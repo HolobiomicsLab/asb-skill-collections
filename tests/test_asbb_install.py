@@ -147,3 +147,117 @@ def test_list_runtimes_lists_all_ids():
     for rid in ("agents", "codex", "copilot", "gemini", "claude",
                 "cursor", "cline", "vscode-copilot"):
         assert rid in text
+
+
+def test_resolve_rejects_escape(tmp_path):
+    from scripts.asbb.installer import _resolve
+    root = tmp_path / "dest"
+    assert _resolve(root, "alpha-skill") == (root / "alpha-skill").resolve()
+    with pytest.raises(ValueError):
+        _resolve(root, "../evil")
+
+
+def test_install_skill_native_symlinks(tmp_path):
+    from scripts.asbb.repo import resolve_pack
+    from scripts.asbb.targets import get_target, InstallOpts
+    from scripts.asbb.installer import install
+    make_repo(tmp_path)
+    pack = resolve_pack(tmp_path, "demo-pack")
+    o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
+    written = install(pack, get_target("agents"), o)
+    assert sorted(written) == ["alpha-skill", "beta-skill"]
+    link = o.home / ".agents" / "skills" / "alpha-skill"
+    assert link.is_symlink()
+    assert (link / "SKILL.md").is_file()
+
+
+def test_install_copy_makes_real_dirs(tmp_path):
+    from scripts.asbb.repo import resolve_pack
+    from scripts.asbb.targets import get_target, InstallOpts
+    from scripts.asbb.installer import install
+    make_repo(tmp_path)
+    pack = resolve_pack(tmp_path, "demo-pack")
+    o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj", copy=True)
+    install(pack, get_target("agents"), o)
+    d = o.home / ".agents" / "skills" / "alpha-skill"
+    assert d.is_dir() and not d.is_symlink()
+
+
+def test_install_idempotent_reinstall(tmp_path):
+    from scripts.asbb.repo import resolve_pack
+    from scripts.asbb.targets import get_target, InstallOpts
+    from scripts.asbb.installer import install
+    make_repo(tmp_path)
+    pack = resolve_pack(tmp_path, "demo-pack")
+    o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
+    install(pack, get_target("agents"), o)
+    written = install(pack, get_target("agents"), o)  # no conflict, no error
+    assert sorted(written) == ["alpha-skill", "beta-skill"]
+
+
+def test_install_dest_override(tmp_path):
+    from scripts.asbb.repo import resolve_pack
+    from scripts.asbb.targets import generic_dest_target, InstallOpts
+    from scripts.asbb.installer import install
+    make_repo(tmp_path)
+    pack = resolve_pack(tmp_path, "demo-pack")
+    dest = tmp_path / "anywhere"
+    o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj",
+                    copy=True, dest_override=dest)
+    install(pack, generic_dest_target(), o)
+    assert (dest / "alpha-skill" / "SKILL.md").is_file()
+
+
+def test_install_rules_renders_files(tmp_path):
+    from scripts.asbb.repo import resolve_pack
+    from scripts.asbb.targets import get_target, InstallOpts
+    from scripts.asbb.installer import install
+    make_repo(tmp_path)
+    pack = resolve_pack(tmp_path, "demo-pack")
+    o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
+    install(pack, get_target("cursor"), o)
+    f = o.project / ".cursor" / "rules" / "alpha-skill.mdc"
+    assert f.is_file()
+    assert "Body for alpha-skill." in f.read_text(encoding="utf-8")
+
+
+def test_install_unmanaged_conflict_needs_force(tmp_path):
+    from scripts.asbb.repo import resolve_pack
+    from scripts.asbb.targets import get_target, InstallOpts
+    from scripts.asbb.installer import install
+    make_repo(tmp_path)
+    pack = resolve_pack(tmp_path, "demo-pack")
+    o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
+    dest = o.home / ".agents" / "skills" / "alpha-skill"
+    dest.mkdir(parents=True)
+    (dest / "SKILL.md").write_text("foreign", encoding="utf-8")
+    with pytest.raises(FileExistsError):
+        install(pack, get_target("agents"), o)
+    o.force = True
+    install(pack, get_target("agents"), o)  # now succeeds
+    assert (o.home / ".agents" / "skills" / "alpha-skill").is_symlink()
+
+
+def test_install_dry_run_writes_nothing(tmp_path):
+    from scripts.asbb.repo import resolve_pack
+    from scripts.asbb.targets import get_target, InstallOpts
+    from scripts.asbb.installer import install
+    make_repo(tmp_path)
+    pack = resolve_pack(tmp_path, "demo-pack")
+    o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj", dry_run=True)
+    install(pack, get_target("agents"), o)
+    assert not (o.home / ".agents").exists()
+
+
+def test_uninstall_removes_recorded_entries(tmp_path):
+    from scripts.asbb.repo import resolve_pack
+    from scripts.asbb.targets import get_target, InstallOpts
+    from scripts.asbb.installer import install, uninstall
+    make_repo(tmp_path)
+    pack = resolve_pack(tmp_path, "demo-pack")
+    o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
+    install(pack, get_target("agents"), o)
+    removed = uninstall("demo-pack", get_target("agents"), o)
+    assert sorted(removed) == ["alpha-skill", "beta-skill"]
+    assert not (o.home / ".agents" / "skills" / "alpha-skill").exists()
+    assert uninstall("demo-pack", get_target("agents"), o) == []  # no-op second time
