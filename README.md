@@ -3,7 +3,7 @@
 [![release](https://img.shields.io/badge/release-metabolomics--v0.1.0-blue)](collections/metabolomics/v2)
 [![skills](https://img.shields.io/badge/skills-5%2C865-success)](collections/metabolomics/v2/skills_index.json)
 [![tools](https://img.shields.io/badge/tools-909-success)](collections/metabolomics/v2/tools_index.json)
-[![license](https://img.shields.io/badge/code-Apache--2.0-green)](LICENSE) [![content](https://img.shields.io/badge/content-CC--BY--4.0-green)](LICENSE.md)
+[![license](https://img.shields.io/badge/code-Apache--2.0-green)](LICENSE) [![content](https://img.shields.io/badge/content-CC--BY--4.0-green)](LICENSING.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20794027.svg)](https://doi.org/10.5281/zenodo.20794027)
 
 Curated, **evidence-grounded** skill and software-tool collections for scientific
@@ -30,6 +30,22 @@ for licensing/PII before release.
 
 Only **ASB-Skills** and **ASB-Tools** are published now; the benchmark and capsule
 layers follow (see [PROVENANCE.md](collections/metabolomics/v2/PROVENANCE.md)).
+
+### Structure & roadmap
+
+`asb-skill-collections` is a **multi-domain** marketplace — it hosts ASB-generated skill
+collections for *any* scientific domain, organized by **provenance** (ASB-generated), not by
+field, so the repo name and marketplace stay domain-agnostic as new domains are added:
+
+```
+collections/<domain>/<version>/    # full collection per domain   (e.g. metabolomics/v2)
+packs/<domain>/<technique>/        # lighter per-technique subsets (e.g. metabolomics/lc-ms)
+```
+
+Each domain ships a full plugin (`<domain>`) plus per-technique packs (`<domain>-<technique>`).
+**Metabolomics is the first released collection;** proteomics, transcriptomics, epigenomics and
+further domains follow under the same layout — no rename, just new entries under
+`collections/` + `marketplace.json`.
 
 ---
 
@@ -122,7 +138,7 @@ grounded with Perspicacité (Holobiomics Lab).
 
 ## License
 
-Dual-licensed, by layer (see [LICENSE.md](LICENSE.md)):
+Dual-licensed, by layer (see [LICENSING.md](LICENSING.md)):
 
 - **Code** (scripts, tooling) — [Apache-2.0](LICENSE).
 - **Collection content** (skill descriptions, tool records, structured metadata) —
