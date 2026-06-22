@@ -61,7 +61,7 @@ jobs:
           python scripts/regen_catalogue.py --repo-root . --output catalogue.jsonld
           echo "catalogue.jsonld regenerated"
 
-      - name: Commit updated catalogue.jsonld
+      - name: Commit updated catalogue.jsonld (fail-soft)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -70,7 +70,16 @@ jobs:
             echo "No catalogue changes to commit"
           else
             git commit -m "chore: regen catalogue.jsonld for ${{ steps.tag.outputs.tag }}"
-            git push origin HEAD:main
+            # The release runs from a detached tag commit; main may be ahead, so a
+            # direct push is often non-fast-forward. Best-effort only — never fail
+            # the release over the catalogue (it is regenerated/maintained on main
+            # separately). Rebase onto current main, then try once.
+            git fetch origin main || true
+            if git push origin "HEAD:main" 2>/dev/null; then
+              echo "catalogue.jsonld pushed to main"
+            else
+              echo "::notice::catalogue push skipped (non-fast-forward from tag commit); regenerate on main separately"
+            fi
           fi
 
       - name: Upload to Zenodo (fail-soft if token missing)
