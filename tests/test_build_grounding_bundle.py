@@ -54,6 +54,24 @@ def test_render_grounding_doc_names_unit():
     assert "PERSPICACITE_BASE" in doc and "git clone" in doc
 
 
+def test_real_lcms_pack_builds(tmp_path):
+    import shutil
+    from scripts.build_grounding_bundle import build_unit
+    root = pathlib.Path(__file__).parent.parent
+    src_unit = root / "packs" / "metabolomics" / "lc-ms"
+    col = root / "collections" / "metabolomics" / "v2"
+    if not src_unit.exists() or not (col / "kb_bundle.json").exists():
+        pytest.skip("real pack/collection not present in this checkout")
+    unit = tmp_path / "lc-ms"
+    shutil.copytree(src_unit, unit, symlinks=True)
+    build_unit(unit, col, root / "scripts" / "perspicacite_kb_bind.py")
+    b = json.loads((unit / "kb_bundle.json").read_text())
+    assert b["skills"] and (unit / "commands" / "ground.md").exists()
+    # binder covers only this pack's skills
+    pack_slugs = {d.name for d in (unit / "skills").iterdir() if d.is_dir()}
+    assert set(b["skills"]).issubset(pack_slugs)
+
+
 def test_build_unit_emits_all_artifacts(tmp_path):
     from scripts.build_grounding_bundle import build_unit
     # arrange a fake unit with two skills, one present in the binder
