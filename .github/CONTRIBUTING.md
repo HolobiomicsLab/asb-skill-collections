@@ -51,6 +51,60 @@ evidence provenance, and FAIR metadata completeness.
 2. Include: domain name, short description, 3-5 seed papers (DOIs), proposed Lead Curator.
 3. After maintainer go-ahead, open a PR adding `staged-collections/<domain>/v1/`.
 
+## Propose or annotate a paper
+
+ASB-Skills are distilled from peer-reviewed **method papers**. Before proposing,
+skim the inclusion criteria in [`governance/SOURCES.md`](../governance/SOURCES.md)
+so your suggestion self-screens. Anyone may suggest or annotate a paper; **a
+maintainer always makes the final merge decision** (you cannot self-merge), and
+COI/tier rules are unchanged.
+
+There are three ways to contribute a paper:
+
+### 1. Suggest via an issue (lightest)
+
+Open a **Propose a paper** issue using the
+[`propose-paper`](ISSUE_TEMPLATE/propose-paper.md) template. Fill in the DOI,
+target collection, self-reported access tier, and a concrete rationale. A curator
+runs the checklist (DOI resolves on Crossref; access verified via Unpaywall; not
+already in the collection's `corpus.yaml`; not retracted; thematic fit), and a
+maintainer adds the accepted paper to `collections/<slug>/v<N>/corpus.yaml`.
+
+### 2. Suggest via a pull request (Enveda-style, low-friction)
+
+Prefer a PR? Add the paper directly to the target
+`collections/<slug>/v<N>/corpus.yaml` under `papers:`, using the
+`asb-corpus/1.0` schema, with `status: hold` (pending curator review):
+
+```yaml
+- name: ToolOrMethodName
+  doi: 10.xxxx/xxxxx
+  title: Full paper title
+  category: <category from the review-series taxonomy>
+  repo_url: owner/repo            # or full URL to code/data
+  status: hold                    # maintainer flips to "included" after review
+  wave: next
+  access:
+    type: gold-oa                 # CI (verify-paper.yml) verifies this
+    is_oa: true
+```
+
+On the PR, `verify-paper.yml` checks access/OA and `validate.yml` checks the
+schema. A maintainer reviews scientific fit against
+[`governance/SOURCES.md`](../governance/SOURCES.md) and merges, flipping
+`status` to `included`.
+
+### 3. Annotate an existing or proposed paper
+
+Improve a paper already in (or proposed to) the corpus by either:
+- a small PR editing that paper's `corpus.yaml` entry, or
+- a structured comment on the open `propose-paper` issue.
+
+**Annotatable fields:** `category` (refine to the review-series taxonomy),
+`repo_url`, and free-text rationale/fit/tags. **Not annotatable** (maintainer/CI-
+owned): `doi`, the `access` block, and `status` — these are set by verification
+and curation, not by annotation.
+
 ## Tier progression
 
 | Tier | Requirement |
