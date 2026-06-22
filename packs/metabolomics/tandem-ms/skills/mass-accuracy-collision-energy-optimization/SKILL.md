@@ -1,0 +1,102 @@
+---
+name: mass-accuracy-collision-energy-optimization
+description: Use when you have defined a set of lipid targets (species, adducts, chain compositions) for PRM or MRM analysis and need to generate precursor-to-fragment transition rules that will maximize signal intensity and specificity on your mass spectrometer (Thermo QExactive HF, Agilent QTOF, or.
+license: CC-BY-4.0
+metadata:
+  edam_operation: http://edamontology.org/operation_3630
+  edam_topics:
+  - http://edamontology.org/topic_0153
+  - http://edamontology.org/topic_3172
+  tools:
+  - Skyline
+  - LipidCreator
+  techniques:
+  - tandem-MS
+derived_from:
+- doi: 10.1038/s41467-020-15960-z
+  title: LipidCreator
+evidence_spans: []
+claims: []
+provenance:
+  collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
+  assembled_by: scripts/collect_metabolomics_collection.py
+  sources:
+  - build: coll_lipidcreator_cq
+    doi: 10.1038/s41467-020-15960-z
+    title: LipidCreator
+  dedup_kept_from: coll_lipidcreator_cq
+schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-020-15960-z
+  all_source_dois:
+  - 10.1038/s41467-020-15960-z
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
+---
+
+# Mass-Accuracy Collision Energy Optimization
+
+## Summary
+
+Optimize collision energy (CE) settings for targeted lipid MS/MS workflows by predicting and validating fragment m/z values with high mass accuracy, ensuring reliable transition definition in PRM/MRM experiments. This skill bridges lipid structure definition to instrument-ready transition libraries by calculating expected fragments and testing CE parameters against reference spectra.
+
+## When to use
+
+You have defined a set of lipid targets (species, adducts, chain compositions) for PRM or MRM analysis and need to generate precursor-to-fragment transition rules that will maximize signal intensity and specificity on your mass spectrometer (Thermo QExactive HF, Agilent QTOF, or equivalent). Specifically, use this skill when: (1) you are building a new lipid target list from scratch and lack empirical CE and fragment library data; (2) you are porting a lipid assay to a new instrument platform and need to retune CE; or (3) you want to predict fragment m/z values and CE recommendations before acquiring data, to inform experimental design.
+
+## When NOT to use
+
+- Your lipid targets are already defined in an empirically validated Skyline library with measured CE and retention times—use this skill only if you need to expand or port the library, not to re-optimize existing transitions.
+- You are working with non-lipid small molecules (metabolites, drugs, peptides) where lipid-specific fragmentation rules do not apply; use general MS/MS fragmentation prediction tools instead.
+- Your mass spectrometer is not in LipidCreator's tested instrument list (Thermo QExactive HF, Agilent QTOF); predictions may not transfer reliably to untested platforms without empirical validation.
+
+## Inputs
+
+- Lipid definitions in LipidCreator format (species name, chain composition, adduct type, e.g., 'PC 36:2 [M+H]+', 'TG 52:2 [M+NH4]+')
+- Instrument platform identifier (Thermo QExactive HF, Agilent QTOF, or equivalent for CE model selection)
+- Optional: empirical reference spectra or CE optimization data from prior experiments on the target instrument
+
+## Outputs
+
+- Target list file (tab-delimited or CSV) with columns: precursor m/z, fragment m/z, collision energy (eV), polarity, retention time window, adduct type
+- Skyline-importable transition list (.txt format) with metadata for PRM/MRM method setup
+- Optional: Spectral library file (.blib or .msp) with predicted fragment intensities and CE annotations for Skyline import
+- Optional: Summary report of predicted fragments per lipid target and CE confidence metrics
+
+## How to apply
+
+Define your lipid targets using standardized lipid nomenclature (species name, chain compositions, adduct type) compatible with LipidCreator. LipidCreator parses these definitions and applies in silico fragmentation rules—based on known lipid cleavage patterns (head group loss, acyl chain cleavage, neutral loss)—to calculate expected fragment m/z values with high mass accuracy. For each lipid and fragment pair, LipidCreator estimates an optimal collision energy (CE in eV) using empirical or theoretical models trained on reference spectra from your instrument class. Generate a target list output (tab-delimited or CSV) formatted for direct import into Skyline, containing precursor m/z, fragment m/z, predicted CE, polarity, and retention time window. Validate the predicted fragments and CE values by acquiring a small pilot dataset (e.g., 5–10 lipid standards) on your instrument; compare observed fragment intensities and spectral patterns to LipidCreator predictions. Refine CE settings iteratively if needed, or use LipidCreator's collision energy module (optional) to export a Skyline-compatible spectral library (.blib or .msp) that embeds predicted intensities for method refinement.
+
+## Related tools
+
+- **Skyline** (Target platform for import and execution of PRM/MRM transition lists and spectral libraries generated by LipidCreator; hosts the LipidCreator plugin interface and provides MS/MS method assembly, data processing, and peak integration.) — https://skyline.ms/project/home/software/Skyline/begin.view
+- **LipidCreator** (Core tool for this skill: parses lipid definitions, predicts fragment m/z values using in silico cleavage rules, estimates collision energy per lipid and fragment pair, and exports Skyline-ready transition lists and spectral libraries.) — https://github.com/lifs-tools/lipidcreator
+
+## Evaluation signals
+
+- Predicted fragment m/z values match observed fragments in pilot MS/MS spectra acquired on the target instrument within the mass accuracy tolerance of the instrument (e.g., <5 ppm for Thermo QExactive HF).
+- Predicted collision energy (CE in eV) yields the highest summed fragment intensity for each lipid target in pilot data; if CE differs >±2 eV from prediction, note refinement and re-check on a second standard.
+- Retention time window overlaps observed retention time ±2–3 min (or instrument-specific RT window); shifts >5 min suggest method drift or standards instability, not model failure.
+- Skyline import succeeds without format errors; all precursor–fragment transitions appear in the Skyline transition list with correct m/z, charge, and CE annotations.
+- Spectral library (.blib or .msp) can be loaded into Skyline and matched against observed spectra; dot-product similarity to observed spectra ≥ 0.7 (if library includes predicted intensities) indicates good predictive performance.
+
+## Limitations
+
+- LipidCreator's fragment prediction uses heuristic cleavage rules and may not capture all observed fragments, especially for unusual lipid classes, modified species, or non-standard adducts not represented in the training set.
+- Collision energy predictions are instrument-class-specific; CE values trained on Thermo QExactive HF or Agilent QTOF may not transfer directly to other platforms (e.g., Orbitrap, QTOF from different vendor) without empirical validation.
+- Retention time predictions are not included in the core workflow; external RT prediction tools or empirical calibration are required to populate the RT window field.
+- LipidCreator does not account for matrix effects, ion suppression, or sample preparation variation; predicted CE and fragment intensities assume ideal ESI conditions and may require empirical refinement for real samples.
+- GUI repainting issues reported on Linux/Ubuntu systems may degrade usability; standalone command-line mode may be more reliable for batch processing on non-Windows platforms.
+- No built-in changelog; version-to-version changes and breaking updates are not explicitly documented, requiring users to test compatibility when updating.
+
+## Evidence
+
+- [other] Fragment prediction and CE model application: "Calculate expected fragment m/z values based on lipid fragmentation rules and chain cleavage patterns. Assemble target list with precursor, fragment, and transition metadata."
+- [other] Skyline-compatible output format: "Format output as tab-delimited or CSV target list file compatible with Skyline import (precursor m/z, fragment m/z, collision energy, polarity, retention time window)."
+- [readme] LipidCreator's core capability and integration: "LipidCreator is a plugin for Skyline supporting targeted workflow development in lipidomics. It can be used to create user-defined target lists and fragment libraries for PRM and MRM experiments in"
+- [readme] Instrument testing and validation scope: "It has been tested with Thermo QExactive HF and Agilent QTOF instruments."
+- [other] Spectral library export with CE module: "Optionally generate standalone fragment library file in Skyline-compatible format (.blib or .msp)."
+- [readme] Standalone and command-line operation modes: "LipidCreator also supports standalone and command-line operation."

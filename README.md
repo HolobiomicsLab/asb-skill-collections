@@ -39,8 +39,19 @@ layers follow (see [PROVENANCE.md](collections/metabolomics/v2/PROVENANCE.md)).
 
 ```bash
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
-/plugin install metabolomics@asb-skill-collections
+/plugin install metabolomics@asb-skill-collections          # full collection (5,865 skills)
 ```
+
+**Lighter per-technique packs** — load only what you need instead of all 5,865:
+
+```bash
+/plugin install metabolomics-lc-ms@asb-skill-collections    # also: gc-ms, nmr, ms-imaging,
+                                                            # ion-mobility, ce-ms, direct-infusion,
+                                                            # tandem-ms, ms-generic
+```
+
+Packs **overlap** (a multi-technique skill appears in several), so prefer one full
+plugin *or* a few packs — not both. See [packs/metabolomics/](packs/metabolomics/README.md).
 
 **Web UI — Claude · ChatGPT · Mistral** (no CLI): upload the search indexes +
 the few skills you need as the assistant's knowledge (Claude *Projects*, ChatGPT
