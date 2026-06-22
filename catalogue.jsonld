@@ -39,7 +39,7 @@
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
   "description": "Auto-generated registry of all released ASB Skill Collections.",
-  "generated_at": "2026-06-22T01:32:14Z",
+  "generated_at": "2026-06-22T08:43:43Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
