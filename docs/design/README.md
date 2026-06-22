@@ -12,6 +12,6 @@ All three are tracked as P1 (deferred to v1.1+); none block the v1 release. They
 
 ## See also
 
-- `OPEN_ACCESS_POLICY.md` — content policy for source papers.
-- `CONTRIBUTING.md` — pipeline + budget-tier model.
-- `RELEASE_ROLLBACK.md` — what happens when a release needs to be withdrawn.
+- `governance/OPEN_ACCESS_POLICY.md` — content policy for source papers.
+- `.github/CONTRIBUTING.md` — pipeline + budget-tier model.
+- `governance/RELEASE_ROLLBACK.md` — what happens when a release needs to be withdrawn.

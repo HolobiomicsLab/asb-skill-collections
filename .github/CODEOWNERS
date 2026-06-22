@@ -16,13 +16,8 @@
 # GOVERNANCE & POLICY — lab-maintainer approval required.
 # These files define how the project is governed; changes need scrutiny.
 # ----------------------------------------------------------------------------
-OPEN_ACCESS_POLICY.md                   @lfnothias
-AUTHOR_OPT_OUT.md                       @lfnothias
-RELEASE_ROLLBACK.md                     @lfnothias
-DISPUTE_RESOLUTION.md                   @lfnothias
-COI_POLICY.md                           @lfnothias
-MAINTAINERS.md                          @lfnothias
-CONTRIBUTING.md                         @lfnothias
+governance/                             @lfnothias
+.github/CONTRIBUTING.md                 @lfnothias
 LICENSE                                 @lfnothias
 LICENSING.md                            @lfnothias
 .github/CODEOWNERS                      @lfnothias

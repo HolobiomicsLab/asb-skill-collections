@@ -49,16 +49,19 @@ further domains follow under the same layout — no rename, just new entries und
 
 ---
 
-## Install
+## 📦 Install
 
-**Claude Code** (native plugin):
+> [!TIP]
+> **Fastest path** — two lines in Claude Code: the full collection, or a lighter per-technique pack.
+
+### 🚀 Claude Code (native plugin)
 
 ```bash
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
 /plugin install metabolomics@asb-skill-collections          # full collection (5,865 skills)
 ```
 
-**Lighter per-technique packs** — load only what you need instead of all 5,865:
+### 🧩 Lighter per-technique packs — load only what you need
 
 ```bash
 /plugin install metabolomics-lc-ms@asb-skill-collections    # also: gc-ms, nmr, ms-imaging,
@@ -66,15 +69,19 @@ further domains follow under the same layout — no rename, just new entries und
                                                             # direct-infusion, ms-generic
 ```
 
-Packs **overlap** (a multi-technique skill appears in several), so prefer one full
-plugin *or* a few packs — not both. See [packs/metabolomics/](packs/metabolomics/README.md).
+> [!NOTE]
+> Packs **overlap** (a multi-technique skill appears in several) — install **one** full plugin **or** a few packs, not both. See [packs/metabolomics/](packs/metabolomics/README.md).
 
-**Web UI — Claude · ChatGPT · Mistral** (no CLI): upload the search indexes +
+### 🌐 Web UI — Claude · ChatGPT · Mistral
+
+No CLI: upload the search indexes +
 the few skills you need as the assistant's knowledge (Claude *Projects*, ChatGPT
 *Custom GPT/Project*, Mistral *Agent/Library*) and paste a routing instruction —
 step-by-step in [USAGE.md](collections/metabolomics/v2/USAGE.md#chat-assistants-via-the-web-ui-claude--chatgpt--mistral).
 
-**Any other agent / IDE:** the collection is plain Markdown + JSON; point your
+### 🤖 Any other agent / IDE
+
+The collection is plain Markdown + JSON — point your
 agent at `collections/metabolomics/v2/` and read the indexes. See
 [AGENTS.md](AGENTS.md).
 
@@ -82,14 +89,39 @@ agent at `collections/metabolomics/v2/` and read the indexes. See
 
 **Search → apply → ground.** Find a skill via `skills_index.json` (by EDAM IRI,
 tool name, or keyword) or `tools_index.json`; read its `SKILL.md` and follow the
-procedure; then optionally **ground** it against the source paper/repo. Grounding
-now ships **inside every plugin and pack** (`bin/perspicacite_kb_bind.py` +
-`kb_bundle.json`) with two backends — a **Perspicacité KB** (RAG over full text +
-SI) or, with no server, a **serverless `local` clone** of the source repo +
-best-effort open-access paper. In Claude Code just run **`/ground`**; otherwise call
-the bundled binder. Full guide:
-[USAGE.md](collections/metabolomics/v2/USAGE.md). Requirements (libraries, per-skill
-tool deps) are in USAGE §0.
+procedure; then optionally **ground** it against the source paper/repo to verify a
+parameter or claim — see the **🔎 Grounding (Perspicacité)** section below.
+Requirements (libraries, per-skill tool deps) are in [USAGE §0](collections/metabolomics/v2/USAGE.md).
+
+## 🔎 Grounding (Perspicacité)
+
+Skills carry distilled procedure; to verify an exact parameter, threshold, or claim,
+**ground a skill against the paper it was distilled from**. Grounding is **optional and
+additive** — every skill works without it — and ships *inside* every plugin and pack.
+
+It's powered by **[Perspicacité](https://github.com/HolobiomicsLab/Perspicacite-AI)** —
+Holobiomics Lab's local-first scientific literature-RAG engine. Two backends, **KB-primary
+with a serverless fallback**:
+
+- **`kb` (Perspicacité)** — RAG over the source paper's full text **+ supplementary
+  information**, persistent and citable. The per-paper KB (`asb-paper-<doi>`) is auto-created
+  and ingested on first use via the MCP tools `ensure_kb` / `ground_paper`.
+- **`local` (serverless)** — **no server**: `git clone` the skill's source repo + best-effort
+  open-access paper, then read the files directly.
+
+**Use it**
+
+- In **Claude Code**: run **`/ground`** on the skill in play — it installs + queries the
+  source KB, or falls back to a local clone when no server is running.
+- **Anywhere**: call the bundled `bin/perspicacite_kb_bind.py` (`prepare` / `query` / `local`).
+
+> [!TIP]
+> **Recommended** before you act on a numeric parameter, threshold, or quantitative claim —
+> it's the difference between *"the skill says ~5 ppm"* and *"the paper specifies 5 ppm."*
+
+The `kb` backend needs a reachable Perspicacité (`PERSPICACITE_BASE`, default
+`http://127.0.0.1:8000`); the `local` backend needs only `git` + network. Full guide:
+[USAGE.md §4](collections/metabolomics/v2/USAGE.md).
 
 ## What's in the collection
 
@@ -149,8 +181,9 @@ Dual-licensed, by layer (see [LICENSING.md](LICENSING.md)):
 ## Maintainers & contributing
 
 Maintained by [Holobiomics Lab](https://github.com/HolobiomicsLab) — see
-[MAINTAINERS.md](MAINTAINERS.md). Curator workflow: [CONTRIBUTING.md](CONTRIBUTING.md);
-conflict-of-interest policy: [COI_POLICY.md](COI_POLICY.md).
+[MAINTAINERS.md](governance/MAINTAINERS.md). Curator workflow: [CONTRIBUTING.md](.github/CONTRIBUTING.md);
+conflict-of-interest policy: [COI_POLICY.md](governance/COI_POLICY.md). All governance & policy
+docs now live in [`governance/`](governance/).
 
 ## Other collections
 

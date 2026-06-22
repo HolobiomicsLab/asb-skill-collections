@@ -96,7 +96,7 @@ All three are **advisory** — the human reviewer and maintainer still make the 
 
 - [ ] I have checked that this paper is **open access or permissive license** (required for v0)
 - [ ] I have read [CONTRIBUTING.md](../CONTRIBUTING.md)
-- [ ] I have read [COI_POLICY.md](../COI_POLICY.md)
+- [ ] I have read [COI_POLICY.md](../../governance/COI_POLICY.md)
 - [ ] I understand the reviewer's responsibilities and tier progression
 - [ ] (If self-nominating as reviewer) I am listed in `contributors.jsonld` OR willing to complete the onboarding in CONTRIBUTING.md Step 0
 
@@ -105,7 +105,7 @@ All three are **advisory** — the human reviewer and maintainer still make the 
 ## Reference
 
 - **Review workflow:** SPEC §9.7 "Community / Public Expert Review"
-- **COI policy:** [COI_POLICY.md](../COI_POLICY.md)
+- **COI policy:** [COI_POLICY.md](../../governance/COI_POLICY.md)
 - **Reviewer onboarding:** [CONTRIBUTING.md](../CONTRIBUTING.md) Step 0–1
 - **Attestation template:** `templates/attestation.yaml.template`
 - **Collections guide:** [README.md](../README.md#collections)

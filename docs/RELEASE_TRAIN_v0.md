@@ -43,7 +43,7 @@ This runbook documents the complete **linear release pipeline** for ASB-Skill-Co
 
 **What happens here:**
 - Skill files (SKILL.md), tools, benchmarks, and metadata go into `staged-collections/<slug>/v<N>/`
-- Use the templates in `templates/` and follow the structure doc in [CONTRIBUTING.md](../CONTRIBUTING.md)
+- Use the templates in `templates/` and follow the structure doc in [CONTRIBUTING.md](../.github/CONTRIBUTING.md)
 - Reviews are accumulated in `staged-collections/<slug>/v<N>/reviews/*.yaml` (one file per reviewed paper)
 - Contributor PRs reference external papers, linked by DOI via `derived_from` fields in SKILL.md frontmatter
 

@@ -23,7 +23,7 @@ cannot be verified within 30 days are **not honored**.
 ## How to request opt-out
 
 1. Open a "Request removal" issue using the
-   [`.github/ISSUE_TEMPLATE/author-opt-out.md`](.github/ISSUE_TEMPLATE/author-opt-out.md)
+   [`.github/ISSUE_TEMPLATE/author-opt-out.md`](../.github/ISSUE_TEMPLATE/author-opt-out.md)
    template. The template auto-applies the `author-opt-out` and
    `needs-lead-curator` labels.
 2. Fill in the paper DOI, your ORCID, the affected collection(s), and the
