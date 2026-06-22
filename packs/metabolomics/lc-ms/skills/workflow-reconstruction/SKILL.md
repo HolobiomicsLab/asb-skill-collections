@@ -527,7 +527,7 @@ attribution:
   - 10.3390/metabo9090171
   - 10.1021/ac051437y
   - 10.1038/s42256-020-00234-6
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

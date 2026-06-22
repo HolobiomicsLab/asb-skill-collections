@@ -15,7 +15,7 @@ attribution:
   generator: AgenticScienceBuilder
   original_doi: ''
   all_source_dois: []
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

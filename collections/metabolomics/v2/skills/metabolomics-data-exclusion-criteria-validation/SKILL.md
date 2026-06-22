@@ -37,7 +37,7 @@ attribution:
   all_source_dois:
   - 10.1093/bioinformatics/bty344
   - 10.1158/0008-5472.can-14-1490
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

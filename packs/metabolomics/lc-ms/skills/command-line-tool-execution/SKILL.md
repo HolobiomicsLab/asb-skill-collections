@@ -71,7 +71,7 @@ attribution:
   - 10.1021/acs.analchem.4c04040
   - 10.1021/acs.jproteome.5c00435
   - 10.1186/s12859-018-2134-1
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

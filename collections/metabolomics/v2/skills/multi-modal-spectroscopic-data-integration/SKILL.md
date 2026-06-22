@@ -38,7 +38,7 @@ attribution:
   all_source_dois:
   - 10.1002/ange.202517611
   - 10.5281/zenodo.14712886
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

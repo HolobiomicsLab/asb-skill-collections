@@ -50,7 +50,7 @@ attribution:
   - 10.1021/acs.jafc.3c09767
   - 10.5702/massspectrometry.S0033
   - 10.1038/s41592-023-02143-z
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

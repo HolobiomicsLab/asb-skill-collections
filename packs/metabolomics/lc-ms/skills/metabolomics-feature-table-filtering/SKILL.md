@@ -39,7 +39,7 @@ attribution:
   all_source_dois:
   - 10.1128/mra.00997-24
   - 10.1021/acs.analchem.2c04632
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

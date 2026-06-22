@@ -37,7 +37,7 @@ attribution:
   all_source_dois:
   - 10.1016/j.microc.2020.104830
   - 10.1371/journal.pntd.0006215
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

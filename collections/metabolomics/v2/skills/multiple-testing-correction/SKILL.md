@@ -59,7 +59,7 @@ attribution:
   - 10.1101/2025.08.28.672951v2
   - 10.1101/2020.11.20.391912
   - 10.1093/bioinformatics/btad523/7248906
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

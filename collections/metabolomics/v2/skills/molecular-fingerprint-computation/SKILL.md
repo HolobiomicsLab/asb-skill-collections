@@ -55,7 +55,7 @@ attribution:
   - 10.26434/chemrxiv-2025-cwq74
   - 10.1186/s13321-023-00695-y
   - 10.1186/s12859-023-05149-8
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

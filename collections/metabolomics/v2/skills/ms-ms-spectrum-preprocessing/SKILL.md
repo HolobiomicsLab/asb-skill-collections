@@ -65,7 +65,7 @@ attribution:
   - 10.1021/acs.jcim.3c01082
   - 10.1021/jasms.2c00153
   - 10.1016/1044-0305
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

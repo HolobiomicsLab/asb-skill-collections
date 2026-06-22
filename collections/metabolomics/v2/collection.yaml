@@ -10,7 +10,7 @@ slug: metabolomics
 version: 2
 description: Curated, evidence-grounded skills and software-tool records for computational metabolomics, assembled by the AgenticScienceBuilder pipeline from open-access method papers. Each skill is deduplicated across papers, anchored to verbatim evidence spans, and annotated with EDAM IRIs.
 license: CC-BY-4.0
-doi: TODO-zenodo
+doi: 10.5281/zenodo.20794027
 released_at: '2026-06-22T00:02:37Z'
 roles:
   generator: AgenticScienceBuilder
@@ -22,7 +22,7 @@ roles:
   - Louis-Félix Nothias
   - HolobiomicsLab.cnrs.fr
   - MetaboLinkAI.net
-zenodo_doi: TODO-zenodo
+zenodo_doi: 10.5281/zenodo.20794027
 lead_curators:
 - name: Louis-Felix Nothias
   orcid: 0000-0001-6711-6719

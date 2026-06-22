@@ -247,7 +247,7 @@ per-build in `build_manifest.json`). The raw ASB capsules + benchmark layer
 
 > **IRIs:** the `w3id.org/holobiomicslab/…` identifiers in `collection.yaml` and
 > the docs are **reserved names that do not resolve yet** — stable identifiers,
-> not working links. The Zenodo DOI is likewise not minted yet (`TODO-zenodo`).
+> not working links. The Zenodo DOI is likewise not minted yet (`10.5281/zenodo.20794027`).
 
 ## Provenance & policy
 

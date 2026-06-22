@@ -6,7 +6,7 @@ version: '2'
 date-released: '2026-06-22'
 license: CC-BY-4.0
 url: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
-doi: TODO-zenodo
+doi: 10.5281/zenodo.20794027
 type: dataset
 authors:
 - name: AgenticScienceBuilder Community

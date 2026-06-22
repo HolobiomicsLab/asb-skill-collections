@@ -58,7 +58,7 @@ attribution:
   - 10.1080/01621459.2017.1397521
   - 10.1093/bioinformatics/btx477
   - 10.1371/journal.pcbi.1011912
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur

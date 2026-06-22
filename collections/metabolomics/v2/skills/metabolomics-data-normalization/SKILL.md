@@ -66,7 +66,7 @@ attribution:
   - 10.1007/s12561-013-9081-1
   - 10.1016/j.cmpb.2025.108672
   - 10.1007/s11306-018-1347-7
-  zenodo_doi: TODO-zenodo
+  zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
   sponsor: CNRS & Université Côte d'Azur
