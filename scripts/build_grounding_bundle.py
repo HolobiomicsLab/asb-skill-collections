@@ -5,6 +5,7 @@ vendored perspicacite_kb_bind.py, /ground command, GROUNDING.md."""
 from __future__ import annotations
 import argparse
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -14,17 +15,28 @@ except ImportError:  # pragma: no cover
     yaml = None
 
 
+def _normalize_repo_url(u):
+    u = (u or "").strip()
+    if not u:
+        return None
+    if "://" in u or u.startswith("git@"):
+        return u
+    if re.fullmatch(r"[\w.\-]+/[\w.\-]+", u):
+        return "https://github.com/" + u
+    return u
+
+
 def resolve_repo_urls(skill_dois, corpus_papers, tools_index):
     doi_set = {d for d in skill_dois}
     out = []
     by_doi = {p.get("doi"): p for p in corpus_papers}
     for d in skill_dois:
-        url = (by_doi.get(d) or {}).get("repo_url")
+        url = _normalize_repo_url((by_doi.get(d) or {}).get("repo_url"))
         if url and url not in out:
             out.append(url)
     for t in tools_index:
         if doi_set.intersection(t.get("dois") or []):
-            url = t.get("canonical_url")
+            url = _normalize_repo_url(t.get("canonical_url"))
             if url and url not in out:
                 out.append(url)
     return out

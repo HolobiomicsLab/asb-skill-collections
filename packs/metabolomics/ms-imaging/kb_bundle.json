@@ -271,7 +271,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -321,7 +320,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -336,7 +334,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -352,7 +349,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -370,10 +366,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "autoencoder-encoder-decoder-design": {
@@ -390,10 +385,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "batch-file-processing-orchestration": {
@@ -409,7 +403,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -428,7 +422,6 @@
         "asb-paper-10-1529-biophysj-103-038422"
       ],
       "repo_urls": [
-        "djdt/pewpew",
         "https://github.com/djdt/pewpew",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -446,7 +439,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -467,7 +459,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -485,10 +476,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "bonferroni-multiple-testing-correction": {
@@ -526,7 +516,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -544,10 +533,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "candidate-peak-filtering-annotation": {
@@ -599,7 +587,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -622,7 +609,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -640,7 +626,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -658,7 +644,7 @@
         "asb-paper-10-1038-s41467-023-43917-5"
       ],
       "repo_urls": [
-        "coskunlab/ScSpaMet"
+        "https://github.com/coskunlab/ScSpaMet"
       ]
     },
     "chemical-annotation-confidence-assessment": {
@@ -677,7 +663,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -694,10 +679,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "chemical-formula-annotation-mapping": {
@@ -763,7 +747,7 @@
         "asb-paper-10-1038-s41467-021-23953-9"
       ],
       "repo_urls": [
-        "mzmine/mzmine",
+        "https://github.com/mzmine/mzmine",
         "https://github.com/luigiquiros/inventa",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/GarrettLab-UF/LipidMatch",
@@ -804,7 +788,6 @@
         "asb-paper-10-1529-biophysj-103-038422"
       ],
       "repo_urls": [
-        "djdt/pewpew",
         "https://github.com/djdt/pewpew",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -842,7 +825,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -864,7 +846,7 @@
         "asb-paper-10-5281-zenodo-6784251"
       ],
       "repo_urls": [
-        "coskunlab/ScSpaMet"
+        "https://github.com/coskunlab/ScSpaMet"
       ]
     },
     "conda-environment-setup-and-activation": {
@@ -884,7 +866,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -904,7 +885,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -995,9 +975,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "cross-database-entity-reconciliation": {
@@ -1011,10 +990,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "cross-domain-metadata-integration": {
@@ -1036,7 +1014,7 @@
         "asb-paper-10-1038-s41564-023-01575-9"
       ],
       "repo_urls": [
-        "robinschmid/microbe_masst",
+        "https://github.com/robinschmid/microbe_masst",
         "https://github.com/mwang87/MASST"
       ]
     },
@@ -1057,7 +1035,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1105,7 +1082,6 @@
         "asb-paper-10-1038-s41592-024-02171-3"
       ],
       "repo_urls": [
-        "richardxie1119/MEISTER",
         "https://github.com/richardxie1119/MEISTER"
       ]
     },
@@ -1172,9 +1148,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "dimple-pipeline-execution": {
@@ -1189,7 +1164,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -1212,7 +1187,7 @@
         "asb-paper-10-1038-s41564-023-01575-9"
       ],
       "repo_urls": [
-        "robinschmid/microbe_masst",
+        "https://github.com/robinschmid/microbe_masst",
         "https://github.com/mwang87/MASST"
       ]
     },
@@ -1235,7 +1210,6 @@
         "asb-paper-10-1038-s41538-022-00137-3"
       ],
       "repo_urls": [
-        "mwang87/MASST",
         "https://github.com/mwang87/MASST"
       ]
     },
@@ -1275,7 +1249,6 @@
         "asb-paper-10-1186-s13742-016-0115-8"
       ],
       "repo_urls": [
-        "Viant-Metabolomics/Galaxy-M",
         "https://github.com/Viant-Metabolomics/Galaxy-M"
       ]
     },
@@ -1292,7 +1265,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1311,7 +1283,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -1328,7 +1299,6 @@
         "asb-paper-10-1038-nprot-2017-122"
       ],
       "repo_urls": [
-        "MolecularCartography/Optimus",
         "https://github.com/MolecularCartography/Optimus"
       ]
     },
@@ -1346,7 +1316,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -1363,9 +1332,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "feature-statistical-annotation": {
@@ -1382,7 +1350,6 @@
         "asb-paper-10-1038-nprot-2017-122"
       ],
       "repo_urls": [
-        "MolecularCartography/Optimus",
         "https://github.com/MolecularCartography/Optimus"
       ]
     },
@@ -1401,7 +1368,6 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
@@ -1419,7 +1385,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1437,10 +1402,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "formula-network-extraction-from-mz": {
@@ -1454,10 +1418,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "git-repository-cloning-and-version-control": {
@@ -1489,10 +1452,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "group-wise-chemical-enrichment-calculation": {
@@ -1511,7 +1473,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -1529,9 +1490,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "hdf5-file-format-reading-and-writing": {
@@ -1549,9 +1509,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "hdf5-file-structure-specification": {
@@ -1566,9 +1525,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "high-dimensional-signal-enhancement": {
@@ -1583,7 +1541,6 @@
         "asb-paper-10-1038-s41592-024-02171-3"
       ],
       "repo_urls": [
-        "richardxie1119/MEISTER",
         "https://github.com/richardxie1119/MEISTER"
       ]
     },
@@ -1599,7 +1556,6 @@
         "asb-paper-10-1101-2024-08-20-608773v2"
       ],
       "repo_urls": [
-        "LittleLittleCloud/haCCA",
         "https://github.com/LittleLittleCloud/haCCA"
       ]
     },
@@ -1644,7 +1600,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1664,7 +1619,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -1698,10 +1653,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "imaging-parameter-metadata-annotation": {
@@ -1720,7 +1674,6 @@
         "asb-paper-10-1021-acs-analchem-4c06520"
       ],
       "repo_urls": [
-        "VIU-Metabolomics/imzML_Writer",
         "https://github.com/VIU-Metabolomics/imzML_Writer",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1741,7 +1694,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -1757,7 +1709,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -1773,9 +1724,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "imzml-metadata-parsing": {
@@ -1793,7 +1743,6 @@
         "asb-paper-10-1529-biophysj-103-038422"
       ],
       "repo_urls": [
-        "djdt/pewpew",
         "https://github.com/djdt/pewpew",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -1814,7 +1763,6 @@
         "asb-paper-10-1093-bioinformatics-btad088-7036334"
       ],
       "repo_urls": [
-        "leopold-weidner/DBDIpy",
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -1831,7 +1779,6 @@
         "asb-paper-10-1021-acs-analchem-5c03225"
       ],
       "repo_urls": [
-        "YuJenL/SMART",
         "https://github.com/YuJenL/SMART"
       ]
     },
@@ -1864,7 +1811,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -1886,7 +1832,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -1905,7 +1850,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1925,9 +1869,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "ion-formula-matrix-classification": {
@@ -2021,9 +1964,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "ion-mobility-filtering-and-tolerance-tuning": {
@@ -2040,7 +1982,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -2094,9 +2035,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "iterative-peak-selection-from-latent-space": {
@@ -2114,10 +2054,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "java-build-artifact-validation": {
@@ -2152,7 +2091,6 @@
         "asb-paper-10-1093-bioinformatics-btac032-6510930"
       ],
       "repo_urls": [
-        "wabdelmoula/massNet",
         "https://github.com/wabdelmoula/massNet",
         "https://github.com/PNNL-m-q/mza",
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
@@ -2172,7 +2110,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -2191,10 +2128,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "latent-space-dimensionality-reduction": {
@@ -2211,10 +2147,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "linear-axis-spatial-analysis": {
@@ -2230,7 +2165,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -2246,9 +2181,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "lipid-category-classification": {
@@ -2269,7 +2203,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -2293,7 +2226,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -2311,9 +2243,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "lipid-feature-identifier-matching": {
@@ -2329,9 +2260,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "lipid-nomenclature-simplification": {
@@ -2352,7 +2282,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -2376,7 +2305,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -2395,7 +2323,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -2418,7 +2345,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -2455,7 +2381,6 @@
         "asb-paper-10-1529-biophysj-103-038422"
       ],
       "repo_urls": [
-        "djdt/pewpew",
         "https://github.com/djdt/pewpew",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -2476,7 +2401,6 @@
         "asb-paper-10-1038-s41592-021-01198-0"
       ],
       "repo_urls": [
-        "alexandrovteam/SpaceM",
         "https://github.com/alexandrovteam/SpaceM",
         "https://github.com/ComPlat/chem-spectra-app"
       ]
@@ -2495,10 +2419,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "mass-accuracy-ppm-filtering": {
@@ -2512,10 +2435,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "mass-difference-calculation-from-spectral-peaks": {
@@ -2568,7 +2490,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -2588,7 +2509,6 @@
         "asb-paper-10-1021-acs-analchem-4c06520"
       ],
       "repo_urls": [
-        "VIU-Metabolomics/imzML_Writer",
         "https://github.com/VIU-Metabolomics/imzML_Writer",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/AdrianHaun/AriumMS",
@@ -2606,10 +2526,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "mass-spectrometry-adduct-annotation": {
@@ -2654,7 +2573,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -2674,7 +2592,6 @@
         "asb-paper-10-1021-acs-analchem-4c06520"
       ],
       "repo_urls": [
-        "VIU-Metabolomics/imzML_Writer",
         "https://github.com/VIU-Metabolomics/imzML_Writer",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/AdrianHaun/AriumMS",
@@ -2696,7 +2613,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -2733,7 +2649,6 @@
         "asb-paper-10-1529-biophysj-103-038422"
       ],
       "repo_urls": [
-        "djdt/pewpew",
         "https://github.com/djdt/pewpew",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -2753,7 +2668,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -2793,7 +2707,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -2832,7 +2745,6 @@
         "asb-paper-10-1093-bioinformatics-btac032-6510930"
       ],
       "repo_urls": [
-        "wabdelmoula/massNet",
         "https://github.com/wabdelmoula/massNet",
         "https://github.com/PNNL-m-q/mza",
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
@@ -2856,7 +2768,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -2881,7 +2792,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -2921,7 +2831,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -2957,10 +2866,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "mass-spectrometry-peak-pair-analysis": {
@@ -2995,7 +2903,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -3038,8 +2945,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "Noble-Lab/casanovo",
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer",
@@ -3060,7 +2965,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -3081,7 +2985,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -3097,7 +3001,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -3131,7 +3035,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -3163,10 +3066,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "metabolite-adduct-correlation-spatial-analysis": {
@@ -3209,7 +3111,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -3226,7 +3127,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -3241,10 +3141,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "metabolite-feature-organization": {
@@ -3258,7 +3157,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -3290,7 +3188,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -3308,7 +3205,6 @@
         "asb-paper-10-1038-s41592-021-01198-0"
       ],
       "repo_urls": [
-        "alexandrovteam/SpaceM",
         "https://github.com/alexandrovteam/SpaceM",
         "https://github.com/ComPlat/chem-spectra-app"
       ]
@@ -3327,7 +3223,7 @@
         "asb-paper-10-1038-s41467-023-43917-5"
       ],
       "repo_urls": [
-        "coskunlab/ScSpaMet"
+        "https://github.com/coskunlab/ScSpaMet"
       ]
     },
     "microbe-compound-identification": {
@@ -3346,7 +3242,6 @@
         "asb-paper-10-1038-s41538-022-00137-3"
       ],
       "repo_urls": [
-        "mwang87/MASST",
         "https://github.com/mwang87/MASST"
       ]
     },
@@ -3368,10 +3263,8 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "samgoldman97/ms-pred",
-        "WanluLiuLab/SpatialMETA",
-        "https://github.com/WanluLiuLab/SpatialMETA",
         "https://github.com/samgoldman97/ms-pred",
+        "https://github.com/WanluLiuLab/SpatialMETA",
         "https://github.com/RECETOX/MSMetaEnhancer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks"
@@ -3389,7 +3282,6 @@
         "asb-paper-10-1038-s41592-024-02171-3"
       ],
       "repo_urls": [
-        "richardxie1119/MEISTER",
         "https://github.com/richardxie1119/MEISTER"
       ]
     },
@@ -3406,7 +3298,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -3459,7 +3350,6 @@
         "asb-paper-10-1101-2024-08-20-608773v2"
       ],
       "repo_urls": [
-        "LittleLittleCloud/haCCA",
         "https://github.com/LittleLittleCloud/haCCA"
       ]
     },
@@ -3480,7 +3370,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -3503,7 +3392,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -3571,9 +3459,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "msi-data-table-export": {
@@ -3589,7 +3476,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -3607,7 +3493,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -3628,7 +3513,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -3649,7 +3533,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -3666,9 +3549,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "msi-intensity-matrix-normalization": {
@@ -3684,9 +3566,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "msi-metadata-curation-and-storage": {
@@ -3703,7 +3584,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -3722,9 +3602,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "msi-peak-annotation": {
@@ -3782,7 +3661,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -3802,7 +3680,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -3823,7 +3700,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -3841,7 +3717,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -3883,7 +3758,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -3898,7 +3772,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -3914,7 +3787,6 @@
         "asb-paper-10-1101-2024-08-20-608773v2"
       ],
       "repo_urls": [
-        "LittleLittleCloud/haCCA",
         "https://github.com/LittleLittleCloud/haCCA"
       ]
     },
@@ -3929,10 +3801,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "multiple-testing-correction-bonferroni": {
@@ -3967,7 +3838,6 @@
         "asb-paper-10-1021-acs-analchem-4c06520"
       ],
       "repo_urls": [
-        "VIU-Metabolomics/imzML_Writer",
         "https://github.com/VIU-Metabolomics/imzML_Writer",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/AdrianHaun/AriumMS",
@@ -3986,9 +3856,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "network-based-metabolite-identification": {
@@ -4002,10 +3871,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "neural-network-hyperparameter-optimization": {
@@ -4019,7 +3887,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -4050,7 +3917,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -4067,7 +3933,6 @@
         "asb-paper-10-1038-s41467-025-60640-5"
       ],
       "repo_urls": [
-        "huaxuyu/masscube",
         "https://github.com/huaxuyu/masscube",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -4085,7 +3950,6 @@
         "asb-paper-10-1038-s41592-021-01198-0"
       ],
       "repo_urls": [
-        "alexandrovteam/SpaceM",
         "https://github.com/alexandrovteam/SpaceM",
         "https://github.com/ComPlat/chem-spectra-app"
       ]
@@ -4108,7 +3972,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -4212,7 +4075,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -4233,7 +4095,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -4267,7 +4128,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -4286,7 +4147,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -4307,7 +4167,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -4372,7 +4231,6 @@
         "asb-paper-10-1529-biophysj-103-038422"
       ],
       "repo_urls": [
-        "djdt/pewpew",
         "https://github.com/djdt/pewpew",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -4388,10 +4246,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "probabilistic-classification-network-construction": {
@@ -4410,7 +4267,6 @@
         "asb-paper-10-1093-bioinformatics-btac032-6510930"
       ],
       "repo_urls": [
-        "wabdelmoula/massNet",
         "https://github.com/wabdelmoula/massNet",
         "https://github.com/PNNL-m-q/mza",
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
@@ -4444,7 +4300,6 @@
         "asb-paper-10-1093-bioinformatics-btac032-6510930"
       ],
       "repo_urls": [
-        "wabdelmoula/massNet",
         "https://github.com/wabdelmoula/massNet",
         "https://github.com/PNNL-m-q/mza",
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
@@ -4467,7 +4322,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -4520,7 +4374,6 @@
         "asb-paper-10-1093-bioinformatics-btac032-6510930"
       ],
       "repo_urls": [
-        "wabdelmoula/massNet",
         "https://github.com/wabdelmoula/massNet",
         "https://github.com/PNNL-m-q/mza",
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
@@ -4543,7 +4396,6 @@
         "asb-paper-10-1021-acs-analchem-4c06520"
       ],
       "repo_urls": [
-        "VIU-Metabolomics/imzML_Writer",
         "https://github.com/VIU-Metabolomics/imzML_Writer",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/AdrianHaun/AriumMS",
@@ -4562,7 +4414,6 @@
         "asb-paper-10-1038-s41592-024-02171-3"
       ],
       "repo_urls": [
-        "richardxie1119/MEISTER",
         "https://github.com/richardxie1119/MEISTER"
       ]
     },
@@ -4611,9 +4462,8 @@
         "asb-paper-10-1038-s41587-021-01045-9"
       ],
       "repo_urls": [
-        "sirius-ms/sirius",
-        "https://github.com/luigiquiros/inventa",
         "https://github.com/sirius-ms/sirius",
+        "https://github.com/luigiquiros/inventa",
         "https://github.com/MassBank/MassBank-data",
         "https://github.com/meowcat/MSNovelist",
         "https://github.com/boecker-lab/sirius"
@@ -4631,9 +4481,8 @@
         "asb-paper-10-1038-s41587-021-01045-9"
       ],
       "repo_urls": [
-        "sirius-ms/sirius",
-        "https://github.com/luigiquiros/inventa",
         "https://github.com/sirius-ms/sirius",
+        "https://github.com/luigiquiros/inventa",
         "https://github.com/MassBank/MassBank-data",
         "https://github.com/meowcat/MSNovelist",
         "https://github.com/boecker-lab/sirius"
@@ -5243,182 +5092,164 @@
         "asb-paper-10-1038-s42256-020-00234-6"
       ],
       "repo_urls": [
-        "JosieHong/3DMolMS",
-        "CSi-Studio/mzmine3",
-        "YangHuaLab/AnnoSM",
-        "piscookie/AS-RT",
+        "https://github.com/JosieHong/3DMolMS",
+        "https://github.com/CSi-Studio/mzmine3",
+        "https://github.com/YangHuaLab/AnnoSM",
+        "https://github.com/piscookie/AS-RT",
         "https://gitlab.gwdg.de/joerg.buescher/automrm.git",
-        "medema-group/BiG-MAP",
-        "sneumann/CAMERA",
-        "sirius-ms/sirius",
-        "wishartlab/cfm-id",
-        "jesilee/CIDMD_setup",
-        "Steinbeck-Lab/coconut",
-        "zhangxiang1205/CorrDIA",
-        "iconSS/FCC",
-        "novak-jiri/cyclobranch",
-        "jianweishuai/Dear-OMG",
-        "hcji/DeepMASS2_Data_Processing",
-        "skinniderlab/clm",
-        "Velenosi-Lab/DIATAGeR",
-        "coleygroup/DiffMS",
-        "Karnovsky-Lab/DNEA",
-        "OfficeChromatography/eicCluster",
-        "xdomingoal/erah-devel",
-        "OpenMS/OpenMS",
-        "glerny/Finnee2024",
-        "FraGNNet/fragnnet",
-        "kslynn128171/FSA",
-        "CSi-Studio/G-Aligner",
-        "mariallr/GcDuo",
-        "ZaylaSchaeffer/GlyKAn-AZ-application",
-        "Wang-Bioinformatics-Lab/GNPS2_Workflows",
-        "ninahaoqizhao/Manuscript_GNPS_Drug_Library",
-        "CCMS-UCSD/GNPS_Workflows",
-        "Ansanqi/GutUDB",
-        "lzjforyou/HDSE-MS",
-        "Lacterd/HeuSMA",
-        "kevinmildau/homologueDiscoverer",
-        "mzmine/mzmine",
-        "BioNet-XMU/iMSEA",
-        "hnolCol/instantclue",
-        "ZhuMetLab/MetDNA2",
-        "RaoboXu/Lipidwizard",
-        "Xinguang-Liu/Lipidepifind",
-        "LipiTUM/lipidetective",
-        "coongroup/LipiDex-2",
-        "coongroup/LipiDex",
-        "dylanhross/lipydomics",
-        "academicCQMD/LongitudinalProf-MSMS-Method",
-        "e-weglarz-tomczak/m2r",
-        "macroMS/macroMS_web",
-        "HassounLab/MADGEN",
-        "HuanLab/MAFFIN",
-        "ElsevierSoftwareX/SOFTX-D-25-00358",
-        "XiminHu/mass-suite",
-        "mohimanilab/MASSTplus",
-        "Alexander0/molecular_communities",
-        "933ZhangDD/MDRB",
-        "IntegrativeBioinformaticsLab/meantools",
-        "xia-lab/MetaboAnalystR",
-        "13501274828/MetaboliteChat",
-        "alperdokay/metabolitics-frontend",
-        "Qiu-Shizheng/MetaboLM",
-        "gtStyLab/MetaboPAC",
-        "YonghuiDong/MetReport",
-        "CMDM-Lab/MetaMOPE",
-        "songyuan93/MetaPhenotype",
-        "CSi-Studio/MetaPro",
-        "Li-OmicsLab/MetDIT",
-        "ShawnWx2019/MetMiner",
-        "skschum/MFAssignR",
-        "LewisResearchGroup/MINNO",
-        "mohimanilab/molDiscovery",
-        "BalunasLab/mpact",
-        "MRMkit/MRMkit",
-        "jsehhs/MS2toImg-CNN",
-        "systemsomicslab/MsdialWorkbench",
-        "CaixiaYuan/MS-TDF",
-        "hkevgill/MS-VIS",
-        "Yingzhu96/MSIannotator",
-        "cplqam/GUI",
-        "laurenfields/MSIght",
-        "WoodFY/MSMCE",
-        "mzmine/mzmine2",
-        "TamirBar-Tov/NetAurHPD-Network-Auralization-Hyperlink-Prediction-Method",
-        "LiuzLab/NMRQNet",
-        "Dingxian666/Norm-ISWSVR",
-        "danielatrivella/NP3_MS_Workflow",
-        "tiagolbiotech/NPOmix_python",
-        "pattilab/PeakDetective",
-        "peakforest/peakforest-webapp",
-        "PBM-Group/PeakMeister",
-        "ClinicalBiomarkersLaborabory/PharmMet",
-        "YaonanLab/PlantMetSuite",
-        "nutrimetabolomics/POMAShiny",
-        "zhengfj1994/PPGB_MS2",
-        "stanstrup/PredRet",
-        "mzniber/Protomix",
-        "PNNL-m-q/qcgnoms",
-        "mathelab/RaMP-DB",
-        "computational-chemical-biology/regression_filter",
-        "Wang-Bioinformatics-Lab/Reverse_metabolomics_library_generation",
-        "WHU-Fenglab/RI-based-CPSC",
-        "DLUT-datas/SGMNS",
-        "zmzhang/SigmaCCS",
-        "SIMPELmetabolism/SIMPEL",
-        "MaribelPR/SingleFrag",
-        "mzlab-research/SManalyst",
-        "metabolomics-us/metadatastandardizer",
-        "pantakis/SMolESY-select",
-        "GrantBellic/SONAR-MSI",
-        "weantony/SpectraX",
-        "ChemAI-Lab/spectro",
-        "hejjack/SpecTUS",
-        "berlinguyinca/spectra-hash",
-        "13479776/statTarget",
-        "computational-metabolomics/struct",
-        "wesleyburr/subMaldi",
-        "hcji/TarMet",
-        "thumingo/TeFT",
-        "griquelme/tidyms",
-        "tidymass/tidymass",
-        "banhdzui/TransExION",
-        "CNIC-Proteomics/TurboPutative",
-        "kserafimov10/UCLMetIsoLib",
-        "biosustain/snakemake_UmetaFlow",
-        "DNKonanov/uni_cli",
-        "girder/viime",
-        "mohimanilab/VInSMoC",
-        "dengkuistat/WaveICA",
-        "dengkuistat/WaveICA_2.0",
-        "bihealth/WiPP",
-        "nishithkumarpaul/robustScaling",
-        "sneumann/xcms",
-        "boecker-lab/sirius",
+        "https://github.com/medema-group/BiG-MAP",
+        "https://github.com/sneumann/CAMERA",
+        "https://github.com/sirius-ms/sirius",
+        "https://github.com/wishartlab/cfm-id",
+        "https://github.com/jesilee/CIDMD_setup",
+        "https://github.com/Steinbeck-Lab/coconut",
+        "https://github.com/zhangxiang1205/CorrDIA",
+        "https://github.com/iconSS/FCC",
+        "https://github.com/novak-jiri/cyclobranch",
+        "https://github.com/jianweishuai/Dear-OMG",
+        "https://github.com/hcji/DeepMASS2_Data_Processing",
+        "https://github.com/skinniderlab/clm",
+        "https://github.com/Velenosi-Lab/DIATAGeR",
+        "https://github.com/coleygroup/DiffMS",
+        "https://github.com/Karnovsky-Lab/DNEA",
+        "https://github.com/OfficeChromatography/eicCluster",
+        "https://github.com/xdomingoal/erah-devel",
+        "https://github.com/OpenMS/OpenMS",
+        "https://github.com/glerny/Finnee2024",
+        "https://github.com/FraGNNet/fragnnet",
+        "https://github.com/kslynn128171/FSA",
+        "https://github.com/CSi-Studio/G-Aligner",
+        "https://github.com/mariallr/GcDuo",
+        "https://github.com/ZaylaSchaeffer/GlyKAn-AZ-application",
+        "https://github.com/Wang-Bioinformatics-Lab/GNPS2_Workflows",
+        "https://github.com/ninahaoqizhao/Manuscript_GNPS_Drug_Library",
+        "https://github.com/CCMS-UCSD/GNPS_Workflows",
+        "https://github.com/Ansanqi/GutUDB",
+        "https://github.com/lzjforyou/HDSE-MS",
+        "https://github.com/Lacterd/HeuSMA",
+        "https://github.com/kevinmildau/homologueDiscoverer",
+        "https://github.com/mzmine/mzmine",
+        "https://github.com/BioNet-XMU/iMSEA",
+        "https://github.com/hnolCol/instantclue",
+        "https://github.com/ZhuMetLab/MetDNA2",
+        "https://github.com/RaoboXu/Lipidwizard",
+        "https://github.com/Xinguang-Liu/Lipidepifind",
+        "https://github.com/LipiTUM/lipidetective",
+        "https://github.com/coongroup/LipiDex-2",
+        "https://github.com/coongroup/LipiDex",
+        "https://github.com/dylanhross/lipydomics",
+        "https://github.com/academicCQMD/LongitudinalProf-MSMS-Method",
+        "https://github.com/e-weglarz-tomczak/m2r",
+        "https://github.com/macroMS/macroMS_web",
+        "https://github.com/HassounLab/MADGEN",
+        "https://github.com/HuanLab/MAFFIN",
+        "https://github.com/ElsevierSoftwareX/SOFTX-D-25-00358",
+        "https://github.com/XiminHu/mass-suite",
+        "https://github.com/mohimanilab/MASSTplus",
+        "https://github.com/Alexander0/molecular_communities",
+        "https://github.com/933ZhangDD/MDRB",
+        "https://github.com/IntegrativeBioinformaticsLab/meantools",
+        "https://github.com/xia-lab/MetaboAnalystR",
+        "https://github.com/13501274828/MetaboliteChat",
+        "https://github.com/alperdokay/metabolitics-frontend",
+        "https://github.com/Qiu-Shizheng/MetaboLM",
+        "https://github.com/gtStyLab/MetaboPAC",
+        "https://github.com/YonghuiDong/MetReport",
+        "https://github.com/CMDM-Lab/MetaMOPE",
+        "https://github.com/songyuan93/MetaPhenotype",
+        "https://github.com/CSi-Studio/MetaPro",
+        "https://github.com/Li-OmicsLab/MetDIT",
+        "https://github.com/ShawnWx2019/MetMiner",
+        "https://github.com/skschum/MFAssignR",
+        "https://github.com/LewisResearchGroup/MINNO",
+        "https://github.com/mohimanilab/molDiscovery",
+        "https://github.com/BalunasLab/mpact",
+        "https://github.com/MRMkit/MRMkit",
+        "https://github.com/jsehhs/MS2toImg-CNN",
+        "https://github.com/systemsomicslab/MsdialWorkbench",
+        "https://github.com/CaixiaYuan/MS-TDF",
+        "https://github.com/hkevgill/MS-VIS",
+        "https://github.com/Yingzhu96/MSIannotator",
+        "https://github.com/cplqam/GUI",
+        "https://github.com/laurenfields/MSIght",
+        "https://github.com/WoodFY/MSMCE",
+        "https://github.com/mzmine/mzmine2",
+        "https://github.com/TamirBar-Tov/NetAurHPD-Network-Auralization-Hyperlink-Prediction-Method",
+        "https://github.com/LiuzLab/NMRQNet",
+        "https://github.com/Dingxian666/Norm-ISWSVR",
+        "https://github.com/danielatrivella/NP3_MS_Workflow",
+        "https://github.com/tiagolbiotech/NPOmix_python",
+        "https://github.com/pattilab/PeakDetective",
+        "https://github.com/peakforest/peakforest-webapp",
+        "https://github.com/PBM-Group/PeakMeister",
+        "https://github.com/ClinicalBiomarkersLaborabory/PharmMet",
+        "https://github.com/YaonanLab/PlantMetSuite",
+        "https://github.com/nutrimetabolomics/POMAShiny",
+        "https://github.com/zhengfj1994/PPGB_MS2",
+        "https://github.com/stanstrup/PredRet",
+        "https://github.com/mzniber/Protomix",
+        "https://github.com/PNNL-m-q/qcgnoms",
+        "https://github.com/mathelab/RaMP-DB",
+        "https://github.com/computational-chemical-biology/regression_filter",
+        "https://github.com/Wang-Bioinformatics-Lab/Reverse_metabolomics_library_generation",
+        "https://github.com/WHU-Fenglab/RI-based-CPSC",
+        "https://github.com/DLUT-datas/SGMNS",
+        "https://github.com/zmzhang/SigmaCCS",
+        "https://github.com/SIMPELmetabolism/SIMPEL",
+        "https://github.com/MaribelPR/SingleFrag",
+        "https://github.com/mzlab-research/SManalyst",
+        "https://github.com/metabolomics-us/metadatastandardizer",
+        "https://github.com/pantakis/SMolESY-select",
+        "https://github.com/GrantBellic/SONAR-MSI",
+        "https://github.com/weantony/SpectraX",
+        "https://github.com/ChemAI-Lab/spectro",
+        "https://github.com/hejjack/SpecTUS",
+        "https://github.com/berlinguyinca/spectra-hash",
+        "https://github.com/13479776/statTarget",
+        "https://github.com/computational-metabolomics/struct",
+        "https://github.com/wesleyburr/subMaldi",
+        "https://github.com/hcji/TarMet",
+        "https://github.com/thumingo/TeFT",
+        "https://github.com/griquelme/tidyms",
+        "https://github.com/tidymass/tidymass",
+        "https://github.com/banhdzui/TransExION",
+        "https://github.com/CNIC-Proteomics/TurboPutative",
+        "https://github.com/kserafimov10/UCLMetIsoLib",
+        "https://github.com/biosustain/snakemake_UmetaFlow",
+        "https://github.com/DNKonanov/uni_cli",
+        "https://github.com/girder/viime",
+        "https://github.com/mohimanilab/VInSMoC",
+        "https://github.com/dengkuistat/WaveICA",
+        "https://github.com/dengkuistat/WaveICA_2.0",
+        "https://github.com/bihealth/WiPP",
+        "https://github.com/nishithkumarpaul/robustScaling",
+        "https://github.com/sneumann/xcms",
+        "https://github.com/boecker-lab/sirius",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/luigiquiros/inventa",
         "https://github.com/HassounLab/JESTR1",
-        "https://github.com/sirius-ms/sirius",
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/BalunasLab/mpact",
-        "https://github.com/hcji/DeepMASS2_Data_Processing",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/MassBank/MassBank-data",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/hcji/TarMet",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker",
-        "https://github.com/griquelme/tidyms",
         "https://github.com/LargeMetabo/LargeMetabo",
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
         "https://github.com/MolecularCartography/Optimus",
-        "https://github.com/CNIC-Proteomics/TurboPutative",
         "https://github.com/daniellyz/meRgeION2",
-        "https://github.com/sneumann/xcms",
-        "https://github.com/mohimanilab/MASSTplus",
-        "https://github.com/xia-lab/MetaboAnalystR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
-        "https://github.com/ZhuMetLab/MetDNA2",
-        "https://github.com/mohimanilab/molDiscovery",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/matchms/MS2DeepScore",
         "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/laurenfields/MSIght",
         "https://github.com/meowcat/MSNovelist",
-        "https://github.com/OpenMS/OpenMS",
         "https://github.com/YasinEl/mzRAPP",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/Functional-Metabolomics-Lab/FBMN-STATS",
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/LeaveMeNotTonight/CMDN",
-        "https://github.com/Dingxian666/Norm-ISWSVR",
-        "https://github.com/RaoboXu/Lipidwizard",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/DasSusanta/snakemake_ccs",
-        "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ]
     },
@@ -5449,7 +5280,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -5467,7 +5297,7 @@
         "asb-paper-10-1101-2025-09-22-677919v1"
       ],
       "repo_urls": [
-        "dickinsonlab/DIMPLE-code",
+        "https://github.com/dickinsonlab/DIMPLE-code",
         "https://github.com/KechrisLab/DisCoPad"
       ]
     },
@@ -5487,7 +5317,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -5505,7 +5334,6 @@
         "asb-paper-10-1021-acs-analchem-4c06520"
       ],
       "repo_urls": [
-        "VIU-Metabolomics/imzML_Writer",
         "https://github.com/VIU-Metabolomics/imzML_Writer",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/AdrianHaun/AriumMS",
@@ -5530,7 +5358,6 @@
         "asb-paper-10-1038-s41538-022-00137-3"
       ],
       "repo_urls": [
-        "mwang87/MASST",
         "https://github.com/mwang87/MASST"
       ]
     },
@@ -5553,7 +5380,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -5575,7 +5401,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -5593,7 +5418,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -5615,7 +5439,7 @@
         "asb-paper-10-5281-zenodo-6784251"
       ],
       "repo_urls": [
-        "coskunlab/ScSpaMet"
+        "https://github.com/coskunlab/ScSpaMet"
       ]
     },
     "smiles-molecular-parsing": {
@@ -5685,7 +5509,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -5702,7 +5525,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -5718,7 +5540,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -5791,10 +5612,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "spatial-filtering-ion-images": {
@@ -5826,7 +5646,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -5843,7 +5662,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -5878,7 +5696,6 @@
         "asb-paper-10-1021-acs-analchem-4c06520"
       ],
       "repo_urls": [
-        "VIU-Metabolomics/imzML_Writer",
         "https://github.com/VIU-Metabolomics/imzML_Writer",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/AdrianHaun/AriumMS",
@@ -5902,7 +5719,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -5922,7 +5738,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -5938,7 +5753,6 @@
         "asb-paper-10-1101-2024-08-20-608773v2"
       ],
       "repo_urls": [
-        "LittleLittleCloud/haCCA",
         "https://github.com/LittleLittleCloud/haCCA"
       ]
     },
@@ -5954,7 +5768,6 @@
         "asb-paper-10-1101-2024-08-20-608773v2"
       ],
       "repo_urls": [
-        "LittleLittleCloud/haCCA",
         "https://github.com/LittleLittleCloud/haCCA"
       ]
     },
@@ -5971,7 +5784,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -5989,7 +5801,6 @@
         "asb-paper-10-1038-s41592-021-01198-0"
       ],
       "repo_urls": [
-        "alexandrovteam/SpaceM",
         "https://github.com/alexandrovteam/SpaceM",
         "https://github.com/ComPlat/chem-spectra-app"
       ]
@@ -6022,7 +5833,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -6043,7 +5853,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -6062,7 +5871,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -6094,7 +5902,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -6125,10 +5932,9 @@
         "asb-paper-10-5281-zenodo-3378723"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
-        "taxonomicallyinformedannotation/tima",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/MMV-Lab/MSI-Explorer",
+        "https://github.com/taxonomicallyinformedannotation/tima",
+        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/01dadada/RT-Transformer"
       ]
     },
@@ -6145,7 +5951,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -6181,7 +5986,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -6200,7 +6004,6 @@
         "asb-paper-10-1093-bioinformatics-btv146"
       ],
       "repo_urls": [
-        "kuwisdelu/Cardinal",
         "https://github.com/kuwisdelu/Cardinal",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
@@ -6223,7 +6026,7 @@
         "asb-paper-10-1038-s41564-023-01575-9"
       ],
       "repo_urls": [
-        "robinschmid/microbe_masst",
+        "https://github.com/robinschmid/microbe_masst",
         "https://github.com/mwang87/MASST"
       ]
     },
@@ -6258,7 +6061,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -6282,7 +6084,7 @@
         "asb-paper-10-1038-s41564-023-01575-9"
       ],
       "repo_urls": [
-        "robinschmid/microbe_masst",
+        "https://github.com/robinschmid/microbe_masst",
         "https://github.com/mwang87/MASST"
       ]
     },
@@ -6303,7 +6105,7 @@
         "asb-paper-10-5281-zenodo-6784251"
       ],
       "repo_urls": [
-        "coskunlab/ScSpaMet"
+        "https://github.com/coskunlab/ScSpaMet"
       ]
     },
     "total-ion-current-quantification": {
@@ -6320,7 +6122,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -6341,7 +6142,6 @@
         "asb-paper-10-1021-acs-analchem-1c03163"
       ],
       "repo_urls": [
-        "poomcj/NPFimg",
         "https://github.com/poomcj/NPFimg",
         "https://github.com/13479776/statTarget"
       ]
@@ -6357,7 +6157,6 @@
         "asb-paper-10-1038-s41467-025-63915-z"
       ],
       "repo_urls": [
-        "WanluLiuLab/SpatialMETA",
         "https://github.com/WanluLiuLab/SpatialMETA"
       ]
     },
@@ -6374,7 +6173,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",

@@ -166,7 +166,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -205,9 +204,8 @@
         "asb-paper-10-1038-s41467-021-23953-9"
       ],
       "repo_urls": [
-        "luigiquiros/inventa",
-        "mzmine/mzmine",
         "https://github.com/luigiquiros/inventa",
+        "https://github.com/mzmine/mzmine",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/Functional-Metabolomics-Lab/FBMN-STATS",
@@ -227,7 +225,6 @@
         "asb-paper-10-1021-acs-jproteome-8b00359"
       ],
       "repo_urls": [
-        "bittremieux-lab/ANN-SoLo",
         "https://github.com/bittremieux-lab/ANN-SoLo"
       ]
     },
@@ -248,7 +245,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -283,7 +279,7 @@
         "asb-paper-10-1021-jasms-4c00152"
       ],
       "repo_urls": [
-        "HuanLab/breathXplorer",
+        "https://github.com/HuanLab/breathXplorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
     },
@@ -299,7 +295,6 @@
         "asb-paper-10-1021-acs-jproteome-8b00359"
       ],
       "repo_urls": [
-        "bittremieux-lab/ANN-SoLo",
         "https://github.com/bittremieux-lab/ANN-SoLo"
       ]
     },
@@ -321,7 +316,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -344,7 +338,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -366,7 +359,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -388,7 +380,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -410,7 +401,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -432,7 +422,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -456,9 +445,8 @@
         "asb-paper-10-1021-acs-analchem-5c02655"
       ],
       "repo_urls": [
-        "sword-nan/SpecEmbedding",
-        "https://github.com/HassounLab/JESTR1",
         "https://github.com/sword-nan/SpecEmbedding",
+        "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ]
@@ -476,7 +464,7 @@
         "asb-paper-10-1038-s41467-021-23953-9"
       ],
       "repo_urls": [
-        "mzmine/mzmine",
+        "https://github.com/mzmine/mzmine",
         "https://github.com/luigiquiros/inventa",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/GarrettLab-UF/LipidMatch",
@@ -498,12 +486,11 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "sneumann/xcms",
+        "https://github.com/sneumann/xcms",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/sneumann/xcms",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
@@ -525,7 +512,7 @@
         "asb-paper-10-1016-1044-0305"
       ],
       "repo_urls": [
-        "bittremieux/cosine_neutral_loss"
+        "https://github.com/bittremieux/cosine_neutral_loss"
       ]
     },
     "cosine-similarity-matrix-computation": {
@@ -547,9 +534,8 @@
         "asb-paper-10-1021-acs-analchem-5c02655"
       ],
       "repo_urls": [
-        "sword-nan/SpecEmbedding",
-        "https://github.com/HassounLab/JESTR1",
         "https://github.com/sword-nan/SpecEmbedding",
+        "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ]
@@ -574,9 +560,8 @@
         "asb-paper-10-1021-acs-analchem-5c02655"
       ],
       "repo_urls": [
-        "sword-nan/SpecEmbedding",
-        "https://github.com/HassounLab/JESTR1",
         "https://github.com/sword-nan/SpecEmbedding",
+        "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ]
@@ -601,7 +586,6 @@
         "asb-paper-10-1007-s00216-023-04715-6"
       ],
       "repo_urls": [
-        "AdrianHaun/AriumMS",
         "https://github.com/AdrianHaun/AriumMS"
       ]
     },
@@ -638,7 +622,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -661,7 +644,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -680,7 +662,6 @@
         "asb-paper-10-1021-jasms-5c00322"
       ],
       "repo_urls": [
-        "AndreySamokhin/mssearchr",
         "https://github.com/AndreySamokhin/mssearchr"
       ]
     },
@@ -698,7 +679,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -720,7 +700,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -739,12 +718,11 @@
         "asb-paper-10-1038-nmeth-3959"
       ],
       "repo_urls": [
-        "OpenMS/OpenMS",
+        "https://github.com/OpenMS/OpenMS",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/MassBank/MassBank-data",
         "https://github.com/13479776/statTarget",
         "https://github.com/MolecularCartography/Optimus",
-        "https://github.com/OpenMS/OpenMS",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -763,7 +741,6 @@
         "asb-paper-10-1021-jasms-4c00061"
       ],
       "repo_urls": [
-        "Wang-Bioinformatics-Lab/ModiFinder_base",
         "https://github.com/Wang-Bioinformatics-Lab/ModiFinder_base",
         "https://github.com/PNNL-m-q/mzapy",
         "https://github.com/01dadada/RT-Transformer",
@@ -792,7 +769,6 @@
         "asb-paper-10-1021-acs-est-5c08558"
       ],
       "repo_urls": [
-        "LeaveMeNotTonight/CMDN",
         "https://github.com/LeaveMeNotTonight/CMDN"
       ]
     },
@@ -812,7 +788,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -830,7 +805,6 @@
         "asb-paper-10-1038-s41592-024-02171-3"
       ],
       "repo_urls": [
-        "richardxie1119/MEISTER",
         "https://github.com/richardxie1119/MEISTER"
       ]
     },
@@ -851,7 +825,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -873,7 +846,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -921,12 +893,9 @@
         "asb-paper-10-1021-acs-analchem-2c04518"
       ],
       "repo_urls": [
-        "AdrianHaun/AriumMS",
-        "xfcui/IsoFusion",
-        "98104781/LSG",
         "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/98104781/LSG",
         "https://github.com/xfcui/IsoFusion",
+        "https://github.com/98104781/LSG",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ]
     },
@@ -947,7 +916,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -966,7 +934,6 @@
         "asb-paper-10-1038-s41467-025-59683-5"
       ],
       "repo_urls": [
-        "LinShuhaiLAB/LipidIN",
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/13479776/statTarget"
       ]
@@ -985,7 +952,7 @@
         "asb-paper-10-1016-1044-0305"
       ],
       "repo_urls": [
-        "bittremieux/cosine_neutral_loss"
+        "https://github.com/bittremieux/cosine_neutral_loss"
       ]
     },
     "mass-spectrum-fragment-ion-extraction": {
@@ -1022,7 +989,7 @@
         "asb-paper-10-1016-1044-0305"
       ],
       "repo_urls": [
-        "bittremieux/cosine_neutral_loss"
+        "https://github.com/bittremieux/cosine_neutral_loss"
       ]
     },
     "mass-to-charge-tolerance-filtering": {
@@ -1042,7 +1009,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -1070,7 +1036,6 @@
         "asb-paper-10-1007-s00216-023-04715-6"
       ],
       "repo_urls": [
-        "AdrianHaun/AriumMS",
         "https://github.com/AdrianHaun/AriumMS"
       ]
     },
@@ -1087,7 +1052,7 @@
         "asb-paper-10-1371-journal-pcbi-1003123"
       ],
       "repo_urls": [
-        "shuzhao-li/mummichog",
+        "https://github.com/shuzhao-li/mummichog",
         "https://github.com/01dadada/RT-Transformer"
       ]
     },
@@ -1107,7 +1072,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -1130,7 +1094,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -1191,7 +1154,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -1214,7 +1176,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -1235,12 +1196,11 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "sneumann/xcms",
+        "https://github.com/sneumann/xcms",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/sneumann/xcms",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
@@ -1264,7 +1224,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -1290,9 +1249,8 @@
         "asb-paper-10-1021-acs-analchem-5c02655"
       ],
       "repo_urls": [
-        "sword-nan/SpecEmbedding",
-        "https://github.com/HassounLab/JESTR1",
         "https://github.com/sword-nan/SpecEmbedding",
+        "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ]
@@ -1314,11 +1272,10 @@
         "asb-paper-10-1186-s13321-020-00477-w"
       ],
       "repo_urls": [
-        "rickhelmus/patRoon",
+        "https://github.com/rickhelmus/patRoon",
         "https://bitbucket.org/wishartlab/biotransformer.git",
         "https://github.com/RECETOX/MSMetaEnhancer",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/rickhelmus/patRoon",
         "https://github.com/boecker-lab/sirius"
       ]
     },
@@ -1335,7 +1292,6 @@
         "asb-paper-10-1007-s00216-023-04715-6"
       ],
       "repo_urls": [
-        "AdrianHaun/AriumMS",
         "https://github.com/AdrianHaun/AriumMS"
       ]
     },
@@ -1352,7 +1308,6 @@
         "asb-paper-10-1021-acs-analchem-0c01594"
       ],
       "repo_urls": [
-        "eMetaboHUB/MS-CleanR",
         "https://github.com/eMetaboHUB/MS-CleanR"
       ]
     },
@@ -1373,7 +1328,6 @@
         "asb-paper-10-1002-9780470508183"
       ],
       "repo_urls": [
-        "huaxuyu/bago",
         "https://github.com/huaxuyu/bago",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/AutoFlowResearch/SmartPeak",
@@ -1395,7 +1349,6 @@
         "asb-paper-10-1021-acs-analchem-3c00376"
       ],
       "repo_urls": [
-        "idslme/IDSL.CSA",
         "https://github.com/idslme/IDSL.CSA"
       ]
     },
@@ -1416,7 +1369,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -1435,11 +1387,10 @@
         "asb-paper-10-1038-s41467-023-37446-4"
       ],
       "repo_urls": [
-        "iomega/ms2query",
+        "https://github.com/iomega/ms2query",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/MassBank/MassBank-data",
         "https://github.com/13479776/statTarget",
-        "https://github.com/iomega/ms2query",
         "https://github.com/01dadada/RT-Transformer"
       ]
     },
@@ -1462,9 +1413,8 @@
         "asb-paper-10-1021-acs-analchem-5c01726"
       ],
       "repo_urls": [
-        "BiosystemEngineeringLab-IITB/dures",
-        "https://github.com/BalunasLab/mpact",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
+        "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ]
     },
@@ -1482,12 +1432,11 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "sneumann/xcms",
+        "https://github.com/sneumann/xcms",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/sneumann/xcms",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
@@ -1509,12 +1458,11 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "sneumann/xcms",
+        "https://github.com/sneumann/xcms",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/sneumann/xcms",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
@@ -1533,7 +1481,6 @@
         "asb-paper-10-26599-bdma-2024-9020059"
       ],
       "repo_urls": [
-        "xfcui/IsoFusion",
         "https://github.com/xfcui/IsoFusion",
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
@@ -1574,7 +1521,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -1594,9 +1540,8 @@
         "asb-paper-10-1021-acs-analchem-4c02219"
       ],
       "repo_urls": [
-        "eMetaboHUB/FragHub",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/eMetaboHUB/FragHub"
+        "https://github.com/eMetaboHUB/FragHub",
+        "https://github.com/01dadada/RT-Transformer"
       ]
     },
     "multi-platform-ms-integration": {
@@ -1621,7 +1566,6 @@
         "asb-paper-10-1038-protex-2015-102"
       ],
       "repo_urls": [
-        "AdrianHaun/AriumMS",
         "https://github.com/AdrianHaun/AriumMS"
       ]
     },
@@ -1642,7 +1586,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -1664,7 +1607,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -1683,12 +1625,11 @@
         "asb-paper-10-1038-nmeth-3959"
       ],
       "repo_urls": [
-        "OpenMS/OpenMS",
+        "https://github.com/OpenMS/OpenMS",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/MassBank/MassBank-data",
         "https://github.com/13479776/statTarget",
         "https://github.com/MolecularCartography/Optimus",
-        "https://github.com/OpenMS/OpenMS",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -1709,7 +1650,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -1733,7 +1673,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -2151,123 +2090,107 @@
         "asb-paper-10-1038-s42256-020-00234-6"
       ],
       "repo_urls": [
-        "JosieHong/3DMolMS",
-        "CSi-Studio/mzmine3",
-        "YangHuaLab/AnnoSM",
-        "piscookie/AS-RT",
+        "https://github.com/JosieHong/3DMolMS",
+        "https://github.com/CSi-Studio/mzmine3",
+        "https://github.com/YangHuaLab/AnnoSM",
+        "https://github.com/piscookie/AS-RT",
         "https://gitlab.gwdg.de/joerg.buescher/automrm.git",
-        "medema-group/BiG-MAP",
-        "sirius-ms/sirius",
-        "Steinbeck-Lab/coconut",
-        "novak-jiri/cyclobranch",
-        "skinniderlab/clm",
-        "Velenosi-Lab/DIATAGeR",
-        "Karnovsky-Lab/DNEA",
-        "OfficeChromatography/eicCluster",
-        "xdomingoal/erah-devel",
-        "OpenMS/OpenMS",
-        "glerny/Finnee2024",
-        "CCMS-UCSD/GNPS_Workflows",
-        "Ansanqi/GutUDB",
-        "kevinmildau/homologueDiscoverer",
-        "mzmine/mzmine",
-        "hnolCol/instantclue",
-        "ZhuMetLab/MetDNA2",
-        "RaoboXu/Lipidwizard",
-        "LipiTUM/lipidetective",
-        "coongroup/LipiDex",
-        "dylanhross/lipydomics",
-        "macroMS/macroMS_web",
-        "HassounLab/MADGEN",
-        "HuanLab/MAFFIN",
-        "ElsevierSoftwareX/SOFTX-D-25-00358",
-        "XiminHu/mass-suite",
-        "mohimanilab/MASSTplus",
-        "xia-lab/MetaboAnalystR",
-        "13501274828/MetaboliteChat",
-        "alperdokay/metabolitics-frontend",
-        "YonghuiDong/MetReport",
-        "CMDM-Lab/MetaMOPE",
-        "CSi-Studio/MetaPro",
-        "Li-OmicsLab/MetDIT",
-        "ShawnWx2019/MetMiner",
-        "LewisResearchGroup/MINNO",
-        "BalunasLab/mpact",
-        "MRMkit/MRMkit",
-        "jsehhs/MS2toImg-CNN",
-        "systemsomicslab/MsdialWorkbench",
-        "hkevgill/MS-VIS",
-        "laurenfields/MSIght",
-        "mzmine/mzmine2",
-        "TamirBar-Tov/NetAurHPD-Network-Auralization-Hyperlink-Prediction-Method",
-        "Dingxian666/Norm-ISWSVR",
-        "danielatrivella/NP3_MS_Workflow",
-        "pattilab/PeakDetective",
-        "peakforest/peakforest-webapp",
-        "YaonanLab/PlantMetSuite",
-        "nutrimetabolomics/POMAShiny",
-        "stanstrup/PredRet",
-        "mzniber/Protomix",
-        "mathelab/RaMP-DB",
-        "computational-chemical-biology/regression_filter",
-        "DLUT-datas/SGMNS",
-        "zmzhang/SigmaCCS",
-        "mzlab-research/SManalyst",
-        "metabolomics-us/metadatastandardizer",
-        "pantakis/SMolESY-select",
-        "hejjack/SpecTUS",
-        "13479776/statTarget",
-        "computational-metabolomics/struct",
-        "wesleyburr/subMaldi",
-        "hcji/TarMet",
-        "griquelme/tidyms",
-        "tidymass/tidymass",
-        "CNIC-Proteomics/TurboPutative",
-        "biosustain/snakemake_UmetaFlow",
-        "girder/viime",
-        "mohimanilab/VInSMoC",
-        "sneumann/xcms",
-        "boecker-lab/sirius",
+        "https://github.com/medema-group/BiG-MAP",
+        "https://github.com/sirius-ms/sirius",
+        "https://github.com/Steinbeck-Lab/coconut",
+        "https://github.com/novak-jiri/cyclobranch",
+        "https://github.com/skinniderlab/clm",
+        "https://github.com/Velenosi-Lab/DIATAGeR",
+        "https://github.com/Karnovsky-Lab/DNEA",
+        "https://github.com/OfficeChromatography/eicCluster",
+        "https://github.com/xdomingoal/erah-devel",
+        "https://github.com/OpenMS/OpenMS",
+        "https://github.com/glerny/Finnee2024",
+        "https://github.com/CCMS-UCSD/GNPS_Workflows",
+        "https://github.com/Ansanqi/GutUDB",
+        "https://github.com/kevinmildau/homologueDiscoverer",
+        "https://github.com/mzmine/mzmine",
+        "https://github.com/hnolCol/instantclue",
+        "https://github.com/ZhuMetLab/MetDNA2",
+        "https://github.com/RaoboXu/Lipidwizard",
+        "https://github.com/LipiTUM/lipidetective",
+        "https://github.com/coongroup/LipiDex",
+        "https://github.com/dylanhross/lipydomics",
+        "https://github.com/macroMS/macroMS_web",
+        "https://github.com/HassounLab/MADGEN",
+        "https://github.com/HuanLab/MAFFIN",
+        "https://github.com/ElsevierSoftwareX/SOFTX-D-25-00358",
+        "https://github.com/XiminHu/mass-suite",
+        "https://github.com/mohimanilab/MASSTplus",
+        "https://github.com/xia-lab/MetaboAnalystR",
+        "https://github.com/13501274828/MetaboliteChat",
+        "https://github.com/alperdokay/metabolitics-frontend",
+        "https://github.com/YonghuiDong/MetReport",
+        "https://github.com/CMDM-Lab/MetaMOPE",
+        "https://github.com/CSi-Studio/MetaPro",
+        "https://github.com/Li-OmicsLab/MetDIT",
+        "https://github.com/ShawnWx2019/MetMiner",
+        "https://github.com/LewisResearchGroup/MINNO",
+        "https://github.com/BalunasLab/mpact",
+        "https://github.com/MRMkit/MRMkit",
+        "https://github.com/jsehhs/MS2toImg-CNN",
+        "https://github.com/systemsomicslab/MsdialWorkbench",
+        "https://github.com/hkevgill/MS-VIS",
+        "https://github.com/laurenfields/MSIght",
+        "https://github.com/mzmine/mzmine2",
+        "https://github.com/TamirBar-Tov/NetAurHPD-Network-Auralization-Hyperlink-Prediction-Method",
+        "https://github.com/Dingxian666/Norm-ISWSVR",
+        "https://github.com/danielatrivella/NP3_MS_Workflow",
+        "https://github.com/pattilab/PeakDetective",
+        "https://github.com/peakforest/peakforest-webapp",
+        "https://github.com/YaonanLab/PlantMetSuite",
+        "https://github.com/nutrimetabolomics/POMAShiny",
+        "https://github.com/stanstrup/PredRet",
+        "https://github.com/mzniber/Protomix",
+        "https://github.com/mathelab/RaMP-DB",
+        "https://github.com/computational-chemical-biology/regression_filter",
+        "https://github.com/DLUT-datas/SGMNS",
+        "https://github.com/zmzhang/SigmaCCS",
+        "https://github.com/mzlab-research/SManalyst",
+        "https://github.com/metabolomics-us/metadatastandardizer",
+        "https://github.com/pantakis/SMolESY-select",
+        "https://github.com/hejjack/SpecTUS",
+        "https://github.com/13479776/statTarget",
+        "https://github.com/computational-metabolomics/struct",
+        "https://github.com/wesleyburr/subMaldi",
+        "https://github.com/hcji/TarMet",
+        "https://github.com/griquelme/tidyms",
+        "https://github.com/tidymass/tidymass",
+        "https://github.com/CNIC-Proteomics/TurboPutative",
+        "https://github.com/biosustain/snakemake_UmetaFlow",
+        "https://github.com/girder/viime",
+        "https://github.com/mohimanilab/VInSMoC",
+        "https://github.com/sneumann/xcms",
+        "https://github.com/boecker-lab/sirius",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/luigiquiros/inventa",
         "https://github.com/HassounLab/JESTR1",
-        "https://github.com/sirius-ms/sirius",
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/MassBank/MassBank-data",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/hcji/TarMet",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/griquelme/tidyms",
         "https://github.com/LargeMetabo/LargeMetabo",
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
         "https://github.com/MolecularCartography/Optimus",
-        "https://github.com/CNIC-Proteomics/TurboPutative",
         "https://github.com/daniellyz/meRgeION2",
-        "https://github.com/sneumann/xcms",
-        "https://github.com/mohimanilab/MASSTplus",
-        "https://github.com/xia-lab/MetaboAnalystR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
-        "https://github.com/ZhuMetLab/MetDNA2",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/matchms/MS2DeepScore",
         "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/laurenfields/MSIght",
         "https://github.com/meowcat/MSNovelist",
-        "https://github.com/OpenMS/OpenMS",
         "https://github.com/YasinEl/mzRAPP",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/Functional-Metabolomics-Lab/FBMN-STATS",
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/LeaveMeNotTonight/CMDN",
-        "https://github.com/Dingxian666/Norm-ISWSVR",
-        "https://github.com/RaoboXu/Lipidwizard",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/DasSusanta/snakemake_ccs",
-        "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ]
     },
@@ -2295,7 +2218,6 @@
         "asb-paper-10-1007-s00216-023-04715-6"
       ],
       "repo_urls": [
-        "AdrianHaun/AriumMS",
         "https://github.com/AdrianHaun/AriumMS"
       ]
     },
@@ -2316,7 +2238,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -2338,7 +2259,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -2358,7 +2278,6 @@
         "asb-paper-10-1021-acs-analchem-1c03163"
       ],
       "repo_urls": [
-        "poomcj/NPFimg",
         "https://github.com/poomcj/NPFimg",
         "https://github.com/13479776/statTarget"
       ]
@@ -2400,7 +2319,6 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "shuzhao-li-lab/asari",
         "https://github.com/shuzhao-li-lab/asari",
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/AdrianHaun/AriumMS",
@@ -2421,9 +2339,8 @@
         "asb-paper-10-1021-acs-analchem-2c00563"
       ],
       "repo_urls": [
-        "idslme/IDSL.UFA",
-        "https://github.com/idslme/IDSL.IPA",
-        "https://github.com/idslme/IDSL.UFA"
+        "https://github.com/idslme/IDSL.UFA",
+        "https://github.com/idslme/IDSL.IPA"
       ]
     },
     "qc-failure-event-detection": {
@@ -2440,7 +2357,6 @@
         "asb-paper-10-1021-acs-analchem-4c00786"
       ],
       "repo_urls": [
-        "czbiohub-sf/Rapid-QC-MS",
         "https://github.com/czbiohub-sf/Rapid-QC-MS",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/AdrianHaun/AriumMS"
@@ -2481,7 +2397,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -2509,7 +2424,6 @@
         "asb-paper-10-1021-acs-est-5c08558"
       ],
       "repo_urls": [
-        "LeaveMeNotTonight/CMDN",
         "https://github.com/LeaveMeNotTonight/CMDN"
       ]
     },
@@ -2525,7 +2439,6 @@
         "asb-paper-10-1038-s41592-024-02171-3"
       ],
       "repo_urls": [
-        "richardxie1119/MEISTER",
         "https://github.com/richardxie1119/MEISTER"
       ]
     },
@@ -2540,7 +2453,6 @@
         "asb-paper-10-1038-s41467-025-63536-6"
       ],
       "repo_urls": [
-        "ZhuMetLab/MrnAnnoAlgo3",
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ]
     },
@@ -2557,7 +2469,6 @@
         "asb-paper-10-1021-acs-analchem-3c00376"
       ],
       "repo_urls": [
-        "idslme/IDSL.CSA",
         "https://github.com/idslme/IDSL.CSA"
       ]
     },
@@ -2576,7 +2487,6 @@
         "asb-paper-10-1021-acs-analchem-9b05765"
       ],
       "repo_urls": [
-        "oloBion/Retip",
         "https://github.com/oloBion/Retip"
       ]
     },
@@ -2598,9 +2508,8 @@
         "asb-paper-10-1021-acs-analchem-5c02655"
       ],
       "repo_urls": [
-        "sword-nan/SpecEmbedding",
-        "https://github.com/HassounLab/JESTR1",
         "https://github.com/sword-nan/SpecEmbedding",
+        "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ]
@@ -2627,7 +2536,6 @@
         "asb-paper-10-1007-s00216-023-04715-6"
       ],
       "repo_urls": [
-        "AdrianHaun/AriumMS",
         "https://github.com/AdrianHaun/AriumMS"
       ]
     },
@@ -2646,7 +2554,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -2665,7 +2572,6 @@
         "asb-paper-10-1021-acs-analchem-5c01513"
       ],
       "repo_urls": [
-        "MMV-Lab/MSI-Explorer",
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -2723,7 +2629,6 @@
         "asb-paper-10-1101-2024-10-14-618269"
       ],
       "repo_urls": [
-        "GenomicsMachineLearning/SpaMTP",
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
@@ -2751,7 +2656,6 @@
         "asb-paper-10-1021-acs-est-5c08558"
       ],
       "repo_urls": [
-        "LeaveMeNotTonight/CMDN",
         "https://github.com/LeaveMeNotTonight/CMDN"
       ]
     },
@@ -2792,10 +2696,9 @@
         "asb-paper-10-1186-s13321-023-00695-y"
       ],
       "repo_urls": [
-        "zmahnoor14/MAW",
+        "https://github.com/zmahnoor14/MAW",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/RECETOX/MSMetaEnhancer",
-        "https://github.com/zmahnoor14/MAW",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/DasSusanta/snakemake_ccs",
         "https://github.com/boecker-lab/sirius",
@@ -2818,7 +2721,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -2840,7 +2742,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -2861,7 +2762,7 @@
         "asb-paper-10-1016-1044-0305"
       ],
       "repo_urls": [
-        "bittremieux/cosine_neutral_loss"
+        "https://github.com/bittremieux/cosine_neutral_loss"
       ]
     },
     "spectral-retrieval-ranking-task": {
@@ -2881,9 +2782,8 @@
         "asb-paper-10-1021-acs-analchem-5c02655"
       ],
       "repo_urls": [
-        "sword-nan/SpecEmbedding",
-        "https://github.com/HassounLab/JESTR1",
         "https://github.com/sword-nan/SpecEmbedding",
+        "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ]
@@ -2903,12 +2803,11 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "sneumann/xcms",
+        "https://github.com/sneumann/xcms",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/sneumann/xcms",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
@@ -2952,23 +2851,18 @@
         "asb-paper-10-1038-s41467-022-30118-9"
       ],
       "repo_urls": [
-        "huaxuyu/masscube",
-        "zmahnoor14/MAW",
-        "joannawolthuis/MetaboShiny",
-        "pnnl/IonToolPack",
-        "biorack/simile",
-        "https://github.com/pnnl/IonToolPack",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/huaxuyu/masscube",
-        "https://github.com/PNNL-m-q/mzapy",
+        "https://github.com/zmahnoor14/MAW",
         "https://github.com/joannawolthuis/MetaboShiny",
+        "https://github.com/pnnl/IonToolPack",
+        "https://github.com/biorack/simile",
+        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
+        "https://github.com/PNNL-m-q/mzapy",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/RECETOX/MSMetaEnhancer",
-        "https://github.com/zmahnoor14/MAW",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/DasSusanta/snakemake_ccs",
-        "https://github.com/biorack/simile",
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ]
@@ -2989,12 +2883,11 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "sneumann/xcms",
+        "https://github.com/sneumann/xcms",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/sneumann/xcms",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
@@ -3016,7 +2909,6 @@
         "asb-paper-10-1021-acs-analchem-2c04343"
       ],
       "repo_urls": [
-        "daniellyz/meRgeION2",
         "https://github.com/daniellyz/meRgeION2",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
       ]
@@ -3037,7 +2929,6 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "mwang87/ReDU-MS2-Documentation",
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
@@ -3059,7 +2950,6 @@
         "asb-paper-10-1093-bioinformatics-btac441"
       ],
       "repo_urls": [
-        "LiesaSalzer/MobilityTransformR",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
@@ -3077,12 +2967,11 @@
         "asb-paper-10-1038-nmeth-3959"
       ],
       "repo_urls": [
-        "OpenMS/OpenMS",
+        "https://github.com/OpenMS/OpenMS",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/MassBank/MassBank-data",
         "https://github.com/13479776/statTarget",
         "https://github.com/MolecularCartography/Optimus",
-        "https://github.com/OpenMS/OpenMS",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -3100,7 +2989,6 @@
         "asb-paper-10-1007-s00216-023-04715-6"
       ],
       "repo_urls": [
-        "AdrianHaun/AriumMS",
         "https://github.com/AdrianHaun/AriumMS"
       ]
     },
@@ -3117,7 +3005,6 @@
         "asb-paper-10-1021-jasms-4c00178"
       ],
       "repo_urls": [
-        "LabLaskin/MSIGen",
         "https://github.com/LabLaskin/MSIGen",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
@@ -3146,7 +3033,6 @@
         "asb-paper-10-1021-acs-est-5c08558"
       ],
       "repo_urls": [
-        "LeaveMeNotTonight/CMDN",
         "https://github.com/LeaveMeNotTonight/CMDN"
       ]
     },
@@ -3161,7 +3047,6 @@
         "asb-paper-10-1038-s41592-021-01339-5"
       ],
       "repo_urls": [
-        "Wang-Bioinformatics-Lab/GNPS_LCMSDashboard",
         "https://github.com/Wang-Bioinformatics-Lab/GNPS_LCMSDashboard"
       ]
     }

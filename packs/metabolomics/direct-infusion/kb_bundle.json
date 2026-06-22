@@ -57,7 +57,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -77,7 +76,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -95,7 +93,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -116,7 +113,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -138,7 +134,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -178,7 +173,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -195,7 +189,6 @@
         "asb-paper-10-1038-s42256-024-00816-8"
       ],
       "repo_urls": [
-        "samgoldman97/ms-pred",
         "https://github.com/samgoldman97/ms-pred",
         "https://github.com/RECETOX/MSMetaEnhancer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
@@ -243,7 +236,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -285,7 +277,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -302,9 +293,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "diversity-visualization-by-treatment": {
@@ -344,7 +334,6 @@
         "asb-paper-10-1021-acs-analchem-3c00260"
       ],
       "repo_urls": [
-        "HaldamirS/CLERMS",
         "https://github.com/HaldamirS/CLERMS"
       ]
     },
@@ -369,7 +358,6 @@
         "asb-paper-10-1186-s13742-016-0115-8"
       ],
       "repo_urls": [
-        "Viant-Metabolomics/Galaxy-M",
         "https://github.com/Viant-Metabolomics/Galaxy-M"
       ]
     },
@@ -386,7 +374,6 @@
         "asb-paper-10-1038-nprot-2017-122"
       ],
       "repo_urls": [
-        "MolecularCartography/Optimus",
         "https://github.com/MolecularCartography/Optimus"
       ]
     },
@@ -403,7 +390,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -421,7 +407,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -437,7 +422,6 @@
         "asb-paper-10-1038-s41467-025-60640-5"
       ],
       "repo_urls": [
-        "huaxuyu/masscube",
         "https://github.com/huaxuyu/masscube",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -457,7 +441,6 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
@@ -477,7 +460,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -494,7 +476,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -515,7 +496,6 @@
         "asb-paper-10-1002-9780470508183"
       ],
       "repo_urls": [
-        "huaxuyu/bago",
         "https://github.com/huaxuyu/bago",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/AutoFlowResearch/SmartPeak",
@@ -540,7 +520,6 @@
         "asb-paper-10-1021-ac501530d"
       ],
       "repo_urls": [
-        "cbroeckl/RAMClustR",
         "https://github.com/cbroeckl/RAMClustR",
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
@@ -561,7 +540,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -584,7 +562,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -605,7 +582,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -623,9 +599,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "knime-workflow-orchestration": {
@@ -644,7 +619,6 @@
         "asb-paper-10-1038-nprot-2017-122"
       ],
       "repo_urls": [
-        "MolecularCartography/Optimus",
         "https://github.com/MolecularCartography/Optimus"
       ]
     },
@@ -663,7 +637,6 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "shuzhao-li-lab/asari",
         "https://github.com/shuzhao-li-lab/asari",
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/AdrianHaun/AriumMS",
@@ -686,7 +659,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -704,9 +676,8 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP",
-        "https://github.com/swinnenteam/LipidQMap"
+        "https://github.com/swinnenteam/LipidQMap",
+        "https://github.com/GenomicsMachineLearning/SpaMTP"
       ]
     },
     "lipid-fingerprint-regeneration-neural-networks": {
@@ -723,7 +694,6 @@
         "asb-paper-10-1038-s41467-025-59683-5"
       ],
       "repo_urls": [
-        "LinShuhaiLAB/LipidIN",
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/13479776/statTarget"
       ]
@@ -744,7 +714,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -763,7 +732,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -781,7 +749,6 @@
         "asb-paper-10-1021-acs-analchem-1c03163"
       ],
       "repo_urls": [
-        "poomcj/NPFimg",
         "https://github.com/poomcj/NPFimg",
         "https://github.com/13479776/statTarget"
       ]
@@ -828,7 +795,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -848,7 +814,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -888,14 +853,11 @@
         "asb-paper-10-3389-fbinf-2022-842964"
       ],
       "repo_urls": [
-        "shuzhao-li-lab/asari",
-        "Wang-Bioinformatics-Lab/GNPS_LCMSDashboard",
-        "idslme/IDSL.IPA",
-        "zmahnoor14/MAW",
-        "mandelbrot-project/memo",
         "https://github.com/shuzhao-li-lab/asari",
         "https://github.com/Wang-Bioinformatics-Lab/GNPS_LCMSDashboard",
         "https://github.com/idslme/IDSL.IPA",
+        "https://github.com/zmahnoor14/MAW",
+        "https://github.com/mandelbrot-project/memo",
         "https://github.com/matchms/MS2DeepScore",
         "https://github.com/luigiquiros/inventa",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
@@ -903,7 +865,6 @@
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/RECETOX/MSMetaEnhancer",
-        "https://github.com/zmahnoor14/MAW",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/DasSusanta/snakemake_ccs",
         "https://github.com/FanzhouKong/spectral_denoising",
@@ -924,7 +885,6 @@
         "asb-paper-10-1038-s41467-025-63536-6"
       ],
       "repo_urls": [
-        "ZhuMetLab/MrnAnnoAlgo3",
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ]
     },
@@ -941,7 +901,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -958,7 +917,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -975,7 +933,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -993,10 +950,9 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "bioinfo-ibms-pumc/SMART",
+        "https://github.com/bioinfo-ibms-pumc/SMART",
         "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/bioinfo-ibms-pumc/SMART"
+        "https://github.com/FangYuan717/ROASMI"
       ]
     },
     "mass-spectrum-database-matching": {
@@ -1022,11 +978,9 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "ablab/npdtools",
-        "Katherine00689/RapidMass",
-        "https://github.com/NPLinker/nplinker",
-        "https://github.com/Katherine00689/RapidMass",
         "https://github.com/ablab/npdtools",
+        "https://github.com/Katherine00689/RapidMass",
+        "https://github.com/NPLinker/nplinker",
         "https://github.com/PNNL-m-q/mzapy",
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
@@ -1045,7 +999,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1068,7 +1021,6 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "shuzhao-li-lab/asari",
         "https://github.com/shuzhao-li-lab/asari",
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1093,7 +1045,6 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "shuzhao-li-lab/asari",
         "https://github.com/shuzhao-li-lab/asari",
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1118,7 +1069,6 @@
         "asb-paper-10-1021-ac501530d"
       ],
       "repo_urls": [
-        "cbroeckl/RAMClustR",
         "https://github.com/cbroeckl/RAMClustR",
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
@@ -1161,7 +1111,6 @@
         "asb-paper-10-1021-ac501530d"
       ],
       "repo_urls": [
-        "cbroeckl/RAMClustR",
         "https://github.com/cbroeckl/RAMClustR",
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
@@ -1181,7 +1130,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -1200,7 +1148,6 @@
         "asb-paper-10-1021-acs-analchem-4c04531"
       ],
       "repo_urls": [
-        "LinShuhaiLAB/QuanFormer",
         "https://github.com/LinShuhaiLAB/QuanFormer",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -1224,7 +1171,6 @@
         "asb-paper-10-1186-s13742-016-0115-8"
       ],
       "repo_urls": [
-        "Viant-Metabolomics/Galaxy-M",
         "https://github.com/Viant-Metabolomics/Galaxy-M"
       ]
     },
@@ -1266,7 +1212,6 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
@@ -1285,7 +1230,6 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
@@ -1306,7 +1250,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -1327,7 +1270,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -1347,7 +1289,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -1363,7 +1304,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -1402,7 +1342,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -1441,7 +1380,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -1457,7 +1395,6 @@
         "asb-paper-10-1038-s41467-025-60640-5"
       ],
       "repo_urls": [
-        "huaxuyu/masscube",
         "https://github.com/huaxuyu/masscube",
         "https://github.com/01dadada/RT-Transformer"
       ]
@@ -1475,7 +1412,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -1492,7 +1428,6 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
@@ -1509,7 +1444,6 @@
         "asb-paper-10-1021-acs-analchem-3c04046"
       ],
       "repo_urls": [
-        "HuanLab/AVIR",
         "https://github.com/HuanLab/AVIR"
       ]
     },
@@ -1526,7 +1460,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1543,7 +1476,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1561,7 +1493,7 @@
         "asb-paper-10-1021-acs-analchem-3c05772"
       ],
       "repo_urls": [
-        "zxguocsu/GCMSFormer",
+        "https://github.com/zxguocsu/GCMSFormer",
         "https://github.com/HassounLab/JESTR1",
         "https://github.com/ComPlat/chem-spectra-app",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
@@ -1582,7 +1514,6 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "shuzhao-li-lab/asari",
         "https://github.com/shuzhao-li-lab/asari",
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/AdrianHaun/AriumMS",
@@ -1605,7 +1536,6 @@
         "asb-paper-10-1021-acs-analchem-9b05765"
       ],
       "repo_urls": [
-        "oloBion/Retip",
         "https://github.com/oloBion/Retip"
       ]
     },
@@ -1652,7 +1582,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -1670,9 +1599,8 @@
         "asb-paper-10-1101-2024-03-25-586580v5"
       ],
       "repo_urls": [
-        "matchms/MS2DeepScore",
-        "https://github.com/13479776/statTarget",
         "https://github.com/matchms/MS2DeepScore",
+        "https://github.com/13479776/statTarget",
         "https://github.com/01dadada/RT-Transformer"
       ]
     },
@@ -1692,7 +1620,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -1728,7 +1655,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1743,7 +1669,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1761,7 +1686,6 @@
         "asb-paper-10-1021-acs-analchem-0c03421"
       ],
       "repo_urls": [
-        "AutoFlowResearch/SmartPeak",
         "https://github.com/AutoFlowResearch/SmartPeak"
       ]
     },
@@ -1778,7 +1702,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1796,7 +1719,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1813,7 +1735,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1830,7 +1751,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -1847,7 +1767,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -1864,7 +1783,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -1882,7 +1800,6 @@
         "asb-paper-10-1021-jasms-4c00146"
       ],
       "repo_urls": [
-        "pnnl/IonToolPack",
         "https://github.com/pnnl/IonToolPack"
       ]
     },
@@ -1901,7 +1818,6 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "GarrettLab-UF/LipidMatch",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/13479776/statTarget"
@@ -1947,7 +1863,7 @@
         "asb-paper-10-1021-acs-analchem-3c05772"
       ],
       "repo_urls": [
-        "zxguocsu/GCMSFormer",
+        "https://github.com/zxguocsu/GCMSFormer",
         "https://github.com/HassounLab/JESTR1",
         "https://github.com/ComPlat/chem-spectra-app",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
@@ -1964,7 +1880,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -1981,7 +1896,6 @@
         "asb-paper-10-1021-acs-analchem-4c05062"
       ],
       "repo_urls": [
-        "Katherine00689/RapidMass",
         "https://github.com/Katherine00689/RapidMass"
       ]
     },
@@ -2000,12 +1914,11 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "sneumann/xcms",
+        "https://github.com/sneumann/xcms",
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/sneumann/xcms",
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",

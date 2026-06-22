@@ -54,6 +54,16 @@ def test_render_grounding_doc_names_unit():
     assert "PERSPICACITE_BASE" in doc and "git clone" in doc
 
 
+def test_resolve_repo_urls_normalizes_and_dedups_shorthand():
+    from scripts.build_grounding_bundle import resolve_repo_urls
+    urls = resolve_repo_urls(
+        ["10.x/y"],
+        [{"doi": "10.x/y", "repo_url": "owner/repo"}],
+        [{"dois": ["10.x/y"], "canonical_url": "https://github.com/owner/repo"}],
+    )
+    assert urls == ["https://github.com/owner/repo"]
+
+
 def test_real_lcms_pack_builds(tmp_path):
     import shutil
     from scripts.build_grounding_bundle import build_unit
