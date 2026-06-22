@@ -83,7 +83,7 @@ Prefer a PR? Add the paper directly to the target
   category: <category from the review-series taxonomy>
   repo_url: owner/repo            # or full URL to code/data
   status: hold                    # maintainer flips to "included" after review
-  wave: next
+  wave: <curation batch — maintainer-assigned>
   access:
     type: gold-oa                 # CI (verify-paper.yml) verifies this
     is_oa: true

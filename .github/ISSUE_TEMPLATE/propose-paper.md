@@ -25,9 +25,11 @@ labels: ["propose-paper", "needs-triage"]
 ## Access tier (self-reported, CI will verify)
 
 - [ ] **Open-access** — explicit CC / open license
-- [ ] **Hybrid** — paywalled with quotation rights (default for most journals)
+- [ ] **Hybrid** — paywalled with quotation rights
 - [ ] **Closed** — paywalled, no open abstract
 - [ ] Don't know — let CI determine
+
+> **Note:** v0 is **open-access only** — Hybrid/Closed proposals are deferred to v1 and will not pass CI. See [`CONTENT_POLICY.md` §3](../../governance/CONTENT_POLICY.md).
 
 ## Rationale
 
