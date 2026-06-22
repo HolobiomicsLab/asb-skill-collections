@@ -18,6 +18,18 @@ for licensing/PII before release.
 > metabolomics (spectral library matching, molecular networking, formula/structure
 > annotation, preprocessing, normalization, statistics).
 
+### Artifacts in this release
+
+| Artifact | Status |
+|---|---|
+| **ASB-Skills** — evidence-grounded procedural skills | ✅ **released** |
+| **ASB-Tools** — deduplicated software-tool records (EDAM + DOIs) | ✅ **released** |
+| **ASB-Benchmark** — per-paper tasks + claim-retrieval test sets | ⏳ to be released soon |
+| **ASB-Capsules** — raw per-paper ASB pipeline outputs (full traceability) | ⏳ to be released soon |
+
+Only **ASB-Skills** and **ASB-Tools** are published now; the benchmark and capsule
+layers follow (see [PROVENANCE.md](collections/metabolomics/v2/PROVENANCE.md)).
+
 ---
 
 ## Install

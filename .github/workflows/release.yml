@@ -29,13 +29,19 @@ jobs:
         id: tag
         run: |
           TAG="${GITHUB_REF_NAME}"
-          # Tag format: <slug>-v<N>  e.g. metabolomics-v1
-          VERSION="${TAG##*-v}"
-          SLUG="${TAG%-v${VERSION}}"
+          # Tag format: <slug>-v<release-version>  e.g. metabolomics-v0.1.0
+          SLUG="${TAG%-v*}"
+          # The release/tag version (e.g. 0.1.0) is independent of the on-disk
+          # collection directory version (collections/<slug>/v<N>). Resolve the
+          # actual collection dir = highest v<N> for this slug.
+          COLL_VERSION="$(ls -d collections/${SLUG}/v* 2>/dev/null | sed 's#.*/v##' | sort -n | tail -1)"
+          if [ -z "${COLL_VERSION}" ]; then
+            echo "::error::no collection dir found under collections/${SLUG}/v*"; exit 1
+          fi
           echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
-          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "version=${COLL_VERSION}" >> "$GITHUB_OUTPUT"
           echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
-          echo "Releasing slug=${SLUG} version=${VERSION}"
+          echo "Releasing tag=${TAG} -> slug=${SLUG} collection dir v${COLL_VERSION}"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -71,6 +77,7 @@ jobs:
         id: zenodo
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_PUBLISH: ${{ vars.ZENODO_PUBLISH }}
           COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
           COLLECTION_VERSION: ${{ steps.tag.outputs.version }}
         run: |
@@ -122,50 +129,68 @@ jobs:
             upload_resp.raise_for_status()
           print(f"Uploaded {slug}-v{version}.zip")
 
-          # Set metadata
-          citation_path = collection_dir / "CITATION.cff"
-          title = f"ASB Skill Collection: {slug} v{version}"
-          creators = [{"name": "HolobiomicsLab"}]
-          if citation_path.exists():
+          # ---- Metadata: prefer a checked-in .zenodo.json, else derive from CITATION.cff ----
+          zj = collection_dir / ".zenodo.json"
+          if zj.exists():
+            metadata = json.loads(zj.read_text())
+            print(f"Using metadata from {zj}")
+          else:
             import yaml
-            cff = yaml.safe_load(citation_path.read_text())
-            title = cff.get("title", title)
-            if "authors" in cff:
-              creators = [{"name": f"{a.get('family-names', '')} {a.get('given-names', '')}".strip(),
-                           "orcid": a.get("orcid", "")} for a in cff["authors"] if a]
-
-          meta = {
-            "metadata": {
+            citation_path = collection_dir / "CITATION.cff"
+            title = f"ASB Skill Collection: {slug} v{version}"
+            creators = [{"name": "Holobiomics Lab"}]
+            if citation_path.exists():
+              cff = yaml.safe_load(citation_path.read_text())
+              title = cff.get("title", title)
+              creators = []
+              for a in cff.get("authors", []):
+                if not a:
+                  continue
+                if a.get("name"):                       # entity author
+                  c = {"name": a["name"]}
+                else:                                    # person author
+                  c = {"name": f"{a.get('family-names','')}, {a.get('given-names','')}".strip(", ")}
+                if a.get("orcid"):
+                  c["orcid"] = a["orcid"].rsplit("/", 1)[-1]
+                creators.append(c)
+            metadata = {
               "title": title,
               "upload_type": "dataset",
-              "description": f"ASB Skill Collection release: {slug} version {version}.",
+              "description": f"ASB Skill Collection release: {slug} (collection v{version}).",
               "creators": creators,
-              "keywords": ["agentic-ai", "scientific-agents", slug, "asb"],
-              "license": "apache-2.0",
-              "version": version,
+              "keywords": ["scientific-agents", "agent-skills", slug, "asb"],
+              "license": "cc-by-4.0",
+              "access_right": "open",
+              "version": os.environ.get("GITHUB_REF_NAME", f"{slug}-v{version}"),
             }
-          }
+
           meta_resp = requests.put(
             f"{base_url}/deposit/depositions/{dep_id}",
-            json=meta,
+            json={"metadata": metadata},
             headers={"Content-Type": "application/json", **headers},
             timeout=30,
           )
           meta_resp.raise_for_status()
 
-          # Publish
-          pub_resp = requests.post(
-            f"{base_url}/deposit/depositions/{dep_id}/actions/publish",
-            headers=headers,
-            timeout=30,
-          )
-          pub_resp.raise_for_status()
-          doi = pub_resp.json().get("doi", "")
-          print(f"Published. DOI: {doi}")
+          # DRAFT ONLY — do NOT publish. The deposition stays private/editable in
+          # Zenodo until a maintainer reviews and clicks Publish (or sets
+          # ZENODO_PUBLISH=true to opt in). This keeps the release "not public yet".
+          edit_url = dep["links"].get("html", f"https://zenodo.org/deposit/{dep_id}")
+          if os.environ.get("ZENODO_PUBLISH", "").lower() == "true":
+            pub_resp = requests.post(
+              f"{base_url}/deposit/depositions/{dep_id}/actions/publish",
+              headers=headers, timeout=30)
+            pub_resp.raise_for_status()
+            doi = pub_resp.json().get("doi", "")
+            print(f"Published. DOI: {doi}")
+          else:
+            doi = ""
+            print(f"Draft created (NOT published). Review & publish here: {edit_url}")
+            print(f"Draft deposition id: {dep_id}")
 
-          # Write DOI to GITHUB_OUTPUT
           with open(os.environ["GITHUB_OUTPUT"], "a") as gho:
             gho.write(f"doi={doi}\n")
+            gho.write(f"draft_id={dep_id}\n")
           PYEOF
 
       - name: Update CITATION.cff with minted DOI
@@ -209,7 +234,9 @@ jobs:
           fi
 
       - name: Trigger mirror-to-hf.yml
-        if: always()
+        # Gated OFF by default — the HuggingFace mirror is not live yet. Set the
+        # repo variable ENABLE_HF_MIRROR=true to opt in.
+        if: vars.ENABLE_HF_MIRROR == 'true'
         uses: actions/github-script@v7
         with:
           script: |
