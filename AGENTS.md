@@ -52,6 +52,16 @@ The collection is self-describing, IDE-agnostic Markdown + JSON. Point your agen
 at `collections/metabolomics/v2/` and use the machine indexes below. No runtime,
 no build step.
 
+### Chat assistants via the web UI (Claude · ChatGPT · Mistral)
+
+For end users without a CLI: upload `skills_index.json` + `tools_index.json` and
+your chosen `skills/<slug>/SKILL.md` files as the assistant's **knowledge**
+(Claude *Projects*, ChatGPT *Custom GPT / Project*, Mistral *Agent / Library*),
+then paste a short routing instruction. Don't upload all 5,865 skills — upload
+the indexes plus the few skills you need. Full steps:
+[`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md) →
+"Chat assistants via the web UI".
+
 ---
 
 ## Use (all agents): search → apply → ground

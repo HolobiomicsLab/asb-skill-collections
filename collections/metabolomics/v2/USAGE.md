@@ -67,6 +67,43 @@ the machine indexes directly:
 | `collection.yaml` | the SkillCollection record (counts, curators, license) |
 | `corpus.yaml` | per-paper access basis (`repo-oa`) |
 
+### Chat assistants via the web UI (Claude · ChatGPT · Mistral)
+
+No CLI needed — you attach the skills as **uploaded knowledge** and add a short
+routing instruction. Because these UIs cap how many files you can upload, **do
+not upload all 5,865 skills**. Upload instead:
+
+1. `skills_index.json` + `tools_index.json` (the searchable catalogue), and
+2. only the handful of `skills/<slug>/SKILL.md` files relevant to your work
+   (find them first with the search in §2, then download those files).
+
+Then paste this **routing instruction** into the assistant's
+instructions/system prompt:
+
+> You have an ASB metabolomics skill catalogue. To answer a metabolomics task:
+> (1) search `skills_index.json` by EDAM topic, tool name, or keyword to pick
+> the best `slug`; (2) open that skill's `SKILL.md` and follow its procedure;
+> (3) cite the skill's `original_doi`. If a needed `SKILL.md` wasn't uploaded,
+> say which `slug` to add.
+
+Per-platform UI steps (menu names drift; the flow is what matters):
+
+- **Claude (claude.ai):** *Projects → Create project → add files to **Project
+  knowledge*** (drop the two index files + your chosen `SKILL.md`s), then put
+  the routing instruction in *Project instructions*. If your workspace has the
+  **Skills/Capabilities** panel, you can instead add a skill there. (Claude
+  Desktop/Code users: prefer the native plugin in §1.)
+- **ChatGPT (chatgpt.com):** *Explore GPTs → Create → Configure → **Knowledge***
+  → upload the index files + your `SKILL.md`s (file-count limited, ~20), paste
+  the routing instruction into *Instructions*. *Projects* with attached files
+  work the same way.
+- **Mistral (Le Chat):** *Agents → build an agent* (or a **Library**) → upload
+  the index files + your `SKILL.md`s as the agent's documents, and paste the
+  routing instruction as the agent's system prompt.
+
+> Grounding (§4) via Perspicacité is CLI-only; the web-UI path gives you the
+> distilled skills + citations, not the live KB query.
+
 ---
 
 ## 2. Search — find the right skill

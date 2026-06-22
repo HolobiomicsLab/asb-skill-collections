@@ -16,7 +16,7 @@ python -m agentic_science_builder build <OWNER/REPO | git-URL> \
   --output outputs/asbb_pilot/coll_<slug>_cq \
   --llm --entity-spine --claim-ledger --classify --rich-cards \
   --emit-executable --skill-bundle --emit-challenge --emit-indicium \
-  --enrich --no-pin --enrich-contact-email <contact-email> \
+  --enrich --no-pin \
   --ground-synthesis \
   --perspicacite-rag-mcp-url http://127.0.0.1:8000/mcp \
   --perspicacite-kb asb-paper-<doi> --perspicacite-kb-mode paper \
