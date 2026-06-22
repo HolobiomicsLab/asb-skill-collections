@@ -1,0 +1,4 @@
+[
+  {"slug": "gnps", "name": "GNPS", "canonical_url": "https://github.com/CCMS-UCSD/GNPS_Workflows", "dois": ["10.1021/acs.jnatprod.7b00737"]},
+  {"slug": "nourl", "name": "NoURL", "canonical_url": "", "dois": ["10.1000/norepo"]}
+]
