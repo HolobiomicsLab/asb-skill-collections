@@ -132,13 +132,24 @@ jobs:
           bucket_url = dep["links"]["bucket"]
           print(f"Created Zenodo deposition {dep_id}")
 
-          # Zip the collection directory
+          # Zip the collection directory + bundle the Perspicacité grounding
+          # binder (+ deps + agent guide) so the deposit is self-contained:
+          # users can run the KB grounding from the archive alone.
           with tempfile.NamedTemporaryFile(suffix=".zip", delete=False) as tf:
             zip_path = tf.name
+          arc_root = f"{slug}/v{version}"
           with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
             for f in sorted(collection_dir.rglob("*")):
               if f.is_file():
                 zf.write(f, f.relative_to(collection_dir.parent.parent))
+            for src, arc in [
+              ("scripts/perspicacite_kb_bind.py", f"{arc_root}/scripts/perspicacite_kb_bind.py"),
+              ("scripts/requirements.txt",        f"{arc_root}/scripts/requirements.txt"),
+              ("AGENTS.md",                        f"{arc_root}/AGENTS.md"),
+            ]:
+              p = pathlib.Path(src)
+              if p.is_file():
+                zf.write(p, arc)
 
           # Upload zip
           with open(zip_path, "rb") as fh:

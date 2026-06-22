@@ -198,6 +198,14 @@ then `query` whenever a claim needs verification before you act on it. This make
 every skill self-grounding without shipping a heavyweight vector dump — the KB is
 reconstructed on demand from the same DOIs (+ SI) the build used.
 
+**From the Zenodo archive (self-contained):** the deposit bundles the binder at
+`scripts/perspicacite_kb_bind.py` alongside this collection. After extracting,
+run it from the collection folder with `--collection .`, e.g.:
+
+```bash
+python scripts/perspicacite_kb_bind.py query --collection . --skill <slug> --question "..."
+```
+
 ---
 
 ## Skill metadata & attribution
