@@ -37,3 +37,18 @@ def test_filter_and_enrich_bundle():
     assert out["skills"]["norepo-skill"]["repo_urls"] == []
     assert out["distinct_dois"] == ["10.1000/norepo", "10.1021/acs.jnatprod.7b00737"]
     assert out["kb_prefix"] == "asb-paper-"
+
+def test_render_ground_command_has_frontmatter_and_both_modes():
+    from scripts.build_grounding_bundle import render_ground_command
+    md = render_ground_command()
+    assert md.startswith("---\n")
+    assert "description:" in md and "argument-hint:" in md
+    assert "perspicacite_kb_bind.py" in md
+    assert "query" in md and "local" in md          # both backends referenced
+    assert "$ARGUMENTS" in md
+
+def test_render_grounding_doc_names_unit():
+    from scripts.build_grounding_bundle import render_grounding_doc
+    doc = render_grounding_doc("metabolomics-lc-ms")
+    assert "metabolomics-lc-ms" in doc
+    assert "PERSPICACITE_BASE" in doc and "git clone" in doc

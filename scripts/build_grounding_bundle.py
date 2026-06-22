@@ -39,3 +39,41 @@ def filter_and_enrich_bundle(full_bundle, skill_slugs, corpus_papers, tools_inde
     out["distinct_dois"] = sorted(dois)
     out["skills"] = kept
     return out
+
+
+GROUND_COMMAND = '''---
+description: Ground the ASB skill in play against its source paper/repo (Perspicacité KB, with a serverless local-clone fallback).
+argument-hint: "[skill-slug-or-doi] [question]"
+---
+You are grounding an ASB skill against the evidence it was distilled from.
+
+Steps:
+1. Identify the target skill: use the argument if given, else the skill most recently applied in this conversation. Read its record in this plugin's `kb_bundle.json` (`dois`, `kb_slugs`, `repo_urls`).
+2. If a Perspicacité server is reachable at $PERSPICACITE_BASE (default http://127.0.0.1:8000), ground via its KB (auto-creates + ingests on first use):
+   `python "<plugin>/bin/perspicacite_kb_bind.py" query --collection "<plugin>" --skill <slug> --question "<question>"`
+3. Otherwise fall back to serverless local grounding (clones the source repo, best-effort fetches the OA paper), then read the fetched files:
+   `python "<plugin>/bin/perspicacite_kb_bind.py" local --collection "<plugin>" --skill <slug> --paper`
+4. Answer the user's question grounded in what you retrieved; cite the KB/repo/paper. If neither backend yields a source, say so and proceed ungrounded.
+
+Arguments: $ARGUMENTS
+'''
+
+
+def render_ground_command():
+    return GROUND_COMMAND
+
+
+def render_grounding_doc(unit_name):
+    return (
+        f"# Grounding — {unit_name}\n\n"
+        "Every skill here is distilled from one peer-reviewed paper (`derived_from` DOI in its "
+        "SKILL.md frontmatter). Grounding is **optional** — skills work without it.\n\n"
+        "Two backends (KB-primary, local fallback):\n\n"
+        "- **kb (Perspicacité):** RAG over full text + SI, persistent, citable. Needs a server at "
+        "`PERSPICACITE_BASE` (default http://127.0.0.1:8000). First use auto-creates + ingests the "
+        "`asb-paper-<doi>` KB.\n"
+        "- **local (serverless):** `git clone` the source repo + best-effort OA paper fetch; read files "
+        "directly. No server.\n\n"
+        "Use `/ground [skill|doi] [question]`, or call `bin/perspicacite_kb_bind.py` "
+        "(`query` / `local`) directly.\n"
+    )
