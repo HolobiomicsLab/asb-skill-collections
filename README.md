@@ -211,6 +211,17 @@ API generation costs for this collection were sponsored by **CNRS** and
 **Université Côte d'Azur**. Built with the AgenticScienceBuilder pipeline and
 grounded with Perspicacité (Holobiomics Lab).
 
+## 📚 Sources & provenance
+
+Skills are distilled from peer-reviewed **method papers** anchored to the
+computational metabolomics review series (Misra → Enveda). See
+[`governance/SOURCES.md`](governance/SOURCES.md) for the source inventory and the
+scientific inclusion criteria, and [`governance/CONTENT_POLICY.md`](governance/CONTENT_POLICY.md)
+for the legal/open-access policy.
+
+**Suggest or annotate a paper:** see
+[Contributing → Propose or annotate a paper](.github/CONTRIBUTING.md#propose-or-annotate-a-paper).
+
 ## License
 
 Dual-licensed, by layer (see [LICENSING.md](LICENSING.md)):

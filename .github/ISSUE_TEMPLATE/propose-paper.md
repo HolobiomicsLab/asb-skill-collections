@@ -5,6 +5,11 @@ title: "Propose: <DOI or short title>"
 labels: ["propose-paper", "needs-triage"]
 ---
 
+> 📚 **Before filing:** check the inclusion criteria in
+> [`governance/SOURCES.md`](../../governance/SOURCES.md) so your proposal
+> self-screens. Both the scientific gate (SOURCES) and the legal/OA gate
+> (CONTENT_POLICY) apply.
+
 ## Paper
 
 - **DOI:** <!-- e.g. 10.1186/s13321-024-00878-1 -->
