@@ -129,6 +129,11 @@ def prepare_kb(slug: str, doi: str, desc: str) -> dict:
         if e.code not in (400, 409):
             status["error"] = f"create {e.code}"
             return status
+    except Exception as e:
+        # connection refused / DNS / timeout — Perspicacité unreachable. Degrade
+        # gracefully (the kb backend is optional; callers fall back to `local`).
+        status["error"] = f"perspicacite unreachable: {str(e)[:160]}"
+        return status
     try:
         resp = _http("POST", f"/api/kb/{slug}/dois", {"dois": [doi]}, timeout=1200)
         status["ingested"] = True
