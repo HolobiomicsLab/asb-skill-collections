@@ -1,35 +1,600 @@
-/* ASB Skill Collections — minimal Pages site */
+/* ASB Skill Collections — Pages site
+ * Theme follows the HolobiomicsLab CNRS charte (navy + yellow on warm paper),
+ * matching the lab website (holobiomicslab.eu) and Perspicacité-AI's palette.
+ * Single source of truth here — no one-off hex in JS templates.
+ */
+
+/* ─── CNRS palette tokens (mirror of holobiomicslab_website/styles/tokens.css) ── */
+:root {
+  /* CNRS primaries */
+  --cnrs-blue: #00284b;
+  --cnrs-blue-ink: #001833;
+  --cnrs-blue-soft: #0d3a66;
+  --cnrs-yellow: #ffeb6e;
+  --cnrs-yellow-soft: #fff5a6;
+
+  /* Paper ground (the signature warm background) */
+  --paper: #fbf7ef;
+  --paper-2: #f3ecdc;
+  --card: #ffffff;
+  --line: #e7e0cc;
+  --line-strong: #d6cdb3;
+
+  /* Ink (text) */
+  --ink: #16242f;
+  --mute: #5d6a78;
+  --faint: #8b95a1;
+
+  /* Accents (research/project chips) */
+  --cnrs-violet: #6941eb;
+  --cnrs-green: #b0ee89;
+  --cnrs-orange: #ffbc75;
+  --cnrs-blue-pale: #9ae2ff;
+  --cnrs-grey: #8296a5;
+
+  /* Semantic */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --fg-muted: var(--mute);
+  --border: var(--line);
+  --border-strong: var(--line-strong);
+  --accent: var(--cnrs-yellow);
+  --accent-fg: var(--cnrs-blue);
+  --link: var(--cnrs-blue);
+
+  /* Geometry */
+  --radius-card: 16px;
+  --radius-button: 10px;
+  --radius-chip: 999px;
+  --shadow-card: 0 8px 30px rgba(0, 40, 75, 0.06);
+  --shadow-hover: 0 12px 40px rgba(0, 40, 75, 0.12);
+
+  /* Typography stack — system-first, IBM Plex when available */
+  --font-display: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+/* Load IBM Plex from Google Fonts (lab-website default). */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   margin: 0;
-  padding: 0 1rem 2rem;
-  max-width: 900px;
+  padding: 0 1.25rem 3rem;
+  max-width: 980px;
   margin-inline: auto;
-  color: #1a1a1a;
-  background: #fff;
+  color: var(--fg);
+  background: var(--bg);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
 }
 
-h1 { font-size: 1.6rem; margin-top: 2rem; }
-h2 { font-size: 1.2rem; margin-top: 1.8rem; border-bottom: 1px solid #e0e0e0; padding-bottom: .3rem; }
+/* ─── Headings: serif display, navy, no underline ─── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  color: var(--cnrs-blue);
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  line-height: 1.25;
+}
+h1 { font-size: 2rem; margin-top: 2rem; margin-bottom: .4rem; }
+h2 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--border);
+}
+h3 { font-size: 1.1rem; margin-top: 1.5rem; }
 
+/* The signature yellow underline-highlight on key phrases */
+.underline-yellow {
+  background-image: linear-gradient(transparent 60%, var(--cnrs-yellow) 60%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0 0.05em;
+}
+
+/* ─── Header / nav (paper-ground, simple, CNRS-y) ─── */
+header {
+  border-bottom: 2px solid var(--cnrs-blue);
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+header::before {
+  /* signature yellow bar above the navy underline */
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--cnrs-yellow);
+  transform: translateY(2px);
+}
+header h1 { margin-top: 0; }
+.tagline {
+  color: var(--fg-muted);
+  font-size: .95rem;
+  font-style: italic;
+  margin: .3rem 0 .8rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: .8rem;
+  font-size: .9rem;
+  font-family: var(--font-body);
+}
+nav a {
+  color: var(--cnrs-blue);
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+nav a:hover {
+  border-bottom-color: var(--cnrs-yellow);
+}
+
+/* ─── Footer ─── */
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--border);
+  color: var(--fg-muted);
+  font-size: .85rem;
+}
+
+/* ─── Tables ─── */
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
-  margin-top: .8rem;
+  font-size: .9rem;
+  margin-top: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
 }
 th, td {
   text-align: left;
-  padding: .4rem .6rem;
-  border-bottom: 1px solid #e0e0e0;
+  padding: .55rem .8rem;
+  border-bottom: 1px solid var(--border);
 }
-th { background: #f5f5f5; font-weight: 600; }
-tr:hover td { background: #fafafa; }
+th {
+  background: var(--cnrs-blue);
+  color: var(--card);
+  font-weight: 500;
+  font-size: .82rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: var(--bg-soft); }
 
-a { color: #0066cc; }
-.badge { display: inline-block; padding: .15rem .5rem; border-radius: 3px;
-         font-size: .75rem; background: #e8f0fe; color: #1a3d7c; }
-.error { color: #c62828; font-style: italic; }
-.loading { color: #666; font-style: italic; }
+/* ─── Links ─── */
+a { color: var(--link); }
+a:hover { text-decoration-color: var(--cnrs-yellow); text-decoration-thickness: 2px; }
+
+/* ─── Code ─── */
+code, .skill-list code {
+  font-family: var(--font-mono);
+  background: var(--bg-soft);
+  padding: .12rem .35rem;
+  border-radius: 3px;
+  font-size: .85em;
+  color: var(--cnrs-blue);
+}
+
+/* ─── Badges / chips (semantic + paper/skill/tool) ─── */
+.badge {
+  display: inline-block;
+  padding: .15rem .55rem;
+  border-radius: var(--radius-chip);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  background: var(--cnrs-yellow-soft);
+  color: var(--cnrs-blue);
+  border: 1px solid var(--cnrs-yellow);
+}
+.badge-paper {
+  background: rgba(154, 226, 255, 0.25);
+  color: var(--cnrs-blue);
+  border-color: var(--cnrs-blue-pale);
+}
+.badge-skill {
+  background: rgba(105, 65, 235, 0.10);
+  color: var(--cnrs-violet);
+  border-color: rgba(105, 65, 235, 0.30);
+}
+.badge-tool {
+  background: rgba(176, 238, 137, 0.20);
+  color: #2d5e1f;
+  border-color: var(--cnrs-green);
+}
+.badge-silver {
+  background: var(--bg-soft);
+  color: var(--fg-muted);
+  border-color: var(--border-strong);
+}
+.badge-gold {
+  background: var(--cnrs-yellow-soft);
+  color: var(--cnrs-blue);
+  border-color: var(--cnrs-yellow);
+}
+
+/* ─── State + hint colors ─── */
+.error { color: #a02b2b; font-style: italic; }
+.loading { color: var(--fg-muted); font-style: italic; }
+.empty { color: var(--fg-muted); font-style: italic; }
+.hint { color: var(--fg-muted); font-size: .9rem; }
+
+/* ─── Filters block (used by corpus.html + paper.html) ─── */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.25rem 0;
+  padding: 1rem 1.2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+#filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: .82rem;
+  color: var(--fg-muted);
+  font-weight: 500;
+  gap: .3rem;
+}
+#filters input, #filters select {
+  padding: .4rem .6rem;
+  font-size: .9rem;
+  font-family: inherit;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-button);
+  background: var(--card);
+  color: var(--fg);
+}
+#filters input:focus, #filters select:focus {
+  outline: 2px solid var(--cnrs-yellow);
+  outline-offset: -1px;
+  border-color: var(--cnrs-blue);
+}
+
+/* ─── Action buttons (primary = navy, secondary = paper) ─── */
+.actions {
+  display: flex;
+  gap: .8rem;
+  margin: 1rem 0 1.5rem;
+}
+.actions button,
+form button[type=submit] {
+  padding: .55rem 1.2rem;
+  font-size: .95rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: 1px solid var(--cnrs-blue);
+  background: var(--cnrs-blue);
+  color: var(--card);
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  transition: background .15s ease, transform .05s ease;
+}
+.actions button:hover,
+form button[type=submit]:hover {
+  background: var(--cnrs-blue-ink);
+  border-color: var(--cnrs-blue-ink);
+}
+.actions button:active,
+form button[type=submit]:active {
+  transform: translateY(1px);
+}
+.actions button:nth-child(2) {
+  background: var(--card);
+  color: var(--cnrs-blue);
+  border-color: var(--cnrs-blue);
+}
+.actions button:nth-child(2):hover {
+  background: var(--cnrs-yellow-soft);
+  border-color: var(--cnrs-blue);
+}
+
+/* ─── Forms ─── */
+form label { display: block; margin: .9rem 0; font-weight: 500; font-size: .92rem; color: var(--fg); }
+form label input, form label textarea, form label select {
+  display: block;
+  width: 100%;
+  padding: .5rem .7rem;
+  font-size: .95rem;
+  font-family: inherit;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-button);
+  margin-top: .35rem;
+  background: var(--card);
+  color: var(--fg);
+}
+form label input:focus, form label textarea:focus, form label select:focus {
+  outline: 2px solid var(--cnrs-yellow);
+  outline-offset: -1px;
+  border-color: var(--cnrs-blue);
+}
+form label textarea { resize: vertical; font-family: inherit; }
+form fieldset {
+  margin: 1.2rem 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--card);
+}
+form fieldset legend {
+  font-weight: 600;
+  font-family: var(--font-display);
+  color: var(--cnrs-blue);
+  padding: 0 .5rem;
+  font-size: .95rem;
+}
+form fieldset label {
+  margin: .5rem 0;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 400;
+}
+form fieldset label input[type=checkbox] {
+  width: auto;
+  margin: 0;
+  accent-color: var(--cnrs-blue);
+}
+form .required { color: #a02b2b; font-weight: 700; }
+
+/* ─── Draft-backup banner (propose.html) ─── */
+.draft-banner {
+  margin: 1rem 0;
+  padding: .75rem 1rem;
+  background: var(--cnrs-yellow-soft);
+  border: 1px solid var(--cnrs-yellow);
+  border-left: 3px solid var(--cnrs-blue);
+  border-radius: var(--radius-button);
+  font-size: .9rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+  color: var(--cnrs-blue);
+}
+.draft-banner button {
+  padding: .35rem .8rem;
+  font-size: .85rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: 1px solid var(--cnrs-blue);
+  background: var(--cnrs-blue);
+  color: var(--card);
+  border-radius: var(--radius-button);
+  cursor: pointer;
+}
+.draft-banner button.btn-secondary {
+  background: var(--card);
+  color: var(--cnrs-blue);
+}
+.draft-banner button:hover { background: var(--cnrs-blue-ink); color: var(--card); }
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 1rem;
+}
+.form-actions .btn-secondary {
+  padding: .55rem 1.1rem;
+  font-size: .9rem;
+  font-family: inherit;
+  background: var(--card);
+  color: var(--cnrs-blue);
+  border: 1px solid var(--cnrs-blue);
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  font-weight: 500;
+}
+.form-actions .btn-secondary:hover {
+  background: var(--cnrs-yellow-soft);
+}
+.draft-status { font-size: .8rem; color: var(--fg-muted); font-style: italic; }
+
+/* ─── Claim-tier filter (paper.html) ─── */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem;
+  margin: .8rem 0;
+  padding: .6rem .9rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-button);
+  font-size: .85rem;
+}
+.filter-row .filter-label {
+  color: var(--cnrs-blue);
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+.filter-row .filter-count {
+  color: var(--fg-muted);
+  margin-left: auto;
+  font-style: italic;
+}
+.tier-btn {
+  padding: .3rem .85rem;
+  font-size: .85rem;
+  font-family: inherit;
+  border: 1px solid var(--border-strong);
+  background: var(--card);
+  color: var(--fg);
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  font-weight: 500;
+}
+.tier-btn:hover {
+  background: var(--cnrs-yellow-soft);
+  border-color: var(--cnrs-blue);
+}
+.tier-btn.is-active {
+  background: var(--cnrs-blue);
+  color: var(--card);
+  border-color: var(--cnrs-blue);
+}
+.claims-table code { font-size: .8rem; }
+.btn-verify-claim {
+  padding: .2rem .6rem;
+  font-size: .8rem;
+  font-family: inherit;
+  border: 1px solid var(--cnrs-blue);
+  background: var(--card);
+  color: var(--cnrs-blue);
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-verify-claim:hover {
+  background: var(--cnrs-blue);
+  color: var(--card);
+}
+
+/* ─── Search page (search.html / search.js) ─── */
+#search-box { margin-top: 1.5rem; }
+#search-input {
+  width: 100%;
+  padding: .8rem 1rem;
+  font-size: 1.05rem;
+  font-family: inherit;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-button);
+  background: var(--card);
+  color: var(--fg);
+}
+#search-input:focus {
+  outline: 2px solid var(--cnrs-yellow);
+  outline-offset: -1px;
+  border-color: var(--cnrs-blue);
+}
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: .9rem 0 1.5rem;
+  align-items: center;
+  font-size: .9rem;
+}
+.search-filters label {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--fg);
+}
+.search-filters input[type=checkbox] {
+  accent-color: var(--cnrs-blue);
+}
+.search-filters .hint {
+  margin-left: auto;
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+.result-group { margin: 1.5rem 0; }
+.result-group h2 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  color: var(--cnrs-blue);
+  border-bottom: 1px solid var(--border);
+}
+.result-item {
+  padding: .8rem 1rem;
+  margin: .55rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--card);
+  position: relative;
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+.result-item:hover {
+  box-shadow: var(--shadow-card);
+  border-color: var(--cnrs-blue);
+}
+/* Signature yellow left-rule on the active/hovered result */
+.result-item:hover::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--cnrs-yellow);
+  border-top-left-radius: var(--radius-card);
+  border-bottom-left-radius: var(--radius-card);
+}
+.result-title {
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: var(--font-display);
+  color: var(--cnrs-blue);
+  display: inline-block;
+  margin-bottom: .25rem;
+}
+.result-meta { font-size: .8rem; color: var(--fg-muted); margin-bottom: .35rem; }
+.result-meta code { background: var(--bg-soft); padding: 0 .3rem; border-radius: 2px; font-size: .78rem; }
+.result-snippet { font-size: .88rem; color: var(--fg); line-height: 1.5; }
+.result-snippet mark {
+  background: var(--cnrs-yellow);
+  color: var(--cnrs-blue);
+  padding: 0 .15rem;
+  border-radius: 2px;
+}
+
+#empty-state ul, #no-results ul { font-size: .9rem; color: var(--fg-muted); }
+#empty-state code, #no-results code {
+  background: var(--bg-soft);
+  padding: .05rem .35rem;
+  border-radius: 3px;
+  font-size: .85rem;
+  color: var(--cnrs-blue);
+}
+
+/* ─── Card-style sections (used on paper.html for derived skills/tools) ─── */
+section#skills, section#tools, section#workflow, section#claims, section#actions {
+  margin-top: 1.5rem;
+}
+.skill-list, .tools-list, ul.search-results {
+  list-style: none;
+  padding: 0;
+}
+
+/* Selection */
+::selection { background: var(--cnrs-yellow); color: var(--cnrs-blue); }
+
+/* Responsive */
+@media (max-width: 640px) {
+  body { padding: 0 1rem 2rem; }
+  h1 { font-size: 1.65rem; }
+  h2 { font-size: 1.2rem; }
+  nav { gap: .85rem; font-size: .85rem; }
+  th, td { padding: .45rem .55rem; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

@@ -1,0 +1,27 @@
+# Curator candidacy — fill in and rename to candidates/<your-github-handle>.yaml.
+# Spec §9.2 + §9.6.
+
+github: <your-github-handle>
+orcid: 0000-0000-0000-0000
+
+# Which collections do you intend to curate? Used by vet-curator to pick
+# the right curator-criteria.yaml (domain_concepts + venue_quality + thresholds).
+intended_collections:
+  - metabolomics
+
+# 2–3 papers you have authored, by DOI. OpenAlex must confirm your ORCID
+# is on each. The check is L2 of identity verification.
+proof_publications:
+  - doi: 10.<your-doi-1>
+  - doi: 10.<your-doi-2>
+  - doi: 10.<your-doi-3>
+
+# Optional — strengthen Lead Curator candidacy via L3 institutional check.
+# Must match an ORCID employment entry.
+affiliation:
+  name: ""
+  email_domain: ""
+
+# Optional — link to your professional pages.
+websites:
+  - https://orcid.org/0000-0000-0000-0000
