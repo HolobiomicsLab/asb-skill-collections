@@ -12,8 +12,7 @@ authors:
 - family-names: Nothias
   given-names: Louis-Felix
   orcid: https://orcid.org/0000-0001-6711-6719
-- family-names: TODO
-  given-names: Add-co-curators
+- name: Holobiomics Lab
 keywords:
 - metabolomics
 - mass spectrometry
@@ -1011,3 +1010,7 @@ references:
   doi: 10.5702/massspectrometry.S0033
 - type: article
   doi: 10.7554/eLife.70780
+identifiers:
+- type: other
+  value: agenticsciencebuilder/metabolomics-v0.1.0
+  description: AgenticScienceBuilder pipeline release tag that produced this collection

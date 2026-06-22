@@ -334,7 +334,14 @@ def _similarity_ratio(a: str, b: str) -> float:
 def _iter_skill_md(collection_dir: Path) -> Iterable[Path]:
     skills_dir = collection_dir / "skills"
     root = skills_dir if skills_dir.is_dir() else collection_dir
-    yield from sorted(root.rglob("SKILL.md"))
+    for p in sorted(root.rglob("SKILL.md")):
+        # Skip infrastructure skills in `_`-prefixed dirs (e.g. `_router`),
+        # consistent with collect_metabolomics_collection.py's `_`-skip: they
+        # are routing/entry scaffolds, not paper-derived skills, so the
+        # provenance / verbatim gates do not apply to them.
+        if any(part.startswith("_") for part in p.relative_to(root).parts[:-1]):
+            continue
+        yield p
 
 
 def _collect_evidence_spans(fm: dict[str, Any], body: str) -> list[dict[str, Any]]:

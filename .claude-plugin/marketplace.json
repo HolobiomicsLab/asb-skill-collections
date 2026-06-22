@@ -1,11 +1,29 @@
 {
   "schema_version": "1.0",
-  "name": "ASB Skill Collections",
-  "description": "Curated scientific-agent skill and benchmark collections from the AgenticScienceBuilder pipeline.",
+  "name": "asb-skill-collections",
+  "description": "Curated, evidence-grounded scientific-agent skill and tool collections from the AgenticScienceBuilder pipeline.",
+  "owner": {
+    "name": "Holobiomics Lab",
+    "url": "https://github.com/HolobiomicsLab",
+    "orcid_org": "https://orcid.org/0000-0001-6711-6719"
+  },
   "publisher": {
     "name": "Holobiomics Lab",
     "url": "https://github.com/HolobiomicsLab",
     "orcid_org": "https://orcid.org/0000-0001-6711-6719"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "metabolomics",
+      "displayName": "ASB Metabolomics",
+      "source": "./collections/metabolomics/v2",
+      "description": "Computational LC-MS/MS metabolomics: spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics — 5,865 evidence-grounded skills over 909 tools, each derived from a peer-reviewed method paper, with a Perspicacite KB auto-grounding binder.",
+      "version": "0.1.0",
+      "author": { "name": "Holobiomics Lab", "url": "https://github.com/HolobiomicsLab" },
+      "homepage": "https://github.com/HolobiomicsLab/asb-skill-collections",
+      "repository": "https://github.com/HolobiomicsLab/asb-skill-collections",
+      "license": "CC-BY-4.0",
+      "keywords": ["metabolomics", "mass-spectrometry", "LC-MS", "annotation", "GNPS", "SIRIUS", "molecular-networking"]
+    }
+  ]
 }

@@ -1,0 +1,11 @@
+{
+  "name": "metabolomics",
+  "displayName": "ASB Metabolomics",
+  "description": "Computational LC-MS/MS metabolomics: spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics — 5,865 evidence-grounded skills over 909 tools, each derived from a peer-reviewed method paper. Includes a Perspicacité KB auto-grounding binder.",
+  "version": "0.1.0",
+  "author": { "name": "Holobiomics Lab", "url": "https://github.com/HolobiomicsLab" },
+  "homepage": "https://github.com/HolobiomicsLab/asb-skill-collections",
+  "repository": "https://github.com/HolobiomicsLab/asb-skill-collections",
+  "license": "CC-BY-4.0",
+  "keywords": ["metabolomics","mass-spectrometry","LC-MS","annotation","GNPS","SIRIUS","molecular-networking"]
+}

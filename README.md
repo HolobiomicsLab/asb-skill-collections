@@ -21,8 +21,16 @@ pipeline, maintained by [Holobiomics Lab](https://github.com/HolobiomicsLab).
 ## Quick install (Claude Code)
 
 ```bash
-/plugin install metabolomics-v1@HolobiomicsLab/asb-skill-collections
+/plugin marketplace add HolobiomicsLab/asb-skill-collections
+/plugin install metabolomics@asb-skill-collections
 ```
+
+The first public release is the **metabolomics** collection
+([`collections/metabolomics/v2`](collections/metabolomics/v2), tag
+`metabolomics-v0.1.0`): 5,865 evidence-grounded skills over 909 tools. See its
+[USAGE.md](collections/metabolomics/v2/USAGE.md) for search → install → use →
+Perspicacité grounding. Other domains in `collections/` are staged/internal and
+not part of this release.
 
 ## Browse collections
 
