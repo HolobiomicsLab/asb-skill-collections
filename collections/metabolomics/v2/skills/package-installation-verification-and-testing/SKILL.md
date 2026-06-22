@@ -12,6 +12,8 @@ metadata:
   - virtualenv
   - mummichog (version 3)
   - pytest or unittest
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog

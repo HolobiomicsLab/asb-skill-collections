@@ -11,6 +11,8 @@ metadata:
   - pytest
   - FERMO
   - fermo_core
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO

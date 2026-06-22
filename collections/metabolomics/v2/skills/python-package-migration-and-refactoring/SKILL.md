@@ -11,6 +11,8 @@ metadata:
   - Python setuptools / pip
   - GitHub Actions (CI/CD workflows)
   - pytest or equivalent test framework
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog

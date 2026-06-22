@@ -14,6 +14,9 @@ metadata:
   - XCMS
   - CAMERA
   - devtools
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag

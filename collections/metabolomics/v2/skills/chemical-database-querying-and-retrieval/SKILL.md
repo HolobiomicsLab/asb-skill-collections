@@ -13,6 +13,8 @@ metadata:
   - PubChem
   - ChEMBL
   - HMDB
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0

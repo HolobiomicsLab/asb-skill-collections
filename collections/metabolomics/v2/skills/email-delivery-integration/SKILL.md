@@ -9,6 +9,8 @@ metadata:
   tools:
   - Email service
   - Slack API
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

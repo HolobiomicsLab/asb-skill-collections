@@ -14,6 +14,8 @@ metadata:
   - MSnbase
   - Spectra
   - msdata
+  techniques:
+  - CE-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR

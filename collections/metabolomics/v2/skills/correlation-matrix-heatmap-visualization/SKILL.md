@@ -19,6 +19,8 @@ metadata:
   - scipy.spatial.distance.pdist / squareform
   - scikit-learn (metrics.adjusted_rand_score, metrics.normalized_mutual_info_score)
   - MamsiStructSearch.get_correlation_clusters()
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

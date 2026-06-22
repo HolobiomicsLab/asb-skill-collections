@@ -12,6 +12,8 @@ metadata:
   - ClassyFire
   - ConCISE
   - pandas
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE

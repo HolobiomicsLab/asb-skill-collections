@@ -15,6 +15,8 @@ metadata:
   - pandas
   - lxml
   - SQLAlchemy
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics

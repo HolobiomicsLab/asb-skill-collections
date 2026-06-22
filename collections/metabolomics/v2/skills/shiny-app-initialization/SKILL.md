@@ -12,6 +12,8 @@ metadata:
   - R
   - metScribeR
   - roxygen2
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR

@@ -12,6 +12,9 @@ metadata:
   - ESP ensemble model
   - MLP baseline model (NEIMS)
   - GNN baseline model
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

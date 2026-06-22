@@ -20,6 +20,8 @@ metadata:
   - Python
   - MSConvert
   - Rapid QC-MS
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec

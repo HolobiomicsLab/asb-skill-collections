@@ -10,6 +10,8 @@ metadata:
   - napari
   - Python
   - MSI-Explorer
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer

@@ -7,6 +7,8 @@ metadata:
   tools:
   - tensorflow serving
   - TensorFlow Serving
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

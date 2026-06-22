@@ -10,6 +10,8 @@ metadata:
   tools:
   - Convolutional Neural Network (CNN)
   - ChemEmbed
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed

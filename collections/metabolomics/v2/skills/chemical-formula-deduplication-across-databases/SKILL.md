@@ -10,6 +10,8 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - SMART
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

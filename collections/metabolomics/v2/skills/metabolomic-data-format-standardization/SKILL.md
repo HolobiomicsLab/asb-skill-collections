@@ -13,6 +13,8 @@ metadata:
   - Biobase
   - R (≥3.5)
   - readr
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

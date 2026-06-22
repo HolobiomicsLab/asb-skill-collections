@@ -11,6 +11,11 @@ metadata:
   tools:
   - R
   - MiMIR
+  techniques:
+  - LC-MS
+  - GC-MS
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR

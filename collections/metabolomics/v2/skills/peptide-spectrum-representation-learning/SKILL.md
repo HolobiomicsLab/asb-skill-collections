@@ -12,6 +12,8 @@ metadata:
   - Python
   - Conda
   - CUDA-enabled GPU
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41592-022-01496-1
   title: GLEAMS

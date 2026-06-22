@@ -14,6 +14,8 @@ metadata:
   - PyTorch Geometric
   - data_preprocess.py
   - subformula_assign.py
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1101/2025.11.12.688047v1
   title: MVP

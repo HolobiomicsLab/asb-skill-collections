@@ -10,6 +10,9 @@ metadata:
   tools:
   - compareMS2
   - DISMS2
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00457
   title: compareMS2 2.0

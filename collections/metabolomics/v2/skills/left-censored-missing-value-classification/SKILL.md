@@ -13,6 +13,9 @@ metadata:
   - GSimp
   - imputeLCMD (R package)
   - Trunc_KNN
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

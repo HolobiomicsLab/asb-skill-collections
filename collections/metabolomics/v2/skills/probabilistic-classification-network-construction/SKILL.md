@@ -15,6 +15,8 @@ metadata:
   - TensorFlow
   - Python
   - massNet
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1093/bioinformatics/btac032/6510930
   title: massNet

@@ -12,6 +12,8 @@ metadata:
   - LIQUID
   - ADViSELipidomics
   - LIPID MAPS
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics

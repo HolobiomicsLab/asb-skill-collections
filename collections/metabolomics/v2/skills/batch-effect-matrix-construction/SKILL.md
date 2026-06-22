@@ -12,6 +12,8 @@ metadata:
   - mzrtsim
   - bccenter, bcscaling, bcpareto, bcrange, bcvast, bclevel
   - SummarizedExperiment
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim

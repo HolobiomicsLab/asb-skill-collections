@@ -13,6 +13,8 @@ metadata:
   - R
   - devtools
   - Docker
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1186/s13321-025-01044-x
   title: Shinyscreen

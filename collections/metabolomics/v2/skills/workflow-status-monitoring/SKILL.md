@@ -12,6 +12,8 @@ metadata:
   - JavaFX 24
   - GitHub Actions
   - GitHub Actions API
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

@@ -12,6 +12,8 @@ metadata:
   - MassHunter ProFinder
   - constraint-based stoichiometric metabolic models
   - COBRApy (implied by workflow)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

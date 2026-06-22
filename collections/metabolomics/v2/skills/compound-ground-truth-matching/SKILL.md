@@ -16,6 +16,9 @@ metadata:
   - cosine_similarity
   - read_raw_spectra
   - embedding
+  techniques:
+  - CE-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

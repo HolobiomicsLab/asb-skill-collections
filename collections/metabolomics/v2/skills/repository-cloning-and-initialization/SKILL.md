@@ -13,6 +13,8 @@ metadata:
   - PyQt5
   - openpyxl
   - Python
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

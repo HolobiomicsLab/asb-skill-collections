@@ -11,6 +11,8 @@ metadata:
   - nanobind
   - CMake
   - OpenMS C++ library
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

@@ -11,6 +11,8 @@ metadata:
   - matplotlib
   - numpy
   - mzapy
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

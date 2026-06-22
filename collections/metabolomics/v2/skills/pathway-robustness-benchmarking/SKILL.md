@@ -13,6 +13,8 @@ metadata:
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
   - PALS Viewer
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

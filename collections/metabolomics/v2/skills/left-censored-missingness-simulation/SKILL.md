@@ -12,6 +12,9 @@ metadata:
   - GSimp_evaluation.R
   - impute.QRILC
   - R base and tidyverse (magrittr, dplyr)
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

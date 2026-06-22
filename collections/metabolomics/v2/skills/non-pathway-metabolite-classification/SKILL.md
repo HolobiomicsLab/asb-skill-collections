@@ -13,6 +13,8 @@ metadata:
   - MS2LDA
   - PALS Viewer
   - GNPS (Global Natural Products Social Molecular Networking)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

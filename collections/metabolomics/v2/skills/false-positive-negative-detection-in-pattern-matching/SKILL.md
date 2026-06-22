@@ -13,6 +13,8 @@ metadata:
   - mwtab
   - pandas
   - Python regular expressions (re module)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

@@ -10,6 +10,8 @@ metadata:
   tools:
   - msfiddle
   - FIDDLE
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

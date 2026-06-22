@@ -12,6 +12,8 @@ metadata:
   - Python 3
   - NumPy
   - GCMSFormer
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

@@ -14,6 +14,8 @@ metadata:
   - .NET Framework 4.7.2 / .NET 6
   - Visual Studio / Visual Studio Code
   - MsdialWorkbench repository
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec

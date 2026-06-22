@@ -12,6 +12,8 @@ metadata:
   - psm_utils
   - Mokapot
   - Percolator
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

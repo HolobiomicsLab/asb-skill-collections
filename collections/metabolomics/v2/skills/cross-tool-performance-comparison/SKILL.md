@@ -17,6 +17,8 @@ metadata:
   - GNPS 2.0 Classical Networking Workflow
   - GNPS 2.0 PerScanSummarizer
   - Clustering_benchmark_MS_RT.py
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT

@@ -13,6 +13,8 @@ metadata:
   - R 3.0.1
   - MATLAB Compiler Runtime 8.3
   - Galaxy-M
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M

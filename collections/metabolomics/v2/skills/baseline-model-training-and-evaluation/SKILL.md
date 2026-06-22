@@ -13,6 +13,9 @@ metadata:
   - PubChem
   - ms-pred
   - MAGMa
+  techniques:
+  - GC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG

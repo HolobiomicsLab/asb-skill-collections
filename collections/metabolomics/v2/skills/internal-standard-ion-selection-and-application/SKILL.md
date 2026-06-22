@@ -11,6 +11,8 @@ metadata:
   - LipidQMap
   - Cardinal
   - h5py or h5netcdf
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap

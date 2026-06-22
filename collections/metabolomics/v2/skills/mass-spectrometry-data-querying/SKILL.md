@@ -11,6 +11,8 @@ metadata:
   tools:
   - MassQLab
   - MassQL
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab

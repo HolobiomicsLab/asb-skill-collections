@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0153
   tools:
   - MetAssimulo 2
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0

@@ -12,6 +12,8 @@ metadata:
   - MassQL Python API
   - MassQL Command Line Utility
   - MassQL Web API (/parse endpoint)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

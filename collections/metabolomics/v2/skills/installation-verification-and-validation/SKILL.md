@@ -13,6 +13,9 @@ metadata:
   - pytest
   - Anaconda / Miniconda
   - Git
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

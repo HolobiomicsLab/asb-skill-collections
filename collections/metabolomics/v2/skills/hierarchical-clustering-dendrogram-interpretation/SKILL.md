@@ -19,6 +19,8 @@ metadata:
   - scikit-learn.metrics.adjusted_rand_score
   - scikit-learn.metrics.normalized_mutual_info_score
   - scipy.cluster.hierarchy (linkage, dendrogram, fcluster)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

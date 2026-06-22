@@ -15,6 +15,8 @@ metadata:
   - conda / pip
   - CUDA 11.8
   - RDKit
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR

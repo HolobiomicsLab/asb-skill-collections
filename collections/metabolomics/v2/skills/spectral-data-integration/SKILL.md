@@ -11,6 +11,8 @@ metadata:
   - msFeaST
   - jupyter-notebook
   - msFeaST_Dashboard_bundle.html
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

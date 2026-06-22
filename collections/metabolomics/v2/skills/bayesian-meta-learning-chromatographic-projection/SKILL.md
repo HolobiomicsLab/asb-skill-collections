@@ -10,6 +10,8 @@ metadata:
   tools:
   - alvaDesc
   - cmmrt (constantino-garcia/cmmrt)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt

@@ -18,6 +18,8 @@ metadata:
   - .NET Standard 2.0
   - WPF (Windows Presentation Foundation)
   - ReactiveExtensions / ReactiveProperty
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec

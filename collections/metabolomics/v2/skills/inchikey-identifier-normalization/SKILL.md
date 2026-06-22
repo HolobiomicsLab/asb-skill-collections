@@ -13,6 +13,8 @@ metadata:
   - GNPS
   - Fiehn Labs ClassyFire Batch
   - ConCISE
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE

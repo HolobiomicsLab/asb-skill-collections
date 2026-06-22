@@ -15,6 +15,8 @@ metadata:
   - metDataModel
   - khipu
   - Python 3 (scipy.stats or sklearn.linear_model)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

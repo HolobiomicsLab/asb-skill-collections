@@ -16,6 +16,9 @@ metadata:
   - cosine_similarity (SpecEmbedding.utils.model)
   - top_k_indices (SpecEmbedding.utils.model)
   - read_raw_spectra (SpecEmbedding.utils.clean)
+  techniques:
+  - CE-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

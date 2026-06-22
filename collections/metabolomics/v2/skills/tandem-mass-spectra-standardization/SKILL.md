@@ -12,6 +12,8 @@ metadata:
   - ThermoRawFileParser
   - GNPS 2.0 Classical Networking Workflow
   - GNPS 2.0 PerScanSummarizer
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT

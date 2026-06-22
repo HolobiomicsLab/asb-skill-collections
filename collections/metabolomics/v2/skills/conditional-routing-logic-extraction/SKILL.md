@@ -11,6 +11,11 @@ metadata:
   - mzmine
   - JDK 25
   - JavaFX 24
+  techniques:
+  - LC-MS
+  - GC-MS
+  - CE-MS
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

@@ -12,6 +12,8 @@ metadata:
   - matchms
   - SpectralEntropy
   - spectraverse-analysis pipeline scripts
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse

@@ -12,6 +12,8 @@ metadata:
   - PyINETA
   - pyineta.clustering
   - pyineta.finding
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

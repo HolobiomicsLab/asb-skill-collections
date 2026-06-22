@@ -19,6 +19,10 @@ metadata:
   - MSFileReader
   - MI-Pack
   - winetricks
+  techniques:
+  - LC-MS
+  - direct-infusion-MS
+  - MS-imaging
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M

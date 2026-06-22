@@ -16,6 +16,8 @@ metadata:
   - Flux Variability Analysis (FVA)
   - t-SNE
   - YSI bioanalyzer (YSI2950)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

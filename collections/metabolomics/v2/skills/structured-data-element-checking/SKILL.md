@@ -13,6 +13,8 @@ metadata:
   - pyarrow
   - arrow (R package)
   - mzPeak specification (living document)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

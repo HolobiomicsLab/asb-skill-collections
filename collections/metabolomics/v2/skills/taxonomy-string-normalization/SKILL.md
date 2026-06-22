@@ -13,6 +13,8 @@ metadata:
   - Open Tree of Life API
   - INVENTA
   - Lotus Database
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa

@@ -13,6 +13,9 @@ metadata:
   - PLAGE method
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

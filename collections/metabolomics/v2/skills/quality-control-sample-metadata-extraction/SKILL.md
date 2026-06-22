@@ -11,6 +11,8 @@ metadata:
   - R
   - Sciex MultiQuant
   - QComics
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics

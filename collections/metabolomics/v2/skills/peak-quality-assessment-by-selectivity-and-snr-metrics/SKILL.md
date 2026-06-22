@@ -18,6 +18,9 @@ metadata:
   - peaks.compute_noise_by_flanks
   - peaks.__peaks_cSelectivity_stats_
   - peaks.stats_detect_elution_peaks
+  techniques:
+  - LC-MS
+  - CE-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

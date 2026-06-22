@@ -12,6 +12,8 @@ metadata:
   - rMSI
   - R
   - rMSIproc
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''

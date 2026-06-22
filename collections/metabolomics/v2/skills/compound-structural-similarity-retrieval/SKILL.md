@@ -14,6 +14,8 @@ metadata:
   - Python
   - scikit-learn
   - Spec2Vec
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore

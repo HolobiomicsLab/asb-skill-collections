@@ -10,6 +10,8 @@ metadata:
   tools:
   - ElemCor
   - IsoCor
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

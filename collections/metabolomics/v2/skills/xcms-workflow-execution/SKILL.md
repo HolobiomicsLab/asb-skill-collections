@@ -13,6 +13,11 @@ metadata:
   - MsFeatures
   - MsExperiment
   - Spectra
+  techniques:
+  - LC-MS
+  - GC-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS

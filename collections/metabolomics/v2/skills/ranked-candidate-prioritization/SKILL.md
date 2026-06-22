@@ -15,6 +15,8 @@ metadata:
   - LOTUS
   - SIRIUS v5/v6
   - GNPS-FBMN
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

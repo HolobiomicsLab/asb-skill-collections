@@ -20,6 +20,8 @@ metadata:
   - torch_geometric
   - torch-scatter, torch-sparse, torch-cluster
   - pandas
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

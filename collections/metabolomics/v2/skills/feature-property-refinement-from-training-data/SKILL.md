@@ -10,6 +10,8 @@ metadata:
   tools:
   - Python
   - PeakBot
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

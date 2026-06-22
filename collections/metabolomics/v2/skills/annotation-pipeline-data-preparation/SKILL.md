@@ -11,6 +11,8 @@ metadata:
   tools:
   - MAGMa
   - pubchem (subproject)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma

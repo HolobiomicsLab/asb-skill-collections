@@ -12,6 +12,8 @@ metadata:
   - D3.js
   - pandas
   - Dash
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

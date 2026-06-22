@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0121
   tools:
   - MZmine
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST

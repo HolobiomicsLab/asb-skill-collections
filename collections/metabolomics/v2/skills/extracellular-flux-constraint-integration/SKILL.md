@@ -21,6 +21,8 @@ metadata:
   - Agilent 1290 Infinity UHPLC + 6550 iFunnel Q-TOF MS
   - t-SNE
   - rasIntegration.py
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

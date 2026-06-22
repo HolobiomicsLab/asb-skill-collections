@@ -12,6 +12,9 @@ metadata:
   - CoreMS
   - pandas
   - numpy
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems

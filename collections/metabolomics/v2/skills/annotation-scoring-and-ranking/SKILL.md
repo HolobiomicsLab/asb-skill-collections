@@ -13,6 +13,9 @@ metadata:
   - jopt-simple
   - trove4j
   - Passatutto
+  techniques:
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

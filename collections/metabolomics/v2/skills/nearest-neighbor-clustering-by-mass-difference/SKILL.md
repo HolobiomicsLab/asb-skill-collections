@@ -13,6 +13,8 @@ metadata:
   - asari mass_functions.nn_cluster_by_mz_seeds
   - asari MassGrid.build_grid_by_centroiding
   - asari chromatograms.get_thousandth_bins
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

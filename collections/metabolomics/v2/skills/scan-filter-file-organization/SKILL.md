@@ -11,6 +11,9 @@ metadata:
   - Python
   - imzML Writer
   - msconvert
+  techniques:
+  - MS-imaging
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer

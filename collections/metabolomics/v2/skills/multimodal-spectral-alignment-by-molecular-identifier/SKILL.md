@@ -12,6 +12,8 @@ metadata:
   - numpy
   - Python
   - Python (standard library)
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

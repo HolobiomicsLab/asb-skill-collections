@@ -13,6 +13,8 @@ metadata:
   - xcms
   - R
   - MS-DIAL
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA

@@ -8,6 +8,8 @@ metadata:
   - S4Vectors
   - R
   - Spectra
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

@@ -13,6 +13,8 @@ metadata:
   - MSConvert
   - Docker
   - Scannotation
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion

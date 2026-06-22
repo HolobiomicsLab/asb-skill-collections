@@ -15,6 +15,8 @@ metadata:
   - Python
   - conda
   - pip
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2

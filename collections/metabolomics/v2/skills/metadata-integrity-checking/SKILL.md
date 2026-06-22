@@ -11,6 +11,8 @@ metadata:
   - bmxp
   - Python
   - Formation
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

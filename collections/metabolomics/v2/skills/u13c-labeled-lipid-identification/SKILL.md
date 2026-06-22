@@ -13,6 +13,8 @@ metadata:
   - MobiLipid R Markdown
   - R (ggplot2, data.table, DT packages)
   - MobiLipid
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid

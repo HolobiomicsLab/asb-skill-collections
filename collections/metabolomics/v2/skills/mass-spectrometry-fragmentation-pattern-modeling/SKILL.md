@@ -12,6 +12,10 @@ metadata:
   - XCMS
   - CAMERA
   - LipidIN Expeditious Querying (EQ) Module
+  techniques:
+  - LC-MS
+  - CE-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN

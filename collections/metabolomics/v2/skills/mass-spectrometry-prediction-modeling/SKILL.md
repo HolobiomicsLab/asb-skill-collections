@@ -10,6 +10,8 @@ metadata:
   - http://edamontology.org/topic_2275
   tools:
   - CFM-ID
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database

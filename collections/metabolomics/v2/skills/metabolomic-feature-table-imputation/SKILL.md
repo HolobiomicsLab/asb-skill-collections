@@ -13,6 +13,8 @@ metadata:
   - pycombat
   - Asari
   - PCPFM (PythonCentricPipelineForMetabolomics)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

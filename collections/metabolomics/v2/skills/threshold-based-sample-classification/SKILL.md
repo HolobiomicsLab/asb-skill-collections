@@ -11,6 +11,8 @@ metadata:
   - R ≥4.1.2
   - R
   - OUKS (step 9. Statistics.R)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

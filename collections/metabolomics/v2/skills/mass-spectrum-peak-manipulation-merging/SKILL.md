@@ -12,6 +12,8 @@ metadata:
   - scipy
   - spectral_denoising
   - numpy
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

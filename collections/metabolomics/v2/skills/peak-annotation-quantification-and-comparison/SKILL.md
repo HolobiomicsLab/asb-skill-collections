@@ -12,6 +12,8 @@ metadata:
   - spectrum_utils
   - ProForma 2.0
   - Unimod
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

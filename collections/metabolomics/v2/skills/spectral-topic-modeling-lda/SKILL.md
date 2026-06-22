@@ -11,6 +11,8 @@ metadata:
   tools:
   - LDA (Latent Dirichlet Allocation)
   - scikit-learn
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

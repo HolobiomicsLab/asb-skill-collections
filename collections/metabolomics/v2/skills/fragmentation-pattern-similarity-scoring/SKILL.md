@@ -20,6 +20,10 @@ metadata:
   - readxl
   - MSDial (ver. 4.80)
   - Biotransformer 3.0
+  techniques:
+  - CE-MS
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

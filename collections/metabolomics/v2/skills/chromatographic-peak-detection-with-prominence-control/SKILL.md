@@ -16,6 +16,9 @@ metadata:
   - asari (peaks.evaluate_gaussian_peak_on_intensity_list)
   - asari (peaks.__peaks_cSelectivity_stats_)
   - asari (peaks.compute_noise_by_flanks)
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

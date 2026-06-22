@@ -13,6 +13,8 @@ metadata:
   - Mesmer segmentation pipeline
   - Jupyter Notebook 01 (Processing of IMC and SIMS images)
   - Jupyter Notebook 02 (Registration of IMC and SIMS images)
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1038/s41467-023-43917-5
   title: scSpaMet

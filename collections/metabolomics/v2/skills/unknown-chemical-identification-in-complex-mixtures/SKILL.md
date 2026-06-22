@@ -14,6 +14,8 @@ metadata:
   - Python
   - MSGO
   - cfmid
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

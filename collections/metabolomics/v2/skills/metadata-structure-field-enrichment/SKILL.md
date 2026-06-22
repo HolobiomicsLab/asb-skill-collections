@@ -11,6 +11,8 @@ metadata:
   - PubChem
   - prepare_wikidata_lotus_prefect.py
   - jobs.py
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

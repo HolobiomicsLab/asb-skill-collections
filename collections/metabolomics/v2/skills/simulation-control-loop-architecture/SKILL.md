@@ -15,6 +15,10 @@ metadata:
   - TopNController
   - OpenMS
   - Python 3+
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

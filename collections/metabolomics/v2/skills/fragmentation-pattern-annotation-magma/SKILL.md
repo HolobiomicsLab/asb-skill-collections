@@ -12,6 +12,9 @@ metadata:
   - Python
   - RDKit
   - matplotlib
+  techniques:
+  - CE-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder

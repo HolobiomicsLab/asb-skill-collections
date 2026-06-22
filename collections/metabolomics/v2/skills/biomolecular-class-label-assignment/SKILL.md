@@ -12,6 +12,10 @@ metadata:
   - HinesLab/MOCCal
   - MOCCal
   - DEIMoS (pnnl version 1.3.2)
+  techniques:
+  - CE-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

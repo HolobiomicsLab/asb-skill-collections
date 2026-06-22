@@ -14,6 +14,9 @@ metadata:
   - RaMS
   - LipidIN Expeditious Querying (EQ) Module
   - LipidIN Lipid Categories Intelligence (LCI) Module
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN

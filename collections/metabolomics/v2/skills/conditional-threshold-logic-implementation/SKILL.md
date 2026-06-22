@@ -8,6 +8,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - Punc'data
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

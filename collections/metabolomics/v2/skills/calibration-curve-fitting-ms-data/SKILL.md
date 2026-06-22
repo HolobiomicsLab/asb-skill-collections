@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - QuantyFey
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey

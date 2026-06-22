@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - AnnoMe
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bioadv/vbag111
   title: AnnoMe

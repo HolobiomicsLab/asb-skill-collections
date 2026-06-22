@@ -13,6 +13,8 @@ metadata:
   - Rust mzPeak library
   - pyarrow
   - arrow (R package)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

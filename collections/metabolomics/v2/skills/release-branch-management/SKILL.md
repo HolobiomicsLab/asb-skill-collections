@@ -9,6 +9,8 @@ metadata:
   tools:
   - GitHub Actions
   - SIRIUS
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

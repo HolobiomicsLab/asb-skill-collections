@@ -11,6 +11,8 @@ metadata:
   - ViMMS
   - Python pickle
   - pandas
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

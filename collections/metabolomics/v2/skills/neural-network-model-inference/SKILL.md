@@ -15,6 +15,8 @@ metadata:
   - MSGO model
   - MSGO
   - PyTorch
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

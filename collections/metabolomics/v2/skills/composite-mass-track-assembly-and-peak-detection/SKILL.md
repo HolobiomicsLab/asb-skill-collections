@@ -19,6 +19,8 @@ metadata:
   - asari.peaks.evaluate_gaussian_peak_on_intensity_list
   - asari.chromatograms.rt_lowess_calibration
   - asari.MassGrid
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

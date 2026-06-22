@@ -15,6 +15,8 @@ metadata:
   - asari.MassGrid (build_grid_sample_wise, add_sample, build_grid_by_centroiding, bin_track_mzs)
   - asari.chromatograms.get_thousandth_bins
   - scipy.signal.detrend
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

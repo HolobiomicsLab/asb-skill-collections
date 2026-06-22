@@ -12,6 +12,8 @@ metadata:
   - GC_RI_Calibration
   - LowResMassSpectralMatch
   - PNNLMetV20191015.MSL
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems

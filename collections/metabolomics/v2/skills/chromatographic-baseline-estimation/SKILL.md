@@ -12,6 +12,8 @@ metadata:
   - R
   - MZmine 2
   - xcms
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA

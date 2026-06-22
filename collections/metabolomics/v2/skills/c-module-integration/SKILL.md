@@ -12,6 +12,8 @@ metadata:
   - msconvert
   - tinyxml2
   - gzip / bsc
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btab636/6363791
   title: mspack

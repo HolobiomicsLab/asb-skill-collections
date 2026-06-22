@@ -10,6 +10,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - PRIMA-Panel
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

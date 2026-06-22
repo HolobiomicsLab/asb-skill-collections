@@ -11,6 +11,9 @@ metadata:
   - KNIME
   - MSNumpressCoder
   - OpenMS
+  techniques:
+  - LC-MS
+  - CE-MS
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

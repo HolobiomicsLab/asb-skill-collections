@@ -13,6 +13,8 @@ metadata:
   - spectral_similarity
   - ms_distance
   - Entropy Search GUI
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

@@ -13,6 +13,9 @@ metadata:
   - SmartPeakCLI
   - pyOpenMS
   - BFAIR
+  techniques:
+  - LC-MS
+  - direct-infusion-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak

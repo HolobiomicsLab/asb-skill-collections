@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - DeepMASS
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.8b05405
   title: Deep MS/MS similarity

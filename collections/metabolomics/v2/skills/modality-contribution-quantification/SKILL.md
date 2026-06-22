@@ -10,6 +10,8 @@ metadata:
   tools:
   - convolutional neural network
   - transformer architecture
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

@@ -14,6 +14,8 @@ metadata:
   - Jupyter Lab
   - Google Colaboratory
   - CCSP 2.0
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0

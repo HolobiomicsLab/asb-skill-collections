@@ -15,6 +15,8 @@ metadata:
   - pyarrow
   - arrow (R)
   - JSON Schema validators (various)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr

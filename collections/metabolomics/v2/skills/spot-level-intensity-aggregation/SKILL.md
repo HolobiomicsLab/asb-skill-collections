@@ -10,6 +10,8 @@ metadata:
   tools:
   - spatialMETA
   - spatialmeta.pp.filter_cells_sm
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

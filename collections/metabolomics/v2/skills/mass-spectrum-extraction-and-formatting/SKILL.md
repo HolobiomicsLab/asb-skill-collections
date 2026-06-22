@@ -9,6 +9,10 @@ metadata:
   - http://edamontology.org/topic_0625
   tools:
   - MSHub
+  techniques:
+  - LC-MS
+  - GC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

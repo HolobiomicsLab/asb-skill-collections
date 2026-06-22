@@ -12,6 +12,8 @@ metadata:
   - R
   - KEGG
   - PubChem
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

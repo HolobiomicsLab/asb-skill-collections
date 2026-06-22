@@ -13,6 +13,8 @@ metadata:
   - SCARF
   - MIST-CF
   - SIRIUS
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

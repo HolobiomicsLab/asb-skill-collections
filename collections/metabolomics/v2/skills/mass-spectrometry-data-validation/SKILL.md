@@ -13,6 +13,8 @@ metadata:
   - data.table
   - S4Vectors
   - Spectra
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS

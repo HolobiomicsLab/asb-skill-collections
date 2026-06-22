@@ -13,6 +13,8 @@ metadata:
   - asari.peaks.evaluate_gaussian_peak_on_intensity_list
   - asari.peaks.detect_evaluate_peaks_on_roi
   - Python (numpy, scipy.optimize)
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

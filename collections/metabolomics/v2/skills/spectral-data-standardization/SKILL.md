@@ -11,6 +11,9 @@ metadata:
   - nplinker
   - Python
   - GNPS
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

@@ -18,6 +18,8 @@ metadata:
   - pyteomics.mgf
   - Python timeit / wall-clock timer
   - matplotlib / seaborn
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

@@ -18,6 +18,8 @@ metadata:
   - enpkg_sirius_canopus
   - enpkg_meta_analysis
   - enpkg_graph_builder
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

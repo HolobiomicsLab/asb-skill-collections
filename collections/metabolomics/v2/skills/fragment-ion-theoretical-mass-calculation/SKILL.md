@@ -10,6 +10,9 @@ metadata:
   tools:
   - XCMS
   - CAMERA
+  techniques:
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN

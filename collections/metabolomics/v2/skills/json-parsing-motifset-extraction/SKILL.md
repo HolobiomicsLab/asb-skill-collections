@@ -10,6 +10,8 @@ metadata:
   tools:
   - MS2LDA
   - Python
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

@@ -13,6 +13,9 @@ metadata:
   - Python (v3.8.1+)
   - PyTorch (v1.13.1)
   - R xcms (v4.4.0+)
+  techniques:
+  - LC-MS
+  - direct-infusion-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

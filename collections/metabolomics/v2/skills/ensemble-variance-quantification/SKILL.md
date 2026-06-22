@@ -10,6 +10,8 @@ metadata:
   tools:
   - pandas
   - NumPy
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI

@@ -12,6 +12,10 @@ metadata:
   - R
   - MiMIR
   - R (base stats, dplyr, matrixStats)
+  techniques:
+  - LC-MS
+  - GC-MS
+  - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR

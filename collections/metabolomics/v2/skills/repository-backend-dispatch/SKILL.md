@@ -17,6 +17,8 @@ metadata:
   - GNPS Spectral Libraries
   - MassIVE
   - MetabolomicsSpectrumResolver
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

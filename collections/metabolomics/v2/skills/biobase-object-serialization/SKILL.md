@@ -14,6 +14,8 @@ metadata:
   - readr
   - R base functions
   - NOREVA
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

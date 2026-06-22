@@ -12,6 +12,8 @@ metadata:
   - usi.py module
   - dash_get_sets.py module
   - requests library
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

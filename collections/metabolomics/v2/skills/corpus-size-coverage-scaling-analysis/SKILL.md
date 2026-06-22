@@ -16,6 +16,10 @@ metadata:
   - Pandas
   - Word2Vec
   - NumPy, Pandas
+  techniques:
+  - LC-MS
+  - GC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec

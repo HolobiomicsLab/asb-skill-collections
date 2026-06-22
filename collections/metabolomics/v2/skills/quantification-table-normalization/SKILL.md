@@ -15,6 +15,8 @@ metadata:
   - globaltest (R package)
   - Shiny
   - QuantyFey
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

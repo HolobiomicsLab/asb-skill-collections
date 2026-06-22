@@ -16,6 +16,9 @@ metadata:
   - mzR
   - MSConvert
   - MassBank of North America (MoNA)
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR

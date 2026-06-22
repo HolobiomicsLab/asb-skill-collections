@@ -15,6 +15,9 @@ metadata:
   - chromatograms.extract_massTracks_
   - ThermoRawFileParser
   - ProteoWizard msconvert
+  techniques:
+  - LC-MS
+  - direct-infusion-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

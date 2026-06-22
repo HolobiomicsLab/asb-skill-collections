@@ -10,6 +10,8 @@ metadata:
   tools:
   - lcmsWorld
   - RawFileReader
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00618
   title: lcmsWorld

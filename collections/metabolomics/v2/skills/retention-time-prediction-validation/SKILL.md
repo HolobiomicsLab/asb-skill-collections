@@ -15,6 +15,8 @@ metadata:
   - RDKit
   - Train.py
   - Transferlearning.py
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

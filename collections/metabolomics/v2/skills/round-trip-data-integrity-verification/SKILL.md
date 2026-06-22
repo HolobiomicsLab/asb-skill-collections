@@ -11,6 +11,8 @@ metadata:
   - Rust mzPeak library
   - Parquet reader/writer (e.g., pyarrow, arrow R package)
   - ZIP utility
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

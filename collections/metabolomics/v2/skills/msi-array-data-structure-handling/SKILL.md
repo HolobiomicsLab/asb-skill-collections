@@ -15,6 +15,8 @@ metadata:
   - matter 2.4 and 2.6
   - CardinalIO
   - BiocManager
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal

@@ -10,6 +10,8 @@ metadata:
   tools:
   - MassBank-web Validator
   - GitHub Actions
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank

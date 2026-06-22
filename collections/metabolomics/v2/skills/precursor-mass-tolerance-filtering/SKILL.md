@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - TandemMatch
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

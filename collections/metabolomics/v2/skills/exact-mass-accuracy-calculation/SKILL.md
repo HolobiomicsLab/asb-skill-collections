@@ -10,6 +10,9 @@ metadata:
   tools:
   - DBDIpy
   - Python
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy

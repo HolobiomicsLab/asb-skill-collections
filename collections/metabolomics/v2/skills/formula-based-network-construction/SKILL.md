@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0769
   tools:
   - MoleTrans
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans

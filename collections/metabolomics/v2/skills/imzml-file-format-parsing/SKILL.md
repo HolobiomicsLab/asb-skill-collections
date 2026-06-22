@@ -9,6 +9,10 @@ metadata:
   - http://edamontology.org/topic_0092
   tools:
   - spatialMETA
+  techniques:
+  - LC-MS
+  - MS-imaging
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

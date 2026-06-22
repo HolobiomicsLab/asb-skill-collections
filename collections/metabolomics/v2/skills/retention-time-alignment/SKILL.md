@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3370
   tools:
   - openNAU (MetaQC module)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU

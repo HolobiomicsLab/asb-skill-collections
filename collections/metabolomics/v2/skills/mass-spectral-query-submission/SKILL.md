@@ -16,6 +16,9 @@ metadata:
   - foodMASST
   - metadataMASST
   - GNPS_MASST
+  techniques:
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

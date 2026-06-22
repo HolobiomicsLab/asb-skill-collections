@@ -12,6 +12,8 @@ metadata:
   - xml.etree.ElementTree
   - pymzML
   - black
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

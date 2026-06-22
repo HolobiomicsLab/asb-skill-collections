@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0091
   tools:
   - R Shiny
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME

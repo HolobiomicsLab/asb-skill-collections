@@ -15,6 +15,8 @@ metadata:
   - MassGrid.build_grid_by_centroiding
   - MassGrid.build_grid_sample_wise
   - chromatograms.extract_single_track_fullrt_length
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

@@ -16,6 +16,8 @@ metadata:
   - asari (chromatograms.rt_lowess_calibration)
   - asari (CompositeMap.calibrate_sample_RT)
   - asari (peaks.quick_detect_unique_elution_peak)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

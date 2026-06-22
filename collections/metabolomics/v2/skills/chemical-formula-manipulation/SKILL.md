@@ -13,6 +13,8 @@ metadata:
   - MSnbase
   - Rdisop
   - MetApp
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR

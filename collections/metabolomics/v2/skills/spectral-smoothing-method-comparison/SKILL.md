@@ -14,6 +14,8 @@ metadata:
   - Cardinal 3.6
   - matter 2.4/2.6
   - BiocParallel
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal

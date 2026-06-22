@@ -10,6 +10,8 @@ metadata:
   tools:
   - DiffSpectra
   - SpecFormer
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra

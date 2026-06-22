@@ -13,6 +13,8 @@ metadata:
   - asari.chromatograms.rt_lowess_calibration
   - asari.chromatograms.extract_massTracks_
   - asari.mass_functions.nn_cluster_by_mz_seeds
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

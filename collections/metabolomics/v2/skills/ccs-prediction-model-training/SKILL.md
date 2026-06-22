@@ -19,6 +19,8 @@ metadata:
   - pip
   - PyG (PyTorch Geometric)
   - conda/pip
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

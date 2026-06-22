@@ -12,6 +12,9 @@ metadata:
   - Jupyter Notebook
   - Google Colab
   - FBMN-STATS web app
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

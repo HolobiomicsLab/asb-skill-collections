@@ -13,6 +13,8 @@ metadata:
   - Bioconductor
   - marr
   - MarrPlotSamplepairs()
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr

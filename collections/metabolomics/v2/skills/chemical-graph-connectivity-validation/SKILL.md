@@ -12,6 +12,8 @@ metadata:
   - NMR2Struct model (transformer + CNN architecture)
   - PubChem or equivalent chemical database
   - NMR spectrum simulation or database retrieval tool
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

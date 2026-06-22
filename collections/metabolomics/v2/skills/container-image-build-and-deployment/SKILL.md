@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0091
   tools:
   - Docker
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet

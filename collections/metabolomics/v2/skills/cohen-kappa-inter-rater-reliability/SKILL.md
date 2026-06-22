@@ -16,6 +16,8 @@ metadata:
   - COBRApy optGpSampler
   - Pandas/NumPy
   - Matplotlib/Seaborn
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

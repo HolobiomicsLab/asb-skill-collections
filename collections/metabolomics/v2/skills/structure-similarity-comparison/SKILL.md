@@ -10,6 +10,8 @@ metadata:
   tools:
   - MultiModalSpectralTransformer
   - RDKit
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

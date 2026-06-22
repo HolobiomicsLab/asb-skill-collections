@@ -24,6 +24,8 @@ metadata:
   - constraint-based stoichiometric metabolic models (ENGRO2)
   - Mann-Whitney U test (scipy.stats)
   - Agilent 1290 Infinity UHPLC + Agilent 6550 iFunnel Q-TOF MS
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

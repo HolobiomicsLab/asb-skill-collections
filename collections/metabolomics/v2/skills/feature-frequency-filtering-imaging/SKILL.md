@@ -12,6 +12,8 @@ metadata:
   - R
   - Cardinal 3.6
   - BiocParallel
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal

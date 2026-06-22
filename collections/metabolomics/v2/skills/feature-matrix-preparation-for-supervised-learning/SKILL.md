@@ -12,6 +12,8 @@ metadata:
   - Lilikoi v2.0
   - R
   - h2o
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0

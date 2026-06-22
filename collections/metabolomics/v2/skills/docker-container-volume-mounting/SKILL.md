@@ -14,6 +14,8 @@ metadata:
   - Docker Desktop for Mac
   - Docker Engine
   - AirdPro
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

@@ -13,6 +13,9 @@ metadata:
   - Impute_wrapper.R
   - imputeLCMD R package
   - Trunc_KNN/Imput_funcs.r
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

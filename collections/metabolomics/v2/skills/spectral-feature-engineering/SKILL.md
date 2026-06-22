@@ -7,6 +7,8 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR

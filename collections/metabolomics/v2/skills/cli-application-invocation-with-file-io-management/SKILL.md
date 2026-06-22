@@ -15,6 +15,8 @@ metadata:
   - Wine
   - .NET Framework 4.8
   - AirdPro V5 / V6
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

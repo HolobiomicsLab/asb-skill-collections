@@ -13,6 +13,9 @@ metadata:
   - .NET 8.0
   - rawDiag
   - .NET 8.0 runtime
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr

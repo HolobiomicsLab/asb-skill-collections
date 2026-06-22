@@ -15,6 +15,8 @@ metadata:
   - Cytoscape
   - networkx
   - MamsiStructSearch
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

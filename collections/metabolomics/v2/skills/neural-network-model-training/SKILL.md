@@ -12,6 +12,8 @@ metadata:
   - TensorFlow
   - Keras
   - EDML_deep_learning2.py
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier

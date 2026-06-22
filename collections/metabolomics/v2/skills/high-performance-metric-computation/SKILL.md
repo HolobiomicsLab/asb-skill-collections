@@ -11,6 +11,8 @@ metadata:
   - MASST
   - GNPS
   - MASST+
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

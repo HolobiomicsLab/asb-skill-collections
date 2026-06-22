@@ -11,6 +11,8 @@ metadata:
   - Python
   - Python 3.12
   - spectra-hash
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

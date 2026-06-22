@@ -11,6 +11,10 @@ metadata:
   tools:
   - PRIMA-Panel
   - QC-Tool
+  techniques:
+  - LC-MS
+  - GC-MS
+  - NMR
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

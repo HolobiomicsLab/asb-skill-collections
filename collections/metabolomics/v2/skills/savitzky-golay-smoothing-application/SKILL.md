@@ -12,6 +12,9 @@ metadata:
   - GCIMS
   - ggplot2
   - cowplot
+  techniques:
+  - GC-MS
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

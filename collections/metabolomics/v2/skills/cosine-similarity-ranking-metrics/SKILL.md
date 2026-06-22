@@ -18,6 +18,9 @@ metadata:
   - SpecEmbedding.utils.clean.read_raw_spectra
   - SpecEmbedding.trainer.trainer.ModelTester
   - PyTorch 2.6.0 with CUDA 12.4
+  techniques:
+  - CE-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

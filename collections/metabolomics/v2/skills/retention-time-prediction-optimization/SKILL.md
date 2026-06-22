@@ -21,6 +21,9 @@ metadata:
   - PyG (PyTorch Geometric)
   - TorchMetrics
   - torch-scatter, torch-sparse, torch-cluster
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT

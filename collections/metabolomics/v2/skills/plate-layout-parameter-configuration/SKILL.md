@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - InjectionDesign
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

@@ -22,6 +22,8 @@ metadata:
   - SYNCSA
   - NumPy, pandas
   - R packages vegan, SYNCSA
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect

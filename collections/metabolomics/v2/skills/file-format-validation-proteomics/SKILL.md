@@ -17,6 +17,8 @@ metadata:
   - Raw_File_Uploader
   - Proteomics_Data_Processor
   - MSConnect
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

@@ -13,6 +13,8 @@ metadata:
   - R
   - igraph
   - pcutils
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet

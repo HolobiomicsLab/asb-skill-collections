@@ -16,6 +16,8 @@ metadata:
   - torch_geometric
   - rdkit-pypi
   - RT-Transformer reference implementation
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

@@ -10,6 +10,8 @@ metadata:
   tools:
   - patRoon
   - MetFrag
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

@@ -14,6 +14,8 @@ metadata:
   - Spec2Vec
   - MS2LDAViz
   - MotifDB
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

@@ -12,6 +12,10 @@ metadata:
   - MASST+
   - GNPS (Global Natural Products Social Molecular Networking)
   - Spectrum USI (Metabolomics Spectrum Resolver)
+  techniques:
+  - LC-MS
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

@@ -13,6 +13,8 @@ metadata:
   - NPDtools 2.5.0
   - NPDtools 2.5.0 (RiPP Structure Database Builder module)
   - Dereplicator
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator

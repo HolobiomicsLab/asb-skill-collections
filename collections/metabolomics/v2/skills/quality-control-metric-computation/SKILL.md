@@ -12,6 +12,8 @@ metadata:
   - R
   - OUKS step 4 (Correction.R)
   - OUKS step 6 (Filtering.R)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

@@ -13,6 +13,8 @@ metadata:
   - Anaconda
   - PyTorch
   - FlavorFormer
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

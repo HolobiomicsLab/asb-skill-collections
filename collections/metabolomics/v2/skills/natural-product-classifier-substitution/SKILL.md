@@ -14,6 +14,8 @@ metadata:
   - GNPS
   - ClassyFire
   - ConCISE
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE

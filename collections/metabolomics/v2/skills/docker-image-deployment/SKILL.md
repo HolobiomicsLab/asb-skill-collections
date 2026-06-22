@@ -12,6 +12,8 @@ metadata:
   - MetFrag
   - Tomcat
   - Java 21
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag

@@ -12,6 +12,8 @@ metadata:
   - Bioconductor
   - MWASTools
   - TopSpin 3.2
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools

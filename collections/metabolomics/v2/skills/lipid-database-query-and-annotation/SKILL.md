@@ -10,6 +10,8 @@ metadata:
   tools:
   - Lipid_MRM_parser.ipynb
   - CLAW-MRM lipid_database
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

@@ -12,6 +12,8 @@ metadata:
   - khipu
   - Python
   - metDataModel
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

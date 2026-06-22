@@ -21,6 +21,9 @@ metadata:
   - Wavelet Toolbox (MATLAB)
   - Image Processing Toolbox (MATLAB)
   - Signal Processing Toolbox (MATLAB)
+  techniques:
+  - LC-MS
+  - CE-MS
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS

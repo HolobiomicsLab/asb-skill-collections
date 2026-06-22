@@ -14,6 +14,9 @@ metadata:
   - QUICK
   - RDKit
   - hpccs
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

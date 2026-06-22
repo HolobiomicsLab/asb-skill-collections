@@ -17,6 +17,9 @@ metadata:
   - antiSMASH
   - BOA
   - ProteoWizard
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator

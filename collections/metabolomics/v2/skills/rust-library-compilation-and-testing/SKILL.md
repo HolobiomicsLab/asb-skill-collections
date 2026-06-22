@@ -11,6 +11,8 @@ metadata:
   - Rust
   - Cargo
   - mzPeak Rust library
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

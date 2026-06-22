@@ -11,6 +11,9 @@ metadata:
   - MS-DIAL v4.00 or higher
   - MS-CleanR
   - MS-DIAL
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

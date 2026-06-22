@@ -11,6 +11,8 @@ metadata:
   - ANN-SoLo
   - Faiss
   - NumPy
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo

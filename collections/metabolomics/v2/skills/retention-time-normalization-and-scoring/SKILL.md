@@ -12,6 +12,8 @@ metadata:
   - XCMS
   - dynamicTreeCut
   - RAMClustR
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

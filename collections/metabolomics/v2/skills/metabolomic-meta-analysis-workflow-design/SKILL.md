@@ -13,6 +13,8 @@ metadata:
   - Shiny
   - R package Amanida
   - R package webchem
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida

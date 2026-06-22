@@ -10,6 +10,8 @@ metadata:
   tools:
   - Python
   - BreathXplorer
+  techniques:
+  - CE-MS
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

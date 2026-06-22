@@ -14,6 +14,8 @@ metadata:
   - Torch
   - MSGO (aaronma2020/MSGO)
   - cfmid
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

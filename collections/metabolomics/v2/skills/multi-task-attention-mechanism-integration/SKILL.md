@@ -11,6 +11,9 @@ metadata:
   - LDA (Latent Dirichlet Allocation)
   - PyTorch / DGL
   - ESP (Ensembled Spectral Prediction)
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

@@ -112,12 +112,36 @@ Per-platform UI steps (menu names drift; the flow is what matters):
 
 Match the user's task against the indexes, most precise first:
 
-1. **EDAM operation/topic IRI** (`skills_index.json` → `edam_operation` / `edam_topics`).
-2. **Tool name** (`tools` field, or `tools_index.json`) — "XCMS", "SIRIUS", "GNPS", "MZmine", "matchms".
-3. **Keyword** over `name` + `description`.
+1. **Technique** (`skills_index.json` → `techniques`) — analytical platform tags.
+2. **EDAM operation/topic IRI** (`edam_operation` / `edam_topics`).
+3. **Tool name** (`tools` field, or `tools_index.json`) — "XCMS", "SIRIUS", "GNPS", "MZmine", "matchms".
+4. **Keyword** over `name` + `description`.
+
+### Filter by technique
+
+Each skill is tagged with a `techniques` list (heuristic, from its content). The
+vocabulary and current counts:
+
+| tag | skills | | tag | skills |
+|---|---|---|---|---|
+| `LC-MS` | 1314 | | `MS-imaging` | 292 |
+| `tandem-MS` (MS/MS) | 2129 | | `NMR` | 276 |
+| `GC-MS` | 367 | | `CE-MS` | 114 |
+| `ion-mobility-MS` | 390 | | `direct-infusion-MS` | 97 |
+| `mass-spectrometry` (generic) | 804 | | *(technique-agnostic: untagged)* | 1520 |
 
 ```bash
-# examples (jq over the index)
+# all LC-MS skills
+jq -r '.[] | select(.techniques[]? == "LC-MS") | .slug' skills_index.json
+# GC-MS skills, with names
+jq '.[] | select(.techniques[]? == "GC-MS") | {slug,name}' skills_index.json
+# combine facets: NMR skills that also mention a structure tool
+jq -r '.[] | select((.techniques[]? == "NMR") and (.tools[]? | ascii_downcase | test("sirius"))) | .slug' skills_index.json
+```
+
+### Other facets
+
+```bash
 jq '.[] | select(.tools[]? | ascii_downcase | test("sirius")) | .slug' skills_index.json
 jq '.[] | select(.edam_topics[]? | test("topic_3172")) | {slug,name}' skills_index.json   # Metabolomics
 jq -r '.[] | select(.description | test("library match";"i")) | .slug' skills_index.json

@@ -17,6 +17,8 @@ metadata:
   - read_raw_spectra
   - Python 3.12
   - RDKit (inferred)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms

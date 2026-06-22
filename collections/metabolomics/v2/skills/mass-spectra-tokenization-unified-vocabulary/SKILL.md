@@ -10,6 +10,8 @@ metadata:
   tools:
   - PyTorch
   - Hugging Face Transformers
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART

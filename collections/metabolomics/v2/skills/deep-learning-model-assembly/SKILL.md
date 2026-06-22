@@ -12,6 +12,8 @@ metadata:
   - Transformers (Hugging Face)
   - RDKit
   - HyperCCS repository
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c03492
   title: HyperCCS

@@ -14,6 +14,8 @@ metadata:
   - Annota_Tandem
   - KEGG_Enrich_PlotPanel
   - R (>= 3.5.0)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo

@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - AutoCCS
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btab429
   title: AutoCCS

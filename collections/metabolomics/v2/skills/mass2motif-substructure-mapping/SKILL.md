@@ -14,6 +14,8 @@ metadata:
   - GNPS
   - MS2LDA
   - Cytoscape
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer

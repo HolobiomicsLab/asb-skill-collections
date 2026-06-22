@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - ANN-SoLo
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo

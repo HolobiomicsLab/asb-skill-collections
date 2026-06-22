@@ -12,6 +12,8 @@ metadata:
   - QuanFormer
   - mzML reader
   - xcms (centWave algorithm)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

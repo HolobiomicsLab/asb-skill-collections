@@ -10,6 +10,8 @@ metadata:
   tools:
   - MS-CleanR
   - MS-DIAL
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

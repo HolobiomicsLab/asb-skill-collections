@@ -15,6 +15,9 @@ metadata:
   - scikit-learn (LASSO, SVR, cross-validation)
   - Graph Neural Network (retention_time_gnn)
   - Python, Jupyter Notebook
+  techniques:
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

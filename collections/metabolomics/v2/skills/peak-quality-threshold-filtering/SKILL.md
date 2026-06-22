@@ -14,6 +14,8 @@ metadata:
   - evaluate_gaussian_peak_on_intensity_list
   - compute_noise_by_flanks
   - stats_detect_elution_peaks
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

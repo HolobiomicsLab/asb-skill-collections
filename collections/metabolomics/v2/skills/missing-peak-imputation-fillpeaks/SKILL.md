@@ -12,6 +12,8 @@ metadata:
   - R
   - xcms
   - compCV
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW

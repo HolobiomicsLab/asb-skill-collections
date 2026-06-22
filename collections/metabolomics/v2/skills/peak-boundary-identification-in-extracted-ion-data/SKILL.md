@@ -14,6 +14,9 @@ metadata:
   - MRMTransitionGroupPicker
   - pyMRMTransitionGroupPicker
   - Bokeh
+  techniques:
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash

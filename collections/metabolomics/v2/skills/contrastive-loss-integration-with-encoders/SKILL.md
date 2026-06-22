@@ -13,6 +13,8 @@ metadata:
   - Git
   - PyTorch
   - MSBERT
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

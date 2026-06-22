@@ -10,6 +10,8 @@ metadata:
   tools:
   - ANN-SoLo
   - Faiss
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo

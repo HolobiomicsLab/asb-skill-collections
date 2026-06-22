@@ -12,6 +12,8 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   - Python
   - Spec2Vec
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

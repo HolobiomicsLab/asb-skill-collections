@@ -14,6 +14,9 @@ metadata:
   - numpy.corrcoef
   - pandas
   - matchms
+  techniques:
+  - MS-imaging
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy

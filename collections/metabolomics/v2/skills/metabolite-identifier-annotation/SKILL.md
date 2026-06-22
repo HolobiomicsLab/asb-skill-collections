@@ -11,6 +11,11 @@ metadata:
   - BioTransformer
   - PubChem
   - EAWAG Biodegradation and Biocatalysis Database
+  techniques:
+  - LC-MS
+  - GC-MS
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0

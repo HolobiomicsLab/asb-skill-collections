@@ -9,6 +9,8 @@ metadata:
   tools:
   - R
   - uafR
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr

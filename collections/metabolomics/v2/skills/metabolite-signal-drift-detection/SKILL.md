@@ -14,6 +14,10 @@ metadata:
   - dplyr
   - SummarizedExperiment
   - ggplot2
+  techniques:
+  - LC-MS
+  - GC-MS
+  - NMR
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV

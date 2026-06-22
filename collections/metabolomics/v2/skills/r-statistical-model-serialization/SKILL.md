@@ -12,6 +12,8 @@ metadata:
   - R 4.2.1
   - DNMS2Purifier_model_generation.r
   - DNMS2Purifier.r
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier

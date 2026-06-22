@@ -13,6 +13,9 @@ metadata:
   - Python
   - PyTorch
   - Preprocess.py
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

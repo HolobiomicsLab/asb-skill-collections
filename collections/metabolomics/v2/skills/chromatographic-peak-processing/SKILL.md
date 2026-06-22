@@ -11,6 +11,8 @@ metadata:
   - IDSL.IPA
   - R
   - RnetCDF
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA

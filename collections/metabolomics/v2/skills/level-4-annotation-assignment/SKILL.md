@@ -14,6 +14,10 @@ metadata:
   - Python
   - PCPFM
   - JMS (Json's Metabolite Services)
+  techniques:
+  - LC-MS
+  - GC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

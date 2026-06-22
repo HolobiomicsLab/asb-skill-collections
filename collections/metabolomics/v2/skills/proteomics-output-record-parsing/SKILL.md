@@ -14,6 +14,8 @@ metadata:
   - Proteomics_Data_Processor
   - Raw_File_Uploader
   - MSConnect (Django + Python + SQL database)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

@@ -11,6 +11,9 @@ metadata:
   - MSConvert
   - MS-DIAL
   - Pandas
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

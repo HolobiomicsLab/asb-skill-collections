@@ -12,6 +12,9 @@ metadata:
   - InterpretMSSpectrum
   - R
   - XCMS
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

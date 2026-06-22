@@ -15,6 +15,8 @@ metadata:
   - Open Tree of Life (OTT)
   - Wikidata
   - NPClassifier
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

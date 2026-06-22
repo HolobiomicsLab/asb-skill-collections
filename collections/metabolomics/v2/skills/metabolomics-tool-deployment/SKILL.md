@@ -17,6 +17,9 @@ metadata:
   - WineHQ 1.7
   - MI-Pack (Metabolite Identification Package)
   - XCMS
+  techniques:
+  - LC-MS
+  - direct-infusion-MS
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M

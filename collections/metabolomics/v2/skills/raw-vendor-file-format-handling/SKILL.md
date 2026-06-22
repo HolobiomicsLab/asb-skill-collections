@@ -13,6 +13,8 @@ metadata:
   - msconvert
   - Docker
   - imzML Writer
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer

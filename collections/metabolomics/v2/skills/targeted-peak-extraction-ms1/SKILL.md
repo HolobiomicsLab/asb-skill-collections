@@ -13,6 +13,11 @@ metadata:
   - PeakQuant
   - PeakQC
   - Comparador
+  techniques:
+  - LC-MS
+  - direct-infusion-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

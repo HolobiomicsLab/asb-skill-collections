@@ -13,6 +13,8 @@ metadata:
   - autoQ
   - QTransform
   - metBarPlot
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN

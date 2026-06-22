@@ -11,6 +11,8 @@ metadata:
   - RGCxGC
   - R
   - mixOmics
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC

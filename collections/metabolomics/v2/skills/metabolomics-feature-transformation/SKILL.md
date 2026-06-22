@@ -13,6 +13,9 @@ metadata:
   - ggplot2
   - XCMS
   - MS-Dial
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

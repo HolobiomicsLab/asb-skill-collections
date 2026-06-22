@@ -13,6 +13,8 @@ metadata:
   - asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding, bin_track_mzs)
   - asari MassGrid class
   - asari mass_functions module
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

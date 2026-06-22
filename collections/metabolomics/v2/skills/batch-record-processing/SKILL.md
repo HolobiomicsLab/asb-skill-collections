@@ -11,6 +11,8 @@ metadata:
   - GitHub Actions
   - MassBank-web Validator
   - MassBank-cli-tools
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank

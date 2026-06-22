@@ -15,6 +15,8 @@ metadata:
   - CellProfiler 3.0.0
   - Fiji (December 22 2015)
   - Python 3 with requirements.txt
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM

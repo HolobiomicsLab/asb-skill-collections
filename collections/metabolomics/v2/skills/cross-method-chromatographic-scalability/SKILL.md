@@ -20,6 +20,8 @@ metadata:
   - torch_geometric
   - rdkit-pypi
   - PredRet
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

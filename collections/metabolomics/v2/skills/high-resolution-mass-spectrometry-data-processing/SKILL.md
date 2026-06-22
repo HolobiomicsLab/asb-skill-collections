@@ -11,6 +11,8 @@ metadata:
   - Punc'data
   - d3.js
   - PCA-JS
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

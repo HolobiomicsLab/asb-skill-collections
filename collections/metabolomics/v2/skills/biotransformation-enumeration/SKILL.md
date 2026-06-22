@@ -13,6 +13,8 @@ metadata:
   - MetIDfyR
   - MetApp
   - R (v3.6.1 – v4.0)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR

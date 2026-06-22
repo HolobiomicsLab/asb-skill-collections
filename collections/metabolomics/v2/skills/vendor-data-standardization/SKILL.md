@@ -11,6 +11,9 @@ metadata:
   - msconvert
   - ProteoWizard
   - AriumMS
+  techniques:
+  - LC-MS
+  - CE-MS
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS

@@ -24,6 +24,9 @@ metadata:
   - Mann-Whitney U test
   - Agilent 1290 Infinity UHPLC + Agilent 6550 iFunnel Q-TOF mass spectrometer
   - Cohen's kappa metric
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

@@ -12,6 +12,8 @@ metadata:
   - antiSMASH
   - Python (numpy, scipy.stats, pandas, matplotlib, seaborn)
   - NPLinker
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

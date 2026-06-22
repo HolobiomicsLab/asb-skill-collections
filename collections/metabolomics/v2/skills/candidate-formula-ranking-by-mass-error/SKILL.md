@@ -10,6 +10,9 @@ metadata:
   tools:
   - MetaboShiny
   - R
+  techniques:
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

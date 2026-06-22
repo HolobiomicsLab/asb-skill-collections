@@ -14,6 +14,8 @@ metadata:
   - GNPS-FBMN
   - LOTUS database
   - Docker (adafede/tima-r image)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

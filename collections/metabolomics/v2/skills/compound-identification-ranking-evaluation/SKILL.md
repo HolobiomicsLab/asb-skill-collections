@@ -13,6 +13,9 @@ metadata:
   - PyTorch
   - FlavorFormer
   - Python 3.13.2
+  techniques:
+  - GC-MS
+  - NMR
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

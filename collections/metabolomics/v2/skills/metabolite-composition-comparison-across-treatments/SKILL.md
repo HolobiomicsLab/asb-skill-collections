@@ -14,6 +14,8 @@ metadata:
   - R
   - R base (prcomp)
   - ggplot2 / ggpubr
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect

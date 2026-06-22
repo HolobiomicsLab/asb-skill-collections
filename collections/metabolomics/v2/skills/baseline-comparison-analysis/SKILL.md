@@ -13,6 +13,9 @@ metadata:
   - MLP (NEIMS baseline)
   - GNN baseline
   - PyTorch
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

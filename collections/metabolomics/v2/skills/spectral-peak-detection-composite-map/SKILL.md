@@ -16,6 +16,8 @@ metadata:
   - asari peaks.detect_evaluate_peaks_on_roi
   - asari chromatograms.smooth_moving_average
   - asari peaks.evaluate_gaussian_peak_on_intensity_list
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

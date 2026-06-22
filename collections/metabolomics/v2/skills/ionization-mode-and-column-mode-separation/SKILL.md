@@ -14,6 +14,8 @@ metadata:
   - Biobase
   - ExpressionSet
   - MS-DIAL
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame

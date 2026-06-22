@@ -12,6 +12,8 @@ metadata:
   - R
   - TARDIS
   - Spectra
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis

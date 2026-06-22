@@ -13,6 +13,8 @@ metadata:
   - graphical time warping (GTW)
   - dynamic time warping (DTW)
   - xcms
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW

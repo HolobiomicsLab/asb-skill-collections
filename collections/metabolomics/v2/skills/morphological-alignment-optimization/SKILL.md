@@ -10,6 +10,8 @@ metadata:
   tools:
   - haCCA
   - scanpy
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1101/2024.08.20.608773v2
   title: haCCA

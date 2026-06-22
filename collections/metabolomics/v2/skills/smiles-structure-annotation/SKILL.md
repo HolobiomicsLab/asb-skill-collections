@@ -15,6 +15,9 @@ metadata:
   - MSGO
   - cfmid
   - PyTorch 1.7.1
+  techniques:
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

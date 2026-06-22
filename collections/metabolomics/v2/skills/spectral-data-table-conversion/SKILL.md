@@ -14,6 +14,8 @@ metadata:
   - pandas
   - Python (mzPeak reader module)
   - Rust (mzPeak CLI tools)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

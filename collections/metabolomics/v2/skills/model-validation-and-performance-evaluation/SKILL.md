@@ -11,6 +11,8 @@ metadata:
   tools:
   - MEISTER
   - multiscale_analysis
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1038/s41592-024-02171-3
   title: MEISTER

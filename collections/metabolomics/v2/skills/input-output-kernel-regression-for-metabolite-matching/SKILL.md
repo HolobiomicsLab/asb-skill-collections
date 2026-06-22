@@ -17,6 +17,8 @@ metadata:
   - CDK (Chemistry Development Kit)
   - PubChem
   - Klekota-Roth fingerprints
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

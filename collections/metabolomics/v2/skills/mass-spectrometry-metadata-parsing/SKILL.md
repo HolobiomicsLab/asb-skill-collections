@@ -11,6 +11,8 @@ metadata:
   - RawFileReader
   - rjson
   - rawrr
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr

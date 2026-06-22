@@ -12,6 +12,9 @@ metadata:
   - HDF5
   - h5py
   - rhdf5
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA

@@ -13,6 +13,10 @@ metadata:
   - Python 3
   - conda
   - GCMSFormer
+  techniques:
+  - LC-MS
+  - GC-MS
+  - direct-infusion-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

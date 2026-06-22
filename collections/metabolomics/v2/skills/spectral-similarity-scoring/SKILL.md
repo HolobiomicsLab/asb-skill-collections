@@ -28,6 +28,10 @@ metadata:
   - MetaboShiny
   - TandemMatch
   - SIMILE
+  techniques:
+  - GC-MS
+  - CE-MS
+  - tandem-MS
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems

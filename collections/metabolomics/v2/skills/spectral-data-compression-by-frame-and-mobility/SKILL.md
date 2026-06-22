@@ -12,6 +12,8 @@ metadata:
   - Agilent MassHunter
   - IM-MS Browser
   - .NET Framework 4.7.2
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor

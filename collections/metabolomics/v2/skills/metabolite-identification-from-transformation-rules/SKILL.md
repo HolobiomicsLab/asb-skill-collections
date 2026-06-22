@@ -10,6 +10,8 @@ metadata:
   - http://edamontology.org/topic_0154
   tools:
   - BioTransformer
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0

@@ -13,6 +13,8 @@ metadata:
   - PROXIMAL2
   - GNN-SOM
   - BAM
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam

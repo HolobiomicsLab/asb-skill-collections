@@ -15,6 +15,8 @@ metadata:
   - PyFingerprint
   - PubChemPy
   - Open Babel
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID

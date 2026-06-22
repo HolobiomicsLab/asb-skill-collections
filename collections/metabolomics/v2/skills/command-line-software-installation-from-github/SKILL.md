@@ -17,6 +17,8 @@ metadata:
   - Git
   - pip
   - Anaconda/Miniconda
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen

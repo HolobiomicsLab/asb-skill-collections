@@ -11,6 +11,8 @@ metadata:
   - mzQuality
   - R
   - SummarizedExperiment
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality

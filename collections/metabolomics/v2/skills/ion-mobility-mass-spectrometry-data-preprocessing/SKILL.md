@@ -14,6 +14,10 @@ metadata:
   - IMFE
   - .NET Framework 4.7.2
   - Microsoft Visual C++ Runtime x64
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor

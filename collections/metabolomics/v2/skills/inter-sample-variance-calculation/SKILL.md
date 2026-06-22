@@ -12,6 +12,8 @@ metadata:
   - pycombat
   - Python
   - PCPFM
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

@@ -11,6 +11,9 @@ metadata:
   - MS-CleanR
   - MS-DIAL
   - MS-FINDER
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

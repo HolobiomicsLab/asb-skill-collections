@@ -25,6 +25,8 @@ metadata:
   - COBRApy (with optGpSampler)
   - Agilent 1290 Infinity UHPLC + Agilent 6550 iFunnel Q-TOF
   - qLSLab/integrate pipeline
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

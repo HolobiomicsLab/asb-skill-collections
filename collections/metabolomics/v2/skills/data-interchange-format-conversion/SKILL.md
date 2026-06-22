@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0121
   tools:
   - DecoMetDIA
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA

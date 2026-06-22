@@ -13,6 +13,8 @@ metadata:
   - Python 3.8
   - R 4.0.2
   - R (version 4.0.2 or above)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect

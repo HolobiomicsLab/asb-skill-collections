@@ -17,6 +17,8 @@ metadata:
   - GNPS
   - MZmine2 / MZmine3
   - Inventa
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa

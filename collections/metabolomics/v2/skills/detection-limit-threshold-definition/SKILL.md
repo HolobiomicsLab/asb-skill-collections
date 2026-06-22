@@ -13,6 +13,8 @@ metadata:
   - GSimp_evaluation.R
   - imputeLCMD (QRILC)
   - kNN-TN (Truncation k-nearest neighbors)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

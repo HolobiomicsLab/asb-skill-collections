@@ -15,6 +15,8 @@ metadata:
   - MetabolomicsSpectrumResolver
   - ProteoXchange Repository
   - MS2LDA
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

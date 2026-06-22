@@ -13,6 +13,8 @@ metadata:
   - R
   - OUKS
   - MetCorR
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

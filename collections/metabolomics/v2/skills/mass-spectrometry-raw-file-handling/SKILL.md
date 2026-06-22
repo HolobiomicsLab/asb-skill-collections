@@ -15,6 +15,8 @@ metadata:
   - Raw File Uploader
   - MSConnect
   - Django
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

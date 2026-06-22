@@ -13,6 +13,9 @@ metadata:
   - Spectra
   - xcms
   - MetaboCoreUtils
+  techniques:
+  - CE-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS

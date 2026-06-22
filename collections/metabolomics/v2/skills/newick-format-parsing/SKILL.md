@@ -10,6 +10,8 @@ metadata:
   tools:
   - q2-qemistree
   - QIIME 2 artifact inspection tools
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree

@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - MAGMa
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma

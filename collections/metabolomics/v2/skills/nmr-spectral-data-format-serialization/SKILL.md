@@ -11,6 +11,8 @@ metadata:
   - MetAssimulo 2
   - h5py
   - scipy.io.netcdf / netCDF4-python
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0

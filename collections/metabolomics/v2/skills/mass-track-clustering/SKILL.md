@@ -13,6 +13,8 @@ metadata:
   - nn_cluster_by_mz_seeds
   - get_thousandth_bins
   - asari chromatograms.extract_massTracks_
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

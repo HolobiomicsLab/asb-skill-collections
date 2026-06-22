@@ -11,6 +11,8 @@ metadata:
   tools:
   - constraint-based stoichiometric metabolic models
   - INTEGRATE pipeline (qLSLab/integrate)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

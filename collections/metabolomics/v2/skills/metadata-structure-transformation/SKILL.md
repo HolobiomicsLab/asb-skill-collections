@@ -11,6 +11,8 @@ metadata:
   - Python
   - jsonschema
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes

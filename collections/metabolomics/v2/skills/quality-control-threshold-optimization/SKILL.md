@@ -10,6 +10,8 @@ metadata:
   tools:
   - MetaQC
   - MARC
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU

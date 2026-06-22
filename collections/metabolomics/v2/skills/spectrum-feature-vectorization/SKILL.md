@@ -12,6 +12,8 @@ metadata:
   - PS²MS
   - NEIMS
   - DeepEI
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

@@ -11,6 +11,8 @@ metadata:
   tools:
   - NMR2Struct model (transformer + CNN)
   - PubChem or equivalent molecular database
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

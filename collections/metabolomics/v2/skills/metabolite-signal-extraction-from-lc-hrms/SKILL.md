@@ -17,6 +17,8 @@ metadata:
   - RnetCDF
   - IDSL.UFA
   - IDSL.CSA
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA

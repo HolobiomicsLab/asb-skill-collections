@@ -14,6 +14,8 @@ metadata:
   - scipy.optimize.least_squares or scipy.optimize.curve_fit
   - mzapy.peaks.calc_gauss_psnr
   - mzapy.peaks.calc_peak_area
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

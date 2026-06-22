@@ -12,6 +12,10 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   - scikit-learn
   - ESP (Ensembled Spectral Prediction)
+  techniques:
+  - LC-MS
+  - GC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

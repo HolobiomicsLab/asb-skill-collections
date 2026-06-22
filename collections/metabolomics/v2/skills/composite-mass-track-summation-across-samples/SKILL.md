@@ -13,6 +13,8 @@ metadata:
   - asari.CompositeMap.construct_mass_grid
   - asari.chromatograms.extract_massTracks_
   - asari.peaks.stats_detect_elution_peaks
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

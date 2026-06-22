@@ -11,6 +11,8 @@ metadata:
   - SQL
   - MassQL
   - massql Python API
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

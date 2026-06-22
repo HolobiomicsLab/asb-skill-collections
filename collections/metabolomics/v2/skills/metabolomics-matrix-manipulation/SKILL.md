@@ -12,6 +12,9 @@ metadata:
   - imputeLCMD (R package)
   - GSimp.R
   - R base (log, exp, scale functions)
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

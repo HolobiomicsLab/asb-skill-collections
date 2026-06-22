@@ -10,6 +10,8 @@ metadata:
   tools:
   - DeepMSProfiler
   - Python (networkx, igraph, matplotlib/seaborn)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler

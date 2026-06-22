@@ -10,6 +10,8 @@ metadata:
   tools:
   - pyproteolizard-algorithm
   - pyproteolizard-data
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s12859-022-04833-5
   title: mzBucket

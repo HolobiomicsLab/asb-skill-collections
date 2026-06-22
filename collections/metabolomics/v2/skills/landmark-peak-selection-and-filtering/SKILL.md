@@ -14,6 +14,8 @@ metadata:
   - asari.peaks.quick_detect_unique_elution_peak
   - asari.constructors.set_RT_reference
   - asari.CompositeMap.calibrate_sample_RT
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

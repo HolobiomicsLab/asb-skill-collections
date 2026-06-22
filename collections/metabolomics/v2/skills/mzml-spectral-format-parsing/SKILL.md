@@ -14,6 +14,8 @@ metadata:
   - Visual Studio Community 2022
   - .NET Framework 4.7.2
   - MS-DIAL MsdialWorkbench
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec

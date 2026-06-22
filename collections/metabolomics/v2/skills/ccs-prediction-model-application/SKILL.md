@@ -13,6 +13,9 @@ metadata:
   - Jupyter Notebook
   - scikit-learn
   - RDKit
+  techniques:
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

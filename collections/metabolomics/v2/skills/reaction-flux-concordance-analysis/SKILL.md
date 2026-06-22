@@ -16,6 +16,8 @@ metadata:
   - Cohen's kappa metric (scikit-learn or manual implementation)
   - Benjamini–Hochberg FDR correction
   - concordanceAnalysis.py (INTEGRATE pipeline Step 10)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

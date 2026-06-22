@@ -11,6 +11,9 @@ metadata:
   - RapidMass
   - DI-MS
   - ASAP-MS
+  techniques:
+  - direct-infusion-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

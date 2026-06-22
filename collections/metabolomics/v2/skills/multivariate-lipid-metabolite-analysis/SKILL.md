@@ -13,6 +13,8 @@ metadata:
   - MultiABLER
   - limma
   - ProteoMM
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1016/j.isci.2023.106881
   title: MultiABLER

@@ -11,6 +11,8 @@ metadata:
   - KNIME
   - OpenMS
   - pyOpenMS
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

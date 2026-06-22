@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - M2S
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s

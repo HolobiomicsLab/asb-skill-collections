@@ -11,6 +11,8 @@ metadata:
   - Google Colab
   - Python 3
   - MetaboLights
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM

@@ -15,6 +15,8 @@ metadata:
   - KEGGREST
   - pathview
   - scipy.stats
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1101/2020.11.20.391912
   title: MetENP

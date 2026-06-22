@@ -17,6 +17,8 @@ metadata:
   - NumPy
   - Jupyter Notebook
   - TensorFlow/Keras
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms

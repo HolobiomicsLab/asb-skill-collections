@@ -14,6 +14,8 @@ metadata:
   - Sirius
   - R
   - XCMS
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - NMR2Struct transformer + CNN model
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

@@ -11,6 +11,8 @@ metadata:
   - drugbank_extraction.py
   - jobs.py
   - metadata_cleanup_prefect.py
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

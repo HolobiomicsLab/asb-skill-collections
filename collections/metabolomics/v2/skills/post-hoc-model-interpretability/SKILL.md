@@ -13,6 +13,8 @@ metadata:
   - PyTorch
   - TensorFlow
   - RDKit
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs

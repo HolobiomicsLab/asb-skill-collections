@@ -15,6 +15,8 @@ metadata:
   - MetaboCoreUtils
   - MSnbase
   - ROMANCE
+  techniques:
+  - CE-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR

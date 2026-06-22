@@ -12,6 +12,8 @@ metadata:
   - GSimp_evaluation.R
   - impute::impute.QRILC
   - R package imputeLCMD
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

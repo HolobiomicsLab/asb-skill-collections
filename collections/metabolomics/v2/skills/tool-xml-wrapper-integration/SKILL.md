@@ -15,6 +15,8 @@ metadata:
   - MATLAB Compiler Runtime (MCR) 8.3
   - MI-Pack (Metabolite Identification Package)
   - Galaxy-M
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M

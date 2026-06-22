@@ -11,6 +11,8 @@ metadata:
   - pewpew
   - pewlib
   - pew²
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2

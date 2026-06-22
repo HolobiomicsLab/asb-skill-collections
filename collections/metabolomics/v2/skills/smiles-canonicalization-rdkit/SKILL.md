@@ -13,6 +13,8 @@ metadata:
   - pandas
   - manual expert review
   - enveda/ccs-prediction training pipeline
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus

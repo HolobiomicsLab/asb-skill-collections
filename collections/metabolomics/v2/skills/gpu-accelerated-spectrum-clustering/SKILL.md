@@ -13,6 +13,8 @@ metadata:
   - HyperSpec
   - Python
   - CUDA
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

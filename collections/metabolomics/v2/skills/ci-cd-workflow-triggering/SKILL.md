@@ -11,6 +11,8 @@ metadata:
   - JDK 25
   - JavaFX 24
   - GitHub Actions
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

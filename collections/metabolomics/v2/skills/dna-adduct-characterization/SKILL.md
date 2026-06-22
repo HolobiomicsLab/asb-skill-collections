@@ -11,6 +11,8 @@ metadata:
   tools:
   - CFM-ID
   - RDKit
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database

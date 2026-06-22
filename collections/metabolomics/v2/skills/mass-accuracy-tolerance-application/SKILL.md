@@ -18,6 +18,8 @@ metadata:
   - meRgeION2
   - GNPS
   - MassBank
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa

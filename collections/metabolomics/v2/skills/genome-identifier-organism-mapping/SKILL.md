@@ -12,6 +12,8 @@ metadata:
   - NCBI Taxonomy / GenBank
   - redis queue
   - paired-data-form API web service
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla

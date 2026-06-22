@@ -14,6 +14,8 @@ metadata:
   - Anaconda
   - PyTorch
   - MWFormer
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c03781
   title: MWFormer

@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - mzEmbed
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1101/2025.01.26.634927v3
   title: mzLearn

@@ -13,6 +13,8 @@ metadata:
   - R
   - xcms
   - MSConvert (ProteoWizard)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis

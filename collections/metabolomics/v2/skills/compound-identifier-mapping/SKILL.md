@@ -14,6 +14,9 @@ metadata:
   - mpactr
   - MPACT
   - Progenesis
+  techniques:
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

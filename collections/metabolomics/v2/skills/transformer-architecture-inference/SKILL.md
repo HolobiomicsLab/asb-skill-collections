@@ -14,6 +14,8 @@ metadata:
   - RDKit
   - SGNN (Spectral Graph Neural Network)
   - Chemprop-IR
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

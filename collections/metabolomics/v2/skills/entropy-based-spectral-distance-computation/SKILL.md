@@ -13,6 +13,8 @@ metadata:
   - spectral_similarity module
   - Entropy Search GUI
   - MS Viewer web app
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

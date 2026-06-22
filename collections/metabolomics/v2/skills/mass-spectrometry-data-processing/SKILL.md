@@ -32,6 +32,8 @@ metadata:
   - mzR
   - MSConvert
   - tima R package
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra

@@ -10,6 +10,8 @@ metadata:
   tools:
   - R
   - run_de()
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET

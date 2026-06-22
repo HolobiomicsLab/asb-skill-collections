@@ -10,6 +10,10 @@ metadata:
   tools:
   - MAGMa
   - PubChem
+  techniques:
+  - ion-mobility-MS
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma

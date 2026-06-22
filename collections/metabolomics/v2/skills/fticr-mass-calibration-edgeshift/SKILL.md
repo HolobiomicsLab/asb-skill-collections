@@ -9,6 +9,10 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - xcms
+  techniques:
+  - LC-MS
+  - GC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS

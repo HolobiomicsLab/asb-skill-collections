@@ -13,6 +13,8 @@ metadata:
   - GNPSExtractor
   - GNPS1
   - GNPS2
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore

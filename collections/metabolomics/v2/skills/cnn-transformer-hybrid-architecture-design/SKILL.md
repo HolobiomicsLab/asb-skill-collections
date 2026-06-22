@@ -11,6 +11,9 @@ metadata:
   - Python
   - QuanFormer
   - PyTorch
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

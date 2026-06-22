@@ -12,6 +12,8 @@ metadata:
   - pwiz_bindings_cli.dll
   - ProteoWizard
   - Docker Engine / Docker Desktop for Mac
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

@@ -10,6 +10,8 @@ metadata:
   tools:
   - XCMS CentWave
   - Paramounter
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.1c04758
   title: Paramounter

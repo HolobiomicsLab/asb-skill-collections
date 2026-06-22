@@ -11,6 +11,10 @@ metadata:
   - Python
   - gensim
   - run_gensim.py
+  techniques:
+  - LC-MS
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

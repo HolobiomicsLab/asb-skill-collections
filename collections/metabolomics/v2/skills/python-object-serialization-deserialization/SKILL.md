@@ -11,6 +11,9 @@ metadata:
   - Python
   - specXplore
   - Jupyter notebooks
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore

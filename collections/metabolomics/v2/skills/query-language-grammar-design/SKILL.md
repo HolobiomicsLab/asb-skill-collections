@@ -11,6 +11,8 @@ metadata:
   - SQL
   - MassQL reference implementation
   - massql command-line utility
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

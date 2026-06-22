@@ -10,6 +10,8 @@ metadata:
   tools:
   - MsFeatures
   - xcms
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS

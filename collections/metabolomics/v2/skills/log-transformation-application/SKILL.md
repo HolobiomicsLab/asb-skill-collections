@@ -12,6 +12,8 @@ metadata:
   - NormalizeMets
   - RStudio
   - MissingValues
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets

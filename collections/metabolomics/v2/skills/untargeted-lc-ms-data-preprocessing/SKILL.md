@@ -12,6 +12,8 @@ metadata:
   - R
   - XCMS
   - caret
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean

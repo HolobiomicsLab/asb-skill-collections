@@ -17,6 +17,8 @@ metadata:
   - ConverterBuilder
   - RDKit
   - Logger
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

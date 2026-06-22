@@ -18,6 +18,8 @@ metadata:
   - jobs.py
   - Fast Search API
   - GNPS_MASST
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

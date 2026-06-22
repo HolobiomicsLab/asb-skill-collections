@@ -11,6 +11,8 @@ metadata:
   - SciPy (scipy.stats.wasserstein_distance or scipy.optimize.linprog for optimal transport)
   - SciPy
   - mcfNMR
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

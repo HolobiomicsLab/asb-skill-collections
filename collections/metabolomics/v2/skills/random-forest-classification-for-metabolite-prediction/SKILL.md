@@ -13,6 +13,8 @@ metadata:
   - ggplot2
   - Omu
   - read.metabo
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool

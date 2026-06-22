@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - RapidMass
+  techniques:
+  - direct-infusion-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

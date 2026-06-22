@@ -11,6 +11,8 @@ metadata:
   - cosine.py
   - entropy.py
   - bhattacharya1.py
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c02047
   title: Reverse Spectral Search

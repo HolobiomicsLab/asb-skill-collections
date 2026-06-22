@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0639
   tools:
   - patRoon
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

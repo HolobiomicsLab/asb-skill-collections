@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0121
   tools:
   - MoleTrans
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans

@@ -14,6 +14,8 @@ metadata:
   - mzBucket
   - pyproteolizard-data
   - pyproteolizard-algorithm
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon

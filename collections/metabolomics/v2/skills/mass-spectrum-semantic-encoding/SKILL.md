@@ -10,6 +10,8 @@ metadata:
   tools:
   - DeepMASS2
   - Ms2Vec (neural embedding model)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS

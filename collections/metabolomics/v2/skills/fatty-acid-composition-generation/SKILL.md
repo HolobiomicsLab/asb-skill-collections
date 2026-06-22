@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3375
   tools:
   - LSG
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

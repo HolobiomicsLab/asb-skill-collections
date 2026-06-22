@@ -11,6 +11,8 @@ metadata:
   - R
   - MobiLipid
   - DTCCS_N2 library for U13C labeled lipids
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid

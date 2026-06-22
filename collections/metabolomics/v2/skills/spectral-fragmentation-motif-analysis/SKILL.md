@@ -13,6 +13,8 @@ metadata:
   - MS2LDA
   - PALS (Pathway Activity Level Scoring)
   - PALS Viewer
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

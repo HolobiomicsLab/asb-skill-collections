@@ -12,6 +12,8 @@ metadata:
   - mwtab
   - pandas
   - Python re module
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

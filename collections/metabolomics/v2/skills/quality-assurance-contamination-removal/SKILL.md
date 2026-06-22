@@ -11,6 +11,9 @@ metadata:
   - R
   - MZmine3
   - Jupyter Notebook
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

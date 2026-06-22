@@ -10,6 +10,8 @@ metadata:
   - SAND
   - NMRPipe
   - NMRBox
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.analchem.3c03078
   title: SAND

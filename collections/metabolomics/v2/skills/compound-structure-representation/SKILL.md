@@ -13,6 +13,8 @@ metadata:
   - RDKit
   - matplotlib
   - GNPS Compound class
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder

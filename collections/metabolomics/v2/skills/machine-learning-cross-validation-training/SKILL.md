@@ -12,6 +12,8 @@ metadata:
   - MSNovelist
   - SLURM
   - Singularity
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

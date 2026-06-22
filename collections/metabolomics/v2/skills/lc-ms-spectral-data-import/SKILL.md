@@ -14,6 +14,9 @@ metadata:
   - matchms
   - MZmine
   - ms2query
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore

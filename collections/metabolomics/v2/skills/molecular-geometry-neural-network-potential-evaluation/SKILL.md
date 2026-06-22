@@ -12,6 +12,9 @@ metadata:
   - RDKit
   - QUICK
   - Snakemake
+  techniques:
+  - ion-mobility-MS
+  - NMR
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

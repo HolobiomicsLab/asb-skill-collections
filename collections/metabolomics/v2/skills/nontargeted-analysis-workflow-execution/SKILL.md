@@ -13,6 +13,9 @@ metadata:
   - MSConvert
   - GNPS
   - Ubuntu 20.04 (Linux environment)
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder

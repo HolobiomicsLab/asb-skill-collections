@@ -14,6 +14,8 @@ metadata:
   - Entropy Search (GUI)
   - FlashEntropySearch (benchmark repository)
   - Python time/timeit modules
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-023-02012-9
   title: Flash entropy search

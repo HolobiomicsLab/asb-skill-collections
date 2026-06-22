@@ -10,6 +10,8 @@ metadata:
   tools:
   - psm_utils
   - MS²Rescore
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

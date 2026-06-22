@@ -10,6 +10,8 @@ metadata:
   tools:
   - MetumpX
   - Git
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btz765
   title: MetumpX untargeted MS support package

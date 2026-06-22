@@ -12,6 +12,8 @@ metadata:
   - XCMS
   - metaMS
   - DaDIA
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA

@@ -11,6 +11,8 @@ metadata:
   - MetumpX-bin
   - Shell script parser (manual or automated)
   - Dependency file parser (apt, pip, conda)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btz765
   title: MetumpX untargeted MS support package

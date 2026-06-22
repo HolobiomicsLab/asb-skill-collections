@@ -13,6 +13,10 @@ metadata:
   - RDKit
   - scikit-learn
   - Graph Neural Network (GNN) retention time predictor
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

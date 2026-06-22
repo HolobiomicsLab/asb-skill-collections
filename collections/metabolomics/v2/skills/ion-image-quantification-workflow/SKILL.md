@@ -11,6 +11,10 @@ metadata:
   tools:
   - LipidQMap
   - Cardinal
+  techniques:
+  - LC-MS
+  - direct-infusion-MS
+  - MS-imaging
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap

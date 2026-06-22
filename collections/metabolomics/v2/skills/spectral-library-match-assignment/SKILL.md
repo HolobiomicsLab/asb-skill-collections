@@ -13,6 +13,8 @@ metadata:
   - pyrwr
   - MetFrag
   - ChemWalker
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btad078/7067745
   title: ChemWalker

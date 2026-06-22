@@ -13,6 +13,9 @@ metadata:
   - enrichmet
   - LION lipid ontology database
   - Fisher's exact test
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET

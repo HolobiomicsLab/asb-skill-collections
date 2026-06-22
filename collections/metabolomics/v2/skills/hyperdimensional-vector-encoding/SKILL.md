@@ -11,6 +11,8 @@ metadata:
   - Python 3.8+
   - HyperSpec
   - CUDA
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

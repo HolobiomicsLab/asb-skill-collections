@@ -12,6 +12,8 @@ metadata:
   - Python
   - EntropySearch
   - FlashEntropySearch
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-023-02012-9
   title: Flash entropy search

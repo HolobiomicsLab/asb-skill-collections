@@ -37,17 +37,20 @@ Every skill is one `skills/<slug>/SKILL.md` with YAML frontmatter. Two machine
 indexes at the collection root make lookup cheap — load whichever fits:
 
 - **`skills_index.json`** — one row per skill: `slug`, `name`, `description`,
-  `edam_operation`, `edam_topics`, `tools`, `dois`.
+  `edam_operation`, `edam_topics`, `tools`, `dois`, `techniques`.
 - **`tools_index.json`** — one row per tool: `slug`, `name`, `canonical_url`,
   `edam_topics`, `dois`.
 
 Pick a skill by matching the user's task against, in order of precision:
 
-1. **EDAM operation/topic IRI** — exact ontology match (e.g. peak picking =
+1. **Technique** (`techniques`) — analytical platform tags: `LC-MS`, `tandem-MS`,
+   `GC-MS`, `CE-MS`, `direct-infusion-MS`, `MS-imaging`, `ion-mobility-MS`, `NMR`,
+   `mass-spectrometry` (generic). e.g. `jq '.[]|select(.techniques[]?=="LC-MS")'`.
+2. **EDAM operation/topic IRI** — exact ontology match (e.g. peak picking =
    `operation_3215`, spectral library matching, formula prediction).
-2. **Tool name** — the user already names a tool ("run XCMS", "use SIRIUS",
+3. **Tool name** — the user already names a tool ("run XCMS", "use SIRIUS",
    "GNPS molecular networking", "MZmine", "matchms").
-3. **Keyword** over `name` + `description`.
+4. **Keyword** over `name` + `description`.
 
 Then read that skill's `skills/<slug>/SKILL.md` and follow it.
 

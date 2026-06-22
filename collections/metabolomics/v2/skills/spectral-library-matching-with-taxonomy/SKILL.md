@@ -16,6 +16,8 @@ metadata:
   - SIRIUS (v5/v6)
   - GNPS-FBMN
   - R (with tidyverse, Spectra, MetaboCoreUtils)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

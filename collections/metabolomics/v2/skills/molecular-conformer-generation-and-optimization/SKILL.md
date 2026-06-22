@@ -14,6 +14,9 @@ metadata:
   - RDKit
   - Quantum Chemistry Package (e.g., ORCA, Gaussian, MOPAC)
   - scikit-learn
+  techniques:
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

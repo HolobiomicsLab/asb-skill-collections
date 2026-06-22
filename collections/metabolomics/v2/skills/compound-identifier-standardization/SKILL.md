@@ -13,6 +13,8 @@ metadata:
   - jobs.py
   - prepare_wikidata_lotus_prefect.py
   - drugbank_extraction.py
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

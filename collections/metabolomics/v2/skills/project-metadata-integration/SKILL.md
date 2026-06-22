@@ -12,6 +12,8 @@ metadata:
   - Github
   - redis queue
   - GenBank / NCBI Taxonomy
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla

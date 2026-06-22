@@ -11,6 +11,8 @@ metadata:
   - ViMMS
   - ViMMS (Virtual Metabolomics Mass Spectrometer)
   - Python pickle
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

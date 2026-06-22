@@ -12,6 +12,8 @@ metadata:
   - MassQL Reference Parser
   - massql Python API
   - massql Command Line Tool
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

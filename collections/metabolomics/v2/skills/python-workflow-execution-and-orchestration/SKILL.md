@@ -21,6 +21,8 @@ metadata:
   - tqdm / tqdm_joblib
   - numpy / scipy
   - LAGF
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF

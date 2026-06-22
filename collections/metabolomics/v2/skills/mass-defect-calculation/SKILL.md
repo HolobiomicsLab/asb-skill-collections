@@ -12,6 +12,8 @@ metadata:
   - pyOpenMS
   - PFΔScreen
   - MSConvert
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

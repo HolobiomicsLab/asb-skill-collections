@@ -17,6 +17,8 @@ metadata:
   - conda
   - pip
   - scikit-learn
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

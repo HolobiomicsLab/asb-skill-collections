@@ -12,6 +12,8 @@ metadata:
   - pandas
   - numpy
   - Python
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

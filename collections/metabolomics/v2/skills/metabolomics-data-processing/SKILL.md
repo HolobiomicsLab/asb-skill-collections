@@ -11,6 +11,8 @@ metadata:
   tools:
   - Galaxy Genomics Framework
   - SECIMTools
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s12859-018-2134-1
   title: SECIMTools

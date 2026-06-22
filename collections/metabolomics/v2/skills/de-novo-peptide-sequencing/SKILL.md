@@ -13,6 +13,8 @@ metadata:
   - PDV
   - limelight-import-casanovo
   - CUDA Toolkit
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo

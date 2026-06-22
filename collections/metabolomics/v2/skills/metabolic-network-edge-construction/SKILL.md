@@ -10,6 +10,8 @@ metadata:
   - http://edamontology.org/topic_2258
   tools:
   - SMART
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

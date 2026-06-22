@@ -12,6 +12,8 @@ metadata:
   - R
   - MiMIR
   - R (base stats, caret, matrixStats)
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR

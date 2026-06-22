@@ -15,6 +15,10 @@ metadata:
   - XCMS
   - MSFinder
   - Sirius
+  techniques:
+  - LC-MS
+  - GC-MS
+  - direct-infusion-MS
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

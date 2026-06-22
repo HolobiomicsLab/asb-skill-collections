@@ -13,6 +13,10 @@ metadata:
   - asari peaks.compute_noise_by_flanks
   - scipy.signal.find_peaks
   - scipy.signal.detrend
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

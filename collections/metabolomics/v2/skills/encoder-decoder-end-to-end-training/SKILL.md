@@ -11,6 +11,8 @@ metadata:
   tools:
   - RDKit
   - PyTorch
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol

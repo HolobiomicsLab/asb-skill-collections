@@ -11,6 +11,9 @@ metadata:
   tools:
   - R Shiny
   - EISA-EXPOSOME
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME

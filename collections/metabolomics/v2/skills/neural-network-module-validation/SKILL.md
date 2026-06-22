@@ -8,6 +8,8 @@ metadata:
   - PyTorch
   - scikit-learn
   - CLERMS
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS

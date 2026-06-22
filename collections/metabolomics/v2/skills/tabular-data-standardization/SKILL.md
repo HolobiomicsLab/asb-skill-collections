@@ -12,6 +12,8 @@ metadata:
   - Python
   - Python regex (re module)
   - Lipid_MRM_parser.ipynb
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

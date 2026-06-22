@@ -13,6 +13,8 @@ metadata:
   - Entropy Search GUI
   - MSEntropy (Python package)
   - MS Viewer web app
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41592-023-02012-9
   title: Flash entropy search

@@ -14,6 +14,8 @@ metadata:
   - CUDA Toolkit
   - Limelight XML converter (yeastrc/limelight-import-casanovo)
   - PDV (Proteomics Data Viewer)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo

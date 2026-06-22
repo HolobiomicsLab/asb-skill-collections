@@ -10,6 +10,8 @@ metadata:
   tools:
   - PyINETA
   - Python
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

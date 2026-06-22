@@ -10,6 +10,8 @@ metadata:
   tools:
   - spectrum_utils
   - cosine_neutral_loss repository
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity

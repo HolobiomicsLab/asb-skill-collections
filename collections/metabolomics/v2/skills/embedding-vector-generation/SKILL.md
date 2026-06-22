@@ -12,6 +12,8 @@ metadata:
   - Python
   - Python 3.7
   - Anaconda
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

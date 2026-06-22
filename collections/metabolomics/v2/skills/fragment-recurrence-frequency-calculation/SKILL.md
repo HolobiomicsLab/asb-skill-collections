@@ -15,6 +15,8 @@ metadata:
   - extract_raw_spectra
   - call_aggregate
   - label_individual_spectrum
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS

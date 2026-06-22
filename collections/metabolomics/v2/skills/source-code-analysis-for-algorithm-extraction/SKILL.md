@@ -11,6 +11,8 @@ metadata:
   tools:
   - MAGMa
   - NLeSC/MAGMa GitHub repository
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma

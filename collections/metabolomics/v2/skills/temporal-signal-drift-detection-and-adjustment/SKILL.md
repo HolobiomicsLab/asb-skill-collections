@@ -10,6 +10,8 @@ metadata:
   tools:
   - Shiny
   - QuantyFey
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey

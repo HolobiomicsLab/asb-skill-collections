@@ -12,6 +12,9 @@ metadata:
   - Lilikoi v2.0
   - R
   - lilikoi.MetaTOpathway()
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0

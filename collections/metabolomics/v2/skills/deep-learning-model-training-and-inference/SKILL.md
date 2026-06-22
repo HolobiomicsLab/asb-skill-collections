@@ -14,6 +14,8 @@ metadata:
   - SIRIUS
   - MIST
   - MIST-CF
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)

@@ -13,6 +13,9 @@ metadata:
   - Chroma
   - Eclipse
   - Gravity
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

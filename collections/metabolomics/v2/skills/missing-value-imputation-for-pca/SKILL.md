@@ -11,6 +11,8 @@ metadata:
   - R
   - ggplot2
   - metaboprep
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep

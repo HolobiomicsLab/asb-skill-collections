@@ -12,6 +12,10 @@ metadata:
   - Agilent MassHunter
   - IM-MS Browser
   - IMFE
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor

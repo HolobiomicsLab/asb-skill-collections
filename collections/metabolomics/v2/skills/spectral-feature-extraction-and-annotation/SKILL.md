@@ -18,6 +18,8 @@ metadata:
   - matplotlib
   - tqdm and tqdm_joblib
   - pandas, numpy, scipy
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF

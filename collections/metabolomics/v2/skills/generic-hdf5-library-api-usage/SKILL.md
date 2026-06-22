@@ -14,6 +14,8 @@ metadata:
   - HDF5
   - hdf5plugin
   - NumPy
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA

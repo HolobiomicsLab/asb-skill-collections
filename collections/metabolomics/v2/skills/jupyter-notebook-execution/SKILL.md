@@ -19,6 +19,8 @@ metadata:
   - Python
   - cwieder/metabolomics-ORA
   - metabolomics-ORA repository
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

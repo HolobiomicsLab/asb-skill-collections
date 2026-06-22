@@ -10,6 +10,8 @@ metadata:
   tools:
   - R
   - metaboprep
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep

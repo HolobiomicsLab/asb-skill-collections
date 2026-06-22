@@ -12,6 +12,8 @@ metadata:
   - pandas
   - numpy
   - Bruker Solarix (ReadBrukerSolarix)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems

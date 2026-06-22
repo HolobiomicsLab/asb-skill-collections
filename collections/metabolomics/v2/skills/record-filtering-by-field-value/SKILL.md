@@ -10,6 +10,8 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes

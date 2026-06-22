@@ -14,6 +14,8 @@ metadata:
   - ProteoMM
   - limma
   - tidyverse
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1016/j.isci.2023.106881
   title: MultiABLER

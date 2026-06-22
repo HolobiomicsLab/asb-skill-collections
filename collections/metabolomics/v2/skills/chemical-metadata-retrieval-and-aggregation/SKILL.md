@@ -13,6 +13,8 @@ metadata:
   - R
   - webchem
   - PubChem
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr

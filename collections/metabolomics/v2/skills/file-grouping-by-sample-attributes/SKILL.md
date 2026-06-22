@@ -14,6 +14,8 @@ metadata:
   - ReDU File Selector
   - GNPS
   - ReDU metadata validator
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

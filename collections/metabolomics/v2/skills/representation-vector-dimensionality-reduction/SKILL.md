@@ -12,6 +12,8 @@ metadata:
   - UMAP
   - scikit-learn
   - PyTorch
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

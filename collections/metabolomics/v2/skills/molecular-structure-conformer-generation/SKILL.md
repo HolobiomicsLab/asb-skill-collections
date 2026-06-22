@@ -20,6 +20,9 @@ metadata:
   - ETKDGv3
   - EmbedMultipleConfs
   - MMFFOptimizeMoleculeConfs
+  techniques:
+  - ion-mobility-MS
+  - NMR
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

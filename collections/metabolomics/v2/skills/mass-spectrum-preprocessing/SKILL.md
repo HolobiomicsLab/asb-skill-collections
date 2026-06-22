@@ -10,6 +10,8 @@ metadata:
   tools:
   - Python 3.8+
   - HyperSpec (wh-xu/Hyper-Spec)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

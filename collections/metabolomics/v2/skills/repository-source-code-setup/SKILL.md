@@ -11,6 +11,8 @@ metadata:
   - MassQL
   - GitHub Actions (test-unit.yml workflow)
   - pytest (inferred from test suite structure)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

@@ -14,6 +14,8 @@ metadata:
   - Raxport.net
   - mzR (Bioconductor)
   - MSnbase (Bioconductor)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith

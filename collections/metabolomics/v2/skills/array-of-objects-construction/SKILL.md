@@ -11,6 +11,8 @@ metadata:
   - Python
   - jsonschema
   - messes
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes

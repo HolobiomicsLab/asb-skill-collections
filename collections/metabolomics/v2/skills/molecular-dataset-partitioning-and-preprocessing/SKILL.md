@@ -14,6 +14,8 @@ metadata:
   - Jupyter notebooks (notebooks/data_processing/2_data_splits.ipynb)
   - Makefile commands (make train-metlin-test-metlin, etc.)
   - Mol2CCS library functions (mol2ccs/train_and_predict.py)
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs

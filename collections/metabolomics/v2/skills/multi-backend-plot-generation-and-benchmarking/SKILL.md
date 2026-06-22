@@ -15,6 +15,8 @@ metadata:
   - matplotlib
   - bokeh
   - pandas
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

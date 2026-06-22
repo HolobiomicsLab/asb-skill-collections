@@ -14,6 +14,8 @@ metadata:
   - asari peaks.compute_noise_by_flanks
   - asari peaks.stats_detect_elution_peaks
   - asari peaks.evaluate_gaussian_peak_on_intensity_list
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

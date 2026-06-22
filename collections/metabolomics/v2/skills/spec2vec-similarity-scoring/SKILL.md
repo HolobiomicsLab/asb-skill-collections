@@ -13,6 +13,8 @@ metadata:
   - MS2LDA
   - MAG (Mass2Motif Annotation Guidance)
   - MS2LDAViz
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

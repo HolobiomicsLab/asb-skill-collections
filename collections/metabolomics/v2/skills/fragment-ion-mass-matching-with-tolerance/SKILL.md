@@ -19,6 +19,8 @@ metadata:
   - get_all_subformulas
   - check_candidates
   - get_denoise_tag
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

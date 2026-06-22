@@ -13,6 +13,9 @@ metadata:
   - DIA-NN
   - msConvert
   - Python (scikit-learn, pandas, numpy)
+  techniques:
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC

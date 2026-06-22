@@ -11,6 +11,8 @@ metadata:
   - KNIME
   - MSNumpressCoder
   - OpenMS unit test suite
+  techniques:
+  - CE-MS
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

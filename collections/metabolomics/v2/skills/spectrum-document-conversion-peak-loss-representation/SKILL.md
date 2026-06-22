@@ -18,6 +18,9 @@ metadata:
   - scipy
   - gensim (Word2Vec, CBOW, Skip-gram)
   - NumPy, Pandas, SciPy
+  techniques:
+  - GC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec

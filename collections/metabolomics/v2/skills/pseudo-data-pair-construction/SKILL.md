@@ -11,6 +11,8 @@ metadata:
   - Python 3.7
   - cfmid
   - MSGO
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

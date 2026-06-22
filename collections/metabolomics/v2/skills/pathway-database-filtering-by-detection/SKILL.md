@@ -12,6 +12,8 @@ metadata:
   - Python
   - Jupyter
   - cwieder/metabolomics-ORA
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA

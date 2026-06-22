@@ -11,6 +11,8 @@ metadata:
   - DIMPLE (Developmental Imaging Mass Spectrometry Pipeline for Linear Evaluation)
   - Matlab
   - batchcdfread function
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE

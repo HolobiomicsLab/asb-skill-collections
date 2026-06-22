@@ -10,6 +10,8 @@ metadata:
   - http://edamontology.org/topic_0091
   tools:
   - DeepMASS2
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS

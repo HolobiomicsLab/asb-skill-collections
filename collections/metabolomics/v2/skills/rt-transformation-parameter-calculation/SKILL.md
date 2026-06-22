@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0091
   tools:
   - MetCohort
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c04906
   title: MetCohort

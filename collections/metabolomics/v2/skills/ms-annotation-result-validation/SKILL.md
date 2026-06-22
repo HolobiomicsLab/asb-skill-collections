@@ -15,6 +15,8 @@ metadata:
   - xcms
   - RamClustR
   - R (version 4.5.0 or higher)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator

@@ -14,6 +14,8 @@ metadata:
   - scipy.signal.find_peaks
   - mass2chem
   - metDataModel
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

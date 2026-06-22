@@ -11,6 +11,8 @@ metadata:
   tools:
   - PyTorch
   - Transformer (encoder-decoder architecture)
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

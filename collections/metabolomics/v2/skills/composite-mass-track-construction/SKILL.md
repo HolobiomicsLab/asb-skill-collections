@@ -13,6 +13,8 @@ metadata:
   - scipy.signal.detrend
   - asari peaks.audit_mass_track
   - asari chromatograms.rt_lowess_calibration
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

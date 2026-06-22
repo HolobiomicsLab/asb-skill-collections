@@ -13,6 +13,8 @@ metadata:
   - mzR
   - enviPat
   - Proteowizard MSconvert
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN

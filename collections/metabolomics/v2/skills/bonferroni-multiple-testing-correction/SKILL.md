@@ -13,6 +13,8 @@ metadata:
   - R
   - corrPairsMSI
   - corrPairsMSIchunks
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct

@@ -9,6 +9,11 @@ metadata:
   - http://edamontology.org/topic_0121
   tools:
   - mzmine
+  techniques:
+  - LC-MS
+  - GC-MS
+  - ion-mobility-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

@@ -10,6 +10,8 @@ metadata:
   tools:
   - CoreMS
   - pandas
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems

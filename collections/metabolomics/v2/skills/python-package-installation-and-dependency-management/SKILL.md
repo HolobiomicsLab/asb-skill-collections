@@ -13,6 +13,8 @@ metadata:
   - falcon-ms
   - spectrum-utils
   - pip
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon

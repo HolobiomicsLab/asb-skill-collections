@@ -12,6 +12,9 @@ metadata:
   - pymzML
   - mzML validator / indexer
   - MetaboLights REST API
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

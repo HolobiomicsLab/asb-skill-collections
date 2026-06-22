@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - Scannotation
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.est.3c04764
   title: Scannotation

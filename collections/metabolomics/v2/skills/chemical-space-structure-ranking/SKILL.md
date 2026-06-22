@@ -10,6 +10,8 @@ metadata:
   - http://edamontology.org/topic_3474
   tools:
   - DeepMASS2
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS

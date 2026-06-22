@@ -13,6 +13,8 @@ metadata:
   - pandas
   - scikit-learn
   - scipy.stats
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy

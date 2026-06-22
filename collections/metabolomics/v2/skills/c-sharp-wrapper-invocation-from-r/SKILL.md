@@ -13,6 +13,8 @@ metadata:
   - .NET 8.0
   - .NET Framework / .NET 8.0
   - Spectra (Bioconductor)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr

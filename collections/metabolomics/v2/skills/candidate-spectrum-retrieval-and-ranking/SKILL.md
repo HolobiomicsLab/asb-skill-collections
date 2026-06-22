@@ -10,6 +10,9 @@ metadata:
   tools:
   - ANN-SoLo
   - Faiss
+  techniques:
+  - CE-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo

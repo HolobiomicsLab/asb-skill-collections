@@ -12,6 +12,8 @@ metadata:
   - jobs.py
   - metadata_cleanup_prefect.py
   - prepare_wikidata_lotus_prefect.py
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

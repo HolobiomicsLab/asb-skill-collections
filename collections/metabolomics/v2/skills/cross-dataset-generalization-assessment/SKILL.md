@@ -20,6 +20,8 @@ metadata:
   - cosine_similarity
   - top_k_indices
   - CUDA 12.4
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

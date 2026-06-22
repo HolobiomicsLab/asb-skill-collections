@@ -13,6 +13,8 @@ metadata:
   - PyTorch or TensorFlow
   - Pandas
   - Matplotlib or Seaborn
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

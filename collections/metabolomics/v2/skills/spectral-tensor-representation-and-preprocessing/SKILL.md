@@ -13,6 +13,8 @@ metadata:
   - Python
   - PyTorch
   - IDSL_MINT
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint

@@ -12,6 +12,9 @@ metadata:
   - SIRIUS
   - CSI:FingerID
   - CANOPUS
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

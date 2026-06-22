@@ -13,6 +13,8 @@ metadata:
   - pymzml
   - psutil
   - Unix time command
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

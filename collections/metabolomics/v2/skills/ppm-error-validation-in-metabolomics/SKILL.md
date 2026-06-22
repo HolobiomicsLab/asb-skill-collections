@@ -11,6 +11,9 @@ metadata:
   - SpaMTP
   - R
   - Cardinal
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

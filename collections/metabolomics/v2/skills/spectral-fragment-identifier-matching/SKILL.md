@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0625
   tools:
   - SDF file parser / molecular structure library
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database

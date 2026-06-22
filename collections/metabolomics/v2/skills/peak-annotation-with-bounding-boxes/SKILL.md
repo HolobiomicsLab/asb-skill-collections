@@ -12,6 +12,8 @@ metadata:
   - PeakBot
   - TensorFlow
   - OpenMS (TOPPView)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

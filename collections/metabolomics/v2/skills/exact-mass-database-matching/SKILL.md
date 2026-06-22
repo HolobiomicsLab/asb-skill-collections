@@ -20,6 +20,8 @@ metadata:
   - readxl
   - MSDial
   - Biotransformer
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

@@ -11,6 +11,9 @@ metadata:
   - R
   - MultiABLER
   - limma
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1016/j.isci.2023.106881
   title: MultiABLER

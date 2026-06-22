@@ -12,6 +12,8 @@ metadata:
   - scipy.stats.describe or numpy.percentile
   - asari.peaks.audit_mass_track
   - asari.peaks.stats_detect_elution_peaks
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

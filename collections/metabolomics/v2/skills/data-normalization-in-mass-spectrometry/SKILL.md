@@ -9,6 +9,10 @@ metadata:
   - http://edamontology.org/topic_0091
   tools:
   - MZmine
+  techniques:
+  - LC-MS
+  - GC-MS
+  - NMR
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST

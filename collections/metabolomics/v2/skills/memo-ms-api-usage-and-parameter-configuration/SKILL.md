@@ -15,6 +15,8 @@ metadata:
   - Python 3.8
   - numpy
   - scikit-bio
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo

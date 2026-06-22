@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0593
   tools:
   - SIRIUS
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

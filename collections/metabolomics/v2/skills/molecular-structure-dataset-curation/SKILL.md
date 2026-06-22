@@ -13,6 +13,8 @@ metadata:
   - Sklearn (scikit-learn) V1.0.2+
   - Jupyter Lab / Jupyter Notebook
   - CCSP 2.0
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0

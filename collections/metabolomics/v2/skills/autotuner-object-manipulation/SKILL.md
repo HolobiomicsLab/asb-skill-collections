@@ -13,6 +13,8 @@ metadata:
   - XCMS
   - MZmine2
   - MSconvert
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

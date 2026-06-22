@@ -12,6 +12,9 @@ metadata:
   - Python
   - ThermoRawFileParser
   - PCPFM (Python-Centric Pipeline for Metabolomics)
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_0121
   tools:
   - MetaboAnalystR
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr

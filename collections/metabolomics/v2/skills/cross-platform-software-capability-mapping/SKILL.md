@@ -27,6 +27,8 @@ metadata:
   - pmartR (R package)
   - py4cytoscape (Python module)
   - KEGGREST (R package)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect

@@ -10,6 +10,8 @@ metadata:
   tools:
   - Excalibur
   - LSG
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

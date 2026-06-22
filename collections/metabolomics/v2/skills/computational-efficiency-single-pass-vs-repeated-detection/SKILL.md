@@ -17,6 +17,8 @@ metadata:
   - asari.peaks.evaluate_gaussian_peak_on_intensity_list
   - asari.peaks.__peaks_cSelectivity_stats__
   - asari.chromatograms.rt_lowess_calibration
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

@@ -14,6 +14,8 @@ metadata:
   - KEGG_Enrich_PlotPanel
   - Enrichment
   - KEGG_Enrich_Plot
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo

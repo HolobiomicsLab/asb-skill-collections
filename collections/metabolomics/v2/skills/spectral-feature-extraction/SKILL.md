@@ -20,6 +20,9 @@ metadata:
   - data_preprocess.py
   - rdkit
   - PyTorch Geometric
+  techniques:
+  - GC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID

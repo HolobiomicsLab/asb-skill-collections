@@ -11,6 +11,8 @@ metadata:
   - KNIME Analytics Platform
   - ili
   - OpenMS
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/nprot.2017.122
   title: 3D molecular cartography (Optimus / 'ili)

@@ -13,6 +13,8 @@ metadata:
   - spectrum-utils
   - DBSCAN (scikit-learn or equivalent)
   - DBSCAN (sklearn.cluster or equivalent)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon

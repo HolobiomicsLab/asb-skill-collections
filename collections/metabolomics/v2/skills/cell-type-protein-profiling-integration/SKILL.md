@@ -13,6 +13,8 @@ metadata:
   - Mesmer segmentation pipeline
   - scSpaMet spatial interaction functions (custom code)
   - Jupyter notebooks 02–05 (ScSpaMet pipeline)
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1038/s41467-023-43917-5
   title: scSpaMet

@@ -13,6 +13,8 @@ metadata:
   - e1071
   - mixOmics
   - varSelRF
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo

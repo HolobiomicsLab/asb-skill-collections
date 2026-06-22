@@ -11,6 +11,9 @@ metadata:
   - R
   - mpactr
   - data.table
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

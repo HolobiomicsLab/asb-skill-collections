@@ -15,6 +15,9 @@ metadata:
   - openpyxl / XlsxWriter
   - Human Metabolome Database (HMDB)
   - PyQt5
+  techniques:
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

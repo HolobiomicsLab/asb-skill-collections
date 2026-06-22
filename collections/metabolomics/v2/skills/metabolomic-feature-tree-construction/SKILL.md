@@ -13,6 +13,9 @@ metadata:
   - SIRIUS
   - MZmine2
   - GNPS (Feature-Based Molecular Networking)
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree

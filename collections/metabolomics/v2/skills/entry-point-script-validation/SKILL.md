@@ -10,6 +10,8 @@ metadata:
   - Python
   - annotate.py
   - argparse
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/bty080
   title: ChemDistiller

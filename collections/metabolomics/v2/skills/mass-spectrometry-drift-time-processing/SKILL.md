@@ -10,6 +10,8 @@ metadata:
   tools:
   - AutoCCS
   - conda/pip
+  techniques:
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btab429
   title: AutoCCS

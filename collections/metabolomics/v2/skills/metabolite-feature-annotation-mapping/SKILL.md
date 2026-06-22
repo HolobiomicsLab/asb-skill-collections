@@ -14,6 +14,8 @@ metadata:
   - read_metabolon
   - read_nightingale, read_olink, read_somalogic
   - batch_normalise
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep

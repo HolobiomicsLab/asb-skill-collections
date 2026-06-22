@@ -12,6 +12,9 @@ metadata:
   - PyTorch
   - DGL (Deep Graph Library)
   - scikit-learn
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

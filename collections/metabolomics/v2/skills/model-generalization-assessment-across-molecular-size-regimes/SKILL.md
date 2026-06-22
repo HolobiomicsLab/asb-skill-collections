@@ -11,6 +11,8 @@ metadata:
   - NMR2Struct
   - PubChem or equivalent chemical database
   - NMR spectrum simulator or experimental database
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

@@ -12,6 +12,8 @@ metadata:
   - MADByTE
   - conda
   - Python
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.jnatprod.0c01076
   title: MADByTE

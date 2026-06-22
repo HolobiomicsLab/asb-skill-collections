@@ -14,6 +14,8 @@ metadata:
   - data.table
   - ggplot2
   - plotly
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

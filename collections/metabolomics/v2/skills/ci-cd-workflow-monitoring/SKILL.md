@@ -12,6 +12,8 @@ metadata:
   - JDK 25
   - JavaFX 24
   - GitHub Actions
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

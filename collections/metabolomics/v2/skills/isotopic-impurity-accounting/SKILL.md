@@ -9,6 +9,9 @@ metadata:
   - http://edamontology.org/topic_0769
   tools:
   - ElemCor
+  techniques:
+  - LC-MS
+  - NMR
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

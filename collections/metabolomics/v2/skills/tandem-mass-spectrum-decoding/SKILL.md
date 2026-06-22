@@ -12,6 +12,8 @@ metadata:
   - ICEBERG WebUI
   - ICEBERG
   - ms-pred repository
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

@@ -13,6 +13,8 @@ metadata:
   - LipidIN Expeditious Querying (EQ) Module
   - LipidIN Lipid Categories Intelligence (LCI) Module
   - LipidIN Wide-spectrum Modeling Yield (WMY) Network
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN

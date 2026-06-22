@@ -11,6 +11,8 @@ metadata:
   - margheRita
   - R
   - MS-Dial
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita

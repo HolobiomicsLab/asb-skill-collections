@@ -24,6 +24,9 @@ metadata:
   - optGpSampler
   - Agilent 1290 Infinity UHPLC + 6550 iFunnel Q-TOF MS
   - eFlux, TRFBA, GX-FBA, scFBA
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

@@ -12,6 +12,8 @@ metadata:
   - RankSVM
   - SVR
   - ECCB2018.Rmd
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/bty590
   title: LC retention order prediction

@@ -11,6 +11,8 @@ metadata:
   - R
   - metabCombiner
   - mgcv
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner

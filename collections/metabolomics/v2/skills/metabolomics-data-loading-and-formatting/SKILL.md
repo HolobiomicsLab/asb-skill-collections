@@ -13,6 +13,8 @@ metadata:
   - read.csv
   - transform_samples
   - assign_hierarchy
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool

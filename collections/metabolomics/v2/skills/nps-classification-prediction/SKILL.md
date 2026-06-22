@@ -14,6 +14,8 @@ metadata:
   - PS2MS enumeration module
   - PS2MS drug detection module
   - rdkit
+  techniques:
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

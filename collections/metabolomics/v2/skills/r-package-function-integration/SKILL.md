@@ -12,6 +12,8 @@ metadata:
   - R
   - MiMIR
   - R (base and stats)
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR

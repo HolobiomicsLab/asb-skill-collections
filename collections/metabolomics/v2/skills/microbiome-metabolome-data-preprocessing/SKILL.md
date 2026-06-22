@@ -21,6 +21,10 @@ metadata:
   - Python
   - SciPy
   - Pandas
+  techniques:
+  - LC-MS
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet

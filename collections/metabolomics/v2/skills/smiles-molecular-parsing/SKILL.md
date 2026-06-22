@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - RDKit
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid

@@ -8,6 +8,8 @@ metadata:
   - http://edamontology.org/topic_0593
   tools:
   - NMRFx
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

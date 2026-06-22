@@ -13,6 +13,11 @@ metadata:
   - XlsxWriter
   - Human Metabolome Database (HMDB)
   - ROIAL-NMR
+  techniques:
+  - LC-MS
+  - GC-MS
+  - tandem-MS
+  - NMR
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

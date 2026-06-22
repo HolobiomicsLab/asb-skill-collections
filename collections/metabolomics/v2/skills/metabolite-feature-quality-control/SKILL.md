@@ -12,6 +12,8 @@ metadata:
   - R
   - MWASTools
   - Bioconductor
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools

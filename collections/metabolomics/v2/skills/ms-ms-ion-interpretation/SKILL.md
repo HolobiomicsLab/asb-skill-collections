@@ -13,6 +13,8 @@ metadata:
   - scipy
   - numpy
   - pandas
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE

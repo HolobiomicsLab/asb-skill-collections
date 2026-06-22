@@ -8,6 +8,8 @@ metadata:
   - MetFrag
   - Docker
   - Tomcat
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag

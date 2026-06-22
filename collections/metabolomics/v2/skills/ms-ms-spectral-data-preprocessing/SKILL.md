@@ -12,6 +12,8 @@ metadata:
   - Mass2SMILES Docker container
   - GNPS (Global Natural Products Social Molecular Networking)
   - Docker
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES

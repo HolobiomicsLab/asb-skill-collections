@@ -11,6 +11,8 @@ metadata:
   tools:
   - R Shiny
   - EISA-EXPOSOME
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME

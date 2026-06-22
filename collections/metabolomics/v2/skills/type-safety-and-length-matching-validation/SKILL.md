@@ -11,6 +11,8 @@ metadata:
   - R
   - S4Vectors
   - Spectra
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

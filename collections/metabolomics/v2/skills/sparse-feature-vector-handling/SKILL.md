@@ -11,6 +11,8 @@ metadata:
   - ChemEcho
   - Mass Query Language (MassQL)
   - Decision Tree Classifier (scikit-learn or equivalent)
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho

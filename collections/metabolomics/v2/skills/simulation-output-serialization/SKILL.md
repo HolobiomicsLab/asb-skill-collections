@@ -10,6 +10,9 @@ metadata:
   tools:
   - ViMMS
   - Python pickle module
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

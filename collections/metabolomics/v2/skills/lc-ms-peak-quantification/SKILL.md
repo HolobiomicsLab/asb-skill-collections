@@ -11,6 +11,8 @@ metadata:
   - Python 3.8.1
   - QuanFormer
   - xcms / centWave
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

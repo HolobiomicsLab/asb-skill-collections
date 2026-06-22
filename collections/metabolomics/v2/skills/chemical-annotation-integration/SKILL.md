@@ -17,6 +17,8 @@ metadata:
   - t-SNE / UMAP
   - Matplotlib / Seaborn
   - matchms
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

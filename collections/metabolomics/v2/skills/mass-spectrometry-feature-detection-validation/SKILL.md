@@ -16,6 +16,8 @@ metadata:
   - enviPat
   - Skyline
   - R (with mzRAPP library)
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP

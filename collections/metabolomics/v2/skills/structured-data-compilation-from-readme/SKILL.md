@@ -16,6 +16,8 @@ metadata:
   - metadataMASST
   - GNPS_MASST
   - microbe_masst
+  techniques:
+  - mass-spectrometry
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

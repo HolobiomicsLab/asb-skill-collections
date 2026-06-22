@@ -13,6 +13,8 @@ metadata:
   - DGL
   - RDKit
   - retention_time_gnn
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn

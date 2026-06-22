@@ -14,6 +14,8 @@ metadata:
   - Agilent 6550 iFunnel Q-TOF mass spectrometer
   - constraint-based stoichiometric metabolic models
   - INTEGRATE pipeline (qLSLab/integrate)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

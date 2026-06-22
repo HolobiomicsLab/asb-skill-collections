@@ -13,6 +13,8 @@ metadata:
   - R
   - XCMS
   - devtools
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

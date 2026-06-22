@@ -14,6 +14,8 @@ metadata:
   - ggplot2
   - R
   - RefineLipids
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

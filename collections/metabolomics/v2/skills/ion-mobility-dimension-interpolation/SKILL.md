@@ -10,6 +10,9 @@ metadata:
   tools:
   - PNNL PreProcessor
   - Agilent MassHunter
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor

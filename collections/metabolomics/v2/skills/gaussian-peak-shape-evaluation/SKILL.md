@@ -11,6 +11,9 @@ metadata:
   - Python
   - asari peaks module
   - scipy.signal.find_peaks
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

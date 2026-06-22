@@ -12,6 +12,8 @@ metadata:
   - numpy
   - matplotlib
   - Bruker Solarix (instrument/software)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems

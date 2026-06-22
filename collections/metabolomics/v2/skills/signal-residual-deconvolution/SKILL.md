@@ -13,6 +13,9 @@ metadata:
   - scipy.optimize.least_squares
   - mzapy.peaks.find_peaks_1d_gauss
   - mzapy.peaks.calc_gauss_psnr
+  techniques:
+  - LC-MS
+  - ion-mobility-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

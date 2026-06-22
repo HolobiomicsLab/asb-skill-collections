@@ -17,6 +17,8 @@ metadata:
   - MassGrid.build_grid_by_centroiding
   - MassGrid.bin_track_mzs
   - ext_Experiment.get_reference_sample_id
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

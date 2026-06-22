@@ -17,6 +17,10 @@ metadata:
   - mass_functions.nn_cluster_by_mz_seeds
   - chromatograms.extract_single_track_fullrt_length
   - asari
+  techniques:
+  - LC-MS
+  - direct-infusion-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

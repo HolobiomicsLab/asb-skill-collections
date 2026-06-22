@@ -14,6 +14,9 @@ metadata:
   - STRING Database v11
   - HMDB
   - Exomiser
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1038/s41525-020-0132-5
   title: metPropagate

@@ -13,6 +13,8 @@ metadata:
   - R
   - CardinalIO
   - matter
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal

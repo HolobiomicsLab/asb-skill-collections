@@ -15,6 +15,9 @@ metadata:
   - LDA (Latent Dirichlet Allocation)
   - PyTorch & DGL
   - ens_train_canopus.py
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

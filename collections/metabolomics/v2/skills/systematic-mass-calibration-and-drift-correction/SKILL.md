@@ -14,6 +14,8 @@ metadata:
   - chromatograms.extract_single_track_fullrt_length
   - ext_Experiment.get_reference_sample_id
   - MassGrid.build_grid_sample_wise
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

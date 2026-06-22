@@ -12,6 +12,9 @@ metadata:
   - R Shiny
   - EISA-EXPOSOME
   - T3DB
+  techniques:
+  - LC-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME

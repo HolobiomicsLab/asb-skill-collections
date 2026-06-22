@@ -11,6 +11,8 @@ metadata:
   - DIMPLE code
   - MATLAB
   - batchcdfread
+  techniques:
+  - MS-imaging
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE

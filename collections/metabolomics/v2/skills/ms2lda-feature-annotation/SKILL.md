@@ -14,6 +14,8 @@ metadata:
   - GNPS (Global Natural Products Social Molecular Networking)
   - MS2LDA (Mass2Motifs Latent Dirichlet Allocation)
   - Cytoscape
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer

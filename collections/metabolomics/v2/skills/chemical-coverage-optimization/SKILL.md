@@ -11,6 +11,8 @@ metadata:
   - R Shiny
   - R Shiny (EISA-EXPOSOME interface)
   - T3DB (compiled database file)
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME

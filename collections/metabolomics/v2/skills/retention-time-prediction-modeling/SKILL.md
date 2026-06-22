@@ -14,6 +14,12 @@ metadata:
   - pyRetip (Python package)
   - Retiplib
   - rcdk / rcdklibs
+  techniques:
+  - LC-MS
+  - GC-MS
+  - CE-MS
+  - direct-infusion-MS
+  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.9b05765
   title: Retip

@@ -17,6 +17,8 @@ metadata:
   - Fast Search API
   - jobs.py
   - GNPS_MASST
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

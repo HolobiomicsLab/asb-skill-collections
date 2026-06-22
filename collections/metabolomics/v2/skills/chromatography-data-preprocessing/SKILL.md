@@ -12,6 +12,9 @@ metadata:
   - Anaconda
   - Preprocess.py
   - RDKit
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

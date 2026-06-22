@@ -20,6 +20,9 @@ metadata:
   - ggplot2
   - IsoPairFinder
   - MS-DIAL
+  techniques:
+  - LC-MS
+  - GC-MS
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair

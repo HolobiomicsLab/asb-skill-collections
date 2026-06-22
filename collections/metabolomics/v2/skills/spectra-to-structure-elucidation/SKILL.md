@@ -12,6 +12,8 @@ metadata:
   - DiffSpectra (Diffusion Molecule Transformer + SpecFormer)
   - SpecFormer
   - Diffusion Molecule Transformer (DMT)
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra

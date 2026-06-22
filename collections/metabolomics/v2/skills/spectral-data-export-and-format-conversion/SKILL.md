@@ -14,6 +14,8 @@ metadata:
   - InterpretMSSpectrum
   - MSFinder
   - Sirius
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

@@ -9,6 +9,8 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - MoleTrans
+  techniques:
+  - NMR
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans

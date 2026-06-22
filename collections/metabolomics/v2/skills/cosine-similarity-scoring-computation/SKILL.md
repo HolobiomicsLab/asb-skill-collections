@@ -13,6 +13,8 @@ metadata:
   - matchms
   - Spec2Vec
   - MS2DeepScore
+  techniques:
+  - tandem-MS
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms

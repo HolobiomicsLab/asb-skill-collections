@@ -18,6 +18,8 @@ metadata:
   - rdkit-pypi
   - torch-scatter, torch-sparse, torch-cluster
   - RT-Transformer
+  techniques:
+  - LC-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

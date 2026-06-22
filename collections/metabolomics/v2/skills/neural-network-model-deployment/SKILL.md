@@ -14,6 +14,10 @@ metadata:
   - Anaconda
   - PyCharm or VS Code
   - R with xcms, ggplot2, scales, dplyr
+  techniques:
+  - LC-MS
+  - GC-MS
+  - NMR
 derived_from:
 - doi: 10.1021/acs.analchem.1c01309
   title: EVA
