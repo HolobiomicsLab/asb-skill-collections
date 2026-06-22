@@ -261,3 +261,43 @@ def test_uninstall_removes_recorded_entries(tmp_path):
     assert sorted(removed) == ["alpha-skill", "beta-skill"]
     assert not (o.home / ".agents" / "skills" / "alpha-skill").exists()
     assert uninstall("demo-pack", get_target("agents"), o) == []  # no-op second time
+
+
+def test_cli_list_runtimes(capsys):
+    from scripts.asbb_cli import main
+    rc = main(["install", "--list-runtimes"])
+    assert rc == 0
+    out = capsys.readouterr().out
+    assert "agents" in out and "cursor" in out
+
+
+def test_cli_install_and_uninstall_dest(tmp_path, capsys):
+    from scripts.asbb_cli import main
+    make_repo(tmp_path)
+    dest = tmp_path / "out"
+    home = tmp_path / "home"
+    base = ["--repo", str(tmp_path), "--home", str(home)]
+    rc = main(["install", "demo-pack", "--dest", str(dest)] + base)
+    assert rc == 0
+    assert (dest / "alpha-skill" / "SKILL.md").is_file()
+    rc = main(["uninstall", "demo-pack", "--dest", str(dest)] + base)
+    assert rc == 0
+    assert not (dest / "alpha-skill").exists()
+
+
+def test_cli_unknown_slug_errors(tmp_path, capsys):
+    from scripts.asbb_cli import main
+    make_repo(tmp_path)
+    rc = main(["install", "nope", "--runtime", "agents",
+               "--repo", str(tmp_path), "--home", str(tmp_path / "home")])
+    assert rc == 1
+    assert "nope" in capsys.readouterr().err
+
+
+def test_cli_unknown_runtime_errors(tmp_path, capsys):
+    from scripts.asbb_cli import main
+    make_repo(tmp_path)
+    rc = main(["install", "demo-pack", "--runtime", "bogus",
+               "--repo", str(tmp_path), "--home", str(tmp_path / "home")])
+    assert rc == 1
+    assert "bogus" in capsys.readouterr().err

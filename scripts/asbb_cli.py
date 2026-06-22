@@ -1,17 +1,17 @@
-"""asbb — registry utility CLI for asb-skill-collections.
+"""asbb — utility CLI for asb-skill-collections.
 
-SCOPE (locked, Phase 1.7): this CLI is a REGISTRY UTILITY only. It exposes
-exactly three subcommands — ``registry``, ``verify``, and ``doctor``. It is
-NOT the install surface: collections are installed via the Claude Code plugin
-marketplace::
+Subcommands:
+  registry / verify / doctor  — registry utilities (Phase 1.7 stubs).
+  install / uninstall         — materialize packs into NON-Claude runtimes
+                                (Codex, Gemini, Copilot, Cursor, Cline,
+                                VS Code Copilot, or any dir via --dest).
 
-    /plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections
+For Claude Code the canonical install path remains the plugin marketplace::
 
-resolved via ``.claude-plugin/marketplace.json``.
+    /plugin install <slug>@HolobiomicsLab/asb-skill-collections
 
-These are intentionally thin stubs (Phase 1.7 scaffold). They wire up the
-argparse surface so ``asbb``, ``asbb --help``, and each subcommand's ``--help``
-work today; the actual registry/verify/doctor logic is to-build.
+`install` resolves packs from a LOCAL checkout (run from a clone or pass
+--repo); the published wheel ships only these scripts, not the packs.
 """
 from __future__ import annotations
 
@@ -48,6 +48,86 @@ def _cmd_doctor(args: argparse.Namespace) -> int:
     return 0
 
 
+def _install_opts(args):
+    from pathlib import Path
+    from scripts.asbb.targets import InstallOpts
+    home = Path(args.home) if args.home else Path.home()
+    return InstallOpts(
+        home=home,
+        project=Path.cwd(),
+        user=getattr(args, "user", False),
+        copy=getattr(args, "copy", False) or bool(args.dest),
+        force=getattr(args, "force", False),
+        dry_run=getattr(args, "dry_run", False),
+        dest_override=Path(args.dest) if args.dest else None,
+    )
+
+
+def _select_target(args):
+    from scripts.asbb.targets import get_target, generic_dest_target
+    if args.dest:
+        return generic_dest_target()
+    return get_target(args.runtime)
+
+
+def _cmd_install(args) -> int:
+    from scripts.asbb.targets import list_runtimes
+    if getattr(args, "list_runtimes", False):
+        print(list_runtimes())
+        return 0
+    from scripts.asbb.repo import find_repo_root, resolve_pack, list_pack_slugs
+    from scripts.asbb.installer import install
+    from pathlib import Path
+    if not args.runtime and not args.dest:
+        print("error: one of --runtime or --dest is required", file=sys.stderr)
+        return 1
+    try:
+        target = _select_target(args)
+    except KeyError:
+        from scripts.asbb.targets import list_runtimes
+        print(f"error: unknown runtime {args.runtime!r}\n{list_runtimes()}",
+              file=sys.stderr)
+        return 1
+    try:
+        repo = Path(args.repo).resolve() if args.repo else find_repo_root(Path.cwd())
+    except FileNotFoundError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 1
+    try:
+        pack = resolve_pack(repo, args.pack)
+    except KeyError:
+        slugs = ", ".join(list_pack_slugs(repo))
+        print(f"error: unknown pack {args.pack!r}; valid: {slugs}", file=sys.stderr)
+        return 1
+    opts = _install_opts(args)
+    try:
+        written = install(pack, target, opts)
+    except (FileExistsError, ValueError) as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 1
+    where = opts.dest_override or target.dest(opts)
+    verb = "would install" if opts.dry_run else "installed"
+    print(f"{verb} {len(written)} skill(s) from {args.pack} -> {where}")
+    return 0
+
+
+def _cmd_uninstall(args) -> int:
+    from scripts.asbb.targets import get_target, generic_dest_target
+    from scripts.asbb.installer import uninstall
+    try:
+        target = generic_dest_target() if args.dest else get_target(args.runtime)
+    except KeyError:
+        print(f"error: unknown runtime {args.runtime!r}", file=sys.stderr)
+        return 1
+    if not args.runtime and not args.dest:
+        print("error: one of --runtime or --dest is required", file=sys.stderr)
+        return 1
+    opts = _install_opts(args)
+    removed = uninstall(args.pack, target, opts)
+    print(f"removed {len(removed)} entry(ies) for {args.pack}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="asbb",
@@ -59,7 +139,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--version", action="version", version=f"asbb {__version__}"
     )
-    sub = parser.add_subparsers(dest="command", metavar="{registry,verify,doctor}")
+    sub = parser.add_subparsers(dest="command", metavar="{registry,verify,doctor,install,uninstall}")
 
     # asbb registry [list|validate]
     p_registry = sub.add_parser(
@@ -91,6 +171,36 @@ def build_parser() -> argparse.ArgumentParser:
         "doctor", help="Health check: DOI resolution, KB reachability, manifests."
     )
     p_doctor.set_defaults(func=_cmd_doctor)
+
+    # asbb install <pack> --runtime ... | --dest DIR
+    p_install = sub.add_parser(
+        "install", help="Install a pack into a non-Claude runtime.")
+    p_install.add_argument("pack", nargs="?", help="Marketplace pack slug.")
+    p_install.add_argument("--runtime", help="Target runtime id (see --list-runtimes).")
+    p_install.add_argument("--dest", help="Install into an arbitrary directory (copy).")
+    p_install.add_argument("--repo", help="Path to an asb-skill-collections checkout.")
+    p_install.add_argument("--user", action="store_true",
+                           help="For --runtime claude: use ~/.claude/skills.")
+    p_install.add_argument("--copy", action="store_true",
+                           help="Copy skill dirs instead of symlinking.")
+    p_install.add_argument("--force", action="store_true",
+                           help="Overwrite unmanaged files at the destination.")
+    p_install.add_argument("--dry-run", action="store_true", dest="dry_run",
+                           help="Print intended writes; change nothing.")
+    p_install.add_argument("--list-runtimes", action="store_true", dest="list_runtimes",
+                           help="List available runtimes and exit.")
+    p_install.add_argument("--home", help=argparse.SUPPRESS)  # test hook
+    p_install.set_defaults(func=_cmd_install)
+
+    # asbb uninstall <pack> --runtime ... | --dest DIR
+    p_uninstall = sub.add_parser(
+        "uninstall", help="Remove a previously installed pack from a runtime.")
+    p_uninstall.add_argument("pack", help="Marketplace pack slug.")
+    p_uninstall.add_argument("--runtime", help="Target runtime id.")
+    p_uninstall.add_argument("--dest", help="The directory it was installed into.")
+    p_uninstall.add_argument("--repo", help=argparse.SUPPRESS)  # accepted for compat
+    p_uninstall.add_argument("--home", help=argparse.SUPPRESS)
+    p_uninstall.set_defaults(func=_cmd_uninstall)
 
     return parser
 
