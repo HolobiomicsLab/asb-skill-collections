@@ -16,7 +16,7 @@ skills and indexes are plain Markdown + JSON. Each capability adds dependencies:
 | Install in Claude Code | Claude Code with plugin support |
 | Search the indexes (examples below) | [`jq`](https://jqlang.github.io/jq/) (optional; any JSON reader works) |
 | Run the helper scripts (`collect`, `release_gate`, `regen_catalogue`) | **Python ≥ 3.8** + **PyYAML** (`pip install pyyaml`) |
-| Run the grounding binder `perspicacite_kb_bind.py` | **Python ≥ 3.8** (stdlib only — no pip installs) **and** a running [Perspicacité](https://github.com/HolobiomicsLab) instance reachable at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité itself needs an OpenAI key (embeddings: `text-embedding-3-large`) and an Anthropic key (answer synthesis). |
+| Run the grounding binder `perspicacite_kb_bind.py` | **Python ≥ 3.8** (stdlib only — no pip installs) **and** a running **Perspicacité** instance reachable at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité can use whatever embedding + LLM provider you configure (OpenAI, Anthropic, OpenRouter, local, …); the specific models are **not** prescribed — only that Perspicacité is running. *(HolobiomicsLab literature-RAG engine; public availability TBD.)* |
 | **Run a given skill's tool** | the libraries that skill lists in its frontmatter `tools` (see below) |
 
 > A `requirements.txt` for the helper scripts lives at `scripts/requirements.txt`.
@@ -101,7 +101,7 @@ Skills carry distilled procedure; for an exact parameter, threshold, or claim,
 **ground the skill against the paper it was built from**. The skill → KB mapping
 is precomputed in `kb_bundle.json` (the `asb-paper-<doi>` KB slugs are the same
 targets the collection was assembled against). With a running
-[Perspicacité](https://github.com/HolobiomicsLab) instance (`PERSPICACITE_BASE`,
+**Perspicacité** instance (`PERSPICACITE_BASE`,
 default `http://127.0.0.1:8000`) the binder does it in one command — the KB is
 **generated on first use** (create + ingest paper full text **+ supplementary
 information**), then reused:
@@ -156,6 +156,18 @@ The collection's **Zenodo authors** (see `CITATION.cff`) are, by policy,
 
 > Cite both: the **collection** (CITATION.cff / Zenodo DOI once minted) **and**
 > the **original paper** (`original_doi`) behind whichever skill you use.
+
+## How it was generated
+
+See [`PROVENANCE.md`](PROVENANCE.md) for the **exact ASB build command** and the
+**mixed-model routing** used to generate the collection (Opus 4.8 for
+outline/card-revise; Haiku 4.5 for the rest; OpenAI embeddings — recorded
+per-build in `build_manifest.json`). The raw ASB capsules + benchmark layer
+(full end-to-end traceability) will be released later.
+
+> **IRIs:** the `w3id.org/holobiomicslab/…` identifiers in `collection.yaml` and
+> the docs are **reserved names that do not resolve yet** — stable identifiers,
+> not working links. The Zenodo DOI is likewise not minted yet (`TODO-zenodo`).
 
 ## Provenance & policy
 

@@ -111,11 +111,17 @@ https://huggingface.co/spaces/HolobiomicsLab/asb-<slug>-v<N>-leaderboard
 
 ### Zenodo
 
-Each collection release mints a Zenodo DOI. See `CITATION.cff` at the collection root for the full citation. The Zenodo badge above links to the latest parent record.
+Each collection release will mint a Zenodo DOI. See `CITATION.cff` at the collection root for the full citation. **The metabolomics v0.1.0 Zenodo DOI is not minted yet** (`doi: TODO-zenodo`); the Zenodo badge above is a placeholder until then.
 
 ### w3id.org IRIs
 
-Skills and tools are addressable via stable IRIs under `w3id.org/holobiomicslab/`:
+> **Note:** these `w3id.org/holobiomicslab/` IRIs are **reserved identifiers and
+> do not resolve yet** — the redirect is not live. Treat them as stable names
+> for now, not as working links. The same applies to the w3id badges above and
+> the `@id` / `iri` fields in `collection.yaml`.
+
+Skills and tools are *intended* to be addressable via stable IRIs under
+`w3id.org/holobiomicslab/` (once the redirect is configured):
 
 ```
 https://w3id.org/holobiomicslab/asb-skill/<slug>

@@ -12,7 +12,7 @@ software tools for computational LC-MS/MS; tag `metabolomics-v0.1.0`).
 
 - **Browse / search / read skills:** nothing — plain Markdown + JSON.
 - **Helper scripts** (`collect`, `release_gate`, `regen_catalogue`): Python ≥ 3.8 + PyYAML (`pip install -r scripts/requirements.txt`).
-- **Grounding binder** (`perspicacite_kb_bind.py`): Python ≥ 3.8 (stdlib only) **and** a running [Perspicacité](https://github.com/HolobiomicsLab) at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`; needs OpenAI + Anthropic keys).
+- **Grounding binder** (`perspicacite_kb_bind.py`): Python ≥ 3.8 (stdlib only) **and** a running **Perspicacité** instance at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité can be configured with whatever embedding + LLM provider you have (OpenAI, Anthropic, OpenRouter, local, …) — the specific models are not prescribed; only a reachable Perspicacité is required. *(Perspicacité is HolobiomicsLab's literature-RAG engine; public availability TBD.)*
 - **Running a given skill's tool:** install what that skill's frontmatter `tools:` lists (R/Bioconductor, Python pkgs, or standalone tools like SIRIUS/MZmine) — see `USAGE.md` §0 and `tools_index.json`.
 
 ---
@@ -80,8 +80,8 @@ install URLs.
 
 **3. Ground (recommended)** — before trusting a parameter, threshold, or claim,
 verify it against the source paper. The skill → KB map is precomputed in
-`kb_bundle.json`. With a running [Perspicacité](https://github.com/HolobiomicsLab)
-instance (`PERSPICACITE_BASE`, default `http://127.0.0.1:8000`), the binder
+`kb_bundle.json`. With a running **Perspicacité** instance
+(`PERSPICACITE_BASE`, default `http://127.0.0.1:8000`), the binder
 generates the KB on first use and answers grounded, cited questions:
 
 ```bash
