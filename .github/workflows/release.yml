@@ -97,6 +97,7 @@ jobs:
         env:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
           ZENODO_PUBLISH: ${{ vars.ZENODO_PUBLISH }}
+          ZENODO_SANDBOX: ${{ vars.ZENODO_SANDBOX }}
           COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
           COLLECTION_VERSION: ${{ steps.tag.outputs.version }}
         run: |
@@ -118,7 +119,9 @@ jobs:
             sys.exit(1)
 
           headers = {"Authorization": f"Bearer {token}"}
-          base_url = "https://zenodo.org/api"
+          sandbox = os.environ.get("ZENODO_SANDBOX", "").lower() == "true"
+          base_url = "https://sandbox.zenodo.org/api" if sandbox else "https://zenodo.org/api"
+          print(f"Zenodo target: {'SANDBOX' if sandbox else 'PRODUCTION'} ({base_url})")
 
           # Create a new deposition
           resp = requests.post(f"{base_url}/deposit/depositions",
