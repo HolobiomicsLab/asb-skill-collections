@@ -77,3 +77,56 @@ def render_grounding_doc(unit_name):
         "Use `/ground [skill|doi] [question]`, or call `bin/perspicacite_kb_bind.py` "
         "(`query` / `local`) directly.\n"
     )
+
+
+import argparse, shutil
+try:
+    import yaml
+except ImportError:  # pragma: no cover
+    yaml = None
+
+_SUFFIX = " Packaged auto-grounding (kb+local)."
+
+
+def _read_corpus(collection_dir):
+    p = collection_dir / "corpus.yaml"
+    return (yaml.safe_load(p.read_text())["papers"]) if p.is_file() and yaml else []
+
+def _read_tools(collection_dir):
+    p = collection_dir / "tools_index.json"
+    return json.loads(p.read_text()) if p.is_file() else []
+
+
+def build_unit(unit_dir, collection_dir, bind_script):
+    unit_dir, collection_dir, bind_script = Path(unit_dir), Path(collection_dir), Path(bind_script)
+    slugs = {d.name for d in (unit_dir / "skills").iterdir() if d.is_dir()}
+    full = json.loads((collection_dir / "kb_bundle.json").read_text())
+    bundle = filter_and_enrich_bundle(full, slugs, _read_corpus(collection_dir), _read_tools(collection_dir))
+    written = []
+    (unit_dir / "kb_bundle.json").write_text(json.dumps(bundle, indent=2) + "\n"); written.append("kb_bundle.json")
+    (unit_dir / "bin").mkdir(exist_ok=True)
+    shutil.copyfile(bind_script, unit_dir / "bin" / "perspicacite_kb_bind.py"); written.append("bin/perspicacite_kb_bind.py")
+    (unit_dir / "commands").mkdir(exist_ok=True)
+    (unit_dir / "commands" / "ground.md").write_text(render_ground_command()); written.append("commands/ground.md")
+    (unit_dir / "GROUNDING.md").write_text(render_grounding_doc(unit_dir.name)); written.append("GROUNDING.md")
+    pj_path = unit_dir / ".claude-plugin" / "plugin.json"
+    pj = json.loads(pj_path.read_text())
+    if not pj.get("description", "").endswith(_SUFFIX):
+        pj["description"] = pj.get("description", "") + _SUFFIX
+        pj_path.write_text(json.dumps(pj, indent=2) + "\n"); written.append(".claude-plugin/plugin.json")
+    return written
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--unit", required=True)
+    ap.add_argument("--collection", required=True)
+    ap.add_argument("--bind-script", default=str(Path(__file__).with_name("perspicacite_kb_bind.py")))
+    a = ap.parse_args(argv)
+    for w in build_unit(Path(a.unit), Path(a.collection), Path(a.bind_script)):
+        print("wrote", Path(a.unit) / w)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

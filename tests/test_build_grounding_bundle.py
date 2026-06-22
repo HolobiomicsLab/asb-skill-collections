@@ -52,3 +52,27 @@ def test_render_grounding_doc_names_unit():
     doc = render_grounding_doc("metabolomics-lc-ms")
     assert "metabolomics-lc-ms" in doc
     assert "PERSPICACITE_BASE" in doc and "git clone" in doc
+
+
+def test_build_unit_emits_all_artifacts(tmp_path):
+    from scripts.build_grounding_bundle import build_unit
+    # arrange a fake unit with two skills, one present in the binder
+    unit = tmp_path / "unit"
+    (unit / "skills" / "bioactivity-score-aggregation").mkdir(parents=True)
+    (unit / "skills" / "norepo-skill").mkdir(parents=True)
+    (unit / ".claude-plugin").mkdir()
+    (unit / ".claude-plugin" / "plugin.json").write_text(json.dumps({"name": "u", "description": "Subset."}))
+    bind = tmp_path / "src_bind.py"; bind.write_text("# vendored bind\n")
+    written = build_unit(unit, FIX, bind)
+    b = json.loads((unit / "kb_bundle.json").read_text())
+    assert set(b["skills"]) == {"bioactivity-score-aggregation", "norepo-skill"}
+    assert "repo_urls" in b["skills"]["bioactivity-score-aggregation"]
+    assert (unit / "bin" / "perspicacite_kb_bind.py").read_text() == "# vendored bind\n"
+    assert (unit / "commands" / "ground.md").exists()
+    assert (unit / "GROUNDING.md").exists()
+    desc = json.loads((unit / ".claude-plugin" / "plugin.json").read_text())["description"]
+    assert desc.endswith("Packaged auto-grounding (kb+local).")
+    # idempotent: second run does not double-append
+    build_unit(unit, FIX, bind)
+    desc2 = json.loads((unit / ".claude-plugin" / "plugin.json").read_text())["description"]
+    assert desc2 == desc
