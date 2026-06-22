@@ -15,7 +15,6 @@
   "plugins": [
     {
       "name": "metabolomics",
-      "displayName": "ASB Metabolomics",
       "source": "./collections/metabolomics/v2",
       "description": "Computational metabolomics (predominantly LC-MS/MS; also LC-MS, GC-MS, NMR, mass-spectrometry imaging, ion mobility, lipidomics, multi-omics): spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics \u2014 5,865 evidence-grounded skills over 909 tools, each derived from a peer-reviewed method paper, with a Perspicacite KB auto-grounding binder.",
       "version": "0.1.0",
@@ -38,7 +37,6 @@
     },
     {
       "name": "metabolomics-ce-ms",
-      "displayName": "ASB Metabolomics \u2014 CE-MS",
       "source": "./packs/metabolomics/ce-ms",
       "description": "CE-MS subset of the ASB metabolomics collection: 114 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
@@ -57,7 +55,6 @@
     },
     {
       "name": "metabolomics-direct-infusion",
-      "displayName": "ASB Metabolomics \u2014 direct-infusion-MS",
       "source": "./packs/metabolomics/direct-infusion",
       "description": "direct-infusion-MS subset of the ASB metabolomics collection: 97 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
@@ -76,7 +73,6 @@
     },
     {
       "name": "metabolomics-gc-ms",
-      "displayName": "ASB Metabolomics \u2014 GC-MS",
       "source": "./packs/metabolomics/gc-ms",
       "description": "GC-MS subset of the ASB metabolomics collection: 367 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
@@ -95,7 +91,6 @@
     },
     {
       "name": "metabolomics-ion-mobility",
-      "displayName": "ASB Metabolomics \u2014 ion-mobility-MS",
       "source": "./packs/metabolomics/ion-mobility",
       "description": "ion-mobility-MS subset of the ASB metabolomics collection: 390 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
@@ -114,7 +109,6 @@
     },
     {
       "name": "metabolomics-lc-ms",
-      "displayName": "ASB Metabolomics \u2014 LC-MS",
       "source": "./packs/metabolomics/lc-ms",
       "description": "LC-MS subset of the ASB metabolomics collection: 2621 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
@@ -133,7 +127,6 @@
     },
     {
       "name": "metabolomics-ms-generic",
-      "displayName": "ASB Metabolomics \u2014 mass-spectrometry",
       "source": "./packs/metabolomics/ms-generic",
       "description": "mass-spectrometry subset of the ASB metabolomics collection: 804 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
@@ -152,7 +145,6 @@
     },
     {
       "name": "metabolomics-ms-imaging",
-      "displayName": "ASB Metabolomics \u2014 MS-imaging",
       "source": "./packs/metabolomics/ms-imaging",
       "description": "MS-imaging subset of the ASB metabolomics collection: 292 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
@@ -171,7 +163,6 @@
     },
     {
       "name": "metabolomics-nmr",
-      "displayName": "ASB Metabolomics \u2014 NMR",
       "source": "./packs/metabolomics/nmr",
       "description": "NMR subset of the ASB metabolomics collection: 276 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
