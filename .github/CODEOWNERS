@@ -1,0 +1,68 @@
+# CODEOWNERS — review-required gates for asb-skill-collections.
+#
+# Format: <pattern>  <user-or-team> [<user-or-team>...]
+# When a PR touches a matching path, the listed owners are auto-requested as
+# reviewers. Combined with branch-protection rules (set in repo settings —
+# requires "Require review from Code Owners" enabled on main), this prevents
+# unauthorized changes to governance, policy, and security-relevant files.
+#
+# Lead maintainer (@lfnothias) is the default owner for everything not
+# more specifically claimed below.
+
+# Default owner — catches anything not matched by a more specific rule below
+*                                       @lfnothias
+
+# ----------------------------------------------------------------------------
+# GOVERNANCE & POLICY — lab-maintainer approval required.
+# These files define how the project is governed; changes need scrutiny.
+# ----------------------------------------------------------------------------
+OPEN_ACCESS_POLICY.md                   @lfnothias
+AUTHOR_OPT_OUT.md                       @lfnothias
+RELEASE_ROLLBACK.md                     @lfnothias
+DISPUTE_RESOLUTION.md                   @lfnothias
+COI_POLICY.md                           @lfnothias
+MAINTAINERS.md                          @lfnothias
+CONTRIBUTING.md                         @lfnothias
+LICENSE                                 @lfnothias
+LICENSE.md                              @lfnothias
+.github/CODEOWNERS                      @lfnothias
+
+# Curator candidacy criteria — domain governance.
+curator-criteria.yaml                   @lfnothias
+**/curator-criteria.yaml                @lfnothias
+
+# Identity / contributor metadata.
+contributors.jsonld                     @lfnothias
+candidates/                             @lfnothias
+
+# ----------------------------------------------------------------------------
+# CI workflows — supply-chain & infrastructure surface.
+# ----------------------------------------------------------------------------
+.github/workflows/                      @lfnothias
+.github/ISSUE_TEMPLATE/                 @lfnothias
+
+# ----------------------------------------------------------------------------
+# Release plumbing — Zenodo / HuggingFace / plugin manifest.
+# ----------------------------------------------------------------------------
+.zenodo.json                            @lfnothias
+.claude-plugin/                         @lfnothias
+catalogue.jsonld                        @lfnothias
+scripts/regen_catalogue.py              @lfnothias
+
+# ----------------------------------------------------------------------------
+# Per-collection ownership.
+# Lead Curator of a collection is co-owner of that collection's directory.
+# Update these lines as collections are added + Lead Curators confirmed.
+# ----------------------------------------------------------------------------
+collections/metabolomics/               @lfnothias
+staged-collections/metabolomics/        @lfnothias
+
+# ----------------------------------------------------------------------------
+# Static docs site — content + UI.
+# ----------------------------------------------------------------------------
+docs-site/                              @lfnothias
+
+# ----------------------------------------------------------------------------
+# Design docs — long-lived contracts; need lab review.
+# ----------------------------------------------------------------------------
+docs/design/                            @lfnothias

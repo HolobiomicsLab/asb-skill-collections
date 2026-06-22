@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Propose a paper — ASB Skill Collections</title>
+  <meta name="description" content="Propose a new paper for inclusion in an ASB-Skill collection's corpus. Submits via a GitHub Issue.">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Propose a paper — ASB Skill Collections" />
+  <meta property="og:description" content="Suggest a peer-reviewed paper for community-curated inclusion." />
+  <meta property="og:url" content="https://holobiomicslab.github.io/asb-skill-collections/propose.html" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Propose a paper</h1>
+    <p class="tagline">Suggest a paper for inclusion in an ASB-Skill collection.</p>
+    <nav>
+      <a href="./">Catalogue</a>
+      <a href="./corpus.html">Corpus</a>
+      <a href="./search.html">Search</a>
+      <a href="./propose.html">Propose paper</a>
+      <a href="https://github.com/HolobiomicsLab/asb-skill-collections">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="draft-banner" class="draft-banner" hidden></div>
+    <form id="propose-form">
+      <label>DOI <span class="required">*</span>
+        <input type="text" name="doi" placeholder="10.1186/s13321-024-00878-1" required>
+      </label>
+      <label>Title <span class="required">*</span>
+        <input type="text" name="title" placeholder="Full paper title" required>
+      </label>
+      <label>Target collection <span class="required">*</span>
+        <input type="text" name="collection" value="metabolomics" required>
+      </label>
+      <label>Target version
+        <input type="text" name="version" placeholder="next (or v2, v3…)" value="next">
+      </label>
+      <label>Access tier
+        <select name="access">
+          <option value="dont-know">Don't know — let CI determine</option>
+          <option value="open-access">Open-access (CC / OA)</option>
+          <option value="hybrid">Hybrid (paywalled with quotation rights)</option>
+          <option value="closed">Closed (paywalled, no open abstract)</option>
+        </select>
+      </label>
+      <label>Rationale (3–6 sentences) <span class="required">*</span>
+        <textarea name="rationale" rows="6" placeholder="Why this paper? What method/tool/skill does it introduce? Why retrieval-key for this domain?" required></textarea>
+      </label>
+      <fieldset>
+        <legend>Your information</legend>
+        <label>Your GitHub handle
+          <input type="text" name="gh" placeholder="your-handle">
+        </label>
+        <label>Your ORCID (optional, recommended)
+          <input type="text" name="orcid" placeholder="0000-0000-0000-0000">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Conflicts of interest (disclose, don't disqualify)</legend>
+        <label><input type="checkbox" name="coi_author"> I am an author of this paper</label>
+        <label><input type="checkbox" name="coi_inst"> I am at the same institution as the lead author</label>
+        <label><input type="checkbox" name="coi_fund"> I have direct funding ties to the work</label>
+      </fieldset>
+      <div class="form-actions">
+        <button type="submit">Open GitHub Issue →</button>
+        <button type="button" id="btn-clear-draft" class="btn-secondary">Clear saved draft</button>
+        <span id="draft-status" class="draft-status"></span>
+      </div>
+    </form>
+
+    <p class="hint">
+      Submitting opens a pre-filled GitHub Issue (you'll be redirected to GitHub to sign in if needed).
+      The lab maintainers + Lead Curator for the target collection review proposals.
+      See <a href="https://github.com/HolobiomicsLab/asb-skill-collections/blob/main/OPEN_ACCESS_POLICY.md">OPEN_ACCESS_POLICY.md</a>
+      for what we accept and how access tiers are handled.
+    </p>
+  </main>
+
+  <footer>
+    <p>Holobiomics Lab · CNRS / Université Côte d'Azur</p>
+  </footer>
+
+  <script>
+  const REPO = "HolobiomicsLab/asb-skill-collections";
+  document.getElementById("propose-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const f = new FormData(e.target);
+    const cois = [];
+    if (f.get("coi_author")) cois.push("Author of this paper");
+    if (f.get("coi_inst")) cois.push("Same institution as lead author");
+    if (f.get("coi_fund")) cois.push("Direct funding ties");
+    const body = [
+      "## Paper",
+      `- **DOI:** ${f.get("doi") || "—"}`,
+      `- **Title:** ${f.get("title") || "—"}`,
+      "",
+      "## Target collection",
+      `- **Collection:** ${f.get("collection") || "—"}`,
+      `- **Version target:** ${f.get("version") || "next"}`,
+      "",
+      "## Access tier (self-reported, CI will verify)",
+      `- ${f.get("access") || "dont-know"}`,
+      "",
+      "## Rationale",
+      f.get("rationale") || "",
+      "",
+      "## Proposer",
+      `- **GitHub:** ${f.get("gh") ? "@" + f.get("gh") : "—"}`,
+      `- **ORCID:** ${f.get("orcid") || "—"}`,
+      "",
+      "## Conflicts of interest",
+      cois.length ? cois.map(c => `- ${c}`).join("\n") : "- None disclosed",
+    ].join("\n");
+    const url = `https://github.com/${REPO}/issues/new?` +
+      new URLSearchParams({
+        title: `Propose: ${(f.get("doi") || f.get("title") || "").trim()}`,
+        body,
+        labels: "propose-paper,needs-triage",
+      });
+    window.open(url, "_blank");
+    // Mark draft as submitted (kept for reference on next page load).
+    try {
+      const snapshot = (window.serializeForm || (() => ({})))(e.target);
+      localStorage.setItem(window.DRAFT_KEY || "asb_propose_draft", JSON.stringify({
+        savedAt: Date.now(),
+        submitted: true,
+        submittedAt: Date.now(),
+        data: snapshot,
+      }));
+      if (window.setDraftStatus) window.setDraftStatus("Issue opened. Draft kept locally as a backup.");
+    } catch { /* localStorage may be disabled */ }
+  });
+
+  // -------------------------------------------------------------------
+  // localStorage draft backup (Enhancement 1)
+  // Survives GitHub login redirects that may drop the prefilled URL.
+  // -------------------------------------------------------------------
+  (function draftBackup() {
+    const DRAFT_KEY = "asb_propose_draft";
+    const MAX_AGE_MS = 24 * 60 * 60 * 1000;
+    const AUTOSAVE_DEBOUNCE_MS = 5000;
+    const form = document.getElementById("propose-form");
+    const banner = document.getElementById("draft-banner");
+    const statusEl = document.getElementById("draft-status");
+    const clearBtn = document.getElementById("btn-clear-draft");
+    // Expose key + helpers to the outer submit handler.
+    window.DRAFT_KEY = DRAFT_KEY;
+
+    function serializeForm(f) {
+      const fd = new FormData(f);
+      const out = {};
+      for (const [k, v] of fd.entries()) {
+        // Checkboxes only appear when checked; record as "on" / absent.
+        out[k] = v;
+      }
+      // Capture unchecked checkboxes as explicit false so restore is faithful.
+      for (const el of f.querySelectorAll('input[type="checkbox"]')) {
+        if (!(el.name in out)) out[el.name] = "";
+      }
+      return out;
+    }
+    window.serializeForm = serializeForm;
+
+    function applyDraft(data) {
+      for (const el of form.elements) {
+        if (!el.name || !(el.name in data)) continue;
+        if (el.type === "checkbox") {
+          el.checked = !!data[el.name];
+        } else {
+          el.value = data[el.name];
+        }
+      }
+    }
+
+    function isFormEmpty() {
+      for (const el of form.elements) {
+        if (!el.name) continue;
+        if (el.type === "checkbox") {
+          if (el.checked) return false;
+        } else if (el.tagName === "SELECT") {
+          // first option counts as "empty"
+          if (el.selectedIndex > 0) return false;
+        } else if ((el.value || "").trim() !== "" && el.defaultValue !== el.value) {
+          // value differs from server-rendered default → user input
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function setDraftStatus(msg) {
+      if (statusEl) statusEl.textContent = msg || "";
+    }
+    window.setDraftStatus = setDraftStatus;
+
+    function loadDraft() {
+      try {
+        const raw = localStorage.getItem(DRAFT_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!parsed || !parsed.savedAt) return null;
+        if (Date.now() - parsed.savedAt > MAX_AGE_MS) return null;
+        return parsed;
+      } catch { return null; }
+    }
+
+    function saveDraft() {
+      try {
+        const data = serializeForm(form);
+        localStorage.setItem(DRAFT_KEY, JSON.stringify({
+          savedAt: Date.now(),
+          submitted: false,
+          data,
+        }));
+        const t = new Date().toLocaleTimeString();
+        setDraftStatus(`Draft auto-saved at ${t}`);
+      } catch { /* quota/private mode */ }
+    }
+
+    function clearDraft() {
+      try { localStorage.removeItem(DRAFT_KEY); } catch {}
+      banner.hidden = true;
+      banner.innerHTML = "";
+      setDraftStatus("Draft cleared.");
+    }
+
+    // Debounced auto-save on input.
+    let saveTimer = null;
+    form.addEventListener("input", () => {
+      if (saveTimer) clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveDraft, AUTOSAVE_DEBOUNCE_MS);
+    });
+    form.addEventListener("change", () => {
+      if (saveTimer) clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveDraft, AUTOSAVE_DEBOUNCE_MS);
+    });
+
+    clearBtn.addEventListener("click", clearDraft);
+
+    // On page load: offer to restore.
+    const draft = loadDraft();
+    if (!draft) return;
+    const dateStr = new Date(draft.submittedAt || draft.savedAt).toLocaleString();
+    banner.hidden = false;
+    if (draft.submitted) {
+      banner.innerHTML = "";
+      const msg = document.createElement("span");
+      msg.textContent = `Your last draft was submitted on ${dateStr}. `;
+      const restore = document.createElement("button");
+      restore.type = "button";
+      restore.textContent = "Restore it";
+      restore.addEventListener("click", () => {
+        applyDraft(draft.data || {});
+        banner.hidden = true;
+      });
+      const fresh = document.createElement("button");
+      fresh.type = "button";
+      fresh.className = "btn-secondary";
+      fresh.textContent = "Start fresh";
+      fresh.addEventListener("click", clearDraft);
+      banner.appendChild(msg);
+      banner.appendChild(restore);
+      banner.appendChild(document.createTextNode(" "));
+      banner.appendChild(fresh);
+    } else if (isFormEmpty()) {
+      banner.innerHTML = "";
+      const msg = document.createElement("span");
+      msg.textContent = `An unsent draft was auto-saved on ${dateStr}. `;
+      const restore = document.createElement("button");
+      restore.type = "button";
+      restore.textContent = "Restore draft?";
+      restore.addEventListener("click", () => {
+        applyDraft(draft.data || {});
+        banner.hidden = true;
+        setDraftStatus("Draft restored.");
+      });
+      const discard = document.createElement("button");
+      discard.type = "button";
+      discard.className = "btn-secondary";
+      discard.textContent = "Discard";
+      discard.addEventListener("click", clearDraft);
+      banner.appendChild(msg);
+      banner.appendChild(restore);
+      banner.appendChild(document.createTextNode(" "));
+      banner.appendChild(discard);
+    } else {
+      // Form not empty (e.g. defaults present and user already typed) — hide.
+      banner.hidden = true;
+    }
+  })();
+  </script>
+</body>
+</html>
