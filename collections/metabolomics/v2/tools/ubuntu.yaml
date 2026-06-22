@@ -9,3 +9,6 @@ derived_from:
 source_repos:
 - LQZ0123/MSThunder
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS

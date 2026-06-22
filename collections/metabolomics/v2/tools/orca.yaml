@@ -13,3 +13,6 @@ source_repos:
 - grimme-lab/QCxMS2
 - pmartR/PMart_ShinyApp
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- GC-MS

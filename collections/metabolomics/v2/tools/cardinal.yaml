@@ -20,3 +20,10 @@ source_repos:
 - kuwisdelu/Cardinal
 - swinnenteam/LipidQMap
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- direct-infusion-MS
+- MS-imaging
+- mass-spectrometry

@@ -12,3 +12,5 @@ source_repos:
 - SysMedOs/LipidLynxX
 - medema-group/BiG-SCAPE
 schema_version: 0.2.0
+techniques:
+- mass-spectrometry

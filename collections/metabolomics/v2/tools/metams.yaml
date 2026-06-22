@@ -9,3 +9,9 @@ derived_from:
 source_repos:
 - HuanLab/DaDIA
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- mass-spectrometry

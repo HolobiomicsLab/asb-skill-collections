@@ -8,3 +8,8 @@ derived_from:
 source_repos:
 - eMetaboHUB/MS-CleanR
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- NMR

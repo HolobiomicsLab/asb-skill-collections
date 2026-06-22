@@ -8,3 +8,7 @@ derived_from:
 source_repos:
 - sipss/GCIMS
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- GC-MS
+- ion-mobility-MS

@@ -8,3 +8,9 @@ derived_from:
 source_repos:
 - idslme/IDSL.CSA
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- NMR
+- mass-spectrometry

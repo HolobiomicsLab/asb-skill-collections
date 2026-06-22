@@ -8,3 +8,7 @@ derived_from:
 source_repos:
 - xfcui/IsoFusion
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- CE-MS
+- mass-spectrometry

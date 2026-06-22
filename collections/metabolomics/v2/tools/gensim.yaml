@@ -15,3 +15,9 @@ source_repos:
 - Qiong-Yang/FastEI
 - vdhooftcompmet/MS2LDA
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- NMR
+- mass-spectrometry

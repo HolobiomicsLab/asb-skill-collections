@@ -12,3 +12,8 @@ source_repos:
 - DanielQuiroz97/RGCxGC
 - LargeMetabo/LargeMetabo
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- mass-spectrometry

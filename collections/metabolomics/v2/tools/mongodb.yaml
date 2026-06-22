@@ -8,3 +8,8 @@ derived_from:
 source_repos:
 - tyo-nu/MINE-Database
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- MS-imaging
+- ion-mobility-MS

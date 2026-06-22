@@ -17,3 +17,8 @@ source_repos:
 - ablab/npdtools
 - shuzhao-li-lab/khipu
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- ion-mobility-MS
+- mass-spectrometry

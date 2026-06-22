@@ -12,3 +12,8 @@ source_repos:
 - GenomicsMachineLearning/SpaMTP
 - kilgain/MassSpec
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- MS-imaging

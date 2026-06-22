@@ -10,3 +10,6 @@ derived_from:
 source_repos:
 - mwang87/NP-Classifier
 schema_version: 0.2.0
+techniques:
+- ion-mobility-MS
+- mass-spectrometry

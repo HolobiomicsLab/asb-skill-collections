@@ -8,3 +8,6 @@ derived_from:
 source_repos:
 - compomics/ms2rescore
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- mass-spectrometry

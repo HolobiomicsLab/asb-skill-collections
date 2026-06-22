@@ -10,3 +10,5 @@ derived_from:
 source_repos:
 - FanzhouKong/spectral_denoising
 schema_version: 0.2.0
+techniques:
+- tandem-MS

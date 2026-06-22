@@ -9,3 +9,7 @@ derived_from:
 source_repos:
 - rformassspectrometry/Spectra
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- NMR
+- mass-spectrometry

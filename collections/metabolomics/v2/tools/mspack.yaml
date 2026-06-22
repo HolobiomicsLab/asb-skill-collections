@@ -8,3 +8,5 @@ derived_from:
 source_repos:
 - fhanau/mspack
 schema_version: 0.2.0
+techniques:
+- ion-mobility-MS

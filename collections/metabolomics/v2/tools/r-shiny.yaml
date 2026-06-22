@@ -13,3 +13,8 @@ source_repos:
 - Lab-XUE/EISA-EXPOSOME
 - databio2022/GraphBio
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- mass-spectrometry

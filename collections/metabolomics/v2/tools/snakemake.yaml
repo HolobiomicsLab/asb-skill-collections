@@ -20,3 +20,11 @@ source_repos:
 - biosustain/snakemake_UmetaFlow
 - skinniderlab/clm
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- direct-infusion-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR

@@ -15,3 +15,9 @@ source_repos:
 - KechrisLab/DisCoPad
 - dickinsonlab/DIMPLE-code
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- MS-imaging
+- ion-mobility-MS

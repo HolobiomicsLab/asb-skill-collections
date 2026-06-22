@@ -93,3 +93,12 @@ source_repos:
 - zhanghailiangcsu/MWFormer
 - zmahnoor14/MAW
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

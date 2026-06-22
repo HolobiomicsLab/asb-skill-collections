@@ -6,3 +6,7 @@ derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- ion-mobility-MS
+- mass-spectrometry

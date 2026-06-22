@@ -12,3 +12,7 @@ source_repos:
 - antonvsdata/notame
 - idrblab/NOREVA;
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- mass-spectrometry

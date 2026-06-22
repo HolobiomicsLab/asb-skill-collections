@@ -6,3 +6,7 @@ derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- GC-MS
+- mass-spectrometry

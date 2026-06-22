@@ -35,3 +35,11 @@ source_repos:
 - volvox292/mass2smiles
 - wabdelmoula/massNet
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- mass-spectrometry

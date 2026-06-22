@@ -19,3 +19,9 @@ derived_from:
 source_repos:
 - vdhooftcompmet/MS2LDA
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- direct-infusion-MS
+- mass-spectrometry

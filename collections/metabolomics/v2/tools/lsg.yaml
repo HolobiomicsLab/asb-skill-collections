@@ -9,3 +9,9 @@ derived_from:
 source_repos:
 - 98104781/LSG
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- ion-mobility-MS
+- mass-spectrometry

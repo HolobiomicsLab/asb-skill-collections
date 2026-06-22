@@ -7,3 +7,8 @@ derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- ion-mobility-MS
+- mass-spectrometry

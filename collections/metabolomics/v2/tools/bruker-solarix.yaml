@@ -6,3 +6,5 @@ derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 schema_version: 0.2.0
+techniques:
+- mass-spectrometry

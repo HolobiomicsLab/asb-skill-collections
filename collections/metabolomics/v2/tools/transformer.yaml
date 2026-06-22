@@ -19,3 +19,7 @@ source_repos:
 - NeoNexusX/HyperCCS
 - samgoldman97/mist
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- ion-mobility-MS
+- NMR

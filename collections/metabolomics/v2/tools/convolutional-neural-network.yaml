@@ -6,3 +6,5 @@ derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 schema_version: 0.2.0
+techniques:
+- NMR

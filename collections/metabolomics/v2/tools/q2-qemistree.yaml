@@ -6,3 +6,6 @@ derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS

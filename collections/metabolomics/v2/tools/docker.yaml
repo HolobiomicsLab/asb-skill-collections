@@ -62,3 +62,12 @@ source_repos:
 - vdhooftcompmet/MS2LDA
 - volvox292/mass2smiles
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

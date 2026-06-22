@@ -13,3 +13,8 @@ source_repos:
 - BalunasLab/mpact
 - BiosystemEngineeringLab-IITB/dures
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- ion-mobility-MS

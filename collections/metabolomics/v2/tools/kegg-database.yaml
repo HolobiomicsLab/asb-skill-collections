@@ -8,3 +8,9 @@ derived_from:
 source_repos:
 - b2slab/mWISE
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- direct-infusion-MS
+- NMR
+- mass-spectrometry

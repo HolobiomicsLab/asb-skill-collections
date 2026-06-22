@@ -9,3 +9,9 @@ derived_from:
 source_repos:
 - grimme-lab/QCxMS2
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- MS-imaging
+- ion-mobility-MS

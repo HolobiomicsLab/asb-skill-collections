@@ -21,3 +21,10 @@ source_repos:
 - NPLinker/nplinker
 - ablab/npdtools
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- direct-infusion-MS
+- MS-imaging
+- ion-mobility-MS
+- mass-spectrometry

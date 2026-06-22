@@ -13,3 +13,6 @@ derived_from:
 source_repos:
 - andreasmock/MetaboDiff
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS

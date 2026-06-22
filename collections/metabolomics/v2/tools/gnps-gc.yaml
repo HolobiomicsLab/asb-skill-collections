@@ -8,3 +8,8 @@ derived_from:
 source_repos:
 - bittremieux/GNPS_GC
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- ion-mobility-MS

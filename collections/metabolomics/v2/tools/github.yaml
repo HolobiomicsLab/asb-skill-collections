@@ -173,3 +173,11 @@ source_repos:
 - xdomingoal/erah-devel
 - zhangxiang1205/CorrDIA
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

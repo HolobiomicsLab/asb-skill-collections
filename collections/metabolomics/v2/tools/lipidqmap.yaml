@@ -10,3 +10,7 @@ derived_from:
 source_repos:
 - swinnenteam/LipidQMap
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- direct-infusion-MS
+- MS-imaging

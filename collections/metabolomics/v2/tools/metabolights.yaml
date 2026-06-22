@@ -8,3 +8,7 @@ derived_from:
 source_repos:
 - mwang87/MetabolomicsSpectrumResolver
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- CE-MS
+- MS-imaging

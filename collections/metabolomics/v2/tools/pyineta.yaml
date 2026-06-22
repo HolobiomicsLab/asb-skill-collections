@@ -11,3 +11,5 @@ derived_from:
 source_repos:
 - edisonomics/PyINETA
 schema_version: 0.2.0
+techniques:
+- NMR

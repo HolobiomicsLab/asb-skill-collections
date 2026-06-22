@@ -8,3 +8,5 @@ derived_from:
 source_repos:
 - madeleineernst/pyMolNetEnhancer
 schema_version: 0.2.0
+techniques:
+- tandem-MS

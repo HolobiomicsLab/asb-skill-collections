@@ -15,3 +15,11 @@ source_repos:
 - shuzhao-li-lab/asari
 - shuzhao-li-lab/khipu
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- direct-infusion-MS
+- NMR
+- mass-spectrometry

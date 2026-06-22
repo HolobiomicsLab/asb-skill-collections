@@ -73,6 +73,10 @@ tool deps) are in USAGE §0.
 
 The default entry point is `skills/_router/SKILL.md`.
 
+For a description of the collection's content (technique & EDAM-topic breakdown)
+and how it was selected (sources, inclusion/exclusion criteria, grounding,
+gating), see **[ABOUT.md](collections/metabolomics/v2/ABOUT.md)**.
+
 ## How it was generated
 
 The exact ASB build command and the **mixed-model routing** (Opus 4.8 for

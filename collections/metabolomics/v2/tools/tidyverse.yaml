@@ -12,3 +12,9 @@ source_repos:
 - LeaveMeNotTonight/CMDN
 - scibiome/meteor
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- NMR
+- mass-spectrometry

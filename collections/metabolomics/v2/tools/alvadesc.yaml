@@ -6,3 +6,7 @@ derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: Probabilistic metabolite annotation using retention time prediction and meta-learned projections
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- mass-spectrometry

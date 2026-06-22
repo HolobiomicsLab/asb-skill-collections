@@ -8,3 +8,5 @@ derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
 schema_version: 0.2.0
+techniques:
+- mass-spectrometry

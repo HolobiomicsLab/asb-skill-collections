@@ -12,3 +12,7 @@ source_repos:
 - YasinEl/mzRAPP
 - jcapelladesto/isoSCAN
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- GC-MS
+- mass-spectrometry

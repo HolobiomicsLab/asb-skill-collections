@@ -12,3 +12,11 @@ source_repos:
 - Viant-Metabolomics/Galaxy-M
 - wanchanglin/ionflow
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- direct-infusion-MS
+- MS-imaging
+- ion-mobility-MS
+- mass-spectrometry

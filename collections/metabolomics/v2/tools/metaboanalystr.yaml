@@ -9,3 +9,9 @@ derived_from:
 source_repos:
 - xia-lab/MetaboAnalystR
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS

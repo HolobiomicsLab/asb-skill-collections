@@ -8,3 +8,7 @@ derived_from:
 source_repos:
 - https://gitlab.com/uniluxembourg/lcsb/eci/shinyscreen.git
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- mass-spectrometry

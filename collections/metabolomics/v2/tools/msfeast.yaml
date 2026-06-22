@@ -8,3 +8,7 @@ derived_from:
 source_repos:
 - kevinmildau/msFeaST
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- mass-spectrometry

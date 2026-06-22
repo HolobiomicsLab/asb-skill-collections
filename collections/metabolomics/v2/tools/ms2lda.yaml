@@ -22,3 +22,9 @@ source_repos:
 - mwang87/MetabolomicsSpectrumResolver
 - vdhooftcompmet/MS2LDA
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

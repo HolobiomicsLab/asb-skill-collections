@@ -12,3 +12,10 @@ source_repos:
 - LeaveMeNotTonight/CMDN
 - sneumann/xcms
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- ion-mobility-MS
+- NMR

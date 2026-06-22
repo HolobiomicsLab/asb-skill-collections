@@ -12,3 +12,6 @@ source_repos:
 - 01dadada/RT-Transformer
 - RiverCCC/ABCoRT
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- GC-MS

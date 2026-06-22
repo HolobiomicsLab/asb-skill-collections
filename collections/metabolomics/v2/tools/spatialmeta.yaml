@@ -10,3 +10,7 @@ derived_from:
 source_repos:
 - WanluLiuLab/SpatialMETA
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- MS-imaging
+- ion-mobility-MS

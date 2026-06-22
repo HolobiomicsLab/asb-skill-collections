@@ -15,3 +15,12 @@ source_repos:
 - mwang87/MetabolomicsSpectrumResolver
 - xdomingoal/erah-devel
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

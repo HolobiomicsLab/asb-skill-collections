@@ -8,3 +8,7 @@ derived_from:
 source_repos:
 - PNNL-Comp-Mass-Spec/PNNL-PreProcessor
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- ion-mobility-MS

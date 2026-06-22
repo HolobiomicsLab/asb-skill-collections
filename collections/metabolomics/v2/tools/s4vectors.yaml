@@ -15,3 +15,6 @@ source_repos:
 - BiosystemEngineeringLab-IITB/dures
 - rformassspectrometry/Spectra
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- mass-spectrometry

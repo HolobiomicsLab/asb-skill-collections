@@ -6,3 +6,6 @@ derived_from:
 - doi: 10.1002/rcm.9153
   title: Large‐scale tandem mass spectrum clustering using fast nearest neighbor searching
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- ion-mobility-MS

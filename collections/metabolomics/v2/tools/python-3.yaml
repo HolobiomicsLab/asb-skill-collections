@@ -28,3 +28,12 @@ source_repos:
 - yuxuanliao/PACCS
 - zxguocsu/GCMSFormer
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- direct-infusion-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

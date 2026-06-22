@@ -22,3 +22,8 @@ source_repos:
 - sword-nan/SpecEmbedding
 - wh-xu/Hyper-Spec
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- CE-MS
+- NMR
+- mass-spectrometry

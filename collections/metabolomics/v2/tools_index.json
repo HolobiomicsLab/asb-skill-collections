@@ -6,7 +6,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008920"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "adam-optimizer",
@@ -15,6 +16,12 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -24,6 +31,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c02687"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -33,6 +44,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac706"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -42,6 +58,9 @@
   "edam_topics": [],
   "dois": [
    "10.1515/jib-2025-0047"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -51,6 +70,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c03207"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -60,6 +84,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -69,6 +97,9 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -78,6 +109,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.1c00425"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -87,6 +124,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -96,6 +137,12 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pone.0306202"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -105,6 +152,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -114,6 +166,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -123,6 +180,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00873"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -132,6 +195,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-022-00613-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -141,6 +209,9 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo13121167"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -154,6 +225,16 @@
    "10.1021/acs.analchem.4c02426",
    "10.1021/jasms.4c00178",
    "10.1021/acs.analchem.4c03781"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -163,6 +244,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.8b00359"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -172,6 +258,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbag111"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -184,6 +273,14 @@
    "10.1186/s40168-022-01444-3",
    "10.1371/journal.pcbi.1008920",
    "10.1101/2024.10.11.617756"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -193,7 +290,8 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-016-0115-9"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "appveyor",
@@ -202,7 +300,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12080684"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "arrow",
@@ -211,6 +310,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.5c00435"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -220,6 +323,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -229,6 +337,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -238,6 +351,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -247,6 +365,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -257,6 +381,14 @@
   "dois": [
    "10.1038/s41467-023-39889-1",
    "10.1371/journal.pcbi.1011912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -266,6 +398,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.1c00315"
+  ],
+  "techniques": [
+   "LC-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -275,6 +412,9 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s11306-017-1244-5"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -284,6 +424,9 @@
   "edam_topics": [],
   "dois": [
    "10.1128/mra.00129-19"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -293,6 +436,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btab429"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -302,6 +450,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/812370"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -311,6 +462,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04046"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -320,7 +477,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-022-01486-3"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "bago",
@@ -329,6 +487,13 @@
   "edam_topics": [],
   "dois": [
    "10.1002/9780470508183"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -338,6 +503,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c01565"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -347,6 +517,9 @@
   "edam_topics": [],
   "dois": [
    "10.48550/arxiv.2510.20615"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -356,6 +529,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01213"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -365,6 +543,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00061"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -374,7 +556,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "big-scape",
@@ -383,6 +566,13 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008920"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -392,7 +582,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/gigascience/giaa154"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "bigscape",
@@ -402,6 +593,10 @@
   "dois": [
    "10.1186/s40168-022-01444-3",
    "10.1101/2024.10.11.617756"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -412,6 +607,11 @@
   "dois": [
    "10.1038/s41596-021-00636-9",
    "10.1093/bioinformatics/btr597"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -422,6 +622,15 @@
   "dois": [
    "10.1101/2021.12.05.471237v2",
    "10.1038/s41596-021-00636-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -431,6 +640,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.8b00717"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -446,6 +658,15 @@
    "10.1093/bioinformatics/btr597",
    "10.1021/acs.jproteome.0c00866",
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -455,6 +676,16 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btv146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -464,6 +695,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -473,7 +708,8 @@
   "edam_topics": [],
   "dois": [
    "10.26434/chemrxiv-2025-cwq74"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "biotransformer",
@@ -484,6 +720,15 @@
    "10.1186/s13321-019-0375-2",
    "10.1093/nar/gkac408",
    "10.1186/s13321-020-00477-w"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -493,7 +738,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jcim.1c00144"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "biotranslator",
@@ -502,7 +748,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "bitterpredict-m",
@@ -511,7 +758,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jafc.3c09767"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "bitterpredict",
@@ -520,7 +768,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jafc.3c09767"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "black",
@@ -530,6 +779,9 @@
   "dois": [
    "10.1038/s41589-019-0400-9",
    "10.1101/2020.04.09.033894"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -539,6 +791,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/nar/gkac1049"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -548,6 +803,12 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btaf290/8128335"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -558,6 +819,12 @@
   "dois": [
    "10.1021/acs.jproteome.4c00026",
    "10.1021/acs.jproteome.4c00873"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -567,6 +834,10 @@
   "edam_topics": [],
   "dois": [
    "10.21105/joss.04494"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -576,6 +847,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -585,6 +860,9 @@
   "edam_topics": [],
   "dois": [
    "10.5281/zenodo.14009575"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -592,7 +870,8 @@
   "name": "C++",
   "canonical_url": "",
   "edam_topics": [],
-  "dois": []
+  "dois": [],
+  "techniques": []
  },
  {
   "slug": "calculator",
@@ -601,7 +880,8 @@
   "edam_topics": [],
   "dois": [
    "10.1529/biophysj.103.038422"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "camera",
@@ -611,6 +891,15 @@
   "dois": [
    "10.1038/s41467-025-59683-5",
    "10.1021/acs.analchem.1c00238"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -620,6 +909,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -631,6 +925,15 @@
    "10.1038/s41587-021-01045-9",
    "10.1038/s41467-021-23953-9",
    "10.1038/s41592-019-0344-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -643,6 +946,14 @@
    "10.1101/2025.10.15.682422v1",
    "10.1021/acs.analchem.0c04720",
    "10.1101/2024.10.14.618269"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -652,6 +963,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btv146"
+  ],
+  "techniques": [
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -662,6 +977,10 @@
   "dois": [
    "10.1186/1471-2105-15-s11-s5",
    "10.3390/metabo13080944"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -671,6 +990,12 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bib/bbac542"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -680,7 +1005,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "centwave",
@@ -689,6 +1015,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c02687"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -700,6 +1030,13 @@
    "10.3389/fchem.2022.908572",
    "10.1089/omi.2021.0051",
    "10.1038/s42256-025-01140-5"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -709,6 +1046,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s42256-025-01140-5"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -718,6 +1061,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c06520"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -727,6 +1073,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -736,6 +1085,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00481-0"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -745,6 +1097,9 @@
   "edam_topics": [],
   "dois": [
    "10.1145/2939672.2939778"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -754,6 +1109,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03895"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -763,6 +1122,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008920"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -772,6 +1135,14 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pone.0306202"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -781,6 +1152,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-023-02012-9"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -790,6 +1164,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jcim.1c00055"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -799,6 +1176,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jcim.1c00055"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -808,6 +1190,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -817,6 +1203,10 @@
   "edam_topics": [],
   "dois": [
    "10.21105/joss.04494"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -827,6 +1217,11 @@
   "dois": [
    "10.3390/metabo12121275",
    "10.1038/s41592-023-02143-z"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -836,6 +1231,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c00238"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -845,6 +1244,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.est.5c08558"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -854,6 +1258,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.est.5c08558"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -864,6 +1273,12 @@
   "dois": [
    "10.1101/2024.06.20.599545",
    "10.1093/bioadv/vbae175"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -873,7 +1288,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "cobrapy-optgpsampler-algorithm",
@@ -882,6 +1298,9 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -891,6 +1310,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -900,6 +1323,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -909,6 +1336,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -918,6 +1349,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05002"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -927,6 +1361,14 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac706"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -936,7 +1378,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009906"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "commons-math3",
@@ -945,6 +1388,11 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12020173"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -954,6 +1402,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -963,6 +1417,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.2c00457"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -973,6 +1431,11 @@
   "dois": [
    "10.1101/2024.06.20.599545",
    "10.1093/bioadv/vbae175"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -982,6 +1445,16 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1002,6 +1475,17 @@
    "10.1002/cem.70040",
    "10.1021/acs.jproteome.8b00717",
    "10.3390/metabo10100416"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1011,7 +1495,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "constraint-based-stoichiometric-metabolic-models",
@@ -1020,6 +1505,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1029,6 +1518,9 @@
   "edam_topics": [],
   "dois": [
    "10.21105/joss.04494"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -1039,6 +1531,11 @@
   "dois": [
    "10.1101/2025.02.07.637102v1",
    "10.1021/acscentsci.4c01132"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1048,6 +1545,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acscentsci.4c01132"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -1057,6 +1557,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05748"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -1066,6 +1569,15 @@
   "edam_topics": [],
   "dois": [
    "10.5281/zenodo.14009575"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1075,6 +1587,10 @@
   "edam_topics": [],
   "dois": [
    "10.1016/1044-0305(94)87009-8"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -1084,6 +1600,11 @@
   "edam_topics": [],
   "dois": [
    "10.1016/1044-0305(94)87009-8"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1093,6 +1614,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/gigascience/giaa162"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -1102,6 +1626,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/gigascience/giaa162"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -1111,7 +1638,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "crest",
@@ -1120,6 +1648,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00234"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -1130,6 +1662,14 @@
   "dois": [
    "10.1038/s41587-021-01045-9",
    "10.1038/s41592-019-0344-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1140,6 +1680,14 @@
   "dois": [
    "10.21105/joss.04494",
    "10.1186/s13321-020-00477-w"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1149,6 +1697,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bib/bbac542"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -1161,6 +1714,12 @@
    "10.1093/bioinformatics/btaf354",
    "10.1007/s10489-022-04351-0",
    "10.1021/acs.analchem.5c02655"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1170,7 +1729,8 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s10489-022-04351-0"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "curl",
@@ -1179,6 +1739,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00481-0"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -1188,6 +1751,13 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1197,7 +1767,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jcim.8b00035"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "cyproduct",
@@ -1206,7 +1777,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jcim.1c00144"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "cytoscape-js",
@@ -1215,7 +1787,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btv194"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "cytoscape",
@@ -1229,6 +1802,17 @@
    "10.1186/s40168-023-01476-3",
    "10.1371/journal.pcbi.1009021",
    "10.1186/s13321-025-01051-y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1238,6 +1822,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00237"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1248,6 +1836,12 @@
   "dois": [
    "10.1021/acs.analchem.5c01726",
    "10.1021/acs.analchem.2c04632"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1257,6 +1851,14 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btad088/7036334"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1266,7 +1868,8 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s12561-013-9081-1"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "decision-tree-classifier-scikit-learn-or-equivalent-tree-based-ml-framework",
@@ -1275,6 +1878,9 @@
   "edam_topics": [],
   "dois": [
    "10.1145/2939672.2939778"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -1284,6 +1890,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.9b02655"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -1293,6 +1902,13 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2024.05.30.596727v2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1302,6 +1918,14 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c05017"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1311,6 +1935,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01726"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -1320,6 +1948,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bib/bbac542"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -1329,6 +1962,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-018-06082-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -1338,7 +1976,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "devtools",
@@ -1353,6 +1992,15 @@
    "10.1038/s41596-021-00636-9",
    "10.1186/s13321-020-00449-0",
    "10.1186/s13321-025-01044-x"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1362,6 +2010,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c05859"
+  ],
+  "techniques": [
+   "LC-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1371,6 +2023,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -1380,6 +2037,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1389,6 +2051,10 @@
   "edam_topics": [],
   "dois": [
    "10.48550/arxiv.2507.06853"
+  ],
+  "techniques": [
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1398,6 +2064,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.1c00315"
+  ],
+  "techniques": [
+   "LC-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1407,6 +2077,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00854"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1417,6 +2092,10 @@
   "dois": [
    "10.1021/jacs.9b13786",
    "10.1021/acs.jnatprod.1c00399"
+  ],
+  "techniques": [
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1426,6 +2105,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
+  ],
+  "techniques": [
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1435,7 +2118,8 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "docker-engine",
@@ -1444,6 +2128,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
+  ],
+  "techniques": [
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1471,6 +2159,16 @@
    "10.1186/s13321-025-01044-x",
    "10.3389/fpls.2019.01329",
    "10.21105/joss.02410"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1480,7 +2178,8 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "doparallel",
@@ -1489,6 +2188,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btr597"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -1501,6 +2203,16 @@
    "10.1101/2020.12.21.423723",
    "10.1101/2021.12.05.471237v2",
    "10.1101/2024.10.14.618269"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1510,6 +2222,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1519,6 +2236,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-025-02813-0"
+  ],
+  "techniques": [
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1528,6 +2249,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c04343"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -1537,6 +2263,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01726"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -1546,6 +2275,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2024.10.11.617756"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -1555,6 +2287,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btaa037"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -1564,6 +2299,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/ac501530d"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1574,6 +2316,9 @@
   "dois": [
    "10.1093/bioinformatics/btac706",
    "10.1093/bioadv/vbae175"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -1583,6 +2328,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1592,7 +2341,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "elastic-net",
@@ -1601,6 +2351,12 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1610,6 +2366,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-019-2669-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "NMR"
   ]
  },
  {
@@ -1619,6 +2379,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/bty046"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -1628,6 +2391,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c00786"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -1637,6 +2405,12 @@
   "edam_topics": [],
   "dois": [
    "10.1186/2047-217x-2-16"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "NMR"
   ]
  },
  {
@@ -1646,6 +2420,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acscentsci.3c00800"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1655,6 +2433,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-023-02012-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1664,6 +2446,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-024-00899-w"
+  ],
+  "techniques": [
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1674,6 +2459,11 @@
   "dois": [
    "10.1021/acs.analchem.0c02998",
    "10.1093/bioinformatics/btab231/6214530"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1683,6 +2473,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03895"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1692,6 +2486,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c04518"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1701,6 +2502,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btr597"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -1710,6 +2514,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bib/bbac455"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -1719,6 +2526,10 @@
   "edam_topics": [],
   "dois": [
    "10.1002/rcm.9153"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1728,7 +2539,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "featurefindermetabo",
@@ -1737,6 +2549,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c02687"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1746,6 +2562,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c00238"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1755,6 +2575,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.08.28.672951v2"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -1764,6 +2587,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-025-66060-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1773,6 +2601,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c02655"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1782,6 +2616,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05002"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -1791,7 +2628,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "fisher-s-exact-test",
@@ -1800,6 +2638,10 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.08.28.672951v2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1809,6 +2651,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41589-019-0400-9"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -1818,6 +2663,14 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00481-0"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1827,6 +2680,9 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -1836,6 +2692,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1845,6 +2705,12 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pone.0306202"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1854,7 +2720,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04131"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "foodmasst",
@@ -1864,6 +2731,12 @@
   "dois": [
    "10.1038/s41538-022-00137-3",
    "10.1038/s41564-023-01575-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1873,6 +2746,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1882,6 +2760,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1891,6 +2774,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1900,6 +2789,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1909,6 +2804,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-018-2134-1"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1919,6 +2818,15 @@
   "dois": [
    "10.1186/s13742-016-0115-8",
    "10.1007/s11306-021-01841-z"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1928,6 +2836,11 @@
   "edam_topics": [],
   "dois": [
    "10.1016/j.chemolab.2023.104938"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -1939,6 +2852,13 @@
    "10.1371/journal.pcbi.1008724",
    "10.1038/s41467-023-39279-7",
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1948,6 +2868,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00234"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -1957,6 +2881,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5b03628"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -1966,7 +2896,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jnatprod.1c00399"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "get-precmz-prodmz",
@@ -1975,6 +2906,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c02462"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -1984,6 +2919,12 @@
   "edam_topics": [],
   "dois": [
    "10.1515/jib-2025-0047"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -1993,6 +2934,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c04632"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -2014,6 +2958,16 @@
    "10.1101/2024.10.14.618269",
    "10.1093/bioinformatics/btaa1031",
    "10.21105/joss.02694"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2032,6 +2986,16 @@
    "10.1021/jasms.4c00178",
    "10.1021/acs.analchem.4c03781",
    "10.1002/anie.202507483"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2041,7 +3005,8 @@
   "edam_topics": [],
   "dois": [
    "10.5281/zenodo.7565700"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "github-actions",
@@ -2056,6 +3021,14 @@
    "10.1038/s41467-023-37446-4",
    "10.1038/s41467-024-54137-w",
    "10.1038/nmeth.3959"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2065,6 +3038,10 @@
   "edam_topics": [],
   "dois": [
    "10.1016/1044-0305(94)87009-8"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -2074,6 +3051,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btae490"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -2083,7 +3064,8 @@
   "edam_topics": [],
   "dois": [
    "10.3389/fnins.2024.1520982"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "github-com-wanluliulab-spatialmeta",
@@ -2092,7 +3074,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-025-63915-z"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "github-com-zsspython-lagf",
@@ -2101,7 +3084,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c00060"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "github-kbseah-mass2adduct",
@@ -2110,7 +3094,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c04720"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "github",
@@ -2176,6 +3161,15 @@
    "10.1007/s42081-023-00205-2",
    "10.1021/ac051437y",
    "10.1038/s42256-020-00234-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2186,6 +3180,13 @@
   "dois": [
    "10.1007/s11306-018-1363-7",
    "10.1038/s41467-022-32155-w"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -2195,6 +3196,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-022-01496-1"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -2204,6 +3208,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41587-020-0700-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -2213,6 +3223,13 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-021-01339-5"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -2223,6 +3240,15 @@
   "dois": [
    "10.1038/s41538-022-00137-3",
    "10.1038/s41564-023-01575-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2232,6 +3258,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.05.09.086066"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -2241,6 +3270,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.05.09.086066"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -2250,6 +3282,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-018-06082-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -2274,6 +3310,17 @@
    "10.1186/1471-2105-6-225",
    "10.1186/2047-217x-2-16",
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2285,6 +3332,12 @@
    "10.1038/s41596-025-01237-6",
    "10.1101/2024.10.11.617756",
    "10.1186/2047-217x-2-16"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -2294,7 +3347,8 @@
   "edam_topics": [],
   "dois": [
    "10.1002/cpz1.70009"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "google-chrome",
@@ -2303,6 +3357,9 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s10858-025-00465-y#sec2"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -2312,6 +3369,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-021-01198-0"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -2321,6 +3383,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2022.08.09.503345"
+  ],
+  "techniques": [
+   "ion-mobility-MS"
   ]
  },
  {
@@ -2330,7 +3395,8 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-024-00899-w"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "graphical-time-warping-gtw",
@@ -2339,6 +3405,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btaa037"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -2348,6 +3417,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c05859"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -2357,6 +3429,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.est.5c08558"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -2366,6 +3443,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00481-0"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -2375,6 +3455,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -2384,6 +3468,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/gigascience/giaa162"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -2393,6 +3480,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -2406,6 +3496,15 @@
    "10.1021/acs.jproteome.2c00313",
    "10.1021/acs.jproteome.8b00717",
    "10.1021/acs.analchem.4c06210"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2415,6 +3514,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2024.08.20.608773v2"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -2424,6 +3526,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c01565"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -2433,6 +3539,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.10.15.682422v1"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -2442,6 +3551,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.2c00313"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2452,6 +3567,10 @@
   "dois": [
    "10.1021/acs.jproteome.2c00313",
    "10.1021/acs.jproteome.8b00717"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -2461,7 +3580,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "hineslab-moccal",
@@ -2470,6 +3590,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04290"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -2479,6 +3604,13 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "NMR"
   ]
  },
  {
@@ -2489,6 +3621,16 @@
   "dois": [
    "10.1371/journal.pcbi.1011912",
    "10.3390/metabo10100416"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2498,6 +3640,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39279-7"
+  ],
+  "techniques": [
+   "LC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2507,7 +3653,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12080684"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "hruv",
@@ -2516,6 +3663,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.12.21.423723"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -2525,6 +3677,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00854"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -2534,6 +3689,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -2543,7 +3702,8 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2024.06.20.599545"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "https-github-com-emosca-cnr-margherita",
@@ -2552,7 +3712,8 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2024.06.20.599545"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "https-github-com-sdrogers-nplinker",
@@ -2561,7 +3722,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008920"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "https-github-com-shuzhao-li-asari",
@@ -2570,7 +3732,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "hugging-face-transformers",
@@ -2579,6 +3742,9 @@
   "edam_topics": [],
   "dois": [
    "10.48550/arxiv.2510.20615"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -2588,6 +3754,14 @@
   "edam_topics": [],
   "dois": [
    "10.1002/nbm.70131"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -2597,6 +3771,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.2c00612"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2606,6 +3785,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2615,7 +3799,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04654"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "iceberg-webui",
@@ -2625,6 +3810,11 @@
   "dois": [
    "10.1038/s42256-024-00816-8",
    "10.1021/acs.analchem.3c04654"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -2634,6 +3824,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04654"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -2643,6 +3837,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c00376"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2653,6 +3854,16 @@
   "dois": [
    "10.1021/acs.jproteome.2c00120",
    "10.1021/acs.analchem.2c00563"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2662,6 +3873,14 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c00563"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2671,6 +3890,10 @@
   "edam_topics": [],
   "dois": [
    "10.21105/joss.04494"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2683,6 +3906,13 @@
    "10.1093/bib/bbac455",
    "10.1186/s13321-025-01051-y",
    "10.1021/acs.analchem.1c00238"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2692,6 +3922,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -2701,7 +3935,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41596-021-00636-9"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "imzml-writer",
@@ -2710,6 +3945,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c06520"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2719,6 +3959,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03895"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -2728,6 +3972,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2023.02.26.530140v1.article-info"
+  ],
+  "techniques": [
+   "GC-MS"
   ]
  },
  {
@@ -2737,6 +3984,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05002"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -2746,6 +3996,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -2755,6 +4008,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -2764,6 +4022,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/ac501530d"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2773,6 +4038,9 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008920"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -2782,6 +4050,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-021-23953-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2791,7 +4064,8 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s11306-021-01841-z"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "iontoolpack",
@@ -2800,6 +4074,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2809,6 +4090,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btad455"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -2818,6 +4103,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-016-0115-9"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -2827,7 +4115,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1010462"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "isfrag",
@@ -2836,6 +4125,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c01644"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -2845,7 +4138,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "isofusion",
@@ -2854,6 +4148,11 @@
   "edam_topics": [],
   "dois": [
    "10.26599/bdma.2024.9020059"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2863,6 +4162,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2021.12.05.471237v2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -2872,6 +4176,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c02998"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2881,6 +4190,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-016-0115-9"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -2891,6 +4203,9 @@
   "dois": [
    "10.1021/acs.jcim.1c00144",
    "10.1371/journal.pone.0246962"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -2901,6 +4216,15 @@
   "dois": [
    "10.1038/s41467-021-23953-9",
    "10.1038/s41587-023-01690-2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2910,6 +4234,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00854"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -2919,7 +4246,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.8b00720"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "jdk-25",
@@ -2929,6 +4257,15 @@
   "dois": [
    "10.1038/s41467-021-23953-9",
    "10.1038/s41587-023-01690-2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2938,6 +4275,11 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12020173"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2947,6 +4289,13 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "NMR"
   ]
  },
  {
@@ -2957,6 +4306,11 @@
   "dois": [
    "10.1038/s41467-018-06082-8",
    "10.1021/acs.analchem.5c00060"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -2966,6 +4320,11 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12020173"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -2975,7 +4334,8 @@
   "edam_topics": [],
   "dois": [
    "10.26599/bdma.2024.9020059"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "jpa-r-package",
@@ -2984,7 +4344,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12030212"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "jpa",
@@ -2993,6 +4354,11 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12030212"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -3002,6 +4368,10 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo11030163"
+  ],
+  "techniques": [
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3011,6 +4381,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2022.08.09.503345"
+  ],
+  "techniques": [
+   "ion-mobility-MS"
   ]
  },
  {
@@ -3020,6 +4393,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btae584"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3029,6 +4407,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04444"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -3040,6 +4423,14 @@
    "10.1371/journal.pcbi.1009105",
    "10.1021/acs.analchem.3c04444",
    "10.3390/metabo10100416"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3049,6 +4440,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c00567"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -3058,7 +4453,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.3c00512"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "kegg-database",
@@ -3067,6 +4463,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c00238"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3077,6 +4480,14 @@
   "dois": [
    "10.1101/2025.08.28.672951v2",
    "10.1371/journal.pone.0246962"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "MS-imaging",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3088,6 +4499,11 @@
    "10.1101/2025.08.28.672951v2",
    "10.1186/s40168-023-01476-3",
    "10.1128/mra.00129-19"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3097,7 +4513,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "keras",
@@ -3111,6 +4528,14 @@
    "10.1021/acs.analchem.1c02220",
    "10.1021/acs.jnatprod.1c00399",
    "10.3390/metabo13080944"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -3122,6 +4547,15 @@
    "10.1038/s41467-023-39889-1",
    "10.1021/acs.analchem.2c05810",
    "10.1371/journal.pcbi.1011912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3133,6 +4567,14 @@
    "10.1038/nprot.2017.122",
    "10.1074/mcp.M113.031278",
    "10.1038/nmeth.3959"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -3143,6 +4585,12 @@
   "dois": [
    "10.1093/bioinformatics/btac059/6522114",
    "10.1021/acs.analchem.5c00567"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3152,6 +4600,12 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bib/bbac455"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3161,6 +4615,12 @@
   "edam_topics": [],
   "dois": [
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3170,6 +4630,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.0c00618"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -3179,6 +4642,12 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btae490"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3188,6 +4657,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3197,6 +4673,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/gigascience/giaa162"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -3210,6 +4691,15 @@
    "10.1093/bioadv/vbae175",
    "10.1038/s41596-021-00636-9",
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3219,6 +4709,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1011912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -3228,6 +4723,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac706"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3237,7 +4737,8 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.04.09.033894"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "lipidmatch",
@@ -3247,6 +4748,14 @@
   "dois": [
    "10.1007/s00216-021-03392-7",
    "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3256,6 +4765,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.10.15.682422v1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -3265,6 +4779,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.0c00082"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3274,6 +4792,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac706"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3283,7 +4806,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c02449"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "lipoclean",
@@ -3292,6 +4816,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c04040"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3301,6 +4830,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac706"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3310,6 +4844,9 @@
   "edam_topics": [],
   "dois": [
    "10.1515/jib-2025-0047"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3319,7 +4856,8 @@
   "edam_topics": [],
   "dois": [
    "10.3389/fmolb.2022.952149"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "lotus-database",
@@ -3328,6 +4866,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-021-23953-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -3337,6 +4879,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -3346,6 +4891,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c04518"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3355,6 +4903,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c04518"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3364,6 +4919,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jnatprod.0c01076"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -3373,6 +4931,10 @@
   "edam_topics": [],
   "dois": [
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3382,6 +4944,9 @@
   "edam_topics": [],
   "dois": [
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3391,6 +4956,15 @@
   "edam_topics": [],
   "dois": [
    "10.5702/massspectrometry.S0033"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3401,6 +4975,10 @@
   "dois": [
    "10.1021/acs.analchem.5c01726",
    "10.1093/bioinformatics/btab741/6409851"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -3411,6 +4989,11 @@
   "dois": [
    "10.1007/s00044-016-1764-y",
    "10.3390/metabo12080684"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3420,6 +5003,12 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1011814"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -3429,6 +5018,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1011814"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3438,6 +5032,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -3449,6 +5047,12 @@
    "10.1186/s13321-024-00899-w",
    "10.1021/acs.analchem.4c07078",
    "10.1021/acs.analchem.1c02687"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3458,7 +5062,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btab741/6409851"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "margherita",
@@ -3467,6 +5072,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2024.06.20.599545"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3476,6 +5086,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -3485,6 +5098,11 @@
   "edam_topics": [],
   "dois": [
    "10.1080/01621459.2017.1397521"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3494,7 +5112,8 @@
   "edam_topics": [],
   "dois": [
    "10.1089/omi.2021.0051"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "mass-functions-nn-cluster-by-mz-seeds",
@@ -3503,6 +5122,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -3512,6 +5136,9 @@
   "edam_topics": [],
   "dois": [
    "10.1145/2939672.2939778"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3521,6 +5148,14 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c04720"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3530,6 +5165,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05810"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3539,6 +5180,9 @@
   "edam_topics": [],
   "dois": [
    "10.1002/jms.1777"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -3548,7 +5192,8 @@
   "edam_topics": [],
   "dois": [
    "10.1002/jms.1777"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "massbank",
@@ -3559,6 +5204,16 @@
    "10.1021/acs.analchem.6b02927",
    "10.1021/acs.analchem.2c04343",
    "10.1101/2020.05.09.086066"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3568,6 +5223,16 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-025-60640-5"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3577,6 +5242,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3586,6 +5254,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3595,6 +5266,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3604,6 +5278,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3613,6 +5290,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3622,6 +5302,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -3631,6 +5316,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -3640,6 +5329,14 @@
   "edam_topics": [],
   "dois": [
    "10.1186/2047-217x-2-16"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -3651,6 +5348,10 @@
    "10.1038/s41592-025-02785-1",
    "10.1002/rcm.10132",
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3660,6 +5361,9 @@
   "edam_topics": [],
   "dois": [
    "10.1002/rcm.10132"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3669,6 +5373,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -3678,6 +5387,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41587-023-01985-4"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3693,6 +5407,16 @@
    "10.1186/s13321-021-00558-4",
    "https://zenodo.org/badge/latestdoi/310047938",
    "10.1371/journal.pcbi.1011912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3702,7 +5426,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-021-01331-z"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "matlab-compiler-runtime-8-3",
@@ -3711,6 +5436,12 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13742-016-0115-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3720,6 +5451,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -3731,6 +5466,13 @@
    "10.1101/2025.09.22.677919v1",
    "10.3390/metabo15010028",
    "10.1021/acs.analchem.1c03592"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -3740,6 +5482,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05019"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -3759,6 +5504,16 @@
    "10.1021/acs.jproteome.4c00873",
    "10.1021/acs.jproteome.8b00717",
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3768,7 +5523,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12080684"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "maxquant",
@@ -3777,7 +5533,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.0c00866"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "mbpls",
@@ -3786,6 +5543,9 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1011814"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -3795,6 +5555,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c01652"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -3804,6 +5567,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-024-02171-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -3813,7 +5582,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "melonnpan",
@@ -3822,6 +5592,12 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3831,6 +5607,12 @@
   "edam_topics": [],
   "dois": [
    "10.3389/fbinf.2022.842964"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -3841,6 +5623,14 @@
   "dois": [
    "10.1038/s41467-021-23953-9",
    "10.3389/fbinf.2022.842964"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -3850,6 +5640,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c04343"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3859,6 +5655,10 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo11030163"
+  ],
+  "techniques": [
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3868,6 +5668,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03693"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3881,6 +5686,15 @@
    "10.1016/j.cmpb.2025.108672",
    "10.1371/journal.pcbi.1011912",
    "10.1016/j.aca.2018.08.002"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3890,6 +5704,13 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-024-48009-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -3899,6 +5720,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c03032"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -3909,6 +5735,13 @@
   "dois": [
    "10.1093/bioinformatics/btac441",
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -3918,7 +5751,8 @@
   "edam_topics": [],
   "dois": [
    "10.1158/0008-5472.can-14-1490"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "metabodirect",
@@ -3927,6 +5761,14 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3936,6 +5778,9 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo15010048"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -3945,6 +5790,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.05.09.086066"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -3954,6 +5804,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.0c00082"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -3963,6 +5816,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.05.09.086066"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -3972,6 +5828,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac059/6522114"
+  ],
+  "techniques": [
+   "LC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3981,6 +5841,14 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s11306-020-01717-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -3990,6 +5858,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/1471-2105-15-s11-s5"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -4000,6 +5872,12 @@
   "dois": [
    "10.1038/s41538-022-00137-3",
    "10.1038/s41564-023-01575-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4009,7 +5887,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btv194"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "metaminer",
@@ -4018,6 +5897,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-018-06082-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -4027,6 +5911,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c05022"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4036,6 +5927,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.06.26.661636v1"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -4045,7 +5939,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c06841"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "metanorm",
@@ -4054,6 +5949,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c06841"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -4063,6 +5961,10 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.11.12.687968v1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -4072,6 +5974,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c04906"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -4081,6 +5986,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.1c00392"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -4090,6 +5999,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05810"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4099,7 +6014,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-022-34537-6"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "meteor",
@@ -4108,7 +6024,8 @@
   "edam_topics": [],
   "dois": [
    "10.1007/978-3-319-47656-8_6"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "metfrag",
@@ -4121,6 +6038,14 @@
    "10.1186/s13321-016-0115-9",
    "10.1186/s13321-020-00477-w",
    "10.1186/s13321-025-01044-x"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4130,7 +6055,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pone.0246962"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "metscriber",
@@ -4139,6 +6065,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.5c00548"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -4148,6 +6079,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03693"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4158,6 +6094,10 @@
   "dois": [
    "10.1371/journal.pcbi.1008920",
    "10.1101/2024.10.11.617756"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4168,6 +6108,12 @@
   "dois": [
    "10.1038/s41538-022-00137-3",
    "10.1038/s41564-023-01575-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4178,6 +6124,12 @@
   "dois": [
    "10.1038/s41538-022-00137-3",
    "10.1038/s41564-023-01575-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4187,6 +6139,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.1c00425"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4196,6 +6153,13 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4205,6 +6169,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-019-11311-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -4214,6 +6184,13 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-025-01051-y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4223,7 +6200,8 @@
   "edam_topics": [],
   "dois": [
    "10.1016/j.cmpb.2025.108672"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "miniconda",
@@ -4232,6 +6210,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00178"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4241,6 +6225,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4250,6 +6240,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btr597"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -4259,6 +6252,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jcim.3c01082"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4269,6 +6268,12 @@
   "dois": [
    "10.1038/s42256-023-00708-3",
    "10.1021/acs.jcim.3c01082"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4279,6 +6284,12 @@
   "dois": [
    "10.1093/bib/bbac455",
    "10.1371/journal.pntd.0006215"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4288,6 +6299,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c01253"
+  ],
+  "techniques": [
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4297,6 +6311,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac441"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -4306,6 +6325,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04290"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4315,7 +6340,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00650"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "modifinder",
@@ -4324,6 +6350,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00061"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -4333,6 +6365,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00234"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -4342,6 +6378,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-021-23986-0"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4351,6 +6393,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.estlett.5c00284"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4360,6 +6407,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-023-02012-9"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -4369,6 +6419,10 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2021.12.21.473622v1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -4378,6 +6432,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4387,6 +6448,12 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-023-05149-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4396,6 +6463,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00558-4"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -4405,6 +6475,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c05859"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4414,6 +6489,10 @@
   "edam_topics": [],
   "dois": [
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4423,6 +6502,9 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s10858-025-00465-y#sec2"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -4432,6 +6514,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c04632"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -4441,6 +6529,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c02462"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -4450,6 +6542,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4459,6 +6556,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-025-63536-6"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "NMR"
   ]
  },
  {
@@ -4468,6 +6571,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01594"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -4477,6 +6586,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c04040"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4486,6 +6600,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c04040"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4495,7 +6614,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01594"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "ms-dial-v4-00-or-higher",
@@ -4504,6 +6624,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01594"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -4522,6 +6646,17 @@
    "10.1021/jasms.4c00364",
    "10.1093/bioinformatics/btr597",
    "10.1021/acs.analchem.4c00786"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4531,6 +6666,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-021-01331-z"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -4540,6 +6678,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-023-02012-9"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -4549,6 +6690,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01594"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -4558,6 +6706,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s42256-024-00816-8"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -4568,7 +6719,8 @@
   "dois": [
    "10.1038/s42256-024-00816-8",
    "10.1021/acs.analchem.3c04654"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "ms-pred",
@@ -4577,6 +6729,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04654"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -4586,6 +6743,10 @@
   "edam_topics": [],
   "dois": [
    "10.1002/pmic.202300336"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4595,6 +6756,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -4604,6 +6770,10 @@
   "edam_topics": [],
   "dois": [
    "10.1089/omi.2021.0051"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -4615,6 +6785,16 @@
    "10.1186/s13321-021-00558-4",
    "10.1101/2024.03.25.586580v5",
    "10.1021/acs.analchem.3c04444"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4624,6 +6804,10 @@
   "edam_topics": [],
   "dois": [
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4633,6 +6817,10 @@
   "edam_topics": [],
   "dois": [
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4645,6 +6833,13 @@
    "10.3390/metabo9070144",
    "10.1073/pnas.1608041113",
    "10.1186/1471-2105-6-225"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4654,6 +6849,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c06875"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -4663,6 +6862,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-37446-4"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4672,6 +6877,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -4681,6 +6893,11 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12020173"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4690,6 +6907,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c00567"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4711,6 +6933,16 @@
    "10.1021/acs.jproteome.0c00866",
    "10.1021/acs.analchem.3c02583",
    "10.3390/metabo10100416"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4720,6 +6952,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac441"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -4729,6 +6966,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -4740,6 +6982,12 @@
    "10.1021/acs.est.5c08558",
    "10.1038/s41592-023-02012-9",
    "10.1038/s41592-021-01331-z"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4749,6 +6997,14 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c00567"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4758,6 +7014,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btae584"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4767,6 +7028,15 @@
   "edam_topics": [],
   "dois": [
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4776,6 +7046,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-025-66060-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4785,6 +7060,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/ac501530d"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4794,6 +7076,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00364"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4803,7 +7091,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c01140"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "msgo-model",
@@ -4812,6 +7101,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s42256-025-01140-5"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -4821,6 +7113,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41587-020-0700-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -4830,6 +7127,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01513"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -4839,6 +7141,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00178"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4848,6 +7156,10 @@
   "edam_topics": [],
   "dois": [
    "10.21105/joss.04494"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4857,6 +7169,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.est.5c08558"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -4867,6 +7184,16 @@
   "dois": [
    "10.1093/bioinformatics/btac441",
    "10.3390/metabo12020173"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4878,6 +7205,14 @@
    "10.1038/s41587-021-01045-9",
    "10.1038/s41592-022-01486-3",
    "10.1038/s41592-019-0344-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4887,6 +7222,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btab636/6363791"
+  ],
+  "techniques": [
+   "ion-mobility-MS"
   ]
  },
  {
@@ -4896,6 +7234,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4905,6 +7250,11 @@
   "edam_topics": [],
   "dois": [
    "10.1080/01621459.2017.1397521"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4914,6 +7264,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -4923,6 +7277,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00322"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4932,6 +7292,11 @@
   "edam_topics": [],
   "dois": [
    "10.1016/j.enceco.2025.07.022"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -4941,7 +7306,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12080684"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "mtbls2",
@@ -4950,6 +7316,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/812370"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -4959,6 +7328,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.9b01842"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -4968,7 +7343,8 @@
   "edam_topics": [],
   "dois": [
    "10.1158/0008-5472.can-14-1490"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "multimodalspectraltransformer",
@@ -4977,6 +7353,9 @@
   "edam_topics": [],
   "dois": [
    "10.1002/ange.202517611"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -4986,7 +7365,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/nmeth.3959"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "multtest",
@@ -4995,7 +7375,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41596-021-00636-9"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "mwastools",
@@ -5004,6 +7385,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btx477"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -5013,6 +7398,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c00238"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -5022,6 +7411,10 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo11030163"
+  ],
+  "techniques": [
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5031,6 +7424,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -5040,6 +7436,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.2c00313"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5049,6 +7450,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.01.26.634927v3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5058,6 +7464,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pone.0306202"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -5069,6 +7479,15 @@
    "10.1021/acs.jproteome.2c00120",
    "10.1186/1471-2105-11-395",
    "10.1093/bioinformatics/btab231/6214530"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5078,6 +7497,11 @@
   "edam_topics": [],
   "dois": [
    "10.1002/9780470508183"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5096,6 +7520,17 @@
    "10.1021/acs.analchem.1c02220",
    "10.1101/2024.05.13.593988v1",
    "10.1021/acs.analchem.5c00567"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5107,6 +7542,16 @@
    "10.1021/acs.jnatprod.7b00737",
    "10.1038/s41467-021-23953-9",
    "10.1186/1471-2105-11-395"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5117,6 +7562,16 @@
   "dois": [
    "10.1038/s41596-024-01046-3",
    "10.1038/s41467-021-23953-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5126,6 +7581,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5135,6 +7595,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00073"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5145,6 +7610,14 @@
   "dois": [
    "10.1021/acs.analchem.5c03207",
    "10.1021/acs.analchem.0c02998"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5154,6 +7627,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btab231/6214530"
+  ],
+  "techniques": [
+   "LC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5163,6 +7640,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01213"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -5172,6 +7654,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/nmeth.3959"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5181,6 +7668,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01513"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -5190,7 +7682,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/nar/gkac1049"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "ncgtw",
@@ -5199,6 +7692,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btaa037"
+  ],
+  "techniques": [
+   "LC-MS",
+   "NMR"
   ]
  },
  {
@@ -5208,6 +7705,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c02220"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5217,6 +7721,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5226,6 +7734,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01980"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5235,6 +7748,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.0c00866"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5244,6 +7762,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5255,6 +7778,12 @@
    "10.1186/s12859-021-04490-0",
    "10.1021/acs.analchem.0c01980",
    "10.1021/acs.jproteome.1c00425"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5264,6 +7793,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01980"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5273,6 +7806,13 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-024-05994-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5284,6 +7824,12 @@
    "10.1038/s41467-018-06082-8",
    "10.1021/acs.analchem.2c05810",
    "10.1371/journal.pcbi.1011814"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5293,7 +7839,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "neural-networks",
@@ -5302,7 +7849,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "nextflow-22-10-0",
@@ -5311,6 +7859,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00364"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -5322,6 +7874,14 @@
    "10.1093/bioadv/vbae175",
    "10.1021/jasms.4c00364",
    "10.1038/s41586-023-06906-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5331,6 +7891,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -5340,6 +7905,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c03078"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -5349,6 +7917,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s42004-025-01812-8"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -5358,6 +7929,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c03078"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -5367,6 +7941,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41596-021-00636-9"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -5376,6 +7953,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -5385,6 +7965,9 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s11306-018-1347-7"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -5394,7 +7977,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41596-021-00636-9"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "notame",
@@ -5403,6 +7987,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btr597"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5412,6 +8001,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -5421,6 +8013,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acscentsci.1c01108"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5430,6 +8028,11 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12121275"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5439,6 +8042,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-018-06082-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -5448,6 +8056,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-018-06082-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -5457,6 +8070,16 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c03163"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5468,6 +8091,11 @@
    "10.1186/s40168-022-01444-3",
    "10.1371/journal.pcbi.1008920",
    "10.1101/2024.10.11.617756"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5477,6 +8105,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41589-020-00724-z"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -5488,6 +8120,15 @@
    "10.1371/journal.pcbi.1008724",
    "10.1021/acs.analchem.5c02655",
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5497,6 +8138,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -5506,6 +8150,9 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008920"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -5541,6 +8188,17 @@
    "10.1038/s41592-023-02012-9",
    "10.1021/acs.analchem.9b04884",
    "10.3390/metabo10100416"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5550,7 +8208,8 @@
   "edam_topics": [],
   "dois": [
    "10.1128/mra.00129-19"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "onnxruntime",
@@ -5559,6 +8218,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5568,6 +8231,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-021-23953-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5577,7 +8245,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/nmeth.3959"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "openms",
@@ -5593,6 +8262,17 @@
    "10.1007/s00216-023-05070-2",
    "10.1021/acs.jproteome.0c00866",
    "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5602,6 +8282,11 @@
   "edam_topics": [],
   "dois": [
    "10.21147/j.issn.1000-9604.2023.05.11"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5611,6 +8296,15 @@
   "edam_topics": [],
   "dois": [
    "10.1002/nbm.70131"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -5618,14 +8312,16 @@
   "name": "OpenTIMS",
   "canonical_url": "",
   "edam_topics": [],
-  "dois": []
+  "dois": [],
+  "techniques": []
  },
  {
   "slug": "opentimspy",
   "name": "opentimspy",
   "canonical_url": "",
   "edam_topics": [],
-  "dois": []
+  "dois": [],
+  "techniques": []
  },
  {
   "slug": "optgpsampler-algorithm",
@@ -5634,6 +8330,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -5643,6 +8343,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -5652,6 +8356,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jnatprod.7b00737"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "NMR"
   ]
  },
  {
@@ -5662,6 +8373,10 @@
   "dois": [
    "10.1021/acs.jproteome.3c00512",
    "10.1021/jasms.5c00234"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -5671,6 +8386,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.est.5c08558"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -5680,6 +8400,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -5689,6 +8412,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.1c00392"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5698,7 +8426,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12080684"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pairkat",
@@ -5707,7 +8436,8 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2021.04.23.440821v1"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pals-pathway-activity-level-scoring",
@@ -5716,6 +8446,12 @@
   "edam_topics": [],
   "dois": [
    "10.1186/1471-2105-6-225"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5725,6 +8461,12 @@
   "edam_topics": [],
   "dois": [
    "10.1186/1471-2105-6-225"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5734,6 +8476,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/1471-2105-6-225"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5743,6 +8489,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -5752,7 +8501,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05019"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pandas-or-equivalent-tabular-data-library",
@@ -5761,7 +8511,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/nar/gkac1049"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pandas",
@@ -5792,6 +8543,17 @@
    "10.1038/s41592-023-02012-9",
    "10.1021/acs.analchem.9b04884",
    "10.3390/metabo10100416"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5801,6 +8563,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -5810,6 +8576,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5819,6 +8590,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c04758"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5828,6 +8604,15 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00477-w"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5837,6 +8622,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01726"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -5846,6 +8635,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41596-021-00636-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5855,6 +8650,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.06.26.661636v1"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -5864,6 +8662,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5873,6 +8678,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -5882,7 +8693,8 @@
   "edam_topics": [],
   "dois": [
    "10.1002/cpz1.70009"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "perl",
@@ -5891,7 +8703,8 @@
   "edam_topics": [],
   "dois": [
    "10.1002/cpz1.70009"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pewlib",
@@ -5900,6 +8713,11 @@
   "edam_topics": [],
   "dois": [
    "10.1529/biophysj.103.038422"
+  ],
+  "techniques": [
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5909,6 +8727,11 @@
   "edam_topics": [],
   "dois": [
    "10.1529/biophysj.103.038422"
+  ],
+  "techniques": [
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5919,7 +8742,8 @@
   "dois": [
    "10.1093/gigascience/giaa154",
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pheatmap",
@@ -5929,6 +8753,14 @@
   "dois": [
    "10.1021/acs.est.5c08558",
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -5938,6 +8770,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -5947,6 +8782,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00061"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -5964,6 +8802,15 @@
    "10.1186/s40168-022-01444-3",
    "10.1002/cem.70040",
    "10.1021/acs.jproteome.8b00717"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5973,7 +8820,8 @@
   "edam_topics": [],
   "dois": [
    "10.1186/1471-2105-6-225"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "plantmasst",
@@ -5983,6 +8831,12 @@
   "dois": [
    "10.1038/s41538-022-00137-3",
    "10.1038/s41564-023-01575-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -5992,6 +8846,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c00786"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -6002,6 +8860,13 @@
   "dois": [
    "10.1021/jasms.5c00237",
    "10.1021/acs.jproteome.4c00873"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6012,6 +8877,11 @@
   "dois": [
    "10.1186/s40168-023-01476-3",
    "10.1021/acs.jproteome.3c00512"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6021,6 +8891,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.1c00425"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6030,6 +8906,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03895"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6039,6 +8922,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05002"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -6048,6 +8934,13 @@
   "edam_topics": [],
   "dois": [
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6057,6 +8950,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05748"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -6066,6 +8962,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-025-02813-0"
+  ],
+  "techniques": [
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6075,6 +8975,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c04938"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -6084,6 +8990,9 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008920"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -6093,7 +9002,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo13080944"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "proforma-2-0",
@@ -6102,6 +9012,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -6111,6 +9024,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41596-021-00636-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6120,6 +9038,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.9b00640"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6131,6 +9055,17 @@
    "10.1021/acs.analchem.1c05017",
    "10.1021/acs.analchem.0c02998",
    "10.1021/jasms.4c00178"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6140,6 +9075,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00481-0"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -6158,6 +9096,16 @@
    "10.1021/acs.analchem.3c02583",
    "10.1007/s11306-018-1363-7",
    "10.3390/metabo10100416"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6167,6 +9115,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.05.09.086066"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -6176,6 +9127,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05019"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6185,6 +9142,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.8b00717"
+  ],
+  "techniques": [
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6194,6 +9154,10 @@
   "edam_topics": [],
   "dois": [
    "10.1002/pmic.202300336"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6203,7 +9167,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-023-02143-z"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pubchem",
@@ -6219,6 +9184,17 @@
    "10.21105/joss.04494",
    "10.1038/s41592-025-02813-0",
    "10.1186/s13321-020-00477-w"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6229,6 +9205,10 @@
   "dois": [
    "10.1186/s13321-023-00695-y",
    "10.1186/s13321-021-00558-4"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6238,6 +9218,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00151"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -6247,6 +9230,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00151"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -6256,6 +9242,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2021.12.05.471237v2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -6265,6 +9256,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6274,6 +9270,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.9b00640"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6283,6 +9285,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6292,6 +9299,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.5c00435"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6301,6 +9313,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00178"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6310,7 +9328,8 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.04.09.033894"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pycombat",
@@ -6319,6 +9338,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1011912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6328,6 +9352,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c01309"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -6338,6 +9367,12 @@
   "dois": [
    "10.1021/acs.jcim.4c02179",
    "10.1002/cem.70040"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -6347,7 +9382,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/gigascience/giaa154"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pyineta",
@@ -6356,6 +9392,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c03966"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -6365,6 +9404,9 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo9070144"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -6374,6 +9416,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6387,6 +9434,16 @@
    "10.1093/bioinformatics/bty046",
    "10.1021/acs.jproteome.4c00873",
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6396,6 +9453,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00873"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6409,6 +9472,17 @@
    "10.1021/acs.jproteome.4c00873",
    "10.1021/acs.analchem.0c03421",
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6418,6 +9492,10 @@
   "edam_topics": [],
   "dois": [
    "10.1002/nbm.70131"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -6427,6 +9505,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btad078/7067745"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6438,6 +9521,14 @@
    "10.1021/acs.jproteome.4c00873",
    "10.1021/acs.jproteome.8b00717",
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6453,6 +9544,15 @@
    "10.21105/joss.04494",
    "10.1186/s40168-022-01444-3",
    "10.1186/s12859-023-05149-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6462,6 +9562,12 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13742-016-0115-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6471,6 +9577,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2025.11.12.688047v1"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6480,6 +9591,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -6489,6 +9603,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00467"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6498,6 +9619,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s42256-025-01140-5"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6507,6 +9634,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c04531"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -6516,6 +9646,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c00060"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -6526,6 +9659,13 @@
   "dois": [
    "10.1002/rcm.9153",
    "10.1021/acs.jproteome.2c00612"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6535,6 +9675,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c04419"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6544,6 +9691,9 @@
   "edam_topics": [],
   "dois": [
    "10.1002/nbm.70131"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -6558,6 +9708,16 @@
    "10.1007/s00044-016-1764-y",
    "10.1002/cem.70040",
    "10.1038/s41592-021-01198-0"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6567,6 +9727,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05019"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -6576,7 +9739,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/nar/gkac1049"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "python-numpy-pandas",
@@ -6585,6 +9749,13 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6594,6 +9765,9 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008920"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -6604,6 +9778,10 @@
   "dois": [
    "10.1021/acs.analchem.4c05039",
    "10.1101/2020.11.20.391912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6613,7 +9791,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "python-scikit-learn",
@@ -6622,7 +9801,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "python",
@@ -6729,6 +9909,17 @@
    "10.3390/metabo10100416",
    "10.1021/acs.analchem.0c03895",
    "10.3390/metabo9090171"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6738,6 +9929,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c02426"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -6747,6 +9941,9 @@
   "edam_topics": [],
   "dois": [
    "10.1016/j.microc.2025.115372"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -6756,6 +9953,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-024-00899-w"
+  ],
+  "techniques": [
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6765,6 +9965,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01594"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6774,7 +9981,8 @@
   "edam_topics": [],
   "dois": [
    "10.1002/anie.202507483"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "pytorch-or-tensorflow",
@@ -6783,6 +9991,12 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-024-00899-w"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6818,6 +10032,17 @@
    "10.1038/s42004-023-00932-3",
    "10.1021/acs.analchem.5c02655",
    "10.1186/s13321-024-00858-5"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6827,6 +10052,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1011814"
+  ],
+  "techniques": [
+   "LC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6836,6 +10065,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2021.12.21.473622v1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -6845,6 +10079,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -6854,6 +10092,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41589-020-00677-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -6863,6 +10105,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c03660"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6872,6 +10119,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00234"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -6881,7 +10132,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12080684"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "qr-code-generation-library",
@@ -6890,6 +10142,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.05.09.086066"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -6899,7 +10154,8 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12080684"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "quick",
@@ -6908,6 +10164,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.1c00315"
+  ],
+  "techniques": [
+   "LC-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -6917,6 +10178,12 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13742-016-0115-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6926,6 +10193,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6935,6 +10206,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.1c00392"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -6944,7 +10218,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c05039"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "r-gui",
@@ -6953,6 +10228,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c03225"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -6962,7 +10240,8 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2021.04.23.440821v1"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "r-package-amanida",
@@ -6971,6 +10250,9 @@
   "edam_topics": [],
   "dois": [
    "10.1002/jrsm.1713"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -6981,6 +10263,12 @@
   "dois": [
    "10.1021/acs.analchem.3c02697",
    "10.3389/fgene.2022.957317"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6990,6 +10278,13 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -6999,6 +10294,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c03032"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -7008,6 +10308,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bib/bbac455"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -7018,6 +10323,15 @@
   "dois": [
    "10.1021/acs.analchem.1c03032",
    "10.1021/ac501530d"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7027,7 +10341,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "random-forest",
@@ -7036,6 +10351,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7045,6 +10365,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05002"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -7054,6 +10377,9 @@
   "edam_topics": [],
   "dois": [
    "10.1128/mra.00129-19"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -7063,7 +10389,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "rapidmass",
@@ -7072,6 +10399,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7081,6 +10414,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00854"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -7090,6 +10426,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.0c00866"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7099,6 +10441,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.0c00866"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7108,6 +10456,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c03207"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7117,6 +10469,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-023-02143-z"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -7126,7 +10481,8 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s10489-022-04351-0"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "rdkit-or-similar-cheminformatics-library-for-molecular-fingerprint-computation",
@@ -7135,7 +10491,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05019"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "rdkit-pypi",
@@ -7144,6 +10501,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-019-13680-7"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -7182,6 +10542,16 @@
    "10.1021/acs.jproteome.4c00873",
    "10.1038/s42004-023-00932-3",
    "10.1038/s41592-023-02012-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7191,6 +10561,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01980"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -7200,6 +10573,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01980"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -7211,6 +10587,12 @@
    "10.1021/acs.analchem.5c01726",
    "10.1101/2025.08.28.672951v2",
    "10.1101/2021.12.05.471237v2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7221,6 +10603,11 @@
   "dois": [
    "10.1021/acs.est.5c08558",
    "10.1101/2025.08.28.672951v2"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -7230,6 +10617,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/nmeth.3959"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7239,6 +10632,13 @@
   "edam_topics": [],
   "dois": [
    "10.1186/2047-217x-2-16"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -7248,6 +10648,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -7257,6 +10662,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.est.5c08558"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS",
+   "NMR"
   ]
  },
  {
@@ -7266,6 +10676,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c05002"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -7275,7 +10689,8 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-016-0174-y"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "rest-client",
@@ -7284,7 +10699,8 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-016-0174-y"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "resultsloader",
@@ -7293,6 +10709,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -7302,6 +10721,10 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo13080944"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7311,6 +10734,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.9b05765"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -7320,6 +10750,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c02047"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -7329,6 +10762,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pntd.0006215"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -7338,6 +10776,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.2c00313"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7347,7 +10790,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c03660"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "riken",
@@ -7356,6 +10800,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05389"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7365,6 +10815,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.0c00866"
+  ],
+  "techniques": [
+   "LC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7374,6 +10828,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac059/6522114"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7383,6 +10841,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00449-0"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR"
   ]
  },
  {
@@ -7392,6 +10855,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00449-0"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR"
   ]
  },
  {
@@ -7401,6 +10869,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-020-00449-0"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR"
   ]
  },
  {
@@ -7410,6 +10883,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-025-00968-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -7419,6 +10896,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -7428,6 +10909,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01726"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -7437,7 +10922,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/nmeth.3959"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "rstudio",
@@ -7448,6 +10934,12 @@
    "10.1016/j.cca.2024.117858",
    "10.1021/acs.analchem.1c01644",
    "10.1007/s11306-018-1347-7"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7457,6 +10949,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00854"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -7466,6 +10961,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00854"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -7475,7 +10973,8 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-016-0174-y"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "rust",
@@ -7484,6 +10983,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.5c00435"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7493,6 +10996,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.12.21.423723"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -7503,6 +11011,10 @@
   "dois": [
    "10.1021/acs.analchem.5c01726",
    "10.3390/metabo12020173"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7512,6 +11024,9 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s10858-025-00465-y#sec2"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -7521,6 +11036,11 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7530,6 +11050,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c03078"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -7539,6 +11062,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.est.3c04764"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -7548,6 +11075,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c06210"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7557,6 +11090,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jcim.3c01082"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7566,6 +11106,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -7575,6 +11119,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c03660"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -7584,6 +11131,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.3c03660"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7593,6 +11145,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "direct-infusion-MS"
   ]
  },
  {
@@ -7602,6 +11158,11 @@
   "edam_topics": [],
   "dois": [
    "10.3389/fbinf.2022.842964"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -7611,6 +11172,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -7620,6 +11184,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -7629,7 +11198,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-025-63915-z"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "scikit-learn-python",
@@ -7638,6 +11208,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -7657,6 +11231,17 @@
    "10.1021/acs.analchem.1c02220",
    "10.1038/s41467-019-13680-7",
    "10.3390/metabo10100416"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7666,6 +11251,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -7675,6 +11263,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c01652"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -7684,6 +11275,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7693,6 +11290,14 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7702,7 +11307,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "scipy",
@@ -7717,6 +11323,17 @@
    "10.1021/acs.jproteome.2c00313",
    "10.1021/acs.analchem.4c05632",
    "10.1038/s41592-023-02012-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7726,6 +11343,9 @@
   "edam_topics": [],
   "dois": [
    "10.3389/fchem.2022.908572"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -7735,6 +11355,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
+  ],
+  "techniques": [
+   "MS-imaging"
   ]
  },
  {
@@ -7744,7 +11367,8 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "seaborn",
@@ -7756,6 +11380,13 @@
    "10.1186/s40168-023-01476-3",
    "10.1371/journal.pcbi.1009021",
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7765,7 +11396,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c07078"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "seurat",
@@ -7774,6 +11406,13 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2024.10.14.618269"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7787,6 +11426,15 @@
    "10.1021/acs.jproteome.5c00548",
    "10.1021/acs.jproteome.3c00512",
    "10.1016/j.aca.2025.344571"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7796,6 +11444,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-025-01044-x"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7805,6 +11458,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -7814,7 +11471,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "simile",
@@ -7823,6 +11481,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-022-30118-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7834,6 +11498,12 @@
    "10.1038/s41592-022-01486-3",
    "10.1093/bioadv/vbae175",
    "10.1021/jasms.4c00364"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7852,6 +11522,17 @@
    "10.1021/ac501530d",
    "10.1038/s41592-019-0344-8",
    "10.1038/s42256-020-00234-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7861,6 +11542,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2022.08.09.503345"
+  ],
+  "techniques": [
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7874,6 +11558,14 @@
    "10.1093/bioinformatics/btab231/6214530",
    "10.1021/acs.jproteome.0c00866",
    "10.1016/j.aca.2018.08.002"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7883,6 +11575,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c00786"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -7892,6 +11589,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c02687"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -7901,6 +11602,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c02687"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -7910,6 +11615,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-022-01486-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7919,6 +11630,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c06210"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -7928,6 +11646,15 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -7937,6 +11664,15 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -7946,6 +11682,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "NMR"
   ]
  },
  {
@@ -7955,6 +11698,10 @@
   "edam_topics": [],
   "dois": [
    "10.3390/genes12030396"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -7967,6 +11714,15 @@
    "10.1021/acs.analchem.1c05017",
    "10.1021/jasms.1c00315",
    "10.1186/s13321-023-00724-w"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -7976,6 +11732,12 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2024.10.14.618269"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -7985,6 +11747,11 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-025-63915-z"
+  ],
+  "techniques": [
+   "LC-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -7997,6 +11764,13 @@
    "10.3389/fbinf.2022.842964",
    "10.1186/s13321-021-00558-4",
    "10.1073/pnas.1608041113"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8006,6 +11780,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c02219"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8021,6 +11801,16 @@
    "10.21105/joss.08070",
    "10.1021/acs.analchem.5c00567",
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8030,6 +11820,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-023-02012-9"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -8039,6 +11832,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-021-01331-z"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -8048,6 +11844,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-021-01331-z"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -8057,6 +11856,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c06256"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -8066,6 +11868,10 @@
   "edam_topics": [],
   "dois": [
    "10.21105/joss.08070"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8075,6 +11881,9 @@
   "edam_topics": [],
   "dois": [
    "10.1002/rcm.9153"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -8084,6 +11893,14 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8094,6 +11911,11 @@
   "dois": [
    "10.1038/s41587-025-02663-3",
    "10.1021/acs.jproteome.4c00873"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8103,6 +11925,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pone.0306202"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -8112,6 +11938,10 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41592-025-02785-1"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8121,6 +11951,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.8b00717"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8128,7 +11964,10 @@
   "name": "SQLite",
   "canonical_url": "",
   "edam_topics": [],
-  "dois": []
+  "dois": [],
+  "techniques": [
+   "tandem-MS"
+  ]
  },
  {
   "slug": "sqlite3",
@@ -8137,6 +11976,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/bty046"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -8146,6 +11988,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS"
   ]
  },
  {
@@ -8155,7 +12000,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "stagate",
@@ -8164,6 +12010,12 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.4c06210"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -8173,6 +12025,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -8182,6 +12038,9 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.11.20.391912"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -8191,6 +12050,10 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btx477"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -8200,6 +12063,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -8209,6 +12076,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01726"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "CE-MS"
   ]
  },
  {
@@ -8218,6 +12089,13 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41596-021-00636-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -8228,6 +12106,10 @@
   "dois": [
    "10.1021/acs.jproteome.4c00026",
    "10.1038/nmeth.3959"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -8237,6 +12119,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2021.12.05.471237v2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -8249,6 +12136,13 @@
    "10.1093/bioinformatics/btab741/6409851",
    "10.1021/jasms.5c00073",
    "10.1021/acs.analchem.5c01213"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8259,7 +12153,8 @@
   "dois": [
    "10.1007/s12561-013-9081-1",
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "symfony",
@@ -8268,6 +12163,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-021-00530-2"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -8277,6 +12175,13 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8286,6 +12191,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00026"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -8295,6 +12204,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -8304,6 +12217,12 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -8313,6 +12232,14 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -8322,6 +12249,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c00567"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8331,7 +12263,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/btac032/6510930"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "tensorflow-2-3-0",
@@ -8340,6 +12273,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jnatprod.1c00399"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -8349,6 +12285,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -8360,6 +12301,10 @@
    "10.1021/jacs.9b13786",
    "10.1186/s13321-023-00738-4",
    "10.1021/acs.jnatprod.1c00399"
+  ],
+  "techniques": [
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8377,6 +12322,15 @@
    "10.1371/journal.pcbi.1009021",
    "10.1021/acs.analchem.1c02220",
    "10.1021/acs.jnatprod.1c00399"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8386,6 +12340,13 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1011912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8395,6 +12356,11 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2021.12.05.471237v2"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -8405,6 +12371,12 @@
   "dois": [
    "10.1101/2021.12.05.471237v2",
    "10.1101/2024.10.14.618269"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "MS-imaging"
   ]
  },
  {
@@ -8415,6 +12387,13 @@
   "dois": [
    "10.1021/acs.est.5c08558",
    "10.1007/978-3-319-47656-8_6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8424,6 +12403,14 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-021-23953-9"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8434,6 +12421,12 @@
   "dois": [
    "10.1038/s41538-022-00137-3",
    "10.1038/s41564-023-01575-9"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "MS-imaging",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8443,6 +12436,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s13321-016-0115-9"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -8452,6 +12448,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03895"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -8461,6 +12462,12 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s42256-025-01140-5"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8471,6 +12478,10 @@
   "dois": [
    "10.1021/acs.jcim.4c02179",
    "10.1038/s41467-019-13680-7"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -8480,6 +12491,9 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41467-019-13680-7"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -8490,6 +12504,10 @@
   "dois": [
    "10.1021/acs.jcim.4c02179",
    "10.1038/s41467-019-13680-7"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -8500,6 +12518,10 @@
   "dois": [
    "10.1021/acs.jcim.4c02179",
    "10.1038/s41467-019-13680-7"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -8511,6 +12533,13 @@
    "10.1007/s10489-022-04351-0",
    "10.1038/s42256-025-01140-5",
    "10.1038/s41467-019-13680-7"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8520,6 +12549,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jcim.4c02179"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS"
   ]
  },
  {
@@ -8529,6 +12562,9 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c00060"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -8539,6 +12575,9 @@
   "dois": [
    "10.1021/acs.analchem.5c00060",
    "10.1038/s41467-019-13680-7"
+  ],
+  "techniques": [
+   "LC-MS"
   ]
  },
  {
@@ -8548,6 +12587,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acscentsci.4c01132"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -8560,6 +12603,11 @@
    "10.1021/acs.analchem.5c03492",
    "10.1038/s42256-023-00708-3",
    "10.1021/acscentsci.4c01132"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "NMR"
   ]
  },
  {
@@ -8569,6 +12617,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.2c05810"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8578,7 +12631,8 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.jproteome.4c00650"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "trfba",
@@ -8587,6 +12641,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -8596,7 +12654,8 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioadv/vbae175"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "trove4j",
@@ -8605,6 +12664,11 @@
   "edam_topics": [],
   "dois": [
    "10.3390/metabo12020173"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8614,6 +12678,10 @@
   "edam_topics": [],
   "dois": [
    "10.1016/j.enceco.2025.07.022"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -8623,6 +12691,11 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8632,6 +12705,10 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.9b04884"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8641,6 +12718,9 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -8650,6 +12730,13 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "direct-infusion-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8659,7 +12746,8 @@
   "edam_topics": [],
   "dois": [
    "10.1007/978-3-319-47656-8_6"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "vimms",
@@ -8668,6 +12756,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c03895"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8678,6 +12773,12 @@
   "dois": [
    "10.1021/acs.analchem.0c01980",
    "10.1101/2020.04.09.033894"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8687,6 +12788,14 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01980"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8696,6 +12805,10 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s00216-023-04715-6"
+  ],
+  "techniques": [
+   "LC-MS",
+   "CE-MS"
   ]
  },
  {
@@ -8705,6 +12818,9 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s10858-025-00465-y#sec2"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -8715,6 +12831,12 @@
   "dois": [
    "10.3390/metabo13121167",
    "10.1371/journal.pone.0306202"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "GC-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8724,6 +12846,9 @@
   "edam_topics": [],
   "dois": [
    "10.1007/s10858-025-00465-y#sec2"
+  ],
+  "techniques": [
+   "NMR"
   ]
  },
  {
@@ -8734,6 +12859,10 @@
   "dois": [
    "10.1158/0008-5472.can-14-1490",
    "10.1371/journal.pcbi.1009021"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -8743,6 +12872,11 @@
   "edam_topics": [],
   "dois": [
    "10.1016/j.enceco.2025.07.022"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "NMR"
   ]
  },
  {
@@ -8752,6 +12886,14 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8761,6 +12903,11 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1008724"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS"
   ]
  },
  {
@@ -8770,6 +12917,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c01980"
+  ],
+  "techniques": [
+   "tandem-MS",
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8779,6 +12931,11 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.1c04758"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8810,6 +12967,17 @@
    "10.1021/acs.analchem.5c00567",
    "10.3390/metabo10100416",
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS",
+   "NMR",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8819,6 +12987,12 @@
   "edam_topics": [],
   "dois": [
    "10.1002/nbm.70131"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "NMR"
   ]
  },
  {
@@ -8828,6 +13002,9 @@
   "edam_topics": [],
   "dois": [
    "10.1093/bioinformatics/bty046"
+  ],
+  "techniques": [
+   "mass-spectrometry"
   ]
  },
  {
@@ -8837,6 +13014,10 @@
   "edam_topics": [],
   "dois": [
    "10.1186/s12859-021-04490-0"
+  ],
+  "techniques": [
+   "ion-mobility-MS",
+   "mass-spectrometry"
   ]
  },
  {
@@ -8846,6 +13027,13 @@
   "edam_topics": [],
   "dois": [
    "10.1021/jasms.5c00234"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "GC-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  },
  {
@@ -8855,6 +13043,10 @@
   "edam_topics": [],
   "dois": [
    "10.1371/journal.pcbi.1009337"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS"
   ]
  },
  {
@@ -8864,7 +13056,8 @@
   "edam_topics": [],
   "dois": [
    "10.1038/s41587-025-02663-3"
-  ]
+  ],
+  "techniques": []
  },
  {
   "slug": "zenodo",
@@ -8877,6 +13070,13 @@
    "10.1002/anie.202507483",
    "10.5281/zenodo.5797920",
    "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "tandem-MS",
+   "CE-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
   ]
  }
 ]

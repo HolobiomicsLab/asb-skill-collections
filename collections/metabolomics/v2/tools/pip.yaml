@@ -35,3 +35,11 @@ source_repos:
 - tingxiecsu/CSU-MS2
 - yuxuanliao/PACCS
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- direct-infusion-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

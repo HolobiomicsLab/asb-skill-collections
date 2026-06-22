@@ -6,3 +6,9 @@ derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: Common data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- direct-infusion-MS
+- mass-spectrometry

@@ -12,3 +12,10 @@ derived_from:
 source_repos:
 - shuzhao-li-lab/asari
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- direct-infusion-MS
+- NMR
+- mass-spectrometry

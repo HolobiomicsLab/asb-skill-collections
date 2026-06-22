@@ -9,3 +9,9 @@ derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- direct-infusion-MS
+- mass-spectrometry

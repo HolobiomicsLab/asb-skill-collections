@@ -4,7 +4,8 @@
 metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
 imaging, ion mobility and lipidomics, with some NMR and multi-omics / statistics
 / pathway tools — each derived from a peer-reviewed method paper and its public
-code repository. This guide covers **search → install → use → ground**.
+code repository. This guide covers **search → install → use → ground**. For what
+the collection contains and how it was selected, see [ABOUT.md](ABOUT.md).
 
 ---
 

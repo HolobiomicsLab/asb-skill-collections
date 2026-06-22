@@ -31,3 +31,11 @@ source_repos:
 - matchms/matchms
 - tyo-nu/MINE-Database
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- mass-spectrometry

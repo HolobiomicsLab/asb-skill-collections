@@ -9,3 +9,9 @@ source_repos:
 - hcji/TarMet
 - tidymass/tidymass
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS

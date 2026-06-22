@@ -8,3 +8,5 @@ derived_from:
 source_repos:
 - UGent-LIMET/Metanorm
 schema_version: 0.2.0
+techniques:
+- LC-MS

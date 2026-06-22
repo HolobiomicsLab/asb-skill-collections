@@ -21,3 +21,9 @@ source_repos:
 - krumsieklab/maplet
 - yufree/mzrtsim
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- NMR
+- mass-spectrometry

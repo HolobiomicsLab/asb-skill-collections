@@ -38,3 +38,12 @@ source_repos:
 - zhanghailiangcsu/MSBERT
 - zhanghailiangcsu/MWFormer
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

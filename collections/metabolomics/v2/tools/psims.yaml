@@ -6,3 +6,5 @@ derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
 schema_version: 0.2.0
+techniques:
+- ion-mobility-MS

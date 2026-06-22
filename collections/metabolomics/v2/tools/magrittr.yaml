@@ -13,3 +13,6 @@ source_repos:
 - BiosystemEngineeringLab-IITB/dures
 - krumsieklab/maplet
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- CE-MS

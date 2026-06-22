@@ -8,3 +8,9 @@ derived_from:
 source_repos:
 - DorresteinLaboratory/Bioactive_Molecular_Networks
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- direct-infusion-MS
+- MS-imaging
+- NMR

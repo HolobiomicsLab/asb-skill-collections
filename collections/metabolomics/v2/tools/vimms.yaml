@@ -11,3 +11,9 @@ derived_from:
 - doi: 10.1021/acs.analchem.0c03895
   title: Rapid Development of Improved Data-Dependent Acquisition Strategies
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- ion-mobility-MS
+- mass-spectrometry

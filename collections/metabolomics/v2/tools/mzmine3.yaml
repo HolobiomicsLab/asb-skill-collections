@@ -13,3 +13,12 @@ source_repos:
 - Functional-Metabolomics-Lab/FBMN-STATS
 - luigiquiros/inventa
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

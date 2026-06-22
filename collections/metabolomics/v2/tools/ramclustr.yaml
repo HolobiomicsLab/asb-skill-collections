@@ -13,3 +13,11 @@ derived_from:
 source_repos:
 - cbroeckl/RAMClustR
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- direct-infusion-MS
+- ion-mobility-MS
+- mass-spectrometry

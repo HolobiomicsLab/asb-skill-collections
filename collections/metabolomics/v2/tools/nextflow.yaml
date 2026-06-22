@@ -19,3 +19,10 @@ source_repos:
 - ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 - Wang-Bioinformatics-Lab/Reverse_metabolomics_library_generation
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- CE-MS
+- MS-imaging
+- ion-mobility-MS
+- mass-spectrometry

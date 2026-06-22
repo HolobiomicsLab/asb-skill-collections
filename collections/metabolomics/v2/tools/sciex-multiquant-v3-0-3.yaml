@@ -7,3 +7,5 @@ derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
 schema_version: 0.2.0
+techniques:
+- mass-spectrometry

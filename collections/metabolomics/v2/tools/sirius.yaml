@@ -38,3 +38,13 @@ source_repos:
 - zmahnoor14/MAW
 - zquinlan/concise
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- CE-MS
+- direct-infusion-MS
+- MS-imaging
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

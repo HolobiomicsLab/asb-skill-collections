@@ -9,3 +9,5 @@ derived_from:
 source_repos:
 - facundof2016/CCSP2.0
 schema_version: 0.2.0
+techniques:
+- ion-mobility-MS

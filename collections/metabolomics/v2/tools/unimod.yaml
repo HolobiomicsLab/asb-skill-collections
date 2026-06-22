@@ -6,3 +6,6 @@ derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- mass-spectrometry

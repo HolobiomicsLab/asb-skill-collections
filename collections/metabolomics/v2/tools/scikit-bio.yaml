@@ -6,3 +6,7 @@ derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS

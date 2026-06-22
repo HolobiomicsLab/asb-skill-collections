@@ -8,3 +8,7 @@ derived_from:
 source_repos:
 - SydneyBioX/hRUV
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- GC-MS
+- NMR

@@ -7,3 +7,10 @@ derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- tandem-MS
+- GC-MS
+- ion-mobility-MS
+- NMR
+- mass-spectrometry

@@ -16,3 +16,7 @@ source_repos:
 - biodatalab/enrichmet
 - connor-reid-tiffany/Omu
 schema_version: 0.2.0
+techniques:
+- LC-MS
+- GC-MS
+- mass-spectrometry

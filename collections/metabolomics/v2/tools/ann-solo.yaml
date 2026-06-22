@@ -9,3 +9,7 @@ derived_from:
 source_repos:
 - bittremieux-lab/ANN-SoLo
 schema_version: 0.2.0
+techniques:
+- tandem-MS
+- CE-MS
+- mass-spectrometry
