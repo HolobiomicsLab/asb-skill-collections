@@ -13,4 +13,4 @@ Lighter per-technique installs of the ASB metabolomics collection.
 | `metabolomics-nmr` | 276 |
 | `metabolomics-ms-generic` | 804 |
 
-> Packs overlap (a multi-technique skill is in several); install the full `metabolomics` plugin OR a few packs, not both. Grounding (Perspicacité binder + kb_bundle) is in `collections/metabolomics/v2/`.
+> Packs overlap (a multi-technique skill is in several); install the full `metabolomics` plugin OR a few packs, not both. **Grounding is packaged in every pack** — `bin/perspicacite_kb_bind.py` + `kb_bundle.json` + the `/ground` command — and works against a Perspicacité KB or, with no server, a serverless `local` clone of the source repo. Full guide: [USAGE §4](../../collections/metabolomics/v2/USAGE.md).

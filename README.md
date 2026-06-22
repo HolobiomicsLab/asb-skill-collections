@@ -66,8 +66,12 @@ agent at `collections/metabolomics/v2/` and read the indexes. See
 
 **Search → apply → ground.** Find a skill via `skills_index.json` (by EDAM IRI,
 tool name, or keyword) or `tools_index.json`; read its `SKILL.md` and follow the
-procedure; then optionally **ground** it against the source paper with the
-Perspicacité binder (`scripts/perspicacite_kb_bind.py`). Full guide:
+procedure; then optionally **ground** it against the source paper/repo. Grounding
+now ships **inside every plugin and pack** (`bin/perspicacite_kb_bind.py` +
+`kb_bundle.json`) with two backends — a **Perspicacité KB** (RAG over full text +
+SI) or, with no server, a **serverless `local` clone** of the source repo +
+best-effort open-access paper. In Claude Code just run **`/ground`**; otherwise call
+the bundled binder. Full guide:
 [USAGE.md](collections/metabolomics/v2/USAGE.md). Requirements (libraries, per-skill
 tool deps) are in USAGE §0.
 
@@ -78,7 +82,8 @@ tool deps) are in USAGE §0.
 | `skills/<slug>/SKILL.md` | one evidence-grounded skill each (frontmatter: EDAM IRIs, `derived_from` DOIs, `evidence_spans`, `tools`, `attribution`) |
 | `tools/<slug>.yaml` | deduplicated software-tool records with EDAM + source DOIs |
 | `skills_index.json` / `tools_index.json` | machine search indexes |
-| `kb_bundle.json` | skill → source-paper KB map (for grounding) |
+| `kb_bundle.json` | skill → source-paper KB slugs **+ `repo_urls`** (grounding map) |
+| `bin/perspicacite_kb_bind.py` · `commands/ground.md` · `GROUNDING.md` | packaged grounding — the binder, the `/ground` command, and a how-to (shipped in every plugin & pack) |
 | `collection.yaml` · `corpus.yaml` | collection record · per-paper access basis (`repo-oa`) |
 | `CITATION.cff` · `PROVENANCE.md` · `gate_report.json` | citation · how it was generated · release-gate verdict |
 

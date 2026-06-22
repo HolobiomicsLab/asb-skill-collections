@@ -12,7 +12,7 @@ software tools for computational LC-MS/MS; tag `metabolomics-v0.1.0`).
 
 - **Browse / search / read skills:** nothing — plain Markdown + JSON.
 - **Helper scripts** (`collect`, `release_gate`, `regen_catalogue`): Python ≥ 3.8 + PyYAML (`pip install -r scripts/requirements.txt`).
-- **Grounding binder** (`perspicacite_kb_bind.py`): Python ≥ 3.8 (stdlib only) **and** a running **Perspicacité** instance at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité can be configured with whatever embedding + LLM provider you have (OpenAI, Anthropic, OpenRouter, local, …) — the specific models are not prescribed; only a reachable Perspicacité is required. *(Perspicacité is HolobiomicsLab's literature-RAG engine; public availability TBD.)*
+- **Grounding binder** (`perspicacite_kb_bind.py`, bundled at `bin/` in every plugin/pack): Python ≥ 3.8 (stdlib only). The **`kb`** backend needs a running **Perspicacité** at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`; any embedding + LLM provider — models not prescribed; *HolobiomicsLab literature-RAG engine, public availability TBD*). The **`local`** backend needs only **`git` + network** — no server.
 - **Running a given skill's tool:** install what that skill's frontmatter `tools:` lists (R/Bioconductor, Python pkgs, or standalone tools like SIRIUS/MZmine) — see `USAGE.md` §0 and `tools_index.json`.
 
 ---
@@ -89,23 +89,33 @@ and `evidence_spans` (verbatim anchors). Use `tools_index.json` for canonical
 install URLs.
 
 **3. Ground (recommended)** — before trusting a parameter, threshold, or claim,
-verify it against the source paper. The skill → KB map is precomputed in
-`kb_bundle.json`. With a running **Perspicacité** instance
-(`PERSPICACITE_BASE`, default `http://127.0.0.1:8000`), the binder
-generates the KB on first use and answers grounded, cited questions:
+verify it against the source paper/repo. The skill → source map (`asb-paper-<doi>`
+KB slugs **+ `repo_urls`**) is precomputed in `kb_bundle.json`, and the binder is
+**bundled in every plugin/pack** at `bin/perspicacite_kb_bind.py` (also
+`scripts/perspicacite_kb_bind.py` in this repo). Two backends, **KB-primary with a
+serverless fallback** (run from the unit dir with `--collection .`):
 
 ```bash
-python scripts/perspicacite_kb_bind.py resolve --collection collections/metabolomics/v2 --skill <slug>
-python scripts/perspicacite_kb_bind.py prepare --collection collections/metabolomics/v2 --skill <slug>
-python scripts/perspicacite_kb_bind.py query   --collection collections/metabolomics/v2 --skill <slug> \
+# KB backend — Perspicacité at PERSPICACITE_BASE (default http://127.0.0.1:8000);
+# KB generated on first use, then reused
+python bin/perspicacite_kb_bind.py prepare --collection . --skill <slug>
+python bin/perspicacite_kb_bind.py query   --collection . --skill <slug> \
        --question "What threshold does the method recommend?"
+
+# serverless backend — NO server: clone the source repo(s) + best-effort OA paper
+python bin/perspicacite_kb_bind.py local   --collection . --skill <slug> --paper
+
+# offline map only (no server, no clone)
+python bin/perspicacite_kb_bind.py resolve --collection . --skill <slug>
 ```
 
 Tiers (`--tier`): `paper` (full text + supplementary info, default) · `si`
 (supplementary emphasised) · `repo` (read the tool's source repo directly).
+In Claude Code, the **`/ground`** command does this on the skill in play.
 
-**Recommended agent loop:** on activating a skill, run `prepare` once to warm
-its KB, then `query` whenever a claim needs verification before acting.
+**Recommended agent loop:** prefer the **`kb`** backend when Perspicacité is up
+(`prepare` to warm it, then `query` on any claim before acting); when it's **down**,
+fall back to **`local`** to clone the source and read it directly.
 
 ---
 

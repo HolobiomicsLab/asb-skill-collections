@@ -19,7 +19,8 @@ skills and indexes are plain Markdown + JSON. Each capability adds dependencies:
 | Install in Claude Code | Claude Code with plugin support |
 | Search the indexes (examples below) | [`jq`](https://jqlang.github.io/jq/) (optional; any JSON reader works) |
 | Run the helper scripts (`collect`, `release_gate`, `regen_catalogue`) | **Python ≥ 3.8** + **PyYAML** (`pip install pyyaml`) |
-| Run the grounding binder `perspicacite_kb_bind.py` | **Python ≥ 3.8** (stdlib only — no pip installs) **and** a running **Perspicacité** instance reachable at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité can use whatever embedding + LLM provider you configure (OpenAI, Anthropic, OpenRouter, local, …); the specific models are **not** prescribed — only that Perspicacité is running. *(HolobiomicsLab literature-RAG engine; public availability TBD.)* |
+| Ground via the **Perspicacité KB** (`perspicacite_kb_bind.py prepare`/`query`) | **Python ≥ 3.8** (stdlib only — no pip installs) **and** a running **Perspicacité** instance reachable at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité can use whatever embedding + LLM provider you configure (OpenAI, Anthropic, OpenRouter, local, …); the specific models are **not** prescribed — only that Perspicacité is running. *(HolobiomicsLab literature-RAG engine; public availability TBD.)* |
+| Ground via the **serverless `local` mode** (`perspicacite_kb_bind.py local`) | **Python ≥ 3.8** (stdlib only) **+ `git` + network**. **No Perspicacité, no server** — clones the skill's source repo(s) and best-effort fetches the open-access paper, which you then read directly. |
 | **Run a given skill's tool** | the libraries that skill lists in its frontmatter `tools` (see below) |
 
 > A `requirements.txt` for the helper scripts lives at `scripts/requirements.txt`.
@@ -167,30 +168,50 @@ install URLs.
 
 ---
 
-## 4. Ground (recommended) — verify against the source with Perspicacité
+## 4. Ground (recommended) — verify against the source (KB or serverless)
 
 Skills carry distilled procedure; for an exact parameter, threshold, or claim,
-**ground the skill against the paper it was built from**. The skill → KB mapping
-is precomputed in `kb_bundle.json` (the `asb-paper-<doi>` KB slugs are the same
-targets the collection was assembled against). With a running
-**Perspicacité** instance (`PERSPICACITE_BASE`,
-default `http://127.0.0.1:8000`) the binder does it in one command — the KB is
-**generated on first use** (create + ingest paper full text **+ supplementary
-information**), then reused:
+**ground the skill against the paper/repo it was built from**. The skill → source
+mapping is precomputed in `kb_bundle.json` (source DOIs, the `asb-paper-<doi>` KB
+slugs — the same targets the collection was assembled against — and the source
+`repo_urls`). **Grounding ships inside every plugin and pack**
+(`bin/perspicacite_kb_bind.py` + `kb_bundle.json` + `commands/ground.md` +
+`GROUNDING.md`), so it works from an installed plugin with no extra setup.
+
+Two backends, **KB-primary with a serverless fallback**:
+
+- **`kb` (Perspicacité)** — RAG over the paper full text **+ supplementary
+  information**, persistent and citable; the KB is **generated on first use**
+  (create + ingest), then reused. Needs a running **Perspicacité** at
+  `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`).
+- **`local` (serverless)** — `git clone` the skill's source repo(s) + best-effort
+  fetch the open-access paper, then read the files directly. **No server.**
+
+**In Claude Code**, run the bundled command on the skill in play:
+
+```
+/ground                              # ground the skill you're using
+/ground <skill-or-doi> "<question>"
+```
+
+**From the CLI** — the binder is bundled at `bin/perspicacite_kb_bind.py` in every
+plugin/pack (and at `scripts/perspicacite_kb_bind.py` in this repo / the Zenodo
+deposit). Run it against the unit dir (`--collection .` from inside a pack); the
+KB is **generated on first use**:
 
 ```bash
-# print the grounding map for a skill (offline, no Perspicacité needed)
-python scripts/perspicacite_kb_bind.py resolve \
-  --collection collections/metabolomics/v2 --skill <slug>
+# print the grounding map for a skill (offline — no server, no clone)
+python bin/perspicacite_kb_bind.py resolve --collection . --skill <slug>
 
-# build the skill's KB (create + ingest), without querying
-python scripts/perspicacite_kb_bind.py prepare \
-  --collection collections/metabolomics/v2 --skill <slug>
+# KB backend: build the skill's KB (create + ingest), without querying
+python bin/perspicacite_kb_bind.py prepare --collection . --skill <slug>
 
-# ask a grounded, cited question against the skill's source paper
-python scripts/perspicacite_kb_bind.py query \
-  --collection collections/metabolomics/v2 --skill <slug> \
+# KB backend: ask a grounded, cited question against the source paper
+python bin/perspicacite_kb_bind.py query --collection . --skill <slug> \
   --question "What spectral-similarity threshold does the method recommend?"
+
+# serverless backend: clone the source repo(s) + best-effort OA paper (no Perspicacité)
+python bin/perspicacite_kb_bind.py local --collection . --skill <slug> --paper
 ```
 
 ### Grounding tiers (`--tier`)
@@ -201,10 +222,12 @@ python scripts/perspicacite_kb_bind.py query \
 | `si` | retrieval steered toward supplementary tables/figures | exact thresholds, benchmark numbers |
 | `repo` | the tool's source repository (no KB; returns repo URLs) | implementation details, CLI flags |
 
-**Agentic pattern:** on activating a skill, call `prepare` once to warm its KB,
-then `query` whenever a claim needs verification before you act on it. This makes
-every skill self-grounding without shipping a heavyweight vector dump — the KB is
-reconstructed on demand from the same DOIs (+ SI) the build used.
+**Agentic pattern:** on activating a skill, prefer the **`kb`** backend when
+Perspicacité is up (`prepare` to warm it, then `query` whenever a claim needs
+verification before you act); when it's **down**, fall back to **`local`** to clone
+the source and read it directly. Either way every skill is self-grounding — no
+heavyweight vector dump ships: the KB is reconstructed on demand from the same DOIs
+(+ SI) the build used, and the repos come straight from `repo_urls`.
 
 **From the Zenodo archive (self-contained):** the deposit bundles the binder at
 `scripts/perspicacite_kb_bind.py` alongside this collection. After extracting,
