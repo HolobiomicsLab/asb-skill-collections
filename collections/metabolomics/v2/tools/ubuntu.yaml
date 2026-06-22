@@ -1,5 +1,6 @@
 name: Ubuntu
 slug: ubuntu
+canonical_url: https://github.com/LQZ0123/MSThunder
 version_used: '20.04'
 evidence_spans:
 - available through our experiments conducted on an Ubuntu 20.04 environment

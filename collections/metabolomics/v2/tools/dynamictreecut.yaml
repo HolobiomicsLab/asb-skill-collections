@@ -1,5 +1,6 @@
 name: dynamicTreeCut
 slug: dynamictreecut
+canonical_url: https://github.com/cbroeckl/RAMClustR
 evidence_spans:
 - submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package

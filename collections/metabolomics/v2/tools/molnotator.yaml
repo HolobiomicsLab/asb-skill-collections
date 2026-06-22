@@ -1,5 +1,6 @@
 name: MolNotator
 slug: molnotator
+canonical_url: https://github.com/ZzakB/MolNotator
 evidence_spans:
 - from MolNotator.duplicate_filter import duplicate_filter
 - from MolNotator.sample_slicer import sample_slicer

@@ -1,5 +1,6 @@
 name: MS2Query
 slug: ms2query
+canonical_url: https://github.com/iomega/ms2query
 evidence_spans:
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
 - you want to make some kind of change to the code base

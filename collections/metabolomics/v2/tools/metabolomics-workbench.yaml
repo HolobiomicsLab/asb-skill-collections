@@ -1,5 +1,6 @@
 name: Metabolomics Workbench
 slug: metabolomics-workbench
+canonical_url: https://github.com/mwang87/MetabolomicsSpectrumResolver
 evidence_spans:
 - Metabolomics Workbench Dataset Spectra
 derived_from:

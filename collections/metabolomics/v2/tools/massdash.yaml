@@ -1,5 +1,6 @@
 name: MassDash
 slug: massdash
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'

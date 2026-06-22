@@ -1,5 +1,6 @@
 name: Statistical analysis libraries (scipy.stats for enrichment tests)
 slug: statistical-analysis-libraries-scipy-stats-for-enrichment-tests
+canonical_url: https://github.com/metabolomicsworkbench/MetENP
 evidence_spans:
 - enrichment statistics
 derived_from:

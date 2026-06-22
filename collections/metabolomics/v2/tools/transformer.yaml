@@ -1,5 +1,6 @@
 name: transformer
 slug: transformer
+canonical_url: https://github.com/HaldamirS/CLERMS
 evidence_spans:
 - based on transformer architecture
 - utilizes a transformer-based architecture with molecular structure information

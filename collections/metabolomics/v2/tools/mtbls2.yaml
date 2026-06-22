@@ -1,5 +1,6 @@
 name: mtbls2
 slug: mtbls2
+canonical_url: https://github.com/KujawinskiLaboratory/Autotuner
 evidence_spans:
 - library(mtbls2)
 derived_from:

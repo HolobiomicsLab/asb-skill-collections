@@ -1,5 +1,6 @@
 name: netgsa R package
 slug: netgsa-r-package
+canonical_url: https://github.com/Karnovsky-Lab/DNEA
 evidence_spans:
 - subsequently test them for enrichment across experimental conditions using the [netgsa R package](https://cran.rstudio.com/web/packages/netgsa/index.html)
 derived_from:

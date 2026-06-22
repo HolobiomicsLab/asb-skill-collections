@@ -1,5 +1,6 @@
 name: torch-cluster
 slug: torch-cluster
+canonical_url: https://github.com/01dadada/RT-Transformer
 evidence_spans:
 - '**torch-cluster**'
 - torch-cluster

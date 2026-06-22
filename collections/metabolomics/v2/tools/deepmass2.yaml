@@ -1,5 +1,6 @@
 name: DeepMASS2
 slug: deepmass2
+canonical_url: https://github.com/hcji/DeepMASS2_Data_Processing
 evidence_spans:
 - DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
 derived_from:

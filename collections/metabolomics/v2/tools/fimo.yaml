@@ -1,5 +1,6 @@
 name: fimo
 slug: fimo
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - Find motif | fimo
 derived_from:

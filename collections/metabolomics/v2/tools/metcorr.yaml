@@ -1,5 +1,6 @@
 name: MetCorR
 slug: metcorr
+canonical_url: https://github.com/plyush1993/OUKS
 evidence_spans:
 - New QC-GAM method (MetCorR) with associated scripts were introduced.
 derived_from:

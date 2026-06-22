@@ -1,5 +1,6 @@
 name: MODE ShinyApp
 slug: mode-shinyapp
+canonical_url: https://github.com/pmartR/MODE_ShinyApp
 evidence_spans:
 - github.com__pmartR__MODE_ShinyApp
 derived_from:

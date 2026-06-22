@@ -1,5 +1,6 @@
 name: BiG-SLiCE
 slug: big-slice
+canonical_url: https://github.com/medema-group/bigslice
 evidence_spans:
 - '**BiG-SLiCE** using pip'
 - Ability to __export pre-calculated BGCs and GCFs table into TSVs__ (use __--export-csv__ parameter)

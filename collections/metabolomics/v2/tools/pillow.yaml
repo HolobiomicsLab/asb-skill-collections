@@ -1,5 +1,6 @@
 name: Pillow
 slug: pillow
+canonical_url: https://github.com/Wang-Bioinformatics-Lab/ModiFinder_base
 evidence_spans:
 - from PIL import Image
 derived_from:

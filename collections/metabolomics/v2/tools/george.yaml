@@ -1,5 +1,6 @@
 name: geoRge
 slug: george
+canonical_url: https://github.com/jcapelladesto/geoRge
 evidence_spans:
 - library(geoRge)
 - hits <- database_query(geoRgeR = s2, adducts = negative, db = db)

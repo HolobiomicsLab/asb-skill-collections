@@ -1,5 +1,6 @@
 name: Perl Prima
 slug: perl-prima
+canonical_url: https://github.com/matteogiulietti/LipidOne
 evidence_spans:
 - Graphical User Interface, developed by using Perl Prima
 derived_from:

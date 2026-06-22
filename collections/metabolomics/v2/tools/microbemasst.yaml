@@ -1,5 +1,6 @@
 name: microbeMASST
 slug: microbemasst
+canonical_url: https://github.com/mwang87/MASST
 evidence_spans:
 - microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
 derived_from:

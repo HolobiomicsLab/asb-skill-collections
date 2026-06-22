@@ -1,5 +1,6 @@
 name: pROC
 slug: proc
+canonical_url: https://github.com/slfan2013/SERDA
 version_used: 1.17.0.1
 evidence_spans:
 - packageVersion("pROC") [1] ‘1.17.0.1’

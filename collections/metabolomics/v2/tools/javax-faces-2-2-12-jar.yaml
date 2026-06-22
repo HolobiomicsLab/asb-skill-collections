@@ -1,5 +1,6 @@
 name: javax.faces-2.2.12.jar
 slug: javax-faces-2-2-12-jar
+canonical_url: https://github.com/albertogilf/ceuMassMediator
 version_used: 2.2.12
 evidence_spans:
 - 'The next library is needed in the app server: javax.faces-2.2.12.jar'

@@ -1,5 +1,6 @@
 name: jupyter-notebook
 slug: jupyter-notebook
+canonical_url: https://github.com/kevinmildau/msFeaST
 evidence_spans:
 - The jupyter-notebook pipeline produces the a text file in json format
 derived_from:

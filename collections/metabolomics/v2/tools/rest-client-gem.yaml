@@ -1,5 +1,6 @@
 name: rest-client gem
 slug: rest-client-gem
+canonical_url: https://bitbucket.org/wishartlab/classyfire_api.git
 evidence_spans:
 - gem 'rest-client', '=1.8.0'
 derived_from:

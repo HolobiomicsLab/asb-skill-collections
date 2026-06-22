@@ -1,5 +1,6 @@
 name: black
 slug: black
+canonical_url: https://github.com/SysMedOs/LipidLynxX
 evidence_spans:
 - We use black for auto formatting
 - LipidLynxX source code use [code style Black](https://github.com/psf/black) for all python codes

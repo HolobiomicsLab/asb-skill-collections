@@ -1,5 +1,6 @@
 name: ms-pred (SCARF model)
 slug: ms-pred-scarf-model
+canonical_url: https://github.com/samgoldman97/ms-pred
 evidence_spans:
 - github.com/samgoldman97/ms-pred
 derived_from:

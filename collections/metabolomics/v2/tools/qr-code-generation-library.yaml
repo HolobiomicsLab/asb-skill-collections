@@ -1,5 +1,6 @@
 name: QR Code Generation Library
 slug: qr-code-generation-library
+canonical_url: https://github.com/mwang87/MetabolomicsSpectrumResolver
 evidence_spans:
 - 3rd party embedding of QR code
 derived_from:

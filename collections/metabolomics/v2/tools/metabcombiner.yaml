@@ -1,5 +1,6 @@
 name: metabCombiner
 slug: metabcombiner
+canonical_url: https://github.com/hhabra/metabCombiner
 evidence_spans:
 - Combine LC-MS Metabolomics Datasets with metabCombiner
 derived_from:

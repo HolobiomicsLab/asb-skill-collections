@@ -1,5 +1,6 @@
 name: spatialMETA
 slug: spatialmeta
+canonical_url: https://github.com/WanluLiuLab/SpatialMETA
 evidence_spans:
 - spatialMETA is a method for integrating spatial multi-omics data
 - spatialmeta.pp.calculate_qc_metrics_sm

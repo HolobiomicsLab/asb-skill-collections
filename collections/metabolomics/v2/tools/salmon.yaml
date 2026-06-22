@@ -1,5 +1,6 @@
 name: Salmon
 slug: salmon
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - Genes, miRNA, isoforms | Align and Assembly | Salmon, samtools, STAR, Hisat2, StringTie2
 - It then employs [salmon](../modules/nf-core/salmon) in order to obtain quantification files

@@ -1,5 +1,6 @@
 name: isoSCAN
 slug: isoscan
+canonical_url: https://github.com/jcapelladesto/isoSCAN
 evidence_spans:
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")

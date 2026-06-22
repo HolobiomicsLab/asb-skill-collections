@@ -1,5 +1,6 @@
 name: scipy.signal.detrend
 slug: scipy-signal-detrend
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - detrend (scipy.signal.detrend) is performed on the mass track.
 - detrend (scipy.signal.detrend) is performed on the mass track

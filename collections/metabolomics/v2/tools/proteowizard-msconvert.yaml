@@ -1,5 +1,6 @@
 name: ProteoWizard msconvert
 slug: proteowizard-msconvert
+canonical_url: https://github.com/LabLaskin/MSIGen
 evidence_spans:
 - Conversion to mzML from several other formats can be performed using the free and open-source [ProteoWizard](https://proteowizard.sourceforge.io/) msconvert utility.
 - transform the raw data from vendor format into __mz(X)ML__ format using __Proteowizard MSconvert__

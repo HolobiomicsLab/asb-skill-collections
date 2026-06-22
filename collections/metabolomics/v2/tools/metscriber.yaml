@@ -1,5 +1,6 @@
 name: metScribeR
 slug: metscriber
+canonical_url: https://github.com/ncats/metScribeR
 evidence_spans:
 - This package provides an automated workflow for processing in-house metabolite library standards data
 derived_from:

@@ -1,5 +1,6 @@
 name: devtools
 slug: devtools
+canonical_url: https://github.com/Ghoshlab/marr
 evidence_spans:
 - if (!require(devtools))
 - The R-package **marr** can be installed from GitHub using the R package [devtools]

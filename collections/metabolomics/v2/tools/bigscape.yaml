@@ -1,5 +1,6 @@
 name: BigScape
 slug: bigscape
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - NPLinker can run BigScape automatically if the `bigscape` directory does not exist in the working directory.
 - NPLinker can run BigScape automatically if the `bigscape` directory does not exist

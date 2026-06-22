@@ -1,5 +1,6 @@
 name: treelib
 slug: treelib
+canonical_url: https://github.com/shuzhao-li-lab/khipu
 evidence_spans:
 - tree visualization aided by the treelib library
 derived_from:

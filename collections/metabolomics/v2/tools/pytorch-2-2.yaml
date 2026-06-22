@@ -1,5 +1,6 @@
 name: PyTorch 2.2
 slug: pytorch-2-2
+canonical_url: https://github.com/zhanghailiangcsu/MSBERT
 evidence_spans:
 - '[Pytorch](https://pytorch.org/) 2.2'
 derived_from:

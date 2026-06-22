@@ -1,5 +1,6 @@
 name: SAND
 slug: sand
+canonical_url: https://github.com/edisonomics/SAND
 evidence_spans:
 - Any user is welcome to make new modificaitons on the SAND code, particularly its version for NMRBox
 derived_from:

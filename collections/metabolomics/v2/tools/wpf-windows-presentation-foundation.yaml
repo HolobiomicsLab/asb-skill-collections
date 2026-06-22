@@ -1,5 +1,6 @@
 name: WPF (Windows Presentation Foundation)
 slug: wpf-windows-presentation-foundation
+canonical_url: https://github.com/systemsomicslab/MsdialWorkbench
 evidence_spans:
 - we are using the WPF (Windows Presentation Foundation) UI framework for GUI implementation
 derived_from:

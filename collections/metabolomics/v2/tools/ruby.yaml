@@ -1,5 +1,6 @@
 name: Ruby
 slug: ruby
+canonical_url: https://bitbucket.org/wishartlab/classyfire_api.git
 evidence_spans:
 - in order to use the commands below in a Ruby console
 derived_from:

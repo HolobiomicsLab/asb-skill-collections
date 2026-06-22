@@ -1,5 +1,6 @@
 name: scipy
 slug: scipy
+canonical_url: https://github.com/FanzhouKong/spectral_denoising
 version_used: 1.4.1
 evidence_spans:
 - An additional cosine score implementation [in S3 Text] relies on scipy [41]

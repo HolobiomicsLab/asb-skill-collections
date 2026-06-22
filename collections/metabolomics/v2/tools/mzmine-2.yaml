@@ -1,5 +1,6 @@
 name: MZmine 2
 slug: mzmine-2
+canonical_url: https://github.com/YasinEl/mzRAPP
 evidence_spans:
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2, *xcms

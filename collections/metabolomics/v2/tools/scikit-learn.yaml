@@ -1,5 +1,6 @@
 name: scikit-learn
 slug: scikit-learn
+canonical_url: https://github.com/01dadada/RT-Transformer
 version_used: 0.23.2
 evidence_spans:
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data

@@ -1,5 +1,6 @@
 name: spectral_similarity
 slug: spectral-similarity
+canonical_url: https://github.com/YuanyueLi/SpectralEntropy
 evidence_spans:
 - '.. automodule:: spectral_similarity :members:'
 derived_from:

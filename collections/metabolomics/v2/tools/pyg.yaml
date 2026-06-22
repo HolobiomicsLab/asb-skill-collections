@@ -1,5 +1,6 @@
 name: PyG
 slug: pyg
+canonical_url: https://github.com/RiverCCC/ABCoRT
 evidence_spans:
 - '**PyG**'
 - '[PyG](https://pytorch-geometric.readthedocs.io/en/latest/)'

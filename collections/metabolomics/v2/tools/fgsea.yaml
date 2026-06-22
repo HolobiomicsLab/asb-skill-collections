@@ -1,5 +1,6 @@
 name: fgsea
 slug: fgsea
+canonical_url: https://github.com/biodatalab/enrichmet
 evidence_spans:
 - enrichmet integrates fgsea for fast MetSEA
 derived_from:

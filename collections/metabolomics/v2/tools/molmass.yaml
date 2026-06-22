@@ -1,5 +1,6 @@
 name: molmass
 slug: molmass
+canonical_url: https://github.com/FanzhouKong/spectral_denoising
 version_used: 2021.6.18
 evidence_spans:
 - molmass==2021.6.18

@@ -1,5 +1,6 @@
 name: hRUV
 slug: hruv
+canonical_url: https://github.com/SydneyBioX/hRUV
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'

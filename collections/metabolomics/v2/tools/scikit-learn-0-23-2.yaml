@@ -1,5 +1,6 @@
 name: scikit-learn 0.23.2
 slug: scikit-learn-0-23-2
+canonical_url: https://github.com/wabdelmoula/massNet
 evidence_spans:
 - sklearn(0.23.2)
 derived_from:

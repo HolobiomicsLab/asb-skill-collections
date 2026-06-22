@@ -1,5 +1,6 @@
 name: readxl
 slug: readxl
+canonical_url: https://github.com/LeaveMeNotTonight/CMDN
 evidence_spans:
 - readxl
 - library(readxl)

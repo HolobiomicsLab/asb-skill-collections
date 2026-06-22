@@ -1,5 +1,6 @@
 name: bmxp
 slug: bmxp
+canonical_url: https://github.com/broadinstitute/bmxp
 evidence_spans:
 - pip install bmxp
 derived_from:

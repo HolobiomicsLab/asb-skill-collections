@@ -1,5 +1,6 @@
 name: pewlib
 slug: pewlib
+canonical_url: https://github.com/djdt/pewpew
 evidence_spans:
 - based on the python library pewlib_
 derived_from:

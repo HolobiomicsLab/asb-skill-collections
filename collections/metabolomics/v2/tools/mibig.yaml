@@ -1,5 +1,6 @@
 name: MIBiG
 slug: mibig
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - To assign one or more molecular structures to BGCs, according to how many high-scoring matches are found in MIBiG
 - Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit

@@ -1,5 +1,6 @@
 name: MetDNA2 R package
 slug: metdna2-r-package
+canonical_url: https://github.com/ZhuMetLab/MetDNA2
 evidence_spans:
 - library(MetDNA2)
 derived_from:

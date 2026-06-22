@@ -1,5 +1,6 @@
 name: MS-DIAL v4.00 or higher
 slug: ms-dial-v4-00-or-higher
+canonical_url: https://github.com/eMetaboHUB/MS-CleanR
 evidence_spans:
 - Needs MS-DIAL (v4.00 or higher)
 - Needs MS-DIAL (v4.00 or higher) ... MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis (DDA) or data independent analysis (DIA)

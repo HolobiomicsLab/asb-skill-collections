@@ -1,5 +1,6 @@
 name: lipidr
 slug: lipidr
+canonical_url: https://github.com/ahmohamed/lipidr
 evidence_spans:
 - Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
 - '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'

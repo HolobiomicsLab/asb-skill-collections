@@ -1,5 +1,6 @@
 name: conda
 slug: conda
+canonical_url: https://github.com/HassounLab/JESTR1
 version_used: '3.11'
 evidence_spans:
 - We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html)

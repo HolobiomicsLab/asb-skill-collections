@@ -1,5 +1,6 @@
 name: PyYAML
 slug: pyyaml
+canonical_url: https://github.com/ZzakB/MolNotator
 evidence_spans:
 - import yaml
 derived_from:

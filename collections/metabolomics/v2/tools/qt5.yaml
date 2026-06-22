@@ -1,5 +1,6 @@
 name: Qt5
 slug: qt5
+canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - Install the qt5 package
 derived_from:

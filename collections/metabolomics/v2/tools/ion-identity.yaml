@@ -1,5 +1,6 @@
 name: Ion Identity
 slug: ion-identity
+canonical_url: https://github.com/luigiquiros/inventa
 evidence_spans:
 - Inventa is capable to performe the calcultions based on the results from Ion Identity, reducing the total number of features.
 derived_from:

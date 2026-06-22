@@ -1,5 +1,6 @@
 name: webchem
 slug: webchem
+canonical_url: https://github.com/mariallr/amanida
 evidence_spans:
 - the package will retrieve the PubChem ID from the ID using `webchem`
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem

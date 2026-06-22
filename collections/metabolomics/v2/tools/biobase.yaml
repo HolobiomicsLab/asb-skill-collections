@@ -1,5 +1,6 @@
 name: Biobase
 slug: biobase
+canonical_url: https://github.com/antonvsdata/notame
 evidence_spans:
 - BiocManager::install("Biobase")
 - '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'

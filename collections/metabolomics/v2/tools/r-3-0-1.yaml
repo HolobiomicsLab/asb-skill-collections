@@ -1,5 +1,6 @@
 name: R 3.0.1
 slug: r-3-0-1
+canonical_url: https://github.com/Viant-Metabolomics/Galaxy-M
 evidence_spans:
 - '[R programming language (version 3.0.1, x86 64bit)](http://cran.r-project.org/bin/windows/base/)'
 derived_from:

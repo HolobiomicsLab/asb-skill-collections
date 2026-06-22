@@ -1,5 +1,6 @@
 name: BiocManager
 slug: biocmanager
+canonical_url: https://github.com/kilgain/MassSpec
 evidence_spans:
 - if (!require(BiocManager))
 - if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")

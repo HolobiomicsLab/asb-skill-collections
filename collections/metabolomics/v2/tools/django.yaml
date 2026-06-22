@@ -1,5 +1,6 @@
 name: Django
 slug: django
+canonical_url: https://github.com/RTKlab-BYU/MSConnect
 evidence_spans:
 - The platform is built with Python, Django, JavaScript, and HTML
 derived_from:

@@ -1,5 +1,6 @@
 name: Metabolomics Workbench API
 slug: metabolomics-workbench-api
+canonical_url: https://github.com/ahmohamed/lipidr
 evidence_spans:
 - Through integration with Metabolomics Workbench API, `lipidr` allows users, to quickly explore public lipidomics experiments.
 derived_from:

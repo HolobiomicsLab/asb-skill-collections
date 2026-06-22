@@ -1,5 +1,6 @@
 name: signalP
 slug: signalp
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - Functional annotation | CPAT, signalP, pfam
 derived_from:

@@ -1,5 +1,6 @@
 name: InteractiveTwoDimensionPlotter
 slug: interactivetwodimensionplotter
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - InteractiveTwoDimensionPlotter
 derived_from:

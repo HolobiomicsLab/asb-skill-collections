@@ -1,5 +1,6 @@
 name: openNAU
 slug: opennau
+canonical_url: https://github.com/zjuRong/openNAU
 evidence_spans:
 - An open-source analysis software for untargeted metabolism data (openNAU) was constructed
 derived_from:

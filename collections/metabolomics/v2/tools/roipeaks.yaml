@@ -1,5 +1,6 @@
 name: ROIpeaks
 slug: roipeaks
+canonical_url: https://github.com/AdrianHaun/AriumMS
 evidence_spans:
 - functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim Jaumot
 derived_from:

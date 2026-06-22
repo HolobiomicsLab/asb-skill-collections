@@ -1,5 +1,6 @@
 name: xtb
 slug: xtb
+canonical_url: https://github.com/grimme-lab/QCxMS2
 version_used: 6.7.1
 evidence_spans:
 - '**xtb** (version > 6.7.1 - bleeding edge version)'

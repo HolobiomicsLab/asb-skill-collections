@@ -1,5 +1,6 @@
 name: Galaxy Genomics Framework
 slug: galaxy-genomics-framework
+canonical_url: https://github.com/secimTools/SECIMTools
 evidence_spans:
 - can be run in a standalone mode or via Galaxy Genomics Framework
 derived_from:

@@ -1,5 +1,6 @@
 name: notame
 slug: notame
+canonical_url: https://github.com/antonvsdata/notame
 evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)

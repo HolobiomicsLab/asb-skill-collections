@@ -1,5 +1,6 @@
 name: KNIME
 slug: knime
+canonical_url: https://github.com/MolecularCartography/Optimus
 evidence_spans:
 - KNIME Basics
 - how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled)

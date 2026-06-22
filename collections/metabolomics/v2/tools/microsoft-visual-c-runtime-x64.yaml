@@ -1,5 +1,6 @@
 name: Microsoft Visual C++ Runtime x64
 slug: microsoft-visual-c-runtime-x64
+canonical_url: https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor
 evidence_spans:
 - Microsoft Visual C++ Runtime x64 (may already be installed, if the program doesn't work then you can download vcredist_x64.exe
 derived_from:

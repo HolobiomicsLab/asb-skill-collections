@@ -1,5 +1,6 @@
 name: PyTorch Geometric
 slug: pytorch-geometric
+canonical_url: https://github.com/tingxiecsu/CSU-MS2
 evidence_spans:
 - '- [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/)'
 derived_from:

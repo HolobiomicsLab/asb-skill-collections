@@ -1,5 +1,6 @@
 name: DepthCharge
 slug: depthcharge
+canonical_url: https://github.com/Noble-Lab/casanovo
 version_used: 0.4.10
 evidence_spans:
 - Upgraded minimum DepthCharge version to 0.4.10.

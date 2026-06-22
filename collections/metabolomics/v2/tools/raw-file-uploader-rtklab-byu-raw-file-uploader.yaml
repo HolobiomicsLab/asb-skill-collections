@@ -1,5 +1,6 @@
 name: Raw File Uploader (RTKlab-BYU/Raw_File_Uploader)
 slug: raw-file-uploader-rtklab-byu-raw-file-uploader
+canonical_url: https://github.com/RTKlab-BYU/MSConnect
 evidence_spans:
 - works with [Raw file uploader]
 derived_from:

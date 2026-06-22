@@ -1,5 +1,6 @@
 name: XCMS
 slug: xcms
+canonical_url: https://github.com/13479776/statTarget
 version_used: 3.11.4
 evidence_spans:
 - AutoTuner is a parameter tuning algorithm for XCMS, MZmine2, and other metabolomics data processing softwares.

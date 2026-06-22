@@ -1,5 +1,6 @@
 name: Mass Query Language (MassQL)
 slug: mass-query-language-massql
+canonical_url: https://github.com/biorack/chemecho
 evidence_spans:
 - The Mass Query Language (MassQL) is a domain specific language used to describe fragmentation patterns
 derived_from:

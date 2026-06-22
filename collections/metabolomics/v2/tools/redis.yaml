@@ -1,5 +1,6 @@
 name: Redis
 slug: redis
+canonical_url: https://github.com/OpenMS/OpenMS
 evidence_spans:
 - Redis queue is purely additive and only activates in online Docker deployments
 derived_from:

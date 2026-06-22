@@ -1,5 +1,6 @@
 name: pyopenms
 slug: pyopenms
+canonical_url: https://github.com/AutoFlowResearch/SmartPeak
 version_used: 2.7.0
 evidence_spans:
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)

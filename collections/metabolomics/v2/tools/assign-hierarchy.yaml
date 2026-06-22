@@ -1,5 +1,6 @@
 name: assign_hierarchy
 slug: assign-hierarchy
+canonical_url: https://github.com/connor-reid-tiffany/Omu
 evidence_spans:
 - To assign hierarchical class data, use the ```assign_hierarchy``` function and pick the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
 derived_from:

@@ -1,5 +1,6 @@
 name: MetNet
 slug: metnet
+canonical_url: https://github.com/simeoni-biolab/MetNet
 evidence_spans:
 - MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
 - MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network

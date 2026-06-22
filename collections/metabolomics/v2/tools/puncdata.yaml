@@ -1,5 +1,6 @@
 name: puncdata
 slug: puncdata
+canonical_url: https://github.com/WTVoe/puncdata
 evidence_spans:
 - 'Source: github:github.com__WTVoe__puncdata'
 derived_from:

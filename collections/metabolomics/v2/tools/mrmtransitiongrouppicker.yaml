@@ -1,5 +1,6 @@
 name: MRMTransitionGroupPicker
 slug: mrmtransitiongrouppicker
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - MRMTransitionGroupPicker
 derived_from:

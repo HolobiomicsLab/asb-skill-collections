@@ -1,5 +1,6 @@
 name: PeakQC
 slug: peakqc
+canonical_url: https://github.com/pnnl/IonToolPack
 evidence_spans:
 - 'PeakQC: Automated quality control pipeline by PCA analysis on MS1 data'
 derived_from:

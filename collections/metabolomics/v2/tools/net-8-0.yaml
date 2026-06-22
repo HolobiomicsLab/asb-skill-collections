@@ -1,5 +1,6 @@
 name: .NET 8.0
 slug: net-8-0
+canonical_url: https://github.com/fgcz/rawrr
 version_used: '8.0'
 evidence_spans:
 - In case you prefer to compile `rawrr.exe` from C# source code, please install the .NET 8.0

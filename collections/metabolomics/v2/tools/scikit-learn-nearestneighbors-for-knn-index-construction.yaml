@@ -1,5 +1,6 @@
 name: scikit-learn (NearestNeighbors for KNN index construction)
 slug: scikit-learn-nearestneighbors-for-knn-index-construction
+canonical_url: https://github.com/WanluLiuLab/SpatialMETA
 evidence_spans:
 - '.. autofunction:: spatialmeta.pp.spot_align_byknn'
 derived_from:

@@ -1,5 +1,6 @@
 name: CypReact
 slug: cypreact
+canonical_url: https://bitbucket.org/Leon_Ti/cypreact.git
 evidence_spans:
 - 'To run the CypReact tool, the user should use command in the terminal as: ->java -jar "PathOfCypReactBundle"'
 - java -jar "PathOfCypReactBundle"

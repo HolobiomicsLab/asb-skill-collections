@@ -1,5 +1,6 @@
 name: FastQC
 slug: fastqc
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - Genes, miRNA, isoforms | Quality control | FastQC, trimgalore
 - It then performs quality control with [FASTQC](../modules/nf-core/fastqc)

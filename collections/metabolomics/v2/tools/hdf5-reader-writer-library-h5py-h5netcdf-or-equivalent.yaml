@@ -1,5 +1,6 @@
 name: HDF5 reader/writer library (h5py, h5netcdf, or equivalent)
 slug: hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent
+canonical_url: https://github.com/swinnenteam/LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
 derived_from:

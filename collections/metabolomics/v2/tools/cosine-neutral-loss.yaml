@@ -1,5 +1,6 @@
 name: cosine_neutral_loss
 slug: cosine-neutral-loss
+canonical_url: https://github.com/bittremieux/cosine_neutral_loss
 evidence_spans:
 - github.com/bittremieux/cosine_neutral_loss
 derived_from:

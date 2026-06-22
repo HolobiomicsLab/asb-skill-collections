@@ -1,5 +1,6 @@
 name: massdash.plotting.InteractivePlotter
 slug: massdash-plotting-interactiveplotter
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - InteractivePlotter
 derived_from:

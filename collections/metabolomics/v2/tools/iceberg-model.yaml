@@ -1,5 +1,6 @@
 name: ICEBERG (model)
 slug: iceberg-model
+canonical_url: https://github.com/samgoldman97/ms-pred
 evidence_spans:
 - ICEBERG predicts spectra at the level of molecular fragments
 derived_from:

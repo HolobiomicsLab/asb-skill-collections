@@ -1,5 +1,6 @@
 name: ReDU
 slug: redu
+canonical_url: https://github.com/mwang87/ReDU-MS2-Documentation
 evidence_spans:
 - Validation of the ReDU sample information template using the drag-and-drop validator
 - ReDU only interacts with MassIVE

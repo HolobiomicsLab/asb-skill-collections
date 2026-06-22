@@ -1,5 +1,6 @@
 name: DIA-NN
 slug: dia-nn
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - search results information obtained from DIA-NN for the selected precursor
 derived_from:

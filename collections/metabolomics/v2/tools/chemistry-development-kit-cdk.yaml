@@ -1,5 +1,6 @@
 name: Chemistry Development Kit (CDK)
 slug: chemistry-development-kit-cdk
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]
 - 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints: CDK Substructure,'

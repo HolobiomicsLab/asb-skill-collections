@@ -1,5 +1,6 @@
 name: CANOPUS
 slug: canopus
+canonical_url: https://github.com/luigiquiros/inventa
 evidence_spans:
 - The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)
 - 'Class Component (CC): a score considering the presence of predicted known chemical classes new to the species'

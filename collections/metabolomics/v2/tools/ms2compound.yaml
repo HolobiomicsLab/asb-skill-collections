@@ -1,5 +1,6 @@
 name: MS2Compound
 slug: ms2compound
+canonical_url: https://github.com/beherasan/MS2Compound
 version_used: 1.0.2
 evidence_spans:
 - MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification of the compounds from LC-MS and MS/MS metabolomics data

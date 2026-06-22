@@ -1,5 +1,6 @@
 name: hnswlib
 slug: hnswlib
+canonical_url: https://github.com/Qiong-Yang/FastEI
 evidence_spans:
 - conda install -c conda-forge hnswlib
 derived_from:

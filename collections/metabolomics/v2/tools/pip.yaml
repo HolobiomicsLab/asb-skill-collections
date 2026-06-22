@@ -1,5 +1,6 @@
 name: pip
 slug: pip
+canonical_url: https://github.com/HassounLab/JESTR1
 evidence_spans:
 - pip install -e .[dev]
 - and [pip](https://pypi.org/project/pip/)

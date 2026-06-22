@@ -1,5 +1,6 @@
 name: pheatmap
 slug: pheatmap
+canonical_url: https://github.com/LeaveMeNotTonight/CMDN
 evidence_spans:
 - pheatmap
 - library(pheatmap)

@@ -1,5 +1,6 @@
 name: MZmine 3
 slug: mzmine-3
+canonical_url: https://github.com/huaxuyu/bago
 evidence_spans:
 - '`MZmine 3 <http://mzmine.github.io/>`_'
 derived_from:

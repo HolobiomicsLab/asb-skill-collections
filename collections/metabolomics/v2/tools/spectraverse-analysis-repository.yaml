@@ -1,5 +1,6 @@
 name: spectraverse-analysis repository
 slug: spectraverse-analysis-repository
+canonical_url: https://github.com/skinniderlab/spectraverse-analysis
 evidence_spans:
 - github.com/skinniderlab/spectraverse-analysis
 derived_from:

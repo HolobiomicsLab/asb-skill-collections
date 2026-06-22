@@ -1,5 +1,6 @@
 name: MassSpecWavelet
 slug: massspecwavelet
+canonical_url: https://github.com/sneumann/xcms
 evidence_spans:
 - '`r Biocpkg("xcms")` uses functionality from the *MassSpecWavelet* package to identify such peaks'
 derived_from:

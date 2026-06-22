@@ -1,5 +1,6 @@
 name: ggplot
 slug: ggplot
+canonical_url: https://github.com/BalunasLab/mpact
 evidence_spans:
 - creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
 derived_from:

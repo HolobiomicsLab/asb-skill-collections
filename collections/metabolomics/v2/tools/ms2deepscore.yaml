@@ -1,5 +1,6 @@
 name: MS2DeepScore
 slug: ms2deepscore
+canonical_url: https://github.com/matchms/MS2DeepScore
 evidence_spans:
 - MS2DeepScore to predict structural similarity scores for spe
 - we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set

@@ -1,5 +1,6 @@
 name: RQ (Redis Queue)
 slug: rq-redis-queue
+canonical_url: https://github.com/OpenMS/OpenMS
 evidence_spans:
 - Task Queue | **RQ (Redis Queue)** | Lightweight, Python-native, simpler than Celery
 derived_from:

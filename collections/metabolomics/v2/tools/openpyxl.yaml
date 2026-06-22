@@ -1,5 +1,6 @@
 name: openpyxl
 slug: openpyxl
+canonical_url: https://github.com/Leo-Cheng-Lab/ROIAL-NMR
 version_used: 3.1.5
 evidence_spans:
 - openpyxl 3.1.5

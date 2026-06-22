@@ -1,5 +1,6 @@
 name: OUKS
 slug: ouks
+canonical_url: https://github.com/plyush1993/OUKS
 evidence_spans:
 - comprehensive nine step LC-MS untargeted metabolomic profiling data processing toolbox
 derived_from:

@@ -1,5 +1,6 @@
 name: Perl
 slug: perl
+canonical_url: https://github.com/matteogiulietti/LipidOne
 evidence_spans:
 - stand alone software entirely written in Perl
 derived_from:

@@ -1,5 +1,6 @@
 name: ChemEcho
 slug: chemecho
+canonical_url: https://github.com/biorack/chemecho
 evidence_spans:
 - github.com__biorack__chemecho
 derived_from:

@@ -1,5 +1,6 @@
 name: Keras
 slug: keras
+canonical_url: https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks
 version_used: 2.2.0
 evidence_spans:
 - convert the keras models into HDF5 TF2 models

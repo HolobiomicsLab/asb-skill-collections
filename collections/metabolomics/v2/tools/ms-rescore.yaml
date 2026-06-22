@@ -1,5 +1,6 @@
 name: MS²Rescore
 slug: ms-rescore
+canonical_url: https://github.com/compomics/ms2rescore
 evidence_spans:
 - MS²Rescore is a tool for rescoring peptide-spectrum matches
 derived_from:

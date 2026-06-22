@@ -1,5 +1,6 @@
 name: dynamic time warping (DTW)
 slug: dynamic-time-warping-dtw
+canonical_url: https://github.com/ChiungTingWu/ncGTW
 evidence_spans:
 - graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based alignment method
 derived_from:

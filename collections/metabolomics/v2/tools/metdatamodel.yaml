@@ -1,5 +1,6 @@
 name: metDataModel
 slug: metdatamodel
+canonical_url: https://github.com/shuzhao-li-lab/khipu
 evidence_spans:
 - The data model of “empirical compound” is described in the metDataModel package.
 derived_from:

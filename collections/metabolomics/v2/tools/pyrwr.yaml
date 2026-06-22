@@ -1,5 +1,6 @@
 name: pyrwr
 slug: pyrwr
+canonical_url: https://github.com/computational-chemical-biology/ChemWalker
 evidence_spans:
 - using [random walk](https://github.com/jinhongjung/pyrwr)
 derived_from:

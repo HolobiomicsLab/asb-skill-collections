@@ -1,5 +1,6 @@
 name: orca
 slug: orca
+canonical_url: https://github.com/grimme-lab/QCxMS2
 version_used: 6.0.0
 evidence_spans:
 - Remove orca in favor of Kaleido

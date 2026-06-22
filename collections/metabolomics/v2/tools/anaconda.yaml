@@ -1,5 +1,6 @@
 name: Anaconda
 slug: anaconda
+canonical_url: https://github.com/LabLaskin/MSIGen
 version_used: '3.6'
 evidence_spans:
 - Install [Anaconda](https://www.anaconda.com/).

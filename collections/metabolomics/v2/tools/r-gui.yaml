@@ -1,5 +1,6 @@
 name: R GUI
 slug: r-gui
+canonical_url: https://github.com/YuJenL/SMART
 evidence_spans:
 - SMART written in R and R GUI has been developed as user-friendly software
 derived_from:

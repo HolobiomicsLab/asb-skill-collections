@@ -1,5 +1,6 @@
 name: CUDA
 slug: cuda
+canonical_url: https://github.com/HassounLab/JESTR1
 version_used: '11.8'
 evidence_spans:
 - HyperSpec requires `Python 3.8+` with `CUDA` environment

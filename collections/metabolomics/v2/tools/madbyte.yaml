@@ -1,5 +1,6 @@
 name: MADByTE
 slug: madbyte
+canonical_url: https://github.com/liningtonlab/madbyte
 evidence_spans:
 - MADByTE stands for **M**etabolomics **A**nd **D**ereplication **By** **T**wo-dimensional **E**xperiments.
 derived_from:

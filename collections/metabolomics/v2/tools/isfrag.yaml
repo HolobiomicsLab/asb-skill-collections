@@ -1,5 +1,6 @@
 name: ISFrag
 slug: isfrag
+canonical_url: https://github.com/HuanLab/ISFrag
 evidence_spans:
 - ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
 - ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table

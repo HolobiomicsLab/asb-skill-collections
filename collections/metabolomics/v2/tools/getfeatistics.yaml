@@ -1,5 +1,6 @@
 name: GetFeatistics
 slug: getfeatistics
+canonical_url: https://github.com/FrigerioGianfranco/GetFeatistics
 evidence_spans:
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
 - The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data

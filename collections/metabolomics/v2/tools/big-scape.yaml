@@ -1,5 +1,6 @@
 name: BiG-SCAPE
 slug: big-scape
+canonical_url: https://github.com/NPLinker/nplinker
 version_used: 1.0.0
 evidence_spans:
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs

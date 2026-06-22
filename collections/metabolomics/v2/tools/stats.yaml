@@ -1,5 +1,6 @@
 name: stats
 slug: stats
+canonical_url: https://github.com/BiosystemEngineeringLab-IITB/dures
 evidence_spans:
 - invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
 derived_from:

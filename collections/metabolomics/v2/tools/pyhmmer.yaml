@@ -1,5 +1,6 @@
 name: pyHMMER
 slug: pyhmmer
+canonical_url: https://github.com/medema-group/bigslice
 evidence_spans:
 - Switching from HMMER to [pyHMMER](https://github.com/althonos/pyhmmer)
 derived_from:

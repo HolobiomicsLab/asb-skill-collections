@@ -1,5 +1,6 @@
 name: IDSL.CSA
 slug: idsl-csa
+canonical_url: https://github.com/idslme/IDSL.CSA
 evidence_spans:
 - The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
 derived_from:

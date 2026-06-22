@@ -1,5 +1,6 @@
 name: GCIMS
 slug: gcims
+canonical_url: https://github.com/sipss/GCIMS
 evidence_spans:
 - library(GCIMS)
 derived_from:

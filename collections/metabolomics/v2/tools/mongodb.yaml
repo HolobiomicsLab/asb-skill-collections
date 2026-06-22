@@ -1,5 +1,6 @@
 name: MongoDB
 slug: mongodb
+canonical_url: https://github.com/tyo-nu/MINE-Database
 evidence_spans:
 - The URI of the mongo database to connect to. Defaults to mongodb://localhost:27017
 derived_from:

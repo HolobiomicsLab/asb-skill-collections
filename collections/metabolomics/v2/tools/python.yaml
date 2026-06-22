@@ -1,5 +1,6 @@
 name: Python
 slug: python
+canonical_url: https://github.com/01dadada/RT-Transformer
 version_used: '3.8'
 evidence_spans:
 - '**Python**'

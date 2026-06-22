@@ -1,5 +1,6 @@
 name: molDiscovery
 slug: moldiscovery
+canonical_url: https://github.com/mohimanilab/molDiscovery
 evidence_spans:
 - To test molDiscovery for academic users, please visit
 derived_from:

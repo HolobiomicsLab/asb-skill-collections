@@ -1,5 +1,6 @@
 name: MsBackendMzR
 slug: msbackendmzr
+canonical_url: https://github.com/rformassspectrometry/Spectra
 evidence_spans:
 - Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files
 derived_from:

@@ -1,5 +1,6 @@
 name: biosynfoni
 slug: biosynfoni
+canonical_url: https://github.com/lucinamay/biosynfoni
 evidence_spans:
 - biosynfoni
 - a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research

@@ -1,5 +1,6 @@
 name: IsoPairFinder
 slug: isopairfinder
+canonical_url: https://github.com/kilgain/MassSpec
 evidence_spans:
 - devtools::install_github("DoddLab/IsoPairFinder")
 derived_from:

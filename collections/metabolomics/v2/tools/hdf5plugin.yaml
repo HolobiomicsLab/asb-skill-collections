@@ -1,5 +1,6 @@
 name: hdf5plugin
 slug: hdf5plugin
+canonical_url: https://github.com/PNNL-m-q/mzapy
 evidence_spans:
 - '* ``hdf5plugin``'
 - h5py and optionally hdf5plugin <https://hdf5plugin.readthedocs.io/en/latest/>

@@ -1,5 +1,6 @@
 name: torch-scatter
 slug: torch-scatter
+canonical_url: https://github.com/01dadada/RT-Transformer
 evidence_spans:
 - '**torch-scatter**'
 - torch-scatter

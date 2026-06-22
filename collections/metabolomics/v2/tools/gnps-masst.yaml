@@ -1,5 +1,6 @@
 name: GNPS_MASST
 slug: gnps-masst
+canonical_url: https://github.com/mwang87/MASST
 evidence_spans:
 - The code for the different standalone web applications, which allow users to search one spectrum at a time, can be found in GNPS_MASST
 derived_from:

@@ -1,5 +1,6 @@
 name: MS2LDA.Preprocessing.load_and_clean
 slug: ms2lda-preprocessing-load-and-clean
+canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - from MS2LDA.Preprocessing import load_and_clean
 - '::: MS2LDA.Preprocessing.load_and_clean'

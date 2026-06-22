@@ -1,5 +1,6 @@
 name: Aerith
 slug: aerith
+canonical_url: https://github.com/thepanlab/Aerith
 evidence_spans:
 - Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
 - Aerith is an R package that provides interfaces to read and write mass spectrum scans

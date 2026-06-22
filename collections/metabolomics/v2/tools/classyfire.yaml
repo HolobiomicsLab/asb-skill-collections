@@ -1,5 +1,6 @@
 name: ClassyFire
 slug: classyfire
+canonical_url: https://github.com/michaelwitting/RepoRT
 evidence_spans:
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
 - You can copy the InChiKey's from the GNPS DBResult file into the Fiehn Labs' classyfire Batch identifier

@@ -1,5 +1,6 @@
 name: iPRESTO
 slug: ipresto
+canonical_url: https://git.wur.nl/bioinformatics/iPRESTO.git
 evidence_spans:
 - iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
 derived_from:

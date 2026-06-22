@@ -1,5 +1,6 @@
 name: PubChem standardization
 slug: pubchem-standardization
+canonical_url: https://github.com/michaelwitting/RepoRT
 evidence_spans:
 - structures are standardized using the PubChem standardization
 derived_from:

@@ -1,5 +1,6 @@
 name: RankProd
 slug: rankprod
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
 derived_from:

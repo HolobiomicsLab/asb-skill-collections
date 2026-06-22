@@ -1,5 +1,6 @@
 name: CTS
 slug: cts
+canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
 - '[CTS](https://cts.fiehnlab.ucdavis.edu/)'

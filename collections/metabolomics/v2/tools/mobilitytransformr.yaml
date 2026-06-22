@@ -1,5 +1,6 @@
 name: MobilityTransformR
 slug: mobilitytransformr
+canonical_url: https://github.com/LiesaSalzer/MobilityTransformR
 evidence_spans:
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform

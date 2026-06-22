@@ -1,5 +1,6 @@
 name: ms_entropy
 slug: ms-entropy
+canonical_url: https://github.com/FanzhouKong/spectral_denoising
 version_used: 1.3.3
 evidence_spans:
 - ms_entropy==1.3.3

@@ -1,5 +1,6 @@
 name: omu (omu_summary function)
 slug: omu-omu-summary-function
+canonical_url: https://github.com/connor-reid-tiffany/Omu
 evidence_spans:
 - Omu supports two univariate statistical models, t test and anova, using the functions ```omu_summary``` and ```anova_function``` respectively
 derived_from:

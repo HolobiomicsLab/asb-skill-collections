@@ -1,5 +1,6 @@
 name: jfreechart
 slug: jfreechart
+canonical_url: https://github.com/rformassspectrometry/Spectra
 version_used: 1.0.17
 evidence_spans:
 - jfreechart-1.0.17-experimental

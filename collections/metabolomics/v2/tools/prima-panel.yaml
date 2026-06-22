@@ -1,5 +1,6 @@
 name: PRIMA-Panel
 slug: prima-panel
+canonical_url: https://github.com/funkam/PRIMA
 evidence_spans:
 - Pre-Analytical Investigator for NMR-based Metabolomics (PRIMA-Panel)
 derived_from:

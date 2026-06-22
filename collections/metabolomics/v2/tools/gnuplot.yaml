@@ -1,5 +1,6 @@
 name: Gnuplot
 slug: gnuplot
+canonical_url: https://github.com/matteogiulietti/LipidOne
 version_used: 5.4.2
 evidence_spans:
 - https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.2/

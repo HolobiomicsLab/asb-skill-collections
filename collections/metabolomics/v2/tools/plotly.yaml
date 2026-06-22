@@ -1,5 +1,6 @@
 name: Plotly
 slug: plotly
+canonical_url: https://github.com/Wang-Bioinformatics-Lab/NetworkFamily_MultipleAlignment_Website
 evidence_spans:
 - interactive visualization
 - integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)

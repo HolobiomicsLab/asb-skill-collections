@@ -1,5 +1,6 @@
 name: enviPat
 slug: envipat
+canonical_url: https://github.com/YasinEl/mzRAPP
 evidence_spans:
 - isoSCAN makes use of __enviPat__ package
 - mzRAPP extracts and validates chromatographic peaks for which boundaries are provided for all (enviPat predicted) isotopologues

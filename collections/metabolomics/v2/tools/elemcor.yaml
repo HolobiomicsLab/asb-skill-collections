@@ -1,5 +1,6 @@
 name: ElemCor
 slug: elemcor
+canonical_url: https://github.com/4dsoftware/elemcor
 evidence_spans:
 - ElemCor is a software tool to correct LC-MS data in isotope labeling experiments.
 - ElemCor is a software tool to correct LC-MS data in isotope labeling experiments

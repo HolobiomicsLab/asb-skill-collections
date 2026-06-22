@@ -1,5 +1,6 @@
 name: IonToolPack
 slug: iontoolpack
+canonical_url: https://github.com/pnnl/IonToolPack
 evidence_spans:
 - IonToolPack is a software suite housing tools for mass spectrometry data
 - IonToolPack is a software suite housing tools for mass spectrometry data.

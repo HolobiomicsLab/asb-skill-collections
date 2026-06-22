@@ -1,5 +1,6 @@
 name: NormalizeMets
 slug: normalizemets
+canonical_url: https://github.com/metabolomicstats/NormalizeMets
 evidence_spans:
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
 derived_from:

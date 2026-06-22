@@ -1,5 +1,6 @@
 name: PubChem
 slug: pubchem
+canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - all ids are converted to a unique one, in this case the PubChem ID
 - By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.

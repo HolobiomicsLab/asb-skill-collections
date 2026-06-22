@@ -1,5 +1,6 @@
 name: ANN-SoLo
 slug: ann-solo
+canonical_url: https://github.com/bittremieux-lab/ANN-SoLo
 evidence_spans:
 - ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
 - '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'

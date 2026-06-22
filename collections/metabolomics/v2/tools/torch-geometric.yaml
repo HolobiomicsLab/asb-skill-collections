@@ -1,5 +1,6 @@
 name: torch_geometric
 slug: torch-geometric
+canonical_url: https://github.com/01dadada/RT-Transformer
 evidence_spans:
 - torch_geometric
 derived_from:

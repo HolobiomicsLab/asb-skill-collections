@@ -1,5 +1,6 @@
 name: gunicorn
 slug: gunicorn
+canonical_url: https://github.com/ComPlat/chem-spectra-app
 version_used: 0.0.0.0
 evidence_spans:
 - gunicorn -w 4 -b 0.0.0.0:3007 server:app --daemon

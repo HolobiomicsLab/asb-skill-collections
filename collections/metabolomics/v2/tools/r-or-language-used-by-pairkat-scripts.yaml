@@ -1,5 +1,6 @@
 name: R (or language used by PaIRKAT scripts)
 slug: r-or-language-used-by-pairkat-scripts
+canonical_url: https://github.com/CharlieCarpenter/PaIRKAT
 evidence_spans:
 - Scripts for PaIRKAT functions with example work flow
 derived_from:

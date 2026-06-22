@@ -1,5 +1,6 @@
 name: LargeMetabo
 slug: largemetabo
+canonical_url: https://github.com/LargeMetabo/LargeMetabo
 evidence_spans:
 - install_github("LargeMetabo/LargeMetabo", force = TRUE, build_vignettes = TRUE)
 derived_from:

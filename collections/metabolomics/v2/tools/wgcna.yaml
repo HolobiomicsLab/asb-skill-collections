@@ -1,5 +1,6 @@
 name: WGCNA
 slug: wgcna
+canonical_url: https://github.com/andreasmock/MetaboDiff
 evidence_spans:
 - install.packages("WGCNA")
 - The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth

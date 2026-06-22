@@ -1,5 +1,6 @@
 name: MassQL
 slug: massql
+canonical_url: https://github.com/JohnsonDylan/MassQLab
 evidence_spans:
 - The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.
 - MassQLab applies a series of queries (written in the language of MassQL)

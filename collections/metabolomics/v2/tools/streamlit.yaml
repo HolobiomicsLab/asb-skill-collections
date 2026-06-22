@@ -1,5 +1,6 @@
 name: Streamlit
 slug: streamlit
+canonical_url: https://github.com/OpenMS/OpenMS
 evidence_spans:
 - streamlit graphical user interface (GUI)
 - OpenMS Streamlit Template's **online mode only**

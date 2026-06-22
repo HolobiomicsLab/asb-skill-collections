@@ -1,5 +1,6 @@
 name: cliqueMS
 slug: cliquems
+canonical_url: https://github.com/b2slab/mWISE
 evidence_spans:
 - The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.

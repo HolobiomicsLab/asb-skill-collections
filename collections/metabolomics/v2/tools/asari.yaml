@@ -1,5 +1,6 @@
 name: asari
 slug: asari
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
 - process mzML data to feature tables (Asari)

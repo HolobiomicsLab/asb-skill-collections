@@ -1,5 +1,6 @@
 name: GNPS_GC
 slug: gnps-gc
+canonical_url: https://github.com/bittremieux/GNPS_GC
 evidence_spans:
 - bittremieux/GNPS_GC
 derived_from:

@@ -1,5 +1,6 @@
 name: SciPy (scipy.stats.wasserstein_distance or scipy.optimize.linprog for optimal transport)
 slug: scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport
+canonical_url: https://github.com/GeoMetabolomics-ICBM/mcfNMR
 evidence_spans:
 - github.com__GeoMetabolomics-ICBM__mcfNMR
 derived_from:

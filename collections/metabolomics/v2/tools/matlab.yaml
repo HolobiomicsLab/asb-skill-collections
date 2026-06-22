@@ -1,5 +1,6 @@
 name: Matlab
 slug: matlab
+canonical_url: https://github.com/KechrisLab/DisCoPad
 evidence_spans:
 - cdf files and available Matlab workspaces are provided
 - example R and MATLAB codes (for one data sub-sample scenario) used for the simulation

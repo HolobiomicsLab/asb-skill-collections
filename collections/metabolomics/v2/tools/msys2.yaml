@@ -1,5 +1,6 @@
 name: MSYS2
 slug: msys2
+canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - Install the MSYS2 platform for Windows
 derived_from:

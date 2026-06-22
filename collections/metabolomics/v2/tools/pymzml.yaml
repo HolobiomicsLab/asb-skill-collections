@@ -1,5 +1,6 @@
 name: pymzml
 slug: pymzml
+canonical_url: https://github.com/shuzhao-li-lab/asari
 version_used: 2.5.2
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.

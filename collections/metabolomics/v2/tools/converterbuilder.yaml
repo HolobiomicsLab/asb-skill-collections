@@ -1,5 +1,6 @@
 name: ConverterBuilder
 slug: converterbuilder
+canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - 'Converter Builder: Automatically discovers and instantiates available converters'
 derived_from:

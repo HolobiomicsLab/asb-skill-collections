@@ -1,5 +1,6 @@
 name: factoextra
 slug: factoextra
+canonical_url: https://github.com/LargeMetabo/LargeMetabo
 evidence_spans:
 - several R packages are utilized in the background processes, including factoextra, FSelector, genefilter
 derived_from:

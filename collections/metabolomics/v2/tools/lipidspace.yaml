@@ -1,5 +1,6 @@
 name: LipidSpace
 slug: lipidspace
+canonical_url: https://github.com/lifs-tools/lipidspace
 evidence_spans:
 - LipidSpace is a stand-alone tool to analyze and compare lipidomes
 derived_from:

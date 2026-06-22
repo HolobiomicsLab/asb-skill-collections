@@ -1,5 +1,6 @@
 name: MS2LDA.Preprocessing.generate_corpus
 slug: ms2lda-preprocessing-generate-corpus
+canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - Generate Corpus
 derived_from:

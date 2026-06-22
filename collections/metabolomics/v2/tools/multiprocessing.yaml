@@ -1,5 +1,6 @@
 name: multiprocessing
 slug: multiprocessing
+canonical_url: https://github.com/OpenMS/OpenMS
 evidence_spans:
 - '| **Local** (`online_deployment: false`) | None | `multiprocessing.Process`'
 derived_from:

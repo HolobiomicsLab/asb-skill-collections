@@ -1,5 +1,6 @@
 name: jsonschema
 slug: jsonschema
+canonical_url: https://github.com/MoseleyBioinformaticsLab/mwtab
 evidence_spans:
 - utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 - This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)

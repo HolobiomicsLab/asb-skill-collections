@@ -1,5 +1,6 @@
 name: h2o
 slug: h2o
+canonical_url: https://github.com/lanagarmire/lilikoi2
 evidence_spans:
 - DL via h2o
 derived_from:

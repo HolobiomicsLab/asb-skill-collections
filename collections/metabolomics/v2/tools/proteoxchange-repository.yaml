@@ -1,5 +1,6 @@
 name: ProteoXchange Repository
 slug: proteoxchange-repository
+canonical_url: https://github.com/mwang87/MetabolomicsSpectrumResolver
 evidence_spans:
 - ProteoXchange Repository Data
 derived_from:

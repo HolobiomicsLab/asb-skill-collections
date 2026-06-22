@@ -1,5 +1,6 @@
 name: VIM
 slug: vim
+canonical_url: https://github.com/scibiome/meteor
 evidence_spans:
 - library(VIM)
 derived_from:

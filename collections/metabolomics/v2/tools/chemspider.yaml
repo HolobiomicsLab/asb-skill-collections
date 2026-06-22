@@ -1,5 +1,6 @@
 name: ChemSpider
 slug: chemspider
+canonical_url: https://github.com/privrja/MassSpecBlocks
 evidence_spans:
 - find structures on other chemical projects like ChemSpider
 derived_from:

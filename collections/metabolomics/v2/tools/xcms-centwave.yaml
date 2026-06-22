@@ -1,5 +1,6 @@
 name: XCMS CentWave
 slug: xcms-centwave
+canonical_url: https://github.com/HuanLab/Paramounter
 evidence_spans:
 - mzdiff is used as the mass tolerance to dereplicate the features (similar m/z values and retention times) extracted by XCMS CentWave
 - dereplicate the features (similar m/z values and retention times) extracted by XCMS CentWave

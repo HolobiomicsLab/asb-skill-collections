@@ -1,5 +1,6 @@
 name: MSNovelist
 slug: msnovelist
+canonical_url: https://github.com/meowcat/MSNovelist
 evidence_spans:
 - The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)
 - singularity build $SCRATCH_PATH/MSNovelist-image/msnovelist.sif docker://stravsm/msnovelist6

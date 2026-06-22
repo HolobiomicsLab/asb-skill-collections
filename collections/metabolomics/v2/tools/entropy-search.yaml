@@ -1,5 +1,6 @@
 name: Entropy Search
 slug: entropy-search
+canonical_url: https://github.com/YuanyueLi/FlashEntropySearch
 evidence_spans:
 - a standalone software with a Graphical User Interface (GUI) named Entropy Search
 derived_from:

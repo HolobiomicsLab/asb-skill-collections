@@ -1,5 +1,6 @@
 name: XlsxWriter
 slug: xlsxwriter
+canonical_url: https://github.com/Leo-Cheng-Lab/ROIAL-NMR
 version_used: 3.2.2
 evidence_spans:
 - XlsxWriter 3.2.2

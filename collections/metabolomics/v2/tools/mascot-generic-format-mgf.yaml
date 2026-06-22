@@ -1,5 +1,6 @@
 name: Mascot Generic Format (mgf)
 slug: mascot-generic-format-mgf
+canonical_url: https://github.com/beherasan/MS2Compound
 evidence_spans:
 - Mascot Generic Format (mgf) files can be used as query input file and search against in-built or cusotm database.
 derived_from:

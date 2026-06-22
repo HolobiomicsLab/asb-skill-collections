@@ -1,5 +1,6 @@
 name: AnnoMe
 slug: annome
+canonical_url: https://github.com/chrboku/AnnoMe
 evidence_spans:
 - This is a package for the classification of MS/MS spectra of novel compounds
 derived_from:

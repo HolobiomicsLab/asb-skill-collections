@@ -1,5 +1,6 @@
 name: tqdm_joblib
 slug: tqdm-joblib
+canonical_url: https://github.com/zsspython/LAGF
 version_used: 0.0.3
 evidence_spans:
 - tqdm_joblib==0.0.3

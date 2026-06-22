@@ -1,5 +1,6 @@
 name: Python 2.7
 slug: python-2-7
+canonical_url: https://github.com/Viant-Metabolomics/Galaxy-M
 evidence_spans:
 - '[Python (version 2.7)](https://www.python.org/download/releases/2.7/)'
 derived_from:

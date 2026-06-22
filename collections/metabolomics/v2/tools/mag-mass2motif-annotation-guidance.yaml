@@ -1,5 +1,6 @@
 name: MAG (Mass2Motif Annotation Guidance)
 slug: mag-mass2motif-annotation-guidance
+canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - Automated annotation of M2M using MAG
 derived_from:

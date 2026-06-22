@@ -1,5 +1,6 @@
 name: AutoCCS
 slug: autoccs
+canonical_url: https://github.com/PNNL-Comp-Mass-Spec/AutoCCS
 evidence_spans:
 - github.com__PNNL-Comp-Mass-Spec__AutoCCS
 derived_from:

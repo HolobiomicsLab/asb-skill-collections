@@ -1,5 +1,6 @@
 name: NMRPipe
 slug: nmrpipe
+canonical_url: https://github.com/edisonomics/SAND
 evidence_spans:
 - interface to NMRPipe (pipe_scripts/)
 derived_from:

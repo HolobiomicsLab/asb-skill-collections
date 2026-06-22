@@ -1,5 +1,6 @@
 name: Probability Product Kernel (PPK)
 slug: probability-product-kernel-ppk
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - we filter the input spectra to include only the peaks found in the training data, before using the Probability Product Kernel (PPK)
 derived_from:

@@ -1,5 +1,6 @@
 name: geodesic_interpolate
 slug: geodesic-interpolate
+canonical_url: https://github.com/grimme-lab/QCxMS2
 evidence_spans:
 - '**geodesic_interpolate** (version'
 derived_from:

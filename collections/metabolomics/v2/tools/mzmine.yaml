@@ -1,5 +1,6 @@
 name: mzmine
 slug: mzmine
+canonical_url: https://github.com/GarrettLab-UF/LipidMatch
 evidence_spans:
 - mzmine is an open-source software for mass spectrometry data processing
 - Getting started with the [Documentation](https://mzmine.github.io/mzmine_documentation/index.html)

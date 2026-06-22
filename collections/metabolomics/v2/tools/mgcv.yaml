@@ -1,5 +1,6 @@
 name: mgcv
 slug: mgcv
+canonical_url: https://github.com/hhabra/metabCombiner
 evidence_spans:
 - a modified form of the `gam` function implemented in the *mgcv* R package
 derived_from:

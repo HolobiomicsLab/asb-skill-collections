@@ -1,5 +1,6 @@
 name: NPFimg
 slug: npfimg
+canonical_url: https://github.com/poomcj/NPFimg
 evidence_spans:
 - github.com__poomcj__NPFimg
 - We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and

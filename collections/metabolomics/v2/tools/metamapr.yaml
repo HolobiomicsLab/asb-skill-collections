@@ -1,5 +1,6 @@
 name: MetaMapR
 slug: metamapr
+canonical_url: https://github.com/dgrapov/MetaMapR
 evidence_spans:
 - MetaMapR - A metabolomic network mapping tool
 derived_from:

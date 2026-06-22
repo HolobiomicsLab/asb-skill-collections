@@ -1,5 +1,6 @@
 name: SMART
 slug: smart
+canonical_url: https://github.com/bioinfo-ibms-pumc/SMART
 evidence_spans:
 - we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
 derived_from:

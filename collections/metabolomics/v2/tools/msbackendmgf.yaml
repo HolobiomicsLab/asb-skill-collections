@@ -1,5 +1,6 @@
 name: MsBackendMgf
 slug: msbackendmgf
+canonical_url: https://github.com/sneumann/xcms
 evidence_spans:
 - library(MsBackendMgf)
 derived_from:

@@ -1,5 +1,6 @@
 name: R (base stats, tidyverse, or similar)
 slug: r-base-stats-tidyverse-or-similar
+canonical_url: https://github.com/chopralab/CLAW
 evidence_spans:
 - statistical analysis
 derived_from:

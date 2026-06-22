@@ -1,5 +1,6 @@
 name: MetaboDiff
 slug: metabodiff
+canonical_url: https://github.com/andreasmock/MetaboDiff
 evidence_spans:
 - '`MetaboDiff` is available for all operating systems and can be installed via Github'
 - met = knn_impute(met,cutoff=0.4)

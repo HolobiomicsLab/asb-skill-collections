@@ -1,5 +1,6 @@
 name: Shiny
 slug: shiny
+canonical_url: https://github.com/Fraunhofer-ITMP/alister
 evidence_spans:
 - ALISTER is a web-app containing scientific information on pre-analytical blood sample stability in metabolomics and lipidomics
 - developed with Shiny

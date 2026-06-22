@@ -1,5 +1,6 @@
 name: Autotuner
 slug: autotuner
+canonical_url: https://github.com/KujawinskiLaboratory/Autotuner
 evidence_spans:
 - library(Autotuner)
 derived_from:

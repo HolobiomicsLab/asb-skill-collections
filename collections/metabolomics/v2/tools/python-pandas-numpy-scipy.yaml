@@ -1,5 +1,6 @@
 name: Python (pandas, NumPy, SciPy)
 slug: python-pandas-numpy-scipy
+canonical_url: https://github.com/chopralab/CLAW
 evidence_spans:
 - statistical analysis
 - MetENP

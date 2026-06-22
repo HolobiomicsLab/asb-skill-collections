@@ -1,5 +1,6 @@
 name: Raxport
 slug: raxport
+canonical_url: https://github.com/thepanlab/Aerith
 evidence_spans:
 - Extract visualization information from `.FT2` files
 derived_from:

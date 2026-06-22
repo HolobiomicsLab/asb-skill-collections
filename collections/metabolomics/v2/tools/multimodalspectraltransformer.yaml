@@ -1,5 +1,6 @@
 name: MultiModalSpectralTransformer
 slug: multimodalspectraltransformer
+canonical_url: https://github.com/mpriessner/MultiModalSpectralTransformer
 evidence_spans:
 - github.com/mpriessner/MultiModalSpectralTransformer
 derived_from:

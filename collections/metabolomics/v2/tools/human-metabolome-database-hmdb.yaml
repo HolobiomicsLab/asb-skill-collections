@@ -1,5 +1,6 @@
 name: Human Metabolome Database (HMDB)
 slug: human-metabolome-database-hmdb
+canonical_url: https://github.com/Leo-Cheng-Lab/ROIAL-NMR
 evidence_spans:
 - using the Human Metabolome Database (HMDB) as a reference platform
 derived_from:

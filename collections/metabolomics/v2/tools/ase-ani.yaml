@@ -1,5 +1,6 @@
 name: ASE-ANI
 slug: ase-ani
+canonical_url: https://github.com/DasSusanta/snakemake_ccs
 evidence_spans:
 - 'ASE-ANI: For conformation filtering'
 derived_from:

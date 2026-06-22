@@ -1,5 +1,6 @@
 name: matchms
 slug: matchms
+canonical_url: https://github.com/matchms/MS2DeepScore
 version_used: 0.8.2
 evidence_spans:
 - the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms

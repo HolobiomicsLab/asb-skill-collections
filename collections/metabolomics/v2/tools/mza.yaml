@@ -1,5 +1,6 @@
 name: MZA
 slug: mza
+canonical_url: https://github.com/PNNL-m-q/mza
 evidence_spans:
 - MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
 derived_from:

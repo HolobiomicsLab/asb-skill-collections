@@ -1,5 +1,6 @@
 name: asari peaks module
 slug: asari-peaks-module
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list), [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
 derived_from:

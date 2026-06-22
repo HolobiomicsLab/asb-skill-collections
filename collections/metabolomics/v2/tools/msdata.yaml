@@ -1,5 +1,6 @@
 name: msdata
 slug: msdata
+canonical_url: https://github.com/LiesaSalzer/MobilityTransformR
 evidence_spans:
 - The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package
 derived_from:

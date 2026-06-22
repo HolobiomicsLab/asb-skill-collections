@@ -1,5 +1,6 @@
 name: RStudio
 slug: rstudio
+canonical_url: https://github.com/Fraunhofer-ITMP/alister
 evidence_spans:
 - '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
 - we recommend using RStudio to complete the installation and usage of ISFrag

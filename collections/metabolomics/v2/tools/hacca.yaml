@@ -1,5 +1,6 @@
 name: haCCA
 slug: hacca
+canonical_url: https://github.com/LittleLittleCloud/haCCA
 evidence_spans:
 - haCCA, a workflow utilizing high Correlated feature pairs combined with a modified spatial morphological alignment
 derived_from:

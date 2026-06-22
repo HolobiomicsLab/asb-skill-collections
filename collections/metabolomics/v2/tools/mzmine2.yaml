@@ -1,5 +1,6 @@
 name: MZmine2
 slug: mzmine2
+canonical_url: https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks
 evidence_spans:
 - open bioinformatic tools, such [MZmine2](http://mzmine.github.io/)
 - MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2

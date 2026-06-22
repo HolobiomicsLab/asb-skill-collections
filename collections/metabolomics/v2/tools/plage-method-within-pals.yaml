@@ -1,5 +1,6 @@
 name: PLAGE method (within PALS)
 slug: plage-method-within-pals
+canonical_url: https://github.com/glasgowcompbio/PALS
 evidence_spans:
 - decomposes activity levels in pathways via the PLAGE method
 derived_from:

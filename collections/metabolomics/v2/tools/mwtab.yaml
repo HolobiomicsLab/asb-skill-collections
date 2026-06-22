@@ -1,5 +1,6 @@
 name: mwtab
 slug: mwtab
+canonical_url: https://github.com/MoseleyBioinformaticsLab/mwtab
 evidence_spans:
 - The ``mwtab`` package is a Python library that facilitates reading and writing files in
 derived_from:

@@ -1,5 +1,6 @@
 name: ADViSELipidomics
 slug: adviselipidomics
+canonical_url: https://github.com/ShinyFabio/ADViSELipidomics
 evidence_spans:
 - ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
 - ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.

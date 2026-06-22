@@ -1,5 +1,6 @@
 name: NMRBox
 slug: nmrbox
+canonical_url: https://github.com/edisonomics/SAND
 evidence_spans:
 - latest interface to NMRBox (SAND_V7)
 derived_from:

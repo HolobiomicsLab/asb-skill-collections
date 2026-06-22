@@ -1,5 +1,6 @@
 name: Google Chrome
 slug: google-chrome
+canonical_url: https://github.com/lidawei1975/colmarvista
 evidence_spans:
 - 'For Google Chrome: 1. Right-click the Google Chrome icon and select "Properties."'
 derived_from:

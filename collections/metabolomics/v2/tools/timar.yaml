@@ -1,5 +1,6 @@
 name: timaR
 slug: timar
+canonical_url: https://github.com/luigiquiros/inventa
 evidence_spans:
 - 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'

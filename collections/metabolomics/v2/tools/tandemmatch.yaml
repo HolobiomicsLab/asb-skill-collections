@@ -1,5 +1,6 @@
 name: TandemMatch
 slug: tandemmatch
+canonical_url: https://github.com/pnnl/IonToolPack
 evidence_spans:
 - 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library formats.'
 derived_from:

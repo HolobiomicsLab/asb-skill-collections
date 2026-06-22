@@ -1,5 +1,6 @@
 name: Metanorm
 slug: metanorm
+canonical_url: https://github.com/UGent-LIMET/Metanorm
 evidence_spans:
 - Metanorm supports robust metabolomics data normalization across scales and experimental designs
 derived_from:

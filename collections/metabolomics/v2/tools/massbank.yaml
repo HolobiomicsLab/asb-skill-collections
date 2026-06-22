@@ -1,5 +1,6 @@
 name: MassBank
 slug: massbank
+canonical_url: https://github.com/daniellyz/meRgeION2
 evidence_spans:
 - search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - MassBank Library Spectra

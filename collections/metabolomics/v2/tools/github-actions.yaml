@@ -1,5 +1,6 @@
 name: GitHub Actions
 slug: github-actions
+canonical_url: https://github.com/MassBank/MassBank-data
 evidence_spans:
 - To conduct tests, please refer to section `test:` of GitHub Actions
 - GitHub Actions 'Build and Publish' workflow (distribute.yaml)

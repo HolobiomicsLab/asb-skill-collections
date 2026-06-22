@@ -1,5 +1,6 @@
 name: Snakemake
 slug: snakemake
+canonical_url: https://github.com/DasSusanta/snakemake_ccs
 evidence_spans:
 - snakemake --configfile config/config_fast.yaml --jobs 1 --dry-run -p
 - A Snakemake configuration file in YAML format is required.

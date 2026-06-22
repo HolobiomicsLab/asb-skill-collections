@@ -1,5 +1,6 @@
 name: Cox-PH
 slug: cox-ph
+canonical_url: https://github.com/lanagarmire/lilikoi2
 evidence_spans:
 - prognosis prediction, implemented by Cox-PH model
 derived_from:

@@ -1,5 +1,6 @@
 name: numpy 1.15.4
 slug: numpy-1-15-4
+canonical_url: https://github.com/wabdelmoula/massNet
 evidence_spans:
 - numpy(1.15.4)
 derived_from:

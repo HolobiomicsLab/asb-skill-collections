@@ -1,5 +1,6 @@
 name: Maven GUI
 slug: maven-gui
+canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - 'Maven GUI: Metabolomics Analysis and Visualization Engine'
 derived_from:

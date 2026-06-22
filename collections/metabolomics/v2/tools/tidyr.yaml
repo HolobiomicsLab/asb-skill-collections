@@ -1,5 +1,6 @@
 name: tidyr
 slug: tidyr
+canonical_url: https://github.com/GenomicsMachineLearning/SpaMTP
 evidence_spans:
 - required_pkgs <- c("dplyr","tidyr","readr", "stringr", "tibble", "purrr",
 - library(tidyr)

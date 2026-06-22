@@ -1,5 +1,6 @@
 name: MetaClean
 slug: metaclean
+canonical_url: https://github.com/KelseyChetnik/MetaClean
 evidence_spans:
 - MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
 - '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'

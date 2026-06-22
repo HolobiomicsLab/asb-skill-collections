@@ -1,5 +1,6 @@
 name: Latent Dirichlet Allocation (LDA)
 slug: latent-dirichlet-allocation-lda
+canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - Apply LDA to the processed spectra
 - MS2LDA uses **Latent Dirichlet Allocation (LDA)** to infer which motifs are most likely to explain the observed fragmentation patterns.

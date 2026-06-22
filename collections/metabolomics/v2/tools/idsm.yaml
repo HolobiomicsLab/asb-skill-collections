@@ -1,5 +1,6 @@
 name: IDSM
 slug: idsm
+canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
 - '[IDSM](https://idsm.elixir-czech.cz/)'

@@ -1,5 +1,6 @@
 name: Python >= 3.8.2
 slug: python-3-8-2
+canonical_url: https://github.com/zsspython/LAGF
 version_used: 3.8.2
 evidence_spans:
 - Python >= 3.8.2

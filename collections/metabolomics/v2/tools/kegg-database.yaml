@@ -1,5 +1,6 @@
 name: KEGG database
 slug: kegg-database
+canonical_url: https://github.com/b2slab/mWISE
 evidence_spans:
 - matching mass-to-charge ratio values to KEGG database
 derived_from:

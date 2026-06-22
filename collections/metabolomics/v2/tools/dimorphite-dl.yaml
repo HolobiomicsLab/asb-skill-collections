@@ -1,5 +1,6 @@
 name: Dimorphite-DL
 slug: dimorphite-dl
+canonical_url: https://github.com/DasSusanta/snakemake_ccs
 evidence_spans:
 - 'Dimorphite-DL: For ionization state determination'
 derived_from:

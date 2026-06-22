@@ -1,5 +1,6 @@
 name: psm_utils
 slug: psm-utils
+canonical_url: https://github.com/compomics/ms2rescore
 evidence_spans:
 - Accepted ProForma modification labels in :py:mod:`psm_utils`
 derived_from:

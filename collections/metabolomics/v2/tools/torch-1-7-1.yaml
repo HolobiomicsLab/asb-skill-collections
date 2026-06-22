@@ -1,5 +1,6 @@
 name: Torch 1.7.1
 slug: torch-1-7-1
+canonical_url: https://github.com/aaronma2020/MSGO
 evidence_spans:
 - 'Torch: 1.7.1'
 derived_from:

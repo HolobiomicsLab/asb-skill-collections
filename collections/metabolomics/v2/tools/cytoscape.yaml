@@ -1,5 +1,6 @@
 name: Cytoscape
 slug: cytoscape
+canonical_url: https://github.com/Karnovsky-Lab/DNEA
 evidence_spans:
 - '[Cytoscape](https://cytoscape.org/)'
 - users need to download Cytoscape from http://www.cytoscape.org/download.php

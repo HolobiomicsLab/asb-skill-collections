@@ -1,5 +1,6 @@
 name: scanpy
 slug: scanpy
+canonical_url: https://github.com/bioinfo-ibms-pumc/SMART
 evidence_spans:
 - scanpy
 derived_from:

@@ -1,5 +1,6 @@
 name: FELLA
 slug: fella
+canonical_url: https://github.com/b2slab/mWISE
 evidence_spans:
 - we will now use the sample graph provided by FELLA R package
 derived_from:

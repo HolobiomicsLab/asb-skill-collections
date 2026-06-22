@@ -1,5 +1,6 @@
 name: PyQt5
 slug: pyqt5
+canonical_url: https://github.com/Leo-Cheng-Lab/ROIAL-NMR
 version_used: 5.15.11
 evidence_spans:
 - PyQt5 5.15.11

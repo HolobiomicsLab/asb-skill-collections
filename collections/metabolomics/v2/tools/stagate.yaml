@@ -1,5 +1,6 @@
 name: STAGATE
 slug: stagate
+canonical_url: https://github.com/bioinfo-ibms-pumc/SMART
 evidence_spans:
 - STAGATE
 derived_from:

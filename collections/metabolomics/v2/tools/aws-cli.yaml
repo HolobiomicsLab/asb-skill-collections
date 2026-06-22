@@ -1,5 +1,6 @@
 name: AWS CLI
 slug: aws-cli
+canonical_url: https://github.com/meowcat/MSNovelist
 evidence_spans:
 - aws s3 cp --recursive s3://sirius-novelist/dataset-s6-202311 data
 derived_from:

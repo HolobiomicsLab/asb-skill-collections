@@ -1,5 +1,6 @@
 name: OpenMS TOPP tools
 slug: openms-topp-tools
+canonical_url: https://github.com/OpenMS/OpenMS
 evidence_spans:
 - complex workflows utilizing **OpenMS TOPP tools** with parallel execution
 derived_from:

@@ -1,5 +1,6 @@
 name: Python 3.7
 slug: python-3-7
+canonical_url: https://github.com/aaronma2020/MSGO
 evidence_spans:
 - 'Python: 3.7'
 derived_from:

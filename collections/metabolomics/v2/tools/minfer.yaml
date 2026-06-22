@@ -1,5 +1,6 @@
 name: MInfer
 slug: minfer
+canonical_url: https://github.com/cellbiomaths/MInfer
 evidence_spans:
 - MInfer is an R package designed for analyzing metabolomics data
 derived_from:

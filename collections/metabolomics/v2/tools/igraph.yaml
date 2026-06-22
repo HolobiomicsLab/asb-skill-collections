@@ -1,5 +1,6 @@
 name: igraph
 slug: igraph
+canonical_url: https://github.com/LargeMetabo/LargeMetabo
 evidence_spans:
 - integrates fgsea for fast MetSEA, igraph for topology-based metrics
 - several R packages are utilized in the background processes, including ggplot2, igraph, MASS

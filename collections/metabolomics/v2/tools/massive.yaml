@@ -1,5 +1,6 @@
 name: MassIVE
 slug: massive
+canonical_url: https://github.com/mwang87/ReDU-MS2-Documentation
 evidence_spans:
 - ReDU only interacts with MassIVE
 - data uploaded to MassIVE as a public dataset

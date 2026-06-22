@@ -1,5 +1,6 @@
 name: MIST
 slug: mist
+canonical_url: https://github.com/samgoldman97/mist
 evidence_spans:
 - and, when trained in a contrastive learning framework, enable embedding and structure annotation by database lookup.
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data

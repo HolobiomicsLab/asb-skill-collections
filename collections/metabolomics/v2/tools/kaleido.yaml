@@ -1,5 +1,6 @@
 name: Kaleido
 slug: kaleido
+canonical_url: https://github.com/pmartR/PMart_ShinyApp
 evidence_spans:
 - Remove orca in favor of Kaleido
 derived_from:

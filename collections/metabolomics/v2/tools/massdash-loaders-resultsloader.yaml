@@ -1,5 +1,6 @@
 name: massdash.loaders.ResultsLoader
 slug: massdash-loaders-resultsloader
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - ResultsLoader
 derived_from:

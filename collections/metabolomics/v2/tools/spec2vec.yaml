@@ -1,5 +1,6 @@
 name: Spec2Vec
 slug: spec2vec
+canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
 - spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda

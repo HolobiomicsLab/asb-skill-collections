@@ -1,5 +1,6 @@
 name: PALS (Pathway Activity Level Scoring)
 slug: pals-pathway-activity-level-scoring
+canonical_url: https://github.com/glasgowcompbio/PALS
 evidence_spans:
 - we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
 - we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways

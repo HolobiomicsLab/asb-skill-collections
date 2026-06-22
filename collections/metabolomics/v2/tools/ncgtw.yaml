@@ -1,5 +1,6 @@
 name: ncGTW
 slug: ncgtw
+canonical_url: https://github.com/ChiungTingWu/ncGTW
 evidence_spans:
 - Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
 derived_from:

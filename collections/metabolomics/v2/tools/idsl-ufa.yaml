@@ -1,5 +1,6 @@
 name: IDSL.UFA
 slug: idsl-ufa
+canonical_url: https://github.com/idslme/IDSL.UFA
 evidence_spans:
 - '**United Formula Annotation (UFA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me/) is a light-weight R package'
 derived_from:

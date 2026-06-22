@@ -1,5 +1,6 @@
 name: Dynaconf
 slug: dynaconf
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - Pass Dynaconf config validation
 derived_from:

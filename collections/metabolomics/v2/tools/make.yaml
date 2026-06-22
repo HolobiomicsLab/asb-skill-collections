@@ -1,5 +1,6 @@
 name: Make
 slug: make
+canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - Please make sure to have [Make](https://www.gnu.org/software/make) installed.
 - make -j4

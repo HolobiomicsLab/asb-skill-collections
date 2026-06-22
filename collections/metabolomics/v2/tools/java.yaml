@@ -1,5 +1,6 @@
 name: Java
 slug: java
+canonical_url: https://github.com/Le0nT1/CyProduct
 evidence_spans:
 - Java -jar CyProduct.jar QueryMolecule enzymeList OutputFolderPath
 - MetNet is a Java tool

@@ -1,5 +1,6 @@
 name: BasicEvaluationEngine
 slug: basicevaluationengine
+canonical_url: https://github.com/Wang-Bioinformatics-Lab/ModiFinder_base
 evidence_spans:
 - eval_engine = BasicEvaluationEngine(default_method="is_max")
 - eval_engine = BasicEvaluationEngine(default_method="average_distance")

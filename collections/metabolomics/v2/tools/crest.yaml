@@ -1,5 +1,6 @@
 name: CREST
 slug: crest
+canonical_url: https://github.com/grimme-lab/QCxMS2
 version_used: 3.0.2
 evidence_spans:
 - '**CREST** (version >= 3.0.2)'

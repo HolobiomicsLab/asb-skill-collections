@@ -1,5 +1,6 @@
 name: Q-Exactive orbitrap
 slug: q-exactive-orbitrap
+canonical_url: https://github.com/GarrettLab-UF/LipidMatch
 evidence_spans:
 - tested and validated using Q-Exactive orbitrap UHPLC-HRMS/MS data
 derived_from:

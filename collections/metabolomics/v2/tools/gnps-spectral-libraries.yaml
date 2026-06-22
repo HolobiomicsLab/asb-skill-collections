@@ -1,5 +1,6 @@
 name: GNPS Spectral Libraries
 slug: gnps-spectral-libraries
+canonical_url: https://github.com/mwang87/MetabolomicsSpectrumResolver
 evidence_spans:
 - GNPS Spectral Libraries
 derived_from:

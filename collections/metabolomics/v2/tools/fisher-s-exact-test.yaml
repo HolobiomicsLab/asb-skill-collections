@@ -1,5 +1,6 @@
 name: Fisher's exact test
 slug: fisher-s-exact-test
+canonical_url: https://github.com/biodatalab/enrichmet
 evidence_spans:
 - enrichmet performs pathway enrichment analysis using Fisher's exact test
 derived_from:

@@ -1,5 +1,6 @@
 name: mpactr
 slug: mpactr
+canonical_url: https://github.com/BalunasLab/mpact
 evidence_spans:
 - library(mpactr)
 - The goal of mpactr is to correct for errors that occur during the pre-processing of raw tandem MS/MS data.

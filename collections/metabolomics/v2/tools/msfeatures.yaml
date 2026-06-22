@@ -1,5 +1,6 @@
 name: MsFeatures
 slug: msfeatures
+canonical_url: https://github.com/sneumann/xcms
 evidence_spans:
 - General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
 - General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented

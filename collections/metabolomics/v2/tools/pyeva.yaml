@@ -1,5 +1,6 @@
 name: pyEVA
 slug: pyeva
+canonical_url: https://github.com/HuanLab-backup/EVA
 evidence_spans:
 - EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems. Please check out pyEVA
 derived_from:

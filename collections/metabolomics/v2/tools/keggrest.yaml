@@ -1,5 +1,6 @@
 name: KEGGREST
 slug: keggrest
+canonical_url: https://github.com/biodatalab/enrichmet
 evidence_spans:
 - pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST package
 - query the KEGG database [59] using the R package KEGGREST [60]

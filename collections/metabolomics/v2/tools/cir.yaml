@@ -1,5 +1,6 @@
 name: CIR
 slug: cir
+canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
 - 'fetched from the following services: [CIR](https://cactus.nci.nih.gov/chemical/structure_documentation)'

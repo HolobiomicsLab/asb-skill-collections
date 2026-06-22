@@ -1,5 +1,6 @@
 name: trove4j
 slug: trove4j
+canonical_url: https://github.com/rformassspectrometry/Spectra
 version_used: 3.0.3
 evidence_spans:
 - trove4j-3.0.3

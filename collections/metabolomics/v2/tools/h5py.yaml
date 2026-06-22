@@ -1,5 +1,6 @@
 name: h5py
 slug: h5py
+canonical_url: https://github.com/PNNL-m-q/mza
 version_used: 2.7.1
 evidence_spans:
 - h5py(2.7.1)

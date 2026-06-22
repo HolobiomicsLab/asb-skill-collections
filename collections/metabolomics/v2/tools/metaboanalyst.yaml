@@ -1,5 +1,6 @@
 name: MetaboAnalyst
 slug: metaboanalyst
+canonical_url: https://github.com/13479776/statTarget
 evidence_spans:
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29]
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]

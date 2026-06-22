@@ -1,5 +1,6 @@
 name: metaboprep
 slug: metaboprep
+canonical_url: https://github.com/MRCIEU/metaboprep
 evidence_spans:
 - library(metaboprep)
 - quality_control(m, source_layer = "input", sample_missingness = 0.2, feature_missingness = 0.2)

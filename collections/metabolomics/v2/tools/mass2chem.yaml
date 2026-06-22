@@ -1,5 +1,6 @@
 name: mass2chem
 slug: mass2chem
+canonical_url: https://github.com/shuzhao-li-lab/khipu
 evidence_spans:
 - Khipu uses our package mass2chem for search functions
 derived_from:

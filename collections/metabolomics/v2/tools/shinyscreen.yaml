@@ -1,5 +1,6 @@
 name: shinyscreen
 slug: shinyscreen
+canonical_url: https://gitlab.com/uniluxembourg/lcsb/eci/shinyscreen.git
 evidence_spans:
 - Shinyscreen is a Shiny application for visualizing and analyzing high resolution mass spectrometry data.
 derived_from:

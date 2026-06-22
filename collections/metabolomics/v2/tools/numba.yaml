@@ -1,5 +1,6 @@
 name: Numba
 slug: numba
+canonical_url: https://github.com/sword-nan/SpecEmbedding
 evidence_spans:
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library

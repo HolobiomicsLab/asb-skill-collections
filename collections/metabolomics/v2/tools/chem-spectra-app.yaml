@@ -1,5 +1,6 @@
 name: chem-spectra-app
 slug: chem-spectra-app
+canonical_url: https://github.com/ComPlat/chem-spectra-app
 evidence_spans:
 - git clone https://github.com/ComPlat/chem-spectra-app.git
 derived_from:

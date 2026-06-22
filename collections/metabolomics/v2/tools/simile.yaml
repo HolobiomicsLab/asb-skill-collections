@@ -1,5 +1,6 @@
 name: SIMILE
 slug: simile
+canonical_url: https://github.com/biorack/simile
 evidence_spans:
 - SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
 derived_from:

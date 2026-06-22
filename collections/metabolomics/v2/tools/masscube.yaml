@@ -1,5 +1,6 @@
 name: masscube
 slug: masscube
+canonical_url: https://github.com/huaxuyu/masscube
 evidence_spans:
 - masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
 - masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing

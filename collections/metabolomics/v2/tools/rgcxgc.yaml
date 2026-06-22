@@ -1,5 +1,6 @@
 name: RGCxGC
 slug: rgcxgc
+canonical_url: https://github.com/DanielQuiroz97/RGCxGC
 evidence_spans:
 - The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
 derived_from:

@@ -1,5 +1,6 @@
 name: doParallel
 slug: doparallel
+canonical_url: https://github.com/antonvsdata/notame
 evidence_spans:
 - Load the libraries (doParallel is used for parallel processing)
 derived_from:

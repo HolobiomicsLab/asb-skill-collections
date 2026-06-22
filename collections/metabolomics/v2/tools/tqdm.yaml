@@ -1,5 +1,6 @@
 name: tqdm
 slug: tqdm
+canonical_url: https://github.com/01dadada/RT-Transformer
 version_used: 4.45.0
 evidence_spans:
 - tqdm==4.45.0

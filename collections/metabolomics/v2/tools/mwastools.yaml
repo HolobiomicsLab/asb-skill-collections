@@ -1,5 +1,6 @@
 name: MWASTools
 slug: mwastools
+canonical_url: https://github.com/AndreaRMICL/MWASTools
 evidence_spans:
 - Here, we present a package to perform MWAS using univariate hypothesis testing
 - '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'

@@ -1,5 +1,6 @@
 name: LOWESS
 slug: lowess
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - Perform a LOWESS (Locally Weighted Scatterplot Smoothing) regression to obtain a function to describe the relationship of the RT values
 derived_from:

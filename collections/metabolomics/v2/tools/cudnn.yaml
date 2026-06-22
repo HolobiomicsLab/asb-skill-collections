@@ -1,5 +1,6 @@
 name: cuDNN
 slug: cudnn
+canonical_url: https://github.com/chensaian/TransG-Net
 version_used: '7.0'
 evidence_spans:
 - cudnn >= 7.0

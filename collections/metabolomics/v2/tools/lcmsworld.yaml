@@ -1,5 +1,6 @@
 name: lcmsWorld
 slug: lcmsworld
+canonical_url: https://github.com/PGB-LIV/lcmsWorld
 evidence_spans:
 - lcmsWorld is a 3d viewer for LC-MS data
 derived_from:

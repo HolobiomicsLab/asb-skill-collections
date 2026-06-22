@@ -1,5 +1,6 @@
 name: MaxQuant
 slug: maxquant
+canonical_url: https://github.com/fgcz/rawrr
 evidence_spans:
 - In the academic environment, MaxQuant and Skyline are by far the most popular ones.
 - In the academic environment, [MaxQuant](https://maxquant.org/)[@Cox2008] and [Skyline] ... are by far the most popular ones.

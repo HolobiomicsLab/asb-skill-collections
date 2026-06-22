@@ -1,5 +1,6 @@
 name: trimgalore
 slug: trimgalore
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - Genes, miRNA, isoforms | Quality control | FastQC, trimgalore
 derived_from:

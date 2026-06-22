@@ -1,5 +1,6 @@
 name: R (>=)
 slug: r
+canonical_url: https://github.com/LargeMetabo/LargeMetabo
 evidence_spans:
 - Dependent on R (>= 3.5.0)
 derived_from:

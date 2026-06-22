@@ -1,5 +1,6 @@
 name: MzMLDataLoader
 slug: mzmldataloader
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - MzMLDataLoader
 derived_from:

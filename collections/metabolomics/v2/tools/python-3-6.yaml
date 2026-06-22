@@ -1,5 +1,6 @@
 name: Python 3.6
 slug: python-3-6
+canonical_url: https://github.com/Dingxian666/Norm-ISWSVR
 version_used: '3.6'
 evidence_spans:
 - '![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)'

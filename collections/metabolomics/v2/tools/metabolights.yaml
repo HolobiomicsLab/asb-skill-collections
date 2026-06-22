@@ -1,5 +1,6 @@
 name: MetaboLights
 slug: metabolights
+canonical_url: https://github.com/mwang87/MetabolomicsSpectrumResolver
 evidence_spans:
 - MetaboLights Dataset Spectra
 derived_from:

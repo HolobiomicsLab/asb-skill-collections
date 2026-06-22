@@ -1,5 +1,6 @@
 name: NCBI E-utilities
 slug: ncbi-e-utilities
+canonical_url: https://github.com/mibig-secmet/mibig-json
 evidence_spans:
 - NCBI's GenBank/RefSeq databases
 derived_from:

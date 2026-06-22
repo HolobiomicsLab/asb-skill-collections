@@ -1,5 +1,6 @@
 name: SDF file parser / molecular structure library
 slug: sdf-file-parser-molecular-structure-library
+canonical_url: https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git
 evidence_spans:
 - SDF format
 derived_from:

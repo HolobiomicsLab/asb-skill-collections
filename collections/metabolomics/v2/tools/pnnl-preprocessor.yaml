@@ -1,5 +1,6 @@
 name: PNNL PreProcessor
 slug: pnnl-preprocessor
+canonical_url: https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor
 evidence_spans:
 - we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
 - we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS

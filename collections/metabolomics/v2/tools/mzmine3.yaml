@@ -1,5 +1,6 @@
 name: MZmine3
 slug: mzmine3
+canonical_url: https://github.com/Functional-Metabolomics-Lab/FBMN-STATS
 evidence_spans:
 - MASSIVE Datasets from which all the files were selected for MZmine3
 - -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares

@@ -1,5 +1,6 @@
 name: SpectralEntropy
 slug: spectralentropy
+canonical_url: https://github.com/YuanyueLi/SpectralEntropy
 evidence_spans:
 - This repository contains the original source code for the paper
 derived_from:

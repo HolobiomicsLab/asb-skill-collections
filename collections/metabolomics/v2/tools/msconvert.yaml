@@ -1,5 +1,6 @@
 name: msconvert
 slug: msconvert
+canonical_url: https://github.com/AdrianHaun/AriumMS
 evidence_spans:
 - For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed with the ProteoWizard Project
 - AutoTuner is designed to work directly with raw mass spectral data that has been processed by using MSconvert.

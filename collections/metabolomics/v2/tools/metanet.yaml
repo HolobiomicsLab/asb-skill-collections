@@ -1,5 +1,6 @@
 name: MetaNet
 slug: metanet
+canonical_url: https://github.com/Asa12138/MetaNet
 evidence_spans:
 - MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
 - MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers

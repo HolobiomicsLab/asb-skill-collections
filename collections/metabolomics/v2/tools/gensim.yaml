@@ -1,5 +1,6 @@
 name: gensim
 slug: gensim
+canonical_url: https://github.com/Qiong-Yang/FastEI
 evidence_spans:
 - A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
 - conda install -c conda-forge gensim

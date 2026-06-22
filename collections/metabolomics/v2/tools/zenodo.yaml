@@ -1,5 +1,6 @@
 name: Zenodo
 slug: zenodo
+canonical_url: https://github.com/Chen-micslab/QCCAssisted4DSterol
 version_used: '10.5281'
 evidence_spans:
 - Zenodo release [![DOI](https://zenodo.org/badge/125496536.svg)](https://zenodo.org/badge/latestdoi/125496536)

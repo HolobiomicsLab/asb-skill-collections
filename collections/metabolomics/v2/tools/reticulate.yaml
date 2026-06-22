@@ -1,5 +1,6 @@
 name: reticulate
 slug: reticulate
+canonical_url: https://github.com/slfan2013/SERDA
 version_used: '1.19'
 evidence_spans:
 - packageVersion("reticulate") [1] ‘1.19’

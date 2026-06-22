@@ -1,5 +1,6 @@
 name: trelliscope
 slug: trelliscope
+canonical_url: https://github.com/pmartR/MODE_ShinyApp
 evidence_spans:
 - Create shareable and interactive trelliscope displays for visualizing omics data
 derived_from:

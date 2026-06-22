@@ -1,5 +1,6 @@
 name: sva
 slug: sva
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - ComBat(parametric and non-parametric)-model [PMID:16632515] from sva package [PMID:22257669]
 - 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva'

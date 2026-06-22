@@ -1,5 +1,6 @@
 name: nplinker
 slug: nplinker
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'

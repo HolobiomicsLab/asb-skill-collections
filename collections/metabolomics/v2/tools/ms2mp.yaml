@@ -1,5 +1,6 @@
 name: MS2MP
 slug: ms2mp
+canonical_url: https://github.com/ucasaccn/MS2MP
 evidence_spans:
 - MS2MP is a novel deep learning-based framework for KEGG pathway prediction directly from untargeted tandem mass spectrometry(MS2)
 derived_from:

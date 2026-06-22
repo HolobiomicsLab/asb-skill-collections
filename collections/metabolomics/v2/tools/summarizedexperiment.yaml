@@ -1,5 +1,6 @@
 name: SummarizedExperiment
 slug: summarizedexperiment
+canonical_url: https://github.com/SydneyBioX/hRUV
 evidence_spans:
 - library(SummarizedExperiment)... The data is already formatted in to a `SummarizedExperiment` object
 - The toolbox builds upon the bioconductor package SummarizedExperiment (SE)

@@ -1,5 +1,6 @@
 name: ComplexHeatmap
 slug: complexheatmap
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - The function `h_map()` provides heatmaps based on package ComplexHeatmap
 - 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'

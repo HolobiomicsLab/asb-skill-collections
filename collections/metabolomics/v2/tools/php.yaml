@@ -1,5 +1,6 @@
 name: PHP
 slug: php
+canonical_url: https://github.com/privrja/MassSpecBlocks
 evidence_spans:
 - Backend is written in PHP with Symfony framework
 derived_from:

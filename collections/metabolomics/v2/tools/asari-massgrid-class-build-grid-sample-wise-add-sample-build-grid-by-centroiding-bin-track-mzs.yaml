@@ -1,5 +1,6 @@
 name: asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding, bin_track_mzs)
 slug: asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - See [MassGrid.build_grid_sample_wise](MassGrid.build_grid_sample_wise), [MassGrid.add_sample](MassGrid.add_sample). See [MassGrid.build_grid_by_centroiding](MassGrid.build_grid_by_centroiding),
 derived_from:

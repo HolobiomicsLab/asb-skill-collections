@@ -1,5 +1,6 @@
 name: QUICK
 slug: quick
+canonical_url: https://github.com/DasSusanta/snakemake_ccs
 evidence_spans:
 - 'QUICK: For quantum calculations'
 derived_from:

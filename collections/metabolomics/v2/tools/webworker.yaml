@@ -1,5 +1,6 @@
 name: WebWorker
 slug: webworker
+canonical_url: https://github.com/lidawei1975/colmarvista
 evidence_spans:
 - This program uses WebWorker and WebAssembly, which cannot be loaded automatically
 derived_from:

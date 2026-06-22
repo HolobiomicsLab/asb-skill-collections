@@ -1,5 +1,6 @@
 name: MultiAssayExperiment
 slug: multiassayexperiment
+canonical_url: https://github.com/andreasmock/MetaboDiff
 evidence_spans:
 - The function `create_mae` merges all objects into a so called `MultiAssayExperiment` object
 - The function `create_mae` merges all objects into a so called `MultiAssayExperiment` object to simplify all downstream analysis.

@@ -1,5 +1,6 @@
 name: pacman
 slug: pacman
+canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - pacman -S --needed --noconfirm git
 derived_from:

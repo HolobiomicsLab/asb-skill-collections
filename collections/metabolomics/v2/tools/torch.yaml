@@ -1,5 +1,6 @@
 name: torch
 slug: torch
+canonical_url: https://github.com/01dadada/RT-Transformer
 version_used: 1.4.0
 evidence_spans:
 - torch >= 1.4.0

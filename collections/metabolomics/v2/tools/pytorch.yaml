@@ -1,5 +1,6 @@
 name: PyTorch
 slug: pytorch
+canonical_url: https://github.com/Chen-micslab/QCCAssisted4DSterol
 version_used: '2.6'
 evidence_spans:
 - PyTorch must be installed separately. Check the `official PyTorch website

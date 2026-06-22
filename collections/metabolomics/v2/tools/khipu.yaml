@@ -1,5 +1,6 @@
 name: khipu
 slug: khipu
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
 - freely available on GitHub (https://github.com/shuzhao-li/khipu) under a BSD 3-Clause License

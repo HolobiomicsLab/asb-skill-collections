@@ -1,5 +1,6 @@
 name: dures
 slug: dures
+canonical_url: https://github.com/BiosystemEngineeringLab-IITB/dures
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
 derived_from:

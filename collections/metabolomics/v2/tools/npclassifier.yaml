@@ -1,5 +1,6 @@
 name: NPClassifier
 slug: npclassifier
+canonical_url: https://github.com/zquinlan/concise
 evidence_spans:
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
 derived_from:

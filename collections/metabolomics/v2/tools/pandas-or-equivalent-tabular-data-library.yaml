@@ -1,5 +1,6 @@
 name: pandas or equivalent tabular data library
 slug: pandas-or-equivalent-tabular-data-library
+canonical_url: https://github.com/mibig-secmet/mibig-json
 evidence_spans:
 - entry status is now tracked via the `cluster.status` field
 derived_from:

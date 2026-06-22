@@ -1,5 +1,6 @@
 name: drugbank_extraction.py
 slug: drugbank-extraction-py
+canonical_url: https://github.com/corinnabrungs/msn_tree_library
 evidence_spans:
 - run `drugbank_extraction.py` on that file
 derived_from:

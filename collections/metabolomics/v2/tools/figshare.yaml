@@ -1,5 +1,6 @@
 name: figshare
 slug: figshare
+canonical_url: https://github.com/sword-nan/SpecEmbedding
 evidence_spans:
 - All cleaned data, along with the preprocessing scripts and 10-fold query/reference splits used for evaluation, are available on [figshare]
 derived_from:

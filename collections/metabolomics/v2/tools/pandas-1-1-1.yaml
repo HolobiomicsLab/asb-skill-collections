@@ -1,5 +1,6 @@
 name: Pandas 1.1.1
 slug: pandas-1-1-1
+canonical_url: https://github.com/wabdelmoula/massNet
 evidence_spans:
 - Pandas(1.1.1.)
 derived_from:

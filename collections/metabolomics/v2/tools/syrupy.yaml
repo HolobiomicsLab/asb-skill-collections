@@ -1,5 +1,6 @@
 name: Syrupy
 slug: syrupy
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - Syrupy is used to compare output to previous expected output states
 derived_from:

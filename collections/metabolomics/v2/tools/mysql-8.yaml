@@ -1,5 +1,6 @@
 name: MySQL 8
 slug: mysql-8
+canonical_url: https://github.com/privrja/MassSpecBlocks
 evidence_spans:
 - Application is developed for Mysql 8 /MariaDB 10
 derived_from:

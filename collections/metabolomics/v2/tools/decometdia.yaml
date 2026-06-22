@@ -1,5 +1,6 @@
 name: DecoMetDIA
 slug: decometdia
+canonical_url: https://github.com/ZhuMSLab/DecoMetDIA
 evidence_spans:
 - DecoMetDIA was developed to process SWATH-MS based data for metabolomics.
 derived_from:

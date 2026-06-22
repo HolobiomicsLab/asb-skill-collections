@@ -1,5 +1,6 @@
 name: Visual Studio Code
 slug: visual-studio-code
+canonical_url: https://github.com/SysMedOs/LipidLynxX
 evidence_spans:
 - This project can be coded in Visual Studio Code (VSCode)
 - JSON configurations are formatted by Visual Studio Code / PyCharm editor

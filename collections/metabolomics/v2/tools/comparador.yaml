@@ -1,5 +1,6 @@
 name: Comparador
 slug: comparador
+canonical_url: https://github.com/pnnl/IonToolPack
 evidence_spans:
 - 'Comparador: Tool to compare lists of features (CSV files) from different acquisition methods or processing software'
 derived_from:

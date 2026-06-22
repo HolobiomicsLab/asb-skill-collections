@@ -1,5 +1,6 @@
 name: mspack
 slug: mspack
+canonical_url: https://github.com/fhanau/mspack
 evidence_spans:
 - mspack is a C++ program for lossless and lossy mass spectrometry data compression
 derived_from:

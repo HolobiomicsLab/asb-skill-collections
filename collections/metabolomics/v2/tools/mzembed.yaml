@@ -1,5 +1,6 @@
 name: mzEmbed
 slug: mzembed
+canonical_url: https://github.com/ReviveMed/mzEmbed
 evidence_spans:
 - mzEmbed, a framework for developing pre-trained generative models and fine-tuning them for specific tasks for untargeted metabolomics datasets
 derived_from:

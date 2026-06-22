@@ -1,5 +1,6 @@
 name: NumPy
 slug: numpy
+canonical_url: https://github.com/FangYuan717/ROASMI
 version_used: 1.22.4
 evidence_spans:
 - Spec2Vec was optimised by making extensive use of Numpy [24]

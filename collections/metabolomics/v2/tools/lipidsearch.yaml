@@ -1,5 +1,6 @@
 name: LipidSearch
 slug: lipidsearch
+canonical_url: https://github.com/ShinyFabio/ADViSELipidomics
 evidence_spans:
 - outputs from LipidSearch and LIQUID for lipid identification and quantification
 derived_from:

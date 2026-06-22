@@ -1,5 +1,6 @@
 name: AVIR.R
 slug: avir-r
+canonical_url: https://github.com/HuanLab/AVIR
 evidence_spans:
 - AVIR.R is a program developed to recognize computational variation among metabolic features in samples
 derived_from:

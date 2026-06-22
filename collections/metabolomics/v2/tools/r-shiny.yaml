@@ -1,5 +1,6 @@
 name: R Shiny
 slug: r-shiny
+canonical_url: https://github.com/Lab-XUE/EISA-EXPOSOME
 evidence_spans:
 - We provide a Rshiny program for EISA-EXPOSOME
 - We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown below

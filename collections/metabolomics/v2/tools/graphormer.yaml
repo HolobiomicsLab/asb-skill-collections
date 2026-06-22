@@ -1,5 +1,6 @@
 name: Graphormer
 slug: graphormer
+canonical_url: https://github.com/HopkinsLaboratory/Graphormer-RT
 evidence_spans:
 - Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
 derived_from:

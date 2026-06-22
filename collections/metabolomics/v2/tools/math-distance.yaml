@@ -1,5 +1,6 @@
 name: math_distance
 slug: math-distance
+canonical_url: https://github.com/YuanyueLi/SpectralEntropy
 evidence_spans:
 - '.. automodule:: math_distance :members:'
 derived_from:

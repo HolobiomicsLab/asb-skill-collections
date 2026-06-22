@@ -1,5 +1,6 @@
 name: MSIGen
 slug: msigen
+canonical_url: https://github.com/LabLaskin/MSIGen
 evidence_spans:
 - MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
 - from MSIGen import msigen

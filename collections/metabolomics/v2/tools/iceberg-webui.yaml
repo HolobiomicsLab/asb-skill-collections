@@ -1,5 +1,6 @@
 name: ICEBERG WebUI
 slug: iceberg-webui
+canonical_url: https://github.com/samgoldman97/ms-pred
 evidence_spans:
 - You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
 derived_from:

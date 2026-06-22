@@ -1,5 +1,6 @@
 name: MS-FINDER
 slug: ms-finder
+canonical_url: https://github.com/eMetaboHUB/MS-CleanR
 evidence_spans:
 - all selected features are exported to MS-FINDER program for in silico-based annotation using hydrogen rearrangement rules (HRR) scoring system
 derived_from:

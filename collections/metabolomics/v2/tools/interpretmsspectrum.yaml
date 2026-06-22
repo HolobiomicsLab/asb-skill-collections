@@ -1,5 +1,6 @@
 name: InterpretMSSpectrum
 slug: interpretmsspectrum
+canonical_url: https://github.com/cbroeckl/RAMClustR
 evidence_spans:
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 derived_from:

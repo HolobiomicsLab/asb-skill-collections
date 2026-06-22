@@ -1,5 +1,6 @@
 name: randomForest
 slug: randomforest
+canonical_url: https://github.com/connor-reid-tiffany/Omu
 evidence_spans:
 - Omu has a function, ```random_forest```, which is a wrapper built around the function ```randomForest``` from the R package randomForest
 derived_from:

@@ -1,5 +1,6 @@
 name: MsDataHub
 slug: msdatahub
+canonical_url: https://github.com/sneumann/xcms
 evidence_spans:
 - library(MsDataHub)
 derived_from:

@@ -1,5 +1,6 @@
 name: Google Colaboratory
 slug: google-colaboratory
+canonical_url: https://github.com/facundof2016/CCSP2.0
 evidence_spans:
 - a Google Colaboratory Jupyter notebook that is well suited for beginners
 derived_from:

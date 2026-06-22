@@ -1,5 +1,6 @@
 name: BioTransformerAPI
 slug: biotransformerapi
+canonical_url: https://github.com/Le0nT1/CyProduct
 evidence_spans:
 - there is a class called BioTransformerAPI in the jar file
 derived_from:

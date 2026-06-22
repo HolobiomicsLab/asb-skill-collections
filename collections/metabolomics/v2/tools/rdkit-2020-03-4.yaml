@@ -1,5 +1,6 @@
 name: RDKit 2020.03.4
 slug: rdkit-2020-03-4
+canonical_url: https://github.com/chensaian/TransG-Net
 evidence_spans:
 - RDKit == 2020.03.4
 derived_from:

@@ -1,5 +1,6 @@
 name: rdkit-pypi
 slug: rdkit-pypi
+canonical_url: https://github.com/01dadada/RT-Transformer
 evidence_spans:
 - rdkit-pypi
 - '- rdkit-pypi'

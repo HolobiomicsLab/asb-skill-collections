@@ -1,5 +1,6 @@
 name: LIPID MAPS
 slug: lipid-maps
+canonical_url: https://github.com/ShinyFabio/ADViSELipidomics
 evidence_spans:
 - parsing lipid species (using LIPID MAPS classification)
 derived_from:

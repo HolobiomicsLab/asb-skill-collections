@@ -1,5 +1,6 @@
 name: msentropy
 slug: msentropy
+canonical_url: https://github.com/LeaveMeNotTonight/CMDN
 evidence_spans:
 - msentropy
 - we provide a Python implementation of the algorithm in the `MSEntropy` repository

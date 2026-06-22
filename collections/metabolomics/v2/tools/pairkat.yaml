@@ -1,5 +1,6 @@
 name: PaIRKAT
 slug: pairkat
+canonical_url: https://github.com/CharlieCarpenter/PaIRKAT
 evidence_spans:
 - github.com/CharlieCarpenter/PaIRKAT
 derived_from:

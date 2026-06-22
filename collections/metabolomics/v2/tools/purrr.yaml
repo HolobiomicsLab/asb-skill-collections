@@ -1,5 +1,6 @@
 name: purrr
 slug: purrr
+canonical_url: https://github.com/kilgain/MassSpec
 evidence_spans:
 - required_pkgs <- c("dplyr","tidyr","readr", "stringr", "tibble", "purrr",
 derived_from:

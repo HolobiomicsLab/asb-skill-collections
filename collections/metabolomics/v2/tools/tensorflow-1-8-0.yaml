@@ -1,5 +1,6 @@
 name: Tensorflow 1.8.0
 slug: tensorflow-1-8-0
+canonical_url: https://github.com/wabdelmoula/massNet
 evidence_spans:
 - Tensorflow(1.8.0)
 derived_from:

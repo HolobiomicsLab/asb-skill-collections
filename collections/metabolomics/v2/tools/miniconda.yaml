@@ -1,5 +1,6 @@
 name: Miniconda
 slug: miniconda
+canonical_url: https://github.com/LabLaskin/MSIGen
 evidence_spans:
 - you can instead download Miniconda from https://www.anaconda.com/download/success
 derived_from:

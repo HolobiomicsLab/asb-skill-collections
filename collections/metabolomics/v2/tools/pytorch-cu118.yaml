@@ -1,5 +1,6 @@
 name: PyTorch+cu118
 slug: pytorch-cu118
+canonical_url: https://github.com/yfWang01/FlavorFormer
 evidence_spans:
 - Python 3.13.2 and Pytorch (version 2.7.0+cu118)
 derived_from:

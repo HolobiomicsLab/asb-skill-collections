@@ -1,5 +1,6 @@
 name: Python (numpy, scipy.stats, pandas, matplotlib, seaborn)
 slug: python-numpy-scipy-stats-pandas-matplotlib-seaborn
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
 derived_from:

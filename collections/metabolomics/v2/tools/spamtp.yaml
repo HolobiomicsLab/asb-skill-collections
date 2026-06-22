@@ -1,5 +1,6 @@
 name: SpaMTP
 slug: spamtp
+canonical_url: https://github.com/GenomicsMachineLearning/SpaMTP
 evidence_spans:
 - Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
 - Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")

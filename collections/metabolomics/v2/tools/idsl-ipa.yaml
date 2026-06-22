@@ -1,5 +1,6 @@
 name: IDSL.IPA
 slug: idsl-ipa
+canonical_url: https://github.com/idslme/IDSL.IPA
 evidence_spans:
 - '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
 - annotate peaklists from the IDSL.IPA package with molecular formula

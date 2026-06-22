@@ -1,5 +1,6 @@
 name: Cardinal
 slug: cardinal
+canonical_url: https://github.com/GenomicsMachineLearning/SpaMTP
 version_used: '3.6'
 evidence_spans:
 - library(Cardinal)

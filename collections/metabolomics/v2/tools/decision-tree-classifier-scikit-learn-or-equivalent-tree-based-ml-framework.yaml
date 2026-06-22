@@ -1,5 +1,6 @@
 name: Decision tree classifier (scikit-learn or equivalent tree-based ML framework)
 slug: decision-tree-classifier-scikit-learn-or-equivalent-tree-based-ml-framework
+canonical_url: https://github.com/biorack/chemecho
 evidence_spans:
 - Using ChemEcho vectors, we can train decision trees which are able to be directly converted to MassQL
 derived_from:

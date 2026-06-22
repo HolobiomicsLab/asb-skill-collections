@@ -1,5 +1,6 @@
 name: GNPS
 slug: gnps
+canonical_url: https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks
 evidence_spans:
 - the GNPS web-platform (http://gnps.ucsd.edu)
 - Currently GNPS has stopped supplying classyfire ontology information for spectral library matches

@@ -1,5 +1,6 @@
 name: qmake
 slug: qmake
+canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - qmake -r build.pro
 derived_from:

@@ -1,5 +1,6 @@
 name: h5py 2.7.1
 slug: h5py-2-7-1
+canonical_url: https://github.com/wabdelmoula/massNet
 evidence_spans:
 - h5py(2.7.1)
 derived_from:

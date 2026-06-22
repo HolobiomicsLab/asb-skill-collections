@@ -1,5 +1,6 @@
 name: NumPy or SciPy
 slug: numpy-or-scipy
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - follows the hypergeometric distribution as previously stated
 derived_from:

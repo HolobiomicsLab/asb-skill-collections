@@ -1,5 +1,6 @@
 name: chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
 slug: chambm-pwiz-skyline-i-agree-to-the-vendor-licenses
+canonical_url: https://github.com/VIU-Metabolomics/imzML_Writer
 evidence_spans:
 - docker pull chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
 derived_from:

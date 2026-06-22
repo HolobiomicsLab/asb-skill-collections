@@ -1,5 +1,6 @@
 name: IsoformSwitchAnalyzer
 slug: isoformswitchanalyzer
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - Isoforms | Genome wide isoform analysis | IsoformSwitchAnalyzer
 derived_from:

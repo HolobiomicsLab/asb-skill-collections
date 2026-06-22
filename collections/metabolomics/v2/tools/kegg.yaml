@@ -1,5 +1,6 @@
 name: KEGG
 slug: kegg
+canonical_url: https://github.com/biodatalab/enrichmet
 evidence_spans:
 - curated KEGG data for enrichment using Fisher's Exact Test
 - their metabolic data are retrieved from KEGG and the corresponding networks of metabolic functions are built

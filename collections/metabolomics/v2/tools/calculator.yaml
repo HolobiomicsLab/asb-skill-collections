@@ -1,5 +1,6 @@
 name: Calculator
 slug: calculator
+canonical_url: https://github.com/djdt/pewpew
 evidence_spans:
 - The built in `Calculator` can perform simple calculations on image data by entering the desired formula into the `Formula` text box
 derived_from:

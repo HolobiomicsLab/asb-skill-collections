@@ -1,5 +1,6 @@
 name: missForest
 slug: missforest
+canonical_url: https://github.com/antonvsdata/notame
 evidence_spans:
 - The implementation we use (from the missForest package) can be parallelized
 derived_from:

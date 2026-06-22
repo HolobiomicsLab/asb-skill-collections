@@ -1,5 +1,6 @@
 name: imzML Writer
 slug: imzml-writer
+canonical_url: https://github.com/VIU-Metabolomics/imzML_Writer
 evidence_spans:
 - iw_utils.RAW_to_mzML(raw_data_path)
 - 'imzML Writer is available as: (1) A distributable package on pypi (for CLI, stable GUI, `pip install imzML-Writer`)'

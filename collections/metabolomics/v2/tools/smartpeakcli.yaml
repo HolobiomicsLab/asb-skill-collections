@@ -1,5 +1,6 @@
 name: SmartPeakCLI
 slug: smartpeakcli
+canonical_url: https://github.com/AutoFlowResearch/SmartPeak
 evidence_spans:
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application

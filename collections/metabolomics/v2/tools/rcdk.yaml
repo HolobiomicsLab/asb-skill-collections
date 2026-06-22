@@ -1,5 +1,6 @@
 name: rcdk
 slug: rcdk
+canonical_url: https://github.com/michaelwitting/RepoRT
 evidence_spans:
 - molecular fingerprints and chemical descriptors are calculated using rcdk
 derived_from:

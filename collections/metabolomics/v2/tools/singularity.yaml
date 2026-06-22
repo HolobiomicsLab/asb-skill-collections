@@ -1,5 +1,6 @@
 name: Singularity
 slug: singularity
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - 'Build singularity image on job node. Freaks out on login node: ``` SCRATCH_PATH=/cluster/scratch/$(id'
 - Build singularity image on job node

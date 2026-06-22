@@ -1,5 +1,6 @@
 name: spectral_denoising
 slug: spectral-denoising
+canonical_url: https://github.com/FanzhouKong/spectral_denoising
 evidence_spans:
 - import spectral_denoising as sd
 derived_from:

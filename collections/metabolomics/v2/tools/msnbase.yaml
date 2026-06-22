@@ -1,5 +1,6 @@
 name: MSnbase
 slug: msnbase
+canonical_url: https://github.com/LiesaSalzer/MobilityTransformR
 evidence_spans:
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MSnbase")`
 - extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package

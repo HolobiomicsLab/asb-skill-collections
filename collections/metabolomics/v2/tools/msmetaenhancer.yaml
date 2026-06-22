@@ -1,5 +1,6 @@
 name: MSMetaEnhancer
 slug: msmetaenhancer
+canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - MSMetaEnhancer is a tool used for `.msp` files annotation
 - 'Converter Builder: Automatically discovers and instantiates available converters'

@@ -1,5 +1,6 @@
 name: MSFragger
 slug: msfragger
+canonical_url: https://github.com/laurenfields/MSIght
 evidence_spans:
 - '.. automodule:: MSIght.refactor_fragger_process'
 derived_from:

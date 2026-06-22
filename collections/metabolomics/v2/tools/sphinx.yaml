@@ -1,5 +1,6 @@
 name: Sphinx
 slug: sphinx
+canonical_url: https://github.com/pluskal-lab/DreaMS
 evidence_spans:
 - sphinx-apidoc -o . ../dreams && make html
 - Build docs with sphinx-build

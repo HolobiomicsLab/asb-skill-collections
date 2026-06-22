@@ -1,5 +1,6 @@
 name: ms-pred ICEBERG
 slug: ms-pred-iceberg
+canonical_url: https://github.com/samgoldman97/ms-pred
 evidence_spans:
 - github.com__samgoldman97__ms-pred
 derived_from:

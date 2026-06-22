@@ -1,5 +1,6 @@
 name: TorchMetrics
 slug: torchmetrics
+canonical_url: https://github.com/RiverCCC/ABCoRT
 evidence_spans:
 - '**TorchMetrics**'
 derived_from:

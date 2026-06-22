@@ -1,5 +1,6 @@
 name: BLAST
 slug: blast
+canonical_url: https://github.com/mibig-secmet/mibig-json
 evidence_spans:
 - GenBank/RefSeq databases
 derived_from:

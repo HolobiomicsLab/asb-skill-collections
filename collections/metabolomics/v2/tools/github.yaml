@@ -1,5 +1,6 @@
 name: GitHub
 slug: github
+canonical_url: https://github.com/13479776/statTarget
 evidence_spans:
 - 'Source: github:gitlab.gwdg.de__joerg.buescher__automrm'
 - 'Source: github:arina-iva__DI-MS2_scripts'

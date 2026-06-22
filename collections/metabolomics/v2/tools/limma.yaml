@@ -1,5 +1,6 @@
 name: limma
 slug: limma
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - allows the identification of differentially abundant lipids in simple and complex experimental designs
 - This step of the workflow requires the `limma` package to be installed.

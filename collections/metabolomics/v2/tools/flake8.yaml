@@ -1,5 +1,6 @@
 name: flake8
 slug: flake8
+canonical_url: https://github.com/medema-group/BiG-SCAPE
 evidence_spans:
 - uses flake8 for linting
 derived_from:

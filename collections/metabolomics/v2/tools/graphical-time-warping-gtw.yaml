@@ -1,5 +1,6 @@
 name: graphical time warping (GTW)
 slug: graphical-time-warping-gtw
+canonical_url: https://github.com/ChiungTingWu/ncGTW
 evidence_spans:
 - This algorithm is improved from graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW)
 derived_from:

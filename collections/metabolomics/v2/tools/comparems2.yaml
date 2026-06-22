@@ -1,5 +1,6 @@
 name: compareMS2
 slug: comparems2
+canonical_url: https://github.com/524D/compareMS2
 evidence_spans:
 - compareMS2 calculates the global similarity between tandem mass spectrometry datasets
 derived_from:

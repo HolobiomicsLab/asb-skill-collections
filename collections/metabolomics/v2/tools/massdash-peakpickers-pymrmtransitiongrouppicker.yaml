@@ -1,5 +1,6 @@
 name: massdash.peakPickers.pyMRMTransitionGroupPicker
 slug: massdash-peakpickers-pymrmtransitiongrouppicker
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - pyMRMTransitionGroupPicker
 derived_from:

@@ -1,5 +1,6 @@
 name: SLURM
 slug: slurm
+canonical_url: https://github.com/meowcat/MSNovelist
 evidence_spans:
 - For usage with SLURM, sets up one GPU. Use with `sbatch --array=0-9`
 - For usage with SLURM, sets up one GPU

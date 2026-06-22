@@ -1,5 +1,6 @@
 name: HMDB 4
 slug: hmdb-4
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - known compound database (default HMDB 4)
 derived_from:

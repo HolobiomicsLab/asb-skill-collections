@@ -1,5 +1,6 @@
 name: mssearchr
 slug: mssearchr
+canonical_url: https://github.com/AndreySamokhin/mssearchr
 evidence_spans:
 - The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
 - The primary goal of the `mssearchr` package is to enhance the capabilities of R users

@@ -1,5 +1,6 @@
 name: BAGO
 slug: bago
+canonical_url: https://github.com/huaxuyu/bago
 evidence_spans:
 - BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)

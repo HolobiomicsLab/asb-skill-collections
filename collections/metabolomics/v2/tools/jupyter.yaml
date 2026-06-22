@@ -1,5 +1,6 @@
 name: Jupyter
 slug: jupyter
+canonical_url: https://github.com/griquelme/tidyms
 evidence_spans:
 - The Python code to generate the results is contained within the Jupyter notebook
 - Jupyter notebook **src/reproducible_simulations.ipynb**

@@ -1,5 +1,6 @@
 name: PFAM
 slug: pfam
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - pHMM databases have been updated to __PFAM 35.0__
 - Functional annotation | CPAT, signalP, pfam

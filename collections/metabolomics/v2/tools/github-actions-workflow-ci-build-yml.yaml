@@ -1,5 +1,6 @@
 name: GitHub actions workflow CI_build.yml
 slug: github-actions-workflow-ci-build-yml
+canonical_url: https://github.com/fermo-metabolomics/FERMO
 evidence_spans:
 - Build testing with GitHub actions workflow `.github/workflows/CI_build.yml`
 derived_from:

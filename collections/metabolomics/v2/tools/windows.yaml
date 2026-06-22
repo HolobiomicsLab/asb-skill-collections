@@ -1,5 +1,6 @@
 name: Windows
 slug: windows
+canonical_url: https://github.com/LQZ0123/MSThunder
 evidence_spans:
 - A case file named “Pesticides” can be run in the Windows environment
 derived_from:

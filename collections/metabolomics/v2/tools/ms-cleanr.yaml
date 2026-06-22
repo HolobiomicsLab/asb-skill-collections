@@ -1,5 +1,6 @@
 name: MS-CleanR
 slug: ms-cleanr
+canonical_url: https://github.com/eMetaboHUB/MS-CleanR
 evidence_spans:
 - MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
 derived_from:

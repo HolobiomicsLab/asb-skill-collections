@@ -1,5 +1,6 @@
 name: FNICM
 slug: fnicm
+canonical_url: https://github.com/LiQi94/FNICM
 evidence_spans:
 - FNICM is a tool to identify core nodes from significantly perturbed subnetwork.
 derived_from:

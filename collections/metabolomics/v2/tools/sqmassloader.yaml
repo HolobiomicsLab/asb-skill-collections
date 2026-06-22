@@ -1,5 +1,6 @@
 name: SqMassLoader
 slug: sqmassloader
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading however since extraction has already been performed by the upstream analysis tool. This includes SqMassLoader'
 derived_from:

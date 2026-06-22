@@ -1,5 +1,6 @@
 name: prepare_wikidata_lotus_prefect.py
 slug: prepare-wikidata-lotus-prefect-py
+canonical_url: https://github.com/corinnabrungs/msn_tree_library
 evidence_spans:
 - run `prepare_wikidata_lotus_prefect.py` for updating the data
 derived_from:

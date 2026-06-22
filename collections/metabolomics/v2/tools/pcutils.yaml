@@ -1,5 +1,6 @@
 name: pcutils
 slug: pcutils
+canonical_url: https://github.com/Asa12138/MetaNet
 evidence_spans:
 - devtools::install_github("Asa12138/pcutils")
 derived_from:

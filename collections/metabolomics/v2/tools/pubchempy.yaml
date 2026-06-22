@@ -1,5 +1,6 @@
 name: PubChemPy
 slug: pubchempy
+canonical_url: https://github.com/zmahnoor14/MAW
 evidence_spans:
 - Final candidate selection is done in Python using RDKit and PubChemPy
 - We then ran an automated search against PubChem [42] using pubchempy [43] for spectra which still missed InChI or SMILES annotations.

@@ -1,5 +1,6 @@
 name: ms_distance
 slug: ms-distance
+canonical_url: https://github.com/YuanyueLi/SpectralEntropy
 evidence_spans:
 - '.. automodule:: ms_distance :members:'
 derived_from:

@@ -1,5 +1,6 @@
 name: CSI:FingerID
 slug: csi-fingerid
+canonical_url: https://github.com/sirius-ms/sirius
 evidence_spans:
 - The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)
 derived_from:

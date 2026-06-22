@@ -1,5 +1,6 @@
 name: pyBaf2Sql
 slug: pybaf2sql
+canonical_url: https://github.com/LabLaskin/MSIGen
 evidence_spans:
 - If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
 derived_from:

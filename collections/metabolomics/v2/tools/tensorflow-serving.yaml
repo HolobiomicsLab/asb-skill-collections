@@ -1,5 +1,6 @@
 name: TensorFlow Serving
 slug: tensorflow-serving
+canonical_url: https://github.com/mwang87/NP-Classifier
 evidence_spans:
 - We pass through tensorflow serving at this url
 - 'We pass through tensorflow serving at this url:'

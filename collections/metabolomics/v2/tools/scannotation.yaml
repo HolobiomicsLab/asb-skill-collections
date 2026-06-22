@@ -1,5 +1,6 @@
 name: Scannotation
 slug: scannotation
+canonical_url: https://github.com/scannotation/Scannotation_software
 evidence_spans:
 - Scannotation is an automated and user-friendly suspect screening tool for the rapid pre-annotation of LC-HRMS datasets.
 derived_from:

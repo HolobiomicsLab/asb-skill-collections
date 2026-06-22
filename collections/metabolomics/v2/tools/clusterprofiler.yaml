@@ -1,5 +1,6 @@
 name: clusterProfiler
 slug: clusterprofiler
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler
 - Pathway enrichment analysis | Clusterprofiler, Biotranslator

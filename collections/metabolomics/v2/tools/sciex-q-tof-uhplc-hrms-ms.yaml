@@ -1,5 +1,6 @@
 name: SCIEX Q-TOF UHPLC-HRMS/MS
 slug: sciex-q-tof-uhplc-hrms-ms
+canonical_url: https://github.com/GarrettLab-UF/LipidMatch
 evidence_spans:
 - Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments
 derived_from:

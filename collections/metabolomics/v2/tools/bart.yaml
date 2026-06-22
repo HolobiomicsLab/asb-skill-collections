@@ -1,5 +1,6 @@
 name: BART
 slug: bart
+canonical_url: https://github.com/OpenDFM/MS-BART
 evidence_spans:
 - MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary
 derived_from:

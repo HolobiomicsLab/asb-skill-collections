@@ -1,5 +1,6 @@
 name: cosine_neutral_loss repository
 slug: cosine-neutral-loss-repository
+canonical_url: https://github.com/bittremieux/cosine_neutral_loss
 evidence_spans:
 - Code repository implements cosine similarity, modified cosine similarity, and neutral loss similarity measures
 derived_from:

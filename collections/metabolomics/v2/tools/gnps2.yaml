@@ -1,5 +1,6 @@
 name: GNPS2
 slug: gnps2
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - These workflows are also available for you to run on federated GNPS2 instances and locally on any computing environment or in the cloud.
 - It currently accepts data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.

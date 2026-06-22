@@ -1,5 +1,6 @@
 name: Dereplicator
 slug: dereplicator
+canonical_url: https://github.com/ablab/npdtools
 evidence_spans:
 - matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator
 derived_from:

@@ -1,5 +1,6 @@
 name: DGL
 slug: dgl
+canonical_url: https://github.com/HopkinsLaboratory/Graphormer-RT
 evidence_spans:
 - import dgl
 derived_from:

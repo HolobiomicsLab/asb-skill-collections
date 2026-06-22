@@ -1,5 +1,6 @@
 name: knitr
 slug: knitr
+canonical_url: https://github.com/MRCIEU/metaboprep
 evidence_spans:
 - '%\VignetteEngine{knitr::rmarkdown}'
 - knitr::include_graphics

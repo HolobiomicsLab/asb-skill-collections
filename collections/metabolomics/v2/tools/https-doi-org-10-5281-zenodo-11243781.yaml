@@ -1,5 +1,6 @@
 name: https://doi.org/10.5281/zenodo.11243781
 slug: https-doi-org-10-5281-zenodo-11243781
+canonical_url: https://github.com/emosca-cnr/margheRita
 version_used: '10.5281'
 evidence_spans:
 - The full version of the "Urine" dataset, which was used for margheRita assessment and to generate this documentation, is available at https://doi.org/10.5281/zenodo.11243781

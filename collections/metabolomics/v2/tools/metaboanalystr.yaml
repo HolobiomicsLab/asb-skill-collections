@@ -1,5 +1,6 @@
 name: MetaboAnalystR
 slug: metaboanalystr
+canonical_url: https://github.com/xia-lab/MetaboAnalystR
 version_used: '4.0'
 evidence_spans:
 - 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'

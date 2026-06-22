@@ -1,5 +1,6 @@
 name: SIRIUS
 slug: sirius
+canonical_url: https://github.com/boecker-lab/sirius
 evidence_spans:
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
 - SIRIUS is a java-based software framework for the analysis of LC-MS/MS data

@@ -1,5 +1,6 @@
 name: dbnorm
 slug: dbnorm
+canonical_url: https://github.com/NBDZ/dbnorm
 version_used: 0.2.2
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization

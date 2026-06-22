@@ -1,5 +1,6 @@
 name: base64enc
 slug: base64enc
+canonical_url: https://github.com/yufree/mzrtsim
 evidence_spans:
 - The underlying engine handles binary data encoding via the `base64enc` package
 derived_from:

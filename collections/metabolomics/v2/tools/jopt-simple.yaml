@@ -1,5 +1,6 @@
 name: jopt-simple
 slug: jopt-simple
+canonical_url: https://github.com/rformassspectrometry/Spectra
 version_used: '4.3'
 evidence_spans:
 - jopt-simple-4.3

@@ -1,5 +1,6 @@
 name: R ≥4.1.2
 slug: r-4-1-2
+canonical_url: https://github.com/plyush1993/OUKS
 evidence_spans:
 - '[![](https://img.shields.io/badge/R≥4.1.2-5fb9ed.svg?style=flat&logo=r&logoColor=white?)](https://cran.r-project.org/index.html)'
 derived_from:

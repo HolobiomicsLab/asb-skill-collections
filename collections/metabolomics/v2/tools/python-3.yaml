@@ -1,5 +1,6 @@
 name: Python 3
 slug: python-3
+canonical_url: https://github.com/ComPlat/chem-spectra-app
 evidence_spans:
 - Use the file pyproject.toml to determine the version of Python required.
 - '[python3](https://www.python.org/)'

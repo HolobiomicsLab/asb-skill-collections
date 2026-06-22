@@ -1,5 +1,6 @@
 name: rawrr
 slug: rawrr
+canonical_url: https://github.com/fgcz/rawrr
 evidence_spans:
 - rawrr::readSpectrum
 - Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file

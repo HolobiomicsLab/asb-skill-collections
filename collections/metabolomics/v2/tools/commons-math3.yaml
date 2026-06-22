@@ -1,5 +1,6 @@
 name: commons-math3
 slug: commons-math3
+canonical_url: https://github.com/rformassspectrometry/Spectra
 version_used: 3.4.1
 evidence_spans:
 - commons-math3-3.4.1

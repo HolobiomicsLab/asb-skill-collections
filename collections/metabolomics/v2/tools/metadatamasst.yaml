@@ -1,5 +1,6 @@
 name: metadataMASST
 slug: metadatamasst
+canonical_url: https://github.com/mwang87/MASST
 evidence_spans:
 - Aggregated search outputs can be generated and visualized using metadataMASST
 derived_from:

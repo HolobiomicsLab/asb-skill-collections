@@ -1,5 +1,6 @@
 name: SRA toolkit
 slug: sra-toolkit
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - Genes, miRNA, isoforms | SRA download | SRA toolkit
 derived_from:

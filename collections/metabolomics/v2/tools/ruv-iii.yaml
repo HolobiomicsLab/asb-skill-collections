@@ -1,5 +1,6 @@
 name: RUV-III
 slug: ruv-iii
+canonical_url: https://github.com/SydneyBioX/hRUV
 evidence_spans:
 - 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate the unwanted variation within and between batches with RUV-III'
 derived_from:

@@ -1,5 +1,6 @@
 name: .NET Standard
 slug: net-standard
+canonical_url: https://github.com/systemsomicslab/MsdialWorkbench
 version_used: '2.0'
 evidence_spans:
 - The .NET class libraries adhere at least to the specifications of .NET Standard 2.0

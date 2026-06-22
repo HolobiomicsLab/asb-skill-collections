@@ -1,5 +1,6 @@
 name: CordBat
 slug: cordbat
+canonical_url: https://github.com/BorchLab/CordBat
 evidence_spans:
 - fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref", grouping = FALSE, print.detail = FALSE )
 derived_from:

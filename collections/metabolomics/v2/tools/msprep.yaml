@@ -1,5 +1,6 @@
 name: MSPrep
 slug: msprep
+canonical_url: https://github.com/Ghoshlab/marr
 evidence_spans:
 - The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep software
 derived_from:

@@ -1,5 +1,6 @@
 name: MotifDB
 slug: motifdb
+canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - Compare motifs to known entries in MotifDB
 derived_from:

@@ -1,5 +1,6 @@
 name: pyMolNetEnhancer
 slug: pymolnetenhancer
+canonical_url: https://github.com/madeleineernst/pyMolNetEnhancer
 evidence_spans:
 - pyMolNetEnhancer is a python module integrating chemical class and substructure information
 derived_from:

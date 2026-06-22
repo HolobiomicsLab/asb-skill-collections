@@ -1,5 +1,6 @@
 name: CUDA Toolkit
 slug: cuda-toolkit
+canonical_url: https://github.com/Noble-Lab/casanovo
 evidence_spans:
 - Install the latest version of the NVIDIA drivers using the official CUDA Toolkit
 derived_from:

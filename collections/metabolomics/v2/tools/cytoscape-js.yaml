@@ -1,5 +1,6 @@
 name: cytoscape.js
 slug: cytoscape-js
+canonical_url: https://github.com/dgrapov/MetaMapR
 evidence_spans:
 - add cytoscape.js networks
 derived_from:

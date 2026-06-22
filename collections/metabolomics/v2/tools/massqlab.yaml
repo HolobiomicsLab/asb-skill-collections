@@ -1,5 +1,6 @@
 name: MassQLab
 slug: massqlab
+canonical_url: https://github.com/JohnsonDylan/MassQLab
 evidence_spans:
 - github.com__JohnsonDylan__MassQLab
 derived_from:

@@ -1,5 +1,6 @@
 name: Homebrew
 slug: homebrew
+canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - Install the Homebrew package management system
 derived_from:

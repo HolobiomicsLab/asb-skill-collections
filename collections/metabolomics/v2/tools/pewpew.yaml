@@ -1,5 +1,6 @@
 name: pewpew
 slug: pewpew
+canonical_url: https://github.com/djdt/pewpew
 evidence_spans:
 - The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'

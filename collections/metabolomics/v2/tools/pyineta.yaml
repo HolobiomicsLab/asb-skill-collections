@@ -1,5 +1,6 @@
 name: PyINETA
 slug: pyineta
+canonical_url: https://github.com/edisonomics/PyINETA
 version_used: 2.0.0
 evidence_spans:
 - This is the documentation for the PyINETA package version 2.0.0.

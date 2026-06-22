@@ -1,5 +1,6 @@
 name: Mozilla Firefox
 slug: mozilla-firefox
+canonical_url: https://github.com/lidawei1975/colmarvista
 evidence_spans:
 - 'For Mozilla Firefox: 1. Enter about:config in the browser''s address bar.'
 derived_from:

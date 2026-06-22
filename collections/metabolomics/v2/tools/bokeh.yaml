@@ -1,5 +1,6 @@
 name: Bokeh
 slug: bokeh
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - The main area will be populated with interactive Bokeh figures
 - integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)

@@ -1,5 +1,6 @@
 name: Python (json module for parsing JSON files)
 slug: python-json-module-for-parsing-json-files
+canonical_url: https://github.com/mibig-secmet/mibig-json
 evidence_spans:
 - MIBiG curation data in JSON format
 derived_from:

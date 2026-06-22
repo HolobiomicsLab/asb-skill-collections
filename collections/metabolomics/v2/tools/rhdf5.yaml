@@ -1,5 +1,6 @@
 name: rhdf5
 slug: rhdf5
+canonical_url: https://github.com/PNNL-m-q/mza
 evidence_spans:
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 derived_from:

@@ -1,5 +1,6 @@
 name: R package Amanida
 slug: r-package-amanida
+canonical_url: https://github.com/mariallr/easy-amanida
 evidence_spans:
 - implements the R package Amanida
 derived_from:

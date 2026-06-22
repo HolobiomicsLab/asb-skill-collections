@@ -1,5 +1,6 @@
 name: scipy 1.0.0
 slug: scipy-1-0-0
+canonical_url: https://github.com/wabdelmoula/massNet
 evidence_spans:
 - scipy(1.0.0)
 derived_from:

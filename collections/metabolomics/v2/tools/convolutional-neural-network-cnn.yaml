@@ -1,5 +1,6 @@
 name: Convolutional Neural Network (CNN)
 slug: convolutional-neural-network-cnn
+canonical_url: https://github.com/massspecdl/ChemEmbed
 evidence_spans:
 - perform predictions using a trained Convolutional Neural Network (CNN) model
 - Integrating this capability with a convolutional neural network, we build an end-to-end model

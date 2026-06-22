@@ -1,5 +1,6 @@
 name: MiMIR
 slug: mimir
+canonical_url: https://github.com/DanieleBizzarri/MiMIR
 evidence_spans:
 - github.com/DanieleBizzarri/MiMIR
 derived_from:

@@ -1,5 +1,6 @@
 name: Python 3.8.1
 slug: python-3-8-1
+canonical_url: https://github.com/LinShuhaiLAB/QuanFormer
 evidence_spans:
 - written in Python (v3.8.1)
 derived_from:

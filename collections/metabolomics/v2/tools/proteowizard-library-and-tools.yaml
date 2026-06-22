@@ -1,5 +1,6 @@
 name: ProteoWizard Library and Tools
 slug: proteowizard-library-and-tools
+canonical_url: https://github.com/ProteoWizard/pwiz
 evidence_spans:
 - The ProteoWizard Library and Tools are a set of modular and extensible open-source, cross-platform tools and software libraries
 derived_from:

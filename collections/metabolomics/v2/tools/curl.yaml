@@ -1,5 +1,6 @@
 name: curl
 slug: curl
+canonical_url: https://github.com/ComPlat/chem-spectra-app
 evidence_spans:
 - curl xxx.xxx.xxx.xxx:3007/ping
 derived_from:

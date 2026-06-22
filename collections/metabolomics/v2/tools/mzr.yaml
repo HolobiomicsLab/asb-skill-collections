@@ -1,5 +1,6 @@
 name: mzR
 slug: mzr
+canonical_url: https://github.com/jcapelladesto/isoSCAN
 evidence_spans:
 - Integration with the mzR package from Bioconductor allows direct parsing of mzML and MGF files
 - isoSCAN uses `mzR` package in order to read MS files

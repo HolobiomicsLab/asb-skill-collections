@@ -1,5 +1,6 @@
 name: Hugging Face Transformers
 slug: hugging-face-transformers
+canonical_url: https://github.com/OpenDFM/MS-BART
 evidence_spans:
 - github.com/OpenDFM/MS-BART
 derived_from:

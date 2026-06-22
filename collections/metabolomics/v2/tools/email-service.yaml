@@ -1,5 +1,6 @@
 name: Email service
 slug: email-service
+canonical_url: https://github.com/czbiohub-sf/Rapid-QC-MS
 evidence_spans:
 - '**Realtime updates on QC fails** in the form of Slack or email notifications'
 derived_from:

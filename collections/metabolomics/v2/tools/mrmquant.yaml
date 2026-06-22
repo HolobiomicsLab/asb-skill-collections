@@ -1,5 +1,6 @@
 name: MRMQuant
 slug: mrmquant
+canonical_url: https://github.com/kslynn128171/MRMQuant
 version_used: '2.7'
 evidence_spans:
 - Be sure to use the latest version (currently MRMQuant v2.7).

@@ -1,5 +1,6 @@
 name: networkx
 slug: networkx
+canonical_url: https://github.com/ablab/npdtools
 evidence_spans:
 - For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
 - The graph operations are supported by the networkx library

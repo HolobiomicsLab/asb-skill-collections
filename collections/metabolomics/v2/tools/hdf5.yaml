@@ -1,5 +1,6 @@
 name: HDF5
 slug: hdf5
+canonical_url: https://github.com/PNNL-m-q/mza
 evidence_spans:
 - the MZA simple data structure based on the HDF5 format
 derived_from:

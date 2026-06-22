@@ -1,5 +1,6 @@
 name: onnxruntime
 slug: onnxruntime
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - optional dependencies are also required and can be installed with pip install -r requirements-optional.txt
 derived_from:

@@ -1,5 +1,6 @@
 name: lme4
 slug: lme4
+canonical_url: https://github.com/FrigerioGianfranco/GetFeatistics
 evidence_spans:
 - linear models with mixed effects (random and fixed), using the _lmer_ function from the lme4 package
 derived_from:

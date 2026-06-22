@@ -1,5 +1,6 @@
 name: Lotus Database
 slug: lotus-database
+canonical_url: https://github.com/luigiquiros/inventa
 evidence_spans:
 - the Lotus Dabase uses the NPClassifyre ontology and Sirius uses the Classifyre ontology
 derived_from:

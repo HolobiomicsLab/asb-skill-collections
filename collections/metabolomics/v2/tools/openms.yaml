@@ -1,5 +1,6 @@
 name: OpenMS
 slug: openms
+canonical_url: https://github.com/AutoFlowResearch/SmartPeak
 evidence_spans:
 - '[Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)'
 - or [Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)

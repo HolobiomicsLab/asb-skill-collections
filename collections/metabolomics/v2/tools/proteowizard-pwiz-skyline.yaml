@@ -1,5 +1,6 @@
 name: proteowizard/pwiz-skyline
 slug: proteowizard-pwiz-skyline
+canonical_url: https://github.com/ComPlat/chem-spectra-app
 evidence_spans:
 - docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
 - docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses

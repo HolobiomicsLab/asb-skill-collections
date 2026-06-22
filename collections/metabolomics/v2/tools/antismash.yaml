@@ -1,5 +1,6 @@
 name: antiSMASH
 slug: antismash
+canonical_url: https://github.com/NPLinker/nplinker
 version_used: 5.0.0
 evidence_spans:
 - 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools'' output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk` or `.gbk` file'

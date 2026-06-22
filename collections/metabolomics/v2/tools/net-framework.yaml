@@ -1,5 +1,6 @@
 name: .NET Framework
 slug: net-framework
+canonical_url: https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor
 version_used: '4.8'
 evidence_spans:
 - .NET Framework 4.8

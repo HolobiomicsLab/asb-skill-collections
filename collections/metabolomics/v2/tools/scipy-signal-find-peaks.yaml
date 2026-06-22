@@ -1,5 +1,6 @@
 name: scipy.signal.find_peaks
 slug: scipy-signal-find-peaks
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - Asari uses a simple local maxima method (scipy.signal.find_peaks), with prominence control
 - Asari uses a simple local maxima method (scipy.signal.find_peaks), with prominence control that is dynamically determined on each mass track then each segment.

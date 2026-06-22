@@ -1,5 +1,6 @@
 name: ProteoWizard
 slug: proteowizard
+canonical_url: https://github.com/AdrianHaun/AriumMS
 evidence_spans:
 - pwiz_bindings_cli.dll from the ProteoWizard project
 - based on pwiz_bindings_cli.dll from the ProteoWizard project.

@@ -1,5 +1,6 @@
 name: amanida
 slug: amanida
+canonical_url: https://github.com/mariallr/amanida
 evidence_spans:
 - This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
 derived_from:

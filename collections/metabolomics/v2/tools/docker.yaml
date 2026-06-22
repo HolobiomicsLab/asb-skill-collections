@@ -1,5 +1,6 @@
 name: Docker
 slug: docker
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 version_used: 2.2.7
 evidence_spans:
 - docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses

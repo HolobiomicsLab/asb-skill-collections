@@ -1,5 +1,6 @@
 name: mzRAPP
 slug: mzrapp
+canonical_url: https://github.com/YasinEl/mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
 - The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)

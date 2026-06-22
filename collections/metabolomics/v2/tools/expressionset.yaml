@@ -1,5 +1,6 @@
 name: ExpressionSet
 slug: expressionset
+canonical_url: https://github.com/antonvsdata/notame
 evidence_spans:
 - '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet``` is built upon the ```ExpressionSet``` class'
 derived_from:

@@ -1,5 +1,6 @@
 name: InjectionDesign
 slug: injectiondesign
+canonical_url: https://github.com/CSi-Studio/InjectionDesign
 evidence_spans:
 - LC/GC-MS-based Multi-Omics Injection-Plate Design Web Service
 derived_from:

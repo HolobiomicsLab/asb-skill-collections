@@ -1,5 +1,6 @@
 name: JMS
 slug: jms
+canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
 derived_from:

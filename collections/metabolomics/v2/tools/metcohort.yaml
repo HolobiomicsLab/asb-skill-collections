@@ -1,5 +1,6 @@
 name: MetCohort
 slug: metcohort
+canonical_url: https://github.com/JunYang2021/MetCohort
 evidence_spans:
 - MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool for large-scale metabolomics and exposomics
 - MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool

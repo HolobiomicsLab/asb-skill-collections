@@ -1,5 +1,6 @@
 name: Statistics And Machine Learning Toolbox
 slug: statistics-and-machine-learning-toolbox
+canonical_url: https://github.com/AdrianHaun/AriumMS
 evidence_spans:
 - 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
 derived_from:

@@ -1,5 +1,6 @@
 name: MassBank-web
 slug: massbank-web
+canonical_url: https://github.com/MassBank/MassBank-data
 evidence_spans:
 - Validator from MassBank-web
 derived_from:

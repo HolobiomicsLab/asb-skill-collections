@@ -1,5 +1,6 @@
 name: LDA (Latent Dirichlet Allocation)
 slug: lda-latent-dirichlet-allocation
+canonical_url: https://github.com/HassounLab/ESP
 evidence_spans:
 - spectral topic labels obtained using LDA (Latent Dirichlet Allocation)
 derived_from:

@@ -1,5 +1,6 @@
 name: IOKR
 slug: iokr
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - In principle, IOKR works by first learning a mapping from the space of spectra to the space of molecular fingerprints
 derived_from:

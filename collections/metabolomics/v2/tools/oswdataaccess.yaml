@@ -1,5 +1,6 @@
 name: OSWDataAccess
 slug: oswdataaccess
+canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - OSWDataAccess
 derived_from:

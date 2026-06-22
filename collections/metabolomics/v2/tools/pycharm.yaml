@@ -1,5 +1,6 @@
 name: PyCharm
 slug: pycharm
+canonical_url: https://github.com/SysMedOs/LipidLynxX
 evidence_spans:
 - JSON configurations are formatted by Visual Studio Code / PyCharm editor
 derived_from:

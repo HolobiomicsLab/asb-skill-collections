@@ -1,5 +1,6 @@
 name: MoleTrans
 slug: moletrans
+canonical_url: https://github.com/JibaoLiu/MoleTrans
 evidence_spans:
 - MoleTrans is a webtool for post analysis and data mining on the formula assigned datasets from FT-ICR MS
 derived_from:

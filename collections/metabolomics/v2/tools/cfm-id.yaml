@@ -1,5 +1,6 @@
 name: CFM-ID
 slug: cfm-id
+canonical_url: https://github.com/aaronma2020/MSGO
 evidence_spans:
 - CFM-ID
 - the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA adducts

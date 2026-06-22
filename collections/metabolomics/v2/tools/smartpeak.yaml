@@ -1,5 +1,6 @@
 name: SmartPeak
 slug: smartpeak
+canonical_url: https://github.com/AutoFlowResearch/SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
 derived_from:

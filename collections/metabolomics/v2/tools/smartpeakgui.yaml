@@ -1,5 +1,6 @@
 name: SmartPeakGUI
 slug: smartpeakgui
+canonical_url: https://github.com/AutoFlowResearch/SmartPeak
 evidence_spans:
 - SmartPeak GUI provides functionality to facilitate users to get up and running as quickly as possible
 derived_from:

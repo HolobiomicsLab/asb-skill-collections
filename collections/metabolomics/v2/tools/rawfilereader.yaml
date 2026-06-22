@@ -1,5 +1,6 @@
 name: RawFileReader
 slug: rawfilereader
+canonical_url: https://github.com/fgcz/rawrr
 evidence_spans:
 - The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'

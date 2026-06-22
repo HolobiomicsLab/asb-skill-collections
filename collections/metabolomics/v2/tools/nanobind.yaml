@@ -1,5 +1,6 @@
 name: nanobind
 slug: nanobind
+canonical_url: https://github.com/OpenMS/OpenMS
 evidence_spans:
 - nanobind binding files are in `src/pyOpenMS/bindings/`
 derived_from:

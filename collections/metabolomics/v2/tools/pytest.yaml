@@ -1,5 +1,6 @@
 name: pytest
 slug: pytest
+canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - pytest tests/
 - No discussion section present in document

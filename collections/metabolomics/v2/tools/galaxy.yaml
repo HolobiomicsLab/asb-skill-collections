@@ -1,5 +1,6 @@
 name: Galaxy
 slug: galaxy
+canonical_url: https://github.com/Viant-Metabolomics/Galaxy-M
 evidence_spans:
 - Metabolomics Tools for [Galaxy](http://galaxyproject.org/)
 - Galaxy tool for processing and analysis

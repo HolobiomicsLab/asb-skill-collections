@@ -1,5 +1,6 @@
 name: seaborn
 slug: seaborn
+canonical_url: https://github.com/chopralab/CLAW
 evidence_spans:
 - streamline various tasks such as data parsing, matching, statistical analysis, and visualization
 - It requires the Python dependencies NumPy [40], pandas [41, 42], seaborn

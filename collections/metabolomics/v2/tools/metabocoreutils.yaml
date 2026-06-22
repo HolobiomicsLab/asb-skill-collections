@@ -1,5 +1,6 @@
 name: MetaboCoreUtils
 slug: metabocoreutils
+canonical_url: https://github.com/LiesaSalzer/MobilityTransformR
 evidence_spans:
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MetaboCoreUtils")`
 - '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'

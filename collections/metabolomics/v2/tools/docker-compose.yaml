@@ -1,5 +1,6 @@
 name: docker-compose
 slug: docker-compose
+canonical_url: https://github.com/mwang87/NP-Classifier
 evidence_spans:
 - you need docker and docker-compose
 derived_from:

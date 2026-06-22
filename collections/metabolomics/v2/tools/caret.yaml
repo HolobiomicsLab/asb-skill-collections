@@ -1,5 +1,6 @@
 name: caret
 slug: caret
+canonical_url: https://github.com/KelseyChetnik/MetaClean
 version_used: 6.0.86
 evidence_spans:
 - MetaClean provides 8 classification algorithms (implemented with the R package caret)

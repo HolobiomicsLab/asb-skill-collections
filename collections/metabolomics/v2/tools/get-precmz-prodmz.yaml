@@ -1,5 +1,6 @@
 name: get_PrecMZ_ProdMZ
 slug: get-precmz-prodmz
+canonical_url: https://github.com/kslynn128171/MRMQuant
 evidence_spans:
 - Users can install get_PrecMZ_ProdMZ in the "program/associated programs" folder to acquire precursor and product m/z values in an MRM sample file.
 derived_from:

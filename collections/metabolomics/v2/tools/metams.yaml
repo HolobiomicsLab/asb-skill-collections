@@ -1,5 +1,6 @@
 name: metaMS
 slug: metams
+canonical_url: https://github.com/HuanLab/DaDIA
 version_used: 1.25.1
 evidence_spans:
 - metaMS Version 1.25.1

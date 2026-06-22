@@ -1,5 +1,6 @@
 name: MS2LDA
 slug: ms2lda
+canonical_url: https://github.com/glasgowcompbio/PALS
 evidence_spans:
 - MS2LDA Reference Motifs
 - Map MS2LDA substructural information to mass spectral molecular networks

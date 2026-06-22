@@ -1,5 +1,6 @@
 name: CardinalIO
 slug: cardinalio
+canonical_url: https://github.com/kuwisdelu/Cardinal
 evidence_spans:
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 derived_from:

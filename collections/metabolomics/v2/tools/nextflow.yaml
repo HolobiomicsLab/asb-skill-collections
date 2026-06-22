@@ -1,5 +1,6 @@
 name: Nextflow
 slug: nextflow
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 version_used: 23.04.2.5870
 evidence_spans:
 - The pipeline is built using [Nextflow](https://www.nextflow.io) version 23.04.2.5870

@@ -1,5 +1,6 @@
 name: mixOmics
 slug: mixomics
+canonical_url: https://github.com/DanielQuiroz97/RGCxGC
 evidence_spans:
 - '"igraph", "MASS", "mixOmics", "SOMbrero", "varSelRF"'
 - Supervised models can be done with the [mixOmics](https://bioconductor.org/packages/release/bioc/html/mixOmics.html) functions.

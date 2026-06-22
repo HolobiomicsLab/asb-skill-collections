@@ -1,5 +1,6 @@
 name: Visual Studio
 slug: visual-studio
+canonical_url: https://github.com/systemsomicslab/MsdialWorkbench
 evidence_spans:
 - If you intend to contribute to the GUI part of the code and would like to have access to a preview, we recommend using Visual Studio
 - we recommend using Visual Studio

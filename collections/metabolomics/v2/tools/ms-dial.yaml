@@ -1,5 +1,6 @@
 name: MS-DIAL
 slug: ms-dial
+canonical_url: https://github.com/FrigerioGianfranco/GetFeatistics
 evidence_spans:
 - '`MS-DIAL <http://prime.psc.riken.jp/compms/msdial/main.html>`_'
 - open source tools such as XCMS and MS-Dial

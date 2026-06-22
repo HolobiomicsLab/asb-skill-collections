@@ -1,5 +1,6 @@
 name: spectra-hash
 slug: spectra-hash
+canonical_url: https://github.com/eMetaboHUB/FragHub
 evidence_spans:
 - direct integration of spectra-hash (https://github.com/berlinguyinca/spectra-hash) into fraghub
 derived_from:

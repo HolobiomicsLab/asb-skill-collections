@@ -1,5 +1,6 @@
 name: prcomp
 slug: prcomp
+canonical_url: https://github.com/BorchLab/CordBat
 evidence_spans:
 - pca_res <- prcomp(cordbat_example[, metabolite_cols], scale. = TRUE)
 derived_from:

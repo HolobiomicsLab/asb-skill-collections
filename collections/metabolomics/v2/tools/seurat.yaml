@@ -1,5 +1,6 @@
 name: Seurat
 slug: seurat
+canonical_url: https://github.com/GenomicsMachineLearning/SpaMTP
 evidence_spans:
 - library(Seurat)
 derived_from:

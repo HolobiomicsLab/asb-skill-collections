@@ -1,5 +1,6 @@
 name: Appveyor
 slug: appveyor
+canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - Builds for Windows are run via Appveyor
 derived_from:

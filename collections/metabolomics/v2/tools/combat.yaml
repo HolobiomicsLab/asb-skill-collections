@@ -1,5 +1,6 @@
 name: ComBat
 slug: combat
+canonical_url: https://github.com/ShinyFabio/ADViSELipidomics
 evidence_spans:
 - dealing with batch effect correction.
 derived_from:

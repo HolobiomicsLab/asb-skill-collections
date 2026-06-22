@@ -1,5 +1,6 @@
 name: MultiABLER
 slug: multiabler
+canonical_url: https://github.com/holab-hku/MultiABLER
 evidence_spans:
 - MultiABLER is a set of R functions forms a seamless workflow
 derived_from:

@@ -1,5 +1,6 @@
 name: Cox-nnet
 slug: cox-nnet
+canonical_url: https://github.com/lanagarmire/lilikoi2
 evidence_spans:
 - the deep-learning based Cox-nnet model
 derived_from:

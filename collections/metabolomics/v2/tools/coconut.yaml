@@ -1,5 +1,6 @@
 name: COCONUT
 slug: coconut
+canonical_url: https://github.com/privrja/MassSpecBlocks
 evidence_spans:
 - find structures on other chemical projects like COCONUT
 derived_from:

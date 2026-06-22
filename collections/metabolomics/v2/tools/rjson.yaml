@@ -1,5 +1,6 @@
 name: rjson
 slug: rjson
+canonical_url: https://github.com/fgcz/rawrr
 evidence_spans:
 - rjson::toJSON
 derived_from:

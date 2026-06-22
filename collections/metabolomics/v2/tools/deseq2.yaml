@@ -1,5 +1,6 @@
 name: DESeq2
 slug: deseq2
+canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
 - '### DESeq2 [deseq](../modules/local/deseq2)'

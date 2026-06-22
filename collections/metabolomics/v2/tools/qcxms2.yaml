@@ -1,5 +1,6 @@
 name: QCxMS2
 slug: qcxms2
+canonical_url: https://github.com/grimme-lab/QCxMS2
 evidence_spans:
 - Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
 derived_from:

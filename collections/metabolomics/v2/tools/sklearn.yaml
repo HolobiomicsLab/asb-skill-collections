@@ -1,5 +1,6 @@
 name: Sklearn
 slug: sklearn
+canonical_url: https://github.com/facundof2016/CCSP2.0
 version_used: 1.0.2
 evidence_spans:
 - The current version of CCSP 2.0 requires Sklearn V1.0.2 or later

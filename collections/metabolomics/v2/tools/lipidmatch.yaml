@@ -1,5 +1,6 @@
 name: LipidMatch
 slug: lipidmatch
+canonical_url: https://github.com/GarrettLab-UF/LipidMatch
 version_used: '4.2'
 evidence_spans:
 - 'put Modular.r into two directories (replace existing code): `LipidMatch-4.2\Flow\LipidMatch_Distribution`'

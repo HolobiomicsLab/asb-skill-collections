@@ -1,5 +1,6 @@
 name: Agilent MassHunter
 slug: agilent-masshunter
+canonical_url: https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor
 evidence_spans:
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files

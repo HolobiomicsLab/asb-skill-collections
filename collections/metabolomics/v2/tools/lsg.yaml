@@ -1,5 +1,6 @@
 name: LSG
 slug: lsg
+canonical_url: https://github.com/98104781/LSG
 version_used: 1.3.0
 evidence_spans:
 - https://github.com/98104781/LSG/releases/tag/v1.3.0

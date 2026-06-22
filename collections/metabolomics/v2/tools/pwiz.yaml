@@ -1,5 +1,6 @@
 name: pwiz
 slug: pwiz
+canonical_url: https://github.com/ProteoWizard/pwiz
 evidence_spans:
 - github.com__ProteoWizard__pwiz
 derived_from:

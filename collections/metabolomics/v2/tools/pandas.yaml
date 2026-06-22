@@ -1,5 +1,6 @@
 name: Pandas
 slug: pandas
+canonical_url: https://github.com/FangYuan717/ROASMI
 version_used: 2.0.3
 evidence_spans:
 - Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]

@@ -1,5 +1,6 @@
 name: mordred
 slug: mordred
+canonical_url: https://github.com/HopkinsLaboratory/Graphormer-RT
 evidence_spans:
 - import mordred from mordred import Calculator, descriptors
 derived_from:

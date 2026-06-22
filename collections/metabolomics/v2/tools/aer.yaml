@@ -1,5 +1,6 @@
 name: AER
 slug: aer
+canonical_url: https://github.com/FrigerioGianfranco/GetFeatistics
 evidence_spans:
 - TOBIT linear models, using the _tobit_ function of the AER package
 derived_from:

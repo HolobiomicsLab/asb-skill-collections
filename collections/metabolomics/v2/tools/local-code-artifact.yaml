@@ -1,5 +1,6 @@
 name: local code artifact
 slug: local-code-artifact
+canonical_url: https://github.com/CNIC-Proteomics/TurboPutative
 derived_from:
 - doi: 10.3389/fmolb.2022.952149
   title: TurboPutative

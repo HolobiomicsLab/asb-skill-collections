@@ -1,5 +1,6 @@
 name: Jupyter Lab
 slug: jupyter-lab
+canonical_url: https://github.com/facundof2016/CCSP2.0
 evidence_spans:
 - a Jupyter Lab compatible notebook with a Tk interface
 derived_from:

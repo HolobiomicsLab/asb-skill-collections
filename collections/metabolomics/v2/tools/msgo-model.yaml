@@ -1,5 +1,6 @@
 name: MSGO model
 slug: msgo-model
+canonical_url: https://github.com/aaronma2020/MSGO
 evidence_spans:
 - github.com__aaronma2020__MSGO
 derived_from:

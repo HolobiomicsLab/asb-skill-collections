@@ -1,5 +1,6 @@
 name: SQL
 slug: sql
+canonical_url: https://github.com/mwang87/MassQueryLanguage
 evidence_spans:
 - It is inspired by SQL, but it attempts to bake in assumptions of mass spectrometry
 derived_from:
