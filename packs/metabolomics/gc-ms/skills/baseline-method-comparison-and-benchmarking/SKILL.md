@@ -1,6 +1,6 @@
 ---
 name: baseline-method-comparison-and-benchmarking
-description: Use when you have developed or adapted an analytical method (e.g., NPFimg for GC–MS marker identification) and need to demonstrate its reliability or superiority over a widely-used reference method (e.g., XCMS). Apply this skill when you have access to both the same raw input data (e.
+description: Use when you have developed or adapted an analytical method (e.g., NPFimg for GC–MS marker identification) and need to demonstrate its reliability or improved performance over a widely-used reference method (e.g., XCMS). Apply this skill when you have access to both the same raw input data (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -53,7 +53,7 @@ Quantitatively compare a novel analytical method against an established baseline
 
 ## When to use
 
-You have developed or adapted an analytical method (e.g., NPFimg for GC–MS marker identification) and need to demonstrate its reliability or superiority over a widely-used reference method (e.g., XCMS). Apply this skill when you have access to both the same raw input data (e.g., two-dimensional m/z vs retention time chromatography–mass spectrometry data) and ground truth or validated reference results, and when error rates of signal acquisition (false positives, false negatives, detection accuracy) and feature identification accuracy are the key performance criteria.
+You have developed or adapted an analytical method (e.g., NPFimg for GC–MS marker identification) and need to demonstrate its reliability or improved performance over a widely-used reference method (e.g., XCMS). Apply this skill when you have access to both the same raw input data (e.g., two-dimensional m/z vs retention time chromatography–mass spectrometry data) and ground truth or validated reference results, and when error rates of signal acquisition (false positives, false negatives, detection accuracy) and feature identification accuracy are the key performance criteria.
 
 ## When NOT to use
 
