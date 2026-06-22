@@ -64,6 +64,7 @@ def test_build_unit_emits_all_artifacts(tmp_path):
     (unit / ".claude-plugin" / "plugin.json").write_text(json.dumps({"name": "u", "description": "Subset."}))
     bind = tmp_path / "src_bind.py"; bind.write_text("# vendored bind\n")
     written = build_unit(unit, FIX, bind)
+    assert set(written) == {"kb_bundle.json", "bin/perspicacite_kb_bind.py", "commands/ground.md", "GROUNDING.md", ".claude-plugin/plugin.json"}
     b = json.loads((unit / "kb_bundle.json").read_text())
     assert set(b["skills"]) == {"bioactivity-score-aggregation", "norepo-skill"}
     assert "repo_urls" in b["skills"]["bioactivity-score-aggregation"]
@@ -73,6 +74,7 @@ def test_build_unit_emits_all_artifacts(tmp_path):
     desc = json.loads((unit / ".claude-plugin" / "plugin.json").read_text())["description"]
     assert desc.endswith("Packaged auto-grounding (kb+local).")
     # idempotent: second run does not double-append
-    build_unit(unit, FIX, bind)
+    written2 = build_unit(unit, FIX, bind)
+    assert ".claude-plugin/plugin.json" not in written2
     desc2 = json.loads((unit / ".claude-plugin" / "plugin.json").read_text())["description"]
     assert desc2 == desc

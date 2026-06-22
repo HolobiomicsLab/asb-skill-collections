@@ -3,8 +3,15 @@
 (a per-technique pack or the full collection): filtered+enriched kb_bundle.json,
 vendored perspicacite_kb_bind.py, /ground command, GROUNDING.md."""
 from __future__ import annotations
+import argparse
 import json
+import shutil
 from pathlib import Path
+
+try:
+    import yaml
+except ImportError:  # pragma: no cover
+    yaml = None
 
 
 def resolve_repo_urls(skill_dois, corpus_papers, tools_index):
@@ -79,12 +86,6 @@ def render_grounding_doc(unit_name):
     )
 
 
-import argparse, shutil
-try:
-    import yaml
-except ImportError:  # pragma: no cover
-    yaml = None
-
 _SUFFIX = " Packaged auto-grounding (kb+local)."
 
 
@@ -99,6 +100,8 @@ def _read_tools(collection_dir):
 
 def build_unit(unit_dir, collection_dir, bind_script):
     unit_dir, collection_dir, bind_script = Path(unit_dir), Path(collection_dir), Path(bind_script)
+    if not (unit_dir / "skills").is_dir():
+        raise ValueError(f"no skills/ dir in unit {unit_dir}")
     slugs = {d.name for d in (unit_dir / "skills").iterdir() if d.is_dir()}
     full = json.loads((collection_dir / "kb_bundle.json").read_text())
     bundle = filter_and_enrich_bundle(full, slugs, _read_corpus(collection_dir), _read_tools(collection_dir))
@@ -110,6 +113,8 @@ def build_unit(unit_dir, collection_dir, bind_script):
     (unit_dir / "commands" / "ground.md").write_text(render_ground_command()); written.append("commands/ground.md")
     (unit_dir / "GROUNDING.md").write_text(render_grounding_doc(unit_dir.name)); written.append("GROUNDING.md")
     pj_path = unit_dir / ".claude-plugin" / "plugin.json"
+    if not pj_path.is_file():
+        raise ValueError(f"no .claude-plugin/plugin.json in unit {unit_dir}")
     pj = json.loads(pj_path.read_text())
     if not pj.get("description", "").endswith(_SUFFIX):
         pj["description"] = pj.get("description", "") + _SUFFIX
