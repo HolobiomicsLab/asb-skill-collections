@@ -275,11 +275,11 @@ asb-skill-collections/
 │
 ├── catalogue.jsonld              # Machine-readable registry (auto-generated)
 ├── CITATION.cff                  # Root-level citation (updated per release)
-├── CONTRIBUTING.md               # Curator workflow
-├── COI_POLICY.md                 # Conflict-of-interest rules
-├── MAINTAINERS.md                # Lead curator + team
-├── LICENSING.md                    # Apache-2.0 + fair-use clause
-└── README.md                     # Quick start + badges
+├── governance/                   # policy & governance (COI · content · OA · dispute · opt-out · maintainers · rollback)
+├── .github/CONTRIBUTING.md       # curator workflow
+├── AGENTS.md · CLAUDE.md         # agent-facing guides
+├── LICENSE · LICENSING.md        # Apache-2.0 (code) + CC-BY-4.0 (content)
+└── README.md                     # quick start + badges
 ```
 
 ### 3.2 collection.yaml schema
@@ -601,7 +601,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 - **§Specification:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/SPEC.md` § 6–7 (Distribution & Installation)
 - **§Implementation Plan:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/PLAN.md` § Phase 0–1
 - **§Release gate:** `POLICY-content.md` (authored Phase 0.1)
-- **§Content policies:** `COI_POLICY.md`, `CONTRIBUTING.md`, `LICENSING.md`
+- **§Content policies:** `governance/COI_POLICY.md`, `.github/CONTRIBUTING.md`, `LICENSING.md`
 - **§Linked data:** `catalogue.jsonld` context, w3id.org namespaces, indicium `uri-scheme.md`
 - **§Workflows:** `.github/workflows/release.yml`, `.github/workflows/validate.yml`
 - **§Scripts:** `scripts/regen_catalogue.py`, `scripts/check_coi.py`, `scripts/validate_leaderboard.py`
