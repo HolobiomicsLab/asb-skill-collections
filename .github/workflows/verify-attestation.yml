@@ -1,0 +1,280 @@
+# verify-attestation.yml — Runs on PRs that touch reviewer attestation YAMLs.
+# Enforces the COI / identity policy: the PR author must match the
+# `reviewer.github` field in every touched attestation, the ORCID must be
+# well-formed AND L1-verified (GitHub URL listed on the public ORCID record),
+# and for self-reviews (`is_coauthor: true`) the ORCID must be listed as an
+# author on the paper-DOI via OpenAlex (L2).
+#
+# Spec ref: COI_POLICY.md §"Identity verification" + §"Self-review handling"
+
+name: Verify attestation
+
+on:
+  pull_request:
+    paths:
+      - 'collections/**/reviews/*.yaml'
+      - 'collections/**/reviews/*.yml'
+      - 'staged-collections/**/reviews/*.yaml'
+      - 'staged-collections/**/reviews/*.yml'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  verify-attestation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml requests
+
+      - name: Identify review attestation files changed in this PR
+        id: changed
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          head="${{ github.event.pull_request.head.sha }}"
+          git diff --name-only --diff-filter=AM "$base" "$head" \
+            | grep -E '^(collections|staged-collections)/.+/reviews/.+\.ya?ml$' \
+            > /tmp/changed_reviews.txt || true
+          echo "count=$(wc -l < /tmp/changed_reviews.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          cat /tmp/changed_reviews.txt
+
+      - name: Verify identity + ORCID + COI for each attestation
+        if: steps.changed.outputs.count != '0'
+        id: verify
+        env:
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          python3 - <<'PYEOF'
+          import os
+          import re
+          import sys
+          import json
+          import pathlib
+          import datetime as _dt
+          import yaml
+          import requests
+
+          USER_AGENT = "asb-skill-collections/0.1 (mailto:louisfelix.nothias@gmail.com)"
+          PR_AUTHOR = os.environ.get("PR_AUTHOR", "").strip()
+          ORCID_RE = re.compile(r"^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$")
+
+          changed = [
+              line.strip()
+              for line in pathlib.Path("/tmp/changed_reviews.txt").read_text().splitlines()
+              if line.strip()
+          ]
+
+          def orcid_public_record(orcid):
+              """Fetch the public ORCID JSON record. Returns dict or None."""
+              try:
+                  r = requests.get(
+                      f"https://orcid.org/{orcid}",
+                      headers={"Accept": "application/json", "User-Agent": USER_AGENT},
+                      timeout=15,
+                  )
+                  if r.status_code == 200:
+                      return r.json()
+                  return None
+              except Exception:
+                  return None
+
+           # noqa - L1 verification
+
+          def github_logins_from_orcid(record):
+              """Return the set of github usernames advertised on an ORCID record."""
+              logins = set()
+              if not record:
+                  return logins
+              try:
+                  urls = (
+                      record.get("person", {})
+                      .get("researcher-urls", {})
+                      .get("researcher-url", [])
+                      or []
+                  )
+              except AttributeError:
+                  return logins
+              for entry in urls:
+                  val = ((entry or {}).get("url") or {}).get("value") or ""
+                  m = re.search(r"github\.com/([A-Za-z0-9-]+)", val)
+                  if m:
+                      logins.add(m.group(1).lower())
+              return logins
+
+          def openalex_authorship(orcid, doi):
+              """Check if `orcid` is listed as an author of `doi` on OpenAlex."""
+              try:
+                  r = requests.get(
+                      f"https://api.openalex.org/works/doi:{doi}",
+                      headers={"User-Agent": USER_AGENT},
+                      timeout=15,
+                  )
+                  if r.status_code != 200:
+                      return None, f"HTTP {r.status_code}"
+                  data = r.json()
+                  for authorship in data.get("authorships", []) or []:
+                      author = authorship.get("author") or {}
+                      a_orcid = (author.get("orcid") or "").rstrip("/").split("/")[-1]
+                      if a_orcid == orcid:
+                          return True, None
+                  return False, None
+              except Exception as exc:
+                  return None, f"err:{type(exc).__name__}"
+
+          report_rows = []
+          fail = False
+
+          if not PR_AUTHOR:
+              print("::error::PR author login unavailable; cannot verify identity.")
+              sys.exit(1)
+
+          for review_path in changed:
+              p = pathlib.Path(review_path)
+              if not p.exists():
+                  report_rows.append(f"| `{review_path}` | — | — | file missing | ✗ |")
+                  fail = True
+                  continue
+              try:
+                  doc = yaml.safe_load(p.read_text()) or {}
+              except Exception as exc:
+                  report_rows.append(f"| `{review_path}` | — | — | parse-error: {exc} | ✗ |")
+                  fail = True
+                  continue
+
+              reviewer = doc.get("reviewer") or {}
+              claimed_gh = (reviewer.get("github") or "").strip().lstrip("@")
+              claimed_orcid = (reviewer.get("orcid") or "").strip()
+              is_coauthor = bool(reviewer.get("is_coauthor"))
+              paper_doi = (doc.get("paper") or {}).get("doi") if isinstance(doc.get("paper"), dict) else doc.get("doi")
+              paper_doi = (paper_doi or "").strip()
+
+              checks = []  # list of (label, ok, detail)
+
+              # (a) PR author matches reviewer.github
+              if claimed_gh and PR_AUTHOR.lower() == claimed_gh.lower():
+                  checks.append(("author=reviewer.github", True, f"{PR_AUTHOR} == {claimed_gh}"))
+              else:
+                  checks.append((
+                      "author=reviewer.github", False,
+                      f"PR author `{PR_AUTHOR}` ≠ `{claimed_gh or '(missing)'}`",
+                  ))
+                  print(f"::error file={review_path}::PR author '{PR_AUTHOR}' does not match reviewer.github '{claimed_gh}'")
+
+              # (b) ORCID well-formed
+              if claimed_orcid and ORCID_RE.match(claimed_orcid):
+                  checks.append(("orcid-format", True, claimed_orcid))
+              else:
+                  checks.append((
+                      "orcid-format", False,
+                      f"`{claimed_orcid or '(missing)'}` fails {ORCID_RE.pattern}",
+                  ))
+                  print(f"::error file={review_path}::ORCID '{claimed_orcid}' is not well-formed")
+
+              # (c) L1: ORCID public record lists the same GitHub login
+              record = orcid_public_record(claimed_orcid) if claimed_orcid and ORCID_RE.match(claimed_orcid) else None
+              if record is None:
+                  checks.append((
+                      "L1: github in ORCID profile", False,
+                      "could not fetch ORCID public record",
+                  ))
+                  print(f"::error file={review_path}::Could not fetch ORCID record for {claimed_orcid}")
+              else:
+                  logins = github_logins_from_orcid(record)
+                  if claimed_gh and claimed_gh.lower() in logins:
+                      checks.append((
+                          "L1: github in ORCID profile", True,
+                          f"github.com/{claimed_gh} listed on {claimed_orcid}",
+                      ))
+                  else:
+                      checks.append((
+                          "L1: github in ORCID profile", False,
+                          f"`{claimed_gh}` not in researcher-urls (found: {sorted(logins) or 'none'})",
+                      ))
+                      print(f"::error file={review_path}::GitHub login '{claimed_gh}' not on public ORCID record {claimed_orcid}")
+
+              # (d) L2: if self-review, ORCID must be on the paper's authorship list
+              if is_coauthor:
+                  if not paper_doi:
+                      checks.append((
+                          "L2: ORCID is paper author (self-review)", False,
+                          "is_coauthor=true but no paper DOI present in attestation",
+                      ))
+                      print(f"::error file={review_path}::is_coauthor=true but no paper DOI present")
+                  else:
+                      ok, err = openalex_authorship(claimed_orcid, paper_doi)
+                      if ok is True:
+                          checks.append((
+                              "L2: ORCID is paper author (self-review)", True,
+                              f"OpenAlex confirms {claimed_orcid} on doi:{paper_doi}",
+                          ))
+                      elif ok is False:
+                          checks.append((
+                              "L2: ORCID is paper author (self-review)", False,
+                              f"OpenAlex does not list {claimed_orcid} on doi:{paper_doi}",
+                          ))
+                          print(f"::error file={review_path}::Self-review COI: {claimed_orcid} not listed as author of {paper_doi}")
+                      else:
+                          checks.append((
+                              "L2: ORCID is paper author (self-review)", False,
+                              f"OpenAlex lookup failed: {err}",
+                          ))
+                          print(f"::error file={review_path}::OpenAlex lookup failed for {paper_doi}: {err}")
+              else:
+                  checks.append((
+                      "L2: ORCID is paper author (self-review)", True,
+                      "skipped (is_coauthor=false)",
+                  ))
+
+              for label, ok, detail in checks:
+                  mark = "✓" if ok else "✗"
+                  report_rows.append(
+                      f"| `{review_path}` | {claimed_gh or '—'} | {claimed_orcid or '—'} | {label}: {detail} | {mark} |"
+                  )
+                  if not ok:
+                      fail = True
+                  print(f"{'PASS' if ok else 'FAIL'}: {review_path} :: {label} :: {detail}")
+
+          report_md = (
+              "| File | reviewer.github | ORCID | Check | Result |\n"
+              "|---|---|---|---|---|\n"
+              + ("\n".join(report_rows) if report_rows else "_(no attestation rows)_\n")
+              + f"\n\n_Verified at: {_dt.datetime.now(_dt.timezone.utc).isoformat()} · PR author: `{PR_AUTHOR}`_\n"
+              + "_Driver: `verify-attestation.yml` · Policy: `COI_POLICY.md`_\n"
+          )
+          pathlib.Path("/tmp/attestation-report.md").write_text(report_md)
+          print("\n" + report_md)
+
+          if fail:
+              sys.exit(1)
+          PYEOF
+
+      - name: Post verification report as PR comment
+        if: always() && steps.changed.outputs.count != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/attestation-report.md', 'utf8');
+            const status = "${{ job.status }}";
+            const heading = status === "success"
+              ? "### ✅ Attestation identity check passed"
+              : "### ❌ Attestation identity check failed";
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `${heading}\n\n${report}`
+            });
