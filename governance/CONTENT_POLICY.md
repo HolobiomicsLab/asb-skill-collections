@@ -12,6 +12,10 @@ This policy establishes the legal and operational boundaries for ingesting, stor
 
 **Core principle:** ASB transforms copyrighted source papers into independently-authored structured artifacts (benchmarks, skills, capsules) grounded in facts and methods (not copyrightable) and attributable to their sources via DOIs and fair use. All public releases are legally defensible on fair-use grounds and explicitly license-compliant.
 
+> **Scientific gate:** this policy is the *legal* gate. The *scientific* gate —
+> where source papers come from and what makes them eligible — is documented in
+> [`SOURCES.md`](SOURCES.md). Both gates apply to every paper.
+
 ---
 
 ## 2. Three-Tier Content Model
