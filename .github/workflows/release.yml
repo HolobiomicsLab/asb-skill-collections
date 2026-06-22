@@ -11,6 +11,12 @@ on:
   push:
     tags:
       - "*-v[0-9]*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to (re)run, e.g. metabolomics-v0.1.0"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -24,11 +30,15 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          # On manual dispatch, check out the requested tag's content.
+          ref: ${{ inputs.tag || github.ref }}
 
       - name: Extract collection slug and version from tag
         id: tag
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
         run: |
-          TAG="${GITHUB_REF_NAME}"
+          TAG="${INPUT_TAG:-${GITHUB_REF_NAME}}"
           # Tag format: <slug>-v<release-version>  e.g. metabolomics-v0.1.0
           SLUG="${TAG%-v*}"
           # The release/tag version (e.g. 0.1.0) is independent of the on-disk
