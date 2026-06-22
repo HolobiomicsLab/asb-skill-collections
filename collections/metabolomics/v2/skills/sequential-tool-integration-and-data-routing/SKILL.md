@@ -16,7 +16,6 @@ metadata:
   - ProteoWizard msConvert
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial

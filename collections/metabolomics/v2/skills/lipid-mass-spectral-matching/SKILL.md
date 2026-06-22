@@ -16,7 +16,6 @@ metadata:
   - Q-Exactive (Orbitrap UHPLC-HRMS/MS)
   techniques:
   - direct-infusion-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

@@ -20,6 +20,5 @@ source_repos:
 schema_version: 0.2.0
 techniques:
 - LC-MS
-- tandem-MS
 - CE-MS
 - mass-spectrometry

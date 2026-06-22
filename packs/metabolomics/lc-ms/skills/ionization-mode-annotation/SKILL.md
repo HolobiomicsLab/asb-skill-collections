@@ -13,7 +13,6 @@ metadata:
   - R
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator

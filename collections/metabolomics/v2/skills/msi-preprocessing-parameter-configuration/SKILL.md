@@ -19,7 +19,6 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen

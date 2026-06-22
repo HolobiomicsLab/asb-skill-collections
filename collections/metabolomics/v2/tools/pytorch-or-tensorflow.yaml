@@ -7,7 +7,7 @@ derived_from:
   title: mol2ccs
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - MS-imaging
 - ion-mobility-MS
 - mass-spectrometry

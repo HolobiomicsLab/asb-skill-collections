@@ -12,7 +12,6 @@ metadata:
   - spectrum_utils
   techniques:
   - CE-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity

@@ -12,7 +12,6 @@ metadata:
   - ipaPy2
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btad455
   title: ipaPy2

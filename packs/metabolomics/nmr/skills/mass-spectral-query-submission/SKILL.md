@@ -17,7 +17,7 @@ metadata:
   - metadataMASST
   - GNPS_MASST
   techniques:
-  - tandem-MS
+  - LC-MS
   - NMR
 derived_from:
 - doi: 10.1038/s41564-023-01575-9

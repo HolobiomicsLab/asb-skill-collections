@@ -12,7 +12,6 @@ metadata:
   - R
   techniques:
   - MS-imaging
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct

@@ -11,7 +11,6 @@ metadata:
   - MS2MP
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c06875
   title: MS2MP

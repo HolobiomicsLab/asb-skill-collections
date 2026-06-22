@@ -11,8 +11,8 @@ metadata:
   - Python
   - DEIMoS
   techniques:
+  - LC-MS
   - ion-mobility-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos

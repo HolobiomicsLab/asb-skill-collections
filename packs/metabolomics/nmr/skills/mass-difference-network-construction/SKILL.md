@@ -19,7 +19,6 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1186/s40168-023-01476-3

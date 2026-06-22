@@ -16,7 +16,6 @@ metadata:
   - asari
   techniques:
   - LC-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1038/s41467-023-39889-1

@@ -7,6 +7,5 @@ derived_from:
   title: moccal
 schema_version: 0.2.0
 techniques:
-- tandem-MS
 - CE-MS
 - ion-mobility-MS

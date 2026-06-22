@@ -9,4 +9,4 @@ derived_from:
   title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS

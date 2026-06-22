@@ -43,9 +43,10 @@ indexes at the collection root make lookup cheap — load whichever fits:
 
 Pick a skill by matching the user's task against, in order of precision:
 
-1. **Technique** (`techniques`) — analytical platform tags: `LC-MS`, `tandem-MS`,
-   `GC-MS`, `CE-MS`, `direct-infusion-MS`, `MS-imaging`, `ion-mobility-MS`, `NMR`,
-   `mass-spectrometry` (generic). e.g. `jq '.[]|select(.techniques[]?=="LC-MS")'`.
+1. **Technique** (`techniques`) — analytical platform tags: `LC-MS` (incl.
+   LC-MS/MS), `GC-MS`, `CE-MS`, `direct-infusion-MS`, `MS-imaging`,
+   `ion-mobility-MS`, `NMR`, `mass-spectrometry` (generic).
+   e.g. `jq '.[]|select(.techniques[]?=="LC-MS")'`.
 2. **EDAM operation/topic IRI** — exact ontology match (e.g. peak picking =
    `operation_3215`, spectral library matching, formula prediction).
 3. **Tool name** — the user already names a tool ("run XCMS", "use SIRIUS",

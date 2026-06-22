@@ -16,8 +16,8 @@ metadata:
   - Redis
   - AirdSDK
   techniques:
+  - LC-MS
   - ion-mobility-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

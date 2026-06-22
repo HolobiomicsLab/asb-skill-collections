@@ -18,7 +18,6 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - MS-imaging
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

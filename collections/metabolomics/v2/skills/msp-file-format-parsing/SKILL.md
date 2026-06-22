@@ -19,7 +19,6 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

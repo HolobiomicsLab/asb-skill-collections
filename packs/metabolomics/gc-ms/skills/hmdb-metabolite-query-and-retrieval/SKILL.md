@@ -16,7 +16,6 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1002/nbm.70131

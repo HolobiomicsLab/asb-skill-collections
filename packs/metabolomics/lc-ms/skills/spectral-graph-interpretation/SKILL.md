@@ -16,7 +16,6 @@ metadata:
   - R
   techniques:
   - LC-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737

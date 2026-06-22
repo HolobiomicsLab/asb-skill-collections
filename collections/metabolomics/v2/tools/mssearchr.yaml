@@ -10,7 +10,7 @@ source_repos:
 - AndreySamokhin/mssearchr
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - GC-MS
 - CE-MS
 - mass-spectrometry

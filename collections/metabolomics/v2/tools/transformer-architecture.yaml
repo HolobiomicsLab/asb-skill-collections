@@ -8,5 +8,5 @@ derived_from:
   title: NMR2Struct
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - NMR

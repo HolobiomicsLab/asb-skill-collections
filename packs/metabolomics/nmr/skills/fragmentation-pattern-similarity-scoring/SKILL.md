@@ -22,7 +22,6 @@ metadata:
   - Biotransformer 3.0
   techniques:
   - CE-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1021/acs.est.5c08558

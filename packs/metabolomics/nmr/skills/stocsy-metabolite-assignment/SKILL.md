@@ -14,7 +14,7 @@ metadata:
   - MWASTools
   - TopSpin 3.2
   techniques:
-  - tandem-MS
+  - LC-MS
   - NMR
 derived_from:
 - doi: 10.1093/bioinformatics/btx477

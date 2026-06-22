@@ -17,7 +17,6 @@ metadata:
   - LC-MS
   - GC-MS
   - CE-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1021/ac051437y

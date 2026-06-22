@@ -12,6 +12,5 @@ source_repos:
 schema_version: 0.2.0
 techniques:
 - LC-MS
-- tandem-MS
 - GC-MS
 - ion-mobility-MS

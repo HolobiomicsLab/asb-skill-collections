@@ -11,7 +11,6 @@ metadata:
   - GNPS_GC
   techniques:
   - GC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

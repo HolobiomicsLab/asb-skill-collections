@@ -18,7 +18,6 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

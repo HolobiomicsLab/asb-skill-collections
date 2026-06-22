@@ -9,7 +9,7 @@ source_repos:
 - ZhuMetLab/MrnAnnoAlgo3
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - CE-MS
 - direct-infusion-MS
 - NMR

@@ -9,7 +9,7 @@ derived_from:
   title: 'MIST-CF: Chemical Formula Inference from Tandem Mass Spectra'
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - MS-imaging
 - ion-mobility-MS
 - mass-spectrometry

@@ -9,5 +9,5 @@ source_repos:
 - grimme-lab/QCxMS2
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - GC-MS

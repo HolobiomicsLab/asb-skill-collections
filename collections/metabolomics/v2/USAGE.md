@@ -53,8 +53,8 @@ jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
 /plugin install metabolomics@asb-skill-collections          # full (5,865 skills)
 # or a lighter per-technique pack (load only what you need):
 /plugin install metabolomics-lc-ms@asb-skill-collections    # lc-ms · gc-ms · nmr · ms-imaging ·
-                                                            # ion-mobility · ce-ms · direct-infusion ·
-                                                            # tandem-ms · ms-generic
+                                                            # ion-mobility · ce-ms ·
+                                                            # direct-infusion · ms-generic
 ```
 
 Skills are auto-discovered from `skills/<slug>/SKILL.md` and become available to
@@ -132,11 +132,12 @@ vocabulary and current counts:
 
 | tag | skills | | tag | skills |
 |---|---|---|---|---|
-| `LC-MS` | 1314 | | `MS-imaging` | 292 |
-| `tandem-MS` (MS/MS) | 2129 | | `NMR` | 276 |
-| `GC-MS` | 367 | | `CE-MS` | 114 |
-| `ion-mobility-MS` | 390 | | `direct-infusion-MS` | 97 |
-| `mass-spectrometry` (generic) | 804 | | *(technique-agnostic: untagged)* | 1520 |
+| `LC-MS` (incl. LC-MS/MS) | 2621 | | `MS-imaging` | 292 |
+| `GC-MS` | 367 | | `NMR` | 276 |
+| `ion-mobility-MS` | 390 | | `CE-MS` | 114 |
+| `mass-spectrometry` (generic) | 804 | | `direct-infusion-MS` | 97 |
+
+*(Tandem-MS / MS/MS is folded into `LC-MS` — a fragmentation mode, not a platform — except genuinely GC-MS/CE-MS/DI/imaging sources. ~1,520 skills are technique-agnostic.)*
 
 ```bash
 # all LC-MS skills

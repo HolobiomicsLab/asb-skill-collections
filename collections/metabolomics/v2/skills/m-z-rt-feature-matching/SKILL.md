@@ -14,7 +14,6 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA

@@ -14,7 +14,6 @@ metadata:
   - spectra-hash
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

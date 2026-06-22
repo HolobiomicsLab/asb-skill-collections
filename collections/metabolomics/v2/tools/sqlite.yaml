@@ -4,4 +4,4 @@ evidence_spans:
 - It also parses some of the information out of the SQLite data base
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS

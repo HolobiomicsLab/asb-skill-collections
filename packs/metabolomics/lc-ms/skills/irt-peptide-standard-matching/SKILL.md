@@ -14,7 +14,6 @@ metadata:
   - Biognosys iRT standard mix
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr

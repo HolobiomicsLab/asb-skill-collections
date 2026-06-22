@@ -11,7 +11,7 @@ source_repos:
 - mwang87/MASST
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - MS-imaging
 - NMR
 - mass-spectrometry

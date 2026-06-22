@@ -11,7 +11,7 @@ source_repos:
 - Wang-Bioinformatics-Lab/ModiFinder_base
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - CE-MS
 - ion-mobility-MS
 - NMR

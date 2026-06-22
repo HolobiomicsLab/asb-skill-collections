@@ -23,7 +23,6 @@ metadata:
   - tidyverse, reshape2
   techniques:
   - CE-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

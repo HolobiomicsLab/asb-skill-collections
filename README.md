@@ -46,8 +46,8 @@ layers follow (see [PROVENANCE.md](collections/metabolomics/v2/PROVENANCE.md)).
 
 ```bash
 /plugin install metabolomics-lc-ms@asb-skill-collections    # also: gc-ms, nmr, ms-imaging,
-                                                            # ion-mobility, ce-ms, direct-infusion,
-                                                            # tandem-ms, ms-generic
+                                                            # ion-mobility, ce-ms,
+                                                            # direct-infusion, ms-generic
 ```
 
 Packs **overlap** (a multi-technique skill appears in several), so prefer one full

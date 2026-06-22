@@ -14,7 +14,7 @@ metadata:
   - trove4j
   - Passatutto
   techniques:
-  - tandem-MS
+  - LC-MS
   - NMR
 derived_from:
 - doi: 10.3390/metabo12020173

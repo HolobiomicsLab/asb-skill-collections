@@ -16,7 +16,7 @@ metadata:
   - GNPS
   - INVENTA
   techniques:
-  - tandem-MS
+  - LC-MS
   - NMR
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334

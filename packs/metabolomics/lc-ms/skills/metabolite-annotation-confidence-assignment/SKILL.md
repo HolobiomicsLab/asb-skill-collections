@@ -15,7 +15,6 @@ metadata:
   - patRoon
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

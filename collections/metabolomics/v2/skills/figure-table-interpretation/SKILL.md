@@ -280,7 +280,6 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS

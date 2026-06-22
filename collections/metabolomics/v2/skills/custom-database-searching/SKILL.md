@@ -12,7 +12,6 @@ metadata:
   - CFM-id
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1089/omi.2021.0051
   title: MS2Compound

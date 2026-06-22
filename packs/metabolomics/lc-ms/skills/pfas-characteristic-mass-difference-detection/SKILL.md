@@ -15,7 +15,6 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1007/s00216-023-05070-2

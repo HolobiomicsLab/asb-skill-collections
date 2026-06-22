@@ -9,7 +9,7 @@ source_repos:
 - aaronma2020/MSGO
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - GC-MS
 - NMR
 - mass-spectrometry

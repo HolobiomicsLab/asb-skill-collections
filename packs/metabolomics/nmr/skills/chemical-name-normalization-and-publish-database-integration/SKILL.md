@@ -21,7 +21,6 @@ metadata:
   - FDA/SPL
   techniques:
   - GC-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1371/journal.pone.0306202

@@ -13,7 +13,6 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1186/s13321-020-00477-w

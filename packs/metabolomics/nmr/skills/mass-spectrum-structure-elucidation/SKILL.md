@@ -13,7 +13,7 @@ metadata:
   - ms-pred (coleygroup)
   - MAGMa
   techniques:
-  - tandem-MS
+  - LC-MS
   - NMR
 derived_from:
 - doi: 10.1038/s42256-024-00816-8

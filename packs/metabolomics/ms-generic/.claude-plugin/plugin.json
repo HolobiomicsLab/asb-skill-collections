@@ -1,7 +1,7 @@
 {
   "name": "metabolomics-ms-generic",
   "displayName": "ASB Metabolomics \u2014 mass-spectrometry",
-  "description": "mass-spectrometry subset of the ASB metabolomics collection: 804 evidence-grounded skills (a lighter install than the full collection; skills may also appear in other technique packs). Filter/ground via the full collection.",
+  "description": "mass-spectrometry subset of the ASB metabolomics collection: 804 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
   "version": "0.1.0",
   "author": {
     "name": "Holobiomics Lab",

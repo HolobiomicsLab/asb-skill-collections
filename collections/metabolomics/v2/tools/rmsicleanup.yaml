@@ -7,6 +7,5 @@ derived_from:
   title: 'rMSIcleanup: an open-source tool for matrix-related peak annotation in mass spectrometry imaging and its application to silver-assisted laser desorption/ionization'
 schema_version: 0.2.0
 techniques:
-- tandem-MS
 - MS-imaging
 - NMR

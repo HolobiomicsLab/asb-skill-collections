@@ -14,7 +14,7 @@ metadata:
   - matplotlib
   - GNPS
   techniques:
-  - tandem-MS
+  - LC-MS
   - NMR
 derived_from:
 - doi: 10.1021/jasms.4c00061

@@ -12,7 +12,6 @@ metadata:
   - PyYAML
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

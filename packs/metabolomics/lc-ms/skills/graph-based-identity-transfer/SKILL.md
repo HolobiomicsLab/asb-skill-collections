@@ -14,7 +14,6 @@ metadata:
   - ChemWalker
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1093/bioinformatics/btad078/7067745
   title: ChemWalker

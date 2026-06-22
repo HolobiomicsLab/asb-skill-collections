@@ -7,5 +7,5 @@ derived_from:
   title: pairedomicsdatapla
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - NMR

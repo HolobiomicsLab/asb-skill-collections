@@ -13,7 +13,6 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

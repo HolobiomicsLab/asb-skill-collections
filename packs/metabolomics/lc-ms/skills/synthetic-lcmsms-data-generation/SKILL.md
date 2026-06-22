@@ -13,7 +13,6 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER

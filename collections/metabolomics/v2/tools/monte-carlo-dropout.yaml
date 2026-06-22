@@ -9,4 +9,4 @@ derived_from:
   title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS

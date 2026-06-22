@@ -13,7 +13,6 @@ metadata:
   - run_gensim.py
   techniques:
   - LC-MS
-  - tandem-MS
   - NMR
 derived_from:
 - doi: 10.1073/pnas.1608041113

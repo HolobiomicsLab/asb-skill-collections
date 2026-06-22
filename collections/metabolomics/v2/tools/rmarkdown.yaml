@@ -9,5 +9,5 @@ source_repos:
 - MRCIEU/metaboprep
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - ion-mobility-MS

@@ -8,6 +8,6 @@ derived_from:
   title: aird
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - ion-mobility-MS
 - mass-spectrometry

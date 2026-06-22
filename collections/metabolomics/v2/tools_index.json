@@ -19,7 +19,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR"
   ]
@@ -33,8 +32,7 @@
    "10.1021/acs.analchem.1c02687"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -47,7 +45,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -60,7 +57,7 @@
    "10.1515/jib-2025-0047"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -72,7 +69,7 @@
    "10.1021/acs.analchem.5c03207"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -86,8 +83,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -112,7 +108,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS"
   ]
@@ -126,7 +121,7 @@
    "10.1186/s12859-017-1744-3"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "direct-infusion-MS"
   ]
  },
@@ -140,7 +135,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR"
   ]
@@ -154,7 +148,7 @@
    "10.1186/s12859-021-04490-0"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -168,7 +162,7 @@
    "10.1186/s12859-021-04490-0"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -183,7 +177,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -198,7 +191,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -228,7 +220,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -246,7 +237,7 @@
    "10.1021/acs.jproteome.8b00359"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "mass-spectrometry"
   ]
@@ -260,7 +251,7 @@
    "10.1093/bioadv/vbag111"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -276,7 +267,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -312,7 +302,7 @@
    "10.1021/acs.jproteome.5c00435"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -326,7 +316,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS"
   ]
  },
@@ -340,7 +329,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -354,7 +342,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -384,7 +371,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "NMR",
@@ -439,7 +425,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -465,7 +450,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS"
   ]
@@ -490,7 +474,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "ion-mobility-MS"
@@ -506,7 +489,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -532,7 +514,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -545,7 +526,7 @@
    "10.1021/jasms.4c00061"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -569,7 +550,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -595,8 +575,7 @@
    "10.1101/2024.10.11.617756"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -610,7 +589,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -625,7 +603,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -642,7 +619,7 @@
    "10.1021/acs.jproteome.8b00717"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -661,7 +638,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -679,7 +655,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -723,7 +698,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "ion-mobility-MS",
@@ -793,7 +767,7 @@
    "10.1093/nar/gkac1049"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -806,7 +780,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -822,7 +795,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -836,7 +808,7 @@
    "10.21105/joss.04494"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -849,7 +821,7 @@
    "10.1186/s12859-017-1744-3"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "direct-infusion-MS"
   ]
  },
@@ -894,7 +866,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -928,7 +899,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -949,7 +919,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "MS-imaging",
@@ -979,8 +948,7 @@
    "10.3390/metabo13080944"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -993,7 +961,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS"
   ]
@@ -1017,8 +984,7 @@
    "10.1021/acs.analchem.1c02687"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1033,7 +999,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -1048,7 +1013,7 @@
    "10.1038/s42256-025-01140-5"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -1099,7 +1064,7 @@
    "10.1145/2939672.2939778"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1111,8 +1076,7 @@
    "10.1021/acs.analchem.0c03895"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1124,7 +1088,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -1138,7 +1102,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS",
    "NMR",
@@ -1154,7 +1117,7 @@
    "10.1038/s41592-023-02012-9"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1179,7 +1142,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -1192,7 +1154,6 @@
    "10.1186/s13321-021-00530-2"
   ],
   "techniques": [
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -1205,7 +1166,7 @@
    "10.21105/joss.04494"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -1220,7 +1181,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -1233,8 +1193,7 @@
    "10.1021/acs.analchem.1c00238"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1246,7 +1205,7 @@
    "10.1021/acs.est.5c08558"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR"
   ]
@@ -1260,7 +1219,7 @@
    "10.1021/acs.est.5c08558"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR"
   ]
@@ -1276,7 +1235,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS"
   ]
@@ -1312,8 +1270,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1325,7 +1282,7 @@
    "10.1186/s13321-021-00530-2"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -1338,8 +1295,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1364,7 +1320,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -1390,7 +1345,7 @@
    "10.3390/metabo12020173"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -1405,7 +1360,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "ion-mobility-MS"
   ]
@@ -1419,8 +1373,7 @@
    "10.1021/acs.jproteome.2c00457"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1434,7 +1387,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -1448,7 +1400,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -1478,7 +1429,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -1507,8 +1457,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1533,7 +1482,7 @@
    "10.1021/acscentsci.4c01132"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -1572,7 +1521,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -1589,7 +1537,7 @@
    "10.1016/1044-0305(94)87009-8"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS"
   ]
  },
@@ -1602,7 +1550,7 @@
    "10.1016/1044-0305(94)87009-8"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "ion-mobility-MS"
   ]
@@ -1616,7 +1564,7 @@
    "10.1093/gigascience/giaa162"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1628,7 +1576,7 @@
    "10.1093/gigascience/giaa162"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1650,7 +1598,7 @@
    "10.1021/jasms.5c00234"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS"
   ]
  },
@@ -1665,7 +1613,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -1683,7 +1630,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "ion-mobility-MS",
@@ -1700,7 +1646,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging"
   ]
  },
@@ -1716,7 +1661,7 @@
    "10.1021/acs.analchem.5c02655"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR",
    "mass-spectrometry"
@@ -1754,7 +1699,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -1805,7 +1749,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -1824,7 +1767,7 @@
    "10.1021/jasms.5c00237"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -1839,7 +1782,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS"
   ]
@@ -1854,7 +1796,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -1880,7 +1821,7 @@
    "10.1145/2939672.2939778"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1892,7 +1833,7 @@
    "10.1021/acs.analchem.9b02655"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -1905,7 +1846,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "NMR",
    "mass-spectrometry"
@@ -1921,7 +1861,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "ion-mobility-MS",
    "NMR",
@@ -1937,7 +1876,7 @@
    "10.1021/acs.analchem.5c01726"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS"
   ]
  },
@@ -1951,7 +1890,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging"
   ]
  },
@@ -1965,7 +1903,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS"
   ]
  },
@@ -1995,7 +1932,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -2026,7 +1962,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS"
   ]
  },
@@ -2040,7 +1975,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -2080,7 +2014,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -2162,7 +2095,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -2206,7 +2138,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -2252,7 +2183,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS"
   ]
  },
@@ -2265,7 +2195,7 @@
    "10.1021/acs.analchem.5c01726"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2277,7 +2207,7 @@
    "10.1101/2024.10.11.617756"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2302,7 +2232,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
@@ -2330,8 +2259,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2354,7 +2282,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -2394,7 +2321,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS"
   ]
  },
@@ -2407,7 +2333,7 @@
    "10.1186/2047-217x-2-16"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "MS-imaging",
    "NMR"
@@ -2422,8 +2348,7 @@
    "10.1021/acscentsci.3c00800"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2435,7 +2360,7 @@
    "10.1038/s41592-023-02012-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -2475,8 +2400,7 @@
    "10.1021/acs.analchem.0c03895"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2489,7 +2413,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -2528,7 +2451,7 @@
    "10.1002/rcm.9153"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -2551,8 +2474,7 @@
    "10.1021/acs.analchem.1c02687"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2564,8 +2486,7 @@
    "10.1021/acs.analchem.1c00238"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2577,7 +2498,7 @@
    "10.1101/2025.08.28.672951v2"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2589,7 +2510,7 @@
    "10.1038/s41467-025-66060-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -2604,7 +2525,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS"
   ]
@@ -2640,8 +2560,7 @@
    "10.1101/2025.08.28.672951v2"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2653,7 +2572,7 @@
    "10.1038/s41589-019-0400-9"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2666,7 +2585,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS",
    "NMR",
@@ -2694,8 +2612,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2707,7 +2624,6 @@
    "10.1371/journal.pone.0306202"
   ],
   "techniques": [
-   "tandem-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -2733,7 +2649,7 @@
    "10.1038/s41564-023-01575-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "NMR",
    "mass-spectrometry"
@@ -2748,7 +2664,7 @@
    "10.1186/s40168-023-01476-3"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
   ]
@@ -2777,7 +2693,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -2792,7 +2707,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -2806,7 +2720,7 @@
    "10.1186/s12859-018-2134-1"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -2821,7 +2735,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "MS-imaging",
@@ -2855,7 +2768,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -2870,7 +2782,7 @@
    "10.1021/jasms.5c00234"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS"
   ]
  },
@@ -2884,7 +2796,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR"
   ]
@@ -2908,8 +2819,7 @@
    "10.1021/acs.analchem.4c02462"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2922,7 +2832,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -2936,7 +2845,7 @@
    "10.1021/acs.analchem.2c04632"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -2961,7 +2870,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -2989,7 +2897,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -3024,7 +2931,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -3040,7 +2946,6 @@
    "10.1016/1044-0305(94)87009-8"
   ],
   "techniques": [
-   "tandem-MS",
    "CE-MS"
   ]
  },
@@ -3164,7 +3069,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -3183,7 +3087,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -3198,7 +3101,7 @@
    "10.1038/s41592-022-01496-1"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3211,7 +3114,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS"
   ]
@@ -3226,7 +3128,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS"
@@ -3243,7 +3144,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -3260,7 +3160,7 @@
    "10.1101/2020.05.09.086066"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3272,7 +3172,7 @@
    "10.1101/2020.05.09.086066"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3284,8 +3184,7 @@
    "10.1038/s41467-018-06082-8"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3313,7 +3212,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -3335,7 +3233,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS"
   ]
@@ -3372,7 +3269,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging"
   ]
  },
@@ -3431,7 +3327,7 @@
    "10.1021/acs.est.5c08558"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR"
   ]
@@ -3457,8 +3353,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3470,7 +3365,7 @@
    "10.1093/gigascience/giaa162"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3499,7 +3394,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -3528,8 +3422,7 @@
    "10.1021/acs.analchem.4c01565"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3554,7 +3447,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -3569,7 +3461,7 @@
    "10.1021/acs.jproteome.8b00717"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -3592,7 +3484,6 @@
    "10.1021/acs.analchem.3c04290"
   ],
   "techniques": [
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS"
   ]
@@ -3607,7 +3498,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "NMR"
@@ -3624,7 +3514,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -3691,8 +3580,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3757,7 +3645,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "ion-mobility-MS",
@@ -3773,7 +3660,7 @@
    "10.1021/acs.jproteome.2c00612"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -3812,7 +3699,7 @@
    "10.1021/acs.analchem.3c04654"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "NMR"
   ]
@@ -3826,7 +3713,7 @@
    "10.1021/acs.analchem.3c04654"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS"
   ]
  },
@@ -3840,7 +3727,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "NMR",
    "mass-spectrometry"
@@ -3857,7 +3743,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -3876,7 +3761,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "NMR",
@@ -3892,7 +3776,7 @@
    "10.21105/joss.04494"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -3909,7 +3793,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -3947,7 +3830,6 @@
    "10.1021/acs.analchem.4c06520"
   ],
   "techniques": [
-   "tandem-MS",
    "MS-imaging",
    "mass-spectrometry"
   ]
@@ -3961,8 +3843,7 @@
    "10.1021/acs.analchem.0c03895"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -3998,7 +3879,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4011,7 +3892,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -4025,7 +3905,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
@@ -4040,7 +3919,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4052,7 +3931,7 @@
    "10.1038/s41467-021-23953-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -4077,7 +3956,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -4092,8 +3970,7 @@
    "10.1093/bioinformatics/btad455"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4127,8 +4004,7 @@
    "10.1021/acs.analchem.1c01644"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4165,7 +4041,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -4205,7 +4080,7 @@
    "10.1371/journal.pone.0246962"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4219,7 +4094,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -4260,7 +4134,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -4277,7 +4150,7 @@
    "10.3390/metabo12020173"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -4292,7 +4165,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "NMR"
@@ -4309,7 +4181,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS"
   ]
  },
@@ -4322,7 +4193,7 @@
    "10.3390/metabo12020173"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -4357,7 +4228,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -4396,7 +4266,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -4410,7 +4279,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -4426,7 +4294,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -4442,8 +4309,7 @@
    "10.1021/acs.analchem.5c00567"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4466,7 +4332,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "NMR",
    "mass-spectrometry"
@@ -4483,7 +4348,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "MS-imaging",
    "NMR",
@@ -4531,7 +4395,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -4550,7 +4413,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -4570,7 +4432,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "MS-imaging",
@@ -4588,7 +4449,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -4603,7 +4463,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -4618,7 +4477,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -4645,7 +4503,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -4660,7 +4517,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -4676,7 +4532,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -4694,7 +4549,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -4712,7 +4566,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -4726,7 +4579,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -4751,7 +4603,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "NMR",
@@ -4781,7 +4632,7 @@
    "10.1021/acs.jproteome.0c00082"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -4795,7 +4646,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -4818,7 +4668,7 @@
    "10.1021/acs.analchem.4c04040"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -4833,7 +4683,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -4846,7 +4695,7 @@
    "10.1515/jib-2025-0047"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4868,7 +4717,7 @@
    "10.1038/s41467-021-23953-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -4893,7 +4742,7 @@
    "10.1021/acs.analchem.2c04518"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4906,7 +4755,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -4933,7 +4781,7 @@
    "10.1073/pnas.1608041113"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -4946,7 +4794,7 @@
    "10.1073/pnas.1608041113"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -4959,7 +4807,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "ion-mobility-MS",
@@ -4977,7 +4824,7 @@
    "10.1093/bioinformatics/btab741/6409851"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS"
   ]
  },
@@ -4992,7 +4839,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -5006,7 +4852,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR"
   ]
@@ -5034,8 +4879,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5050,7 +4894,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -5075,7 +4918,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -5101,7 +4943,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -5125,7 +4966,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS"
   ]
  },
@@ -5138,7 +4978,7 @@
    "10.1145/2939672.2939778"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5151,7 +4991,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "MS-imaging",
@@ -5168,7 +5007,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -5207,7 +5045,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -5226,7 +5063,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -5244,7 +5080,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5256,7 +5092,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5268,7 +5104,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5280,7 +5116,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5292,7 +5128,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5305,7 +5141,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -5318,8 +5153,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5332,7 +5166,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -5350,7 +5183,7 @@
    "10.1073/pnas.1608041113"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -5363,7 +5196,7 @@
    "10.1002/rcm.10132"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5376,7 +5209,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -5389,7 +5221,7 @@
    "10.1038/s41587-023-01985-4"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -5410,7 +5242,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -5469,7 +5300,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -5507,7 +5337,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -5570,7 +5399,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging"
   ]
@@ -5595,7 +5423,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -5610,7 +5437,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS"
   ]
@@ -5626,7 +5452,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "ion-mobility-MS",
@@ -5643,7 +5468,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "mass-spectrometry"
   ]
@@ -5671,7 +5495,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -5689,7 +5512,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -5707,7 +5529,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -5723,7 +5544,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS"
   ]
  },
@@ -5738,7 +5558,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "NMR"
@@ -5764,7 +5583,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "NMR",
@@ -5792,7 +5610,7 @@
    "10.1101/2020.05.09.086066"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "MS-imaging"
   ]
@@ -5818,7 +5636,7 @@
    "10.1101/2020.05.09.086066"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5844,7 +5662,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "NMR",
@@ -5860,8 +5677,7 @@
    "10.1186/1471-2105-15-s11-s5"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -5874,7 +5690,7 @@
    "10.1038/s41564-023-01575-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "NMR",
    "mass-spectrometry"
@@ -5900,7 +5716,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS"
   ]
  },
@@ -5914,7 +5729,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "mass-spectrometry"
@@ -5963,8 +5777,7 @@
    "10.1101/2025.11.12.687968v1"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6002,7 +5815,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -6041,7 +5853,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "ion-mobility-MS",
@@ -6068,7 +5879,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -6082,7 +5892,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -6096,7 +5905,7 @@
    "10.1101/2024.10.11.617756"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -6110,7 +5919,7 @@
    "10.1038/s41564-023-01575-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "NMR",
    "mass-spectrometry"
@@ -6126,7 +5935,7 @@
    "10.1038/s41564-023-01575-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "NMR",
    "mass-spectrometry"
@@ -6142,7 +5951,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -6156,7 +5964,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -6172,7 +5979,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR"
   ]
@@ -6187,7 +5993,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -6212,7 +6017,6 @@
    "10.1021/jasms.4c00178"
   ],
   "techniques": [
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -6228,7 +6032,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "ion-mobility-MS"
   ]
@@ -6254,7 +6057,7 @@
    "10.1021/acs.jcim.3c01082"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -6270,7 +6073,7 @@
    "10.1021/acs.jcim.3c01082"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -6287,7 +6090,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -6314,7 +6116,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS"
   ]
  },
@@ -6328,7 +6129,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS"
   ]
@@ -6352,7 +6152,7 @@
    "10.1021/jasms.4c00061"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "ion-mobility-MS",
    "NMR"
@@ -6367,7 +6167,7 @@
    "10.1021/jasms.5c00234"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS"
   ]
  },
@@ -6381,7 +6181,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS"
   ]
@@ -6395,7 +6194,7 @@
    "10.1021/acs.estlett.5c00284"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -6409,7 +6208,7 @@
    "10.1038/s41592-023-02012-9"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6421,8 +6220,7 @@
    "10.1101/2021.12.21.473622v1"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6435,7 +6233,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -6451,7 +6248,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS"
   ]
@@ -6465,7 +6261,7 @@
    "10.1186/s13321-021-00558-4"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6491,7 +6287,7 @@
    "10.1073/pnas.1608041113"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -6517,7 +6313,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "NMR"
   ]
@@ -6531,8 +6326,7 @@
    "10.1021/acs.analchem.4c02462"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6545,7 +6339,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -6558,7 +6351,7 @@
    "10.1038/s41467-025-63536-6"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "direct-infusion-MS",
    "NMR"
@@ -6574,7 +6367,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "NMR"
   ]
@@ -6588,7 +6380,7 @@
    "10.1021/acs.analchem.4c04040"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -6602,7 +6394,7 @@
    "10.1021/acs.analchem.4c04040"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -6626,8 +6418,7 @@
    "10.1021/acs.analchem.0c01594"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6649,7 +6440,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -6668,7 +6458,7 @@
    "10.1038/s41592-021-01331-z"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6680,7 +6470,7 @@
    "10.1038/s41592-023-02012-9"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6693,7 +6483,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "NMR"
@@ -6708,7 +6497,7 @@
    "10.1038/s42256-024-00816-8"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6731,7 +6520,7 @@
    "10.1021/acs.analchem.3c04654"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "MS-imaging"
   ]
@@ -6745,7 +6534,7 @@
    "10.1002/pmic.202300336"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -6759,7 +6548,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -6772,8 +6560,7 @@
    "10.1089/omi.2021.0051"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6788,7 +6575,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "MS-imaging",
@@ -6806,7 +6592,7 @@
    "10.1073/pnas.1608041113"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -6819,7 +6605,7 @@
    "10.1073/pnas.1608041113"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -6836,7 +6622,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "NMR",
    "mass-spectrometry"
@@ -6851,8 +6636,7 @@
    "10.1021/acs.analchem.4c06875"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -6865,7 +6649,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "mass-spectrometry"
   ]
@@ -6880,7 +6663,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "NMR"
@@ -6896,7 +6678,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -6910,7 +6691,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -6936,7 +6716,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -6955,7 +6734,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS"
   ]
  },
@@ -6969,7 +6747,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -6984,7 +6761,7 @@
    "10.1038/s41592-021-01331-z"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR",
    "mass-spectrometry"
@@ -7000,7 +6777,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "ion-mobility-MS",
@@ -7017,7 +6793,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -7031,7 +6806,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "ion-mobility-MS",
@@ -7048,7 +6822,7 @@
    "10.1038/s41467-025-66060-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -7063,7 +6837,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
@@ -7079,7 +6852,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "mass-spectrometry"
   ]
@@ -7116,7 +6888,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -7129,7 +6900,6 @@
    "10.1021/acs.analchem.5c01513"
   ],
   "techniques": [
-   "tandem-MS",
    "CE-MS",
    "MS-imaging"
   ]
@@ -7143,7 +6913,6 @@
    "10.1021/jasms.4c00178"
   ],
   "techniques": [
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -7158,7 +6927,7 @@
    "10.21105/joss.04494"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -7171,7 +6940,7 @@
    "10.1021/acs.est.5c08558"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR"
   ]
@@ -7187,7 +6956,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -7208,7 +6976,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -7237,7 +7004,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -7253,7 +7019,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -7279,7 +7044,7 @@
    "10.1021/jasms.5c00322"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "CE-MS",
    "mass-spectrometry"
@@ -7295,7 +7060,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -7331,7 +7095,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -7387,7 +7150,7 @@
    "10.1093/bioinformatics/btx477"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR"
   ]
  },
@@ -7400,8 +7163,7 @@
    "10.1021/acs.analchem.1c00238"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -7439,7 +7201,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -7453,7 +7214,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -7482,7 +7242,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -7500,7 +7259,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -7523,7 +7281,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -7545,7 +7302,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "MS-imaging",
@@ -7565,7 +7321,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -7584,7 +7339,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -7598,7 +7352,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -7613,7 +7366,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS",
    "NMR",
@@ -7643,7 +7395,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -7656,7 +7407,7 @@
    "10.1038/nmeth.3959"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "mass-spectrometry"
   ]
@@ -7670,7 +7421,6 @@
    "10.1021/acs.analchem.5c01513"
   ],
   "techniques": [
-   "tandem-MS",
    "CE-MS",
    "MS-imaging"
   ]
@@ -7708,7 +7458,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -7736,7 +7485,7 @@
    "10.1021/acs.analchem.0c01980"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -7751,7 +7500,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -7764,7 +7512,7 @@
    "10.1186/s12859-021-04490-0"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -7781,7 +7529,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -7795,7 +7542,7 @@
    "10.1021/acs.analchem.0c01980"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -7809,7 +7556,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -7827,7 +7573,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -7861,8 +7606,7 @@
    "10.1021/jasms.4c00364"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -7877,7 +7621,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -7894,7 +7637,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -7990,7 +7732,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -8016,7 +7757,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS"
   ]
@@ -8031,7 +7771,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -8045,7 +7784,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS"
   ]
  },
@@ -8059,7 +7797,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS"
   ]
  },
@@ -8073,7 +7810,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -8094,7 +7830,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -8107,7 +7842,7 @@
    "10.1038/s41589-020-00724-z"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR"
   ]
  },
@@ -8123,7 +7858,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -8152,7 +7886,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -8191,7 +7925,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -8220,7 +7953,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -8234,7 +7967,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -8265,7 +7997,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -8285,7 +8016,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -8299,7 +8029,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -8332,8 +8061,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -8345,8 +8073,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -8359,7 +8086,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "MS-imaging",
    "NMR"
@@ -8375,7 +8101,7 @@
    "10.1021/jasms.5c00234"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS"
   ]
  },
@@ -8388,7 +8114,7 @@
    "10.1021/acs.est.5c08558"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR"
   ]
@@ -8402,7 +8128,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -8449,7 +8175,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -8464,7 +8189,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -8478,7 +8202,7 @@
    "10.1186/1471-2105-6-225"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -8546,7 +8270,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -8578,7 +8301,6 @@
    "10.1021/acs.analchem.2c05389"
   ],
   "techniques": [
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -8593,7 +8315,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -8607,7 +8328,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "ion-mobility-MS",
@@ -8624,7 +8344,7 @@
    "10.1021/acs.analchem.5c01726"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS"
   ]
  },
@@ -8638,7 +8358,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS"
   ]
@@ -8665,7 +8384,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -8681,7 +8399,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "ion-mobility-MS"
   ]
@@ -8756,7 +8473,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "ion-mobility-MS",
@@ -8784,7 +8500,7 @@
    "10.1021/jasms.4c00061"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -8805,7 +8521,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -8833,7 +8548,7 @@
    "10.1038/s41564-023-01575-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "NMR",
    "mass-spectrometry"
@@ -8848,8 +8563,7 @@
    "10.1021/acs.analchem.4c00786"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -8863,7 +8577,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -8894,7 +8607,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS"
   ]
@@ -8909,7 +8621,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -8937,7 +8648,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -8978,7 +8688,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR"
   ]
@@ -8992,7 +8701,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -9014,7 +8723,7 @@
    "10.1021/acs.analchem.9b04884"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -9027,7 +8736,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -9041,7 +8749,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -9058,7 +8765,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -9099,7 +8805,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -9117,7 +8822,7 @@
    "10.1101/2020.05.09.086066"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -9130,7 +8835,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -9156,7 +8860,7 @@
    "10.1002/pmic.202300336"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -9187,7 +8891,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -9207,7 +8910,7 @@
    "10.1186/s13321-021-00558-4"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -9245,7 +8948,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -9258,7 +8960,7 @@
    "10.1186/s12859-021-04490-0"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -9273,7 +8975,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -9302,7 +9003,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -9315,7 +9015,6 @@
    "10.1021/jasms.4c00178"
   ],
   "techniques": [
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -9406,7 +9105,7 @@
    "10.3390/metabo9070144"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -9419,7 +9118,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -9437,7 +9135,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -9456,7 +9153,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -9475,7 +9171,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -9494,7 +9189,7 @@
    "10.1002/nbm.70131"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR"
   ]
  },
@@ -9508,7 +9203,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -9524,7 +9218,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "ion-mobility-MS",
@@ -9547,7 +9240,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -9579,7 +9271,7 @@
    "10.1101/2025.11.12.688047v1"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -9606,7 +9298,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -9621,7 +9312,7 @@
    "10.1038/s42256-025-01140-5"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -9662,7 +9353,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "NMR",
    "mass-spectrometry"
@@ -9678,7 +9368,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -9711,7 +9400,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "MS-imaging",
@@ -9752,7 +9440,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "NMR",
    "mass-spectrometry"
@@ -9767,7 +9454,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -9912,7 +9599,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -9931,7 +9617,7 @@
    "10.1021/acs.analchem.4c02426"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -9968,7 +9654,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -9993,7 +9678,7 @@
    "10.1186/s13321-024-00899-w"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -10035,7 +9720,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -10068,7 +9752,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -10081,7 +9764,7 @@
    "10.1186/s12859-017-1744-3"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "direct-infusion-MS"
   ]
  },
@@ -10094,8 +9777,7 @@
    "10.1038/s41589-020-00677-3"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -10108,7 +9790,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -10121,7 +9802,7 @@
    "10.1021/jasms.5c00234"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS"
   ]
  },
@@ -10144,7 +9825,7 @@
    "10.1101/2020.05.09.086066"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -10195,7 +9876,7 @@
    "10.1186/s40168-023-01476-3"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -10266,7 +9947,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -10281,7 +9961,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "NMR",
    "mass-spectrometry"
@@ -10297,7 +9976,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS"
   ]
  },
@@ -10311,7 +9989,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -10326,7 +10003,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -10402,7 +10078,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
   ]
@@ -10429,7 +10104,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -10444,7 +10118,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -10458,7 +10131,7 @@
    "10.1021/acs.analchem.5c03207"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -10471,7 +10144,7 @@
    "10.1038/s41592-023-02143-z"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -10545,7 +10218,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -10590,7 +10262,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -10605,7 +10276,7 @@
    "10.1101/2025.08.28.672951v2"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR"
   ]
@@ -10620,7 +10291,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "MS-imaging",
    "ion-mobility-MS"
   ]
@@ -10634,7 +10304,7 @@
    "10.1186/2047-217x-2-16"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -10651,7 +10321,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -10664,7 +10333,7 @@
    "10.1021/acs.est.5c08558"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS",
    "NMR"
   ]
@@ -10678,7 +10347,6 @@
    "10.1021/acs.analchem.3c05002"
   ],
   "techniques": [
-   "tandem-MS",
    "MS-imaging"
   ]
  },
@@ -10711,7 +10379,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -10723,7 +10391,7 @@
    "10.3390/metabo13080944"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -10737,7 +10405,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS"
@@ -10752,7 +10419,7 @@
    "10.1021/acs.analchem.5c02047"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -10765,7 +10432,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -10779,7 +10445,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -10803,7 +10468,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -10830,7 +10494,7 @@
    "10.1093/bioinformatics/btac059/6522114"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -10843,7 +10507,6 @@
    "10.1186/s13321-020-00449-0"
   ],
   "techniques": [
-   "tandem-MS",
    "MS-imaging",
    "NMR"
   ]
@@ -10857,7 +10520,6 @@
    "10.1186/s13321-020-00449-0"
   ],
   "techniques": [
-   "tandem-MS",
    "MS-imaging",
    "NMR"
   ]
@@ -10871,7 +10533,6 @@
    "10.1186/s13321-020-00449-0"
   ],
   "techniques": [
-   "tandem-MS",
    "MS-imaging",
    "NMR"
   ]
@@ -10885,8 +10546,7 @@
    "10.1186/s13321-025-00968-8"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -10911,7 +10571,7 @@
    "10.1021/acs.analchem.5c01726"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS"
   ]
  },
@@ -10937,7 +10597,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -10985,7 +10644,7 @@
    "10.1021/acs.jproteome.5c00435"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -11013,7 +10672,7 @@
    "10.3390/metabo12020173"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -11039,7 +10698,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -11064,8 +10722,7 @@
    "10.1021/acs.est.3c04764"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11092,7 +10749,7 @@
    "10.1021/acs.jcim.3c01082"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -11108,8 +10765,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11134,7 +10790,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -11147,7 +10802,7 @@
    "10.1186/s12859-017-1744-3"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "direct-infusion-MS"
   ]
  },
@@ -11161,7 +10816,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -11187,7 +10841,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -11234,7 +10887,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -11278,7 +10930,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "ion-mobility-MS"
   ]
@@ -11293,7 +10944,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "ion-mobility-MS",
@@ -11326,7 +10976,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -11383,7 +11032,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "NMR",
    "mass-spectrometry"
@@ -11409,7 +11057,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -11429,7 +11076,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -11447,7 +11093,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -11483,7 +11128,7 @@
    "10.1038/s41467-022-30118-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "CE-MS",
    "ion-mobility-MS"
@@ -11501,7 +11146,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "mass-spectrometry"
   ]
@@ -11525,7 +11169,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -11561,7 +11204,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -11578,7 +11220,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS"
   ]
  },
@@ -11591,8 +11232,7 @@
    "10.1021/acs.analchem.1c02687"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11604,8 +11244,7 @@
    "10.1021/acs.analchem.1c02687"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11618,7 +11257,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "mass-spectrometry"
   ]
@@ -11633,7 +11271,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "MS-imaging",
    "mass-spectrometry"
@@ -11649,7 +11286,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -11667,7 +11303,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -11685,7 +11320,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "NMR"
@@ -11700,8 +11334,7 @@
    "10.3390/genes12030396"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11717,7 +11350,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "direct-infusion-MS",
    "MS-imaging",
@@ -11735,7 +11367,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging"
   ]
@@ -11767,7 +11398,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
@@ -11783,7 +11413,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "mass-spectrometry"
   ]
@@ -11804,7 +11433,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -11822,7 +11450,7 @@
    "10.1038/s41592-023-02012-9"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11834,7 +11462,7 @@
    "10.1038/s41592-021-01331-z"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11846,7 +11474,7 @@
    "10.1038/s41592-021-01331-z"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11858,7 +11486,7 @@
    "10.1021/acs.analchem.5c06256"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11870,7 +11498,7 @@
    "10.21105/joss.08070"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -11883,7 +11511,7 @@
    "10.1002/rcm.9153"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11895,7 +11523,7 @@
    "10.1021/acs.analchem.9b04884"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -11913,7 +11541,7 @@
    "10.1021/acs.jproteome.4c00873"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "mass-spectrometry"
   ]
@@ -11940,7 +11568,7 @@
    "10.1038/s41592-025-02785-1"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -11954,7 +11582,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -11966,7 +11593,7 @@
   "edam_topics": [],
   "dois": [],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -11990,7 +11617,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -12027,8 +11654,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -12052,7 +11678,7 @@
    "10.1093/bioinformatics/btx477"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR"
   ]
  },
@@ -12078,7 +11704,7 @@
    "10.1021/acs.analchem.5c01726"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "CE-MS"
   ]
  },
@@ -12092,7 +11718,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -12108,7 +11733,7 @@
    "10.1038/nmeth.3959"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -12122,7 +11747,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -12139,7 +11763,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -12178,7 +11801,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
@@ -12193,7 +11815,7 @@
    "10.1021/acs.jproteome.4c00026"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS"
   ]
  },
@@ -12206,8 +11828,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -12220,7 +11841,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS"
   ]
@@ -12235,7 +11855,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -12252,7 +11871,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -12288,7 +11906,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -12325,7 +11942,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "MS-imaging",
@@ -12343,7 +11959,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
@@ -12359,7 +11974,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -12374,7 +11988,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "MS-imaging"
   ]
@@ -12390,7 +12003,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "NMR",
    "mass-spectrometry"
@@ -12406,7 +12018,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "NMR",
@@ -12423,7 +12034,7 @@
    "10.1038/s41564-023-01575-9"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "MS-imaging",
    "NMR",
    "mass-spectrometry"
@@ -12451,7 +12062,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS"
   ]
  },
@@ -12464,7 +12074,7 @@
    "10.1038/s42256-025-01140-5"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -12536,7 +12146,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -12589,7 +12198,7 @@
    "10.1021/acscentsci.4c01132"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR"
   ]
  },
@@ -12605,7 +12214,7 @@
    "10.1021/acscentsci.4c01132"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "NMR"
   ]
@@ -12620,7 +12229,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -12643,8 +12251,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -12666,7 +12273,7 @@
    "10.3390/metabo12020173"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "NMR",
    "mass-spectrometry"
   ]
@@ -12680,8 +12287,7 @@
    "10.1016/j.enceco.2025.07.022"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -12707,7 +12313,7 @@
    "10.1021/acs.analchem.9b04884"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "mass-spectrometry"
   ]
  },
@@ -12733,7 +12339,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "direct-infusion-MS",
    "mass-spectrometry"
@@ -12759,7 +12364,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
@@ -12776,7 +12380,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -12791,7 +12394,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -12833,7 +12435,6 @@
    "10.1371/journal.pone.0306202"
   ],
   "techniques": [
-   "tandem-MS",
    "GC-MS",
    "NMR",
    "mass-spectrometry"
@@ -12861,8 +12462,7 @@
    "10.1371/journal.pcbi.1009021"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -12875,7 +12475,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "NMR"
   ]
  },
@@ -12889,7 +12488,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "direct-infusion-MS",
    "MS-imaging",
    "ion-mobility-MS",
@@ -12906,7 +12504,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS"
   ]
  },
@@ -12919,7 +12516,7 @@
    "10.1021/acs.analchem.0c01980"
   ],
   "techniques": [
-   "tandem-MS",
+   "LC-MS",
    "ion-mobility-MS",
    "mass-spectrometry"
   ]
@@ -12934,7 +12531,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "mass-spectrometry"
   ]
  },
@@ -12970,7 +12566,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "CE-MS",
    "direct-infusion-MS",
@@ -12990,7 +12585,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "NMR"
   ]
@@ -13030,7 +12624,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "GC-MS",
    "MS-imaging",
    "ion-mobility-MS"
@@ -13045,8 +12638,7 @@
    "10.1371/journal.pcbi.1009337"
   ],
   "techniques": [
-   "LC-MS",
-   "tandem-MS"
+   "LC-MS"
   ]
  },
  {
@@ -13073,7 +12665,6 @@
   ],
   "techniques": [
    "LC-MS",
-   "tandem-MS",
    "CE-MS",
    "MS-imaging",
    "ion-mobility-MS"

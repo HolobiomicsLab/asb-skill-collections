@@ -15,7 +15,7 @@ metadata:
   - PyQt5
   - Human Metabolome Database (HMDB)
   techniques:
-  - tandem-MS
+  - LC-MS
   - NMR
 derived_from:
 - doi: 10.1002/nbm.70131

@@ -13,4 +13,4 @@ source_repos:
 - simeoni-biolab/MetNet
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS

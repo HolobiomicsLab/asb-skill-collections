@@ -11,7 +11,7 @@ metadata:
   - XCMS
   - CAMERA
   techniques:
-  - tandem-MS
+  - LC-MS
   - NMR
 derived_from:
 - doi: 10.1038/s41467-025-59683-5

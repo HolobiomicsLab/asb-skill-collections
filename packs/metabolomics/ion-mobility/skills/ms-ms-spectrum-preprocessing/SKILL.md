@@ -20,8 +20,8 @@ metadata:
   - spectrum_utils
   - cosine_neutral_loss
   techniques:
+  - LC-MS
   - ion-mobility-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo

@@ -19,8 +19,7 @@ spanning several analytical platforms. Each skill/tool is tagged with a
 
 | Technique | Skills | Tools |
 |---|---|---|
-| LC-MS | 1,314 | 474 |
-| tandem-MS (MS/MS) | 2,129 | 586 |
+| LC-MS (incl. LC-MS/MS) | 2,621 | 651 |
 | GC-MS | 367 | 205 |
 | CE-MS | 114 | 180 |
 | direct-infusion-MS | 97 | 101 |
@@ -30,7 +29,9 @@ spanning several analytical platforms. Each skill/tool is tagged with a
 | mass-spectrometry (generic) | 804 | 374 |
 
 (Skills/tools may carry several tags; ~1,520 skills are technique-agnostic —
-statistics, format conversion, general workflow.)
+statistics, format conversion, general workflow. Tandem-MS / MS/MS is treated as
+part of **LC-MS** — it is a fragmentation mode, not a separate platform — except
+where the source is genuinely GC-MS, CE-MS, direct-infusion or imaging.)
 
 ### Main EDAM topics
 

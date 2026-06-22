@@ -9,4 +9,4 @@ source_repos:
 - JohnsonDylan/MassQLab
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS

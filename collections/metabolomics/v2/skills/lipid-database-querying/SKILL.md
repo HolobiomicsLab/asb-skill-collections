@@ -17,7 +17,6 @@ metadata:
   - RefineLipids
   techniques:
   - MS-imaging
-  - tandem-MS
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

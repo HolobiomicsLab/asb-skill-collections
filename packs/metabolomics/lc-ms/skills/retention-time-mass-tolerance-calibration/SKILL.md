@@ -18,7 +18,6 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo

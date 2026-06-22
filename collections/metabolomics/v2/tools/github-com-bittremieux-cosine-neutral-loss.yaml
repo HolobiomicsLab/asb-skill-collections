@@ -9,5 +9,4 @@ source_repos:
 - bittremieux/cosine_neutral_loss
 schema_version: 0.2.0
 techniques:
-- tandem-MS
 - CE-MS

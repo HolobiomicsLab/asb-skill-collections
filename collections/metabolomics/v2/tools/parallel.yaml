@@ -7,6 +7,5 @@ derived_from:
   title: mspcompiler
 schema_version: 0.2.0
 techniques:
-- tandem-MS
 - GC-MS
 - mass-spectrometry

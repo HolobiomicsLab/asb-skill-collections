@@ -7,5 +7,5 @@ derived_from:
   title: Large‐scale tandem mass spectrum clustering using fast nearest neighbor searching
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - ion-mobility-MS

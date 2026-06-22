@@ -9,6 +9,5 @@ source_repos:
 - MMV-Lab/MSI-Explorer
 schema_version: 0.2.0
 techniques:
-- tandem-MS
 - CE-MS
 - MS-imaging

@@ -9,6 +9,6 @@ source_repos:
 - HassounLab/MVP
 schema_version: 0.2.0
 techniques:
-- tandem-MS
+- LC-MS
 - GC-MS
 - mass-spectrometry

@@ -14,7 +14,6 @@ metadata:
   - chemprop
   techniques:
   - LC-MS
-  - tandem-MS
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI
