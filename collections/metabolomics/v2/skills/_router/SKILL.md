@@ -25,8 +25,9 @@ attribution:
 
 This is the default entry point for the ASB Metabolomics collection (v2): **5,865
 evidence-grounded skills** and **909 software-tool records** for computational
-mass spectrometry / LC-MS/MS, each derived from a peer-reviewed method paper and
-its public code repository.
+metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
+imaging, ion mobility, lipidomics, and some NMR / multi-omics — each derived from
+a peer-reviewed method paper and its public code repository.
 
 You (the agent) use this router in three steps: **search → apply → (optionally) ground**.
 

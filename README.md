@@ -14,9 +14,10 @@ for licensing/PII before release.
 
 > **This release — `metabolomics-v0.1.0` (preliminary):**
 > [`collections/metabolomics/v2`](collections/metabolomics/v2) — **5,865 skills**
-> across **909 tools** distilled from **568 papers**, for computational LC-MS/MS
-> metabolomics (spectral library matching, molecular networking, formula/structure
-> annotation, preprocessing, normalization, statistics).
+> across **909 tools** distilled from **568 papers**, for computational
+> metabolomics — predominantly **LC-MS/MS**, but also LC-MS, GC-MS,
+> mass-spectrometry imaging, ion mobility and lipidomics, with some **NMR** and
+> multi-omics / statistics / pathway tools.
 
 ### Artifacts in this release
 

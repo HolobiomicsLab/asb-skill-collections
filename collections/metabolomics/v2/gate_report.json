@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-06-22T01:26:58.318994+00:00",
+  "generated_at": "2026-06-22T08:55:25.324700+00:00",
   "collection_dir": "collections/metabolomics/v2",
   "corpus_path": "collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",

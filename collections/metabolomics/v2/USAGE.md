@@ -1,8 +1,10 @@
 # Using the ASB Metabolomics Collection (v2)
 
 5,865 evidence-grounded skills + 909 software-tool records for computational
-LC-MS/MS metabolomics, each derived from a peer-reviewed method paper and its
-public code repository. This guide covers **search → install → use → ground**.
+metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
+imaging, ion mobility and lipidomics, with some NMR and multi-omics / statistics
+/ pathway tools — each derived from a peer-reviewed method paper and its public
+code repository. This guide covers **search → install → use → ground**.
 
 ---
 
