@@ -79,3 +79,23 @@ def test_parse_skill_md_no_frontmatter(tmp_path):
     fm, body = parse_skill_md(p)
     assert fm == {}
     assert body == "just text\n"
+
+
+def test_manifest_round_trip(tmp_path):
+    from scripts.asbb import manifest
+    home = tmp_path / "home"
+    assert manifest.get(home, "demo-pack", "agents") is None
+    manifest.record(home, "demo-pack", "agents", home / "d", ["alpha-skill"], "symlink")
+    rec = manifest.get(home, "demo-pack", "agents")
+    assert rec["entries"] == ["alpha-skill"]
+    assert rec["mode"] == "symlink"
+    assert rec["dest_root"] == str(home / "d")
+
+
+def test_manifest_remove_prunes_empty(tmp_path):
+    from scripts.asbb import manifest
+    home = tmp_path / "home"
+    manifest.record(home, "demo-pack", "agents", home / "d", ["x"], "symlink")
+    manifest.remove(home, "demo-pack", "agents")
+    assert manifest.get(home, "demo-pack", "agents") is None
+    assert manifest.load(home) == {}
