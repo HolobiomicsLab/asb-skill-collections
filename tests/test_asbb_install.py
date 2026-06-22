@@ -1,5 +1,4 @@
 import json
-import os
 from pathlib import Path
 
 import pytest
@@ -301,3 +300,11 @@ def test_cli_unknown_runtime_errors(tmp_path, capsys):
                "--repo", str(tmp_path), "--home", str(tmp_path / "home")])
     assert rc == 1
     assert "bogus" in capsys.readouterr().err
+
+
+def test_cli_uninstall_requires_target(tmp_path, capsys):
+    from scripts.asbb_cli import main
+    make_repo(tmp_path)
+    rc = main(["uninstall", "demo-pack", "--home", str(tmp_path / "home")])
+    assert rc == 1
+    assert "one of --runtime or --dest is required" in capsys.readouterr().err

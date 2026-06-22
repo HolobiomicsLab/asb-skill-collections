@@ -114,13 +114,13 @@ def _cmd_install(args) -> int:
 def _cmd_uninstall(args) -> int:
     from scripts.asbb.targets import get_target, generic_dest_target
     from scripts.asbb.installer import uninstall
+    if not args.runtime and not args.dest:
+        print("error: one of --runtime or --dest is required", file=sys.stderr)
+        return 1
     try:
         target = generic_dest_target() if args.dest else get_target(args.runtime)
     except KeyError:
         print(f"error: unknown runtime {args.runtime!r}", file=sys.stderr)
-        return 1
-    if not args.runtime and not args.dest:
-        print("error: one of --runtime or --dest is required", file=sys.stderr)
         return 1
     opts = _install_opts(args)
     removed = uninstall(args.pack, target, opts)
@@ -132,8 +132,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="asbb",
         description=(
-            "asb-skill-collections registry utility (registry/verify/doctor only). "
-            "NOT the install surface — use /plugin install for that."
+            "asb-skill-collections CLI: registry/verify/doctor utilities + "
+            "install/uninstall for non-Claude runtimes "
+            "(for Claude Code, use /plugin install)."
         ),
     )
     parser.add_argument(
