@@ -35,6 +35,16 @@ provenance:
     title: enpkg
   dedup_kept_from: coll_enpkg
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acscentsci.3c00800
+  all_source_dois:
+  - 10.1021/acscentsci.3c00800
+  - 10.5281/zenodo.10018590
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Repository Cloning and Structure Navigation

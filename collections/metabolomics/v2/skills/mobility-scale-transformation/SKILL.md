@@ -35,6 +35,15 @@ provenance:
     title: MobilityTransformR
   dedup_kept_from: coll_mobilitytransformr_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btac441
+  all_source_dois:
+  - 10.1093/bioinformatics/btac441
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mobility-scale-transformation

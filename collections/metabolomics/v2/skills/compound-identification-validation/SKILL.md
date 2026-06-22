@@ -35,6 +35,15 @@ provenance:
     title: CSU-MS2
   dedup_kept_from: coll_csu_ms2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c01594
+  all_source_dois:
+  - 10.1021/acs.analchem.5c01594
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # compound-identification-validation

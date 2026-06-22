@@ -47,6 +47,16 @@ provenance:
     title: OpenNAU
   dedup_kept_from: coll_metabolomics_spectrum_resolver_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2020.05.09.086066
+  all_source_dois:
+  - 10.1101/2020.05.09.086066
+  - 10.21147/j.issn.1000-9604.2023.05.11
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectral-metadata-standardization

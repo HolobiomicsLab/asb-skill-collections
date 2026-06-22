@@ -26,6 +26,15 @@ provenance:
     title: fiddle
   dedup_kept_from: coll_fiddle_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-025-66060-9
+  all_source_dois:
+  - 10.1038/s41467-025-66060-9
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Multi-module joint training

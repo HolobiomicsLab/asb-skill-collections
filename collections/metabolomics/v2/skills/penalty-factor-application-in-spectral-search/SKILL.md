@@ -27,6 +27,15 @@ provenance:
     title: Reverse Spectral Search
   dedup_kept_from: coll_reverse_spectral_search_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c02047
+  all_source_dois:
+  - 10.1021/acs.analchem.5c02047
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # penalty-factor-application-in-spectral-search

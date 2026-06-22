@@ -27,6 +27,15 @@ provenance:
     title: retention_time_gnn
   dedup_kept_from: coll_retention_time_gnn_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.3c03177
+  all_source_dois:
+  - 10.1021/acs.analchem.3c03177
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # retention-time-prediction-from-structures

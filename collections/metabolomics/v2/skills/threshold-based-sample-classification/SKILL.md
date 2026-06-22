@@ -28,6 +28,15 @@ provenance:
     title: Omics Untargeted Key Script
   dedup_kept_from: coll_omics_untargeted_key_script_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.1c00392
+  all_source_dois:
+  - 10.1021/acs.jproteome.1c00392
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Threshold-based sample classification

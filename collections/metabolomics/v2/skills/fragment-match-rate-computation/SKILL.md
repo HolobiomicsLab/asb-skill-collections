@@ -33,6 +33,15 @@ provenance:
     title: DuReS
   dedup_kept_from: coll_dures_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c01726
+  all_source_dois:
+  - 10.1021/acs.analchem.5c01726
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # fragment-match-rate-computation

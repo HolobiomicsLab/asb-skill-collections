@@ -26,6 +26,15 @@ provenance:
     title: MassQL
   dedup_kept_from: coll_massql
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41592-025-02785-1
+  all_source_dois:
+  - 10.1038/s41592-025-02785-1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # unit-test-validation

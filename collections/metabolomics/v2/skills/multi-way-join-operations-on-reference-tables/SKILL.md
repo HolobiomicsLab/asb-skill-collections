@@ -31,6 +31,16 @@ provenance:
     title: lotus
   dedup_kept_from: coll_lotus_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.7554/eLife.70780
+  all_source_dois:
+  - 10.7554/eLife.70780
+  - 10.1007/s00044-016-1764-y
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # multi-way-join-operations-on-reference-tables

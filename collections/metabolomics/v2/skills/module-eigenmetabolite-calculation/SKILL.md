@@ -35,6 +35,16 @@ provenance:
     title: MetaboDiff
   dedup_kept_from: coll_metabodiff_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/bty344
+  all_source_dois:
+  - 10.1093/bioinformatics/bty344
+  - 10.1158/0008-5472.can-14-1490
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # module-eigenmetabolite-calculation

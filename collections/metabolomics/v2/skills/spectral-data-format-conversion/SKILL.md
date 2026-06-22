@@ -45,6 +45,16 @@ provenance:
     title: tardis
   dedup_kept_from: coll_ms2lda_2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1073/pnas.1608041113
+  all_source_dois:
+  - 10.1073/pnas.1608041113
+  - 10.1021/acs.analchem.5c00567
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectral-data-format-conversion

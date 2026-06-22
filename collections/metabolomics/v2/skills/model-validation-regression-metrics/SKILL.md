@@ -25,6 +25,15 @@ provenance:
     title: Deep MS/MS similarity
   dedup_kept_from: coll_deep_ms_ms_similarity_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.8b05405
+  all_source_dois:
+  - 10.1021/acs.analchem.8b05405
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Model Validation via Regression Metrics

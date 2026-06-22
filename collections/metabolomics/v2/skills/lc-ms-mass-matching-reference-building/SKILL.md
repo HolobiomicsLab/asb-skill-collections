@@ -32,6 +32,15 @@ provenance:
     title: mWISE
   dedup_kept_from: coll_mwise_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.1c00238
+  all_source_dois:
+  - 10.1021/acs.analchem.1c00238
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # lc-ms-mass-matching-reference-building

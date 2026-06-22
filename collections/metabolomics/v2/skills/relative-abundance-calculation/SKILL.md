@@ -28,6 +28,15 @@ provenance:
     title: omu metabolomics count data tool
   dedup_kept_from: coll_omu_metabolomics_count_data_tool_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1128/mra.00129-19
+  all_source_dois:
+  - 10.1128/mra.00129-19
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # relative-abundance-calculation

@@ -40,6 +40,16 @@ provenance:
     title: MetENP
   dedup_kept_from: coll_eclipse_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btaf290/8128335
+  all_source_dois:
+  - 10.1093/bioinformatics/btaf290/8128335
+  - 10.1101/2020.11.20.391912
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolomics-data-formatting

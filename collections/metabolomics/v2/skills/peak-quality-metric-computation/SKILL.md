@@ -31,6 +31,16 @@ provenance:
     title: MetaClean
   dedup_kept_from: coll_metaclean_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s11306-020-01738-3
+  all_source_dois:
+  - 10.1007/s11306-020-01738-3
+  - 10.1186/1471-2105-15-s11-s5
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # peak-quality-metric-computation

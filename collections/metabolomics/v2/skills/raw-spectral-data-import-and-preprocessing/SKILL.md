@@ -23,6 +23,15 @@ provenance:
     title: plantMASST
   dedup_kept_from: coll_plantmasst_2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2024.05.13.593988v1
+  all_source_dois:
+  - 10.1101/2024.05.13.593988v1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # raw-spectral-data-import-and-preprocessing

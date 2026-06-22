@@ -41,6 +41,16 @@ provenance:
     title: mzrtsim
   dedup_kept_from: coll_mzquality_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jasms.5c00073
+  all_source_dois:
+  - 10.1021/jasms.5c00073
+  - 10.1021/acs.analchem.5c01213
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # bioconductor-summarized-experiment-construction

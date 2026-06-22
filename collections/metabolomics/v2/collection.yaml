@@ -12,6 +12,17 @@ description: Curated, evidence-grounded skills and software-tool records for com
 license: CC-BY-4.0
 doi: TODO-zenodo
 released_at: '2026-06-22T00:02:37Z'
+roles:
+  generator: AgenticScienceBuilder
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
+  curators: []
+  zenodo_authors:
+  - AgenticScienceBuilder Community
+  - Louis-Félix Nothias
+  - HolobiomicsLab.cnrs.fr
+  - MetaboLinkAI.net
+zenodo_doi: TODO-zenodo
 lead_curators:
 - name: Louis-Felix Nothias
   orcid: 0000-0001-6711-6719

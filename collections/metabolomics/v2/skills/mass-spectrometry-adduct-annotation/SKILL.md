@@ -51,6 +51,17 @@ provenance:
     title: mistcf
   dedup_kept_from: coll_mass2adduct_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.0c04720
+  all_source_dois:
+  - 10.1021/acs.analchem.0c04720
+  - 10.1021/acs.analchem.5c00633
+  - 10.1021/acs.jcim.3c01082
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-adduct-annotation

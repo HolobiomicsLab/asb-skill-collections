@@ -42,6 +42,15 @@ provenance:
     title: ROIAL-NMR
   dedup_kept_from: coll_roial_nmr_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/nbm.70131
+  all_source_dois:
+  - 10.1002/nbm.70131
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # python-environment-setup

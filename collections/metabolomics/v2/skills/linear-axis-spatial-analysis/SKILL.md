@@ -25,6 +25,15 @@ provenance:
     title: DIMPLE
   dedup_kept_from: coll_dimple_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2025.09.22.677919v1
+  all_source_dois:
+  - 10.1101/2025.09.22.677919v1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # linear-axis-spatial-analysis

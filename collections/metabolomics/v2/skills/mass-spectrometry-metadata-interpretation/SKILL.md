@@ -48,6 +48,17 @@ provenance:
     title: rawrr
   dedup_kept_from: coll_dereplicator
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-018-06082-8
+  all_source_dois:
+  - 10.1038/s41467-018-06082-8
+  - 10.1101/2020.10.30.362533
+  - 10.1021/acs.jproteome.0c00866
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-metadata-interpretation

@@ -25,6 +25,15 @@ provenance:
     title: mcfNMR
   dedup_kept_from: coll_mcfnmr_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c01652
+  all_source_dois:
+  - 10.1021/acs.analchem.4c01652
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Compound-Abundance Quantification from Flow

@@ -48,6 +48,17 @@ provenance:
     title: PNNL PreProcessor
   dedup_kept_from: coll_mspcompiler_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.2c05389
+  all_source_dois:
+  - 10.1021/acs.analchem.2c05389
+  - 10.1021/jasms.4c00220
+  - 10.1021/acs.jproteome.1c00425
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-data-format-conversion

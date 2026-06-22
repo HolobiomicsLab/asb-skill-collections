@@ -30,6 +30,15 @@ provenance:
     title: MInfer
   dedup_kept_from: coll_minfer_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1016/j.cmpb.2025.108672
+  all_source_dois:
+  - 10.1016/j.cmpb.2025.108672
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolite-network-covariance-analysis

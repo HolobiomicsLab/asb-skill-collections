@@ -26,6 +26,15 @@ provenance:
     title: GraphBio
   dedup_kept_from: coll_graphbio_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3389/fgene.2022.957317
+  all_source_dois:
+  - 10.3389/fgene.2022.957317
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # diagnostic-plot-rendering

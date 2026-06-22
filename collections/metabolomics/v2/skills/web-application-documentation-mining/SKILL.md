@@ -39,6 +39,17 @@ provenance:
     title: microbemasst
   dedup_kept_from: coll_microbemasst
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41564-023-01575-9
+  all_source_dois:
+  - 10.1038/s41564-023-01575-9
+  - 10.1101/2024.05.13.593988v1
+  - 10.1101/2025.04.28.651123v1.abstract
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Web Application Documentation Mining

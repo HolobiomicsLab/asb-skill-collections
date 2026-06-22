@@ -58,6 +58,17 @@ provenance:
     title: SMART
   dedup_kept_from: coll_rt_transformer_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btae084
+  all_source_dois:
+  - 10.1093/bioinformatics/btae084
+  - 10.1038/s41467-019-13680-7
+  - 10.1021/acs.analchem.4c06210
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Graph Neural Network Architecture Design

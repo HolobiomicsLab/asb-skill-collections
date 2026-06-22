@@ -34,6 +34,15 @@ provenance:
     title: neatms
   dedup_kept_from: coll_neatms
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.1c02220
+  all_source_dois:
+  - 10.1021/acs.analchem.1c02220
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # probability-threshold-calibration

@@ -27,6 +27,15 @@ provenance:
     title: FastEI
   dedup_kept_from: coll_fastei_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-023-39279-7
+  all_source_dois:
+  - 10.1038/s41467-023-39279-7
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectrum-tokenization-for-nlp

@@ -24,6 +24,15 @@ provenance:
     title: BiG-SLiCE
   dedup_kept_from: coll_big_slice_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/gigascience/giaa154
+  all_source_dois:
+  - 10.1093/gigascience/giaa154
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Export pre-calculated BGC and GCF tables to TSV via --export-csv

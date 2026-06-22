@@ -28,6 +28,15 @@ provenance:
     title: AriumMS
   dedup_kept_from: coll_ariumms_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s00216-023-04715-6
+  all_source_dois:
+  - 10.1007/s00216-023-04715-6
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # ms-data-preprocessing

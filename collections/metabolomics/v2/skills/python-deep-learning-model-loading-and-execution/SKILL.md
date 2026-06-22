@@ -33,6 +33,15 @@ provenance:
     title: NMRformer
   dedup_kept_from: coll_nmrformer_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c05632
+  all_source_dois:
+  - 10.1021/acs.analchem.4c05632
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # python-deep-learning-model-loading-and-execution

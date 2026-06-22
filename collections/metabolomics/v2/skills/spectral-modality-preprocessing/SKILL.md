@@ -33,6 +33,18 @@ provenance:
     title: MMST
   dedup_kept_from: coll_mmst_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/ange.202517611
+  all_source_dois:
+  - 10.1002/ange.202517611
+  - 10.5281/zenodo.16076914
+  - 10.5281/zenodo.16257786
+  - 10.5281/zenodo.17284940
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectral-modality-preprocessing

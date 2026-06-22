@@ -27,6 +27,15 @@ provenance:
     title: iimn
   dedup_kept_from: coll_iimn
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-021-23953-9
+  all_source_dois:
+  - 10.1038/s41467-021-23953-9
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # build-artifact-retrieval-and-validation

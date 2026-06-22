@@ -28,6 +28,15 @@ provenance:
     title: metPropagate
   dedup_kept_from: coll_metpropagate_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41525-020-0132-5
+  all_source_dois:
+  - 10.1038/s41525-020-0132-5
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Reconstruct the label-propagation algorithm for prioritizing metabolic disease genes

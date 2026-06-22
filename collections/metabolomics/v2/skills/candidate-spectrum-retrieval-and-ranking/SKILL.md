@@ -25,6 +25,15 @@ provenance:
     title: ANN-SoLo
   dedup_kept_from: coll_ann_solo_gpu_feature_hashing_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.8b00359
+  all_source_dois:
+  - 10.1021/acs.jproteome.8b00359
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Candidate Spectrum Retrieval and Ranking

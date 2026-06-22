@@ -26,6 +26,15 @@ provenance:
     title: FERMO
   dedup_kept_from: coll_fermo_2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-024-50111-8
+  all_source_dois:
+  - 10.1038/s41467-024-50111-8
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # group-specification-and-subsetting

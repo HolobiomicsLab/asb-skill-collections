@@ -23,6 +23,15 @@ provenance:
     title: CypReact
   dedup_kept_from: coll_cypreact_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jcim.8b00035
+  all_source_dois:
+  - 10.1021/acs.jcim.8b00035
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # SMILES Format Preparation

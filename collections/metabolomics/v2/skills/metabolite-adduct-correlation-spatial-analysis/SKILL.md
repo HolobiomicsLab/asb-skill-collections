@@ -35,6 +35,15 @@ provenance:
     title: mass2adduct
   dedup_kept_from: coll_mass2adduct_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.0c04720
+  all_source_dois:
+  - 10.1021/acs.analchem.0c04720
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolite-adduct-correlation-spatial-analysis

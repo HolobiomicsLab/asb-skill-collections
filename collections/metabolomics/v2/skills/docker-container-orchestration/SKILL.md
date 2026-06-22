@@ -56,6 +56,17 @@ provenance:
     title: npclassifier
   dedup_kept_from: coll_imzml_writer_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c06520
+  all_source_dois:
+  - 10.1021/acs.analchem.4c06520
+  - 10.1021/jasms.4c00364
+  - 10.1021/acs.jnatprod.1c00399
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # docker-container-orchestration

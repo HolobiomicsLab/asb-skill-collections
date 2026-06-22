@@ -35,6 +35,16 @@ provenance:
     title: notame
   dedup_kept_from: coll_notame_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/metabo10040135
+  all_source_dois:
+  - 10.3390/metabo10040135
+  - 10.1093/bioinformatics/btr597
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Ionization Mode and Column Mode Separation

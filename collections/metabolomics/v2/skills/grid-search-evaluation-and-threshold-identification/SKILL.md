@@ -27,6 +27,15 @@ provenance:
     title: metabCombiner
   dedup_kept_from: coll_metabcombiner_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.0c03693
+  all_source_dois:
+  - 10.1021/acs.analchem.0c03693
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # grid-search-evaluation-and-threshold-identification

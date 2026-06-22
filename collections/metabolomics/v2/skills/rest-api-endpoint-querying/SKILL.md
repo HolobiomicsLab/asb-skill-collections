@@ -42,6 +42,17 @@ provenance:
     title: npclassifier
   dedup_kept_from: coll_cscs_deep_cnn_natural_product_annotation_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jacs.9b13786
+  all_source_dois:
+  - 10.1021/jacs.9b13786
+  - 10.1186/s13321-023-00738-4
+  - 10.1021/acs.jnatprod.1c00399
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # rest-api-endpoint-querying

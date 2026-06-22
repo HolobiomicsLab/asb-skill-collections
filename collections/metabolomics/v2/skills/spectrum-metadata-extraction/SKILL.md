@@ -28,6 +28,15 @@ provenance:
     title: mzpeak
   dedup_kept_from: coll_mzpeak
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.5c00435
+  all_source_dois:
+  - 10.1021/acs.jproteome.5c00435
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectrum-metadata-extraction

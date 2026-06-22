@@ -33,6 +33,15 @@ provenance:
     title: tima
   dedup_kept_from: coll_tima_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3389/fpls.2019.01329
+  all_source_dois:
+  - 10.3389/fpls.2019.01329
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectral-library-matching-with-taxonomy

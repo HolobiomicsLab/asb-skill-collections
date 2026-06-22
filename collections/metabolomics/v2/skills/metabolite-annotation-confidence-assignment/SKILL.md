@@ -30,6 +30,15 @@ provenance:
     title: GetFeatistics
   dedup_kept_from: coll_getfeatistics_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1515/jib-2025-0047
+  all_source_dois:
+  - 10.1515/jib-2025-0047
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolite-annotation-confidence-assignment

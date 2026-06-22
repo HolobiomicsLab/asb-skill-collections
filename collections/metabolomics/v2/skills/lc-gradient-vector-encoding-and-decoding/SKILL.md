@@ -34,6 +34,16 @@ provenance:
     title: BAGO
   dedup_kept_from: coll_bago_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2023.09.08.556930
+  all_source_dois:
+  - 10.1101/2023.09.08.556930
+  - 10.1002/9780470508183
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # LC-gradient vector encoding and decoding

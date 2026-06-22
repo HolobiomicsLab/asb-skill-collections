@@ -30,6 +30,15 @@ provenance:
     title: MS2Rescore (immunopeptidome rescoring)
   dedup_kept_from: coll_ms2rescore_immunopeptidome_rescoring_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/pmic.202300336
+  all_source_dois:
+  - 10.1002/pmic.202300336
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # modification-label-normalization

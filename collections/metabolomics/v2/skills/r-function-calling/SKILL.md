@@ -27,6 +27,15 @@ provenance:
     title: AutoTuner parameter selection
   dedup_kept_from: coll_autotuner_parameter_selection_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/812370
+  all_source_dois:
+  - 10.1101/812370
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Extract parameter estimates via R function call

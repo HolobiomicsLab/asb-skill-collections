@@ -26,6 +26,15 @@ provenance:
     title: moccal
   dedup_kept_from: coll_moccal_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.3c04290
+  all_source_dois:
+  - 10.1021/acs.analchem.3c04290
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # CCS value assignment from standards

@@ -26,6 +26,15 @@ provenance:
     title: QComics
   dedup_kept_from: coll_qcomics
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.3c03660
+  all_source_dois:
+  - 10.1021/acs.analchem.3c03660
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # injection-sequence-annotation

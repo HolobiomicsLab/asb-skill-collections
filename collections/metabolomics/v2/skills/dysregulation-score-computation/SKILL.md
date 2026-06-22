@@ -28,6 +28,15 @@ provenance:
     title: Lilikoi V2.0
   dedup_kept_from: coll_lilikoi_v2_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/gigascience/giaa162
+  all_source_dois:
+  - 10.1093/gigascience/giaa162
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # dysregulation-score-computation

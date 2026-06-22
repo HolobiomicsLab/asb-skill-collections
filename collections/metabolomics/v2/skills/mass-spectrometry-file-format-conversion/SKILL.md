@@ -47,6 +47,17 @@ provenance:
     title: Lipid Spectrum Generator
   dedup_kept_from: coll_ariumms_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s00216-023-04715-6
+  all_source_dois:
+  - 10.1007/s00216-023-04715-6
+  - 10.26599/bdma.2024.9020059
+  - 10.1021/acs.analchem.2c04518
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-file-format-conversion

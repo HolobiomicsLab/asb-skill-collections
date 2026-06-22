@@ -26,6 +26,15 @@ provenance:
     title: HyperCCS
   dedup_kept_from: coll_hyperccs_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c03492
+  all_source_dois:
+  - 10.1021/acs.analchem.5c03492
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # ccs-prediction-model-design

@@ -26,6 +26,15 @@ provenance:
     title: SpatialMETA
   dedup_kept_from: coll_spatialmeta_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-025-63915-z
+  all_source_dois:
+  - 10.1038/s41467-025-63915-z
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # multi-omics-latent-space-learning

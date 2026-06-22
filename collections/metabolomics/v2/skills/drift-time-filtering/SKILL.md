@@ -26,6 +26,15 @@ provenance:
     title: GCIMS
   dedup_kept_from: coll_gcims_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1016/j.chemolab.2023.104938
+  all_source_dois:
+  - 10.1016/j.chemolab.2023.104938
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # drift-time-filtering

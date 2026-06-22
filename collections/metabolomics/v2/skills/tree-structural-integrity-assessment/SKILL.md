@@ -25,6 +25,15 @@ provenance:
     title: qemistree
   dedup_kept_from: coll_qemistree
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41589-020-00677-3
+  all_source_dois:
+  - 10.1038/s41589-020-00677-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # tree-structural-integrity-assessment

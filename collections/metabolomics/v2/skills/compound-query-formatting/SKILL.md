@@ -26,6 +26,15 @@ provenance:
     title: ClassyFire
   dedup_kept_from: coll_classyfire_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-016-0174-y
+  all_source_dois:
+  - 10.1186/s13321-016-0174-y
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # compound-query-formatting

@@ -32,6 +32,16 @@ provenance:
     title: Spectral Denoising
   dedup_kept_from: coll_spectral_denoising_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41592-025-02646-x
+  all_source_dois:
+  - 10.1038/s41592-025-02646-x
+  - 10.1038/s41592-023-02012-9
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrum-peak-manipulation-merging

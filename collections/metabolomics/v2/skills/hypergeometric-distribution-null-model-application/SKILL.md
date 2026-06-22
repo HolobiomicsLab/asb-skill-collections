@@ -36,6 +36,16 @@ provenance:
     title: NPLinker
   dedup_kept_from: coll_nplinker_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2024.10.11.617756
+  all_source_dois:
+  - 10.1101/2024.10.11.617756
+  - 10.1371/journal.pcbi.1008920
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # hypergeometric-distribution-null-model-application

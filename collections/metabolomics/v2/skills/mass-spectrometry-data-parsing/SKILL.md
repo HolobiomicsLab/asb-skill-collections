@@ -69,6 +69,19 @@ provenance:
     title: memo
   dedup_kept_from: coll_asari_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-023-39889-1
+  all_source_dois:
+  - 10.1038/s41467-023-39889-1
+  - 10.1038/s41592-021-01339-5
+  - 10.1021/acs.jproteome.2c00120
+  - 10.1186/s13321-023-00695-y
+  - 10.3389/fbinf.2022.842964
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-data-parsing

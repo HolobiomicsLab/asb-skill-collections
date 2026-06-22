@@ -36,6 +36,15 @@ provenance:
     title: metScribeR
   dedup_kept_from: coll_metscriber_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.5c00548
+  all_source_dois:
+  - 10.1021/acs.jproteome.5c00548
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Build in-house MS1 & RT metabolite library standards for untargeted metabolomics annotation

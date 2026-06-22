@@ -26,6 +26,15 @@ provenance:
     title: MEISTER
   dedup_kept_from: coll_meister_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41592-024-02171-3
+  all_source_dois:
+  - 10.1038/s41592-024-02171-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # model-validation-and-performance-evaluation

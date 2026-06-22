@@ -33,6 +33,16 @@ provenance:
     title: MeTEor
   dedup_kept_from: coll_meteor_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioadv/vbae178
+  all_source_dois:
+  - 10.1093/bioadv/vbae178
+  - 10.1007/978-3-319-47656-8_6
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolite-binary-classification

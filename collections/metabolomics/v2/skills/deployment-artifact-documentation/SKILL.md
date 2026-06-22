@@ -22,6 +22,15 @@ provenance:
     title: CEU Mass Mediator 3.0
   dedup_kept_from: coll_ceu_mass_mediator_3_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.8b00720
+  all_source_dois:
+  - 10.1021/acs.jproteome.8b00720
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # deployment-artifact-documentation

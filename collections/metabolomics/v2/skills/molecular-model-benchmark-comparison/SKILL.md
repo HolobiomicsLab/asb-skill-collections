@@ -28,6 +28,15 @@ provenance:
     title: NA
   dedup_kept_from: coll_nafm_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/anie.202507483
+  all_source_dois:
+  - 10.1002/anie.202507483
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # molecular-model-benchmark-comparison

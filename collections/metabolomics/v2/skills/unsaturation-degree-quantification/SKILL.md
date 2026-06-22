@@ -28,6 +28,15 @@ provenance:
     title: MetaboDirect
   dedup_kept_from: coll_metabodirect_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s40168-023-01476-3
+  all_source_dois:
+  - 10.1186/s40168-023-01476-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # unsaturation-degree-quantification

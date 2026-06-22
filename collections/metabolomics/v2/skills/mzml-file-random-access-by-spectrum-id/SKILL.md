@@ -24,6 +24,15 @@ provenance:
     title: pymzml
   dedup_kept_from: coll_pymzml_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/bty046
+  all_source_dois:
+  - 10.1093/bioinformatics/bty046
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mzml-file-random-access-by-spectrum-id

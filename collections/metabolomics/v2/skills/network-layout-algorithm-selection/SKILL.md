@@ -40,6 +40,16 @@ provenance:
     title: MInfer
   dedup_kept_from: coll_metanet_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2025.06.26.661636v1
+  all_source_dois:
+  - 10.1101/2025.06.26.661636v1
+  - 10.1016/j.cmpb.2025.108672
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # network-layout-algorithm-selection

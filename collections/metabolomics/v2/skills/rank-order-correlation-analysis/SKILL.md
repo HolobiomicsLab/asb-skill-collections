@@ -27,6 +27,16 @@ provenance:
     title: pals
   dedup_kept_from: coll_pals
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/metabo11020103
+  all_source_dois:
+  - 10.3390/metabo11020103
+  - 10.1186/1471-2105-6-225
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # rank-order-correlation-analysis

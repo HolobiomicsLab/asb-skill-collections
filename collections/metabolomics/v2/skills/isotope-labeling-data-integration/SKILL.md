@@ -39,6 +39,15 @@ provenance:
     title: isopair
   dedup_kept_from: coll_isopairfinder_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2021.12.05.471237v2
+  all_source_dois:
+  - 10.1101/2021.12.05.471237v2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # isotope-labeling-data-integration

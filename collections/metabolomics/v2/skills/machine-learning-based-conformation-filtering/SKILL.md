@@ -32,6 +32,15 @@ provenance:
     title: POMICS
   dedup_kept_from: coll_pomics_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jasms.1c00315
+  all_source_dois:
+  - 10.1021/jasms.1c00315
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # machine-learning-based-conformation-filtering

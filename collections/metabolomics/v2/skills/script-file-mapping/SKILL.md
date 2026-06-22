@@ -24,6 +24,15 @@ provenance:
     title: FluoroMatch 2.0
   dedup_kept_from: coll_fluoromatch_2_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s00216-021-03392-7
+  all_source_dois:
+  - 10.1007/s00216-021-03392-7
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Reconstruct the script-file placement layout into the LipidMatch-4.2 distribution directories

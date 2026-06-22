@@ -32,6 +32,16 @@ provenance:
     title: MargheRita
   dedup_kept_from: coll_margherita_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2024.06.20.599545v1
+  all_source_dois:
+  - 10.1101/2024.06.20.599545v1
+  - 10.1101/2024.06.20.599545
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolomic-feature-imputation

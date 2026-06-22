@@ -30,6 +30,15 @@ provenance:
     title: MSConnect
   dedup_kept_from: coll_msconnect_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.4c00854
+  all_source_dois:
+  - 10.1021/acs.jproteome.4c00854
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # third-party-processor-integration

@@ -31,6 +31,15 @@ provenance:
     title: JPA
   dedup_kept_from: coll_jpa_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/metabo12030212
+  all_source_dois:
+  - 10.3390/metabo12030212
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # feature-metadata-parsing-and-integration

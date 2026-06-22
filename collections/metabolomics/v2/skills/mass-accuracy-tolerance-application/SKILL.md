@@ -45,6 +45,17 @@ provenance:
     title: MeRgeION
   dedup_kept_from: coll_inventa_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3389/fmolb.2022.1028334
+  all_source_dois:
+  - 10.3389/fmolb.2022.1028334
+  - 10.1038/s41467-021-23953-9
+  - 10.1021/acs.analchem.2c04343
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-accuracy-tolerance-application

@@ -29,6 +29,15 @@ provenance:
     title: EnrichMET
   dedup_kept_from: coll_enrichmet_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2025.08.28.672951v2
+  all_source_dois:
+  - 10.1101/2025.08.28.672951v2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # lipid-ontology-category-mapping

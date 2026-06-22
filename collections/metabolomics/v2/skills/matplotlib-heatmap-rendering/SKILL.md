@@ -29,6 +29,15 @@ provenance:
     title: MS2DeepScore 2.0
   dedup_kept_from: coll_ms2deepscore_2_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2024.03.25.586580v5
+  all_source_dois:
+  - 10.1101/2024.03.25.586580v5
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # matplotlib-heatmap-rendering

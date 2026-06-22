@@ -23,6 +23,15 @@ provenance:
     title: Punc’data
   dedup_kept_from: coll_punc_data_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jasms.5c00151
+  all_source_dois:
+  - 10.1021/jasms.5c00151
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # peak-list-column-mapping

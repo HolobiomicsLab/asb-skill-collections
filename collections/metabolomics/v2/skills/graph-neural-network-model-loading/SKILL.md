@@ -31,6 +31,17 @@ provenance:
     title: mol2ccs
   dedup_kept_from: coll_mol2ccs_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-024-00899-w
+  all_source_dois:
+  - 10.1186/s13321-024-00899-w
+  - 10.5281/zenodo.11199061
+  - 10.5281/zenodo.11199061.svg
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Graph Neural Network Model Loading

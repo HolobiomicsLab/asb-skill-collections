@@ -24,6 +24,15 @@ provenance:
     title: BiG-SCAPE biosynthetic diversity
   dedup_kept_from: coll_big_scape_biosynthetic_diversity_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41589-019-0400-9
+  all_source_dois:
+  - 10.1038/s41589-019-0400-9
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # pep8-standard-enforcement

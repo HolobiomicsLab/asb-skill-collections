@@ -30,6 +30,15 @@ provenance:
     title: mzrtsim
   dedup_kept_from: coll_mzrtsim_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c01213
+  all_source_dois:
+  - 10.1021/acs.analchem.5c01213
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-matrix-background-simulation

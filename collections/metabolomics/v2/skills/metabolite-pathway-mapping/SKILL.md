@@ -29,6 +29,15 @@ provenance:
     title: MetENP
   dedup_kept_from: coll_metenp_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2020.11.20.391912
+  all_source_dois:
+  - 10.1101/2020.11.20.391912
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolite-pathway-mapping

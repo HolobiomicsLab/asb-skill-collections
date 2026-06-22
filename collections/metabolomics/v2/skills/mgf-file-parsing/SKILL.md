@@ -38,6 +38,16 @@ provenance:
     title: MS2LDA
   dedup_kept_from: coll_molnotator_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2021.12.21.473622v1
+  all_source_dois:
+  - 10.1101/2021.12.21.473622v1
+  - 10.1073/pnas.1608041113
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mgf-file-parsing

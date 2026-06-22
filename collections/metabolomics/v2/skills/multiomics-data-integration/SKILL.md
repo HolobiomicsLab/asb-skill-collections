@@ -26,6 +26,15 @@ provenance:
     title: Recon8D
   dedup_kept_from: coll_recon8d_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2024.08.17.608400v2
+  all_source_dois:
+  - 10.1101/2024.08.17.608400v2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # multiomics-data-integration

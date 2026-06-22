@@ -35,6 +35,15 @@ provenance:
     title: Mass Spectrum Transformer
   dedup_kept_from: coll_mass_spectrum_transformer_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s10489-022-04351-0
+  all_source_dois:
+  - 10.1007/s10489-022-04351-0
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # pytorch-forward-pass-validation

@@ -25,6 +25,15 @@ provenance:
     title: cmmrt
   dedup_kept_from: coll_cmmrt
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-022-00613-8
+  all_source_dois:
+  - 10.1186/s13321-022-00613-8
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # stochastic-weight-averaging-implementation

@@ -30,6 +30,15 @@ provenance:
     title: DBDIpy
   dedup_kept_from: coll_dbdipy_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btad088/7036334
+  all_source_dois:
+  - 10.1093/bioinformatics/btad088/7036334
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # in-source-fragment-adduct-candidate-flagging

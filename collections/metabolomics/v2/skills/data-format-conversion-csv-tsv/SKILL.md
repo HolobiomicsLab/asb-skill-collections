@@ -26,6 +26,15 @@ provenance:
     title: FBMN-STATS
   dedup_kept_from: coll_fbmn_stats_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41596-024-01046-3
+  all_source_dois:
+  - 10.1038/s41596-024-01046-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # data-format-conversion-csv-tsv

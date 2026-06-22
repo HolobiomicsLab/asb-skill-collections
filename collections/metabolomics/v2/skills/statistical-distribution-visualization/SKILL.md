@@ -43,6 +43,16 @@ provenance:
     title: ORA
   dedup_kept_from: coll_biosynfoni
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.26434/chemrxiv-2025-cwq74
+  all_source_dois:
+  - 10.26434/chemrxiv-2025-cwq74
+  - 10.1371/journal.pcbi.1009105
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # statistical-distribution-visualization

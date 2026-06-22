@@ -33,6 +33,15 @@ provenance:
     title: MassSpecBlocks
   dedup_kept_from: coll_massspecblocks_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-021-00530-2
+  all_source_dois:
+  - 10.1186/s13321-021-00530-2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # database-record-retrieval

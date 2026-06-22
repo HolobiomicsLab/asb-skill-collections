@@ -11,6 +11,14 @@ metadata:
   - tools_index.json
   - kb_bundle.json
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: ''
+  all_source_dois: []
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # ASB Metabolomics Skill Collection — router

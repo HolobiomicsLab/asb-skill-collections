@@ -9,11 +9,12 @@ url: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
 doi: TODO-zenodo
 type: dataset
 authors:
+- name: AgenticScienceBuilder Community
 - family-names: Nothias
-  given-names: Louis-Felix
+  given-names: Louis-Félix
   orcid: https://orcid.org/0000-0001-6711-6719
-- name: Holobiomics Lab
-- name: MetabolinkAI
+- name: HolobiomicsLab.cnrs.fr
+- name: MetaboLinkAI.net
 keywords:
 - metabolomics
 - mass spectrometry

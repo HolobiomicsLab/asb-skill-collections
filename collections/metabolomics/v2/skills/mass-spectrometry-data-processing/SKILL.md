@@ -80,6 +80,20 @@ provenance:
     title: tima
   dedup_kept_from: coll_chemspectra_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-020-00481-0
+  all_source_dois:
+  - 10.1186/s13321-020-00481-0
+  - 10.1021/acs.jproteome.2c00612
+  - 10.1021/acs.analchem.3c00376
+  - 10.3390/metabo12030212
+  - 10.1021/acs.jproteome.5c00548
+  - 10.3389/fpls.2019.01329
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-data-processing

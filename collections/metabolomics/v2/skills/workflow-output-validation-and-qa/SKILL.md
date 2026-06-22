@@ -28,6 +28,15 @@ provenance:
     title: nextflow4msdial
   dedup_kept_from: coll_nextflow4msdial
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jasms.4c00364
+  all_source_dois:
+  - 10.1021/jasms.4c00364
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # workflow-output-validation-and-qa

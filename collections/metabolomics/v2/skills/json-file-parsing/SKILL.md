@@ -30,6 +30,15 @@ provenance:
     title: MIBiG 3.0
   dedup_kept_from: coll_mibig_3_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/nar/gkac1049
+  all_source_dois:
+  - 10.1093/nar/gkac1049
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # json-file-parsing

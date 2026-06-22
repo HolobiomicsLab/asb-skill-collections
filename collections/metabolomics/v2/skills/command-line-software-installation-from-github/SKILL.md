@@ -37,6 +37,15 @@ provenance:
     title: MSIGen
   dedup_kept_from: coll_msigen_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jasms.4c00178
+  all_source_dois:
+  - 10.1021/jasms.4c00178
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # command-line-software-installation-from-github

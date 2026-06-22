@@ -32,6 +32,15 @@ provenance:
     title: ConCISE
   dedup_kept_from: coll_concise_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/metabo12121275
+  all_source_dois:
+  - 10.3390/metabo12121275
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # chemical-classification-scheme-validation

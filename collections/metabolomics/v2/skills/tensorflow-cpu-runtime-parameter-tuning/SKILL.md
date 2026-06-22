@@ -30,6 +30,15 @@ provenance:
     title: Mass2SMILES
   dedup_kept_from: coll_mass2smiles_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2023.07.06.547963v1
+  all_source_dois:
+  - 10.1101/2023.07.06.547963v1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # tensorflow-cpu-runtime-parameter-tuning

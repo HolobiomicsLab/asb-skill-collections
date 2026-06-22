@@ -36,6 +36,16 @@ provenance:
     title: Casanovo
   dedup_kept_from: coll_casanovo_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-024-49731-x
+  all_source_dois:
+  - 10.1038/s41467-024-49731-x
+  - 10.1093/bib/bbac542
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mztab-format-export-and-annotation

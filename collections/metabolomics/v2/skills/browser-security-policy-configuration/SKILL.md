@@ -28,6 +28,15 @@ provenance:
     title: COLMARvista
   dedup_kept_from: coll_colmarvista_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s10858-025-00465-y#sec2
+  all_source_dois:
+  - 10.1007/s10858-025-00465-y#sec2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # browser-security-policy-configuration

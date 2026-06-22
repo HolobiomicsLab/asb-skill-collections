@@ -26,6 +26,15 @@ provenance:
     title: DNA adduct database
   dedup_kept_from: coll_dna_adduct_database_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3389/fchem.2022.908572
+  all_source_dois:
+  - 10.3389/fchem.2022.908572
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-prediction-modeling

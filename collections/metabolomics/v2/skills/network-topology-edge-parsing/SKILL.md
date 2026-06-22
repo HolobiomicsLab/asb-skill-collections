@@ -24,6 +24,15 @@ provenance:
     title: FNICM
   dedup_kept_from: coll_fnicm_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.3c04131
+  all_source_dois:
+  - 10.1021/acs.analchem.3c04131
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # network-topology-edge-parsing

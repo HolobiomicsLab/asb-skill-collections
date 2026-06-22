@@ -70,6 +70,18 @@ provenance:
     title: mspepsearchr
   dedup_kept_from: coll_foodmasst_2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41538-022-00137-3
+  all_source_dois:
+  - 10.1038/s41538-022-00137-3
+  - 10.1021/acs.analchem.2c04343
+  - 10.1089/omi.2021.0051
+  - 10.1021/jasms.5c00322
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectral-library-matching

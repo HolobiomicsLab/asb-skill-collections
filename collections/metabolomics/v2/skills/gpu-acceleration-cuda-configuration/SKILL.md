@@ -29,6 +29,15 @@ provenance:
     title: HyperSpec
   dedup_kept_from: coll_hyperspec_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.2c00612
+  all_source_dois:
+  - 10.1021/acs.jproteome.2c00612
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # GPU Acceleration via CUDA Configuration

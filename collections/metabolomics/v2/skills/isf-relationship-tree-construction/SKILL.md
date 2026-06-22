@@ -29,6 +29,15 @@ provenance:
     title: ISFrag
   dedup_kept_from: coll_isfrag_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.1c01644
+  all_source_dois:
+  - 10.1021/acs.analchem.1c01644
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # isf-relationship-tree-construction

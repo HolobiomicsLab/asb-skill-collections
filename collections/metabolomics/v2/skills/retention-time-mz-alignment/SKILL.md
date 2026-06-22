@@ -25,6 +25,15 @@ provenance:
     title: mzLearn
   dedup_kept_from: coll_mzlearn_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2025.01.26.634927v3
+  all_source_dois:
+  - 10.1101/2025.01.26.634927v3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # retention-time-mz-alignment

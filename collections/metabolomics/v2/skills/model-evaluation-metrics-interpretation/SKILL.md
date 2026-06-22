@@ -34,6 +34,15 @@ provenance:
     title: MSNovelist
   dedup_kept_from: coll_msnovelist_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41592-022-01486-3
+  all_source_dois:
+  - 10.1038/s41592-022-01486-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # model-evaluation-metrics-interpretation

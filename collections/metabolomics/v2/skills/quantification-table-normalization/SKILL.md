@@ -36,6 +36,16 @@ provenance:
     title: quantyfey
   dedup_kept_from: coll_msfeast_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btae584
+  all_source_dois:
+  - 10.1093/bioinformatics/btae584
+  - 10.1016/j.aca.2025.344571
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # quantification-table-normalization

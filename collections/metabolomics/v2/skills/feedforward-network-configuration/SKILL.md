@@ -27,6 +27,16 @@ provenance:
     title: ICEBERG / fragmentation graph generation
   dedup_kept_from: coll_iceberg_fragmentation_graph_generation_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.3c04654
+  all_source_dois:
+  - 10.1021/acs.analchem.3c04654
+  - 10.1021/acscentsci.9b00085
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Feedforward Network Configuration

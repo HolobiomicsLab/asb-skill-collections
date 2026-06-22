@@ -26,6 +26,15 @@ provenance:
     title: ipaPy2
   dedup_kept_from: coll_ipapy2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btad455
+  all_source_dois:
+  - 10.1093/bioinformatics/btad455
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # lcms-feature-probability-scoring

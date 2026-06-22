@@ -27,6 +27,15 @@ provenance:
     title: Easy-Amanida
   dedup_kept_from: coll_easy_amanida_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/jrsm.1713
+  all_source_dois:
+  - 10.1002/jrsm.1713
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # web-application-server-logic-mapping

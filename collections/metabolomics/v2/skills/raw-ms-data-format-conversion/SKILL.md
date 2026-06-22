@@ -28,6 +28,15 @@ provenance:
     title: MSThunder
   dedup_kept_from: coll_msthunder_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1016/j.enceco.2025.07.022
+  all_source_dois:
+  - 10.1016/j.enceco.2025.07.022
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # raw-ms-data-format-conversion

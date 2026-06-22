@@ -38,6 +38,16 @@ provenance:
     title: MeRgeION
   dedup_kept_from: coll_largemetabo_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bib/bbac455
+  all_source_dois:
+  - 10.1093/bib/bbac455
+  - 10.1021/acs.analchem.2c04343
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # retention-time-mass-tolerance-calibration

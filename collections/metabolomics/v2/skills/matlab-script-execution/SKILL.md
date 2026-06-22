@@ -23,6 +23,15 @@ provenance:
     title: DisCo P-ad
   dedup_kept_from: coll_disco_p_ad_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/metabo15010028
+  all_source_dois:
+  - 10.3390/metabo15010028
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # matlab-script-execution

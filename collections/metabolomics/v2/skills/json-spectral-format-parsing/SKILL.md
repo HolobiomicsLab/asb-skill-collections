@@ -27,6 +27,15 @@ provenance:
     title: FragHub
   dedup_kept_from: coll_fraghub_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c02219
+  all_source_dois:
+  - 10.1021/acs.analchem.4c02219
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # json-spectral-format-parsing

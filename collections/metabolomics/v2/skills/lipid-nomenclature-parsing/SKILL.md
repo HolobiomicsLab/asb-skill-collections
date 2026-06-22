@@ -51,6 +51,17 @@ provenance:
     title: LipidCreator
   dedup_kept_from: coll_adviselipidomics_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btac706
+  all_source_dois:
+  - 10.1093/bioinformatics/btac706
+  - 10.1021/acs.analchem.4c05039
+  - 10.1038/s41467-020-15960-z
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # lipid-nomenclature-parsing

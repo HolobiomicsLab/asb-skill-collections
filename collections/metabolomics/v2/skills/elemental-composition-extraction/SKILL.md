@@ -24,6 +24,15 @@ provenance:
     title: MoleTrans
   dedup_kept_from: coll_moletrans_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.estlett.5c00284
+  all_source_dois:
+  - 10.1021/acs.estlett.5c00284
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # elemental-composition-extraction

@@ -29,6 +29,15 @@ provenance:
     title: ''
   dedup_kept_from: coll_rmsicleanup_ms_imaging_matrix_peak_annot_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-020-00449-0
+  all_source_dois:
+  - 10.1186/s13321-020-00449-0
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Isobaric Ion Detection in Mass Spectrometry Imaging

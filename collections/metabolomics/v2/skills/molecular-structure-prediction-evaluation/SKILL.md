@@ -26,6 +26,15 @@ provenance:
     title: NMR2Struct
   dedup_kept_from: coll_nmr2struct
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acscentsci.4c01132
+  all_source_dois:
+  - 10.1021/acscentsci.4c01132
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # molecular-structure-prediction-evaluation

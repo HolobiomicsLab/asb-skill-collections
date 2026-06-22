@@ -31,6 +31,15 @@ provenance:
     title: Spectral entropy
   dedup_kept_from: coll_spectral_entropy_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41592-021-01331-z
+  all_source_dois:
+  - 10.1038/s41592-021-01331-z
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # MS/MS Spectral Preprocessing: Noise Removal

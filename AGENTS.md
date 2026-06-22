@@ -8,6 +8,13 @@ software tools for computational LC-MS/MS; tag `metabolomics-v0.1.0`).
 
 > Full human guide: [`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md).
 
+## Requirements
+
+- **Browse / search / read skills:** nothing — plain Markdown + JSON.
+- **Helper scripts** (`collect`, `release_gate`, `regen_catalogue`): Python ≥ 3.8 + PyYAML (`pip install -r scripts/requirements.txt`).
+- **Grounding binder** (`perspicacite_kb_bind.py`): Python ≥ 3.8 (stdlib only) **and** a running [Perspicacité](https://github.com/HolobiomicsLab) at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`; needs OpenAI + Anthropic keys).
+- **Running a given skill's tool:** install what that skill's frontmatter `tools:` lists (R/Bioconductor, Python pkgs, or standalone tools like SIRIUS/MZmine) — see `USAGE.md` §0 and `tools_index.json`.
+
 ---
 
 ## Install

@@ -56,6 +56,17 @@ provenance:
     title: SpecEmbedding
   dedup_kept_from: coll_ms2deepscore_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-021-00558-4
+  all_source_dois:
+  - 10.1186/s13321-021-00558-4
+  - 10.1038/s42004-023-00932-3
+  - 10.1021/acs.analchem.5c02655
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectral-embedding-generation

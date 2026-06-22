@@ -25,6 +25,15 @@ provenance:
     title: MassBank
   dedup_kept_from: coll_massbank_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/jms.1777
+  all_source_dois:
+  - 10.1002/jms.1777
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # batch-record-processing

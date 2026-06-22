@@ -27,6 +27,15 @@ provenance:
     title: metid
   dedup_kept_from: coll_metid
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c00633
+  all_source_dois:
+  - 10.1021/acs.analchem.5c00633
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # shell-environment-setup-and-dependency-management

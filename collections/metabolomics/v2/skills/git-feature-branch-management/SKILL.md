@@ -30,6 +30,15 @@ provenance:
     title: ms2query
   dedup_kept_from: coll_ms2query_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-023-37446-4
+  all_source_dois:
+  - 10.1038/s41467-023-37446-4
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # git-feature-branch-management

@@ -28,6 +28,15 @@ provenance:
     title: LC retention order prediction
   dedup_kept_from: coll_lc_retention_order_prediction_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/bty590
+  all_source_dois:
+  - 10.1093/bioinformatics/bty590
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # ground-truth-ordinal-validation

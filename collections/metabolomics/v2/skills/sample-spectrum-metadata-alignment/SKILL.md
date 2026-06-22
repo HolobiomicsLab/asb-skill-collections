@@ -32,6 +32,15 @@ provenance:
     title: NPLinker
   dedup_kept_from: coll_nplinker_2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2024.10.11.617756
+  all_source_dois:
+  - 10.1101/2024.10.11.617756
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # sample-spectrum-metadata-alignment

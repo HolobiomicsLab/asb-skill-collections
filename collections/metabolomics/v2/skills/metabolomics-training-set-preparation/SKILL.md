@@ -27,6 +27,15 @@ provenance:
     title: DNMS2Purifier
   dedup_kept_from: coll_dnms2purifier_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.3c00736
+  all_source_dois:
+  - 10.1021/acs.analchem.3c00736
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolomics-training-set-preparation

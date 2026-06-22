@@ -25,6 +25,15 @@ provenance:
     title: MetumpX untargeted MS support package
   dedup_kept_from: coll_metumpx_untargeted_ms_support_package_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btz765
+  all_source_dois:
+  - 10.1093/bioinformatics/btz765
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # package-metadata-compilation

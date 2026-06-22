@@ -24,6 +24,15 @@ provenance:
     title: DeepMASS
   dedup_kept_from: coll_deepmass_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2024.05.30.596727v2
+  all_source_dois:
+  - 10.1101/2024.05.30.596727v2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # chemical-space-similarity-computation

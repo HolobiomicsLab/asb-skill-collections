@@ -28,6 +28,15 @@ provenance:
     title: MetFID
   dedup_kept_from: coll_metfid_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s11306-020-01726-7
+  all_source_dois:
+  - 10.1007/s11306-020-01726-7
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-preprocessing

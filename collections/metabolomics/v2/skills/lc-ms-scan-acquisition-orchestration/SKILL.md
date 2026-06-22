@@ -33,6 +33,16 @@ provenance:
     title: vimms
   dedup_kept_from: coll_vimms
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.21105/joss.03990
+  all_source_dois:
+  - 10.21105/joss.03990
+  - 10.1021/acs.analchem.0c03895
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # LC-MS Scan Acquisition Orchestration

@@ -32,6 +32,15 @@ provenance:
     title: ModiFinder
   dedup_kept_from: coll_modifinder_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jasms.4c00061
+  all_source_dois:
+  - 10.1021/jasms.4c00061
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Fragmentation Pattern Annotation with MAGMa

@@ -50,6 +50,18 @@ provenance:
     title: pcpfm
   dedup_kept_from: coll_marr_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s12859-021-04336-9
+  all_source_dois:
+  - 10.1186/s12859-021-04336-9
+  - 10.1080/01621459.2017.1397521
+  - 10.1093/bioinformatics/btx477
+  - 10.1371/journal.pcbi.1011912
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # quality-control-threshold-application

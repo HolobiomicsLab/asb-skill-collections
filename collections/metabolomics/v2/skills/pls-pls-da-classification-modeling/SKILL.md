@@ -25,6 +25,15 @@ provenance:
     title: SMART 2.0
   dedup_kept_from: coll_smart_2_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c03225
+  all_source_dois:
+  - 10.1021/acs.analchem.5c03225
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # pls-pls-da-classification-modeling

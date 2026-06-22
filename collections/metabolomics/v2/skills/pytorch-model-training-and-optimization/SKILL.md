@@ -27,6 +27,15 @@ provenance:
     title: GNN-RT
   dedup_kept_from: coll_gnn_rt_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.0c04071
+  all_source_dois:
+  - 10.1021/acs.analchem.0c04071
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # PyTorch Model Training and Optimization

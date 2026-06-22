@@ -68,6 +68,18 @@ provenance:
     title: tima
   dedup_kept_from: coll_msmetaenhancer
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.21105/joss.04494
+  all_source_dois:
+  - 10.21105/joss.04494
+  - 10.21147/j.issn.1000-9604.2023.05.11
+  - 10.1186/s13321-020-00477-w
+  - 10.3389/fpls.2019.01329
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # chemical-identifier-mapping

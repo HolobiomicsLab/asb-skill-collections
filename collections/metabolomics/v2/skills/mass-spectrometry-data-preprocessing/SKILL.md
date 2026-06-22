@@ -78,6 +78,20 @@ provenance:
     title: XCMS
   dedup_kept_from: coll_isfrag_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.1c01644
+  all_source_dois:
+  - 10.1021/acs.analchem.1c01644
+  - 10.1038/s41592-024-02171-3
+  - 10.1093/bioinformatics/btae584
+  - 10.21147/j.issn.1000-9604.2023.05.11
+  - 10.1021/acs.analchem.3c05019
+  - 10.1021/ac051437y
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-data-preprocessing

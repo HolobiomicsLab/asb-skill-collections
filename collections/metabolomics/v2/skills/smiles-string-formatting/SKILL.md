@@ -28,6 +28,15 @@ provenance:
     title: npclassifier
   dedup_kept_from: coll_npclassifier
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jnatprod.1c00399
+  all_source_dois:
+  - 10.1021/acs.jnatprod.1c00399
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # SMILES String Formatting for Chemical Classification API Queries

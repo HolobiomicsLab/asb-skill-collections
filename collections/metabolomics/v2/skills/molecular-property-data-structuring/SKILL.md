@@ -25,6 +25,15 @@ provenance:
     title: SMITER
   dedup_kept_from: coll_smiter_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/genes12030396
+  all_source_dois:
+  - 10.3390/genes12030396
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # molecular-property-data-structuring

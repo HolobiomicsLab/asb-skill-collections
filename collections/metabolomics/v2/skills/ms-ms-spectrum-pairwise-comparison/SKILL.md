@@ -25,6 +25,15 @@ provenance:
     title: falcon
   dedup_kept_from: coll_falcon
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/rcm.9153
+  all_source_dois:
+  - 10.1002/rcm.9153
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # MS/MS Spectrum Pairwise Comparison via Nearest Neighbor Indexing

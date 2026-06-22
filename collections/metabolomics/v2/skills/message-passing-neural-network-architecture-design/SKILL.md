@@ -25,6 +25,15 @@ provenance:
     title: Chemprop-IR
   dedup_kept_from: coll_chemprop_ir_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jcim.1c00055
+  all_source_dois:
+  - 10.1021/acs.jcim.1c00055
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # message-passing-neural-network-architecture-design

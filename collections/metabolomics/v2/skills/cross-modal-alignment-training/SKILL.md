@@ -27,6 +27,15 @@ provenance:
     title: MS-BART
   dedup_kept_from: coll_ms_bart_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.48550/arxiv.2510.20615
+  all_source_dois:
+  - 10.48550/arxiv.2510.20615
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # cross-modal-alignment-training

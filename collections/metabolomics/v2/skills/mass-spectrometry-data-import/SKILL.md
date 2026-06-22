@@ -40,6 +40,16 @@ provenance:
     title: SMART 2.0
   dedup_kept_from: coll_matchms
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-024-00878-1
+  all_source_dois:
+  - 10.1186/s13321-024-00878-1
+  - 10.1021/acs.analchem.5c03225
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-data-import

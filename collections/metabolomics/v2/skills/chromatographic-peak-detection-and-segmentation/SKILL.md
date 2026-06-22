@@ -27,6 +27,15 @@ provenance:
     title: MassCube
   dedup_kept_from: coll_masscube_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-025-60640-5
+  all_source_dois:
+  - 10.1038/s41467-025-60640-5
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # chromatographic-peak-detection-and-segmentation

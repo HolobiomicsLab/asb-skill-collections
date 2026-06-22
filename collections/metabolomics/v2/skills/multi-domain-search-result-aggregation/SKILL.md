@@ -33,6 +33,15 @@ provenance:
     title: foodMASST
   dedup_kept_from: coll_foodmasst_2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41538-022-00137-3
+  all_source_dois:
+  - 10.1038/s41538-022-00137-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # multi-domain-search-result-aggregation

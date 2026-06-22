@@ -26,6 +26,15 @@ provenance:
     title: pairedomicsdatapla
   dedup_kept_from: coll_pairedomicsdatapla_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41589-020-00724-z
+  all_source_dois:
+  - 10.1038/s41589-020-00724-z
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # paired-omics-data-structure-mapping

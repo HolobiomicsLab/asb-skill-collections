@@ -41,6 +41,16 @@ provenance:
     title: NormalizeMets
   dedup_kept_from: coll_hruv_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2020.12.21.423723
+  all_source_dois:
+  - 10.1101/2020.12.21.423723
+  - 10.1007/s11306-018-1347-7
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # batch-effect-visualization

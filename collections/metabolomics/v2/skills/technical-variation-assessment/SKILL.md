@@ -31,6 +31,16 @@ provenance:
     title: Dbnorm
   dedup_kept_from: coll_dbnorm_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41598-021-84824-3
+  all_source_dois:
+  - 10.1038/s41598-021-84824-3
+  - 10.1007/s12561-013-9081-1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # technical-variation-assessment

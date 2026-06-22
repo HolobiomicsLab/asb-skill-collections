@@ -29,6 +29,15 @@ provenance:
     title: mwtab Python Library for RESTful Access
   dedup_kept_from: coll_mwtab_python_library_for_restful_access_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/metabo11030163
+  all_source_dois:
+  - 10.3390/metabo11030163
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mwtab-file-parsing

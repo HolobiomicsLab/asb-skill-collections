@@ -35,6 +35,15 @@ provenance:
     title: Spec2Vec
   dedup_kept_from: spec2vec_grounded
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1371/journal.pcbi.1008724
+  all_source_dois:
+  - 10.1371/journal.pcbi.1008724
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # word-embedding-aggregation-for-spectral-data

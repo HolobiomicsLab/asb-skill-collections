@@ -31,6 +31,16 @@ provenance:
     title: MultiABLER
   dedup_kept_from: coll_multiabler_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1016/j.isci.2023.106881
+  all_source_dois:
+  - 10.1016/j.isci.2023.106881
+  - 10.1021/acs.analchem.9b01842
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Differential Metabolite Detection

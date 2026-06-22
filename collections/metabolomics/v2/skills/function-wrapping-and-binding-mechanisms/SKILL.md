@@ -31,6 +31,15 @@ provenance:
     title: spectripy
   dedup_kept_from: coll_spectripy
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.21105/joss.08070
+  all_source_dois:
+  - 10.21105/joss.08070
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # function-wrapping-and-binding-mechanisms

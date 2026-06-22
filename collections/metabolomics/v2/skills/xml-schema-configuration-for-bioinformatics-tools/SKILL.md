@@ -29,6 +29,15 @@ provenance:
     title: IonFlow
   dedup_kept_from: coll_ionflow_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s11306-021-01841-z
+  all_source_dois:
+  - 10.1007/s11306-021-01841-z
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # xml-schema-configuration-for-bioinformatics-tools

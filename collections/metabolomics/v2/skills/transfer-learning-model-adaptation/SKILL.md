@@ -55,6 +55,17 @@ provenance:
     title: RT-Transformer
   dedup_kept_from: coll_abcort_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jcim.4c02179
+  all_source_dois:
+  - 10.1021/acs.jcim.4c02179
+  - 10.1093/bioinformatics/btae084
+  - 10.1038/s41467-019-13680-7
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # transfer-learning-model-adaptation

@@ -24,6 +24,15 @@ provenance:
     title: CSCS / deep CNN natural-product annotation
   dedup_kept_from: coll_cscs_deep_cnn_natural_product_annotation_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jacs.9b13786
+  all_source_dois:
+  - 10.1021/jacs.9b13786
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # tensorflow-model-metadata-inspection

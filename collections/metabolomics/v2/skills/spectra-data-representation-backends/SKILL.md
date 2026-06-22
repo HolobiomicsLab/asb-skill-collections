@@ -34,6 +34,15 @@ provenance:
     title: spectra
   dedup_kept_from: coll_spectra_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/metabo12020173
+  all_source_dois:
+  - 10.3390/metabo12020173
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectra-data-representation-backends

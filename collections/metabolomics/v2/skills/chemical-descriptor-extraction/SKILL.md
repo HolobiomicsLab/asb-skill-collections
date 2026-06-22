@@ -25,6 +25,15 @@ provenance:
     title: RepoRT (retention-time repository)
   dedup_kept_from: coll_report_retention_time_repository_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41592-023-02143-z
+  all_source_dois:
+  - 10.1038/s41592-023-02143-z
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # chemical-descriptor-extraction

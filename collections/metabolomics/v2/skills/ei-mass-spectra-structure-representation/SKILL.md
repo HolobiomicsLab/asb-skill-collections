@@ -28,6 +28,15 @@ provenance:
     title: mspepsearchr
   dedup_kept_from: coll_mspepsearchr_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/jasms.5c00322
+  all_source_dois:
+  - 10.1021/jasms.5c00322
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # ei-mass-spectra-structure-representation

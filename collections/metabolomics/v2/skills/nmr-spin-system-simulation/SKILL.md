@@ -23,6 +23,15 @@ provenance:
     title: MetAssimulo 2.0
   dedup_kept_from: coll_metassimulo_2_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btaf045
+  all_source_dois:
+  - 10.1093/bioinformatics/btaf045
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # nmr-spin-system-simulation

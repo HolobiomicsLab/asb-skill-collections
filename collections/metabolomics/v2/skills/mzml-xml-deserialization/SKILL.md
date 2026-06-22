@@ -29,6 +29,15 @@ provenance:
     title: Eclipse
   dedup_kept_from: coll_eclipse_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btaf290/8128335
+  all_source_dois:
+  - 10.1093/bioinformatics/btaf290/8128335
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mzml-xml-deserialization

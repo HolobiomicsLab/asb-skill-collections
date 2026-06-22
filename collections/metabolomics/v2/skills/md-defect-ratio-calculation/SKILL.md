@@ -27,6 +27,15 @@ provenance:
     title: pfdeltascreen
   dedup_kept_from: coll_pfdeltascreen
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1007/s00216-023-05070-2
+  all_source_dois:
+  - 10.1007/s00216-023-05070-2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # MD/C-m/C Ratio Calculation for PFAS Feature Prioritization

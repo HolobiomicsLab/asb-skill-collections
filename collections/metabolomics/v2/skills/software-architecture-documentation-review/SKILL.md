@@ -25,6 +25,15 @@ provenance:
     title: mzmine3
   dedup_kept_from: coll_mzmine3
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41587-023-01690-2
+  all_source_dois:
+  - 10.1038/s41587-023-01690-2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # software-architecture-documentation-review

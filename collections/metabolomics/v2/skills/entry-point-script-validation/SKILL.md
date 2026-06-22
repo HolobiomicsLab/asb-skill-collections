@@ -25,6 +25,15 @@ provenance:
     title: ChemDistiller
   dedup_kept_from: coll_chemdistiller_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/bty080
+  all_source_dois:
+  - 10.1093/bioinformatics/bty080
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # entry-point-script-validation

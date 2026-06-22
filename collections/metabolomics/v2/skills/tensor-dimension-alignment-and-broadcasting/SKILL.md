@@ -23,6 +23,15 @@ provenance:
     title: IsoFusion
   dedup_kept_from: coll_isofusion_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.26599/bdma.2024.9020059
+  all_source_dois:
+  - 10.26599/bdma.2024.9020059
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # tensor-dimension-alignment-and-broadcasting

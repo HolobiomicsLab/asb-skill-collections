@@ -25,6 +25,15 @@ provenance:
     title: 3D molecular cartography (Optimus / 'ili)
   dedup_kept_from: coll_3d_molecular_cartography_optimus_ili_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/nprot.2017.122
+  all_source_dois:
+  - 10.1038/nprot.2017.122
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # experimental-design-metadata-integration

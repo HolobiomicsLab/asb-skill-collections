@@ -6,6 +6,41 @@ public code repository. This guide covers **search → install → use → groun
 
 ---
 
+## 0. Requirements
+
+You can **browse, search, and read** the collection with nothing installed — the
+skills and indexes are plain Markdown + JSON. Each capability adds dependencies:
+
+| To… | You need |
+|---|---|
+| Install in Claude Code | Claude Code with plugin support |
+| Search the indexes (examples below) | [`jq`](https://jqlang.github.io/jq/) (optional; any JSON reader works) |
+| Run the helper scripts (`collect`, `release_gate`, `regen_catalogue`) | **Python ≥ 3.8** + **PyYAML** (`pip install pyyaml`) |
+| Run the grounding binder `perspicacite_kb_bind.py` | **Python ≥ 3.8** (stdlib only — no pip installs) **and** a running [Perspicacité](https://github.com/HolobiomicsLab) instance reachable at `PERSPICACITE_BASE` (default `http://127.0.0.1:8000`). Perspicacité itself needs an OpenAI key (embeddings: `text-embedding-3-large`) and an Anthropic key (answer synthesis). |
+| **Run a given skill's tool** | the libraries that skill lists in its frontmatter `tools` (see below) |
+
+> A `requirements.txt` for the helper scripts lives at `scripts/requirements.txt`.
+
+### Per-skill tool dependencies
+
+Each skill's frontmatter `tools:` enumerates exactly what that procedure needs —
+these vary per skill and are **not** bundled here. Common shapes:
+
+- **R / Bioconductor** — e.g. `R (>=3.5)`, `BiocManager`, then
+  `BiocManager::install("xcms")`, `pcaMethods`, `limma`, … (installed with
+  `devtools::install_github(...)` or `BiocManager::install(...)` as the skill body shows).
+- **Python** — `pip install matchms spectrum_utils pyteomics …` per the skill.
+- **Standalone tools** — e.g. SIRIUS, GNPS/FBMN (web), MZmine (GUI/headless).
+
+Resolve the canonical install target from the skill body and from
+`tools_index.json` (`canonical_url`). To list everything a skill requires:
+
+```bash
+jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
+```
+
+---
+
 ## 1. Install
 
 ### Claude Code (recommended)
@@ -100,6 +135,27 @@ every skill self-grounding without shipping a heavyweight vector dump — the KB
 reconstructed on demand from the same DOIs (+ SI) the build used.
 
 ---
+
+## Skill metadata & attribution
+
+Every `SKILL.md` carries an `attribution:` block (collection-level mirror in
+`collection.yaml → roles`). The roles are deliberately distinct:
+
+| Field | Meaning |
+|---|---|
+| `generator` | what produced the skill — the **AgenticScienceBuilder** pipeline (not a human author) |
+| `original_doi` / `all_source_dois` | the source paper(s) the skill was built from — **always cite these** |
+| `curators` | person(s) who later **modify / validate** the skill (empty at v0.1.0 — none yet) |
+| `promoter` | person who **suggests using** the skill — Louis-Félix Nothias |
+| `sponsor` | who **paid the API cost** of generation — CNRS & Université Côte d'Azur |
+| `zenodo_doi` | the collection's Zenodo deposition DOI (TODO until minted) |
+
+The collection's **Zenodo authors** (see `CITATION.cff`) are, by policy,
+**AgenticScienceBuilder Community** first, then for this collection
+**Louis-Félix Nothias**, **HolobiomicsLab.cnrs.fr**, **MetaboLinkAI.net**.
+
+> Cite both: the **collection** (CITATION.cff / Zenodo DOI once minted) **and**
+> the **original paper** (`original_doi`) behind whichever skill you use.
 
 ## Provenance & policy
 

@@ -26,6 +26,15 @@ provenance:
     title: Pickaxe
   dedup_kept_from: coll_pickaxe_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s12859-023-05149-8
+  all_source_dois:
+  - 10.1186/s12859-023-05149-8
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # filter-threshold-parameterization

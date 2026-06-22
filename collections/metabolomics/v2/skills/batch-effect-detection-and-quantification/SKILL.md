@@ -34,6 +34,16 @@ provenance:
     title: SMART 2.0
   dedup_kept_from: coll_fbmn_stats_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41596-024-01046-3
+  all_source_dois:
+  - 10.1038/s41596-024-01046-3
+  - 10.1021/acs.analchem.5c03225
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # batch-effect-detection-and-quantification

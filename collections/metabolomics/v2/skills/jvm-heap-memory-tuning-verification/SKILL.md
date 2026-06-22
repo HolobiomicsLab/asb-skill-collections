@@ -22,6 +22,15 @@ provenance:
     title: MetFrag
   dedup_kept_from: coll_metfrag
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-016-0115-9
+  all_source_dois:
+  - 10.1186/s13321-016-0115-9
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # JVM Heap Memory Tuning Verification

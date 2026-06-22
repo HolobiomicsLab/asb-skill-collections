@@ -29,6 +29,15 @@ provenance:
     title: Bioactivity-Based Molecular Networking
   dedup_kept_from: coll_bioactivity_based_molecular_networking_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jnatprod.7b00737
+  all_source_dois:
+  - 10.1021/acs.jnatprod.7b00737
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # MS/MS feature preparation for GNPS

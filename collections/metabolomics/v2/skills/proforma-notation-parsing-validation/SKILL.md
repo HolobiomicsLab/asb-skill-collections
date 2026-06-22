@@ -28,6 +28,15 @@ provenance:
     title: pyteomics
   dedup_kept_from: coll_pyteomics
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.8b00717
+  all_source_dois:
+  - 10.1021/acs.jproteome.8b00717
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # proforma-notation-parsing-validation

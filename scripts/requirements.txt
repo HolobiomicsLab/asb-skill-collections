@@ -1,0 +1,5 @@
+# Dependencies for the asb-skill-collections helper scripts.
+#   collect_metabolomics_collection.py, release_gate.py, regen_catalogue.py
+# need PyYAML. The grounding binder (perspicacite_kb_bind.py) is stdlib-only
+# and needs no pip installs — it only needs a running Perspicacité instance.
+PyYAML>=6.0

@@ -28,6 +28,16 @@ provenance:
     title: Metanorm
   dedup_kept_from: coll_metanorm_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2025.09.30.679445v1
+  all_source_dois:
+  - 10.1101/2025.09.30.679445v1
+  - 10.1021/acs.analchem.5c06841
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolomics-normalization-artifact-reproduction

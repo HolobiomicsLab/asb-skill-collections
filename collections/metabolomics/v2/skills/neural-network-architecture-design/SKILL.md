@@ -47,6 +47,16 @@ provenance:
     title: Spec2Mol
   dedup_kept_from: coll_neatms
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.1c02220
+  all_source_dois:
+  - 10.1021/acs.analchem.1c02220
+  - 10.1038/s42004-023-00932-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # neural-network-architecture-design

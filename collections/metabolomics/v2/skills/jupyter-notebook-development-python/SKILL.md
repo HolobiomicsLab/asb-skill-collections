@@ -33,6 +33,16 @@ provenance:
     title: CCS Predictor 2.0
   dedup_kept_from: coll_ccs_predictor_2_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.2c03491
+  all_source_dois:
+  - 10.1021/acs.analchem.2c03491
+  - 10.1101/2022.08.09.503345
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Jupyter Notebook Development in Python

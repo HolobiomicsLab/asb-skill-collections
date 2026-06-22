@@ -24,6 +24,15 @@ provenance:
     title: LipidOne 2.0
   dedup_kept_from: coll_lipidone_2_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/cpz1.70009
+  all_source_dois:
+  - 10.1002/cpz1.70009
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # gnuplot-library-availability-verification

@@ -35,6 +35,15 @@ provenance:
     title: uafr
   dedup_kept_from: coll_uafr_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1371/journal.pone.0306202
+  all_source_dois:
+  - 10.1371/journal.pone.0306202
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # chemical-structure-similarity-matching

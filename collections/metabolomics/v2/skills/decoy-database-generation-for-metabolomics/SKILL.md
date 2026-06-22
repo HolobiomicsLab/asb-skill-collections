@@ -31,6 +31,15 @@ provenance:
     title: spectra
   dedup_kept_from: coll_spectral_matching_significance_estimatio_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3390/metabo12020173
+  all_source_dois:
+  - 10.3390/metabo12020173
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # decoy-database-generation-for-metabolomics

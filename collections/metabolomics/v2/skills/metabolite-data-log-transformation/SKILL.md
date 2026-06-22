@@ -29,6 +29,15 @@ provenance:
     title: CordBat
   dedup_kept_from: coll_cordbat_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.2c05748
+  all_source_dois:
+  - 10.1021/acs.analchem.2c05748
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolite-data-log-transformation

@@ -34,6 +34,15 @@ provenance:
     title: corems
   dedup_kept_from: coll_corems
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.5281/zenodo.14009575
+  all_source_dois:
+  - 10.5281/zenodo.14009575
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Retention-Index Calibration and Alignment

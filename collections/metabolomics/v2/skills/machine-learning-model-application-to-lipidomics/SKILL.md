@@ -27,6 +27,15 @@ provenance:
     title: lipoclean
   dedup_kept_from: coll_lipoclean
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c04040
+  all_source_dois:
+  - 10.1021/acs.analchem.4c04040
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # machine-learning-model-application-to-lipidomics

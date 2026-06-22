@@ -24,6 +24,15 @@ provenance:
     title: InjectionDesign
   dedup_kept_from: coll_injectiondesign_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2023.02.26.530140v1.article-info
+  all_source_dois:
+  - 10.1101/2023.02.26.530140v1.article-info
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # within-batch-randomization-by-metadata-attribute

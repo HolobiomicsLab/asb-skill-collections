@@ -469,6 +469,65 @@ provenance:
     title: ZODIAC
   dedup_kept_from: coll_3dmolms_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btad354
+  all_source_dois:
+  - 10.1093/bioinformatics/btad354
+  - 10.1021/acs.jproteome.5c00423
+  - 10.1021/acs.analchem.8b04698
+  - 10.1186/s13321-020-00478-9
+  - 10.1038/s41587-021-01045-9
+  - 10.1007/s12539-025-00786-4
+  - 10.1101/2024.11.13.623458v1
+  - 10.1186/s12859-024-05994-1
+  - 10.1074/mcp.M113.031278
+  - 10.1186/s12859-023-05525-4
+  - 10.1038/s41596-025-01237-6
+  - 10.1038/s41596-020-0317-5
+  - 10.1093/bioinformatics/btac647/6722615
+  - 10.1038/s41467-021-23953-9
+  - 10.1021/acs.analchem.0c03895
+  - 10.1101/2024.10.07.617094v3
+  - 10.1021/acs.analchem.5c01414
+  - 10.1186/s13321-023-00741-9
+  - 10.1093/nar/gkae253
+  - 10.1038/s41467-024-48009-6
+  - 10.5281/zenodo.3924422.svg
+  - 10.1007/s11306-023-02018-6
+  - 10.1016/j.aca.2018.05.001
+  - 10.1111/jipb.13774
+  - 10.1186/s13321-025-01051-y
+  - 10.1038/s41467-024-54137-w
+  - 10.1021/acs.jproteome.4c01140
+  - 10.1038/s41587-023-01690-2
+  - 10.1021/acs.analchem.1c02220
+  - 10.48550/arxiv.2410.22030
+  - 10.1021/acs.analchem.3c05829
+  - 10.1038/nmeth.3959
+  - 10.1007/s11306-022-01899-3
+  - 10.1021/acs.analchem.4c04375
+  - 10.1021/acs.analchem.5b02287
+  - 10.1021/acs.analchem.4c07078
+  - 10.1038/s41586-023-06906-8
+  - 10.1038/s41592-019-0344-8
+  - 10.48550/arxiv.2502.05114
+  - 10.1021/acs.analchem.3c04444
+  - 10.1016/j.aca.2018.08.002
+  - 10.1093/bioinformatics/btaa1031
+  - 10.1007/s11306-018-1363-7
+  - 10.1021/acs.jproteome.3c00784
+  - 10.3390/metabo10100416
+  - 10.1186/s13321-023-00724-w
+  - 10.1016/j.aca.2019.02.010
+  - 10.1007/s11306-021-01839-7
+  - 10.3390/metabo9090171
+  - 10.1021/ac051437y
+  - 10.1038/s42256-020-00234-6
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Workflow Reconstruction

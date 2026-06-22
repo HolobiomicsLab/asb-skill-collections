@@ -24,6 +24,15 @@ provenance:
     title: OpenNAU
   dedup_kept_from: coll_opennau_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.21147/j.issn.1000-9604.2023.05.11
+  all_source_dois:
+  - 10.21147/j.issn.1000-9604.2023.05.11
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolic-ion-peak-filtering

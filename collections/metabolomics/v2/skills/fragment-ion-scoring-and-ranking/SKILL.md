@@ -29,6 +29,15 @@ provenance:
     title: metaboannotator
   dedup_kept_from: coll_metaboannotator_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.1c03032
+  all_source_dois:
+  - 10.1021/acs.analchem.1c03032
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Fragment-Ion Scoring and Ranking

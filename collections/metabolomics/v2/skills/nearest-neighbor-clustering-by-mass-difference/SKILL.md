@@ -30,6 +30,15 @@ provenance:
     title: asari
   dedup_kept_from: coll_asari
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-023-39889-1
+  all_source_dois:
+  - 10.1038/s41467-023-39889-1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # nearest-neighbor-clustering-by-mass-difference

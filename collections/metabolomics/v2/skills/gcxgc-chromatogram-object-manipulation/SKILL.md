@@ -30,6 +30,16 @@ provenance:
     title: RGCxGC
   dedup_kept_from: coll_rgcxgc_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1016/j.microc.2020.104830
+  all_source_dois:
+  - 10.1016/j.microc.2020.104830
+  - 10.1371/journal.pntd.0006215
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # GCxGC Chromatogram Object Manipulation

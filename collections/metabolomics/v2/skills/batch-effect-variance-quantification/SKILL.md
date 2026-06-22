@@ -30,6 +30,15 @@ provenance:
     title: pcpfm
   dedup_kept_from: coll_pcpfm
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1371/journal.pcbi.1011912
+  all_source_dois:
+  - 10.1371/journal.pcbi.1011912
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # batch-effect-variance-quantification

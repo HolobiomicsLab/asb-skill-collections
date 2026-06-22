@@ -27,6 +27,15 @@ provenance:
     title: idslmint
   dedup_kept_from: coll_idslmint
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-024-00804-5
+  all_source_dois:
+  - 10.1186/s13321-024-00804-5
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # positional-encoding-for-spectral-sequences

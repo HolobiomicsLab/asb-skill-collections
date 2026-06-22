@@ -29,6 +29,15 @@ provenance:
     title: minems2
   dedup_kept_from: coll_minems2
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-025-01051-y
+  all_source_dois:
+  - 10.1186/s13321-025-01051-y
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # network-component-identification-and-filtering

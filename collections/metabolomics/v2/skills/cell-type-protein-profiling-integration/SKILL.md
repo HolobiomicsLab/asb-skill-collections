@@ -27,6 +27,15 @@ provenance:
     title: scSpaMet
   dedup_kept_from: coll_scspamet_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-023-43917-5
+  all_source_dois:
+  - 10.1038/s41467-023-43917-5
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # cell-type-protein-profiling-integration

@@ -27,6 +27,15 @@ provenance:
     title: LipidQMap
   dedup_kept_from: coll_lipidqmap_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2025.10.15.682422v1
+  all_source_dois:
+  - 10.1101/2025.10.15.682422v1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # dimension-scale-linking-and-cross-group-indexing

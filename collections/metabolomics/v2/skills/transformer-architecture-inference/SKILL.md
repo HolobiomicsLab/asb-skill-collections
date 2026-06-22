@@ -33,6 +33,17 @@ provenance:
     title: MMST
   dedup_kept_from: coll_mmst_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1002/ange.202517611
+  all_source_dois:
+  - 10.1002/ange.202517611
+  - 10.1021/acs.jcim.1c00055
+  - 10.5281/zenodo.14712886
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # transformer-architecture-inference

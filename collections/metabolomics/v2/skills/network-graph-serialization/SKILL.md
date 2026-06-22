@@ -25,6 +25,15 @@ provenance:
     title: MetaboLINK/ PCA-GLASSO
   dedup_kept_from: coll_metabolink_pca_glasso_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3389/fnins.2024.1520982
+  all_source_dois:
+  - 10.3389/fnins.2024.1520982
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # network-graph-serialization

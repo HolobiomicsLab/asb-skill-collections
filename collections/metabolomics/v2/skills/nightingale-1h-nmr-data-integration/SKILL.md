@@ -29,6 +29,16 @@ provenance:
     title: MiMIR
   dedup_kept_from: coll_mimir_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btac388
+  all_source_dois:
+  - 10.1093/bioinformatics/btac388
+  - 10.1038/s41467-019-11311-9
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # nightingale-1h-nmr-data-integration

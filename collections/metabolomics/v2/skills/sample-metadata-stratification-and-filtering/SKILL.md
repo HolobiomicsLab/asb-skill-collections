@@ -31,6 +31,16 @@ provenance:
     title: ReDU
   dedup_kept_from: coll_redu_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41592-020-0916-7
+  all_source_dois:
+  - 10.1038/s41592-020-0916-7
+  - 10.1186/2047-217x-2-16
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # sample-metadata-stratification-and-filtering

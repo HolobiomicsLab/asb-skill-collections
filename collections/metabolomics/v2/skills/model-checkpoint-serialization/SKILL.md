@@ -41,6 +41,16 @@ provenance:
     title: SpatialMETA
   dedup_kept_from: coll_iceberg_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s42256-024-00816-8
+  all_source_dois:
+  - 10.1038/s42256-024-00816-8
+  - 10.1038/s41467-025-63915-z
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # model-checkpoint-serialization

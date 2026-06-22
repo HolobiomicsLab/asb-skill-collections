@@ -39,6 +39,16 @@ provenance:
     title: ncGTW
   dedup_kept_from: coll_mwastools_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btx477
+  all_source_dois:
+  - 10.1093/bioinformatics/btx477
+  - 10.1093/bioinformatics/btaa037
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # coefficient-of-variation-computation

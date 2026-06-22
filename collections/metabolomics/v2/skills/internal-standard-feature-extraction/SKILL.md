@@ -25,6 +25,15 @@ provenance:
     title: Rapid QC-MS
   dedup_kept_from: coll_rapid_qc_ms_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c00786
+  all_source_dois:
+  - 10.1021/acs.analchem.4c00786
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # internal-standard-feature-extraction

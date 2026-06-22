@@ -26,6 +26,15 @@ provenance:
     title: ESP
   dedup_kept_from: coll_esp_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btae490
+  all_source_dois:
+  - 10.1093/bioinformatics/btae490
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # multi-task-auxiliary-target-generation

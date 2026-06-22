@@ -23,6 +23,15 @@ provenance:
     title: lipidmatch
   dedup_kept_from: coll_lipidmatch
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s12859-017-1744-3
+  all_source_dois:
+  - 10.1186/s12859-017-1744-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # lipid-species-abundance-counting

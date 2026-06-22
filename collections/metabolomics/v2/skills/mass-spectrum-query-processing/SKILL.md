@@ -28,6 +28,15 @@ provenance:
     title: Flash entropy search
   dedup_kept_from: coll_flash_entropy_search_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41592-023-02012-9
+  all_source_dois:
+  - 10.1038/s41592-023-02012-9
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrum-query-processing

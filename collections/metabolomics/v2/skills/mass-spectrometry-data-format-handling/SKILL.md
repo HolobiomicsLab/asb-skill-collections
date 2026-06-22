@@ -36,6 +36,16 @@ provenance:
     title: OpenMS
   dedup_kept_from: coll_mrmquant_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c02462
+  all_source_dois:
+  - 10.1021/acs.analchem.4c02462
+  - 10.1038/nmeth.3959
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-data-format-handling

@@ -34,6 +34,15 @@ provenance:
     title: mzRAPP
   dedup_kept_from: coll_mzrapp_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bioinformatics/btab231/6214530
+  all_source_dois:
+  - 10.1093/bioinformatics/btab231/6214530
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # peak-picking-performance-benchmarking

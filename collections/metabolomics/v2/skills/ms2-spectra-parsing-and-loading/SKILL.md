@@ -32,6 +32,15 @@ provenance:
     title: memo
   dedup_kept_from: coll_memo
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.3389/fbinf.2022.842964
+  all_source_dois:
+  - 10.3389/fbinf.2022.842964
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # MS2 Spectra Parsing and Loading

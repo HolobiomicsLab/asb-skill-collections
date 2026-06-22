@@ -30,6 +30,15 @@ provenance:
     title: spectrumutils
   dedup_kept_from: coll_spectrumutils
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.9b04884
+  all_source_dois:
+  - 10.1021/acs.analchem.9b04884
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # ion-type-assignment-verification

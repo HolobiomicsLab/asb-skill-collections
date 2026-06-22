@@ -27,6 +27,15 @@ provenance:
     title: SPIFFED
   dedup_kept_from: coll_spiffed_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/bib/bbad229/7199559
+  all_source_dois:
+  - 10.1093/bib/bbad229/7199559
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # protein-interaction-score-prediction

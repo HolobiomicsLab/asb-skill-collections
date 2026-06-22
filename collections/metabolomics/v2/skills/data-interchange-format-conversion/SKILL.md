@@ -24,6 +24,15 @@ provenance:
     title: DecoMetDIA
   dedup_kept_from: coll_decometdia_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.9b02655
+  all_source_dois:
+  - 10.1021/acs.analchem.9b02655
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Data Interchange Format Conversion

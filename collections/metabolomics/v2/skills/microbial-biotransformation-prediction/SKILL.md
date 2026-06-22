@@ -26,6 +26,15 @@ provenance:
     title: BioTransformer 3.0
   dedup_kept_from: coll_biotransformer_3_0_2_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1093/nar/gkac408
+  all_source_dois:
+  - 10.1093/nar/gkac408
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # microbial-biotransformation-prediction

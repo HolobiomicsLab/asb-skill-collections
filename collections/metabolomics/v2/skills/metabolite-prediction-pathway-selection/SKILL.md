@@ -26,6 +26,15 @@ provenance:
     title: BioTransformer 1.0
   dedup_kept_from: coll_biotransformer_1_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s13321-019-0375-2
+  all_source_dois:
+  - 10.1186/s13321-019-0375-2
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metabolite-prediction-pathway-selection

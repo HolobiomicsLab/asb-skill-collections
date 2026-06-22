@@ -38,6 +38,16 @@ provenance:
     title: slaw
   dedup_kept_from: coll_metaxtract_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2025.11.12.687968v1
+  all_source_dois:
+  - 10.1101/2025.11.12.687968v1
+  - 10.1021/acs.analchem.1c02687
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mass-spectrometry-data-extraction

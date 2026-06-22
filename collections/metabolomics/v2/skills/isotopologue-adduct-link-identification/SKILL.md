@@ -38,6 +38,16 @@ provenance:
     title: mamsi
   dedup_kept_from: coll_mamsi_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c01327
+  all_source_dois:
+  - 10.1021/acs.analchem.5c01327
+  - 10.1371/journal.pcbi.1011814
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Isotopologue-Adduct Link Identification

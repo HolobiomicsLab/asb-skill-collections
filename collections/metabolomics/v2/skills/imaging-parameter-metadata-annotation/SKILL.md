@@ -30,6 +30,15 @@ provenance:
     title: imzML Writer
   dedup_kept_from: coll_imzml_writer_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c06520
+  all_source_dois:
+  - 10.1021/acs.analchem.4c06520
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # imaging-parameter-metadata-annotation

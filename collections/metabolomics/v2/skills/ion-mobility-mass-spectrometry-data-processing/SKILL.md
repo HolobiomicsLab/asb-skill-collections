@@ -32,6 +32,15 @@ provenance:
     title: mobilipid
   dedup_kept_from: coll_mobilipid_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.4c01253
+  all_source_dois:
+  - 10.1021/acs.analchem.4c01253
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # ion-mobility-mass-spectrometry-data-processing

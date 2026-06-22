@@ -35,6 +35,16 @@ provenance:
     title: MetumpX untargeted MS support package
   dedup_kept_from: coll_magma
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.5702/massspectrometry.S0033
+  all_source_dois:
+  - 10.5702/massspectrometry.S0033
+  - 10.1093/bioinformatics/btz765
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Repository Structure Parsing

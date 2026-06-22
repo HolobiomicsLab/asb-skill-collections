@@ -27,6 +27,15 @@ provenance:
     title: RAMClust
   dedup_kept_from: coll_ramclust_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/ac501530d
+  all_source_dois:
+  - 10.1021/ac501530d
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Reconstruct the total similarity score as the product of retention time and correlational similarity

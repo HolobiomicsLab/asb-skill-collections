@@ -24,6 +24,15 @@ provenance:
     title: NMRFx
   dedup_kept_from: coll_nmrfx_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s42004-025-01812-8
+  all_source_dois:
+  - 10.1038/s42004-025-01812-8
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # metadata-extraction-from-fixed-offset-records

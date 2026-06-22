@@ -27,6 +27,15 @@ provenance:
     title: ChemEmbed
   dedup_kept_from: coll_chemembed_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1101/2025.02.07.637102v1
+  all_source_dois:
+  - 10.1101/2025.02.07.637102v1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # multidimensional-feature-extraction-from-spectra

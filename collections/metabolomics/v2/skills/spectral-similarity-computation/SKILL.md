@@ -38,6 +38,16 @@ provenance:
     title: mshub
   dedup_kept_from: coll_ms2lda
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1073/pnas.1608041113
+  all_source_dois:
+  - 10.1073/pnas.1608041113
+  - 10.1038/s41587-020-0700-3
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # spectral-similarity-computation

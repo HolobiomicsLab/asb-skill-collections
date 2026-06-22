@@ -24,6 +24,15 @@ provenance:
     title: compareMS2 2.0
   dedup_kept_from: coll_comparems2_2_0_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.2c00457
+  all_source_dois:
+  - 10.1021/acs.jproteome.2c00457
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Global Similarity Aggregation

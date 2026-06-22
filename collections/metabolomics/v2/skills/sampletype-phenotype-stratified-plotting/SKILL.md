@@ -27,6 +27,15 @@ provenance:
     title: lipidr
   dedup_kept_from: coll_lipidr_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.jproteome.0c00082
+  all_source_dois:
+  - 10.1021/acs.jproteome.0c00082
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # sampletype-phenotype-stratified-plotting

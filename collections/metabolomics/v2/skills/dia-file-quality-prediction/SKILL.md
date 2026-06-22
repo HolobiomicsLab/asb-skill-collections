@@ -27,6 +27,15 @@ provenance:
     title: iDIA-QC
   dedup_kept_from: coll_idia_qc_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1038/s41467-024-54871-1
+  all_source_dois:
+  - 10.1038/s41467-024-54871-1
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # dia-file-quality-prediction

@@ -33,6 +33,15 @@ provenance:
     title: MiMeNet
   dedup_kept_from: coll_mimenet_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1371/journal.pcbi.1009021
+  all_source_dois:
+  - 10.1371/journal.pcbi.1009021
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Reconstruct microbe-metabolite functional modules by clustering the feature attribution matrix

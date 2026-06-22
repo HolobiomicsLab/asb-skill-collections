@@ -37,6 +37,16 @@ provenance:
     title: NPLinker
   dedup_kept_from: coll_npclassscore_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1186/s40168-022-01444-3
+  all_source_dois:
+  - 10.1186/s40168-022-01444-3
+  - 10.1101/2024.10.11.617756
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # archive-extraction-and-file-mapping

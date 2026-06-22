@@ -34,6 +34,15 @@ provenance:
     title: tardis
   dedup_kept_from: coll_tardis
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c00567
+  all_source_dois:
+  - 10.1021/acs.analchem.5c00567
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # Chromatographic Peak Annotation and Visualization

@@ -44,6 +44,17 @@ provenance:
     title: vimms
   dedup_kept_from: coll_tardis_cq
 schema_version: 0.2.0
+attribution:
+  generator: AgenticScienceBuilder
+  original_doi: 10.1021/acs.analchem.5c00567
+  all_source_dois:
+  - 10.1021/acs.analchem.5c00567
+  - 10.21105/joss.03990
+  - 10.1021/acs.analchem.0c03895
+  zenodo_doi: TODO-zenodo
+  curators: []
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
 ---
 
 # mzML File Parsing and Loading
