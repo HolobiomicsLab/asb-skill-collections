@@ -278,7 +278,7 @@ asb-skill-collections/
 ├── CONTRIBUTING.md               # Curator workflow
 ├── COI_POLICY.md                 # Conflict-of-interest rules
 ├── MAINTAINERS.md                # Lead curator + team
-├── LICENSE.md                    # Apache-2.0 + fair-use clause
+├── LICENSING.md                    # Apache-2.0 + fair-use clause
 └── README.md                     # Quick start + badges
 ```
 
@@ -601,7 +601,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 - **§Specification:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/SPEC.md` § 6–7 (Distribution & Installation)
 - **§Implementation Plan:** `/Users/nothiasl/git/agenticsciencebuilder_dev/docs/asbb/PLAN.md` § Phase 0–1
 - **§Release gate:** `POLICY-content.md` (authored Phase 0.1)
-- **§Content policies:** `COI_POLICY.md`, `CONTRIBUTING.md`, `LICENSE.md`
+- **§Content policies:** `COI_POLICY.md`, `CONTRIBUTING.md`, `LICENSING.md`
 - **§Linked data:** `catalogue.jsonld` context, w3id.org namespaces, indicium `uri-scheme.md`
 - **§Workflows:** `.github/workflows/release.yml`, `.github/workflows/validate.yml`
 - **§Scripts:** `scripts/regen_catalogue.py`, `scripts/check_coi.py`, `scripts/validate_leaderboard.py`
