@@ -85,6 +85,49 @@ The collection is plain Markdown + JSON — point your
 agent at `collections/metabolomics/v2/` and read the indexes. See
 [AGENTS.md](AGENTS.md).
 
+## 🌍 Install beyond Claude Code
+
+Other agent runtimes have no `/plugin install`. Use the bundled `asbb` CLI from a
+local clone to materialize a pack into the runtime's own location.
+
+```bash
+git clone https://github.com/HolobiomicsLab/asb-skill-collections.git
+cd asb-skill-collections
+python3 -m scripts.asbb_cli install --list-runtimes      # see all targets
+```
+
+**Skill-native runtimes** (read `SKILL.md` directly):
+
+```bash
+# Codex + Copilot CLI + Gemini CLI all share ~/.agents/skills — one install:
+python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime agents
+
+# Or a specific home: --runtime codex | copilot | gemini
+# Vendor into a project for Claude Code: --runtime claude  (add --user for ~/.claude)
+```
+
+**Rules/instruction IDEs** (a `SKILL.md` is rendered into their format — run from
+the target project):
+
+```bash
+python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime cursor          # .cursor/rules/*.mdc
+python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime cline           # .clinerules/*.md
+python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime vscode-copilot  # .github/instructions/*.instructions.md
+```
+
+**Anything else** (pi, Antigravity, or a runtime without a preset):
+
+```bash
+python3 -m scripts.asbb_cli install metabolomics-lc-ms --dest ~/some/skills/dir
+```
+
+Skill-native installs **symlink** by default (a `git pull` in the clone updates
+them); add `--copy` for a self-contained copy. `--dry-run` previews, `--force`
+overwrites unmanaged files, and `asbb uninstall <pack> --runtime <id>` cleanly
+removes exactly what was installed (tracked in `~/.asbb/installed.json`).
+
+> For **Claude Code**, the plugin marketplace above remains the recommended path.
+
 ## Use
 
 **Search → apply → ground.** Find a skill via `skills_index.json` (by EDAM IRI,
