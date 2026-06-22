@@ -226,7 +226,7 @@ def clone_repo(url, dest, _run=subprocess.run):
         return True
     dest.parent.mkdir(parents=True, exist_ok=True)
     try:
-        p = _run(["git", "clone", "--depth", "1", url, str(dest)],
+        p = _run(["git", "clone", "--depth", "1", "--", url, str(dest)],
                  stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         return getattr(p, "returncode", 1) == 0
     except Exception:

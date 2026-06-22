@@ -21,9 +21,11 @@ def test_resolve_repo_urls_merges_corpus_and_tools_dedup():
         "https://github.com/CCMS-UCSD/GNPS_Workflows",
     ]
 
+
 def test_resolve_repo_urls_drops_empty():
     from scripts.build_grounding_bundle import resolve_repo_urls
     assert resolve_repo_urls(["10.1000/norepo"], _corpus(), _tools()) == []
+
 
 def test_filter_and_enrich_bundle():
     from scripts.build_grounding_bundle import filter_and_enrich_bundle
@@ -37,6 +39,7 @@ def test_filter_and_enrich_bundle():
     assert out["skills"]["norepo-skill"]["repo_urls"] == []
     assert out["distinct_dois"] == ["10.1000/norepo", "10.1021/acs.jnatprod.7b00737"]
     assert out["kb_prefix"] == "asb-paper-"
+
 
 def test_render_ground_command_has_frontmatter_and_both_modes():
     from scripts.build_grounding_bundle import render_ground_command
