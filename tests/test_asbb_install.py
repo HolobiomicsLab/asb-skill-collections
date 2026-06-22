@@ -59,3 +59,23 @@ def test_resolve_pack_unknown_raises(tmp_path):
     make_repo(tmp_path)
     with pytest.raises(KeyError):
         resolve_pack(tmp_path, "nope")
+
+
+def test_parse_skill_md_frontmatter_and_body(tmp_path):
+    from scripts.asbb.skillmd import parse_skill_md
+    make_repo(tmp_path)
+    p = tmp_path / "packs/demo/pack/skills/alpha-skill/SKILL.md"
+    fm, body = parse_skill_md(p)
+    assert fm["name"] == "alpha-skill"
+    assert fm["description"] == "Use when testing: do the thing."
+    assert body.startswith("# alpha-skill")
+    assert "Body for alpha-skill." in body
+
+
+def test_parse_skill_md_no_frontmatter(tmp_path):
+    from scripts.asbb.skillmd import parse_skill_md
+    p = tmp_path / "plain.md"
+    p.write_text("just text\n", encoding="utf-8")
+    fm, body = parse_skill_md(p)
+    assert fm == {}
+    assert body == "just text\n"
