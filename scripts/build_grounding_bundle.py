@@ -21,3 +21,21 @@ def resolve_repo_urls(skill_dois, corpus_papers, tools_index):
             if url and url not in out:
                 out.append(url)
     return out
+
+
+def filter_and_enrich_bundle(full_bundle, skill_slugs, corpus_papers, tools_index):
+    src = full_bundle.get("skills") or {}
+    kept = {}
+    dois = set()
+    for slug in sorted(skill_slugs):
+        rec = src.get(slug)
+        if rec is None:
+            continue
+        rec = dict(rec)
+        rec["repo_urls"] = resolve_repo_urls(rec.get("dois") or [], corpus_papers, tools_index)
+        kept[slug] = rec
+        dois.update(rec.get("dois") or [])
+    out = {k: full_bundle[k] for k in ("collection", "version", "perspicacite_kb_mode", "kb_prefix") if k in full_bundle}
+    out["distinct_dois"] = sorted(dois)
+    out["skills"] = kept
+    return out

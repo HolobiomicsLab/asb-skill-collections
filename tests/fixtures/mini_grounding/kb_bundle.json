@@ -1,0 +1,9 @@
+{
+  "collection": "test", "version": 2, "perspicacite_kb_mode": "paper", "kb_prefix": "asb-paper-",
+  "distinct_dois": ["10.1021/acs.jnatprod.7b00737", "10.1000/norepo", "10.1000/unused"],
+  "skills": {
+    "bioactivity-score-aggregation": {"dois": ["10.1021/acs.jnatprod.7b00737"], "tools": ["GNPS"], "kb_slugs": ["asb-paper-10-1021-acs-jnatprod-7b00737"]},
+    "norepo-skill": {"dois": ["10.1000/norepo"], "tools": ["NoURL"], "kb_slugs": ["asb-paper-10-1000-norepo"]},
+    "unused-skill": {"dois": ["10.1000/unused"], "tools": [], "kb_slugs": ["asb-paper-10-1000-unused"]}
+  }
+}
