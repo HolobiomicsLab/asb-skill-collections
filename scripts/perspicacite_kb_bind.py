@@ -49,6 +49,7 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -208,14 +209,54 @@ def cmd_query(args) -> int:
     return 0
 
 
+def unpaywall_oa_url(doi, email, _http=urllib.request.urlopen):
+    url = f"https://api.unpaywall.org/v2/{doi}?email={email}"
+    try:
+        with _http(urllib.request.Request(url), timeout=30) as r:
+            data = json.loads(r.read())
+    except Exception:
+        return None
+    loc = data.get("best_oa_location") or {}
+    return loc.get("url_for_pdf") or loc.get("url") or None
+
+
+def clone_repo(url, dest, _run=subprocess.run):
+    dest = Path(dest)
+    if dest.exists():
+        return True
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        p = _run(["git", "clone", "--depth", "1", url, str(dest)],
+                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return getattr(p, "returncode", 1) == 0
+    except Exception:
+        return False
+
+
+def cmd_local(args) -> int:
+    bundle = load_bundle(Path(args.collection))
+    rec = resolve_skill(bundle, args.skill)
+    base = Path(args.dest) / rec["slug"]
+    manifest = {"skill": rec["slug"], "repos": [], "paper": None}
+    for i, url in enumerate(rec.get("repo_urls") or []):
+        dest = base / "repo" / str(i)
+        manifest["repos"].append({"url": url, "dest": str(dest), "cloned": clone_repo(url, dest)})
+    if args.paper and rec.get("dois"):
+        doi = rec["dois"][0]
+        oa = unpaywall_oa_url(doi, args.email)
+        manifest["paper"] = {"doi": doi, "oa_url": oa, "path": None}
+    print(json.dumps(manifest, indent=2))
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("resolve", "prepare", "query"):
+    for name in ("resolve", "prepare", "query", "local"):
         sp = sub.add_parser(name)
         sp.add_argument("--collection", required=True,
-                        help="Path to the collection dir (contains kb_bundle.json).")
+                        help="Path to the collection/pack dir (contains kb_bundle.json).")
         sp.add_argument("--skill", required=True, help="Skill slug.")
         sp.add_argument("--tier", choices=("paper", "si", "repo"), default="paper",
                         help="Grounding tier (default: paper = full text + SI).")
@@ -223,8 +264,13 @@ def main(argv=None) -> int:
             sp.add_argument("--question", required=True)
             sp.add_argument("--no-prepare", action="store_true",
                             help="Do not auto-create/ingest the KB before querying.")
+        if name == "local":
+            sp.add_argument("--dest", default=".grounding")
+            sp.add_argument("--paper", action="store_true",
+                            help="Also fetch the OA paper via Unpaywall.")
+            sp.add_argument("--email", default=os.environ.get("UNPAYWALL_EMAIL", "research@holobiomics.org"))
     args = ap.parse_args(argv)
-    return {"resolve": cmd_resolve, "prepare": cmd_prepare, "query": cmd_query}[args.cmd](args)
+    return {"resolve": cmd_resolve, "prepare": cmd_prepare, "query": cmd_query, "local": cmd_local}[args.cmd](args)
 
 
 if __name__ == "__main__":
