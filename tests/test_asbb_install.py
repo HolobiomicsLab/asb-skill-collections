@@ -99,3 +99,51 @@ def test_manifest_remove_prunes_empty(tmp_path):
     manifest.remove(home, "demo-pack", "agents")
     assert manifest.get(home, "demo-pack", "agents") is None
     assert manifest.load(home) == {}
+
+
+def _opts(tmp_path, **kw):
+    from scripts.asbb.targets import InstallOpts
+    return InstallOpts(home=tmp_path / "home", project=tmp_path / "proj", **kw)
+
+
+def test_skill_native_dests(tmp_path):
+    from scripts.asbb.targets import get_target
+    o = _opts(tmp_path)
+    assert get_target("agents").dest(o) == o.home / ".agents" / "skills"
+    assert get_target("codex").dest(o) == o.home / ".codex" / "skills"
+    assert get_target("gemini").dest(o) == o.home / ".gemini" / "skills"
+    assert get_target("claude").dest(o) == o.project / ".claude" / "skills"
+    assert get_target("claude").dest(_opts(tmp_path, user=True)) == o.home / ".claude" / "skills"
+
+
+def test_rules_dests_and_filenames(tmp_path):
+    from scripts.asbb.targets import get_target
+    o = _opts(tmp_path)
+    cur = get_target("cursor")
+    assert cur.kind == "rules"
+    assert cur.dest(o) == o.project / ".cursor" / "rules"
+    assert cur.filename("alpha-skill") == "alpha-skill.mdc"
+    assert get_target("cline").filename("alpha-skill") == "alpha-skill.md"
+    assert get_target("vscode-copilot").filename("a") == "a.instructions.md"
+
+
+def test_rules_render_carries_description_and_body():
+    from scripts.asbb.targets import get_target
+    fm = {"name": "alpha-skill", "description": "Use when X."}
+    body = "# alpha-skill\n\nDo the thing.\n"
+    out = get_target("cursor").render(fm, body, "alpha-skill")
+    assert "Use when X." in out
+    assert "Do the thing." in out
+    assert "alwaysApply" in out
+    vs = get_target("vscode-copilot").render(fm, body, "alpha-skill")
+    assert "applyTo" in vs and "Do the thing." in vs
+    cl = get_target("cline").render(fm, body, "alpha-skill")
+    assert "Do the thing." in cl
+
+
+def test_list_runtimes_lists_all_ids():
+    from scripts.asbb.targets import list_runtimes
+    text = list_runtimes()
+    for rid in ("agents", "codex", "copilot", "gemini", "claude",
+                "cursor", "cline", "vscode-copilot"):
+        assert rid in text
