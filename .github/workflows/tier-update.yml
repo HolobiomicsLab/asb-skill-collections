@@ -84,8 +84,7 @@ jobs:
             git config user.name "asb-skill-collections-bot"
             git config user.email "bot@holobiomicslab.cnrs.fr"
             git add contributors.jsonld
-            git commit -m "chore(tier): auto-update contributor tiers after review merge
-
-Driver: scripts/tier_update.py · Spec §9.6"
+            git commit -m "chore(tier): auto-update contributor tiers after review merge" \
+              -m "Driver: scripts/tier_update.py · Spec §9.6"
             git push origin main
           fi
