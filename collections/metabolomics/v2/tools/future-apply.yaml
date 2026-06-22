@@ -1,0 +1,8 @@
+name: future.apply
+slug: future-apply
+evidence_spans:
+- library(future.apply)
+derived_from:
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+schema_version: 0.2.0

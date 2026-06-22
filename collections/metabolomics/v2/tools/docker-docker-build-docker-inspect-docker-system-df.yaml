@@ -1,0 +1,8 @@
+name: Docker (docker build, docker inspect, docker system df)
+slug: docker-docker-build-docker-inspect-docker-system-df
+evidence_spans:
+- Build all images (first build may take longer)
+derived_from:
+- doi: 10.1186/s12859-021-04490-0
+  title: aird
+schema_version: 0.2.0

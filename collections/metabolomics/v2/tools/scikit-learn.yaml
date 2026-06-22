@@ -1,0 +1,42 @@
+name: scikit-learn
+slug: scikit-learn
+version_used: 0.23.2
+evidence_spans:
+- a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
+- a :class:`sklearn.gaussian_process.GaussianProcessRegressor` object
+- '* :attr:`gpr`: a :class:`sklearn.gaussian_process.GaussianProcessRegressor` object.'
+- from sklearn.model_selection import train_test_split
+- A scikit-learn ``RandomForestClassifier`` wrapper.
+- '## Dependencies - mbpls==1.0.4 - pandas - numpy - matplotlib - scipy - scikit-learn'
+derived_from:
+- doi: 10.1002/9780470508183
+  title: Introduction to Modern Liquid Chromatography
+- doi: 10.1021/acs.analchem.4c05859
+  title: 'From Reverse Phase Chromatography to HILIC: Graph Transformers Power Method-Independent Machine Learning of Retention Times'
+- doi: 10.1101/2024.10.07.617094v3
+  title: LipiDetective
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.1007/s10489-022-04351-0
+  title: Mass Spectrum Transformer
+- doi: 10.1007/s11306-020-01726-7
+  title: MetFID
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+- doi: 10.1186/s13321-021-00558-4
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1038/s41467-019-13680-7
+  title: The METLIN small molecule dataset for machine learning-based retention time prediction
+- doi: 10.3390/metabo10100416
+  title: A Python-Based Pipeline for Preprocessing LC–MS Data for Untargeted Metabolomics Workflows
+source_repos:
+- 01dadada/RT-Transformer
+- HopkinsLaboratory/Graphormer-RT
+- LipiTUM/lipidetective
+- chensaian/TransG-Net
+- griquelme/tidyms
+- huaxuyu/bago
+- ressomlab/MetFID
+schema_version: 0.2.0

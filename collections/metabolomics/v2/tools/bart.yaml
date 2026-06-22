@@ -1,0 +1,10 @@
+name: BART
+slug: bart
+evidence_spans:
+- MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary
+derived_from:
+- doi: 10.48550/arxiv.2510.20615
+  title: MS-BART
+source_repos:
+- OpenDFM/MS-BART
+schema_version: 0.2.0

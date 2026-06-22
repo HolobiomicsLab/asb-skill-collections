@@ -1,0 +1,9 @@
+name: MelonnPan
+slug: melonnpan
+evidence_spans:
+- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed using the given instructions
+- we first compared MiMeNet to MelonnPan, a recent model that uses Elastic Net linear regression
+derived_from:
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+schema_version: 0.2.0

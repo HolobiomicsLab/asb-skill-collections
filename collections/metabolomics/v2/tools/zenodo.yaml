@@ -1,0 +1,25 @@
+name: Zenodo
+slug: zenodo
+version_used: '10.5281'
+evidence_spans:
+- Zenodo release [![DOI](https://zenodo.org/badge/125496536.svg)](https://zenodo.org/badge/latestdoi/125496536)
+- Also a Zenodo entry will be made for the release with its own DOI.
+- Pre-trained weights available on Zenodo
+- '[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5797920.svg)](https://doi.org/10.5281/zenodo.5797920)'
+derived_from:
+- doi: 10.1002/jms.1777
+  title: MassBank
+- doi: 10.1186/s13321-024-00878-1
+  title: matchms
+- doi: 10.1002/anie.202507483
+  title: NA
+- doi: 10.5281/zenodo.5797920
+  title: tima
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- Chen-micslab/QCCAssisted4DSterol
+- MassBank/MassBank-data
+- matchms/matchms
+- sneumann/xcms
+schema_version: 0.2.0

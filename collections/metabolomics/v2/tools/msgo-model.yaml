@@ -1,0 +1,10 @@
+name: MSGO model
+slug: msgo-model
+evidence_spans:
+- github.com__aaronma2020__MSGO
+derived_from:
+- doi: 10.1038/s42256-025-01140-5
+  title: MSGo
+source_repos:
+- aaronma2020/MSGO
+schema_version: 0.2.0

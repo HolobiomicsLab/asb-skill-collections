@@ -1,0 +1,10 @@
+name: ConverterBuilder
+slug: converterbuilder
+evidence_spans:
+- 'Converter Builder: Automatically discovers and instantiates available converters'
+derived_from:
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+source_repos:
+- RECETOX/MSMetaEnhancer
+schema_version: 0.2.0

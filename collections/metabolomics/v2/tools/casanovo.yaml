@@ -1,0 +1,11 @@
+name: Casanovo
+slug: casanovo
+evidence_spans:
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+derived_from:
+- doi: 10.1093/bib/bbac542
+  title: "Comprehensive evaluation of peptide\n                    <i>de novo</i>\n                    sequencing tools for monoclonal antibody assembly"
+source_repos:
+- Noble-Lab/casanovo
+schema_version: 0.2.0

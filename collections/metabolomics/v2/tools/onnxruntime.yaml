@@ -1,0 +1,10 @@
+name: onnxruntime
+slug: onnxruntime
+evidence_spans:
+- optional dependencies are also required and can be installed with pip install -r requirements-optional.txt
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00026
+  title: 'MassDash: A Web-Based Dashboard for Data-Independent Acquisition Mass Spectrometry Visualization'
+source_repos:
+- Roestlab/massdash
+schema_version: 0.2.0

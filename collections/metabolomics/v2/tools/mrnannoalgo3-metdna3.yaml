@@ -1,0 +1,10 @@
+name: MrnAnnoAlgo3 (MetDNA3)
+slug: mrnannoalgo3-metdna3
+evidence_spans:
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+derived_from:
+- doi: 10.1038/s41467-025-63536-6
+  title: MetDNA3
+source_repos:
+- ZhuMetLab/MrnAnnoAlgo3
+schema_version: 0.2.0

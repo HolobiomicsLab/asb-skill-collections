@@ -1,0 +1,8 @@
+name: get_models.sh
+slug: get-models-sh
+evidence_spans:
+- cd Classifier/models_folder/models sh ./get_models.sh
+derived_from:
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
+schema_version: 0.2.0

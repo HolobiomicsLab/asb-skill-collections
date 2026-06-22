@@ -1,0 +1,12 @@
+name: MetaClean
+slug: metaclean
+evidence_spans:
+- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
+- the user can optionally filter out EICs by RSD % using the rsdFilter() function.
+derived_from:
+- doi: 10.1186/1471-2105-15-s11-s5
+  title: Quality evaluation of extracted ion chromatograms and chromatographic peaks in liquid chromatography/mass spectrometry-based metabolomics data
+source_repos:
+- KelseyChetnik/MetaClean
+schema_version: 0.2.0

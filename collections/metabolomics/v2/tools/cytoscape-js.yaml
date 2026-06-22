@@ -1,0 +1,10 @@
+name: cytoscape.js
+slug: cytoscape-js
+evidence_spans:
+- add cytoscape.js networks
+derived_from:
+- doi: 10.1093/bioinformatics/btv194
+  title: MetaMapR
+source_repos:
+- dgrapov/MetaMapR
+schema_version: 0.2.0

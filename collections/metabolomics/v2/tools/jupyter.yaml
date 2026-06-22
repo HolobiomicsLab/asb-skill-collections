@@ -1,0 +1,16 @@
+name: Jupyter
+slug: jupyter
+evidence_spans:
+- The Python code to generate the results is contained within the Jupyter notebook
+- Jupyter notebook **src/reproducible_simulations.ipynb**
+- This is done in interactive Jupyter notebooks using the specXplore importing pipeline.
+derived_from:
+- doi: 10.1371/journal.pcbi.1009105
+  title: ORA
+- doi: 10.1021/acs.analchem.3c04444
+  title: specxplore
+- doi: 10.3390/metabo10100416
+  title: A Python-Based Pipeline for Preprocessing LC–MS Data for Untargeted Metabolomics Workflows
+source_repos:
+- griquelme/tidyms
+schema_version: 0.2.0

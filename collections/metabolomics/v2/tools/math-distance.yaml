@@ -1,0 +1,10 @@
+name: math_distance
+slug: math-distance
+evidence_spans:
+- '.. automodule:: math_distance :members:'
+derived_from:
+- doi: 10.1038/s41592-021-01331-z
+  title: Spectral entropy outperforms MS/MS dot product similarity for small-molecule compound identification
+source_repos:
+- YuanyueLi/SpectralEntropy
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: metaMS
+slug: metams
+version_used: 1.25.1
+evidence_spans:
+- metaMS Version 1.25.1
+derived_from:
+- doi: 10.1021/acs.analchem.0c05022
+  title: DaDIA
+source_repos:
+- HuanLab/DaDIA
+schema_version: 0.2.0

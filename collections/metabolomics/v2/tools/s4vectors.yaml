@@ -1,0 +1,17 @@
+name: S4Vectors
+slug: s4vectors
+evidence_spans:
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
+- DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
+derived_from:
+- doi: 10.1021/acs.analchem.5c01726
+  title: DuReS
+- doi: 10.3390/metabo12020173
+  title: spectra
+source_repos:
+- BiosystemEngineeringLab-IITB/dures
+- rformassspectrometry/Spectra
+schema_version: 0.2.0

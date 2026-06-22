@@ -1,0 +1,11 @@
+name: MetaNet
+slug: metanet
+evidence_spans:
+- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+derived_from:
+- doi: 10.1101/2025.06.26.661636v1
+  title: MetaNet
+source_repos:
+- Asa12138/MetaNet
+schema_version: 0.2.0

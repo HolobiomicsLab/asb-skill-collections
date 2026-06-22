@@ -1,0 +1,16 @@
+name: ComplexHeatmap
+slug: complexheatmap
+evidence_spans:
+- The function `h_map()` provides heatmaps based on package ComplexHeatmap
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
+- 'Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+derived_from:
+- doi: 10.1101/2024.06.20.599545
+  title: 'MargheRita: streamlining MS-DIAL output analysis and metabolite identification in R'
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+- emosca-cnr/margheRita
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: VIM
+slug: vim
+evidence_spans:
+- library(VIM)
+derived_from:
+- doi: 10.1007/978-3-319-47656-8_6
+  title: Preprocessing and Pretreatment of Metabolomics Data for Statistical Analysis
+source_repos:
+- scibiome/meteor
+schema_version: 0.2.0

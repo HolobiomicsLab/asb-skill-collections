@@ -1,0 +1,10 @@
+name: amanida
+slug: amanida
+evidence_spans:
+- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+derived_from:
+- doi: 10.3390/metabo13121167
+  title: 'A Metabolites Merging Strategy (MMS): Harmonization to Enable Studies’ Intercomparison'
+source_repos:
+- mariallr/amanida
+schema_version: 0.2.0

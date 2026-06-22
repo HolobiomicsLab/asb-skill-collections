@@ -1,0 +1,15 @@
+name: magrittr
+slug: magrittr
+evidence_spans:
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
+- maplet is designed to work with a pipe operator - either the popular %>% operator from the magrittr package
+derived_from:
+- doi: 10.1021/acs.analchem.5c01726
+  title: DuReS
+- doi: 10.1093/bioinformatics/btab741/6409851
+  title: maplet
+source_repos:
+- BiosystemEngineeringLab-IITB/dures
+- krumsieklab/maplet
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: RDKit 2020.03.4
+slug: rdkit-2020-03-4
+evidence_spans:
+- RDKit == 2020.03.4
+derived_from:
+- doi: 10.1007/s10489-022-04351-0
+  title: Mass Spectrum Transformer
+source_repos:
+- chensaian/TransG-Net
+schema_version: 0.2.0

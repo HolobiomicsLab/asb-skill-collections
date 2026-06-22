@@ -1,0 +1,10 @@
+name: lcmsWorld
+slug: lcmsworld
+evidence_spans:
+- lcmsWorld is a 3d viewer for LC-MS data
+derived_from:
+- doi: 10.1021/acs.jproteome.0c00618
+  title: lcmsWorld
+source_repos:
+- PGB-LIV/lcmsWorld
+schema_version: 0.2.0

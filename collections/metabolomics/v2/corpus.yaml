@@ -1,0 +1,6259 @@
+schema: asb-corpus/1.0
+collection: metabolomics
+version: 2
+generated_on: '2026-06-22'
+source: asb-corpus-metabolomics expansion buildlist (repo-grounded, computational-MS only)
+policy: OPEN_ACCESS_POLICY.md (repo-grounded; access.type=repo-oa, public git repo cloned at build)
+summary:
+  total: 568
+  included: 568
+  hold: 0
+papers:
+- name: 10.1002/9780470508183
+  doi: 10.1002/9780470508183
+  title: 10.1002/9780470508183
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MMST
+  doi: 10.1002/ange.202517611
+  title: MMST
+  repo_url: mpriessner/MultiModalSpectralTransformer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NA
+  doi: 10.1002/anie.202507483
+  title: NA
+  repo_url: Chen-micslab/QCCAssisted4DSterol
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PACCS
+  doi: 10.1002/cem.70040
+  title: PACCS
+  repo_url: yuxuanliao/PACCS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ms2decide
+  doi: 10.1002/cmtd.202400088
+  title: ms2decide
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipidOne 2.0
+  doi: 10.1002/cpz1.70009
+  title: LipidOne 2.0
+  repo_url: matteogiulietti/LipidOne
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GutUDB
+  doi: 10.1002/imt2.195
+  title: GutUDB
+  repo_url: Ansanqi/GutUDB
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MassBank
+  doi: 10.1002/jms.1777
+  title: MassBank
+  repo_url: MassBank/MassBank-data
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Easy-Amanida
+  doi: 10.1002/jrsm.1713
+  title: Easy-Amanida
+  repo_url: mariallr/easy-amanida
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ROIAL-NMR
+  doi: 10.1002/nbm.70131
+  title: ROIAL-NMR
+  repo_url: Leo-Cheng-Lab/ROIAL-NMR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS2Rescore (immunopeptidome rescoring)
+  doi: 10.1002/pmic.202300336
+  title: MS2Rescore (immunopeptidome rescoring)
+  repo_url: compomics/ms2rescore
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MassQLab
+  doi: 10.1002/rcm.10132
+  title: MassQLab
+  repo_url: JohnsonDylan/MassQLab
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: falcon
+  doi: 10.1002/rcm.9153
+  title: falcon
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS-VIS
+  doi: 10.1002/rcm.9253
+  title: MS-VIS
+  repo_url: hkevgill/MS-VIS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1007/978-3-319-47656-8_6
+  doi: 10.1007/978-3-319-47656-8_6
+  title: 10.1007/978-3-319-47656-8_6
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1007/s00044-016-1764-y
+  doi: 10.1007/s00044-016-1764-y
+  title: 10.1007/s00044-016-1764-y
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FluoroMatch 2.0
+  doi: 10.1007/s00216-021-03392-7
+  title: FluoroMatch 2.0
+  repo_url: InnovativeOmics/Core-Match
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: AriumMS
+  doi: 10.1007/s00216-023-04715-6
+  title: AriumMS
+  repo_url: AdrianHaun/AriumMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: pfdeltascreen
+  doi: 10.1007/s00216-023-05070-2
+  title: pfdeltascreen
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Mass Spectrum Transformer
+  doi: 10.1007/s10489-022-04351-0
+  title: Mass Spectrum Transformer
+  repo_url: chensaian/TransG-Net
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: COLMARvista
+  doi: 10.1007/s10858-025-00465-y#sec2
+  title: COLMARvista
+  repo_url: lidawei1975/colmarvista
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1007/s11306-017-1244-5
+  doi: 10.1007/s11306-017-1244-5
+  title: 10.1007/s11306-017-1244-5
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NormalizeMets
+  doi: 10.1007/s11306-018-1347-7
+  title: NormalizeMets
+  repo_url: metabolomicstats/NormalizeMets
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: TarMet
+  doi: 10.1007/s11306-018-1363-7
+  title: TarMet
+  repo_url: hcji/TarMet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboShiny
+  doi: 10.1007/s11306-020-01717-8
+  title: MetaboShiny
+  repo_url: joannawolthuis/MetaboShiny
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetFID
+  doi: 10.1007/s11306-020-01726-7
+  title: MetFID
+  repo_url: ressomlab/MetFID
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaClean
+  doi: 10.1007/s11306-020-01738-3
+  title: MetaClean
+  repo_url: KelseyChetnik/MetaClean
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: WaveICA 2.0
+  doi: 10.1007/s11306-021-01839-7
+  title: WaveICA 2.0
+  repo_url: dengkuistat/WaveICA_2.0
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: IonFlow
+  doi: 10.1007/s11306-021-01841-z
+  title: IonFlow
+  repo_url: wanchanglin/ionflow
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PeakForest
+  doi: 10.1007/s11306-022-01899-3
+  title: PeakForest
+  repo_url: peakforest/peakforest-webapp
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaPro
+  doi: 10.1007/s11306-023-02018-6
+  title: MetaPro
+  repo_url: CSi-Studio/MetaPro
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FSA
+  doi: 10.1007/s11306-025-02379-0
+  title: FSA
+  repo_url: kslynn128171/FSA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Dear-OMG
+  doi: 10.1007/s12539-025-00786-4
+  title: Dear-OMG
+  repo_url: jianweishuai/Dear-OMG
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1007/s12561-013-9081-1
+  doi: 10.1007/s12561-013-9081-1
+  title: 10.1007/s12561-013-9081-1
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: wscaling.R
+  doi: 10.1007/s42081-023-00205-2
+  title: wscaling.R
+  repo_url: nishithkumarpaul/robustScaling
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1016/1044-0305
+  doi: 10.1016/1044-0305
+  title: 10.1016/1044-0305
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1016/j.aca.2018.05.001
+  doi: 10.1016/j.aca.2018.05.001
+  title: 10.1016/j.aca.2018.05.001
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: statTarget
+  doi: 10.1016/j.aca.2018.08.002
+  title: statTarget
+  repo_url: 13479776/statTarget
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: WaveICA
+  doi: 10.1016/j.aca.2019.02.010
+  title: WaveICA
+  repo_url: dengkuistat/WaveICA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: quantyfey
+  doi: 10.1016/j.aca.2025.344571
+  title: quantyfey
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DIATAGe
+  doi: 10.1016/j.aca.2025.344698
+  title: DIATAGe
+  repo_url: Velenosi-Lab/DIATAGeR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ALISTER
+  doi: 10.1016/j.cca.2024.117858
+  title: ALISTER
+  repo_url: Fraunhofer-ITMP/alister
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipiDex
+  doi: 10.1016/j.cels.2018.03.011
+  title: LipiDex
+  repo_url: coongroup/LipiDex
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GCIMS
+  doi: 10.1016/j.chemolab.2023.104938
+  title: GCIMS
+  repo_url: sipss/GCIMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSident
+  doi: 10.1016/j.chemolab.2024.105063
+  title: MSident
+  repo_url: cplqam/GUI
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: eicCluster
+  doi: 10.1016/j.chroma.2018.09.050
+  title: eicCluster
+  repo_url: OfficeChromatography/eicCluster
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MInfer
+  doi: 10.1016/j.cmpb.2025.108672
+  title: MInfer
+  repo_url: cellbiomaths/MInfer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PharmMet DB
+  doi: 10.1016/j.dmd.2025.100183
+  title: PharmMet DB
+  repo_url: ClinicalBiomarkersLaborabory/PharmMet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSThunder
+  doi: 10.1016/j.enceco.2025.07.022
+  title: MSThunder
+  repo_url: LQZ0123/MSThunder
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MFAssignR
+  doi: 10.1016/j.envres.2020.110114
+  title: MFAssignR
+  repo_url: skschum/MFAssignR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MultiABLER
+  doi: 10.1016/j.isci.2023.106881
+  title: MultiABLER
+  repo_url: holab-hku/MultiABLER
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: AsRTNet
+  doi: 10.1016/j.jece.2025.119962
+  title: AsRTNet
+  repo_url: piscookie/AS-RT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: UniqPy
+  doi: 10.1016/j.jpba.2022.114681
+  title: UniqPy
+  repo_url: DNKonanov/uni_cli
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: RGCxGC
+  doi: 10.1016/j.microc.2020.104830
+  title: RGCxGC
+  repo_url: DanielQuiroz97/RGCxGC
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FlavorFormer
+  doi: 10.1016/j.microc.2025.115372
+  title: FlavorFormer
+  repo_url: yfWang01/FlavorFormer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: XCMS
+  doi: 10.1021/ac051437y
+  title: XCMS
+  repo_url: sneumann/xcms
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CAMERA
+  doi: 10.1021/ac202450g
+  title: CAMERA
+  repo_url: sneumann/CAMERA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: RAMClust
+  doi: 10.1021/ac501530d
+  title: RAMClust
+  repo_url: cbroeckl/RAMClustR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS-CleanR
+  doi: 10.1021/acs.analchem.0c01594
+  title: MS-CleanR
+  repo_url: eMetaboHUB/MS-CleanR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CorrDec
+  doi: 10.1021/acs.analchem.0c01980
+  title: CorrDec
+  repo_url: systemsomicslab/MsdialWorkbench
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetIDfyR
+  doi: 10.1021/acs.analchem.0c02281
+  title: MetIDfyR
+  repo_url: agnesbrnb/MetIDfyR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LiPydomics
+  doi: 10.1021/acs.analchem.0c02560
+  title: LiPydomics
+  repo_url: dylanhross/lipydomics
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: isoSCAN
+  doi: 10.1021/acs.analchem.0c02998
+  title: isoSCAN
+  repo_url: jcapelladesto/isoSCAN
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MRMkit
+  doi: 10.1021/acs.analchem.0c03060
+  title: MRMkit
+  repo_url: MRMkit/MRMkit
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SmartPeak
+  doi: 10.1021/acs.analchem.0c03421
+  title: SmartPeak
+  repo_url: AutoFlowResearch/SmartPeak
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: metabCombiner
+  doi: 10.1021/acs.analchem.0c03693
+  title: metabCombiner
+  repo_url: hhabra/metabCombiner
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/acs.analchem.0c03895
+  doi: 10.1021/acs.analchem.0c03895
+  title: 10.1021/acs.analchem.0c03895
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GNN-RT
+  doi: 10.1021/acs.analchem.0c04071
+  title: GNN-RT
+  repo_url: Qiong-Yang/GNN-RT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ASICS
+  doi: 10.1021/acs.analchem.0c04232
+  title: ASICS
+  repo_url: GaelleLefort/ASICS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mass2adduct
+  doi: 10.1021/acs.analchem.0c04720
+  title: mass2adduct
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DaDIA
+  doi: 10.1021/acs.analchem.0c05022
+  title: DaDIA
+  repo_url: HuanLab/DaDIA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SMolESY
+  doi: 10.1021/acs.analchem.1c00113
+  title: SMolESY
+  repo_url: pantakis/SMolESY-select
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mWISE
+  doi: 10.1021/acs.analchem.1c00238
+  title: mWISE
+  repo_url: b2slab/mWISE
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: EVA
+  doi: 10.1021/acs.analchem.1c01309
+  title: EVA
+  repo_url: HuanLab-backup/EVA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/acs.analchem.1c01465
+  doi: 10.1021/acs.analchem.1c01465
+  title: 10.1021/acs.analchem.1c01465
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ISFrag
+  doi: 10.1021/acs.analchem.1c01644
+  title: ISFrag
+  repo_url: HuanLab/ISFrag
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Pew2
+  doi: 10.1021/acs.analchem.1c02138
+  title: Pew2
+  repo_url: djdt/pewpew
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: neatms
+  doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: slaw
+  doi: 10.1021/acs.analchem.1c02687
+  title: slaw
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: metaboannotator
+  doi: 10.1021/acs.analchem.1c03032
+  title: metaboannotator
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/acs.analchem.1c03163
+  doi: 10.1021/acs.analchem.1c03163
+  title: 10.1021/acs.analchem.1c03163
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NPFimg
+  doi: 10.1021/acs.analchem.1c03163?ref=
+  title: NPFimg
+  repo_url: poomcj/NPFimg
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: m2s
+  doi: 10.1021/acs.analchem.1c03592
+  title: m2s
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Paramounter
+  doi: 10.1021/acs.analchem.1c04758
+  title: Paramounter
+  repo_url: HuanLab/Paramounter
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: deimos
+  doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: automRm
+  doi: 10.1021/acs.analchem.1c05224
+  title: automRm
+  repo_url: https://gitlab.gwdg.de/joerg.buescher/automrm.git
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSIannotator
+  doi: 10.1021/acs.analchem.2c00557
+  title: MSIannotator
+  repo_url: Yingzhu96/MSIannotator
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: IDSL.UFA
+  doi: 10.1021/acs.analchem.2c00563
+  title: IDSL.UFA
+  repo_url: idslme/IDSL.UFA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: rassp
+  doi: 10.1021/acs.analchem.2c02093
+  title: rassp
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CCS Predictor 2.0
+  doi: 10.1021/acs.analchem.2c03491
+  title: CCS Predictor 2.0
+  repo_url: facundof2016/CCSP2.0
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MeRgeION
+  doi: 10.1021/acs.analchem.2c04343
+  title: MeRgeION
+  repo_url: daniellyz/meRgeION2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Lipid Spectrum Generator
+  doi: 10.1021/acs.analchem.2c04518
+  title: Lipid Spectrum Generator
+  repo_url: 98104781/LSG
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: iMSEA
+  doi: 10.1021/acs.analchem.2c04603
+  title: iMSEA
+  repo_url: BioNet-XMU/iMSEA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MPACT
+  doi: 10.1021/acs.analchem.2c04632
+  title: MPACT
+  repo_url: BalunasLab/mpact
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mspcompiler
+  doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CordBat
+  doi: 10.1021/acs.analchem.2c05748
+  title: CordBat
+  repo_url: BorchLab/CordBat
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: khipu
+  doi: 10.1021/acs.analchem.2c05810
+  title: khipu
+  repo_url: shuzhao-li-lab/khipu
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CLERMS
+  doi: 10.1021/acs.analchem.3c00260
+  title: CLERMS
+  repo_url: HaldamirS/CLERMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: IDSL.CSA
+  doi: 10.1021/acs.analchem.3c00376
+  title: IDSL.CSA
+  repo_url: idslme/IDSL.CSA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DNMS2Purifier
+  doi: 10.1021/acs.analchem.3c00736
+  title: DNMS2Purifier
+  repo_url: HuanLab/DNMS2Purifier
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PeakDetective
+  doi: 10.1021/acs.analchem.3c00764
+  title: PeakDetective
+  repo_url: pattilab/PeakDetective
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SGMNS
+  doi: 10.1021/acs.analchem.3c00849
+  title: SGMNS
+  repo_url: DLUT-datas/SGMNS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzapy
+  doi: 10.1021/acs.analchem.3c01653
+  title: mzapy
+  repo_url: PNNL-m-q/mzapy
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipidSpace
+  doi: 10.1021/acs.analchem.3c02449
+  title: LipidSpace
+  repo_url: lifs-tools/lipidspace
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: RI-based-CPSC
+  doi: 10.1021/acs.analchem.3c02583
+  title: RI-based-CPSC
+  repo_url: WHU-Fenglab/RI-based-CPSC
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: EISA-EXPOSOME
+  doi: 10.1021/acs.analchem.3c02697
+  title: EISA-EXPOSOME
+  repo_url: Lab-XUE/EISA-EXPOSOME
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SAND
+  doi: 10.1021/acs.analchem.3c03078
+  title: SAND
+  repo_url: edisonomics/SAND
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: retention_time_gnn
+  doi: 10.1021/acs.analchem.3c03177
+  title: retention_time_gnn
+  repo_url: seokhokang/retention_time_gnn
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Magnetstein
+  doi: 10.1021/acs.analchem.3c03594
+  title: Magnetstein
+  repo_url: ElsevierSoftwareX/SOFTX-D-25-00358
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: QComics
+  doi: 10.1021/acs.analchem.3c03660
+  title: QComics
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: AVIR
+  doi: 10.1021/acs.analchem.3c04046
+  title: AVIR
+  repo_url: HuanLab/AVIR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FNICM
+  doi: 10.1021/acs.analchem.3c04131
+  title: FNICM
+  repo_url: LiQi94/FNICM
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: moccal
+  doi: 10.1021/acs.analchem.3c04290
+  title: moccal
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Lipid Wizard
+  doi: 10.1021/acs.analchem.3c04419
+  title: Lipid Wizard
+  repo_url: RaoboXu/Lipidwizard
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: specxplore
+  doi: 10.1021/acs.analchem.3c04444
+  title: specxplore
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MINNO
+  doi: 10.1021/acs.analchem.3c04501
+  title: MINNO
+  repo_url: LewisResearchGroup/MINNO
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetDIT
+  doi: 10.1021/acs.analchem.3c04607
+  title: MetDIT
+  repo_url: Li-OmicsLab/MetDIT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ICEBERG / fragmentation graph generation
+  doi: 10.1021/acs.analchem.3c04654
+  title: ICEBERG / fragmentation graph generation
+  repo_url: samgoldman97/ms-pred
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: AnnoSM
+  doi: 10.1021/acs.analchem.3c04946
+  title: AnnoSM
+  repo_url: YangHuaLab/AnnoSM
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: deepion
+  doi: 10.1021/acs.analchem.3c05002
+  title: deepion
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ps2ms
+  doi: 10.1021/acs.analchem.3c05019
+  title: ps2ms
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GCMSFormer
+  doi: 10.1021/acs.analchem.3c05772
+  title: GCMSFormer
+  repo_url: zxguocsu/GCMSFormer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NP3 MS Workflow
+  doi: 10.1021/acs.analchem.3c05829
+  title: NP3 MS Workflow
+  repo_url: danielatrivella/NP3_MS_Workflow
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipiDex 2
+  doi: 10.1021/acs.analchem.4c00359
+  title: LipiDex 2
+  repo_url: coongroup/LipiDex-2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS-TDF Software
+  doi: 10.1021/acs.analchem.4c00527
+  title: MS-TDF Software
+  repo_url: CaixiaYuan/MS-TDF
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Rapid QC-MS
+  doi: 10.1021/acs.analchem.4c00786
+  title: Rapid QC-MS
+  repo_url: czbiohub-sf/Rapid-QC-MS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mobilipid
+  doi: 10.1021/acs.analchem.4c01253
+  title: mobilipid
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: bam
+  doi: 10.1021/acs.analchem.4c01565
+  title: bam
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mcfNMR
+  doi: 10.1021/acs.analchem.4c01652
+  title: mcfNMR
+  repo_url: GeoMetabolomics-ICBM/mcfNMR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaPhenotype
+  doi: 10.1021/acs.analchem.4c02038
+  title: MetaPhenotype
+  repo_url: songyuan93/MetaPhenotype
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FragHub
+  doi: 10.1021/acs.analchem.4c02219
+  title: FragHub
+  repo_url: eMetaboHUB/FragHub
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSBERT
+  doi: 10.1021/acs.analchem.4c02426
+  title: MSBERT
+  repo_url: zhanghailiangcsu/MSBERT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MRMQuant
+  doi: 10.1021/acs.analchem.4c02462
+  title: MRMQuant
+  repo_url: kslynn128171/MRMQuant
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PeakMeister
+  doi: 10.1021/acs.analchem.4c03513
+  title: PeakMeister
+  repo_url: PBM-Group/PeakMeister
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MWFormer
+  doi: 10.1021/acs.analchem.4c03781
+  title: MWFormer
+  repo_url: zhanghailiangcsu/MWFormer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PyINETA
+  doi: 10.1021/acs.analchem.4c03966
+  title: PyINETA
+  repo_url: edisonomics/PyINETA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: lipoclean
+  doi: 10.1021/acs.analchem.4c04040
+  title: lipoclean
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PPGB-MS2
+  doi: 10.1021/acs.analchem.4c04375
+  title: PPGB-MS2
+  repo_url: zhengfj1994/PPGB_MS2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: QuanFormer
+  doi: 10.1021/acs.analchem.4c04531
+  title: QuanFormer
+  repo_url: LinShuhaiLAB/QuanFormer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetCohort
+  doi: 10.1021/acs.analchem.4c04906
+  title: MetCohort
+  repo_url: JunYang2021/MetCohort
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PRIMA-Panel
+  doi: 10.1021/acs.analchem.4c04938
+  title: PRIMA-Panel
+  repo_url: funkam/PRIMA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CLAW-MRM
+  doi: 10.1021/acs.analchem.4c05039
+  title: CLAW-MRM
+  repo_url: chopralab/CLAW
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: RapidMass
+  doi: 10.1021/acs.analchem.4c05062
+  title: RapidMass
+  repo_url: Katherine00689/RapidMass
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: HeuSMA
+  doi: 10.1021/acs.analchem.4c05315
+  title: HeuSMA
+  repo_url: Lacterd/HeuSMA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NMRformer
+  doi: 10.1021/acs.analchem.4c05632
+  title: NMRformer
+  repo_url: zza1211/NMRformer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Graphormer-RT
+  doi: 10.1021/acs.analchem.4c05859
+  title: Graphormer-RT
+  repo_url: HopkinsLaboratory/Graphormer-RT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SMART
+  doi: 10.1021/acs.analchem.4c06210
+  title: SMART
+  repo_url: bioinfo-ibms-pumc/SMART
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: imzML Writer
+  doi: 10.1021/acs.analchem.4c06520
+  title: imzML Writer
+  repo_url: VIU-Metabolomics/imzML_Writer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS2MP
+  doi: 10.1021/acs.analchem.4c06875
+  title: MS2MP
+  repo_url: ucasaccn/MS2MP
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: qc4metabolomics
+  doi: 10.1021/acs.analchem.4c07078
+  title: qc4metabolomics
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PredRet
+  doi: 10.1021/acs.analchem.5b02287
+  title: PredRet
+  repo_url: stanstrup/PredRet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: geoRge
+  doi: 10.1021/acs.analchem.5b03628
+  title: geoRge
+  repo_url: jcapelladesto/geoRge
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LAGF
+  doi: 10.1021/acs.analchem.5c00060
+  title: LAGF
+  repo_url: zsspython/LAGF
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Lipidepifind
+  doi: 10.1021/acs.analchem.5c00277
+  title: Lipidepifind
+  repo_url: Xinguang-Liu/Lipidepifind
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipidA-IDER
+  doi: 10.1021/acs.analchem.5c00520
+  title: LipidA-IDER
+  repo_url: Systems-Biology-Of-Lipid-Metabolism-Lab/LipidA-IDER
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: tardis
+  doi: 10.1021/acs.analchem.5c00567
+  title: tardis
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: metid
+  doi: 10.1021/acs.analchem.5c00633
+  title: metid
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzrtsim
+  doi: 10.1021/acs.analchem.5c01213
+  title: mzrtsim
+  repo_url: yufree/mzrtsim
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mamsi
+  doi: 10.1021/acs.analchem.5c01327
+  title: mamsi
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LongitudinalProf-MSMS-Method
+  doi: 10.1021/acs.analchem.5c01414
+  title: LongitudinalProf-MSMS-Method
+  repo_url: academicCQMD/LongitudinalProf-MSMS-Method
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSI-Explorer
+  doi: 10.1021/acs.analchem.5c01513
+  title: MSI-Explorer
+  repo_url: MMV-Lab/MSI-Explorer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CSU-MS2
+  doi: 10.1021/acs.analchem.5c01594
+  title: CSU-MS2
+  repo_url: tingxiecsu/CSU-MS2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DuReS
+  doi: 10.1021/acs.analchem.5c01726
+  title: DuReS
+  repo_url: BiosystemEngineeringLab-IITB/dures
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Reverse Spectral Search
+  doi: 10.1021/acs.analchem.5c02047
+  title: Reverse Spectral Search
+  repo_url: Philipbear/reverse_search
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ChemEcho
+  doi: 10.1021/acs.analchem.5c02591
+  title: ChemEcho
+  repo_url: biorack/chemecho
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SpecEmbedding
+  doi: 10.1021/acs.analchem.5c02655
+  title: SpecEmbedding
+  repo_url: sword-nan/SpecEmbedding
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Aerith
+  doi: 10.1021/acs.analchem.5c03207
+  title: Aerith
+  repo_url: thepanlab/Aerith
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SMART 2.0
+  doi: 10.1021/acs.analchem.5c03225
+  title: SMART 2.0
+  repo_url: YuJenL/SMART
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: UCL-MetIsoLib
+  doi: 10.1021/acs.analchem.5c03390
+  title: UCL-MetIsoLib
+  repo_url: kserafimov10/UCLMetIsoLib
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CRB-FCC
+  doi: 10.1021/acs.analchem.5c03451
+  title: CRB-FCC
+  repo_url: iconSS/FCC
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: HyperCCS
+  doi: 10.1021/acs.analchem.5c03492
+  title: HyperCCS
+  repo_url: NeoNexusX/HyperCCS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SONAR-MSI
+  doi: 10.1021/acs.analchem.5c03682
+  title: SONAR-MSI
+  repo_url: GrantBellic/SONAR-MSI
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: rtmsecho
+  doi: 10.1021/acs.analchem.5c03730
+  title: rtmsecho
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: HDSE-MS
+  doi: 10.1021/acs.analchem.5c04111
+  title: HDSE-MS
+  repo_url: lzjforyou/HDSE-MS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Spectraverse
+  doi: 10.1021/acs.analchem.5c06256
+  title: Spectraverse
+  repo_url: skinniderlab/spectraverse-analysis
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/acs.analchem.5c06841
+  doi: 10.1021/acs.analchem.5c06841
+  title: 10.1021/acs.analchem.5c06841
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: eRah
+  doi: 10.1021/acs.analchem.6b02927
+  title: eRah
+  repo_url: xdomingoal/erah-devel
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CANOPUS
+  doi: 10.1021/acs.analchem.8b04698
+  title: CANOPUS
+  repo_url: sirius-ms/sirius
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Deep MS/MS similarity
+  doi: 10.1021/acs.analchem.8b05405
+  title: Deep MS/MS similarity
+  repo_url: hcji/DeepMASS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/acs.analchem.9b01842
+  doi: 10.1021/acs.analchem.9b01842
+  title: 10.1021/acs.analchem.9b01842
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DecoMetDIA
+  doi: 10.1021/acs.analchem.9b02655
+  title: DecoMetDIA
+  repo_url: ZhuMSLab/DecoMetDIA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DNN peak classifier
+  doi: 10.1021/acs.analchem.9b02983
+  title: DNN peak classifier
+  repo_url: JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: spectrumutils
+  doi: 10.1021/acs.analchem.9b04884
+  title: spectrumutils
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Retip
+  doi: 10.1021/acs.analchem.9b05765
+  title: Retip
+  repo_url: oloBion/Retip
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Scannotation
+  doi: 10.1021/acs.est.3c04764
+  title: Scannotation
+  repo_url: scannotation/Scannotation_software
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CMDN
+  doi: 10.1021/acs.est.5c08558
+  title: CMDN
+  repo_url: LeaveMeNotTonight/CMDN
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MoleTrans
+  doi: 10.1021/acs.estlett.5c00284
+  title: MoleTrans
+  repo_url: JibaoLiu/MoleTrans
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: bittermass
+  doi: 10.1021/acs.jafc.3c09767
+  title: bittermass
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Chemprop-IR
+  doi: 10.1021/acs.jcim.1c00055
+  title: Chemprop-IR
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CyProduct
+  doi: 10.1021/acs.jcim.1c00144
+  title: CyProduct
+  repo_url: Le0nT1/CyProduct
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mistcf
+  doi: 10.1021/acs.jcim.3c01082
+  title: mistcf
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: QC-GN2oMS2
+  doi: 10.1021/acs.jcim.4c00446
+  title: QC-GN2oMS2
+  repo_url: PNNL-m-q/qcgnoms
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CIDMD
+  doi: 10.1021/acs.jcim.4c00760
+  title: CIDMD
+  repo_url: jesilee/CIDMD_setup
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ABCoRT
+  doi: 10.1021/acs.jcim.4c02179
+  title: ABCoRT
+  repo_url: RiverCCC/ABCoRT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CypReact
+  doi: 10.1021/acs.jcim.8b00035
+  title: CypReact
+  repo_url: https://bitbucket.org/Leon_Ti/cypreact.git
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MADByTE
+  doi: 10.1021/acs.jnatprod.0c01076
+  title: MADByTE
+  repo_url: liningtonlab/madbyte
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: npclassifier
+  doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Bioactivity-Based Molecular Networking
+  doi: 10.1021/acs.jnatprod.7b00737
+  title: Bioactivity-Based Molecular Networking
+  repo_url: DorresteinLaboratory/Bioactive_Molecular_Networks
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: lipidr
+  doi: 10.1021/acs.jproteome.0c00082
+  title: lipidr
+  repo_url: ahmohamed/lipidr
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: lcmsWorld
+  doi: 10.1021/acs.jproteome.0c00618
+  title: lcmsWorld
+  repo_url: PGB-LIV/lcmsWorld
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/acs.jproteome.0c00866
+  doi: 10.1021/acs.jproteome.0c00866
+  title: 10.1021/acs.jproteome.0c00866
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Omics Untargeted Key Script
+  doi: 10.1021/acs.jproteome.1c00392
+  title: Omics Untargeted Key Script
+  repo_url: plyush1993/OUKS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/acs.jproteome.1c00425
+  doi: 10.1021/acs.jproteome.1c00425
+  title: 10.1021/acs.jproteome.1c00425
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: IDSL.IPA
+  doi: 10.1021/acs.jproteome.2c00120
+  title: IDSL.IPA
+  repo_url: idslme/IDSL.IPA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MZA
+  doi: 10.1021/acs.jproteome.2c00313
+  title: MZA
+  repo_url: PNNL-m-q/mza
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: compareMS2 2.0
+  doi: 10.1021/acs.jproteome.2c00457
+  title: compareMS2 2.0
+  repo_url: 524D/compareMS2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CloMet
+  doi: 10.1021/acs.jproteome.2c00602
+  title: CloMet
+  repo_url: rmallol/clomet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: HyperSpec
+  doi: 10.1021/acs.jproteome.2c00612
+  title: HyperSpec
+  repo_url: wh-xu/Hyper-Spec
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PMart
+  doi: 10.1021/acs.jproteome.3c00512
+  title: PMart
+  repo_url: pmartR/PMart_ShinyApp
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Tidy-Direct-to-MS
+  doi: 10.1021/acs.jproteome.3c00784
+  title: Tidy-Direct-to-MS
+  repo_url: griquelme/tidyms
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MassDash
+  doi: 10.1021/acs.jproteome.4c00026
+  title: MassDash
+  repo_url: Roestlab/massdash
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MODE
+  doi: 10.1021/acs.jproteome.4c00650
+  title: MODE
+  repo_url: pmartR/MODE_ShinyApp
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSConnect
+  doi: 10.1021/acs.jproteome.4c00854
+  title: MSConnect
+  repo_url: RTKlab-BYU/MSConnect
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: pyopenmsviz
+  doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS-RT
+  doi: 10.1021/acs.jproteome.4c00881
+  title: MS-RT
+  repo_url: XianghuWang-287/Metabolomics_Clustering_Benchmark
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSIght
+  doi: 10.1021/acs.jproteome.4c01140
+  title: MSIght
+  repo_url: laurenfields/MSIght
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Aird-MSI
+  doi: 10.1021/acs.jproteome.5c00423
+  title: Aird-MSI
+  repo_url: CSi-Studio/mzmine3
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzpeak
+  doi: 10.1021/acs.jproteome.5c00435
+  title: mzpeak
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: metScribeR
+  doi: 10.1021/acs.jproteome.5c00548
+  title: metScribeR
+  repo_url: ncats/metScribeR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ANN-SoLo
+  doi: 10.1021/acs.jproteome.8b00359
+  title: ANN-SoLo
+  repo_url: bittremieux-lab/ANN-SoLo
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: pyteomics
+  doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CEU Mass Mediator 3.0
+  doi: 10.1021/acs.jproteome.8b00720
+  title: CEU Mass Mediator 3.0
+  repo_url: albertogilf/ceuMassMediator
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Skyline (small molecules)
+  doi: 10.1021/acs.jproteome.9b00640
+  title: Skyline (small molecules)
+  repo_url: ProteoWizard/pwiz
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NP Analyst
+  doi: 10.1021/acscentsci.1c01108
+  title: NP Analyst
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ENPKG (Experimental Natural Products Knowledge Graph)
+  doi: 10.1021/acscentsci.3c00800
+  title: ENPKG (Experimental Natural Products Knowledge Graph)
+  repo_url: enpkg/enpkg_full
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NMR2Struct
+  doi: 10.1021/acscentsci.4c01132
+  title: NMR2Struct
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/acscentsci.9b00085
+  doi: 10.1021/acscentsci.9b00085
+  title: 10.1021/acscentsci.9b00085
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/ci100050t
+  doi: 10.1021/ci100050t
+  title: 10.1021/ci100050t
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1021/ci200081k
+  doi: 10.1021/ci200081k
+  title: 10.1021/ci200081k
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CSCS / deep CNN natural-product annotation
+  doi: 10.1021/jacs.9b13786
+  title: CSCS / deep CNN natural-product annotation
+  repo_url: mwang87/NP-Classifier
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: macroMS
+  doi: 10.1021/jasms.1c00013
+  title: macroMS
+  repo_url: macroMS/macroMS_web
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: POMICS
+  doi: 10.1021/jasms.1c00315
+  title: POMICS
+  repo_url: DasSusanta/snakemake_ccs
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Neutral-loss similarity
+  doi: 10.1021/jasms.2c00153
+  title: Neutral-loss similarity
+  repo_url: bittremieux/cosine_neutral_loss
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SpectraX
+  doi: 10.1021/jasms.3c00322
+  title: SpectraX
+  repo_url: weantony/SpectraX
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ModiFinder
+  doi: 10.1021/jasms.4c00061
+  title: ModiFinder
+  repo_url: Wang-Bioinformatics-Lab/ModiFinder_base
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PeakQC
+  doi: 10.1021/jasms.4c00146
+  title: PeakQC
+  repo_url: pnnl/IonToolPack
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: BreathXplorer
+  doi: 10.1021/jasms.4c00152
+  title: BreathXplorer
+  repo_url: HuanLab/breathXplorer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSIGen
+  doi: 10.1021/jasms.4c00178
+  title: MSIGen
+  repo_url: LabLaskin/MSIGen
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PNNL PreProcessor
+  doi: 10.1021/jasms.4c00220
+  title: PNNL PreProcessor
+  repo_url: PNNL-Comp-Mass-Spec/PNNL-PreProcessor
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: nextflow4msdial
+  doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Norm ISWSVR
+  doi: 10.1021/jasms.4c00467
+  title: Norm ISWSVR
+  repo_url: Dingxian666/Norm-ISWSVR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzquality
+  doi: 10.1021/jasms.5c00073
+  title: mzquality
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Punc’data
+  doi: 10.1021/jasms.5c00151
+  title: Punc’data
+  repo_url: WTVoe/puncdata
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: QCxMS2
+  doi: 10.1021/jasms.5c00234
+  title: QCxMS2
+  repo_url: grimme-lab/QCxMS2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MMSA
+  doi: 10.1021/jasms.5c00237
+  title: MMSA
+  repo_url: Wang-Bioinformatics-Lab/NetworkFamily_MultipleAlignment_Website
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mspepsearchr
+  doi: 10.1021/jasms.5c00322
+  title: mspepsearchr
+  repo_url: AndreySamokhin/mssearchr
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1038/nbt.3597
+  doi: 10.1038/nbt.3597
+  title: 10.1038/nbt.3597
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SPLASH
+  doi: 10.1038/nbt.3689
+  title: SPLASH
+  repo_url: berlinguyinca/spectra-hash
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: OpenMS
+  doi: 10.1038/nmeth.3959
+  title: OpenMS
+  repo_url: OpenMS/OpenMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 3D molecular cartography (Optimus / 'ili)
+  doi: 10.1038/nprot.2017.122
+  title: 3D molecular cartography (Optimus / 'ili)
+  repo_url: MolecularCartography/Optimus
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1038/protex.2015.102
+  doi: 10.1038/protex.2015.102
+  title: 10.1038/protex.2015.102
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: dereplicator
+  doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
+  repo_url: ablab/npdtools
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1038/s41467-019-11311-9
+  doi: 10.1038/s41467-019-11311-9
+  title: 10.1038/s41467-019-11311-9
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1038/s41467-019-13680-7
+  doi: 10.1038/s41467-019-13680-7
+  title: 10.1038/s41467-019-13680-7
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipidCreator
+  doi: 10.1038/s41467-020-15960-z
+  title: LipidCreator
+  repo_url: lifs-tools/lipidcreator
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Ion Identity Molecular Networking (IIMN)
+  doi: 10.1038/s41467-021-23953-9
+  title: Ion Identity Molecular Networking (IIMN)
+  repo_url: mzmine/mzmine
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: moldiscovery
+  doi: 10.1038/s41467-021-23986-0
+  title: moldiscovery
+  repo_url: mohimanilab/molDiscovery
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SIMILE
+  doi: 10.1038/s41467-022-30118-9
+  title: SIMILE
+  repo_url: biorack/simile
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: tidyMass
+  doi: 10.1038/s41467-022-32155-w
+  title: tidyMass
+  repo_url: tidymass/tidymass
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Knowledge-guided MN (knowns→unknowns)
+  doi: 10.1038/s41467-022-34537-6
+  title: Knowledge-guided MN (knowns→unknowns)
+  repo_url: ZhuMetLab/MetDNA2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ms2query
+  doi: 10.1038/s41467-023-37446-4
+  title: ms2query
+  repo_url: iomega/ms2query
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FastEI
+  doi: 10.1038/s41467-023-39279-7
+  title: FastEI
+  repo_url: Qiong-Yang/FastEI
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: asari
+  doi: 10.1038/s41467-023-39889-1
+  title: asari
+  repo_url: shuzhao-li-lab/asari
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: scSpaMet
+  doi: 10.1038/s41467-023-43917-5
+  title: scSpaMet
+  repo_url: coskunlab/ScSpaMet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: metaboanalystr
+  doi: 10.1038/s41467-024-48009-6
+  title: metaboanalystr
+  repo_url: xia-lab/MetaboAnalystR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Casanovo
+  doi: 10.1038/s41467-024-49731-x
+  title: Casanovo
+  repo_url: Noble-Lab/casanovo
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FERMO
+  doi: 10.1038/s41467-024-50111-8
+  title: FERMO
+  repo_url: fermo-metabolomics/FERMO
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DeepMSProfiler
+  doi: 10.1038/s41467-024-51433-3
+  title: DeepMSProfiler
+  repo_url: yjdeng9/DeepMSProfiler
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS-DIAL 5
+  doi: 10.1038/s41467-024-54137-w
+  title: MS-DIAL 5
+  repo_url: systemsomicslab/MsdialWorkbench
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: iDIA-QC
+  doi: 10.1038/s41467-024-54871-1
+  title: iDIA-QC
+  repo_url: guomics-lab/iDIA-QC
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipidIN
+  doi: 10.1038/s41467-025-59683-5
+  title: LipidIN
+  repo_url: LinShuhaiLAB/LipidIN
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MassCube
+  doi: 10.1038/s41467-025-60640-5
+  title: MassCube
+  repo_url: huaxuyu/masscube
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetDNA3
+  doi: 10.1038/s41467-025-63536-6
+  title: MetDNA3
+  repo_url: ZhuMetLab/MrnAnnoAlgo3
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SpatialMETA
+  doi: 10.1038/s41467-025-63915-z
+  title: SpatialMETA
+  repo_url: WanluLiuLab/SpatialMETA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GNPS Drug Library
+  doi: 10.1038/s41467-025-65993-5
+  title: GNPS Drug Library
+  repo_url: ninahaoqizhao/Manuscript_GNPS_Drug_Library
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: fiddle
+  doi: 10.1038/s41467-025-66060-9
+  title: fiddle
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboLM
+  doi: 10.1038/s41467-025-66163-3
+  title: MetaboLM
+  repo_url: Qiu-Shizheng/MetaboLM
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: metPropagate
+  doi: 10.1038/s41525-020-0132-5
+  title: metPropagate
+  repo_url: emmagraham/metPropagate
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: foodMASST
+  doi: 10.1038/s41538-022-00137-3
+  title: foodMASST
+  repo_url: mwang87/MASST
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: microbeMASST / fastMASST
+  doi: 10.1038/s41564-023-01575-9
+  title: microbeMASST / fastMASST
+  repo_url: robinschmid/microbe_masst
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Reverse metabolomics
+  doi: 10.1038/s41586-023-06906-8
+  title: Reverse metabolomics
+  repo_url: Wang-Bioinformatics-Lab/Reverse_metabolomics_library_generation
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mshub
+  doi: 10.1038/s41587-020-0700-3
+  title: mshub
+  repo_url: bittremieux/GNPS_GC
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CANOPUS-adjacent — COSMIC
+  doi: 10.1038/s41587-021-01045-9
+  title: CANOPUS-adjacent — COSMIC
+  repo_url: sirius-ms/sirius
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzmine3
+  doi: 10.1038/s41587-023-01690-2
+  title: mzmine3
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MASST
+  doi: 10.1038/s41587-023-01985-4
+  title: MASST
+  repo_url: mohimanilab/MASSTplus
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DreaMS
+  doi: 10.1038/s41587-025-02663-3
+  title: DreaMS
+  repo_url: pluskal-lab/DreaMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: BiG-SCAPE biosynthetic diversity
+  doi: 10.1038/s41589-019-0400-9
+  title: BiG-SCAPE biosynthetic diversity
+  repo_url: medema-group/BiG-SCAPE
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: qemistree
+  doi: 10.1038/s41589-020-00677-3
+  title: qemistree
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Paired Omics Data Platform (PoDP)
+  doi: 10.1038/s41589-020-00724-z
+  title: Paired Omics Data Platform (PoDP)
+  repo_url: iomega/paired-data-form
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: sirius
+  doi: 10.1038/s41592-019-0344-8
+  title: sirius
+  repo_url: sirius-ms/sirius
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ReDU
+  doi: 10.1038/s41592-020-0916-7
+  title: ReDU
+  repo_url: mwang87/ReDU-MS2-Documentation
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SpaceM
+  doi: 10.1038/s41592-021-01198-0
+  title: SpaceM
+  repo_url: alexandrovteam/SpaceM
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Spectral entropy
+  doi: 10.1038/s41592-021-01331-z
+  title: Spectral entropy
+  repo_url: YuanyueLi/SpectralEntropy
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GNPS Dashboard
+  doi: 10.1038/s41592-021-01339-5
+  title: GNPS Dashboard
+  repo_url: Wang-Bioinformatics-Lab/GNPS_LCMSDashboard
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSNovelist
+  doi: 10.1038/s41592-022-01486-3
+  title: MSNovelist
+  repo_url: meowcat/MSNovelist
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GLEAMS
+  doi: 10.1038/s41592-022-01496-1
+  title: GLEAMS
+  repo_url: bittremieux-lab/GLEAMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Flash entropy search
+  doi: 10.1038/s41592-023-02012-9
+  title: Flash entropy search
+  repo_url: YuanyueLi/FlashEntropySearch
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: RepoRT (retention-time repository)
+  doi: 10.1038/s41592-023-02143-z
+  title: RepoRT (retention-time repository)
+  repo_url: michaelwitting/RepoRT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MEISTER
+  doi: 10.1038/s41592-024-02171-3
+  title: MEISTER
+  repo_url: richardxie1119/MEISTER
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Spectral Denoising
+  doi: 10.1038/s41592-025-02646-x
+  title: Spectral Denoising
+  repo_url: FanzhouKong/spectral_denoising
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MassQL
+  doi: 10.1038/s41592-025-02785-1
+  title: MassQL
+  repo_url: mwang87/MassQueryLanguage
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSnLib
+  doi: 10.1038/s41592-025-02813-0
+  title: MSnLib
+  repo_url: corinnabrungs/msn_tree_library
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GNPS molecular networking protocol
+  doi: 10.1038/s41596-020-0317-5
+  title: GNPS molecular networking protocol
+  repo_url: CCMS-UCSD/GNPS_Workflows
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NOREVA
+  doi: 10.1038/s41596-021-00636-9
+  title: NOREVA
+  repo_url: idrblab/NOREVA;
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FBMN-STATS
+  doi: 10.1038/s41596-024-01046-3
+  title: FBMN-STATS
+  repo_url: Functional-Metabolomics-Lab/FBMN-STATS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GNPS2 drug-metabolism toolkit
+  doi: 10.1038/s41596-025-01237-6
+  title: GNPS2 drug-metabolism toolkit
+  repo_url: Wang-Bioinformatics-Lab/GNPS2_Workflows
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Instant Clue
+  doi: 10.1038/s41598-018-31154-6
+  title: Instant Clue
+  repo_url: hnolCol/instantclue
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Dbnorm
+  doi: 10.1038/s41598-021-84824-3
+  title: Dbnorm
+  repo_url: NBDZ/dbnorm
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SIMPEL
+  doi: 10.1038/s42003-024-05844-z
+  title: SIMPEL
+  repo_url: SIMPELmetabolism/SIMPEL
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Spec2Mol
+  doi: 10.1038/s42004-023-00932-3
+  title: Spec2Mol
+  repo_url: KavrakiLab/Spec2Mol
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SigmaCCS
+  doi: 10.1038/s42004-023-00939-w
+  title: SigmaCCS
+  repo_url: zmzhang/SigmaCCS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: TeFT
+  doi: 10.1038/s42004-024-01189-0
+  title: TeFT
+  repo_url: thumingo/TeFT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NMRFx
+  doi: 10.1038/s42004-025-01812-8
+  title: NMRFx
+  repo_url: nanalysis/nmrfx
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 13C-SpaceM
+  doi: 10.1038/s42255-024-01118-4
+  title: 13C-SpaceM
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ZODIAC
+  doi: 10.1038/s42256-020-00234-6
+  title: ZODIAC
+  repo_url: boecker-lab/sirius
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MIST (chemical formula transformer)
+  doi: 10.1038/s42256-023-00708-3
+  title: MIST (chemical formula transformer)
+  repo_url: samgoldman97/mist
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ICEBERG
+  doi: 10.1038/s42256-024-00816-8
+  title: ICEBERG
+  repo_url: samgoldman97/ms-pred
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSGo
+  doi: 10.1038/s42256-025-01140-5
+  title: MSGo
+  repo_url: aaronma2020/MSGO
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: VInSMoC
+  doi: 10.1038/s43588-025-00923-5
+  title: VInSMoC
+  repo_url: mohimanilab/VInSMoC
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboPAC
+  doi: 10.1039/d2mo00168c
+  title: MetaboPAC
+  repo_url: gtStyLab/MetaboPAC
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS2LDA
+  doi: 10.1073/pnas.1608041113
+  title: MS2LDA
+  repo_url: vdhooftcompmet/MS2LDA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: FeatureFinderMetabo
+  doi: 10.1074/mcp.M113.031278
+  title: FeatureFinderMetabo
+  repo_url: OpenMS/OpenMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1080/01621459.2017.1397521
+  doi: 10.1080/01621459.2017.1397521
+  title: 10.1080/01621459.2017.1397521
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS2Compound
+  doi: 10.1089/omi.2021.0051
+  title: MS2Compound
+  repo_url: beherasan/MS2Compound
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LargeMetabo
+  doi: 10.1093/bib/bbac455
+  title: LargeMetabo
+  repo_url: LargeMetabo/LargeMetabo
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1093/bib/bbac542
+  doi: 10.1093/bib/bbac542
+  title: 10.1093/bib/bbac542
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SPIFFED
+  doi: 10.1093/bib/bbad229/7199559
+  title: SPIFFED
+  repo_url: bio-it-station/SPIFFED
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GcDUO
+  doi: 10.1093/bib/bbaf080
+  title: GcDUO
+  repo_url: mariallr/GcDuo
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaMOPE
+  doi: 10.1093/bioadv/vbad061/7172446
+  title: MetaMOPE
+  repo_url: CMDM-Lab/MetaMOPE
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MultiOmicsIntegrator
+  doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+  repo_url: ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MeTEor
+  doi: 10.1093/bioadv/vbae178
+  title: MeTEor
+  repo_url: scibiome/meteor
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Protomix
+  doi: 10.1093/bioadv/vbae192
+  title: Protomix
+  repo_url: mzniber/Protomix
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: AnnoMe
+  doi: 10.1093/bioadv/vbag111
+  title: AnnoMe
+  repo_url: chrboku/AnnoMe
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ncGTW
+  doi: 10.1093/bioinformatics/btaa037
+  title: ncGTW
+  repo_url: ChiungTingWu/ncGTW
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: struct
+  doi: 10.1093/bioinformatics/btaa1031
+  title: struct
+  repo_url: computational-metabolomics/struct
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: M2R
+  doi: 10.1093/bioinformatics/btab060/6125380
+  title: M2R
+  repo_url: e-weglarz-tomczak/m2r
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzRAPP
+  doi: 10.1093/bioinformatics/btab231/6214530
+  title: mzRAPP
+  repo_url: YasinEl/mzRAPP
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: AutoCCS
+  doi: 10.1093/bioinformatics/btab429
+  title: AutoCCS
+  repo_url: PNNL-Comp-Mass-Spec/AutoCCS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Amanida
+  doi: 10.1093/bioinformatics/btab591
+  title: Amanida
+  repo_url: mariallr/amanida
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mspack
+  doi: 10.1093/bioinformatics/btab636/6363791
+  title: mspack
+  repo_url: fhanau/mspack
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: maplet
+  doi: 10.1093/bioinformatics/btab741/6409851
+  title: maplet
+  repo_url: krumsieklab/maplet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: massNet
+  doi: 10.1093/bioinformatics/btac032/6510930
+  title: massNet
+  repo_url: wabdelmoula/massNet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Metaboprep
+  doi: 10.1093/bioinformatics/btac059/6522114
+  title: Metaboprep
+  repo_url: MRCIEU/metaboprep
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PeakBot
+  doi: 10.1093/bioinformatics/btac344
+  title: PeakBot
+  repo_url: christophuv/PeakBot
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MAFFIN
+  doi: 10.1093/bioinformatics/btac355/6593484
+  title: MAFFIN
+  repo_url: HuanLab/MAFFIN
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MiMIR
+  doi: 10.1093/bioinformatics/btac388
+  title: MiMIR
+  repo_url: DanieleBizzarri/MiMIR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MobilityTransformR
+  doi: 10.1093/bioinformatics/btac441
+  title: MobilityTransformR
+  repo_url: LiesaSalzer/MobilityTransformR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: homologueDiscoverer
+  doi: 10.1093/bioinformatics/btac647/6722615
+  title: homologueDiscoverer
+  repo_url: kevinmildau/homologueDiscoverer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ADViSELipidomics
+  doi: 10.1093/bioinformatics/btac706
+  title: ADViSELipidomics
+  repo_url: ShinyFabio/ADViSELipidomics
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ChemWalker
+  doi: 10.1093/bioinformatics/btad078/7067745
+  title: ChemWalker
+  repo_url: computational-chemical-biology/ChemWalker
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DBDIpy
+  doi: 10.1093/bioinformatics/btad088/7036334
+  title: DBDIpy
+  repo_url: leopold-weidner/DBDIpy
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 3DMolMS
+  doi: 10.1093/bioinformatics/btad354
+  title: 3DMolMS
+  repo_url: JosieHong/3DMolMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ipaPy2
+  doi: 10.1093/bioinformatics/btad455
+  title: ipaPy2
+  repo_url: francescodc87/ipaPy2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: metGWAS 1.0
+  doi: 10.1093/bioinformatics/btad523/7248906
+  title: metGWAS 1.0
+  repo_url: saifurbd28/metGWAS-1.0
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: RT-Transformer
+  doi: 10.1093/bioinformatics/btae084
+  title: RT-Transformer
+  repo_url: 01dadada/RT-Transformer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboReport
+  doi: 10.1093/bioinformatics/btae373
+  title: MetaboReport
+  repo_url: YonghuiDong/MetReport
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ESP
+  doi: 10.1093/bioinformatics/btae490
+  title: ESP
+  repo_url: HassounLab/ESP
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: msFeaST
+  doi: 10.1093/bioinformatics/btae584
+  title: msFeaST
+  repo_url: kevinmildau/msFeaST
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetAssimulo 2.0
+  doi: 10.1093/bioinformatics/btaf045
+  title: MetAssimulo 2.0
+  repo_url: yanyan5420/MetAssimulo_2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Eclipse
+  doi: 10.1093/bioinformatics/btaf290/8128335
+  title: Eclipse
+  repo_url: broadinstitute/bmxp
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: JESTR
+  doi: 10.1093/bioinformatics/btaf354
+  title: JESTR
+  repo_url: HassounLab/JESTR1
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1093/bioinformatics/btr597
+  doi: 10.1093/bioinformatics/btr597
+  title: 10.1093/bioinformatics/btr597
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Cardinal
+  doi: 10.1093/bioinformatics/btv146
+  title: Cardinal
+  repo_url: kuwisdelu/Cardinal
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaMapR
+  doi: 10.1093/bioinformatics/btv194
+  title: MetaMapR
+  repo_url: dgrapov/MetaMapR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MWASTools
+  doi: 10.1093/bioinformatics/btx477
+  title: MWASTools
+  repo_url: AndreaRMICL/MWASTools
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: pymzml
+  doi: 10.1093/bioinformatics/bty046
+  title: pymzml
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ChemDistiller
+  doi: 10.1093/bioinformatics/bty080
+  title: ChemDistiller
+  repo_url: Mrqeoqqt/chemdistiller
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboDiff
+  doi: 10.1093/bioinformatics/bty344
+  title: MetaboDiff
+  repo_url: andreasmock/MetaboDiff
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LC retention order prediction
+  doi: 10.1093/bioinformatics/bty590
+  title: LC retention order prediction
+  repo_url: aalto-ics-kepaco/retention_order_prediction
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetumpX untargeted MS support package
+  doi: 10.1093/bioinformatics/btz765
+  title: MetumpX untargeted MS support package
+  repo_url: hasaniqbal777/MetumpX-bin
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: BiG-SLiCE
+  doi: 10.1093/gigascience/giaa154
+  title: BiG-SLiCE
+  repo_url: medema-group/bigslice
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Lilikoi V2.0
+  doi: 10.1093/gigascience/giaa162
+  title: Lilikoi V2.0
+  repo_url: lanagarmire/lilikoi2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MIBiG 3.0
+  doi: 10.1093/nar/gkac1049
+  title: MIBiG 3.0
+  repo_url: mibig-secmet/mibig-json
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: BioTransformer 3.0
+  doi: 10.1093/nar/gkac408
+  title: BioTransformer 3.0
+  repo_url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboAnalyst 6.0
+  doi: 10.1093/nar/gkae253
+  title: MetaboAnalyst 6.0
+  repo_url: xia-lab/MetaboAnalystR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CFM-ID
+  doi: 10.1093/nar/gku436
+  title: CFM-ID
+  repo_url: wishartlab/cfm-id
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MIBiG 2.0
+  doi: 10.1093/nar/gkz882
+  title: MIBiG 2.0
+  repo_url: mibig-secmet/mibig-json
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NPOmix
+  doi: 10.1093/pnasnexus/pgac257/6847575
+  title: NPOmix
+  repo_url: tiagolbiotech/NPOmix_python
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipidLynxX
+  doi: 10.1101/2020.04.09.033894
+  title: LipidLynxX
+  repo_url: SysMedOs/LipidLynxX
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Metabolomics Spectrum Resolver
+  doi: 10.1101/2020.05.09.086066
+  title: Metabolomics Spectrum Resolver
+  repo_url: mwang87/MetabolomicsSpectrumResolver
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: rawrr
+  doi: 10.1101/2020.10.30.362533
+  title: rawrr
+  repo_url: fgcz/rawrr
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetENP
+  doi: 10.1101/2020.11.20.391912
+  title: MetENP
+  repo_url: metabolomicsworkbench/MetENP
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: hRUV
+  doi: 10.1101/2020.12.21.423723
+  title: hRUV
+  repo_url: SydneyBioX/hRUV
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaFetcheR
+  doi: 10.1101/2021.02.28.433248v2
+  title: MetaFetcheR
+  repo_url: komorowskilab/MetaFetcheR
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PaIRKAT
+  doi: 10.1101/2021.04.23.440821v1
+  title: PaIRKAT
+  repo_url: CharlieCarpenter/PaIRKAT
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: isopair
+  doi: 10.1101/2021.12.05.471237v2
+  title: isopair
+  repo_url: kilgain/MassSpec
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MolNotator
+  doi: 10.1101/2021.12.21.473622v1
+  title: MolNotator
+  repo_url: ZzakB/MolNotator
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1101/2022.08.09.503345
+  doi: 10.1101/2022.08.09.503345
+  title: 10.1101/2022.08.09.503345
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: InjectionDesign
+  doi: 10.1101/2023.02.26.530140v1.article-info
+  title: InjectionDesign
+  repo_url: CSi-Studio/InjectionDesign
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NMRQNet
+  doi: 10.1101/2023.03.01.530642v1
+  title: NMRQNet
+  repo_url: LiuzLab/NMRQNet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1101/2023.03.15.532823v1
+  doi: 10.1101/2023.03.15.532823v1
+  title: 10.1101/2023.03.15.532823v1
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Mass2SMILES
+  doi: 10.1101/2023.07.06.547963v1
+  title: Mass2SMILES
+  repo_url: volvox292/mass2smiles
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: BAGO
+  doi: 10.1101/2023.09.08.556930
+  title: BAGO
+  repo_url: huaxuyu/bago
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS2DeepScore 2.0
+  doi: 10.1101/2024.03.25.586580v5
+  title: MS2DeepScore 2.0
+  repo_url: matchms/MS2DeepScore
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: plantMASST
+  doi: 10.1101/2024.05.13.593988v1
+  title: plantMASST
+  repo_url: helenamrusso/plantmasst
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DeepMASS
+  doi: 10.1101/2024.05.30.596727v2
+  title: DeepMASS
+  repo_url: hcji/DeepMASS2_Data_Processing
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1101/2024.06.20.599545
+  doi: 10.1101/2024.06.20.599545
+  title: 10.1101/2024.06.20.599545
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MargheRita
+  doi: 10.1101/2024.06.20.599545v1
+  title: MargheRita
+  repo_url: emosca-cnr/margheRita
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MCN
+  doi: 10.1101/2024.08.02.606356v2
+  title: MCN
+  repo_url: Alexander0/molecular_communities
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: RegFilter
+  doi: 10.1101/2024.08.07.607073v1
+  title: RegFilter
+  repo_url: computational-chemical-biology/regression_filter
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Recon8D
+  doi: 10.1101/2024.08.17.608400v2
+  title: Recon8D
+  repo_url: sriram-lab/Recon8D
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: haCCA
+  doi: 10.1101/2024.08.20.608773v2
+  title: haCCA
+  repo_url: LittleLittleCloud/haCCA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipiDetective
+  doi: 10.1101/2024.10.07.617094v3
+  title: LipiDetective
+  repo_url: LipiTUM/lipidetective
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NPLinker
+  doi: 10.1101/2024.10.11.617756
+  title: NPLinker
+  repo_url: NPLinker/nplinker
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1101/2024.10.14.618269
+  doi: 10.1101/2024.10.14.618269
+  title: 10.1101/2024.10.14.618269
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SpaMTP
+  doi: 10.1101/2024.10.31.621429v1
+  title: SpaMTP
+  repo_url: GenomicsMachineLearning/SpaMTP
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SingleFrag
+  doi: 10.1101/2024.11.04.621329v1
+  title: SingleFrag
+  repo_url: MaribelPR/SingleFrag
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DeepMet
+  doi: 10.1101/2024.11.13.623458v1
+  title: DeepMet
+  repo_url: skinniderlab/clm
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzLearn
+  doi: 10.1101/2025.01.26.634927v3
+  title: mzLearn
+  repo_url: ReviveMed/mzEmbed
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ChemEmbed
+  doi: 10.1101/2025.02.07.637102v1
+  title: ChemEmbed
+  repo_url: massspecdl/ChemEmbed
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1101/2025.04.28.651123v1.abstract
+  doi: 10.1101/2025.04.28.651123v1.abstract
+  title: 10.1101/2025.04.28.651123v1.abstract
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaNet
+  doi: 10.1101/2025.06.26.661636v1
+  title: MetaNet
+  repo_url: Asa12138/MetaNet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: EnrichMET
+  doi: 10.1101/2025.08.28.672951v2
+  title: EnrichMET
+  repo_url: biodatalab/enrichmet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DIMPLE
+  doi: 10.1101/2025.09.22.677919v1
+  title: DIMPLE
+  repo_url: dickinsonlab/DIMPLE-code
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Metanorm
+  doi: 10.1101/2025.09.30.679445v1
+  title: Metanorm
+  repo_url: UGent-LIMET/Metanorm
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: LipidQMap
+  doi: 10.1101/2025.10.15.682422v1
+  title: LipidQMap
+  repo_url: swinnenteam/LipidQMap
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1101/2025.11.07.687008
+  doi: 10.1101/2025.11.07.687008
+  title: 10.1101/2025.11.07.687008
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboliteChat
+  doi: 10.1101/2025.11.07.687008v1
+  title: MetaboliteChat
+  repo_url: 13501274828/MetaboliteChat
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaXtract
+  doi: 10.1101/2025.11.12.687968v1
+  title: MetaXtract
+  repo_url: Rappsilber-Laboratory/MetaXtract
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MVP
+  doi: 10.1101/2025.11.12.688047v1
+  title: MVP
+  repo_url: HassounLab/MVP
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: AutoTuner parameter selection
+  doi: 10.1101/812370
+  title: AutoTuner parameter selection
+  repo_url: KujawinskiLaboratory/Autotuner
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboliticsDB
+  doi: 10.1109/tcbbio.2025.3563807
+  title: MetaboliticsDB
+  repo_url: alperdokay/metabolitics-frontend
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetMiner, MDAtoolkits
+  doi: 10.1111/jipb.13774
+  title: MetMiner, MDAtoolkits
+  repo_url: ShawnWx2019/MetMiner
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1111/jipb.13774-cyan
+  doi: 10.1111/jipb.13774-cyan
+  title: 10.1111/jipb.13774-cyan
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: omu metabolomics count data tool
+  doi: 10.1128/mra.00129-19
+  title: omu metabolomics count data tool
+  repo_url: connor-reid-tiffany/Omu
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mpactr
+  doi: 10.1128/mra.00997-24
+  title: mpactr
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: BiG-MAP
+  doi: 10.1128/msystems.00937-21
+  title: BiG-MAP
+  repo_url: medema-group/BiG-MAP
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1145/2939672.2939778
+  doi: 10.1145/2939672.2939778
+  title: 10.1145/2939672.2939778
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1158/0008-5472.can-14-1490
+  doi: 10.1158/0008-5472.can-14-1490
+  title: 10.1158/0008-5472.can-14-1490
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CycloBranch
+  doi: 10.1177/14690667231164766
+  title: CycloBranch
+  repo_url: novak-jiri/cyclobranch
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzmine2
+  doi: 10.1186/1471-2105-11-395
+  title: mzmine2
+  repo_url: mzmine/mzmine2
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1186/1471-2105-15-s11-s5
+  doi: 10.1186/1471-2105-15-s11-s5
+  title: 10.1186/1471-2105-15-s11-s5
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1186/1471-2105-6-225
+  doi: 10.1186/1471-2105-6-225
+  title: 10.1186/1471-2105-6-225
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1186/2047-217x-2-16
+  doi: 10.1186/2047-217x-2-16
+  title: 10.1186/2047-217x-2-16
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1186/s12859-017-1547-6
+  doi: 10.1186/s12859-017-1547-6
+  title: 10.1186/s12859-017-1547-6
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: lipidmatch
+  doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+  repo_url: GarrettLab-UF/LipidMatch
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SECIMTools
+  doi: 10.1186/s12859-018-2134-1
+  title: SECIMTools
+  repo_url: secimTools/SECIMTools
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ElemCor
+  doi: 10.1186/s12859-019-2669-9
+  title: ElemCor
+  repo_url: 4dsoftware/elemcor
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: marr
+  doi: 10.1186/s12859-021-04336-9
+  title: marr
+  repo_url: Ghoshlab/marr
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: aird
+  doi: 10.1186/s12859-021-04490-0
+  title: aird
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mzBucket
+  doi: 10.1186/s12859-022-04833-5
+  title: mzBucket
+  repo_url: hildebrandtlab/mzBucket
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Pickaxe
+  doi: 10.1186/s12859-023-05149-8
+  title: Pickaxe
+  repo_url: tyo-nu/MINE-Database
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GlyKAn AZ
+  doi: 10.1186/s12859-023-05346-5
+  title: GlyKAn AZ
+  repo_url: ZaylaSchaeffer/GlyKAn-AZ-application
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: G-Aligner
+  doi: 10.1186/s12859-023-05525-4
+  title: G-Aligner
+  repo_url: CSi-Studio/G-Aligner
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DNEA
+  doi: 10.1186/s12859-024-05994-1
+  title: DNEA
+  repo_url: Karnovsky-Lab/DNEA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MDRB
+  doi: 10.1186/s13020-024-01031-8
+  title: MDRB
+  repo_url: 933ZhangDD/MDRB
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetFrag
+  doi: 10.1186/s13321-016-0115-9
+  title: MetFrag
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ClassyFire
+  doi: 10.1186/s13321-016-0174-y
+  title: ClassyFire
+  repo_url: https://bitbucket.org/wishartlab/classyfire_api.git
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: BioTransformer 1.0
+  doi: 10.1186/s13321-019-0375-2
+  title: BioTransformer 1.0
+  repo_url: https://bitbucket.org/wishartlab/biotransformer.git
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1186/s13321-020-00449-0
+  doi: 10.1186/s13321-020-00449-0
+  title: 10.1186/s13321-020-00449-0
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: patRoon
+  doi: 10.1186/s13321-020-00477-w
+  title: patRoon
+  repo_url: rickhelmus/patRoon
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: COCONUT
+  doi: 10.1186/s13321-020-00478-9
+  title: COCONUT
+  repo_url: Steinbeck-Lab/coconut
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ChemSpectra
+  doi: 10.1186/s13321-020-00481-0
+  title: ChemSpectra
+  repo_url: ComPlat/chem-spectra-app
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MassSpecBlocks
+  doi: 10.1186/s13321-021-00530-2
+  title: MassSpecBlocks
+  repo_url: privrja/MassSpecBlocks
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS2DeepScore
+  doi: 10.1186/s13321-021-00558-4
+  title: MS2DeepScore
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: cmmrt
+  doi: 10.1186/s13321-022-00613-8
+  title: cmmrt
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MAW
+  doi: 10.1186/s13321-023-00695-y
+  title: MAW
+  repo_url: zmahnoor14/MAW
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: UmetaFlow
+  doi: 10.1186/s13321-023-00724-w
+  title: UmetaFlow
+  repo_url: biosustain/snakemake_UmetaFlow
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: bindiscover
+  doi: 10.1186/s13321-023-00734-8
+  title: bindiscover
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DeepSAT
+  doi: 10.1186/s13321-023-00738-4
+  title: DeepSAT
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Mass-Suite
+  doi: 10.1186/s13321-023-00741-9
+  title: Mass-Suite
+  repo_url: XiminHu/mass-suite
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: idslmint
+  doi: 10.1186/s13321-024-00804-5
+  title: idslmint
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: TransExION
+  doi: 10.1186/s13321-024-00858-5
+  title: TransExION
+  repo_url: banhdzui/TransExION
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: matchms
+  doi: 10.1186/s13321-024-00878-1
+  title: matchms
+  repo_url: matchms/matchms
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mol2ccs
+  doi: 10.1186/s13321-024-00899-w
+  title: mol2ccs
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ROASMI
+  doi: 10.1186/s13321-025-00968-8
+  title: ROASMI
+  repo_url: FangYuan717/ROASMI
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Shinyscreen
+  doi: 10.1186/s13321-025-01044-x
+  title: Shinyscreen
+  repo_url: https://gitlab.com/uniluxembourg/lcsb/eci/shinyscreen.git
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: minems2
+  doi: 10.1186/s13321-025-01051-y
+  title: minems2
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Galaxy-M
+  doi: 10.1186/s13742-016-0115-8
+  title: Galaxy-M
+  repo_url: Viant-Metabolomics/Galaxy-M
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NPClassScore
+  doi: 10.1186/s40168-022-01444-3
+  title: NPClassScore
+  repo_url: NPLinker/nplinker
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboDirect
+  doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: HExpMetDB
+  doi: 10.1289/EHP7722
+  title: HExpMetDB
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MEANtools
+  doi: 10.1371/journal.pbio.3003307
+  title: MEANtools
+  repo_url: IntegrativeBioinformaticsLab/meantools
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mummichog
+  doi: 10.1371/journal.pcbi.1003123
+  title: mummichog
+  repo_url: shuzhao-li/mummichog
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GSimp
+  doi: 10.1371/journal.pcbi.1005973
+  title: GSimp
+  repo_url: WandeRum/GSimp
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Spec2Vec
+  doi: 10.1371/journal.pcbi.1008724
+  title: Spec2Vec
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1371/journal.pcbi.1008920
+  doi: 10.1371/journal.pcbi.1008920
+  title: 10.1371/journal.pcbi.1008920
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MiMeNet
+  doi: 10.1371/journal.pcbi.1009021
+  title: MiMeNet
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ORA
+  doi: 10.1371/journal.pcbi.1009105
+  title: ORA
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: POMAShiny
+  doi: 10.1371/journal.pcbi.1009148
+  title: POMAShiny
+  repo_url: nutrimetabolomics/POMAShiny
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: INTEGRATE
+  doi: 10.1371/journal.pcbi.1009337
+  title: INTEGRATE
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: COMMIT
+  doi: 10.1371/journal.pcbi.1009906
+  title: COMMIT
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: iPRESTO
+  doi: 10.1371/journal.pcbi.1010462
+  title: iPRESTO
+  repo_url: https://git.wur.nl/bioinformatics/iPRESTO.git
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1371/journal.pcbi.1011814
+  doi: 10.1371/journal.pcbi.1011814
+  title: 10.1371/journal.pcbi.1011814
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: pcpfm
+  doi: 10.1371/journal.pcbi.1011912
+  title: pcpfm
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1371/journal.pntd.0006215
+  doi: 10.1371/journal.pntd.0006215
+  title: 10.1371/journal.pntd.0006215
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetNet
+  doi: 10.1371/journal.pone.0246962
+  title: MetNet
+  repo_url: simeoni-biolab/MetNet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: uafr
+  doi: 10.1371/journal.pone.0306202
+  title: uafr
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MSMCE
+  doi: 10.1371/journal.pone.0321239
+  title: MSMCE
+  repo_url: WoodFY/MSMCE
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GetFeatistics
+  doi: 10.1515/jib-2025-0047
+  title: GetFeatistics
+  repo_url: FrigerioGianfranco/GetFeatistics
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.1529/biophysj.103.038422
+  doi: 10.1529/biophysj.103.038422
+  title: 10.1529/biophysj.103.038422
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Viime
+  doi: 10.21105/joss.02410
+  title: Viime
+  repo_url: girder/viime
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.21105/joss.02411
+  doi: 10.21105/joss.02411
+  title: 10.21105/joss.02411
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: subMALDI
+  doi: 10.21105/joss.02694
+  title: subMALDI
+  repo_url: wesleyburr/subMaldi
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: vimms
+  doi: 10.21105/joss.03990
+  title: vimms
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: msmetaenhancer
+  doi: 10.21105/joss.04494
+  title: msmetaenhancer
+  repo_url: RECETOX/MSMetaEnhancer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: spectripy
+  doi: 10.21105/joss.08070
+  title: spectripy
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: OpenNAU
+  doi: 10.21147/j.issn.1000-9604.2023.05.11
+  title: OpenNAU
+  repo_url: zjuRong/openNAU
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.25345/C5FD2F
+  doi: 10.25345/C5FD2F
+  title: 10.25345/C5FD2F
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Finnee 2024
+  doi: 10.26434/chemrxiv-2024-1zk33
+  title: Finnee 2024
+  repo_url: glerny/Finnee2024
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Spectro
+  doi: 10.26434/chemrxiv-2024-37v2j
+  title: Spectro
+  repo_url: ChemAI-Lab/spectro
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: biosynfoni
+  doi: 10.26434/chemrxiv-2025-cwq74
+  title: biosynfoni
+  repo_url: lucinamay/biosynfoni
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: IsoFusion
+  doi: 10.26599/bdma.2024.9020059
+  title: IsoFusion
+  repo_url: xfcui/IsoFusion
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MEMO (MS2-BasEd saMple vectOrization)
+  doi: 10.3389/fbinf.2022.842964
+  title: MEMO (MS2-BasEd saMple vectOrization)
+  repo_url: mandelbrot-project/memo
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DNA adduct database
+  doi: 10.3389/fchem.2022.908572
+  title: DNA adduct database
+  repo_url: https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: GraphBio
+  doi: 10.3389/fgene.2022.957317
+  title: GraphBio
+  repo_url: databio2022/GraphBio
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: Inventa
+  doi: 10.3389/fmolb.2022.1028334
+  title: Inventa
+  repo_url: luigiquiros/inventa
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: TurboPutative
+  doi: 10.3389/fmolb.2022.952149
+  title: TurboPutative
+  repo_url: CNIC-Proteomics/TurboPutative
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboLINK/ PCA-GLASSO
+  doi: 10.3389/fnins.2024.1520982
+  title: MetaboLINK/ PCA-GLASSO
+  repo_url: jlichtarge/pcaGLASSO
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: TIMA (Taxonomically Informed Metabolite Annotation, TIMA-R)
+  doi: 10.3389/fpls.2019.01329
+  title: TIMA (Taxonomically Informed Metabolite Annotation, TIMA-R)
+  repo_url: taxonomicallyinformedannotation/tima
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: CorrDIA
+  doi: 10.3390/app13105969
+  title: CorrDIA
+  repo_url: zhangxiang1205/CorrDIA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SMAnalyst
+  doi: 10.3390/biom15111562
+  title: SMAnalyst
+  repo_url: mzlab-research/SManalyst
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SMITER
+  doi: 10.3390/genes12030396
+  title: SMITER
+  repo_url: LeidelLab/SMITER
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: notame
+  doi: 10.3390/metabo10040135
+  title: notame
+  repo_url: antonvsdata/notame
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.3390/metabo10100416
+  doi: 10.3390/metabo10100416
+  title: 10.3390/metabo10100416
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: pals
+  doi: 10.3390/metabo11020103
+  title: pals
+  repo_url: glasgowcompbio/PALS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: mwtab Python Library for RESTful Access
+  doi: 10.3390/metabo11030163
+  title: mwtab Python Library for RESTful Access
+  repo_url: MoseleyBioinformaticsLab/mwtab
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: spectra
+  doi: 10.3390/metabo12020173
+  title: spectra
+  repo_url: rformassspectrometry/Spectra
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: JPA
+  doi: 10.3390/metabo12030212
+  title: JPA
+  repo_url: HuanLab/JPA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MAVEN2
+  doi: 10.3390/metabo12080684
+  title: MAVEN2
+  repo_url: eugenemel/maven
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: ConCISE
+  doi: 10.3390/metabo12121275
+  title: ConCISE
+  repo_url: zquinlan/concise
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: messes
+  doi: 10.3390/metabo13070842
+  title: messes
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SMetaS
+  doi: 10.3390/metabo13080941
+  title: SMetaS
+  repo_url: metabolomics-us/metadatastandardizer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SERDA
+  doi: 10.3390/metabo13080944
+  title: SERDA
+  repo_url: slfan2013/SERDA
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.3390/metabo13121167
+  doi: 10.3390/metabo13121167
+  title: 10.3390/metabo13121167
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DisCo P-ad
+  doi: 10.3390/metabo15010028
+  title: DisCo P-ad
+  repo_url: KechrisLab/DisCoPad
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MetaboLabPy
+  doi: 10.3390/metabo15010048
+  title: MetaboLabPy
+  repo_url: ludwigc/metabolabpy
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: RaMP
+  doi: 10.3390/metabo8010016
+  title: RaMP
+  repo_url: mathelab/RaMP-DB
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: molnetenhancer
+  doi: 10.3390/metabo9070144
+  title: molnetenhancer
+  repo_url: madeleineernst/pyMolNetEnhancer
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: WiPP GC-MS peak picking workflow
+  doi: 10.3390/metabo9090171
+  title: WiPP GC-MS peak picking workflow
+  repo_url: bihealth/WiPP
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: PlantMetSuite
+  doi: 10.3390/plants12152880
+  title: PlantMetSuite
+  repo_url: YaonanLab/PlantMetSuite
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: fragnnet
+  doi: 10.48550/arxiv.2404.02360
+  title: fragnnet
+  repo_url: FraGNNet/fragnnet
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: NetAurHPD
+  doi: 10.48550/arxiv.2410.22030
+  title: NetAurHPD
+  repo_url: TamirBar-Tov/NetAurHPD-Network-Auralization-Hyperlink-Prediction-Method
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MADGEN
+  doi: 10.48550/arxiv.2501.01950
+  title: MADGEN
+  repo_url: HassounLab/MADGEN
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: SpecTUS
+  doi: 10.48550/arxiv.2502.05114
+  title: SpecTUS
+  repo_url: hejjack/SpecTUS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DiffMS
+  doi: 10.48550/arxiv.2502.09571
+  title: DiffMS
+  repo_url: coleygroup/DiffMS
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: DiffSpectra
+  doi: 10.48550/arxiv.2507.06853
+  title: DiffSpectra
+  repo_url: AzureLeon1/DiffSpectra
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS2toImg
+  doi: 10.48550/arxiv.2510.09716
+  title: MS2toImg
+  repo_url: jsehhs/MS2toImg-CNN
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: MS-BART
+  doi: 10.48550/arxiv.2510.20615
+  title: MS-BART
+  repo_url: OpenDFM/MS-BART
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.10018590
+  doi: 10.5281/zenodo.10018590
+  title: 10.5281/zenodo.10018590
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.1043226
+  doi: 10.5281/zenodo.1043226
+  title: 10.5281/zenodo.1043226
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.1043226.svg
+  doi: 10.5281/zenodo.1043226.svg
+  title: 10.5281/zenodo.1043226.svg
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.11199061
+  doi: 10.5281/zenodo.11199061
+  title: 10.5281/zenodo.11199061
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.11199061.svg
+  doi: 10.5281/zenodo.11199061.svg
+  title: 10.5281/zenodo.11199061.svg
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.12602805
+  doi: 10.5281/zenodo.12602805
+  title: 10.5281/zenodo.12602805
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: corems
+  doi: 10.5281/zenodo.14009575
+  title: corems
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.14712886
+  doi: 10.5281/zenodo.14712886
+  title: 10.5281/zenodo.14712886
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.14778327
+  doi: 10.5281/zenodo.14778327
+  title: 10.5281/zenodo.14778327
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.14822624
+  doi: 10.5281/zenodo.14822624
+  title: 10.5281/zenodo.14822624
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.15688609
+  doi: 10.5281/zenodo.15688609
+  title: 10.5281/zenodo.15688609
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.16076914
+  doi: 10.5281/zenodo.16076914
+  title: 10.5281/zenodo.16076914
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.16257786
+  doi: 10.5281/zenodo.16257786
+  title: 10.5281/zenodo.16257786
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.17284940
+  doi: 10.5281/zenodo.17284940
+  title: 10.5281/zenodo.17284940
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.17819145
+  doi: 10.5281/zenodo.17819145
+  title: 10.5281/zenodo.17819145
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.18494293
+  doi: 10.5281/zenodo.18494293
+  title: 10.5281/zenodo.18494293
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.19181279
+  doi: 10.5281/zenodo.19181279
+  title: 10.5281/zenodo.19181279
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.3378723
+  doi: 10.5281/zenodo.3378723
+  title: 10.5281/zenodo.3378723
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.363932874
+  doi: 10.5281/zenodo.363932874
+  title: 10.5281/zenodo.363932874
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.3924422.svg
+  doi: 10.5281/zenodo.3924422.svg
+  title: 10.5281/zenodo.3924422.svg
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.3978054
+  doi: 10.5281/zenodo.3978054
+  title: 10.5281/zenodo.3978054
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.5501673
+  doi: 10.5281/zenodo.5501673
+  title: 10.5281/zenodo.5501673
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.5607185
+  doi: 10.5281/zenodo.5607185
+  title: 10.5281/zenodo.5607185
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.5794106
+  doi: 10.5281/zenodo.5794106
+  title: 10.5281/zenodo.5794106
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.6784251
+  doi: 10.5281/zenodo.6784251
+  title: 10.5281/zenodo.6784251
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.5281/zenodo.7565700
+  doi: 10.5281/zenodo.7565700
+  title: 10.5281/zenodo.7565700
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: magma
+  doi: 10.5702/massspectrometry.S0033
+  title: magma
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: 10.6084/m9.figshare.28876751.v2
+  doi: 10.6084/m9.figshare.28876751.v2
+  title: 10.6084/m9.figshare.28876751.v2
+  repo_url: ''
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'
+- name: lotus
+  doi: 10.7554/eLife.70780
+  title: lotus
+  repo_url: lotusnprod/lotus-processor
+  status: included
+  wave: v2-expansion
+  access:
+    type: repo-oa
+    is_oa: true
+    verified_via: git_clone_succeeded_at_build
+    verified_on: '2026-06-22'

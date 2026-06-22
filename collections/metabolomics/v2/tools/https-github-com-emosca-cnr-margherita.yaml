@@ -1,0 +1,12 @@
+name: https://github.com/emosca-cnr/margheRita
+slug: https-github-com-emosca-cnr-margherita
+evidence_spans:
+- 'Source code: https://github.com/emosca-cnr/margheRita'
+- devtools::install_github("antonvsdata/notame")
+- github.com__emosca-cnr__margheRita
+derived_from:
+- doi: 10.1101/2024.06.20.599545
+  title: 'MargheRita: streamlining MS-DIAL output analysis and metabolite identification in R'
+source_repos:
+- emosca-cnr/margheRita
+schema_version: 0.2.0

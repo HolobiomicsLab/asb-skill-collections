@@ -1,0 +1,10 @@
+name: DeepMASS2
+slug: deepmass2
+evidence_spans:
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+derived_from:
+- doi: 10.1101/2024.05.30.596727v2
+  title: DeepMASS
+source_repos:
+- hcji/DeepMASS2_Data_Processing
+schema_version: 0.2.0

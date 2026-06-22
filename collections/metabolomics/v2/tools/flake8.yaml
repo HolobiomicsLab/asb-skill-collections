@@ -1,0 +1,10 @@
+name: flake8
+slug: flake8
+evidence_spans:
+- uses flake8 for linting
+derived_from:
+- doi: 10.1038/s41589-019-0400-9
+  title: BiG-SCAPE biosynthetic diversity
+source_repos:
+- medema-group/BiG-SCAPE
+schema_version: 0.2.0

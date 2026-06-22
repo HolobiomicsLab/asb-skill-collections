@@ -1,0 +1,18 @@
+name: RStudio
+slug: rstudio
+evidence_spans:
+- '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
+- we recommend using RStudio to complete the installation and usage of ISFrag
+- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+derived_from:
+- doi: 10.1016/j.cca.2024.117858
+  title: ALISTER
+- doi: 10.1021/acs.analchem.1c01644
+  title: ISFrag
+- doi: 10.1007/s11306-018-1347-7
+  title: NormalizeMets
+source_repos:
+- Fraunhofer-ITMP/alister
+- HuanLab/ISFrag
+- metabolomicstats/NormalizeMets
+schema_version: 0.2.0

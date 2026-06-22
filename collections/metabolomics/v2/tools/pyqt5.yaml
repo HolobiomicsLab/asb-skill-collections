@@ -1,0 +1,11 @@
+name: PyQt5
+slug: pyqt5
+version_used: 5.15.11
+evidence_spans:
+- PyQt5 5.15.11
+derived_from:
+- doi: 10.1002/nbm.70131
+  title: ROIAL-NMR
+source_repos:
+- Leo-Cheng-Lab/ROIAL-NMR
+schema_version: 0.2.0

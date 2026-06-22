@@ -1,0 +1,18 @@
+name: KEGGREST
+slug: keggrest
+evidence_spans:
+- pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST package
+- query the KEGG database [59] using the R package KEGGREST [60]
+- MetaboDirect can use the assigned molecular formulas to query the KEGG database [59] using the R package KEGGREST [60]
+- which retrieves data from the KEGG API using the function ```keggGet``` from the package KEGGREST
+derived_from:
+- doi: 10.1101/2025.08.28.672951v2
+  title: EnrichMET
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+- doi: 10.1128/mra.00129-19
+  title: omu metabolomics count data tool
+source_repos:
+- biodatalab/enrichmet
+- connor-reid-tiffany/Omu
+schema_version: 0.2.0

@@ -1,0 +1,8 @@
+name: i-van Krevelen
+slug: i-van-krevelen
+evidence_spans:
+- visualization tools i-van Krevelen [31]
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+schema_version: 0.2.0

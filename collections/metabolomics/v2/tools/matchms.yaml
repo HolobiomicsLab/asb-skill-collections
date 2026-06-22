@@ -1,0 +1,30 @@
+name: matchms
+slug: matchms
+version_used: 0.8.2
+evidence_spans:
+- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31]
+- '- [matchms](https://matchms.readthedocs.io/en/latest/)'
+- Matchms offers an array of tools for metadata cleaning and validation
+- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+derived_from:
+- doi: 10.1371/journal.pcbi.1008724
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.1021/acs.analchem.5c01594
+  title: CSU-MS2
+- doi: 10.1186/s13321-024-00878-1
+  title: matchms
+- doi: 10.3389/fbinf.2022.842964
+  title: memo
+- doi: 10.1186/s13321-021-00558-4
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+- doi: https://zenodo.org/badge/latestdoi/310047938
+  title: MS2DeepScore 2.0
+- doi: 10.1371/journal.pcbi.1011912
+  title: Common data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline
+source_repos:
+- matchms/MS2DeepScore
+- matchms/matchms
+- tingxiecsu/CSU-MS2
+schema_version: 0.2.0

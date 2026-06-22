@@ -1,0 +1,11 @@
+name: MS-DIAL v4.00 or higher
+slug: ms-dial-v4-00-or-higher
+evidence_spans:
+- Needs MS-DIAL (v4.00 or higher)
+- Needs MS-DIAL (v4.00 or higher) ... MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis (DDA) or data independent analysis (DIA)
+derived_from:
+- doi: 10.1021/acs.analchem.0c01594
+  title: MS-CleanR
+source_repos:
+- eMetaboHUB/MS-CleanR
+schema_version: 0.2.0

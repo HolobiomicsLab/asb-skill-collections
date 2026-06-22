@@ -1,0 +1,10 @@
+name: IsoPairFinder
+slug: isopairfinder
+evidence_spans:
+- devtools::install_github("DoddLab/IsoPairFinder")
+derived_from:
+- doi: 10.1101/2021.12.05.471237v2
+  title: isopair
+source_repos:
+- kilgain/MassSpec
+schema_version: 0.2.0

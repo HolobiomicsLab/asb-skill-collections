@@ -1,0 +1,12 @@
+name: BridgeDb
+slug: bridgedb
+evidence_spans:
+- 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
+- '[BridgeDb](https://bridgedb.github.io/)'
+- __all__ = ['IDSM', 'CTS', 'CIR', 'PubChem', 'BridgeDb', 'MyService']
+derived_from:
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+source_repos:
+- RECETOX/MSMetaEnhancer
+schema_version: 0.2.0

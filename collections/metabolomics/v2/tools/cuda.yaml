@@ -1,0 +1,24 @@
+name: CUDA
+slug: cuda
+version_used: '11.8'
+evidence_spans:
+- HyperSpec requires `Python 3.8+` with `CUDA` environment
+- HyperSpec requires `Python 3.8+` with `CUDA` environment.
+- The model was trained and tested on GPU nVidia A100 with CUDA 11.8
+- cuda >= 9.0
+- PyTorch：2.6.0 + CUDA 12.4
+derived_from:
+- doi: 10.1021/acs.jproteome.2c00612
+  title: 'HyperSpec: Ultrafast Mass Spectra Clustering in Hyperdimensional Space'
+- doi: 10.1093/bioinformatics/btaf354
+  title: JESTR
+- doi: 10.1007/s10489-022-04351-0
+  title: Mass Spectrum Transformer
+- doi: 10.1021/acs.analchem.5c02655
+  title: SpecEmbedding
+source_repos:
+- HassounLab/JESTR1
+- chensaian/TransG-Net
+- sword-nan/SpecEmbedding
+- wh-xu/Hyper-Spec
+schema_version: 0.2.0

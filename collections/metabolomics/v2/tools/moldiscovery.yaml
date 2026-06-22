@@ -1,0 +1,10 @@
+name: molDiscovery
+slug: moldiscovery
+evidence_spans:
+- To test molDiscovery for academic users, please visit
+derived_from:
+- doi: 10.1038/s41467-021-23986-0
+  title: moldiscovery
+source_repos:
+- mohimanilab/molDiscovery
+schema_version: 0.2.0

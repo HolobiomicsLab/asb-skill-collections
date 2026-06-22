@@ -1,0 +1,10 @@
+name: numpy 1.15.4
+slug: numpy-1-15-4
+evidence_spans:
+- numpy(1.15.4)
+derived_from:
+- doi: 10.1093/bioinformatics/btac032/6510930
+  title: massNet
+source_repos:
+- wabdelmoula/massNet
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: FNICM
+slug: fnicm
+evidence_spans:
+- FNICM is a tool to identify core nodes from significantly perturbed subnetwork.
+derived_from:
+- doi: 10.1021/acs.analchem.3c04131
+  title: 'FNICM: A New Methodology To Identify Core Metabolites Based on Significantly Perturbed Metabolic Subnetworks'
+source_repos:
+- LiQi94/FNICM
+schema_version: 0.2.0

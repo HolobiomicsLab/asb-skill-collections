@@ -1,0 +1,8 @@
+name: Python (NumPy, pandas)
+slug: python-numpy-pandas
+evidence_spans:
+- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies NumPy, pandas
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: MInfer
+slug: minfer
+evidence_spans:
+- MInfer is an R package designed for analyzing metabolomics data
+derived_from:
+- doi: 10.1016/j.cmpb.2025.108672
+  title: MInfer
+source_repos:
+- cellbiomaths/MInfer
+schema_version: 0.2.0

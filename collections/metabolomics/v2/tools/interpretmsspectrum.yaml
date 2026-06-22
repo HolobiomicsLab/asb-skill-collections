@@ -1,0 +1,10 @@
+name: InterpretMSSpectrum
+slug: interpretmsspectrum
+evidence_spans:
+- We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
+derived_from:
+- doi: 10.1021/ac501530d
+  title: RAMClust
+source_repos:
+- cbroeckl/RAMClustR
+schema_version: 0.2.0

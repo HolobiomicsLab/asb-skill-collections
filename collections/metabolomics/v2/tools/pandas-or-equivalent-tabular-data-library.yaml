@@ -1,0 +1,10 @@
+name: pandas or equivalent tabular data library
+slug: pandas-or-equivalent-tabular-data-library
+evidence_spans:
+- entry status is now tracked via the `cluster.status` field
+derived_from:
+- doi: 10.1093/nar/gkac1049
+  title: MIBiG 3.0
+source_repos:
+- mibig-secmet/mibig-json
+schema_version: 0.2.0

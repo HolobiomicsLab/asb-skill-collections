@@ -1,0 +1,11 @@
+name: geoRge
+slug: george
+evidence_spans:
+- library(geoRge)
+- hits <- database_query(geoRgeR = s2, adducts = negative, db = db)
+derived_from:
+- doi: 10.1021/acs.analchem.5b03628
+  title: geoRge
+source_repos:
+- jcapelladesto/geoRge
+schema_version: 0.2.0

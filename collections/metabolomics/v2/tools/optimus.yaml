@@ -1,0 +1,10 @@
+name: Optimus
+slug: optimus
+evidence_spans:
+- '[Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)'
+derived_from:
+- doi: 10.1021/acs.jnatprod.7b00737
+  title: Bioactivity-Based Molecular Networking
+source_repos:
+- DorresteinLaboratory/Bioactive_Molecular_Networks
+schema_version: 0.2.0

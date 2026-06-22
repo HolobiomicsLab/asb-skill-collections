@@ -1,0 +1,10 @@
+name: RGCxGC
+slug: rgcxgc
+evidence_spans:
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+derived_from:
+- doi: 10.1371/journal.pntd.0006215
+  title: Diagnostic metabolite biomarkers of chronic typhoid carriage
+source_repos:
+- DanielQuiroz97/RGCxGC
+schema_version: 0.2.0

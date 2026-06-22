@@ -1,0 +1,8 @@
+name: mzExacto()
+slug: mzexacto
+evidence_spans:
+- '`mzExacto()` collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals.'
+derived_from:
+- doi: 10.1371/journal.pone.0306202
+  title: uafr
+schema_version: 0.2.0

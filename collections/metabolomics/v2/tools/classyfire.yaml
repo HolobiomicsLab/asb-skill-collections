@@ -1,0 +1,15 @@
+name: ClassyFire
+slug: classyfire
+evidence_spans:
+- use NPClassifier instead of ClassyFire by checking the box in the GUI
+- You can copy the InChiKey's from the GNPS DBResult file into the Fiehn Labs' classyfire Batch identifier
+- Classification of molecules is performed using ClassyFire
+derived_from:
+- doi: 10.3390/metabo12121275
+  title: ConCISE
+- doi: 10.1038/s41592-023-02143-z
+  title: RepoRT (retention-time repository)
+source_repos:
+- michaelwitting/RepoRT
+- zquinlan/concise
+schema_version: 0.2.0

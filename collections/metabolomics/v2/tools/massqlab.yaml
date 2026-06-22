@@ -1,0 +1,10 @@
+name: MassQLab
+slug: massqlab
+evidence_spans:
+- github.com__JohnsonDylan__MassQLab
+derived_from:
+- doi: 10.1002/rcm.10132
+  title: MassQLab
+source_repos:
+- JohnsonDylan/MassQLab
+schema_version: 0.2.0

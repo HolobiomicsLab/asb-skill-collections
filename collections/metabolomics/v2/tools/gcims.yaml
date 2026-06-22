@@ -1,0 +1,10 @@
+name: GCIMS
+slug: gcims
+evidence_spans:
+- library(GCIMS)
+derived_from:
+- doi: 10.1016/j.chemolab.2023.104938
+  title: GCIMS
+source_repos:
+- sipss/GCIMS
+schema_version: 0.2.0

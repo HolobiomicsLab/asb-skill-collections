@@ -1,0 +1,10 @@
+name: Mozilla Firefox
+slug: mozilla-firefox
+evidence_spans:
+- 'For Mozilla Firefox: 1. Enter about:config in the browser''s address bar.'
+derived_from:
+- doi: 10.1007/s10858-025-00465-y#sec2
+  title: COLMARvista
+source_repos:
+- lidawei1975/colmarvista
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: Docker Desktop for Mac
+slug: docker-desktop-for-mac
+version_used: '20.10'
+evidence_spans:
+- Docker Desktop for Mac (version 20.10+)
+- this project enables AirdPro to run on macOS through Docker + Wine technology.
+- 'docker-compose.yml # Docker Compose configuration'
+derived_from:
+- doi: 10.1186/s12859-021-04490-0
+  title: aird
+schema_version: 0.2.0

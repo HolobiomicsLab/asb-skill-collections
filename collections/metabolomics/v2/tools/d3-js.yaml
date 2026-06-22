@@ -1,0 +1,10 @@
+name: D3.js
+slug: d3-js
+evidence_spans:
+- interactive visualization and analysis
+derived_from:
+- doi: 10.1021/jasms.5c00237
+  title: MMSA
+source_repos:
+- Wang-Bioinformatics-Lab/NetworkFamily_MultipleAlignment_Website
+schema_version: 0.2.0

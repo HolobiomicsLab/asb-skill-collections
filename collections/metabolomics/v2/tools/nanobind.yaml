@@ -1,0 +1,10 @@
+name: nanobind
+slug: nanobind
+evidence_spans:
+- nanobind binding files are in `src/pyOpenMS/bindings/`
+derived_from:
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+source_repos:
+- OpenMS/OpenMS
+schema_version: 0.2.0

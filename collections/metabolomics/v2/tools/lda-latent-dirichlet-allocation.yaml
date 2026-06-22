@@ -1,0 +1,10 @@
+name: LDA (Latent Dirichlet Allocation)
+slug: lda-latent-dirichlet-allocation
+evidence_spans:
+- spectral topic labels obtained using LDA (Latent Dirichlet Allocation)
+derived_from:
+- doi: 10.1093/bioinformatics/btae490
+  title: ESP
+source_repos:
+- HassounLab/ESP
+schema_version: 0.2.0

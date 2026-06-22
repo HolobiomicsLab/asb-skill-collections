@@ -1,0 +1,10 @@
+name: Dimorphite-DL
+slug: dimorphite-dl
+evidence_spans:
+- 'Dimorphite-DL: For ionization state determination'
+derived_from:
+- doi: 10.1021/jasms.1c00315
+  title: <i>In Silico</i> Collision Cross Section Calculations to Aid Metabolite Annotation
+source_repos:
+- DasSusanta/snakemake_ccs
+schema_version: 0.2.0

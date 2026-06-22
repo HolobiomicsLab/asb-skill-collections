@@ -1,0 +1,77 @@
+name: XCMS
+slug: xcms
+version_used: 3.11.4
+evidence_spans:
+- AutoTuner is a parameter tuning algorithm for XCMS, MZmine2, and other metabolomics data processing softwares.
+- the estimates may be entered directly into XCMS to processes raw untargeted metabolomics data.
+- 'Other metabolomics data processing tools can also be used for customized evaluation: `XCMS'
+- XCMS Development Version 3.11.4 or above
+- Use XCMS package (https://bioconductor.org/packages/release/bioc/html/xcms.html) for peak picking, alignment and grouping
+- open source tools such as XCMS and MS-Dial
+derived_from:
+- doi: 10.1101/812370
+  title: AutoTuner parameter selection
+- doi: 10.1002/9780470508183
+  title: Introduction to Modern Liquid Chromatography
+- doi: 10.1021/acs.analchem.0c05022
+  title: DaDIA
+- doi: 10.1021/acs.analchem.5b03628
+  title: geoRge
+- doi: 10.1515/jib-2025-0047
+  title: 'Streamlining feature elaboration and statistics analysis in metabolomics: the GetFeatistics R-package'
+- doi: 10.1021/acs.jproteome.2c00120
+  title: IDSL.IPA
+- doi: 10.1021/acs.analchem.1c01644
+  title: ISFrag
+- doi: 10.1038/s41467-025-59683-5
+  title: LipidIN
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.1021/acs.analchem.1c03032
+  title: Automated Annotation of Untargeted All-Ion Fragmentation LC–MS Metabolomics Data with MetaboAnnotatoR
+- doi: 10.1186/1471-2105-15-s11-s5
+  title: Quality evaluation of extracted ion chromatograms and chromatographic peaks in liquid chromatography/mass spectrometry-based metabolomics data
+- doi: 10.1093/bioinformatics/btac441
+  title: MobilityTransformR
+- doi: 10.1021/jasms.5c00073
+  title: mzquality
+- doi: 10.1093/bioinformatics/btab231/6214530
+  title: mzRAPP
+- doi: 10.1093/bioinformatics/btaa037
+  title: ncGTW
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1021/acs.analchem.1c03163
+  title: Image Processing and Machine Learning for Automated Identification of Chemo-/Biomarkers in Chromatography–Mass Spectrometry
+- doi: 10.1021/ac501530d
+  title: RAMClust
+- doi: 10.1016/j.aca.2018.08.002
+  title: 'statTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data'
+- doi: 10.1021/acs.analchem.5c00567
+  title: Automated Integration and Quality Assessment of Chromatographic Peaks in LC–MS-Based Metabolomics and Lipidomics Using TARDIS
+- doi: 10.3390/metabo10100416
+  title: A Python-Based Pipeline for Preprocessing LC–MS Data for Untargeted Metabolomics Workflows
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- 13479776/statTarget
+- ChiungTingWu/ncGTW
+- FrigerioGianfranco/GetFeatistics
+- GarrettLab-UF/LipidMatch
+- HuanLab/DaDIA
+- HuanLab/ISFrag
+- KelseyChetnik/MetaClean
+- KujawinskiLaboratory/Autotuner
+- LiesaSalzer/MobilityTransformR
+- LinShuhaiLAB/LipidIN
+- YasinEl/mzRAPP
+- cbroeckl/RAMClustR
+- griquelme/tidyms
+- huaxuyu/bago
+- idslme/IDSL.IPA
+- jcapelladesto/geoRge
+- poomcj/NPFimg
+- sneumann/xcms
+schema_version: 0.2.0

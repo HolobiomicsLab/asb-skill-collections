@@ -1,0 +1,10 @@
+name: Statistical Total Correlation Spectroscopy (STOCSY)
+slug: statistical-total-correlation-spectroscopy-stocsy
+evidence_spans:
+- metabolite assignment using Statistical Total Correlation Spectroscopy (STOCSY)
+derived_from:
+- doi: 10.1093/bioinformatics/btx477
+  title: MWASTools
+source_repos:
+- AndreaRMICL/MWASTools
+schema_version: 0.2.0

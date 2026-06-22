@@ -1,0 +1,30 @@
+name: Python 3
+slug: python-3
+evidence_spans:
+- Use the file pyproject.toml to determine the version of Python required.
+- '[python3](https://www.python.org/)'
+- Khipu is developed as an open source Python 3 package
+- 221[[smiles.py]], 260[[3_cleaningAndEnriching/sanitizing.py]], 280[[3_cleaningAndEnriching/stereocounting.py]]
+- R - Python 3 - Java >= 17
+- Python scripts for data parsing and transformation
+derived_from:
+- doi: 10.1186/s13321-020-00481-0
+  title: ChemSpectra
+- doi: 10.1021/acs.analchem.3c05772
+  title: GCMSFormer
+- doi: 10.1021/acs.analchem.2c05810
+  title: Generalized Tree Structure to Annotate Untargeted Metabolomics and Stable Isotope Tracing Data
+- doi: 10.1007/s00044-016-1764-y
+  title: 'Binding of anti-Trypanosoma natural products from African flora against selected drug targets: a docking study'
+- doi: 10.1002/cem.70040
+  title: PACCS
+- doi: 10.1038/s41592-021-01198-0
+  title: SpaceM
+source_repos:
+- ComPlat/chem-spectra-app
+- alexandrovteam/SpaceM
+- lotusnprod/lotus-processor
+- shuzhao-li-lab/khipu
+- yuxuanliao/PACCS
+- zxguocsu/GCMSFormer
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Signal Processing Toolbox
+slug: signal-processing-toolbox
+evidence_spans:
+- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
+derived_from:
+- doi: 10.1007/s00216-023-04715-6
+  title: Augmented region of interest for untargeted metabolomics mass spectrometry (AriumMS) of multi-platform-based CE-MS and LC-MS data
+source_repos:
+- AdrianHaun/AriumMS
+schema_version: 0.2.0

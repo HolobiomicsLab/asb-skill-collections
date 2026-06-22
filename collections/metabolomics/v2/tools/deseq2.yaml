@@ -1,0 +1,11 @@
+name: DESeq2
+slug: deseq2
+evidence_spans:
+- 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
+- '### DESeq2 [deseq](../modules/local/deseq2)'
+derived_from:
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+schema_version: 0.2.0

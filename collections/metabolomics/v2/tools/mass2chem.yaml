@@ -1,0 +1,10 @@
+name: mass2chem
+slug: mass2chem
+evidence_spans:
+- Khipu uses our package mass2chem for search functions
+derived_from:
+- doi: 10.1021/acs.analchem.2c05810
+  title: Generalized Tree Structure to Annotate Untargeted Metabolomics and Stable Isotope Tracing Data
+source_repos:
+- shuzhao-li-lab/khipu
+schema_version: 0.2.0

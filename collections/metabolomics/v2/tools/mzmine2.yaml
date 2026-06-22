@@ -1,0 +1,18 @@
+name: MZmine2
+slug: mzmine2
+evidence_spans:
+- open bioinformatic tools, such [MZmine2](http://mzmine.github.io/)
+- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2
+- Inventa takes input directly from MZmine2 or MZmine 3
+derived_from:
+- doi: 10.1021/acs.jnatprod.7b00737
+  title: Bioactivity-Based Molecular Networking
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+- doi: 10.1186/1471-2105-11-395
+  title: mzmine2
+source_repos:
+- DorresteinLaboratory/Bioactive_Molecular_Networks
+- luigiquiros/inventa
+- mzmine/mzmine2
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: trove4j
+slug: trove4j
+version_used: 3.0.3
+evidence_spans:
+- trove4j-3.0.3
+derived_from:
+- doi: 10.3390/metabo12020173
+  title: spectra
+source_repos:
+- rformassspectrometry/Spectra
+schema_version: 0.2.0

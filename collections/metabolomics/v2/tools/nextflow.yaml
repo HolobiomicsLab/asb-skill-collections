@@ -1,0 +1,21 @@
+name: Nextflow
+slug: nextflow
+version_used: 23.04.2.5870
+evidence_spans:
+- The pipeline is built using [Nextflow](https://www.nextflow.io) version 23.04.2.5870
+- The pipeline is built using [Nextflow](https://www.nextflow.io) version 23.04.2.5870 (IMPORTANT), a workflow tool to run tasks across multiple compute infrastructures
+- '[![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A522.10.0-brightgreen.svg)](https://www.nextflow.io/)'
+- nextflow4ms-dial
+- To learn NextFlow checkout this documentation
+- 'To learn NextFlow checkout this documentation: https://www.nextflow.io/docs/latest/index.html'
+derived_from:
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+- doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+- doi: 10.1038/s41586-023-06906-8
+  title: Reverse metabolomics
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+- Wang-Bioinformatics-Lab/Reverse_metabolomics_library_generation
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: MIST-CF
+slug: mist-cf
+evidence_spans:
+- an extension of MIST for annotating MS1 precursor masses from MS/MS data
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments
+derived_from:
+- doi: 10.1021/acs.jcim.3c01082
+  title: 'MIST-CF: Chemical Formula Inference from Tandem Mass Spectra'
+schema_version: 0.2.0

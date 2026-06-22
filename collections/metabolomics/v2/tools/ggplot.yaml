@@ -1,0 +1,10 @@
+name: ggplot
+slug: ggplot
+evidence_spans:
+- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+derived_from:
+- doi: 10.1021/acs.analchem.2c04632
+  title: 'Metabolomics Peak Analysis Computational Tool (MPACT): An Advanced Informatics Tool for Metabolomics and Data Visualization of Molecules from Complex Biological Samples'
+source_repos:
+- BalunasLab/mpact
+schema_version: 0.2.0

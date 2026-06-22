@@ -1,0 +1,10 @@
+name: Redis
+slug: redis
+evidence_spans:
+- Redis queue is purely additive and only activates in online Docker deployments
+derived_from:
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+source_repos:
+- OpenMS/OpenMS
+schema_version: 0.2.0

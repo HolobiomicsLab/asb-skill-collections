@@ -1,0 +1,15 @@
+name: MZmine3
+slug: mzmine3
+evidence_spans:
+- MASSIVE Datasets from which all the files were selected for MZmine3
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares
+- Inventa takes input directly from MZmine2 or MZmine 3
+derived_from:
+- doi: 10.1038/s41596-024-01046-3
+  title: FBMN-STATS
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+source_repos:
+- Functional-Metabolomics-Lab/FBMN-STATS
+- luigiquiros/inventa
+schema_version: 0.2.0

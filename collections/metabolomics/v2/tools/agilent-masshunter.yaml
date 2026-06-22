@@ -1,0 +1,12 @@
+name: Agilent MassHunter
+slug: agilent-masshunter
+evidence_spans:
+- Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
+- Agilent MassHunter (.d) and UIMF mass spectrometry data files
+- Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM)
+derived_from:
+- doi: 10.1021/acs.jproteome.1c00425
+  title: A Preprocessing Tool for Enhanced Ion Mobility–Mass Spectrometry-Based Omics Workflows
+source_repos:
+- PNNL-Comp-Mass-Spec/PNNL-PreProcessor
+schema_version: 0.2.0

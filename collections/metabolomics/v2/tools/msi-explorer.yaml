@@ -1,0 +1,10 @@
+name: MSI-Explorer
+slug: msi-explorer
+evidence_spans:
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+derived_from:
+- doi: 10.1021/acs.analchem.5c01513
+  title: MSI-Explorer
+source_repos:
+- MMV-Lab/MSI-Explorer
+schema_version: 0.2.0

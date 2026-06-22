@@ -1,0 +1,13 @@
+name: PyINETA
+slug: pyineta
+version_used: 2.0.0
+evidence_spans:
+- This is the documentation for the PyINETA package version 2.0.0.
+- '.. automodule:: pyineta.finding :members:'
+- '.. automodule:: pyineta.matching :members:'
+derived_from:
+- doi: 10.1021/acs.analchem.4c03966
+  title: PyINETA
+source_repos:
+- edisonomics/PyINETA
+schema_version: 0.2.0

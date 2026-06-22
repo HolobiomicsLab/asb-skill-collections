@@ -1,0 +1,10 @@
+name: puncdata
+slug: puncdata
+evidence_spans:
+- 'Source: github:github.com__WTVoe__puncdata'
+derived_from:
+- doi: 10.1021/jasms.5c00151
+  title: Punc’data
+source_repos:
+- WTVoe/puncdata
+schema_version: 0.2.0

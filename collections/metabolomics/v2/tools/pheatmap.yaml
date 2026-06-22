@@ -1,0 +1,14 @@
+name: pheatmap
+slug: pheatmap
+evidence_spans:
+- pheatmap
+- library(pheatmap)
+derived_from:
+- doi: 10.1021/acs.est.5c08558
+  title: CMDN
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- LeaveMeNotTonight/CMDN
+- sneumann/xcms
+schema_version: 0.2.0

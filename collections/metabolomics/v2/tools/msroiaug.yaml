@@ -1,0 +1,10 @@
+name: MSroiaug
+slug: msroiaug
+evidence_spans:
+- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim Jaumot
+derived_from:
+- doi: 10.1007/s00216-023-04715-6
+  title: Augmented region of interest for untargeted metabolomics mass spectrometry (AriumMS) of multi-platform-based CE-MS and LC-MS data
+source_repos:
+- AdrianHaun/AriumMS
+schema_version: 0.2.0

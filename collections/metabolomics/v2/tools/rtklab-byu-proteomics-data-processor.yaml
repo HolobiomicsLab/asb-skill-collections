@@ -1,0 +1,10 @@
+name: RTKlab-BYU/Proteomics_Data_Processor
+slug: rtklab-byu-proteomics-data-processor
+evidence_spans:
+- works with [Processor](https://github.com/RTKlab-BYU/Proteomics_Data_Processor)
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00854
+  title: MSConnect
+source_repos:
+- RTKlab-BYU/MSConnect
+schema_version: 0.2.0

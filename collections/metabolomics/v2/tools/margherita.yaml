@@ -1,0 +1,12 @@
+name: margheRita
+slug: margherita
+evidence_spans:
+- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies
+derived_from:
+- doi: 10.1101/2024.06.20.599545
+  title: 'MargheRita: streamlining MS-DIAL output analysis and metabolite identification in R'
+source_repos:
+- emosca-cnr/margheRita
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: SMITER
+slug: smiter
+evidence_spans:
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+derived_from:
+- doi: 10.3390/genes12030396
+  title: SMITER
+source_repos:
+- LeidelLab/SMITER
+schema_version: 0.2.0

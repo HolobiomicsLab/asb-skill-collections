@@ -1,0 +1,39 @@
+name: MS-DIAL
+slug: ms-dial
+evidence_spans:
+- '`MS-DIAL <http://prime.psc.riken.jp/compms/msdial/main.html>`_'
+- open source tools such as XCMS and MS-Dial
+- after obtaining a feature table using open source tools such as XCMS and MS-Dial.
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
+- quality filter for lipid identifications from MS-DIAL
+derived_from:
+- doi: 10.1002/9780470508183
+  title: Introduction to Modern Liquid Chromatography
+- doi: 10.1515/jib-2025-0047
+  title: 'Streamlining feature elaboration and statistics analysis in metabolomics: the GetFeatistics R-package'
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+- doi: 10.1021/acs.analchem.4c04040
+  title: lipoclean
+- doi: 10.1101/2024.06.20.599545
+  title: 'MargheRita: streamlining MS-DIAL output analysis and metabolite identification in R'
+- doi: 10.1038/s41467-024-54137-w
+  title: MS-DIAL 5
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+- doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+- doi: 10.1093/bioinformatics/btr597
+  title: MissForest—non-parametric missing value imputation for mixed-type data
+- doi: 10.1021/acs.analchem.4c00786
+  title: Rapid QC-MS
+source_repos:
+- FrigerioGianfranco/GetFeatistics
+- GarrettLab-UF/LipidMatch
+- antonvsdata/notame
+- czbiohub-sf/Rapid-QC-MS
+- emosca-cnr/margheRita
+- huaxuyu/bago
+- systemsomicslab/MsdialWorkbench
+schema_version: 0.2.0

@@ -1,0 +1,14 @@
+name: clusterProfiler
+slug: clusterprofiler
+evidence_spans:
+- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler
+- Pathway enrichment analysis | Clusterprofiler, Biotranslator
+derived_from:
+- doi: 10.1101/2024.06.20.599545
+  title: 'MargheRita: streamlining MS-DIAL output analysis and metabolite identification in R'
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+- emosca-cnr/margheRita
+schema_version: 0.2.0

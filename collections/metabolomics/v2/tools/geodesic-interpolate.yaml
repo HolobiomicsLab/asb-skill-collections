@@ -1,0 +1,10 @@
+name: geodesic_interpolate
+slug: geodesic-interpolate
+evidence_spans:
+- '**geodesic_interpolate** (version'
+derived_from:
+- doi: 10.1021/jasms.5c00234
+  title: QCxMS2
+source_repos:
+- grimme-lab/QCxMS2
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
+slug: chambm-pwiz-skyline-i-agree-to-the-vendor-licenses
+evidence_spans:
+- docker pull chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
+derived_from:
+- doi: 10.1021/acs.analchem.4c06520
+  title: imzML Writer
+source_repos:
+- VIU-Metabolomics/imzML_Writer
+schema_version: 0.2.0

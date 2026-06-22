@@ -1,0 +1,10 @@
+name: DecoMetDIA
+slug: decometdia
+evidence_spans:
+- DecoMetDIA was developed to process SWATH-MS based data for metabolomics.
+derived_from:
+- doi: 10.1021/acs.analchem.9b02655
+  title: 'DecoMetDIA: Deconvolution of Multiplexed MS/MS Spectra for Metabolite Identification in SWATH-MS-Based Untargeted Metabolomics'
+source_repos:
+- ZhuMSLab/DecoMetDIA
+schema_version: 0.2.0

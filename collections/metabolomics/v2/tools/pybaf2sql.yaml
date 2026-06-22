@@ -1,0 +1,10 @@
+name: pyBaf2Sql
+slug: pybaf2sql
+evidence_spans:
+- If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
+derived_from:
+- doi: 10.1021/jasms.4c00178
+  title: 'MSIGen: An Open-Source Python Package for Processing and Visualizing Mass Spectrometry Imaging Data'
+source_repos:
+- LabLaskin/MSIGen
+schema_version: 0.2.0

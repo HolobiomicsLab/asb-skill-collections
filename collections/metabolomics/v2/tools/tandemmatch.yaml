@@ -1,0 +1,10 @@
+name: TandemMatch
+slug: tandemmatch
+evidence_spans:
+- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library formats.'
+derived_from:
+- doi: 10.1021/jasms.4c00146
+  title: PeakQC
+source_repos:
+- pnnl/IonToolPack
+schema_version: 0.2.0

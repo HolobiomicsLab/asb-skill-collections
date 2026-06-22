@@ -1,0 +1,10 @@
+name: Tensorflow 1.8.0
+slug: tensorflow-1-8-0
+evidence_spans:
+- Tensorflow(1.8.0)
+derived_from:
+- doi: 10.1093/bioinformatics/btac032/6510930
+  title: massNet
+source_repos:
+- wabdelmoula/massNet
+schema_version: 0.2.0

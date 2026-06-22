@@ -1,0 +1,12 @@
+name: jsonschema
+slug: jsonschema
+evidence_spans:
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- jsonschema_ for validating functionality of ``mwTab`` files based on ``JSON`` schema
+derived_from:
+- doi: 10.3390/metabo11030163
+  title: The mwtab Python Library for RESTful Access and Enhanced Quality Control, Deposition, and Curation of the Metabolomics Workbench Data Repository
+source_repos:
+- MoseleyBioinformaticsLab/mwtab
+schema_version: 0.2.0

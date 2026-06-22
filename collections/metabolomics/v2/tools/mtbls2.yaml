@@ -1,0 +1,10 @@
+name: mtbls2
+slug: mtbls2
+evidence_spans:
+- library(mtbls2)
+derived_from:
+- doi: 10.1101/812370
+  title: AutoTuner parameter selection
+source_repos:
+- KujawinskiLaboratory/Autotuner
+schema_version: 0.2.0

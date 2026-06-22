@@ -1,0 +1,10 @@
+name: mwtab
+slug: mwtab
+evidence_spans:
+- The ``mwtab`` package is a Python library that facilitates reading and writing files in
+derived_from:
+- doi: 10.3390/metabo11030163
+  title: The mwtab Python Library for RESTful Access and Enhanced Quality Control, Deposition, and Curation of the Metabolomics Workbench Data Repository
+source_repos:
+- MoseleyBioinformaticsLab/mwtab
+schema_version: 0.2.0

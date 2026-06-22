@@ -1,0 +1,40 @@
+name: git
+slug: git
+evidence_spans:
+- 'Step 0: Install git (if you have not done so before)'
+- git clone --recursive git@github.com:eugenemel/maven.git maven
+- git clone https://github.com/ipb-halle/MetFragRelaunched.git
+- Clone the Met-ID repository
+- github.com/mibig-secmet/mibig-json
+- push your feature branch to (your fork of) the ms2query repository on GitHub
+derived_from:
+- doi: 10.1021/acs.analchem.5c00520
+  title: LipidA-IDER
+- doi: 10.3390/metabo12080684
+  title: MAVEN2
+- doi: 10.1186/s13321-016-0115-9
+  title: MetFrag
+- doi: 10.1021/acs.analchem.5c00633
+  title: metid
+- doi: 10.1093/nar/gkz882
+  title: MIBiG 2.0
+- doi: 10.1038/s41467-023-37446-4
+  title: ms2query
+- doi: 10.1021/acs.analchem.4c02426
+  title: MSBERT
+- doi: 10.1021/jasms.4c00178
+  title: 'MSIGen: An Open-Source Python Package for Processing and Visualizing Mass Spectrometry Imaging Data'
+- doi: 10.1021/acs.analchem.4c03781
+  title: MWFormer
+- doi: 10.1002/anie.202507483
+  title: NA
+source_repos:
+- Chen-micslab/QCCAssisted4DSterol
+- LabLaskin/MSIGen
+- Systems-Biology-Of-Lipid-Metabolism-Lab/LipidA-IDER
+- eugenemel/maven
+- iomega/ms2query
+- mibig-secmet/mibig-json
+- zhanghailiangcsu/MSBERT
+- zhanghailiangcsu/MWFormer
+schema_version: 0.2.0

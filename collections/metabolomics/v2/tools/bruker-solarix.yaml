@@ -1,0 +1,8 @@
+name: Bruker Solarix
+slug: bruker-solarix
+evidence_spans:
+- from corems.transient.input.brukerSolarix import ReadBrukerSolarix
+derived_from:
+- doi: 10.5281/zenodo.14009575
+  title: corems
+schema_version: 0.2.0

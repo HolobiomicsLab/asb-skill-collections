@@ -1,0 +1,12 @@
+name: molmass
+slug: molmass
+version_used: 2021.6.18
+evidence_spans:
+- molmass==2021.6.18
+- '- ``molmass==2021.6.18``'
+derived_from:
+- doi: 10.1038/s41592-023-02012-9
+  title: Flash entropy search to query all mass spectral libraries in real time
+source_repos:
+- FanzhouKong/spectral_denoising
+schema_version: 0.2.0

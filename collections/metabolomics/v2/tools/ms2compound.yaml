@@ -1,0 +1,11 @@
+name: MS2Compound
+slug: ms2compound
+version_used: 1.0.2
+evidence_spans:
+- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification of the compounds from LC-MS and MS/MS metabolomics data
+derived_from:
+- doi: 10.1089/omi.2021.0051
+  title: MS2Compound
+source_repos:
+- beherasan/MS2Compound
+schema_version: 0.2.0

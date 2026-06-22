@@ -1,0 +1,11 @@
+name: dbnorm
+slug: dbnorm
+version_used: 0.2.2
+evidence_spans:
+- dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
+derived_from:
+- doi: 10.1007/s12561-013-9081-1
+  title: A Two-Stage Procedure for the Removal of Batch Effects in Microarray Studies
+source_repos:
+- NBDZ/dbnorm
+schema_version: 0.2.0

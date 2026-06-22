@@ -1,0 +1,8 @@
+name: pyarrow
+slug: pyarrow
+evidence_spans:
+- complete re-implementation for _reading_ mzPeak files using [`pyarrow`]
+derived_from:
+- doi: 10.1021/acs.jproteome.5c00435
+  title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
+schema_version: 0.2.0

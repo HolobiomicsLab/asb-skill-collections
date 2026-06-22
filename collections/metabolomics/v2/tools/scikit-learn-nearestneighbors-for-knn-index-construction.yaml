@@ -1,0 +1,10 @@
+name: scikit-learn (NearestNeighbors for KNN index construction)
+slug: scikit-learn-nearestneighbors-for-knn-index-construction
+evidence_spans:
+- '.. autofunction:: spatialmeta.pp.spot_align_byknn'
+derived_from:
+- doi: 10.1038/s41467-025-63915-z
+  title: SpatialMETA
+source_repos:
+- WanluLiuLab/SpatialMETA
+schema_version: 0.2.0

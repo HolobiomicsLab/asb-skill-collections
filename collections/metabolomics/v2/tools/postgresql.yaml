@@ -1,0 +1,10 @@
+name: PostgreSQL
+slug: postgresql
+evidence_spans:
+- docker run --name some-pg -d -p 5432:5432
+derived_from:
+- doi: 10.1073/pnas.1608041113
+  title: MS2LDA
+source_repos:
+- vdhooftcompmet/MS2LDA
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Statistical analysis libraries (scipy.stats for enrichment tests)
+slug: statistical-analysis-libraries-scipy-stats-for-enrichment-tests
+evidence_spans:
+- enrichment statistics
+derived_from:
+- doi: 10.1101/2020.11.20.391912
+  title: MetENP
+source_repos:
+- metabolomicsworkbench/MetENP
+schema_version: 0.2.0

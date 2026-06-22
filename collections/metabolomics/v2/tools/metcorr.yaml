@@ -1,0 +1,10 @@
+name: MetCorR
+slug: metcorr
+evidence_spans:
+- New QC-GAM method (MetCorR) with associated scripts were introduced.
+derived_from:
+- doi: 10.1021/acs.jproteome.1c00392
+  title: '<i>Omics Untargeted Key Script</i>: R-Based Software Toolbox for Untargeted Metabolomics with Bladder Cancer Biomarkers Discovery Case Study'
+source_repos:
+- plyush1993/OUKS
+schema_version: 0.2.0

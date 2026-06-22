@@ -1,0 +1,8 @@
+name: MSFLO
+slug: msflo
+evidence_spans:
+- containerized workflow MS-DIAL -> MSFLO
+derived_from:
+- doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+schema_version: 0.2.0

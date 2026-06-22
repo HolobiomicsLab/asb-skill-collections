@@ -1,0 +1,24 @@
+name: dplyr
+slug: dplyr
+evidence_spans:
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
+- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
+- required_pkgs <- c("dplyr","tidyr","readr", "stringr", "tibble", "purrr",
+- library(dplyr)
+derived_from:
+- doi: 10.1021/acs.analchem.5c01726
+  title: DuReS
+- doi: 10.1101/2020.12.21.423723
+  title: hRUV
+- doi: 10.1101/2021.12.05.471237v2
+  title: isopair
+- doi: 10.1101/2024.10.14.618269
+  title: 'Structural annotation of full-scan MS data: A unified solution for LC-MS and MS imaging analyses'
+source_repos:
+- BiosystemEngineeringLab-IITB/dures
+- GenomicsMachineLearning/SpaMTP
+- SydneyBioX/hRUV
+- kilgain/MassSpec
+schema_version: 0.2.0

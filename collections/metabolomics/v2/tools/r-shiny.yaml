@@ -1,0 +1,15 @@
+name: R Shiny
+slug: r-shiny
+evidence_spans:
+- We provide a Rshiny program for EISA-EXPOSOME
+- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown below
+- GraphBio---A modular and scalable R Shiny dashboard
+derived_from:
+- doi: 10.1021/acs.analchem.3c02697
+  title: EISA-EXPOSOME
+- doi: 10.3389/fgene.2022.957317
+  title: 'GraphBio: A shiny web app to easily perform popular visualization analysis for omics data'
+source_repos:
+- Lab-XUE/EISA-EXPOSOME
+- databio2022/GraphBio
+schema_version: 0.2.0

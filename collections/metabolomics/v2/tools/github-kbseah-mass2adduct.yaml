@@ -1,0 +1,8 @@
+name: github:kbseah__mass2adduct
+slug: github-kbseah-mass2adduct
+evidence_spans:
+- 'Source: github:kbseah__mass2adduct'
+derived_from:
+- doi: 10.1021/acs.analchem.0c04720
+  title: Determination of Abundant Metabolite Matrix Adducts Illuminates the Dark Metabolome of MALDI-Mass Spectrometry Imaging Datasets
+schema_version: 0.2.0

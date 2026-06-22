@@ -1,0 +1,10 @@
+name: MariaDB 10
+slug: mariadb-10
+evidence_spans:
+- Application is developed for Mysql 8 /MariaDB 10
+derived_from:
+- doi: 10.1186/s13321-021-00530-2
+  title: MassSpecBlocks
+source_repos:
+- privrja/MassSpecBlocks
+schema_version: 0.2.0

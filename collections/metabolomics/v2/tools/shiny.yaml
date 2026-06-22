@@ -1,0 +1,26 @@
+name: Shiny
+slug: shiny
+evidence_spans:
+- ALISTER is a web-app containing scientific information on pre-analytical blood sample stability in metabolomics and lipidomics
+- developed with Shiny
+- The process is implemented in a Shiny app, which can be launched using a function exported by this package
+- Shiny GUI implementation of the pmartR R package.
+- Shiny GUI implementation of the pmartR R package
+- QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry (MS) data
+derived_from:
+- doi: 10.1016/j.cca.2024.117858
+  title: ALISTER
+- doi: 10.1002/jrsm.1713
+  title: Easy-Amanida
+- doi: 10.1021/acs.jproteome.5c00548
+  title: metScribeR
+- doi: 10.1021/acs.jproteome.3c00512
+  title: 'PMart Web Application: Marketplace for Interactive Analysis of Panomics Data'
+- doi: 10.1016/j.aca.2025.344571
+  title: quantyfey
+source_repos:
+- Fraunhofer-ITMP/alister
+- mariallr/easy-amanida
+- ncats/metScribeR
+- pmartR/PMart_ShinyApp
+schema_version: 0.2.0

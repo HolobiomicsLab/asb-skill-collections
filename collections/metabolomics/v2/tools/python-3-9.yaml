@@ -1,0 +1,11 @@
+name: Python >=3.9
+slug: python-3-9
+evidence_spans:
+- Python>=3.9
+- '[Python](https://www.anaconda.com/download/)>=3.9'
+derived_from:
+- doi: 10.1002/nbm.70131
+  title: ROIAL-NMR
+source_repos:
+- Leo-Cheng-Lab/ROIAL-NMR
+schema_version: 0.2.0

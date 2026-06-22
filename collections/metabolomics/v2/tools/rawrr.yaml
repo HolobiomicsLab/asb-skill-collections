@@ -1,0 +1,15 @@
+name: rawrr
+slug: rawrr
+evidence_spans:
+- rawrr::readSpectrum
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- Specifically, `R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods using a system call
+- Our `.NET 8.0` [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file and shipped with the released `R` package.
+- R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods
+- The `rawrr` executable will run out of the box
+derived_from:
+- doi: 10.1021/acs.jproteome.0c00866
+  title: 'The rawrr R Package: Direct Access to Orbitrap Data and Beyond'
+source_repos:
+- fgcz/rawrr
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: KEGG database
+slug: kegg-database
+evidence_spans:
+- matching mass-to-charge ratio values to KEGG database
+derived_from:
+- doi: 10.1021/acs.analchem.1c00238
+  title: mWISE
+source_repos:
+- b2slab/mWISE
+schema_version: 0.2.0

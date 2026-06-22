@@ -1,0 +1,10 @@
+name: R (>=)
+slug: r
+evidence_spans:
+- Dependent on R (>= 3.5.0)
+derived_from:
+- doi: 10.1093/bib/bbac455
+  title: LargeMetabo
+source_repos:
+- LargeMetabo/LargeMetabo
+schema_version: 0.2.0

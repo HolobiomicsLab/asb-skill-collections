@@ -1,0 +1,11 @@
+name: MetaboAnalystR
+slug: metaboanalystr
+version_used: '4.0'
+evidence_spans:
+- 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'
+derived_from:
+- doi: 10.1038/s41467-024-48009-6
+  title: metaboanalystr
+source_repos:
+- xia-lab/MetaboAnalystR
+schema_version: 0.2.0

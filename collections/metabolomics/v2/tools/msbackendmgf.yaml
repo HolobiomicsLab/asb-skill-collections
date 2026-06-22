@@ -1,0 +1,10 @@
+name: MsBackendMgf
+slug: msbackendmgf
+evidence_spans:
+- library(MsBackendMgf)
+derived_from:
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- sneumann/xcms
+schema_version: 0.2.0

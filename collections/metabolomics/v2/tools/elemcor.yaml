@@ -1,0 +1,11 @@
+name: ElemCor
+slug: elemcor
+evidence_spans:
+- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments.
+- ElemCor is a software tool to correct LC-MS data in isotope labeling experiments
+derived_from:
+- doi: 10.1186/s12859-019-2669-9
+  title: ElemCor
+source_repos:
+- 4dsoftware/elemcor
+schema_version: 0.2.0

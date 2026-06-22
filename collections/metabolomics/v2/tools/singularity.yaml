@@ -1,0 +1,20 @@
+name: Singularity
+slug: singularity
+evidence_spans:
+- 'Build singularity image on job node. Freaks out on login node: ``` SCRATCH_PATH=/cluster/scratch/$(id'
+- Build singularity image on job node
+- Build singularity image on job node.
+- It uses Docker/Singularity containers making installation trivial and results highly reproducible.
+- Both Docker and Singularity (for high-performance computing) are supported
+- Both Docker and Singularity (for high-performance computing) are supported.
+derived_from:
+- doi: 10.1038/s41592-022-01486-3
+  title: MSNovelist
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+- doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+- meowcat/MSNovelist
+schema_version: 0.2.0

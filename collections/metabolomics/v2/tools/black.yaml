@@ -1,0 +1,14 @@
+name: black
+slug: black
+evidence_spans:
+- We use black for auto formatting
+- LipidLynxX source code use [code style Black](https://github.com/psf/black) for all python codes
+derived_from:
+- doi: 10.1038/s41589-019-0400-9
+  title: BiG-SCAPE biosynthetic diversity
+- doi: 10.1101/2020.04.09.033894
+  title: LipidLynxX
+source_repos:
+- SysMedOs/LipidLynxX
+- medema-group/BiG-SCAPE
+schema_version: 0.2.0

@@ -1,0 +1,23 @@
+name: antiSMASH
+slug: antismash
+version_used: 5.0.0
+evidence_spans:
+- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools'' output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk` or `.gbk` file'
+- antismash directory contains a collection of AntiSMASH BGC data
+- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- genomes were run through antiSMASH v5.0.0 for BGC detection
+- the genomes were run through antiSMASH v5.0.0 for BGC detection
+- After downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+derived_from:
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
+- doi: 10.1186/s40168-022-01444-3
+  title: NPClassScore
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+- doi: 10.1101/2024.10.11.617756
+  title: NPLinker
+source_repos:
+- NPLinker/nplinker
+- ablab/npdtools
+schema_version: 0.2.0

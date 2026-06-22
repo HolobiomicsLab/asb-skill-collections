@@ -1,0 +1,10 @@
+name: Lotus Database
+slug: lotus-database
+evidence_spans:
+- the Lotus Dabase uses the NPClassifyre ontology and Sirius uses the Classifyre ontology
+derived_from:
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+source_repos:
+- luigiquiros/inventa
+schema_version: 0.2.0

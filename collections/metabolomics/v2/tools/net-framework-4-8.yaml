@@ -1,0 +1,9 @@
+name: .NET Framework 4.8
+slug: net-framework-4-8
+version_used: '4.8'
+evidence_spans:
+- .NET Framework 4.8 installed and run through Wine
+derived_from:
+- doi: 10.1186/s12859-021-04490-0
+  title: aird
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: Flask
+slug: flask
+evidence_spans:
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+derived_from:
+- doi: 10.1186/s13321-020-00481-0
+  title: ChemSpectra
+source_repos:
+- ComPlat/chem-spectra-app
+schema_version: 0.2.0

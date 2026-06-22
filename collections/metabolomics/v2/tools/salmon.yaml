@@ -1,0 +1,11 @@
+name: Salmon
+slug: salmon
+evidence_spans:
+- Genes, miRNA, isoforms | Align and Assembly | Salmon, samtools, STAR, Hisat2, StringTie2
+- It then employs [salmon](../modules/nf-core/salmon) in order to obtain quantification files
+derived_from:
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+schema_version: 0.2.0

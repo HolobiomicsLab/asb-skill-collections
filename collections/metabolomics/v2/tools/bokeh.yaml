@@ -1,0 +1,17 @@
+name: Bokeh
+slug: bokeh
+evidence_spans:
+- The main area will be populated with interactive Bokeh figures
+- integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)
+- 'Extension: BOKEH'
+- These examples are generated if `backend='ms_bokheh'
+- Multiple backends supported including matplotlib, bokeh, and plotly
+- Rendering is typically faster than the PLOTLY backend
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00026
+  title: 'MassDash: A Web-Based Dashboard for Data-Independent Acquisition Mass Spectrometry Visualization'
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+source_repos:
+- Roestlab/massdash
+schema_version: 0.2.0

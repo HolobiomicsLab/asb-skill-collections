@@ -1,0 +1,10 @@
+name: QUICK
+slug: quick
+evidence_spans:
+- 'QUICK: For quantum calculations'
+derived_from:
+- doi: 10.1021/jasms.1c00315
+  title: <i>In Silico</i> Collision Cross Section Calculations to Aid Metabolite Annotation
+source_repos:
+- DasSusanta/snakemake_ccs
+schema_version: 0.2.0

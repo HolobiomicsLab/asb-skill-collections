@@ -1,0 +1,8 @@
+name: Consensus clustering
+slug: consensus-clustering
+evidence_spans:
+- for each fixed k, ranged from 2 to 20, a k-clustering of the rows using each normalized S was generated. Then a consensus matrix M(k) was calculated as the mean connectivity matrix across all
+derived_from:
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+schema_version: 0.2.0

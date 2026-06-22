@@ -1,0 +1,10 @@
+name: PaIRKAT
+slug: pairkat
+evidence_spans:
+- github.com/CharlieCarpenter/PaIRKAT
+derived_from:
+- doi: 10.1101/2021.04.23.440821v1
+  title: PaIRKAT
+source_repos:
+- CharlieCarpenter/PaIRKAT
+schema_version: 0.2.0

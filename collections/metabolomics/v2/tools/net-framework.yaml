@@ -1,0 +1,19 @@
+name: .NET Framework
+slug: net-framework
+version_used: '4.8'
+evidence_spans:
+- .NET Framework 4.8
+- the main MsdialGuiApp project can be built using .NET Framework 4.7.2
+- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
+- .NET Framework 4.7.2 or later (included with Windows 10 update 1803 and later releases
+derived_from:
+- doi: 10.1186/s12859-021-04490-0
+  title: aird
+- doi: 10.1021/acs.analchem.0c01980
+  title: CorrDec
+- doi: 10.1021/acs.jproteome.1c00425
+  title: A Preprocessing Tool for Enhanced Ion Mobility–Mass Spectrometry-Based Omics Workflows
+source_repos:
+- PNNL-Comp-Mass-Spec/PNNL-PreProcessor
+- systemsomicslab/MsdialWorkbench
+schema_version: 0.2.0

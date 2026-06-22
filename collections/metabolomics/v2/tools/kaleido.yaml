@@ -1,0 +1,10 @@
+name: Kaleido
+slug: kaleido
+evidence_spans:
+- Remove orca in favor of Kaleido
+derived_from:
+- doi: 10.1021/acs.jproteome.3c00512
+  title: 'PMart Web Application: Marketplace for Interactive Analysis of Panomics Data'
+source_repos:
+- pmartR/PMart_ShinyApp
+schema_version: 0.2.0

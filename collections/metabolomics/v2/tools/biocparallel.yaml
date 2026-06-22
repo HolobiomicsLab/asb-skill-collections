@@ -1,0 +1,11 @@
+name: BiocParallel
+slug: biocparallel
+evidence_spans:
+- Parallel processing support via the *BiocParallel* package for all pre-processing methods
+- Parallel processing support via the *BiocParallel* package for all pre-processing methods and any statistical analysis methods with a `BPPARAM` option
+derived_from:
+- doi: 10.1093/bioinformatics/btv146
+  title: Cardinal
+source_repos:
+- kuwisdelu/Cardinal
+schema_version: 0.2.0

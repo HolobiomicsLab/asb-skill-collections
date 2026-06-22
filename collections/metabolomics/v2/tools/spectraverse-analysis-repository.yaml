@@ -1,0 +1,10 @@
+name: spectraverse-analysis repository
+slug: spectraverse-analysis-repository
+evidence_spans:
+- github.com/skinniderlab/spectraverse-analysis
+derived_from:
+- doi: 10.1021/acs.analchem.5c06256
+  title: Spectraverse
+source_repos:
+- skinniderlab/spectraverse-analysis
+schema_version: 0.2.0

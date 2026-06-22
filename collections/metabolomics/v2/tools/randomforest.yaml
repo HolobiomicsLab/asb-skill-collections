@@ -1,0 +1,10 @@
+name: randomForest
+slug: randomforest
+evidence_spans:
+- Omu has a function, ```random_forest```, which is a wrapper built around the function ```randomForest``` from the R package randomForest
+derived_from:
+- doi: 10.1128/mra.00129-19
+  title: omu metabolomics count data tool
+source_repos:
+- connor-reid-tiffany/Omu
+schema_version: 0.2.0

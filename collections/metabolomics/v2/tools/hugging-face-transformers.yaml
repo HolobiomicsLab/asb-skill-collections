@@ -1,0 +1,10 @@
+name: Hugging Face Transformers
+slug: hugging-face-transformers
+evidence_spans:
+- github.com/OpenDFM/MS-BART
+derived_from:
+- doi: 10.48550/arxiv.2510.20615
+  title: MS-BART
+source_repos:
+- OpenDFM/MS-BART
+schema_version: 0.2.0

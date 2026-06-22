@@ -1,0 +1,10 @@
+name: pyEVA
+slug: pyeva
+evidence_spans:
+- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems. Please check out pyEVA
+derived_from:
+- doi: 10.1021/acs.analchem.1c01309
+  title: EVA
+source_repos:
+- HuanLab-backup/EVA
+schema_version: 0.2.0

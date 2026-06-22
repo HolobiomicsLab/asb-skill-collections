@@ -1,0 +1,11 @@
+name: zenodo.org/records/10997887
+slug: zenodo-org-records-10997887
+evidence_spans:
+- https://zenodo.org/records/10997887
+- https://zenodo.org/records/13843034
+derived_from:
+- doi: 10.1038/s41587-025-02663-3
+  title: DreaMS
+source_repos:
+- pluskal-lab/DreaMS
+schema_version: 0.2.0

@@ -1,0 +1,8 @@
+name: ChemicalMixtureFromMZML
+slug: chemicalmixturefrommzml
+evidence_spans:
+- Existing mzML files can be converted into chemical lists using `ChemicalMixtureFromMZML`.
+derived_from:
+- doi: 10.1021/acs.analchem.0c03895
+  title: Rapid Development of Improved Data-Dependent Acquisition Strategies
+schema_version: 0.2.0

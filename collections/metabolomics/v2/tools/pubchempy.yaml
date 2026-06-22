@@ -1,0 +1,13 @@
+name: PubChemPy
+slug: pubchempy
+evidence_spans:
+- Final candidate selection is done in Python using RDKit and PubChemPy
+- We then ran an automated search against PubChem [42] using pubchempy [43] for spectra which still missed InChI or SMILES annotations.
+derived_from:
+- doi: 10.1186/s13321-023-00695-y
+  title: MAW
+- doi: 10.1186/s13321-021-00558-4
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+source_repos:
+- zmahnoor14/MAW
+schema_version: 0.2.0

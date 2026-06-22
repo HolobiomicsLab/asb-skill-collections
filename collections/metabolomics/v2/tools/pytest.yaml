@@ -1,0 +1,33 @@
+name: pytest
+slug: pytest
+evidence_spans:
+- pytest tests/
+- No discussion section present in document
+- See our organization-level document on [CONTRIBUTING]
+- Run the pytest test suite
+- Tests are performed using Pytest
+- make sure the existing tests still work by running ``pytest``
+derived_from:
+- doi: 10.26434/chemrxiv-2025-cwq74
+  title: biosynfoni
+- doi: 10.1038/s41467-024-50111-8
+  title: FERMO
+- doi: 10.1021/acs.jproteome.4c00026
+  title: 'MassDash: A Web-Based Dashboard for Data-Independent Acquisition Mass Spectrometry Visualization'
+- doi: 10.1186/s13321-024-00878-1
+  title: matchms
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+- doi: 10.1186/s40168-022-01444-3
+  title: NPClassScore
+- doi: 10.1186/s12859-023-05149-8
+  title: Pickaxe
+source_repos:
+- NPLinker/nplinker
+- RECETOX/MSMetaEnhancer
+- Roestlab/massdash
+- fermo-metabolomics/FERMO
+- lucinamay/biosynfoni
+- matchms/matchms
+- tyo-nu/MINE-Database
+schema_version: 0.2.0

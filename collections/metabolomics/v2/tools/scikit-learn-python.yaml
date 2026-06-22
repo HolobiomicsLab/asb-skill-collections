@@ -1,0 +1,8 @@
+name: scikit-learn (Python)
+slug: scikit-learn-python
+evidence_spans:
+- these models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate Elastic Net, and Canonical
+derived_from:
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Paramounter
+slug: paramounter
+evidence_spans:
+- github.com/HuanLab/Paramounter
+derived_from:
+- doi: 10.1021/acs.analchem.1c04758
+  title: Paramounter
+source_repos:
+- HuanLab/Paramounter
+schema_version: 0.2.0

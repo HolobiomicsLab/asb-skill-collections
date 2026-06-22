@@ -1,0 +1,56 @@
+name: GNPS
+slug: gnps
+evidence_spans:
+- the GNPS web-platform (http://gnps.ucsd.edu)
+- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Link for Feature-Based Molecular Network](https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=b661d12ba88745639664988329c1363e)
+- job_id= "yourjobidgoeshere"
+- '##### For cleaning-up annotations from GNPS'
+derived_from:
+- doi: 10.1021/acs.jnatprod.7b00737
+  title: Bioactivity-Based Molecular Networking
+- doi: 10.3390/metabo12121275
+  title: ConCISE
+- doi: 10.1038/s41596-024-01046-3
+  title: FBMN-STATS
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+- doi: 10.1038/s41587-023-01985-4
+  title: MASST
+- doi: 10.1021/acs.analchem.2c04343
+  title: MeRgeION
+- doi: 10.1186/s13321-025-01051-y
+  title: minems2
+- doi: 10.3390/metabo9070144
+  title: molnetenhancer
+- doi: 10.1038/s41587-020-0700-3
+  title: Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+- doi: 10.1186/s40168-022-01444-3
+  title: NPClassScore
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+- doi: 10.1101/2024.10.11.617756
+  title: NPLinker
+- doi: 10.1186/1471-2105-6-225
+  title: Pathway level analysis of gene expression using singular value decomposition
+- doi: 10.1186/2047-217x-2-16
+  title: 'EMPeror: a tool for visualizing high-throughput microbial community data'
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- DorresteinLaboratory/Bioactive_Molecular_Networks
+- Functional-Metabolomics-Lab/FBMN-STATS
+- NPLinker/nplinker
+- bittremieux/GNPS_GC
+- daniellyz/meRgeION2
+- glasgowcompbio/PALS
+- luigiquiros/inventa
+- madeleineernst/pyMolNetEnhancer
+- mohimanilab/MASSTplus
+- mwang87/ReDU-MS2-Documentation
+- sneumann/xcms
+- zquinlan/concise
+schema_version: 0.2.0

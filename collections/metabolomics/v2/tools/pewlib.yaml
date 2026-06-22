@@ -1,0 +1,10 @@
+name: pewlib
+slug: pewlib
+evidence_spans:
+- based on the python library pewlib_
+derived_from:
+- doi: 10.1529/biophysj.103.038422
+  title: Automatic and Quantitative Measurement of Protein-Protein Colocalization in Live Cells
+source_repos:
+- djdt/pewpew
+schema_version: 0.2.0

@@ -1,0 +1,40 @@
+name: ProteoWizard
+slug: proteowizard
+evidence_spans:
+- pwiz_bindings_cli.dll from the ProteoWizard project
+- based on pwiz_bindings_cli.dll from the ProteoWizard project.
+- msconvert, distributed with the ProteoWizard Project
+- msconvert, distributed with the ProteoWizard Project http://proteowizard.sourceforge.net/download.html
+- Msconvert in ProteoWizard (https://proteowizard.sourceforge.io/tools.shtml) can handle the conversion of most vendor data formats.
+- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
+derived_from:
+- doi: 10.1186/s12859-021-04490-0
+  title: aird
+- doi: 10.1007/s00216-023-04715-6
+  title: Augmented region of interest for untargeted metabolomics mass spectrometry (AriumMS) of multi-platform-based CE-MS and LC-MS data
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
+- doi: 10.1021/acs.analchem.4c06520
+  title: imzML Writer
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1021/acs.jproteome.0c00866
+  title: 'The rawrr R Package: Direct Access to Orbitrap Data and Beyond'
+- doi: 10.1021/acs.analchem.3c02583
+  title: RI-based-CPSC
+- doi: 10.1007/s11306-018-1363-7
+  title: TarMet
+- doi: 10.3390/metabo10100416
+  title: A Python-Based Pipeline for Preprocessing LC–MS Data for Untargeted Metabolomics Workflows
+source_repos:
+- AdrianHaun/AriumMS
+- VIU-Metabolomics/imzML_Writer
+- WHU-Fenglab/RI-based-CPSC
+- ablab/npdtools
+- fgcz/rawrr
+- griquelme/tidyms
+- hcji/TarMet
+- shuzhao-li-lab/asari
+schema_version: 0.2.0

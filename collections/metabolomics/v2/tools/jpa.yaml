@@ -1,0 +1,11 @@
+name: JPA
+slug: jpa
+evidence_spans:
+- JPA is a comprehensive and integrated metabolomics data processing software.
+- JPA is a comprehensive and integrated metabolomics data processing software
+derived_from:
+- doi: 10.3390/metabo12030212
+  title: JPA
+source_repos:
+- HuanLab/JPA
+schema_version: 0.2.0

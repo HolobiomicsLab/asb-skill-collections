@@ -1,0 +1,17 @@
+name: MassBank
+slug: massbank
+evidence_spans:
+- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- MassBank Library Spectra
+derived_from:
+- doi: 10.1021/acs.analchem.6b02927
+  title: 'eRah: A Computational Tool Integrating Spectral Deconvolution and Alignment with Quantification and Identification of Metabolites in GC/MS-Based Metabolomics'
+- doi: 10.1021/acs.analchem.2c04343
+  title: MeRgeION
+- doi: 10.1101/2020.05.09.086066
+  title: Metabolomics Spectrum Resolver
+source_repos:
+- daniellyz/meRgeION2
+- mwang87/MetabolomicsSpectrumResolver
+- xdomingoal/erah-devel
+schema_version: 0.2.0

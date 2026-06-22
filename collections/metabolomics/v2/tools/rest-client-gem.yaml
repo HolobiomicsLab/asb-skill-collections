@@ -1,0 +1,10 @@
+name: rest-client gem
+slug: rest-client-gem
+evidence_spans:
+- gem 'rest-client', '=1.8.0'
+derived_from:
+- doi: 10.1186/s13321-016-0174-y
+  title: ClassyFire
+source_repos:
+- https://bitbucket.org/wishartlab/classyfire_api.git
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: github.com/zsspython/LAGF
+slug: github-com-zsspython-lagf
+evidence_spans:
+- 'Source: github:github.com__zsspython__LAGF'
+- github.com__zsspython__LAGF
+derived_from:
+- doi: 10.1021/acs.analchem.5c00060
+  title: LAGF
+source_repos:
+- zsspython/LAGF
+schema_version: 0.2.0

@@ -1,0 +1,12 @@
+name: ms_entropy
+slug: ms-entropy
+version_used: 1.3.3
+evidence_spans:
+- ms_entropy==1.3.3
+- '- ``ms_entropy==1.3.3``'
+derived_from:
+- doi: 10.1038/s41592-023-02012-9
+  title: Flash entropy search to query all mass spectral libraries in real time
+source_repos:
+- FanzhouKong/spectral_denoising
+schema_version: 0.2.0

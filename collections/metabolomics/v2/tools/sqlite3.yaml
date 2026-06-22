@@ -1,0 +1,8 @@
+name: sqlite3
+slug: sqlite3
+evidence_spans:
+- import sqlite3
+derived_from:
+- doi: 10.1093/bioinformatics/bty046
+  title: pymzml
+schema_version: 0.2.0

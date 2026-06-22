@@ -1,0 +1,14 @@
+name: Make
+slug: make
+evidence_spans:
+- Please make sure to have [Make](https://www.gnu.org/software/make) installed.
+- make -j4
+derived_from:
+- doi: 10.1007/s00044-016-1764-y
+  title: 'Binding of anti-Trypanosoma natural products from African flora against selected drug targets: a docking study'
+- doi: 10.3390/metabo12080684
+  title: MAVEN2
+source_repos:
+- eugenemel/maven
+- lotusnprod/lotus-processor
+schema_version: 0.2.0

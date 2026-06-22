@@ -1,0 +1,10 @@
+name: prepare_wikidata_lotus_prefect.py
+slug: prepare-wikidata-lotus-prefect-py
+evidence_spans:
+- run `prepare_wikidata_lotus_prefect.py` for updating the data
+derived_from:
+- doi: 10.1038/s41592-025-02813-0
+  title: MSnLib
+source_repos:
+- corinnabrungs/msn_tree_library
+schema_version: 0.2.0

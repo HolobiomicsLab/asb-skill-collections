@@ -1,0 +1,37 @@
+name: pip
+slug: pip
+evidence_spans:
+- pip install -e .[dev]
+- and [pip](https://pypi.org/project/pip/)
+- 'Install DEIMoS using pip: pip install -e .'
+- 'Install DEIMoS using `pip <https://pypi.org/project/pip/>`_: ``pip install -e .``'
+- pip install -r requirements.txt
+- Please set up the environment as per this file using [conda](http://docs.condi.ioen/latest/)/[pip]
+derived_from:
+- doi: 10.26434/chemrxiv-2025-cwq74
+  title: biosynfoni
+- doi: 10.1021/acs.analchem.5c01594
+  title: CSU-MS2
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+- doi: 10.1038/s41587-025-02663-3
+  title: DreaMS
+- doi: 10.1093/bioinformatics/btaf354
+  title: JESTR
+- doi: 10.1186/s13321-024-00878-1
+  title: matchms
+- doi: 10.1186/s40168-022-01444-3
+  title: NPClassScore
+- doi: 10.1002/cem.70040
+  title: PACCS
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+source_repos:
+- HassounLab/JESTR1
+- NPLinker/nplinker
+- lucinamay/biosynfoni
+- matchms/matchms
+- pluskal-lab/DreaMS
+- tingxiecsu/CSU-MS2
+- yuxuanliao/PACCS
+schema_version: 0.2.0

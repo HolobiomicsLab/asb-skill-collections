@@ -1,0 +1,8 @@
+name: local code artifact
+slug: local-code-artifact
+derived_from:
+- doi: 10.3389/fmolb.2022.952149
+  title: TurboPutative
+source_repos:
+- CNIC-Proteomics/TurboPutative
+schema_version: 0.2.0

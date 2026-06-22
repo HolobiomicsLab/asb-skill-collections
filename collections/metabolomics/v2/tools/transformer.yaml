@@ -1,0 +1,21 @@
+name: transformer
+slug: transformer
+evidence_spans:
+- based on transformer architecture
+- utilizes a transformer-based architecture with molecular structure information
+- MIST applies a transformer architecture to directly encode and learn to represent collections of chemical formula
+- a transformer architecture can be constructed to efficiently solve the task, traditionally performed by chemists, of assembling large numbers of molecular fragments into molecular
+derived_from:
+- doi: 10.1021/acs.analchem.3c00260
+  title: CLERMS
+- doi: 10.1021/acs.analchem.5c03492
+  title: HyperCCS
+- doi: 10.1038/s42256-023-00708-3
+  title: MIST (chemical formula transformer)
+- doi: 10.1021/acscentsci.4c01132
+  title: NMR2Struct
+source_repos:
+- HaldamirS/CLERMS
+- NeoNexusX/HyperCCS
+- samgoldman97/mist
+schema_version: 0.2.0

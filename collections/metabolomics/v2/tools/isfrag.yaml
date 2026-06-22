@@ -1,0 +1,11 @@
+name: ISFrag
+slug: isfrag
+evidence_spans:
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+derived_from:
+- doi: 10.1021/acs.analchem.1c01644
+  title: ISFrag
+source_repos:
+- HuanLab/ISFrag
+schema_version: 0.2.0

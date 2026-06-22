@@ -1,0 +1,10 @@
+name: netgsa R package
+slug: netgsa-r-package
+evidence_spans:
+- subsequently test them for enrichment across experimental conditions using the [netgsa R package](https://cran.rstudio.com/web/packages/netgsa/index.html)
+derived_from:
+- doi: 10.1186/s12859-024-05994-1
+  title: 'DNEA: an R package for fast and versatile data-driven network analysis of metabolomics data'
+source_repos:
+- Karnovsky-Lab/DNEA
+schema_version: 0.2.0

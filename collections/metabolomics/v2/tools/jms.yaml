@@ -1,0 +1,10 @@
+name: JMS
+slug: jms
+evidence_spans:
+- The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
+derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+source_repos:
+- shuzhao-li-lab/asari
+schema_version: 0.2.0

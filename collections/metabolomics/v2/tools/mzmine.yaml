@@ -1,0 +1,37 @@
+name: mzmine
+slug: mzmine
+evidence_spans:
+- mzmine is an open-source software for mass spectrometry data processing
+- Getting started with the [Documentation](https://mzmine.github.io/mzmine_documentation/index.html)
+- The evaluation helpers rely on peak picking using MZMine parameters defined in `PeakPicking.py`.
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/)
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- Duplicate filtering on MZmine's MGF and CSV files (NEG)
+derived_from:
+- doi: 10.1038/s41467-021-23953-9
+  title: iimn
+- doi: 10.1021/acs.analchem.0c03895
+  title: Rapid Development of Improved Data-Dependent Acquisition Strategies
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+- doi: 10.1101/2021.12.21.473622v1
+  title: MolNotator
+- doi: 10.1186/1471-2105-11-395
+  title: mzmine2
+- doi: 10.1038/s41587-023-01690-2
+  title: mzmine3
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1101/2024.05.13.593988v1
+  title: plantMASST
+- doi: 10.1021/acs.analchem.5c00567
+  title: Automated Integration and Quality Assessment of Chromatographic Peaks in LC–MS-Based Metabolomics and Lipidomics Using TARDIS
+source_repos:
+- GarrettLab-UF/LipidMatch
+- ZzakB/MolNotator
+- helenamrusso/plantmasst
+- luigiquiros/inventa
+- mzmine/mzmine2
+schema_version: 0.2.0

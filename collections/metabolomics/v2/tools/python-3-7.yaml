@@ -1,0 +1,10 @@
+name: Python 3.7
+slug: python-3-7
+evidence_spans:
+- 'Python: 3.7'
+derived_from:
+- doi: 10.1038/s42256-025-01140-5
+  title: MSGo
+source_repos:
+- aaronma2020/MSGO
+schema_version: 0.2.0

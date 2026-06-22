@@ -1,0 +1,8 @@
+name: falcon
+slug: falcon
+evidence_spans:
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+derived_from:
+- doi: 10.1002/rcm.9153
+  title: Large‐scale tandem mass spectrum clustering using fast nearest neighbor searching
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: h5py 2.7.1
+slug: h5py-2-7-1
+evidence_spans:
+- h5py(2.7.1)
+derived_from:
+- doi: 10.1093/bioinformatics/btac032/6510930
+  title: massNet
+source_repos:
+- wabdelmoula/massNet
+schema_version: 0.2.0

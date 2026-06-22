@@ -1,0 +1,13 @@
+name: MEMO
+slug: memo
+evidence_spans:
+- 'Similarity Component (SC): a score considering the spectral dissimilarity of the samples within the set'
+- '**M**\ s2 bas\ **E**\ d sa\ **M**\ ple vect\ **O**\ rization (**MEMO**) is a method allowing a Retention Time (RT) agnostic alignment'
+derived_from:
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+- doi: 10.3389/fbinf.2022.842964
+  title: memo
+source_repos:
+- luigiquiros/inventa
+schema_version: 0.2.0

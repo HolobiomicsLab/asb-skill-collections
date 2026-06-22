@@ -1,0 +1,14 @@
+name: tidyverse
+slug: tidyverse
+evidence_spans:
+- tidyverse
+- library(tidyverse)
+derived_from:
+- doi: 10.1021/acs.est.5c08558
+  title: CMDN
+- doi: 10.1007/978-3-319-47656-8_6
+  title: Preprocessing and Pretreatment of Metabolomics Data for Statistical Analysis
+source_repos:
+- LeaveMeNotTonight/CMDN
+- scibiome/meteor
+schema_version: 0.2.0

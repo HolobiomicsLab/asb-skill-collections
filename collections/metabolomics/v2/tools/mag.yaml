@@ -1,0 +1,10 @@
+name: MAG
+slug: mag
+evidence_spans:
+- Automated annotation of **M2M** using **MAG**
+derived_from:
+- doi: 10.1073/pnas.1608041113
+  title: MS2LDA
+source_repos:
+- vdhooftcompmet/MS2LDA
+schema_version: 0.2.0

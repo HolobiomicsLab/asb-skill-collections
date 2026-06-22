@@ -1,0 +1,10 @@
+name: IDSL.CSA
+slug: idsl-csa
+evidence_spans:
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+derived_from:
+- doi: 10.1021/acs.analchem.3c00376
+  title: IDSL.CSA
+source_repos:
+- idslme/IDSL.CSA
+schema_version: 0.2.0

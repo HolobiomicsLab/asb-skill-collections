@@ -1,0 +1,10 @@
+name: PyTorch or equivalent deep learning framework (inferred from GNN/contrastive learning context)
+slug: pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context
+evidence_spans:
+- Our method integrates contrastive learning with masked graph modeling
+derived_from:
+- doi: 10.1002/anie.202507483
+  title: NA
+source_repos:
+- Chen-micslab/QCCAssisted4DSterol
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: jorhelp Docker Image
+slug: jorhelp-docker-image
+evidence_spans:
+- 'you can directly use the Docker Image we provide, or you can build your own running environment: #### Run with docker Pull the docker image: `docker pull jorhelp/'
+derived_from:
+- doi: 10.26599/bdma.2024.9020059
+  title: IsoFusion
+source_repos:
+- xfcui/IsoFusion
+schema_version: 0.2.0

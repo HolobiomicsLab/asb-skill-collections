@@ -1,0 +1,8 @@
+name: MOCCal
+slug: moccal
+evidence_spans:
+- Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations
+derived_from:
+- doi: 10.1021/acs.analchem.3c04290
+  title: moccal
+schema_version: 0.2.0

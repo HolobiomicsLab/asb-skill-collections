@@ -1,0 +1,32 @@
+name: scipy
+slug: scipy
+version_used: 1.4.1
+evidence_spans:
+- An additional cosine score implementation [in S3 Text] relies on scipy [41]
+- An additional cosine score implementation (Fig C in S3 Text) relies on scipy [41]
+- scipy.signal module for LOWESS fitting via the regression function
+- scipy==1.4.1
+- scipy
+- 'Dependencies: scipy'
+derived_from:
+- doi: 10.1371/journal.pcbi.1008724
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+- doi: 10.1021/acs.analchem.5c00060
+  title: LAGF
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.1021/acs.jproteome.2c00313
+  title: 'MZA: A Data Conversion Tool to Facilitate Software Development and Artificial Intelligence Research in Multidimensional Mass Spectrometry'
+- doi: 10.1021/acs.analchem.4c05632
+  title: NMRformer
+- doi: 10.1038/s41592-023-02012-9
+  title: Flash entropy search to query all mass spectral libraries in real time
+source_repos:
+- FanzhouKong/spectral_denoising
+- PNNL-m-q/mzapy
+- shuzhao-li-lab/asari
+- zsspython/LAGF
+- zza1211/NMRformer
+schema_version: 0.2.0

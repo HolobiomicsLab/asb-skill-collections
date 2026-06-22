@@ -1,0 +1,11 @@
+name: tqdm_joblib
+slug: tqdm-joblib
+version_used: 0.0.3
+evidence_spans:
+- tqdm_joblib==0.0.3
+derived_from:
+- doi: 10.1021/acs.analchem.5c00060
+  title: LAGF
+source_repos:
+- zsspython/LAGF
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: MRMQuant
+slug: mrmquant
+version_used: '2.7'
+evidence_spans:
+- Be sure to use the latest version (currently MRMQuant v2.7).
+derived_from:
+- doi: 10.1021/acs.analchem.4c02462
+  title: MRMQuant
+source_repos:
+- kslynn128171/MRMQuant
+schema_version: 0.2.0

@@ -1,0 +1,14 @@
+name: mzR
+slug: mzr
+evidence_spans:
+- Integration with the mzR package from Bioconductor allows direct parsing of mzML and MGF files
+- isoSCAN uses `mzR` package in order to read MS files
+derived_from:
+- doi: 10.1021/acs.analchem.5c03207
+  title: Aerith
+- doi: 10.1021/acs.analchem.0c02998
+  title: isoSCAN
+source_repos:
+- jcapelladesto/isoSCAN
+- thepanlab/Aerith
+schema_version: 0.2.0

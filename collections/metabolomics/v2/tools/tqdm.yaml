@@ -1,0 +1,15 @@
+name: tqdm
+slug: tqdm
+version_used: 4.45.0
+evidence_spans:
+- tqdm==4.45.0
+- tqdm
+derived_from:
+- doi: 10.1021/acs.analchem.5c00060
+  title: LAGF
+- doi: 10.1038/s41467-019-13680-7
+  title: The METLIN small molecule dataset for machine learning-based retention time prediction
+source_repos:
+- 01dadada/RT-Transformer
+- zsspython/LAGF
+schema_version: 0.2.0

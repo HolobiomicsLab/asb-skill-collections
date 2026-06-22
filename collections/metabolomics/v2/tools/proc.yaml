@@ -1,0 +1,11 @@
+name: pROC
+slug: proc
+version_used: 1.17.0.1
+evidence_spans:
+- packageVersion("pROC") [1] ‘1.17.0.1’
+derived_from:
+- doi: 10.3390/metabo13080944
+  title: SERDA
+source_repos:
+- slfan2013/SERDA
+schema_version: 0.2.0

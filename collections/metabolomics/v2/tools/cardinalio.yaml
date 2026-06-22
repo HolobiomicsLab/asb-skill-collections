@@ -1,0 +1,10 @@
+name: CardinalIO
+slug: cardinalio
+evidence_spans:
+- 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
+derived_from:
+- doi: 10.1093/bioinformatics/btv146
+  title: Cardinal
+source_repos:
+- kuwisdelu/Cardinal
+schema_version: 0.2.0

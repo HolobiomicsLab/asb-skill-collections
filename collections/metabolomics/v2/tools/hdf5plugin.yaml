@@ -1,0 +1,13 @@
+name: hdf5plugin
+slug: hdf5plugin
+evidence_spans:
+- '* ``hdf5plugin``'
+- h5py and optionally hdf5plugin <https://hdf5plugin.readthedocs.io/en/latest/>
+derived_from:
+- doi: 10.1021/acs.jproteome.2c00313
+  title: 'MZA: A Data Conversion Tool to Facilitate Software Development and Artificial Intelligence Research in Multidimensional Mass Spectrometry'
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+source_repos:
+- PNNL-m-q/mzapy
+schema_version: 0.2.0

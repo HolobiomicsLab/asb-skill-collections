@@ -1,0 +1,10 @@
+name: Keras 2.2.0
+slug: keras-2-2-0
+evidence_spans:
+- Keras (2.2.0)
+derived_from:
+- doi: 10.1093/bioinformatics/btac032/6510930
+  title: massNet
+source_repos:
+- wabdelmoula/massNet
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Ruby
+slug: ruby
+evidence_spans:
+- in order to use the commands below in a Ruby console
+derived_from:
+- doi: 10.1186/s13321-016-0174-y
+  title: ClassyFire
+source_repos:
+- https://bitbucket.org/wishartlab/classyfire_api.git
+schema_version: 0.2.0

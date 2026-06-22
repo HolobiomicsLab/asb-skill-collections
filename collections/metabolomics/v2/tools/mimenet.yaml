@@ -1,0 +1,11 @@
+name: MiMeNet
+slug: mimenet
+evidence_spans:
+- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
+- MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
+derived_from:
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+schema_version: 0.2.0

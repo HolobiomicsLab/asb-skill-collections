@@ -1,0 +1,10 @@
+name: rhdf5
+slug: rhdf5
+evidence_spans:
+- using generic HDF5 libraries available (e.g., h5py and rhdf5)
+derived_from:
+- doi: 10.1021/acs.jproteome.2c00313
+  title: MZA
+source_repos:
+- PNNL-m-q/mza
+schema_version: 0.2.0

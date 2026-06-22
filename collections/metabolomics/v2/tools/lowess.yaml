@@ -1,0 +1,10 @@
+name: LOWESS
+slug: lowess
+evidence_spans:
+- Perform a LOWESS (Locally Weighted Scatterplot Smoothing) regression to obtain a function to describe the relationship of the RT values
+derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+source_repos:
+- shuzhao-li-lab/asari
+schema_version: 0.2.0

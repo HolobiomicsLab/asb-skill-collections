@@ -1,0 +1,11 @@
+name: reticulate
+slug: reticulate
+version_used: '1.19'
+evidence_spans:
+- packageVersion("reticulate") [1] ‘1.19’
+derived_from:
+- doi: 10.3390/metabo13080944
+  title: SERDA
+source_repos:
+- slfan2013/SERDA
+schema_version: 0.2.0

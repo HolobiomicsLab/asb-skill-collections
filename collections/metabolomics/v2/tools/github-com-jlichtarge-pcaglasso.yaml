@@ -1,0 +1,10 @@
+name: github.com/jlichtarge/pcaGLASSO
+slug: github-com-jlichtarge-pcaglasso
+evidence_spans:
+- github.com__jlichtarge__pcaGLASSO
+derived_from:
+- doi: 10.3389/fnins.2024.1520982
+  title: MetaboLINK/ PCA-GLASSO
+source_repos:
+- jlichtarge/pcaGLASSO
+schema_version: 0.2.0

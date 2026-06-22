@@ -1,0 +1,10 @@
+name: qmake
+slug: qmake
+evidence_spans:
+- qmake -r build.pro
+derived_from:
+- doi: 10.3390/metabo12080684
+  title: MAVEN2
+source_repos:
+- eugenemel/maven
+schema_version: 0.2.0

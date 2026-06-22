@@ -1,0 +1,10 @@
+name: Decision tree classifier (scikit-learn or equivalent tree-based ML framework)
+slug: decision-tree-classifier-scikit-learn-or-equivalent-tree-based-ml-framework
+evidence_spans:
+- Using ChemEcho vectors, we can train decision trees which are able to be directly converted to MassQL
+derived_from:
+- doi: 10.1145/2939672.2939778
+  title: '"Why Should I Trust You?"'
+source_repos:
+- biorack/chemecho
+schema_version: 0.2.0

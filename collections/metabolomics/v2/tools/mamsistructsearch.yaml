@@ -1,0 +1,8 @@
+name: MamsiStructSearch
+slug: mamsistructsearch
+evidence_spans:
+- A class for performing structural search on multi-modal MS data using.
+derived_from:
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+schema_version: 0.2.0

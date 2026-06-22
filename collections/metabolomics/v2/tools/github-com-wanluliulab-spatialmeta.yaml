@@ -1,0 +1,10 @@
+name: github.com/WanluLiuLab/SpatialMETA
+slug: github-com-wanluliulab-spatialmeta
+evidence_spans:
+- github.com__WanluLiuLab__SpatialMETA
+derived_from:
+- doi: 10.1038/s41467-025-63915-z
+  title: SpatialMETA
+source_repos:
+- WanluLiuLab/SpatialMETA
+schema_version: 0.2.0

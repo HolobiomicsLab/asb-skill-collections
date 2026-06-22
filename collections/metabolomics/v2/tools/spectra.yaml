@@ -1,0 +1,31 @@
+name: Spectra
+slug: spectra
+evidence_spans:
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- performs spectral database dereplication using R Package
+- spectral database dereplication using R Package Spectra
+- The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("Spectra")`
+- The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra
+derived_from:
+- doi: 10.1021/acs.analchem.5c01726
+  title: DuReS
+- doi: 10.1186/s13321-023-00695-y
+  title: MAW
+- doi: 10.1093/bioinformatics/btac441
+  title: MobilityTransformR
+- doi: 10.3390/metabo12020173
+  title: spectra
+- doi: 10.21105/joss.08070
+  title: spectripy
+- doi: 10.1021/acs.analchem.5c00567
+  title: Automated Integration and Quality Assessment of Chromatographic Peaks in LC–MS-Based Metabolomics and Lipidomics Using TARDIS
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- BiosystemEngineeringLab-IITB/dures
+- LiesaSalzer/MobilityTransformR
+- rformassspectrometry/Spectra
+- sneumann/xcms
+- zmahnoor14/MAW
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: shinyscreen
+slug: shinyscreen
+evidence_spans:
+- Shinyscreen is a Shiny application for visualizing and analyzing high resolution mass spectrometry data.
+derived_from:
+- doi: 10.1186/s13321-025-01044-x
+  title: Shinyscreen
+source_repos:
+- https://gitlab.com/uniluxembourg/lcsb/eci/shinyscreen.git
+schema_version: 0.2.0

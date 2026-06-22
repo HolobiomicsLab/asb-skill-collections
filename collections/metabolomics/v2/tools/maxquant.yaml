@@ -1,0 +1,11 @@
+name: MaxQuant
+slug: maxquant
+evidence_spans:
+- In the academic environment, MaxQuant and Skyline are by far the most popular ones.
+- In the academic environment, [MaxQuant](https://maxquant.org/)[@Cox2008] and [Skyline] ... are by far the most popular ones.
+derived_from:
+- doi: 10.1021/acs.jproteome.0c00866
+  title: 'The rawrr R Package: Direct Access to Orbitrap Data and Beyond'
+source_repos:
+- fgcz/rawrr
+schema_version: 0.2.0

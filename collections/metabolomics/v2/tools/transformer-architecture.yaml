@@ -1,0 +1,9 @@
+name: transformer architecture
+slug: transformer-architecture
+evidence_spans:
+- a transformer architecture can be constructed to efficiently solve the task
+- we show how a transformer architecture can be constructed to efficiently solve the task
+derived_from:
+- doi: 10.1021/acscentsci.4c01132
+  title: NMR2Struct
+schema_version: 0.2.0

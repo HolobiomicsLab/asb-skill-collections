@@ -1,0 +1,10 @@
+name: treelib
+slug: treelib
+evidence_spans:
+- tree visualization aided by the treelib library
+derived_from:
+- doi: 10.1021/acs.analchem.2c05810
+  title: Generalized Tree Structure to Annotate Untargeted Metabolomics and Stable Isotope Tracing Data
+source_repos:
+- shuzhao-li-lab/khipu
+schema_version: 0.2.0

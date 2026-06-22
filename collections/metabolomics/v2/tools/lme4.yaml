@@ -1,0 +1,10 @@
+name: lme4
+slug: lme4
+evidence_spans:
+- linear models with mixed effects (random and fixed), using the _lmer_ function from the lme4 package
+derived_from:
+- doi: 10.1515/jib-2025-0047
+  title: 'Streamlining feature elaboration and statistics analysis in metabolomics: the GetFeatistics R-package'
+source_repos:
+- FrigerioGianfranco/GetFeatistics
+schema_version: 0.2.0

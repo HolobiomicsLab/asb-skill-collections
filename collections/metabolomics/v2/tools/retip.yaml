@@ -1,0 +1,10 @@
+name: Retip
+slug: retip
+evidence_spans:
+- github.com__oloBion__Retip
+derived_from:
+- doi: 10.1021/acs.analchem.9b05765
+  title: 'Retip: Retention Time Prediction for Compound Annotation in Untargeted Metabolomics'
+source_repos:
+- oloBion/Retip
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Perl Prima
+slug: perl-prima
+evidence_spans:
+- Graphical User Interface, developed by using Perl Prima
+derived_from:
+- doi: 10.1002/cpz1.70009
+  title: LipidOne 2.0
+source_repos:
+- matteogiulietti/LipidOne
+schema_version: 0.2.0

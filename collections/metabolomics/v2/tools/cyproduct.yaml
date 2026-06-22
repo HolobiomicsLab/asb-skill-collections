@@ -1,0 +1,10 @@
+name: CyProduct
+slug: cyproduct
+evidence_spans:
+- Please download the CyProduct.jar to run the tool
+derived_from:
+- doi: 10.1021/acs.jcim.1c00144
+  title: CyProduct
+source_repos:
+- Le0nT1/CyProduct
+schema_version: 0.2.0

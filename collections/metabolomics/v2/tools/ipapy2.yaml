@@ -1,0 +1,10 @@
+name: ipaPy2
+slug: ipapy2
+evidence_spans:
+- github.com__francescodc87__ipaPy2
+derived_from:
+- doi: 10.1093/bioinformatics/btad455
+  title: ipaPy2
+source_repos:
+- francescodc87/ipaPy2
+schema_version: 0.2.0

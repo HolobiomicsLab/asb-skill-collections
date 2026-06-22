@@ -1,0 +1,12 @@
+name: notame
+slug: notame
+evidence_spans:
+- This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
+- library(notame)
+- '```flag_quality``` is used to flag features based on the other quality metrics'
+derived_from:
+- doi: 10.1093/bioinformatics/btr597
+  title: MissForest—non-parametric missing value imputation for mixed-type data
+source_repos:
+- antonvsdata/notame
+schema_version: 0.2.0

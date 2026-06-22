@@ -1,0 +1,11 @@
+name: CREST
+slug: crest
+version_used: 3.0.2
+evidence_spans:
+- '**CREST** (version >= 3.0.2)'
+derived_from:
+- doi: 10.1021/jasms.5c00234
+  title: QCxMS2
+source_repos:
+- grimme-lab/QCxMS2
+schema_version: 0.2.0

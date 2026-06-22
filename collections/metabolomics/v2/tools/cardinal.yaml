@@ -1,0 +1,22 @@
+name: Cardinal
+slug: cardinal
+version_used: '3.6'
+evidence_spans:
+- library(Cardinal)
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- If you are using Cardinal to process your MSI data, data objects in the `MSProcessedImagingExperiment` or `MSContinuousImagingExperiment` formats can be converted to mass2adduct's `msimat` format
+derived_from:
+- doi: 10.1093/bioinformatics/btv146
+  title: Cardinal
+- doi: 10.1101/2025.10.15.682422v1
+  title: LipidQMap
+- doi: 10.1021/acs.analchem.0c04720
+  title: Determination of Abundant Metabolite Matrix Adducts Illuminates the Dark Metabolome of MALDI-Mass Spectrometry Imaging Datasets
+- doi: 10.1101/2024.10.14.618269
+  title: 'Structural annotation of full-scan MS data: A unified solution for LC-MS and MS imaging analyses'
+source_repos:
+- GenomicsMachineLearning/SpaMTP
+- kuwisdelu/Cardinal
+- swinnenteam/LipidQMap
+schema_version: 0.2.0

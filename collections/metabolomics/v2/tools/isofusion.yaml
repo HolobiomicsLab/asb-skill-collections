@@ -1,0 +1,10 @@
+name: IsoFusion
+slug: isofusion
+evidence_spans:
+- github.com__xfcui__IsoFusion
+derived_from:
+- doi: 10.26599/bdma.2024.9020059
+  title: IsoFusion
+source_repos:
+- xfcui/IsoFusion
+schema_version: 0.2.0

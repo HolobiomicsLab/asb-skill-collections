@@ -1,0 +1,11 @@
+name: timaR
+slug: timar
+evidence_spans:
+- 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
+- 'tima_results_filename: timaR reponderated output format'
+derived_from:
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+source_repos:
+- luigiquiros/inventa
+schema_version: 0.2.0

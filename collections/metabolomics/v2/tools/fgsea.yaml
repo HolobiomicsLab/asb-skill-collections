@@ -1,0 +1,10 @@
+name: fgsea
+slug: fgsea
+evidence_spans:
+- enrichmet integrates fgsea for fast MetSEA
+derived_from:
+- doi: 10.1101/2025.08.28.672951v2
+  title: EnrichMET
+source_repos:
+- biodatalab/enrichmet
+schema_version: 0.2.0

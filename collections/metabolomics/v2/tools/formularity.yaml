@@ -1,0 +1,9 @@
+name: Formularity
+slug: formularity
+evidence_spans:
+- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24] which uses FT-ICR MS data in .xml format
+- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24]
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+schema_version: 0.2.0

@@ -1,0 +1,12 @@
+name: mass2adduct
+slug: mass2adduct
+evidence_spans:
+- This package presents tools for counting and identifying possible adducts in MS data
+- library(mass2adduct)
+- This package presents tools for counting and identifying possible adducts in MS data, and accompanies Janda et al. (in prep.).
+- We can match massdiffs to specific adduct types using the same function `adductMatch`
+- This performs a correlation test (by default two-tailed with Pearson's method) on each pair of peaks in the massdiff object.
+derived_from:
+- doi: 10.1021/acs.analchem.0c04720
+  title: Determination of Abundant Metabolite Matrix Adducts Illuminates the Dark Metabolome of MALDI-Mass Spectrometry Imaging Datasets
+schema_version: 0.2.0

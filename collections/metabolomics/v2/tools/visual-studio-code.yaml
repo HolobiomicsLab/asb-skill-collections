@@ -1,0 +1,14 @@
+name: Visual Studio Code
+slug: visual-studio-code
+evidence_spans:
+- This project can be coded in Visual Studio Code (VSCode)
+- JSON configurations are formatted by Visual Studio Code / PyCharm editor
+derived_from:
+- doi: 10.1021/acs.analchem.0c01980
+  title: CorrDec
+- doi: 10.1101/2020.04.09.033894
+  title: LipidLynxX
+source_repos:
+- SysMedOs/LipidLynxX
+- systemsomicslab/MsdialWorkbench
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: openpyxl
+slug: openpyxl
+version_used: 3.1.5
+evidence_spans:
+- openpyxl 3.1.5
+derived_from:
+- doi: 10.1002/nbm.70131
+  title: ROIAL-NMR
+source_repos:
+- Leo-Cheng-Lab/ROIAL-NMR
+schema_version: 0.2.0

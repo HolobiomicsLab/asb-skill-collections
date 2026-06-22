@@ -1,0 +1,10 @@
+name: Python 3.11.7
+slug: python-3-11-7
+evidence_spans:
+- 'python_version: 3.11.7'
+derived_from:
+- doi: 10.1101/2025.11.12.688047v1
+  title: MVP
+source_repos:
+- HassounLab/MVP
+schema_version: 0.2.0

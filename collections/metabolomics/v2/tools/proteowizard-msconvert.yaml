@@ -1,0 +1,18 @@
+name: ProteoWizard msconvert
+slug: proteowizard-msconvert
+evidence_spans:
+- Conversion to mzML from several other formats can be performed using the free and open-source [ProteoWizard](https://proteowizard.sourceforge.io/) msconvert utility.
+- transform the raw data from vendor format into __mz(X)ML__ format using __Proteowizard MSconvert__
+- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
+- You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html.
+derived_from:
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+- doi: 10.1021/acs.analchem.0c02998
+  title: isoSCAN
+- doi: 10.1021/jasms.4c00178
+  title: 'MSIGen: An Open-Source Python Package for Processing and Visualizing Mass Spectrometry Imaging Data'
+source_repos:
+- LabLaskin/MSIGen
+- jcapelladesto/isoSCAN
+schema_version: 0.2.0

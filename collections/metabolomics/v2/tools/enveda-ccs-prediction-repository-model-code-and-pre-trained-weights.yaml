@@ -1,0 +1,8 @@
+name: enveda/ccs-prediction repository (model code and pre-trained weights)
+slug: enveda-ccs-prediction-repository-model-code-and-pre-trained-weights
+evidence_spans:
+- enveda/ccs-prediction
+derived_from:
+- doi: 10.1186/s13321-024-00899-w
+  title: mol2ccs
+schema_version: 0.2.0

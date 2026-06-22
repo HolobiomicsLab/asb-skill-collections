@@ -1,0 +1,12 @@
+name: docker-compose
+slug: docker-compose
+evidence_spans:
+- you need docker and docker-compose
+derived_from:
+- doi: 10.1021/jacs.9b13786
+  title: CSCS / deep CNN natural-product annotation
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
+source_repos:
+- mwang87/NP-Classifier
+schema_version: 0.2.0

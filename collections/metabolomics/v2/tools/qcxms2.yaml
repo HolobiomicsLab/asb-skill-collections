@@ -1,0 +1,10 @@
+name: QCxMS2
+slug: qcxms2
+evidence_spans:
+- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+derived_from:
+- doi: 10.1021/jasms.5c00234
+  title: QCxMS2
+source_repos:
+- grimme-lab/QCxMS2
+schema_version: 0.2.0

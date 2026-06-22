@@ -1,0 +1,16 @@
+name: edgeR
+slug: edger
+evidence_spans:
+- allows the identification of differentially abundant lipids in simple and complex experimental designs
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva'
+- 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
+- '### edger [edger](../modules/local/edger)'
+derived_from:
+- doi: 10.1093/bioinformatics/btac706
+  title: ADViSELipidomics
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+- ShinyFabio/ADViSELipidomics
+schema_version: 0.2.0

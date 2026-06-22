@@ -1,0 +1,10 @@
+name: Miniconda
+slug: miniconda
+evidence_spans:
+- you can instead download Miniconda from https://www.anaconda.com/download/success
+derived_from:
+- doi: 10.1021/jasms.4c00178
+  title: 'MSIGen: An Open-Source Python Package for Processing and Visualizing Mass Spectrometry Imaging Data'
+source_repos:
+- LabLaskin/MSIGen
+schema_version: 0.2.0

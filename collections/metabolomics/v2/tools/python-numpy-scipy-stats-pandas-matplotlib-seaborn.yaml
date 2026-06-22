@@ -1,0 +1,10 @@
+name: Python (numpy, scipy.stats, pandas, matplotlib, seaborn)
+slug: python-numpy-scipy-stats-pandas-matplotlib-seaborn
+evidence_spans:
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- NPLinker/nplinker
+schema_version: 0.2.0

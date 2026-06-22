@@ -1,0 +1,10 @@
+name: Metabolomics Workbench API
+slug: metabolomics-workbench-api
+evidence_spans:
+- Through integration with Metabolomics Workbench API, `lipidr` allows users, to quickly explore public lipidomics experiments.
+derived_from:
+- doi: 10.1021/acs.jproteome.0c00082
+  title: lipidr
+source_repos:
+- ahmohamed/lipidr
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Appveyor
+slug: appveyor
+evidence_spans:
+- Builds for Windows are run via Appveyor
+derived_from:
+- doi: 10.3390/metabo12080684
+  title: MAVEN2
+source_repos:
+- eugenemel/maven
+schema_version: 0.2.0

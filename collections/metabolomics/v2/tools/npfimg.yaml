@@ -1,0 +1,11 @@
+name: NPFimg
+slug: npfimg
+evidence_spans:
+- github.com__poomcj__NPFimg
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+derived_from:
+- doi: 10.1021/acs.analchem.1c03163
+  title: Image Processing and Machine Learning for Automated Identification of Chemo-/Biomarkers in Chromatography–Mass Spectrometry
+source_repos:
+- poomcj/NPFimg
+schema_version: 0.2.0

@@ -1,0 +1,35 @@
+name: PubChem
+slug: pubchem
+evidence_spans:
+- all ids are converted to a unique one, in this case the PubChem ID
+- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- the WebUI will rank it against all candidates from PubChem
+- find structures on other chemical projects like Pubchem
+- Final candidate selection is done in Python using RDKit and PubChemPy
+- 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
+derived_from:
+- doi: 10.3390/metabo13121167
+  title: 'A Metabolites Merging Strategy (MMS): Harmonization to Enable Studies’ Intercomparison'
+- doi: 10.1038/s42256-024-00816-8
+  title: ICEBERG
+- doi: 10.1021/acs.analchem.3c04654
+  title: ICEBERG / fragmentation graph generation
+- doi: 10.1186/s13321-021-00530-2
+  title: MassSpecBlocks
+- doi: 10.1186/s13321-023-00695-y
+  title: MAW
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+- doi: 10.1038/s41592-025-02813-0
+  title: MSnLib
+- doi: 10.1186/s13321-020-00477-w
+  title: 'patRoon: open source software platform for environmental mass spectrometry based non-target screening'
+source_repos:
+- RECETOX/MSMetaEnhancer
+- corinnabrungs/msn_tree_library
+- mariallr/amanida
+- privrja/MassSpecBlocks
+- rickhelmus/patRoon
+- samgoldman97/ms-pred
+- zmahnoor14/MAW
+schema_version: 0.2.0

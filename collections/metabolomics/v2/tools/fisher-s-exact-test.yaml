@@ -1,0 +1,10 @@
+name: Fisher's exact test
+slug: fisher-s-exact-test
+evidence_spans:
+- enrichmet performs pathway enrichment analysis using Fisher's exact test
+derived_from:
+- doi: 10.1101/2025.08.28.672951v2
+  title: EnrichMET
+source_repos:
+- biodatalab/enrichmet
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: psm_utils
+slug: psm-utils
+evidence_spans:
+- Accepted ProForma modification labels in :py:mod:`psm_utils`
+derived_from:
+- doi: 10.1002/pmic.202300336
+  title: MS2Rescore (immunopeptidome rescoring)
+source_repos:
+- compomics/ms2rescore
+schema_version: 0.2.0

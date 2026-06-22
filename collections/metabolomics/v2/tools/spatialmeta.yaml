@@ -1,0 +1,12 @@
+name: spatialMETA
+slug: spatialmeta
+evidence_spans:
+- spatialMETA is a method for integrating spatial multi-omics data
+- spatialmeta.pp.calculate_qc_metrics_sm
+- spatialmeta.model.ConditionalVAESTSM
+derived_from:
+- doi: 10.1038/s41467-025-63915-z
+  title: SpatialMETA
+source_repos:
+- WanluLiuLab/SpatialMETA
+schema_version: 0.2.0

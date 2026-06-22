@@ -1,0 +1,10 @@
+name: h2o
+slug: h2o
+evidence_spans:
+- DL via h2o
+derived_from:
+- doi: 10.1093/gigascience/giaa162
+  title: Lilikoi V2.0
+source_repos:
+- lanagarmire/lilikoi2
+schema_version: 0.2.0

@@ -1,0 +1,15 @@
+name: LipidMatch
+slug: lipidmatch
+version_used: '4.2'
+evidence_spans:
+- 'put Modular.r into two directories (replace existing code): `LipidMatch-4.2\Flow\LipidMatch_Distribution`'
+- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
+derived_from:
+- doi: 10.1007/s00216-021-03392-7
+  title: FluoroMatch 2.0
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+source_repos:
+- GarrettLab-UF/LipidMatch
+- InnovativeOmics/Core-Match
+schema_version: 0.2.0

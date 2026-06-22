@@ -1,0 +1,14 @@
+name: Galaxy
+slug: galaxy
+evidence_spans:
+- Metabolomics Tools for [Galaxy](http://galaxyproject.org/)
+- Galaxy tool for processing and analysis
+derived_from:
+- doi: 10.1186/s13742-016-0115-8
+  title: Galaxy-M
+- doi: 10.1007/s11306-021-01841-z
+  title: IonFlow
+source_repos:
+- Viant-Metabolomics/Galaxy-M
+- wanchanglin/ionflow
+schema_version: 0.2.0

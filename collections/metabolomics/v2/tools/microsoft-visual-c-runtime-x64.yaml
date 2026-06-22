@@ -1,0 +1,10 @@
+name: Microsoft Visual C++ Runtime x64
+slug: microsoft-visual-c-runtime-x64
+evidence_spans:
+- Microsoft Visual C++ Runtime x64 (may already be installed, if the program doesn't work then you can download vcredist_x64.exe
+derived_from:
+- doi: 10.1021/acs.jproteome.1c00425
+  title: A Preprocessing Tool for Enhanced Ion Mobility–Mass Spectrometry-Based Omics Workflows
+source_repos:
+- PNNL-Comp-Mass-Spec/PNNL-PreProcessor
+schema_version: 0.2.0

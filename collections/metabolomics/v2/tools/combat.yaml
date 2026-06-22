@@ -1,0 +1,10 @@
+name: ComBat
+slug: combat
+evidence_spans:
+- dealing with batch effect correction.
+derived_from:
+- doi: 10.1093/bioinformatics/btac706
+  title: ADViSELipidomics
+source_repos:
+- ShinyFabio/ADViSELipidomics
+schema_version: 0.2.0

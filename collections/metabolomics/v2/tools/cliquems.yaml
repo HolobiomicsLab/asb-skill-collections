@@ -1,0 +1,11 @@
+name: cliqueMS
+slug: cliquems
+evidence_spans:
+- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- information from CAMERA R package, H. Tong et al., and cliqueMS.
+derived_from:
+- doi: 10.1021/acs.analchem.1c00238
+  title: mWISE
+source_repos:
+- b2slab/mWISE
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: TorchMetrics
+slug: torchmetrics
+evidence_spans:
+- '**TorchMetrics**'
+derived_from:
+- doi: 10.1021/acs.jcim.4c02179
+  title: ABCoRT
+source_repos:
+- RiverCCC/ABCoRT
+schema_version: 0.2.0

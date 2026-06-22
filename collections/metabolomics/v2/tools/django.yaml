@@ -1,0 +1,10 @@
+name: Django
+slug: django
+evidence_spans:
+- The platform is built with Python, Django, JavaScript, and HTML
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00854
+  title: MSConnect
+source_repos:
+- RTKlab-BYU/MSConnect
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: meRgeION2
+slug: mergeion2
+evidence_spans:
+- github.com__daniellyz__meRgeION2
+derived_from:
+- doi: 10.1021/acs.analchem.2c04343
+  title: MeRgeION
+source_repos:
+- daniellyz/meRgeION2
+schema_version: 0.2.0

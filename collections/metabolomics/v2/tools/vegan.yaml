@@ -1,0 +1,11 @@
+name: vegan
+slug: vegan
+evidence_spans:
+- diversity metrics using functions from the R packages vegan [63]
+- diversity metrics using functions from the R packages vegan
+- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
+- using functions from the R packages vegan [63]
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+schema_version: 0.2.0

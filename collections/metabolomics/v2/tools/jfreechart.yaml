@@ -1,0 +1,11 @@
+name: jfreechart
+slug: jfreechart
+version_used: 1.0.17
+evidence_spans:
+- jfreechart-1.0.17-experimental
+derived_from:
+- doi: 10.3390/metabo12020173
+  title: spectra
+source_repos:
+- rformassspectrometry/Spectra
+schema_version: 0.2.0

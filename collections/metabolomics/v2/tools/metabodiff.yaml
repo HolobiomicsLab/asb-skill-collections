@@ -1,0 +1,12 @@
+name: MetaboDiff
+slug: metabodiff
+evidence_spans:
+- '`MetaboDiff` is available for all operating systems and can be installed via Github'
+- met = knn_impute(met,cutoff=0.4)
+- library("MetaboDiff")
+derived_from:
+- doi: 10.1158/0008-5472.can-14-1490
+  title: AKT1 and MYC Induce Distinctive Metabolic Fingerprints in Human Prostate Cancer
+source_repos:
+- andreasmock/MetaboDiff
+schema_version: 0.2.0

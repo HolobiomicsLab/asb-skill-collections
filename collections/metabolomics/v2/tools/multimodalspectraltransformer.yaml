@@ -1,0 +1,10 @@
+name: MultiModalSpectralTransformer
+slug: multimodalspectraltransformer
+evidence_spans:
+- github.com/mpriessner/MultiModalSpectralTransformer
+derived_from:
+- doi: 10.1002/ange.202517611
+  title: MMST
+source_repos:
+- mpriessner/MultiModalSpectralTransformer
+schema_version: 0.2.0

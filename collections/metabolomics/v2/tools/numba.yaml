@@ -1,0 +1,18 @@
+name: Numba
+slug: numba
+evidence_spans:
+- making extensive use of Numpy [24] and Numba [25]
+- by making extensive use of Numpy [24] and Numba [25], the library
+- by making extensive use of Numpy [24] and Numba [25]
+- 该装饰器来自 numba
+- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and [Numba](http://numba.pydata.org/)
+derived_from:
+- doi: 10.1371/journal.pcbi.1008724
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.1021/acs.analchem.5c02655
+  title: SpecEmbedding
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+source_repos:
+- sword-nan/SpecEmbedding
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: multiprocessing
+slug: multiprocessing
+evidence_spans:
+- '| **Local** (`online_deployment: false`) | None | `multiprocessing.Process`'
+derived_from:
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+source_repos:
+- OpenMS/OpenMS
+schema_version: 0.2.0

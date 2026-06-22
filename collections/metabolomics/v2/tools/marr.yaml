@@ -1,0 +1,11 @@
+name: marr
+slug: marr
+evidence_spans:
+- devtools::install_github("Ghoshlab/marr")
+- marr (Maximum Rank Reproducibility) is a nonparametric approach that detects reproducible signals using a maximal rank statistic for high-dimensional biological data
+derived_from:
+- doi: 10.1080/01621459.2017.1397521
+  title: 'Maximum Rank Reproducibility: A Nonparametric Approach to Assessing Reproducibility in Replicate Experiments'
+source_repos:
+- Ghoshlab/marr
+schema_version: 0.2.0

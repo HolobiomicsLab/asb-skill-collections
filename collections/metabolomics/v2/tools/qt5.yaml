@@ -1,0 +1,10 @@
+name: Qt5
+slug: qt5
+evidence_spans:
+- Install the qt5 package
+derived_from:
+- doi: 10.3390/metabo12080684
+  title: MAVEN2
+source_repos:
+- eugenemel/maven
+schema_version: 0.2.0

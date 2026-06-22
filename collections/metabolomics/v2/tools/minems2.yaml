@@ -1,0 +1,8 @@
+name: mineMS2
+slug: minems2
+evidence_spans:
+- 'package: "`r BiocStyle::pkg_ver(''mineMS2'')`"'
+derived_from:
+- doi: 10.1186/s13321-025-01051-y
+  title: minems2
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: OpenMS TOPP tools
+slug: openms-topp-tools
+evidence_spans:
+- complex workflows utilizing **OpenMS TOPP tools** with parallel execution
+derived_from:
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+source_repos:
+- OpenMS/OpenMS
+schema_version: 0.2.0

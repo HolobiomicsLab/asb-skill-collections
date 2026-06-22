@@ -1,0 +1,10 @@
+name: Google Colab
+slug: google-colab
+evidence_spans:
+- we [present interactively using Google Collab](https://colab.research.google.com/drive/1CKdHDUkGIpAcBzrSfuCodMF_l2xbVAKT?usp=sharing)
+derived_from:
+- doi: 10.1038/s41592-021-01198-0
+  title: SpaceM
+source_repos:
+- alexandrovteam/SpaceM
+schema_version: 0.2.0

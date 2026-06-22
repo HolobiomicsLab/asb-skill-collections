@@ -1,0 +1,10 @@
+name: AVIR.R
+slug: avir-r
+evidence_spans:
+- AVIR.R is a program developed to recognize computational variation among metabolic features in samples
+derived_from:
+- doi: 10.1021/acs.analchem.3c04046
+  title: AVIR
+source_repos:
+- HuanLab/AVIR
+schema_version: 0.2.0

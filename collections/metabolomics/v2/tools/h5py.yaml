@@ -1,0 +1,26 @@
+name: h5py
+slug: h5py
+version_used: 2.7.1
+evidence_spans:
+- h5py(2.7.1)
+- using generic HDF5 libraries available (e.g., h5py and rhdf5)
+- '* ``h5py``'
+- h5py <https://www.h5py.org/> and optionally hdf5plugin
+- h5py
+derived_from:
+- doi: 10.1093/bioinformatics/btac032/6510930
+  title: massNet
+- doi: 10.1021/acs.jproteome.2c00313
+  title: MZA
+- doi: 10.1021/acs.jproteome.2c00313
+  title: 'MZA: A Data Conversion Tool to Facilitate Software Development and Artificial Intelligence Research in Multidimensional Mass Spectrometry'
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+- doi: 10.1021/acs.analchem.4c06210
+  title: SMART
+source_repos:
+- PNNL-m-q/mza
+- PNNL-m-q/mzapy
+- bioinfo-ibms-pumc/SMART
+- wabdelmoula/massNet
+schema_version: 0.2.0

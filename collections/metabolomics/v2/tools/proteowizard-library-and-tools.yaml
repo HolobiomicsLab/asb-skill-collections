@@ -1,0 +1,10 @@
+name: ProteoWizard Library and Tools
+slug: proteowizard-library-and-tools
+evidence_spans:
+- The ProteoWizard Library and Tools are a set of modular and extensible open-source, cross-platform tools and software libraries
+derived_from:
+- doi: 10.1021/acs.jproteome.9b00640
+  title: Skyline (small molecules)
+source_repos:
+- ProteoWizard/pwiz
+schema_version: 0.2.0

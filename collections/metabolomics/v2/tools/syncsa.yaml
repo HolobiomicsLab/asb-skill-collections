@@ -1,0 +1,10 @@
+name: SYNCSA
+slug: syncsa
+evidence_spans:
+- diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
+- diversity metrics using functions from the R packages vegan [63] and SYNCSA
+- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+schema_version: 0.2.0

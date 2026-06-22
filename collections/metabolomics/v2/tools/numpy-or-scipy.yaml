@@ -1,0 +1,10 @@
+name: NumPy or SciPy
+slug: numpy-or-scipy
+evidence_spans:
+- follows the hypergeometric distribution as previously stated
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- NPLinker/nplinker
+schema_version: 0.2.0

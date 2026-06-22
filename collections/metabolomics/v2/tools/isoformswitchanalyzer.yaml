@@ -1,0 +1,10 @@
+name: IsoformSwitchAnalyzer
+slug: isoformswitchanalyzer
+evidence_spans:
+- Isoforms | Genome wide isoform analysis | IsoformSwitchAnalyzer
+derived_from:
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+schema_version: 0.2.0

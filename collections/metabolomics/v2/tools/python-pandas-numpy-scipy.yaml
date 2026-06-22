@@ -1,0 +1,14 @@
+name: Python (pandas, NumPy, SciPy)
+slug: python-pandas-numpy-scipy
+evidence_spans:
+- statistical analysis
+- MetENP
+derived_from:
+- doi: 10.1021/acs.analchem.4c05039
+  title: CLAW-MRM
+- doi: 10.1101/2020.11.20.391912
+  title: MetENP
+source_repos:
+- chopralab/CLAW
+- metabolomicsworkbench/MetENP
+schema_version: 0.2.0

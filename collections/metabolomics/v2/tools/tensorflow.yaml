@@ -1,0 +1,37 @@
+name: TensorFlow
+slug: tensorflow
+version_used: 2.3.0
+evidence_spans:
+- tensorflow version 2.3.0 installed to convert the keras models into HDF5 TF2 models
+- 'We pass through tensorflow serving at this url: ```/model/metadata```'
+- Make sure you have python installed and tensorflow version 2.3.0 installed to convert the keras models into HDF5 TF2 models.
+- Deep Neural Networks for Classification of LC-MS Spectral Peaks
+- _No usage/docs found._
+- cddd does not seem to work on newer cuda drivers, therefore it is build using tensorflow cpu
+derived_from:
+- doi: 10.1021/jacs.9b13786
+  title: CSCS / deep CNN natural-product annotation
+- doi: 10.1021/acs.analchem.9b02983
+  title: Deep Neural Networks for Classification of LC-MS Spectral Peaks
+- doi: 10.1038/s42256-024-00816-8
+  title: ICEBERG
+- doi: 10.1101/2023.07.06.547963v1
+  title: Mass2SMILES
+- doi: 10.1093/bioinformatics/btac032/6510930
+  title: massNet
+- doi: 10.1007/s11306-020-01726-7
+  title: MetFID
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
+source_repos:
+- JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks
+- mwang87/NP-Classifier
+- ressomlab/MetFID
+- samgoldman97/ms-pred
+- volvox292/mass2smiles
+- wabdelmoula/massNet
+schema_version: 0.2.0

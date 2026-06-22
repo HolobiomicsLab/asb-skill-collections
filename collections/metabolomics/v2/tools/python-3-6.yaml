@@ -1,0 +1,11 @@
+name: Python 3.6
+slug: python-3-6
+version_used: '3.6'
+evidence_spans:
+- '![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)'
+derived_from:
+- doi: 10.1021/jasms.4c00467
+  title: Norm ISWSVR
+source_repos:
+- Dingxian666/Norm-ISWSVR
+schema_version: 0.2.0

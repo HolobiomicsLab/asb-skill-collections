@@ -1,0 +1,19 @@
+name: MS2DeepScore
+slug: ms2deepscore
+evidence_spans:
+- MS2DeepScore to predict structural similarity scores for spe
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
+- Our MS2DeepScore Python library offers two types of data generators
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
+- t-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore
+derived_from:
+- doi: 10.1186/s13321-021-00558-4
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+- doi: 10.1101/2024.03.25.586580v5
+  title: MS2DeepScore 2.0
+- doi: 10.1021/acs.analchem.3c04444
+  title: specxplore
+source_repos:
+- matchms/MS2DeepScore
+schema_version: 0.2.0

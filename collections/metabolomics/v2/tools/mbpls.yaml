@@ -1,0 +1,8 @@
+name: mbpls
+slug: mbpls
+evidence_spans:
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+derived_from:
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+schema_version: 0.2.0

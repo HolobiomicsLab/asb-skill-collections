@@ -1,0 +1,10 @@
+name: GNPS Molecular Networking
+slug: gnps-molecular-networking
+evidence_spans:
+- GNPS Molecular Networking Clustered Spectra
+derived_from:
+- doi: 10.1101/2020.05.09.086066
+  title: Metabolomics Spectrum Resolver
+source_repos:
+- mwang87/MetabolomicsSpectrumResolver
+schema_version: 0.2.0

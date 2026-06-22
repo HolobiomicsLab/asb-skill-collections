@@ -1,0 +1,11 @@
+name: 10.5281/zenodo.4680579
+slug: 10-5281-zenodo-4680579
+version_used: '10.5281'
+evidence_spans:
+- while the version used for the analysis in this work can be found at http://doi.org/10.5281/zenodo.4680579
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- NPLinker/nplinker
+schema_version: 0.2.0

@@ -1,0 +1,14 @@
+name: tidyr
+slug: tidyr
+evidence_spans:
+- required_pkgs <- c("dplyr","tidyr","readr", "stringr", "tibble", "purrr",
+- library(tidyr)
+derived_from:
+- doi: 10.1101/2021.12.05.471237v2
+  title: isopair
+- doi: 10.1101/2024.10.14.618269
+  title: 'Structural annotation of full-scan MS data: A unified solution for LC-MS and MS imaging analyses'
+source_repos:
+- GenomicsMachineLearning/SpaMTP
+- kilgain/MassSpec
+schema_version: 0.2.0

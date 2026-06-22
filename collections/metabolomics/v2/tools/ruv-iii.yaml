@@ -1,0 +1,10 @@
+name: RUV-III
+slug: ruv-iii
+evidence_spans:
+- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate the unwanted variation within and between batches with RUV-III'
+derived_from:
+- doi: 10.1101/2020.12.21.423723
+  title: hRUV
+source_repos:
+- SydneyBioX/hRUV
+schema_version: 0.2.0

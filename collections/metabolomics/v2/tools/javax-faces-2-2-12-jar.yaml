@@ -1,0 +1,11 @@
+name: javax.faces-2.2.12.jar
+slug: javax-faces-2-2-12-jar
+version_used: 2.2.12
+evidence_spans:
+- 'The next library is needed in the app server: javax.faces-2.2.12.jar'
+derived_from:
+- doi: 10.1021/acs.jproteome.8b00720
+  title: CEU Mass Mediator 3.0
+source_repos:
+- albertogilf/ceuMassMediator
+schema_version: 0.2.0

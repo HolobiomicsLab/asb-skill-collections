@@ -1,0 +1,14 @@
+name: BiocManager
+slug: biocmanager
+evidence_spans:
+- if (!require(BiocManager))
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+derived_from:
+- doi: 10.1101/2021.12.05.471237v2
+  title: isopair
+- doi: 10.1038/s41596-021-00636-9
+  title: NOREVA
+source_repos:
+- idrblab/NOREVA;
+- kilgain/MassSpec
+schema_version: 0.2.0

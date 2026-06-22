@@ -1,0 +1,10 @@
+name: cosine_neutral_loss repository
+slug: cosine-neutral-loss-repository
+evidence_spans:
+- Code repository implements cosine similarity, modified cosine similarity, and neutral loss similarity measures
+derived_from:
+- doi: 10.1016/1044-0305(94)87009-8
+  title: Optimization and testing of mass spectral library search algorithms for compound identification
+source_repos:
+- bittremieux/cosine_neutral_loss
+schema_version: 0.2.0

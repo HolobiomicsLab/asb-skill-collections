@@ -1,0 +1,11 @@
+name: GLEAMS
+slug: gleams
+evidence_spans:
+- GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
+- GLEAMS is a Learned Embedding for Annotating Mass Spectra. GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
+derived_from:
+- doi: 10.1038/s41592-022-01496-1
+  title: A learned embedding for efficient joint analysis of millions of mass spectra
+source_repos:
+- bittremieux-lab/GLEAMS
+schema_version: 0.2.0

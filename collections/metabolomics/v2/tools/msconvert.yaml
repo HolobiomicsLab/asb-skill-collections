@@ -1,0 +1,49 @@
+name: msconvert
+slug: msconvert
+evidence_spans:
+- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed with the ProteoWizard Project
+- AutoTuner is designed to work directly with raw mass spectral data that has been processed by using MSconvert.
+- uses msConvert for file conversion to extracted precursor ion chromatogram (PIC)
+- imzML Writer relies on MS convert to convert raw instrument data into the open format mzML, requiring a working install.
+- imzML Writer relies on MS convert to convert raw instrument data into the open format mzML.
+- The conversion tool can use MSConvert, which you need to download and install yourself.
+derived_from:
+- doi: 10.1007/s00216-023-04715-6
+  title: Augmented region of interest for untargeted metabolomics mass spectrometry (AriumMS) of multi-platform-based CE-MS and LC-MS data
+- doi: 10.5281/zenodo.3270590
+  title: AutoTuner parameter selection
+- doi: 10.1038/s41467-024-54871-1
+  title: iDIA-QC
+- doi: 10.1021/acs.analchem.4c06520
+  title: imzML Writer
+- doi: 10.26599/bdma.2024.9020059
+  title: IsoFusion
+- doi: 10.1021/jasms.4c00178
+  title: 'MSIGen: An Open-Source Python Package for Processing and Visualizing Mass Spectrometry Imaging Data'
+- doi: 10.1016/j.enceco.2025.07.022
+  title: MSThunder
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1007/s00216-023-05070-2
+  title: PFΔScreen — an open-source tool for automated PFAS feature prioritization in non-target HRMS data
+- doi: 10.1021/acs.analchem.4c00786
+  title: Rapid QC-MS
+- doi: 10.1021/acs.jproteome.0c00866
+  title: 'The rawrr R Package: Direct Access to Orbitrap Data and Beyond'
+- doi: 10.1021/acs.analchem.3c02583
+  title: RI-based-CPSC
+- doi: 10.3390/metabo10100416
+  title: A Python-Based Pipeline for Preprocessing LC–MS Data for Untargeted Metabolomics Workflows
+source_repos:
+- AdrianHaun/AriumMS
+- KujawinskiLaboratory/Autotuner
+- LQZ0123/MSThunder
+- LabLaskin/MSIGen
+- VIU-Metabolomics/imzML_Writer
+- WHU-Fenglab/RI-based-CPSC
+- czbiohub-sf/Rapid-QC-MS
+- fgcz/rawrr
+- griquelme/tidyms
+- guomics-lab/iDIA-QC
+- xfcui/IsoFusion
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: MotifDB
+slug: motifdb
+evidence_spans:
+- Compare motifs to known entries in MotifDB
+derived_from:
+- doi: 10.1073/pnas.1608041113
+  title: MS2LDA
+source_repos:
+- vdhooftcompmet/MS2LDA
+schema_version: 0.2.0

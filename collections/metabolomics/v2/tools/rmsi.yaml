@@ -1,0 +1,9 @@
+name: rMSI
+slug: rmsi
+version_used: '0.8'
+evidence_spans:
+- devtools::install_github("prafols/rMSI", ref = "0.8")
+derived_from:
+- doi: 10.1186/s13321-020-00449-0
+  title: 'rMSIcleanup: an open-source tool for matrix-related peak annotation in mass spectrometry imaging and its application to silver-assisted laser desorption/ionization'
+schema_version: 0.2.0

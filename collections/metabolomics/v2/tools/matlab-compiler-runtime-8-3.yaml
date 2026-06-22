@@ -1,0 +1,10 @@
+name: MATLAB Compiler Runtime 8.3
+slug: matlab-compiler-runtime-8-3
+evidence_spans:
+- '[MATLAB Compiler Runtime (MCR) (version 8.3)]'
+derived_from:
+- doi: 10.1186/s13742-016-0115-8
+  title: Galaxy-M
+source_repos:
+- Viant-Metabolomics/Galaxy-M
+schema_version: 0.2.0

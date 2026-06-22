@@ -1,0 +1,11 @@
+name: PALS Viewer
+slug: pals-viewer
+evidence_spans:
+- PALS Viewer
+- To access our interactive Web application PALS Viewer, please visit [https://pals.glasgowcompbio.org/app/]
+derived_from:
+- doi: 10.1186/1471-2105-6-225
+  title: Pathway level analysis of gene expression using singular value decomposition
+source_repos:
+- glasgowcompbio/PALS
+schema_version: 0.2.0

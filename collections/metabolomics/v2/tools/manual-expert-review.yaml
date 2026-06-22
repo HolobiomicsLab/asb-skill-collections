@@ -1,0 +1,10 @@
+name: manual expert review
+slug: manual-expert-review
+derived_from:
+- doi: 10.1186/s13321-024-00899-w
+  title: mol2ccs
+- doi: 10.1021/acs.analchem.4c07078
+  title: qc4metabolomics
+- doi: 10.1021/acs.analchem.1c02687
+  title: 'SLAW: A Scalable and Self-Optimizing Processing Workflow for Untargeted LC-MS'
+schema_version: 0.2.0

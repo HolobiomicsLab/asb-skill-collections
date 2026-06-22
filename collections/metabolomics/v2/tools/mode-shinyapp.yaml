@@ -1,0 +1,10 @@
+name: MODE ShinyApp
+slug: mode-shinyapp
+evidence_spans:
+- github.com__pmartR__MODE_ShinyApp
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00650
+  title: 'MODE: A Web Application for Interactive Visualization and Exploration of Omics Data'
+source_repos:
+- pmartR/MODE_ShinyApp
+schema_version: 0.2.0

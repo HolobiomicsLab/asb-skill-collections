@@ -1,0 +1,26 @@
+name: Cytoscape
+slug: cytoscape
+evidence_spans:
+- '[Cytoscape](https://cytoscape.org/)'
+- users need to download Cytoscape from http://www.cytoscape.org/download.php
+- You can also save the network as an NX object and review in [Cytoscape](https://cytoscape.org)
+- Networks are then constructed using Cytoscape [79] and colored based on their molecular class.
+- Networks are then constructed using Cytoscape and colored based on their molecular class
+- using Cytoscape
+derived_from:
+- doi: 10.1186/s12859-024-05994-1
+  title: 'DNEA: an R package for fast and versatile data-driven network analysis of metabolomics data'
+- doi: 10.1093/gigascience/giaa162
+  title: Lilikoi V2.0
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+- doi: 10.1186/s13321-025-01051-y
+  title: minems2
+source_repos:
+- Karnovsky-Lab/DNEA
+- lanagarmire/lilikoi2
+schema_version: 0.2.0

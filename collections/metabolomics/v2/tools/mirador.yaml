@@ -1,0 +1,10 @@
+name: Mirador
+slug: mirador
+evidence_spans:
+- 'Mirador: Raw MS data visualization and export (PDF, CSV) including extracted ion chromatograms (XIC), extracted ion mobility (XIM) heatmaps, and MS/MS mirror plots'
+derived_from:
+- doi: 10.1021/jasms.4c00146
+  title: PeakQC
+source_repos:
+- pnnl/IonToolPack
+schema_version: 0.2.0

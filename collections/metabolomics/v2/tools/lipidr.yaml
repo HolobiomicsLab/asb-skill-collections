@@ -1,0 +1,12 @@
+name: lipidr
+slug: lipidr
+evidence_spans:
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- lipidr allows users, to quickly explore public lipidomics experiments
+derived_from:
+- doi: 10.1021/acs.jproteome.0c00082
+  title: lipidr
+source_repos:
+- ahmohamed/lipidr
+schema_version: 0.2.0

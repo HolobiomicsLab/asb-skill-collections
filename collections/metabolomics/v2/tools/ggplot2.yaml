@@ -1,0 +1,51 @@
+name: ggplot2
+slug: ggplot2
+evidence_spans:
+- library(ggplot2)
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
+- All the figures of this package are created as ggplot object, so they can be furhter modified following the ggplot2 sintax.
+- required_pkgs <- c("dplyr","tidyr","readr", "stringr", "tibble", "purrr",
+- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
+- you can visualize filtering results with a tree map using the filtering summary obtained from `qc_summary()` and the packages `ggplot2` and `treemapify`.
+derived_from:
+- doi: 10.1021/acs.analchem.2c05748
+  title: CordBat
+- doi: 10.1186/s12859-024-05994-1
+  title: 'DNEA: an R package for fast and versatile data-driven network analysis of metabolomics data'
+- doi: 10.1021/acs.analchem.5c01726
+  title: DuReS
+- doi: 10.1515/jib-2025-0047
+  title: 'Streamlining feature elaboration and statistics analysis in metabolomics: the GetFeatistics R-package'
+- doi: 10.1101/2021.12.05.471237v2
+  title: isopair
+- doi: 10.1093/bib/bbac455
+  title: LargeMetabo
+- doi: 10.1093/bioinformatics/btac059/6522114
+  title: Metaboprep
+- doi: 10.1021/acs.analchem.2c04632
+  title: 'Metabolomics Peak Analysis Computational Tool (MPACT): An Advanced Informatics Tool for Metabolomics and Data Visualization of Molecules from Complex Biological Samples'
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+- doi: 10.1128/mra.00129-19
+  title: omu metabolomics count data tool
+- doi: 10.1101/2024.10.14.618269
+  title: 'Structural annotation of full-scan MS data: A unified solution for LC-MS and MS imaging analyses'
+- doi: 10.1093/bioinformatics/btaa1031
+  title: struct
+- doi: 10.21105/joss.02694
+  title: subMALDI
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+- BalunasLab/mpact
+- BiosystemEngineeringLab-IITB/dures
+- BorchLab/CordBat
+- FrigerioGianfranco/GetFeatistics
+- GenomicsMachineLearning/SpaMTP
+- Karnovsky-Lab/DNEA
+- LargeMetabo/LargeMetabo
+- MRCIEU/metaboprep
+- computational-metabolomics/struct
+- connor-reid-tiffany/Omu
+- kilgain/MassSpec
+- wesleyburr/subMaldi
+schema_version: 0.2.0

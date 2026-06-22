@@ -1,0 +1,10 @@
+name: Ion Identity
+slug: ion-identity
+evidence_spans:
+- Inventa is capable to performe the calcultions based on the results from Ion Identity, reducing the total number of features.
+derived_from:
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+source_repos:
+- luigiquiros/inventa
+schema_version: 0.2.0

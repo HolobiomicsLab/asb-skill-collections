@@ -1,0 +1,25 @@
+name: pymzml
+slug: pymzml
+version_used: 2.5.2
+evidence_spans:
+- The default method uses `pymzml` to parse mzML files.
+- pymzml==2.5.2
+- In order to make pymzML accept other kinds of mzML data (e.g databases), one can implement an own wrapper
+- from pymzml import spec
+- from pymzml.run import Reader
+- '.mzML ----- .. toctree:: :maxdepth: 1 pyopenms pymzml'
+derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+- doi: 10.1021/acs.analchem.5c00060
+  title: LAGF
+- doi: 10.1093/bioinformatics/bty046
+  title: pymzml
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+source_repos:
+- shuzhao-li-lab/asari
+- zsspython/LAGF
+schema_version: 0.2.0

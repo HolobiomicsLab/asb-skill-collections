@@ -1,0 +1,12 @@
+name: chemparse
+slug: chemparse
+version_used: 0.3.1
+evidence_spans:
+- chemparse==0.3.1
+- '- ``chemparse==0.3.1``'
+derived_from:
+- doi: 10.1038/s41592-023-02012-9
+  title: Flash entropy search to query all mass spectral libraries in real time
+source_repos:
+- FanzhouKong/spectral_denoising
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Graphormer
+slug: graphormer
+evidence_spans:
+- Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
+derived_from:
+- doi: 10.1021/acs.analchem.4c05859
+  title: 'From Reverse Phase Chromatography to HILIC: Graph Transformers Power Method-Independent Machine Learning of Retention Times'
+source_repos:
+- HopkinsLaboratory/Graphormer-RT
+schema_version: 0.2.0

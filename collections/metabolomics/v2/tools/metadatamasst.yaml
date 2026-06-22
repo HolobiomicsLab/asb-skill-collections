@@ -1,0 +1,12 @@
+name: metadataMASST
+slug: metadatamasst
+evidence_spans:
+- Aggregated search outputs can be generated and visualized using metadataMASST
+derived_from:
+- doi: 10.1038/s41538-022-00137-3
+  title: foodMASST
+- doi: 10.1038/s41564-023-01575-9
+  title: microbemasst
+source_repos:
+- mwang87/MASST
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: ICEBERG
+slug: iceberg
+evidence_spans:
+- You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
+derived_from:
+- doi: 10.1021/acs.analchem.3c04654
+  title: ICEBERG / fragmentation graph generation
+source_repos:
+- samgoldman97/ms-pred
+schema_version: 0.2.0

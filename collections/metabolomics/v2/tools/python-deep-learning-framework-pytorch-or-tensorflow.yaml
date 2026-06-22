@@ -1,0 +1,8 @@
+name: Python deep learning framework (PyTorch or TensorFlow)
+slug: python-deep-learning-framework-pytorch-or-tensorflow
+evidence_spans:
+- Deep Learning-Based Prediction System
+derived_from:
+- doi: 10.1021/acs.analchem.3c05019
+  title: 'PS<sup>2</sup>MS: A Deep Learning-Based Prediction System for Identifying New Psychoactive Substances Using Mass Spectrometry'
+schema_version: 0.2.0

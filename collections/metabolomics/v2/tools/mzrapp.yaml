@@ -1,0 +1,11 @@
+name: mzRAPP
+slug: mzrapp
+evidence_spans:
+- 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+derived_from:
+- doi: 10.1093/bioinformatics/btab231/6214530
+  title: mzRAPP
+source_repos:
+- YasinEl/mzRAPP
+schema_version: 0.2.0

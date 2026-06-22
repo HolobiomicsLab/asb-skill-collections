@@ -1,0 +1,8 @@
+name: R (vegan package)
+slug: r-vegan-package
+evidence_spans:
+- developed in Python 3.8 [38] and R 4.0.2 [39]
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+schema_version: 0.2.0

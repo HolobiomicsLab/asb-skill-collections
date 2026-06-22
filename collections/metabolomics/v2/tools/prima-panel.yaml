@@ -1,0 +1,10 @@
+name: PRIMA-Panel
+slug: prima-panel
+evidence_spans:
+- Pre-Analytical Investigator for NMR-based Metabolomics (PRIMA-Panel)
+derived_from:
+- doi: 10.1021/acs.analchem.4c04938
+  title: PRIMA-Panel
+source_repos:
+- funkam/PRIMA
+schema_version: 0.2.0

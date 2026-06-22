@@ -1,0 +1,11 @@
+name: pyOpenMS-Viz
+slug: pyopenms-viz
+evidence_spans:
+- pyOpenMS-Viz is a Python library that provides a simple interface for extending the plotting capabilities of Pandas DataFrames
+- Chromatograms can be plotted using kind = chromatogram
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- comprehensive overview of all methods and classes available in PyOpenMS-Viz
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+schema_version: 0.2.0

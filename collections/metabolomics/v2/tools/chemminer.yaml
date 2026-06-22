@@ -1,0 +1,9 @@
+name: ChemmineR
+slug: chemminer
+evidence_spans:
+- uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
+- To perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]
+derived_from:
+- doi: 10.1371/journal.pone.0306202
+  title: uafr
+schema_version: 0.2.0

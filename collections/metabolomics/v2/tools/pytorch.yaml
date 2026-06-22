@@ -1,0 +1,91 @@
+name: PyTorch
+slug: pytorch
+version_used: '2.6'
+evidence_spans:
+- PyTorch must be installed separately. Check the `official PyTorch website
+- '**Pytorch**'
+- '- **Pytorch**'
+- Pytorch is installed automatically when installing Casanovo
+- Upgraded minimum Lightning version to 2.6.
+- Hotfix to ensure compatibility with PyTorch v2.6 when loading weights files.
+derived_from:
+- doi: 10.1093/bioinformatics/btad354
+  title: 3DMolMS
+- doi: 10.1021/acs.jcim.4c02179
+  title: ABCoRT
+- doi: 10.1093/bib/bbac542
+  title: "Comprehensive evaluation of peptide\n                    <i>de novo</i>\n                    sequencing tools for monoclonal antibody assembly"
+- doi: 10.1021/acs.analchem.5c01594
+  title: CSU-MS2
+- doi: 10.1021/acs.analchem.3c05772
+  title: GCMSFormer
+- doi: 10.1021/acs.analchem.0c04071
+  title: GNN-RT
+- doi: 10.1021/acs.analchem.4c05859
+  title: 'From Reverse Phase Chromatography to HILIC: Graph Transformers Power Method-Independent Machine Learning of Retention Times'
+- doi: 10.1038/s42256-024-00816-8
+  title: ICEBERG
+- doi: 10.1186/s13321-024-00804-5
+  title: idslmint
+- doi: 10.26599/bdma.2024.9020059
+  title: IsoFusion
+- doi: 10.1093/bioinformatics/btaf354
+  title: JESTR
+- doi: 10.1101/2024.10.07.617094v3
+  title: LipiDetective
+- doi: 10.1007/s11306-020-01726-7
+  title: MetFID
+- doi: 10.1038/s42256-023-00708-3
+  title: MIST (chemical formula transformer)
+- doi: 10.1186/s13321-024-00899-w
+  title: mol2ccs
+- doi: 10.48550/arxiv.2510.20615
+  title: MS-BART
+- doi: 10.1021/acs.analchem.4c02426
+  title: MSBERT
+- doi: 10.1371/journal.pone.0321239
+  title: MSMCE
+- doi: 10.1021/acs.analchem.4c03781
+  title: MWFormer
+- doi: 10.1002/anie.202507483
+  title: NA
+- doi: 10.1021/acscentsci.4c01132
+  title: NMR2Struct
+- doi: 10.1021/acs.analchem.4c05632
+  title: NMRformer
+- doi: 10.1002/cem.70040
+  title: PACCS
+- doi: 10.1021/acs.analchem.3c03177
+  title: retention_time_gnn
+- doi: 10.1038/s42004-023-00932-3
+  title: Spec2Mol
+- doi: 10.1021/acs.analchem.5c02655
+  title: SpecEmbedding
+- doi: 10.1186/s13321-024-00858-5
+  title: TransExION
+source_repos:
+- Chen-micslab/QCCAssisted4DSterol
+- HassounLab/JESTR1
+- HopkinsLaboratory/Graphormer-RT
+- JosieHong/3DMolMS
+- KavrakiLab/Spec2Mol
+- LipiTUM/lipidetective
+- Noble-Lab/casanovo
+- OpenDFM/MS-BART
+- Qiong-Yang/GNN-RT
+- RiverCCC/ABCoRT
+- WoodFY/MSMCE
+- banhdzui/TransExION
+- ressomlab/MetFID
+- samgoldman97/mist
+- samgoldman97/ms-pred
+- seokhokang/retention_time_gnn
+- sword-nan/SpecEmbedding
+- tingxiecsu/CSU-MS2
+- xfcui/IsoFusion
+- yuxuanliao/PACCS
+- zhanghailiangcsu/MSBERT
+- zhanghailiangcsu/MWFormer
+- zxguocsu/GCMSFormer
+- zza1211/NMRformer
+schema_version: 0.2.0

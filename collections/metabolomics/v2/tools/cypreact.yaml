@@ -1,0 +1,11 @@
+name: CypReact
+slug: cypreact
+evidence_spans:
+- 'To run the CypReact tool, the user should use command in the terminal as: ->java -jar "PathOfCypReactBundle"'
+- java -jar "PathOfCypReactBundle"
+derived_from:
+- doi: 10.1021/acs.jcim.8b00035
+  title: CypReact
+source_repos:
+- https://bitbucket.org/Leon_Ti/cypreact.git
+schema_version: 0.2.0

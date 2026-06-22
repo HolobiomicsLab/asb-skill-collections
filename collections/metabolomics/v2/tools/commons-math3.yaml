@@ -1,0 +1,11 @@
+name: commons-math3
+slug: commons-math3
+version_used: 3.4.1
+evidence_spans:
+- commons-math3-3.4.1
+derived_from:
+- doi: 10.3390/metabo12020173
+  title: spectra
+source_repos:
+- rformassspectrometry/Spectra
+schema_version: 0.2.0

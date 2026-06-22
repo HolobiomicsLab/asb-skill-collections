@@ -1,0 +1,10 @@
+name: Perl
+slug: perl
+evidence_spans:
+- stand alone software entirely written in Perl
+derived_from:
+- doi: 10.1002/cpz1.70009
+  title: LipidOne 2.0
+source_repos:
+- matteogiulietti/LipidOne
+schema_version: 0.2.0

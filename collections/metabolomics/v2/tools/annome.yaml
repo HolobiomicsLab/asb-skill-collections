@@ -1,0 +1,10 @@
+name: AnnoMe
+slug: annome
+evidence_spans:
+- This is a package for the classification of MS/MS spectra of novel compounds
+derived_from:
+- doi: 10.1093/bioadv/vbag111
+  title: AnnoMe
+source_repos:
+- chrboku/AnnoMe
+schema_version: 0.2.0

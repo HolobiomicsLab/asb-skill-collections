@@ -1,0 +1,10 @@
+name: spectral_similarity
+slug: spectral-similarity
+evidence_spans:
+- '.. automodule:: spectral_similarity :members:'
+derived_from:
+- doi: 10.1038/s41592-021-01331-z
+  title: Spectral entropy outperforms MS/MS dot product similarity for small-molecule compound identification
+source_repos:
+- YuanyueLi/SpectralEntropy
+schema_version: 0.2.0

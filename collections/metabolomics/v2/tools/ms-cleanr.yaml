@@ -1,0 +1,10 @@
+name: MS-CleanR
+slug: ms-cleanr
+evidence_spans:
+- MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
+derived_from:
+- doi: 10.1021/acs.analchem.0c01594
+  title: MS-CleanR
+source_repos:
+- eMetaboHUB/MS-CleanR
+schema_version: 0.2.0

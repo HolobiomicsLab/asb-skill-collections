@@ -1,0 +1,10 @@
+name: MetaMapR
+slug: metamapr
+evidence_spans:
+- MetaMapR - A metabolomic network mapping tool
+derived_from:
+- doi: 10.1093/bioinformatics/btv194
+  title: MetaMapR
+source_repos:
+- dgrapov/MetaMapR
+schema_version: 0.2.0

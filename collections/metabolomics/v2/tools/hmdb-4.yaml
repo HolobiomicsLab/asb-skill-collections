@@ -1,0 +1,10 @@
+name: HMDB 4
+slug: hmdb-4
+evidence_spans:
+- known compound database (default HMDB 4)
+derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+source_repos:
+- shuzhao-li-lab/asari
+schema_version: 0.2.0

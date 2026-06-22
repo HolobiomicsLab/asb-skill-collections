@@ -1,0 +1,9 @@
+name: AirdPro V6
+slug: airdpro-v6
+version_used: '2024.4'
+evidence_spans:
+- AirdPro V6 is now available at 2024.4
+derived_from:
+- doi: 10.1186/s12859-021-04490-0
+  title: aird
+schema_version: 0.2.0

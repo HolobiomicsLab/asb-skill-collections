@@ -1,0 +1,10 @@
+name: LIPID MAPS
+slug: lipid-maps
+evidence_spans:
+- parsing lipid species (using LIPID MAPS classification)
+derived_from:
+- doi: 10.1093/bioinformatics/btac706
+  title: ADViSELipidomics
+source_repos:
+- ShinyFabio/ADViSELipidomics
+schema_version: 0.2.0

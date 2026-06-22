@@ -1,0 +1,11 @@
+name: xtb
+slug: xtb
+version_used: 6.7.1
+evidence_spans:
+- '**xtb** (version > 6.7.1 - bleeding edge version)'
+derived_from:
+- doi: 10.1021/jasms.5c00234
+  title: QCxMS2
+source_repos:
+- grimme-lab/QCxMS2
+schema_version: 0.2.0

@@ -1,0 +1,32 @@
+name: OpenMS
+slug: openms
+evidence_spans:
+- '[Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)'
+- or [Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS feature detection.
+- pyOpenMS (Python interface to the C++ OpenMS library)
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data.
+- projects like OpenMS or pyteomics chose a fundamentally different approach.
+derived_from:
+- doi: 10.1021/acs.jnatprod.7b00737
+  title: Bioactivity-Based Molecular Networking
+- doi: 10.1074/mcp.M113.031278
+  title: featurefindermetab
+- doi: 10.1021/acs.analchem.0c03895
+  title: Rapid Development of Improved Data-Dependent Acquisition Strategies
+- doi: 10.1021/acs.jproteome.5c00435
+  title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+- doi: 10.1007/s00216-023-05070-2
+  title: PFΔScreen — an open-source tool for automated PFAS feature prioritization in non-target HRMS data
+- doi: 10.1021/acs.jproteome.0c00866
+  title: 'The rawrr R Package: Direct Access to Orbitrap Data and Beyond'
+- doi: 10.1021/acs.analchem.0c03421
+  title: SmartPeak
+source_repos:
+- AutoFlowResearch/SmartPeak
+- DorresteinLaboratory/Bioactive_Molecular_Networks
+- OpenMS/OpenMS
+- fgcz/rawrr
+schema_version: 0.2.0

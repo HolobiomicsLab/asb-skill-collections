@@ -1,0 +1,12 @@
+name: MsFeatures
+slug: msfeatures
+evidence_spans:
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
+derived_from:
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- sneumann/xcms
+schema_version: 0.2.0

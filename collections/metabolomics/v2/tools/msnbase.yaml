@@ -1,0 +1,14 @@
+name: MSnbase
+slug: msnbase
+evidence_spans:
+- The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MSnbase")`
+- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package
+derived_from:
+- doi: 10.1093/bioinformatics/btac441
+  title: MobilityTransformR
+- doi: 10.3390/metabo12020173
+  title: spectra
+source_repos:
+- LiesaSalzer/MobilityTransformR
+- rformassspectrometry/Spectra
+schema_version: 0.2.0

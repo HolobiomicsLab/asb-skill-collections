@@ -1,0 +1,14 @@
+name: mixOmics
+slug: mixomics
+evidence_spans:
+- '"igraph", "MASS", "mixOmics", "SOMbrero", "varSelRF"'
+- Supervised models can be done with the [mixOmics](https://bioconductor.org/packages/release/bioc/html/mixOmics.html) functions.
+derived_from:
+- doi: 10.1093/bib/bbac455
+  title: LargeMetabo
+- doi: 10.1371/journal.pntd.0006215
+  title: Diagnostic metabolite biomarkers of chronic typhoid carriage
+source_repos:
+- DanielQuiroz97/RGCxGC
+- LargeMetabo/LargeMetabo
+schema_version: 0.2.0

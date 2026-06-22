@@ -1,0 +1,27 @@
+name: Anaconda
+slug: anaconda
+version_used: '3.6'
+evidence_spans:
+- Install [Anaconda](https://www.anaconda.com/).
+- Anaconda for python 3.6
+- '[Anaconda](https://www.anaconda.com) for Python 3.12'
+- If you do not have Python installed, we recommend installing the Anaconda distribution of Python
+- '[Anaconda](https://www.anaconda.com) for Python 3.9'
+derived_from:
+- doi: 10.1016/j.microc.2025.115372
+  title: FlavorFormer
+- doi: 10.1021/acs.analchem.0c04071
+  title: GNN-RT
+- doi: 10.1021/acs.analchem.4c02426
+  title: MSBERT
+- doi: 10.1021/jasms.4c00178
+  title: 'MSIGen: An Open-Source Python Package for Processing and Visualizing Mass Spectrometry Imaging Data'
+- doi: 10.1021/acs.analchem.4c03781
+  title: MWFormer
+source_repos:
+- LabLaskin/MSIGen
+- Qiong-Yang/GNN-RT
+- yfWang01/FlavorFormer
+- zhanghailiangcsu/MSBERT
+- zhanghailiangcsu/MWFormer
+schema_version: 0.2.0

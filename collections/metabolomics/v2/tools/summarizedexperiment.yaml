@@ -1,0 +1,23 @@
+name: SummarizedExperiment
+slug: summarizedexperiment
+evidence_spans:
+- library(SummarizedExperiment)... The data is already formatted in to a `SummarizedExperiment` object
+- The toolbox builds upon the bioconductor package SummarizedExperiment (SE)
+- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment object
+derived_from:
+- doi: 10.1101/2020.12.21.423723
+  title: hRUV
+- doi: 10.1093/bioinformatics/btab741/6409851
+  title: maplet
+- doi: 10.1021/jasms.5c00073
+  title: mzquality
+- doi: 10.1021/acs.analchem.5c01213
+  title: mzrtsim
+source_repos:
+- SydneyBioX/hRUV
+- krumsieklab/maplet
+- yufree/mzrtsim
+schema_version: 0.2.0

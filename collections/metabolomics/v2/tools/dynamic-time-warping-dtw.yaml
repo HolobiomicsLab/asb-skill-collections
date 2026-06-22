@@ -1,0 +1,10 @@
+name: dynamic time warping (DTW)
+slug: dynamic-time-warping-dtw
+evidence_spans:
+- graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based alignment method
+derived_from:
+- doi: 10.1093/bioinformatics/btaa037
+  title: ncGTW
+source_repos:
+- ChiungTingWu/ncGTW
+schema_version: 0.2.0

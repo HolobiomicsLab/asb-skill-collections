@@ -1,0 +1,10 @@
+name: dures
+slug: dures
+evidence_spans:
+- devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
+derived_from:
+- doi: 10.1021/acs.analchem.5c01726
+  title: DuReS
+source_repos:
+- BiosystemEngineeringLab-IITB/dures
+schema_version: 0.2.0

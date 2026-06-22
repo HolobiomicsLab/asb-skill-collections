@@ -1,0 +1,10 @@
+name: biotranslator
+slug: biotranslator
+evidence_spans:
+- Pathway enrichment analysis | Clusterprofiler, Biotranslator
+derived_from:
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+schema_version: 0.2.0

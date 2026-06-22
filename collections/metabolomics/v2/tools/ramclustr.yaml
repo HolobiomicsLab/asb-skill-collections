@@ -1,0 +1,15 @@
+name: RamClustR
+slug: ramclustr
+evidence_spans:
+- An example of feature annotation using LC-MS AIF chromatograms processed using xcms and RamClustR packages
+- ramclustR function is built to use xcms data
+- RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
+- RC <- do.findmain(RC, mode = "positive", mzabs.error = 0.02, ppm.error = 10)
+derived_from:
+- doi: 10.1021/acs.analchem.1c03032
+  title: Automated Annotation of Untargeted All-Ion Fragmentation LC–MS Metabolomics Data with MetaboAnnotatoR
+- doi: 10.1021/ac501530d
+  title: RAMClust
+source_repos:
+- cbroeckl/RAMClustR
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: ANN-SoLo
+slug: ann-solo
+evidence_spans:
+- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+derived_from:
+- doi: 10.1021/acs.jproteome.8b00359
+  title: Fast Open Modification Spectral Library Searching through Approximate Nearest Neighbor Indexing
+source_repos:
+- bittremieux-lab/ANN-SoLo
+schema_version: 0.2.0

@@ -1,0 +1,9 @@
+name: Apache Maven 3.8
+slug: apache-maven-3-8
+version_used: '3.8'
+evidence_spans:
+- Apache Maven 3.8
+derived_from:
+- doi: 10.1186/s13321-016-0115-9
+  title: MetFrag
+schema_version: 0.2.0

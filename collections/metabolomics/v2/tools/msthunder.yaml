@@ -1,0 +1,10 @@
+name: MSThunder
+slug: msthunder
+evidence_spans:
+- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+derived_from:
+- doi: 10.1016/j.enceco.2025.07.022
+  title: MSThunder
+source_repos:
+- LQZ0123/MSThunder
+schema_version: 0.2.0

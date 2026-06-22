@@ -1,0 +1,17 @@
+name: gensim
+slug: gensim
+evidence_spans:
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- conda install -c conda-forge gensim
+- Run gensim lda
+derived_from:
+- doi: 10.1371/journal.pcbi.1008724
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.1038/s41467-023-39279-7
+  title: FastEI
+- doi: 10.1073/pnas.1608041113
+  title: MS2LDA
+source_repos:
+- Qiong-Yang/FastEI
+- vdhooftcompmet/MS2LDA
+schema_version: 0.2.0

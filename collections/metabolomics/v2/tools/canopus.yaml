@@ -1,0 +1,16 @@
+name: CANOPUS
+slug: canopus
+evidence_spans:
+- The SIRIUS web services (CSI:FingerID, CANOPUS, MSNovelist and others)
+- 'Class Component (CC): a score considering the presence of predicted known chemical classes new to the species'
+derived_from:
+- doi: 10.1038/s41587-021-01045-9
+  title: cosmic
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+- doi: 10.1038/s41592-019-0344-8
+  title: sirius
+source_repos:
+- luigiquiros/inventa
+- sirius-ms/sirius
+schema_version: 0.2.0

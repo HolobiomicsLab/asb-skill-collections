@@ -1,0 +1,16 @@
+name: Python 3.8+
+slug: python-3-8
+version_used: '3.8'
+evidence_spans:
+- _falcon_ requires Python 3.8+ and is available on the Linux and OSX platforms.
+- HyperSpec requires `Python 3.8+` with `CUDA` environment
+- HyperSpec requires `Python 3.8+` with `CUDA` environment.
+- HyperSpec is a Python library that supports extremely fast spectra clustering
+derived_from:
+- doi: 10.1002/rcm.9153
+  title: Large‐scale tandem mass spectrum clustering using fast nearest neighbor searching
+- doi: 10.1021/acs.jproteome.2c00612
+  title: 'HyperSpec: Ultrafast Mass Spectra Clustering in Hyperdimensional Space'
+source_repos:
+- wh-xu/Hyper-Spec
+schema_version: 0.2.0

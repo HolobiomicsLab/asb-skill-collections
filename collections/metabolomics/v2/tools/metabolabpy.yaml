@@ -1,0 +1,10 @@
+name: metabolabpy
+slug: metabolabpy
+evidence_spans:
+- github.com__ludwigc__metabolabpy
+derived_from:
+- doi: 10.3390/metabo15010048
+  title: MetaboLabPy
+source_repos:
+- ludwigc/metabolabpy
+schema_version: 0.2.0

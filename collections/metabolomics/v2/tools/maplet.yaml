@@ -1,0 +1,10 @@
+name: maplet
+slug: maplet
+evidence_spans:
+- maplet is an R package for statistical data analysis with a special focus on metabolomics datasets.
+derived_from:
+- doi: 10.1093/bioinformatics/btab741/6409851
+  title: maplet
+source_repos:
+- krumsieklab/maplet
+schema_version: 0.2.0

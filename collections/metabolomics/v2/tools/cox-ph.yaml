@@ -1,0 +1,10 @@
+name: Cox-PH
+slug: cox-ph
+evidence_spans:
+- prognosis prediction, implemented by Cox-PH model
+derived_from:
+- doi: 10.1093/gigascience/giaa162
+  title: Lilikoi V2.0
+source_repos:
+- lanagarmire/lilikoi2
+schema_version: 0.2.0

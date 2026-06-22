@@ -1,0 +1,11 @@
+name: https://doi.org/10.5281/zenodo.11243781
+slug: https-doi-org-10-5281-zenodo-11243781
+version_used: '10.5281'
+evidence_spans:
+- The full version of the "Urine" dataset, which was used for margheRita assessment and to generate this documentation, is available at https://doi.org/10.5281/zenodo.11243781
+derived_from:
+- doi: 10.1101/2024.06.20.599545
+  title: 'MargheRita: streamlining MS-DIAL output analysis and metabolite identification in R'
+source_repos:
+- emosca-cnr/margheRita
+schema_version: 0.2.0

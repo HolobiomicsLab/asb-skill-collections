@@ -1,0 +1,10 @@
+name: torch_geometric
+slug: torch-geometric
+evidence_spans:
+- torch_geometric
+derived_from:
+- doi: 10.1038/s41467-019-13680-7
+  title: The METLIN small molecule dataset for machine learning-based retention time prediction
+source_repos:
+- 01dadada/RT-Transformer
+schema_version: 0.2.0

@@ -1,0 +1,17 @@
+name: khipu
+slug: khipu
+evidence_spans:
+- The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
+- freely available on GitHub (https://github.com/shuzhao-li/khipu) under a BSD 3-Clause License
+- pre-annotation to group featues to empirical compounds (khipu)
+derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+- doi: 10.1021/acs.analchem.2c05810
+  title: Generalized Tree Structure to Annotate Untargeted Metabolomics and Stable Isotope Tracing Data
+- doi: 10.1371/journal.pcbi.1011912
+  title: Common data models to streamline metabolomics processing and annotation, and implementation in a Python pipeline
+source_repos:
+- shuzhao-li-lab/asari
+- shuzhao-li-lab/khipu
+schema_version: 0.2.0

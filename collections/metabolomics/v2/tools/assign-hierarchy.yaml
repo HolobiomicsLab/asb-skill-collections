@@ -1,0 +1,10 @@
+name: assign_hierarchy
+slug: assign-hierarchy
+evidence_spans:
+- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
+derived_from:
+- doi: 10.1128/mra.00129-19
+  title: omu metabolomics count data tool
+source_repos:
+- connor-reid-tiffany/Omu
+schema_version: 0.2.0

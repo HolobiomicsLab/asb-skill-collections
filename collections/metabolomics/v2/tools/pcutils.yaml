@@ -1,0 +1,10 @@
+name: pcutils
+slug: pcutils
+evidence_spans:
+- devtools::install_github("Asa12138/pcutils")
+derived_from:
+- doi: 10.1101/2025.06.26.661636v1
+  title: MetaNet
+source_repos:
+- Asa12138/MetaNet
+schema_version: 0.2.0

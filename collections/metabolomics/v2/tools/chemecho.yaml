@@ -1,0 +1,10 @@
+name: ChemEcho
+slug: chemecho
+evidence_spans:
+- github.com__biorack__chemecho
+derived_from:
+- doi: 10.1145/2939672.2939778
+  title: '"Why Should I Trust You?"'
+source_repos:
+- biorack/chemecho
+schema_version: 0.2.0

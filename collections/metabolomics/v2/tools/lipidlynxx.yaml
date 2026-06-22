@@ -1,0 +1,10 @@
+name: LipidLynxX
+slug: lipidlynxx
+evidence_spans:
+- The LipidLynxX project is aimed to provide a unified identifier for major lipids
+derived_from:
+- doi: 10.1101/2020.04.09.033894
+  title: LipidLynxX
+source_repos:
+- SysMedOs/LipidLynxX
+schema_version: 0.2.0

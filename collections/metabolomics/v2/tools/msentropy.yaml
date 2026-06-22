@@ -1,0 +1,19 @@
+name: msentropy
+slug: msentropy
+evidence_spans:
+- msentropy
+- we provide a Python implementation of the algorithm in the `MSEntropy` repository
+- These are all integrated into the [MSEntropy package
+- These are all integrated into the MSEntropy package (https://github.com/YuanyueLi/MSEntropy)
+derived_from:
+- doi: 10.1021/acs.est.5c08558
+  title: CMDN
+- doi: 10.1038/s41592-023-02012-9
+  title: Flash entropy search to query all mass spectral libraries in real time
+- doi: 10.1038/s41592-021-01331-z
+  title: Spectral entropy outperforms MS/MS dot product similarity for small-molecule compound identification
+source_repos:
+- LeaveMeNotTonight/CMDN
+- YuanyueLi/FlashEntropySearch
+- YuanyueLi/SpectralEntropy
+schema_version: 0.2.0

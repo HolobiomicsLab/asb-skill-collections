@@ -1,0 +1,10 @@
+name: metScribeR
+slug: metscriber
+evidence_spans:
+- This package provides an automated workflow for processing in-house metabolite library standards data
+derived_from:
+- doi: 10.1021/acs.jproteome.5c00548
+  title: metScribeR
+source_repos:
+- ncats/metScribeR
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: mzrtsim
+slug: mzrtsim
+evidence_spans:
+- github.com__yufree__mzrtsim
+derived_from:
+- doi: 10.1021/acs.analchem.5c01213
+  title: mzrtsim
+source_repos:
+- yufree/mzrtsim
+schema_version: 0.2.0

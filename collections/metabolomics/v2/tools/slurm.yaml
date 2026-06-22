@@ -1,0 +1,11 @@
+name: SLURM
+slug: slurm
+evidence_spans:
+- For usage with SLURM, sets up one GPU. Use with `sbatch --array=0-9`
+- For usage with SLURM, sets up one GPU
+derived_from:
+- doi: 10.1038/s41592-022-01486-3
+  title: MSNovelist
+source_repos:
+- meowcat/MSNovelist
+schema_version: 0.2.0

@@ -1,0 +1,19 @@
+name: MZmine 2
+slug: mzmine-2
+evidence_spans:
+- IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2
+- IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2, *xcms
+- Below we provided one more example for MZmine2
+- Download the XCMS- and MZmine 2-output files from [ucloud]
+derived_from:
+- doi: 10.1021/acs.jproteome.2c00120
+  title: IDSL.IPA
+- doi: 10.1186/1471-2105-11-395
+  title: mzmine2
+- doi: 10.1093/bioinformatics/btab231/6214530
+  title: mzRAPP
+source_repos:
+- YasinEl/mzRAPP
+- idslme/IDSL.IPA
+- mzmine/mzmine2
+schema_version: 0.2.0

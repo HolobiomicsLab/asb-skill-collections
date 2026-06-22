@@ -1,0 +1,14 @@
+name: MetaboCoreUtils
+slug: metabocoreutils
+evidence_spans:
+- The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MetaboCoreUtils")`
+- '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'
+derived_from:
+- doi: 10.1093/bioinformatics/btac441
+  title: MobilityTransformR
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- LiesaSalzer/MobilityTransformR
+- sneumann/xcms
+schema_version: 0.2.0

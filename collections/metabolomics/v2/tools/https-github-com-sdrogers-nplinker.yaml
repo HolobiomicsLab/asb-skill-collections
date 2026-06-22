@@ -1,0 +1,10 @@
+name: https://github.com/sdrogers/nplinker
+slug: https-github-com-sdrogers-nplinker
+evidence_spans:
+- The NPLinker source code and documentation can be found at https://github.com/sdrogers/nplinker
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- NPLinker/nplinker
+schema_version: 0.2.0

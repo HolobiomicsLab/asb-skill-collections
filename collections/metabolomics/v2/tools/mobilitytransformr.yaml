@@ -1,0 +1,11 @@
+name: MobilityTransformR
+slug: mobilitytransformr
+evidence_spans:
+- Description and usage of MobilityTransformR
+- compute Procaine's effective mobility using mobilityTransform
+derived_from:
+- doi: 10.1093/bioinformatics/btac441
+  title: MobilityTransformR
+source_repos:
+- LiesaSalzer/MobilityTransformR
+schema_version: 0.2.0

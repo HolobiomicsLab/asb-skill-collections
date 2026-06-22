@@ -1,0 +1,10 @@
+name: PeakQC
+slug: peakqc
+evidence_spans:
+- 'PeakQC: Automated quality control pipeline by PCA analysis on MS1 data'
+derived_from:
+- doi: 10.1021/jasms.4c00146
+  title: PeakQC
+source_repos:
+- pnnl/IonToolPack
+schema_version: 0.2.0

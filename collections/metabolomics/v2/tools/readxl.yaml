@@ -1,0 +1,14 @@
+name: readxl
+slug: readxl
+evidence_spans:
+- readxl
+- library(readxl)
+derived_from:
+- doi: 10.1021/acs.est.5c08558
+  title: CMDN
+- doi: 10.1101/2025.08.28.672951v2
+  title: EnrichMET
+source_repos:
+- LeaveMeNotTonight/CMDN
+- biodatalab/enrichmet
+schema_version: 0.2.0

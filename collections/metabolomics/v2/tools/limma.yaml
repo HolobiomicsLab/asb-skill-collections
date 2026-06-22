@@ -1,0 +1,26 @@
+name: limma
+slug: limma
+evidence_spans:
+- allows the identification of differentially abundant lipids in simple and complex experimental designs
+- This step of the workflow requires the `limma` package to be installed.
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva'
+- BiocManager::install("limma")
+- can be performed on the feature matrix using functionality from other R packages, such as `r Biocpkg("limma")`.
+derived_from:
+- doi: 10.1093/bioinformatics/btac706
+  title: ADViSELipidomics
+- doi: 10.1021/acs.jproteome.0c00082
+  title: lipidr
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+- doi: 10.1038/s41596-021-00636-9
+  title: NOREVA
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+- ShinyFabio/ADViSELipidomics
+- ahmohamed/lipidr
+- idrblab/NOREVA;
+- sneumann/xcms
+schema_version: 0.2.0

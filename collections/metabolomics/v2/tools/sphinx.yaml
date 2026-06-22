@@ -1,0 +1,13 @@
+name: Sphinx
+slug: sphinx
+evidence_spans:
+- sphinx-apidoc -o . ../dreams && make html
+- Build docs with sphinx-build
+derived_from:
+- doi: 10.1038/s41587-025-02663-3
+  title: DreaMS
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+source_repos:
+- pluskal-lab/DreaMS
+schema_version: 0.2.0

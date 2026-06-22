@@ -1,0 +1,27 @@
+name: Skyline
+slug: skyline
+evidence_spans:
+- LipidCreator is a plugin for Skyline supporting targeted workflow development in lipidomics
+- LipidCreator is a plugin for [Skyline](https://skyline.ms/project/home/software/Skyline/begin.view) supporting targeted workflow development in lipidomics.
+- '`lipidr` takes exported Skyline CSV as input, allowing for multiple methods to be analyzed together.'
+- You can inspect the Benchmark in greater detail by exporting it to Skyline, which you can download from [here]
+- In the academic environment, MaxQuant and Skyline are by far the most popular ones.
+- '[MaxQuant](https://maxquant.org/)[@Cox2008] and [Skyline](https://skyline.ms/project/home/begin.view?)[@MacLean2010] are by far the most popular ones.'
+derived_from:
+- doi: 10.1038/s41467-020-15960-z
+  title: LipidCreator
+- doi: 10.1021/acs.jproteome.0c00082
+  title: lipidr
+- doi: 10.1093/bioinformatics/btab231/6214530
+  title: mzRAPP
+- doi: 10.1021/acs.jproteome.0c00866
+  title: 'The rawrr R Package: Direct Access to Orbitrap Data and Beyond'
+- doi: 10.1016/j.aca.2018.08.002
+  title: 'statTarget: A streamlined tool for signal drift correction and interpretations of quantitative mass spectrometry-based omics data'
+source_repos:
+- 13479776/statTarget
+- YasinEl/mzRAPP
+- ahmohamed/lipidr
+- fgcz/rawrr
+- lifs-tools/lipidcreator
+schema_version: 0.2.0

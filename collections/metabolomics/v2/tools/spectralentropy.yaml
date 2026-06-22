@@ -1,0 +1,10 @@
+name: SpectralEntropy
+slug: spectralentropy
+evidence_spans:
+- This repository contains the original source code for the paper
+derived_from:
+- doi: 10.1038/s41592-021-01331-z
+  title: Spectral entropy outperforms MS/MS dot product similarity for small-molecule compound identification
+source_repos:
+- YuanyueLi/SpectralEntropy
+schema_version: 0.2.0

@@ -1,0 +1,16 @@
+name: CTS
+slug: cts
+evidence_spans:
+- 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
+- '[CTS](https://cts.fiehnlab.ucdavis.edu/)'
+- __all__ = ['IDSM', 'CTS', 'CIR', 'PubChem', 'BridgeDb', 'MyService']
+- '`generateTPs(algorithm = "cts", ...)` | Parents | TPs with structural information'
+derived_from:
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+- doi: 10.1186/s13321-020-00477-w
+  title: 'patRoon: open source software platform for environmental mass spectrometry based non-target screening'
+source_repos:
+- RECETOX/MSMetaEnhancer
+- rickhelmus/patRoon
+schema_version: 0.2.0

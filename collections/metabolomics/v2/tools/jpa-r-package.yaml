@@ -1,0 +1,10 @@
+name: JPA R Package
+slug: jpa-r-package
+evidence_spans:
+- '''JPA'' is written in R and its source code is publicly available at <https://github.com/HuanLab/JPA.git>.'
+derived_from:
+- doi: 10.3390/metabo12030212
+  title: JPA
+source_repos:
+- HuanLab/JPA
+schema_version: 0.2.0

@@ -1,0 +1,14 @@
+name: MetaboDirect
+slug: metabodirect
+version_used: '3.8'
+evidence_spans:
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- 'The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1): (i) data pre-processing, (ii) data diagnostics, (iii) data exploration, (iv) chemodiversity analysis, (v) statistical analysis'
+- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
+- normalized intensities of the peaks (from pre-processing step) are transformed into Bray-Curtis, Euclidean, or Jaccard distances
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+schema_version: 0.2.0

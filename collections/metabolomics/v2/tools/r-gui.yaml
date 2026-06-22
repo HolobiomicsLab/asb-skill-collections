@@ -1,0 +1,10 @@
+name: R GUI
+slug: r-gui
+evidence_spans:
+- SMART written in R and R GUI has been developed as user-friendly software
+derived_from:
+- doi: 10.1021/acs.analchem.5c03225
+  title: SMART 2.0
+source_repos:
+- YuJenL/SMART
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: spectra-hash
+slug: spectra-hash
+evidence_spans:
+- direct integration of spectra-hash (https://github.com/berlinguyinca/spectra-hash) into fraghub
+derived_from:
+- doi: 10.1021/acs.analchem.4c02219
+  title: FragHub
+source_repos:
+- eMetaboHUB/FragHub
+schema_version: 0.2.0

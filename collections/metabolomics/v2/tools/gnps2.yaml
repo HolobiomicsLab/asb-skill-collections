@@ -1,0 +1,18 @@
+name: GNPS2
+slug: gnps2
+evidence_spans:
+- These workflows are also available for you to run on federated GNPS2 instances and locally on any computing environment or in the cloud.
+- It currently accepts data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
+- ReDU is the bridge between the [(GNPS2)](https://gnps2.org/) and [MassIVE]
+derived_from:
+- doi: 10.1038/s41596-025-01237-6
+  title: GNPS2 drug-metabolism toolkit
+- doi: 10.1101/2024.10.11.617756
+  title: NPLinker
+- doi: 10.1186/2047-217x-2-16
+  title: 'EMPeror: a tool for visualizing high-throughput microbial community data'
+source_repos:
+- NPLinker/nplinker
+- Wang-Bioinformatics-Lab/GNPS2_Workflows
+- mwang87/ReDU-MS2-Documentation
+schema_version: 0.2.0

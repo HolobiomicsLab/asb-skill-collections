@@ -1,0 +1,10 @@
+name: InjectionDesign
+slug: injectiondesign
+evidence_spans:
+- LC/GC-MS-based Multi-Omics Injection-Plate Design Web Service
+derived_from:
+- doi: 10.1101/2023.02.26.530140v1.article-info
+  title: InjectionDesign
+source_repos:
+- CSi-Studio/InjectionDesign
+schema_version: 0.2.0

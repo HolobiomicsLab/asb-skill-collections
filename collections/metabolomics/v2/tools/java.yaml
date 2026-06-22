@@ -1,0 +1,14 @@
+name: Java
+slug: java
+evidence_spans:
+- Java -jar CyProduct.jar QueryMolecule enzymeList OutputFolderPath
+- MetNet is a Java tool
+derived_from:
+- doi: 10.1021/acs.jcim.1c00144
+  title: CyProduct
+- doi: 10.1371/journal.pone.0246962
+  title: MetNet
+source_repos:
+- Le0nT1/CyProduct
+- simeoni-biolab/MetNet
+schema_version: 0.2.0

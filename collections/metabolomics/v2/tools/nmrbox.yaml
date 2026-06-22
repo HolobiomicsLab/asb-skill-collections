@@ -1,0 +1,10 @@
+name: NMRBox
+slug: nmrbox
+evidence_spans:
+- latest interface to NMRBox (SAND_V7)
+derived_from:
+- doi: 10.1021/acs.analchem.3c03078
+  title: SAND
+source_repos:
+- edisonomics/SAND
+schema_version: 0.2.0

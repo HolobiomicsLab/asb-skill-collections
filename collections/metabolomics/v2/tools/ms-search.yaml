@@ -1,0 +1,8 @@
+name: MS Search
+slug: ms-search
+evidence_spans:
+- The total number of spectra that your NIST library have can be checked in the *MS Search* program
+derived_from:
+- doi: 10.1021/acs.analchem.2c05389
+  title: mspcompiler
+schema_version: 0.2.0

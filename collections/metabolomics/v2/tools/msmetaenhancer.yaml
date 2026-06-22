@@ -1,0 +1,14 @@
+name: MSMetaEnhancer
+slug: msmetaenhancer
+evidence_spans:
+- MSMetaEnhancer is a tool used for `.msp` files annotation
+- 'Converter Builder: Automatically discovers and instantiates available converters'
+- MSMetaEnhancer is a tool used for `.msp` files annotation.
+- '**MSMetaEnhancer** is a tool used for `.msp` files annotation'
+- '`MSMetaEnhancer/libs/converters/web/` named after your service'
+derived_from:
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+source_repos:
+- RECETOX/MSMetaEnhancer
+schema_version: 0.2.0

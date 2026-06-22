@@ -1,0 +1,10 @@
+name: mzEmbed
+slug: mzembed
+evidence_spans:
+- mzEmbed, a framework for developing pre-trained generative models and fine-tuning them for specific tasks for untargeted metabolomics datasets
+derived_from:
+- doi: 10.1101/2025.01.26.634927v3
+  title: mzLearn
+source_repos:
+- ReviveMed/mzEmbed
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Mass Query Language (MassQL)
+slug: mass-query-language-massql
+evidence_spans:
+- The Mass Query Language (MassQL) is a domain specific language used to describe fragmentation patterns
+derived_from:
+- doi: 10.1145/2939672.2939778
+  title: '"Why Should I Trust You?"'
+source_repos:
+- biorack/chemecho
+schema_version: 0.2.0

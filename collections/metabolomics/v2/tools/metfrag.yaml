@@ -1,0 +1,26 @@
+name: metFrag
+slug: metfrag
+evidence_spans:
+- 'such as metFrag for example, check it out: https://github.com/rickhelmus/patRoon'
+- compound database dereplication using SIRIUS OR MetFrag
+- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched) webapp
+- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents, only for TPs with structural information)
+- Generates a [MetFrag] database for all TPs
+- if MetFrag analysis is enabled, a comprehensive summary of all entries can be generated using the corresponding export option.
+derived_from:
+- doi: 10.1515/jib-2025-0047
+  title: 'Streamlining feature elaboration and statistics analysis in metabolomics: the GetFeatistics R-package'
+- doi: 10.1186/s13321-023-00695-y
+  title: MAW
+- doi: 10.1186/s13321-016-0115-9
+  title: MetFrag
+- doi: 10.1186/s13321-020-00477-w
+  title: 'patRoon: open source software platform for environmental mass spectrometry based non-target screening'
+- doi: 10.1186/s13321-025-01044-x
+  title: Shinyscreen
+source_repos:
+- FrigerioGianfranco/GetFeatistics
+- https://gitlab.com/uniluxembourg/lcsb/eci/shinyscreen.git
+- rickhelmus/patRoon
+- zmahnoor14/MAW
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: GetFeatistics
+slug: getfeatistics
+evidence_spans:
+- devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
+derived_from:
+- doi: 10.1515/jib-2025-0047
+  title: 'Streamlining feature elaboration and statistics analysis in metabolomics: the GetFeatistics R-package'
+source_repos:
+- FrigerioGianfranco/GetFeatistics
+schema_version: 0.2.0

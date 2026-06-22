@@ -1,0 +1,10 @@
+name: ms-pred ICEBERG
+slug: ms-pred-iceberg
+evidence_spans:
+- github.com__samgoldman97__ms-pred
+derived_from:
+- doi: 10.1038/s42256-024-00816-8
+  title: ICEBERG
+source_repos:
+- samgoldman97/ms-pred
+schema_version: 0.2.0

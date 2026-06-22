@@ -1,0 +1,10 @@
+name: pwiz
+slug: pwiz
+evidence_spans:
+- github.com__ProteoWizard__pwiz
+derived_from:
+- doi: 10.1021/acs.jproteome.9b00640
+  title: Skyline (small molecules)
+source_repos:
+- ProteoWizard/pwiz
+schema_version: 0.2.0

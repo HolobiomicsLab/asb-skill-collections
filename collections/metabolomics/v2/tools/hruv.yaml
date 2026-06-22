@@ -1,0 +1,11 @@
+name: hRUV
+slug: hruv
+evidence_spans:
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
+derived_from:
+- doi: 10.1101/2020.12.21.423723
+  title: hRUV
+source_repos:
+- SydneyBioX/hRUV
+schema_version: 0.2.0

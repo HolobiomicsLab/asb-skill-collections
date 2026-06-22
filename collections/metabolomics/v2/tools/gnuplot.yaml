@@ -1,0 +1,11 @@
+name: Gnuplot
+slug: gnuplot
+version_used: 5.4.2
+evidence_spans:
+- https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.2/
+derived_from:
+- doi: 10.1002/cpz1.70009
+  title: LipidOne 2.0
+source_repos:
+- matteogiulietti/LipidOne
+schema_version: 0.2.0

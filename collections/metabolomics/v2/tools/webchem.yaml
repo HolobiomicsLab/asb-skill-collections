@@ -1,0 +1,15 @@
+name: webchem
+slug: webchem
+evidence_spans:
+- the package will retrieve the PubChem ID from the ID using `webchem`
+- uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR](https://bioconductor.org/packages/release/bioc
+- '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
+derived_from:
+- doi: 10.3390/metabo13121167
+  title: 'A Metabolites Merging Strategy (MMS): Harmonization to Enable Studies’ Intercomparison'
+- doi: 10.1371/journal.pone.0306202
+  title: uafr
+source_repos:
+- mariallr/amanida
+schema_version: 0.2.0

@@ -1,0 +1,8 @@
+name: Flux Variability Analysis
+slug: flux-variability-analysis
+evidence_spans:
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA
+derived_from:
+- doi: 10.1371/journal.pcbi.1009337
+  title: 'INTEGRATE: Model-based multi-omics data integration to characterize multi-level metabolic regulation'
+schema_version: 0.2.0

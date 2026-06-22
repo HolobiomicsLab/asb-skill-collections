@@ -1,0 +1,10 @@
+name: reshape2
+slug: reshape2
+evidence_spans:
+- reshape2
+derived_from:
+- doi: 10.1021/acs.est.5c08558
+  title: CMDN
+source_repos:
+- LeaveMeNotTonight/CMDN
+schema_version: 0.2.0

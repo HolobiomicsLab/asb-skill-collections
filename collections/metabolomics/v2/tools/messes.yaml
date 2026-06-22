@@ -1,0 +1,8 @@
+name: MESSES
+slug: messes
+evidence_spans:
+- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package that facilitates the conversion of tabular data into other formats
+derived_from:
+- doi: 10.3390/metabo11030163
+  title: The mwtab Python Library for RESTful Access and Enhanced Quality Control, Deposition, and Curation of the Metabolomics Workbench Data Repository
+schema_version: 0.2.0

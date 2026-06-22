@@ -1,0 +1,10 @@
+name: JDK 25
+slug: jdk-25
+evidence_spans:
+- JDK version-25-blue
+derived_from:
+- doi: 10.1038/s41467-021-23953-9
+  title: iimn
+- doi: 10.1038/s41587-023-01690-2
+  title: mzmine3
+schema_version: 0.2.0

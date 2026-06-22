@@ -1,0 +1,20 @@
+name: seaborn
+slug: seaborn
+evidence_spans:
+- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- It requires the Python dependencies NumPy [40], pandas [41, 42], seaborn
+- It requires the Python dependencies NumPy [40], pandas [41, 42], seaborn [43]
+- We recalculated S so that each element in S* is also between -1 and 1. The normalized S was then used to cluster microbes (rows) and metabolites (columns) separately based on the Euclidean distance
+- import seaborn as sns
+derived_from:
+- doi: 10.1021/acs.analchem.4c05039
+  title: CLAW-MRM
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+- doi: 10.1371/journal.pcbi.1009021
+  title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+source_repos:
+- chopralab/CLAW
+schema_version: 0.2.0

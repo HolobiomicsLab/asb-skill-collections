@@ -1,0 +1,10 @@
+name: PyYAML
+slug: pyyaml
+evidence_spans:
+- import yaml
+derived_from:
+- doi: 10.1101/2021.12.21.473622v1
+  title: MolNotator
+source_repos:
+- ZzakB/MolNotator
+schema_version: 0.2.0

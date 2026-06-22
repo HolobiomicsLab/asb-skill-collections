@@ -1,0 +1,8 @@
+name: ADAP
+slug: adap
+evidence_spans:
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+derived_from:
+- doi: 10.1021/acs.analchem.1c02687
+  title: 'SLAW: A Scalable and Self-Optimizing Processing Workflow for Untargeted LC-MS'
+schema_version: 0.2.0

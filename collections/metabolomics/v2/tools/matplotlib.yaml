@@ -1,0 +1,40 @@
+name: matplotlib
+slug: matplotlib
+version_used: 3.1.3
+evidence_spans:
+- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- from matplotlib import pyplot
+- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
+- matplotlib==3.1.3
+- from matplotlib import pyplot as plt
+- 'Dependencies: matplotlib'
+derived_from:
+- doi: 10.1021/acs.analchem.4c05039
+  title: CLAW-MRM
+- doi: 10.5281/zenodo.14009575
+  title: corems
+- doi: 10.1038/s41467-018-06082-8
+  title: dereplicator
+- doi: 10.1021/acs.analchem.5c00060
+  title: LAGF
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+- doi: 10.1021/jasms.4c00061
+  title: 'ModiFinder: Tandem Mass Spectral Alignment Enables Structural Modification Site Localization'
+- doi: 10.1021/acs.jproteome.2c00313
+  title: 'MZA: A Data Conversion Tool to Facilitate Software Development and Artificial Intelligence Research in Multidimensional Mass Spectrometry'
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+source_repos:
+- PNNL-m-q/mzapy
+- Wang-Bioinformatics-Lab/ModiFinder_base
+- ablab/npdtools
+- chopralab/CLAW
+- zsspython/LAGF
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: MongoDB
+slug: mongodb
+evidence_spans:
+- The URI of the mongo database to connect to. Defaults to mongodb://localhost:27017
+derived_from:
+- doi: 10.1186/s12859-023-05149-8
+  title: Pickaxe
+source_repos:
+- tyo-nu/MINE-Database
+schema_version: 0.2.0

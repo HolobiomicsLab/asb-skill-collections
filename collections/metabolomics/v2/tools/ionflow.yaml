@@ -1,0 +1,10 @@
+name: ionflow
+slug: ionflow
+evidence_spans:
+- github.com__wanchanglin__ionflow
+derived_from:
+- doi: 10.1007/s11306-021-01841-z
+  title: IonFlow
+source_repos:
+- wanchanglin/ionflow
+schema_version: 0.2.0

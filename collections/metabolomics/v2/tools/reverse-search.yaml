@@ -1,0 +1,10 @@
+name: reverse_search
+slug: reverse-search
+evidence_spans:
+- github.com/Philipbear/reverse_search
+derived_from:
+- doi: 10.1021/acs.analchem.5c02047
+  title: Reverse Spectral Search
+source_repos:
+- Philipbear/reverse_search
+schema_version: 0.2.0

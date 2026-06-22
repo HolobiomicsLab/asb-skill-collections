@@ -1,0 +1,10 @@
+name: pyHMMER
+slug: pyhmmer
+evidence_spans:
+- Switching from HMMER to [pyHMMER](https://github.com/althonos/pyhmmer)
+derived_from:
+- doi: 10.1093/gigascience/giaa154
+  title: BiG-SLiCE
+source_repos:
+- medema-group/bigslice
+schema_version: 0.2.0

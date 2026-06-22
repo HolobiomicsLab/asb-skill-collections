@@ -1,0 +1,10 @@
+name: hnswlib
+slug: hnswlib
+evidence_spans:
+- conda install -c conda-forge hnswlib
+derived_from:
+- doi: 10.1038/s41467-023-39279-7
+  title: FastEI
+source_repos:
+- Qiong-Yang/FastEI
+schema_version: 0.2.0

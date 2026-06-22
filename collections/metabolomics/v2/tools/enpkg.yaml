@@ -1,0 +1,8 @@
+name: ENPKG
+slug: enpkg
+evidence_spans:
+- Welcome to the ENPKG Full Workflow!
+derived_from:
+- doi: 10.1021/acscentsci.3c00800
+  title: A Sample-Centric and Knowledge-Driven Computational Framework for Natural Products Drug Discovery
+schema_version: 0.2.0

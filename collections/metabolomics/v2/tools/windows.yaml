@@ -1,0 +1,10 @@
+name: Windows
+slug: windows
+evidence_spans:
+- A case file named “Pesticides” can be run in the Windows environment
+derived_from:
+- doi: 10.1016/j.enceco.2025.07.022
+  title: MSThunder
+source_repos:
+- LQZ0123/MSThunder
+schema_version: 0.2.0

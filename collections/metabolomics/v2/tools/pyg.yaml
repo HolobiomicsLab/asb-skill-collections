@@ -1,0 +1,14 @@
+name: PyG
+slug: pyg
+evidence_spans:
+- '**PyG**'
+- '[PyG](https://pytorch-geometric.readthedocs.io/en/latest/)'
+derived_from:
+- doi: 10.1021/acs.jcim.4c02179
+  title: ABCoRT
+- doi: 10.1002/cem.70040
+  title: PACCS
+source_repos:
+- RiverCCC/ABCoRT
+- yuxuanliao/PACCS
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: MetDNA2 R package
+slug: metdna2-r-package
+evidence_spans:
+- library(MetDNA2)
+derived_from:
+- doi: 10.1038/s41467-022-34537-6
+  title: Knowledge-guided MN (knowns→unknowns)
+source_repos:
+- ZhuMetLab/MetDNA2
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: MSFragger
+slug: msfragger
+evidence_spans:
+- '.. automodule:: MSIght.refactor_fragger_process'
+derived_from:
+- doi: 10.1021/acs.jproteome.4c01140
+  title: MSIght
+source_repos:
+- laurenfields/MSIght
+schema_version: 0.2.0

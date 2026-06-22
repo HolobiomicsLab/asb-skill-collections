@@ -1,0 +1,10 @@
+name: MiMIR
+slug: mimir
+evidence_spans:
+- github.com/DanieleBizzarri/MiMIR
+derived_from:
+- doi: 10.1038/s41467-019-11311-9
+  title: A metabolic profile of all-cause mortality risk identified in an observational study of 44,168 individuals
+source_repos:
+- DanieleBizzarri/MiMIR
+schema_version: 0.2.0

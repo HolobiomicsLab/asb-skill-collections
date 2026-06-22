@@ -1,0 +1,11 @@
+name: Ubuntu
+slug: ubuntu
+version_used: '20.04'
+evidence_spans:
+- available through our experiments conducted on an Ubuntu 20.04 environment
+derived_from:
+- doi: 10.1016/j.enceco.2025.07.022
+  title: MSThunder
+source_repos:
+- LQZ0123/MSThunder
+schema_version: 0.2.0

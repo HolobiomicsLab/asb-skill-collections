@@ -1,0 +1,30 @@
+name: GitHub Actions
+slug: github-actions
+evidence_spans:
+- To conduct tests, please refer to section `test:` of GitHub Actions
+- GitHub Actions 'Build and Publish' workflow (distribute.yaml)
+- uses GitHub Actions to validate the content of all records
+- uses GitHub Actions to validate the content of all records with the [Validator]
+- GitHub Actions CI workflow (main.yml)
+- A GitHub action will run which will publish the new version to [pypi](https://pypi.org/project/ms2query/)
+derived_from:
+- doi: 10.1021/acs.analchem.0c01980
+  title: CorrDec
+- doi: 10.1038/s41587-021-01045-9
+  title: cosmic
+- doi: 10.1002/jms.1777
+  title: MassBank
+- doi: 10.1021/acs.analchem.5c00633
+  title: metid
+- doi: 10.1038/s41467-023-37446-4
+  title: ms2query
+- doi: 10.1038/s41467-024-54137-w
+  title: MS-DIAL 5
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+source_repos:
+- MassBank/MassBank-data
+- OpenMS/OpenMS
+- iomega/ms2query
+- systemsomicslab/MsdialWorkbench
+schema_version: 0.2.0

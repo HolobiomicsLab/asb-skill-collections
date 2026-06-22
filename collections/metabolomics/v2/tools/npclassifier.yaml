@@ -1,0 +1,10 @@
+name: NPClassifier
+slug: npclassifier
+evidence_spans:
+- use NPClassifier instead of ClassyFire by checking the box in the GUI
+derived_from:
+- doi: 10.3390/metabo12121275
+  title: ConCISE
+source_repos:
+- zquinlan/concise
+schema_version: 0.2.0

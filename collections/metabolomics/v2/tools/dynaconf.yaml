@@ -1,0 +1,10 @@
+name: Dynaconf
+slug: dynaconf
+evidence_spans:
+- Pass Dynaconf config validation
+derived_from:
+- doi: 10.1101/2024.10.11.617756
+  title: NPLinker
+source_repos:
+- NPLinker/nplinker
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: MSIGen
+slug: msigen
+evidence_spans:
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- from MSIGen import msigen
+derived_from:
+- doi: 10.1021/jasms.4c00178
+  title: 'MSIGen: An Open-Source Python Package for Processing and Visualizing Mass Spectrometry Imaging Data'
+source_repos:
+- LabLaskin/MSIGen
+schema_version: 0.2.0

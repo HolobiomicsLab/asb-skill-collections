@@ -1,0 +1,10 @@
+name: Symfony
+slug: symfony
+evidence_spans:
+- Backend is written in PHP with Symfony framework
+derived_from:
+- doi: 10.1186/s13321-021-00530-2
+  title: MassSpecBlocks
+source_repos:
+- privrja/MassSpecBlocks
+schema_version: 0.2.0

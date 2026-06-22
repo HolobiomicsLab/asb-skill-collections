@@ -1,0 +1,10 @@
+name: ASAP-MS
+slug: asap-ms
+evidence_spans:
+- supports data from multiple instruments, including DI-MS and ASAP-MS
+derived_from:
+- doi: 10.1021/acs.analchem.4c05062
+  title: 'RapidMass: A Graphical Data Processing Application for Automated Species Authentication in High-Throughput Mass Spectrometry'
+source_repos:
+- Katherine00689/RapidMass
+schema_version: 0.2.0

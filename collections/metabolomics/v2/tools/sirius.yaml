@@ -1,0 +1,40 @@
+name: SIRIUS
+slug: sirius
+evidence_spans:
+- ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
+- SIRIUS is a java-based software framework for the analysis of LC-MS/MS data
+- install Sirius and run it in your set.
+- install Sirius and run it in your set
+- install [Sirius](https://bio.informatik.uni-jena.de/software/sirius/) and run it in your set.
+- compound database dereplication using SIRIUS OR MetFrag
+derived_from:
+- doi: 10.3390/metabo12121275
+  title: ConCISE
+- doi: 10.1038/s41587-021-01045-9
+  title: cosmic
+- doi: 10.1038/s41467-021-23953-9
+  title: Ion identity molecular networking for mass spectrometry-based metabolomics in the GNPS environment
+- doi: 10.1186/s13321-023-00695-y
+  title: MAW
+- doi: 10.1021/acs.jcim.3c01082
+  title: 'MIST-CF: Chemical Formula Inference from Tandem Mass Spectra'
+- doi: 10.1038/s41592-022-01486-3
+  title: MSNovelist
+- doi: 10.1186/s13321-020-00477-w
+  title: 'patRoon: open source software platform for environmental mass spectrometry based non-target screening'
+- doi: 10.1021/ac501530d
+  title: RAMClust
+- doi: 10.1038/s41592-019-0344-8
+  title: sirius
+- doi: 10.1038/s42256-020-00234-6
+  title: ZODIAC
+source_repos:
+- boecker-lab/sirius
+- cbroeckl/RAMClustR
+- luigiquiros/inventa
+- meowcat/MSNovelist
+- rickhelmus/patRoon
+- sirius-ms/sirius
+- zmahnoor14/MAW
+- zquinlan/concise
+schema_version: 0.2.0

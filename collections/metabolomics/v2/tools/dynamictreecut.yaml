@@ -1,0 +1,11 @@
+name: dynamicTreeCut
+slug: dynamictreecut
+evidence_spans:
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+derived_from:
+- doi: 10.1021/ac501530d
+  title: RAMClust
+source_repos:
+- cbroeckl/RAMClustR
+schema_version: 0.2.0

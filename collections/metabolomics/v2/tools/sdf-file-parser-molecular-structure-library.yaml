@@ -1,0 +1,10 @@
+name: SDF file parser / molecular structure library
+slug: sdf-file-parser-molecular-structure-library
+evidence_spans:
+- SDF format
+derived_from:
+- doi: 10.3389/fchem.2022.908572
+  title: DNA adduct database
+source_repos:
+- https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git
+schema_version: 0.2.0

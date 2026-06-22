@@ -1,0 +1,10 @@
+name: GitHub actions workflow CI_build.yml
+slug: github-actions-workflow-ci-build-yml
+evidence_spans:
+- Build testing with GitHub actions workflow `.github/workflows/CI_build.yml`
+derived_from:
+- doi: 10.5281/zenodo.7565700
+  title: FERMO
+source_repos:
+- fermo-metabolomics/FERMO
+schema_version: 0.2.0

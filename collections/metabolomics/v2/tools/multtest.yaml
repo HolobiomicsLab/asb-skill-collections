@@ -1,0 +1,10 @@
+name: multtest
+slug: multtest
+evidence_spans:
+- BiocManager::install("multtest")
+derived_from:
+- doi: 10.1038/s41596-021-00636-9
+  title: NOREVA
+source_repos:
+- idrblab/NOREVA;
+schema_version: 0.2.0

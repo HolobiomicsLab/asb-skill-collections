@@ -1,0 +1,11 @@
+name: GNPS LCMS Visualization Dashboard
+slug: gnps-lcms-visualization-dashboard
+evidence_spans:
+- GNPS LCMS Visualization Dashboard
+- GNPS Analysis Tasks - [mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce
+derived_from:
+- doi: 10.1038/s41592-021-01339-5
+  title: GNPS Dashboard
+source_repos:
+- Wang-Bioinformatics-Lab/GNPS_LCMSDashboard
+schema_version: 0.2.0

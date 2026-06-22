@@ -1,0 +1,10 @@
+name: MADByTE
+slug: madbyte
+evidence_spans:
+- MADByTE stands for **M**etabolomics **A**nd **D**ereplication **By** **T**wo-dimensional **E**xperiments.
+derived_from:
+- doi: 10.1021/acs.jnatprod.0c01076
+  title: Development of an NMR-Based Platform for the Direct Structural Annotation of Complex Natural Products Mixtures
+source_repos:
+- liningtonlab/madbyte
+schema_version: 0.2.0

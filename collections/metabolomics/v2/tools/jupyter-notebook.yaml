@@ -1,0 +1,10 @@
+name: jupyter-notebook
+slug: jupyter-notebook
+evidence_spans:
+- The jupyter-notebook pipeline produces the a text file in json format
+derived_from:
+- doi: 10.1093/bioinformatics/btae584
+  title: msFeaST
+source_repos:
+- kevinmildau/msFeaST
+schema_version: 0.2.0

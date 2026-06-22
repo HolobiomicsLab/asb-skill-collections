@@ -1,0 +1,10 @@
+name: bmxp
+slug: bmxp
+evidence_spans:
+- pip install bmxp
+derived_from:
+- doi: 10.1093/bioinformatics/btaf290/8128335
+  title: Eclipse
+source_repos:
+- broadinstitute/bmxp
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: R ≥4.1.2
+slug: r-4-1-2
+evidence_spans:
+- '[![](https://img.shields.io/badge/R≥4.1.2-5fb9ed.svg?style=flat&logo=r&logoColor=white?)](https://cran.r-project.org/index.html)'
+derived_from:
+- doi: 10.1021/acs.jproteome.1c00392
+  title: '<i>Omics Untargeted Key Script</i>: R-Based Software Toolbox for Untargeted Metabolomics with Bladder Cancer Biomarkers Discovery Case Study'
+source_repos:
+- plyush1993/OUKS
+schema_version: 0.2.0

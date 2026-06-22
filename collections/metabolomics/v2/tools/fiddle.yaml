@@ -1,0 +1,8 @@
+name: FIDDLE
+slug: fiddle
+evidence_spans:
+- FIDDLE is a deep learning method for predicting molecular formulas from MS/MS spectra
+derived_from:
+- doi: 10.1038/s41467-025-66060-9
+  title: fiddle
+schema_version: 0.2.0

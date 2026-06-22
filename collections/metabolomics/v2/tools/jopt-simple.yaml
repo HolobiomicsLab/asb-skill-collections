@@ -1,0 +1,11 @@
+name: jopt-simple
+slug: jopt-simple
+version_used: '4.3'
+evidence_spans:
+- jopt-simple-4.3
+derived_from:
+- doi: 10.3390/metabo12020173
+  title: spectra
+source_repos:
+- rformassspectrometry/Spectra
+schema_version: 0.2.0

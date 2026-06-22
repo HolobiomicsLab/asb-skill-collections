@@ -1,0 +1,9 @@
+name: arrow
+slug: arrow
+evidence_spans:
+- complete re-implementation using the [`arrow`] for _reading_ only
+- R implementation in `R/`, which is also a complete re-implementation using the [`arrow`](https://arrow.apache.org/docs/r/) for _reading_ only
+derived_from:
+- doi: 10.1021/acs.jproteome.5c00435
+  title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Galaxy Genomics Framework
+slug: galaxy-genomics-framework
+evidence_spans:
+- can be run in a standalone mode or via Galaxy Genomics Framework
+derived_from:
+- doi: 10.1186/s12859-018-2134-1
+  title: SECIMTools
+source_repos:
+- secimTools/SECIMTools
+schema_version: 0.2.0

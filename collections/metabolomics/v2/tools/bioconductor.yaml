@@ -1,0 +1,33 @@
+name: Bioconductor
+slug: bioconductor
+evidence_spans:
+- 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
+- '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
+- Assuming that R (>=3.3) and Bioconductor have been correctly installed
+- or from Bioconductor by
+- the ```ExpressionSet``` class from the Biobase package by Bioconductor
+- This is primarily due to the Bioconductor project that currently provides >1900 open-source software packages
+derived_from:
+- doi: 10.1021/acs.analchem.6b02927
+  title: 'eRah: A Computational Tool Integrating Spectral Deconvolution and Alignment with Quantification and Identification of Metabolites in GC/MS-Based Metabolomics'
+- doi: 10.1080/01621459.2017.1397521
+  title: 'Maximum Rank Reproducibility: A Nonparametric Approach to Assessing Reproducibility in Replicate Experiments'
+- doi: 10.1093/bioinformatics/btx477
+  title: MWASTools
+- doi: 10.1093/bioinformatics/btaa037
+  title: ncGTW
+- doi: 10.1093/bioinformatics/btr597
+  title: MissForest—non-parametric missing value imputation for mixed-type data
+- doi: 10.1021/acs.jproteome.0c00866
+  title: 'The rawrr R Package: Direct Access to Orbitrap Data and Beyond'
+- doi: 10.1021/ac051437y
+  title: XCMS
+source_repos:
+- AndreaRMICL/MWASTools
+- ChiungTingWu/ncGTW
+- Ghoshlab/marr
+- antonvsdata/notame
+- fgcz/rawrr
+- sneumann/xcms
+- xdomingoal/erah-devel
+schema_version: 0.2.0

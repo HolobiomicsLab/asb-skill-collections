@@ -1,0 +1,13 @@
+name: BigScape
+slug: bigscape
+evidence_spans:
+- NPLinker can run BigScape automatically if the `bigscape` directory does not exist in the working directory.
+- NPLinker can run BigScape automatically if the `bigscape` directory does not exist
+derived_from:
+- doi: 10.1186/s40168-022-01444-3
+  title: NPClassScore
+- doi: 10.1101/2024.10.11.617756
+  title: NPLinker
+source_repos:
+- NPLinker/nplinker
+schema_version: 0.2.0

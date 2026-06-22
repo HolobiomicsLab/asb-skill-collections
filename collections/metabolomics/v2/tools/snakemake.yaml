@@ -1,0 +1,22 @@
+name: Snakemake
+slug: snakemake
+evidence_spans:
+- snakemake --configfile config/config_fast.yaml --jobs 1 --dry-run -p
+- A Snakemake configuration file in YAML format is required.
+- A Snakemake configuration file in `YAML <http://yaml.org/>`_ format is required.
+- Snakemake workflow manager for predicting collisional cross sections
+- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+derived_from:
+- doi: 10.1101/2024.11.13.623458v1
+  title: DeepMet
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+- doi: 10.1021/jasms.1c00315
+  title: <i>In Silico</i> Collision Cross Section Calculations to Aid Metabolite Annotation
+- doi: 10.1186/s13321-023-00724-w
+  title: UmetaFlow
+source_repos:
+- DasSusanta/snakemake_ccs
+- biosustain/snakemake_UmetaFlow
+- skinniderlab/clm
+schema_version: 0.2.0

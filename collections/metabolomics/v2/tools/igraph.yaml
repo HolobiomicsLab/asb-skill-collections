@@ -1,0 +1,21 @@
+name: igraph
+slug: igraph
+evidence_spans:
+- integrates fgsea for fast MetSEA, igraph for topology-based metrics
+- several R packages are utilized in the background processes, including ggplot2, igraph, MASS
+- '%\VignetteDepends{igraph}'
+- g.metab <- igraph::as.undirected(sample.graph)
+derived_from:
+- doi: 10.1101/2025.08.28.672951v2
+  title: EnrichMET
+- doi: 10.1093/bib/bbac455
+  title: LargeMetabo
+- doi: 10.1186/s13321-025-01051-y
+  title: minems2
+- doi: 10.1021/acs.analchem.1c00238
+  title: mWISE
+source_repos:
+- LargeMetabo/LargeMetabo
+- b2slab/mWISE
+- biodatalab/enrichmet
+schema_version: 0.2.0

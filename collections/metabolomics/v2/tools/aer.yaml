@@ -1,0 +1,10 @@
+name: AER
+slug: aer
+evidence_spans:
+- TOBIT linear models, using the _tobit_ function of the AER package
+derived_from:
+- doi: 10.1515/jib-2025-0047
+  title: 'Streamlining feature elaboration and statistics analysis in metabolomics: the GetFeatistics R-package'
+source_repos:
+- FrigerioGianfranco/GetFeatistics
+schema_version: 0.2.0

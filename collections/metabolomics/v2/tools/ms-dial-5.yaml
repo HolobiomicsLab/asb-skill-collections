@@ -1,0 +1,8 @@
+name: MS-DIAL 5
+slug: ms-dial-5
+evidence_spans:
+- Default options files for MS-DIAL 4 and 5
+derived_from:
+- doi: 10.1021/acs.analchem.4c04040
+  title: lipoclean
+schema_version: 0.2.0

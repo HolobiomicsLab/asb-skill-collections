@@ -1,0 +1,11 @@
+name: gunicorn
+slug: gunicorn
+version_used: 0.0.0.0
+evidence_spans:
+- gunicorn -w 4 -b 0.0.0.0:3007 server:app --daemon
+derived_from:
+- doi: 10.1186/s13321-020-00481-0
+  title: ChemSpectra
+source_repos:
+- ComPlat/chem-spectra-app
+schema_version: 0.2.0

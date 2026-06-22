@@ -1,0 +1,17 @@
+name: MIBiG
+slug: mibig
+evidence_spans:
+- To assign one or more molecular structures to BGCs, according to how many high-scoring matches are found in MIBiG
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit
+- established homology to a particular MIBiG BGC
+- mibig directory contains the MIBiG metadata
+- antiSMASH to score the correspondence between the MIBiG entries and the detected BGCs
+- the MIBiG database [32] has emerged as a central repository of characterised microbial BGCs
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+- doi: 10.1101/2024.10.11.617756
+  title: NPLinker
+source_repos:
+- NPLinker/nplinker
+schema_version: 0.2.0

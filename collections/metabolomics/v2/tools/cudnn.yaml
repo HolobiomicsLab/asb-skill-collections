@@ -1,0 +1,11 @@
+name: cuDNN
+slug: cudnn
+version_used: '7.0'
+evidence_spans:
+- cudnn >= 7.0
+derived_from:
+- doi: 10.1007/s10489-022-04351-0
+  title: Mass Spectrum Transformer
+source_repos:
+- chensaian/TransG-Net
+schema_version: 0.2.0

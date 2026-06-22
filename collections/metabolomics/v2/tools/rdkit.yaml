@@ -1,0 +1,95 @@
+name: RDKit
+slug: rdkit
+version_used: 2020.03.4
+evidence_spans:
+- Tanimoto similarity (Jaccard index) based on daylight-like molecular fingerprints, version 2020.03.2, 2048 bits, derived using rdkit
+- '3DMolMS has the following dependencies: * Python 3.8+ * PyTorch * RDKit'
+- '**RDKit**'
+- '- **RDKit**'
+- standard library for parsing and manipulating SMILES and chemical structures
+- No usage/docs found.
+derived_from:
+- doi: 10.1371/journal.pcbi.1008724
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.1093/bioinformatics/btad354
+  title: 3DMolMS
+- doi: 10.1021/acs.jcim.4c02179
+  title: ABCoRT
+- doi: 10.1021/acs.analchem.4c01565
+  title: bam
+- doi: 10.1093/bioinformatics/bty080
+  title: ChemDistiller
+- doi: 10.1186/s13321-020-00478-9
+  title: 'COCONUT online: Collection of Open Natural Products database'
+- doi: 10.1021/acs.analchem.5c01594
+  title: CSU-MS2
+- doi: 10.1101/2024.11.13.623458v1
+  title: DeepMet
+- doi: 10.3389/fchem.2022.908572
+  title: DNA adduct database
+- doi: 10.1038/s41467-023-39279-7
+  title: FastEI
+- doi: 10.5281/zenodo.17235587
+  title: FragHub
+- doi: 10.1021/acs.analchem.0c04071
+  title: GNN-RT
+- doi: 10.1021/acs.analchem.4c05859
+  title: 'From Reverse Phase Chromatography to HILIC: Graph Transformers Power Method-Independent Machine Learning of Retention Times'
+- doi: 10.1186/s13321-024-00804-5
+  title: idslmint
+- doi: 10.1007/s00044-016-1764-y
+  title: 'Binding of anti-Trypanosoma natural products from African flora against selected drug targets: a docking study'
+- doi: 10.1007/s10489-022-04351-0
+  title: Mass Spectrum Transformer
+- doi: 10.1186/s13321-023-00695-y
+  title: MAW
+- doi: 10.1021/acs.analchem.5c00633
+  title: metid
+- doi: 10.1021/jasms.4c00061
+  title: 'ModiFinder: Tandem Mass Spectral Alignment Enables Structural Modification Site Localization'
+- doi: 10.1186/s13321-024-00899-w
+  title: mol2ccs
+- doi: 10.1186/s13321-021-00558-4
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+- doi: 10.21105/joss.04494
+  title: msmetaenhancer
+- doi: 10.1021/acs.analchem.4c03781
+  title: MWFormer
+- doi: 10.1002/cem.70040
+  title: PACCS
+- doi: 10.1186/s12859-023-05149-8
+  title: Pickaxe
+- doi: 10.1021/jasms.1c00315
+  title: <i>In Silico</i> Collision Cross Section Calculations to Aid Metabolite Annotation
+- doi: 10.1021/acs.analchem.3c05019
+  title: 'PS<sup>2</sup>MS: A Deep Learning-Based Prediction System for Identifying New Psychoactive Substances Using Mass Spectrometry'
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+- doi: 10.1038/s42004-023-00932-3
+  title: Spec2Mol
+- doi: 10.1038/s41592-023-02012-9
+  title: Flash entropy search to query all mass spectral libraries in real time
+source_repos:
+- DasSusanta/snakemake_ccs
+- FanzhouKong/spectral_denoising
+- HopkinsLaboratory/Graphormer-RT
+- JosieHong/3DMolMS
+- KavrakiLab/Spec2Mol
+- Mrqeoqqt/chemdistiller
+- Qiong-Yang/FastEI
+- Qiong-Yang/GNN-RT
+- RECETOX/MSMetaEnhancer
+- RiverCCC/ABCoRT
+- Steinbeck-Lab/coconut
+- Wang-Bioinformatics-Lab/ModiFinder_base
+- chensaian/TransG-Net
+- eMetaboHUB/FragHub
+- https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git
+- lotusnprod/lotus-processor
+- skinniderlab/clm
+- tingxiecsu/CSU-MS2
+- tyo-nu/MINE-Database
+- yuxuanliao/PACCS
+- zhanghailiangcsu/MWFormer
+- zmahnoor14/MAW
+schema_version: 0.2.0

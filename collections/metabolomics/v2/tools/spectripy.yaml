@@ -1,0 +1,10 @@
+name: SpectriPy
+slug: spectripy
+evidence_spans:
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
+derived_from:
+- doi: 10.21105/joss.08070
+  title: spectripy
+schema_version: 0.2.0

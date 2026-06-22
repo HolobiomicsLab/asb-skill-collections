@@ -1,0 +1,12 @@
+name: patRoon
+slug: patroon
+evidence_spans:
+- The `generateTPs` function is used to obtain TPs for a particular set of parents.
+- componTP <- generateComponents(algorithm = "tp",
+- convertToMFDB | Generates a [MetFrag] database for all TPs
+derived_from:
+- doi: 10.1186/s13321-020-00477-w
+  title: 'patRoon: open source software platform for environmental mass spectrometry based non-target screening'
+source_repos:
+- rickhelmus/patRoon
+schema_version: 0.2.0

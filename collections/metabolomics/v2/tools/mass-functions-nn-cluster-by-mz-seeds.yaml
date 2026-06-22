@@ -1,0 +1,10 @@
+name: mass_functions.nn_cluster_by_mz_seeds
+slug: mass-functions-nn-cluster-by-mz-seeds
+evidence_spans:
+- nearest neighbor (NN) clustering is performed to establish the number of mass tracks. The NN clustering assigns each data point to its nearest 'peak mz value'.
+derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+source_repos:
+- shuzhao-li-lab/asari
+schema_version: 0.2.0

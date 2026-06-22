@@ -1,0 +1,10 @@
+name: DEIMoS
+slug: deimos
+evidence_spans:
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- import deimos
+- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+derived_from:
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+schema_version: 0.2.0

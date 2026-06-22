@@ -1,0 +1,8 @@
+name: vegan (R package)
+slug: vegan-r-package
+evidence_spans:
+- distances (depending on the selected normalization method) using the "vegdist" function for the vegan package and then used to perform a permutational analysis of variance (PERMANOVA)
+derived_from:
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+schema_version: 0.2.0

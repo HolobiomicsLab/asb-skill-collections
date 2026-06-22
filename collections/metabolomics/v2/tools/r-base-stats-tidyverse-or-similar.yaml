@@ -1,0 +1,10 @@
+name: R (base stats, tidyverse, or similar)
+slug: r-base-stats-tidyverse-or-similar
+evidence_spans:
+- statistical analysis
+derived_from:
+- doi: 10.1021/acs.analchem.4c05039
+  title: CLAW-MRM
+source_repos:
+- chopralab/CLAW
+schema_version: 0.2.0

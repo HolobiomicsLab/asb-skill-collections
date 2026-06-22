@@ -1,0 +1,12 @@
+name: MetaboShiny
+slug: metaboshiny
+evidence_spans:
+- Welcome to the info page on MetaboShiny
+- Welcome to the info page on MetaboShiny! We are currently on BioRXiv
+- Settings - Global, Project, Search, Adducts, Formula prediction and lookup
+derived_from:
+- doi: 10.1007/s11306-020-01717-8
+  title: MetaboShiny
+source_repos:
+- joannawolthuis/MetaboShiny
+schema_version: 0.2.0

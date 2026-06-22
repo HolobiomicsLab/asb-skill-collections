@@ -1,0 +1,10 @@
+name: github.com/bittremieux/cosine_neutral_loss
+slug: github-com-bittremieux-cosine-neutral-loss
+evidence_spans:
+- github.com__bittremieux__cosine_neutral_loss
+derived_from:
+- doi: 10.1016/1044-0305(94)87009-8
+  title: Optimization and testing of mass spectral library search algorithms for compound identification
+source_repos:
+- bittremieux/cosine_neutral_loss
+schema_version: 0.2.0

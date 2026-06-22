@@ -1,0 +1,14 @@
+name: KEGG
+slug: kegg
+evidence_spans:
+- curated KEGG data for enrichment using Fisher's Exact Test
+- their metabolic data are retrieved from KEGG and the corresponding networks of metabolic functions are built
+derived_from:
+- doi: 10.1101/2025.08.28.672951v2
+  title: EnrichMET
+- doi: 10.1371/journal.pone.0246962
+  title: MetNet
+source_repos:
+- biodatalab/enrichmet
+- simeoni-biolab/MetNet
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: PubChem standardization
+slug: pubchem-standardization
+evidence_spans:
+- structures are standardized using the PubChem standardization
+derived_from:
+- doi: 10.1038/s41592-023-02143-z
+  title: RepoRT (retention-time repository)
+source_repos:
+- michaelwitting/RepoRT
+schema_version: 0.2.0

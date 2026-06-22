@@ -1,0 +1,10 @@
+name: DiffSpectra
+slug: diffspectra
+evidence_spans:
+- github.com/AzureLeon1/DiffSpectra
+derived_from:
+- doi: 10.48550/arxiv.2507.06853
+  title: DiffSpectra
+source_repos:
+- AzureLeon1/DiffSpectra
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Pillow
+slug: pillow
+evidence_spans:
+- from PIL import Image
+derived_from:
+- doi: 10.1021/jasms.4c00061
+  title: 'ModiFinder: Tandem Mass Spectral Alignment Enables Structural Modification Site Localization'
+source_repos:
+- Wang-Bioinformatics-Lab/ModiFinder_base
+schema_version: 0.2.0

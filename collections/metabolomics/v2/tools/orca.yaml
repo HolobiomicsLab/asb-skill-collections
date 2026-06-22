@@ -1,0 +1,15 @@
+name: orca
+slug: orca
+version_used: 6.0.0
+evidence_spans:
+- Remove orca in favor of Kaleido
+- '**orca** (version >= 6.0.0)'
+derived_from:
+- doi: 10.1021/acs.jproteome.3c00512
+  title: 'PMart Web Application: Marketplace for Interactive Analysis of Panomics Data'
+- doi: 10.1021/jasms.5c00234
+  title: QCxMS2
+source_repos:
+- grimme-lab/QCxMS2
+- pmartR/PMart_ShinyApp
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: Comparador
+slug: comparador
+evidence_spans:
+- 'Comparador: Tool to compare lists of features (CSV files) from different acquisition methods or processing software'
+derived_from:
+- doi: 10.1021/jasms.4c00146
+  title: PeakQC
+source_repos:
+- pnnl/IonToolPack
+schema_version: 0.2.0

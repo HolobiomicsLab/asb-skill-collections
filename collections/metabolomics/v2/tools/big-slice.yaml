@@ -1,0 +1,11 @@
+name: BiG-SLiCE
+slug: big-slice
+evidence_spans:
+- '**BiG-SLiCE** using pip'
+- Ability to __export pre-calculated BGCs and GCFs table into TSVs__ (use __--export-csv__ parameter)
+derived_from:
+- doi: 10.1093/gigascience/giaa154
+  title: BiG-SLiCE
+source_repos:
+- medema-group/bigslice
+schema_version: 0.2.0

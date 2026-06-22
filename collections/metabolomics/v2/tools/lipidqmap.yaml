@@ -1,0 +1,12 @@
+name: LipidQMap
+slug: lipidqmap
+evidence_spans:
+- LipidQMap writes MSI exports as HDF5 containers
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap is a program to support accurate quantitation of Mass Spectrometry Imaging data
+derived_from:
+- doi: 10.1101/2025.10.15.682422v1
+  title: LipidQMap
+source_repos:
+- swinnenteam/LipidQMap
+schema_version: 0.2.0

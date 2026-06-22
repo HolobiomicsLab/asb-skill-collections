@@ -1,0 +1,15 @@
+name: caret
+slug: caret
+version_used: 6.0.86
+evidence_spans:
+- MetaClean provides 8 classification algorithms (implemented with the R package caret)
+- packageVersion("caret") [1] ‘6.0.86’
+derived_from:
+- doi: 10.1186/1471-2105-15-s11-s5
+  title: Quality evaluation of extracted ion chromatograms and chromatographic peaks in liquid chromatography/mass spectrometry-based metabolomics data
+- doi: 10.3390/metabo13080944
+  title: SERDA
+source_repos:
+- KelseyChetnik/MetaClean
+- slfan2013/SERDA
+schema_version: 0.2.0

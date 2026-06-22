@@ -1,0 +1,10 @@
+name: MSPrep
+slug: msprep
+evidence_spans:
+- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep software
+derived_from:
+- doi: 10.1080/01621459.2017.1397521
+  title: 'Maximum Rank Reproducibility: A Nonparametric Approach to Assessing Reproducibility in Replicate Experiments'
+source_repos:
+- Ghoshlab/marr
+schema_version: 0.2.0

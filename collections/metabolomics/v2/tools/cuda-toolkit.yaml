@@ -1,0 +1,10 @@
+name: CUDA Toolkit
+slug: cuda-toolkit
+evidence_spans:
+- Install the latest version of the NVIDIA drivers using the official CUDA Toolkit
+derived_from:
+- doi: 10.1093/bib/bbac542
+  title: "Comprehensive evaluation of peptide\n                    <i>de novo</i>\n                    sequencing tools for monoclonal antibody assembly"
+source_repos:
+- Noble-Lab/casanovo
+schema_version: 0.2.0

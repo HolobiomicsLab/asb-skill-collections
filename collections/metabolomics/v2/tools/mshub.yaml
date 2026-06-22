@@ -1,0 +1,11 @@
+name: MSHub
+slug: mshub
+evidence_spans:
+- MSHub auto-deconvolution
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+derived_from:
+- doi: 10.1038/s41587-020-0700-3
+  title: Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+source_repos:
+- bittremieux/GNPS_GC
+schema_version: 0.2.0

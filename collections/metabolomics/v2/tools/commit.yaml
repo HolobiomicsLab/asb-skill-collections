@@ -1,0 +1,9 @@
+name: COMMIT
+slug: commit
+evidence_spans:
+- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana
+- community-dependent gap-filling using COMMIT for communites sampled from
+derived_from:
+- doi: 10.1371/journal.pcbi.1009906
+  title: COMMIT
+schema_version: 0.2.0

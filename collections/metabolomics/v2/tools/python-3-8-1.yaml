@@ -1,0 +1,10 @@
+name: Python 3.8.1
+slug: python-3-8-1
+evidence_spans:
+- written in Python (v3.8.1)
+derived_from:
+- doi: 10.1021/acs.analchem.4c04531
+  title: QuanFormer
+source_repos:
+- LinShuhaiLAB/QuanFormer
+schema_version: 0.2.0

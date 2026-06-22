@@ -1,0 +1,10 @@
+name: SIMILE
+slug: simile
+evidence_spans:
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+derived_from:
+- doi: 10.1038/s41467-022-30118-9
+  title: SIMILE enables alignment of tandem mass spectra with statistical significance
+source_repos:
+- biorack/simile
+schema_version: 0.2.0

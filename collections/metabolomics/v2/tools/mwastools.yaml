@@ -1,0 +1,12 @@
+name: MWASTools
+slug: mwastools
+evidence_spans:
+- Here, we present a package to perform MWAS using univariate hypothesis testing
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- we present a package to perform MWAS using univariate hypothesis testing
+derived_from:
+- doi: 10.1093/bioinformatics/btx477
+  title: MWASTools
+source_repos:
+- AndreaRMICL/MWASTools
+schema_version: 0.2.0

@@ -1,0 +1,12 @@
+name: metaboprep
+slug: metaboprep
+evidence_spans:
+- library(metaboprep)
+- quality_control(m, source_layer = "input", sample_missingness = 0.2, feature_missingness = 0.2)
+- pc_analysis <- pc_and_outliers(metaboprep = mydata,
+derived_from:
+- doi: 10.1093/bioinformatics/btac059/6522114
+  title: Metaboprep
+source_repos:
+- MRCIEU/metaboprep
+schema_version: 0.2.0

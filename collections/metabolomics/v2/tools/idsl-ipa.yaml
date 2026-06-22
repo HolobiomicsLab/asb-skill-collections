@@ -1,0 +1,14 @@
+name: IDSL.IPA
+slug: idsl-ipa
+evidence_spans:
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- annotate peaklists from the IDSL.IPA package with molecular formula
+derived_from:
+- doi: 10.1021/acs.jproteome.2c00120
+  title: IDSL.IPA
+- doi: 10.1021/acs.analchem.2c00563
+  title: IDSL.UFA
+source_repos:
+- idslme/IDSL.IPA
+- idslme/IDSL.UFA
+schema_version: 0.2.0

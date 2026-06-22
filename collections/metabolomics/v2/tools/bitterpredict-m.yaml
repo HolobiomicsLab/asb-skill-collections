@@ -1,0 +1,8 @@
+name: BitterPredict.m
+slug: bitterpredict-m
+evidence_spans:
+- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not
+derived_from:
+- doi: 10.1021/acs.jafc.3c09767
+  title: bittermass
+schema_version: 0.2.0

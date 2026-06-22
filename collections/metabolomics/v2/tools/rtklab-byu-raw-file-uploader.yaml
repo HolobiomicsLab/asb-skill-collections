@@ -1,0 +1,10 @@
+name: RTKlab-BYU/Raw_File_Uploader
+slug: rtklab-byu-raw-file-uploader
+evidence_spans:
+- works with [Raw file uploader](https://github.com/RTKlab-BYU/Raw_File_Uploader)
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00854
+  title: MSConnect
+source_repos:
+- RTKlab-BYU/MSConnect
+schema_version: 0.2.0

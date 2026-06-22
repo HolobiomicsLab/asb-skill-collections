@@ -1,0 +1,10 @@
+name: Metabolomics Workbench
+slug: metabolomics-workbench
+evidence_spans:
+- Metabolomics Workbench Dataset Spectra
+derived_from:
+- doi: 10.1101/2020.05.09.086066
+  title: Metabolomics Spectrum Resolver
+source_repos:
+- mwang87/MetabolomicsSpectrumResolver
+schema_version: 0.2.0

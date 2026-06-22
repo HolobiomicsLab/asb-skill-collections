@@ -1,0 +1,8 @@
+name: spreadOut()
+slug: spreadout
+evidence_spans:
+- The first step in the process is to convert the raw input to a format that downstream functions can work with. `spreadOut()` prepares the read in .CSV for intelligent ***sorting*** (using retention
+derived_from:
+- doi: 10.1371/journal.pone.0306202
+  title: uafr
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: MASST
+slug: masst
+evidence_spans:
+- MASST+ is an improvement on GNPS Mass Spectrometry Search Tool (MASST)
+- MASST+ is an improvement on GNPS Mass Spectrometry Search Tool
+derived_from:
+- doi: 10.1038/s41587-023-01985-4
+  title: MASST
+source_repos:
+- mohimanilab/MASSTplus
+schema_version: 0.2.0

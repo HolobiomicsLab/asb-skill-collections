@@ -1,0 +1,16 @@
+name: KNIME
+slug: knime
+evidence_spans:
+- KNIME Basics
+- how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled)
+derived_from:
+- doi: 10.1038/nprot.2017.122
+  title: 3D molecular cartography (Optimus / 'ili)
+- doi: 10.1074/mcp.M113.031278
+  title: featurefindermetab
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+source_repos:
+- MolecularCartography/Optimus
+- OpenMS/OpenMS
+schema_version: 0.2.0

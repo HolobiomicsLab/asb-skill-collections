@@ -1,0 +1,8 @@
+name: Java 21
+slug: java-21
+evidence_spans:
+- Java 21
+derived_from:
+- doi: 10.1186/s13321-016-0115-9
+  title: MetFrag
+schema_version: 0.2.0

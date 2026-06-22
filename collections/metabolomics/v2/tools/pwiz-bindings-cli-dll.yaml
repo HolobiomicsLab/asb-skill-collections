@@ -1,0 +1,8 @@
+name: pwiz_bindings_cli.dll
+slug: pwiz-bindings-cli-dll
+evidence_spans:
+- based on pwiz_bindings_cli.dll from the ProteoWizard project
+derived_from:
+- doi: 10.1186/s12859-021-04490-0
+  title: aird
+schema_version: 0.2.0

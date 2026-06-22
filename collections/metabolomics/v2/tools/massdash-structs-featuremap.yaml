@@ -1,0 +1,10 @@
+name: massdash.structs.FeatureMap
+slug: massdash-structs-featuremap
+evidence_spans:
+- FeatureMap
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00026
+  title: 'MassDash: A Web-Based Dashboard for Data-Independent Acquisition Mass Spectrometry Visualization'
+source_repos:
+- Roestlab/massdash
+schema_version: 0.2.0

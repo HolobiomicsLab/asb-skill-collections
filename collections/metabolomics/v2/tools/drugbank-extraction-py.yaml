@@ -1,0 +1,10 @@
+name: drugbank_extraction.py
+slug: drugbank-extraction-py
+evidence_spans:
+- run `drugbank_extraction.py` on that file
+derived_from:
+- doi: 10.1038/s41592-025-02813-0
+  title: MSnLib
+source_repos:
+- corinnabrungs/msn_tree_library
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: GitLab
+slug: gitlab
+derived_from:
+- doi: 10.1007/s11306-018-1363-7
+  title: TarMet
+- doi: 10.1038/s41467-022-32155-w
+  title: tidyMass
+source_repos:
+- hcji/TarMet
+- tidymass/tidymass
+schema_version: 0.2.0

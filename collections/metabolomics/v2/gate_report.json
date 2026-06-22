@@ -1,0 +1,110 @@
+{
+  "schema": "asbb-release-gate/1.0",
+  "generated_at": "2026-06-22T00:12:34.355791+00:00",
+  "collection_dir": "collections/metabolomics/v2",
+  "corpus_path": "collections/metabolomics/v2/corpus.yaml",
+  "mode": "strict",
+  "strict": true,
+  "promote_logic_source": "agentic_science_builder.release.promote",
+  "policy": {
+    "oa_tiers": [
+      "diamond",
+      "gold-oa",
+      "green-oa",
+      "oa",
+      "open-access",
+      "repo-copyleft",
+      "repo-oa",
+      "repo-permissive"
+    ],
+    "per_span_cap": 150,
+    "cumulative_cap": 1500,
+    "text_field_cap": 300,
+    "ngram_jaccard_threshold": 0.3,
+    "similarity_ratio_threshold": 0.92,
+    "pii_config_version": "2026-06-15.1",
+    "require_open_access": true
+  },
+  "overall_status": "warn",
+  "blocking": false,
+  "exit_code": 0,
+  "summary_counts": {
+    "pass": 3,
+    "warn": 1,
+    "fail": 0
+  },
+  "hard_gate_ids": [
+    2,
+    5,
+    6,
+    8,
+    15
+  ],
+  "checks": [
+    {
+      "name": "access_tier_oa",
+      "status": "pass",
+      "gates": [
+        2,
+        15
+      ],
+      "hard_gate": true,
+      "summary": "Every included paper's access.type is in the OA allowed set (v0 OA-only).  (568 included papers checked)",
+      "n_findings": 0,
+      "details": []
+    },
+    {
+      "name": "strip_verbatim_similarity",
+      "status": "pass",
+      "gates": [
+        5,
+        6
+      ],
+      "hard_gate": true,
+      "summary": "OA papers exempt from caps (unlimited verbatim w/ attribution; >300-char spans \u2192 advisory WARN).  Non-OA: per-span text cap 300 chars, cumulative cap 1500 chars/DOI.  Near-verbatim similarity flagged for all.  (43470 verbatim spans scanned)",
+      "n_findings": 0,
+      "details": []
+    },
+    {
+      "name": "pii_dual_use",
+      "status": "warn",
+      "gates": [
+        6
+      ],
+      "hard_gate": true,
+      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-06-15.1).  (43470 spans scanned)",
+      "n_findings": 3,
+      "details": [
+        {
+          "status": "warn",
+          "message": "skills/meta-analysis-effect-size-estimation/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
+          "file": "skills/meta-analysis-effect-size-estimation/SKILL.md",
+          "pattern": "placeholder_subject"
+        },
+        {
+          "status": "warn",
+          "message": "skills/metabolite-trend-classification/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
+          "file": "skills/metabolite-trend-classification/SKILL.md",
+          "pattern": "placeholder_subject"
+        },
+        {
+          "status": "warn",
+          "message": "skills/study-size-weighted-averaging/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
+          "file": "skills/study-size-weighted-averaging/SKILL.md",
+          "pattern": "placeholder_subject"
+        }
+      ]
+    },
+    {
+      "name": "provenance_doi_license",
+      "status": "pass",
+      "gates": [
+        8
+      ],
+      "hard_gate": true,
+      "summary": "Every skill carries a source DOI + a license SPDX tag.  (5865 skills checked)",
+      "n_findings": 0,
+      "details": []
+    }
+  ]
+}

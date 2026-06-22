@@ -1,0 +1,10 @@
+name: chem-spectra-app
+slug: chem-spectra-app
+evidence_spans:
+- git clone https://github.com/ComPlat/chem-spectra-app.git
+derived_from:
+- doi: 10.1186/s13321-020-00481-0
+  title: ChemSpectra
+source_repos:
+- ComPlat/chem-spectra-app
+schema_version: 0.2.0

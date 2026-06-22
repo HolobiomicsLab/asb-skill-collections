@@ -1,0 +1,11 @@
+name: SpaMTP
+slug: spamtp
+evidence_spans:
+- Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
+- Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
+derived_from:
+- doi: 10.1101/2024.10.14.618269
+  title: 'Structural annotation of full-scan MS data: A unified solution for LC-MS and MS imaging analyses'
+source_repos:
+- GenomicsMachineLearning/SpaMTP
+schema_version: 0.2.0

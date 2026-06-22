@@ -1,0 +1,12 @@
+name: ms-pred (SCARF model)
+slug: ms-pred-scarf-model
+evidence_spans:
+- github.com/samgoldman97/ms-pred
+derived_from:
+- doi: 10.1038/s42256-024-00816-8
+  title: ICEBERG
+- doi: 10.1021/acs.analchem.3c04654
+  title: ICEBERG / fragmentation graph generation
+source_repos:
+- samgoldman97/ms-pred
+schema_version: 0.2.0

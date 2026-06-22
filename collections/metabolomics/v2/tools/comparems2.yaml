@@ -1,0 +1,10 @@
+name: compareMS2
+slug: comparems2
+evidence_spans:
+- compareMS2 calculates the global similarity between tandem mass spectrometry datasets
+derived_from:
+- doi: 10.1021/acs.jproteome.2c00457
+  title: compareMS2 2.0
+source_repos:
+- 524D/compareMS2
+schema_version: 0.2.0

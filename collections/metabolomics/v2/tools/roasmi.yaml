@@ -1,0 +1,10 @@
+name: ROASMI
+slug: roasmi
+evidence_spans:
+- ROASMI is a Retention Order model to Assist Small Molecule Identification
+derived_from:
+- doi: 10.1186/s13321-025-00968-8
+  title: ROASMI
+source_repos:
+- FangYuan717/ROASMI
+schema_version: 0.2.0

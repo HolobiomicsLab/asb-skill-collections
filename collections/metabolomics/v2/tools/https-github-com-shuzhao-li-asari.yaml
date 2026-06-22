@@ -1,0 +1,12 @@
+name: https://github.com/shuzhao-li/asari
+slug: https-github-com-shuzhao-li-asari
+evidence_spans:
+- 'Source code: [https://github.com/shuzhao-li/asari](https://github.com/shuzhao-li/asari)'
+- The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
+- searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS)
+derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+source_repos:
+- shuzhao-li-lab/asari
+schema_version: 0.2.0

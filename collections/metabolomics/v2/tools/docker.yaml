@@ -1,0 +1,64 @@
+name: Docker
+slug: docker
+version_used: 2.2.7
+evidence_spans:
+- docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
+- Follow these steps to install Docker and run CloMet for the first time
+- you need docker and docker-compose
+- To bring everything up, you need docker and docker-compose.
+- you need docker and docker-compose.
+- Deploying to your own web server with docker. `docker pull databio2022/graphbio:v2.2.7-manual`
+derived_from:
+- doi: 10.1186/s13321-020-00481-0
+  title: ChemSpectra
+- doi: 10.1021/acs.jproteome.2c00602
+  title: CloMet
+- doi: 10.5281/zenodo.14009575
+  title: corems
+- doi: 10.1021/jacs.9b13786
+  title: CSCS / deep CNN natural-product annotation
+- doi: 10.3389/fgene.2022.957317
+  title: 'GraphBio: A shiny web app to easily perform popular visualization analysis for omics data'
+- doi: 10.1021/acs.analchem.4c06520
+  title: imzML Writer
+- doi: 10.1021/acs.analchem.4c04040
+  title: lipoclean
+- doi: 10.1101/2023.07.06.547963v1
+  title: Mass2SMILES
+- doi: 10.1007/s11306-020-01717-8
+  title: MetaboShiny
+- doi: 10.1186/s13321-016-0115-9
+  title: MetFrag
+- doi: 10.1073/pnas.1608041113
+  title: MS2LDA
+- doi: 10.1093/bioadv/vbae175
+  title: MultiOmicsIntegrator
+- doi: 10.1021/jasms.4c00364
+  title: nextflow4msdial
+- doi: 10.1021/acs.jnatprod.1c00399
+  title: npclassifier
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+- doi: 10.1021/acs.jproteome.3c00512
+  title: 'PMart Web Application: Marketplace for Interactive Analysis of Panomics Data'
+- doi: 10.1186/s13321-025-01044-x
+  title: Shinyscreen
+- doi: 10.3389/fpls.2019.01329
+  title: tima
+- doi: 10.21105/joss.02410
+  title: Viime
+source_repos:
+- ASAGlab/MOI--An-integrated-solution-for-omics-analyses
+- ComPlat/chem-spectra-app
+- OpenMS/OpenMS
+- VIU-Metabolomics/imzML_Writer
+- databio2022/GraphBio
+- girder/viime
+- https://gitlab.com/uniluxembourg/lcsb/eci/shinyscreen.git
+- joannawolthuis/MetaboShiny
+- mwang87/NP-Classifier
+- pmartR/PMart_ShinyApp
+- rmallol/clomet
+- vdhooftcompmet/MS2LDA
+- volvox292/mass2smiles
+schema_version: 0.2.0

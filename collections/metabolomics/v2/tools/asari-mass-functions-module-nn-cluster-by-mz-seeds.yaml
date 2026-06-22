@@ -1,0 +1,10 @@
+name: asari mass_functions module (nn_cluster_by_mz_seeds)
+slug: asari-mass-functions-module-nn-cluster-by-mz-seeds
+evidence_spans:
+- a nearest neighbor (NN) clustering is performed to establish the number of mass tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).
+derived_from:
+- doi: 10.1038/s41467-023-39889-1
+  title: Trackable and scalable LC-MS metabolomics data processing using asari
+source_repos:
+- shuzhao-li-lab/asari
+schema_version: 0.2.0

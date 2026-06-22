@@ -1,0 +1,9 @@
+name: MS-DIAL 4
+slug: ms-dial-4
+evidence_spans:
+- Default options files for MS-DIAL 4 and 5
+- a machine learning based quality filter for lipid identifications from MS-DIAL
+derived_from:
+- doi: 10.1021/acs.analchem.4c04040
+  title: lipoclean
+schema_version: 0.2.0

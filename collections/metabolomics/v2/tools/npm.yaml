@@ -1,0 +1,8 @@
+name: npm
+slug: npm
+evidence_spans:
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+derived_from:
+- doi: 10.1038/s41589-020-00724-z
+  title: pairedomicsdatapla
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: rcdk
+slug: rcdk
+evidence_spans:
+- molecular fingerprints and chemical descriptors are calculated using rcdk
+derived_from:
+- doi: 10.1038/s41592-023-02143-z
+  title: RepoRT (retention-time repository)
+source_repos:
+- michaelwitting/RepoRT
+schema_version: 0.2.0

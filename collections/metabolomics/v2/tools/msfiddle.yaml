@@ -1,0 +1,8 @@
+name: msfiddle
+slug: msfiddle
+evidence_spans:
+- 'CLI and Python API: [msfiddle](https://github.com/josiehong/msfiddle)'
+derived_from:
+- doi: 10.1038/s41467-025-66060-9
+  title: fiddle
+schema_version: 0.2.0

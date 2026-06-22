@@ -1,0 +1,10 @@
+name: Calculator
+slug: calculator
+evidence_spans:
+- The built in `Calculator` can perform simple calculations on image data by entering the desired formula into the `Formula` text box
+derived_from:
+- doi: 10.1529/biophysj.103.038422
+  title: Automatic and Quantitative Measurement of Protein-Protein Colocalization in Live Cells
+source_repos:
+- djdt/pewpew
+schema_version: 0.2.0

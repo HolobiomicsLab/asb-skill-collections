@@ -1,0 +1,10 @@
+name: MS-DIAL or higher
+slug: ms-dial-or-higher
+evidence_spans:
+- Needs MS-DIAL (v4.00 or higher) and MS-FINDER (3.30 or higher)
+derived_from:
+- doi: 10.1021/acs.analchem.0c01594
+  title: MS-CleanR
+source_repos:
+- eMetaboHUB/MS-CleanR
+schema_version: 0.2.0

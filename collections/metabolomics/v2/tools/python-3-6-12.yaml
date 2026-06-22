@@ -1,0 +1,11 @@
+name: Python 3.6.12
+slug: python-3-6-12
+evidence_spans:
+- Python(3.6.12)
+- 1- Python(3.6.12)
+derived_from:
+- doi: 10.1093/bioinformatics/btac032/6510930
+  title: massNet
+source_repos:
+- wabdelmoula/massNet
+schema_version: 0.2.0

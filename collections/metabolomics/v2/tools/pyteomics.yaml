@@ -1,0 +1,14 @@
+name: pyteomics
+slug: pyteomics
+evidence_spans:
+- pyopenms ... pymzml ... pyteomics
+- Pyteomics supports recent versions of Python 3.
+- import pyteomics.mgf
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+schema_version: 0.2.0

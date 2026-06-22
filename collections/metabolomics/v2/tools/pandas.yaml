@@ -1,0 +1,74 @@
+name: Pandas
+slug: pandas
+version_used: 2.0.3
+evidence_spans:
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec by making extensive use of Numpy [24] and Numba [25], the library was optimised by making extensive use of Pandas [40]
+- using Pandas [40]
+- '**Pandas**'
+- _No usage/docs found._
+- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+derived_from:
+- doi: 10.1371/journal.pcbi.1008724
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+- doi: 10.1021/acs.jcim.4c02179
+  title: ABCoRT
+- doi: 10.1021/acs.analchem.4c05039
+  title: CLAW-MRM
+- doi: 10.5281/zenodo.14009575
+  title: corems
+- doi: 10.1021/acs.analchem.4c05859
+  title: 'From Reverse Phase Chromatography to HILIC: Graph Transformers Power Method-Independent Machine Learning of Retention Times'
+- doi: 10.1021/acs.analchem.5c00060
+  title: LAGF
+- doi: 10.1371/journal.pcbi.1011814
+  title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
+- doi: 10.1007/s10489-022-04351-0
+  title: Mass Spectrum Transformer
+- doi: 10.1186/s40168-023-01476-3
+  title: MetaboDirect
+- doi: 10.1002/ange.202517611
+  title: MMST
+- doi: 10.3390/metabo11030163
+  title: The mwtab Python Library for RESTful Access and Enhanced Quality Control, Deposition, and Curation of the Metabolomics Workbench Data Repository
+- doi: 10.1021/acs.jproteome.2c00313
+  title: 'MZA: A Data Conversion Tool to Facilitate Software Development and Artificial Intelligence Research in Multidimensional Mass Spectrometry'
+- doi: 10.1021/acs.analchem.1c02220
+  title: neatms
+- doi: 10.1021/acs.analchem.4c05632
+  title: NMRformer
+- doi: 10.1002/cem.70040
+  title: PACCS
+- doi: 10.1021/acs.jproteome.4c00873
+  title: pyopenmsviz
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+- doi: 10.1186/s13321-025-00968-8
+  title: ROASMI
+- doi: 10.1002/nbm.70131
+  title: ROIAL-NMR
+- doi: 10.1021/acs.analchem.4c06210
+  title: SMART
+- doi: 10.1038/s41592-023-02012-9
+  title: Flash entropy search to query all mass spectral libraries in real time
+- doi: 10.1021/acs.analchem.9b04884
+  title: "<tt>spectrum_utils</tt>\n                    : A Python Package for Mass Spectrometry Data Processing and Visualization"
+- doi: 10.3390/metabo10100416
+  title: A Python-Based Pipeline for Preprocessing LC–MS Data for Untargeted Metabolomics Workflows
+source_repos:
+- FangYuan717/ROASMI
+- FanzhouKong/spectral_denoising
+- HopkinsLaboratory/Graphormer-RT
+- Leo-Cheng-Lab/ROIAL-NMR
+- MoseleyBioinformaticsLab/mwtab
+- PNNL-m-q/mzapy
+- RiverCCC/ABCoRT
+- bioinfo-ibms-pumc/SMART
+- chensaian/TransG-Net
+- chopralab/CLAW
+- griquelme/tidyms
+- mpriessner/MultiModalSpectralTransformer
+- yuxuanliao/PACCS
+- zsspython/LAGF
+- zza1211/NMRformer
+schema_version: 0.2.0

@@ -1,0 +1,11 @@
+name: Sklearn
+slug: sklearn
+version_used: 1.0.2
+evidence_spans:
+- The current version of CCSP 2.0 requires Sklearn V1.0.2 or later
+derived_from:
+- doi: 10.1101/2022.08.09.503345
+  title: 'CCS Predictor 2.0: An Open-Source Jupyter Notebook Tool for Filtering Out False Positives in Metabolomics'
+source_repos:
+- facundof2016/CCSP2.0
+schema_version: 0.2.0

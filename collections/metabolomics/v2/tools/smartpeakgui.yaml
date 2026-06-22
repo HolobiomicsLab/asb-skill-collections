@@ -1,0 +1,10 @@
+name: SmartPeakGUI
+slug: smartpeakgui
+evidence_spans:
+- SmartPeak GUI provides functionality to facilitate users to get up and running as quickly as possible
+derived_from:
+- doi: 10.1021/acs.analchem.0c03421
+  title: SmartPeak
+source_repos:
+- AutoFlowResearch/SmartPeak
+schema_version: 0.2.0

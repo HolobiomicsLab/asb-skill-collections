@@ -1,0 +1,10 @@
+name: MZmine 3
+slug: mzmine-3
+evidence_spans:
+- '`MZmine 3 <http://mzmine.github.io/>`_'
+derived_from:
+- doi: 10.1002/9780470508183
+  title: Introduction to Modern Liquid Chromatography
+source_repos:
+- huaxuyu/bago
+schema_version: 0.2.0

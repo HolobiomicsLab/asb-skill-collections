@@ -1,0 +1,47 @@
+name: conda
+slug: conda
+version_used: '3.11'
+evidence_spans:
+- We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html)
+- Use conda to create a virtual environment with required dependencies.
+- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment with required dependencies.
+- We recommend to use [conda](https://conda.io/docs/user-guide/install/download.html).
+- Create a Conda environment and install the necessary compiler tools and GPU runtime
+- Please set up the environment as per this file using [conda](http://docs.condi.ioen/latest/)/[pip]
+derived_from:
+- doi: 10.1021/acs.analchem.5c01594
+  title: CSU-MS2
+- doi: 10.1021/acs.analchem.1c05017
+  title: deimos
+- doi: 10.1021/acs.analchem.3c05772
+  title: GCMSFormer
+- doi: 10.1038/s41592-022-01496-1
+  title: A learned embedding for efficient joint analysis of millions of mass spectra
+- doi: 10.1093/bioinformatics/btaf354
+  title: JESTR
+- doi: 10.1021/acs.jnatprod.0c01076
+  title: Development of an NMR-Based Platform for the Direct Structural Annotation of Complex Natural Products Mixtures
+- doi: 10.1186/s13321-024-00878-1
+  title: matchms
+- doi: 10.1073/pnas.1608041113
+  title: MS2LDA
+- doi: 10.1186/s40168-022-01444-3
+  title: NPClassScore
+- doi: 10.1002/cem.70040
+  title: PACCS
+- doi: 10.1021/acs.jproteome.8b00717
+  title: pyteomics
+- doi: 10.3390/metabo10100416
+  title: A Python-Based Pipeline for Preprocessing LC–MS Data for Untargeted Metabolomics Workflows
+source_repos:
+- HassounLab/JESTR1
+- NPLinker/nplinker
+- bittremieux-lab/GLEAMS
+- griquelme/tidyms
+- liningtonlab/madbyte
+- matchms/matchms
+- tingxiecsu/CSU-MS2
+- vdhooftcompmet/MS2LDA
+- yuxuanliao/PACCS
+- zxguocsu/GCMSFormer
+schema_version: 0.2.0

@@ -1,0 +1,10 @@
+name: SqMassLoader
+slug: sqmassloader
+evidence_spans:
+- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading however since extraction has already been performed by the upstream analysis tool. This includes SqMassLoader'
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00026
+  title: 'MassDash: A Web-Based Dashboard for Data-Independent Acquisition Mass Spectrometry Visualization'
+source_repos:
+- Roestlab/massdash
+schema_version: 0.2.0

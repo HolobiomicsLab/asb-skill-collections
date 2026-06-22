@@ -1,0 +1,8 @@
+name: Rust
+slug: rust
+evidence_spans:
+- The primary work shown here is written in Rust at the repository root
+derived_from:
+- doi: 10.1021/acs.jproteome.5c00435
+  title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
+schema_version: 0.2.0

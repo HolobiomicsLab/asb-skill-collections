@@ -1,0 +1,10 @@
+name: rjson
+slug: rjson
+evidence_spans:
+- rjson::toJSON
+derived_from:
+- doi: 10.1021/acs.jproteome.0c00866
+  title: 'The rawrr R Package: Direct Access to Orbitrap Data and Beyond'
+source_repos:
+- fgcz/rawrr
+schema_version: 0.2.0

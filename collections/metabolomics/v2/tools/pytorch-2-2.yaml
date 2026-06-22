@@ -1,0 +1,10 @@
+name: PyTorch 2.2
+slug: pytorch-2-2
+evidence_spans:
+- '[Pytorch](https://pytorch.org/) 2.2'
+derived_from:
+- doi: 10.1021/acs.analchem.4c02426
+  title: MSBERT
+source_repos:
+- zhanghailiangcsu/MSBERT
+schema_version: 0.2.0

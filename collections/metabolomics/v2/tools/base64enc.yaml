@@ -1,0 +1,10 @@
+name: base64enc
+slug: base64enc
+evidence_spans:
+- The underlying engine handles binary data encoding via the `base64enc` package
+derived_from:
+- doi: 10.1021/acs.analchem.5c01213
+  title: mzrtsim
+source_repos:
+- yufree/mzrtsim
+schema_version: 0.2.0

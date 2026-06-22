@@ -1,0 +1,8 @@
+name: t-SNE
+slug: t-sne
+evidence_spans:
+- We then applied a t-distributed stochastic neighbor embedding (t-SNE) algorithm and represented the high-dimensional sampled flux distributions in a two-dimensional space [50].
+derived_from:
+- doi: 10.1371/journal.pcbi.1009337
+  title: 'INTEGRATE: Model-based multi-omics data integration to characterize multi-level metabolic regulation'
+schema_version: 0.2.0

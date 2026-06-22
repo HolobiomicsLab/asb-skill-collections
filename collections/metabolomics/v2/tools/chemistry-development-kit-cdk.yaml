@@ -1,0 +1,11 @@
+name: Chemistry Development Kit (CDK)
+slug: chemistry-development-kit-cdk
+evidence_spans:
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]
+- 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints: CDK Substructure,'
+derived_from:
+- doi: 10.1371/journal.pcbi.1008920
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+source_repos:
+- NPLinker/nplinker
+schema_version: 0.2.0

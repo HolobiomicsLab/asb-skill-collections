@@ -1,0 +1,10 @@
+name: Compound Discoverer
+slug: compound-discoverer
+evidence_spans:
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+derived_from:
+- doi: 10.1186/s12859-017-1744-3
+  title: lipidmatch
+source_repos:
+- GarrettLab-UF/LipidMatch
+schema_version: 0.2.0

@@ -1,0 +1,14 @@
+name: Streamlit
+slug: streamlit
+evidence_spans:
+- streamlit graphical user interface (GUI)
+- OpenMS Streamlit Template's **online mode only**
+derived_from:
+- doi: 10.1021/acs.jproteome.4c00026
+  title: 'MassDash: A Web-Based Dashboard for Data-Independent Acquisition Mass Spectrometry Visualization'
+- doi: 10.1038/nmeth.3959
+  title: OpenMS
+source_repos:
+- OpenMS/OpenMS
+- Roestlab/massdash
+schema_version: 0.2.0

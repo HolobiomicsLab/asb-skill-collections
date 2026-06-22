@@ -1,0 +1,10 @@
+name: pyrwr
+slug: pyrwr
+evidence_spans:
+- using [random walk](https://github.com/jinhongjung/pyrwr)
+derived_from:
+- doi: 10.1093/bioinformatics/btad078/7067745
+  title: ChemWalker
+source_repos:
+- computational-chemical-biology/ChemWalker
+schema_version: 0.2.0
