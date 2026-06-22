@@ -1,0 +1,10 @@
+schema: asb-corpus/1.0
+collection: test
+version: 2
+papers:
+- name: BBMN
+  doi: 10.1021/acs.jnatprod.7b00737
+  repo_url: https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks
+- name: NOREPO
+  doi: 10.1000/norepo
+  repo_url: ''
