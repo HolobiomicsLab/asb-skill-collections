@@ -1,6 +1,5 @@
 {
   "name": "metabolomics-gc-ms",
-  "displayName": "ASB Metabolomics \u2014 GC-MS",
   "description": "GC-MS subset of the ASB metabolomics collection: 367 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs). Packaged auto-grounding (kb+local).",
   "version": "0.1.0",
   "author": {
