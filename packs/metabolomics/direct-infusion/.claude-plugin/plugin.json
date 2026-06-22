@@ -1,7 +1,7 @@
 {
   "name": "metabolomics-direct-infusion",
   "displayName": "ASB Metabolomics \u2014 direct-infusion-MS",
-  "description": "direct-infusion-MS subset of the ASB metabolomics collection: 97 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
+  "description": "direct-infusion-MS subset of the ASB metabolomics collection: 97 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs). Packaged auto-grounding (kb+local).",
   "version": "0.1.0",
   "author": {
     "name": "Holobiomics Lab",

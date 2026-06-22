@@ -1,11 +1,22 @@
 {
   "name": "metabolomics",
   "displayName": "ASB Metabolomics",
-  "description": "Computational metabolomics (predominantly LC-MS/MS; also LC-MS, GC-MS, NMR, mass-spectrometry imaging, ion mobility, lipidomics, multi-omics): spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics — 5,865 evidence-grounded skills over 909 tools, each derived from a peer-reviewed method paper. Includes a Perspicacité KB auto-grounding binder.",
+  "description": "Computational metabolomics (predominantly LC-MS/MS; also LC-MS, GC-MS, NMR, mass-spectrometry imaging, ion mobility, lipidomics, multi-omics): spectral library matching, molecular networking, formula/structure annotation (SIRIUS), preprocessing, normalization, and statistics \u2014 5,865 evidence-grounded skills over 909 tools, each derived from a peer-reviewed method paper. Includes a Perspicacit\u00e9 KB auto-grounding binder. Packaged auto-grounding (kb+local).",
   "version": "0.1.0",
-  "author": { "name": "Holobiomics Lab", "url": "https://github.com/HolobiomicsLab" },
+  "author": {
+    "name": "Holobiomics Lab",
+    "url": "https://github.com/HolobiomicsLab"
+  },
   "homepage": "https://github.com/HolobiomicsLab/asb-skill-collections",
   "repository": "https://github.com/HolobiomicsLab/asb-skill-collections",
   "license": "CC-BY-4.0",
-  "keywords": ["metabolomics","mass-spectrometry","LC-MS","annotation","GNPS","SIRIUS","molecular-networking"]
+  "keywords": [
+    "metabolomics",
+    "mass-spectrometry",
+    "LC-MS",
+    "annotation",
+    "GNPS",
+    "SIRIUS",
+    "molecular-networking"
+  ]
 }
