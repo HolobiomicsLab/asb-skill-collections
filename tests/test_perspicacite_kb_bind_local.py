@@ -26,3 +26,14 @@ def test_clone_repo_invokes_git(tmp_path):
     assert kb.clone_repo("https://github.com/a/b", tmp_path / "r", _run=fake_run) is True
     assert calls and calls[0][0] == "git" and "clone" in calls[0]
     assert "--" in calls[0]
+
+
+def test_prepare_kb_graceful_when_server_unreachable(monkeypatch):
+    import urllib.error
+    def boom(*a, **k):
+        raise urllib.error.URLError("Connection refused")
+    monkeypatch.setattr(kb, "_http", boom)
+    status = kb.prepare_kb("asb-paper-x", "10.x/y", "ASB grounding KB")
+    assert isinstance(status, dict)
+    assert status.get("created") is False
+    assert "unreachable" in (status.get("error") or "")
