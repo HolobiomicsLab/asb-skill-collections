@@ -1,70 +1,30 @@
 ---
-name: Propose a paper
-about: Propose a paper for inclusion in an ASB-Skill collection's corpus
-title: "Propose: <DOI or short title>"
-labels: ["propose-paper", "needs-triage"]
+name: Propose a paper, tool, or resource
+about: Suggest something for an ASB-Skill collection. Keep it short — a curator fills in the rest.
+title: "Propose: <name>"
+labels: ["propose", "needs-triage"]
 ---
 
-> 📚 **Before filing:** check the inclusion criteria in
-> [`governance/SOURCES.md`](../../governance/SOURCES.md) so your proposal
-> self-screens. Both the scientific gate (SOURCES) and the legal/OA gate
-> (CONTENT_POLICY) apply.
-
-## Paper
-
-- **DOI:** <!-- e.g. 10.1186/s13321-024-00878-1 -->
-- **Title:** <!-- full title from the publication -->
-- **Authors (first author + et al.):** <!-- e.g. "Bittremieux et al." -->
-- **Venue + year:** <!-- e.g. "Journal of Cheminformatics, 2024" -->
-
-## Target collection
-
-- **Collection:** <!-- e.g. metabolomics -->
-- **Version target:** <!-- e.g. metabolomics/v1, or "next" -->
-
-## Access tier (self-reported, CI will verify)
-
-- [ ] **Open-access** — explicit CC / open license
-- [ ] **Hybrid** — paywalled with quotation rights
-- [ ] **Closed** — paywalled, no open abstract
-- [ ] Don't know — let CI determine
-
-> **Note:** v0 is **open-access only** — Hybrid/Closed proposals are deferred to v1 and will not pass CI. See [`CONTENT_POLICY.md` §3](../../governance/CONTENT_POLICY.md).
-
-## Rationale
-
 <!--
-Why this paper? Aim for 3-6 sentences covering:
-- What domain method or tool it introduces
-- Why it should be referenced for retrieval (foundational? widely-used? rare expertise?)
-- What kind of agent task / benchmark it enables
-- How it relates to other papers already in the corpus
+Keep this short. Just tell us WHAT, give a LINK, and one line on WHY.
+A curator (or our automated curation pass) resolves the DOI, open-access status,
+category, and fit — you don't need to. See governance/SOURCES.md if you're curious
+about what gets accepted.
 -->
 
-## Proposer
+**What is it?** <!-- e.g. "Spec2Vec — spectral similarity scoring" -->
 
-- **GitHub:** <!-- @your-handle -->
-- **ORCID (optional but recommended):** <!-- 0000-0000-0000-0000 -->
-- **Affiliation (optional):** <!-- e.g. "Holobiomics Lab" -->
+**Link:** <!-- a DOI, GitHub repo, or homepage — whatever you have -->
 
-## Conflicts of interest
+**Type:** <!-- paper / tool / data resource -->
 
-- [ ] I am an author of this paper
-- [ ] I am at the same institution as the lead author
-- [ ] I have direct funding ties to the work
-- [ ] None of the above
+**Target collection:** <!-- metabolomics (default), or another collection slug -->
 
-<!-- COI doesn't disqualify a proposal — it just gets disclosed for transparency. -->
+**Why it matters (one or two sentences):**
+<!-- What does it do, and why is it worth grounding agent retrieval on? -->
 
-## Checklist for the curator reviewing this proposal
-
-(For maintainers; leave unchecked when filing.)
-
-- [ ] DOI resolves on Crossref
-- [ ] Title/authors match the DOI's Crossref record
-- [ ] Access tier verified via Unpaywall
-- [ ] Paper isn't already in the target collection's `corpus.yaml`
-- [ ] Paper isn't retracted (Crossref retraction-watch)
-- [ ] Rationale is concrete (not "would be nice to have")
-- [ ] Thematic fit with the target collection
-- [ ] Decision: accept / reject / defer-pending-info
+---
+<!-- Optional, all skippable: -->
+- **Open access?** <!-- yes / no / not sure — CI verifies -->
+- **You:** <!-- @handle, ORCID -->
+- **Conflict of interest?** <!-- e.g. "I'm an author" — disclosure only, never disqualifying -->

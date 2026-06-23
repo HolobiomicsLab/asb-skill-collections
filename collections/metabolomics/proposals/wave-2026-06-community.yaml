@@ -1,0 +1,146 @@
+# Community proposal queue — staged for the next curation wave.
+#
+# These entries originate from GitHub "Propose" issues (#11–#14). They have been
+# triaged and normalized by a curator pass (identity/DOI/OA resolved) but are NOT
+# yet in the release corpus. A maintainer reviews each against governance/SOURCES.md
+# and, on accept, moves the entry into collections/metabolomics/v2/corpus.yaml with
+# status: included (flipping access verification as needed). status: hold here means
+# "queued, not shipped" — verify-paper.yml only gates status: included.
+#
+# Schema is asb-corpus/1.0 (same as corpus.yaml) so accepted entries paste in cleanly.
+
+schema: asb-corpus/1.0
+collection: metabolomics
+version: 2
+generated_on: '2026-06-23'
+source: community proposals (GitHub issues #11–#14), curator-normalized
+policy: OPEN_ACCESS_POLICY.md (OA verified per entry; unresolved tiers flagged in triage)
+wave: community-2026-06
+summary:
+  total: 4
+  included: 0
+  hold: 4
+
+papers:
+- name: RforMassSpectrometry
+  doi: 10.5281/zenodo.15180830
+  title: 'R for Mass Spectrometry (Bioconductor ecosystem book / package suite)'
+  year: 2025
+  category: Multifunctional
+  repo_url: https://github.com/rformassspectrometry
+  status: hold
+  wave: community-2026-06
+  resource_type: software-ecosystem
+  source_issue: 14   # filed alongside #13
+  access:
+    type: gold-oa
+    license: cc-by-4.0
+    is_oa: true
+    verified_via: zenodo_record_license
+    verified_on: '2026-06-23'
+  triage:
+    proposer: lfnothias
+    rationale: >-
+      The R for Mass Spectrometry ecosystem (Spectra, MsCoreUtils, MsBackend*,
+      MetaboCoreUtils, xcms, …) is the foundational Bioconductor tooling for
+      reproducible LC-MS/MS data handling, preprocessing, and annotation. Widely
+      used and authoritative for retrieval grounding of R-based workflows.
+    decision: accept
+    notes: >-
+      Software/ecosystem DOIs are accepted as first-class (policy 2026-06-23), so the
+      Zenodo book release qualifies. Optionally also anchor to per-package method
+      papers (e.g. the Spectra paper) for richer grounding. Author overlap with #14
+      (Rainer). OA confirmed (CC-BY-4.0). Ready for maintainer to move to v2 corpus.
+
+- name: Metabonaut
+  doi: 10.5281/zenodo.15190305
+  title: 'Metabonaut: reproducible end-to-end LC-MS metabolomics workflows with R for Mass Spectrometry'
+  year: 2025
+  category: Multifunctional
+  repo_url: https://github.com/rformassspectrometry/Metabonaut
+  status: hold
+  wave: community-2026-06
+  resource_type: tutorial-workflow
+  source_issue: 14
+  access:
+    type: gold-oa
+    license: cc-by-4.0
+    is_oa: true
+    verified_via: zenodo_record_license
+    verified_on: '2026-06-23'
+  triage:
+    proposer: lfnothias
+    authors: 'Louail, Tagliaferri, Verri Hernandes, Marques de Sá e Silva, De Graeve, Rainer'
+    rationale: >-
+      A hands-on, executable tutorial book demonstrating complete untargeted LC-MS
+      workflows on real data with the RforMS stack. Strong fit for agent tasks that
+      reproduce or extend end-to-end metabolomics pipelines.
+    decision: accept
+    notes: >-
+      Zenodo software/tutorial DOI now qualifies under the software-DOI policy
+      (2026-06-23). Natural companion to #13 (co-stage). OA confirmed (CC-BY-4.0).
+      Ready for maintainer to move to v2 corpus.
+
+- name: MetabolomicsHub
+  doi: null   # no peer-reviewed DOI resolved; infrastructure project
+  title: 'MetabolomicsHub (MHD) — common data model and cross-repository integration (MetaboLights, GNPS, Metabolomics Workbench)'
+  year: 2025
+  category: Formats
+  repo_url: https://github.com/MetabolomicsHub
+  status: hold
+  wave: community-2026-06
+  resource_type: data-infrastructure
+  source_issue: 11
+  links:
+    - https://www.metabolomicshub.org/
+    - https://metabolomicshub.github.io/mhd-model/
+  access:
+    type: repo-oa
+    license: apache-2.0   # mhd-model + integration repos are Apache-2.0
+    is_oa: true
+    verified_via: github_repo_license
+    verified_on: '2026-06-23'
+  triage:
+    proposer: lfnothias
+    rationale: >-
+      The MHD common data model and integration frameworks standardize metadata and
+      enable cross-repository crawling/linking across the major metabolomics data
+      repositories. Valuable for FAIR-data and dataset-discovery agent skills.
+    decision: defer-pending-info
+    notes: >-
+      Data INFRASTRUCTURE with no citable DOI — even under the software-DOI policy
+      (2026-06-23) there is no Crossref/Zenodo ID to attach (no CITATION.cff or
+      .zenodo.json found on mhd-model). Either request a citable DOI from upstream, or
+      route to an ASB *skill/tool* pack rather than the paper corpus. Code is
+      Apache-2.0 (OA), so it clears the access gate once an identifier exists.
+
+- name: Masster
+  doi: null   # no peer-reviewed DOI resolved
+  title: 'Masster (MASSter) — untargeted metabolomics data analysis (Zamboni lab)'
+  year: null
+  category: Multifunctional
+  repo_url: https://github.com/zamboni-lab/masster-dist
+  status: hold
+  wave: community-2026-06
+  resource_type: software-tool
+  source_issue: 12
+  links:
+    - https://metabolomics.blog/2026/03/how-we-analyze-untargeted-metabolomics-data/
+  access:
+    type: restricted
+    license: 'Masster Noncommercial and Commercial Services License 1.0.0'   # source-available, NOT open-source
+    is_oa: false
+    verified_via: github_repo_license_file
+    verified_on: '2026-06-23'
+  triage:
+    proposer: lfnothias
+    rationale: >-
+      Tooling behind the Zamboni-lab untargeted metabolomics workflow described in the
+      linked blog post. Potentially useful for full-workflow agent grounding.
+    decision: blocked
+    notes: >-
+      ⚠️ BLOCKER: the repo's "Masster Noncommercial and Commercial Services License
+      1.0.0" is source-available but explicitly NON-open / non-OSI (commercial-use
+      restrictions). It fails the OPEN_ACCESS_POLICY OA gate, so it cannot be staged to
+      included — independent of the software-DOI policy. No citable DOI either. Ask
+      upstream for an open license + a citable reference before reconsidering.

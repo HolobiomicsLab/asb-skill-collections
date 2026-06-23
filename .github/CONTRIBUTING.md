@@ -63,12 +63,15 @@ There are three ways to contribute a paper:
 
 ### 1. Suggest via an issue (lightest)
 
-Open a **Propose a paper** issue using the
-[`propose-paper`](ISSUE_TEMPLATE/propose-paper.md) template. Fill in the DOI,
-target collection, self-reported access tier, and a concrete rationale. A curator
-runs the checklist (DOI resolves on Crossref; access verified via Unpaywall; not
-already in the collection's `corpus.yaml`; not retracted; thematic fit), and a
-maintainer adds the accepted paper to `collections/<slug>/v<N>/corpus.yaml`.
+Open a **Propose a paper, tool, or resource** issue using the
+[`propose-paper`](ISSUE_TEMPLATE/propose-paper.md) template. Keep it short — just
+what it is, a link (DOI, repo, or homepage), and a one-line rationale. A curator (or
+the automated curation pass) then resolves the rest: DOI on Crossref, access via
+Unpaywall, dedup against the collection's `corpus.yaml`, retraction check, category,
+and thematic fit. Triaged proposals are staged in
+`collections/<slug>/proposals/wave-*.yaml` (`status: hold`); at the next wave a
+maintainer moves accepted entries into `collections/<slug>/v<N>/corpus.yaml` with
+`status: included`.
 
 ### 2. Suggest via a pull request (Enveda-style, low-friction)
 
