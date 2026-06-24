@@ -26,6 +26,20 @@ def tier_for_license(name: str, _map: dict | None = None) -> str:
     for spdx_id, tier in (m.get("spdx") or {}).items():
         if spdx_id.lower() == key.lower():
             return tier
+
+    # Normalize by stripping -only / -or-later suffixes to match legacy SPDX ids
+    def _norm(s):
+        s = s.lower()
+        for suf in ("-or-later", "-only"):
+            if s.endswith(suf):
+                s = s[: -len(suf)]
+        return s
+
+    nk = _norm(key)
+    for spdx_id, tier in (m.get("spdx") or {}).items():
+        if _norm(spdx_id) == nk:
+            return tier
+
     low = key.lower()
     for kw in (m.get("fallback") or {}).get("noncommercial_keywords", []):
         if kw.lower() in low:

@@ -28,3 +28,14 @@ def test_ack_required():
     assert lt.ack_required("open") is False
     assert lt.ack_required("noncommercial") is True
     assert lt.ack_required("restricted") is True
+
+def test_github_legacy_spdx_ids_map_open():
+    assert lt.tier_for_license("GPL-3.0") == "open"
+    assert lt.tier_for_license("GPL-2.0") == "open"
+    assert lt.tier_for_license("AGPL-3.0") == "open"
+    assert lt.tier_for_license("LGPL-2.1") == "open"
+    assert lt.tier_for_license("LGPL-3.0") == "open"
+    assert lt.tier_for_license("CC-BY-SA-4.0") == "open"
+    assert lt.tier_for_license("AFL-3.0") == "open"
+    assert lt.tier_for_license("Artistic-2.0") == "open"
+    assert lt.tier_for_license("BSD-3-Clause-Clear") == "open"
