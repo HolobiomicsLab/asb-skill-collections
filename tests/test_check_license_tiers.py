@@ -40,3 +40,11 @@ def test_missing_si_tier_is_violation(tmp_path):
         [{"slug": "s1"}])                                       # skills_index entry has no license_tier
     v = c.check_collection(str(d))
     assert any("license_tier" in x and "s1" in x for x in v)
+
+def test_frontmatter_tier_mismatch_is_violation(tmp_path):
+    d = _collection(tmp_path,
+        ["- {name: A, doi: 10.1/a, license_tier: open}\n"],
+        [{"slug": "s1", "license_tier": "restricted"}],
+        skills={"s1": "name: s1\nmetadata:\n  license_tier: open\n"})   # SKILL says open, index says restricted
+    v = c.check_collection(str(d))
+    assert any("license_tier" in x and "s1" in x and ("mismatch" in x or "!=" in x or "index" in x) for x in v)
