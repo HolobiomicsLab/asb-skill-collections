@@ -95,6 +95,26 @@ class TestExtractLicense:
         assert result["confidence"] == "low"
         assert result["evidence"] is None
 
+    def test_extract_parses_nested_json_response(self):
+        from scripts.readme_license_precheck import extract_license
+
+        resp = 'Sure:\n```json\n{"license":"MIT","meta":{"src":"badge"},"confidence":"high","evidence":"Licensed under MIT."}\n```'
+        chat = self._make_chat(resp)
+        result = extract_license("readme", _chat=chat)
+
+        assert result["license"] == "MIT"
+        assert result["confidence"] == "high"
+        assert result["evidence"] == "Licensed under MIT."
+
+    def test_extract_still_fails_safe_on_garbage(self):
+        from scripts.readme_license_precheck import extract_license
+
+        chat = self._make_chat("no json here at all")
+        result = extract_license("readme", _chat=chat)
+
+        assert result["license"] is None
+        assert result["confidence"] == "low"
+
 
 # ---------------------------------------------------------------------------
 # Test 2 — detected_tier: license string → tier mapping

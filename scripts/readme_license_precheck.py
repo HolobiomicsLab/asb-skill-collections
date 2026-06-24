@@ -138,7 +138,7 @@ README text:
 
 Respond with ONLY the JSON object."""
 
-_BRACE_RE = re.compile(r"\{[^{}]*\}", re.DOTALL)
+_BRACE_RE = re.compile(r"\{.*\}", re.DOTALL)   # first '{' .. last '}', tolerant of nesting
 
 
 def extract_license(readme_text: str, _chat: Callable) -> dict:
