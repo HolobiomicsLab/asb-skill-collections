@@ -18,25 +18,29 @@ def test_parse_repo_tolerates_punctuation_and_paths():
     assert d.parse_repo("https://github.com/a/b.git") == ("a", "b")   # still works
 
 def test_tier_for_repo_maps_spdx():
-    fetch = lambda o, r, t: {"iomega/spec2vec": "Apache-2.0"}.get(f"{o}/{r}")
-    assert d.tier_for_repo("https://github.com/iomega/spec2vec", _fetch=fetch) == ("open", "Apache-2.0")
+    det = lambda o, r, t: ({"iomega/spec2vec": "Apache-2.0"}.get(f"{o}/{r}"), "github-api")
+    tier, lic, src = d.tier_for_repo("https://github.com/iomega/spec2vec", _detect=det)
+    assert (tier, lic) == ("open", "Apache-2.0")
 
 def test_tier_for_repo_noncommercial():
-    fetch = lambda o, r, t: "CC-BY-NC-4.0"
-    assert d.tier_for_repo("https://github.com/x/y", _fetch=fetch) == ("noncommercial", "CC-BY-NC-4.0")
+    det = lambda o, r, t: ("CC-BY-NC-4.0", "github-api")
+    tier, lic, src = d.tier_for_repo("https://github.com/x/y", _detect=det)
+    assert (tier, lic) == ("noncommercial", "CC-BY-NC-4.0")
 
 def test_tier_for_repo_no_license_is_restricted():
-    assert d.tier_for_repo("https://github.com/x/y", _fetch=lambda o, r, t: None) == ("restricted", None)
-    assert d.tier_for_repo("not-a-repo", _fetch=lambda o, r, t: "MIT") == ("restricted", None)
+    tier, lic, src = d.tier_for_repo("https://github.com/x/y", _detect=lambda o, r, t: (None, "none"))
+    assert (tier, lic) == ("restricted", None)
+    tier, lic, src = d.tier_for_repo("not-a-repo", _detect=lambda o, r, t: ("MIT", "github-api"))
+    assert (tier, lic) == ("restricted", None)
 
 def test_tier_for_repo_uses_cache(tmp_path):
     calls = []
-    def fetch(o, r, t): calls.append((o, r)); return "MIT"
+    def det(o, r, t): calls.append((o, r)); return ("MIT", "github-api")
     cache = {}
-    d.tier_for_repo("https://github.com/a/b", cache=cache, _fetch=fetch)
-    d.tier_for_repo("https://github.com/a/b", cache=cache, _fetch=fetch)
+    d.tier_for_repo("https://github.com/a/b", cache=cache, _detect=det)
+    d.tier_for_repo("https://github.com/a/b", cache=cache, _detect=det)
     assert calls == [("a", "b")]            # second call served from cache
-    assert cache == {"a/b": "MIT"}
+    assert cache == {"a/b": {"id": "MIT", "source": "github-api"}}
 
 def test_apply_to_corpus_writes_tiers(tmp_path):
     corpus = tmp_path / "corpus.yaml"
@@ -54,13 +58,17 @@ def test_apply_to_corpus_writes_tiers(tmp_path):
           status: included
           access: {type: repo-oa, is_oa: true}
     '''))
-    fetch = lambda o, r, t: {"a/open": "MIT", "b/nc": "CC-BY-NC-4.0"}.get(f"{o}/{r}")
-    summary = d.apply_to_corpus(str(corpus), token=None, _fetch=fetch)
+    def det(o, r, t):
+        lic = {"a/open": "MIT", "b/nc": "CC-BY-NC-4.0"}.get(f"{o}/{r}")
+        return (lic, "github-api")
+    summary = d.apply_to_corpus(str(corpus), token=None, _detect=det)
     out = yaml.safe_load(corpus.read_text())["papers"]
     assert out[0]["license_tier"] == "open" and out[0]["access"]["license"] == "MIT"
     assert out[1]["license_tier"] == "noncommercial" and out[1]["access"]["license"] == "CC-BY-NC-4.0"
     assert out[0]["access"]["type"] == "repo-oa"
     assert out[1]["access"]["type"] == "repo-oa"
+    assert out[0]["license_detection"] == "github-api"
+    assert out[1]["license_detection"] == "github-api"
     assert summary == {"open": 1, "noncommercial": 1}
 
 def test_apply_to_corpus_respects_license_locked(tmp_path):
@@ -78,10 +86,69 @@ def test_apply_to_corpus_respects_license_locked(tmp_path):
           repo_url: https://github.com/c/d
           access: {type: repo-oa}
     '''))
-    # _fetch would say both are MIT(open); the locked one must stay noncommercial.
-    summary = d.apply_to_corpus(str(corpus), token=None, _fetch=lambda o, r, t: "MIT")
+    # _detect would say both are MIT(open); the locked one must stay noncommercial.
+    summary = d.apply_to_corpus(str(corpus), token=None, _detect=lambda o, r, t: ("MIT", "github-api"))
     out = yaml.safe_load(corpus.read_text())["papers"]
     assert out[0]["license_tier"] == "noncommercial"               # locked, untouched
     assert out[0]["access"]["license"] == "Academic; commercial by permission"
     assert out[1]["license_tier"] == "open"                        # auto-derived
+    assert out[1]["license_detection"] == "github-api"
     assert summary == {"noncommercial": 1, "open": 1}
+
+
+def test_classify_license_text():
+    assert d.classify_license_text("Apache License\nVersion 2.0") == "Apache-2.0"
+    assert d.classify_license_text("Permission is hereby granted, free of charge") == "MIT"
+    assert d.classify_license_text("GNU AFFERO GENERAL PUBLIC LICENSE") == "AGPL-3.0"
+    assert d.classify_license_text("GNU GENERAL PUBLIC LICENSE\nVersion 3") == "GPL-3.0"
+    assert d.classify_license_text("Mozilla Public License Version 2.0") == "MPL-2.0"
+    assert d.classify_license_text("Creative Commons Attribution-NonCommercial 4.0") == "CC-BY-NC-4.0"
+    assert d.classify_license_text("Creative Commons Attribution 4.0 International") == "CC-BY-4.0"
+    assert d.classify_license_text("Redistribution and use in source and binary forms") == "BSD-3-Clause"
+    assert d.classify_license_text("some random readme text") is None
+
+
+def test_detect_license_primary_api_wins():
+    det = d.detect_license("o", "r", "t", _fetch_api=lambda o, r, t: "MIT",
+                           _contents=lambda o, r, t: (_ for _ in ()).throw(AssertionError("should not be called")),
+                           _fetch_file=None)
+    assert det == ("MIT", "github-api")
+
+
+def test_detect_license_falls_back_to_license_file():
+    det = d.detect_license("o", "r", "t", _fetch_api=lambda o, r, t: None,
+                           _contents=lambda o, r, t: ["README.md", "LICENSE.md"],
+                           _fetch_file=lambda o, r, p, t: "Apache License Version 2.0")
+    assert det == ("Apache-2.0", "license-file")
+
+
+def test_detect_license_file_present_unclassified():
+    det = d.detect_license("o", "r", "t", _fetch_api=lambda o, r, t: None,
+                           _contents=lambda o, r, t: ["COPYING"],
+                           _fetch_file=lambda o, r, p, t: "see our website for terms")
+    assert det == (None, "file-present-unclassified")
+
+
+def test_detect_license_none_when_no_file():
+    det = d.detect_license("o", "r", "t", _fetch_api=lambda o, r, t: None,
+                           _contents=lambda o, r, t: ["README.md", "setup.py"],
+                           _fetch_file=None)
+    assert det == (None, "none")
+
+
+def test_tier_for_repo_threetuple_and_unclassified_is_restricted():
+    det = lambda o, r, t: (None, "file-present-unclassified")
+    tier, lic, src = d.tier_for_repo("https://github.com/o/r", _detect=det)
+    assert (tier, src) == ("restricted", "file-present-unclassified")
+
+
+def test_apply_to_corpus_writes_license_detection(tmp_path):
+    corpus = tmp_path / "corpus.yaml"
+    corpus.write_text(textwrap.dedent('''
+        papers:
+        - {name: A, doi: 10.1/a, repo_url: https://github.com/a/open, status: included, access: {type: repo-oa}}
+    '''))
+    det = lambda o, r, t: ("MIT", "license-file")
+    d.apply_to_corpus(str(corpus), token=None, _detect=det)
+    p = yaml.safe_load(corpus.read_text())["papers"][0]
+    assert p["license_tier"] == "open" and p["access"]["license"] == "MIT" and p["license_detection"] == "license-file"

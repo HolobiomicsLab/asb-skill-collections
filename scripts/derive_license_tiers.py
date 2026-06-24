@@ -6,6 +6,7 @@ filled and license_tier added. No resolvable license -> restricted (by design).
 """
 from __future__ import annotations
 
+import base64
 import json
 import pathlib
 import re
@@ -17,6 +18,22 @@ import yaml
 from scripts.license_tier import tier_for_license
 
 _GH_API = "https://api.github.com/repos/{}/{}/license"
+_LICENSE_FILE_RE = re.compile(r"^(licen[sc]e|copying|notice)(\.[\w.-]+)?$", re.I)
+
+# Ordered: most specific first; noncommercial BEFORE generic CC-BY.
+_TEXT_RULES = [
+    ("AGPL-3.0",     ["affero general public"]),
+    ("LGPL-3.0",     ["lesser general public", "library general public"]),
+    ("GPL-3.0",      ["gnu general public"]),               # tier-equivalent across GPL versions
+    ("Apache-2.0",   ["apache license"]),
+    ("MPL-2.0",      ["mozilla public license"]),
+    ("MIT",          ["mit license", "permission is hereby granted, free of charge"]),
+    ("BSD-3-Clause", ["redistribution and use in source and binary"]),
+    ("ISC",          ["isc license"]),
+    ("Unlicense",    ["this is free and unencumbered software released into the public domain"]),
+    ("CC-BY-NC-4.0", ["attribution-noncommercial", "cc by-nc", "by-nc", "noncommercial", "non-commercial"]),
+    ("CC-BY-4.0",    ["creative commons attribution", "creativecommons.org/licenses/by/", "cc by"]),
+]
 
 
 def parse_repo(repo_url: str):
@@ -29,6 +46,17 @@ def parse_repo(repo_url: str):
         return m.group(1), m.group(2)
     m = re.fullmatch(r"([\w.-]+)/([\w.-]+)", s)
     return (m.group(1), m.group(2)) if m else None
+
+
+def classify_license_text(text: str):
+    """SPDX-ish id from license text, or None."""
+    if not text:
+        return None
+    low = " ".join(text.lower().split())
+    for spdx, needles in _TEXT_RULES:
+        if any(n in low for n in needles):
+            return spdx
+    return None
 
 
 def _gh_fetch(owner: str, repo: str, token: str | None) -> str | None:
@@ -48,23 +76,68 @@ def _gh_fetch(owner: str, repo: str, token: str | None) -> str | None:
     return None if spdx in (None, "NOASSERTION") else spdx
 
 
-def tier_for_repo(repo_url, token=None, cache=None, _fetch=_gh_fetch):
-    """(tier, spdx) for a repo URL. No repo or no license -> ('restricted', None)."""
+def _gh_contents(owner, repo, token):
+    """Root filenames via the GitHub contents API; [] on 404/error."""
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{owner}/{repo}/contents", headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return [item.get("name", "") for item in json.loads(r.read())]
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return []
+        raise
+
+
+def _gh_file(owner, repo, path, token):
+    """Raw file text via the contents API (base64), or '' on failure."""
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{owner}/{repo}/contents/{path}", headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = json.loads(r.read())
+        return base64.b64decode(data.get("content", "")).decode("utf-8", "replace")
+    except Exception:
+        return ""
+
+
+def detect_license(owner, repo, token, _fetch_api=_gh_fetch, _contents=_gh_contents, _fetch_file=_gh_file):
+    """(license_id, source) where source ∈ {github-api, license-file, file-present-unclassified, none}."""
+    spdx = _fetch_api(owner, repo, token)
+    if spdx:
+        return (spdx, "github-api")
+    names = _contents(owner, repo, token)
+    lic_files = [n for n in names if _LICENSE_FILE_RE.match(n)]
+    if not lic_files:
+        return (None, "none")
+    text = _fetch_file(owner, repo, lic_files[0], token)
+    cls = classify_license_text(text)
+    return (cls, "license-file") if cls else (None, "file-present-unclassified")
+
+
+def tier_for_repo(repo_url, token=None, cache=None, _detect=detect_license):
+    """(tier, license_id, source) for a repo URL. No repo or no license -> ('restricted', None, 'none')."""
     pr = parse_repo(repo_url)
     if not pr:
-        return ("restricted", None)
+        return ("restricted", None, "none")
     key = f"{pr[0]}/{pr[1]}"
     if cache is not None and key in cache:
-        spdx = cache[key]
+        lic, src = cache[key]["id"], cache[key]["source"]
     else:
-        spdx = _fetch(pr[0], pr[1], token)
+        lic, src = _detect(pr[0], pr[1], token)
         if cache is not None:
-            cache[key] = spdx
-    return (tier_for_license(spdx or ""), spdx)
+            cache[key] = {"id": lic, "source": src}
+    return (tier_for_license(lic or ""), lic, src)
 
 
-def apply_to_corpus(corpus_path, token, cache=None, _fetch=_gh_fetch) -> dict:
-    """Write license_tier + access.license into every corpus entry. Returns {tier:count}."""
+def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> dict:
+    """Write license_tier + access.license + license_detection into every corpus entry. Returns {tier:count}."""
     path = pathlib.Path(corpus_path)
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
     summary: dict[str, int] = {}
@@ -73,10 +146,10 @@ def apply_to_corpus(corpus_path, token, cache=None, _fetch=_gh_fetch) -> dict:
             t = p.get("license_tier", "restricted")
             summary[t] = summary.get(t, 0) + 1
             continue
-        tier, spdx = tier_for_repo(p.get("repo_url"), token=token, cache=cache, _fetch=_fetch)
+        tier, lic, src = tier_for_repo(p.get("repo_url"), token=token, cache=cache, _detect=_detect)
         p["license_tier"] = tier
-        p.setdefault("access", {})
-        p["access"]["license"] = spdx
+        p.setdefault("access", {})["license"] = lic
+        p["license_detection"] = src
         summary[tier] = summary.get(tier, 0) + 1
     path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True), encoding="utf-8")
     return summary
@@ -93,7 +166,7 @@ def main(argv=None) -> int:
     import subprocess
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--corpus", required=True)
-    ap.add_argument("--cache", default=".license-cache.json")
+    ap.add_argument("--cache", default=".license-cache-v2.json")
     args = ap.parse_args(argv)
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
     if not token:
