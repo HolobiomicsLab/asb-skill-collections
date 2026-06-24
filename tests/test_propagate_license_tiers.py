@@ -37,6 +37,27 @@ def test_propagate_indices(tmp_path):
     assert out_kb == {"s1": "noncommercial", "s2": "open"}
     assert summary == {"noncommercial": 1, "open": 1}
 
+def test_propagate_preserves_indent(tmp_path):
+    si = tmp_path / "skills_index.json"
+    si.write_text('[\n {\n  "slug": "s1",\n  "dois": ["10.1/a"]\n }\n]')   # 1-space indent
+    kb = tmp_path / "kb_bundle.json"
+    kb.write_text('{\n  "skills": {\n    "s1": {\n      "dois": ["10.1/a"]\n    }\n  }\n}')  # 2-space
+    tiers = {"10.1/a": {"tier": "open"}}
+    p.propagate_indices(str(si), str(kb), tiers)
+
+    si_text = si.read_text()
+    kb_text = kb.read_text()
+
+    # skills_index should preserve 1-space indent at array entry level
+    assert '\n {\n' in si_text, "skills_index should have 1-space indent on opening brace"
+    # Verify license_tier was added
+    assert json.loads(si_text)[0]["license_tier"] == "open"
+
+    # kb_bundle should preserve 2-space indent at top level
+    assert '\n  "skills"' in kb_text, "kb_bundle should have 2-space indent on top-level keys"
+    # Verify license_tier was added
+    assert json.loads(kb_text)["skills"]["s1"]["license_tier"] == "open"
+
 def test_tool_license_block_consistency():
     b = p.tool_license_block("noncommercial", "CC-BY-NC-4.0", "https://github.com/x/y")
     assert b["tier"] == "noncommercial"

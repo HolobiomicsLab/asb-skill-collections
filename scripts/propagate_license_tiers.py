@@ -13,6 +13,15 @@ from scripts.license_tier import ack_required
 _ORDER = {"open": 0, "noncommercial": 1, "restricted": 2}
 
 
+def detect_indent(text: str, default: int = 2) -> int:
+    """Infer the leading-space indent width from the first indented line."""
+    for line in text.splitlines():
+        stripped = line.lstrip(" ")
+        if stripped and stripped != line:
+            return len(line) - len(stripped)
+    return default
+
+
 def corpus_tier_by_doi(corpus_path) -> dict:
     doc = yaml.safe_load(pathlib.Path(corpus_path).read_text(encoding="utf-8"))
     out = {}
@@ -32,8 +41,12 @@ def skill_tier(dois, tiers) -> str:
 
 def propagate_indices(skills_index_path, kb_bundle_path, tiers) -> dict:
     si_path, kb_path = pathlib.Path(skills_index_path), pathlib.Path(kb_bundle_path)
-    si = json.loads(si_path.read_text(encoding="utf-8"))
-    kb = json.loads(kb_path.read_text(encoding="utf-8"))
+    si_raw = si_path.read_text(encoding="utf-8")
+    kb_raw = kb_path.read_text(encoding="utf-8")
+    si = json.loads(si_raw)
+    kb = json.loads(kb_raw)
+    si_indent = detect_indent(si_raw)
+    kb_indent = detect_indent(kb_raw)
     summary: dict[str, int] = {}
     for entry in si:
         t = skill_tier(entry.get("dois"), tiers)
@@ -41,8 +54,8 @@ def propagate_indices(skills_index_path, kb_bundle_path, tiers) -> dict:
         summary[t] = summary.get(t, 0) + 1
     for rec in (kb.get("skills") or {}).values():
         rec["license_tier"] = skill_tier(rec.get("dois"), tiers)
-    si_path.write_text(json.dumps(si, indent=2, ensure_ascii=False), encoding="utf-8")
-    kb_path.write_text(json.dumps(kb, indent=2, ensure_ascii=False), encoding="utf-8")
+    si_path.write_text(json.dumps(si, indent=si_indent, ensure_ascii=False), encoding="utf-8")
+    kb_path.write_text(json.dumps(kb, indent=kb_indent, ensure_ascii=False), encoding="utf-8")
     return summary
 
 
