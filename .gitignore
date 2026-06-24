@@ -38,3 +38,4 @@ htmlcov/
 outputs/
 *.jsonl.gz
 *.parquet
+.license-cache.json
