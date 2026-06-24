@@ -1,6 +1,9 @@
 ---
 name: training-validation-dataset-stratification
-description: Use when when you have a complete labelled MS/MS spectral dataset annotated as 'relevant' (compounds of interest from reference standards) or 'other' (reference standards or non-target compounds from repositories), and you need to train and evaluate an AnnoMe binary classifier without data leakage.
+description: Use when when you have a complete labelled MS/MS spectral dataset annotated
+  as 'relevant' (compounds of interest from reference standards) or 'other' (reference
+  standards or non-target compounds from repositories), and you need to train and
+  evaluate an AnnoMe binary classifier without data leakage.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,6 +14,7 @@ metadata:
   - AnnoMe
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbag111
   title: AnnoMe

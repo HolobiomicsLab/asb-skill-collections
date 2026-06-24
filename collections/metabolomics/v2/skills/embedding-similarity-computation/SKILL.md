@@ -1,6 +1,8 @@
 ---
 name: embedding-similarity-computation
-description: Use when when you have pre-computed embeddings (from MSBERT, Spec2Vec, or other deep learning models) for a query spectrum dataset and a reference library, and need to measure how well the embedding space ranks correct library matches.
+description: Use when when you have pre-computed embeddings (from MSBERT, Spec2Vec,
+  or other deep learning models) for a query spectrum dataset and a reference library,
+  and need to measure how well the embedding space ranks correct library matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -17,6 +19,7 @@ metadata:
   - SciPy / NumPy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

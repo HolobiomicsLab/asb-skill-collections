@@ -1,6 +1,9 @@
 ---
 name: structured-report-generation
-description: Use when after applying jsonschema validation to a parsed mwTab file against MS or NMR schema definitions, when you have collected validation errors, warnings, and metadata column matching results and need to communicate findings to data curators or submitters in a structured, machine-readable.
+description: Use when after applying jsonschema validation to a parsed mwTab file
+  against MS or NMR schema definitions, when you have collected validation errors,
+  warnings, and metadata column matching results and need to communicate findings
+  to data curators or submitters in a structured, machine-readable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,6 +19,7 @@ metadata:
   - pandas
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

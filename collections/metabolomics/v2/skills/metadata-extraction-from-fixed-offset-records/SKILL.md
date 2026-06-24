@@ -1,6 +1,7 @@
 ---
 name: metadata-extraction-from-fixed-offset-records
-description: Use when you have a binary file (e.g., NV format) with a known fixed-size header block (e.
+description: Use when you have a binary file (e.g., NV format) with a known fixed-size
+  header block (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -10,6 +11,7 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -39,6 +41,7 @@ attribution:
 
 # metadata-extraction-from-fixed-offset-records
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate structured metadata from binary files with fixed-offset record layouts by reading at known byte positions, validating magic numbers and field consistency, and serializing parsed headers to structured output. Essential for reverse-engineering and parsing proprietary NMR file formats where header structure is known but parsing tools are unavailable.

@@ -1,6 +1,9 @@
 ---
 name: validation-error-categorization
-description: Use when when a parsed mwTab file (MS or NMR experimental data) must be assessed for conformance to its corresponding JSON schema specification. Apply this skill after loading the mwTab file using the mwtab parser but before quality assurance sign-off or deposition to the Metabolomics Workbench.
+description: Use when when a parsed mwTab file (MS or NMR experimental data) must
+  be assessed for conformance to its corresponding JSON schema specification. Apply
+  this skill after loading the mwTab file using the mwtab parser but before quality
+  assurance sign-off or deposition to the Metabolomics Workbench.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3364
@@ -14,6 +17,7 @@ metadata:
   - mwtab
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

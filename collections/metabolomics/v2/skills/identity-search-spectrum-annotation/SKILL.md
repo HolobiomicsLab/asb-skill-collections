@@ -18,6 +18,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -50,6 +51,7 @@ attribution:
 
 # identity-search-spectrum-annotation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Annotate experimental MS/MS spectra by matching them against a spectral library using exact or high-confidence similarity scoring to assign molecular identities. This is the direct-match component of spectrum annotation, complementary to fuzzy/analog search for discovering structurally related compounds.

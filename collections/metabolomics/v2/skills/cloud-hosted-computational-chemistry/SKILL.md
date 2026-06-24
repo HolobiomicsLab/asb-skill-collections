@@ -1,6 +1,9 @@
 ---
 name: cloud-hosted-computational-chemistry
-description: Use when you have a curated dataset of ≤10,000 molecular structures with known collision cross section values for training, a target set of ≤10,000 molecules requiring CCS predictions, a compatible browser, and either lack local Python installation or prefer cloud-based execution to avoid.
+description: Use when you have a curated dataset of ≤10,000 molecular structures with
+  known collision cross section values for training, a target set of ≤10,000 molecules
+  requiring CCS predictions, a compatible browser, and either lack local Python installation
+  or prefer cloud-based execution to avoid.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +17,7 @@ metadata:
   - CCSP 2.0
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0
@@ -45,6 +49,7 @@ attribution:
 
 # Cloud-hosted computational chemistry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute collision cross section (CCS) prediction workflows on user-curated molecular training sets using Google Colaboratory, eliminating the need for local Python installation while constraining computation to <10,000 molecules and ≤12 hours continuous operation. This skill leverages Google-hosted services to train scikit-learn models and export predictions without local infrastructure.

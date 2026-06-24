@@ -1,6 +1,9 @@
 ---
 name: natural-product-model-application
-description: Use when you have (1) a collection of natural product or drug candidate molecules in SMILES format, (2) a downstream task (classification at Class/Superclass/Pathway levels, bioactivity regression, or virtual screening ranking), (3) access to pre-trained NaFM weights, and (4) a need to leverage.
+description: Use when you have (1) a collection of natural product or drug candidate
+  molecules in SMILES format, (2) a downstream task (classification at Class/Superclass/Pathway
+  levels, bioactivity regression, or virtual screening ranking), (3) access to pre-trained
+  NaFM weights, and (4) a need to leverage.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -15,6 +18,7 @@ metadata:
   - PyTorch Geometric
   - scikit-learn
   - NaFM-Official
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -44,6 +48,7 @@ attribution:
 
 # natural-product-model-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a pre-trained foundation model (NaFM) to downstream natural product tasks—including taxonomy classification, bioactivity prediction, and virtual screening—by loading pre-trained weights, preparing task-specific datasets, and fine-tuning or running inference on molecular SMILES inputs. This skill leverages the model's learned evolutionary and structural patterns to generate embeddings and predictions for novel bioactive compounds.

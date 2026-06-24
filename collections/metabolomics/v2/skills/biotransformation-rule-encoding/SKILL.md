@@ -1,6 +1,8 @@
 ---
 name: biotransformation-rule-encoding
-description: Use when you have untargeted metabolomics data with unknown metabolite structures and need to generate plausible candidate products by systematically applying known enzymatic or chemical transformation rules.
+description: Use when you have untargeted metabolomics data with unknown metabolite
+  structures and need to generate plausible candidate products by systematically applying
+  known enzymatic or chemical transformation rules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,6 +14,7 @@ metadata:
   - HassounLab/BAM
   - PROXIMAL2
   - GNN-SOM
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -41,6 +44,7 @@ attribution:
 
 # biotransformation-rule-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill encodes reaction biotransformation rules from metabolic databases (KEGG, RetroRules) into operator representations that enable systematic generation of candidate molecular structures from input metabolites. It is essential for scaling molecular structure discovery in untargeted metabolomics when the space of plausible biotransformations must be exhaustively represented.

@@ -1,6 +1,9 @@
 ---
 name: tandem-mass-spectra-embedding-generation
-description: Use when you have tandem mass spectra (in .msp or compatible format) from instruments like Orbitrap, and you need to compute library matching scores, cluster spectra by chemical similarity, or embed spectra into a learned vector space for downstream similarity or clustering tasks.
+description: Use when you have tandem mass spectra (in .msp or compatible format)
+  from instruments like Orbitrap, and you need to compute library matching scores,
+  cluster spectra by chemical similarity, or embed spectra into a learned vector space
+  for downstream similarity or clustering tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -16,6 +19,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

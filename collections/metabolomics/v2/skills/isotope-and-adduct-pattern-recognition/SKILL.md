@@ -1,6 +1,7 @@
 ---
 name: isotope-and-adduct-pattern-recognition
-description: Use when when processing MS1 mass tracks from a single sample and you have already constructed per-bin mass tracks with consensus m/z and intensity vectors.
+description: Use when when processing MS1 mass tracks from a single sample and you
+  have already constructed per-bin mass tracks with consensus m/z and intensity vectors.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +16,14 @@ metadata:
   - asari
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -45,6 +48,7 @@ attribution:
 
 # isotope-and-adduct-pattern-recognition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and groups related mass tracks by recognizing characteristic m/z differences corresponding to 13C/12C isotopes, sodium/hydrogen (Na/H) adducts, and other mass-pattern relationships. This anchors mass tracks to a common neutral mass, reducing redundancy and improving feature annotation in high-resolution LC-MS metabolomics.

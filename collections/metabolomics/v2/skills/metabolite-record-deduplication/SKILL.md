@@ -1,6 +1,8 @@
 ---
 name: metabolite-record-deduplication
-description: Use when you have extracted metabolite records from two or more public metabolomics databases (e.g., HMDB, MassBank, METLIN) and need to merge them into a single reference database.
+description: Use when you have extracted metabolite records from two or more public
+  metabolomics databases (e.g., HMDB, MassBank, METLIN) and need to merge them into
+  a single reference database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3364
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - openNAU
+  license_tier: open
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU

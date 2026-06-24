@@ -1,6 +1,9 @@
 ---
 name: spectra-variable-and-peak-data-storage
-description: Use when when building a new mass spectrometry data backend for the Spectra package that must store and serve multiple spectra with their associated m/z and intensity peaks. Use this when you need a backend that combines efficient metadata lookup (via data.
+description: Use when when building a new mass spectrometry data backend for the Spectra
+  package that must store and serve multiple spectra with their associated m/z and
+  intensity peaks. Use this when you need a backend that combines efficient metadata
+  lookup (via data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,12 +18,14 @@ metadata:
   - MSnbase
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
-- The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra
+- The *Spectra* package defines an efficient infrastructure for storing and handling
+  mass spectrometry spectra
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
 - DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # spectra-variable-and-peak-data-storage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement an S4 class extending MsBackend to store mass spectrometry spectral data, separating spectrum metadata (spectra variables) in a data.frame from peak data (m/z and intensity) in NumericList objects, with validity constraints ensuring consistency. This skill enables creation of custom backend implementations for the Spectra infrastructure.

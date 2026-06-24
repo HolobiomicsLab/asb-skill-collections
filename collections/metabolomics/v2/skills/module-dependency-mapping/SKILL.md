@@ -1,6 +1,9 @@
 ---
 name: module-dependency-mapping
-description: Use when you need to understand or document the structural organization of an object-oriented codebase—specifically when developers require a map of which modules depend on others, where extension points (abstract classes, interfaces, factory patterns) exist, or when preparing to extend or refactor.
+description: Use when you need to understand or document the structural organization
+  of an object-oriented codebase—specifically when developers require a map of which
+  modules depend on others, where extension points (abstract classes, interfaces,
+  factory patterns) exist, or when preparing to extend or refactor.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -10,6 +13,7 @@ metadata:
   - Docker
   - Git
   - PlantUML
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet

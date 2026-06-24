@@ -1,6 +1,8 @@
 ---
 name: computational-environment-configuration
-description: Use when at the start of any DaDIA pipeline execution, or whenever you are preparing to run a complex multi-package R workflow on a new system or after updating package managers.
+description: Use when at the start of any DaDIA pipeline execution, or whenever you
+  are preparing to run a complex multi-package R workflow on a new system or after
+  updating package managers.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,6 +13,7 @@ metadata:
   - DaDIA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA
@@ -41,6 +44,7 @@ attribution:
 
 # computational-environment-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and document software version dependencies before executing a data processing pipeline, ensuring that R, XCMS, metaMS, and all dependent packages meet minimum thresholds. This skill prevents runtime failures by establishing a reproducible computational environment contract upfront.

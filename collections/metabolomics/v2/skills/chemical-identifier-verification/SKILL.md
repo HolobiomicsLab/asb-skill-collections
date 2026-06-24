@@ -1,6 +1,9 @@
 ---
 name: chemical-identifier-verification
-description: Use when when you have a list of chemically known compounds and need to validate that an MS processing pipeline (e.g., mzExacto) correctly retrieves their characteristic m/z, retention time, match factor, and area values from GC-MS data.
+description: Use when when you have a list of chemically known compounds and need
+  to validate that an MS processing pipeline (e.g., mzExacto) correctly retrieves
+  their characteristic m/z, retention time, match factor, and area values from GC-MS
+  data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,13 +16,17 @@ metadata:
   - spreadOut
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- mzExacto() collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- mzExacto() collects the same information for a set of query chemicals and uses it
+  to precisely search the advanced dictionary for samples that have those chemicals
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +50,7 @@ attribution:
 
 # chemical-identifier-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a set of query chemicals can be correctly retrieved and identified from GC-MS data using retention time, m/z peaks, and match factor thresholds. This skill validates whether mass spectrometry search algorithms accurately extract compound-specific metadata (exact mass, retention time, match factor, area) from preprocessed spectral dictionaries.

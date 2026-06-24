@@ -1,6 +1,8 @@
 ---
 name: polarity-mode-filtering-lcms
-description: Use when you have a comprehensive target list (containing compounds from both positive and negative ionization modes) but need to screen or detect peaks in a single LC-MS run acquired in a specific polarity mode.
+description: Use when you have a comprehensive target list (containing compounds from
+  both positive and negative ionization modes) but need to screen or detect peaks
+  in a single LC-MS run acquired in a specific polarity mode.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +15,13 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # Polarity-mode filtering for LC-MS target lists
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill filters a target compound list by ionization polarity (positive or negative mode) to produce a subset of compounds matched to a specific MS acquisition mode. It is essential for targeted LC-MS workflows where different ionization modes are acquired separately and each analytical run requires only the compounds ionizable in that mode.

@@ -1,6 +1,7 @@
 ---
 name: genome-identifier-lookup
-description: Use when a paired omics project JSON document contains genome identifiers (e.g. IMG IDs, NCBI accessions) but lacks corresponding organism names.
+description: Use when a paired omics project JSON document contains genome identifiers
+  (e.g. IMG IDs, NCBI accessions) but lacks corresponding organism names.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3672
@@ -14,11 +15,13 @@ metadata:
   - NCBI Taxonomy / IMG
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

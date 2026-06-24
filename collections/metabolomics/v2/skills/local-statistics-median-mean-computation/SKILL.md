@@ -1,6 +1,8 @@
 ---
 name: local-statistics-median-mean-computation
-description: Use when you have raw LA-ICP-MS image data containing potential spike outliers (e.g., instrumental noise, ablation irregularities) and need to establish a local reference statistic for each pixel.
+description: Use when you have raw LA-ICP-MS image data containing potential spike
+  outliers (e.g., instrumental noise, ablation irregularities) and need to establish
+  a local reference statistic for each pixel.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,13 +13,15 @@ metadata:
   - pewpew
   - pewlib
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 - python library [pewlib]
@@ -46,6 +50,7 @@ attribution:
 
 # local-statistics-median-mean-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute local median or mean statistics within a rolling window around each pixel in LA-ICP-MS image data to establish baseline and deviation thresholds for spike detection and removal. This is a foundational preprocessing step that prepares local reference statistics needed by downstream outlier-detection filters.

@@ -1,12 +1,16 @@
 ---
 name: environment-variable-provisioning
-description: Use when when extending a multi-service project (like MAGMa with its four subproject components) to container orchestration, and you need to ensure each microservice (magmaweb, joblauncher, job, pubchem) receives the correct configuration—such as port mappings, service URLs, and data paths—without.
+description: Use when when extending a multi-service project (like MAGMa with its
+  four subproject components) to container orchestration, and you need to ensure each
+  microservice (magmaweb, joblauncher, job, pubchem) receives the correct configuration—such
+  as port mappings, service URLs, and data paths—without.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - MAGMa
   - Docker Compose
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -36,6 +40,7 @@ attribution:
 
 # environment-variable-provisioning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure environment variables for containerized microservices in a multi-component orchestration system. This skill defines service-specific variables (ports, database connections, inter-service dependencies) that enable correct communication and resource allocation across containerized components.

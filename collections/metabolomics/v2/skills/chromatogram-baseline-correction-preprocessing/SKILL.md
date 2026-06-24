@@ -1,6 +1,8 @@
 ---
 name: chromatogram-baseline-correction-preprocessing
-description: Use when you have raw or folded 2D-TIC chromatogram data (typically imported from NetCDF files into RGCxGC chromatogram objects) that exhibits baseline drift, chemical noise, or instrumental artifacts that would obscure true metabolite peaks.
+description: Use when you have raw or folded 2D-TIC chromatogram data (typically imported
+  from NetCDF files into RGCxGC chromatogram objects) that exhibits baseline drift,
+  chemical noise, or instrumental artifacts that would obscure true metabolite peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,13 +14,15 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # chromatogram-baseline-correction-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove instrumental baseline drift and chemical noise from GCxGC-MS chromatograms using asymmetric least squares (ALS) algorithm to enhance signal clarity and enable downstream peak alignment and multivariate analysis. This is a critical preprocessing step that must precede smoothing and peak alignment in comprehensive two-dimensional gas chromatography workflows.

@@ -1,6 +1,8 @@
 ---
 name: spectrum-object-instantiation
-description: Use when after successfully parsing raw spectral data from one of the supported file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) into intermediate dictionaries containing m/z arrays, intensity arrays, and metadata key-value pairs.
+description: Use when after successfully parsing raw spectral data from one of the
+  supported file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) into intermediate
+  dictionaries containing m/z arrays, intensity arrays, and metadata key-value pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,11 +15,13 @@ metadata:
   - matchms
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - matchms is a versatile open-source Python package
 - make sure the existing tests still work by running ``pytest``
 claims: []

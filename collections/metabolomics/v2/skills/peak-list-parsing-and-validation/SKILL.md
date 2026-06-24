@@ -1,6 +1,8 @@
 ---
 name: peak-list-parsing-and-validation
-description: Use when when importing raw mass spectrometry data from vendor or open formats (mzML, mzXML, msp, MGF, JSON, metabolomics-USI) and you need to extract peak m/z and intensity pairs into a standardized representation.
+description: Use when when importing raw mass spectrometry data from vendor or open
+  formats (mzML, mzXML, msp, MGF, JSON, metabolomics-USI) and you need to extract
+  peak m/z and intensity pairs into a standardized representation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,11 +15,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

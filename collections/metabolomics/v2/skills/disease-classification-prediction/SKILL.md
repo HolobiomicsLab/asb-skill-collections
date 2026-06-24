@@ -1,6 +1,7 @@
 ---
 name: disease-classification-prediction
-description: Use when you have raw LC-MS metabolomics data from multiple disease groups (in .npy or .
+description: Use when you have raw LC-MS metabolomics data from multiple disease groups
+  (in .npy or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3464
@@ -15,6 +16,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -42,6 +44,7 @@ attribution:
 
 # disease-classification-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply deep learning to raw LC-MS metabolomics data to generate per-sample disease-type classification labels. This skill leverages neural networks trained on preprocessed mass spectrometry features to distinguish between disease states (e.g., healthy, lung nodule, lung cancer) in a multi-class classification framework.

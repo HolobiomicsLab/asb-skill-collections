@@ -1,6 +1,9 @@
 ---
 name: kegg-database-querying
-description: Use when you have identified two or more organisms (via their KEGG organism codes, e.g., 'hsa' for Homo sapiens) and need to retrieve their complete metabolic pathway and reaction datasets as a prerequisite for network reconstruction or comparative metabolic analysis.
+description: Use when you have identified two or more organisms (via their KEGG organism
+  codes, e.g., 'hsa' for Homo sapiens) and need to retrieve their complete metabolic
+  pathway and reaction datasets as a prerequisite for network reconstruction or comparative
+  metabolic analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0224
@@ -11,13 +14,17 @@ metadata:
   - MetNet
   - KEGG
   - Java
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
 evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network
-- their metabolic data are retrieved from KEGG and the corresponding networks of metabolic functions are built
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network of two organisms selected in KEGG
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network
+- their metabolic data are retrieved from KEGG and the corresponding networks of metabolic
+  functions are built
 - MetNet is a Java tool
 claims: []
 provenance:

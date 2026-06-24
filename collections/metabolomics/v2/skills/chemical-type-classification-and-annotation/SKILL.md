@@ -15,13 +15,17 @@ metadata:
   - uafR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- To perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR](https://bioconductor.org/packages/release/bioc
+- To perform the chemical structure matches and summarize atomic features, uafR taps
+  into an amazing set of cheminformatics packages -- [ChemmineR]
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR]
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR](https://bioconductor.org/packages/release/bioc
 - '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
@@ -48,6 +52,7 @@ attribution:
 
 # chemical-type-classification-and-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify and annotate query chemicals against a user-defined or restricted library of compound type categories using structural matching and categorical database lookups. This skill identifies best-matching compound types for GC-MS detected chemicals and enriches them with cross-database metadata (PubChem, LOTUS, KEGG, FEMA, FDA/SPL).

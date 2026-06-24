@@ -1,6 +1,8 @@
 ---
 name: molecular-descriptor-calculation-via-rdkit
-description: Use when when you have a set of SMILES strings representing small molecules and need to generate a unified descriptor feature matrix for downstream machine learning (e.g., retention time prediction, property regression).
+description: Use when when you have a set of SMILES strings representing small molecules
+  and need to generate a unified descriptor feature matrix for downstream machine
+  learning (e.g., retention time prediction, property regression).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3365
@@ -13,6 +15,7 @@ metadata:
   - mordred
   - NumPy
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
@@ -45,6 +48,7 @@ attribution:
 
 # molecular-descriptor-calculation-via-rdkit
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute molecular descriptors from SMILES strings using RDKit and mordred libraries, deduplicate descriptors across both libraries, and export unified feature matrices in compressed NumPy format. This skill enables rapid featurization of chemical structures for machine learning on retention times and other physicochemical properties.

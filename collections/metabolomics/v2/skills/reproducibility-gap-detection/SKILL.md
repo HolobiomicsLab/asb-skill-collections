@@ -1,6 +1,9 @@
 ---
 name: reproducibility-gap-detection
-description: Use when when curating a scientific workflow (especially deep learning or data-processing pipelines) and you need to verify that all steps described in the publication have corresponding available code, data downloads, trained model checkpoints, and explicit dependency specifications.
+description: Use when when curating a scientific workflow (especially deep learning
+  or data-processing pipelines) and you need to verify that all steps described in
+  the publication have corresponding available code, data downloads, trained model
+  checkpoints, and explicit dependency specifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -114,7 +117,8 @@ metadata:
   - GitHub (source repository)
   - pyOpenMS
   - README indexing and cross-referencing
-  - Setup/dependency file inspection (setup.py, requirements.txt, environment.yml, pyproject.toml)
+  - Setup/dependency file inspection (setup.py, requirements.txt, environment.yml,
+    pyproject.toml)
   - G-Aligner
   - Google Drive
   - GcDuo
@@ -305,6 +309,7 @@ metadata:
   - limma
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -624,7 +629,8 @@ evidence_spans:
 - 'Source: github:gitlab.gwdg.de__joerg.buescher__automrm'
 - 'Source: github:arina-iva__DI-MS2_scripts'
 - 'Source: github:jesilee__CIDMD_setup'
-- These are generated using RDKit... We extensively use the ChEMBL structure curation pipeline developed with RDKit to clean the data and curate the database.
+- These are generated using RDKit... We extensively use the ChEMBL structure curation
+  pipeline developed with RDKit to clean the data and curate the database.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -1310,6 +1316,7 @@ attribution:
 
 # reproducibility_gap_detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and document gaps between published computational workflows and their reproducible instantiations (code, data, checkpoints, dependencies) by comparing article descriptions, source code documentation, and available artifacts. This skill is essential for flagging missing resources, undocumented preprocessing steps, or version pinning issues that would prevent independent replication.

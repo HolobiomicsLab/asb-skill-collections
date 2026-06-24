@@ -1,6 +1,7 @@
 ---
 name: corpus-preparation-validation
-description: Use when when you have raw LC-MS-MS fragmentation spectra in MGF format and need to convert them into a corpus JSON file before running topic modeling.
+description: Use when when you have raw LC-MS-MS fragmentation spectra in MGF format
+  and need to convert them into a corpus JSON file before running topic modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +14,7 @@ metadata:
   - gensim
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

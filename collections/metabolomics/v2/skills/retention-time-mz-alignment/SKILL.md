@@ -1,6 +1,8 @@
 ---
 name: retention-time-mz-alignment
-description: Use when processing raw LC/MS data (mzML or mzXML format) from multi-sample cohorts where retention time or intensity drift is suspected due to batch effects, instrument calibration drift, or variable run order.
+description: Use when processing raw LC/MS data (mzML or mzXML format) from multi-sample
+  cohorts where retention time or intensity drift is suspected due to batch effects,
+  instrument calibration drift, or variable run order.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +15,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.01.26.634927v3
   title: mzLearn
 evidence_spans:
-- mzEmbed, a framework for developing pre-trained generative models and fine-tuning them for specific tasks for untargeted metabolomics datasets
+- mzEmbed, a framework for developing pre-trained generative models and fine-tuning
+  them for specific tasks for untargeted metabolomics datasets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

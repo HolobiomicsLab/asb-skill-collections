@@ -1,6 +1,9 @@
 ---
 name: neural-network-model-deployment
-description: Use when you have LC-MS feature tables (m/z and retention time columns) and corresponding .mzXML or .mzML files, and you need to automatically classify whether extracted ion chromatograms represent genuine metabolomic features or false positives.
+description: Use when you have LC-MS feature tables (m/z and retention time columns)
+  and corresponding .mzXML or .mzML files, and you need to automatically classify
+  whether extracted ion chromatograms represent genuine metabolomic features or false
+  positives.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -18,12 +21,15 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01309
   title: EVA
 evidence_spans:
-- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems. Please check out pyEVA
-- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems
+- EVA now has a python version that can be easily installed and used on Mac, PC, and
+  Linux systems. Please check out pyEVA
+- EVA now has a python version that can be easily installed and used on Mac, PC, and
+  Linux systems
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

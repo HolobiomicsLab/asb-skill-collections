@@ -1,6 +1,8 @@
 ---
 name: volcano-plot-construction-from-omics-data
-description: Use when after statistical analysis (e.g., edgeR) has produced a results table containing lipid identities, fold-change values, and p-values for pairwise or multi-condition comparisons.
+description: Use when after statistical analysis (e.g., edgeR) has produced a results
+  table containing lipid identities, fold-change values, and p-values for pairwise
+  or multi-condition comparisons.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -14,11 +16,13 @@ metadata:
   - edgeR.R
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 - _No usage/docs found._
 claims: []
 provenance:

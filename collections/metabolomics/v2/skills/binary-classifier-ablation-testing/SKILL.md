@@ -1,6 +1,7 @@
 ---
 name: binary-classifier-ablation-testing
-description: Use when you have a trained binary molecular classifier (like BitterPredict) and want to understand which groups of chemical descriptors drive its predictions.
+description: Use when you have a trained binary molecular classifier (like BitterPredict)
+  and want to understand which groups of chemical descriptors drive its predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,11 +12,13 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +42,7 @@ attribution:
 
 # binary-classifier-ablation-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically remove descriptor subgroups from a molecular classifier's input data and measure prediction changes to identify which chemical structure descriptors have the greatest impact on bitter/not-bitter predictions. This reveals descriptor importance and enables interpretability of the classifier's decision logic.

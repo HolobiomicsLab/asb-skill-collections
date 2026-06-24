@@ -1,6 +1,9 @@
 ---
 name: multi-dimensional-data-encoding
-description: Use when you have loaded LC-MS feature tables or peak detection output containing internal standard identifications with retention times, m/z values, and intensity measurements across multiple samples, and you need to detect anomalies such as retention time drift, m/z shifts, or intensity loss that.
+description: Use when you have loaded LC-MS feature tables or peak detection output
+  containing internal standard identifications with retention times, m/z values, and
+  intensity measurements across multiple samples, and you need to detect anomalies
+  such as retention time drift, m/z shifts, or intensity loss that.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +16,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

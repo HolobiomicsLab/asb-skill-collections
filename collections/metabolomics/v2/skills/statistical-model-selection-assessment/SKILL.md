@@ -1,6 +1,8 @@
 ---
 name: statistical-model-selection-assessment
-description: Use when after loading preprocessed metabolomics data (log-transformed feature abundance matrices with samples as rows, features as columns, and batch annotations) but before applying batch-effect correction.
+description: Use when after loading preprocessed metabolomics data (log-transformed
+  feature abundance matrices with samples as rows, features as columns, and batch
+  annotations) but before applying batch-effect correction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - dbnorm
   - R
   - sva
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -20,7 +23,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # statistical-model-selection-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess which batch-effect correction statistical model (parametric ComBat, non-parametric ComBat, or two-stage ber procedure) best fits metabolomics data structure by generating diagnostic visualizations and performance scores. This skill enables data-driven model selection before committing to full batch correction.

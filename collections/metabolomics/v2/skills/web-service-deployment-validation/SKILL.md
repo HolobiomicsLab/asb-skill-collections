@@ -1,6 +1,8 @@
 ---
 name: web-service-deployment-validation
-description: Use when when you need to confirm that a publicly hosted academic web service (such as molDiscovery) is live and responding at a documented endpoint URL, or when troubleshooting access issues reported by end users.
+description: Use when when you need to confirm that a publicly hosted academic web
+  service (such as molDiscovery) is live and responding at a documented endpoint URL,
+  or when troubleshooting access issues reported by end users.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -9,6 +11,7 @@ metadata:
   tools:
   - molDiscovery
   - curl
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-021-23986-0
   title: moldiscovery
@@ -37,6 +40,7 @@ attribution:
 
 # web-service-deployment-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a scientific web service is deployed and accessible at its documented URL by performing HTTP health checks and capturing response metadata. This skill confirms service availability for downstream users before proceeding with integration or documentation updates.

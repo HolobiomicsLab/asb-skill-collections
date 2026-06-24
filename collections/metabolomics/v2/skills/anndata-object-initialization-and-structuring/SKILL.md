@@ -1,6 +1,9 @@
 ---
 name: anndata-object-initialization-and-structuring
-description: Use when when you have imzML and accompanying ibd (ion binary data) files from spatial metabolomics experiments and need to load them into a unified AnnData object representation for integration with spatial transcriptomics or other spatial multi-omics data.
+description: Use when when you have imzML and accompanying ibd (ion binary data) files
+  from spatial metabolomics experiments and need to load them into a unified AnnData
+  object representation for integration with spatial transcriptomics or other spatial
+  multi-omics data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -11,6 +14,7 @@ metadata:
   - spatialMETA
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

@@ -1,6 +1,9 @@
 ---
 name: hyperdimensional-computing-projection
-description: Use when when clustering large-scale mass spectrometry datasets (millions of MS/MS spectra in MGF format) where runtime is a bottleneck and you have access to NVIDIA GPU resources (GTX 3090 for large datasets like PXD000561, or GTX 1080Ti for smaller datasets).
+description: Use when when clustering large-scale mass spectrometry datasets (millions
+  of MS/MS spectra in MGF format) where runtime is a bottleneck and you have access
+  to NVIDIA GPU resources (GTX 3090 for large datasets like PXD000561, or GTX 1080Ti
+  for smaller datasets).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -13,6 +16,7 @@ metadata:
   - CUDA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

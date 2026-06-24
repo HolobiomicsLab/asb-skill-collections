@@ -1,6 +1,9 @@
 ---
 name: word-embedding-aggregation-for-spectral-data
-description: Use when when you have pre-processed MS/MS spectra and a pre-trained Word2Vec model, and need to compute fast, scalable similarity scores for library matching or molecular networking that correlate better with structural similarity than cosine-based methods.
+description: Use when when you have pre-processed MS/MS spectra and a pre-trained
+  Word2Vec model, and need to compute fast, scalable similarity scores for library
+  matching or molecular networking that correlate better with structural similarity
+  than cosine-based methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -18,16 +21,21 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
+  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +59,7 @@ attribution:
 
 # word-embedding-aggregation-for-spectral-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert MS/MS spectra into fixed-length vector representations by aggregating pre-trained Word2Vec embeddings of fragment peaks and neutral losses, weighted by normalized peak intensity. This enables efficient similarity comparisons and structural analogue searches in large spectral databases.

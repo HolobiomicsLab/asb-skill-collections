@@ -1,6 +1,7 @@
 ---
 name: software-support-matrix-construction
-description: Use when you need to determine the full scope of hardware and methodological compatibility for a bioinformatics tool before designing an analytical workflow.
+description: Use when you need to determine the full scope of hardware and methodological
+  compatibility for a bioinformatics tool before designing an analytical workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +17,7 @@ metadata:
   - Waters instruments
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

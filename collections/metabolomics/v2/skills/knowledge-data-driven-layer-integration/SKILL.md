@@ -1,6 +1,7 @@
 ---
 name: knowledge-data-driven-layer-integration
-description: Use when you have untargeted metabolomics data (MS/MS spectra) and need to annotate metabolites at scale.
+description: Use when you have untargeted metabolomics data (MS/MS spectra) and need
+  to annotate metabolites at scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,11 +12,13 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +42,7 @@ attribution:
 
 # knowledge-data-driven-layer-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate knowledge-driven (biochemical pathways, metabolic reaction networks) and data-driven (experimental MS2 similarity networks) layers into a unified two-layer network topology to enable recursive annotation propagation for comprehensive metabolite annotation in untargeted metabolomics. This skill underpins accurate, high-coverage metabolite identification in large-scale studies.

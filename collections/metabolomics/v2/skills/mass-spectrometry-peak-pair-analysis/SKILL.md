@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-peak-pair-analysis
-description: Use when you have preprocessed MSI data (as a CSV intensity matrix or Cardinal MSProcessedImagingExperiment object) and suspect that observed peaks include both parent ions and their adducts formed with matrix or salt species.
+description: Use when you have preprocessed MSI data (as a CSV intensity matrix or
+  Cardinal MSProcessedImagingExperiment object) and suspect that observed peaks include
+  both parent ions and their adducts formed with matrix or salt species.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,11 +18,13 @@ metadata:
   - R (devtools, knitr, rmarkdown, pandoc)
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -45,6 +49,7 @@ attribution:
 
 # mass-spectrometry-peak-pair-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank molecular adducts in mass spectrometry imaging by computing pairwise mass differences between all detected peaks, binning them into a histogram, and matching observed differences to known chemical species. This skill reveals adduct formation between target metabolites and matrix or salt ions, illuminating signals otherwise missed in standard peak annotation.

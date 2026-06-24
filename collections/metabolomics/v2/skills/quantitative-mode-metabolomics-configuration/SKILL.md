@@ -1,6 +1,9 @@
 ---
 name: quantitative-mode-metabolomics-configuration
-description: Use when when you have metabolomics results from multiple studies reporting compound identifiers, p-values, fold-changes, and study sizes (N), and you need to prepare them for quantitative meta-analysis using weighted Fisher's method and logarithmic fold-change combination.
+description: Use when when you have metabolomics results from multiple studies reporting
+  compound identifiers, p-values, fold-changes, and study sizes (N), and you need
+  to prepare them for quantitative meta-analysis using weighted Fisher's method and
+  logarithmic fold-change combination.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,14 +17,17 @@ metadata:
   - webchem
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # quantitative-mode-metabolomics-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and validate the input data structure for quantitative metabolomics meta-analysis by specifying column mappings, selecting mode='quan', and handling missing and negative fold-change values. This skill ensures metabolomics datasets from heterogeneous sources (xls/xlsx/csv/txt) conform to the required tibble schema before statistical combination.

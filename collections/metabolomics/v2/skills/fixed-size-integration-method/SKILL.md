@@ -1,6 +1,8 @@
 ---
 name: fixed-size-integration-method
-description: Use when you have aligned and baseline-corrected GC-IMS data with detected and clustered peaks, and you want to extract peak intensities using a consistent integration window.
+description: Use when you have aligned and baseline-corrected GC-IMS data with detected
+  and clustered peaks, and you want to extract peak intensities using a consistent
+  integration window.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +15,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +44,7 @@ attribution:
 
 # fixed-size-integration-method
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A peak integration strategy for GC-IMS data that uses a uniform window size across all detected peaks, rather than adapting to individual peak widths. This method is applied after peak detection and clustering to quantify peak intensities into a sample-by-peak matrix suitable for downstream statistical analysis.

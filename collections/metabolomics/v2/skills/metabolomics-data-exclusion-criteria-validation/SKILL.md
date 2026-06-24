@@ -1,6 +1,7 @@
 ---
 name: metabolomics-data-exclusion-criteria-validation
-description: Use when you have received or published a claim about the number of metabolites excluded by a missingness-based quality filter (e.g., 'cutoff=0.
+description: Use when you have received or published a claim about the number of metabolites
+  excluded by a missingness-based quality filter (e.g., 'cutoff=0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +12,7 @@ metadata:
   - R
   - MetaboDiff
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +47,7 @@ attribution:
 
 # metabolomics-data-exclusion-criteria-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and reproduce the count of metabolites excluded from a metabolomics dataset by applying a missingness cutoff threshold during imputation preprocessing. This skill ensures that the imputation filter is applied correctly and reproducibly, and that the number of retained metabolites matches the stated exclusion count.

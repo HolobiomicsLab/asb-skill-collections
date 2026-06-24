@@ -1,6 +1,9 @@
 ---
 name: spectral-similarity-scoring-and-ranking
-description: Use when after discovering Mass2Motifs via LDA topic modeling on MS/MS data, when you need to assign putative structural annotations to those motifs by comparing their fragmentation signatures (weighted fragment and neutral loss distributions) to a curated reference database of known motifs and.
+description: Use when after discovering Mass2Motifs via LDA topic modeling on MS/MS
+  data, when you need to assign putative structural annotations to those motifs by
+  comparing their fragmentation signatures (weighted fragment and neutral loss distributions)
+  to a curated reference database of known motifs and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -16,11 +19,13 @@ metadata:
   - MAG (Automated Mass2Motif Annotation Guidance)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - Automated annotation of **M2M** using **MAG**
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

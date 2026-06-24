@@ -1,6 +1,8 @@
 ---
 name: chemical-structure-featurization
-description: Use when when you have molecular structures (SMILES, SDF, or molecular graphs) and need to train a spectrum prediction or molecular property model, and you want to learn task-specific representations rather than use fixed descriptors.
+description: Use when when you have molecular structures (SMILES, SDF, or molecular
+  graphs) and need to train a spectrum prediction or molecular property model, and
+  you want to learn task-specific representations rather than use fixed descriptors.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -14,13 +16,15 @@ metadata:
   - ms-pred (coleygroup)
   - NEIMS
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 - doi: 10.1021/acs.analchem.3c05019
   title: ''
 evidence_spans:
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 - jhhung/PS2MS
 claims: []
@@ -50,6 +54,7 @@ attribution:
 
 # chemical-structure-featurization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert molecular chemical structures into learned numerical representations using graph neural network (GNN) encoders that capture connectivity and atomic properties for downstream prediction tasks like mass spectrum forecasting. This approach replaces hand-crafted molecular fingerprints with end-to-end learned embeddings optimized for the target task.

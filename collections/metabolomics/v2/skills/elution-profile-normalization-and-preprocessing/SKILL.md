@@ -1,6 +1,8 @@
 ---
 name: elution-profile-normalization-and-preprocessing
-description: Use when when you have raw co-fractionation/mass-spectrometry elution intensity profiles and plan to train a CNN or semi-supervised learning model (Label Spreading) directly on unengineered elution data.
+description: Use when when you have raw co-fractionation/mass-spectrometry elution
+  intensity profiles and plan to train a CNN or semi-supervised learning model (Label
+  Spreading) directly on unengineered elution data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - SPIFFED
   - EPIC
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbad229/7199559
   title: SPIFFED
@@ -37,6 +40,7 @@ attribution:
 
 # elution-profile-normalization-and-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing of co-fractionation/mass-spectrometry (CF-MS) elution profiles by normalizing intensity values and handling missing data points, preparing raw elution data for direct input to end-to-end deep learning models without manual feature extraction. This step is critical for eliminating feature engineering bottlenecks and enabling convolutional neural networks to learn directly from raw co-elution patterns.

@@ -1,6 +1,8 @@
 ---
 name: background-reference-set-construction
-description: Use when when preparing to perform pathway enrichment analysis on metabolomics data, you need a background-reference file that maps metabolic pathways to their constituent metabolites.
+description: Use when when preparing to perform pathway enrichment analysis on metabolomics
+  data, you need a background-reference file that maps metabolic pathways to their
+  constituent metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,11 +16,13 @@ metadata:
   - enrichmet
   - BiocFileCache
   - R (readr, readxl, dplyr)
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - curated KEGG data for enrichment using Fisher's Exact Test
 claims: []
 provenance:

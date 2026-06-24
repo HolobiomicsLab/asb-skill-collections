@@ -1,6 +1,9 @@
 ---
 name: categorical-grouping-and-aggregation
-description: 'Use when you have a flat table of structure-organism pairs or entity records and need to summarize their distribution across categorical bins (e.g., organism counts binned by number of associated structures in categories: 1, 1–10, 10–100, >100).'
+description: 'Use when you have a flat table of structure-organism pairs or entity
+  records and need to summarize their distribution across categorical bins (e.g.,
+  organism counts binned by number of associated structures in categories: 1, 1–10,
+  10–100, >100).'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -9,6 +12,7 @@ metadata:
   tools:
   - R
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -41,6 +45,7 @@ attribution:
 
 # categorical-grouping-and-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group entities (organisms, structures, or references) by a discrete categorical attribute and count or aggregate members within each group to summarize distributions and validate against reference benchmarks. This skill is essential for validating curated datasets against published counts and understanding the composition of large structure-organism pair collections.

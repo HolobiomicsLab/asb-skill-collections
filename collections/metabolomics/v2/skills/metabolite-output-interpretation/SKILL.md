@@ -1,6 +1,8 @@
 ---
 name: metabolite-output-interpretation
-description: Use when after running CyProduct with a query molecule (SMILES or SDF) and a list of CYP450 enzymes, use this skill to collect, organize, and validate the predicted metabolite results stored in the output folder.
+description: Use when after running CyProduct with a query molecule (SMILES or SDF)
+  and a list of CYP450 enzymes, use this skill to collect, organize, and validate
+  the predicted metabolite results stored in the output folder.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -11,6 +13,7 @@ metadata:
   - CyProduct
   - BioTransformerAPI
   - Java
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -39,6 +42,7 @@ attribution:
 
 # metabolite-output-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and validate predicted metabolite outputs from CyProduct by collecting results from specified output folders, verifying enzyme-specific catalysis assignments, and optionally filtering through the CypReact module to ensure metabolites are biochemically plausible.

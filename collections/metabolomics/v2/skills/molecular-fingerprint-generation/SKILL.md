@@ -1,6 +1,9 @@
 ---
 name: molecular-fingerprint-generation
-description: Use when when you have annotated chemical structures (SMILES or InChI strings) from a curated MS/MS dataset and need to compute pairwise structural similarity scores (Tanimoto or other metrics) as training labels, or when preparing molecular representations for comparison against mass spectral data.
+description: Use when when you have annotated chemical structures (SMILES or InChI
+  strings) from a curated MS/MS dataset and need to compute pairwise structural similarity
+  scores (Tanimoto or other metrics) as training labels, or when preparing molecular
+  representations for comparison against mass spectral data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -17,15 +20,23 @@ metadata:
   - pubchempy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names, extracting adduct information from the given metadata, moving metadata to consistent fields
-- For each pair of molecular fingerprints Tanimoto scores were calculated, indicating the structural similarity of that pair. (as implemented in matchms [18])
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names, extracting adduct information from the given metadata,
+  moving metadata to consistent fields
+- For each pair of molecular fingerprints Tanimoto scores were calculated, indicating
+  the structural similarity of that pair. (as implemented in matchms [18])
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 - Our MS2DeepScore Python library offers two types of data generators
 claims: []
 provenance:
@@ -59,6 +70,7 @@ attribution:
 
 # molecular-fingerprint-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate binary molecular fingerprints from chemical structures (SMILES/InChI) using RDKit Daylight algorithm to encode structural features for downstream similarity computation and machine learning tasks.

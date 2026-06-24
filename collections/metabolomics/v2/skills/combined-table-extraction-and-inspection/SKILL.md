@@ -1,6 +1,8 @@
 ---
 name: combined-table-extraction-and-inspection
-description: Use when after constructing a metabCombiner object by grouping features from two metabData objects by m/z, and before proceeding to anchor selection, RT mapping, or alignment scoring.
+description: Use when after constructing a metabCombiner object by grouping features
+  from two metabData objects by m/z, and before proceeding to anchor selection, RT
+  mapping, or alignment scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,12 +14,15 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # combined-table-extraction-and-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and inspect the combined feature pair alignment table from a metabCombiner object to verify its structure and column composition before downstream processing. This skill validates that m/z-grouped feature pairs from two LC-MS datasets have been correctly aligned and formatted.

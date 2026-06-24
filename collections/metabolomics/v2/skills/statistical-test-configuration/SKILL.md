@@ -1,6 +1,8 @@
 ---
 name: statistical-test-configuration
-description: Use when after data transformation, normalization, and filtering are complete, and you have assigned experimental groups (main effects, covariates, pairing structure).
+description: Use when after data transformation, normalization, and filtering are
+  complete, and you have assigned experimental groups (main effects, covariates, pairing
+  structure).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,13 +14,15 @@ metadata:
   - pmartR
   - R
   - Shiny
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart
 evidence_spans:
 - Shiny GUI implementation of the pmartR R package.
 - Shiny GUI implementation of the pmartR R package
-- the bulk of the functionality of the package to be available to the user without the need for familiarity with R or the package itself
+- the bulk of the functionality of the package to be available to the user without
+  the need for familiarity with R or the package itself
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

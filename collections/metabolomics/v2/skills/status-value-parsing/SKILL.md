@@ -1,6 +1,7 @@
 ---
 name: status-value-parsing
-description: Use when when a project README or documentation embeds badge endpoints that report real-time status (e.g., Travis CI build, Landscape.
+description: Use when when a project README or documentation embeds badge endpoints
+  that report real-time status (e.g., Travis CI build, Landscape.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +15,7 @@ metadata:
   - Coveralls
   - Docker Hub
   - Zenodo
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -46,6 +48,7 @@ attribution:
 
 # status-value-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and tabulate current status values from live project status badge endpoints (CI/CD, code quality, coverage, container, archival) by retrieving and parsing endpoint responses. This skill enables reproducible monitoring of multi-faceted project health indicators embedded in repository documentation.

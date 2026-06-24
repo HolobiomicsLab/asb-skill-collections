@@ -1,6 +1,8 @@
 ---
 name: statistical-threshold-parameterization
-description: Use when when you have computed fold-change and p-value statistics from differential expression analysis and need to partition the results into significant and non-significant regions for visualization or downstream filtering.
+description: Use when when you have computed fold-change and p-value statistics from
+  differential expression analysis and need to partition the results into significant
+  and non-significant regions for visualization or downstream filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R Shiny
   - GraphBio
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

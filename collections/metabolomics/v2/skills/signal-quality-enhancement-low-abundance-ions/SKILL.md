@@ -1,6 +1,7 @@
 ---
 name: signal-quality-enhancement-low-abundance-ions
-description: Use when you observe jagged or noisy peak profiles in low-abundance ions after loading raw IM-MS data (Agilent MassHunter .
+description: Use when you observe jagged or noisy peak profiles in low-abundance ions
+  after loading raw IM-MS data (Agilent MassHunter .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3564
@@ -12,14 +13,18 @@ metadata:
   - Agilent MassHunter
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # signal-quality-enhancement-low-abundance-ions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enhance signal quality and recover true ion signals from low-abundance peaks in IM-MS data by applying multidimensional smoothing to remove jagged artifacts while preserving real signal intensity. This skill is essential for improving detection and quantification fidelity when analyzing complex proteomics or metabolomics samples where low-abundance ions are susceptible to noise corruption.

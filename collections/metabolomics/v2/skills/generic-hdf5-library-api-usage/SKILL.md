@@ -1,6 +1,8 @@
 ---
 name: generic-hdf5-library-api-usage
-description: Use when when you have converted multidimensional MS data to MZA HDF5 format and need to programmatically read spectra, metadata, and ion mobility or mass-to-charge arrays in Python or R without vendor-specific dependencies.
+description: Use when when you have converted multidimensional MS data to MZA HDF5
+  format and need to programmatically read spectra, metadata, and ion mobility or
+  mass-to-charge arrays in Python or R without vendor-specific dependencies.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,11 +18,13 @@ metadata:
   - NumPy
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 - the MZA simple data structure based on the HDF5 format
 claims: []

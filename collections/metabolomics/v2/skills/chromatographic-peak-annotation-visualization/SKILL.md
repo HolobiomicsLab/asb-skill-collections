@@ -1,6 +1,9 @@
 ---
 name: chromatographic-peak-annotation-visualization
-description: Use when after running tardisPeaks() with screening_mode=TRUE on centroided .mzML LC-MS data, when you need to visually inspect whether the 10 target compounds (internal standards and endogenous metabolites) were correctly detected within their expected m/z and retention time windows.
+description: Use when after running tardisPeaks() with screening_mode=TRUE on centroided
+  .mzML LC-MS data, when you need to visually inspect whether the 10 target compounds
+  (internal standards and endogenous metabolites) were correctly detected within their
+  expected m/z and retention time windows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -17,14 +20,17 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - knitr::include_graphics
 claims: []
 provenance:
@@ -49,6 +55,7 @@ attribution:
 
 # Chromatographic Peak Annotation and Visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and inspect extracted ion chromatogram (EIC) plots with annotated peaks for targeted LC-MS compounds, enabling visual quality control of peak detection, integration, and retention time alignment across sample batches. This skill bridges automated peak detection with human-interpretable diagnostic plots for targeted metabolomics and lipidomics workflows.

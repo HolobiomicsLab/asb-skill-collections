@@ -1,6 +1,8 @@
 ---
 name: qcpool-cv-calculation
-description: Use when you have Sciex Multiquant txt exports containing signal intensities from QCpool samples injected at regular intervals (e.g., every 10–20 samples) during one or more analytical sequences in a metabolomics or lipidomics study.
+description: Use when you have Sciex Multiquant txt exports containing signal intensities
+  from QCpool samples injected at regular intervals (e.g., every 10–20 samples) during
+  one or more analytical sequences in a metabolomics or lipidomics study.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -10,11 +12,13 @@ metadata:
   tools:
   - QComics
   - Sciex Multiquant
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
 evidence_spans:
-- The goal of the `QComics` package is to have a quick overview of the quality of a metabolomics or lipidomics study
+- The goal of the `QComics` package is to have a quick overview of the quality of
+  a metabolomics or lipidomics study
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +42,7 @@ attribution:
 
 # qcpool-cv-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate per-compound coefficient of variation (CV) from pooled quality control (QCpool) sample intensities measured at regular intervals during a metabolomics or lipidomics sequence. CV quantifies technical reproducibility and is a primary metric for assessing data quality before downstream analysis.

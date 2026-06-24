@@ -1,6 +1,8 @@
 ---
 name: feature-branch-workflow-management
-description: Use when when implementing a new feature or bug fix in a shared repository (such as Maven GUI metabolomics analysis software) where multiple contributors work in parallel and code quality is enforced via CI/CD pipelines (Travis, Appveyor).
+description: Use when when implementing a new feature or bug fix in a shared repository
+  (such as Maven GUI metabolomics analysis software) where multiple contributors work
+  in parallel and code quality is enforced via CI/CD pipelines (Travis, Appveyor).
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -12,6 +14,7 @@ metadata:
   - Qt5
   - Travis
   - Appveyor
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

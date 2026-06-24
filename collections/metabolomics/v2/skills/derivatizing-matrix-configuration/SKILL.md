@@ -1,6 +1,9 @@
 ---
 name: derivatizing-matrix-configuration
-description: Use when you have a derivatizing matrix (e.g., TAHS or other publicly documented reagent) with known composition and ionization behavior that you want to use in Met-ID for metabolite annotation, and the matrix is not yet configured in your Met-ID installation.
+description: Use when you have a derivatizing matrix (e.g., TAHS or other publicly
+  documented reagent) with known composition and ionization behavior that you want
+  to use in Met-ID for metabolite annotation, and the matrix is not yet configured
+  in your Met-ID installation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +16,7 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -41,6 +45,7 @@ attribution:
 
 # derivatizing-matrix-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Register and configure novel chemical derivatizing matrices (beyond FMP-10) into Met-ID to enable automated metabolite identification with non-standard adduct annotations in mass spectrometry imaging. This skill extends Met-ID's extensibility architecture to support any derivatizing reagent with defined ionization behavior and expected adduct forms.

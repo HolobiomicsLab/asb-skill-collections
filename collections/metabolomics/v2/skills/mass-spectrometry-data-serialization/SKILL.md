@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-serialization
-description: Use when after RAMClustR clustering and molecular weight inference via do.findmain, when you need to export deconvoluted cluster spectra for import into external annotation tools (MSFinder or Sirius).
+description: Use when after RAMClustR clustering and molecular weight inference via
+  do.findmain, when you need to export deconvoluted cluster spectra for import into
+  external annotation tools (MSFinder or Sirius).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +17,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -48,6 +51,7 @@ attribution:
 
 # mass-spectrometry-data-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert clustered mass spectrometry spectra into standardized file formats (.mat for MSFinder, .ms for Sirius) to enable downstream structural annotation and compound identification in specialized metabolomics software.

@@ -1,6 +1,8 @@
 ---
 name: pytorch-forward-pass-validation
-description: Use when after instantiating a PyTorch model (such as TransG-Net) with multimodal inputs (graph features and SMILES embeddings), and before beginning model training.
+description: Use when after instantiating a PyTorch model (such as TransG-Net) with
+  multimodal inputs (graph features and SMILES embeddings), and before beginning model
+  training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -15,6 +17,7 @@ metadata:
   - scikit-learn
   - CUDA
   - cuDNN
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -48,6 +51,7 @@ attribution:
 
 # pytorch-forward-pass-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a PyTorch neural network model accepts multimodal inputs and produces correctly-shaped output tensors by executing a forward pass with sample data. This skill ensures the model architecture is correctly instantiated and compatible with the data preparation pipeline before training.

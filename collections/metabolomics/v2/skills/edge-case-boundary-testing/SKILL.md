@@ -1,11 +1,15 @@
 ---
 name: edge-case-boundary-testing
-description: Use when when implementing or validating a quantitative formula (e.g., resource sizing, memory allocation, worker count calculation) that will be applied across a range of input values, especially when the formula involves division, clamping, or has implicit domain constraints (e.
+description: Use when when implementing or validating a quantitative formula (e.g.,
+  resource sizing, memory allocation, worker count calculation) that will be applied
+  across a range of input values, especially when the formula involves division, clamping,
+  or has implicit domain constraints (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -33,6 +37,7 @@ attribution:
 
 # edge-case-boundary-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic validation of computational formulas and system configurations by testing boundary conditions and extreme input values to verify correctness and identify failure modes. This skill ensures that mathematical models and resource-allocation algorithms behave correctly at their limits.

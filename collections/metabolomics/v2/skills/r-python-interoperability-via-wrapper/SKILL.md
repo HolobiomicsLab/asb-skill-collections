@@ -1,6 +1,7 @@
 ---
 name: r-python-interoperability-via-wrapper
-description: Use when you have a Spectra object in R and need to apply a specialized Python MS algorithm (e.
+description: Use when you have a Spectra object in R and need to apply a specialized
+  Python MS algorithm (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,14 +18,18 @@ metadata:
   - reticulate
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # R-Python Interoperability via Wrapper
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 SpectriPy wraps Python mass spectrometry package functionality (matchms, spectrum_utils) into R function signatures, enabling seamless invocation of Python MS algorithms within R-based Spectra workflows without manual object marshalling. This skill bridges two ecosystems to leverage Python's specialized MS libraries while remaining in R.

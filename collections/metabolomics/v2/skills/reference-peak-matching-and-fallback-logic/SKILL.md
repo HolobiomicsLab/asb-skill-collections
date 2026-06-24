@@ -1,6 +1,8 @@
 ---
 name: reference-peak-matching-and-fallback-logic
-description: Use when when performing m/z domain calibration on FT-ICR or high-resolution MS data and the initial calibration attempt finds fewer than 5 reference m/z matches within the standard PPM window (typically ±1–5 ppm).
+description: Use when when performing m/z domain calibration on FT-ICR or high-resolution
+  MS data and the initial calibration attempt finds fewer than 5 reference m/z matches
+  within the standard PPM window (typically ±1–5 ppm).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +51,7 @@ attribution:
 
 # Reference-Peak Matching and Fallback Logic
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 An iterative mass calibration strategy that matches observed m/z peaks against known reference m/z values, progressively widening the PPM tolerance window when initial matches fall below a minimum threshold. This skill is essential for recovering calibration coefficients when sparse reference lists or high mass errors prevent sufficient matches at standard tolerances.

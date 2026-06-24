@@ -1,6 +1,8 @@
 ---
 name: thermo-raw-file-format-parsing
-description: Use when you have acquired multidimensional mass spectrometry data (MS1, MS/MS, or data-independent acquisition) from a Thermo instrument saved in the proprietary '.
+description: Use when you have acquired multidimensional mass spectrometry data (MS1,
+  MS/MS, or data-independent acquisition) from a Thermo instrument saved in the proprietary
+  '.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 claims: []
 provenance:

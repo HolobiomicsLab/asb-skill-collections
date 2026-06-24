@@ -1,6 +1,9 @@
 ---
 name: unknown-chemical-extraction-from-spectra
-description: Use when when you have an existing real mzML file from a metabolomics LC-MS/MS acquisition (e.g., beer or urine samples) and need to populate a virtual mass spectrometer with the actual chemicals that were measured, so that you can replay the acquisition with alternative fragmentation strategies (e.
+description: Use when when you have an existing real mzML file from a metabolomics
+  LC-MS/MS acquisition (e.g., beer or urine samples) and need to populate a virtual
+  mass spectrometer with the actual chemicals that were measured, so that you can
+  replay the acquisition with alternative fragmentation strategies (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +17,7 @@ metadata:
   - vimms-data
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -21,7 +25,8 @@ derived_from:
   title: ''
 evidence_spans:
 - ViMMS is compatible with Python 3+
-- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation
+  coverage using OpenMS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # unknown-chemical-extraction-from-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract a list of unknown chemical compounds with retention times and m/z values directly from real LC-MS/MS mzML acquisition data, enabling in silico validation of fragmentation strategies against empirical metabolite populations without prior annotation.

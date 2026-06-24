@@ -1,6 +1,8 @@
 ---
 name: feedforward-neural-network-architecture-design
-description: Use when you have preprocessed molecular structures as fixed-length feature vectors and need to establish a fair-comparison baseline model for tandem mass spectrum prediction.
+description: Use when you have preprocessed molecular structures as fixed-length feature
+  vectors and need to establish a fair-comparison baseline model for tandem mass spectrum
+  prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3656
@@ -16,12 +18,14 @@ metadata:
   - Adam optimizer
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 evidence_spans:
 - _No usage/docs found._
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:

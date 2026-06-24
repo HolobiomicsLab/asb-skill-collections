@@ -1,6 +1,8 @@
 ---
 name: raw-data-throughput-benchmarking
-description: Use when when you have a raw mass spectrometry file (e.g., Thermo Orbitrap .raw) and need to establish the measured throughput of a spectral reading function (e.
+description: Use when when you have a raw mass spectrometry file (e.g., Thermo Orbitrap
+  .raw) and need to establish the measured throughput of a spectral reading function
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +16,7 @@ metadata:
   - .NET 8.0 Runtime
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -21,10 +24,13 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
-- In case you prefer to compile `rawrr.exe` from C# source code, please install the .NET 8.0
+- In case you prefer to compile `rawrr.exe` from C# source code, please install the
+  .NET 8.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +55,7 @@ attribution:
 
 # raw-data-throughput-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure the spectra-per-second throughput of raw mass spectrometry data reading operations using controlled benchmark experiments with varying scan counts. This skill quantifies I/O and parsing performance on proprietary binary formats (e.g., Thermo .raw files) to validate data access layer speed and guide pipeline optimization decisions.

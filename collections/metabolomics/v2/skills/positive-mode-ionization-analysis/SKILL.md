@@ -1,6 +1,7 @@
 ---
 name: positive-mode-ionization-analysis
-description: Use when you have LC-MS metabolomics data in positive ionization mode and have already performed XCMS feature detection and RAMClustR clustering.
+description: Use when you have LC-MS metabolomics data in positive ionization mode
+  and have already performed XCMS feature detection and RAMClustR clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +15,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -44,6 +46,7 @@ attribution:
 
 # positive-mode-ionization-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply molecular weight inference on high-resolution LC-MS data acquired in positive ionization mode by executing the findMain scoring method within RAMClustR, then validate agreement with RAMClustR's internal scoring to ensure robust compound identification. This skill is critical for non-targeted metabolomics workflows where accurate mass assignment directly affects downstream annotation and biological interpretation.

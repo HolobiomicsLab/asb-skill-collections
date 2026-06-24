@@ -1,6 +1,9 @@
 ---
 name: script-execution-time-measurement
-description: Use when you have a set of gallery or example scripts that must run consistently across multiple backend implementations (e.g., matplotlib, Bokeh, Plotly), and you need to verify that reported execution times are accurate or detect performance changes.
+description: Use when you have a set of gallery or example scripts that must run consistently
+  across multiple backend implementations (e.g., matplotlib, Bokeh, Plotly), and you
+  need to verify that reported execution times are accurate or detect performance
+  changes.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - Python time module
   - Pandas
   - matplotlib, Bokeh, Plotly
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -36,6 +40,7 @@ attribution:
 
 # script-execution-time-measurement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure wall-clock execution time for a suite of scripts running against multiple backend implementations, aggregate per-script and total execution times, and compare measured values against reported benchmarks. This skill is essential for validating performance claims and detecting regressions across plotting backends.

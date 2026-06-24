@@ -1,6 +1,9 @@
 ---
 name: batch-name-reconciliation
-description: Use when when you have a metadata table with taxonomic annotations (species, genus, family columns) that may contain outdated, misspelled, or non-canonical taxon names, and you need to integrate these samples into a natural products analysis pipeline that requires standardized taxonomy (e.
+description: Use when when you have a metadata table with taxonomic annotations (species,
+  genus, family columns) that may contain outdated, misspelled, or non-canonical taxon
+  names, and you need to integrate these samples into a natural products analysis
+  pipeline that requires standardized taxonomy (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -11,13 +14,15 @@ metadata:
   - Open Tree of Life
   - INVENTA
   - Lotus Database
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- The taxonomy should be cleaned to uptoday recognized names, you can use the Open Tree of Life
+- The taxonomy should be cleaned to uptoday recognized names, you can use the Open
+  Tree of Life
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: intensity-dependent-missing-value-simulation
-description: Use when augmenting mass spectrometry ion images in ISO mode (isotope ions from the same molecule) and you need to simulate intensity-dependent data loss that reflects real detector behavior where lower-intensity pixels are more likely to be missed or undetected.
+description: Use when augmenting mass spectrometry ion images in ISO mode (isotope
+  ions from the same molecule) and you need to simulate intensity-dependent data loss
+  that reflects real detector behavior where lower-intensity pixels are more likely
+  to be missed or undetected.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,13 +18,15 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
 - T_COL including color jitter, filtering, Poisson noise, and random missing value
-- T_ISO introduces an additional process of intensity-dependent missing value in ISO mode
+- T_ISO introduces an additional process of intensity-dependent missing value in ISO
+  mode
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # intensity-dependent-missing-value-simulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A data augmentation technique that selectively removes pixels from ion images based on their intensity levels, applied exclusively in ISO mode of the DeepION pipeline to simulate realistic photon-counting and detector artifacts in mass spectrometry imaging. This augmentation preserves the relationship between pixel intensity and missingness, which is critical for learning robust representations of isotope ions.

@@ -1,6 +1,7 @@
 ---
 name: file-format-writing-mzml
-description: Use when after completing an Environment simulation or replay with scan-level MS2 acquisition control, and evaluation data has been collected in memory.
+description: Use when after completing an Environment simulation or replay with scan-level
+  MS2 acquisition control, and evaluation data has been collected in memory.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -12,14 +13,17 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # file-format-writing-mzml
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize simulated or replayed mass spectrometry scan data from a ViMMS Environment into the standard mzML (mzXML Markup Language) format for downstream analysis and archival. This enables portable exchange of LC-MS/MS scan metadata, fragmentation spectra, and retention time information with external metabolomics tools.

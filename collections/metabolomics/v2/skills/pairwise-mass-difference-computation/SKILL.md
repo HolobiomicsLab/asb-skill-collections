@@ -1,6 +1,8 @@
 ---
 name: pairwise-mass-difference-computation
-description: Use when after loading preprocessed MSI intensity data (via msimat from CSV export) or a simple numeric vector of mass peak values, when you need to discover which masses in your dataset co-vary as parent–adduct pairs.
+description: Use when after loading preprocessed MSI intensity data (via msimat from
+  CSV export) or a simple numeric vector of mass peak values, when you need to discover
+  which masses in your dataset co-vary as parent–adduct pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,13 +16,16 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # Pairwise mass-difference tabulation from MSI data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute all possible pairwise mass differences from an MSI data matrix to identify potential molecular adducts. This is the foundational step in mass spectrometry imaging adduct detection, transforming a peak list into a complete difference matrix for downstream binning and annotation.

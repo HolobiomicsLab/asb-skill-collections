@@ -1,6 +1,9 @@
 ---
 name: gensim-pipeline-execution
-description: Use when you have an MS2 spectral file (MGF format) from LC-MS/MS metabolomics analysis and need to discover latent topics across fragmentation patterns for unsupervised characterization. Use it as the prerequisite step before topic visualization in the ms2lda web interface.
+description: Use when you have an MS2 spectral file (MGF format) from LC-MS/MS metabolomics
+  analysis and need to discover latent topics across fragmentation patterns for unsupervised
+  characterization. Use it as the prerequisite step before topic visualization in
+  the ms2lda web interface.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -15,6 +18,7 @@ metadata:
   - Django
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

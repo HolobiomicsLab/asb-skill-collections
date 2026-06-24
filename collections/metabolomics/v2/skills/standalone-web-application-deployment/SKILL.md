@@ -1,6 +1,9 @@
 ---
 name: standalone-web-application-deployment
-description: Use when you have cloned the GNPS_MASST codebase and need to instantiate a domain-specific MASST variant (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, or foodMASST) to accept individual MS/MS spectra as input queries and perform searches against the corresponding curated reference.
+description: Use when you have cloned the GNPS_MASST codebase and need to instantiate
+  a domain-specific MASST variant (microbeMASST, plantMASST, tissueMASST, microbiomeMASST,
+  or foodMASST) to accept individual MS/MS spectra as input queries and perform searches
+  against the corresponding curated reference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -16,6 +19,7 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
@@ -45,6 +49,7 @@ attribution:
 
 # standalone-web-application-deployment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy domain-specific MASST standalone web applications that accept single mass spectra as input and perform searches against curated, domain-specific reference databases. This skill enables researchers to set up and validate spectral search infrastructure for microbe, plant, tissue, microbiome, or food metabolomics queries.

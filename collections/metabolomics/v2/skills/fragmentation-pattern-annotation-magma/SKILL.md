@@ -1,6 +1,8 @@
 ---
 name: fragmentation-pattern-annotation-magma
-description: Use when you have a tandem MS/MS spectrum of a structurally modified compound and a known reference structure (SMILES), and you need to annotate which fragment ions correspond to specific bonds or atoms in the molecule.
+description: Use when you have a tandem MS/MS spectrum of a structurally modified
+  compound and a known reference structure (SMILES), and you need to annotate which
+  fragment ions correspond to specific bonds or atoms in the molecule.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,6 +16,7 @@ metadata:
   - matplotlib
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -23,7 +26,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +51,7 @@ attribution:
 
 # Fragmentation Pattern Annotation with MAGMa
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 MAGMa annotation engine assigns fragment ions in tandem MS/MS spectra to specific neutral losses and bond cleavages within a known molecular structure, enabling structural localization of modifications. This skill is essential when you need to trace MS/MS peaks back to exact atoms or functional groups to localize where a modification has occurred on a known compound.

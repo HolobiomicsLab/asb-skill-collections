@@ -1,6 +1,8 @@
 ---
 name: molecular-fingerprint-prediction
-description: Use when you have tandem MS/MS spectra paired with known molecular structures (for training) or unknown spectra requiring structure identification, and you want to predict dense molecular fingerprint vectors that encode structural similarity.
+description: Use when you have tandem MS/MS spectra paired with known molecular structures
+  (for training) or unknown spectra requiring structure identification, and you want
+  to predict dense molecular fingerprint vectors that encode structural similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -15,6 +17,7 @@ metadata:
   - SIRIUS decomp
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)

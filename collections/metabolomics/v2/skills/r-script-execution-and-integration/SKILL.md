@@ -1,6 +1,7 @@
 ---
 name: r-script-execution-and-integration
-description: Use when when you have pre-written R functions organized across multiple .R files (e.g., GSimp.R, GSimp_evaluation.R, Impute_wrapper.
+description: Use when when you have pre-written R functions organized across multiple
+  .R files (e.g., GSimp.R, GSimp_evaluation.R, Impute_wrapper.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,7 @@ metadata:
   - Impute_wrapper.R
   - Trunc_KNN/Imput_funcs.r
   - R (imputeLCMD package)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -43,6 +45,7 @@ attribution:
 
 # R Script Execution and Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute modular R scripts containing statistical functions and pipelines, then integrate their outputs into downstream analysis workflows. This skill is essential for reproducible metabolomics data imputation and evaluation where multiple specialized scripts (data preprocessing, imputation, evaluation) must be sourced and chained together in a controlled sequence.

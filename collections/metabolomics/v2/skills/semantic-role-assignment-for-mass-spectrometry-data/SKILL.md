@@ -1,6 +1,9 @@
 ---
 name: semantic-role-assignment-for-mass-spectrometry-data
-description: Use when you have uploaded a delimited data file (comma-, semicolon-, or tab-separated) with a header row into Punc'data and need to ensure that each column is correctly mapped to its semantic role (m/z, intensity, formula, or other mass spectrometry attributes) before proceeding to analysis.
+description: Use when you have uploaded a delimited data file (comma-, semicolon-,
+  or tab-separated) with a header row into Punc'data and need to ensure that each
+  column is correctly mapped to its semantic role (m/z, intensity, formula, or other
+  mass spectrometry attributes) before proceeding to analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,12 +16,15 @@ metadata:
   - puncdata (GitHub repository)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data
 evidence_spans:
-- Punc'data is an interactive attribution and vizualization tool made for high resolution mass spectrometry results.
-- Punc'data is an interactive attribution and vizualization tool made for high resolution mass spectrometry results
+- Punc'data is an interactive attribution and vizualization tool made for high resolution
+  mass spectrometry results.
+- Punc'data is an interactive attribution and vizualization tool made for high resolution
+  mass spectrometry results
 - 'Source: github:github.com__WTVoe__puncdata'
 claims: []
 provenance:

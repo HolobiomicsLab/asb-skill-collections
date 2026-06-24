@@ -1,6 +1,8 @@
 ---
 name: fragment-ion-peak-detection-and-normalization
-description: Use when immediately after loading raw MS/MS spectra from .mgf, .msp, or .mzML files, before generating the bag-of-fragments corpus or extracting neutral losses.
+description: Use when immediately after loading raw MS/MS spectra from .mgf, .msp,
+  or .mzML files, before generating the bag-of-fragments corpus or extracting neutral
+  losses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,12 +16,14 @@ metadata:
   - Conda
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - from MS2LDA.Preprocessing import load_and_clean
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - These steps assume you have Conda installed

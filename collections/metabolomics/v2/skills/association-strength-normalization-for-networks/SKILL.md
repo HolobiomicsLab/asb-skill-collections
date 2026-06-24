@@ -1,6 +1,8 @@
 ---
 name: association-strength-normalization-for-networks
-description: Use when after generating metabolite-disease correlations and protein association predictions from a deep learning module (e.g., DeepMSProfiler's feature extraction), before constructing a bipartite network graph for publication.
+description: Use when after generating metabolite-disease correlations and protein
+  association predictions from a deep learning module (e.g., DeepMSProfiler's feature
+  extraction), before constructing a bipartite network graph for publication.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - DeepMSProfiler
   - Python (NumPy, scikit-learn)
   - NetworkX or graph visualization library (e.g., Cytoscape, Gephi)
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -39,6 +42,7 @@ attribution:
 
 # association-strength-normalization-for-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and scale metabolite-protein association strengths to enable comparable node sizing and edge weighting in bipartite disease-associated networks. This ensures visual and quantitative consistency across heterogeneous association metrics derived from deep learning predictions.

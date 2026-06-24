@@ -1,6 +1,8 @@
 ---
 name: peak-list-filtering-for-quality-control
-description: Use when you have extracted a raw peak list (chemical shifts in a TXT file, one per row) from a 1D 1H NMR spectrum and intend to pass it to NMRformer or a similar deep learning model for metabolite identification.
+description: Use when you have extracted a raw peak list (chemical shifts in a TXT
+  file, one per row) from a 1D 1H NMR spectrum and intend to pass it to NMRformer
+  or a similar deep learning model for metabolite identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   - NMRformer
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05632
   title: NMRformer

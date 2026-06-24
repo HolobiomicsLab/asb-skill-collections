@@ -1,6 +1,9 @@
 ---
 name: tandem-mass-spectrometry-ion-fragmentation-pattern-analysis
-description: Use when after MS1 feature extraction and prescreening quality control have completed on mzML files, and you need to inspect the MS2 fragmentation patterns of candidate compounds to verify their identity or assess whether extracted features are genuine metabolites rather than noise or artifacts.
+description: Use when after MS1 feature extraction and prescreening quality control
+  have completed on mzML files, and you need to inspect the MS2 fragmentation patterns
+  of candidate compounds to verify their identity or assess whether extracted features
+  are genuine metabolites rather than noise or artifacts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,13 @@ metadata:
   - Docker
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-025-01044-x
   title: Shinyscreen
 evidence_spans:
-- Shinyscreen is a Shiny application for visualizing and analyzing high resolution mass spectrometry data.
+- Shinyscreen is a Shiny application for visualizing and analyzing high resolution
+  mass spectrometry data.
 - Shinyscreen can be installed in R via `devtools`
 - docker run -p 3838:3838 \ -v C:/your/path/project:/home/ssuser/projects
 - docker pull registry.gitlab.com/uniluxembourg/lcsb/eci/shinyscreen:master

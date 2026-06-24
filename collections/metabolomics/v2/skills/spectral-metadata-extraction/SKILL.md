@@ -1,6 +1,9 @@
 ---
 name: spectral-metadata-extraction
-description: Use when after loading an MSP spectral library file into memory using mssearchr's MSP parser, when you need to verify that each spectrum record contains complete and valid metadata (precursor m/z values, peak lists, header annotations) before writing the parsed spectra to a new MSP file or.
+description: Use when after loading an MSP spectral library file into memory using
+  mssearchr's MSP parser, when you need to verify that each spectrum record contains
+  complete and valid metadata (precursor m/z values, peak lists, header annotations)
+  before writing the parsed spectra to a new MSP file or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3237
@@ -18,6 +21,7 @@ metadata:
   - spectrum_utils
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -26,12 +30,17 @@ derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: ''
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 - SMART written in R and R GUI has been developed as user-friendly software
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -69,6 +78,7 @@ attribution:
 
 # spectral-metadata-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate key spectral metadata fields (precursor m/z, peaks, annotations) from mass spectral records parsed from MSP library files. This skill ensures structural and semantic correctness of spectral data before downstream analysis or file export.

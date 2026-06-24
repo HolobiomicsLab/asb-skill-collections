@@ -1,6 +1,9 @@
 ---
 name: documentation-driven-reproducibility
-description: Use when you have inherited a multi-language analysis codebase (R and/or MATLAB scripts) with accompanying documentation (Read-Me.txt, link-to-codes-and-data-objects files) and need to verify that the entire simulation workflow runs correctly on a reference dataset (typically a sub-sample scenario).
+description: Use when you have inherited a multi-language analysis codebase (R and/or
+  MATLAB scripts) with accompanying documentation (Read-Me.txt, link-to-codes-and-data-objects
+  files) and need to verify that the entire simulation workflow runs correctly on
+  a reference dataset (typically a sub-sample scenario).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   - R
   - MATLAB
   - DisCoPad
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo15010028
   title: DisCo P-ad
@@ -38,6 +42,7 @@ attribution:
 
 # documentation-driven-reproducibility
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A workflow for reconstructing and validating a complete simulation or analysis pipeline by executing example scripts in a documented sequence, cross-referencing code documentation (Read-Me files) with intermediate outputs to verify correctness at each stage. This skill ensures that complex multi-language workflows (R, MATLAB) produce expected outputs and remain reproducible across environments.

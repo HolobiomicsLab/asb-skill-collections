@@ -1,6 +1,8 @@
 ---
 name: pfam-domain-pattern-recognition
-description: Use when when you have a set of Biosynthetic Gene Clusters (BGCs) in GenBank format and need to identify statistically significant or topic-modeled co-occurrence patterns of Pfam domains and subPfams across multiple genes.
+description: Use when when you have a set of Biosynthetic Gene Clusters (BGCs) in
+  GenBank format and need to identify statistically significant or topic-modeled co-occurrence
+  patterns of Pfam domains and subPfams across multiple genes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0361
@@ -10,11 +12,13 @@ metadata:
   - http://edamontology.org/topic_3678
   tools:
   - iPRESTO
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

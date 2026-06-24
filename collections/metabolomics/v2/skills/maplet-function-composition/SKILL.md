@@ -1,6 +1,7 @@
 ---
 name: maplet-function-composition
-description: Use when you have metabolomics data that requires sequential processing through multiple analytical steps (e.
+description: Use when you have metabolomics data that requires sequential processing
+  through multiple analytical steps (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,14 +14,17 @@ metadata:
   - SummarizedExperiment
   - magrittr
   - base R
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab741/6409851
   title: maplet
 evidence_spans:
-- maplet is an R package for statistical data analysis with a special focus on metabolomics datasets.
+- maplet is an R package for statistical data analysis with a special focus on metabolomics
+  datasets.
 - maplet is an R package
 - The toolbox builds upon the bioconductor package SummarizedExperiment (SE)
-- maplet is designed to work with a pipe operator - either the popular %>% operator from the magrittr package
+- maplet is designed to work with a pipe operator - either the popular %>% operator
+  from the magrittr package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

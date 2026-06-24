@@ -1,6 +1,9 @@
 ---
 name: retention-time-direction-matching
-description: Use when after componentization of parent and TP features with generateComponents(algorithm='tp'), when structural formula or compound annotations are available and you wish to prioritize TP candidates whose retention time behavior aligns with expected electronegativity, polarity, or hydrophobicity.
+description: Use when after componentization of parent and TP features with generateComponents(algorithm='tp'),
+  when structural formula or compound annotations are available and you wish to prioritize
+  TP candidates whose retention time behavior aligns with expected electronegativity,
+  polarity, or hydrophobicity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,6 +15,7 @@ metadata:
   - BioTransformer
   - CTS
   - PubChem
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

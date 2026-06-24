@@ -1,6 +1,9 @@
 ---
 name: polypeptide-property-computation
-description: Use when you have one or more polypeptide sequences (from FASTA, CSV, or direct input) and need to compute monoisotopic mass, average mass, isotopic distribution, charge state, or isoelectric point for downstream proteomics analysis such as MS database matching, retention time prediction, or.
+description: Use when you have one or more polypeptide sequences (from FASTA, CSV,
+  or direct input) and need to compute monoisotopic mass, average mass, isotopic distribution,
+  charge state, or isoelectric point for downstream proteomics analysis such as MS
+  database matching, retention time prediction, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0392
@@ -14,6 +17,7 @@ metadata:
   - Pyteomics
   - conda
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -46,6 +50,7 @@ attribution:
 
 # polypeptide-property-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute physicochemical properties of polypeptides—including monoisotopic mass, average mass, isotopic distribution, charge, and pI—from amino acid sequences using Pyteomics mass modules. This skill enables rapid, reproducible calculation of mass-dependent proteomics features required for peptide identification and quantification workflows.

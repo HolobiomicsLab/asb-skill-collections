@@ -1,6 +1,8 @@
 ---
 name: mass-accuracy-ppm-filtering
-description: Use when when you have a set of candidate molecular formulae for a measured m/z value and need to rank them by how closely their theoretical m/z matches the observed value.
+description: Use when when you have a set of candidate molecular formulae for a measured
+  m/z value and need to rank them by how closely their theoretical m/z matches the
+  observed value.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -12,11 +14,13 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # mass-accuracy-ppm-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and rank candidate molecular formulae by mass accuracy using parts-per-million (PPM) error thresholds, a key criterion in the SMART multiple linear regression scoring pipeline for m/z-based formula assignment in mass spectrometry imaging.

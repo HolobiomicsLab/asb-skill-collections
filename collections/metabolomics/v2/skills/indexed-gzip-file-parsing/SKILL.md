@@ -1,6 +1,7 @@
 ---
 name: indexed-gzip-file-parsing
-description: Use when you have compressed mzML.gz files and need to retrieve specific spectra by numeric identifier without decompressing the entire file.
+description: Use when you have compressed mzML.gz files and need to retrieve specific
+  spectra by numeric identifier without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,6 +13,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -39,6 +41,7 @@ attribution:
 
 # indexed-gzip-file-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and randomly access spectra in compressed mzML files using indexed gzip format, which maintains file compression comparable to RAW format while enabling O(1) lookup by spectrum ID. This skill is essential for handling large mass spectrometry datasets where both storage efficiency and random access performance are critical.

@@ -1,6 +1,7 @@
 ---
 name: lipid-a-structure-annotation
-description: Use when when you have high-resolution tandem mass spectrometry (MS2) data in .ms2 format and need to identify and annotate lipid A structures at scale.
+description: Use when when you have high-resolution tandem mass spectrometry (MS2)
+  data in .ms2 format and need to identify and annotate lipid A structures at scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3661
@@ -13,6 +14,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER
@@ -42,6 +44,7 @@ attribution:
 
 # lipid-a-structure-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 LipidA-IDER is an automated structure annotation tool for systems-level identification of lipid A from high-resolution tandem mass spectrometry (MS2) data. Use this skill to assign lipid A molecular structures to fragmentation patterns in MS2 spectra.

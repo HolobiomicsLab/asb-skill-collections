@@ -1,6 +1,8 @@
 ---
 name: motifdb-reference-library-querying
-description: Use when after Mass2Motifs have been inferred from tandem MS/MS spectra via LDA topic modeling and you need to assign putative substructure annotations to those motifs.
+description: Use when after Mass2Motifs have been inferred from tandem MS/MS spectra
+  via LDA topic modeling and you need to assign putative substructure annotations
+  to those motifs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -16,11 +18,13 @@ metadata:
   - MAG (Automated Mass2Motif Annotation Guidance)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - Automated annotation of **M2M** using **MAG**
 - Compare motifs to known entries in MotifDB

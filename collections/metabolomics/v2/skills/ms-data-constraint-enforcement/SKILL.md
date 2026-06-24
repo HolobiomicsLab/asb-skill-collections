@@ -1,6 +1,9 @@
 ---
 name: ms-data-constraint-enforcement
-description: 'Use when implementing or validating a new MsBackend class that stores m/z and intensity values, or when assigning peak data to an existing backend. Triggers include: (1) implementing a replacement method (e.g., mz<- or intensity<-) for a backend class;'
+description: 'Use when implementing or validating a new MsBackend class that stores
+  m/z and intensity values, or when assigning peak data to an existing backend. Triggers
+  include: (1) implementing a replacement method (e.g., mz<- or intensity<-) for a
+  backend class;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -14,13 +17,15 @@ metadata:
   - MsBackendTest
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # ms-data-constraint-enforcement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and enforce critical constraints on mass spectrometry peak data (m/z and intensity values) within backend storage classes to ensure data integrity and conformance to expected physical properties. This skill detects violations early using efficient vectorised methods on NumericList objects, preventing downstream analysis errors.

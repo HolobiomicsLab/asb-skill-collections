@@ -1,6 +1,9 @@
 ---
 name: isoform-sequence-extraction-and-formatting
-description: Use when after completing differential isoform expression analysis using IsoformSwitchAnalyzer or equivalent isoform quantification, when you have identified sets of differentially expressed isoforms and need to perform functional characterization through sequence-based homology and structural.
+description: Use when after completing differential isoform expression analysis using
+  IsoformSwitchAnalyzer or equivalent isoform quantification, when you have identified
+  sets of differentially expressed isoforms and need to perform functional characterization
+  through sequence-based homology and structural.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0564
@@ -15,6 +18,7 @@ metadata:
   - IsoformSwitchAnalyzer
   - Nextflow DSL2
   - nf-core/modules
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator

@@ -1,6 +1,8 @@
 ---
 name: hyperdimensional-vector-encoding
-description: Use when you have preprocessed mass spectra (mz/intensity pairs in MGF format) and need to convert them into a compact, fixed-dimensional representation suitable for fast similarity computation and clustering.
+description: Use when you have preprocessed mass spectra (mz/intensity pairs in MGF
+  format) and need to convert them into a compact, fixed-dimensional representation
+  suitable for fast similarity computation and clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +15,7 @@ metadata:
   - CUDA
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

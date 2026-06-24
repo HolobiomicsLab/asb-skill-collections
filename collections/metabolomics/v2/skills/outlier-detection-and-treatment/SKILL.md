@@ -1,6 +1,9 @@
 ---
 name: outlier-detection-and-treatment
-description: Use when when you have a Metaboprep object with raw or batch-normalized metabolomics abundance data and need to detect samples that deviate significantly from the central distribution due to technical artifacts, processing errors, or biological extremes.
+description: Use when when you have a Metaboprep object with raw or batch-normalized
+  metabolomics abundance data and need to detect samples that deviate significantly
+  from the central distribution due to technical artifacts, processing errors, or
+  biological extremes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - metaboprep
   - ggplot2
   - dendextend
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -40,6 +44,7 @@ attribution:
 
 # outlier-detection-and-treatment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and handle statistical outliers in metabolomics datasets using hierarchical clustering, principal component analysis, and user-defined distance thresholds. This skill applies multiple complementary detection methods (total peak area, PCA-based, and feature correlation) to flag anomalous samples for exclusion or treatment before downstream analysis.

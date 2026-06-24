@@ -1,6 +1,8 @@
 ---
 name: selectivity-metric-computation-chromatographic
-description: Use when after peak detection on composite mass tracks when you need to evaluate whether a detected peak represents a pure, interference-free signal on its m/z channel.
+description: Use when after peak detection on composite mass tracks when you need
+  to evaluate whether a detected peak represents a pure, interference-free signal
+  on its m/z channel.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,11 +16,13 @@ metadata:
   - asari.peaks.evaluate_gaussian_peak_on_intensity_list
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # selectivity-metric-computation-chromatographic
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute chromatographic selectivity metrics (cSelectivity) to assess the purity and interference-free nature of detected elution peaks on mass tracks. This metric is essential for filtering low-quality peaks and tracking peak confidence across LC-MS metabolomics workflows.

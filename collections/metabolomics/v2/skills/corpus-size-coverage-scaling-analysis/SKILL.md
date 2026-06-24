@@ -1,6 +1,9 @@
 ---
 name: corpus-size-coverage-scaling-analysis
-description: Use when when deploying a Word2Vec-based spectral similarity model (such as Spec2Vec) on a new mass spectrometry dataset and needing to assess whether the pre-trained model's learned peak embeddings sufficiently represent the peaks in your query spectra.
+description: Use when when deploying a Word2Vec-based spectral similarity model (such
+  as Spec2Vec) on a new mass spectrometry dataset and needing to assess whether the
+  pre-trained model's learned peak embeddings sufficiently represent the peaks in
+  your query spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -19,15 +22,20 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
+  and can be installed via conda
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - Spec2Vec was optimised by making extensive use of Numpy [24]
 claims: []
 provenance:
@@ -52,6 +60,7 @@ attribution:
 
 # corpus-size-coverage-scaling-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies how Word2Vec model coverage of spectral features (peaks and neutral losses) scales with increasing training corpus size, using the missing-fraction metric to assess the proportion of spectral peaks with learned embeddings. This skill evaluates whether large pre-trained models achieve sufficient feature coverage (e.g., 97%) to enable reliable Spec2Vec similarity scoring without additional retraining.

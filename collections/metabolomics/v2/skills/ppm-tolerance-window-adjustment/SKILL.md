@@ -1,6 +1,7 @@
 ---
 name: ppm-tolerance-window-adjustment
-description: Use when a mass spectrum calibration procedure initialized with a narrow ppm window (e.g., ±1.0 or ±5.0 ppm) finds fewer than 5 reference m/z matches.
+description: Use when a mass spectrum calibration procedure initialized with a narrow
+  ppm window (e.g., ±1.0 or ±5.0 ppm) finds fewer than 5 reference m/z matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +15,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +50,7 @@ attribution:
 
 # ppm-tolerance-window-adjustment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 An iterative calibration refinement technique that progressively widens the parts-per-million (ppm) error tolerance window when initial narrow thresholds fail to yield sufficient reference m/z matches. This skill is essential for robust mass spectrometry calibration when working with sparse or challenging reference lists.

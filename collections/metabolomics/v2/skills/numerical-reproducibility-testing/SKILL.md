@@ -1,6 +1,9 @@
 ---
 name: numerical-reproducibility-testing
-description: Use when you have instantiated a learned component (embedding layer, encoder, or transformer submodule) from a published codebase and need to verify that its forward pass produces outputs matching the original paper's implementation before integrating it into a downstream analysis pipeline.
+description: Use when you have instantiated a learned component (embedding layer,
+  encoder, or transformer submodule) from a published codebase and need to verify
+  that its forward pass produces outputs matching the original paper's implementation
+  before integrating it into a downstream analysis pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -11,13 +14,15 @@ metadata:
   - MIST
   - SCARF
   - MIST-CF
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # numerical-reproducibility-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that neural network embedding layers produce consistent, numerically stable outputs by comparing forward-pass results against reference implementations using strict tolerance thresholds. This skill ensures that model components (e.g., sinusoidal formula embeddings) reproduce reliably across environments and commits.

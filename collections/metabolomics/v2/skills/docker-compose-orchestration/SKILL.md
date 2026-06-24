@@ -1,6 +1,8 @@
 ---
 name: docker-compose-orchestration
-description: Use when when you need to deploy the NP Classifier locally with TensorFlow Serving backend and nginx frontend on the same host, and you want to avoid manual container lifecycle management and inter-container networking configuration.
+description: Use when when you need to deploy the NP Classifier locally with TensorFlow
+  Serving backend and nginx frontend on the same host, and you want to avoid manual
+  container lifecycle management and inter-container networking configuration.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,6 +13,7 @@ metadata:
   - TensorFlow Serving
   - nginx
   - Make
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

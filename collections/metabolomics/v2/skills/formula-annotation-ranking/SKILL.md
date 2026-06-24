@@ -1,6 +1,8 @@
 ---
 name: formula-annotation-ranking
-description: Use when after generating candidate formula/adduct pairs from m/z database matching but before final metabolite annotation. Use it when you have observed isotopic patterns from feature detection (e.
+description: Use when after generating candidate formula/adduct pairs from m/z database
+  matching but before final metabolite annotation. Use it when you have observed isotopic
+  patterns from feature detection (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,6 +14,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

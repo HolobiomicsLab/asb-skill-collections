@@ -1,6 +1,9 @@
 ---
 name: ms2-peak-detection-and-counting
-description: Use when you have raw MS2 spectral data (MGF, mzML, or msp format) and need to generate a sample-level fingerprint for comparison across metabolomics samples, especially when samples were acquired using different LC methods, mass spectrometer technologies, or exhibit poor feature overlap or large.
+description: Use when you have raw MS2 spectral data (MGF, mzML, or msp format) and
+  need to generate a sample-level fingerprint for comparison across metabolomics samples,
+  especially when samples were acquired using different LC methods, mass spectrometer
+  technologies, or exhibit poor feature overlap or large.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,11 +20,13 @@ metadata:
   - MEMO
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 - conda install -c conda-forge scikit-bio

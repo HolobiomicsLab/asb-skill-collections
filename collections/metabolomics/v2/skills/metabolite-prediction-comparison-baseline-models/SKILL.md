@@ -1,6 +1,9 @@
 ---
 name: metabolite-prediction-comparison-baseline-models
-description: Use when you have paired microbiome (genus-level 16S or functional profiles) and metabolome datasets (e.g., mass spectrometry or metabolomics panels) with 100+ samples, and you want to demonstrate that a new prediction method outperforms prior work.
+description: Use when you have paired microbiome (genus-level 16S or functional profiles)
+  and metabolome datasets (e.g., mass spectrometry or metabolomics panels) with 100+
+  samples, and you want to demonstrate that a new prediction method outperforms prior
+  work.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -21,16 +24,23 @@ metadata:
   - NED (Non-negative Embedding)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- we first compared MiMeNet to MelonnPan, a recent model that uses Elastic Net linear regression
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- we first compared MiMeNet to MelonnPan, a recent model that uses Elastic Net linear
+  regression
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - The NED model was trained using code downloaded from https://github.com/vuongle2/BiomeNED
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -54,6 +64,7 @@ attribution:
 
 # metabolite-prediction-comparison-baseline-models
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Benchmark a neural network-based metabolite prediction model against established linear regression and other baseline methods using cross-validated Spearman correlation coefficients and counts of well-predicted metabolites. This skill enables empirical assessment of whether a candidate method identifies more metabolites above a statistically derived threshold than existing approaches.

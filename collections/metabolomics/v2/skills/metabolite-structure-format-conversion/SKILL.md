@@ -1,6 +1,9 @@
 ---
 name: metabolite-structure-format-conversion
-description: Use when when importing candidate metabolite structures from public chemical databases (PubChem, ChEBI, etc.) for use in MAGMa-based annotation workflows, or when integrating external structure datasets that may use divergent molecular representation formats or contain non-standard chemical.
+description: Use when when importing candidate metabolite structures from public chemical
+  databases (PubChem, ChEBI, etc.) for use in MAGMa-based annotation workflows, or
+  when integrating external structure datasets that may use divergent molecular representation
+  formats or contain non-standard chemical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,6 +15,7 @@ metadata:
   - PubChem database
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -40,6 +44,7 @@ attribution:
 
 # metabolite-structure-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert and standardize chemical structure formats from public databases (e.g., PubChem) into formats compatible with in silico metabolite annotation pipelines. This skill ensures structural data integrity and computational compatibility across heterogeneous chemo-informatics workflows.

@@ -1,6 +1,9 @@
 ---
 name: gnps-workflow-identification
-description: Use when you have downloaded a GNPS molecular networking job archive and need to extract its contents (spectra.mgf, molecular_families.tsv, annotations.tsv, file_mappings) but do not know which GNPS workflow version produced it, preventing correct file naming and downstream computational analysis.
+description: Use when you have downloaded a GNPS molecular networking job archive
+  and need to extract its contents (spectra.mgf, molecular_families.tsv, annotations.tsv,
+  file_mappings) but do not know which GNPS workflow version produced it, preventing
+  correct file naming and downstream computational analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +18,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -23,7 +27,8 @@ evidence_spans:
 - GNPSDownloader, GNPSExtractor
 - Python version ≥3.11
 - NPLinker requires GNPS molecular networking data as input
-- NPLinker requires GNPS molecular networking data as input. It currently accepts data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
+- NPLinker requires GNPS molecular networking data as input. It currently accepts
+  data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-detection-and-picking
-description: Use when you have raw INADEQUATE NMR spectra files and need to transition from continuous spectral data to discrete peak coordinates. Use it as the first signal-processing step before clustering peaks into networks or matching against metabolite databases.
+description: Use when you have raw INADEQUATE NMR spectra files and need to transition
+  from continuous spectral data to discrete peak coordinates. Use it as the first
+  signal-processing step before clustering peaks into networks or matching against
+  metabolite databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +16,7 @@ metadata:
   - PyINETA Clustering module
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

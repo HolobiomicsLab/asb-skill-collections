@@ -1,6 +1,9 @@
 ---
 name: msi-spectral-data-import
-description: Use when use this skill at the start of any MSI analysis workflow when you have raw imzML files or vendor-specific MSI data that need to be loaded into napari-MSI-Explorer for visualization, mean intensity calculation, ROI analysis, or annotation.
+description: Use when use this skill at the start of any MSI analysis workflow when
+  you have raw imzML files or vendor-specific MSI data that need to be loaded into
+  napari-MSI-Explorer for visualization, mean intensity calculation, ROI analysis,
+  or annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3209
@@ -12,11 +15,13 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:

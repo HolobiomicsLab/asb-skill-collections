@@ -1,6 +1,9 @@
 ---
 name: dda-fragmentation-strategy-simulation
-description: Use when you have real mzML LC-MS/MS data (e.g., from a Beer sample or HMDB reference set) and want to test whether a proposed TopN DDA strategy (or variant) can accurately reproduce the observed acquisition patterns, or you want to compare multiple acquisition controllers on the same chemical.
+description: Use when you have real mzML LC-MS/MS data (e.g., from a Beer sample or
+  HMDB reference set) and want to test whether a proposed TopN DDA strategy (or variant)
+  can accurately reproduce the observed acquisition patterns, or you want to compare
+  multiple acquisition controllers on the same chemical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,17 +19,21 @@ metadata:
   - ViMMS (Virtual Metabolomics Mass Spectrometer)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 - Existing mzML files can be converted into chemical lists using `ChemicalMixtureFromMZML`.
 - '`TopNController` – standard Top‑N data dependent acquisition.'
-- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or a real instrument.
+- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or
+  a real instrument.
 - Environment – orchestrates interaction between the mass spectrometer and the controller.
 claims: []
 provenance:
@@ -52,6 +59,7 @@ attribution:
 
 # DDA Fragmentation Strategy Simulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate Data-Dependent Acquisition (DDA) fragmentation strategies on real or synthetic LC-MS/MS data by extracting chemical constituents and running them through a virtual mass spectrometer with a configurable acquisition controller. This skill enables rapid prototyping and benchmarking of TopN and other MS/MS acquisition strategies before deployment on real instruments.

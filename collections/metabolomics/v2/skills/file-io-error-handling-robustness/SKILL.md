@@ -1,6 +1,9 @@
 ---
 name: file-io-error-handling-robustness
-description: Use when when designing or integrating a file parser for mass spectrometry formats (.raw Thermo RAW format, .mzml XML-based format) in a metabolomics processing pipeline, or when reading legacy or heterogeneous instrument output where file integrity cannot be guaranteed.
+description: Use when when designing or integrating a file parser for mass spectrometry
+  formats (.raw Thermo RAW format, .mzml XML-based format) in a metabolomics processing
+  pipeline, or when reading legacy or heterogeneous instrument output where file integrity
+  cannot be guaranteed.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,6 +17,7 @@ metadata:
   - C
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

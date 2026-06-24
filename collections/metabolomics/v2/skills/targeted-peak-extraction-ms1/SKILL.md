@@ -1,6 +1,8 @@
 ---
 name: targeted-peak-extraction-ms1
-description: Use when you have raw MS data in a supported instrument format (Agilent .d, Thermo .raw, Bruker .d, mzML) and a predefined list of molecular targets (CSV with m/z and/or retention time) that you need to quantify.
+description: Use when you have raw MS data in a supported instrument format (Agilent
+  .d, Thermo .raw, Bruker .d, mzML) and a predefined list of molecular targets (CSV
+  with m/z and/or retention time) that you need to quantify.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -17,6 +19,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

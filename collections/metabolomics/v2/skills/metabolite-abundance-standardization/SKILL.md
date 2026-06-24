@@ -1,6 +1,9 @@
 ---
 name: metabolite-abundance-standardization
-description: Use when you have a metabolomics featuredata matrix with known batch effects, matrix effects, or unwanted technical variation, and you have identified a set of negative control metabolites (e.g., spiked internal standards or blank-derived features) that are expected to show no biological signal.
+description: Use when you have a metabolomics featuredata matrix with known batch
+  effects, matrix effects, or unwanted technical variation, and you have identified
+  a set of negative control metabolites (e.g., spiked internal standards or blank-derived
+  features) that are expected to show no biological signal.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -12,13 +15,16 @@ metadata:
   - NormalizeMets
   - RStudio
   - Microsoft Excel
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # metabolite-abundance-standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize metabolite peak intensities or concentrations across a featuredata matrix using remove-unwanted-variation (RUV) normalization with clustering and negative control metabolites. This skill corrects for batch effects, matrix effects, and other systematic variation in metabolomics data before downstream biomarker analysis.

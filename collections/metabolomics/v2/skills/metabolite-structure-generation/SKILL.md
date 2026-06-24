@@ -19,6 +19,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
@@ -48,6 +49,7 @@ attribution:
 
 # metabolite-structure-generation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Predict small-molecule metabolite structures by applying biotransformation rules from curated databases (EAWAG, CYP450, Phase II) to an input compound. This skill generates predicted metabolite structures and their associated transformation pathways, enabling downstream metabolite identification and pathway analysis.

@@ -1,6 +1,9 @@
 ---
 name: bipartite-graph-maximum-weight-matching
-description: 'Use when you have two MS/MS fragmentation spectra with fragment ion lists and computed pairwise mass differences (m/z deltas) between them, and you need to find the alignment of ion pairs that: (1) does not reuse any ion from either spectrum, (2) maximizes total matching quality (e.'
+description: 'Use when you have two MS/MS fragmentation spectra with fragment ion
+  lists and computed pairwise mass differences (m/z deltas) between them, and you
+  need to find the alignment of ion pairs that: (1) does not reuse any ion from either
+  spectrum, (2) maximizes total matching quality (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,11 +16,13 @@ metadata:
   - Python (scipy, numpy, pandas)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # Bipartite Graph Maximum Weight Matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply maximum weight matching algorithms (e.g., Hungarian algorithm) to a bipartite graph of fragment ions to identify the optimal set of non-overlapping ion pair alignments between two MS/MS spectra. This replaces monotonic alignment methods and maximizes total matching score based on mass delta and statistical significance.

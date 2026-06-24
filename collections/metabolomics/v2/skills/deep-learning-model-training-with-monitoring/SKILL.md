@@ -1,6 +1,7 @@
 ---
 name: deep-learning-model-training-with-monitoring
-description: Use when you have a pre-trained deep learning encoder (e.g., TCN spectrum encoder trained on a large corpus) and want to adapt it to a new task (e.
+description: Use when you have a pre-trained deep learning encoder (e.g., TCN spectrum
+  encoder trained on a large corpus) and want to adapt it to a new task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +13,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +42,7 @@ attribution:
 
 # deep-learning-model-training-with-monitoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a subset of neural network components (FormulaEncoder and RescoreHead) while freezing a pre-trained encoder (TCN spectrum encoder), using validation-based checkpoint selection to capture the best model state. This technique balances transfer learning efficiency with targeted optimization of task-specific layers.

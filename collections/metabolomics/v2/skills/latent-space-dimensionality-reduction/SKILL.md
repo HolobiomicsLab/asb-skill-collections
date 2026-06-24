@@ -1,6 +1,9 @@
 ---
 name: latent-space-dimensionality-reduction
-description: Use when you have imaging mass spectrometry (IMS) datasets where peak intensities are high-dimensional and sparse, and you need to extract compressed latent features that preserve spatial adjacency relationships and enable iterative automatic peak picking to identify marker ions.
+description: Use when you have imaging mass spectrometry (IMS) datasets where peak
+  intensities are high-dimensional and sparse, and you need to extract compressed
+  latent features that preserve spatial adjacency relationships and enable iterative
+  automatic peak picking to identify marker ions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
@@ -46,6 +50,7 @@ attribution:
 
 # latent-space-dimensionality-reduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a graph-attention autoencoder to compress imaging mass spectrometry peak intensity data into low-dimensional latent representations that capture spatial and spectral structure. This enables downstream automatic peak picking and marker ion identification in spatial metabolomics.

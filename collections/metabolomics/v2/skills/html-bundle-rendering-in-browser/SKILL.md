@@ -1,6 +1,8 @@
 ---
 name: html-bundle-rendering-in-browser
-description: Use when you have a dashboard_data.json file (JSON export from the msFeaST pipeline) and need to interactively explore quantification tables, metadata, and spectral data on a desktop machine (macOS, Linux, or Windows).
+description: Use when you have a dashboard_data.json file (JSON export from the msFeaST
+  pipeline) and need to interactively explore quantification tables, metadata, and
+  spectral data on a desktop machine (macOS, Linux, or Windows).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -12,6 +14,7 @@ metadata:
   - jupyter-notebook
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

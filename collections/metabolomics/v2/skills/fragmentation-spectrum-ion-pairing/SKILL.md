@@ -1,6 +1,9 @@
 ---
 name: fragmentation-spectrum-ion-pairing
-description: 'Use when you have two MS/MS spectra (precursor m/z and fragment ion lists) and need to identify the non-overlapping set of fragment ion alignments. Use this skill when: (1) you want to move beyond monotonic alignment to capture complex ion relationships;'
+description: 'Use when you have two MS/MS spectra (precursor m/z and fragment ion
+  lists) and need to identify the non-overlapping set of fragment ion alignments.
+  Use this skill when: (1) you want to move beyond monotonic alignment to capture
+  complex ion relationships;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,11 +15,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # Reconstruct maximum weight matching alignment of MS/MS spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply maximum weight matching (e.g., Hungarian algorithm) to optimally align fragment ion pairs between two tandem MS/MS spectra by maximizing total edge weight in a bipartite graph. This replaces monotonic alignment methods to achieve improved matching performance while accounting for mass difference significance.

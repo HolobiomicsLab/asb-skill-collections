@@ -1,6 +1,8 @@
 ---
 name: dictionary-list-aggregation
-description: Use when after applying a matrix directive variant (fields_to_headers, headers, or collate) to extract and transform individual records into dictionaries with field filtering and type coercion applied.
+description: Use when after applying a matrix directive variant (fields_to_headers,
+  headers, or collate) to extract and transform individual records into dictionaries
+  with field filtering and type coercion applied.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - Python
   - MESSES
   - Python json module
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -42,6 +45,7 @@ attribution:
 
 # dictionary-list-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate transformed dictionaries produced by matrix directive operations (fields_to_headers, headers, or collate variants) into a single JSON list and serialize to file. This skill converts record-by-record dictionary transformations into a final array-of-objects structure suitable for downstream format conversion or repository submission.

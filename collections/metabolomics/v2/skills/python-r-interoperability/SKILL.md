@@ -1,6 +1,8 @@
 ---
 name: python-r-interoperability
-description: Use when when a Shiny R application needs to use Python libraries that lack R equivalents or are more mature in Python (e.g., Kaleido for plot export), and users should not need to manually configure Python environments.
+description: Use when when a Shiny R application needs to use Python libraries that
+  lack R equivalents or are more mature in Python (e.g., Kaleido for plot export),
+  and users should not need to manually configure Python environments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3755
@@ -16,6 +18,7 @@ metadata:
   - Kaleido
   - renv
   - Shiny
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart
@@ -23,7 +26,8 @@ evidence_spans:
 - Shiny GUI implementation of the pmartR R package.
 - Shiny GUI implementation of the pmartR R package
 - Remove orca in favor of Kaleido
-- the bulk of the functionality of the package to be available to the user without the need for familiarity with R or the package itself
+- the bulk of the functionality of the package to be available to the user without
+  the need for familiarity with R or the package itself
 - '#### Docker Containers'
 claims: []
 provenance:

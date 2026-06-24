@@ -1,6 +1,7 @@
 ---
 name: api-response-latency-measurement
-description: Use when when annotating .msp files with metadata from multiple external web services and you need to monitor which services are slow or unreliable.
+description: Use when when annotating .msp files with metadata from multiple external
+  web services and you need to monitor which services are slow or unreliable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +15,7 @@ metadata:
   - IDSM
   - BridgeDb
   - pytest
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

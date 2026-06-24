@@ -1,6 +1,7 @@
 ---
 name: hrms-feature-annotation-integration
-description: Use when you have LC- or GC-HRMS data in mzML format and a feature list (CSV/TSL/Excel) from external feature detection software (e.
+description: Use when you have LC- or GC-HRMS data in mzML format and a feature list
+  (CSV/TSL/Excel) from external feature detection software (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -15,12 +16,14 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +47,7 @@ attribution:
 
 # HRMS Feature Annotation Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate custom HRMS feature lists (from external feature-finding procedures) into PFΔScreen's prioritization pipeline, validating metadata and applying MD/C-m/C, KMD, and MS2 fragment diagnostics to features regardless of detection source. This skill enables use of vendor-specific or alternative feature detection algorithms while retaining standardized PFAS prioritization.

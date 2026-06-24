@@ -1,6 +1,9 @@
 ---
 name: peak-abundance-normalization
-description: Use when after peak detection and before any comparative analysis (e.g., diversity indices, ordination, or statistical testing) when working with direct injection FT-ICR MS data where raw peak intensities vary across samples due to instrumental factors. The task_id=task_005 example applies it to S.
+description: Use when after peak detection and before any comparative analysis (e.g.,
+  diversity indices, ordination, or statistical testing) when working with direct
+  injection FT-ICR MS data where raw peak intensities vary across samples due to instrumental
+  factors. The task_id=task_005 example applies it to S.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,12 +15,14 @@ metadata:
   - vegan
   - SYNCSA
   - pmartR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - diversity metrics using functions from the R packages vegan [63]
 - diversity metrics using functions from the R packages vegan
 - diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
@@ -45,6 +50,7 @@ attribution:
 
 # peak-abundance-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize peak intensity values across FT-ICR MS samples to correct for instrumental variation and enable fair comparison of molecular composition between samples. This is a critical preprocessing step that standardizes the abundance matrix before downstream chemodiversity or multivariate statistical analysis.

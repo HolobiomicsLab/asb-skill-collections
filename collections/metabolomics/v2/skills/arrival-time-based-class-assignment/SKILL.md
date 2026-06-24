@@ -1,6 +1,8 @@
 ---
 name: arrival-time-based-class-assignment
-description: Use when you have raw or processed TWIM-MS data with arrival time and m/z dimensions, and you need to label each experimental feature by biomolecular class before feature identification or peak detection steps are complete.
+description: Use when you have raw or processed TWIM-MS data with arrival time and
+  m/z dimensions, and you need to label each experimental feature by biomolecular
+  class before feature identification or peak detection steps are complete.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +15,14 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
 evidence_spans:
 - MOCCal, or Multi-Omic CCS Calibrator, is a Python application
-- Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations
+- Functionality includes collision cross section (CCS) calibration, experimental data
+  biomolecular class assignment, and experimental class-specific CCS calculations
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # arrival-time-based-class-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign biomolecular class labels (lipid, peptide, carbohydrate, etc.) to experimental features directly from TWIM-MS arrival time and m/z data without requiring prior feature identification. This enables immediate class-specific CCS calculations on raw multi-omic ion mobility data.

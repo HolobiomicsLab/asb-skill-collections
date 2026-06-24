@@ -1,6 +1,9 @@
 ---
 name: lcms-peak-alignment-and-annotation
-description: Use when you have an XCMS-processed feature set (XCMSet object) from replicate LC/MS runs comparing labeled (e.g., 13C-glucose) and unlabeled (e.g., 12C-glucose) conditions, and need to identify which features show isotope incorporation (fold-change ≥1.5, p-value <0.
+description: Use when you have an XCMS-processed feature set (XCMSet object) from
+  replicate LC/MS runs comparing labeled (e.g., 13C-glucose) and unlabeled (e.g.,
+  12C-glucose) conditions, and need to identify which features show isotope incorporation
+  (fold-change ≥1.5, p-value <0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -15,6 +18,7 @@ metadata:
   - devtools
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

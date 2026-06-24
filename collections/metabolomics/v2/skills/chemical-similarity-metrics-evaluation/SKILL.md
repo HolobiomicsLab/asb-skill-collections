@@ -1,6 +1,8 @@
 ---
 name: chemical-similarity-metrics-evaluation
-description: Use when after training a sequence-to-sequence decoder that reconstructs SMILES strings from fixed-size embeddings (e.g., from MS/MS spectra), use this skill to measure reconstruction fidelity on held-out test embeddings.
+description: Use when after training a sequence-to-sequence decoder that reconstructs
+  SMILES strings from fixed-size embeddings (e.g., from MS/MS spectra), use this skill
+  to measure reconstruction fidelity on held-out test embeddings.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3365
@@ -12,11 +14,13 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
 evidence_spans:
-- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/) software.
+- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/)
+  software.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

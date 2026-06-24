@@ -1,6 +1,9 @@
 ---
 name: peak-matrix-construction
-description: Use when when you have raw mzML files and a corresponding feature table (CSV format, e.g., from mzmine) and need to generate peak matrices with fixed dimensions (e.g., 2 × 120) that encode margin vs. peak signal regions for training a neural network classifier to filter false positive LCMS peaks.
+description: Use when when you have raw mzML files and a corresponding feature table
+  (CSV format, e.g., from mzmine) and need to generate peak matrices with fixed dimensions
+  (e.g., 2 × 120) that encode margin vs. peak signal regions for training a neural
+  network classifier to filter false positive LCMS peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -15,11 +18,13 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -48,6 +53,7 @@ attribution:
 
 # peak-matrix-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct 2D peak matrices from LCMS raw data and feature tables using NeatMS's neural network handler, encoding margin and peak signal regions for automated classification of true vs. false positive MS1 peaks. This skill produces normalized batch arrays suitable for neural network training and validation.

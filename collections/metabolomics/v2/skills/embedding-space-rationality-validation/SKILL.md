@@ -1,6 +1,9 @@
 ---
 name: embedding-space-rationality-validation
-description: Use when after training a deep learning model (e.g. MSBERT) on mass spectra and obtaining embedding vectors, apply this skill to verify that the learned representations cluster chemically similar compounds together and that structural relationships are preserved in the embedding space.
+description: Use when after training a deep learning model (e.g. MSBERT) on mass spectra
+  and obtaining embedding vectors, apply this skill to verify that the learned representations
+  cluster chemically similar compounds together and that structural relationships
+  are preserved in the embedding space.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -18,6 +21,7 @@ metadata:
   - PyTorch
   - MSBERT
   - GNPS dataset
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

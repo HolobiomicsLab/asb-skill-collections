@@ -1,6 +1,9 @@
 ---
 name: peptide-isotopic-envelope-calculation
-description: Use when you have a peptide sequence, precursor charge state, and observed m/z spectrum and need to generate the expected isotopic distribution to match against observed precursor or fragment ion peaks. This is especially critical in SIP workflows where incorporation probabilities (e.g., 0.
+description: Use when you have a peptide sequence, precursor charge state, and observed
+  m/z spectrum and need to generate the expected isotopic distribution to match against
+  observed precursor or fragment ion peaks. This is especially critical in SIP workflows
+  where incorporation probabilities (e.g., 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,13 +20,17 @@ metadata:
   - Sipros
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
-- Integration with the mzR package from Bioconductor allows direct parsing of mzML and MGF files
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
+- Integration with the mzR package from Bioconductor allows direct parsing of mzML
+  and MGF files
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

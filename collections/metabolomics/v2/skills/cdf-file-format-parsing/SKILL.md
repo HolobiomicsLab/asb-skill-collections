@@ -1,6 +1,8 @@
 ---
 name: cdf-file-format-parsing
-description: 'Use when when you have multiple CDF files from mass spectrometry imaging experiments (e.g., root tissue MALDI-MS data) that need to be ingested into Matlab for linear imaging analysis. Trigger: presence of .'
+description: 'Use when when you have multiple CDF files from mass spectrometry imaging
+  experiments (e.g., root tissue MALDI-MS data) that need to be ingested into Matlab
+  for linear imaging analysis. Trigger: presence of .'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,6 +14,7 @@ metadata:
   - DIMPLE-code
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
@@ -39,6 +42,7 @@ attribution:
 
 # cdf-file-format-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Batch parsing of NetCDF/CDF imaging files to extract and structure mass spectrometry spectral data (m/z values, intensity arrays, spatial coordinates) into Matlab workspace arrays for downstream DIMPLE pipeline analysis.

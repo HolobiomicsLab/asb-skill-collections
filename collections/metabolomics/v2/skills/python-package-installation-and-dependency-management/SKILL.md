@@ -1,6 +1,8 @@
 ---
 name: python-package-installation-and-dependency-management
-description: Use when when setting up a new computational environment for tandem MS/MS spectrum clustering or other proteomics analysis, and you need to install a tool (like falcon) that depends on specific versions of auxiliary packages (like spectrum-utils==0.3.5).
+description: Use when when setting up a new computational environment for tandem MS/MS
+  spectrum clustering or other proteomics analysis, and you need to install a tool
+  (like falcon) that depends on specific versions of auxiliary packages (like spectrum-utils==0.3.5).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0227
@@ -15,11 +17,13 @@ metadata:
   - pip
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 - _falcon_ requires Python 3.8+ and is available on the Linux and OSX platforms.
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # Python Package Installation and Dependency Management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install and configure Python bioinformatics packages with pinned dependencies to ensure reproducible execution of mass spectrometry analysis workflows. This skill addresses version-specific compatibility constraints that arise when combining multiple scientific packages.

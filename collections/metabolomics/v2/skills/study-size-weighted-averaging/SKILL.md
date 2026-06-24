@@ -1,6 +1,8 @@
 ---
 name: study-size-weighted-averaging
-description: Use when you have metabolomics results from multiple independent studies (each with a fold-change, p-value, and sample size N) and need to produce a single quantitative meta-analysis fold-change estimate.
+description: Use when you have metabolomics results from multiple independent studies
+  (each with a fold-change, p-value, and sample size N) and need to produce a single
+  quantitative meta-analysis fold-change estimate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,14 +12,17 @@ metadata:
   tools:
   - R
   - amanida
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # study-size-weighted-averaging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine effect sizes (fold-changes) across multiple metabolomics studies by applying log2 transformation and computing a weighted average where weights are proportional to each study's sample size (N). This produces a single pooled fold-change estimate that reflects both the magnitude of change and the statistical power of each contributing study.

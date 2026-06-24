@@ -1,6 +1,9 @@
 ---
 name: preprocessing-pipeline-parameter-optimization
-description: Use when you have raw TOF-MS or IM-MS data in Agilent MassHunter (.d) or UIMF format with jagged peaks and low-abundance ions that require signal enhancement, but you need to decide whether to apply smoothing, and at what strength, to avoid over-smoothing real signals or under-removing artifacts.
+description: Use when you have raw TOF-MS or IM-MS data in Agilent MassHunter (.d)
+  or UIMF format with jagged peaks and low-abundance ions that require signal enhancement,
+  but you need to decide whether to apply smoothing, and at what strength, to avoid
+  over-smoothing real signals or under-removing artifacts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,14 +16,18 @@ metadata:
   - IM-MS Browser
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -47,6 +54,7 @@ attribution:
 
 # Preprocessing Pipeline Parameter Optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize multidimensional smoothing, noise filtering, and saturation repair parameters in IM-MS preprocessing to enhance signal quality while preserving real peaks and removing artifacts. This skill involves selecting and tuning algorithm parameters within the PNNL PreProcessor to balance noise removal against signal integrity across jagged, low-abundance ion regions.

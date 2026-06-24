@@ -1,6 +1,7 @@
 ---
 name: prediction-sensitivity-analysis
-description: Use when you have a trained predictor (like BitterPredict) that accepts structured descriptors and want to understand feature importance without retraining.
+description: Use when you have a trained predictor (like BitterPredict) that accepts
+  structured descriptors and want to understand feature importance without retraining.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3928
@@ -10,11 +11,13 @@ metadata:
   - http://edamontology.org/topic_0154
   tools:
   - BitterPredict
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +41,7 @@ attribution:
 
 # prediction-sensitivity-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically ablate input descriptor subgroups to quantify their individual impact on bitter/not-bitter prediction accuracy in a trained classifier. This skill reveals which molecular descriptor categories (e.g., lipophilicity, topological features) drive predictions and which are redundant.

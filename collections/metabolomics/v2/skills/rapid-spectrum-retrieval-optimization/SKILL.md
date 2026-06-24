@@ -1,6 +1,8 @@
 ---
 name: rapid-spectrum-retrieval-optimization
-description: Use when you have a large collection of mass spectrometry spectra (m/z and intensity pairs) and need to rapidly retrieve similar or candidate spectra from the archive in response to queries.
+description: Use when you have a large collection of mass spectrometry spectra (m/z
+  and intensity pairs) and need to rapidly retrieve similar or candidate spectra from
+  the archive in response to queries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -13,6 +15,7 @@ metadata:
   - pyproteolizard-data
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-022-04833-5
   title: mzBucket

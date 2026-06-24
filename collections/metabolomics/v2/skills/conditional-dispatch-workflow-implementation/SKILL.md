@@ -1,6 +1,8 @@
 ---
 name: conditional-dispatch-workflow-implementation
-description: Use when when you have loaded a raw mass spectrum (e.g., ESI_NEG_SRFA.d in Bruker or .raw format) and need to apply one of several noise-threshold strategies based on user preference or spectrum metadata.
+description: Use when when you have loaded a raw mass spectrum (e.g., ESI_NEG_SRFA.d
+  in Bruker or .raw format) and need to apply one of several noise-threshold strategies
+  based on user preference or spectrum metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -14,12 +16,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +51,7 @@ attribution:
 
 # Conditional-Dispatch Workflow Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A pattern for implementing mutually exclusive signal-processing branches in mass spectrometry workflows, where spectrum properties or user parameters trigger selection of one noise-thresholding method (relative_abundance, signal_noise, or log) to filter and retain different peak populations from raw MS data.

@@ -1,6 +1,8 @@
 ---
 name: url-format-constraint-checking
-description: Use when ingesting or validating project JSON documents against a schema (such as app/public/schema.json in the Pairing Omics Data Platform) that designates certain fields as URL type (e.
+description: Use when ingesting or validating project JSON documents against a schema
+  (such as app/public/schema.json in the Pairing Omics Data Platform) that designates
+  certain fields as URL type (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -8,11 +10,13 @@ metadata:
   - http://edamontology.org/topic_3674
   tools:
   - npm
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

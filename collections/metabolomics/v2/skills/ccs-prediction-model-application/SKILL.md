@@ -1,6 +1,8 @@
 ---
 name: ccs-prediction-model-application
-description: Use when you have structural input data (SMILES or molecular geometry files) for N-Me derived unsaturated sterol lipids and need to generate a predicted CCS dataset indexed by lipid identifier and structural isomer class.
+description: Use when you have structural input data (SMILES or molecular geometry
+  files) for N-Me derived unsaturated sterol lipids and need to generate a predicted
+  CCS dataset indexed by lipid identifier and structural isomer class.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -45,6 +48,7 @@ attribution:
 
 # CCS Prediction Model Application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a machine-learning CCS prediction model trained on quantum chemistry features to estimate collision cross section values for N-Me derived unsaturated sterol lipids. This skill bridges quantum structural calculations to experimental ion mobility predictions, enabling large-scale isomer-level CCS dataset generation without exhaustive experimental measurement.

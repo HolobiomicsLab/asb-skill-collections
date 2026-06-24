@@ -1,6 +1,9 @@
 ---
 name: m-z-metabolite-annotation-mapping
-description: 'Use when when you have a spatial metabolomics or LC-MS dataset with detected m/z features (as a feature matrix or SpaMTP Seurat object) and need to assign metabolite identities. Specifically: you have observed m/z values, you know the ionization polarity and expected adduct form (e.'
+description: 'Use when when you have a spatial metabolomics or LC-MS dataset with
+  detected m/z features (as a feature matrix or SpaMTP Seurat object) and need to
+  assign metabolite identities. Specifically: you have observed m/z values, you know
+  the ionization polarity and expected adduct form (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -18,6 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -51,6 +55,7 @@ attribution:
 
 # m/z-metabolite-annotation-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps mass-to-charge (m/z) ratios from full-scan MS data to metabolite identities by searching against a reference database (e.g. LipidMaps, HMDB) with specified mass tolerance and adduct type. This is the primary step for converting raw m/z features into annotated metabolite identities in spatial metabolomics and LC-MS workflows.

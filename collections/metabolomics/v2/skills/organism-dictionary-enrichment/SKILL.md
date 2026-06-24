@@ -1,6 +1,9 @@
 ---
 name: organism-dictionary-enrichment
-description: Use when after organism names have been cleaned and standardized (e.g., via 1_cleaningOriginal.R and 4_cleaningTaxonomy.R) but before final integration of organism, structure, and reference data. Use it when you have a cleaned organism table (interim/tables/2_cleaned/organism/cleaned.tsv.
+description: Use when after organism names have been cleaned and standardized (e.g.,
+  via 1_cleaningOriginal.R and 4_cleaningTaxonomy.R) but before final integration
+  of organism, structure, and reference data. Use it when you have a cleaned organism
+  table (interim/tables/2_cleaned/organism/cleaned.tsv.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -11,6 +14,7 @@ metadata:
   - R
   - 5_addingOTL.R
   - Open Tree of Life
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +47,7 @@ attribution:
 
 # organism-dictionary-enrichment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enriches cleaned organism names with standardized taxonomic identifiers from the Open Tree of Life (OTL) by mapping organism records to OTL taxonomic annotations and identifiers. This step bridges curated organism nomenclature with a comprehensive, externally-maintained reference taxonomy.

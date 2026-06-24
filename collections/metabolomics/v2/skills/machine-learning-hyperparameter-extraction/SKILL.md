@@ -1,6 +1,9 @@
 ---
 name: machine-learning-hyperparameter-extraction
-description: Use when you have completed cross-validation tuning of one or more machine-learning models (e.g., AdaBoost, SVM, Random Forest) on a development dataset using the caret package and need to identify which specific hyperparameter values were selected as optimal.
+description: Use when you have completed cross-validation tuning of one or more machine-learning
+  models (e.g., AdaBoost, SVM, Random Forest) on a development dataset using the caret
+  package and need to identify which specific hyperparameter values were selected
+  as optimal.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3664
@@ -11,15 +14,19 @@ metadata:
   - MetaClean
   - R
   - caret
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 - MetaClean provides 8 classification algorithms (implemented with the R package caret)
 claims: []
@@ -46,6 +53,7 @@ attribution:
 
 # Machine-Learning Hyperparameter Extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate optimized hyperparameter values (e.g., nIter, method) for trained machine-learning classifiers from cross-validation output. This skill identifies which hyperparameter combinations were selected during model tuning and documents them for reproducibility and model retraining.

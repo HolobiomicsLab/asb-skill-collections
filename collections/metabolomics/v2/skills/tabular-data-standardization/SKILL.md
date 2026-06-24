@@ -1,6 +1,8 @@
 ---
 name: tabular-data-standardization
-description: Use when when you have received raw MRM lipidomics export files in vendor-specific formats (TSV, CSV) with inconsistent column naming, unparsed lipid identifiers (e.g., 'PC(36:1)' as a single string), and unknown data quality issues.
+description: Use when when you have received raw MRM lipidomics export files in vendor-specific
+  formats (TSV, CSV) with inconsistent column naming, unparsed lipid identifiers (e.g.,
+  'PC(36:1)' as a single string), and unknown data quality issues.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,12 +16,14 @@ metadata:
   - Lipid_MRM_parser.ipynb
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
 - _No usage/docs found._
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

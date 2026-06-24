@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -48,6 +49,7 @@ attribution:
 
 # peak-center-coordinate-localization
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Train and apply a CNN model to predict the precise rt×mz center coordinates of chromatographic peaks detected in LC-HRMS profile mode data. This skill enables automated, coordinate-level localization of peak maxima from standardized two-dimensional rt×mz areas extracted around local maxima.

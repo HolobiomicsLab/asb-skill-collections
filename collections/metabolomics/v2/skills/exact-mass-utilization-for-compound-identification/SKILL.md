@@ -1,6 +1,9 @@
 ---
 name: exact-mass-utilization-for-compound-identification
-description: Use when you have a GC-MS dataset in CSV format with retention times, base peak m/z values, component areas, and compound names, and you need to identify whether specific query chemicals are present in your samples and retrieve their -match factors (scoring the confidence of the spectral match) and.
+description: Use when you have a GC-MS dataset in CSV format with retention times,
+  base peak m/z values, component areas, and compound names, and you need to identify
+  whether specific query chemicals are present in your samples and retrieve their
+  -match factors (scoring the confidence of the spectral match) and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -15,14 +18,18 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
-- The first step in the process is to convert the raw input to a format that downstream functions can work with. `spreadOut()` prepares the read in .CSV for intelligent ***sorting*** (using retention
-- '`mzExacto()` collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals.'
+- The first step in the process is to convert the raw input to a format that downstream
+  functions can work with. `spreadOut()` prepares the read in .CSV for intelligent
+  ***sorting*** (using retention
+- '`mzExacto()` collects the same information for a set of query chemicals and uses
+  it to precisely search the advanced dictionary for samples that have those chemicals.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +53,7 @@ attribution:
 
 # exact-mass-utilization-for-compound-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies exact mass matching and retention time correlation to identify compounds in GC-MS datasets by comparing measured m/z values and retention times against reference chemical metadata. It is used to validate analytical results and retrieve match factors and area quantifications for target compounds from mass spectrometry samples.

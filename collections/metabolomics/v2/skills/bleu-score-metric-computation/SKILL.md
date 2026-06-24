@@ -1,6 +1,8 @@
 ---
 name: bleu-score-metric-computation
-description: Use when you have a trained sequence-to-sequence model (such as GCMSFormer) that predicts mass spectra from overlapped peaks, and you need to evaluate model performance on a held-out test set.
+description: Use when you have a trained sequence-to-sequence model (such as GCMSFormer)
+  that predicts mass spectra from overlapped peaks, and you need to evaluate model
+  performance on a held-out test set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

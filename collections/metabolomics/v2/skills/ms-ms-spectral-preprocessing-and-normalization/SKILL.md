@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectral-preprocessing-and-normalization
-description: Use when you have a labelled dataset of raw MS/MS spectra annotated as 'relevant' (compounds of interest) or 'other' (reference standards or non-target compounds) and need to prepare them for supervised classifier training.
+description: Use when you have a labelled dataset of raw MS/MS spectra annotated as
+  'relevant' (compounds of interest) or 'other' (reference standards or non-target
+  compounds) and need to prepare them for supervised classifier training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,6 +14,7 @@ metadata:
   - AnnoMe
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbag111
   title: AnnoMe

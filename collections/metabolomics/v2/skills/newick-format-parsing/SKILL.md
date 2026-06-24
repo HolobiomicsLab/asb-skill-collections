@@ -1,6 +1,9 @@
 ---
 name: newick-format-parsing
-description: Use when you have a Chemical Feature Tree artifact (phylogeny) output from q2-qemistree's make-hierarchy method and need to verify its structural validity, count nodes (leaves and internal nodes), measure tree depth, and assess branching patterns before using it for alpha- or beta-diversity.
+description: Use when you have a Chemical Feature Tree artifact (phylogeny) output
+  from q2-qemistree's make-hierarchy method and need to verify its structural validity,
+  count nodes (leaves and internal nodes), measure tree depth, and assess branching
+  patterns before using it for alpha- or beta-diversity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0567
@@ -12,11 +15,13 @@ metadata:
   - QIIME 2 artifact inspection tools
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # newick-format-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate Newick-format phylogenetic trees to extract structural properties (node count, tree depth, branching statistics) for chemically-informed metabolomic trees. This skill is essential when inspecting Chemical Feature Tree artifacts produced by q2-qemistree to ensure data integrity before downstream phylogenetic diversity analysis.

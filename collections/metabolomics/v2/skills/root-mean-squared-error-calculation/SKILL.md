@@ -1,6 +1,9 @@
 ---
 name: root-mean-squared-error-calculation
-description: Use when when you have paired predictions and ground-truth structural similarity labels (e.g., predicted Tanimoto scores from a neural network and reference Tanimoto scores from RDKit Daylight fingerprints) and need to report a single scalar metric of model prediction error across all pairs.
+description: Use when when you have paired predictions and ground-truth structural
+  similarity labels (e.g., predicted Tanimoto scores from a neural network and reference
+  Tanimoto scores from RDKit Daylight fingerprints) and need to report a single scalar
+  metric of model prediction error across all pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,15 +18,20 @@ metadata:
   - PyTorch or TensorFlow
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
 - mean squared error (MSE) loss
 claims: []
 provenance:
@@ -48,6 +56,7 @@ attribution:
 
 # root-mean-squared-error-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute root mean squared error (RMSE) between predicted and reference structural similarity scores (Tanimoto) across all spectrum pairs to quantify prediction accuracy of neural network models. RMSE serves as the primary regression loss metric and final evaluation criterion for MS2DeepScore model performance.

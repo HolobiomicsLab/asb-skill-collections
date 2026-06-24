@@ -1,6 +1,8 @@
 ---
 name: numerical-equivalence-testing
-description: Use when you need to confirm that omitting an optional input parameter (such as secondaryAssay in buildExperiment) produces the expected mathematical result—specifically, when a default value should neutralize a transformation (e.
+description: Use when you need to confirm that omitting an optional input parameter
+  (such as secondaryAssay in buildExperiment) produces the expected mathematical result—specifically,
+  when a default value should neutralize a transformation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - SummarizedExperiment
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -43,6 +46,7 @@ attribution:
 
 # numerical-equivalence-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that two numerical assays or derived quantities are element-wise identical or functionally equivalent by comparing their values across all observations. This skill is essential when testing default parameter behaviors or validating that mathematical transformations (e.g., division by 1) leave data unchanged.

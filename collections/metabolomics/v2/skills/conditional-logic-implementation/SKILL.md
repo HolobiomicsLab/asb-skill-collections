@@ -1,6 +1,7 @@
 ---
 name: conditional-logic-implementation
-description: Use when you have a user-submitted spectrum with domain-context metadata (e.
+description: Use when you have a user-submitted spectrum with domain-context metadata
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -19,6 +20,7 @@ metadata:
   - Fast Search API
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

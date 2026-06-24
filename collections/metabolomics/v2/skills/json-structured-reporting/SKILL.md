@@ -1,6 +1,7 @@
 ---
 name: json-structured-reporting
-description: Use when you need to persist and communicate the health status of multiple external web services queried during an annotation run.
+description: Use when you need to persist and communicate the health status of multiple
+  external web services queried during an annotation run.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +16,7 @@ metadata:
   - BridgeDb
   - pytest
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

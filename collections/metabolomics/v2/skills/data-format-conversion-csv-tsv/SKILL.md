@@ -1,6 +1,9 @@
 ---
 name: data-format-conversion-csv-tsv
-description: Use when after completing data merging, cleanup, and batch correction steps in the FBMN-STATS pipeline, when you have a processed feature quantification table combined with sample metadata in memory (R data frame or Python pandas DataFrame) and need to preserve it for multivariate statistical.
+description: Use when after completing data merging, cleanup, and batch correction
+  steps in the FBMN-STATS pipeline, when you have a processed feature quantification
+  table combined with sample metadata in memory (R data frame or Python pandas DataFrame)
+  and need to preserve it for multivariate statistical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3896
@@ -13,6 +16,7 @@ metadata:
   - Python (pandas)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

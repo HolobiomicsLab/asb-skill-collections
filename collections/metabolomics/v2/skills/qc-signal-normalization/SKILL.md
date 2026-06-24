@@ -1,6 +1,9 @@
 ---
 name: qc-signal-normalization
-description: Use when your metabolomic dataset contains dedicated QC samples (pooled or standard reference material injected at intervals throughout the analytical sequence) and you observe intensity drift, batch effects, or systematic signal variation correlated with run order or acquisition time rather than.
+description: Use when your metabolomic dataset contains dedicated QC samples (pooled
+  or standard reference material injected at intervals throughout the analytical sequence)
+  and you observe intensity drift, batch effects, or systematic signal variation correlated
+  with run order or acquisition time rather than.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +18,7 @@ metadata:
   - limma
   - pcaMethods
   - Biobase
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

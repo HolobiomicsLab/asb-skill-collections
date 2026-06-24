@@ -1,6 +1,9 @@
 ---
 name: dataframe-lazy-loading-comparison
-description: Use when when designing or optimizing an MsBackend implementation (or similar columnar data structure) you must decide whether to pre-allocate all known columns in the backing DataFrame at initialization or defer column creation until first access.
+description: Use when when designing or optimizing an MsBackend implementation (or
+  similar columnar data structure) you must decide whether to pre-allocate all known
+  columns in the backing DataFrame at initialization or defer column creation until
+  first access.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -13,13 +16,15 @@ metadata:
   - R base
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # dataframe-lazy-loading-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A benchmarking approach to quantify the memory and performance tradeoff between eagerly pre-populating a backend's @spectraVars DataFrame with all core spectra variable columns versus lazily populating them on-the-fly during data access. This skill applies to backend implementations in the Spectra package where design choices about initialization timing directly affect object footprint and accessor latency.

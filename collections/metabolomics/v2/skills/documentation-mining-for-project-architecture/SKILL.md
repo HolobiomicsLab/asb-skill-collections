@@ -1,6 +1,7 @@
 ---
 name: documentation-mining-for-project-architecture
-description: Use when you have access to a multi-component research software repository (e.
+description: Use when you have access to a multi-component research software repository
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +14,7 @@ metadata:
   - joblauncher
   - pubchem
   - web (magmaweb)
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -42,6 +44,7 @@ attribution:
 
 # documentation-mining-for-project-architecture
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and map the named subproject components, their functional roles, and interdependencies from a multi-module research software project by systematically scanning repository READMEs, configuration files, and module docstrings. This skill reconstructs the logical architecture of complex systems like MAGMa to enable downstream dependency analysis, integration testing, and workflow optimization.

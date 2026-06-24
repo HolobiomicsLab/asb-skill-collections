@@ -1,6 +1,7 @@
 ---
 name: metabolite-feature-standardization
-description: Use when after loading raw metabolomics measurement data (samples × metabolites matrix) into R but before computing covariance matrices or Jacobian analysis.
+description: Use when after loading raw metabolomics measurement data (samples × metabolites
+  matrix) into R but before computing covariance matrices or Jacobian analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +12,7 @@ metadata:
   - MInfer
   - R
   - MetaboAnalyst
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer

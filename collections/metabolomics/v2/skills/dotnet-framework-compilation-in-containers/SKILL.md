@@ -1,6 +1,9 @@
 ---
 name: dotnet-framework-compilation-in-containers
-description: Use when you have a C# GUI application targeting .NET Framework 4.8 (Windows-only) and need to execute it on macOS or Linux hosts without modifying the source code. The application requires compilation from source and GUI display support via X11 forwarding or headless CLI execution.
+description: Use when you have a C# GUI application targeting .NET Framework 4.8 (Windows-only)
+  and need to execute it on macOS or Linux hosts without modifying the source code.
+  The application requires compilation from source and GUI display support via X11
+  forwarding or headless CLI execution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3431
@@ -18,6 +21,7 @@ metadata:
   - CSi-Studio/AirdPro
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -50,6 +54,7 @@ attribution:
 
 # dotnet-framework-compilation-in-containers
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile .NET Framework 4.8 GUI applications in multi-stage Docker containers to enable Windows-only binaries to run on non-Windows hosts via Wine runtime integration. This skill pairs .NET SDK compilation in a Linux build stage with Wine environment setup and .NET Framework runtime installation in the runtime stage.

@@ -1,6 +1,9 @@
 ---
 name: metabolite-to-pathway-mapping
-description: Use when you have a peak intensity matrix (samples × metabolites) with assigned metabolite annotations (peak ID → KEGG or ChEBI compound ID), and you need to link those identities to known metabolic pathways, molecular families, or mass2motifs before computing pathway activity scores.
+description: Use when you have a peak intensity matrix (samples × metabolites) with
+  assigned metabolite annotations (peak ID → KEGG or ChEBI compound ID), and you need
+  to link those identities to known metabolic pathways, molecular families, or mass2motifs
+  before computing pathway activity scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,12 +16,15 @@ metadata:
   - PALS Viewer
   - GNPS
   - MS2LDA
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways,
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

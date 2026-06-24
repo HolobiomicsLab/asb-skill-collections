@@ -1,6 +1,8 @@
 ---
 name: pre-analytical-delay-stratification
-description: Use when when you have NMR metabolite measurements paired with documented pre-centrifugation and post-centrifugation delay times, and need to assess how processing delays affect metabolic parameter stability within a plasma or serum sample cohort.
+description: Use when when you have NMR metabolite measurements paired with documented
+  pre-centrifugation and post-centrifugation delay times, and need to assess how processing
+  delays affect metabolic parameter stability within a plasma or serum sample cohort.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -11,6 +13,7 @@ metadata:
   - PRIMA-Panel
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel
@@ -39,6 +42,7 @@ attribution:
 
 # pre-analytical-delay-stratification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interactive stratification and visualization of NMR metabolic parameters by processing delay intervals (pre- and post-centrifugation) to assess stability and identify minor/major metabolite changes across time-points. Used in quality control workflows for peripheral blood sample metabolomics studies.

@@ -1,6 +1,8 @@
 ---
 name: ablation-study-design-and-interpretation
-description: Use when when you have a neural network or machine learning model with multiple tunable hyperparameters (layer size, regularization strength, dropout) or design choices (e.
+description: Use when when you have a neural network or machine learning model with
+  multiple tunable hyperparameters (layer size, regularization strength, dropout)
+  or design choices (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,12 +16,15 @@ metadata:
   - TensorFlow
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # ablation-study-design-and-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Ablation studies systematically compare model variants by isolating a single hyperparameter or design choice (shared vs. per-partition tuning) while holding all else constant, then measure performance differences to determine whether the isolated factor materially improves predictive accuracy. This skill is essential for distinguishing genuine performance gains from statistical noise and for understanding which design decisions actually drive model behavior.

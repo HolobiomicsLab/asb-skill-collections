@@ -1,6 +1,9 @@
 ---
 name: chemical-similarity-metric-aggregation
-description: Use when when you have an unknown metabolite compound with mass spectral data, have retrieved candidate structures from a molecular structure database (PubChem, HMDB), and have obtained predictions of structurally related metabolites from a deep-learning semantic similarity model (e.g., DeepMASS2).
+description: Use when when you have an unknown metabolite compound with mass spectral
+  data, have retrieved candidate structures from a molecular structure database (PubChem,
+  HMDB), and have obtained predictions of structurally related metabolites from a
+  deep-learning semantic similarity model (e.g., DeepMASS2).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0360
@@ -11,11 +14,13 @@ metadata:
   - DeepMASS2
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
 evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
+  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +44,7 @@ attribution:
 
 # chemical-similarity-metric-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate chemical-space similarity scores between database candidate structures and deep-learning predicted structurally related metabolites to rerank molecular structure database hits. This skill leverages molecular fingerprints and similarity metrics to identify chemical-space proximity and relocate unknown metabolites within the structural candidate space.

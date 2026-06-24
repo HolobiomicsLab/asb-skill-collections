@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-package-integration
-description: Use when you have R Spectra objects and need to apply Python-only MS algorithms (e.
+description: Use when you have R Spectra objects and need to apply Python-only MS
+  algorithms (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,12 +17,15 @@ metadata:
   - reticulate
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:
@@ -46,6 +50,7 @@ attribution:
 
 # Cross-Language Mass Spectrometry Package Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Wrap Python mass spectrometry libraries (matchms, spectrum_utils) as R-callable functions within the Spectra framework, enabling seamless bidirectional translation of spectral objects and leveraging specialized Python algorithms (e.g., CosineGreedy similarity, spectral normalization) in R-based MS analysis workflows.

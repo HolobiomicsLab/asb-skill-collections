@@ -1,6 +1,8 @@
 ---
 name: decoy-psm-identification-and-tagging
-description: Use when ingesting PSM files from proteomics search engines (MS Amanda, MSGFPlus, MaxQuant, etc.) that contain a mixture of target and decoy PSMs, and you need to ensure accurate FDR calculation during or after rescoring.
+description: Use when ingesting PSM files from proteomics search engines (MS Amanda,
+  MSGFPlus, MaxQuant, etc.) that contain a mixture of target and decoy PSMs, and you
+  need to ensure accurate FDR calculation during or after rescoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -11,6 +13,7 @@ metadata:
   - MS²Rescore
   - psm_utils
   - Percolator
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

@@ -1,6 +1,9 @@
 ---
 name: toml-configuration-file-generation
-description: Use when when beginning a LipoCLEAN analysis workflow and needing to configure MS-DIAL export file locations, filtering parameters, and other tool options. Specifically when you have MS-DIAL 4 or MS-DIAL 5 exported data and need to prepare an options.txt file before running lipid quality filtering.
+description: Use when when beginning a LipoCLEAN analysis workflow and needing to
+  configure MS-DIAL export file locations, filtering parameters, and other tool options.
+  Specifically when you have MS-DIAL 4 or MS-DIAL 5 exported data and need to prepare
+  an options.txt file before running lipid quality filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - LipoCLEAN
   - MS-DIAL 4
   - MS-DIAL 5
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -39,6 +43,7 @@ attribution:
 
 # toml-configuration-file-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate version-specific default TOML-formatted configuration files for MS-DIAL integration by invoking command-line print arguments. This skill enables rapid initialization of tool-specific options files that users can then customize for their analysis pipeline.

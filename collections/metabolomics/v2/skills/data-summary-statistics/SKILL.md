@@ -1,6 +1,8 @@
 ---
 name: data-summary-statistics
-description: Use when you have a curated relational dataset (structure-organism pairs) and need to quantify how structures distribute across a categorical variable (e.g., organism prevalence).
+description: Use when you have a curated relational dataset (structure-organism pairs)
+  and need to quantify how structures distribute across a categorical variable (e.g.,
+  organism prevalence).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3500
@@ -11,6 +13,7 @@ metadata:
   - R
   - Python 3
   - lotus-processor
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -45,6 +48,7 @@ attribution:
 
 # data-summary-statistics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and report frequency distributions and summary counts across categorical bins to characterize the composition and coverage of a large structure-organism dataset. This skill validates data integrity by comparing observed bin membership against reference gold-standard counts.

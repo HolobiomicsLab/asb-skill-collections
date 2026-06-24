@@ -1,6 +1,9 @@
 ---
 name: aromaticity-index-computation
-description: Use when after molecular formula assignment from FT-ICR MS peaks and elemental composition tabulation (C, H, O, N, S, P counts), when you need to quantify the degree of aromaticity and carbon-skeleton unsaturation for each detected compound to support Van Krevelen classification, chemodiversity.
+description: Use when after molecular formula assignment from FT-ICR MS peaks and
+  elemental composition tabulation (C, H, O, N, S, P counts), when you need to quantify
+  the degree of aromaticity and carbon-skeleton unsaturation for each detected compound
+  to support Van Krevelen classification, chemodiversity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,12 +17,15 @@ metadata:
   - MetaboDirect
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
 - It requires the Python dependencies NumPy [40], pandas [41, 42]
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # aromaticity-index-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computation of the modified Aromaticity Index (AImod) from elemental composition of assigned molecular formulas to characterize the density of carbon-to-carbon double bonds and aromatic structure in metabolites. This index is a key thermodynamic descriptor for evaluating metabolite lability and degree of structural condensation in complex organic mixtures analyzed by FT-ICR MS.

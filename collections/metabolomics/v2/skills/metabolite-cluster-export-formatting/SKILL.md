@@ -1,6 +1,9 @@
 ---
 name: metabolite-cluster-export-formatting
-description: Use when after running do.findmain on a RAMClustR-clustered object to infer molecular weights and assign features to compound clusters, when you need to conduct structural elucidation in MSFinder or Sirius and require spectra in their native import formats rather than the intermediate MSP or.
+description: Use when after running do.findmain on a RAMClustR-clustered object to
+  infer molecular weights and assign features to compound clusters, when you need
+  to conduct structural elucidation in MSFinder or Sirius and require spectra in their
+  native import formats rather than the intermediate MSP or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,6 +18,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -48,6 +52,7 @@ attribution:
 
 # metabolite-cluster-export-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export RAMClustR-clustered mass spectrometry spectra into software-specific formats (.mat for MSFinder, .ms for Sirius) to enable downstream structural annotation and molecular weight inference. This skill bridges the output of unsupervised feature clustering with format requirements of specialized annotation tools.

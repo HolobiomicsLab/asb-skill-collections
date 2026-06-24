@@ -1,6 +1,8 @@
 ---
 name: spectral-data-format-conversion
-description: Use when you have raw tandem mass spectrometry data in one or more of the vendor formats (MGF, mzML, or msp) and need to apply unsupervised topic modeling (LDA-based motif discovery) or comparative fragmentation analysis.
+description: Use when you have raw tandem mass spectrometry data in one or more of
+  the vendor formats (MGF, mzML, or msp) and need to apply unsupervised topic modeling
+  (LDA-based motif discovery) or comparative fragmentation analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -22,13 +24,15 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 - doi: 10.1021/acs.analchem.5c00567
   title: ''
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - ms2lda_runfull.py
 - '::: MS2LDA.Preprocessing.load_and_clean'
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
@@ -61,6 +65,7 @@ attribution:
 
 # spectral-data-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw mass spectrometry spectral data from vendor-specific input formats (MGF, mzML, msp) into a unified bag-of-fragments representation with neutral losses retained, preparing spectra for downstream topic modeling in MS2LDA. This standardization is essential because MS/MS data arrives in heterogeneous formats but LDA modeling requires a consistent, normalized feature representation.

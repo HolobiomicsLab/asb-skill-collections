@@ -1,6 +1,9 @@
 ---
 name: graph-embedding-coordinate-extraction
-description: Use when you have a network object (loaded as igraph or MetaNet format with edges and nodes defined) and need to assign two-dimensional spatial coordinates to nodes for downstream visualization on static platforms (ggplot2, base R graphics) or interactive viewers (Gephi, Cytoscape).
+description: Use when you have a network object (loaded as igraph or MetaNet format
+  with edges and nodes defined) and need to assign two-dimensional spatial coordinates
+  to nodes for downstream visualization on static platforms (ggplot2, base R graphics)
+  or interactive viewers (Gephi, Cytoscape).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3936
@@ -11,12 +14,15 @@ metadata:
   - MetaNet
   - R
   - igraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:
@@ -41,6 +47,7 @@ attribution:
 
 # Reconstruct application of a named layout algorithm from the layout library to a network
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract spatial coordinates (x, y positions) from network nodes after applying a layout algorithm in MetaNet, enabling visualization-ready coordinate assignments for static and interactive network plots. This skill bridges network topology computation and visual rendering by materializing abstract graph structure into Cartesian node positions.

@@ -1,6 +1,9 @@
 ---
 name: internal-standard-optimization-selection
-description: Use when you have preprocessed metabolomics data with multiple candidate internal standards and QC (Quality Control) sample replicates, and you need to assign a single internal standard per compound that will minimize measurement variability across batches.
+description: Use when you have preprocessed metabolomics data with multiple candidate
+  internal standards and QC (Quality Control) sample replicates, and you need to assign
+  a single internal standard per compound that will minimize measurement variability
+  across batches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,6 +15,7 @@ metadata:
   - R
   - SummarizedExperiment
   - mzQualityDashboard
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -20,8 +24,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # internal-standard-optimization-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selects the optimal internal standard for each compound in metabolomics studies by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) across batch-corrected compound-to-internal-standard ratios, then recommending the internal standard yielding the lowest RSDQC. This minimizes analytical variability and improves quantification reliability.

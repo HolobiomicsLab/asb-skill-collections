@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-polarity-filtering
-description: Use when when processing centroided .mzML LC–MS runs with a multi-polarity target list (i.e., some targets ionize in positive mode, others in negative mode, or both) and you need to detect peaks and extract ion chromatograms without manually subsetting the raw data by polarity beforehand.
+description: Use when when processing centroided .mzML LC–MS runs with a multi-polarity
+  target list (i.e., some targets ionize in positive mode, others in negative mode,
+  or both) and you need to detect peaks and extract ion chromatograms without manually
+  subsetting the raw data by polarity beforehand.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,14 +20,17 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - knitr::include_graphics
 claims: []
 provenance:
@@ -49,6 +55,7 @@ attribution:
 
 # Mass Spectrometry Polarity Filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatic subsetting of targeted LC–MS data by ionization mode (positive or negative) during peak detection and extraction, eliminating the need for manual pre-filtering of raw spectral data. This skill ensures that only m/z and retention time windows corresponding to the correct polarity are queried for each target compound, reducing false positives and computational overhead.

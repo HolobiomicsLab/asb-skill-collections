@@ -1,6 +1,9 @@
 ---
 name: mass-action-law-flux-prediction
-description: Use when when you have quantified intracellular metabolite abundances (LC-MS normalized values) from multiple samples and need to predict how differences in substrate availability translate into differences in metabolic flux for specific reactions in a constraint-based metabolic model.
+description: Use when when you have quantified intracellular metabolite abundances
+  (LC-MS normalized values) from multiple samples and need to predict how differences
+  in substrate availability translate into differences in metabolic flux for specific
+  reactions in a constraint-based metabolic model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3929
@@ -14,11 +17,13 @@ metadata:
   - COBRApy (implied by workflow)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # Reconstruct the RPS computation from intracellular metabolomics via the mass action law
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Reaction Propensity Scores (RPS) from intracellular metabolite abundances by applying the mass action law principle—where reaction rate is proportional to the product of substrate concentrations each raised to their stoichiometric coefficient. This provides a metabolomics-based prediction of metabolic flux differences driven by substrate availability alone, independent of enzymatic activity or transcriptional regulation.

@@ -1,6 +1,8 @@
 ---
 name: vendor-format-abstraction
-description: Use when you have mass-spectrometry raw data files from multiple vendors (e.g., Thermo, Waters, Bruker, Sciex) and/or mixed standard formats (mzML, mzXML) that must be processed by a single analysis pipeline.
+description: Use when you have mass-spectrometry raw data files from multiple vendors
+  (e.g., Thermo, Waters, Bruker, Sciex) and/or mixed standard formats (mzML, mzXML)
+  that must be processed by a single analysis pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -12,11 +14,13 @@ metadata:
   - pwiz
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.9b00640
   title: Skyline (small molecules)
 evidence_spans:
-- The ProteoWizard Library and Tools are a set of modular and extensible open-source, cross-platform tools and software libraries
+- The ProteoWizard Library and Tools are a set of modular and extensible open-source,
+  cross-platform tools and software libraries
 - github.com__ProteoWizard__pwiz
 claims: []
 provenance:

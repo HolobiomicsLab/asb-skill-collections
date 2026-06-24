@@ -1,6 +1,8 @@
 ---
 name: post-translational-modification-pattern-recognition
-description: Use when you have centroided LC-MS/MS spectra (in MGF, mzXML, mzML, or mzData format) and genomically-predicted precursor peptide sequences, and you need to identify which predicted RiPPs are actually expressed and modified in the sample.
+description: Use when you have centroided LC-MS/MS spectra (in MGF, mzXML, mzML, or
+  mzData format) and genomically-predicted precursor peptide sequences, and you need
+  to identify which predicted RiPPs are actually expressed and modified in the sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -17,15 +19,23 @@ metadata:
   - ProteoWizard msconvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools'' output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk` or `.gbk` file'
-- matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools''
+  output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk`
+  or `.gbk` file'
+- matches tandem mass spectra against the constructed post-translationally modified
+  RiPPs structure database using Dereplicator
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +59,7 @@ attribution:
 
 # post-translational-modification-pattern-recognition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate post-translationally modified peptide structures by matching tandem mass spectra against constructed RiPP structure databases that encode known and predicted PTM variants. This skill is essential for discovering ribosomally synthesized and post-translationally modified peptides (RiPPs) where spectral signatures reflect specific chemical modifications like cyclization, oxidation, and epimerization.

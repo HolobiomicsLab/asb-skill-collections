@@ -1,6 +1,8 @@
 ---
 name: annotation-quality-filtering-by-cosine-similarity
-description: Use when you have in silico annotations (e.g. from GNPS, timaR, or SIRIUS) paired with experimental MS/MS spectra and need to select only the highest-confidence structural matches.
+description: Use when you have in silico annotations (e.g. from GNPS, timaR, or SIRIUS)
+  paired with experimental MS/MS spectra and need to select only the highest-confidence
+  structural matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,16 +18,20 @@ metadata:
   - Inventa
   techniques:
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2
+- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time'
+  columns. -Inventa takes input directly from MZmine2
 - Inventa takes input directly from MZmine2 or MZmine 3
-- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares
-- 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/),
+  is possible to use other processing sofwares
+- 'tima_results_filename: timaR reponderated output format. - for performing in silico
+  annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'
 claims: []
 provenance:

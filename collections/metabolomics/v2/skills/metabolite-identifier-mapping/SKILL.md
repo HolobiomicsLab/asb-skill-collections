@@ -1,6 +1,9 @@
 ---
 name: metabolite-identifier-mapping
-description: Use when after peak detection and MS1 feature picking from merged FIA-MS spectra (typically 0–30 s acquisition window), when you have a list of accurate monoisotopic masses and need to assign HMDB compound identifiers, molecular formulas, and structural annotations to support mzTab output.
+description: Use when after peak detection and MS1 feature picking from merged FIA-MS
+  spectra (typically 0–30 s acquisition window), when you have a list of accurate
+  monoisotopic masses and need to assign HMDB compound identifiers, molecular formulas,
+  and structural annotations to support mzTab output.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -14,6 +17,7 @@ metadata:
   - pyOpenMS
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
@@ -21,7 +25,8 @@ evidence_spans:
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

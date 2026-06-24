@@ -1,6 +1,9 @@
 ---
 name: color-palette-application-greens
-description: Use when when rendering a treemap of qc_summary() output showing ion counts and percentages by filter status (passed/failed), and you need a perceptually uniform, colorblind-friendly palette that clearly distinguishes filter categories while using sequential intensity to reinforce the magnitude of.
+description: Use when when rendering a treemap of qc_summary() output showing ion
+  counts and percentages by filter status (passed/failed), and you need a perceptually
+  uniform, colorblind-friendly palette that clearly distinguishes filter categories
+  while using sequential intensity to reinforce the magnitude of.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0573
@@ -17,6 +20,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -24,7 +28,8 @@ derived_from:
   title: ''
 evidence_spans:
 - This table can be used for a variety of analyses that can be conducted in R
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # Apply Greens color palette to treemap visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the RColorBrewer Greens sequential palette to a treemap visualization of QC filtering results, enabling intuitive perception of ion count magnitudes across filter status categories. This palette choice leverages sequential color progression to emphasize both categorical distinctions and quantitative differences in ion abundances.

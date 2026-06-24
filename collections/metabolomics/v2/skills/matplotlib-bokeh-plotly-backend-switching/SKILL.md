@@ -1,6 +1,8 @@
 ---
 name: matplotlib-bokeh-plotly-backend-switching
-description: Use when when you have mass spectrometry data (chromatograms, spectra, mobilograms, or peak maps) in a Pandas DataFrame and need to generate the same visualization in multiple formats—e.
+description: Use when when you have mass spectrometry data (chromatograms, spectra,
+  mobilograms, or peak maps) in a Pandas DataFrame and need to generate the same visualization
+  in multiple formats—e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -18,11 +20,13 @@ metadata:
   - pyOpenMS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
-- integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)
+- integrates seamlessly with various plotting library backends (matpotlib, bokeh and
+  plotly)
 - 'Extension: MATPLOTLIB'
 - 'Extension: BOKEH'
 - 'Extension: PLOTLY'
@@ -51,6 +55,7 @@ attribution:
 
 # matplotlib-bokeh-plotly-backend-switching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Switch mass spectrometry visualization output between matplotlib (static), Bokeh (interactive), and Plotly (interactive) backends using a consistent pyOpenMS-Viz API, enabling users to choose between publication-ready static figures and interactive web-based exploration without rewriting plot code.

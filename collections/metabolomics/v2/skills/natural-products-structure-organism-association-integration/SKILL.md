@@ -1,6 +1,8 @@
 ---
 name: natural-products-structure-organism-association-integration
-description: Use when you have separately cleaned and validated tables for organisms (interim/tables/2_cleaned/organism/cleaned.tsv.gz), structures (interim/tables/1_translated/structure/final.tsv.gz and interim/tables/2_cleaned/structure/named.tsv.gz), references (interim/tables/2_cleaned/reference/cleaned.tsv.
+description: Use when you have separately cleaned and validated tables for organisms
+  (interim/tables/2_cleaned/organism/cleaned.tsv.gz), structures (interim/tables/1_translated/structure/final.tsv.gz
+  and interim/tables/2_cleaned/structure/named.tsv.gz), references (interim/tables/2_cleaned/reference/cleaned.tsv.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -13,6 +15,7 @@ metadata:
   - R data.table
   - 1_integrating.R
   - gzip / compression utilities
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -45,6 +48,7 @@ attribution:
 
 # natural-products-structure-organism-association-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Consolidate and denormalize cleaned organism, structure, and reference data into a unified curated table by performing sequential left joins and appending enrichment annotations, preserving all original record identifiers and lineage. This skill integrates multiple subgraphs (organism, structure, reference) to produce a single documented structure-organism pair resource suitable for computational natural products research.

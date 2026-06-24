@@ -1,6 +1,7 @@
 ---
 name: spectral-similarity-metric-computation
-description: Use when after clustering peak networks from INADEQUATE spectra and before filtering matches to retain high-confidence metabolite assignments.
+description: Use when after clustering peak networks from INADEQUATE spectra and before
+  filtering matches to retain high-confidence metabolite assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -10,6 +11,7 @@ metadata:
   tools:
   - PyINETA
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

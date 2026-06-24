@@ -1,6 +1,8 @@
 ---
 name: feature-to-metabolite-network-propagation
-description: Use when you have an untargeted metabolomics feature table (m/z, retention time, p-value from statistical test) but lack comprehensive metabolite identifications or MS/MS annotations.
+description: Use when you have an untargeted metabolomics feature table (m/z, retention
+  time, p-value from statistical test) but lack comprehensive metabolite identifications
+  or MS/MS annotations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -14,6 +16,7 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
@@ -41,6 +44,7 @@ attribution:
 
 # feature-to-metabolite-network-propagation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map untargeted metabolomics feature m/z values onto a metabolic network and propagate signal through connected nodes to infer functional activity and pathway involvement without explicit metabolite identification. This skill bypasses the bottleneck of compound annotation by leveraging network topology to predict metabolic function directly from feature tables.

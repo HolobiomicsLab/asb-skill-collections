@@ -1,6 +1,9 @@
 ---
 name: tanimoto-score-threshold-optimization
-description: Use when when you have a set of MS/MS spectra with ground-truth structural similarity labels (Tanimoto scores computed from molecular fingerprints) and need to choose a decision threshold for classifying spectrum pairs as 'chemically related' or 'unrelated'.
+description: Use when when you have a set of MS/MS spectra with ground-truth structural
+  similarity labels (Tanimoto scores computed from molecular fingerprints) and need
+  to choose a decision threshold for classifying spectrum pairs as 'chemically related'
+  or 'unrelated'.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,14 +20,18 @@ metadata:
   - Spec2Vec
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
-- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
+- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute
+  structural similarities
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
 claims: []
@@ -50,6 +57,7 @@ attribution:
 
 # Tanimoto-Score Threshold Optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method to systematically evaluate and select optimal structural similarity thresholds (Tanimoto scores) for compound retrieval tasks by measuring precision and recall across a range of decision boundaries. This skill determines which threshold value best balances the trade-off between selectivity and sensitivity when retrieving chemically related compounds from mass spectral datasets.

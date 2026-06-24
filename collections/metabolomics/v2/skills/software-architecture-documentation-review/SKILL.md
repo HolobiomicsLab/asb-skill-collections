@@ -1,6 +1,8 @@
 ---
 name: software-architecture-documentation-review
-description: Use when you need to verify the scope and completeness of a software platform's analytical capabilities—particularly when the project claims to support multiple input modalities (e.
+description: Use when you need to verify the scope and completeness of a software
+  platform's analytical capabilities—particularly when the project claims to support
+  multiple input modalities (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -42,6 +45,7 @@ attribution:
 
 # software-architecture-documentation-review
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A systematic method to audit the completeness and coverage of a software project's processing modules across supported data types by cross-referencing source code structure, documentation, and module categorization against defined analysis workflows. This skill verifies that every claimed capability (e.g., LC, GC, IMS, MS imaging support) is backed by at least one concrete implementation module.

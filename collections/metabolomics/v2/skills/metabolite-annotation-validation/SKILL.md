@@ -1,6 +1,8 @@
 ---
 name: metabolite-annotation-validation
-description: Use when after running in silico annotation tools (SIRIUS, ISDB) or spectral library matching on your feature table, when you need to retain only annotations meeting a minimum confidence threshold.
+description: Use when after running in silico annotation tools (SIRIUS, ISDB) or spectral
+  library matching on your feature table, when you need to retain only annotations
+  meeting a minimum confidence threshold.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - Inventa
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa

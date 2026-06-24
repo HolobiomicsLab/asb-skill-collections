@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-basepeak-extraction
-description: Use when when you have Thermo Fisher Scientific .raw files from Orbitrap instruments and need to build a quantitative summary of MS1 acquisition intensity dynamics across a run—specifically, the m/z and intensity of the most intense peak in each MS1 scan.
+description: Use when when you have Thermo Fisher Scientific .raw files from Orbitrap
+  instruments and need to build a quantitative summary of MS1 acquisition intensity
+  dynamics across a run—specifically, the m/z and intensity of the most intense peak
+  in each MS1 scan.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,15 +17,20 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
-- Our implementation consists of two language layers, the top `R` layer and the hidden `C#` layer.
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
+- Our implementation consists of two language layers, the top `R` layer and the hidden
+  `C#` layer.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +55,7 @@ attribution:
 
 # mass-spectrum-basepeak-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Programmatically extract base-peak m/z and intensity values from individual MS1 scans in Thermo Orbitrap raw files using the rawrr package. This skill enables construction of scan-indexed base-peak tables without external file conversion, facilitating direct integration of raw spectral data into R-based proteomics pipelines.

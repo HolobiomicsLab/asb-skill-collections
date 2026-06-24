@@ -1,6 +1,9 @@
 ---
 name: chunk-wise-data-processing-optimization
-description: Use when you have a large mass spectrometry dataset stored across multiple mzML, mzXML, or CDF files and need to perform operations (e.g., normalization, filtering, feature extraction) on the full dataset but memory constraints prevent loading all peak data simultaneously.
+description: Use when you have a large mass spectrometry dataset stored across multiple
+  mzML, mzXML, or CDF files and need to perform operations (e.g., normalization, filtering,
+  feature extraction) on the full dataset but memory constraints prevent loading all
+  peak data simultaneously.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -15,14 +18,17 @@ metadata:
   - mzR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files
+- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from
+  the raw MS data files
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # chunk-wise-data-processing-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Split large MS datasets into memory-efficient chunks grouped by data source files, then process each chunk independently to reduce peak-data memory footprint while maintaining parallel processing capability. This skill applies the backendParallelFactor() method to enable lazy loading of m/z and intensity values on-the-fly rather than realizing all spectra into memory at once.

@@ -1,6 +1,9 @@
 ---
 name: knn-imputation-quality-assessment
-description: 'Use when after deciding to use KNN imputation on a metabolomic assay matrix with missing values, but before proceeding to normalization and statistical testing. Trigger conditions include: (1) your metabolomic dataset contains metabolites with varying degrees of missingness across samples;'
+description: 'Use when after deciding to use KNN imputation on a metabolomic assay
+  matrix with missing values, but before proceeding to normalization and statistical
+  testing. Trigger conditions include: (1) your metabolomic dataset contains metabolites
+  with varying degrees of missingness across samples;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -11,6 +14,7 @@ metadata:
   - R
   - MetaboDiff
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +49,7 @@ attribution:
 
 # knn-imputation-quality-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess the quality and appropriateness of k-nearest neighbor (KNN) imputation for metabolomic data by evaluating how many metabolites are excluded by the missingness cutoff and verifying that imputation minimizes distortion of data normality and variance. This skill ensures that the imputation strategy preserves data integrity before downstream differential analysis.

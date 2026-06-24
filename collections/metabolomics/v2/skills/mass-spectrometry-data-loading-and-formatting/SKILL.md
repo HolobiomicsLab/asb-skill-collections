@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-loading-and-formatting
-description: Use when you have raw or curated mass spectrometry data (MS1, MS2, or MSMS) in mzML, mzXML, CDF, MGF, MSP formats, or from a MassBank/MetaboLights repository, and need to convert it into an in-memory or on-disk spectral object that supports filtering, comparison, and annotation workflows.
+description: Use when you have raw or curated mass spectrometry data (MS1, MS2, or
+  MSMS) in mzML, mzXML, CDF, MGF, MSP formats, or from a MassBank/MetaboLights repository,
+  and need to convert it into an in-memory or on-disk spectral object that supports
+  filtering, comparison, and annotation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -21,12 +24,15 @@ metadata:
   - MsBackendMetaboLights
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:
@@ -51,6 +57,7 @@ attribution:
 
 # mass-spectrometry-data-loading-and-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load mass spectrometry data from diverse file formats and standardized databases into language-specific spectral objects (R Spectra or Python matchms/spectrum_utils objects) that enable downstream processing, similarity calculations, and cross-language workflows. This skill bridges data ingestion with reproducible MS analysis in R or Python environments.

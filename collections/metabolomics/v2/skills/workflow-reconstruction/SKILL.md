@@ -1,6 +1,7 @@
 ---
 name: workflow-reconstruction
-description: Use when you have molecular structures (SMILES, SDF, or CSV with InChI) and want to predict tandem mass spectra (MS/MS) for those compounds.
+description: Use when you have molecular structures (SMILES, SDF, or CSV with InChI)
+  and want to predict tandem mass spectra (MS/MS) for those compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3964
@@ -193,6 +194,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -299,10 +301,13 @@ derived_from:
 evidence_spans:
 - PyTorch must be installed separately. Check the `official PyTorch website
 - '3DMolMS has the following dependencies: * Python 3.8+ * PyTorch * RDKit'
-- These are generated using RDKit... We extensively use the ChEMBL structure curation pipeline developed with RDKit to clean the data and curate the database.
+- These are generated using RDKit... We extensively use the ChEMBL structure curation
+  pipeline developed with RDKit to clean the data and curate the database.
 - snakemake --configfile config/config_fast.yaml --jobs 1 --dry-run -p
-- This entails conversion to molecules using `rdkit`, removing light fragments, neutralizing charges, filtering for valid elements
-- subsequently test them for enrichment across experimental conditions using the [netgsa R package](https://cran.rstudio.com/web/packages/netgsa/index.html)
+- This entails conversion to molecules using `rdkit`, removing light fragments, neutralizing
+  charges, filtering for valid elements
+- subsequently test them for enrichment across experimental conditions using the [netgsa
+  R package](https://cran.rstudio.com/web/packages/netgsa/index.html)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -535,6 +540,7 @@ attribution:
 
 # Workflow Reconstruction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and validate a complete computational workflow for mass spectrometry prediction by downloading source datasets, preprocessing molecular conformations, training or loading pretrained neural network models, and generating predicted MS/MS spectra in standard formats (MGF, CSV). This skill enables practitioners to reproduce published results or adapt the workflow to new datasets.

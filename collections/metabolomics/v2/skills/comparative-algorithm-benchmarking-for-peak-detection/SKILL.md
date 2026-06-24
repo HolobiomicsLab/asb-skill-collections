@@ -1,6 +1,9 @@
 ---
 name: comparative-algorithm-benchmarking-for-peak-detection
-description: 'Use when you have developed or adapted a peak detection method for chromatography–mass spectrometry and need to validate its reliability against an established baseline on the same raw GC–MS dataset. Specifically when: (1) the input is raw GC–MS data in m/z vs retention time format;'
+description: 'Use when you have developed or adapted a peak detection method for chromatography–mass
+  spectrometry and need to validate its reliability against an established baseline
+  on the same raw GC–MS dataset. Specifically when: (1) the input is raw GC–MS data
+  in m/z vs retention time format;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -12,6 +15,7 @@ metadata:
   - XCMS
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -19,9 +23,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +53,7 @@ attribution:
 
 # Comparative Algorithm Benchmarking for Peak Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic comparison of peak detection algorithms on the same chromatography–mass spectrometry dataset to quantify and rank error rates in signal acquisition and marker identification. This skill validates whether a novel method (e.g., NPFimg) outperforms established baseline tools (e.g., XCMS) on real GC–MS data.

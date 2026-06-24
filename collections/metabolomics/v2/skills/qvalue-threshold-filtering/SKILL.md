@@ -1,6 +1,9 @@
 ---
 name: qvalue-threshold-filtering
-description: Use when after loading search result files (e.g., from DIA-NN or OpenSwath) containing feature identification results with associated Q-value scores, apply this filter when you need to select a subset of high-confidence identifications before generating comparison plots or summary statistics across.
+description: Use when after loading search result files (e.g., from DIA-NN or OpenSwath)
+  containing feature identification results with associated Q-value scores, apply
+  this filter when you need to select a subset of high-confidence identifications
+  before generating comparison plots or summary statistics across.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - MassDash
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash

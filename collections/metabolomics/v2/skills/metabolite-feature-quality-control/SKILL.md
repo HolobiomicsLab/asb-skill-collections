@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-quality-control
-description: Use when you have a metabolomic SummarizedExperiment object with replicate QC (quality control) samples and need to remove non-reproducible metabolic features before phenotype association modeling. Use it specifically when your workflow requires FDA-compliant reproducibility thresholds (CV < 0.
+description: Use when you have a metabolomic SummarizedExperiment object with replicate
+  QC (quality control) samples and need to remove non-reproducible metabolic features
+  before phenotype association modeling. Use it specifically when your workflow requires
+  FDA-compliant reproducibility thresholds (CV < 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,13 +17,15 @@ metadata:
   - Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # metabolite-feature-quality-control
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess reproducibility of metabolomic features by computing coefficient of variation (CV) across quality control samples and filtering features that fail FDA thresholds for biomarker discovery (CV < 0.30) or quantification (CV < 0.15). This skill ensures only reliable, low-variance metabolites are retained for downstream association analysis.

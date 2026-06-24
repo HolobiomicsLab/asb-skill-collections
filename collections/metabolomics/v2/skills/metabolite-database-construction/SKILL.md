@@ -1,6 +1,7 @@
 ---
 name: metabolite-database-construction
-description: Use when when performing untargeted metabolomics annotation at scale and you need to estimate false discovery rates for candidate metabolite identifications.
+description: Use when when performing untargeted metabolomics annotation at scale
+  and you need to estimate false discovery rates for candidate metabolite identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,6 +16,7 @@ metadata:
   - Passatutto
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -46,6 +48,7 @@ attribution:
 
 # metabolite-database-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct reference and decoy compound databases for untargeted metabolomics annotation by applying spectral feature permutation and statistical property preservation. This enables false discovery rate estimation and significance control in large-scale metabolite matching workflows.

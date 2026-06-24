@@ -1,6 +1,9 @@
 ---
 name: r-tibble-object-creation-and-validation
-description: Use when when you have raw metabolomics results from multiple studies in heterogeneous file formats (xls/xlsx, csv, or txt) and need to harmonize them into a single, machine-readable tibble structure with required columns (compound identifier, p-value, fold-change, study size N, reference) for.
+description: Use when when you have raw metabolomics results from multiple studies
+  in heterogeneous file formats (xls/xlsx, csv, or txt) and need to harmonize them
+  into a single, machine-readable tibble structure with required columns (compound
+  identifier, p-value, fold-change, study size N, reference) for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,14 +14,17 @@ metadata:
   - R
   - amanida
   - webchem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +49,7 @@ attribution:
 
 # R tibble object creation and validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw metabolomics datasets from multiple file formats (xls/xlsx/csv/txt) into a validated R tibble structure suitable for downstream quantitative meta-analysis, including standardized column mapping, missing data handling, and fold-change transformation.

@@ -1,6 +1,8 @@
 ---
 name: peptide-level-spectrum-grouping
-description: Use when after embedding MS/MS spectra into a 32-dimensional vector space using GLEAMS, when you need to identify and group all spectra originating from the same peptide sequence.
+description: Use when after embedding MS/MS spectra into a 32-dimensional vector space
+  using GLEAMS, when you need to identify and group all spectra originating from the
+  same peptide sequence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,12 +14,14 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01496-1
   title: GLEAMS
 evidence_spans:
 - GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
-- GLEAMS is a Learned Embedding for Annotating Mass Spectra. GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
+- GLEAMS is a Learned Embedding for Annotating Mass Spectra. GLEAMS encodes mass spectra
+  as vectors of features and feeds them to a neural network
 - GLEAMS requires Python 3.8, a Linux operating system, and a CUDA-enabled GPU
 claims: []
 provenance:

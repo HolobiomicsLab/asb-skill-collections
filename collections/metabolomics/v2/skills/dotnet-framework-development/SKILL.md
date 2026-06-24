@@ -1,6 +1,9 @@
 ---
 name: dotnet-framework-development
-description: Use when you need to compile and test a .NET-based metabolomics or bioinformatics desktop application (e.g., MS-DIAL version 5 series) from source code, or you are implementing new parsing or data-processing modules that must integrate with WPF UI frameworks and ReactiveExtensions patterns.
+description: Use when you need to compile and test a .NET-based metabolomics or bioinformatics
+  desktop application (e.g., MS-DIAL version 5 series) from source code, or you are
+  implementing new parsing or data-processing modules that must integrate with WPF
+  UI frameworks and ReactiveExtensions patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -20,13 +23,16 @@ metadata:
   - ReactiveExtensions / ReactiveProperty
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
 - the main MsdialGuiApp project can be built using .NET Framework 4.7.2
-- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and
+  .NET 6
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 - To conduct tests, please refer to section `test:` of GitHub Actions
 claims: []
 provenance:
@@ -51,6 +57,7 @@ attribution:
 
 # dotnet-framework-development
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Set up and build .NET Framework / .NET Core / .NET 6 desktop applications using Visual Studio, manage NuGet dependencies, and configure solution build profiles for reproducible compiled binaries. Essential for contributing to or extending open-source .NET projects like MS-DIAL that support multiple .NET runtime targets.

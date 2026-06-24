@@ -1,6 +1,9 @@
 ---
 name: correlation-matrix-heatmap-visualization
-description: Use when after computing a correlation matrix (e.g., Pearson correlation across samples) on statistically significant LC-MS features, particularly when you need to inspect hierarchical dendrogram structure, validate cluster assignments from different flattening methods (constant-threshold vs..
+description: Use when after computing a correlation matrix (e.g., Pearson correlation
+  across samples) on statistically significant LC-MS features, particularly when you
+  need to inspect hierarchical dendrogram structure, validate cluster assignments
+  from different flattening methods (constant-threshold vs..
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -21,6 +24,7 @@ metadata:
   - MamsiStructSearch.get_correlation_clusters()
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -57,6 +61,7 @@ attribution:
 
 # correlation-matrix-heatmap-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize pairwise correlations among LC-MS features or metabolites as a hierarchical heatmap to identify structural and functional relationships in mass spectrometry datasets. This skill enables rapid detection of feature co-clustering patterns and supports downstream cluster assignment validation.

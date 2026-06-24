@@ -1,6 +1,8 @@
 ---
 name: roc-curve-computation
-description: Use when you have paired columns of predicted probabilities (or decision scores) and true binary class labels, and need to assess classifier discrimination ability across all decision thresholds.
+description: Use when you have paired columns of predicted probabilities (or decision
+  scores) and true binary class labels, and need to assess classifier discrimination
+  ability across all decision thresholds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R Shiny
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

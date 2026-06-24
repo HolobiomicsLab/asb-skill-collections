@@ -1,6 +1,8 @@
 ---
 name: cross-domain-metadata-harmonization
-description: Use when when you have submitted the same MS/MS spectrum query to multiple domain-specific MASST tools and need to compare matches, combine ranked results, or generate cross-domain summary statistics.
+description: Use when when you have submitted the same MS/MS spectrum query to multiple
+  domain-specific MASST tools and need to compare matches, combine ranked results,
+  or generate cross-domain summary statistics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -20,6 +22,7 @@ metadata:
   - jobs.py
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
@@ -49,6 +52,7 @@ attribution:
 
 # cross-domain-metadata-harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregates and normalizes heterogeneous mass spectrometry search results from multiple domain-specific MASST tools (microbe, plant, tissue, microbiome, food) into a unified data structure for integrated visualization and comparative analysis. This skill enables unified querying across disparate taxonomic and sample-type domains without manual result consolidation.

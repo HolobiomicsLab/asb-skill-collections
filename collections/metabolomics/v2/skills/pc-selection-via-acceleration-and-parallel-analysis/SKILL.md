@@ -1,6 +1,8 @@
 ---
 name: pc-selection-via-acceleration-and-parallel-analysis
-description: Use when when preparing metabolomic or multivariate count data for outlier detection in PC space, or when you need to reduce dimensionality while retaining only statistically significant components.
+description: Use when when preparing metabolomic or multivariate count data for outlier
+  detection in PC space, or when you need to reduce dimensionality while retaining
+  only statistically significant components.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -11,6 +13,7 @@ metadata:
   - R
   - ggplot2
   - metaboprep
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -40,6 +43,7 @@ attribution:
 
 # pc-selection-via-acceleration-and-parallel-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine the optimal number of informative principal components (PCs) in metabolomic data by applying acceleration analysis and parallel analysis to identify where variance explanation plateaus. This skill gates downstream PC-based outlier detection and dimensionality reduction by eliminating spurious high-variance noise dimensions.

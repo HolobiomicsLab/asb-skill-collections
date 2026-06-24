@@ -1,6 +1,8 @@
 ---
 name: mass-calibration-coefficient-computation
-description: Use when after successfully matching at least 5 reference m/z points (from a .ref file) to spectrum peaks within a PPM error window (starting at ±1.0 ppm and widened iteratively to ±1.5, ±3, ±5, ±7, or ±10 ppm if needed).
+description: Use when after successfully matching at least 5 reference m/z points
+  (from a .ref file) to spectrum peaks within a PPM error window (starting at ±1.0
+  ppm and widened iteratively to ±1.5, ±3, ±5, ±7, or ±10 ppm if needed).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +51,7 @@ attribution:
 
 # mass-calibration-coefficient-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute polynomial calibration coefficients from matched reference m/z peaks using least-squares fitting, enabling conversion of measured frequency or m/z error to true m/z values in FT-MS workflows. This skill bridges peak-matching (with adaptive PPM tolerance) to downstream molecular formula assignment.

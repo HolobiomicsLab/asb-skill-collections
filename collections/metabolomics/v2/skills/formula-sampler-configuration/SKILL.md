@@ -1,6 +1,9 @@
 ---
 name: formula-sampler-configuration
-description: Use when you need to generate a set of candidate chemical formulas for LC-MS/MS simulation—specifically when you want to populate a virtual mass spectrometer with realistic chemical structures drawn from a reference database (HMDB) or a uniform m/z distribution, and you need to apply m/z filtering.
+description: Use when you need to generate a set of candidate chemical formulas for
+  LC-MS/MS simulation—specifically when you want to populate a virtual mass spectrometer
+  with realistic chemical structures drawn from a reference database (HMDB) or a uniform
+  m/z distribution, and you need to apply m/z filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -13,6 +16,7 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -44,6 +48,7 @@ attribution:
 
 # formula-sampler-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and instantiate a formula sampler (e.g., DatabaseFormulaSampler or UniformMZFormulaSampler) to generate a population of chemical formulas within specified m/z bounds for virtual metabolomics simulation. This skill bridges database/distribution selection and chemical population creation in the ViMMS framework.

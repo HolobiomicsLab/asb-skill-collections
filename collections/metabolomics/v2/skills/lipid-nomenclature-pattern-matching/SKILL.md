@@ -1,6 +1,7 @@
 ---
 name: lipid-nomenclature-pattern-matching
-description: Use when when loading a lipidomics dataset into lipidr and the parsing step generates warnings about unparsed molecules due to unsupported naming patterns.
+description: Use when when loading a lipidomics dataset into lipidr and the parsing
+  step generates warnings about unparsed molecules due to unsupported naming patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +13,15 @@ metadata:
   - R
   - R (base)
   - Metabolomics Workbench API
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # lipid-nomenclature-pattern-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recover and standardize unparsed lipid molecule names that do not follow supported naming conventions by applying regular expression pattern matching. This skill enables successful parsing of molecules with full chemical names (e.g., Ceramides) into canonical lipidomics formats, expanding the set of analyzable lipids in a LipidomicsExperiment.

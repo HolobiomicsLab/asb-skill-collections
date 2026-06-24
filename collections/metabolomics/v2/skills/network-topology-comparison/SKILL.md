@@ -1,6 +1,8 @@
 ---
 name: network-topology-comparison
-description: Use when after executing a molecular networking workflow on GC-MS data that has been processed through auto-deconvolution, and a published reference network exists from a prior analysis of the same or analogous dataset.
+description: Use when after executing a molecular networking workflow on GC-MS data
+  that has been processed through auto-deconvolution, and a published reference network
+  exists from a prior analysis of the same or analogous dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -14,12 +16,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
 evidence_spans:
 - MSHub auto-deconvolution
-- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry
+  data
 - GNPS molecular networking
 claims: []
 provenance:

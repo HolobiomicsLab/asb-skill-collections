@@ -1,6 +1,8 @@
 ---
 name: nmr-spectra-deep-learning-encoding
-description: Use when when you have preprocessed 1H NMR spectral data from flavor mixtures or similar compound identification tasks, and you need to identify which compounds are present.
+description: Use when when you have preprocessed 1H NMR spectral data from flavor
+  mixtures or similar compound identification tasks, and you need to identify which
+  compounds are present.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -14,6 +16,7 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
@@ -43,6 +46,7 @@ attribution:
 
 # nmr-spectra-deep-learning-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A hybrid CNN-Transformer deep learning approach that combines bi-encoder and cross-encoder architectures with fusion pooling and weighted loss to encode and identify compounds in 1H NMR spectra. This skill addresses the challenge of accurately distinguishing mixture components in NMR data by jointly modeling spectral representations and compound reference embeddings.

@@ -17,15 +17,18 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment with required dependencies.
+- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment
+  with required dependencies.
 - 'Install DEIMoS using `pip <https://pypi.org/project/pip/>`_: ``pip install -e .``'
 claims: []
 provenance:
@@ -50,6 +53,7 @@ attribution:
 
 # command-line-interface-configuration-and-automation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute a DEIMoS CLI workflow via Snakemake to automate the end-to-end processing of multidimensional mass spectrometry data from raw mzML files to aligned, characterized features. This skill chains CLI arguments, YAML configuration parameters, and Snakemake DAG orchestration to reproducibly execute feature detection, alignment, CCS calibration, isotope detection, and MS/MS deconvolution across multiple samples.

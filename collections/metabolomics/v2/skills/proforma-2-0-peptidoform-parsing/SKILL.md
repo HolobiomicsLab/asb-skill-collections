@@ -17,6 +17,7 @@ metadata:
   - Glycan Naming Ontology
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -24,7 +25,8 @@ evidence_spans:
 - spectrum_utils is a Python package
 - spectrum = sus.MsmsSpectrum.from_usi(usi)
 - Modifications are defined by controlled vocabularies (CVs), including [Unimod](https://www.unimod.org/)
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - 'Specify modifications by their name: `EM[Oxidation]EVEES[Phospho]PEK`'
 claims: []
 provenance:
@@ -49,6 +51,7 @@ attribution:
 
 # ProForma 2.0 Peptidoform Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse ProForma 2.0 notation strings to extract peptide sequences, modification positions, and ion types for fragment annotation in mass spectrometry. This skill enables standardized representation of modified peptidoforms and supports downstream ion annotation workflows.

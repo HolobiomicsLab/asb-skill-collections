@@ -1,6 +1,8 @@
 ---
 name: docker-volume-mount-configuration
-description: Use when deploying the ipbhalle/metfragweb container and you need to supply custom MetFrag settings (ChemSpider tokens, proxy servers, local database connections) without modifying the container image.
+description: Use when deploying the ipbhalle/metfragweb container and you need to
+  supply custom MetFrag settings (ChemSpider tokens, proxy servers, local database
+  connections) without modifying the container image.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +12,7 @@ metadata:
   - MetFrag
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -39,6 +42,7 @@ attribution:
 
 # docker-volume-mount-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Mount a host-side configuration file into a running Docker container at a specific path to enable automatic loading of application settings without rebuilding the image. This skill is essential when you need to inject environment-specific parameters (database credentials, API tokens, proxy settings) into containerized applications that support external configuration file discovery.

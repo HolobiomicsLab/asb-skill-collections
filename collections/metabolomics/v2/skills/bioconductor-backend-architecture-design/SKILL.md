@@ -1,6 +1,9 @@
 ---
 name: bioconductor-backend-architecture-design
-description: 'Use when you are building a new mass spectrometry data backend or storage layer and need to integrate it with the Spectra ecosystem. Triggers include: (1) you have a novel data source (raw files, databases, web APIs) that should be accessible through Spectra objects;'
+description: 'Use when you are building a new mass spectrometry data backend or storage
+  layer and need to integrate it with the Spectra ecosystem. Triggers include: (1)
+  you have a novel data source (raw files, databases, web APIs) that should be accessible
+  through Spectra objects;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -17,6 +20,7 @@ metadata:
   - MsBackendMsp
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -47,6 +51,7 @@ attribution:
 
 # bioconductor-backend-architecture-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a modular MsBackend subclass that separates MS data representation from analysis logic, enabling pluggable storage strategies (in-memory, on-disk, SQL, HDF5) while maintaining a unified Spectra API. This architecture allows analysis code to remain agnostic to data provenance and storage format.

@@ -1,6 +1,8 @@
 ---
 name: reaction-rule-coverage-analysis
-description: Use when when you need to decide how many reaction rules to include in a Pickaxe expansion run and want to quantify the coverage penalty of using a smaller subset; when benchmarking rule importance or frequency rankings;
+description: Use when when you need to decide how many reaction rules to include in
+  a Pickaxe expansion run and want to quantify the coverage penalty of using a smaller
+  subset; when benchmarking rule importance or frequency rankings;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3928
@@ -11,6 +13,7 @@ metadata:
   - MINE-Database (Pickaxe)
   - RDKit
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

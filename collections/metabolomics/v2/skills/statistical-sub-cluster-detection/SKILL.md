@@ -1,6 +1,9 @@
 ---
 name: statistical-sub-cluster-detection
-description: Use when you have a collection of Biosynthetic Gene Clusters that have been tokenised into Pfam domain and subPfam sequences and filtered for redundancy, and you seek to identify statistically significant groupings of genes that co-occur across multiple BGCs—particularly when downstream linking to.
+description: Use when you have a collection of Biosynthetic Gene Clusters that have
+  been tokenised into Pfam domain and subPfam sequences and filtered for redundancy,
+  and you seek to identify statistically significant groupings of genes that co-occur
+  across multiple BGCs—particularly when downstream linking to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3928
@@ -10,11 +13,13 @@ metadata:
   - http://edamontology.org/topic_3050
   tools:
   - iPRESTO
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

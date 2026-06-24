@@ -1,6 +1,8 @@
 ---
 name: extraction-parameter-optimization-ppm-retention-time-ion-mobility
-description: Use when you are reconstructing targeted ion chromatograms (XIC) and ion mobilograms (IM) from raw diaPASEF data and need to balance sensitivity (wide extraction windows) against specificity (narrow windows that reject interference).
+description: Use when you are reconstructing targeted ion chromatograms (XIC) and
+  ion mobilograms (IM) from raw diaPASEF data and need to balance sensitivity (wide
+  extraction windows) against specificity (narrow windows that reject interference).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,11 +20,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 - MzMLDataLoader
 - InteractiveTwoDimensionPlotter

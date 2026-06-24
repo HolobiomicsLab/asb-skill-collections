@@ -1,6 +1,8 @@
 ---
 name: cross-assay-feature-linkage
-description: Use when when you have structural clusters from multiple LC-MS assays (e.g., positive and negative ion modes, or reversed-phase and HILIC methods) and need to identify which features across assays represent the same underlying metabolite.
+description: Use when when you have structural clusters from multiple LC-MS assays
+  (e.g., positive and negative ion modes, or reversed-phase and HILIC methods) and
+  need to identify which features across assays represent the same underlying metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -19,13 +21,15 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
 evidence_spans:
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 - import pandas as pd
 - import numpy as np
 - 'Dependencies: scipy'
@@ -55,6 +59,7 @@ attribution:
 
 # cross-assay-feature-linkage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Link statistically significant LC-MS features across multiple assays (e.g., HPOS, LPOS, LNEG) by identifying features that represent the same metabolite in different ionization modes or chromatographic methods. This skill uses mass-to-charge ratio and retention time patterns to recognize common metabolites across assays and strengthen evidence for compound identification in multi-assay metabolomics studies.

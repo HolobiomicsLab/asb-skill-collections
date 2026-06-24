@@ -1,6 +1,9 @@
 ---
 name: noise-artifact-reduction-optimization
-description: Use when you have imported a raw GCxGC-MS chromatogram (NetCDF format folded into 2D-TIC) that exhibits chemical noise, instrumental artifacts, or baseline drift—conditions that obscure true metabolite signals and impede between-group differentiation in downstream multivariate analysis.
+description: Use when you have imported a raw GCxGC-MS chromatogram (NetCDF format
+  folded into 2D-TIC) that exhibits chemical noise, instrumental artifacts, or baseline
+  drift—conditions that obscure true metabolite signals and impede between-group differentiation
+  in downstream multivariate analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,13 +18,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # noise-artifact-reduction-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove instrumental and chemical noise from two-dimensional gas chromatography–mass spectrometry (GCxGC-MS) data through coordinated application of smoothing and baseline correction algorithms. This skill reduces background interference and enhances signal-to-noise ratio prior to peak alignment and multivariate analysis.

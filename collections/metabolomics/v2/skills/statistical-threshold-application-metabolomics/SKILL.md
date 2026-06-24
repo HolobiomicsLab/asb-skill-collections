@@ -1,6 +1,8 @@
 ---
 name: statistical-threshold-application-metabolomics
-description: Use when when you have completed a weighted meta-analysis of metabolomic studies using amanida and need to isolate robust, reproducible metabolite signals from the combined results.
+description: Use when when you have completed a weighted meta-analysis of metabolomic
+  studies using amanida and need to isolate robust, reproducible metabolite signals
+  from the combined results.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,14 +14,17 @@ metadata:
   - amanida
   - webchem
   - PubChem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # Statistical Threshold Application in Metabolomics Meta-Analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply combined statistical and effect-size cutoffs (p-value ≤0.05, fold-change ≥3.5) to volcano plot and mixed-mode explore plot outputs to identify metabolites with statistical significance, multiple independent reports, and consistent directional trends across studies. This skill validates candidate biomarkers by rejecting the null hypothesis through quantitative filtering and qualitative consistency voting.

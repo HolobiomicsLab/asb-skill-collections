@@ -1,6 +1,9 @@
 ---
 name: class-imbalance-handling-in-neural-networks
-description: Use when your PPI prediction dataset has a large mismatch between positive (true interactions) and negative (non-interactions) labels—typical in CF-MS interactome prediction where true interactions are rare. When training an end-to-end neural network (e.
+description: Use when your PPI prediction dataset has a large mismatch between positive
+  (true interactions) and negative (non-interactions) labels—typical in CF-MS interactome
+  prediction where true interactions are rare. When training an end-to-end neural
+  network (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -12,6 +15,7 @@ metadata:
   - SPIFFED
   - TensorFlow / Keras
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbad229/7199559
   title: SPIFFED
@@ -39,6 +43,7 @@ attribution:
 
 # class-imbalance-handling-in-neural-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply class-balancing strategies during deep learning model training to handle imbalanced positive and negative protein-protein interaction (PPI) labels in co-fractionation/mass-spectrometry prediction tasks. This skill ensures the model learns meaningful representations of both classes despite severe label imbalance.

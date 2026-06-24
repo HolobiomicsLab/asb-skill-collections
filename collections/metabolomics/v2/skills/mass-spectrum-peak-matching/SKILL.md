@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-peak-matching
-description: Use when when you have a query electron ionization mass spectrum (as m/z and intensity pairs) and need to identify it against a spectral library stored in msp format.
+description: Use when when you have a query electron ionization mass spectrum (as
+  m/z and intensity pairs) and need to identify it against a spectral library stored
+  in msp format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,12 +15,16 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:
@@ -43,6 +49,7 @@ attribution:
 
 # mass-spectrum-peak-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Peak matching is the core operation in electron ionization (EI) mass spectral library search, where m/z values and intensity pairs from a query spectrum are compared against library entries using algorithm-specific scoring (Identity EI Normal or Similarity EI Simple) to rank candidate matches. This skill bridges raw spectral data to ranked library hits, enabling compound identification in metabolomics and analytical chemistry.

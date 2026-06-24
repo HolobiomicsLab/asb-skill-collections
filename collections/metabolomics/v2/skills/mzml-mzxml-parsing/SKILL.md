@@ -1,6 +1,8 @@
 ---
 name: mzml-mzxml-parsing
-description: Use when you have raw LC-MS/MS data in mzML or mzXML format and need to isolate specific MS1/MS2 scan pairs for a targeted compound list or for building a local spectral library.
+description: Use when you have raw LC-MS/MS data in mzML or mzXML format and need
+  to isolate specific MS1/MS2 scan pairs for a targeted compound list or for building
+  a local spectral library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,6 +14,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
@@ -40,6 +43,7 @@ attribution:
 
 # mzML/mzXML parsing for MS1/MS2 scan extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse mass spectrometry chromatogram files in mzML or mzXML format (converted from Thermo, Waters, or Bruker instruments) to extract MS1 precursor scans and corresponding MS2 fragment spectra based on user-specified m/z and retention time targets. This skill enables selective recovery of scan pairs for spectral library construction while preserving scan metadata.

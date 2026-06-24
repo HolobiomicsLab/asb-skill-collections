@@ -1,6 +1,8 @@
 ---
 name: molecular-representation-learning
-description: Use when when you have a collection of molecules with known property labels (e.g., retention times on a chromatographic column) and need to predict those properties on new compounds.
+description: Use when when you have a collection of molecules with known property
+  labels (e.g., retention times on a chromatographic column) and need to predict those
+  properties on new compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -21,6 +23,7 @@ metadata:
   - PyG (PyTorch Geometric)
   - TorchMetrics
   - torch-scatter, torch-sparse, torch-cluster
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
@@ -60,6 +63,7 @@ attribution:
 
 # molecular-representation-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and fine-tune graph neural network models to learn molecular representations (embeddings) for predicting compound properties such as retention time. This skill uses PyTorch and PyG to encode molecular structures as graphs and transfer knowledge across chromatography datasets.

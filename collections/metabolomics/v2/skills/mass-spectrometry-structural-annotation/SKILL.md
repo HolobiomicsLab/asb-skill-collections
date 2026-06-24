@@ -17,6 +17,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -52,6 +53,7 @@ attribution:
 
 # mass-spectrometry-structural-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Link statistically significant LC-MS features into structural clusters by detecting isotopologue signatures, adduct patterns, and cross-assay relationships, parameterized by retention-time windows, mass tolerance, and adduct mode. This enables metabolite-level interpretation of untargeted multi-assay metabolomics datasets.

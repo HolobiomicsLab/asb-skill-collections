@@ -1,6 +1,9 @@
 ---
 name: graph-neural-network-model-training
-description: Use when when you have a molecular dataset (e.g., SMRT retention-time pairs) that you want to model as node-and-edge graphs, a PyTorch + PyG architecture already instantiated, and need to perform supervised training with checkpoint persistence and per-epoch metric logging.
+description: Use when when you have a molecular dataset (e.g., SMRT retention-time
+  pairs) that you want to model as node-and-edge graphs, a PyTorch + PyG architecture
+  already instantiated, and need to perform supervised training with checkpoint persistence
+  and per-epoch metric logging.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -21,6 +24,7 @@ metadata:
   - PyG (PyTorch Geometric)
   - TorchMetrics
   - torch-scatter, torch-sparse, torch-cluster
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
@@ -54,6 +58,7 @@ attribution:
 
 # graph-neural-network-model-training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a PyTorch-based graph neural network (GNN) on molecular retention-time prediction data using PyG primitives and TorchMetrics monitoring. This skill applies to projects that model molecular properties as graph-structured data and require supervised training with epoch-level loss and validation tracking.

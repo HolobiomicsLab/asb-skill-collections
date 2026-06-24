@@ -1,6 +1,8 @@
 ---
 name: neutral-loss-extraction-and-weighting
-description: Use when you have a collection of annotated MS/MS spectra with precursor m/z values and fragment peak lists, and you aim to train or apply a spectral similarity model (such as Spec2Vec Word2Vec) that exploits fragmentation chemistry.
+description: Use when you have a collection of annotated MS/MS spectra with precursor
+  m/z values and fragment peak lists, and you aim to train or apply a spectral similarity
+  model (such as Spec2Vec Word2Vec) that exploits fragmentation chemistry.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,15 +20,20 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
+  and can be installed via conda
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - Spec2Vec was optimised by making extensive use of Numpy [24]
 claims: []
 provenance:
@@ -51,6 +58,7 @@ attribution:
 
 # neutral-loss-extraction-and-weighting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract neutral losses (mass differences between precursor and fragment ions) from MS/MS spectra and encode them as weighted features for spectral embedding and similarity scoring. This skill is essential for capturing diagnostic fragmentation patterns that inform structural relationships beyond peak m/z alone.

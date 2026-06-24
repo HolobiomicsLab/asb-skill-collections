@@ -14,14 +14,17 @@ metadata:
   - R base
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra
+- The *Spectra* package defines an efficient infrastructure for storing and handling
+  mass spectrometry spectra
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +48,7 @@ attribution:
 
 # spectra-variable-initialization-strategies
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and select between eager pre-population and lazy on-demand filling of core spectra variables (@spectraVars slot) in MsBackend objects to optimize the memory–speed tradeoff. This skill surfaces the design choice between initialization timing and its consequences for object footprint and data access latency.

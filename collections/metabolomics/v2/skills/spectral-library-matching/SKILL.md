@@ -1,6 +1,9 @@
 ---
 name: spectral-library-matching
-description: 'Use when you have one or more MS/MS spectra in .mgf format (or USI identifiers) and need to: (1) identify unknowns by searching against domain-curated reference data; (2) assign Level 2 metabolomics annotations via GNPS library matches; (3) aggregate matches across organism lineages (e.'
+description: 'Use when you have one or more MS/MS spectra in .mgf format (or USI identifiers)
+  and need to: (1) identify unknowns by searching against domain-curated reference
+  data; (2) assign Level 2 metabolomics annotations via GNPS library matches; (3)
+  aggregate matches across organism lineages (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -34,6 +37,7 @@ metadata:
   - NIST API
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
@@ -46,10 +50,13 @@ derived_from:
 evidence_spans:
 - microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
 - Aggregated search outputs can be generated and visualized using metadataMASST
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
-- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification of the compounds from LC-MS and MS/MS metabolomics data
-- compatible with the customized database prepared using CFM-id, the fragment prediction tool
+- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification
+  of the compounds from LC-MS and MS/MS metabolomics data
+- compatible with the customized database prepared using CFM-id, the fragment prediction
+  tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -88,6 +95,7 @@ attribution:
 
 # spectral-library-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match mass spectrometry spectra against domain-specific reference libraries using cosine similarity scoring to identify compounds and assign taxonomic or sample-origin metadata. This skill enables single-spectrum or batch searches across curated domain MASSTs (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) and federated public repositories (GNPS libraries, MassIVE, Metabolomics Workbench, MetaboLights, NORMAN).

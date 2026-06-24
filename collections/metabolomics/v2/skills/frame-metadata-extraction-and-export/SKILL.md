@@ -1,6 +1,7 @@
 ---
 name: frame-metadata-extraction-and-export
-description: Use when after completing multidimensional smoothing and saturation repair on Agilent MassHunter (.
+description: Use when after completing multidimensional smoothing and saturation repair
+  on Agilent MassHunter (.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,14 +13,18 @@ metadata:
   - Agilent MassHunter
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # frame-metadata-extraction-and-export
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and export ion mobility frame metadata (field strength, pressure, temperature, MS actuals) from preprocessed IM-MS data files to structured text records for downstream analysis and instrumental parameter documentation.

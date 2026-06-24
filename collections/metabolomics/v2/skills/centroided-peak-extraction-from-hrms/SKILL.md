@@ -1,6 +1,9 @@
 ---
 name: centroided-peak-extraction-from-hrms
-description: Use when you have centroided data-dependent acquisition (DDA/ddMS2) mzML files from LC- or GC-HRMS measurements and need to systematically detect and characterize MS1 features across the mass-to-charge and retention-time dimensions prior to compound prioritization or suspect screening.
+description: Use when you have centroided data-dependent acquisition (DDA/ddMS2) mzML
+  files from LC- or GC-HRMS measurements and need to systematically detect and characterize
+  MS1 features across the mass-to-charge and retention-time dimensions prior to compound
+  prioritization or suspect screening.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -15,13 +18,16 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data.
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data.
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -46,6 +52,7 @@ attribution:
 
 # Centroided Peak Extraction from HRMS
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and delineation of chromatographic peaks from vendor-independent mzML files containing centroided high-resolution mass spectrometry data using pyOpenMS. This skill extracts feature attributes (m/z, retention time, intensity, charge state, isotope pattern) and constructs tabular feature tables for downstream prioritization workflows.

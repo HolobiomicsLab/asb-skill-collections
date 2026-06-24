@@ -1,6 +1,9 @@
 ---
 name: cross-platform-build-environment-setup
-description: Use when when you have a Qt5 C++ project (such as Maven GUI or Maven Core) that must be built on multiple target operating systems, and you need to install and verify platform-specific build dependencies (MSYS2 + mingw64 on Windows, Homebrew + Qt5 on macOS, PPA + Qt5.
+description: Use when when you have a Qt5 C++ project (such as Maven GUI or Maven
+  Core) that must be built on multiple target operating systems, and you need to install
+  and verify platform-specific build dependencies (MSYS2 + mingw64 on Windows, Homebrew
+  + Qt5 on macOS, PPA + Qt5.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -15,6 +18,7 @@ metadata:
   - MSYS2
   - Homebrew
   - pacman
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

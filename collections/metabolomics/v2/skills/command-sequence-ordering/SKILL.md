@@ -1,6 +1,8 @@
 ---
 name: command-sequence-ordering
-description: Use when you have a workflow.csv file co-located with sequence.csv in a session directory, and you need to initialize a reproducible, ordered chain of processing steps (e.
+description: Use when you have a workflow.csv file co-located with sequence.csv in
+  a session directory, and you need to initialize a reproducible, ordered chain of
+  processing steps (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,12 +14,14 @@ metadata:
   - SmartPeakCLI
   - SmartPeakGUI
   - pyOpenMS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

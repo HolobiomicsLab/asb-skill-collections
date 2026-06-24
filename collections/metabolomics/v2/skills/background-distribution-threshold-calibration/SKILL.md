@@ -1,6 +1,8 @@
 ---
 name: background-distribution-threshold-calibration
-description: Use when when you have trained a predictive model (e.g., neural network or regression model) that outputs continuous scores (such as Spearman correlation coefficients) for individual features (e.
+description: Use when when you have trained a predictive model (e.g., neural network
+  or regression model) that outputs continuous scores (such as Spearman correlation
+  coefficients) for individual features (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -15,13 +17,18 @@ metadata:
   - TensorFlow
   - scikit-learn
   - SciPy
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- these models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate Elastic Net, and Canonical
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- these models can predict the entire set of metabolites at once, and all models were
+  evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate
+  Elastic Net, and Canonical
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +52,7 @@ attribution:
 
 # background-distribution-threshold-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method to establish empirically-grounded significance thresholds for predictive model outputs by generating a null distribution from shuffled data, then using percentile cutoffs to classify well-predicted features. This skill ensures that feature predictions are statistically validated against random baseline correlations rather than relying on arbitrary fixed cutoffs.

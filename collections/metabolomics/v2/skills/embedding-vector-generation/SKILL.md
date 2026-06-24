@@ -1,6 +1,8 @@
 ---
 name: embedding-vector-generation
-description: Use when when you have tokenized mass spectra (peak-mass and peak-intensity pairs from experimental or in-silico libraries such as NIST 2017 or MassBank) and need to perform rapid similarity searches or spectrum matching at scale.
+description: Use when when you have tokenized mass spectra (peak-mass and peak-intensity
+  pairs from experimental or in-silico libraries such as NIST 2017 or MassBank) and
+  need to perform rapid similarity searches or spectrum matching at scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -14,6 +16,7 @@ metadata:
   - Anaconda
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

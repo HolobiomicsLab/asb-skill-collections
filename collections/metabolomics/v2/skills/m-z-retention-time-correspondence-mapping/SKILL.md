@@ -1,6 +1,9 @@
 ---
 name: m-z-retention-time-correspondence-mapping
-description: Use when you have two peak-picked, conventionally aligned untargeted LC-MS metabolomics datasets (as metabData objects) acquired under different conditions or at different times, and you need to determine which features in dataset X correspond to which features in dataset Y so their sample.
+description: Use when you have two peak-picked, conventionally aligned untargeted
+  LC-MS metabolomics datasets (as metabData objects) acquired under different conditions
+  or at different times, and you need to determine which features in dataset X correspond
+  to which features in dataset Y so their sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,12 +16,15 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # m-z-retention-time-correspondence-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate overlapping features between two LC-MS metabolomics datasets by grouping features with similar m/z and retention time coordinates, then constructing a unified combined table with aligned feature pairs. This skill is essential for merging metabolomics measurements acquired under non-identical instrumental or temporal conditions.

@@ -1,6 +1,9 @@
 ---
 name: chemical-name-normalization-and-publish-database-integration
-description: Use when after spreadOut() has converted raw CSV peak data into a structured list, when you have one or more Compound.Name entries from GC-MS that may be ambiguous, non-canonical, or missing standardized properties (exact mass, published retention times, reactive groups, database presence).
+description: Use when after spreadOut() has converted raw CSV peak data into a structured
+  list, when you have one or more Compound.Name entries from GC-MS that may be ambiguous,
+  non-canonical, or missing standardized properties (exact mass, published retention
+  times, reactive groups, database presence).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -22,13 +25,17 @@ metadata:
   techniques:
   - GC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- The recommended software for generating the necessary data in the default format
+  (i.e. with correct column names) is Unknowns Analysis
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:
@@ -53,6 +60,7 @@ attribution:
 
 # chemical-name-normalization-and-publish-database-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize chemical compound names from GC-MS output and enrich them with standardized metadata (exact mass, retention time, fragment patterns, literature references) from PubChem, ChemSpider, and other curated databases. This skill ensures that tentatively identified compounds from Agilent Unknowns Analysis are mapped to canonical identities and linked to physicochemical properties required for downstream chemical inference and subsetting.

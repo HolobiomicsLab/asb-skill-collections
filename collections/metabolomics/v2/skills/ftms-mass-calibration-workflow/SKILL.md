@@ -1,6 +1,7 @@
 ---
 name: ftms-mass-calibration-workflow
-description: Use when when you have a processed Bruker Solarix FT-ICR mass spectrum object (from ReadBrukerSolarix) and a reference peak list file (SRFA.
+description: Use when when you have a processed Bruker Solarix FT-ICR mass spectrum
+  object (from ReadBrukerSolarix) and a reference peak list file (SRFA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +15,14 @@ metadata:
   - Bruker Solarix
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - import pandas as pd
 claims: []
@@ -45,6 +48,7 @@ attribution:
 
 # ftms-mass-calibration-workflow
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A Bruker FT-ICR mass calibration workflow that recalibrates a processed mass spectrum using MzDomainCalibration against a reference peak list (e.g., SRFA.ref), applying polynomial recalibration to correct m/z values and quantifying calibration accuracy via mass error statistics.

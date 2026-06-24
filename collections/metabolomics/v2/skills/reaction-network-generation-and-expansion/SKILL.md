@@ -1,6 +1,9 @@
 ---
 name: reaction-network-generation-and-expansion
-description: Use when you have (1) a set of starting compounds as SMILES strings, (2) a collection of reaction rules in SMARTS format (e.g., from MetaCyc), and (3) a need to systematically predict all reachable products within a bounded number of generations.
+description: Use when you have (1) a set of starting compounds as SMILES strings,
+  (2) a collection of reaction rules in SMARTS format (e.g., from MetaCyc), and (3)
+  a need to systematically predict all reachable products within a bounded number
+  of generations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +16,7 @@ metadata:
   - Python
   - eQuilibrator
   - MINE-Database (Pickaxe)
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

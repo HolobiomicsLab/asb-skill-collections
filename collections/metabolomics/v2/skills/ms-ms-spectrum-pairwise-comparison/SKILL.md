@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectrum-pairwise-comparison
-description: Use when you have millions of MS/MS spectra in mzML, mzXML, or MGF format that have been converted to low-dimensional vectors via feature hashing, and you need to identify which spectra are similar enough to cluster together.
+description: Use when you have millions of MS/MS spectra in mzML, mzXML, or MGF format
+  that have been converted to low-dimensional vectors via feature hashing, and you
+  need to identify which spectra are similar enough to cluster together.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -12,11 +14,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # MS/MS Spectrum Pairwise Comparison via Nearest Neighbor Indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use nearest neighbor indexes to efficiently compute pairwise distances between MS/MS spectra without exhaustive all-versus-all comparison. This skill enables sparse distance matrix construction for large-scale spectrum clustering by querying pre-built indexes rather than computing distances for every spectrum pair.

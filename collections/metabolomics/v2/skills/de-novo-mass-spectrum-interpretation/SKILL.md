@@ -1,6 +1,8 @@
 ---
 name: de-novo-mass-spectrum-interpretation
-description: Use when you have MS/MS spectra (centroided m/z and intensity pairs) and corresponding MS1 precursor masses but lack reference spectra or a priori formula information.
+description: Use when you have MS/MS spectra (centroided m/z and intensity pairs)
+  and corresponding MS1 precursor masses but lack reference spectra or a priori formula
+  information.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,14 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # de-novo-mass-spectrum-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer chemical formula and adduct type for an unknown metabolite directly from tandem mass spectra (MS/MS) without referencing spectral databases or computing fragmentation trees. This skill uses a neural network-based formula transformer to rank candidate formulas and assign subformulas to fragment peaks in a data-dependent fashion.

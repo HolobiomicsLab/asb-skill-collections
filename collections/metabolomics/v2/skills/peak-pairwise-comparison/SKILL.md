@@ -1,6 +1,8 @@
 ---
 name: peak-pairwise-comparison
-description: Use when after molecular formula assignment and peak filtering are complete, when you have a filtered peak list (m/z values and molecular formulas) and want to discover biochemical transformations without prior knowledge of reaction networks.
+description: Use when after molecular formula assignment and peak filtering are complete,
+  when you have a filtered peak list (m/z values and molecular formulas) and want
+  to discover biochemical transformations without prior knowledge of reaction networks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +15,14 @@ metadata:
   - KEGG database
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # peak-pairwise-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare all pairs of detected peaks in FT-ICR MS samples by calculating mass differences to identify potential biochemical transformations. This pairwise comparison is the foundation for generating mass-difference networks that reveal metabolic pathway connectivity and hub metabolites.

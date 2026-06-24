@@ -1,6 +1,9 @@
 ---
 name: chemical-classification-aggregation
-description: Use when you have a collection of standardized molecular structures (SMILES or MOL format) that have been submitted to ClassyFire and you need to collect and organize their classification results into a single CSV or JSON table for downstream analysis, validation, or retention time modeling.
+description: Use when you have a collection of standardized molecular structures (SMILES
+  or MOL format) that have been submitted to ClassyFire and you need to collect and
+  organize their classification results into a single CSV or JSON table for downstream
+  analysis, validation, or retention time modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -10,6 +13,7 @@ metadata:
   tools:
   - ClassyFire
   - PubChem standardization
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

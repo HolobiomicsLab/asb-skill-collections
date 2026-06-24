@@ -1,6 +1,9 @@
 ---
 name: metabolic-age-prediction-from-nmr-features
-description: Use when you have Nightingale Health 1H-NMR metabolomics data (feature matrix with named metabolite columns) and need to compute predicted metabolic age for each sample, typically to assess whether individuals' metabolic profiles align with or diverge from age-expected trajectories.
+description: Use when you have Nightingale Health 1H-NMR metabolomics data (feature
+  matrix with named metabolite columns) and need to compute predicted metabolic age
+  for each sample, typically to assess whether individuals' metabolic profiles align
+  with or diverge from age-expected trajectories.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -45,6 +49,7 @@ attribution:
 
 # metabolic-age-prediction-from-nmr-features
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and apply the MetaboAge predictive model to estimate biological metabolic age from Nightingale Health 1H-NMR metabolomics features. This skill maps a curated set of NMR-derived metabolite concentrations through pre-trained linear model coefficients to produce a single predicted metabolic age value per sample, enabling assessment of metabolic aging independent of chronological age.

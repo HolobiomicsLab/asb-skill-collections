@@ -1,6 +1,9 @@
 ---
 name: dotnet-framework-installation-in-containers
-description: Use when you need to containerize a C# application (e.g., AirdPro) that targets .NET Framework 4.8 and must run on Linux hosts via Docker, but the application was originally built for Windows. Use this skill when you are building multi-stage Docker images from a Ubuntu 22.
+description: Use when you need to containerize a C# application (e.g., AirdPro) that
+  targets .NET Framework 4.8 and must run on Linux hosts via Docker, but the application
+  was originally built for Windows. Use this skill when you are building multi-stage
+  Docker images from a Ubuntu 22.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,6 +14,7 @@ metadata:
   - Wine
   - AirdPro V5/V6
   - ProteoWizard
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -40,6 +44,7 @@ attribution:
 
 # dotnet-framework-installation-in-containers
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install and configure .NET Framework 4.8 within a Wine-enabled Linux container to run C#-based Windows applications like AirdPro in containerized environments. This skill bridges Windows/.NET dependencies with cross-platform container deployment.

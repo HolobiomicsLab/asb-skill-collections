@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-extraction-xcms
-description: Use when you have one or multiple raw mzXML/mzML files from DDA, DIA, or full-scan LCMS analyses and need to detect, align, and quantify metabolite features across samples to create a unified feature matrix before MS2 annotation or in-source fragment analysis.
+description: Use when you have one or multiple raw mzXML/mzML files from DDA, DIA,
+  or full-scan LCMS analyses and need to detect, align, and quantify metabolite features
+  across samples to create a unified feature matrix before MS2 annotation or in-source
+  fragment analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -19,18 +22,22 @@ metadata:
   - Paramounter
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
 - doi: 10.1021/acs.analchem.1c04758
   title: ''
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - XCMS-based MS1 feature extraction
 - 2.1 XCMS Feature Extraction
 - To install ISFrag package R version 4.0.0 or above is required
-- mzdiff is used as the mass tolerance to dereplicate the features (similar m/z values and retention times) extracted by XCMS CentWave
+- mzdiff is used as the mass tolerance to dereplicate the features (similar m/z values
+  and retention times) extracted by XCMS CentWave
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

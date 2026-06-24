@@ -1,6 +1,8 @@
 ---
 name: retention-index-assignment-and-filtering
-description: Use when after combining multiple EI or MS2 mass spectral libraries and you have access to NIST RI reference files (ri.dat and USER.DBU) and need to assign experimental retention indices to compounds.
+description: Use when after combining multiple EI or MS2 mass spectral libraries and
+  you have access to NIST RI reference files (ri.dat and USER.DBU) and need to assign
+  experimental retention indices to compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -20,6 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -29,7 +32,8 @@ evidence_spans:
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
 - MS-DIAL friendly msp file
-- both positive and negative modes are in a single file as well. Therefore, we need to separated the polarity
+- both positive and negative modes are in a single file as well. Therefore, we need
+  to separated the polarity
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -53,6 +57,7 @@ attribution:
 
 # Retention-Index Assignment and Filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns experimental Kovats retention indices (RI) to combined mass spectral libraries by extracting RI data from NIST reference files, then filters assigned RI values based on column type, polarity, and statistical quality thresholds. This enriches library records with validated RI metadata for improved compound identification in GC-MS workflows.

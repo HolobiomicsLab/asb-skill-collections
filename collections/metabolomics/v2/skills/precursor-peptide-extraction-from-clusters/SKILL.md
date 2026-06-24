@@ -1,6 +1,8 @@
 ---
 name: precursor-peptide-extraction-from-clusters
-description: Use when you have assembled genome FASTA sequences (from SPAdes, metaSPAdes, or antiSMASH output) and need to systematically identify precursor peptides corresponding to a target RiPP class before constructing the structure database for dereplication.
+description: Use when you have assembled genome FASTA sequences (from SPAdes, metaSPAdes,
+  or antiSMASH output) and need to systematically identify precursor peptides corresponding
+  to a target RiPP class before constructing the structure database for dereplication.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0415
@@ -14,13 +16,18 @@ metadata:
   - antiSMASH
   - BOA
   - SPAdes / metaSPAdes
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +51,7 @@ attribution:
 
 # precursor-peptide-extraction-from-clusters
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract precursor peptide sequences from identified biosynthetic gene clusters (BGCs) in genome assemblies, filtering by RiPP class (lantibiotic, lassopeptide, cyanobactin, etc.). This step bridges genomic mining and structure prediction by producing class-specific precursor sequences that serve as substrates for post-translational modification enumeration.

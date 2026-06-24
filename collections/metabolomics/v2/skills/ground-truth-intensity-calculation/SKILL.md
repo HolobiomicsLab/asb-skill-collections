@@ -1,6 +1,9 @@
 ---
 name: ground-truth-intensity-calculation
-description: Use when when generating synthetic LC/GC-MS .mzML files with companion ground-truth peak tables for method validation, you need to calculate the absolute maximum intensity that each simulated peak would exhibit in the raw mass spectrometry matrix.
+description: Use when when generating synthetic LC/GC-MS .mzML files with companion
+  ground-truth peak tables for method validation, you need to calculate the absolute
+  maximum intensity that each simulated peak would exhibit in the raw mass spectrometry
+  matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,11 +17,13 @@ metadata:
   - SummarizedExperiment
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - The underlying engine handles binary data encoding via the `base64enc` package
 - github.com__yufree__mzrtsim
 claims: []
@@ -44,6 +49,7 @@ attribution:
 
 # ground-truth-intensity-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute absolute ground-truth maximum intensity (sim_ins) for each simulated LC/GC-MS peak by accounting for response factor, peak height scaling, and chromatographic profile shape. This enables benchmarking of peak detection and quantification methods against known ground truth.

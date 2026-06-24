@@ -1,6 +1,9 @@
 ---
 name: docker-container-orchestration-for-ml-services
-description: Use when you have trained or pre-trained ML models (Keras, TensorFlow) that need to be exposed as HTTP endpoints for programmatic classification or inference, require reproducible deployment across environments, or need to coordinate multiple services (e.
+description: Use when you have trained or pre-trained ML models (Keras, TensorFlow)
+  that need to be exposed as HTTP endpoints for programmatic classification or inference,
+  require reproducible deployment across environments, or need to coordinate multiple
+  services (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,6 +16,7 @@ metadata:
   - Python
   - TensorFlow Serving
   - TensorFlow / Keras
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -42,6 +46,7 @@ attribution:
 
 # docker-container-orchestration-for-ml-services
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy containerized machine learning inference services (e.g., TensorFlow Serving models) using Docker and docker-compose to expose REST APIs for real-time predictions. This skill bundles model preparation, network configuration, and container orchestration to enable scalable, reproducible ML service delivery.

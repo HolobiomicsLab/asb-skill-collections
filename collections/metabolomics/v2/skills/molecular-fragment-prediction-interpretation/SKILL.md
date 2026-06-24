@@ -1,6 +1,9 @@
 ---
 name: molecular-fragment-prediction-interpretation
-description: Use when you have an experimental tandem mass spectrum (collision energy annotated) and a known molecular formula or candidate structure list, and you need to rank or discriminate between isomeric or isobaric candidates by comparing predicted fragment-level spectral patterns.
+description: Use when you have an experimental tandem mass spectrum (collision energy
+  annotated) and a known molecular formula or candidate structure list, and you need
+  to rank or discriminate between isomeric or isobaric candidates by comparing predicted
+  fragment-level spectral patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,12 +19,14 @@ metadata:
   - SCARF
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 evidence_spans:
 - You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:

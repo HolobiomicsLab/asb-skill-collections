@@ -1,6 +1,9 @@
 ---
 name: dimension-scale-linking-and-cross-group-indexing
-description: Use when when exporting quantified MSI data as HDF5 containers following the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing between intensity data (feature-by-pixel matrix) and metadata groups (featureData, pixelData).
+description: Use when when exporting quantified MSI data as HDF5 containers following
+  the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing
+  between intensity data (feature-by-pixel matrix) and metadata groups (featureData,
+  pixelData).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,12 +17,14 @@ metadata:
   techniques:
   - direct-infusion-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # dimension-scale-linking-and-cross-group-indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Link HDF5 dataset dimensions to shared index scales across groups to enable standardized cross-group coordinate reference and axis semantics in Cardinal::HDF5 containers. This ensures that feature and pixel axes in intensity matrices are properly annotated and traversable via dimension scales.

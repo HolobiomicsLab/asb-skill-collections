@@ -1,6 +1,9 @@
 ---
 name: annotaterc-function-parameterization
-description: Use when you have LC–MS all-ion fragmentation chromatograms already processed by xcms and clustered by RamClustR, a feature table (targetTable.csv format) listing features to annotate, and you need rank-1 metabolite or lipid identifications with confidence metrics.
+description: Use when you have LC–MS all-ion fragmentation chromatograms already processed
+  by xcms and clustered by RamClustR, a feature table (targetTable.csv format) listing
+  features to annotate, and you need rank-1 metabolite or lipid identifications with
+  confidence metrics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -15,11 +18,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # annotaterc-function-parameterization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute the annotateRC function to match experimental LC–MS all-ion fragmentation spectra against fragment ion databases (e.g., LipidPos) and rank candidate metabolite annotations. This skill bridges processed xcms/RamClustR objects and feature tables to produce ranked lipid or metabolite identifications.

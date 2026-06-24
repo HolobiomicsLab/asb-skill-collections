@@ -1,6 +1,9 @@
 ---
 name: model-metadata-schema-inspection
-description: Use when when preparing to send peak data (1H and 13C NMR measurements) to a machine learning classification endpoint and you need to verify the current model's input/output names and schema, especially before implementing or updating code that constructs JSON payloads for the /api/smart3/search.
+description: Use when when preparing to send peak data (1H and 13C NMR measurements)
+  to a machine learning classification endpoint and you need to verify the current
+  model's input/output names and schema, especially before implementing or updating
+  code that constructs JSON payloads for the /api/smart3/search.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +11,7 @@ metadata:
   - TensorFlow Serving
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -35,6 +39,7 @@ attribution:
 
 # model-metadata-schema-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and inspect the input/output schema and model metadata from a TensorFlow Serving instance to understand required data formats and structure before sending classification requests. This skill ensures programmatic requests are aligned with the current model's expected input signatures.

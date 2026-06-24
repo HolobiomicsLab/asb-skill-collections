@@ -1,6 +1,9 @@
 ---
 name: high-performance-metric-computation
-description: Use when you have implemented or are evaluating an algorithmic or system optimization (e.g., MASST+) that claims to reduce execution time, and you need to quantify and statistically validate the speedup against a baseline system (e.g., MASST).
+description: Use when you have implemented or are evaluating an algorithmic or system
+  optimization (e.g., MASST+) that claims to reduce execution time, and you need to
+  quantify and statistically validate the speedup against a baseline system (e.g.,
+  MASST).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,6 +16,7 @@ metadata:
   - MASST+
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST
@@ -44,6 +48,7 @@ attribution:
 
 # high-performance-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify search-time performance improvements by executing identical query sets on baseline and optimized systems, recording wall-clock execution times, and computing speedup ratios with statistical confidence intervals. This skill validates whether algorithmic or system-level optimizations (e.g., indexing, data structure changes) achieve predicted performance gains in metabolomics mass spectrometry search.

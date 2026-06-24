@@ -1,6 +1,9 @@
 ---
 name: word2vec-model-inference-unknown-word-handling
-description: Use when when applying a pre-trained Word2Vec model to mass spectra at inference time (e.g., library matching or molecular networking), especially when the query spectra may contain fragment peaks or neutral losses not represented in the model's training vocabulary.
+description: Use when when applying a pre-trained Word2Vec model to mass spectra at
+  inference time (e.g., library matching or molecular networking), especially when
+  the query spectra may contain fragment peaks or neutral losses not represented in
+  the model's training vocabulary.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,16 +21,21 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
+- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
+  and can be installed via conda
 - inspired by a natural language processing algorithm—Word2Vec
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +59,7 @@ attribution:
 
 # word2vec-model-inference-unknown-word-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and handle unknown peaks (words) in mass spectra that fall outside a trained Word2Vec model's vocabulary during similarity inference. This skill estimates the weighted fraction of spectral intensity represented by out-of-vocabulary peaks and applies a missing-fraction threshold to avoid spurious Spec2Vec similarity scores on spectra with insufficient feature coverage.

@@ -1,6 +1,8 @@
 ---
 name: spectral-feature-extraction-and-annotation
-description: Use when you have raw LC/MS data in mzML format and need to perform non-targeted screening to discover unknown chemical features without a predefined list of target compounds.
+description: Use when you have raw LC/MS data in mzML format and need to perform non-targeted
+  screening to discover unknown chemical features without a predefined list of target
+  compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -20,6 +22,7 @@ metadata:
   - pandas, numpy, scipy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF
@@ -53,6 +56,7 @@ attribution:
 
 # spectral-feature-extraction-and-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and annotate chemical features from untargeted LC/MS data using the LAGF algorithm, which identifies ion signals and associates them with potential molecular identities for screening and discovery workflows.

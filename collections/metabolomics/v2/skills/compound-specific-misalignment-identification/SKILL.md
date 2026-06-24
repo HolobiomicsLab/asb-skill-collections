@@ -1,6 +1,8 @@
 ---
 name: compound-specific-misalignment-identification
-description: Use when you have completed XCMS grouping on LC-MS data and suspect misaligned features due to long acquisition periods (>1 week) or large sample cohorts (hundreds of samples).
+description: Use when you have completed XCMS grouping on LC-MS data and suspect misaligned
+  features due to long acquisition periods (>1 week) or large sample cohorts (hundreds
+  of samples).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +15,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -43,6 +47,7 @@ attribution:
 
 # compound-specific-misalignment-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies misaligned feature groups produced by XCMS grouping using ncGTW's misalignDetect() function, which compares two XCMS results with different bandwidth parameters to detect retention time (RT) drift artifacts. This skill enables correction of alignment errors that arise when XCMS assumes all m/z bins in a sample share a single warping function, improving accuracy for downstream peak-regrouping and peak-filling.

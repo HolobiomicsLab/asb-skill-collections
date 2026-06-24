@@ -1,6 +1,8 @@
 ---
 name: inter-sample-variance-calculation
-description: Use when after applying batch correction (e.g., via pycombat) to a multi-batch feature table, to validate whether the correction has reduced systematic intensity differences between batches.
+description: Use when after applying batch correction (e.g., via pycombat) to a multi-batch
+  feature table, to validate whether the correction has reduced systematic intensity
+  differences between batches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -14,6 +16,7 @@ metadata:
   - PCPFM
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -45,6 +48,7 @@ attribution:
 
 # inter-sample-variance-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate median inter-batch variance for high-intensity features across sample groups to quantify the magnitude of batch effects in multi-batch metabolomics feature tables before and after correction.

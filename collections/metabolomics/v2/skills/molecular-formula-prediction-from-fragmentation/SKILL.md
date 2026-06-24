@@ -1,6 +1,8 @@
 ---
 name: molecular-formula-prediction-from-fragmentation
-description: Use when you have MS/MS fragmentation spectra (from Orbitrap or Q-TOF instruments) in MGF format with known precursor m/z, adduct type, and collision energy, and you need to generate ranked molecular formula candidates.
+description: Use when you have MS/MS fragmentation spectra (from Orbitrap or Q-TOF
+  instruments) in MGF format with known precursor m/z, adduct type, and collision
+  energy, and you need to generate ranked molecular formula candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -42,6 +45,7 @@ attribution:
 
 # molecular-formula-prediction-from-fragmentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a pre-trained deep learning model (FIDDLE) to predict molecular formulas from tandem mass spectra (MS/MS), leveraging a Siamese rescore architecture to rank formula candidates by confidence score. This skill is essential when you have fragmentation spectra and need to narrow the chemical search space by eliminating implausible molecular formulas before structure elucidation.

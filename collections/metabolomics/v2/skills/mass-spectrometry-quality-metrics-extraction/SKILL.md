@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-quality-metrics-extraction
-description: Use when you have centroided .mzML LC–MS data, a validated target compound list with adjusted expected retention times (e.g., after a screening mode run), and need to quantify peak quality and integration reliability across multiple sample runs to support metabolomics or lipidomics workflows.
+description: Use when you have centroided .mzML LC–MS data, a validated target compound
+  list with adjusted expected retention times (e.g., after a screening mode run),
+  and need to quantify peak quality and integration reliability across multiple sample
+  runs to support metabolomics or lipidomics workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,6 +17,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -45,6 +49,7 @@ attribution:
 
 # mass-spectrometry-quality-metrics-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction of quantitative quality metrics (AUC, Max. Int., SNR, peak_cor, points_over_peak) for targeted chemical compounds from LC–MS data using TARDIS. This skill enables systematic assessment of peak detection reliability across multiple sample runs after retention time adjustment.

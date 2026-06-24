@@ -1,6 +1,8 @@
 ---
 name: peak-to-formula-assignment-mapping
-description: Use when when you have a fragment peak list (m/z values and intensities) from MS/MS data and need to assign candidate chemical subformulae to each peak as part of a de novo chemical formula inference pipeline.
+description: Use when when you have a fragment peak list (m/z values and intensities)
+  from MS/MS data and need to assign candidate chemical subformulae to each peak as
+  part of a de novo chemical formula inference pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # peak-to-formula-assignment-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign chemical subformulae to fragment peaks in tandem mass spectra by enumerating valid molecular formulas within mass tolerance windows and ranking them by energy-based scoring, without relying on external fragmentation tree databases. This creates a structured peak-to-formula mapping table for use in downstream formula ranking models.

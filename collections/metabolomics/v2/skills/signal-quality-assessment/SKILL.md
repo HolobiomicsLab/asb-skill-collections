@@ -1,6 +1,8 @@
 ---
 name: signal-quality-assessment
-description: Use when you have imported raw MSI spectral data in imzML format and need to improve signal-to-noise ratio before performing mean intensity calculations, ROI analysis, or database annotation.
+description: Use when you have imported raw MSI spectral data in imzML format and
+  need to improve signal-to-noise ratio before performing mean intensity calculations,
+  ROI analysis, or database annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,11 +16,13 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:

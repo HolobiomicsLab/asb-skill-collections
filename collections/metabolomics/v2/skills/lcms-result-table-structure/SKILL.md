@@ -1,6 +1,9 @@
 ---
 name: lcms-result-table-structure
-description: Use when after completing Part 4 (Identification of ISF Features) in the ISFrag workflow, when you have an analysis results object containing identified ISF features and need to generate a shareable, tabular export that documents feature annotations, hierarchical parent–fragment relationships, and.
+description: Use when after completing Part 4 (Identification of ISF Features) in
+  the ISFrag workflow, when you have an analysis results object containing identified
+  ISF features and need to generate a shareable, tabular export that documents feature
+  annotations, hierarchical parent–fragment relationships, and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,12 +16,15 @@ metadata:
   - RStudio
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - To install ISFrag package R version 4.0.0 or above is required
 - we recommend using RStudio to complete the installation and usage of ISFrag
 claims: []

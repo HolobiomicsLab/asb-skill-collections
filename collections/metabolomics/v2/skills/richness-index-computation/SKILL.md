@@ -1,6 +1,9 @@
 ---
 name: richness-index-computation
-description: Use when you have a normalized peak-abundance matrix from FT-ICR MS data (peaks as rows, samples as columns) and need to compare the number and diversity of detected molecular species across experimental conditions—for example, to test whether inoculation or environmental perturbation alters the.
+description: Use when you have a normalized peak-abundance matrix from FT-ICR MS data
+  (peaks as rows, samples as columns) and need to compare the number and diversity
+  of detected molecular species across experimental conditions—for example, to test
+  whether inoculation or environmental perturbation alters the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,12 +16,14 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - diversity metrics using functions from the R packages vegan [63]
 - diversity metrics using functions from the R packages vegan
 - diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
@@ -46,6 +51,7 @@ attribution:
 
 # richness-index-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute abundance-based metabolite richness metrics (Chao1, Shannon, Gini-Simpson) from normalized peak-intensity matrices to quantify the diversity of detected molecular species in metabolomic samples. This skill enables comparison of metabolite richness across treatment groups or sample conditions.

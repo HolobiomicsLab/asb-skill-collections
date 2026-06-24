@@ -1,6 +1,9 @@
 ---
 name: spectral-library-matching-with-cosine-similarity
-description: Use when you have a query spectrum and a reduced candidate set of library spectra (via approximate nearest neighbor indexing), and need to search for exact unmodified peptide matches with high confidence before proceeding to variable-mass-shift modification searches.
+description: Use when you have a query spectrum and a reduced candidate set of library
+  spectra (via approximate nearest neighbor indexing), and need to search for exact
+  unmodified peptide matches with high confidence before proceeding to variable-mass-shift
+  modification searches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -11,11 +14,13 @@ metadata:
   - ANN-SoLo
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

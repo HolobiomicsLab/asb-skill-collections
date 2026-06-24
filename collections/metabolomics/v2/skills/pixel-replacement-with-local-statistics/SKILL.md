@@ -1,6 +1,8 @@
 ---
 name: pixel-replacement-with-local-statistics
-description: Use when lA-ICP-MS image data contains isolated spike outliers (single or few pixels with anomalously high or low intensities relative to their local neighborhood) that distort quantitative analysis or visualization.
+description: Use when lA-ICP-MS image data contains isolated spike outliers (single
+  or few pixels with anomalously high or low intensities relative to their local neighborhood)
+  that distort quantitative analysis or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -10,13 +12,15 @@ metadata:
   - pewpew
   - pewlib
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 - python library [pewlib]
@@ -45,6 +49,7 @@ attribution:
 
 # pixel-replacement-with-local-statistics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace outlier pixels in LA-ICP-MS image data by comparing each pixel against a local rolling-window statistic (median or mean) and substituting values that exceed a threshold with the corresponding local statistic. This removes spike artifacts while preserving spatial structure in elemental distribution maps.

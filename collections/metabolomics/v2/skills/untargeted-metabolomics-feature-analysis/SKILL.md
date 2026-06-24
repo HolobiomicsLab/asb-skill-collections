@@ -1,6 +1,8 @@
 ---
 name: untargeted-metabolomics-feature-analysis
-description: Use when you have a feature table from untargeted metabolomics (with m/z, retention time, and p-values from differential abundance testing) but lack or wish to bypass metabolite annotation.
+description: Use when you have a feature table from untargeted metabolomics (with
+  m/z, retention time, and p-values from differential abundance testing) but lack
+  or wish to bypass metabolite annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -14,6 +16,7 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
@@ -41,6 +44,7 @@ attribution:
 
 # untargeted-metabolomics-feature-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map untargeted metabolomics feature tables (m/z, retention time, statistical significance) onto metabolic networks to predict functional pathway activity without requiring explicit metabolite identification. This skill leverages network-level propagation of feature signals to infer active metabolic modules and pathways directly from feature-level data.

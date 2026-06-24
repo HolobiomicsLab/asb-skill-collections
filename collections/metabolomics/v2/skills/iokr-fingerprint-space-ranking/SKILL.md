@@ -1,6 +1,8 @@
 ---
 name: iokr-fingerprint-space-ranking
-description: Use when when you have paired MS2 spectra and BGCs with structural candidates (e.g., from MIBiG homology), and you want to rank which BGC likely produces which spectrum using a compound-class-agnostic method.
+description: Use when when you have paired MS2 spectra and BGCs with structural candidates
+  (e.g., from MIBiG homology), and you want to rank which BGC likely produces which
+  spectrum using a compound-class-agnostic method.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -16,13 +18,15 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -52,6 +56,7 @@ attribution:
 
 # IOKR fingerprint-space ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A kernel regression method that ranks candidate BGC-spectrum links by projecting MS2 spectra into molecular fingerprint space and assigning IOKR scores without direct dependence on natural product compound class. This provides a complementary scoring signal to strain correlation for prioritizing validated genomic–metabolomic associations.

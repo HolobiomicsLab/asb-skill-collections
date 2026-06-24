@@ -1,6 +1,9 @@
 ---
 name: peak-recovery-post-filtering
-description: Use when after applying cluster-based filtering with quasi-molecular adduct constraints and frequency thresholds on LC-MS feature candidates, when some peaks have been entirely removed from the candidate pool and you want to prevent loss of true metabolites that failed to meet filtering criteria.
+description: Use when after applying cluster-based filtering with quasi-molecular
+  adduct constraints and frequency thresholds on LC-MS feature candidates, when some
+  peaks have been entirely removed from the candidate pool and you want to prevent
+  loss of true metabolites that failed to meet filtering criteria.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -17,14 +20,18 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 - we will now use the sample graph provided by FELLA R package
 claims: []
@@ -50,6 +57,7 @@ attribution:
 
 # peak-recovery-post-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recovery of metabolite peaks that were completely removed during cluster-based filtering in untargeted LC-MS annotation pipelines. This skill restores potentially valid candidates that may have been over-filtered, improving annotation sensitivity without sacrificing specificity.

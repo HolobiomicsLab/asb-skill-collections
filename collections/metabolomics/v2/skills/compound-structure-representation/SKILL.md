@@ -1,6 +1,9 @@
 ---
 name: compound-structure-representation
-description: Use when when you have experimental MS/MS data (peak lists, precursor m/z, charge state, adduct type) paired with a chemical structure (SMILES or structural identifier), and need to create a unified Compound object for spectral alignment, modification-site prediction, or comparative fragmentation.
+description: Use when when you have experimental MS/MS data (peak lists, precursor
+  m/z, charge state, adduct type) paired with a chemical structure (SMILES or structural
+  identifier), and need to create a unified Compound object for spectral alignment,
+  modification-site prediction, or comparative fragmentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -15,6 +18,7 @@ metadata:
   - GNPS Compound class
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -24,7 +28,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # compound-structure-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode chemical structures as SMILES strings and spectroscopic metadata (precursor m/z, charge, adduct) into Compound objects for downstream mass spectrometry analysis. This skill is essential for initializing structured chemical representations that link molecular topology to experimental ionization and fragmentation data.

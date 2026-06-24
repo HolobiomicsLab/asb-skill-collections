@@ -1,6 +1,8 @@
 ---
 name: lipid-library-annotation-from-mz
-description: Use when you have experimental peaklist data (CSV or mzML-derived tables) from UHPLC-HRMS/MS instruments (Q-Exactive, Agilent/Bruker/SCIEX Q-TOF) with fragment m/z values and want to annotate them to known lipid identities.
+description: Use when you have experimental peaklist data (CSV or mzML-derived tables)
+  from UHPLC-HRMS/MS instruments (Q-Exactive, Agilent/Bruker/SCIEX Q-TOF) with fragment
+  m/z values and want to annotate them to known lipid identities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -19,6 +21,7 @@ metadata:
   - SCIEX Q-TOF UHPLC-HRMS/MS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

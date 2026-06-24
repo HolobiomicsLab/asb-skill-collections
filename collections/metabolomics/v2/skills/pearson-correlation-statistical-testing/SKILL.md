@@ -1,6 +1,8 @@
 ---
 name: pearson-correlation-statistical-testing
-description: Use when when you have two co-registered LA-ICP-MS element images and need to determine whether the spatial distribution of one element correlates significantly with another.
+description: Use when when you have two co-registered LA-ICP-MS element images and
+  need to determine whether the spatial distribution of one element correlates significantly
+  with another.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2945
@@ -11,13 +13,15 @@ metadata:
   - pewpew
   - pewlib
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 - python library [pewlib]
@@ -46,6 +50,7 @@ attribution:
 
 # Pearson Correlation Statistical Testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute the Pearson R coefficient between two co-registered LA-ICP-MS element channels and assess its statistical significance by comparing the observed R value to a null distribution generated from random shuffles of one input channel. This quantifies spatial correlation between element distributions and provides a probability estimate (ρ) that the observed correlation arose by chance.

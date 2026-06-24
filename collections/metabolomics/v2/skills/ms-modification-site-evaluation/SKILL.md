@@ -1,6 +1,9 @@
 ---
 name: ms-modification-site-evaluation
-description: Use when after ModiFinder has generated modification site probability scores for an unknown compound by comparing its MS/MS spectrum to a known analog, and you have access to the true structure of the unknown compound (oracle mode) or a reference modification site annotation.
+description: Use when after ModiFinder has generated modification site probability
+  scores for an unknown compound by comparing its MS/MS spectrum to a known analog,
+  and you have access to the true structure of the unknown compound (oracle mode)
+  or a reference modification site annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -16,6 +19,7 @@ metadata:
   - Pillow
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -49,6 +53,7 @@ attribution:
 
 # ms-modification-site-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitatively evaluate the accuracy of predicted modification sites on unknown compounds by comparing ModiFinder-generated probability distributions against known structural modifications using BasicEvaluationEngine scoring metrics (is_max and average_distance). This skill validates whether the predicted site probabilities correctly localize the actual modification.

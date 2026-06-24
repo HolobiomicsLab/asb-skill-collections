@@ -1,6 +1,9 @@
 ---
 name: metabolic-network-edge-construction
-description: Use when when building a comprehensive chemical knowledge base for mass spectrometry formula assignment, particularly when you need to link chemical formulae across heterogeneous repositories (HMDB, ChEMBL, PubChem) and connect them through known metabolic transformations to improve annotation.
+description: Use when when building a comprehensive chemical knowledge base for mass
+  spectrometry formula assignment, particularly when you need to link chemical formulae
+  across heterogeneous repositories (HMDB, ChEMBL, PubChem) and connect them through
+  known metabolic transformations to improve annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -12,11 +15,13 @@ metadata:
   - SMART
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # metabolic-network-edge-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construction of interconnected chemical formula networks by integrating structural relationships (DBEdges) from multi-source chemical repositories and biological reaction pairs (BioEdges) from KEGG, enabling m/z-based lookups for spatially-resolved metabolomics annotation.

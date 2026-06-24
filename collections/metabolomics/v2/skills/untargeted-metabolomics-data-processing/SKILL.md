@@ -1,6 +1,8 @@
 ---
 name: untargeted-metabolomics-data-processing
-description: Use when you have untargeted MS2 spectral data (from LC-MS/MS or similar instruments) and need to assign metabolic pathway context to detected compounds when standard spectral library matching is unavailable or insufficient.
+description: Use when you have untargeted MS2 spectral data (from LC-MS/MS or similar
+  instruments) and need to assign metabolic pathway context to detected compounds
+  when standard spectral library matching is unavailable or insufficient.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -11,11 +13,13 @@ metadata:
   - MS2MP
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06875
   title: MS2MP
 evidence_spans:
-- MS2MP is a novel deep learning-based framework for KEGG pathway prediction directly from untargeted tandem mass spectrometry(MS2)
+- MS2MP is a novel deep learning-based framework for KEGG pathway prediction directly
+  from untargeted tandem mass spectrometry(MS2)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # untargeted-metabolomics-data-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Process untargeted tandem mass spectrometry (MS2) spectra through a deep learning framework to predict KEGG metabolic pathways directly from spectral data. This skill enables functional annotation of unknown metabolites by leveraging pre-trained models that map MS2 fragmentation patterns to known biochemical pathways.

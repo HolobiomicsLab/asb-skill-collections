@@ -1,6 +1,9 @@
 ---
 name: genomic-coordinate-mapping
-description: Use when after sub-clusters have been detected by PRESTO-STAT or PRESTO-TOP statistical methods on tokenised and redundancy-filtered BGCs, and you need to report their precise genomic positions, gene locus tags, and orientations for integration with natural product substructure predictions or for.
+description: Use when after sub-clusters have been detected by PRESTO-STAT or PRESTO-TOP
+  statistical methods on tokenised and redundancy-filtered BGCs, and you need to report
+  their precise genomic positions, gene locus tags, and orientations for integration
+  with natural product substructure predictions or for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3106
@@ -10,11 +13,13 @@ metadata:
   - http://edamontology.org/topic_0749
   tools:
   - iPRESTO
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

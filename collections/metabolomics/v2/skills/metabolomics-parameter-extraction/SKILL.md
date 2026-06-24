@@ -1,6 +1,9 @@
 ---
 name: metabolomics-parameter-extraction
-description: Use when you have raw untargeted metabolomics data in mzML, mzXML, or CDF format from qTOF, Orbitrap, or FTICR mass analyzers, at least 3 samples, a sample metadata spreadsheet linking filenames to experimental factors, and need to generate optimized processing parameters for XCMS or MZmine2.
+description: Use when you have raw untargeted metabolomics data in mzML, mzXML, or
+  CDF format from qTOF, Orbitrap, or FTICR mass analyzers, at least 3 samples, a sample
+  metadata spreadsheet linking filenames to experimental factors, and need to generate
+  optimized processing parameters for XCMS or MZmine2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +19,7 @@ metadata:
   - mtbls2
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

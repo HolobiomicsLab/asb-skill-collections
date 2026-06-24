@@ -1,6 +1,7 @@
 ---
 name: gaussian-peak-shape-evaluation
-description: Use when after peak detection on a composite mass track has identified candidate peaks in a mass chromatogram, and before compiling the final feature table.
+description: Use when after peak detection on a composite mass track has identified
+  candidate peaks in a mass chromatogram, and before compiling the final feature table.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,13 +15,16 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list), [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
+- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list),
+  [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # Gaussian Peak Shape Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies the goodness-of-fit of detected LC-MS peaks to a Gaussian model to filter out poorly shaped peaks and retain high-quality features. This metric serves as one of three orthogonal quality thresholds (alongside SNR and prominence) in asari's peak quality filtering pipeline.

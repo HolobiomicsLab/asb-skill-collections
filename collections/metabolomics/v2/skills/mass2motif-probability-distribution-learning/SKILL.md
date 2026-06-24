@@ -1,6 +1,8 @@
 ---
 name: mass2motif-probability-distribution-learning
-description: Use when when you have preprocessed MS/MS spectra converted to a bag-of-fragments format (fragments and neutral losses extracted, noise filtered) and you seek to discover recurring fragmentation patterns without prior compound identification.
+description: Use when when you have preprocessed MS/MS spectra converted to a bag-of-fragments
+  format (fragments and neutral losses extracted, noise filtered) and you seek to
+  discover recurring fragmentation patterns without prior compound identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,11 +16,13 @@ metadata:
   - MotifDB
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

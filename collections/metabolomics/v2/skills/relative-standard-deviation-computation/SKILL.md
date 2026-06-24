@@ -1,6 +1,8 @@
 ---
 name: relative-standard-deviation-computation
-description: Use when when you have preprocessed metabolomics data with pooled QC samples and assigned internal standards, and need to select the optimal internal standard for each compound by comparing ratio stability across candidate standards.
+description: Use when when you have preprocessed metabolomics data with pooled QC
+  samples and assigned internal standards, and need to select the optimal internal
+  standard for each compound by comparing ratio stability across candidate standards.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +13,7 @@ metadata:
   - mzQuality
   - R
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -19,8 +22,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # relative-standard-deviation-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute the Relative Standard Deviation (RSD) of batch-corrected compound-to-internal-standard ratios across QC samples to quantify measurement reproducibility and identify the most stable internal standard for each metabolite.

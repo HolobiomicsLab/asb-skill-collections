@@ -1,6 +1,7 @@
 ---
 name: metabolite-benchmark-dataset-validation
-description: Use when after mzRAPP has exported a benchmark CSV file from processing a batch of centroided mzML files (e.
+description: Use when after mzRAPP has exported a benchmark CSV file from processing
+  a batch of centroided mzML files (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -14,12 +15,14 @@ metadata:
   - enviPat
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - library(mzRAPP)
 claims: []
 provenance:

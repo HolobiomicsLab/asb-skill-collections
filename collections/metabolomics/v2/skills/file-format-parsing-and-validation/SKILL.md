@@ -1,6 +1,9 @@
 ---
 name: file-format-parsing-and-validation
-description: Use when you have peak/feature tables from one or more of MZmine, XCMS, MS-DIAL, or Compound Discoverer and need to ingest them into LipidMatch for lipid identification. The input files are in tabular format (CSV, TSV, or Excel) and their upstream tool origin may be unknown or mixed.
+description: Use when you have peak/feature tables from one or more of MZmine, XCMS,
+  MS-DIAL, or Compound Discoverer and need to ingest them into LipidMatch for lipid
+  identification. The input files are in tabular format (CSV, TSV, or Excel) and their
+  upstream tool origin may be unknown or mixed.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,13 +18,16 @@ metadata:
   - LipidMatch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

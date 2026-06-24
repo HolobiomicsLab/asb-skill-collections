@@ -1,6 +1,8 @@
 ---
 name: ms-quantitative-analysis-standards
-description: Use when you have raw MS intensity data paired with known-concentration calibration standard measurements, and you need to convert intensities to absolute or relative concentrations.
+description: Use when you have raw MS intensity data paired with known-concentration
+  calibration standard measurements, and you need to convert intensities to absolute
+  or relative concentrations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -11,6 +13,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -38,6 +41,7 @@ attribution:
 
 # MS Quantitative Analysis via External Calibration Standards
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method for converting raw mass spectrometry intensity measurements into quantified concentration values by fitting external calibration curves (linear or polynomial regression) against known concentration standards and applying the model to sample data. Essential for handling intensity drift in targeted MS workflows.

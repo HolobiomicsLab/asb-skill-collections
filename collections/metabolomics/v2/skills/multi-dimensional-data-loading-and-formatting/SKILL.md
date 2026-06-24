@@ -1,6 +1,7 @@
 ---
 name: multi-dimensional-data-loading-and-formatting
-description: Use when you have raw or processed mass spectrometry data in HDF5 (.h5) or mzML format and need to ingest it into DEIMoS for multi-dimensional analysis.
+description: Use when you have raw or processed mass spectrometry data in HDF5 (.h5)
+  or mzML format and need to ingest it into DEIMoS for multi-dimensional analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,11 +17,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - is a Python application programming interface and command-line tool
 - import numpy as np
@@ -47,6 +50,7 @@ attribution:
 
 # multi-dimensional-data-loading-and-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse multi-dimensional mass spectrometry data from diverse file formats (HDF5, mzML) into DEIMoS-compatible data structures, preserving all acquisition dimensions (m/z, drift time, retention time, intensity) needed for downstream feature detection and CCS calibration.

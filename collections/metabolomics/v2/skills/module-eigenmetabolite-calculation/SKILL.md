@@ -1,6 +1,9 @@
 ---
 name: module-eigenmetabolite-calculation
-description: Use when after metabolic correlation modules have been identified via hierarchical clustering with dynamic branch cutting on a biweight midcorrelation matrix. Apply this skill when you need a single representative abundance profile per module to correlate against sample traits (e.
+description: Use when after metabolic correlation modules have been identified via
+  hierarchical clustering with dynamic branch cutting on a biweight midcorrelation
+  matrix. Apply this skill when you need a single representative abundance profile
+  per module to correlate against sample traits (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -13,6 +16,7 @@ metadata:
   - WGCNA
   - R
   - R (stats::prcomp or similar)
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -22,7 +26,8 @@ evidence_spans:
 - '`MetaboDiff` is available for all operating systems and can be installed via Github'
 - met = knn_impute(met,cutoff=0.4)
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 claims: []
@@ -49,6 +54,7 @@ attribution:
 
 # module-eigenmetabolite-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate eigenmetabolites (first principal components) as representative profiles for metabolic co-expression modules identified by hierarchical clustering and dynamic tree cutting. This condenses high-dimensional module abundance patterns into single composite metabolite vectors suitable for downstream correlation analysis with sample phenotypes.

@@ -1,6 +1,9 @@
 ---
 name: retention-time-clustering-alignment
-description: Use when you have extracted feature tables (via MS1 peak picking, MS2 recognition, or targeted list extraction) from two or more individual LC-MS samples and need to identify which features represent the same metabolite across samples before generating a unified, sample-aligned feature table for.
+description: Use when you have extracted feature tables (via MS1 peak picking, MS2
+  recognition, or targeted list extraction) from two or more individual LC-MS samples
+  and need to identify which features represent the same metabolite across samples
+  before generating a unified, sample-aligned feature table for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -14,6 +17,7 @@ metadata:
   - CAMERA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

@@ -1,6 +1,9 @@
 ---
 name: dna-adduct-compound-database-loading
-description: Use when you have downloaded fragment records from the experimental or predicted DNA adductomics databases and need to verify that each fragment can be matched to its corresponding compound entry in the SDF-format reference compound database, or when auditing completeness of a DNA adduct resource.
+description: Use when you have downloaded fragment records from the experimental or
+  predicted DNA adductomics databases and need to verify that each fragment can be
+  matched to its corresponding compound entry in the SDF-format reference compound
+  database, or when auditing completeness of a DNA adduct resource.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - SDF file parser / molecular structure library
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -36,6 +40,7 @@ attribution:
 
 # dna-adduct-compound-database-loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and cross-reference experimental and predicted fragment records against a reference compound database in SDF format to validate data integrity and identify orphaned fragments. This skill ensures that all fragment entries in DNA adductomics resources are traceable to their parent compound records.

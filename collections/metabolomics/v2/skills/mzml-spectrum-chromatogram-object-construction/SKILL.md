@@ -1,6 +1,8 @@
 ---
 name: mzml-spectrum-chromatogram-object-construction
-description: Use when you have an indexed gzip–compressed mzML file (mzML.gz with internal index structure) and need to retrieve and work with individual spectra or chromatograms by integer index without decompressing the entire file.
+description: Use when you have an indexed gzip–compressed mzML file (mzML.gz with
+  internal index structure) and need to retrieve and work with individual spectra
+  or chromatograms by integer index without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +15,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,6 +44,7 @@ attribution:
 
 # mzml-spectrum-chromatogram-object-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct Python Spectrum or Chromatogram objects from indexed gzip–compressed mzML data by parsing decompressed XML blocks and instantiating the appropriate object type based on the element tag. This enables random-access retrieval and in-memory representation of individual mass spectra or chromatograms from large compressed mzML files.

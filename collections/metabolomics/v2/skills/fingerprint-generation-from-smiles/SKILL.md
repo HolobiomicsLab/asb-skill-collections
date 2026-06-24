@@ -1,6 +1,9 @@
 ---
 name: fingerprint-generation-from-smiles
-description: Use when you have molecule IDs from PubChem or HMDB that have been converted to RDKit molecule objects, and you need to create a standardized fingerprint modality to combine with graph-based and physicochemical descriptor features for multimodal deep learning on molecular property prediction.
+description: Use when you have molecule IDs from PubChem or HMDB that have been converted
+  to RDKit molecule objects, and you need to create a standardized fingerprint modality
+  to combine with graph-based and physicochemical descriptor features for multimodal
+  deep learning on molecular property prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0564
@@ -13,6 +16,7 @@ metadata:
   - numpy
   - pandas
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -44,6 +48,7 @@ attribution:
 
 # fingerprint-generation-from-smiles
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate fixed-length binary fingerprint vectors (Morgan fingerprints) from molecular structures to create compact, machine-learning-ready representations of chemical compounds. This skill converts SMILES or RDKit molecule objects into 2048-bit vectors capturing molecular topology and features for multimodal model training.

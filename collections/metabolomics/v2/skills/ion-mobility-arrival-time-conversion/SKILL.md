@@ -1,6 +1,9 @@
 ---
 name: ion-mobility-arrival-time-conversion
-description: Use when you have a feature table containing raw ion mobility arrival time measurements paired with experimentally assigned biomolecular class labels (e.g., lipid, protein, carbohydrate), and you need to compute CCS values for downstream structural or comparative analysis.
+description: Use when you have a feature table containing raw ion mobility arrival
+  time measurements paired with experimentally assigned biomolecular class labels
+  (e.g., lipid, protein, carbohydrate), and you need to compute CCS values for downstream
+  structural or comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -41,6 +45,7 @@ attribution:
 
 # ion-mobility-arrival-time-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert TWIM-MS ion arrival time measurements to calibrated collision cross section (CCS) values using class-specific calibration parameters. This skill is essential for quantifying biomolecular structural properties in high-dimensional multi-omic ion mobility workflows where class-appropriate calibration models must be applied to raw arrival time data.

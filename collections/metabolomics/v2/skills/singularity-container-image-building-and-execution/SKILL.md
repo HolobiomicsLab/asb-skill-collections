@@ -1,6 +1,8 @@
 ---
 name: singularity-container-image-building-and-execution
-description: Use when you have a Docker image published to a registry (e.g., docker://stravsm/msnovelist6), need to run it on an HPC cluster with SLURM scheduling, and must allocate specific hardware resources (GPUs, RAM) per job.
+description: Use when you have a Docker image published to a registry (e.g., docker://stravsm/msnovelist6),
+  need to run it on an HPC cluster with SLURM scheduling, and must allocate specific
+  hardware resources (GPUs, RAM) per job.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3552
@@ -12,6 +14,7 @@ metadata:
   - Python
   - MSNovelist
   - SLURM
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

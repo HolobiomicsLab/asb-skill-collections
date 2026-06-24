@@ -1,6 +1,9 @@
 ---
 name: excel-template-parsing
-description: Use when when you have an Excel file downloaded from InjectionDesign's template or conforming to its schema, and you need to extract sample identifiers, classification dimensions (up to three), and QC type labels (Blank QC, Solvent QC, Pooled QC, Long-Term Reference QC, or custom) into a structured.
+description: Use when when you have an Excel file downloaded from InjectionDesign's
+  template or conforming to its schema, and you need to extract sample identifiers,
+  classification dimensions (up to three), and QC type labels (Blank QC, Solvent QC,
+  Pooled QC, Long-Term Reference QC, or custom) into a structured.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - InjectionDesign
   - pandas
   - openpyxl
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
@@ -39,6 +43,7 @@ attribution:
 
 # excel-template-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse uploaded Excel files conforming to an InjectionDesign template schema into a structured sample list with support for multiple classification dimensions and QC type designation. This skill enables systematic conversion of user-supplied sample metadata into a machine-readable format ready for injection-plate design optimization.

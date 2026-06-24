@@ -1,6 +1,9 @@
 ---
 name: mass-trace-separation-by-grouping
-description: Use when your pandas DataFrame contains mass spectrometry data with retention time (rt) and intensity columns AND a column representing different mass-to-charge (m/z) values or ion identifiers. This is particularly relevant when generating chromatogram plots from data with multiple mass traces (e.
+description: Use when your pandas DataFrame contains mass spectrometry data with retention
+  time (rt) and intensity columns AND a column representing different mass-to-charge
+  (m/z) values or ion identifiers. This is particularly relevant when generating chromatogram
+  plots from data with multiple mass traces (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,12 +16,14 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # mass-trace-separation-by-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Separate multiple mass-to-charge (m/z) traces within a single chromatogram visualization by using the 'by' parameter to group data into faceted subplots. This skill is essential when a mass spectrometry dataset contains multiple ion traces and you need to visualize them as distinct chromatographic profiles rather than as an overlaid composite.

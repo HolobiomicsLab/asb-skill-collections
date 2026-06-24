@@ -1,6 +1,8 @@
 ---
 name: raw-file-header-extraction
-description: Use when beginning an LC-MS data analysis pipeline and you need to rapidly inspect instrument metadata, acquisition parameters, or scan statistics from proprietary Thermo .raw files without the I/O overhead of loading full spectra.
+description: Use when beginning an LC-MS data analysis pipeline and you need to rapidly
+  inspect instrument metadata, acquisition parameters, or scan statistics from proprietary
+  Thermo .raw files without the I/O overhead of loading full spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,17 +17,23 @@ metadata:
   - jsonlite
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
 - rjson::toJSON
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -53,6 +61,7 @@ attribution:
 
 # raw-file-header-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and deserialize metadata from Thermo Fisher Scientific binary .raw files into R list objects using the readFileHeader() function, retrieving instrument configuration, acquisition time range, and scan counts without loading full spectral data.

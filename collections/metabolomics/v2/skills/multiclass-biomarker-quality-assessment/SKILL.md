@@ -1,6 +1,8 @@
 ---
 name: multiclass-biomarker-quality-assessment
-description: Use when you have a multi-class metabolomic peak table with quality control (QC) samples included, and you need to select an optimal preprocessing workflow for downstream biomarker discovery or differential profiling.
+description: Use when you have a multi-class metabolomic peak table with quality control
+  (QC) samples included, and you need to select an optimal preprocessing workflow
+  for downstream biomarker discovery or differential profiling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -18,6 +20,7 @@ metadata:
   - impute
   - statTarget
   - ProteoMM
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

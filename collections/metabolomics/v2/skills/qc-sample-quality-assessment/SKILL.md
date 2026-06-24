@@ -1,6 +1,8 @@
 ---
 name: qc-sample-quality-assessment
-description: Use when after drift correction and before imputation when you have LC-MS data with designated QC samples and you need to remove features with poor reproducibility across QC replicates.
+description: Use when after drift correction and before imputation when you have LC-MS
+  data with designated QC samples and you need to remove features with poor reproducibility
+  across QC replicates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - ExpressionSet
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -23,8 +26,10 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
-- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet``` is built upon the ```ExpressionSet``` class'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
+- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet```
+  is built upon the ```ExpressionSet``` class'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # QC Sample Quality Assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Flag and filter molecular features in LC-MS metabolomics data based on their detection rate across Quality Control (QC) samples to remove low-quality features before multivariate analysis. This is a critical quality-control step in the notame preprocessing workflow that identifies features failing to meet minimum reproducibility thresholds.

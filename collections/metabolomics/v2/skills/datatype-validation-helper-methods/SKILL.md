@@ -1,6 +1,8 @@
 ---
 name: datatype-validation-helper-methods
-description: Use when when implementing a custom MsBackend subclass and need to verify that spectra variables (e.g., precursor m/z, retention time, MS level) conform to expected data types before exposing them to Spectra objects.
+description: Use when when implementing a custom MsBackend subclass and need to verify
+  that spectra variables (e.g., precursor m/z, retention time, MS level) conform to
+  expected data types before exposing them to Spectra objects.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -44,6 +47,7 @@ attribution:
 
 # datatype-validation-helper-methods
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement helper functions that validate core spectra variable data types against MsBackend schema requirements during backend initialization. This ensures type consistency and prevents downstream errors in mass spectrometry data pipelines.

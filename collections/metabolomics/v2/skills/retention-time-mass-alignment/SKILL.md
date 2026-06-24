@@ -1,6 +1,8 @@
 ---
 name: retention-time-mass-alignment
-description: Use when you have two independent LC-MS untargeted metabolomic feature datasets (each with retention time and m/z values) and need to identify which features in one dataset correspond to features in the other.
+description: Use when you have two independent LC-MS untargeted metabolomic feature
+  datasets (each with retention time and m/z values) and need to identify which features
+  in one dataset correspond to features in the other.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -11,6 +13,7 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -38,6 +41,7 @@ attribution:
 
 # retention-time-mass-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and match untargeted LC-MS metabolomic features across two datasets by leveraging retention time and mass-to-charge ratio similarity. This skill enables cross-dataset feature correspondence, producing matched feature tables with alignment scores suitable for comparative metabolomics studies.

@@ -1,6 +1,8 @@
 ---
 name: hmdb-metabolite-extraction
-description: Use when you have downloaded raw HMDB data (hmdb_metabolites.zip or pickle file) and need to generate a representative set of chemical objects for simulating LC-MS/MS acquisition strategies.
+description: Use when you have downloaded raw HMDB data (hmdb_metabolites.zip or pickle
+  file) and need to generate a representative set of chemical objects for simulating
+  LC-MS/MS acquisition strategies.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,6 +16,7 @@ metadata:
   - vimms-data
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -45,6 +48,7 @@ attribution:
 
 # HMDB Metabolite Extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and filter molecular metabolites from the Human Metabolome Database (HMDB) using ViMMS's database utilities, applying m/z range and intensity constraints to create a curated chemical object library for LC-MS/MS simulation and evaluation.

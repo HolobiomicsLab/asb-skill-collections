@@ -1,6 +1,9 @@
 ---
 name: nmr-spectral-feature-extraction
-description: Use when when you have raw or preprocessed 1H NMR spectral tensors from flavor or chemical mixtures and need to generate high-level feature representations that capture both fine-grained local patterns (e.g., peak multiplet structure, coupling constants) and global spectral context (e.
+description: Use when when you have raw or preprocessed 1H NMR spectral tensors from
+  flavor or chemical mixtures and need to generate high-level feature representations
+  that capture both fine-grained local patterns (e.g., peak multiplet structure, coupling
+  constants) and global spectral context (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
@@ -43,6 +47,7 @@ attribution:
 
 # nmr-spectral-feature-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract local and global features from 1H NMR spectra using a hybrid CNN-Transformer architecture that combines convolutional layers for short-range spectral patterns with multi-head Transformer encoders for long-range dependencies. This skill enables accurate feature representation of NMR data for downstream compound identification tasks in mixture analysis.

@@ -1,6 +1,9 @@
 ---
 name: target-list-coordinate-mapping
-description: Use when you have a CSV-formatted target list with m/z, retention time, or ion mobility identifiers and need to locate and extract peak abundances from raw MS data files (Agilent .d, Thermo .raw, Bruker .d, mzML) acquired across LC-MS, LC-IMS-MS, DDA, DIA, or direct infusion modes.
+description: Use when you have a CSV-formatted target list with m/z, retention time,
+  or ion mobility identifiers and need to locate and extract peak abundances from
+  raw MS data files (Agilent .d, Thermo .raw, Bruker .d, mzML) acquired across LC-MS,
+  LC-IMS-MS, DDA, DIA, or direct infusion modes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3705
@@ -15,6 +18,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

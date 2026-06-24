@@ -1,6 +1,9 @@
 ---
 name: metabolomics-feature-intensity-normalization
-description: Use when after peak detection and feature table construction (rows = features, columns = samples with intensity values) and before applying intensity-based filters (e.g., fold-change, phenotype score) or when preparing data for dashboard visualization.
+description: Use when after peak detection and feature table construction (rows =
+  features, columns = samples with intensity values) and before applying intensity-based
+  filters (e.g., fold-change, phenotype score) or when preparing data for dashboard
+  visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +16,7 @@ metadata:
   - FERMO dashboard
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO

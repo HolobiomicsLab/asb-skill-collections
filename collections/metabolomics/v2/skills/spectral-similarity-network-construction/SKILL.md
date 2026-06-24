@@ -1,6 +1,8 @@
 ---
 name: spectral-similarity-network-construction
-description: Use when after acquiring MS/MS spectral data from untargeted metabolomics experiments and having candidate transformed structures from biotransformation rule application.
+description: Use when after acquiring MS/MS spectral data from untargeted metabolomics
+  experiments and having candidate transformed structures from biotransformation rule
+  application.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,7 @@ metadata:
   - GNN-SOM
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -41,6 +44,7 @@ attribution:
 
 # spectral-similarity-network-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a similarity network from untargeted metabolomics MS/MS spectral data by computing pairwise spectral similarity scores and filtering edges to retain high-confidence spectral matches. This network serves as the foundation for identifying molecular families and annotating candidate structures in metabolomic discovery workflows.

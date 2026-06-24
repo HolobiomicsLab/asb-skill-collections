@@ -21,6 +21,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -53,6 +54,7 @@ attribution:
 
 # feature-quality-assessment-metrics
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Comprehensive evaluation of LC-MS detected features using quality metrics to filter and rank chromatographic peaks by reliability. This skill assesses feature integrity, noise characteristics, and signal consistency to support confident downstream annotation and metabolite identification.

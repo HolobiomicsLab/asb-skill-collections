@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectrum-annotation-preprocessing
-description: Use when you have raw LC-MS/MS data acquired in Data-Dependent Acquisition (DDA) mode and need to create a labeled training dataset for customized purification model development.
+description: Use when you have raw LC-MS/MS data acquired in Data-Dependent Acquisition
+  (DDA) mode and need to create a labeled training dataset for customized purification
+  model development.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -13,6 +15,7 @@ metadata:
   - DNMS2Purifier.r
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
@@ -41,6 +44,7 @@ attribution:
 
 # MS/MS Spectrum Annotation Preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and annotate MS/MS spectra from LC-MS/MS acquisitions in DDA mode by curating training datasets with purity labels to enable downstream chimeric spectrum purification and customized model training. This skill bridges raw spectral acquisition and machine-learning-ready training sets.

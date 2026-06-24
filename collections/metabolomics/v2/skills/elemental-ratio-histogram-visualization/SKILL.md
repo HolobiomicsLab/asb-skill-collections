@@ -1,6 +1,9 @@
 ---
 name: elemental-ratio-histogram-visualization
-description: 'Use when after loading a numeric elemental ratio column (H/C, O/C, N/C, etc.) from a CSV file into Punc''data, when you need to visualize the distribution of molecular formulas across a sample and want bin spacing to adapt automatically: narrow bins (0.1) for low-range data (span ≤ 3.'
+description: 'Use when after loading a numeric elemental ratio column (H/C, O/C, N/C,
+  etc.) from a CSV file into Punc''data, when you need to visualize the distribution
+  of molecular formulas across a sample and want bin spacing to adapt automatically:
+  narrow bins (0.1) for low-range data (span ≤ 3.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -11,6 +14,7 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

@@ -1,6 +1,9 @@
 ---
 name: neural-network-based-molecular-formula-inference
-description: Use when you have MS/MS spectra with unknown precursor m/z values and need to assign the most likely chemical formula and adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+) in a de novo setting where spectrum database matching is unavailable or undesirable.
+description: Use when you have MS/MS spectra with unknown precursor m/z values and
+  need to assign the most likely chemical formula and adduct type (e.g., [M+H]+, [M+Na]+,
+  [M+K]+) in a de novo setting where spectrum database matching is unavailable or
+  undesirable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -15,13 +18,16 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
@@ -46,6 +52,7 @@ attribution:
 
 # neural-network-based-molecular-formula-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a formula transformer neural network to rank candidate chemical formulas and adduct assignments directly from tandem MS/MS spectra without fragmentation tree computation. This approach learns data-dependent patterns and considers multiple adduct types, enabling de novo precursor mass annotation for unknown metabolites.

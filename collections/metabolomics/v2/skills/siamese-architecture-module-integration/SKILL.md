@@ -1,6 +1,9 @@
 ---
 name: siamese-architecture-module-integration
-description: Use when when refactoring a mass-spectrometry formula-prediction codebase that has deprecated a monolithic scoring function (FDRNet) and requires a modular, symmetric Siamese design to independently embed spectrum and molecular-formula features before combining them.
+description: Use when when refactoring a mass-spectrometry formula-prediction codebase
+  that has deprecated a monolithic scoring function (FDRNet) and requires a modular,
+  symmetric Siamese design to independently embed spectrum and molecular-formula features
+  before combining them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,6 +16,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -41,6 +45,7 @@ attribution:
 
 # siamese-architecture-module-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and integrate a Siamese neural architecture comprising a FormulaEncoder (embedding atom-count vectors into fixed-dimension representations) and a RescoreHead (computing element-wise products of spectrum and formula embeddings to generate confidence logits) into the model_tcn.py codebase. This skill applies when modernizing a legacy formula-prediction rescore pipeline from v1.0.0 to v2.0.0 and replacing removed FDRNet components.

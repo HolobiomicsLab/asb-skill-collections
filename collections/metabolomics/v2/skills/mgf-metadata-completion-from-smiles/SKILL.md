@@ -1,6 +1,8 @@
 ---
 name: mgf-metadata-completion-from-smiles
-description: Use when when processing MGF-format MS2 spectral libraries (e.g., GNPS) that contain SMILES but lack the Molecular Formula field, and you need to prepare the library for MS-DIAL import or polarity-based separation workflows.
+description: Use when when processing MGF-format MS2 spectral libraries (e.g., GNPS)
+  that contain SMILES but lack the Molecular Formula field, and you need to prepare
+  the library for MS-DIAL import or polarity-based separation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -18,6 +20,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -51,6 +54,7 @@ attribution:
 
 # MGF Metadata Completion from SMILES
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Complete missing Molecular Formula (MF) fields in MGF-format mass spectral libraries by calculating MF from existing SMILES strings. This is essential for libraries like GNPS that lack comprehensive metadata annotation required by downstream MS-DIAL processing.

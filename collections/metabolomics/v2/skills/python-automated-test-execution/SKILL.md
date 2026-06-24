@@ -1,6 +1,8 @@
 ---
 name: python-automated-test-execution
-description: Use when when contributing code changes to a Python project (fork, feature branch, or pull request) that uses a setup.py-based test suite, before pushing changes to the remote repository or merging into the main branch.
+description: Use when when contributing code changes to a Python project (fork, feature
+  branch, or pull request) that uses a setup.py-based test suite, before pushing changes
+  to the remote repository or merging into the main branch.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - GitHub Actions
   - Python setuptools
   - Sonarcloud
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

@@ -1,6 +1,8 @@
 ---
 name: condition-effect-matrix-generation
-description: 'Use when you need to create a synthetic feature table with known, ground-truth condition effects for method validation when: (1) testing normalization or batch-correction algorithms that must not confound condition signal with batch noise;'
+description: 'Use when you need to create a synthetic feature table with known, ground-truth
+  condition effects for method validation when: (1) testing normalization or batch-correction
+  algorithms that must not confound condition signal with batch noise;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +16,13 @@ metadata:
   - HMDB / MoNA databases
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # condition-effect-matrix-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a feature-table matrix encoding controlled intensity modulations across experimental conditions for LC/GC-MS metabolomics simulations. This skill produces a condition-only effect matrix that modulates peak intensities across conditions according to user-specified allocation parameters, enabling benchmarking of statistical and normalization methods.

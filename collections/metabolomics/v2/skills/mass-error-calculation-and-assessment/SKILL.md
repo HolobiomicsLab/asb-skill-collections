@@ -1,6 +1,8 @@
 ---
 name: mass-error-calculation-and-assessment
-description: Use when after peak picking and before or after molecular formula assignment on FT-ICR data, especially when calibrating on a specific field strength (e.g., 12 T or 15 T).
+description: Use when after peak picking and before or after molecular formula assignment
+  on FT-ICR data, especially when calibrating on a specific field strength (e.g.,
+  12 T or 15 T).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,14 @@ metadata:
   - Bruker Solarix (ReadBrukerSolarix)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 - import numpy as np
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # mass-error-calculation-and-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies the accuracy of molecular formula assignments by calculating the difference between theoretical m/z values and observed m/z values in FT-ICR mass spectra, expressed in ppm error. This assessment is essential for validating formula assignments and tuning calibration parameters on high-field instruments.

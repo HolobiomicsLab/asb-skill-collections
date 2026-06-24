@@ -1,6 +1,9 @@
 ---
 name: metabolite-database-file-formatting
-description: Use when after generating or filtering transformation products using generateTPs() or filter(), when you need to annotate MS/MS spectra using MetFrag and require a database of candidate structures (parent compounds and/or their TPs) in a format MetFrag can read.
+description: Use when after generating or filtering transformation products using
+  generateTPs() or filter(), when you need to annotate MS/MS spectra using MetFrag
+  and require a database of candidate structures (parent compounds and/or their TPs)
+  in a format MetFrag can read.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,13 +16,15 @@ metadata:
   - generateTPs (patRoon algorithm)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
 evidence_spans:
 - The `generateTPs` function is used to obtain TPs for a particular set of parents.
 - componTP <- generateComponents(algorithm = "tp",
-- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents, only for TPs with structural information)
+- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents,
+  only for TPs with structural information)
 - Generates a [MetFrag] database for all TPs
 claims: []
 provenance:

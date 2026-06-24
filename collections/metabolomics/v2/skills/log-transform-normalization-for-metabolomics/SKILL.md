@@ -1,6 +1,8 @@
 ---
 name: log-transform-normalization-for-metabolomics
-description: Use when after chromatographic peak detection, fill-in of missing peaks, and retention-time-based grouping in LC-MS metabolomics workflows, apply log2 transformation when refining feature groups using correlation of abundances across samples.
+description: Use when after chromatographic peak detection, fill-in of missing peaks,
+  and retention-time-based grouping in LC-MS metabolomics workflows, apply log2 transformation
+  when refining feature groups using correlation of abundances across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,11 +14,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

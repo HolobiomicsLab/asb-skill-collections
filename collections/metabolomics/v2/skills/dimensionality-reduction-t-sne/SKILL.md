@@ -15,15 +15,19 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
 - Using the t-SNE [28] implementation from scikit-learn [29]
-- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates
+- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional
+  coordinates
 - Our MS2DeepScore Python library offers two types of data generators
 claims: []
 provenance:
@@ -48,6 +52,7 @@ attribution:
 
 # dimensionality-reduction-t-sne
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply t-SNE (t-distributed Stochastic Neighbor Embedding) to project high-dimensional spectral embeddings into 2D space for visual inspection of chemical clustering and validation that learned representations preserve chemically meaningful structure.

@@ -1,6 +1,7 @@
 ---
 name: isotope-corrected-image-quantitation
-description: Use when after isotopic correction has been performed on MSI ion images and you need to convert normalized intensities into absolute quantitative values.
+description: Use when after isotopic correction has been performed on MSI ion images
+  and you need to convert normalized intensities into absolute quantitative values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,12 +14,14 @@ metadata:
   - h5py
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +45,7 @@ attribution:
 
 # isotope-corrected-image-quantitation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert isotope-corrected mass spectrometry ion-image intensities into quantified lipid abundance values by normalizing against user-defined internal standards. This skill enables absolute quantitation of spatial lipid distributions in MSI data by dividing target lipid intensity matrices by internal standard intensity, handling division-by-zero artifacts.

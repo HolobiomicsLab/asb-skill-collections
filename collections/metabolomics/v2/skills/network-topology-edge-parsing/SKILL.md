@@ -1,6 +1,7 @@
 ---
 name: network-topology-edge-parsing
-description: Use when you have a metabolic or biological network encoded as pairwise directed interactions (e.
+description: Use when you have a metabolic or biological network encoded as pairwise
+  directed interactions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,6 +10,7 @@ metadata:
   - http://edamontology.org/topic_2269
   tools:
   - FNICM
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04131
   title: FNICM

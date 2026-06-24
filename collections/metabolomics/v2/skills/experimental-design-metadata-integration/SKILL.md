@@ -1,6 +1,8 @@
 ---
 name: experimental-design-metadata-integration
-description: Use when when you have LC-MS raw data and need to process it through a feature detection and quantification pipeline in KNIME, but lack a structured mapping between sample identifiers, experimental conditions, and the raw LC-MS runs.
+description: Use when when you have LC-MS raw data and need to process it through
+  a feature detection and quantification pipeline in KNIME, but lack a structured
+  mapping between sample identifiers, experimental conditions, and the raw LC-MS runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -15,6 +17,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/nprot.2017.122
   title: 3D molecular cartography (Optimus / 'ili)

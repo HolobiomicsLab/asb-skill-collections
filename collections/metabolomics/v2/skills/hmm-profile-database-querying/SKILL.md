@@ -1,6 +1,8 @@
 ---
 name: hmm-profile-database-querying
-description: Use when when you have BGC sequences (FASTA or GenBank format) or protein sequences and need to annotate them with biosynthetic or functional domains from a curated pHMM database (e.g., PFAM 35.0).
+description: Use when when you have BGC sequences (FASTA or GenBank format) or protein
+  sequences and need to annotate them with biosynthetic or functional domains from
+  a curated pHMM database (e.g., PFAM 35.0).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0346
@@ -13,6 +15,7 @@ metadata:
   - BiG-SLiCE
   - PFAM 35.0
   - HMMER3
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

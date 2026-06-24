@@ -1,6 +1,8 @@
 ---
 name: ion-mobility-peak-picking
-description: Use when when you have extracted ion mobilograms from DIA-MS experiments and need to automatically identify peak boundaries and apex positions in the ion mobility dimension.
+description: Use when when you have extracted ion mobilograms from DIA-MS experiments
+  and need to automatically identify peak boundaries and apex positions in the ion
+  mobility dimension.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,11 +17,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- optional dependencies are also required and can be installed with pip install -r requirements-optional.txt
+- optional dependencies are also required and can be installed with pip install -r
+  requirements-optional.txt
 - Tests are performed using Pytest
 - Syrupy is used to compare output to previous expected output states
 claims: []

@@ -1,6 +1,8 @@
 ---
 name: roi-detection-mass-spectrometry
-description: Use when you have raw or converted mass spectrometry data (CE-MS or LC-MS in mzXML or mzML format) and need to identify candidate metabolite regions before feature extraction.
+description: Use when you have raw or converted mass spectrometry data (CE-MS or LC-MS
+  in mzXML or mzML format) and need to identify candidate metabolite regions before
+  feature extraction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -24,12 +26,16 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
 evidence_spans:
-- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim Jaumot
-- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
+- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim
+  Jaumot
+- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine
+  Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox,
+  Parallel Computing'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

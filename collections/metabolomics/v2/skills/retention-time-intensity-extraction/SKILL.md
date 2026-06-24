@@ -1,6 +1,8 @@
 ---
 name: retention-time-intensity-extraction
-description: Use when when you have imported mass spectrometry data in .raw, .d, or mzXML format and need to generate a TIC plot to visualize overall sample ionization intensity as a function of retention time.
+description: Use when when you have imported mass spectrometry data in .raw, .d, or
+  mzXML format and need to generate a TIC plot to visualize overall sample ionization
+  intensity as a function of retention time.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +15,7 @@ metadata:
   - SMART
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

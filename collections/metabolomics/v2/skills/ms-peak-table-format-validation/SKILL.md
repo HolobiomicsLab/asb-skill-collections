@@ -1,6 +1,8 @@
 ---
 name: ms-peak-table-format-validation
-description: Use when immediately after loading a raw GC-MS CSV file and before executing the spreadOut() function. Use it when you have received peak table data from an instrument vendor (e.
+description: Use when immediately after loading a raw GC-MS CSV file and before executing
+  the spreadOut() function. Use it when you have received peak table data from an
+  instrument vendor (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,13 +18,17 @@ metadata:
   - uafR spreadOut()
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- The recommended software for generating the necessary data in the default format
+  (i.e. with correct column names) is Unknowns Analysis
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # MS Peak Table Format Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that a raw GC-MS peak table (typically CSV output from Agilent Unknowns Analysis) conforms to the required schema before downstream processing. This skill ensures input data integrity by confirming the presence and correctness of critical columns and data types needed for intelligent sorting and chemical identification.

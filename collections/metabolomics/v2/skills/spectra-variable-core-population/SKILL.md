@@ -1,6 +1,8 @@
 ---
 name: spectra-variable-core-population
-description: Use when when implementing a custom MsBackend and the spectraData() method needs to return all core spectra variables (e.g., centroided, polarity, collisionEnergy) regardless of which variables were explicitly stored during backend initialization.
+description: Use when when implementing a custom MsBackend and the spectraData() method
+  needs to return all core spectra variables (e.g., centroided, polarity, collisionEnergy)
+  regardless of which variables were explicitly stored during backend initialization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -12,12 +14,15 @@ metadata:
   - S4Vectors
   - R
   - MsBackendMemory
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- The *Spectra* package defines an efficient infrastructure for storing and handling
+  mass spectrometry spectra
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []
@@ -43,6 +48,7 @@ attribution:
 
 # spectra-variable-core-population
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Populate missing core spectra variables with NA values in a backend's spectraData() output to ensure complete metadata structure. This ensures all required MS spectra variables are present in DataFrame results even when user-supplied data contains only a subset.

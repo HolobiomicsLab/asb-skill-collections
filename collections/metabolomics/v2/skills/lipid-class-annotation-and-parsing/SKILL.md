@@ -1,6 +1,7 @@
 ---
 name: lipid-class-annotation-and-parsing
-description: Use when immediately after loading raw lipid identifiers from LipidSearch or LIQUID output, or when importing lipidomic data from the Metabolomics Workbench.
+description: Use when immediately after loading raw lipid identifiers from LipidSearch
+  or LIQUID output, or when importing lipidomic data from the Metabolomics Workbench.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,13 +16,17 @@ metadata:
   - LIPID MAPS
   - LipidSearch
   - LIQUID
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
 evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.
-- allows the identification of differentially abundant lipids in simple and complex experimental designs
+- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
+  per lipid and sample
+- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
+  of lipidomics data.
+- allows the identification of differentially abundant lipids in simple and complex
+  experimental designs
 - dealing with batch effect correction.
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-picking-derivative-based
-description: Use when you have preprocessed MSImagingArrays objects (normalized via normalize(), smoothed via smooth(), and baseline-reduced via reduceBaseline()) and need to identify discrete peaks across all spectra in a mass spectrometry imaging dataset.
+description: Use when you have preprocessed MSImagingArrays objects (normalized via
+  normalize(), smoothed via smooth(), and baseline-reduced via reduceBaseline()) and
+  need to identify discrete peaks across all spectra in a mass spectrometry imaging
+  dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -15,14 +18,18 @@ metadata:
   - matter 2.4 / 2.6
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods and any statistical analysis methods with a `BPPARAM` option
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods and any statistical analysis methods with a `BPPARAM` option
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:

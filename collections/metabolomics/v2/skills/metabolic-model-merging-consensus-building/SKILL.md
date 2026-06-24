@@ -1,6 +1,9 @@
 ---
 name: metabolic-model-merging-consensus-building
-description: Use when you have multiple draft metabolic reconstructions (in JSON, XML, or SBML format) representing individual members or assembly variants of a community and need a single, non-redundant consensus model that captures shared and community-supported metabolic capacity.
+description: Use when you have multiple draft metabolic reconstructions (in JSON,
+  XML, or SBML format) representing individual members or assembly variants of a community
+  and need a single, non-redundant consensus model that captures shared and community-supported
+  metabolic capacity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +13,7 @@ metadata:
   - http://edamontology.org/topic_3810
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -38,6 +42,7 @@ attribution:
 
 # metabolic-model-merging-consensus-building
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge multiple draft genome-scale metabolic models into a single consensus reconstruction by resolving conflicts and gaps using community-dependent logic. This skill is essential when integrating metabolic diversity from multi-member microbial or plant-associated communities into a unified, systems-level representation.

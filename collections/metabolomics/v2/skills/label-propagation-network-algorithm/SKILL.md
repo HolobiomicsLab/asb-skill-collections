@@ -1,6 +1,9 @@
 ---
 name: label-propagation-network-algorithm
-description: Use when you have a ranked list of seed genes or metabolites (e.g., from metabolomic enrichment analysis with MSEA scores, or exome-derived candidate genes) and you want to propagate their signals across a gene–protein interaction network (e.
+description: Use when you have a ranked list of seed genes or metabolites (e.g., from
+  metabolomic enrichment analysis with MSEA scores, or exome-derived candidate genes)
+  and you want to propagate their signals across a gene–protein interaction network
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -13,6 +16,7 @@ metadata:
   - Label propagation (adapted from Yuto Yamaguchi)
   - STRING database
   - XCMS / CAMERA
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41525-020-0132-5
   title: metPropagate
@@ -40,6 +44,7 @@ attribution:
 
 # label-propagation-network-algorithm
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Label propagation iteratively distributes seed labels (e.g., from metabolomic enrichment scores) across a gene/protein interaction network to compute ranked gene scores that reflect both network proximity to seeds and propagation confidence. This skill is used to prioritize disease genes by leveraging both omics-derived signals and network topology.

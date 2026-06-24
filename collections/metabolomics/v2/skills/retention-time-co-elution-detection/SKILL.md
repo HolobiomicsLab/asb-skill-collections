@@ -1,6 +1,8 @@
 ---
 name: retention-time-co-elution-detection
-description: Use when after matching mass-to-charge ratios to a compound database (e.g., KEGG) and assigning adduct/fragment types, when you have an annotated feature table with retention times, m/z values, and intensity profiles across samples.
+description: Use when after matching mass-to-charge ratios to a compound database
+  (e.g., KEGG) and assigning adduct/fragment types, when you have an annotated feature
+  table with retention times, m/z values, and intensity profiles across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,11 +15,13 @@ metadata:
   - CAMERA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # retention-time-co-elution-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group co-eluting LC-MS features by retention time proximity and intensity correlation to identify candidate ions arising from the same metabolite. This clustering step precedes candidate filtering and reduces false positive annotations by consolidating fragments and adducts into quasi-molecular ion clusters.

@@ -1,6 +1,9 @@
 ---
 name: metabolic-marker-identification
-description: Use when after batch effect removal and sample integration, when you have a normalized feature-by-sample abundance matrix (finalData) with corresponding sample group labels (finalLabel), and need to identify which metabolites discriminate between biological conditions or phenotypes for focused.
+description: Use when after batch effect removal and sample integration, when you
+  have a normalized feature-by-sample abundance matrix (finalData) with corresponding
+  sample group labels (finalLabel), and need to identify which metabolites discriminate
+  between biological conditions or phenotypes for focused.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - varSelRF
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -43,6 +47,7 @@ attribution:
 
 # metabolic-marker-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies discriminative metabolic markers from feature-by-sample metabolomic data matrices using statistical and machine-learning strategies. This skill applies one of 13 methods (fold change, t-test, PLS-DA, random forest, SAM, etc.) to rank metabolites by their capacity to distinguish between sample groups, producing ranked marker tables for downstream annotation and pathway analysis.

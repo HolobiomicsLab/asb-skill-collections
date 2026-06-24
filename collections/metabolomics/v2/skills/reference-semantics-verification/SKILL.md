@@ -1,6 +1,9 @@
 ---
 name: reference-semantics-verification
-description: Use when when applying sequential filters to a large metabolomics peak table (e.g., mispicked ions, group, CV, or in-source filters) and you need to confirm that setting copy_object=FALSE actually modifies the input object in-place rather than creating a hidden copy.
+description: Use when when applying sequential filters to a large metabolomics peak
+  table (e.g., mispicked ions, group, CV, or in-source filters) and you need to confirm
+  that setting copy_object=FALSE actually modifies the input object in-place rather
+  than creating a hidden copy.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +15,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

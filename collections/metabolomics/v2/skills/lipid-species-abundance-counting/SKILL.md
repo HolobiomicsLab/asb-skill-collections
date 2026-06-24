@@ -1,6 +1,8 @@
 ---
 name: lipid-species-abundance-counting
-description: Use when you have access to a lipidomics library repository (e.g., LipidMatch .csv files) and need to audit or report the total number of distinct lipid species and lipid-type categories present.
+description: Use when you have access to a lipidomics library repository (e.g., LipidMatch
+  .csv files) and need to audit or report the total number of distinct lipid species
+  and lipid-type categories present.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -11,6 +13,7 @@ metadata:
   - LipidMatch
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

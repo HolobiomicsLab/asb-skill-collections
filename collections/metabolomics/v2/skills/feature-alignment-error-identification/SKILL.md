@@ -1,6 +1,8 @@
 ---
 name: feature-alignment-error-identification
-description: Use when you have completed peak detection and feature alignment in metabolomic LC-MS processing and suspect systematic errors in peak integration or feature misalignment across your sample cohort.
+description: Use when you have completed peak detection and feature alignment in metabolomic
+  LC-MS processing and suspect systematic errors in peak integration or feature misalignment
+  across your sample cohort.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,11 +16,13 @@ metadata:
   - caret
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04046
   title: AVIR
 evidence_spans:
-- AVIR.R is a program developed to recognize computational variation among metabolic features in samples
+- AVIR.R is a program developed to recognize computational variation among metabolic
+  features in samples
 - AVIR.R
 claims: []
 provenance:

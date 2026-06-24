@@ -1,6 +1,8 @@
 ---
 name: r-package-function-export
-description: Use when you have built a reusable workflow function (e.g., a Shiny app launcher, automated analysis routine) within an R package and need to make it available to package users.
+description: Use when you have built a reusable workflow function (e.g., a Shiny app
+  launcher, automated analysis routine) within an R package and need to make it available
+  to package users.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -12,13 +14,15 @@ metadata:
   - roxygen2
   - devtools
   - Shiny
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR
 evidence_spans:
 - This package... can be launched using a function exported by this package
 - can be launched using a function exported by this package
-- This package provides an automated workflow for processing in-house metabolite library standards data
+- This package provides an automated workflow for processing in-house metabolite library
+  standards data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

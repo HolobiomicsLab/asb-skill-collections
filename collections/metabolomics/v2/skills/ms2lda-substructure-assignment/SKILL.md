@@ -1,6 +1,9 @@
 ---
 name: ms2lda-substructure-assignment
-description: Use when you have a GNPS molecular network (in GML or GraphML format) and a completed MS2LDA experiment on ms2lda.org, and you want to annotate network nodes with detected substructural motifs to identify shared fragmentation patterns and structural classes across molecular families.
+description: Use when you have a GNPS molecular network (in GML or GraphML format)
+  and a completed MS2LDA experiment on ms2lda.org, and you want to annotate network
+  nodes with detected substructural motifs to identify shared fragmentation patterns
+  and structural classes across molecular families.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 - Map MS2LDA substructural information to mass spectral molecular networks
 claims: []

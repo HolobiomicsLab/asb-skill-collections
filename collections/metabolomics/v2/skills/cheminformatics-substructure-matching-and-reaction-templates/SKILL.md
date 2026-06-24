@@ -19,6 +19,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -48,6 +49,7 @@ attribution:
 
 # cheminformatics-substructure-matching-and-reaction-templates
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply SMARTS-based substructure matching and biotransformation reaction templates to predict small molecule metabolites in environmental, mammalian, and microbial systems. This skill enables systematic enumeration of possible metabolic products by matching input substrates against curated biotransformation rules and expanding matched substructures into product templates.

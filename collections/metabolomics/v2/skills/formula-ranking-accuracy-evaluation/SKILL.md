@@ -1,6 +1,8 @@
 ---
 name: formula-ranking-accuracy-evaluation
-description: Use when use this skill after training or fine-tuning a chemical formula transformer model on annotated tandem MS/MS spectra, when you need to measure whether the model's ranked formula candidates match ground truth.
+description: Use when use this skill after training or fine-tuning a chemical formula
+  transformer model on annotated tandem MS/MS spectra, when you need to measure whether
+  the model's ranked formula candidates match ground truth.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +17,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,6 +47,7 @@ attribution:
 
 # formula-ranking-accuracy-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the ranking quality of predicted chemical formulas and adduct assignments by computing top-k accuracy metrics (top-1, top-5, top-10) on held-out test spectra with annotated ground-truth formulas. This skill verifies whether a formula inference model (e.g., MIST-CF) correctly places the true molecular formula within the top-k candidates ranked by model confidence.

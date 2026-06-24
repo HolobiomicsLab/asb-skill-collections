@@ -1,6 +1,8 @@
 ---
 name: api-response-error-handling
-description: Use when when building asynchronous metadata enrichment workflows that call multiple external APIs (CIR, CTS, PubChem, IDSM, BridgeDb) to annotate mass spectra .
+description: Use when when building asynchronous metadata enrichment workflows that
+  call multiple external APIs (CIR, CTS, PubChem, IDSM, BridgeDb) to annotate mass
+  spectra .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,6 +18,7 @@ metadata:
   - PubChem
   - IDSM
   - BridgeDb
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

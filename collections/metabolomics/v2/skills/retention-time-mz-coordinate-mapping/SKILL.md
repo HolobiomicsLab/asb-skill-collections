@@ -1,6 +1,9 @@
 ---
 name: retention-time-mz-coordinate-mapping
-description: Use when when you have mass-spectrometry data in tabular form (Pandas DataFrame) with columns for m/z, retention time or ion mobility, and intensity, and you need to visualize the 2D distribution of peaks to assess peak separation, detect co-elution, or examine chromatographic and mass resolution.
+description: Use when when you have mass-spectrometry data in tabular form (Pandas
+  DataFrame) with columns for m/z, retention time or ion mobility, and intensity,
+  and you need to visualize the 2D distribution of peaks to assess peak separation,
+  detect co-elution, or examine chromatographic and mass resolution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -15,12 +18,14 @@ metadata:
   - matplotlib
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # retention-time-mz-coordinate-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map mass-spectrometry data onto a two-dimensional coordinate system using retention time (or ion mobility) as one axis and m/z as the other, enabling interactive or static visualization of peak maps. This skill is essential for visualizing the joint distribution of analytes across time and mass dimensions.

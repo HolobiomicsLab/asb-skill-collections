@@ -1,6 +1,9 @@
 ---
 name: cross-batch-metabolite-quantification-harmonization
-description: Use when you have multiple SummarizedExperiment objects representing separate metabolomics assay batches with different metabolite coverage and missing-value patterns, and you need to identify a common metabolite set quantified across all batches before applying hierarchical batch normalization or.
+description: Use when you have multiple SummarizedExperiment objects representing
+  separate metabolomics assay batches with different metabolite coverage and missing-value
+  patterns, and you need to identify a common metabolite set quantified across all
+  batches before applying hierarchical batch normalization or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,14 +16,17 @@ metadata:
   - dplyr
   - SummarizedExperiment
   - DMwR2
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
 - Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
+- we will load the hRUV package and other packages required for the demonstration...
+  library(dplyr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: spectral-format-conversion
-description: Use when when raw spectral data exists in one mass spectrometry file format but downstream analysis requires a different format; when integrating spectra from multiple sources or instruments that produce heterogeneous file formats;
+description: Use when when raw spectral data exists in one mass spectrometry file
+  format but downstream analysis requires a different format; when integrating spectra
+  from multiple sources or instruments that produce heterogeneous file formats;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,11 +15,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - matchms is a versatile open-source Python package
 - make sure the existing tests still work by running ``pytest``
 claims: []

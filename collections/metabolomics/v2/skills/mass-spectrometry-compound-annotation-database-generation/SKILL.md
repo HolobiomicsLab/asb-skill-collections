@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-compound-annotation-database-generation
-description: Use when after generating transformation products using generateTPs() with structural information (SMILES), when you need to screen for predicted TP compounds in environmental MS/MS data via MetFrag's in-silico fragmentation annotation.
+description: Use when after generating transformation products using generateTPs()
+  with structural information (SMILES), when you need to screen for predicted TP compounds
+  in environmental MS/MS data via MetFrag's in-silico fragmentation annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -14,13 +16,15 @@ metadata:
   - CTS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
 evidence_spans:
 - The `generateTPs` function is used to obtain TPs for a particular set of parents.
 - componTP <- generateComponents(algorithm = "tp",
-- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents, only for TPs with structural information)
+- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents,
+  only for TPs with structural information)
 - Generates a [MetFrag] database for all TPs
 claims: []
 provenance:

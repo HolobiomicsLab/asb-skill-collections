@@ -1,6 +1,8 @@
 ---
 name: metabolite-ratio-batch-correction
-description: Use when your input is a SummarizedExperiment containing multiple batches or injection sequences of metabolomics samples (study samples, QC replicates, calibration lines) with measured ion areas for compounds and assigned internal standards.
+description: Use when your input is a SummarizedExperiment containing multiple batches
+  or injection sequences of metabolomics samples (study samples, QC replicates, calibration
+  lines) with measured ion areas for compounds and assigned internal standards.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +16,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -44,6 +47,7 @@ attribution:
 
 # metabolite-ratio-batch-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Batch-correct compound/internal-standard ratios in metabolomics LC-MS/MS data using pooled study quality control (SQC) samples as anchors. This corrects for systematic drift and matrix effects across injection sequences while preserving biological signal.

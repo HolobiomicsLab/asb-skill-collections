@@ -1,6 +1,8 @@
 ---
 name: connected-component-decomposition-and-pruning
-description: Use when after identifying pairwise feature connections via correlation and retention-time windowing, when you need to partition the feature space into coherent groups where each feature has sufficient connectivity to its peers.
+description: Use when after identifying pairwise feature connections via correlation
+  and retention-time windowing, when you need to partition the feature space into
+  coherent groups where each feature has sufficient connectivity to its peers.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -13,6 +15,7 @@ metadata:
   - Biobase
   - find_connections
   - assign_cluster_id
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -22,7 +25,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +51,7 @@ attribution:
 
 # connected-component-decomposition-and-pruning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Decompose a feature correlation graph into connected components and iteratively prune nodes to enforce a minimum degree threshold, isolating groups of co-eluting or highly correlated metabolic features. This produces pruned clusters suitable for downstream assignment of cluster identifiers.

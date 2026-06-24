@@ -21,6 +21,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -49,6 +50,7 @@ attribution:
 
 # training-data-generation-from-reference-features
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Generate a large augmented training dataset for CNN peak classification by iteratively combining matched reference chromatographic peaks with various background types and distraction peaks. This skill is essential for training a CNN model to distinguish true LC-HRMS chromatographic peaks from background noise while learning to predict peak bounding-boxes and centers.

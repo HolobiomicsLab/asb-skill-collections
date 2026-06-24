@@ -1,6 +1,8 @@
 ---
 name: contrastive-loss-integration-with-encoders
-description: Use when you have a transformer encoder producing representations of tandem mass spectra and need to train it using contrastive learning with pairs of original and randomly masked spectra.
+description: Use when you have a transformer encoder producing representations of
+  tandem mass spectra and need to train it using contrastive learning with pairs of
+  original and randomly masked spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,6 +17,7 @@ metadata:
   - MSBERT
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

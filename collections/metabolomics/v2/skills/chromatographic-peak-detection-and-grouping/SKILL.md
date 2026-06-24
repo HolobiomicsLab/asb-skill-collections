@@ -1,6 +1,9 @@
 ---
 name: chromatographic-peak-detection-and-grouping
-description: Use when when you have processed LC-MS data through XCMS alignment but suspect misaligned features due to retention-time drift over long acquisition periods (>1 week) or large sample batches (hundreds of samples), or when peak-filling produces unexpectedly high coefficient-of-variation (CV > 0.
+description: Use when when you have processed LC-MS data through XCMS alignment but
+  suspect misaligned features due to retention-time drift over long acquisition periods
+  (>1 week) or large sample batches (hundreds of samples), or when peak-filling produces
+  unexpectedly high coefficient-of-variation (CV > 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -15,11 +18,13 @@ metadata:
   - graphical time warping (GTW)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # chromatographic-peak-detection-and-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and group chromatographic peaks across LC-MS samples, then identify and correct misaligned feature groups using compound-specific warping functions. This skill bridges XCMS peak detection with ncGTW realignment to reduce coefficient-of-variation in aligned retention times.

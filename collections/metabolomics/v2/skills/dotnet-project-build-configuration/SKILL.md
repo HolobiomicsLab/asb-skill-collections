@@ -1,6 +1,9 @@
 ---
 name: dotnet-project-build-configuration
-description: Use when you are attempting to compile a WPF-based .NET desktop application from source code that targets multiple .NET Framework versions, have cloned a repository with an .sln solution file, and need to resolve framework-specific NuGet dependencies (e.
+description: Use when you are attempting to compile a WPF-based .NET desktop application
+  from source code that targets multiple .NET Framework versions, have cloned a repository
+  with an .sln solution file, and need to resolve framework-specific NuGet dependencies
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,12 +20,14 @@ metadata:
   - NuGet Package Manager
   - WPF (Windows Presentation Foundation)
   - MsdialWorkbench GitHub Repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
 - utilizing packages such as ReactiveExtensions and ReactiveProperty
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # dotnet-project-build-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and build a .NET project targeting multiple framework versions (4.7.2, Core 3.1, .NET 6) with proper NuGet dependency resolution and WPF GUI compilation. This skill ensures reproducible desktop application builds from source across Windows development environments.

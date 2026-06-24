@@ -1,6 +1,7 @@
 ---
 name: retention-time-normalization-and-scoring
-description: Use when you have XCMS-aligned feature tables with retention time values and need to compute pairwise feature similarity.
+description: Use when you have XCMS-aligned feature tables with retention time values
+  and need to compute pairwise feature similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,6 +15,7 @@ metadata:
   - RAMClustR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -42,6 +44,7 @@ attribution:
 
 # retention-time-normalization-and-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw retention time differences between mass spectrometry features into normalized similarity scores (0–1 scale) suitable for hierarchical clustering. This preprocessing step enables fair combination of retention time proximity with correlational similarity to group features derived from the same compound.

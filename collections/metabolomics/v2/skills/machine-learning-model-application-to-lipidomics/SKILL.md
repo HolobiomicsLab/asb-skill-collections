@@ -1,6 +1,8 @@
 ---
 name: machine-learning-model-application-to-lipidomics
-description: Use when you have MS-DIAL lipid identifications from an Orbitrap or TOF mass spectrometer and need to remove spurious or low-confidence assignments before downstream metabolomics analysis.
+description: Use when you have MS-DIAL lipid identifications from an Orbitrap or TOF
+  mass spectrometer and need to remove spurious or low-confidence assignments before
+  downstream metabolomics analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -43,6 +46,7 @@ attribution:
 
 # machine-learning-model-application-to-lipidomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply pre-trained machine learning models to filter low-confidence lipid identifications from MS-DIAL output, improving annotation quality by removing incorrect lipid assignments. LipoCLEAN uses instrument-specific models (Orbitrap or TOF) trained on manually curated MS/MS spectra to score and retain only high-confidence identifications.

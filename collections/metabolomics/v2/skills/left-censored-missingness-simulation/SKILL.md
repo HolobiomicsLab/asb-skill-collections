@@ -1,6 +1,8 @@
 ---
 name: left-censored-missingness-simulation
-description: Use when when you have a complete metabolomics abundance table (e.g., targeted LC/MS or untargeted GC/MS counts) and need to generate synthetic left-censored missingness for evaluating imputation algorithm performance.
+description: Use when when you have a complete metabolomics abundance table (e.g.,
+  targeted LC/MS or untargeted GC/MS counts) and need to generate synthetic left-censored
+  missingness for evaluating imputation algorithm performance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -44,6 +47,7 @@ attribution:
 
 # left-censored-missingness-simulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate missing-not-at-random (MNAR) left-censored data in metabolomics matrices by applying detection limits and feature-dependent missing mechanisms, enabling benchmarking of imputation methods against realistic instrument censoring patterns.

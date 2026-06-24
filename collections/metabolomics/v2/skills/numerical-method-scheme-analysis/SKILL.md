@@ -1,6 +1,7 @@
 ---
 name: numerical-method-scheme-analysis
-description: Use when when correcting LC-MS isotope labeling data and existing numerical schemes (e.
+description: Use when when correcting LC-MS isotope labeling data and existing numerical
+  schemes (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,6 +13,7 @@ metadata:
   - IsoCor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

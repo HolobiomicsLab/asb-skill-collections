@@ -1,6 +1,8 @@
 ---
 name: q-value-based-confidence-filtering
-description: Use when after loading feature identification results (e.g., from OpenSwath or other DIA search engines) when you need to display only confident peptide precursors and their chromatograms.
+description: Use when after loading feature identification results (e.g., from OpenSwath
+  or other DIA search engines) when you need to display only confident peptide precursors
+  and their chromatograms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,11 +19,14 @@ metadata:
   - Streamlit
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading however since extraction has already been performed by the upstream analysis tool. This includes SqMassLoader'
+- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading
+  however since extraction has already been performed by the upstream analysis tool.
+  This includes SqMassLoader'
 - InteractivePlotter
 - MRMTransitionGroupPicker
 - pyMRMTransitionGroupPicker

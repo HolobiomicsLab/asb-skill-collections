@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-fragmentation-pattern-discovery
-description: Use when you have preprocessed MS/MS spectral data (in positive or negative ion mode) and seek to discover recurring fragmentation and neutral-loss patterns that characterize molecular substructures across a dataset.
+description: Use when you have preprocessed MS/MS spectral data (in positive or negative
+  ion mode) and seek to discover recurring fragmentation and neutral-loss patterns
+  that characterize molecular substructures across a dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3929
@@ -17,11 +19,13 @@ metadata:
   - MotifDB
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - ms2lda_runfull.py
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

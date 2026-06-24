@@ -1,6 +1,8 @@
 ---
 name: peak-table-row-count-comparison
-description: Use when you need to validate the reference-semantics behavior of mpactr filter functions, particularly when using copy_object=FALSE. Use it to confirm that a filtering operation (e.
+description: Use when you need to validate the reference-semantics behavior of mpactr
+  filter functions, particularly when using copy_object=FALSE. Use it to confirm that
+  a filtering operation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -12,6 +14,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

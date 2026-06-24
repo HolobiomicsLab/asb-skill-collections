@@ -1,6 +1,8 @@
 ---
 name: hdf5-output-validation-verification
-description: Use when after invoking the DEIMoS CLI with a configuration file and allowing the Snakemake workflow to execute, use this skill to confirm successful completion of all workflow rules.
+description: Use when after invoking the DEIMoS CLI with a configuration file and
+  allowing the Snakemake workflow to execute, use this skill to confirm successful
+  completion of all workflow rules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - Use conda to create a virtual environment with required dependencies.
 - 'Install DEIMoS using pip: pip install -e .'
@@ -48,6 +52,7 @@ attribution:
 
 # HDF5 Output Validation and Verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a DEIMoS Snakemake workflow has completed successfully by confirming the presence and integrity of HDF5 output files and their internal datasets. This skill ensures that all expected workflow artifacts (ms1, ms2, features, isotopes) are present with non-zero row counts before proceeding to downstream analysis.

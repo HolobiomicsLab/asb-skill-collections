@@ -1,6 +1,9 @@
 ---
 name: feature-detection-in-chromatographic-ms-data
-description: Use when you have vendor-independent centroided DDA mzML files from LC- or GC-HRMS and need to delineate chromatographic peaks across the mass-to-charge and retention-time dimensions before applying mass defect analysis, diagnostic fragment matching, or other prioritization rules.
+description: Use when you have vendor-independent centroided DDA mzML files from LC-
+  or GC-HRMS and need to delineate chromatographic peaks across the mass-to-charge
+  and retention-time dimensions before applying mass defect analysis, diagnostic fragment
+  matching, or other prioritization rules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,13 +18,16 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data.
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data.
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -46,6 +52,7 @@ attribution:
 
 # feature-detection-in-chromatographic-ms-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction of chromatographic features (m/z, retention time, intensity, charge state, isotope pattern) from centroided data-dependent acquisition mzML files using pyOpenMS, forming the input foundation for downstream PFAS prioritization and non-target screening workflows.

@@ -1,6 +1,9 @@
 ---
 name: spectral-library-molecular-networking
-description: Use when you have deconvolved GC-MS spectra (from overlapping chromatographic peaks) in MGF or mzTab format and want to group chemically related compounds, visualize their similarity relationships, and identify spectral families without prior library matching.
+description: Use when you have deconvolved GC-MS spectra (from overlapping chromatographic
+  peaks) in MGF or mzTab format and want to group chemically related compounds, visualize
+  their similarity relationships, and identify spectral families without prior library
+  matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,12 +16,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
 evidence_spans:
 - MSHub auto-deconvolution
-- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry
+  data
 - GNPS molecular networking
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: mzmine-quantitative-table-parsing
-description: Use when you have LC–MS/MS data processed through MZmine2 or MZmine3 and need to construct a feature quantification table for natural product discovery pipelines (e.g., INVENTA prioritization, GNPS networking, or metabolite annotation).
+description: Use when you have LC–MS/MS data processed through MZmine2 or MZmine3
+  and need to construct a feature quantification table for natural product discovery
+  pipelines (e.g., INVENTA prioritization, GNPS networking, or metabolite annotation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -18,18 +20,23 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2
+- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time'
+  columns. -Inventa takes input directly from MZmine2
 - Inventa takes input directly from MZmine2 or MZmine 3
-- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares
-- 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/),
+  is possible to use other processing sofwares
+- 'tima_results_filename: timaR reponderated output format. - for performing in silico
+  annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'
-- 'Class Component (CC): a score considering the presence of predicted known chemical classes new to the species'
+- 'Class Component (CC): a score considering the presence of predicted known chemical
+  classes new to the species'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

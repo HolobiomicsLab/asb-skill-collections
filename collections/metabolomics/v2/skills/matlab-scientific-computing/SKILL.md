@@ -1,6 +1,9 @@
 ---
 name: matlab-scientific-computing
-description: Use when you have mass spectrometry data in mzXML or mzML format and need to systematically extract regions of interest (ROIs) from multi-dimensional m/z-intensity-time arrays, normalize feature values, and augment datasets for untargeted metabolomics workflows.
+description: Use when you have mass spectrometry data in mzXML or mzML format and
+  need to systematically extract regions of interest (ROIs) from multi-dimensional
+  m/z-intensity-time arrays, normalize feature values, and augment datasets for untargeted
+  metabolomics workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -23,13 +26,17 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
 evidence_spans:
-- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim Jaumot
+- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim
+  Jaumot
 - MATLAB R2024a or newer
-- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
+- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine
+  Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox,
+  Parallel Computing'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

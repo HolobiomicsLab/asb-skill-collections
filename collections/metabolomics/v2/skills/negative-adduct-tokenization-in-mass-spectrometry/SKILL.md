@@ -1,6 +1,8 @@
 ---
 name: negative-adduct-tokenization-in-mass-spectrometry
-description: Use when you have negative-mode MS/MS spectra with annotated molecular formulas and negative adducts (from repositories like MassIVE or MetaboLights), and your current formula inference model is restricted to positive mode only.
+description: Use when you have negative-mode MS/MS spectra with annotated molecular
+  formulas and negative adducts (from repositories like MassIVE or MetaboLights),
+  and your current formula inference model is restricted to positive mode only.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3648
@@ -15,6 +17,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,6 +47,7 @@ attribution:
 
 # negative-adduct-tokenization-in-mass-spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extend formula transformer neural networks to recognize and tokenize negative ionization mode adducts ([M-H]−, [M+Cl]−, [M+FA]−) in tandem mass spectra, enabling chemical formula ranking for negative-mode MS/MS data. This skill adapts the MIST-CF architecture from positive-mode-only operation to support dual-polarity metabolite identification.

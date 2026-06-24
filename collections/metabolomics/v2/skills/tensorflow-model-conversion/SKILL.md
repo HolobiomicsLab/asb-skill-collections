@@ -1,6 +1,9 @@
 ---
 name: tensorflow-model-conversion
-description: Use when you have downloaded pre-trained Keras models and need to prepare them for deployment in a TensorFlow Serving container. Use this skill when you must convert legacy or freshly downloaded Keras model files to HDF5 format for compatibility with TensorFlow 2.3.0 serving infrastructure.
+description: Use when you have downloaded pre-trained Keras models and need to prepare
+  them for deployment in a TensorFlow Serving container. Use this skill when you must
+  convert legacy or freshly downloaded Keras model files to HDF5 format for compatibility
+  with TensorFlow 2.3.0 serving infrastructure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - TensorFlow Serving
   - TensorFlow
   - Keras
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -44,6 +48,7 @@ attribution:
 
 # tensorflow-model-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert pre-trained Keras models to HDF5 TensorFlow 2 format for deployment with TensorFlow Serving. This skill enables reproducible model serialization and ensures compatibility with containerized inference pipelines.

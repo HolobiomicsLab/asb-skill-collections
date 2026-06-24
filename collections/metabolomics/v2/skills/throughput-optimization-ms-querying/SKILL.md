@@ -1,6 +1,7 @@
 ---
 name: throughput-optimization-ms-querying
-description: Use when you have experimental MS/MS spectra that must be matched against a large hierarchical fragmentation library (e.g., 168.
+description: Use when you have experimental MS/MS spectra that must be matched against
+  a large hierarchical fragmentation library (e.g., 168.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -15,12 +16,15 @@ metadata:
   - LipidIN Expeditious Querying (EQ) Module
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

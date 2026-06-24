@@ -1,6 +1,9 @@
 ---
 name: omics-data-visualization
-description: Use when you have tabular omics data (expression matrices, p-values, fold changes, functional annotations, or clinical outcomes) in CSV format and need to generate publication-ready visualizations that reveal distributional patterns, statistical significance thresholds, group comparisons, or.
+description: Use when you have tabular omics data (expression matrices, p-values,
+  fold changes, functional annotations, or clinical outcomes) in CSV format and need
+  to generate publication-ready visualizations that reveal distributional patterns,
+  statistical significance thresholds, group comparisons, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -12,6 +15,7 @@ metadata:
   - R Shiny
   - Docker
   - GraphBio
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

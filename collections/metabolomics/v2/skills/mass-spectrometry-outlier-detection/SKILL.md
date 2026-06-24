@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-outlier-detection
-description: Use when you have multi-sample MS1 data (LC-MS, LC-IMS-MS, or direct infusion across any omics domain) and need to detect samples with abnormal global ion intensity patterns or unusual per-ion metric behavior (intensity distribution, signal-to-noise, retention time stability) that may indicate.
+description: Use when you have multi-sample MS1 data (LC-MS, LC-IMS-MS, or direct
+  infusion across any omics domain) and need to detect samples with abnormal global
+  ion intensity patterns or unusual per-ion metric behavior (intensity distribution,
+  signal-to-noise, retention time stability) that may indicate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

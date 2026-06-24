@@ -1,6 +1,9 @@
 ---
 name: multicontrast-statistical-testing-lipidomics
-description: Use when after removing outlier samples and confirming data quality through PCA or TIC plots, apply this skill when you need to quantify statistical significance of lipid abundance differences across defined sample groups (e.g., disease vs. control, treatment vs. untreated, cancer stages).
+description: Use when after removing outlier samples and confirming data quality through
+  PCA or TIC plots, apply this skill when you need to quantify statistical significance
+  of lipid abundance differences across defined sample groups (e.g., disease vs. control,
+  treatment vs. untreated, cancer stages).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3668
@@ -11,12 +14,15 @@ metadata:
   - lipidr
   - limma
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - This step of the workflow requires the `limma` package to be installed.
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
@@ -42,6 +48,7 @@ attribution:
 
 # multicontrast-statistical-testing-lipidomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform two-group and multi-group differential expression analysis on lipidomics data using the limma package to identify lipid classes with significant regulation patterns across biological contrasts (e.g., cancer vs. benign, cancer vs. metastasis). This skill detects which lipid molecular species and classes are systematically up- or down-regulated between sample groups.

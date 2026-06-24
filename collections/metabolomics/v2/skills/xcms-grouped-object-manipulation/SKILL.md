@@ -1,6 +1,7 @@
 ---
 name: xcms-grouped-object-manipulation
-description: Use when you have preprocessed LC-MS data with detected chromatographic peaks that need to be consolidated into feature groups representing putative compounds.
+description: Use when you have preprocessed LC-MS data with detected chromatographic
+  peaks that need to be consolidated into feature groups representing putative compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -12,13 +13,16 @@ metadata:
   - MsFeatures
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- The *xcms* R package provides functionality to efficiently preprocess LC-MS (as well as GC-MS and LC-MS/MS) data.
+- The *xcms* R package provides functionality to efficiently preprocess LC-MS (as
+  well as GC-MS and LC-MS/MS) data.
 - 'Package: xcms'
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

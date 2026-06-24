@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-match-factor-filtering
-description: Use when you have a GC-MS dataset with a Match.Factor column (output from Agilent Unknowns Analysis or equivalent) and need to retain only high-confidence compound identifications.
+description: Use when you have a GC-MS dataset with a Match.Factor column (output
+  from Agilent Unknowns Analysis or equivalent) and need to retain only high-confidence
+  compound identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +15,15 @@ metadata:
   - uafR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # mass-spectrometry-match-factor-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply quality-based thresholds to GC-MS compound identifications by filtering on Match.Factor scores, a library-matching metric that ranges from 0–100. This skill enables reproducible subsetting of compound lists at standardized quality cutoffs (e.g., ≥65, ≥80, ≥90) to balance detection sensitivity against false-positive risk.

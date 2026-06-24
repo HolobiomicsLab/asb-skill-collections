@@ -1,6 +1,8 @@
 ---
 name: open-modification-peptide-identification
-description: Use when when you have high-resolution tandem mass spectra (query spectra) and need to identify peptides with unanticipated or open modifications (any mass shift on any amino acid position).
+description: Use when when you have high-resolution tandem mass spectra (query spectra)
+  and need to identify peptides with unanticipated or open modifications (any mass
+  shift on any amino acid position).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,11 +15,13 @@ metadata:
   - Faiss
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

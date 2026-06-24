@@ -1,6 +1,9 @@
 ---
 name: s4-class-method-inspection
-description: Use when you need to verify that an S4 replacement method (e.g., `mz<-`) in a bioinformatics backend class correctly validates input data using vectorized operations on NumericList or similar container objects, rather than inefficient loops or apply functions.
+description: Use when you need to verify that an S4 replacement method (e.g., `mz<-`)
+  in a bioinformatics backend class correctly validates input data using vectorized
+  operations on NumericList or similar container objects, rather than inefficient
+  loops or apply functions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -13,13 +16,15 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # S4 Class Method Inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically locate, examine, and validate S4 replacement methods in R packages to verify they correctly implement required validation logic, such as vectorized efficiency checks on complex data structures. This skill is essential for auditing backend implementations in bioinformatics packages where data integrity constraints (e.g., sorted m/z values) must be enforced.

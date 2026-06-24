@@ -1,6 +1,8 @@
 ---
 name: relative-abundance-calculation
-description: Use when after generating a frequency count table (e.g., from count_fold_changes output showing numbers of increased vs. decreased metabolites by class) and before creating proportional visualizations (pie charts, stacked bar plots).
+description: Use when after generating a frequency count table (e.g., from count_fold_changes
+  output showing numbers of increased vs. decreased metabolites by class) and before
+  creating proportional visualizations (pie charts, stacked bar plots).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +15,7 @@ metadata:
   - pie_chart
   - ggplot2
   - R (base)
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -41,6 +44,7 @@ attribution:
 
 # relative-abundance-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform frequency count tables of metabolite subsets into relative abundance (percentage) data to enable proportional comparison across compound classes or fold-change categories. This is essential for pie-chart and proportional visualizations in metabolomics workflows where raw counts obscure class-level distributions.

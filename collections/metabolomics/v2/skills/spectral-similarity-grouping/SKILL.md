@@ -1,6 +1,9 @@
 ---
 name: spectral-similarity-grouping
-description: Use when when you have computed a sparse pairwise distance matrix from nearest neighbor indexes of high-resolution MS/MS spectra and need to partition them into clusters such that spectra within each cluster correspond to similar fragmentation patterns (e.g., same peptide or metabolite).
+description: Use when when you have computed a sparse pairwise distance matrix from
+  nearest neighbor indexes of high-resolution MS/MS spectra and need to partition
+  them into clusters such that spectra within each cluster correspond to similar fragmentation
+  patterns (e.g., same peptide or metabolite).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,11 +16,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # spectral-similarity-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Density-based clustering of mass spectra using a sparse pairwise distance matrix to partition similar MS/MS spectra into homogeneous groups. This skill is applied as the final step of the falcon pipeline to assign cluster membership based on cosine similarity thresholds and neighborhood density.

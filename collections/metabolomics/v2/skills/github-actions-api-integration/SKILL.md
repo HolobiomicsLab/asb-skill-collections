@@ -1,6 +1,9 @@
 ---
 name: github-actions-api-integration
-description: Use when when you need to verify that a GitHub Actions workflow (such as a development build or release pipeline) executes without fatal errors and produces expected artifacts. Use this skill when the workflow is already configured in a repository (e.g., a .yml file in .
+description: Use when when you need to verify that a GitHub Actions workflow (such
+  as a development build or release pipeline) executes without fatal errors and produces
+  expected artifacts. Use this skill when the workflow is already configured in a
+  repository (e.g., a .yml file in .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -13,6 +16,7 @@ metadata:
   - GitHub Actions
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

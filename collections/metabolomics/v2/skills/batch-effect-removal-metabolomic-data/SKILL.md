@@ -1,6 +1,9 @@
 ---
 name: batch-effect-removal-metabolomic-data
-description: Use when after integrating feature matrices from multiple analytical experiments or batches (e.g., n=3 or more batches). Use it when batch-related systematic variations are present in the integrated dataset before proceeding to sample separation, marker identification, or annotation steps.
+description: Use when after integrating feature matrices from multiple analytical
+  experiments or batches (e.g., n=3 or more batches). Use it when batch-related systematic
+  variations are present in the integrated dataset before proceeding to sample separation,
+  marker identification, or annotation steps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +14,7 @@ metadata:
   - LargeMetabo
   - R
   - mixOmics
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -39,6 +43,7 @@ attribution:
 
 # Batch-Effect Removal in Metabolomic Data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove unwanted batch variations from integrated multi-batch metabolomic datasets using algorithm-specific correction methods. This skill is essential after data integration to harmonize feature intensities across analytical experiments and enable unbiased downstream analysis.

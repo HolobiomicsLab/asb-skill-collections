@@ -1,6 +1,8 @@
 ---
 name: missing-data-mechanism-specification
-description: Use when when you have a metabolomics abundance table with missing values and need to decide which imputation method to apply, or when designing a simulation to evaluate imputation performance.
+description: Use when when you have a metabolomics abundance table with missing values
+  and need to decide which imputation method to apply, or when designing a simulation
+  to evaluate imputation performance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -46,6 +49,7 @@ attribution:
 
 # Missing-Data Mechanism Specification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Specify the missing-data mechanism (MCAR, MAR, or MNAR) and censoring parameters for metabolomics datasets to enable appropriate selection and benchmarking of imputation methods. This skill determines whether missingness is random, dependent on observed covariates, or dependent on unobserved (left-censored) values, which constrains which imputation strategies are valid.

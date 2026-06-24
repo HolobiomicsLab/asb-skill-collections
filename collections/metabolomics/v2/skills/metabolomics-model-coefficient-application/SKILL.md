@@ -1,6 +1,9 @@
 ---
 name: metabolomics-model-coefficient-application
-description: Use when you have a matrix of Nightingale Health 1H-NMR metabolomics measurements (samples × features) and need to generate predicted metabolic scores published in peer-reviewed studies (MetaboAge, mortality score, cardiovascular event risk, Type-2 diabetes score, COVID-severity score, or surrogate.
+description: Use when you have a matrix of Nightingale Health 1H-NMR metabolomics
+  measurements (samples × features) and need to generate predicted metabolic scores
+  published in peer-reviewed studies (MetaboAge, mortality score, cardiovascular event
+  risk, Type-2 diabetes score, COVID-severity score, or surrogate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -14,6 +17,7 @@ metadata:
   - R (base stats, caret, matrixStats)
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -45,6 +49,7 @@ attribution:
 
 # metabolomics-model-coefficient-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply pre-trained linear model coefficients to Nightingale Health 1H-NMR metabolomics feature matrices to compute predicted metabolic biomarker scores (e.g., MetaboAge, mortality risk). This skill bridges published metabolic prediction models with new cohort data by mapping individual metabolite concentrations to scalar risk or age estimates.

@@ -1,6 +1,8 @@
 ---
 name: spectral-graph-construction-from-fragments
-description: Use when after you have aligned fragment ion pairs between two MS/MS spectra using maximum weight matching and need to compute statistical significance scores for the matched pairs.
+description: Use when after you have aligned fragment ion pairs between two MS/MS
+  spectra using maximum weight matching and need to compute statistical significance
+  scores for the matched pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,11 +16,13 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # spectral-graph-construction-from-fragments
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a Laplacian embedding graph from matched fragment ion pairs across MS/MS spectra to model spectral relationships and enable statistical significance testing. This graph representation captures both direct mass difference frequencies and ancestor–descendant similarity relationships among fragments.

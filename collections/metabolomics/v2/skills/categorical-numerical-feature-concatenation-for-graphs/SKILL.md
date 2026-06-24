@@ -1,6 +1,8 @@
 ---
 name: categorical-numerical-feature-concatenation-for-graphs
-description: 'Use when when preparing heterogeneous column-metadata inputs for a graph transformer model that operates on molecular graphs. Specifically: (1) you have both categorical metadata (e.'
+description: 'Use when when preparing heterogeneous column-metadata inputs for a graph
+  transformer model that operates on molecular graphs. Specifically: (1) you have
+  both categorical metadata (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,11 +18,13 @@ metadata:
   - Graphormer-RT
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
 evidence_spans:
-- Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
+- Graphormer-RT is an extension to the Graphormer package, with documentation, and
+  the original code on Github
 - import dgl
 claims: []
 provenance:
@@ -45,6 +49,7 @@ attribution:
 
 # categorical-numerical-feature-concatenation-for-graphs
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode mixed categorical and numerical HPLC column parameters into a unified feature vector for input to graph transformer models by one-hot encoding categorical attributes (company, USP, solvents, HPLC type) and normalizing numerical features (length, temperature, pH, particle size, dead time, physicochemical parameters) before concatenation. This skill bridges domain-specific chromatographic metadata and graph neural network architectures for retention-time prediction.

@@ -1,6 +1,8 @@
 ---
 name: repeated-measures-anova-design
-description: Use when you have an imputed, long-format metabolomics dataset with repeated measurements (multiple time points) per subject, a categorical grouping variable (e.
+description: Use when you have an imputed, long-format metabolomics dataset with repeated
+  measurements (multiple time points) per subject, a categorical grouping variable
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,6 +13,7 @@ metadata:
   - MeTEor
   - R
   - tidyverse
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 - library(tidyverse)
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # repeated-measures-anova-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Repeated measures ANOVA ranks metabolites in longitudinal metabolomics datasets by statistical significance, enabling prioritized feature selection for downstream analysis. This skill applies ANOVA with subject-level random effects to imputed long-format data to identify metabolites with strongest evidence of group differences across time.

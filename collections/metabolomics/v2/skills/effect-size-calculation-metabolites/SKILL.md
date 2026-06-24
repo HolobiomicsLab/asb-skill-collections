@@ -1,6 +1,8 @@
 ---
 name: effect-size-calculation-metabolites
-description: Use when after applying statistical tests (e.g., Student's t-test) to identify differentially abundant metabolites between two or more sample groups in a MultiAssayExperiment object.
+description: Use when after applying statistical tests (e.g., Student's t-test) to
+  identify differentially abundant metabolites between two or more sample groups in
+  a MultiAssayExperiment object.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,6 +13,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +48,7 @@ attribution:
 
 # Effect Size Calculation for Metabolites
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the magnitude of differential abundance between sample groups in metabolomic studies by computing effect sizes (difference in means) alongside statistical significance. This skill enables detection of biologically meaningful metabolic signatures beyond p-value thresholds.

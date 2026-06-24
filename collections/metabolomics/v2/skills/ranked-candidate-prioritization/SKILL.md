@@ -1,6 +1,9 @@
 ---
 name: ranked-candidate-prioritization
-description: Use when you have a feature quantification table (m/z, retention time, peak areas) and candidate metabolite annotations (chemical identifiers, MS/MS spectra matches, or SIRIUS/GNPS predictions) linked to a sample organism or taxon, and you need to prioritize which candidates are most biochemically.
+description: Use when you have a feature quantification table (m/z, retention time,
+  peak areas) and candidate metabolite annotations (chemical identifiers, MS/MS spectra
+  matches, or SIRIUS/GNPS predictions) linked to a sample organism or taxon, and you
+  need to prioritize which candidates are most biochemically.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -17,6 +20,7 @@ metadata:
   - GNPS-FBMN
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

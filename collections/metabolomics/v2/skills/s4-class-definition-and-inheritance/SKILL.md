@@ -1,6 +1,8 @@
 ---
 name: s4-class-definition-and-inheritance
-description: Use when you are designing a new backend or data container that must integrate seamlessly with an existing Spectra-based workflow. You have identified a virtual parent class (e.
+description: Use when you are designing a new backend or data container that must
+  integrate seamlessly with an existing Spectra-based workflow. You have identified
+  a virtual parent class (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3365
@@ -14,11 +16,13 @@ metadata:
   - IRanges
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
@@ -49,6 +53,7 @@ attribution:
 
 # S4 Class Definition and Inheritance
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define custom S4 classes that extend virtual parent classes and implement required slots and methods to create domain-specific data structures. This skill is essential when building extensible bioinformatics infrastructure where multiple implementations need to conform to a common API contract.

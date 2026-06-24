@@ -1,6 +1,9 @@
 ---
 name: metabolomics-preprocessing-normalization
-description: Use when you have acquired raw SIMS (secondary ion mass spectrometry) metabolite images aligned with tissue regions and segmented single-cell masks, and you need to extract normalized metabolite intensity values per cell before performing cell-type assignment, VAE embedding, or protein–metabolite.
+description: Use when you have acquired raw SIMS (secondary ion mass spectrometry)
+  metabolite images aligned with tissue regions and segmented single-cell masks, and
+  you need to extract normalized metabolite intensity values per cell before performing
+  cell-type assignment, VAE embedding, or protein–metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +18,7 @@ metadata:
   - Jupyter Notebook 02 (Registration of IMC and SIMS images)
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-43917-5
   title: scSpaMet
@@ -42,6 +46,7 @@ attribution:
 
 # metabolomics-preprocessing-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing and normalization of single-cell spatial metabolomics data from imaging mass spectrometry (SIMS), including intensity extraction, quality control, and modal harmonization before downstream clustering and correlation analysis. This skill is essential for converting raw SIMS image stacks into normalized single-cell metabolite intensity matrices suitable for joint proteomics integration.

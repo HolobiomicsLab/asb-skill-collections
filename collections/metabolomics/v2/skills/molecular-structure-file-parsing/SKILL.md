@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-file-parsing
-description: Use when when you have received or downloaded an SDF-formatted compound database file and need to verify that it is valid, uncorrupted, and contains the expected number of distinct molecular records before using it in metabolomics, cheminformatics, or toxicology workflows.
+description: Use when when you have received or downloaded an SDF-formatted compound
+  database file and need to verify that it is valid, uncorrupted, and contains the
+  expected number of distinct molecular records before using it in metabolomics, cheminformatics,
+  or toxicology workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3372
   tools:
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -37,6 +41,7 @@ attribution:
 
 # molecular-structure-file-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate SDF-formatted molecular structure files to verify structural integrity, extract compound records, and confirm one-to-one mapping between file entries and unique chemical entities. This skill is essential for quality control of compound databases before downstream analysis.

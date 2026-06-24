@@ -1,6 +1,9 @@
 ---
 name: tanimoto-similarity-scoring-implementation
-description: Use when when you have paired mass spectrometry spectra (e.g., from GNPS, MoNA, MassBank, or MSnLib) and need to predict continuous structural similarity scores (0–1 range) between them, especially when traditional spectral-distance metrics (e.
+description: Use when when you have paired mass spectrometry spectra (e.g., from GNPS,
+  MoNA, MassBank, or MSnLib) and need to predict continuous structural similarity
+  scores (0–1 range) between them, especially when traditional spectral-distance metrics
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -14,11 +17,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

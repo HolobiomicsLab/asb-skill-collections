@@ -1,6 +1,9 @@
 ---
 name: pathway-activity-decomposition-via-plage
-description: Use when you have a log2-transformed, standardized peak intensity matrix (rows = metabolite features, columns = samples) with compound annotations mapped to curated pathway databases (KEGG, Reactome, or custom metabolite sets), and you need to rank pathways by their activity level while tolerating.
+description: Use when you have a log2-transformed, standardized peak intensity matrix
+  (rows = metabolite features, columns = samples) with compound annotations mapped
+  to curated pathway databases (KEGG, Reactome, or custom metabolite sets), and you
+  need to rank pathways by their activity level while tolerating.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -17,14 +20,17 @@ metadata:
   - MS2LDA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 - PALS Viewer
 claims: []
 provenance:
@@ -50,6 +56,7 @@ attribution:
 
 # pathway-activity-decomposition-via-plage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 PLAGE (Pathway Level Analysis using Gene Expression) decomposes peak intensity or gene expression matrices into pathway activity scores by applying singular value decomposition to metabolite or gene groups within curated pathways. This rank-based approach is more robust to noise and missing peaks than alternatives like ORA and GSEA, making it well-suited for metabolomics datasets with incomplete or noisy peak detection.

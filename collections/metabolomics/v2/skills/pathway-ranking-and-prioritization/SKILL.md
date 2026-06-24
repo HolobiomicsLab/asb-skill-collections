@@ -1,6 +1,9 @@
 ---
 name: pathway-ranking-and-prioritization
-description: 'Use when after peak annotation when you have: (1) a peak intensity matrix (rows=peaks with KEGG/ChEBI/UniProt IDs, columns=samples) with group labels; (2) a pathway database (KEGG, Reactome, or user-defined metabolite sets); (3) a comparative experimental design (case vs. control groups).'
+description: 'Use when after peak annotation when you have: (1) a peak intensity matrix
+  (rows=peaks with KEGG/ChEBI/UniProt IDs, columns=samples) with group labels; (2)
+  a pathway database (KEGG, Reactome, or user-defined metabolite sets); (3) a comparative
+  experimental design (case vs. control groups).'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_1812
@@ -19,14 +22,17 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +57,7 @@ attribution:
 
 # pathway-ranking-and-prioritization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and prioritize metabolic or molecular pathways by computing activity level scores from intensity data and pathway definitions, then sorting by statistical significance. This skill enables hypothesis generation by identifying which pathways are most perturbed in a dataset, particularly robust to noise and missing peaks in metabolomics.

@@ -10,11 +10,13 @@ metadata:
   - http://edamontology.org/topic_3520
   tools:
   - haCCA
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.20.608773v2
   title: haCCA
 evidence_spans:
-- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified spatial morphological alignment
+- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified
+  spatial morphological alignment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +40,7 @@ attribution:
 
 # feature-pair-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank high-correlation feature pairs between two omics datasets (e.g., spatial transcriptome and metabolome) by computing pairwise correlation coefficients and filtering by correlation threshold. This ranking prioritizes the strongest cross-modal associations for downstream integration and alignment.

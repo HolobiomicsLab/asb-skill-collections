@@ -1,6 +1,8 @@
 ---
 name: domain-ontology-mapping-tcm-and-ethnobotany
-description: Use when when integrating structure-organism pairs from TCM databases, ethnobotanical collections, or alternative medicine sources that use domain-specific or transliterated terminology (e.
+description: Use when when integrating structure-organism pairs from TCM databases,
+  ethnobotanical collections, or alternative medicine sources that use domain-specific
+  or transliterated terminology (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,6 +16,7 @@ metadata:
   - Make
   - tcm.R
   - common.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -49,6 +52,7 @@ attribution:
 
 # Domain-ontology mapping for Traditional Chinese Medicine and ethnobotany
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build controlled-vocabulary mappings for Traditional Chinese Medicine (TCM) and alternative medicine nomenclature, translating local database identifiers and substance names into standardized ontology terms. This ensures heterogeneous ethnobotanical and TCM data sources can be reconciled and queried using shared semantic frameworks.

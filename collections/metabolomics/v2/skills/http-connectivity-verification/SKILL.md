@@ -1,6 +1,9 @@
 ---
 name: http-connectivity-verification
-description: Use when you need to confirm that a documented web service URL is live and reachable before attempting to submit analysis jobs, download results, or integrate the service into an automated pipeline. Use it as a prerequisite check when the service documentation claims academic or public availability.
+description: Use when you need to confirm that a documented web service URL is live
+  and reachable before attempting to submit analysis jobs, download results, or integrate
+  the service into an automated pipeline. Use it as a prerequisite check when the
+  service documentation claims academic or public availability.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0224
@@ -8,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_0219
   tools:
   - molDiscovery
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-021-23986-0
   title: moldiscovery
@@ -36,6 +40,7 @@ attribution:
 
 # http-connectivity-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a scientific web service or API endpoint is deployed, accessible, and responding with expected HTTP status codes. This skill validates service availability before downstream analysis tasks depend on it.

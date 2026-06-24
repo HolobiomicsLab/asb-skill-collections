@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -50,6 +51,7 @@ attribution:
 
 # spectral-metadata-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validates and filters mass spectra based on completeness and consistency of structural and experimental metadata (SMILES, InChI, InChIKey, precursor m/z, adduct information). This skill identifies spectra that lack critical identifiers or have conflicting ionmode/adduct pairs, enabling removal of low-quality records before downstream analysis.

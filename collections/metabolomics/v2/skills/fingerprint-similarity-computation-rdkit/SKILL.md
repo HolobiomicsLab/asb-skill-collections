@@ -1,6 +1,8 @@
 ---
 name: fingerprint-similarity-computation-rdkit
-description: Use when when implementing a similarity-based filter for Pickaxe compound expansion that must retain or remove candidates based on their structural resemblance to a target compound set.
+description: Use when when implementing a similarity-based filter for Pickaxe compound
+  expansion that must retain or remove candidates based on their structural resemblance
+  to a target compound set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -11,12 +13,15 @@ metadata:
   - RDKit
   - Python
   - pytest
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
 evidence_spans:
-- MINE-Database requires the use of rdkit, which currently is unavailable to install on pip
-- Default filters are created using [RDKit](https://rdkit.org/docs/api-docs.html), a python library providing a collection of cheminformatic tools.
+- MINE-Database requires the use of rdkit, which currently is unavailable to install
+  on pip
+- Default filters are created using [RDKit](https://rdkit.org/docs/api-docs.html),
+  a python library providing a collection of cheminformatic tools.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

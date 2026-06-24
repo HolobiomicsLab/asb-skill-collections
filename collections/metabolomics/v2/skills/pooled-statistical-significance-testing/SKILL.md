@@ -1,6 +1,8 @@
 ---
 name: pooled-statistical-significance-testing
-description: Use when when you have validated link annotations from multiple independent datasets (≥2), individual scoring functions with per-dataset enrichment p-values, and you want to test whether a combined scoring strategy (e.
+description: Use when when you have validated link annotations from multiple independent
+  datasets (≥2), individual scoring functions with per-dataset enrichment p-values,
+  and you want to test whether a combined scoring strategy (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,13 +17,15 @@ metadata:
   - MIBiG
   - Python (numpy, scipy.stats, pandas, matplotlib, seaborn)
   - Python scipy.stats
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -51,6 +55,7 @@ attribution:
 
 # pooled-statistical-significance-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine validated link counts across multiple independent datasets and apply Fisher exact test or chi-square test to assess whether a combined ranking criterion (e.g. joint percentile threshold) yields statistically significant enrichment for true links compared to single-function baselines. This allows detection of complementarity effects that may be obscured in individual datasets.

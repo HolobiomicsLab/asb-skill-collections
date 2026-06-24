@@ -1,6 +1,8 @@
 ---
 name: lipid-sample-separation-visualization
-description: Use when after normalizing and log-transforming lipidomics intensity data in a LipidomicsExperiment object, use this skill when you need to assess whether your sample groups (e.
+description: Use when after normalizing and log-transforming lipidomics intensity
+  data in a LipidomicsExperiment object, use this skill when you need to assess whether
+  your sample groups (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -11,12 +13,15 @@ metadata:
   - lipidr
   - R
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # lipid-sample-separation-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Principal component analysis (PCA) applied to normalized and logged lipidomics intensity data to visualize sample clustering by phenotype and detect outlier samples with anomalous lipid profiles. This skill reveals whether biological groups (benign, cancer, metastasis) separate in reduced dimensionality space and identifies samples warranting removal due to high dispersion.

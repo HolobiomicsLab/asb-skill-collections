@@ -1,6 +1,9 @@
 ---
 name: motif-to-node-mapping
-description: Use when you have a GNPS-generated classical or feature-based mass spectral molecular network (graphml or JSON format) and a corresponding MS2LDA experiment with Mass2Motif assignments on the same spectra, and you want to visualize and quantify which structural motifs are shared within and across.
+description: Use when you have a GNPS-generated classical or feature-based mass spectral
+  molecular network (graphml or JSON format) and a corresponding MS2LDA experiment
+  with Mass2Motif assignments on the same spectra, and you want to visualize and quantify
+  which structural motifs are shared within and across.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -16,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

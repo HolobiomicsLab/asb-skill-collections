@@ -1,6 +1,9 @@
 ---
 name: comparative-statistical-testing-across-methods
-description: Use when when you have applied multiple pathway analysis methods to the same metabolomics peak intensity dataset and need to determine which method produces more stable pathway activity scores under realistic perturbation conditions (noise and missing peaks).
+description: Use when when you have applied multiple pathway analysis methods to the
+  same metabolomics peak intensity dataset and need to determine which method produces
+  more stable pathway activity scores under realistic perturbation conditions (noise
+  and missing peaks).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
   - PALS Viewer
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

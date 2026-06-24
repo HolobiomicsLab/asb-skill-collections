@@ -1,6 +1,9 @@
 ---
 name: graph-neural-network-design-for-chemistry
-description: Use when you have 1D or 2D NMR spectra (1H and/or 13C) and need to predict unknown molecular structure (formula and connectivity) up to ~19 heavy atoms; or you have a set of molecular fragment-structure pairs and need to model how fragments assemble into complete structures.
+description: Use when you have 1D or 2D NMR spectra (1H and/or 13C) and need to predict
+  unknown molecular structure (formula and connectivity) up to ~19 heavy atoms; or
+  you have a set of molecular fragment-structure pairs and need to model how fragments
+  assemble into complete structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3894
@@ -13,6 +16,7 @@ metadata:
   - convolutional neural network
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -40,6 +44,7 @@ attribution:
 
 # graph-neural-network-design-for-chemistry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and train graph neural network architectures to predict molecular properties or structures from spectroscopic data by encoding molecular connectivity and atomic features as node-edge graphs. This skill is essential when molecular topology and atomic relationships are central to the prediction task, such as structure elucidation from NMR spectra or fragment assembly.

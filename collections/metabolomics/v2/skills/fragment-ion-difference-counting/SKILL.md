@@ -1,6 +1,9 @@
 ---
 name: fragment-ion-difference-counting
-description: Use when when preparing tandem MS/MS data for spectral alignment and similarity comparison, particularly when you have loaded raw fragmentation spectra and need to extract and quantify mass difference patterns that capture the fragmentation process.
+description: Use when when preparing tandem MS/MS data for spectral alignment and
+  similarity comparison, particularly when you have loaded raw fragmentation spectra
+  and need to extract and quantify mass difference patterns that capture the fragmentation
+  process.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +16,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # fragment-ion-difference-counting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute mass difference feature counts from tandem mass spectra using both m/z differences between fragment pairs and precursor-based neutral loss differences. This skill generates a unified difference-count table that serves as input to SIMILE's spectral similarity and alignment algorithm.

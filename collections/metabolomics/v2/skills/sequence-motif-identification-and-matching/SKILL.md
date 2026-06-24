@@ -1,6 +1,8 @@
 ---
 name: sequence-motif-identification-and-matching
-description: Use when you have differentially expressed isoform or exon FASTA sequences and need to identify conserved regulatory or structural motifs as part of comprehensive functional annotation.
+description: Use when you have differentially expressed isoform or exon FASTA sequences
+  and need to identify conserved regulatory or structural motifs as part of comprehensive
+  functional annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0239
@@ -14,6 +16,7 @@ metadata:
   - fimo
   - IsoformSwitchAnalyzer
   - Pfam
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator

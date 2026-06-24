@@ -1,6 +1,8 @@
 ---
 name: background-distribution-threshold-derivation
-description: Use when when you have trained predictive models (e.g., neural networks) on paired microbiome-metabolome data and need to identify which metabolites are genuinely well-predicted above chance.
+description: Use when when you have trained predictive models (e.g., neural networks)
+  on paired microbiome-metabolome data and need to identify which metabolites are
+  genuinely well-predicted above chance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -19,16 +21,24 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +62,7 @@ attribution:
 
 # Background-Distribution Threshold Derivation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Derive empirical significance thresholds for metabolite prediction quality by generating null distributions through repeated shuffling and cross-validation, then define well-predicted metabolites at a high percentile (e.g., 95th) of the background distribution. This guards against false discoveries and enables data-driven cutoff selection without prior assumptions.

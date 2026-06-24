@@ -1,6 +1,9 @@
 ---
 name: spatial-data-integration-preprocessing
-description: Use when when you have paired spatial transcriptome and metabolome datasets (in .h5ad or matrix format) with spatial location information, and you need to establish correspondence between features across modalities before performing spatial morphological alignment.
+description: Use when when you have paired spatial transcriptome and metabolome datasets
+  (in .h5ad or matrix format) with spatial location information, and you need to establish
+  correspondence between features across modalities before performing spatial morphological
+  alignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -9,11 +12,13 @@ metadata:
   - http://edamontology.org/topic_0621
   tools:
   - haCCA
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.20.608773v2
   title: haCCA
 evidence_spans:
-- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified spatial morphological alignment
+- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified
+  spatial morphological alignment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -37,6 +42,7 @@ attribution:
 
 # spatial-data-integration-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank high-correlation feature pairs between spatial transcriptome and metabolome datasets as a prerequisite for spot-to-spot multi-modal alignment. This skill prepares paired omics data for integrated spatial registration by computing correlation scores and filtering to retain only the strongest cross-modal associations.

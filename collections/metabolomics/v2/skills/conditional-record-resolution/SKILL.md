@@ -1,6 +1,8 @@
 ---
 name: conditional-record-resolution
-description: Use when converting JSON metadata and you need to populate a target field by selecting or iterating over records only when they satisfy a logical test condition (e.g., 'include this record only if a specific field has a particular value').
+description: Use when converting JSON metadata and you need to populate a target field
+  by selecting or iterating over records only when they satisfy a logical test condition
+  (e.g., 'include this record only if a specific field has a particular value').
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # Conditional Record Resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selectively resolve field values from input JSON records based on test conditions, applying code transformations and field extraction with optional sorting and concatenation. This skill enables intelligent record filtering and multi-value aggregation within the MESSES conversion directive framework, ensuring only records matching specified criteria contribute to the final output.

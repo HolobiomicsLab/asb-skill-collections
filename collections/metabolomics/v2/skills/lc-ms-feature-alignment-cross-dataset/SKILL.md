@@ -1,6 +1,7 @@
 ---
 name: lc-ms-feature-alignment-cross-dataset
-description: Use when you have two peak-picked, conventionally aligned LC-MS metabolomics datasets (e.
+description: Use when you have two peak-picked, conventionally aligned LC-MS metabolomics
+  datasets (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +14,15 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # lc-ms-feature-alignment-cross-dataset
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and merge feature measurements from two independently acquired untargeted LC-MS metabolomics datasets by matching overlapping <m/z, retention time> pairs and constructing a unified combined table. This skill is essential when integrating disparately-acquired datasets to expand sample coverage while maintaining feature correspondence despite non-identical acquisition conditions.

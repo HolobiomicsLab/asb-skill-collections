@@ -1,6 +1,9 @@
 ---
 name: metadata-validation-rule-specification
-description: Use when mSMetaEnhancer retrieves metadata attributes (SMILES, InChI, CAS numbers, IUPAC names, formulas) from external services (CIR, CTS, PubChem, IDSM, BridgeDb) and you need to guarantee that only correctly formatted values are written back to .msp output files.
+description: Use when mSMetaEnhancer retrieves metadata attributes (SMILES, InChI,
+  CAS numbers, IUPAC names, formulas) from external services (CIR, CTS, PubChem, IDSM,
+  BridgeDb) and you need to guarantee that only correctly formatted values are written
+  back to .msp output files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +19,7 @@ metadata:
   - PubChem
   - IDSM
   - BridgeDb
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

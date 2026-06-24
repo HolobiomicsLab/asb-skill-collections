@@ -1,6 +1,9 @@
 ---
 name: qc-dilution-consistency-validation
-description: Use when after CV-based and blank-contribution filtering when you have untargeted metabolomics feature tables with QC samples that include dilution series (QC_half) and you need to ensure features exhibit consistent, approximately proportional intensity changes across dilution steps.
+description: Use when after CV-based and blank-contribution filtering when you have
+  untargeted metabolomics feature tables with QC samples that include dilution series
+  (QC_half) and you need to ensure features exhibit consistent, approximately proportional
+  intensity changes across dilution steps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,13 +14,15 @@ metadata:
   - R
   - GetFeatistics
   - ggplot2
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

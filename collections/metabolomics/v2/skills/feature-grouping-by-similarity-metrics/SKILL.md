@@ -1,6 +1,8 @@
 ---
 name: feature-grouping-by-similarity-metrics
-description: Use when after LCMS feature alignment (e.g., Eclipse output) when you have a feature table with retention times and intensity profiles across multiple injections, and you need to collapse redundant features (e.
+description: Use when after LCMS feature alignment (e.g., Eclipse output) when you
+  have a feature table with retention times and intensity profiles across multiple
+  injections, and you need to collapse redundant features (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,6 +18,7 @@ metadata:
   - bmxp (Python package)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

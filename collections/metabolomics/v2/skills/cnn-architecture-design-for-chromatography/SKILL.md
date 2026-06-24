@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -50,6 +51,7 @@ attribution:
 
 # CNN Architecture Design for Chromatography
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Design and train a convolutional neural network to classify local maxima in LC-HRMS profile-mode data as chromatographic peaks or background signal, with auxiliary regression heads to predict bounding-box coordinates and peak centers. This skill enables automated, generalizable peak-picking across diverse LC-HRMS datasets by learning from iteratively augmented training instances.

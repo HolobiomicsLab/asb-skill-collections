@@ -1,6 +1,8 @@
 ---
 name: few-shot-learning-calibration-design
-description: Use when you have experimental retention times measured on a source chromatographic method and want to predict RTs on a target chromatographic method, but possess only a small set (10–100) of molecules with ground-truth measurements on both methods.
+description: Use when you have experimental retention times measured on a source chromatographic
+  method and want to predict RTs on a target chromatographic method, but possess only
+  a small set (10–100) of molecules with ground-truth measurements on both methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - cmmrt
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # few-shot-learning-calibration-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A Bayesian meta-learning approach that projects retention times between chromatographic methods using minimal calibration data (≥10 molecules), enabling rapid method transfer without extensive experimental validation. This skill applies Gaussian Process meta-learning to learn transferable RT mappings from small reference molecule sets, achieving competitive accuracy against traditional regression baselines.

@@ -1,6 +1,9 @@
 ---
 name: protein-interaction-score-prediction
-description: Use when you have co-fractionation/mass-spectrometry (CF-MS) elution profiles (raw intensity vectors across fractions) paired with a gold standard of known positive and negative protein–protein interactions, and your goal is to predict interaction scores for all protein pairs without hand-crafted.
+description: Use when you have co-fractionation/mass-spectrometry (CF-MS) elution
+  profiles (raw intensity vectors across fractions) paired with a gold standard of
+  known positive and negative protein–protein interactions, and your goal is to predict
+  interaction scores for all protein pairs without hand-crafted.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0315
@@ -13,6 +16,7 @@ metadata:
   - EPIC
   - TensorFlow / Keras
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbad229/7199559
   title: SPIFFED
@@ -40,6 +44,7 @@ attribution:
 
 # protein-interaction-score-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a balanced end-to-end convolutional neural network to predict protein–protein interaction (PPI) scores directly from raw co-fractionation/mass-spectrometry elution profiles, eliminating manual feature engineering. Apply this skill when you have CF-MS elution intensity data and labeled PPI ground truth, and you want to leverage deep learning to handle class imbalance and nonlinear co-elution patterns.

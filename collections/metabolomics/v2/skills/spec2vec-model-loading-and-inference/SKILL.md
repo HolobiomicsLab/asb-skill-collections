@@ -1,6 +1,8 @@
 ---
 name: spec2vec-model-loading-and-inference
-description: Use when you have discovered Mass2Motifs or other fragmentation pattern representations via LDA and need to generate vector embeddings to query a reference motif database (MotifDB) for structural annotation candidates.
+description: Use when you have discovered Mass2Motifs or other fragmentation pattern
+  representations via LDA and need to generate vector embeddings to query a reference
+  motif database (MotifDB) for structural annotation candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2939
@@ -18,11 +20,13 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - Automated Mass2Motif Annotation Guidance (MAG) with Spec2Vec
 - Automated annotation of **M2M** using **MAG**

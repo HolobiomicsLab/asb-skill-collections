@@ -1,6 +1,9 @@
 ---
 name: cnn-architecture-design-for-spectral-data
-description: Use when when you have mass-spectrometry data (m/z and intensity pairs or spectral matrices) paired with ground-truth molecular fingerprints or InChIKeys, and you need to learn a non-linear mapping from spectral patterns to structural fingerprints for downstream metabolite ranking or annotation.
+description: Use when when you have mass-spectrometry data (m/z and intensity pairs
+  or spectral matrices) paired with ground-truth molecular fingerprints or InChIKeys,
+  and you need to learn a non-linear mapping from spectral patterns to structural
+  fingerprints for downstream metabolite ranking or annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -17,6 +20,7 @@ metadata:
   - Open Babel
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID
@@ -45,6 +49,7 @@ attribution:
 
 # CNN Architecture Design for Spectral Data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a convolutional neural network (CNN) to map mass-spectrometry spectral features (m/z and intensity arrays) to molecular fingerprint vector outputs for metabolite annotation. This skill bridges raw MS data preprocessing and learned compound prediction by architecting convolutional, pooling, and dense layers tailored to spectral input dimensionality and fingerprint prediction tasks.

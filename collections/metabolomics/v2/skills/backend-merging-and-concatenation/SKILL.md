@@ -1,6 +1,9 @@
 ---
 name: backend-merging-and-concatenation
-description: Use when when you have two or more MsBackend objects (e.g., multiple MsBackendMemory, MsBackendDataFrame, or MsBackendMzR instances) containing distinct sets of MS spectra and you need to consolidate them into a single backend for downstream analysis, parallel processing, or export.
+description: Use when when you have two or more MsBackend objects (e.g., multiple
+  MsBackendMemory, MsBackendDataFrame, or MsBackendMzR instances) containing distinct
+  sets of MS spectra and you need to consolidate them into a single backend for downstream
+  analysis, parallel processing, or export.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3364
@@ -14,6 +17,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -44,6 +48,7 @@ attribution:
 
 # backend-merging-and-concatenation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine multiple MsBackend objects of the same type into a single instance while preserving all spectra and their peak data. This skill is essential for aggregating mass spectrometry data from multiple sources or processing stages into a unified backend representation.

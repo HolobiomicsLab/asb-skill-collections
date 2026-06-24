@@ -1,6 +1,8 @@
 ---
 name: tandem-mass-spectra-interpretation
-description: Use when you have an unknown MS/MS spectrum (tandem mass spectrum) with a measured precursor m/z and fragment peaks, and you need to assign the most likely molecular formula and ionization adduct (e.g., [M+H]+, [M+Na]+, [M+K]+).
+description: Use when you have an unknown MS/MS spectrum (tandem mass spectrum) with
+  a measured precursor m/z and fragment peaks, and you need to assign the most likely
+  molecular formula and ionization adduct (e.g., [M+H]+, [M+Na]+, [M+K]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,14 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # Tandem Mass Spectra Interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank chemical formula and adduct assignments for unknown MS/MS spectra using energy-based neural network scoring, without relying on spectral databases. This skill applies a transformer architecture to learn fragment-formula relationships directly from data, supporting multiple adduct types in positive ionization mode.

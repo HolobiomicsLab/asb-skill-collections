@@ -1,6 +1,7 @@
 ---
 name: sphinx-gallery-execution-and-performance-profiling
-description: Use when you have a Sphinx-based documentation project with multiple gallery scripts (e.
+description: Use when you have a Sphinx-based documentation project with multiple
+  gallery scripts (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -14,12 +15,14 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - Build docs with sphinx-build
@@ -47,6 +50,7 @@ attribution:
 
 # sphinx-gallery-execution-and-performance-profiling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure and verify the aggregate execution time and memory footprint of a multi-backend Sphinx gallery by running all gallery scripts and comparing reported metrics against expected benchmarks. This skill ensures reproducibility and performance compliance across static and interactive visualization backends.

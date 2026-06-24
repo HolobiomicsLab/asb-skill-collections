@@ -1,6 +1,8 @@
 ---
 name: artifact-size-measurement-and-range-verification
-description: Use when you have built multiple Docker image variants (e.g., cli, dev, linux, windows) from a multi-stage Dockerfile and need to verify that their uncompressed and compressed storage footprints fall within documented acceptable ranges (e.
+description: Use when you have built multiple Docker image variants (e.g., cli, dev,
+  linux, windows) from a multi-stage Dockerfile and need to verify that their uncompressed
+  and compressed storage footprints fall within documented acceptable ranges (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +10,7 @@ metadata:
   - AirdPro V5
   - Docker (docker build, docker inspect, docker system df)
   - Dockerfile (multi-stage build with --target flag)
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -36,6 +39,7 @@ attribution:
 
 # artifact-size-measurement-and-range-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure uncompressed and compressed sizes of built Docker image artifacts, compare against documented acceptable ranges, and generate a structured pass/fail verification report. This skill ensures Docker image variants meet storage and distribution requirements before deployment.

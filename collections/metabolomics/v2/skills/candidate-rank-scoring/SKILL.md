@@ -1,6 +1,7 @@
 ---
 name: candidate-rank-scoring
-description: Use when after compound database dereplication has generated per-spectrum candidate lists (e.
+description: Use when after compound database dereplication has generated per-spectrum
+  candidate lists (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -17,6 +18,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -49,6 +51,7 @@ attribution:
 
 # Candidate rank scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank putative metabolite candidates from compound database dereplication (SIRIUS or MetFrag output) using structural similarity metrics and spectral match quality to select the most likely correct annotation for each MS2 spectrum.

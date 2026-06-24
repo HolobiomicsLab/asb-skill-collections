@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-loading
-description: Use when you have raw MS data files from supported instruments (Agilent, Thermo, Bruker, or mzML format) and need to ingest them into IonToolPack for visualization, quality control, targeted extraction, or spectral library matching.
+description: Use when you have raw MS data files from supported instruments (Agilent,
+  Thermo, Bruker, or mzML format) and need to ingest them into IonToolPack for visualization,
+  quality control, targeted extraction, or spectral library matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -18,6 +20,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

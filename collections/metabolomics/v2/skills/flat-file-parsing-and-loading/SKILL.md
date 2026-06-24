@@ -1,6 +1,8 @@
 ---
 name: flat-file-parsing-and-loading
-description: Use when when you have published LOTUS flat files (TSV or compressed TSV.GZ) containing structure-organism pairs and need to enumerate unique structures, group by organism prevalence, or validate record counts against gold-standard benchmarks.
+description: Use when when you have published LOTUS flat files (TSV or compressed
+  TSV.GZ) containing structure-organism pairs and need to enumerate unique structures,
+  group by organism prevalence, or validate record counts against gold-standard benchmarks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -13,6 +15,7 @@ metadata:
   - R (data.table, base read.csv)
   - Python 3 (pandas.read_csv, gzip)
   - Make
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -47,6 +50,7 @@ attribution:
 
 # flat-file-parsing-and-loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load structure-organism pair data from published LOTUS flat files into memory, extracting documented 2D/3D structure identifiers, organism associations, and reference metadata for subsequent binning and validation. This is a foundational data ingestion step that establishes the integrity of source records before downstream analysis.

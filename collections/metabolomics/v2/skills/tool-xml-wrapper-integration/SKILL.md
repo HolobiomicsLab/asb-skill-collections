@@ -1,6 +1,8 @@
 ---
 name: tool-xml-wrapper-integration
-description: Use when you have standalone metabolomics analysis tools (Python scripts, R packages, MATLAB compiled applications) that you want to expose through Galaxy's UI and make composable into reproducible workflows.
+description: Use when you have standalone metabolomics analysis tools (Python scripts,
+  R packages, MATLAB compiled applications) that you want to expose through Galaxy's
+  UI and make composable into reproducible workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -17,6 +19,7 @@ metadata:
   - Galaxy-M
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M

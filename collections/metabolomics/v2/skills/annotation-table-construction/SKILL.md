@@ -1,6 +1,8 @@
 ---
 name: annotation-table-construction
-description: Use when when you have access to multiple public metabolomics databases and need to build a unified reference table for metabolite annotation in untargeted mass spectrometry analysis.
+description: Use when when you have access to multiple public metabolomics databases
+  and need to build a unified reference table for metabolite annotation in untargeted
+  mass spectrometry analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -13,6 +15,7 @@ metadata:
   - MARC
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU

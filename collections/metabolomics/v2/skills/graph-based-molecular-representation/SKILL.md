@@ -1,6 +1,8 @@
 ---
 name: graph-based-molecular-representation
-description: Use when when you have 1D NMR spectra (¹H and/or ¹³C) as input and need to predict complete molecular structure (both molecular formula and bond connectivity) for molecules with up to 19 heavy atoms.
+description: Use when when you have 1D NMR spectra (¹H and/or ¹³C) as input and need
+  to predict complete molecular structure (both molecular formula and bond connectivity)
+  for molecules with up to 19 heavy atoms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -13,6 +15,7 @@ metadata:
   - Transformer (architecture)
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -41,6 +44,7 @@ attribution:
 
 # graph-based-molecular-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Represent molecular structures as graphs with atoms as nodes and bonds as edges, enabling transformer and neural network architectures to learn structure-from-spectra mappings. This representation decouples molecular connectivity and formula prediction into discrete, learnable tasks suitable for end-to-end neural training.

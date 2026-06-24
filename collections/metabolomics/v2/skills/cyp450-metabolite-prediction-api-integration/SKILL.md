@@ -1,6 +1,8 @@
 ---
 name: cyp450-metabolite-prediction-api-integration
-description: Use when you need to embed CYP450 metabolite prediction directly into a larger Java software pipeline or require dynamic toggling of the CypReact filter module based on experimental parameters.
+description: Use when you need to embed CYP450 metabolite prediction directly into
+  a larger Java software pipeline or require dynamic toggling of the CypReact filter
+  module based on experimental parameters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0305
@@ -11,6 +13,7 @@ metadata:
   - BioTransformerAPI
   - CyProduct
   - Java
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -40,6 +43,7 @@ attribution:
 
 # cyp450-metabolite-prediction-api-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate the BioTransformerAPI static functions into custom Java applications to predict CYP450-catalyzed metabolites with optional CypReact filtering. This skill enables programmatic control over metabolite prediction workflows without relying on command-line invocation.

@@ -1,6 +1,7 @@
 ---
 name: mass-spectrum-plot-rendering
-description: Use when after importing and preprocessing mass spectrometry data (in .raw, .
+description: Use when after importing and preprocessing mass spectrometry data (in
+  .raw, .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +14,7 @@ metadata:
   - R GUI (SMART)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

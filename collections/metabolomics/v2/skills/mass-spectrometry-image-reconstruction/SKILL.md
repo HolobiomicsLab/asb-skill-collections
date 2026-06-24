@@ -12,13 +12,15 @@ metadata:
   - pewpew (pew²)
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -45,6 +47,7 @@ attribution:
 
 # mass-spectrometry-image-reconstruction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct spatially resolved mass spectrometry images from imzML/ibd file pairs by parsing XML metadata, extracting mass-specific intensity slices from binary data, and assembling multi-channel image objects with isotope annotations and coordinate metadata. This skill enables pixel-level spectral exploration and targeted m/z image generation for imaging mass spectrometry workflows.

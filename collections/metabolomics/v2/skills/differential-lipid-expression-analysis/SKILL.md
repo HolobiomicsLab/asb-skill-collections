@@ -1,6 +1,9 @@
 ---
 name: differential-lipid-expression-analysis
-description: Use when when you have a LipidomicsExperiment object with logged and normalized Area measurements, sample grouping metadata (e.g., SampleType, Stage, Race), and a research question about whether specific lipid molecules or classes differ significantly between two or more sample groups.
+description: Use when when you have a LipidomicsExperiment object with logged and
+  normalized Area measurements, sample grouping metadata (e.g., SampleType, Stage,
+  Race), and a research question about whether specific lipid molecules or classes
+  differ significantly between two or more sample groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3668
@@ -12,12 +15,15 @@ metadata:
   - limma
   - R
   - Metabolomics Workbench API
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - This step of the workflow requires the `limma` package to be installed.
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
@@ -43,6 +49,7 @@ attribution:
 
 # differential-lipid-expression-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify lipid molecules with significant abundance changes between sample groups (e.g., cancer vs. benign tissue) using limma-based statistical testing within the lipidr framework. This skill enables discovery of lipid class regulation patterns and their association with biological conditions or clinical variables.

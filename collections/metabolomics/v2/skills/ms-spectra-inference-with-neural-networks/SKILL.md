@@ -1,6 +1,9 @@
 ---
 name: ms-spectra-inference-with-neural-networks
-description: Use when you have MGF or native MS/MS arrays (mz_array, intensity_array, precursor_mz, adduct) and want to predict the most likely molecular formula. The input spectra must include required MGF fields (TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) or equivalent Python API parameters.
+description: Use when you have MGF or native MS/MS arrays (mz_array, intensity_array,
+  precursor_mz, adduct) and want to predict the most likely molecular formula. The
+  input spectra must include required MGF fields (TITLE, PRECURSOR_MZ, PRECURSOR_TYPE,
+  COLLISION_ENERGY) or equivalent Python API parameters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -42,6 +46,7 @@ attribution:
 
 # ms-spectra-inference-with-neural-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a pre-trained deep neural network (FIDDLE) to predict molecular formulas directly from tandem MS/MS spectra, using a two-stage architecture (TCN for initial prediction + Siamese rescore model for ranking candidates). This skill is essential when you need rapid, high-accuracy formula assignment from high-resolution mass spectrometry without external tools like SIRIUS or BUDDY.

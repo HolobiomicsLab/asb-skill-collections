@@ -1,6 +1,8 @@
 ---
 name: keras-model-format-conversion
-description: Use when you have downloaded Keras-format pre-trained models (e.g., via get_models.sh) and need to deploy them locally via TensorFlow Serving within a Dockerized classification API.
+description: Use when you have downloaded Keras-format pre-trained models (e.g., via
+  get_models.sh) and need to deploy them locally via TensorFlow Serving within a Dockerized
+  classification API.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -11,6 +13,7 @@ metadata:
   - Keras
   - TensorFlow
   - TensorFlow Serving
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

@@ -1,6 +1,9 @@
 ---
 name: custom-file-handler-class-design-for-indexed-access
-description: Use when your input is a large mzML or text file that would benefit from compression without sacrificing random-access performance, and you need to retrieve specific logical blocks (e.g., a chapter, spectrum, or database record) by key without decompressing the entire file.
+description: Use when your input is a large mzML or text file that would benefit from
+  compression without sacrificing random-access performance, and you need to retrieve
+  specific logical blocks (e.g., a chapter, spectrum, or database record) by key without
+  decompressing the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +16,7 @@ metadata:
   - ElementTree (xml.etree.ElementTree)
   - sqlite3
   - Black (psf/black)
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,6 +45,7 @@ attribution:
 
 # custom-file-handler-class-design-for-indexed-access
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and integrate a custom file handler class that implements random and sequential access to blockwise-indexed data structures (e.g., compressed gzip archives with chapter-level or spectrum-level indexing). This skill enables rapid access to large mzML files by mapping logical blocks to byte offsets in compressed storage.

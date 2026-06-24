@@ -1,6 +1,9 @@
 ---
 name: time-temperature-degradation-modeling
-description: Use when you are planning a blood sampling campaign and need to know whether specific lipid or polar-metabolite analytes will degrade during storage or processing delays at known temperatures, or you are troubleshooting retrospective stability concerns for analytes already measured under documented.
+description: Use when you are planning a blood sampling campaign and need to know
+  whether specific lipid or polar-metabolite analytes will degrade during storage
+  or processing delays at known temperatures, or you are troubleshooting retrospective
+  stability concerns for analytes already measured under documented.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,11 +16,13 @@ metadata:
   - RStudio
   - ALISTER
   - RefMet Database
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cca.2024.117858
   title: ALISTER
 evidence_spans:
-- ALISTER is a web-app containing scientific information on pre-analytical blood sample stability in metabolomics and lipidomics
+- ALISTER is a web-app containing scientific information on pre-analytical blood sample
+  stability in metabolomics and lipidomics
 - '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
 claims: []
 provenance:

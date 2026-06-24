@@ -1,6 +1,7 @@
 ---
 name: fold-change-log2-transformation
-description: Use when when preparing fold-change measurements from multiple metabolomics studies for quantitative meta-analysis via weighted averaging.
+description: Use when when preparing fold-change measurements from multiple metabolomics
+  studies for quantitative meta-analysis via weighted averaging.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -10,14 +11,17 @@ metadata:
   tools:
   - R
   - amanida
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # fold-change-log2-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Log2 transformation of fold-change values enables symmetric representation of up- and down-regulation and facilitates study-size-weighted averaging in quantitative metabolomics meta-analysis. This transformation is a prerequisite step before combining fold-changes across multiple studies using weighted averaging methods.

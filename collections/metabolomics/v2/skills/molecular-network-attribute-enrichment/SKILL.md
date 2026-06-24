@@ -1,6 +1,9 @@
 ---
 name: molecular-network-attribute-enrichment
-description: Use when you have a GNPS mass spectral molecular network (in .graphml or Cytoscape format) and wish to annotate its nodes and edges with chemical class assignments from the GNPS library and/or MS2LDA motif probabilities from an independent LDA experiment.
+description: Use when you have a GNPS mass spectral molecular network (in .graphml
+  or Cytoscape format) and wish to annotate its nodes and edges with chemical class
+  assignments from the GNPS library and/or MS2LDA motif probabilities from an independent
+  LDA experiment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -17,11 +20,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

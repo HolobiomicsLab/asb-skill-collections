@@ -1,6 +1,9 @@
 ---
 name: lipid-spectral-data-export
-description: Use when after generating a complete lipid spectral library with adduct-specific fragmentation patterns and retention time metadata, when you need to deploy the library for targeted or data-dependent acquisition on specific mass spectrometry instruments—either Excalibur-controlled orbitrap.
+description: Use when after generating a complete lipid spectral library with adduct-specific
+  fragmentation patterns and retention time metadata, when you need to deploy the
+  library for targeted or data-dependent acquisition on specific mass spectrometry
+  instruments—either Excalibur-controlled orbitrap.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,6 +15,7 @@ metadata:
   - Skyline
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator
@@ -40,6 +44,7 @@ attribution:
 
 # lipid-spectral-data-export
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Conditional serialization of in-memory lipid spectral library data into format-specific CSV export schemas compatible with downstream mass spectrometry analysis platforms (Excalibur for DDA orbitrap or Skyline for targeted analysis). This skill bridges generated spectral metadata to instrument-ready precursor or transition lists.

@@ -1,6 +1,8 @@
 ---
 name: gam-model-diagnostic-evaluation
-description: Use when after fitting candidate GAM splines with B-spline basis functions across a range of basis dimensions (k values 12–20) to anchor feature pairs (m/z and retention time coordinates).
+description: Use when after fitting candidate GAM splines with B-spline basis functions
+  across a range of basis dimensions (k values 12–20) to anchor feature pairs (m/z
+  and retention time coordinates).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -13,13 +15,16 @@ metadata:
   - metabCombiner
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
 - a modified form of the `gam` function implemented in the *mgcv* R package
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # gam-model-diagnostic-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and select the optimal generalized additive model (GAM) spline fit for retention time mapping by applying iterative outlier filtering and cross-validation across multiple basis dimensions. This skill ensures that the fitted spline captures true anchor point relationships while down-weighting anomalous measurements that would distort RT alignment.

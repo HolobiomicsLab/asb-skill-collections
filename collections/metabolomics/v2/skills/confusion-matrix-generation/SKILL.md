@@ -1,6 +1,9 @@
 ---
 name: confusion-matrix-generation
-description: Use when after training or evaluating a classification model (e.g., MS2DeepScore or other neural networks) when you have paired arrays of predicted class labels and ground-truth labels and need to assess per-class prediction accuracy, false positive/negative rates, or class imbalance effects.
+description: Use when after training or evaluating a classification model (e.g., MS2DeepScore
+  or other neural networks) when you have paired arrays of predicted class labels
+  and ground-truth labels and need to assess per-class prediction accuracy, false
+  positive/negative rates, or class imbalance effects.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,11 +17,13 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 - use the search functionality [here](https://github.com/matchms/ms2deepscore/issues)
 claims: []
 provenance:

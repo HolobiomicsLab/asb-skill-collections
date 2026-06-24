@@ -1,6 +1,8 @@
 ---
 name: mrm-transition-extraction
-description: Use when you have raw LC-MS/MS data in MRM acquisition mode and need to systematically identify and catalog all precursor m/z and corresponding product m/z values for each transition monitored during data collection.
+description: Use when you have raw LC-MS/MS data in MRM acquisition mode and need
+  to systematically identify and catalog all precursor m/z and corresponding product
+  m/z values for each transition monitored during data collection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -12,11 +14,13 @@ metadata:
   - MRMQuant
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c02462
   title: MRMQuant
 evidence_spans:
-- Users can install get_PrecMZ_ProdMZ in the "program/associated programs" folder to acquire precursor and product m/z values in an MRM sample file.
+- Users can install get_PrecMZ_ProdMZ in the "program/associated programs" folder
+  to acquire precursor and product m/z values in an MRM sample file.
 - Be sure to use the latest version (currently MRMQuant v2.7).
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # mrm-transition-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract precursor and product m/z value pairs from raw MRM (Multiple Reaction Monitoring) LC-MS/MS sample files using the get_PrecMZ_ProdMZ utility. This skill is essential for downstream MRM quantification workflows that require cataloging all monitored transitions with their exact mass-to-charge ratios.

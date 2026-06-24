@@ -1,6 +1,8 @@
 ---
 name: fragment-ion-type-interpretation
-description: Use when you have an tandem MS spectrum with unidentified peaks and a known or hypothesized peptide sequence (in ProForma 2.0 format, including post-translational modifications).
+description: Use when you have an tandem MS spectrum with unidentified peaks and a
+  known or hypothesized peptide sequence (in ProForma 2.0 format, including post-translational
+  modifications).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -15,12 +17,15 @@ metadata:
   - PSI-MOD CV
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # fragment-ion-type-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate observed mass spectrometry fragment peaks by matching them to theoretical fragment ions (a, b, y types and neutral losses) derived from a known peptide sequence using ProForma 2.0 notation. This enables visual and quantitative identification of which peaks correspond to expected peptide backbone cleavage products.

@@ -1,6 +1,9 @@
 ---
 name: gpu-accelerated-computation
-description: 'Use when when processing large-scale mass spectrometry datasets (>1 million spectra) where CPU-based clustering runtime would exceed minutes to hours, and when the analysis pipeline includes: (1) encoding raw spectra into high-dimensional binary vectors, (2) computing pairwise distance matrices.'
+description: 'Use when when processing large-scale mass spectrometry datasets (>1
+  million spectra) where CPU-based clustering runtime would exceed minutes to hours,
+  and when the analysis pipeline includes: (1) encoding raw spectra into high-dimensional
+  binary vectors, (2) computing pairwise distance matrices.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -14,6 +17,7 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

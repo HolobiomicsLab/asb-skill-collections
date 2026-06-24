@@ -1,6 +1,8 @@
 ---
 name: repository-code-quality-assessment
-description: Use when you need to validate that all Python files in a repository meet the project's stated code formatting and style guidelines before merging a pull request, onboarding a new contributor, or establishing a baseline for code quality.
+description: Use when you need to validate that all Python files in a repository meet
+  the project's stated code formatting and style guidelines before merging a pull
+  request, onboarding a new contributor, or establishing a baseline for code quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -9,6 +11,7 @@ metadata:
   tools:
   - black
   - flake8
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-019-0400-9
   title: BiG-SCAPE biosynthetic diversity

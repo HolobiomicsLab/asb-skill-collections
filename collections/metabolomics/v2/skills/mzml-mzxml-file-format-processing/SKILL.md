@@ -1,6 +1,7 @@
 ---
 name: mzml-mzxml-file-format-processing
-description: Use when your raw LC-MS data are in vendor-specific binary formats (e.g., .raw, .d, .
+description: Use when your raw LC-MS data are in vendor-specific binary formats (e.g.,
+  .raw, .d, .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,12 +13,15 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04906
   title: MetCohort
 evidence_spans:
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool for large-scale metabolomics and exposomics
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool for large-scale metabolomics and exposomics
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

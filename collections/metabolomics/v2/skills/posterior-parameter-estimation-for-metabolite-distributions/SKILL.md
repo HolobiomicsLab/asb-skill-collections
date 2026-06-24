@@ -1,6 +1,7 @@
 ---
 name: posterior-parameter-estimation-for-metabolite-distributions
-description: Use when you have metabolomics data with left-censored missing values (below detection limit) and need to impute them.
+description: Use when you have metabolomics data with left-censored missing values
+  (below detection limit) and need to impute them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -11,6 +12,7 @@ metadata:
   - R
   - GSimp
   - R (base + imputeLCMD, doParallel)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -40,6 +42,7 @@ attribution:
 
 # Posterior parameter estimation for metabolite distributions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate posterior mean and variance parameters of metabolite abundance distributions during iterative Gibbs sampling, conditioning on observed non-missing values and respecting left-censoring limits. This enables principled imputation of left-censored missing metabolites by sampling from truncated normal distributions informed by data-driven parameter estimates.

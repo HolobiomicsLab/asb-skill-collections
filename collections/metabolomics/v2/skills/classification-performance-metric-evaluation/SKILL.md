@@ -1,6 +1,9 @@
 ---
 name: classification-performance-metric-evaluation
-description: Use when after training multiple classifiers (traditional ML and deep learning) on a preprocessed metabolomics feature matrix with labeled samples, and you need to quantify and compare their predictive performance to select the model or ensemble for downstream analysis.
+description: Use when after training multiple classifiers (traditional ML and deep
+  learning) on a preprocessed metabolomics feature matrix with labeled samples, and
+  you need to quantify and compare their predictive performance to select the model
+  or ensemble for downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,12 +14,15 @@ metadata:
   - Lilikoi v2.0
   - R
   - h2o
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 - DL via h2o
 claims: []
 provenance:

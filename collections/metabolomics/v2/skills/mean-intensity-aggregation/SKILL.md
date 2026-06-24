@@ -1,6 +1,7 @@
 ---
 name: mean-intensity-aggregation
-description: Use when after importing imzML or vendor-specific MSI data into napari and visualizing the raw spectral dataset.
+description: Use when after importing imzML or vendor-specific MSI data into napari
+  and visualizing the raw spectral dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +14,13 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:

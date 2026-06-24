@@ -1,6 +1,7 @@
 ---
 name: custom-metabolite-set-integration
-description: Use when you have a user-supplied metabolite set file (CSV or JSON) defining custom groupings of metabolites (e.
+description: Use when you have a user-supplied metabolite set file (CSV or JSON) defining
+  custom groupings of metabolites (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -10,6 +11,7 @@ metadata:
   tools:
   - PALS Viewer
   - PALS (Pathway Activity Level Scoring)
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -41,6 +43,7 @@ attribution:
 
 # custom-metabolite-set-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extend PALS pathway activity scoring to user-defined metabolite set collections (beyond built-in pathways, Molecular Families, and Mass2Motifs) by validating user-uploaded sets and dispatching them through the PLAGE decomposition pipeline. This enables scoring and prioritization of custom metabolite groupings based on activity levels in comparative metabolomics experiments.

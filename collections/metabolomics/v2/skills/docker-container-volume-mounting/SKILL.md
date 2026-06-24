@@ -1,6 +1,9 @@
 ---
 name: docker-container-volume-mounting
-description: 'Use when when you have vendor raw mass spectrometry files on the host machine that need to be processed by a containerized tool (e.g., AirdPro), and the container must read input from and write output to specific host paths. Typical trigger: you have a .'
+description: 'Use when when you have vendor raw mass spectrometry files on the host
+  machine that need to be processed by a containerized tool (e.g., AirdPro), and the
+  container must read input from and write output to specific host paths. Typical
+  trigger: you have a .'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,6 +19,7 @@ metadata:
   - AirdPro
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -49,6 +53,7 @@ attribution:
 
 # docker-container-volume-mounting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Mount host filesystem directories into Docker containers to enable input/output file exchange and persistent data storage. This skill is essential for containerized scientific workflows where raw data must be read from the host and results written back.

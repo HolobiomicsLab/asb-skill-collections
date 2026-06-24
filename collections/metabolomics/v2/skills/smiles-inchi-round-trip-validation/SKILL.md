@@ -1,6 +1,9 @@
 ---
 name: smiles-inchi-round-trip-validation
-description: Use when you have implemented a new RDKit-based ComputeConverter for SMILES↔InChI conversions and need to verify that the conversion methods preserve molecular structure integrity across round-trip transformations (SMILES → InChI → SMILES or vice versa) before registering it in the MSMetaEnhancer.
+description: Use when you have implemented a new RDKit-based ComputeConverter for
+  SMILES↔InChI conversions and need to verify that the conversion methods preserve
+  molecular structure integrity across round-trip transformations (SMILES → InChI
+  → SMILES or vice versa) before registering it in the MSMetaEnhancer.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -11,6 +14,7 @@ metadata:
   - MSMetaEnhancer
   - pytest
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

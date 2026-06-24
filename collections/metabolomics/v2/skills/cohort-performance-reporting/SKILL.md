@@ -1,6 +1,8 @@
 ---
 name: cohort-performance-reporting
-description: Use when you have NMR metabolite measurements from peripheral blood samples (plasma/serum) paired with processing delay metadata (pre-centrifugation and post-centrifugation times) and need to benchmark metabolic parameter stability across delay windows.
+description: Use when you have NMR metabolite measurements from peripheral blood samples
+  (plasma/serum) paired with processing delay metadata (pre-centrifugation and post-centrifugation
+  times) and need to benchmark metabolic parameter stability across delay windows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2945
@@ -11,6 +13,7 @@ metadata:
   - PRIMA-Panel
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel
@@ -39,6 +42,7 @@ attribution:
 
 # cohort-performance-reporting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate stratified performance reports for metabolite cohorts under varying pre-analytical conditions (processing delays, sample type, centrifugation timing). This skill quantifies metabolic parameter stability across delay bins or continuous timepoints, flagging minor and major deviations to support pre-analytical method validation.

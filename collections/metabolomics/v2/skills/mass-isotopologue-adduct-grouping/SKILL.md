@@ -1,6 +1,8 @@
 ---
 name: mass-isotopologue-adduct-grouping
-description: Use when after sample alignment has established consensus retention time and m/z coordinates across all samples, and you need to identify and merge peaks that represent isotopologues (e.g., ¹³C variants) or adducts (e.
+description: Use when after sample alignment has established consensus retention time
+  and m/z coordinates across all samples, and you need to identify and merge peaks
+  that represent isotopologues (e.g., ¹³C variants) or adducts (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +16,13 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # mass-isotopologue-adduct-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups aligned LC-MS peaks by their isotopologue and adduct relationships using mass difference and intensity ratio criteria. This step consolidates redundant ion representations of the same molecular feature, reducing complexity in the final feature table.

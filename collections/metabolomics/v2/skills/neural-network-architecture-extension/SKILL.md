@@ -1,6 +1,8 @@
 ---
 name: neural-network-architecture-extension
-description: Use when you have a working base MPNN model (e.g., chemprop) and need to add task-specific feature processing layers (spectral, electronic, or domain features) to improve predictions on a specialized molecular property or spectrum.
+description: Use when you have a working base MPNN model (e.g., chemprop) and need
+  to add task-specific feature processing layers (spectral, electronic, or domain
+  features) to improve predictions on a specialized molecular property or spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -10,11 +12,13 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]
+- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
+  for Property Prediction]
 - The `chemprop-IR` architecture is an extension of `chemprop`
 claims: []
 provenance:
@@ -39,6 +43,7 @@ attribution:
 
 # neural-network-architecture-extension
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extend an existing message passing neural network (MPNN) architecture by integrating domain-specific feature modules—such as spectral feature encoders—into the base model definition and validating parameter flow and output shapes. This skill is essential when adapting general-purpose molecular models to specialized prediction tasks (e.g., infrared spectral forecasting) that require learned representations beyond standard molecular graphs.

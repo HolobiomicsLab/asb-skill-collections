@@ -1,6 +1,7 @@
 ---
 name: data-structure-design-for-spectral-searches
-description: Use when you have raw GC-MS output in CSV format with columns Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, and File.
+description: Use when you have raw GC-MS output in CSV format with columns Component.RT,
+  Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, and File.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,14 +15,17 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- To perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]
+- To perform the chemical structure matches and summarize atomic features, uafR taps
+  into an amazing set of cheminformatics packages -- [ChemmineR]
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR](https://bioconductor.org/packages/release/bioc
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR](https://bioconductor.org/packages/release/bioc
 - '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
 claims: []
 provenance:
@@ -46,6 +50,7 @@ attribution:
 
 # data-structure-design-for-spectral-searches
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and construct nested data structures that organize raw GC-MS spectral data into searchable indexes keyed by chemical identity, retention time, and exact mass. This skill enables downstream functions to perform rapid intelligent sorting, aggregation, and chemical metadata retrieval across multi-sample datasets.

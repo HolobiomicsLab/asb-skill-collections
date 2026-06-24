@@ -1,6 +1,8 @@
 ---
 name: kendrick-mass-defect-calculation
-description: Use when you have a feature list from LC- or GC-HRMS analysis (with m/z, retention time, and exact mass columns) and you want to detect homologous series of PFAS compounds that repeat by CF₂ mass increments (typically ≈34 Da).
+description: Use when you have a feature list from LC- or GC-HRMS analysis (with m/z,
+  retention time, and exact mass columns) and you want to detect homologous series
+  of PFAS compounds that repeat by CF₂ mass increments (typically ≈34 Da).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -42,6 +45,7 @@ attribution:
 
 # Kendrick Mass Defect (KMD) Calculation and Homologous Series Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Kendrick mass defect analysis computes KMD values for each feature in a mass spectrometry dataset to group them into CF₂ homologous series, a characteristic pattern of perfluorinated compounds (PFAS). This calculation enables systematic clustering of features that differ by repeating CF₂ units and facilitates prioritization of PFAS candidates in non-target HRMS screening.

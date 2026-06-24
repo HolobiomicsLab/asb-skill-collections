@@ -1,6 +1,8 @@
 ---
 name: reactomics-annotation-and-clustering
-description: Use when you have a formula-assigned dataset from FT-ICR MS or other mass spectrometry with molecular formulas assigned to each mass feature, and you want to identify and quantify the molecular transformations (e.
+description: Use when you have a formula-assigned dataset from FT-ICR MS or other
+  mass spectrometry with molecular formulas assigned to each mass feature, and you
+  want to identify and quantify the molecular transformations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -11,11 +13,13 @@ metadata:
   - MoleTrans
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans
 evidence_spans:
-- MoleTrans is a webtool for post analysis and data mining on the formula assigned datasets from FT-ICR MS
+- MoleTrans is a webtool for post analysis and data mining on the formula assigned
+  datasets from FT-ICR MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

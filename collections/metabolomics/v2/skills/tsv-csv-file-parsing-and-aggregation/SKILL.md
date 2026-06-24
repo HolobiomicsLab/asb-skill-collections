@@ -1,6 +1,9 @@
 ---
 name: tsv-csv-file-parsing-and-aggregation
-description: Use when you have TSV or CSV files containing structure-organism pairs (with columns for structure identifier and organism identifier) and need to count unique pairs, unique structures, unique organisms, or enumerate source database identifiers to validate or report dataset scale.
+description: Use when you have TSV or CSV files containing structure-organism pairs
+  (with columns for structure identifier and organism identifier) and need to count
+  unique pairs, unique structures, unique organisms, or enumerate source database
+  identifiers to validate or report dataset scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -13,6 +16,7 @@ metadata:
   - R (readr, data.table, dplyr)
   - Python (pandas)
   - lotus-processor
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -47,6 +51,7 @@ attribution:
 
 # TSV/CSV File Parsing and Aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load delimited structure-organism pair tables (TSV/CSV) from a curated natural products dataset and aggregate them by unique identifiers (structure ID, organism ID) to produce count statistics. This skill is essential for verifying dataset composition and deriving headline metrics for documented structure-organism relationships.

@@ -1,6 +1,8 @@
 ---
 name: baseline-comparative-analysis
-description: Use when your research proposes a new spectral embedding, matching algorithm, or retrieval method and you need to quantify its improvement over known baselines. Specifically, when you have a test dataset (e.
+description: Use when your research proposes a new spectral embedding, matching algorithm,
+  or retrieval method and you need to quantify its improvement over known baselines.
+  Specifically, when you have a test dataset (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,6 +19,7 @@ metadata:
   - scipy.stats
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

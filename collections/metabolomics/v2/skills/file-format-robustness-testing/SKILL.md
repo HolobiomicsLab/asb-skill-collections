@@ -24,6 +24,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -52,6 +53,7 @@ attribution:
 
 # file-format-robustness-testing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validate and standardize mass spectrometry data across heterogeneous file formats (MSP, MGF, JSON, CSV) by implementing format-specific parsers with comprehensive edge-case handling, metadata validation, and structural integrity checks to ensure consistent spectrum parsing without data loss.

@@ -1,6 +1,9 @@
 ---
 name: targeted-proteomics-feature-filtering
-description: Use when you have loaded transition group chromatogram data from sqMass files and need to restrict the analyte selection dropdowns (protein, peptide, charge state) to only those features passing a specified Q-value threshold (default 1%), or when you need to selectively display or hide MS1 and MS2.
+description: Use when you have loaded transition group chromatogram data from sqMass
+  files and need to restrict the analyte selection dropdowns (protein, peptide, charge
+  state) to only those features passing a specified Q-value threshold (default 1%),
+  or when you need to selectively display or hide MS1 and MS2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,11 +20,14 @@ metadata:
   - Bokeh
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading however since extraction has already been performed by the upstream analysis tool. This includes SqMassLoader'
+- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading
+  however since extraction has already been performed by the upstream analysis tool.
+  This includes SqMassLoader'
 - InteractivePlotter
 - MRMTransitionGroupPicker
 - pyMRMTransitionGroupPicker

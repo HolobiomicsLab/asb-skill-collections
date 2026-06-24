@@ -1,6 +1,7 @@
 ---
 name: microbe-metabolite-feature-selection-by-annotation-status
-description: Use when when you have paired microbiome-metabolome datasets where only a subset of metabolites carry curated biochemical annotations (e.
+description: Use when when you have paired microbiome-metabolome datasets where only
+  a subset of metabolites carry curated biochemical annotations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,14 +15,19 @@ metadata:
   - TensorFlow
   - scikit-learn
   - Seaborn/Matplotlib
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # Microbe-Metabolite Feature Selection by Annotation Status
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify metabolite prediction models by whether metabolites carry curated biochemical annotations, enabling separate evaluation of annotated versus unannotated features to measure the impact of annotation availability on prediction accuracy. This skill surfaces latent predictive signal in unannotated metabolites that can improve overall model performance when trained jointly.

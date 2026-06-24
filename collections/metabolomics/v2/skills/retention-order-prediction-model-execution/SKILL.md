@@ -1,6 +1,9 @@
 ---
 name: retention-order-prediction-model-execution
-description: Use when you have access to the aalto-ics-kepaco/retention_order_prediction repository, have installed all Python (scipy, numpy, sklearn, joblib, pandas, networkx) and R dependencies, possess molecular feature data (MACCS fingerprints or equivalent), and need to execute a specific evaluation.
+description: Use when you have access to the aalto-ics-kepaco/retention_order_prediction
+  repository, have installed all Python (scipy, numpy, sklearn, joblib, pandas, networkx)
+  and R dependencies, possess molecular feature data (MACCS fingerprints or equivalent),
+  and need to execute a specific evaluation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +18,7 @@ metadata:
   - model_selection_cls.py
   - rcdk / rcdkTools
   - OpenBabel
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty590
   title: LC retention order prediction

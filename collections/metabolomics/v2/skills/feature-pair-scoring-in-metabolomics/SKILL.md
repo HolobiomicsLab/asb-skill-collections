@@ -1,6 +1,9 @@
 ---
 name: feature-pair-scoring-in-metabolomics
-description: Use when use this skill after XCMS feature detection and alignment on non-targeted LC-MS or GC-MS metabolomics data, when you have aligned features with quantitative profiles across samples and need to group features that co-originate from the same compound (accounting for isotopic peaks, adducts.
+description: Use when use this skill after XCMS feature detection and alignment on
+  non-targeted LC-MS or GC-MS metabolomics data, when you have aligned features with
+  quantitative profiles across samples and need to group features that co-originate
+  from the same compound (accounting for isotopic peaks, adducts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -43,6 +47,7 @@ attribution:
 
 # Reconstruct the total similarity score as the product of retention time and correlational similarity
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise total similarity scores for metabolomics features by multiplying retention time similarity and correlational similarity metrics. This scoring approach identifies features likely derived from the same compound (score → 1) versus different compounds (score → 0), enabling unsupervised feature clustering in non-targeted LC-MS and GC-MS data.

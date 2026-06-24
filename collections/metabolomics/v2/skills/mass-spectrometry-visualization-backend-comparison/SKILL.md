@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-visualization-backend-comparison
-description: 'Use when you have a mass spectrometry visualization library that claims to support multiple plotting backends and need to verify that: (1) all backends produce functionally equivalent outputs, (2) execution times are consistent with reported benchmarks, and (3) the library scales appropriately.'
+description: 'Use when you have a mass spectrometry visualization library that claims
+  to support multiple plotting backends and need to verify that: (1) all backends
+  produce functionally equivalent outputs, (2) execution times are consistent with
+  reported benchmarks, and (3) the library scales appropriately.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +19,7 @@ metadata:
   - Python time module
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -43,6 +47,7 @@ attribution:
 
 # mass-spectrometry-visualization-backend-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare execution time and performance characteristics of mass spectrometry visualizations across multiple plotting backends (matplotlib, Bokeh, Plotly) to assess backend suitability for different deployment contexts. This skill validates whether a visualization library's cross-backend integration functions correctly and identifies performance trade-offs between static and interactive rendering.

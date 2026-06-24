@@ -1,6 +1,8 @@
 ---
 name: docker-network-creation
-description: Use when when deploying a multi-container application stack using docker-compose where containers need reliable hostname-based service discovery and isolation from the host network.
+description: Use when when deploying a multi-container application stack using docker-compose
+  where containers need reliable hostname-based service discovery and isolation from
+  the host network.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +12,7 @@ metadata:
   - Python
   - nginx
   - TensorFlow Serving
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

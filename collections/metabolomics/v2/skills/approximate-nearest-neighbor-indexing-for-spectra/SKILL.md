@@ -1,6 +1,8 @@
 ---
 name: approximate-nearest-neighbor-indexing-for-spectra
-description: Use when when you have a large spectral library (hundreds of thousands or millions of spectra) and need to search unknown query spectra against it for both unmodified and post-translationally modified peptides.
+description: Use when when you have a large spectral library (hundreds of thousands
+  or millions of spectra) and need to search unknown query spectra against it for
+  both unmodified and post-translationally modified peptides.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -12,11 +14,13 @@ metadata:
   - Faiss
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

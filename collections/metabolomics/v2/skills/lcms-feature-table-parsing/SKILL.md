@@ -1,6 +1,9 @@
 ---
 name: lcms-feature-table-parsing
-description: Use when you have raw nontargeted LCMS feature tables from one or more analytical methods in tabular format (with m/z, RT, and intensity columns) that need to be aligned or clustered, or when integrating multiple feature tables into a shared BMXP processing pipeline that requires standardized.
+description: Use when you have raw nontargeted LCMS feature tables from one or more
+  analytical methods in tabular format (with m/z, RT, and intensity columns) that
+  need to be aligned or clustered, or when integrating multiple feature tables into
+  a shared BMXP processing pipeline that requires standardized.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

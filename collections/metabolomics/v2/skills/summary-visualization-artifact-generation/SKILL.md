@@ -1,6 +1,9 @@
 ---
 name: summary-visualization-artifact-generation
-description: Use when you have completed batch spectral searches against multiple domain-specific MASST tools (via Fast Search API or individual domain searches) and need to combine and visualize the aggregated match results in a format compatible with metadataMASST web interface or downstream analysis.
+description: Use when you have completed batch spectral searches against multiple
+  domain-specific MASST tools (via Fast Search API or individual domain searches)
+  and need to combine and visualize the aggregated match results in a format compatible
+  with metadataMASST web interface or downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -21,6 +24,7 @@ metadata:
   - GNPS libraries
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

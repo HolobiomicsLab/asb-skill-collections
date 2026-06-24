@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-input-format-handling
-description: Use when you are receiving molecular structures from external sources (COCONUT database, ZINC database, user-provided chemical data) in varying formats (SMILES strings, InChI identifiers, SDF files), and you need to unify them into a single canonical representation before computing biosynfoni.
+description: Use when you are receiving molecular structures from external sources
+  (COCONUT database, ZINC database, user-provided chemical data) in varying formats
+  (SMILES strings, InChI identifiers, SDF files), and you need to unify them into
+  a single canonical representation before computing biosynfoni.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3837
@@ -11,12 +14,14 @@ metadata:
   - biosynfoni
   - pip
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:

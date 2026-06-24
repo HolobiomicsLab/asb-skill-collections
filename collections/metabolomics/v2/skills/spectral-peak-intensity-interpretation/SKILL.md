@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-intensity-interpretation
-description: Use when you have a molecular structure (SMILES, InChI, or chemical formula) and need to predict which fragments will appear with high intensity in a tandem MS spectrum, or when you are performing structural elucidation by ranking candidate molecules against experimental spectra and need.
+description: Use when you have a molecular structure (SMILES, InChI, or chemical formula)
+  and need to predict which fragments will appear with high intensity in a tandem
+  MS spectrum, or when you are performing structural elucidation by ranking candidate
+  molecules against experimental spectra and need.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -11,18 +14,21 @@ metadata:
   - ms-pred ICEBERG
   - ICEBERG WebUI
   - PubChem
-  - ICEBERG (Inferring CID by Estimating Breakage Events and Reconstructing their Graphs)
+  - ICEBERG (Inferring CID by Estimating Breakage Events and Reconstructing their
+    Graphs)
   - ms-pred (coleygroup/ms-pred)
   - MAGMa (Mass Spectrum Annotation by Genetic Mass Spectrometry Analysis)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 evidence_spans:
 - github.com__samgoldman97__ms-pred
 - You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: user-override-parameter-management
-description: Use when punc'data's automatic keyword-based column recognition produces incorrect semantic role assignments—for example, when a column header contains a non-standard keyword that the tool fails to recognize, or when a column's true semantic role (e.
+description: Use when punc'data's automatic keyword-based column recognition produces
+  incorrect semantic role assignments—for example, when a column header contains a
+  non-standard keyword that the tool fails to recognize, or when a column's true semantic
+  role (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

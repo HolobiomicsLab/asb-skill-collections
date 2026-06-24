@@ -1,6 +1,9 @@
 ---
 name: species-candidate-ranking-from-spectral-alignment
-description: Use when you have an unknown sample spectrum (m/z peaks and intensities from DI-MS, ASAP-MS, or other high-throughput mass spectrometry modalities) and a reference species database of known spectra, and you need to identify the most likely species or authenticate the sample by ranking how well each.
+description: Use when you have an unknown sample spectrum (m/z peaks and intensities
+  from DI-MS, ASAP-MS, or other high-throughput mass spectrometry modalities) and
+  a reference species database of known spectra, and you need to identify the most
+  likely species or authenticate the sample by ranking how well each.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -11,6 +14,7 @@ metadata:
   - RapidMass
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -40,6 +44,7 @@ attribution:
 
 # species-candidate-ranking-from-spectral-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Ranks reference species candidates by computing alignment-based similarity scores between an unknown mass spectrometry sample spectrum and a reference database of known spectra. This skill enables direct discrimination of unknown sample species through quantitative spectral matching, producing a ranked candidate list with match scores and visual outputs.

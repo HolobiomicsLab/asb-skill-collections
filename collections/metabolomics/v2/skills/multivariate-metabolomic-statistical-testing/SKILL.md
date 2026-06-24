@@ -1,6 +1,9 @@
 ---
 name: multivariate-metabolomic-statistical-testing
-description: Use when after WGCNA-derived metabolic modules have been identified and named in a normalized, imputed MultiAssayExperiment object, and you need to test whether specific modules show statistically significant association with a binary or categorical sample grouping (e.
+description: Use when after WGCNA-derived metabolic modules have been identified and
+  named in a normalized, imputed MultiAssayExperiment object, and you need to test
+  whether specific modules show statistically significant association with a binary
+  or categorical sample grouping (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -12,6 +15,7 @@ metadata:
   - R
   - WGCNA
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -23,7 +27,8 @@ evidence_spans:
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # Multivariate Metabolomic Statistical Testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute module significance (MS) statistics to assess associations between metabolic correlation modules and sample groupings (e.g., tumor vs. normal) using averaged absolute metabolite significance per module. This skill enables detection of statistically significant metabolic modules linked to phenotypic traits in preprocessed metabolomic data.

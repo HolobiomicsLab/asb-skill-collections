@@ -1,6 +1,9 @@
 ---
 name: feature-table-consensus-aggregation
-description: Use when you have detected feature tables from multiple LC-IMS-MS/MS samples and need to establish a unified feature catalog in which each row represents a distinct molecular entity observed across one or more samples, with harmonized m/z, drift time, and retention time coordinates.
+description: Use when you have detected feature tables from multiple LC-IMS-MS/MS
+  samples and need to establish a unified feature catalog in which each row represents
+  a distinct molecular entity observed across one or more samples, with harmonized
+  m/z, drift time, and retention time coordinates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,13 +19,15 @@ metadata:
   - LC-MS
   - ion-mobility-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []
@@ -48,6 +53,7 @@ attribution:
 
 # feature-table-consensus-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate aligned multi-sample LC-IMS-MS/MS features into consensus coordinates and cluster memberships to produce a unified, deduplicated feature table suitable for downstream quantitation and comparison. This skill reconciles instrument drift and calibration variation by computing weighted means or medians across clustered features in (mz, drift_time, retention_time) space.

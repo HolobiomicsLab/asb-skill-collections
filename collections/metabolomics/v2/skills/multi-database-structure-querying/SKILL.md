@@ -1,6 +1,9 @@
 ---
 name: multi-database-structure-querying
-description: Use when after cleaning and clustering LC-MS features in MS-CleanR, when you need to assign putative compound identities to a feature set with MS/MS spectra, and when candidate compounds may exist across multiple specialized databases (e.g., natural products, pharmaceuticals, contaminants).
+description: Use when after cleaning and clustering LC-MS features in MS-CleanR, when
+  you need to assign putative compound identities to a feature set with MS/MS spectra,
+  and when candidate compounds may exist across multiple specialized databases (e.g.,
+  natural products, pharmaceuticals, contaminants).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -43,6 +47,7 @@ attribution:
 
 # multi-database-structure-querying
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query multiple metabolite structure databases simultaneously via MS-FINDER to annotate LC-MS features using hydrogen rearrangement rules (HRR) scoring. This skill enables parallel, database-agnostic compound identification from cleaned and clustered MS-DIAL peak lists, with consolidation of per-feature annotations into a unified table ranked by user-defined database priority.

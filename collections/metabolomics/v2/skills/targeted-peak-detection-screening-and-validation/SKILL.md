@@ -1,6 +1,9 @@
 ---
 name: targeted-peak-detection-screening-and-validation
-description: Use when you have centroided mzML LC–MS data, a curated list of target compounds (with theoretical m/z, expected retention time, and polarity), and you need to confirm target presence and extract quantitative metrics (area under curve, max intensity, signal-to-noise ratio, peak correlation, point.
+description: Use when you have centroided mzML LC–MS data, a curated list of target
+  compounds (with theoretical m/z, expected retention time, and polarity), and you
+  need to confirm target presence and extract quantitative metrics (area under curve,
+  max intensity, signal-to-noise ratio, peak correlation, point.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -17,13 +20,16 @@ metadata:
   - ProteoWizard MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 claims: []
@@ -49,6 +55,7 @@ attribution:
 
 # Targeted Peak Detection Screening and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A two-stage workflow that first screens LC–MS data to confirm visibility of targeted compounds within defined m/z and retention-time windows, then performs automated peak detection, integration, and quality assessment on confirmed targets. This skill validates that targets are detectable before committing to full quantitative analysis.

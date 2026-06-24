@@ -1,6 +1,9 @@
 ---
 name: thermodynamic-molecular-index-calculation-from-elemental-composition
-description: 'Use when when you have peak-abundance .csv files with assigned molecular formulas (elemental composition: C, H, O, N, P, S) from FT-ICR MS or high-resolution MS and need to characterize the redox and structural properties of the molecular pool—e.'
+description: 'Use when when you have peak-abundance .csv files with assigned molecular
+  formulas (elemental composition: C, H, O, N, P, S) from FT-ICR MS or high-resolution
+  MS and need to characterize the redox and structural properties of the molecular
+  pool—e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -21,12 +24,14 @@ metadata:
   - SYNCSA (R)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 - It requires the Python dependencies NumPy
@@ -54,6 +59,7 @@ attribution:
 
 # Thermodynamic molecular index calculation from elemental composition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate thermodynamic and chemical indices (e.g., nominal oxidation state of carbon, hydrogen deficiency, aromaticity proxies) from assigned molecular formulas in FT-ICR MS datasets to quantify the oxidation state and structural properties of organic molecules. This skill enables rapid assessment of sample chemodiversity and biochemical transformation potential.

@@ -1,6 +1,9 @@
 ---
 name: spectrum-plot-generation-mz-intensity
-description: Use when you have mass spectrometry spectral data loaded into a Pandas DataFrame with columns representing m/z (mass-to-charge ratio) and intensity values, and you need to visualize the spectrum to inspect peak patterns, identify high-abundance ions, or compare spectral profiles across samples or.
+description: Use when you have mass spectrometry spectral data loaded into a Pandas
+  DataFrame with columns representing m/z (mass-to-charge ratio) and intensity values,
+  and you need to visualize the spectrum to inspect peak patterns, identify high-abundance
+  ions, or compare spectral profiles across samples or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -18,6 +21,7 @@ metadata:
   - pyOpenMS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -47,6 +51,7 @@ attribution:
 
 # spectrum-plot-generation-mz-intensity
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate static or interactive mass spectrometry spectrum plots with m/z values on the x-axis and intensity on the y-axis using pyOpenMS-Viz's Pandas DataFrame plotting interface. This skill enables rapid visualization of MS spectral data across multiple plotting backends (matplotlib, Bokeh, Plotly) without writing backend-specific code.

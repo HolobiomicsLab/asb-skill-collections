@@ -1,6 +1,7 @@
 ---
 name: jacobian-precision-matrix-computation
-description: Use when after generating a covariance matrix from normalized metabolite abundance data (e.
+description: Use when after generating a covariance matrix from normalized metabolite
+  abundance data (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3625
@@ -11,6 +12,7 @@ metadata:
   - R
   - MInfer
   - MetaboAnalyst
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer
@@ -18,7 +20,8 @@ evidence_spans:
 - MInfer is an R package
 - MInfer is an R package designed for analyzing metabolomics data
 - transition from MetaboAnalyst to Jacobian analysis
-- MInfer represents a novel computational framework that effectively facilitates the transition from MetaboAnalyst to Jacobian analysis
+- MInfer represents a novel computational framework that effectively facilitates the
+  transition from MetaboAnalyst to Jacobian analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: molecular-geometry-optimization
-description: Use when you have generated multiple 3D conformers (e.g., from RDKit's distance-geometry algorithm) of ionized adducts and need to relax them toward local minima before filtering with machine-learning potentials or quantum methods.
+description: Use when you have generated multiple 3D conformers (e.g., from RDKit's
+  distance-geometry algorithm) of ionized adducts and need to relax them toward local
+  minima before filtering with machine-learning potentials or quantum methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2476
@@ -11,12 +13,14 @@ metadata:
   - Snakemake
   - RDKit
   - ASE-ANI
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # molecular-geometry-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize 3D molecular geometries toward local energy minima using force-field methods, preparing conformer ensembles for downstream quantum or machine-learning filtering. This skill bridges conformer generation and high-level validation by relaxing structures to physically plausible states.

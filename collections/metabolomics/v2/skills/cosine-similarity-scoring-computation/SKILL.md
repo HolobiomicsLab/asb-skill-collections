@@ -1,6 +1,8 @@
 ---
 name: cosine-similarity-scoring-computation
-description: Use when when you have imported and filtered mass spectrometry spectral data (from mzML, mzXML, msp, MGF, or JSON formats) and need to identify similar or related spectra within a dataset or against a reference library.
+description: Use when when you have imported and filtered mass spectrometry spectral
+  data (from mzML, mzXML, msp, MGF, or JSON formats) and need to identify similar
+  or related spectra within a dataset or against a reference library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -15,11 +17,13 @@ metadata:
   - MS2DeepScore
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

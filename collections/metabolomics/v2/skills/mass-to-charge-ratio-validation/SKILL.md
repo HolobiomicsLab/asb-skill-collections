@@ -1,6 +1,9 @@
 ---
 name: mass-to-charge-ratio-validation
-description: Use when after loading MS-Dial feature tables (e.g., Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt) and before sample-level filtering or imputation, whenever the feature abundance matrix contains m/z values acquired across multiple chromatographic runs or polarities.
+description: Use when after loading MS-Dial feature tables (e.g., Urine_RP_NEG_norm.txt
+  or Urine_RP_POS_norm.txt) and before sample-level filtering or imputation, whenever
+  the feature abundance matrix contains m/z values acquired across multiple chromatographic
+  runs or polarities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,13 +16,16 @@ metadata:
   - MS-Dial
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -47,6 +53,7 @@ attribution:
 
 # mass-to-charge-ratio-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Excludes metabolomic features with implausible or instrument-artifact m/z values by filtering based on mass defect thresholds. This preprocessing step removes spurious signals that arise from instrument noise or acquisition artifacts before downstream statistical and identification analysis.

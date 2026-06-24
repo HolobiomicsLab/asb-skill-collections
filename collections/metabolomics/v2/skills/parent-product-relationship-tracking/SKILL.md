@@ -1,6 +1,8 @@
 ---
 name: parent-product-relationship-tracking
-description: Use when when you have applied biotransformation rules to generate candidate product structures from a set of input molecules (represented as SMILES strings) and need to document which product structures were derived from which parent structures.
+description: Use when when you have applied biotransformation rules to generate candidate
+  product structures from a set of input molecules (represented as SMILES strings)
+  and need to document which product structures were derived from which parent structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,6 +16,7 @@ metadata:
   - KEGG or RetroRules
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -43,6 +46,7 @@ attribution:
 
 # parent-product-relationship-tracking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maintain and serialize parent–product relationships when applying biotransformation rules to input molecular structures, enabling traceability of how candidate molecules are derived from anchor compounds. This is essential for validating structure predictions and reconstructing the chemical transformation pathway in untargeted metabolomics annotation.

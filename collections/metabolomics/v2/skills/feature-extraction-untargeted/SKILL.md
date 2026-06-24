@@ -1,6 +1,9 @@
 ---
 name: feature-extraction-untargeted
-description: Use when when you have raw untargeted LC/MS data in mzML or mzXML format and need to detect and quantify metabolite signals across mass-to-charge and retention time dimensions without prior knowledge of instrument parameters, batch effects, or optimal detection thresholds.
+description: Use when when you have raw untargeted LC/MS data in mzML or mzXML format
+  and need to detect and quantify metabolite signals across mass-to-charge and retention
+  time dimensions without prior knowledge of instrument parameters, batch effects,
+  or optimal detection thresholds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -11,11 +14,13 @@ metadata:
   - mzEmbed
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.01.26.634927v3
   title: mzLearn
 evidence_spans:
-- mzEmbed, a framework for developing pre-trained generative models and fine-tuning them for specific tasks for untargeted metabolomics datasets
+- mzEmbed, a framework for developing pre-trained generative models and fine-tuning
+  them for specific tasks for untargeted metabolomics datasets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

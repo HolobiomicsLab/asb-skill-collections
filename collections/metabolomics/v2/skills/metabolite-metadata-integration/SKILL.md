@@ -1,6 +1,9 @@
 ---
 name: metabolite-metadata-integration
-description: Use when when you have separate quantification data (abundance matrix), sample metadata (phenotypes, treatment groups, experimental conditions), and spectral data (MS/MS fragmentation patterns or other spectral features) that must be combined for mass spectrometry-based metabolite analysis.
+description: Use when when you have separate quantification data (abundance matrix),
+  sample metadata (phenotypes, treatment groups, experimental conditions), and spectral
+  data (MS/MS fragmentation patterns or other spectral features) that must be combined
+  for mass spectrometry-based metabolite analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +16,7 @@ metadata:
   - jupyter-notebook
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

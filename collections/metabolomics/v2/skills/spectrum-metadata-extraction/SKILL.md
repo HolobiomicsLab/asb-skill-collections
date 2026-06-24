@@ -1,6 +1,9 @@
 ---
 name: spectrum-metadata-extraction
-description: Use when when you have raw mass spectrometry data from diverse instrument vendors (Thermo, Sciex, etc.) and need to harmonize and standardize spectrum-level metadata—including scan information, precursor m/z and charge, and ion selection parameters—into a queryable, vendor-agnostic tabular schema.
+description: Use when when you have raw mass spectrometry data from diverse instrument
+  vendors (Thermo, Sciex, etc.) and need to harmonize and standardize spectrum-level
+  metadata—including scan information, precursor m/z and charge, and ion selection
+  parameters—into a queryable, vendor-agnostic tabular schema.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +18,7 @@ metadata:
   - arrow (R package)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -43,6 +47,7 @@ attribution:
 
 # spectrum-metadata-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and structure spectrum-level metadata (descriptions, scans, precursors, selected ions) from mass spectrometry data into a Parquet-backed tabular format using the mzPeak specification. This skill enables standardized metadata capture and interoperability across different MS instrument vendors and data pipelines.

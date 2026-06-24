@@ -1,6 +1,9 @@
 ---
 name: python-class-implementation-with-dunder-methods
-description: Use when you have mzML spectral data stored in a non-standard format (SQLite database, custom binary store, or indexed archive) and need pymzML's Reader to parse and iterate over spectra as if they were in native mzML files. Specifically, when FileInterface.
+description: Use when you have mzML spectral data stored in a non-standard format
+  (SQLite database, custom binary store, or indexed archive) and need pymzML's Reader
+  to parse and iterate over spectra as if they were in native mzML files. Specifically,
+  when FileInterface.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -15,6 +18,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -46,6 +50,7 @@ attribution:
 
 # python-class-implementation-with-dunder-methods
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement custom Python classes with dunder methods (__getitem__, __init__, read) to enable random and sequential access to mzML spectral data stored in alternative formats (SQLite databases, compressed files). This skill bridges data storage backends with pymzML's Reader interface by defining the protocol through which the library retrieves spectra on demand.

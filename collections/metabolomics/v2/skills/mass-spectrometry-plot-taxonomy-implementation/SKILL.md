@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-plot-taxonomy-implementation
-description: Use when you are building a visualization library that must support multiple plot kinds (chromatogram, spectrum, mobilogram, peakmap) across multiple rendering backends (matplotlib, bokeh, plotly) and want to avoid code duplication.
+description: Use when you are building a visualization library that must support multiple
+  plot kinds (chromatogram, spectrum, mobilogram, peakmap) across multiple rendering
+  backends (matplotlib, bokeh, plotly) and want to avoid code duplication.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -17,6 +19,7 @@ metadata:
   - OpenMS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -26,7 +29,8 @@ evidence_spans:
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +54,7 @@ attribution:
 
 # mass-spectrometry-plot-taxonomy-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a polymorphic class hierarchy that routes mass spectrometry visualization requests (spectrum, chromatogram, mobilogram, peakmap) through abstract base classes to backend-specific concrete plot implementations. This skill enables a single Pandas plotting interface to delegate to matplotlib (static), bokeh, or plotly (interactive) renderers while maintaining consistent method signatures and validation logic across plot kinds.

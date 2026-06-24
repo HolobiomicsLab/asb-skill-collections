@@ -1,6 +1,9 @@
 ---
 name: cross-split-metric-aggregation
-description: 'Use when when you have a pre-trained model and need to report stable, generalizable performance on a fixed training set with multiple held-out test splits. Specifically: when you have 10 (or n) random query/reference splits on the same dataset (e.'
+description: 'Use when when you have a pre-trained model and need to report stable,
+  generalizable performance on a fixed training set with multiple held-out test splits.
+  Specifically: when you have 10 (or n) random query/reference splits on the same
+  dataset (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3745
@@ -19,6 +22,7 @@ metadata:
   - top_k_indices
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -52,6 +56,7 @@ attribution:
 
 # cross-split-metric-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and aggregate retrieval performance metrics (hit@k) across multiple independent train/test splits to obtain robust mean and standard deviation estimates. This skill enables reproducible, split-independent evaluation of spectral embedding models on benchmark datasets.

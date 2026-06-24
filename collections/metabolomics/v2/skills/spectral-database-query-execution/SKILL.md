@@ -1,6 +1,8 @@
 ---
 name: spectral-database-query-execution
-description: Use when when you have an unknown mass spectrum (query spectrum) and need to search it against a reference database of billions of spectra to find matching or structurally related compounds.
+description: Use when when you have an unknown mass spectrum (query spectrum) and
+  need to search it against a reference database of billions of spectra to find matching
+  or structurally related compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -15,6 +17,7 @@ metadata:
   - PAIRING+
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST
@@ -46,6 +49,7 @@ attribution:
 
 # spectral-database-query-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute mass spectrometry spectral queries against large reference databases to identify unknown metabolites or retrieve similar spectra. This skill measures query execution time and retrieves ranked results with similarity scores for validation and annotation.

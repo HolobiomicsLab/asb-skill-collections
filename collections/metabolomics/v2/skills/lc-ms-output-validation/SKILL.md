@@ -1,6 +1,8 @@
 ---
 name: lc-ms-output-validation
-description: Use when after executing a Nextflow-based LC-HRMS metabolomics workflow with Docker or Singularity containerization on .mzML LC-MS data, before proceeding to downstream statistical or visualization analyses.
+description: Use when after executing a Nextflow-based LC-HRMS metabolomics workflow
+  with Docker or Singularity containerization on .mzML LC-MS data, before proceeding
+  to downstream statistical or visualization analyses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,6 +17,7 @@ metadata:
   - Singularity
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -43,6 +46,7 @@ attribution:
 
 # LC-MS output validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verification that containerized LC-HRMS metabolomics workflows have completed all pipeline stages without error and produced expected output artifacts with correct format and content. This skill ensures data integrity and reproducibility when using Docker or Singularity-containerized MS-DIAL → MSFLO processing pipelines on .mzML LC-MS datasets.

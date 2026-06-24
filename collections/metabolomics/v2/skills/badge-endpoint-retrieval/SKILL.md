@@ -1,6 +1,9 @@
 ---
 name: badge-endpoint-retrieval
-description: Use when when you need to verify the current operational status of a software project across multiple dimensions (CI/CD, code quality, test coverage, containerization, archival) and those status indicators are exposed as badge endpoints in the project's README.
+description: Use when when you need to verify the current operational status of a
+  software project across multiple dimensions (CI/CD, code quality, test coverage,
+  containerization, archival) and those status indicators are exposed as badge endpoints
+  in the project's README.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,6 +14,7 @@ metadata:
   - Coveralls
   - Docker Hub
   - Zenodo
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -43,6 +47,7 @@ attribution:
 
 # badge-endpoint-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and parse live status indicators from badge endpoints embedded in a project README to obtain current build, code quality, test coverage, deployment, and archival status. This skill enables reproducible capture of project health metrics at a specific point in time.

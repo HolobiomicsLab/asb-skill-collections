@@ -1,6 +1,9 @@
 ---
 name: fixed-effect-regression-analysis
-description: Use when you have a long-format metabolomics dataset with one row per observation and need to estimate the independent association between one or more fixed effects (e.g., exposure dose, treatment group, demographic variable) and each dependent variable (e.
+description: Use when you have a long-format metabolomics dataset with one row per
+  observation and need to estimate the independent association between one or more
+  fixed effects (e.g., exposure dose, treatment group, demographic variable) and each
+  dependent variable (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -12,13 +15,15 @@ metadata:
   - GetFeatistics
   - lm (base R stats)
   - ggplot2
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

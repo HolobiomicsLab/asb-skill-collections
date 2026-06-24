@@ -1,6 +1,9 @@
 ---
 name: molecular-formula-database-filtering
-description: Use when when you need to constrain a large metabolite database to a specific instrumental range (e.g., m/z 100–1000) before generating virtual chemical mixtures for LC-MS/MS simulation, or when you need to verify that a reported filtered database count can be reproduced from raw database files.
+description: Use when when you need to constrain a large metabolite database to a
+  specific instrumental range (e.g., m/z 100–1000) before generating virtual chemical
+  mixtures for LC-MS/MS simulation, or when you need to verify that a reported filtered
+  database count can be reproduced from raw database files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - HMDB database
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -44,6 +48,7 @@ attribution:
 
 # molecular-formula-database-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a molecular formula database (e.g., HMDB) by physicochemical constraints such as m/z range to obtain a subset of unique chemical formulae suitable for virtual mass spectrometry simulation or targeted metabolomics analysis.

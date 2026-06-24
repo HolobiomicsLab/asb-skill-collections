@@ -1,6 +1,8 @@
 ---
 name: candidate-peak-filtering-annotation
-description: Use when you have a peak list extracted from MSI data that includes candidate peaks with potential m/z overlap or spatial co-localization patterns across tissue images.
+description: Use when you have a peak list extracted from MSI data that includes candidate
+  peaks with potential m/z overlap or spatial co-localization patterns across tissue
+  images.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,11 +16,13 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - rMSIcleanup is an open-source R package
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # Overlapping Peak Detection and Isobaric Ion Flagging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and flags overlapped or isobaric ions (peaks with identical or near-identical m/z values and overlapping spatial distributions) to prevent their misclassification during matrix-related signal annotation in mass spectrometry imaging. This filtering step is essential for accurate peak annotation workflows where isobaric ambiguity could otherwise lead to false assignments.

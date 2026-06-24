@@ -1,6 +1,8 @@
 ---
 name: training-data-loading-and-preprocessing
-description: Use when you have downloaded raw LC-MS spectral peak data from a public repository (e.g., DOI 10.25345/C5FD2F) and need to ingest it into memory and prepare it in the format expected by a TensorFlow/Keras neural network classifier.
+description: Use when you have downloaded raw LC-MS spectral peak data from a public
+  repository (e.g., DOI 10.25345/C5FD2F) and need to ingest it into memory and prepare
+  it in the format expected by a TensorFlow/Keras neural network classifier.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +15,7 @@ metadata:
   - EDML_deep_learning2.py
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier
@@ -44,6 +47,7 @@ attribution:
 
 # training-data-loading-and-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and prepare LC-MS spectral peak datasets from public repositories for deep neural network training. This skill bridges raw deposited data and model-ready tensors by implementing the data loading utilities and preprocessing pipeline required before neural network initialization.

@@ -1,6 +1,9 @@
 ---
 name: numerical-feature-serialization-and-storage
-description: Use when after computing molecular descriptors (RDKit, mordred) or featurizing chromatographic parameters (column metadata, gradient slopes, pH, additives), you have a NumPy array or list of arrays in memory that must be persisted for reproducibility, shared across pipeline stages, or archived.
+description: Use when after computing molecular descriptors (RDKit, mordred) or featurizing
+  chromatographic parameters (column metadata, gradient slopes, pH, additives), you
+  have a NumPy array or list of arrays in memory that must be persisted for reproducibility,
+  shared across pipeline stages, or archived.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3429
@@ -13,6 +16,7 @@ metadata:
   - pandas
   - pickle (Python standard library)
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
@@ -43,6 +47,7 @@ attribution:
 
 # numerical-feature-serialization-and-storage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize computed molecular descriptor arrays and chromatographic feature matrices into multiple persistent formats (.npz, .npy, .csv, .pkl) to enable efficient storage, version control, and downstream machine learning ingestion. This skill bridges in-memory feature computation and model training by choosing format trade-offs (compression, human-readability, portability).

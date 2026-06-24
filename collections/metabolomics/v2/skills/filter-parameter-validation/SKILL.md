@@ -10,6 +10,7 @@ metadata:
   tools:
   - pytest
   - fermo_core
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO

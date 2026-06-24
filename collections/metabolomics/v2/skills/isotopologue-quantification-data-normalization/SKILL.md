@@ -1,6 +1,7 @@
 ---
 name: isotopologue-quantification-data-normalization
-description: Use when after autoQ has extracted and integrated peak areas for all isotopologues of your targeted compounds.
+description: Use when after autoQ has extracted and integrated peak areas for all
+  isotopologues of your targeted compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +14,7 @@ metadata:
   - autoQ
   - QTransform
   - metBarPlot
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
@@ -20,7 +22,8 @@ evidence_spans:
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: metabolite-intensity-matrix-extraction
-description: Use when when you have raw mass spectrometry peak intensity data (rows = peaks with IDs, columns = individual samples) and you need to align it with metabolite annotations (peak ID → KEGG or ChEBI compound ID mappings) before performing pathway-level analysis.
+description: Use when when you have raw mass spectrometry peak intensity data (rows
+  = peaks with IDs, columns = individual samples) and you need to align it with metabolite
+  annotations (peak ID → KEGG or ChEBI compound ID mappings) before performing pathway-level
+  analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,11 +15,13 @@ metadata:
   - scipy.preprocessing
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

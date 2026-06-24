@@ -1,6 +1,8 @@
 ---
 name: feature-encoding-atoms-bonds
-description: Use when you have parsed SMILES or SDF molecular structures from a chemical dataset (e.g., SMRT dataset) and need to convert them into graph representations for input to a graph neural network or RT-Transformer model.
+description: Use when you have parsed SMILES or SDF molecular structures from a chemical
+  dataset (e.g., SMRT dataset) and need to convert them into graph representations
+  for input to a graph neural network or RT-Transformer model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,7 @@ metadata:
   - Python
   - rdkit-pypi
   - torch_geometric
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -45,6 +48,7 @@ attribution:
 
 # feature-encoding-atoms-bonds
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode atom and bond features from molecular structures into node and edge attributes suitable for graph neural network input. This skill converts chemical structures into machine-readable graph representations where atoms become labeled nodes and bonds become labeled edges, enabling dual-input molecular featurization for retention time prediction.

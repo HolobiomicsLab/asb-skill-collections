@@ -1,6 +1,8 @@
 ---
 name: overlapping-ion-detection
-description: Use when when annotating matrix-related ions in MSI datasets where two or more ions share identical or near-identical m/z values (isobaric ions) or exhibit overlapping spatial distributions across imaging pixels.
+description: Use when when annotating matrix-related ions in MSI datasets where two
+  or more ions share identical or near-identical m/z values (isobaric ions) or exhibit
+  overlapping spatial distributions across imaging pixels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,11 +17,13 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - devtools::install_github("prafols/rMSIproc", ref = "0.2")
 - rMSIcleanup is an open-source R package
@@ -47,6 +51,7 @@ attribution:
 
 # overlapping-ion-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and flag isobaric or co-localized ions that may confound matrix/non-matrix classification in mass spectrometry imaging (MSI) data. This step prevents misclassification of chemically indistinguishable or spatially overlapped peaks during automated matrix annotation.

@@ -1,6 +1,9 @@
 ---
 name: metabolite-annotation-result-export
-description: Use when after running the annotateRC function on LC-MS All-ion fragmentation (AIF) features and obtaining a populated annotations object with ranked candidate matches, use this skill when you need to persist results to disk for archival, sharing, or downstream interpretation (e.
+description: Use when after running the annotateRC function on LC-MS All-ion fragmentation
+  (AIF) features and obtaining a populated annotations object with ranked candidate
+  matches, use this skill when you need to persist results to disk for archival, sharing,
+  or downstream interpretation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,11 +15,13 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # metabolite-annotation-result-export
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export completed metabolite annotations from a MetaboAnnotatoR annotations object to a user-specified directory as a suite of structured output files (global results table, ranked results per feature, ranked spectra PDFs, and pseudo-MS/MS MGF). This skill ensures all annotation results are serialized in standardized, reusable formats for downstream analysis and reporting.

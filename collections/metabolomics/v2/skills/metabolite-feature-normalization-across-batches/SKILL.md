@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-normalization-across-batches
-description: Use when after data merging and cleanup (blank removal) and before univariate or multivariate statistical analysis, when your merged feature table (samples as columns, metabolite features as rows) contains samples processed in different MS batches or instrumental runs that may introduce systematic.
+description: Use when after data merging and cleanup (blank removal) and before univariate
+  or multivariate statistical analysis, when your merged feature table (samples as
+  columns, metabolite features as rows) contains samples processed in different MS
+  batches or instrumental runs that may introduce systematic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - FBMN-STATS web app
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

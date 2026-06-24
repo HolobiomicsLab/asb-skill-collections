@@ -1,6 +1,8 @@
 ---
 name: hierarchical-json-structure-construction
-description: 'Use when your input is a tabular file (CSV or Excel) with column headers annotated using MESSES tagging syntax (#<table_name>.id for record identifiers and #.'
+description: 'Use when your input is a tabular file (CSV or Excel) with column headers
+  annotated using MESSES tagging syntax (#<table_name>.id for record identifiers and
+  #.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -11,6 +13,7 @@ metadata:
   - Python
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
   - jsonschema
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -42,6 +45,7 @@ attribution:
 
 # hierarchical-json-structure-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert tagged tabular data (with export tags like #<table_name>.id and #.<field_name>) into a nested JSON structure suitable for directive resolvers and downstream processing. This skill is essential for transforming spreadsheet-based experimental metadata into interoperable, standardized JSON representations.

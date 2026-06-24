@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-normalization
-description: Use when you have loaded two or more nontargeted LCMS feature tables from the same analytical method that contain m/z, retention time, and intensity values, and these datasets exhibit differences in metadata scale, distribution, or format that could confound cross-dataset feature matching or.
+description: Use when you have loaded two or more nontargeted LCMS feature tables
+  from the same analytical method that contain m/z, retention time, and intensity
+  values, and these datasets exhibit differences in metadata scale, distribution,
+  or format that could confound cross-dataset feature matching or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +18,7 @@ metadata:
   - bmxp (Python/C)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

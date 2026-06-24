@@ -1,6 +1,7 @@
 ---
 name: molecular-formula-heteroatom-classification
-description: Use when after molecular formula assignment has been completed on detected peaks in a processed mass spectrum object.
+description: Use when after molecular formula assignment has been completed on detected
+  peaks in a processed mass spectrum object.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +14,14 @@ metadata:
   - EnviroMS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 claims: []
 provenance:
@@ -43,6 +46,7 @@ attribution:
 
 # molecular-formula-heteroatom-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organizes formula-assigned peaks from a mass spectrum into heteroatom class groups (CHO, CHON, CHOS, CHOP, etc.) for compositional analysis and visualization. This skill enables rapid summary and filtering of complex mass spectrometry datasets by elemental composition.

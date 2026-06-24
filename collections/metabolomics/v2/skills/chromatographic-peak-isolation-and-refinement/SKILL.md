@@ -1,6 +1,8 @@
 ---
 name: chromatographic-peak-isolation-and-refinement
-description: Use when after sliding-window analysis has identified candidate TIC peaks but before extracting chromatographic parameters (retention time, peak width, intensity) from extracted ion chromatograms.
+description: Use when after sliding-window analysis has identified candidate TIC peaks
+  but before extracting chromatographic parameters (retention time, peak width, intensity)
+  from extracted ion chromatograms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +18,7 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

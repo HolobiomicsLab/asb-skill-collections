@@ -1,6 +1,7 @@
 ---
 name: field-mapping-and-transformation
-description: Use when converting intermediate JSONized experimental metadata (extracted from tagged tabular data) to a target repository format (e.
+description: Use when converting intermediate JSONized experimental metadata (extracted
+  from tagged tabular data) to a target repository format (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +13,7 @@ metadata:
   - jsonschema
   - messes
   - Python eval()
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -19,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +47,7 @@ attribution:
 
 # field-mapping-and-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply conversion directives (str, override, code, record_id, for_each, test, sort_by, sort_order, delimiter, fields) to resolve dynamic field values from input JSON documents, supporting conditional filtering, iteration, Python code evaluation, and sorting. This skill bridges tabular experimental metadata and repository-ready JSON formats via structured directive specifications.

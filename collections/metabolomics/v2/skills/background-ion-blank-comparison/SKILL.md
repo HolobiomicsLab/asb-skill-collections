@@ -1,6 +1,9 @@
 ---
 name: background-ion-blank-comparison
-description: Use when after generating an initial LC-MS feature table (from Asari or similar peak detection) and before normalization or statistical analysis, especially when blank samples (e.g., solvent-only or buffer-only runs) were acquired alongside study samples.
+description: Use when after generating an initial LC-MS feature table (from Asari
+  or similar peak detection) and before normalization or statistical analysis, especially
+  when blank samples (e.g., solvent-only or buffer-only runs) were acquired alongside
+  study samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -42,6 +46,7 @@ attribution:
 
 # background-ion-blank-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A quality control filter that removes LC-MS metabolomics features likely arising from background contamination or instrument noise by comparing feature intensity between study samples and blank control samples using a user-specified intensity ratio threshold. This step prevents false positive metabolite identifications caused by reagent or solvent contaminants.

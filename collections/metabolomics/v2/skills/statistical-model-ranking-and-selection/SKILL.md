@@ -12,15 +12,19 @@ metadata:
   - R
   - caret
   - devtools
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 - MetaClean provides 8 classification algorithms (implemented with the R package caret)
 - devtools::install_github("KelseyChetnik/MetaCleanData")
@@ -48,6 +52,7 @@ attribution:
 
 # statistical-model-ranking-and-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and select the best-performing machine learning classifier from a candidate set using cross-validation, evaluation metrics (F-score, precision, recall, accuracy), and statistical comparison plots (Friedman-Demšar CD plots). This skill identifies the optimal algorithm for a specific downstream task (e.g., peak quality classification) by comparing mean performance scores and statistical significance across all folds and repetitions.

@@ -1,6 +1,9 @@
 ---
 name: spectral-library-annotation-augmentation
-description: Use when you have a GNPS DBResult file containing spectral library matches with InChIKey identifiers but lacking ClassyFire ontology columns (superclass, class, subclass), and you need to restore this taxonomic context for consensus classification or chemical ontology annotation workflows.
+description: Use when you have a GNPS DBResult file containing spectral library matches
+  with InChIKey identifiers but lacking ClassyFire ontology columns (superclass, class,
+  subclass), and you need to restore this taxonomic context for consensus classification
+  or chemical ontology annotation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,12 +17,15 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

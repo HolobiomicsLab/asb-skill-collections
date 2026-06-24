@@ -1,6 +1,8 @@
 ---
 name: missing-value-imputation-metabolomics
-description: Use when your raw metabolomics dataset contains missing values (NAs) in metabolite columns after loading and you have already identified and removed metabolite columns with >10% missing data prevalence.
+description: Use when your raw metabolomics dataset contains missing values (NAs)
+  in metabolite columns after loading and you have already identified and removed
+  metabolite columns with >10% missing data prevalence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - R
   - MeTEor
   - tidyverse
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -21,7 +24,8 @@ evidence_spans:
 - library(VIM)
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # missing-value-imputation-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply k-nearest neighbor (KNN) imputation to fill missing metabolite values in preprocessed metabolomics datasets after removing sparse columns. This skill bridges data cleaning and statistical readiness by using weighted mean aggregation across nearest neighbors to preserve metabolite relationships while maintaining data integrity for downstream analysis.

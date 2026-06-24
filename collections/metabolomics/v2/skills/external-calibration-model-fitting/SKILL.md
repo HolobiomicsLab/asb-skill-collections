@@ -1,6 +1,8 @@
 ---
 name: external-calibration-model-fitting
-description: Use when you have acquired targeted mass spectrometry data with measured ion intensities for known standard compounds at multiple concentration levels, and you need to convert sample intensities into absolute or relative concentrations.
+description: Use when you have acquired targeted mass spectrometry data with measured
+  ion intensities for known standard compounds at multiple concentration levels, and
+  you need to convert sample intensities into absolute or relative concentrations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,11 +14,13 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # external-calibration-model-fitting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a calibration model (linear or non-linear regression) to relate mass spectrometry signal intensities to known standard concentrations, enabling conversion of sample intensities into quantitative predictions. This skill addresses intensity drift in MS datasets through multiple correction strategies (internal standard, drift correction, bracketing, weighted bracketing).

@@ -1,6 +1,9 @@
 ---
 name: chromatographic-peak-characterization
-description: Use when after screening-mode validation of your m/z and retention time (RT) windows has confirmed that targets are visible in your data. Use it when you have centroided .mzML files, a validated target compound table with adjusted expected RT values (e.
+description: Use when after screening-mode validation of your m/z and retention time
+  (RT) windows has confirmed that targets are visible in your data. Use it when you
+  have centroided .mzML files, a validated target compound table with adjusted expected
+  RT values (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +18,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -52,6 +56,7 @@ attribution:
 
 # chromatographic-peak-characterization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction and quality assessment of chromatographic peaks for targeted compounds in LC–MS data, producing integrated area-under-curve (AUC), intensity, signal-to-noise ratio, and peak correlation metrics across multiple sample runs. This skill is essential when transitioning from targeted screening to full quantitative analysis of metabolomic or lipidomic cohorts.

@@ -1,6 +1,7 @@
 ---
 name: ion-tree-structure-optimization-and-trunk-establishment
-description: Use when after you have partitioned a feature network into connected subnetworks (each containing ion features linked by isotope or adduct mass differences).
+description: Use when after you have partitioned a feature network into connected
+  subnetworks (each containing ion features linked by isotope or adduct mass differences).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -16,6 +17,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -47,6 +49,7 @@ attribution:
 
 # ion-tree-structure-optimization-and-trunk-establishment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill optimizes a connected subnetwork of matched isotope and adduct ion features into a tree structure by identifying an adduct trunk (root and linear path) that maximizes node coverage, then assigns isotopic branches to that trunk. It converts a flat feature relationship graph into a hierarchical empirical compound representation suitable for neutral mass inference and ion annotation.

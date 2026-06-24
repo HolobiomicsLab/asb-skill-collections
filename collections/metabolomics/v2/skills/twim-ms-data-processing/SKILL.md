@@ -1,6 +1,8 @@
 ---
 name: twim-ms-data-processing
-description: 'Use when you have TWIM-MS data (arrival time and m/z values) from a multi-omic sample and need to: (1) establish a CCS calibration curve from known standards, (2) assign unidentified features to biomolecular classes (e.'
+description: 'Use when you have TWIM-MS data (arrival time and m/z values) from a
+  multi-omic sample and need to: (1) establish a CCS calibration curve from known
+  standards, (2) assign unidentified features to biomolecular classes (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +16,7 @@ metadata:
   - MOCCal
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -43,6 +46,7 @@ attribution:
 
 # twim-ms-data-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply MOCCal to perform collision cross section (CCS) calibration, biomolecular class assignment, and class-specific CCS calculation on traveling-wave ion mobility mass spectrometry (TWIM-MS) data without requiring prior feature identification. This workflow transforms raw or processed TWIM-MS arrival time and m/z measurements into calibrated, class-labeled CCS values suitable for multi-omic profiling.

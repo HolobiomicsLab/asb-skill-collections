@@ -1,6 +1,8 @@
 ---
 name: interactive-region-of-interest-refinement
-description: Use when after loading a LA-ICP-MS image into pew², you need to isolate tissue or sample regions from instrumental background or matrix before calculating elemental concentrations or ratios.
+description: Use when after loading a LA-ICP-MS image into pew², you need to isolate
+  tissue or sample regions from instrumental background or matrix before calculating
+  elemental concentrations or ratios.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -10,13 +12,15 @@ metadata:
   - pewpew
   - pewlib
   - pew²
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -43,6 +47,7 @@ attribution:
 
 # Interactive Region-of-Interest Refinement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Iteratively refine tissue selections in LA-ICP-MS images through threshold-based segmentation dialogs, combining manual selection tools with automated masking methods (Otsu's method, comparison operators) to separate analytically relevant tissue regions from background. Essential for isolating spatially localized elemental signals before quantitative analysis.

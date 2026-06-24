@@ -1,6 +1,9 @@
 ---
 name: volcano-plot-interpretation-cancer-benign
-description: Use when when you have performed two-group differential expression analysis on preprocessed LipidomicsExperiment objects (with logged and normalized Area measurements) and need to identify and visualize lipid molecules with statistically significant differential regulation between cancer and benign.
+description: Use when when you have performed two-group differential expression analysis
+  on preprocessed LipidomicsExperiment objects (with logged and normalized Area measurements)
+  and need to identify and visualize lipid molecules with statistically significant
+  differential regulation between cancer and benign.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -11,12 +14,15 @@ metadata:
   - lipidr
   - limma
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - This step of the workflow requires the `limma` package to be installed.
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
@@ -42,6 +48,7 @@ attribution:
 
 # volcano-plot-interpretation-cancer-benign
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and interpret volcano plots to visualize log2-fold-change and adjusted p-values in two-group differential lipidomics analysis comparing cancer to benign tissue samples. This skill identifies lipid classes with significant regulatory patterns (up- or down-regulation) that distinguish disease states.

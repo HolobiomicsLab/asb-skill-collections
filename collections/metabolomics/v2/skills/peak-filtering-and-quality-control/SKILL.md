@@ -1,6 +1,9 @@
 ---
 name: peak-filtering-and-quality-control
-description: Use when after peak picking and alignment have been performed on MSImagingArrays data (via peakPick() and peakProcess()), apply this skill when you need to remove noise-driven or low-frequency peaks before summarizing reference peaks across the full imaging dataset.
+description: Use when after peak picking and alignment have been performed on MSImagingArrays
+  data (via peakPick() and peakProcess()), apply this skill when you need to remove
+  noise-driven or low-frequency peaks before summarizing reference peaks across the
+  full imaging dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,14 +17,18 @@ metadata:
   - matter
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods and any statistical analysis methods with a `BPPARAM` option
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods and any statistical analysis methods with a `BPPARAM` option
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:

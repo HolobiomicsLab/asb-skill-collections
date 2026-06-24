@@ -13,6 +13,7 @@ metadata:
   - AWS CLI
   - Singularity
   - SLURM
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

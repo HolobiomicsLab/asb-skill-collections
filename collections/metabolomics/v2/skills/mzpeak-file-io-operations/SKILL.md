@@ -1,6 +1,9 @@
 ---
 name: mzpeak-file-io-operations
-description: 'Use when you have raw mass spectrometry data (vendor formats, mzML, or existing mzPeak files) and need to: (1) convert to mzPeak format for long-term storage and interoperability across languages and tools; (2) load mzPeak spectrum or chromatogram data into memory as structured tables for analysis;'
+description: 'Use when you have raw mass spectrometry data (vendor formats, mzML,
+  or existing mzPeak files) and need to: (1) convert to mzPeak format for long-term
+  storage and interoperability across languages and tools; (2) load mzPeak spectrum
+  or chromatogram data into memory as structured tables for analysis;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3999
@@ -18,6 +21,7 @@ metadata:
   - TypeScript/JavaScript implementation
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -47,6 +51,7 @@ attribution:
 
 # mzpeak-file-io-operations
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reading and writing mass spectrometry spectra and chromatogram data in the mzPeak format, a Parquet-based archive standard that stores spectrum metadata, signal data, and instrument information in structured tabular form. Use this skill to convert between vendor formats (e.g., mzML, vendor binary) and the interoperable mzPeak format, or to load mzPeak files into PyData-compatible structures (pandas DataFrame, Arrow Table) for downstream analysis.

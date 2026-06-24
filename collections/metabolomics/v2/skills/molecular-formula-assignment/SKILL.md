@@ -1,6 +1,9 @@
 ---
 name: molecular-formula-assignment
-description: 'Use when you have acquired MS/MS spectra (in MGF format with required fields: TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) from known or unknown compounds and need to predict their molecular formulas with ranked candidates and confidence scores.'
+description: 'Use when you have acquired MS/MS spectra (in MGF format with required
+  fields: TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) from known or unknown
+  compounds and need to predict their molecular formulas with ranked candidates and
+  confidence scores.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -42,6 +46,7 @@ attribution:
 
 # molecular-formula-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a deep learning rescore model to assign and rank molecular formula candidates from tandem MS/MS spectra, leveraging a redesigned Siamese architecture to generate confidence-scored formula predictions with standardized output columns.

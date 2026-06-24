@@ -1,6 +1,8 @@
 ---
 name: biosynthetic-gene-cluster-annotation
-description: Use when when you have BGC sequences in FASTA or GenBank format and need to identify and extract biosynthetic Pfam domains for feature-based clustering, similarity search, or functional characterization.
+description: Use when when you have BGC sequences in FASTA or GenBank format and need
+  to identify and extract biosynthetic Pfam domains for feature-based clustering,
+  similarity search, or functional characterization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3092
@@ -12,6 +14,7 @@ metadata:
   - pyHMMER
   - BiG-SLiCE
   - PFAM 35.0
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

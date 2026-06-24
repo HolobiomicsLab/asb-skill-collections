@@ -1,6 +1,8 @@
 ---
 name: package-metadata-compilation
-description: Use when when a package README or publication claims to install a large, fixed number of tools (e.g., 'approximately 89 tools') but does not enumerate them explicitly.
+description: Use when when a package README or publication claims to install a large,
+  fixed number of tools (e.g., 'approximately 89 tools') but does not enumerate them
+  explicitly.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,7 @@ metadata:
   - Dependency file parser (apt, pip, conda)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btz765
   title: MetumpX untargeted MS support package

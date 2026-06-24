@@ -1,6 +1,9 @@
 ---
 name: lc-ms-scan-acquisition-orchestration
-description: Use when when you have a curated list of chemical compounds (real or virtual), a defined fragmentation strategy (e.g., Top-N, exclusion lists), and need to simulate how that strategy will acquire MS1 and MS2 scans over a defined retention-time window.
+description: Use when when you have a curated list of chemical compounds (real or
+  virtual), a defined fragmentation strategy (e.g., Top-N, exclusion lists), and need
+  to simulate how that strategy will acquire MS1 and MS2 scans over a defined retention-time
+  window.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,6 +21,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -49,6 +53,7 @@ attribution:
 
 # LC-MS Scan Acquisition Orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate a complete tandem mass spectrometry (MS/MS) simulation control loop by coupling a virtual mass spectrometer, chemical library, and fragmentation strategy controller within an Environment instance. This skill enables rapid prototyping and evaluation of data-dependent acquisition (DDA) strategies before testing on real LC-MS/MS hardware.

@@ -1,6 +1,9 @@
 ---
 name: mass-range-constraint-application
-description: Use when when generating a virtual chemical mixture for LC-MS/MS simulation, or when sampling molecular formulas from a metabolite database (such as HMDB), you need to restrict the sample to a specific m/z window that matches your instrument's acquisition range or your analytical focus.
+description: Use when when generating a virtual chemical mixture for LC-MS/MS simulation,
+  or when sampling molecular formulas from a metabolite database (such as HMDB), you
+  need to restrict the sample to a specific m/z window that matches your instrument's
+  acquisition range or your analytical focus.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -44,6 +48,7 @@ attribution:
 
 # mass-range-constraint-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply mass-to-charge (m/z) range constraints to filter chemical formulas or compounds from metabolomics databases or samplers. This skill ensures that only molecules within a specified mass window are considered for simulation or analysis, which is essential for focusing acquisition strategies on the target mass range of the instrument.

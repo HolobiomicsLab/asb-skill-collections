@@ -1,6 +1,9 @@
 ---
 name: peak-detection-and-boundary-identification
-description: Use when when you have CE-MS raw data (mzML or netCDF format) with extracted ion traces for target compounds and need to identify peak boundaries and extract quantitative peak properties (retention time on µeff scale, peak intensity, peak area) within a specified mobility window.
+description: Use when when you have CE-MS raw data (mzML or netCDF format) with extracted
+  ion traces for target compounds and need to identify peak boundaries and extract
+  quantitative peak properties (retention time on µeff scale, peak intensity, peak
+  area) within a specified mobility window.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -16,6 +19,7 @@ metadata:
   - R
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -49,6 +53,7 @@ attribution:
 
 # peak-detection-and-boundary-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and localization of metabolite peaks on the effective mobility (µeff) scale in CE-MS data, with precise boundary identification to extract peak properties (intensity, area, migration position). This skill converts migration time-dependent electropherograms into mobility-normalized space where peaks become reproducible and comparable across runs despite electroosmotic flow variations.

@@ -1,6 +1,8 @@
 ---
 name: knowledge-graph-generation-and-validation
-description: Use when after completing all per-sample annotation steps (molecular networking, ISDB/spectral matching, SIRIUS/CSI:FingerID, and compounds metadata enhancement with Wikidata IDs and NPClassifier ontology).
+description: Use when after completing all per-sample annotation steps (molecular
+  networking, ISDB/spectral matching, SIRIUS/CSI:FingerID, and compounds metadata
+  enhancement with Wikidata IDs and NPClassifier ontology).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -17,6 +19,7 @@ metadata:
   - NPClassifier
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

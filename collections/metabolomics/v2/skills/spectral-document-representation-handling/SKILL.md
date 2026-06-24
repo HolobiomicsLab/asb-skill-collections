@@ -1,6 +1,9 @@
 ---
 name: spectral-document-representation-handling
-description: Use when you have per-sample MS2 spectra (in matchms-compatible formats like mzML, mzXML, MGF, or msp) and need to compare metabolomic samples across different LC methods, mass spectrometers, or retention-time regimes—especially when samples are chemodiverse with poor feature overlap or strong RT.
+description: Use when you have per-sample MS2 spectra (in matchms-compatible formats
+  like mzML, mzXML, MGF, or msp) and need to compare metabolomic samples across different
+  LC methods, mass spectrometers, or retention-time regimes—especially when samples
+  are chemodiverse with poor feature overlap or strong RT.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -16,12 +19,15 @@ metadata:
   - MEMO
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - pip install numpy
 - conda create --name memo python=3.8
 claims: []

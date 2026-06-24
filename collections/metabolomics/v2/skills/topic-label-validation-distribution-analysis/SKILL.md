@@ -1,6 +1,7 @@
 ---
 name: topic-label-validation-distribution-analysis
-description: Use when after LDA topic inference has assigned dominant topic labels to mass spectra, and before those labels are passed to MLP or GNN multi-task training.
+description: Use when after LDA topic inference has assigned dominant topic labels
+  to mass spectra, and before those labels are passed to MLP or GNN multi-task training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3238
@@ -13,6 +14,7 @@ metadata:
   - ESP (Ensembled Spectral Prediction)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

@@ -1,6 +1,7 @@
 ---
 name: noise-filtering-threshold-application
-description: Use when when you have raw or centroid-mode LC-MS All-ion fragmentation (AIF) spectra and need to generate or match against ion fragment databases.
+description: Use when when you have raw or centroid-mode LC-MS All-ion fragmentation
+  (AIF) spectra and need to generate or match against ion fragment databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,11 +15,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -43,6 +46,7 @@ attribution:
 
 # noise-filtering-threshold-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply intensity-based noise thresholds to LC-MS/MS spectra to remove low-intensity signals and retain only biologically or analytically relevant fragment peaks. This preprocessing step is essential before library entry generation or metabolite annotation to improve signal-to-noise ratio and reduce false positive peak matches.

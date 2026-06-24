@@ -1,6 +1,8 @@
 ---
 name: entry-point-script-validation
-description: Use when after installing a Python package or cloning its repository, to verify that the primary command-line interface is functional and discoverable before attempting analysis workflows.
+description: Use when after installing a Python package or cloning its repository,
+  to verify that the primary command-line interface is functional and discoverable
+  before attempting analysis workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -12,6 +14,7 @@ metadata:
   - argparse
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty080
   title: ChemDistiller
@@ -40,6 +43,7 @@ attribution:
 
 # entry-point-script-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Python package's command-line entry point script executes successfully and emits help documentation when invoked with the --help flag. This confirms the script is properly installed, importable, and has valid argument parsing configured.

@@ -1,6 +1,9 @@
 ---
 name: transformer-architecture-inference
-description: Use when you have acquired or generated multi-modal spectroscopic data (integrated NMR, HSQC, COSY, IR spectra) in the model's expected input format, a pre-trained MultiModalSpectralTransformer checkpoint is available, and you need to predict molecular structures from these spectra without.
+description: Use when you have acquired or generated multi-modal spectroscopic data
+  (integrated NMR, HSQC, COSY, IR spectra) in the model's expected input format, a
+  pre-trained MultiModalSpectralTransformer checkpoint is available, and you need
+  to predict molecular structures from these spectra without.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2929
@@ -16,6 +19,7 @@ metadata:
   - Chemprop-IR
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST
@@ -50,6 +54,7 @@ attribution:
 
 # transformer-architecture-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a pre-trained transformer model on multi-modal spectroscopic input data (NMR, HSQC, COSY, IR) to generate automated molecular structure predictions. This skill operationalizes the MultiModalSpectralTransformer architecture for inference on new or reference spectral datasets.

@@ -1,6 +1,9 @@
 ---
 name: retention-time-prediction-scoring
-description: Use when you have a list of candidate metabolites for an unknown compound (from mass-to-structure search or library matching), experimental retention time(s) from one or more chromatographic methods, and access to a trained DNN RT predictor and meta-learned RT projection model.
+description: Use when you have a list of candidate metabolites for an unknown compound
+  (from mass-to-structure search or library matching), experimental retention time(s)
+  from one or more chromatographic methods, and access to a trained DNN RT predictor
+  and meta-learned RT projection model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,11 +15,13 @@ metadata:
   - cmmrt (CMM-RT)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # Retention Time Prediction Scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank metabolite annotation candidates by comparing observed chromatographic retention times against DNN-predicted values with confidence intervals, filtering candidates whose observed RT falls within projected uncertainty bounds. This probabilistic scoring integrates predicted RTs (MAE 39.2±1.2 s) with meta-learned RT projections between chromatographic methods to increase annotation specificity.

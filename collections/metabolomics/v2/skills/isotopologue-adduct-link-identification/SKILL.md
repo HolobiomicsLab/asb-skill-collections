@@ -1,6 +1,8 @@
 ---
 name: isotopologue-adduct-link-identification
-description: Use when you have selected statistically significant features from multi-assay untargeted LC-MS metabolomics data and need to group them by structural relationships defined by their mass-to-charge ratios (m/z) and retention times (RT).
+description: Use when you have selected statistically significant features from multi-assay
+  untargeted LC-MS metabolomics data and need to group them by structural relationships
+  defined by their mass-to-charge ratios (m/z) and retention times (RT).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -19,6 +21,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -29,7 +32,8 @@ evidence_spans:
 - 'Dependencies: pyvis'
 - 'Dependencies: matplotlib'
 - import pandas as pd
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -54,6 +58,7 @@ attribution:
 
 # Isotopologue-Adduct Link Identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A structural clustering method that identifies mass spectrometry features linked by isotopologue signatures (mass difference ~1.00335 Da) and common adduct patterns within retention time windows, enabling grouping of related features into structural clusters for multi-assay LC-MS metabolomics datasets.

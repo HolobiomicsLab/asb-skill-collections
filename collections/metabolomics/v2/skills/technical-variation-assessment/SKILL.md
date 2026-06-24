@@ -1,6 +1,9 @@
 ---
 name: technical-variation-assessment
-description: Use when when you have a preprocessed metabolomics matrix (log2-scaled, CSV format with batch identifiers in the first column) and need to determine whether technical variation is present, which correction model (ber, ber-bagging, parametric ComBat, or non-parametric ComBat) performs on your.
+description: Use when when you have a preprocessed metabolomics matrix (log2-scaled,
+  CSV format with batch identifiers in the first column) and need to determine whether
+  technical variation is present, which correction model (ber, ber-bagging, parametric
+  ComBat, or non-parametric ComBat) performs on your.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3223
@@ -12,6 +15,7 @@ metadata:
   - R
   - sva
   - ber
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -20,7 +24,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # technical-variation-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and diagnose technical heterogeneity (batch effects and drift) in large metabolomics datasets using statistical models and unsupervised clustering visualization. This skill helps identify which batch-correction model best fits the data structure before applying normalization.

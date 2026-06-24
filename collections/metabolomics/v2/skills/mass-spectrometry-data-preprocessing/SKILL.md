@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-preprocessing
-description: Use when you have raw LCMS data in mzML or mzXML format from DDA, DIA, or fullscan analyses and need to extract metabolite features with unified m/z, retention time, and intensity values across multiple samples before performing MS2 annotation or in-source fragment analysis.
+description: Use when you have raw LCMS data in mzML or mzXML format from DDA, DIA,
+  or fullscan analyses and need to extract metabolite features with unified m/z, retention
+  time, and intensity values across multiple samples before performing MS2 annotation
+  or in-source fragment analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -35,6 +38,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
@@ -49,8 +53,10 @@ derived_from:
 - doi: 10.1021/ac051437y
   title: ''
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - To install ISFrag package R version 4.0.0 or above is required
 - github.com/richardxie1119/MEISTER
 - github.com__kevinmildau__msFeaST
@@ -98,6 +104,7 @@ attribution:
 
 # mass-spectrometry-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing of raw LCMS data through centroiding, noise filtering, peak detection, and alignment to produce a feature table compatible with downstream metabolite annotation and in-source fragment identification. This is Part 2 of the ISFrag workflow and serves as the foundation for MS2 annotation and ISF analysis.

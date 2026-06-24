@@ -1,6 +1,8 @@
 ---
 name: score-distribution-visualization
-description: Use when after computing link scores (e.g., strain correlation, IOKR, or combined scores) across GCF-MF pairs, use this skill to assess whether scores achieve sufficient separation between validated links and the background population.
+description: Use when after computing link scores (e.g., strain correlation, IOKR,
+  or combined scores) across GCF-MF pairs, use this skill to assess whether scores
+  achieve sufficient separation between validated links and the background population.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,18 +17,22 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
+- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +57,7 @@ attribution:
 
 # score-distribution-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualization of raw and standardised scoring distributions for genomic-metabolomic links across validated and all-link populations to assess scoring method effectiveness. This skill enables visual and statistical comparison of how well a scoring function separates true links from decoys.

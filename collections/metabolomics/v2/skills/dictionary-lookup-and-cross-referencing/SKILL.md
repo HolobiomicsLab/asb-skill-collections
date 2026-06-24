@@ -1,6 +1,9 @@
 ---
 name: dictionary-lookup-and-cross-referencing
-description: Use when after integrating and curating raw structure-organism pairs from multiple heterogeneous databases, use this skill when you need to verify that each pair and its associated metadata (literature citations, organism taxonomy, chemical identifiers) exist in your authoritative reference.
+description: Use when after integrating and curating raw structure-organism pairs
+  from multiple heterogeneous databases, use this skill when you need to verify that
+  each pair and its associated metadata (literature citations, organism taxonomy,
+  chemical identifiers) exist in your authoritative reference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -11,6 +14,7 @@ metadata:
   tools:
   - R
   - 2_validating.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +47,7 @@ attribution:
 
 # dictionary-lookup-and-cross-referencing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate structure-organism pairs and their metadata by cross-referencing each pair against curated dictionary records (organism, structure, reference) to identify and flag inconsistencies, missing entries, or conflicting assertions. This skill filters curated data to high-confidence platinum-tier collections suitable for computational natural products research.

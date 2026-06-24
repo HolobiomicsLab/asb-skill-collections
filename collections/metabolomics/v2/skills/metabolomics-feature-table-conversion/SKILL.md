@@ -1,6 +1,9 @@
 ---
 name: metabolomics-feature-table-conversion
-description: Use when you have generated a feature table via mzrtsim() with simulated LC/GC-MS abundances, condition assignments, and batch labels, and you need to pass it to Bioconductor tools (e.g., for batch correction, normalization, or statistical analysis) that expect SummarizedExperiment-class input.
+description: Use when you have generated a feature table via mzrtsim() with simulated
+  LC/GC-MS abundances, condition assignments, and batch labels, and you need to pass
+  it to Bioconductor tools (e.g., for batch correction, normalization, or statistical
+  analysis) that expect SummarizedExperiment-class input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,12 +16,15 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
-- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps the simulation in a `SummarizedExperiment`
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
+- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps
+  the simulation in a `SummarizedExperiment`
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -43,6 +49,7 @@ attribution:
 
 # Wrap simulated metabolomics feature tables in SummarizedExperiment for Bioconductor integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert peak-list simulation output (feature tables with condition and batch effects) into a SummarizedExperiment object that exposes count data and sample metadata through standard Bioconductor accessors. This enables seamless downstream integration with Bioconductor normalization, batch correction, and analysis workflows.

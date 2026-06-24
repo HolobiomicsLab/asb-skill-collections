@@ -1,6 +1,7 @@
 ---
 name: time-domain-signal-apodization
-description: Use when working with raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d format) prior to noise thresholding and mass-domain calibration.
+description: Use when working with raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d
+  format) prior to noise thresholding and mass-domain calibration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,12 +15,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +50,7 @@ attribution:
 
 # time-domain-signal-apodization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Hanning windowing to time-domain FT-ICR transients with zero-filling to reduce spectral artifacts and improve peak definition before Fourier transformation and mass calibration. This preprocessing step is essential for reducing spectral leakage and enhancing the signal-to-noise ratio of subsequent mass-domain analysis.

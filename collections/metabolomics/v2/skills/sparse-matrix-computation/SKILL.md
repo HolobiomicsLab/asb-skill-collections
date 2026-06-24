@@ -1,6 +1,8 @@
 ---
 name: sparse-matrix-computation
-description: Use when clustering large collections of high-resolution MS/MS spectra (thousands to millions) and you have already converted spectra to low-dimensional vectors via feature hashing.
+description: Use when clustering large collections of high-resolution MS/MS spectra
+  (thousands to millions) and you have already converted spectra to low-dimensional
+  vectors via feature hashing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,11 +14,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # Reconstruct nearest-neighbor index construction and sparse pairwise distance computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill constructs spatial indexes (k-d trees or LSH-based inverted indexes) from low-dimensional spectrum vectors and queries them to compute a sparse pairwise distance matrix, avoiding exhaustive all-vs-all comparisons. It is essential for scaling similarity clustering to millions of MS/MS spectra by reducing computational complexity from O(n²) to O(n·k) where k is the number of neighbors queried per spectrum.

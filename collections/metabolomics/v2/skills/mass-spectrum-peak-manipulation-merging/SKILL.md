@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-peak-manipulation-merging
-description: Use when after generating electronic noise (uniformly sampled m/z with Poisson-distributed intensities) and chemical noise (formula database-sampled m/z with Poisson intensities) and you need to combine both noise types with a clean baseline spectrum into a single unified peak array.
+description: Use when after generating electronic noise (uniformly sampled m/z with
+  Poisson-distributed intensities) and chemical noise (formula database-sampled m/z
+  with Poisson intensities) and you need to combine both noise types with a clean
+  baseline spectrum into a single unified peak array.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3714
@@ -14,6 +17,7 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

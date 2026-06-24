@@ -1,6 +1,9 @@
 ---
 name: structure-organism-pair-binning
-description: Use when when you have loaded a structure-organism pairs table from a natural products database (e.g., LOTUS) and need to answer questions about the distribution of chemical diversity—specifically, how many unique 2D structures appear in exactly 1 organism versus many organisms.
+description: Use when when you have loaded a structure-organism pairs table from a
+  natural products database (e.g., LOTUS) and need to answer questions about the distribution
+  of chemical diversity—specifically, how many unique 2D structures appear in exactly
+  1 organism versus many organisms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,6 +14,7 @@ metadata:
   - R
   - Python 3
   - lotus-processor
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -45,6 +49,7 @@ attribution:
 
 # Structure-Organism-Pair Binning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition a dataset of unique 2D structures by their prevalence across organisms into discrete frequency bins (1 organism, 1–10 organisms, 10–100 organisms, >100 organisms), enabling comparative analysis of chemical diversity and organism–structure associations. This skill is essential for characterizing the breadth of natural product chemistry coverage in curated structure-organism databases.

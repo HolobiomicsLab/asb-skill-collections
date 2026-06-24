@@ -1,6 +1,7 @@
 ---
 name: core-spectra-variable-definition-and-population
-description: Use when when implementing a custom MsBackend class for the Spectra package, you must define these two methods to satisfy the MsBackend virtual class API contract.
+description: Use when when implementing a custom MsBackend class for the Spectra package,
+  you must define these two methods to satisfy the MsBackend virtual class API contract.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -16,15 +17,18 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra
+- The *Spectra* package defines an efficient infrastructure for storing and handling
+  mass spectrometry spectra
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
 - DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 - library(Spectra) library(IRanges)
-- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package
+- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +52,7 @@ attribution:
 
 # core-spectra-variable-definition-and-population
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement spectraData() and spectraVariables() methods in MsBackend subclasses to safely expose mass spectrometry core variables (m/z, intensity, retention time, scan index) without cyclic function calls. This skill ensures that peak data and metadata are correctly merged into a single DataFrame while maintaining architectural separation between variable discovery and data retrieval.

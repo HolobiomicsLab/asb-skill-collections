@@ -1,6 +1,9 @@
 ---
 name: converter-pipeline-integration-and-execution
-description: Use when when you have a .msp mass spectra file with incomplete or missing chemical metadata fields (SMILES, InChI, CAS number, formula, InChIKey, IUPAC name) and need to populate those fields by querying multiple external chemical identifier services and local cheminformatics tools in parallel.
+description: Use when when you have a .msp mass spectra file with incomplete or missing
+  chemical metadata fields (SMILES, InChI, CAS number, formula, InChIKey, IUPAC name)
+  and need to populate those fields by querying multiple external chemical identifier
+  services and local cheminformatics tools in parallel.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -19,6 +22,7 @@ metadata:
   - Logger
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

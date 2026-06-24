@@ -1,6 +1,8 @@
 ---
 name: spectral-data-quality-assurance
-description: Use when when importing raw mass spectrometry data in formats like mzML, mzXML, msp, MGF, or JSON and you need to ensure spectral data quality before proceeding to similarity comparisons or other downstream analyses.
+description: Use when when importing raw mass spectrometry data in formats like mzML,
+  mzXML, msp, MGF, or JSON and you need to ensure spectral data quality before proceeding
+  to similarity comparisons or other downstream analyses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +15,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

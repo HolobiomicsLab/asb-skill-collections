@@ -1,6 +1,7 @@
 ---
 name: variance-stabilization-normalization
-description: Use when after k-nearest neighbor imputation (cutoff ≥0.6 data retention) and outlier sample removal have been completed on your MultiAssayExperiment object.
+description: Use when after k-nearest neighbor imputation (cutoff ≥0.6 data retention)
+  and outlier sample removal have been completed on your MultiAssayExperiment object.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +12,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +47,7 @@ attribution:
 
 # Variance-Stabilization Normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Variance-stabilizing normalization (vsn) is a post-imputation normalization step that ensures constant variance across the full range of metabolite measurements, preventing heteroscedasticity that would violate assumptions of downstream statistical tests. Apply this skill after kNN imputation and outlier removal to prepare metabolite assay data for differential analysis.

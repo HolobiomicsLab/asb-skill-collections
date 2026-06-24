@@ -1,6 +1,8 @@
 ---
 name: core-node-identification-from-perturbation
-description: Use when you have a directed metabolic network (digraph) with node perturbation data (e.g., from metabolomics fold-changes or experimental treatment effects) and you need to identify which nodes are core drivers of the observed perturbation.
+description: Use when you have a directed metabolic network (digraph) with node perturbation
+  data (e.g., from metabolomics fold-changes or experimental treatment effects) and
+  you need to identify which nodes are core drivers of the observed perturbation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - FNICM
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04131
   title: FNICM

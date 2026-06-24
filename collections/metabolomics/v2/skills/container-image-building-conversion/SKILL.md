@@ -1,6 +1,8 @@
 ---
 name: container-image-building-conversion
-description: Use when your Nextflow metabolomics workflow has been validated with Docker locally, but you need to deploy it on an HPC cluster that mandates Singularity containerization (e.g., Red Hat Enterprise Linux 8.
+description: Use when your Nextflow metabolomics workflow has been validated with
+  Docker locally, but you need to deploy it on an HPC cluster that mandates Singularity
+  containerization (e.g., Red Hat Enterprise Linux 8.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +17,7 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -42,6 +45,7 @@ attribution:
 
 # Container Image Building and Conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build or convert container images (Docker↔Singularity) to enable pipeline portability across execution environments—from local Docker-capable workstations to high-performance computing clusters that require Singularity for resource isolation and compliance.

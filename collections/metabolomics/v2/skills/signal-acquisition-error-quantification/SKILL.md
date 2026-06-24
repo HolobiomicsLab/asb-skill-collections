@@ -1,6 +1,8 @@
 ---
 name: signal-acquisition-error-quantification
-description: Use when you have processed the same GC–MS dataset (m/z vs retention time) through two independent signal acquisition pipelines and need to compute and compare their detection accuracy. Use this skill when one method (e.
+description: Use when you have processed the same GC–MS dataset (m/z vs retention
+  time) through two independent signal acquisition pipelines and need to compute and
+  compare their detection accuracy. Use this skill when one method (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -20,9 +23,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # signal-acquisition-error-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and compare error rates of signal acquisition and marker identification between two chromatography–mass spectrometry processing methods (e.g., NPFimg vs. XCMS) on the same GC–MS dataset to validate algorithmic reliability. This skill surfaces when conventional peak picking is suspected of introducing false positives or false negatives, and a reference method is available for comparison.

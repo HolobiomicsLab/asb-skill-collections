@@ -1,6 +1,9 @@
 ---
 name: python-library-integration
-description: Use when when you have Thermo Fisher RAW mass spectrometry files and need to extract mass-to-charge ratios, intensities, scan metadata, and peak lists within a Python script or notebook for downstream computational analysis, and you require programmatic control over extraction parameters rather.
+description: Use when when you have Thermo Fisher RAW mass spectrometry files and
+  need to extract mass-to-charge ratios, intensities, scan metadata, and peak lists
+  within a Python script or notebook for downstream computational analysis, and you
+  require programmatic control over extraction parameters rather.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,12 +18,14 @@ metadata:
   - pyarrow
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.11.12.687968v1
   title: MetaXtract
 evidence_spans:
 - directly as a **Python library** for programmatic workflows
-- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from **Thermo Fisher RAW** mass spectrometry files.
+- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from
+  **Thermo Fisher RAW** mass spectrometry files.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

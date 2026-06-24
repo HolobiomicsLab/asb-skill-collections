@@ -1,6 +1,9 @@
 ---
 name: mass-spectra-embedding-extraction
-description: Use when you have tandem mass spectra (MS/MS) in .msp format and need dense, chemically meaningful vector representations for library matching, similarity computation, or structural clustering. Apply this when comparing spectra across large reference databases (e.
+description: Use when you have tandem mass spectra (MS/MS) in .msp format and need
+  dense, chemically meaningful vector representations for library matching, similarity
+  computation, or structural clustering. Apply this when comparing spectra across
+  large reference databases (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -19,6 +22,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

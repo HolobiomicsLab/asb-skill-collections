@@ -1,6 +1,9 @@
 ---
 name: peak-detection-and-alignment-in-metabolomics
-description: Use when after generating simulated mzML output from ViMMS and you need to compare it against real acquisition data. Specifically, use it when you have paired real and simulated mzML files from the same sample (e.g., Beer1pos) and must evaluate whether a fragmentation strategy (e.
+description: Use when after generating simulated mzML output from ViMMS and you need
+  to compare it against real acquisition data. Specifically, use it when you have
+  paired real and simulated mzML files from the same sample (e.g., Beer1pos) and must
+  evaluate whether a fragmentation strategy (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3932
@@ -13,6 +16,7 @@ metadata:
   - VIMMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -20,7 +24,8 @@ derived_from:
   title: ''
 evidence_spans:
 - ViMMS is compatible with Python 3+
-- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation
+  coverage using OpenMS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # peak-detection-and-alignment-in-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Peak detection and alignment extracts ion intensity peaks from LC-MS/MS mzML data and matches them across real and simulated acquisitions to compare fragmentation coverage and chemical detection. This skill is essential for validating whether simulated MS/MS strategies reproduce the same metabolite signals as experimental data.

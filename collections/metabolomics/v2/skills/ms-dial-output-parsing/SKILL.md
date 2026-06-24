@@ -1,6 +1,9 @@
 ---
 name: ms-dial-output-parsing
-description: Use when you have completed peak picking in MS-DIAL (generating files like Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt) and need to load the resulting feature table into R for quality control, feature filtering, normalization, or metabolite annotation.
+description: Use when you have completed peak picking in MS-DIAL (generating files
+  like Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt) and need to load the resulting
+  feature table into R for quality control, feature filtering, normalization, or metabolite
+  annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,17 +19,21 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- margheRita is intended to be used after having done a number of data acquisition steps through MS-Dial
+- margheRita is intended to be used after having done a number of data acquisition
+  steps through MS-Dial
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +58,7 @@ attribution:
 
 # MS-DIAL output parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load MS-DIAL peak tables (feature tables with m/z, retention time, and intensity values) into a structured metabolomics data object for downstream preprocessing and analysis. This is the critical entry point for untargeted LC-MS/MS workflows, converting vendor-independent MS-DIAL output into a format compatible with quality control, filtering, and statistical analysis pipelines.

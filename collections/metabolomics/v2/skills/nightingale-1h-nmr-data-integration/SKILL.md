@@ -1,6 +1,9 @@
 ---
 name: nightingale-1h-nmr-data-integration
-description: Use when you have newly assayed 1H-NMR metabolomics data from Nightingale Health (CSV or TSV format) and need to apply one or more published metabolic risk scores (Deelen et al. all-cause mortality, van den Akker MetaboAge, Würtz cardiovascular event risk, etc.).
+description: Use when you have newly assayed 1H-NMR metabolomics data from Nightingale
+  Health (CSV or TSV format) and need to apply one or more published metabolic risk
+  scores (Deelen et al. all-cause mortality, van den Akker MetaboAge, Würtz cardiovascular
+  event risk, etc.).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +16,7 @@ metadata:
   - MiMIR
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -45,6 +49,7 @@ attribution:
 
 # nightingale-1h-nmr-data-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate and standardize Nightingale Health 1H-NMR metabolomics measurements into a feature matrix compatible with MiMIR's pre-trained metabolic scoring models. This skill enables projection of published metabolic biomarkers (mortality risk, MetaboAge, cardiovascular risk, etc.) onto new cohorts by aligning raw metabolite data to expected column nomenclature and validating feature completeness.

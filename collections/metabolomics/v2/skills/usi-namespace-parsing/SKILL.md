@@ -1,6 +1,8 @@
 ---
 name: usi-namespace-parsing
-description: Use when when you need to retrieve mass spectrometry spectrum data from a metabolomics repository but only have a USI string (e.g., 'mzspec:GNPS:TASK-c95481f0c53d42e78a61bf899e9f9adb-spectra/specs_ms.mgf:scan:1943' or 'mzspec:MASSBANK::accession:SM858102').
+description: Use when when you need to retrieve mass spectrometry spectrum data from
+  a metabolomics repository but only have a USI string (e.g., 'mzspec:GNPS:TASK-c95481f0c53d42e78a61bf899e9f9adb-spectra/specs_ms.mgf:scan:1943'
+  or 'mzspec:MASSBANK::accession:SM858102').
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -17,6 +19,7 @@ metadata:
   - ProteoXchange Repository
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

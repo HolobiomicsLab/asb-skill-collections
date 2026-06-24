@@ -1,6 +1,9 @@
 ---
 name: simulation-result-validation
-description: Use when you have obtained a repository containing simulation scripts (e.g., Type I error or power analysis scripts) and need to verify that executing those scripts produces the same summary statistics and findings reported in the associated publication or documentation.
+description: Use when you have obtained a repository containing simulation scripts
+  (e.g., Type I error or power analysis scripts) and need to verify that executing
+  those scripts produces the same summary statistics and findings reported in the
+  associated publication or documentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3677
@@ -10,6 +13,7 @@ metadata:
   - R (or language used by PaIRKAT scripts)
   - R
   - PaIRKAT SimulationFunctions
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -38,6 +42,7 @@ attribution:
 
 # simulation-result-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that computational simulation scripts correctly reproduce published Type I error and power statistics by executing them end-to-end and comparing generated outputs against reported values. This skill ensures fidelity of simulation implementations and identifies discrepancies in statistical methodology.

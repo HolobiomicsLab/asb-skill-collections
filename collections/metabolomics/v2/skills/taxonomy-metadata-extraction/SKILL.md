@@ -1,6 +1,9 @@
 ---
 name: taxonomy-metadata-extraction
-description: Use when you have executed a spectrum search against one or more domain-specific MASSTs (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, or foodMASST) and need to systematically extract taxonomic lineages (kingdom, phylum, class, order, family, genus, species, strain) and sample metadata.
+description: Use when you have executed a spectrum search against one or more domain-specific
+  MASSTs (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, or foodMASST) and
+  need to systematically extract taxonomic lineages (kingdom, phylum, class, order,
+  family, genus, species, strain) and sample metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -19,6 +22,7 @@ metadata:
   - jobs.py
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

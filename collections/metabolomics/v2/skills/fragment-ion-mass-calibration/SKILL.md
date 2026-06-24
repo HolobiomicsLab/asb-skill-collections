@@ -1,6 +1,8 @@
 ---
 name: fragment-ion-mass-calibration
-description: Use when when comparing experimental spectra to reference library spectra and fragment ion m/z values show systematic drift or measurement noise that could distort neutral loss peaks or cosine similarity scores.
+description: Use when when comparing experimental spectra to reference library spectra
+  and fragment ion m/z values show systematic drift or measurement noise that could
+  distort neutral loss peaks or cosine similarity scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - cosine_neutral_loss repository
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity
@@ -42,6 +45,7 @@ attribution:
 
 # fragment-ion-mass-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate fragment ion m/z values in tandem mass spectra to correct systematic measurement errors before similarity matching. Accurate fragment masses are essential for reliable neutral loss calculation and spectrum alignment in library search workflows.

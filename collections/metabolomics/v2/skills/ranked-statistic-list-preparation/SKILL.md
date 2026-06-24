@@ -1,6 +1,8 @@
 ---
 name: ranked-statistic-list-preparation
-description: Use when after completing differential analysis (e.g., via run_de()) to generate p-values and log2 fold changes, and before executing fgsea-based MetSEA enrichment.
+description: Use when after completing differential analysis (e.g., via run_de())
+  to generate p-values and log2 fold changes, and before executing fgsea-based MetSEA
+  enrichment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +17,13 @@ metadata:
   - readxl
   - enrichmet
   - run_de
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - enrichmet integrates fgsea for fast MetSEA
 - library(readr)
 - library(readxl)

@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectrum-prediction
-description: Use when you have MS/MS spectra (in MGF format) with required metadata fields (TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) and need to predict candidate molecular formulas ranked by confidence.
+description: Use when you have MS/MS spectra (in MGF format) with required metadata
+  fields (TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) and need to predict
+  candidate molecular formulas ranked by confidence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -42,6 +45,7 @@ attribution:
 
 # MS/MS Spectrum Prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use deep learning (FIDDLE v2.0.0 with Siamese-architecture rescore model) to predict molecular formulas from tandem mass spectra (MS/MS), producing ranked formula candidates with confidence scores. This skill is essential when you need to identify unknown compounds from high-resolution MS/MS data without prior structure knowledge.

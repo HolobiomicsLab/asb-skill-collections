@@ -1,6 +1,8 @@
 ---
 name: metabolomics-ora-methodology
-description: Use when you have a metabolomics dataset and want to perform pathway enrichment analysis using ORA, but need to first understand its behavior, limitations, and correct application through reproducible simulation.
+description: Use when you have a metabolomics dataset and want to perform pathway
+  enrichment analysis using ORA, but need to first understand its behavior, limitations,
+  and correct application through reproducible simulation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -12,6 +14,7 @@ metadata:
   - Python
   - Jupyter
   - cwieder/metabolomics-ORA
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -39,6 +42,7 @@ attribution:
 
 # metabolomics-ora-methodology
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reproduce and validate Over-representation Analysis (ORA) simulations in metabolomics to understand pitfalls and apply best practices for pathway enrichment. This skill involves executing Python-based simulations in a Jupyter notebook to regenerate results demonstrating how ORA performs under different experimental conditions and parameter choices.

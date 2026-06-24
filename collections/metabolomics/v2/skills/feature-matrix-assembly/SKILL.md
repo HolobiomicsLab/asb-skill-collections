@@ -1,6 +1,9 @@
 ---
 name: feature-matrix-assembly
-description: Use when when you have a set of chemical structures (SMILES, SDF, mol, mol2, or hin files) and need to convert them into a tabular feature representation for retention time prediction, metabolite annotation, or other quantitative structure–property modeling tasks.
+description: Use when when you have a set of chemical structures (SMILES, SDF, mol,
+  mol2, or hin files) and need to convert them into a tabular feature representation
+  for retention time prediction, metabolite annotation, or other quantitative structure–property
+  modeling tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -11,11 +14,13 @@ metadata:
   - alvaDesc
   - RDKit
   - cmmrt build_data.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +44,7 @@ attribution:
 
 # feature-matrix-assembly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assemble a unified feature matrix combining molecular descriptors and fingerprints from chemical structure input, creating a row-per-molecule table ready for machine learning model training. This skill bridges molecular representation generation and downstream regression or classification workflows.

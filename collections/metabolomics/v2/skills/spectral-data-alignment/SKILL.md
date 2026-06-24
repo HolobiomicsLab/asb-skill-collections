@@ -1,6 +1,9 @@
 ---
 name: spectral-data-alignment
-description: Use when you have quantification tables (with feature IDs and abundance values), metadata tables (with sample annotations), and separate spectral data files (e.g., MS/MS spectra or fragmentation patterns), and you need to integrate them into a unified input for msFeaST.
+description: Use when you have quantification tables (with feature IDs and abundance
+  values), metadata tables (with sample annotations), and separate spectral data files
+  (e.g., MS/MS spectra or fragmentation patterns), and you need to integrate them
+  into a unified input for msFeaST.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -13,6 +16,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

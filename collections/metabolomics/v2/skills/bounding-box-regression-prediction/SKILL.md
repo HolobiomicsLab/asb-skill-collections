@@ -21,6 +21,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -49,6 +50,7 @@ attribution:
 
 # bounding-box-regression-prediction
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Train and deploy a CNN regression head to predict spatial bounding-box coordinates and peak-center locations for chromatographic peaks in standardized rt×mz two-dimensional LC-HRMS image patches. This skill complements peak/background classification by localizing the exact boundaries and centroid of detected peaks for downstream feature extraction.

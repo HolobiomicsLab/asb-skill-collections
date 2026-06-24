@@ -1,6 +1,9 @@
 ---
 name: ion-mobility-spectrometry-peak-extraction
-description: Use when after peaks have been detected in aligned GCIMS samples using findPeaks with CWT parameters and peaks have been clustered across samples, and you need to integrate peak signals into a matrix format where each entry represents the intensity of a peak cluster in a specific sample for.
+description: Use when after peaks have been detected in aligned GCIMS samples using
+  findPeaks with CWT parameters and peaks have been clustered across samples, and
+  you need to integrate peak signals into a matrix format where each entry represents
+  the intensity of a peak cluster in a specific sample for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3197
@@ -13,6 +16,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +45,7 @@ attribution:
 
 # ion-mobility-spectrometry-peak-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction of intensity values for detected peaks across Gas Chromatography–Ion Mobility Spectrometry samples into a peak intensity matrix suitable for downstream analysis. This skill bridges peak detection and clustering to produce a quantitative feature table where rows represent peaks/clusters and columns represent samples.

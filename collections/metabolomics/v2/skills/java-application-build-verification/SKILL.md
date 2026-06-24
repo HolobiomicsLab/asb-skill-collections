@@ -1,6 +1,8 @@
 ---
 name: java-application-build-verification
-description: Use when when you need to confirm that a Java project's GitHub Actions workflow (e.g., 'dev_build_release.yml') has completed successfully and generated usable build artifacts;
+description: Use when when you need to confirm that a Java project's GitHub Actions
+  workflow (e.g., 'dev_build_release.yml') has completed successfully and generated
+  usable build artifacts;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3222
@@ -11,6 +13,7 @@ metadata:
   - JDK 25
   - JavaFX 24
   - GitHub Actions
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

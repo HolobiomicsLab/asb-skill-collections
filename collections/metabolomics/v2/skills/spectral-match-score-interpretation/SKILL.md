@@ -1,6 +1,9 @@
 ---
 name: spectral-match-score-interpretation
-description: 'Use when when you have GC-MS output with Match.Factor values or structural similarity scores from categorate() and need to decide which identified compounds are reliable enough to carry forward. Specifically: (1) after running GC-MS and receiving a Match.Factor column;'
+description: 'Use when when you have GC-MS output with Match.Factor values or structural
+  similarity scores from categorate() and need to decide which identified compounds
+  are reliable enough to carry forward. Specifically: (1) after running GC-MS and
+  receiving a Match.Factor column;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,13 +18,17 @@ metadata:
   - uafR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- To perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR](https://bioconductor.org/packages/release/bioc
+- To perform the chemical structure matches and summarize atomic features, uafR taps
+  into an amazing set of cheminformatics packages -- [ChemmineR]
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR]
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR](https://bioconductor.org/packages/release/bioc
 - '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
@@ -48,6 +55,7 @@ attribution:
 
 # spectral-match-score-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpreting and applying Match.Factor thresholds and structural match scores (>0.95) to filter and validate chemical identifications in GC-MS and cheminformatics workflows. This skill bridges mass spectrometry confidence metrics with structural matching results to establish compound identity with quantifiable confidence.

@@ -1,6 +1,9 @@
 ---
 name: repository-code-integration
-description: Use when you have identified a published method (e.g., MIST-CF for chemical formula ranking from mass spectra) whose source code and trained weights are available in a public repository, and you need to apply that method to new experimental data (e.
+description: Use when you have identified a published method (e.g., MIST-CF for chemical
+  formula ranking from mass spectra) whose source code and trained weights are available
+  in a public repository, and you need to apply that method to new experimental data
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0573
@@ -15,13 +18,15 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # Repository Code Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate published research code from a versioned repository (clone, install dependencies, instantiate trained models) to enable reproducible application of a computational method on new data. This skill is essential when a research article describes a novel algorithm or model whose implementation is released publicly.

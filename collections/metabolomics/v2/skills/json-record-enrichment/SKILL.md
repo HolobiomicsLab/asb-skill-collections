@@ -1,6 +1,8 @@
 ---
 name: json-record-enrichment
-description: Use when when a project JSON record contains a resolvable public identifier (genome accession, biosynthetic gene cluster ID, etc.) but lacks the corresponding human-readable or standardized metadata field (organism name, cluster description).
+description: Use when when a project JSON record contains a resolvable public identifier
+  (genome accession, biosynthetic gene cluster ID, etc.) but lacks the corresponding
+  human-readable or standardized metadata field (organism name, cluster description).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -14,6 +16,7 @@ metadata:
   - Node.js / npm
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla

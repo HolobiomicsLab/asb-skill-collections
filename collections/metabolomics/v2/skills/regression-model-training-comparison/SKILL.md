@@ -1,6 +1,7 @@
 ---
 name: regression-model-training-comparison
-description: Use when you have a labeled dataset of molecular structures with experimental continuous outcomes (e.
+description: Use when you have a labeled dataset of molecular structures with experimental
+  continuous outcomes (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,11 +13,13 @@ metadata:
   - alvaDesc
   - RDKit
   - Optuna
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +43,7 @@ attribution:
 
 # regression-model-training-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and compare multiple machine learning regressors on the same dataset using different feature representations (descriptors, fingerprints, or combined) to identify which feature set and model architecture yield the lowest prediction error. This skill is essential when optimizing retention time or other continuous molecular property prediction, where feature engineering significantly impacts model performance.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-target-list-preparation
-description: Use when you have a raw .xlsx or tabular file listing candidate compounds with theoretical or measured m/z values, expected retention times, and ionization polarities, and you need to feed this into TARDIS or another targeted LC–MS analysis pipeline.
+description: Use when you have a raw .xlsx or tabular file listing candidate compounds
+  with theoretical or measured m/z values, expected retention times, and ionization
+  polarities, and you need to feed this into TARDIS or another targeted LC–MS analysis
+  pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -12,6 +15,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -42,6 +46,7 @@ attribution:
 
 # mass-spectrometry-target-list-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preparation of a TARDIS-compatible target list by loading a compound spreadsheet, filtering by ionization polarity, and extracting required metadata columns (ID, name, m/z, RT) into a standardized data.frame. This is the prerequisite step that enables targeted peak detection and integration in LC–MS metabolomics workflows.

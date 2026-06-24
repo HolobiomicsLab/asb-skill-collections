@@ -1,6 +1,9 @@
 ---
 name: c-sharp-wrapper-invocation-from-r
-description: Use when when you need to read proprietary or binary data formats (e.g., Thermo Fisher .raw files) from R but the native implementation is in .NET/C#, and direct language bindings are unavailable or impractical. Use this when the target assembly requires Windows/.
+description: Use when when you need to read proprietary or binary data formats (e.g.,
+  Thermo Fisher .raw files) from R but the native implementation is in .NET/C#, and
+  direct language bindings are unavailable or impractical. Use this when the target
+  assembly requires Windows/.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +18,7 @@ metadata:
   - Spectra (Bioconductor)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -22,10 +26,13 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
-- In case you prefer to compile `rawrr.exe` from C# source code, please install the .NET 8.0
+- In case you prefer to compile `rawrr.exe` from C# source code, please install the
+  .NET 8.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +57,7 @@ attribution:
 
 # C# Wrapper Invocation from R
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke compiled C# wrapper methods from R via system calls to access functionality of .NET assemblies (such as the RawFileReader for Thermo Fisher Orbitrap data). This technique enables R to read proprietary binary file formats and extract structured data by delegating to managed code and serializing results back through temporary file I/O.

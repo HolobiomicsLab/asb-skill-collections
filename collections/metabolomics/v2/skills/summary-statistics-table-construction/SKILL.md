@@ -1,6 +1,8 @@
 ---
 name: summary-statistics-table-construction
-description: Use when when you need to quantify and compare the effect of multiple filtering thresholds (e.g., Match.Factor ≥65, ≥80, ≥90) on the size of a retained compound set.
+description: Use when when you need to quantify and compare the effect of multiple
+  filtering thresholds (e.g., Match.Factor ≥65, ≥80, ≥90) on the size of a retained
+  compound set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,12 +13,15 @@ metadata:
   - uafR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # summary-statistics-table-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a summary table that aggregates counts or statistics across multiple filter conditions applied to a compound dataset. This skill is used to compare how data volume changes when different threshold criteria are applied to mass spectrometry results.

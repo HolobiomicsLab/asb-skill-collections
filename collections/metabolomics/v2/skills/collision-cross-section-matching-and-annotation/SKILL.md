@@ -1,6 +1,9 @@
 ---
 name: collision-cross-section-matching-and-annotation
-description: Use when when you have LC-IM-MS/MS data with measured collision cross section (CCS) values and m/z assignments, and you need to disambiguate sterol isomers (particularly N-Me derived unsaturated sterols) by matching against a curated database of predicted CCS values and MS/MS fragmentation patterns.
+description: Use when when you have LC-IM-MS/MS data with measured collision cross
+  section (CCS) values and m/z assignments, and you need to disambiguate sterol isomers
+  (particularly N-Me derived unsaturated sterols) by matching against a curated database
+  of predicted CCS values and MS/MS fragmentation patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -43,6 +47,7 @@ attribution:
 
 # collision-cross-section-matching-and-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match experimental LC-IM-MS/MS 4D features (retention time, m/z, drift time, intensity) against a quantum chemistry calculation-assisted CCS prediction database to identify and annotate sterol isomers with structural detail (double-bond position, stereochemistry) and confidence scores.

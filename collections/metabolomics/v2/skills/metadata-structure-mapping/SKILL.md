@@ -1,6 +1,7 @@
 ---
 name: metadata-structure-mapping
-description: Use when you have mzML-format raw data files from mass spectrometry experiments and need to ingest them into MS-DIAL for untargeted metabolomics or lipidomics analysis.
+description: Use when you have mzML-format raw data files from mass spectrometry experiments
+  and need to ingest them into MS-DIAL for untargeted metabolomics or lipidomics analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,12 +17,15 @@ metadata:
   - MsdialWorkbench repository
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
-- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and
+  .NET 6
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 - To conduct tests, please refer to section `test:` of GitHub Actions
 claims: []
 provenance:
@@ -46,6 +50,7 @@ attribution:
 
 # metadata-structure-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map raw data file metadata (instrument type, acquisition parameters) and spectral arrays (m/z, intensity values) from an external format (mzML) into a software's internal data structures. This skill is essential when ingesting vendor-neutral or open-standard mass spectrometry data into MS-DIAL or similar metabolomics platforms that require format deserialization before spectral processing.

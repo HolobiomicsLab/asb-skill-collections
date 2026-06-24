@@ -1,6 +1,9 @@
 ---
 name: ground-truth-ordinal-validation
-description: Use when after running retention-order prediction on a test or evaluation dataset, when you have both predicted retention orderings (from RankSVM, SVR, or similar ordinal regressors) and experimentally validated ground-truth retention orders from the same chromatographic system(s).
+description: Use when after running retention-order prediction on a test or evaluation
+  dataset, when you have both predicted retention orderings (from RankSVM, SVR, or
+  similar ordinal regressors) and experimentally validated ground-truth retention
+  orders from the same chromatographic system(s).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -14,6 +17,7 @@ metadata:
   - SVR (Support Vector Regression)
   - scipy, numpy, pandas, scikit-learn
   - ECCB2018.Rmd
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty590
   title: LC retention order prediction

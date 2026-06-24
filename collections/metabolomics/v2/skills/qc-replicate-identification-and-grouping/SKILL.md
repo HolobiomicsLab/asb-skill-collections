@@ -1,6 +1,8 @@
 ---
 name: qc-replicate-identification-and-grouping
-description: Use when you have a QC-annotated LC-MS feature table (CSV or data frame format with sample metadata) and need to isolate QC replicate measurements prior to computing quality metrics such as D-Ratio or performing signal drift correction.
+description: Use when you have a QC-annotated LC-MS feature table (CSV or data frame
+  format with sample metadata) and need to isolate QC replicate measurements prior
+  to computing quality metrics such as D-Ratio or performing signal drift correction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - MetCorR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

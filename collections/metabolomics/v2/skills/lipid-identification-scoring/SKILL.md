@@ -1,6 +1,8 @@
 ---
 name: lipid-identification-scoring
-description: Use when after peak picking (MZmine, XCMS, MS-DIAL, or Compound Discoverer output) and candidate retrieval, when you have experimental fragment m/z values and multiple candidate lipid species from the in-silico library.
+description: Use when after peak picking (MZmine, XCMS, MS-DIAL, or Compound Discoverer
+  output) and candidate retrieval, when you have experimental fragment m/z values
+  and multiple candidate lipid species from the in-silico library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -16,12 +18,15 @@ metadata:
   - Q-Exactive orbitrap UHPLC-HRMS/MS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
 claims: []
 provenance:

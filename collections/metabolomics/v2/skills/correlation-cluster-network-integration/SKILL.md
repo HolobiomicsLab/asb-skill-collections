@@ -1,6 +1,8 @@
 ---
 name: correlation-cluster-network-integration
-description: Use when after identifying structural clusters (isotopologue groups, adduct groups, and cross-assay links) and assigning features to correlation clusters via hierarchical clustering.
+description: Use when after identifying structural clusters (isotopologue groups,
+  adduct groups, and cross-assay links) and assigning features to correlation clusters
+  via hierarchical clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -17,6 +19,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -51,6 +54,7 @@ attribution:
 
 # Reconstruct the structural network graph generation from significant features
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate structural cluster assignments and correlation cluster memberships into an interactive NetworkX graph representation suitable for visualization and analysis in Cytoscape. This skill converts feature relationships (isotopologues, adducts, cross-assay links, and correlation co-membership) into a weighted network where node attributes and edge weights encode structural and statistical relationships.

@@ -1,6 +1,9 @@
 ---
 name: positional-encoding-implementation
-description: Use when you need to feed discrete chemical formula representations (e.g., 'C6H12O6') into a neural network that requires continuous vector inputs, particularly when adopting a transformer architecture for formula ranking or property prediction tasks.
+description: Use when you need to feed discrete chemical formula representations (e.g.,
+  'C6H12O6') into a neural network that requires continuous vector inputs, particularly
+  when adopting a transformer architecture for formula ranking or property prediction
+  tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +13,7 @@ metadata:
   tools:
   - SCARF
   - MIST-CF formula transformer
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -37,6 +41,7 @@ attribution:
 
 # Positional Encoding Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement sinusoidal positional encodings to convert discrete chemical formula strings into fixed-length continuous embedding vectors for neural network input. This technique, developed in SCARF, enables transformer architectures to process chemical formulae by mapping element counts and positions to orthogonal sinusoidal basis functions.

@@ -1,6 +1,9 @@
 ---
 name: metabolite-set-file-parsing-and-validation
-description: Use when when a user has prepared a custom collection of metabolite sets (e.g., from spectral fragmentation clustering, literature curation, or domain-specific grouping) in CSV or JSON format and wants to score their activity levels using PALS without modifying the core PALS codebase.
+description: Use when when a user has prepared a custom collection of metabolite sets
+  (e.g., from spectral fragmentation clustering, literature curation, or domain-specific
+  grouping) in CSV or JSON format and wants to score their activity levels using PALS
+  without modifying the core PALS codebase.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   tools:
   - PALS Viewer
   - PALS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -41,6 +45,7 @@ attribution:
 
 # metabolite-set-file-parsing-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse user-uploaded metabolite set files (CSV or JSON format) to extract metabolite identifiers and set membership, then validate the structure and identifiers against the PALS database schema before downstream decomposition analysis. This skill enables extensibility of pathway activity scoring to custom metabolite groupings beyond the three shipped set types (pathways, Molecular Families, and Mass2Motifs).

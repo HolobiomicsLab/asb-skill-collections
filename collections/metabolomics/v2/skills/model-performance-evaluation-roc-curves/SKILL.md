@@ -1,6 +1,8 @@
 ---
 name: model-performance-evaluation-roc-curves
-description: Use when you have a binary classification task on metabolomics data (e.g., covid_data) and need to benchmark multiple algorithms to determine which produces the highest discriminative power.
+description: Use when you have a binary classification task on metabolomics data (e.g.,
+  covid_data) and need to benchmark multiple algorithms to determine which produces
+  the highest discriminative power.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -10,6 +12,7 @@ metadata:
   tools:
   - MeTEor
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -17,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # model-performance-evaluation-roc-curves
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and compare binary classification model performance by training logistic regression, random forest, and XGBoost models on metabolomics data under cross-validation and recording performance metrics and ROC curves for each algorithm. This skill is essential when assessing which supervised learning approach best discriminates between two metabolic phenotypes.

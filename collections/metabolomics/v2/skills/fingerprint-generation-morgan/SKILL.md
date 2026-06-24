@@ -1,6 +1,8 @@
 ---
 name: fingerprint-generation-morgan
-description: Use when you have parsed molecular structures from the SMRT dataset or similar small molecule collections and need to create a vectorized molecular representation suitable for neural network input alongside molecular graph representations.
+description: Use when you have parsed molecular structures from the SMRT dataset or
+  similar small molecule collections and need to create a vectorized molecular representation
+  suitable for neural network input alongside molecular graph representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -14,6 +16,7 @@ metadata:
   - rdkit-pypi
   - torch_geometric
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -46,6 +49,7 @@ attribution:
 
 # fingerprint-generation-morgan
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate Morgan fingerprints from molecular structures (SMILES or SDF format) using RDKit to create fixed-length binary vector representations of small molecules. Morgan fingerprints serve as one of two complementary molecular input modalities for retention time prediction in the RT-Transformer architecture.

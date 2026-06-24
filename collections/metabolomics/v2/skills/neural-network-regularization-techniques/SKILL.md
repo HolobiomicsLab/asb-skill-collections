@@ -1,6 +1,9 @@
 ---
 name: neural-network-regularization-techniques
-description: Use when when training a deep neural network on paired MS/MS spectra to predict structural similarity scores, especially when the training dataset is moderate-sized (109,734 spectra across 15,062 molecules) and overfitting risk is high.
+description: Use when when training a deep neural network on paired MS/MS spectra
+  to predict structural similarity scores, especially when the training dataset is
+  moderate-sized (109,734 spectra across 15,062 molecules) and overfitting risk is
+  high.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -15,11 +18,13 @@ metadata:
   - ms2deepscore
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # Neural Network Regularization Techniques
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Application of L1/L2 regularization, batch normalization, and dropout to constrain neural network learning and reduce overfitting when training deep embeddings on spectral data. These techniques improve generalization by penalizing large weights, normalizing activations, and stochastically masking units during training.

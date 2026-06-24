@@ -1,6 +1,7 @@
 ---
 name: matlab-script-execution
-description: Use when you have located MATLAB scripts in a Codes-Explained folder with accompanying Read-Me.
+description: Use when you have located MATLAB scripts in a Codes-Explained folder
+  with accompanying Read-Me.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +9,7 @@ metadata:
   - R
   - MATLAB
   - DisCoPad repository
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo15010028
   title: DisCo P-ad
@@ -36,6 +38,7 @@ attribution:
 
 # matlab-script-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute MATLAB scripts in sequence as part of a documented simulation workflow, monitoring console output and intermediate file writes to verify correct computation. This skill is applied when reconstructing or validating a multi-language (R + MATLAB) simulation procedure on a reference data sub-sample.

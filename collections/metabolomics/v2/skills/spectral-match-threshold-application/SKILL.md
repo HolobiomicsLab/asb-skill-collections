@@ -1,6 +1,9 @@
 ---
 name: spectral-match-threshold-application
-description: Use when after running spectral matching (e.g., GNPS library search, SIRIUS in silico annotation) and obtaining an annotation table with confidence scores, apply threshold filtering to remove low-confidence or spurious matches before downstream analysis (e.
+description: Use when after running spectral matching (e.g., GNPS library search,
+  SIRIUS in silico annotation) and obtaining an annotation table with confidence scores,
+  apply threshold filtering to remove low-confidence or spurious matches before downstream
+  analysis (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - Inventa
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa

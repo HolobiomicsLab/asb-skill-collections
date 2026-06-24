@@ -1,6 +1,9 @@
 ---
 name: uhplc-hrms-ms-data-matching
-description: Use when you have peak-picked UHPLC-HRMS/MS data (from Q-Exactive orbitrap, Agilent, Bruker, or SCIEX Q-TOF instruments) with both MS1 and MS/MS fragment spectra, and you need to assign lipid identities to detected features using in-silico fragmentation patterns.
+description: Use when you have peak-picked UHPLC-HRMS/MS data (from Q-Exactive orbitrap,
+  Agilent, Bruker, or SCIEX Q-TOF instruments) with both MS1 and MS/MS fragment spectra,
+  and you need to assign lipid identities to detected features using in-silico fragmentation
+  patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -19,12 +22,15 @@ metadata:
   - SCIEX Q-TOF
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
 claims: []
 provenance:

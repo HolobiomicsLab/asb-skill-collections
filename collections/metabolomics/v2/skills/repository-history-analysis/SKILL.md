@@ -1,6 +1,9 @@
 ---
 name: repository-history-analysis
-description: Use when when you need to understand how a complex feature or architectural pattern was implemented in a codebase, particularly when the current README or documentation does not fully explain the control flow, decision criteria, or parameter passing between subsystems.
+description: Use when when you need to understand how a complex feature or architectural
+  pattern was implemented in a codebase, particularly when the current README or documentation
+  does not fully explain the control flow, decision criteria, or parameter passing
+  between subsystems.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

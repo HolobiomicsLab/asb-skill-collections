@@ -1,6 +1,7 @@
 ---
 name: spatial-transcriptome-metabolome-coregistration
-description: Use when you have paired spatial transcriptome and metabolome datasets (both as h5ad files with .obsm['spatial'] coordinate matrices and .
+description: Use when you have paired spatial transcriptome and metabolome datasets
+  (both as h5ad files with .obsm['spatial'] coordinate matrices and .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,11 +14,13 @@ metadata:
   - scanpy
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.20.608773v2
   title: haCCA
 evidence_spans:
-- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified spatial morphological alignment
+- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified
+  spatial morphological alignment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +44,7 @@ attribution:
 
 # Spatial Transcriptome–Metabolome Coregistration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns spot coordinates between paired spatial transcriptome and metabolome datasets using high-correlated feature pairs and modified spatial morphological alignment to enable integrated spot-to-spot analysis. This skill bridges two complementary spatial omics modalities by registering their spot geometries and feature spaces for joint interpretation.

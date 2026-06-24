@@ -1,6 +1,8 @@
 ---
 name: exact-mass-database-matching
-description: Use when after feature detection and alignment on raw MS data, when you have a list of unknown feature m/z values and need to assign them to known xenobiotic metabolites or their predicted biotransformation products.
+description: Use when after feature detection and alignment on raw MS data, when you
+  have a list of unknown feature m/z values and need to assign them to known xenobiotic
+  metabolites or their predicted biotransformation products.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -22,6 +24,7 @@ metadata:
   - Biotransformer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN
@@ -55,6 +58,7 @@ attribution:
 
 # exact-mass-database-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match detected metabolite features to xenobiotic reaction databases by computing exact monoisotopic mass and comparing against reference metabolite masses. This skill enables high-throughput annotation of reaction-derived metabolites in untargeted MS data by reducing candidate space through mass accuracy.

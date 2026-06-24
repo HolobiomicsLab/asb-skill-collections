@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -50,6 +51,7 @@ attribution:
 
 # reference-peak-matching-retention-time-alignment
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Match chromatographic peaks detected via smoothing and gradient-descent algorithms against a user-defined reference list of isolated single peaks, using retention time and m/z alignment criteria to link detected peaks across training chromatograms. This enables consistent feature tracking and refinement of reference feature properties for subsequent CNN model training.

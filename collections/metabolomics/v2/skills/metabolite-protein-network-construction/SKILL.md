@@ -1,6 +1,8 @@
 ---
 name: metabolite-protein-network-construction
-description: Use when after generating metabolite-disease correlation data and protein association predictions from a deep learning metabolomics module (e.g., DeepMSProfiler's feature extraction step).
+description: Use when after generating metabolite-disease correlation data and protein
+  association predictions from a deep learning metabolomics module (e.g., DeepMSProfiler's
+  feature extraction step).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -12,6 +14,7 @@ metadata:
   - Python (networkx, igraph, matplotlib/seaborn)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -39,6 +42,7 @@ attribution:
 
 # metabolite-protein-network-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and visualize bipartite network graphs linking metabolites to proteins, weighted by association strength and disease class, to reveal disease-specific metabolic–proteomic relationships from LC-MS data. This skill transforms raw correlation and prediction outputs into interpretable network topology suitable for publication.

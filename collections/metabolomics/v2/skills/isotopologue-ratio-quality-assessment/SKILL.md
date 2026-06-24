@@ -1,6 +1,7 @@
 ---
 name: isotopologue-ratio-quality-assessment
-description: Use when evaluating the reliability of non-targeted data pre-processing (NPP) tools (XCMS, MZmine 2, MS-DIAL, etc.) on known metabolite peaks.
+description: Use when evaluating the reliability of non-targeted data pre-processing
+  (NPP) tools (XCMS, MZmine 2, MS-DIAL, etc.) on known metabolite peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,12 +16,14 @@ metadata:
   - enviPat
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - You can then assess the performance of NPP runs we have performed via XCMS
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)

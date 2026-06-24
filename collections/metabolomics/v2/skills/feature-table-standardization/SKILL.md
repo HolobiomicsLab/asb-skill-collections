@@ -1,6 +1,8 @@
 ---
 name: feature-table-standardization
-description: Use when you have feature tables from external metabolomics software (MS-DIAL, XCMS, vendor tools) in CSV format and need to integrate them into JPA for cross-sample alignment and metabolite annotation.
+description: Use when you have feature tables from external metabolomics software
+  (MS-DIAL, XCMS, vendor tools) in CSV format and need to integrate them into JPA
+  for cross-sample alignment and metabolite annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +15,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

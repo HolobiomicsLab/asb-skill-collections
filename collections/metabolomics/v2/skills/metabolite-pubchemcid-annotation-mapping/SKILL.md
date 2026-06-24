@@ -1,6 +1,8 @@
 ---
 name: metabolite-pubchemcid-annotation-mapping
-description: Use when after metabolite annotation has been completed (level-1 confidence via spectral library matching in margheRita or equivalent), and you need to perform pathway enrichment analysis on a subset of significant features (e.
+description: Use when after metabolite annotation has been completed (level-1 confidence
+  via spectral library matching in margheRita or equivalent), and you need to perform
+  pathway enrichment analysis on a subset of significant features (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -16,14 +18,18 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set
+  Enrichment Analysis (MSEA), based on clusterProfiler
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -52,6 +58,7 @@ attribution:
 
 # metabolite-pubchemcid-annotation-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map annotated metabolite features from LC-MS/MS data to PubChemCID identifiers to enable pathway enrichment queries against metabolic databases. This bridges spectral library-based metabolite identification (level-1) to chemical structure identifiers required by pathway analysis tools.

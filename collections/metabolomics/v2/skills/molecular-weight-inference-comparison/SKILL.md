@@ -1,6 +1,9 @@
 ---
 name: molecular-weight-inference-comparison
-description: Use when after RAMClustR clustering of XCMS-detected features and prior to final compound annotation, when you need to verify the robustness of molecular weight inference or when findMain and RAMClustR predictions are available for the same compound clusters and you want to assess concordance or.
+description: Use when after RAMClustR clustering of XCMS-detected features and prior
+  to final compound annotation, when you need to verify the robustness of molecular
+  weight inference or when findMain and RAMClustR predictions are available for the
+  same compound clusters and you want to assess concordance or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -44,6 +48,7 @@ attribution:
 
 # molecular-weight-inference-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and reconcile molecular weight predictions from two independent scoring methods (findMain and RAMClustR) applied to high-resolution LC-MS metabolomics data in positive ionization mode. This skill quantifies agreement rate and resolves discordant predictions using a decision rule.

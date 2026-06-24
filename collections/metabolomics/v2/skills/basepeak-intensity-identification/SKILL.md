@@ -1,6 +1,9 @@
 ---
 name: basepeak-intensity-identification
-description: Use when when you have Thermo Fisher Scientific .raw files from an Orbitrap instrument and need to identify the m/z value and corresponding intensity of the most abundant ion in each MS1 scan for quality control, method optimization, or feature extraction in a modular R-based proteomics pipeline.
+description: Use when when you have Thermo Fisher Scientific .raw files from an Orbitrap
+  instrument and need to identify the m/z value and corresponding intensity of the
+  most abundant ion in each MS1 scan for quality control, method optimization, or
+  feature extraction in a modular R-based proteomics pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -14,6 +17,7 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -21,9 +25,12 @@ derived_from:
   title: ''
 evidence_spans:
 - The `rawrr` executable will run out of the box
-- '`R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods'
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- '`R` functions requesting access to data stored in binary raw files (reader family
+  functions listed in Table 1) invoke compiled `C#` wrapper methods'
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +55,7 @@ attribution:
 
 # Base-Peak Intensity Identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract the base-peak m/z and intensity values (maximum intensity peak) from individual MS1 scans in Thermo Fisher raw files and organize them into a tabular data frame. This skill enables direct access to fundamental spectral descriptors without conversion to exchange formats.

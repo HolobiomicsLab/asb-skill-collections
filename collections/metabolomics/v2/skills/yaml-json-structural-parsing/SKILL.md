@@ -1,6 +1,9 @@
 ---
 name: yaml-json-structural-parsing
-description: Use when you have a versioned workflow definition file (YAML or JSON) from a specific release commit and need to verify it conforms to the project's schema specification, validate the presence of all required metadata fields (name, version, inputs, outputs, steps), and detect syntax errors or.
+description: Use when you have a versioned workflow definition file (YAML or JSON)
+  from a specific release commit and need to verify it conforms to the project's schema
+  specification, validate the presence of all required metadata fields (name, version,
+  inputs, outputs, steps), and detect syntax errors or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0339
@@ -12,6 +15,7 @@ metadata:
   - QC4metabolomics
   - YAML schema validator
   - JSON schema validator
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
@@ -39,6 +43,7 @@ attribution:
 
 # yaml-json-structural-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate workflow definition files (YAML or JSON) against schema specifications to verify structural integrity, required metadata fields, and type consistency. This skill is essential when reconstructing or auditing versioned workflow components bundled as release assets.

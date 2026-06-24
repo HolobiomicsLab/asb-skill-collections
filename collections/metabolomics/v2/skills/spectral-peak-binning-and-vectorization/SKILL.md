@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-binning-and-vectorization
-description: Use when you have raw MS/MS spectra with variable numbers of peaks at continuous m/z values and need to feed them to a neural network (e.g., Siamese network for similarity prediction) that requires fixed-size vector input.
+description: Use when you have raw MS/MS spectra with variable numbers of peaks at
+  continuous m/z values and need to feed them to a neural network (e.g., Siamese network
+  for similarity prediction) that requires fixed-size vector input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,11 +17,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # spectral-peak-binning-and-vectorization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a raw tandem mass spectrum (peaks at arbitrary m/z locations with varying intensities) into a fixed-dimensional numerical vector by binning peaks into equally-spaced m/z windows and applying intensity transformation. This preprocessing step prepares MS/MS spectra for neural network input and enables downstream similarity scoring.

@@ -1,6 +1,9 @@
 ---
 name: library-analogue-search-branching
-description: Use when when you need to reconstruct or validate the control-flow architecture of a spectral search system that must handle both exact-match library lookups and analogue discovery in a single pass, particularly when the system uses pre-computed embeddings for efficiency and machine learning for.
+description: Use when when you need to reconstruct or validate the control-flow architecture
+  of a spectral search system that must handle both exact-match library lookups and
+  analogue discovery in a single pass, particularly when the system uses pre-computed
+  embeddings for efficiency and machine learning for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -15,6 +18,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

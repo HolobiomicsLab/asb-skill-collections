@@ -1,6 +1,9 @@
 ---
 name: hdf5-file-io-operations
-description: Use when you have raw or peak-picked mass spectrometry data in HDF5 format that needs to be loaded into memory for downstream processing (feature alignment, isotope detection, CCS calibration), or when you need to export annotated feature tables with isotopologue metadata back to HDF5 for archival.
+description: Use when you have raw or peak-picked mass spectrometry data in HDF5 format
+  that needs to be loaded into memory for downstream processing (feature alignment,
+  isotope detection, CCS calibration), or when you need to export annotated feature
+  tables with isotopologue metadata back to HDF5 for archival.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -43,6 +47,7 @@ attribution:
 
 # HDF5 File I/O Operations
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and save peak-picked mass spectrometry feature tables from/to HDF5 files with multidimensional columns (m/z, drift time, retention time, intensity). This skill enables efficient storage and retrieval of intermediate analysis results in DEIMoS workflows.

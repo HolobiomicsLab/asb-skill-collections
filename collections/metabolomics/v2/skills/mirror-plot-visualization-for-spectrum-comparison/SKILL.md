@@ -1,6 +1,7 @@
 ---
 name: mirror-plot-visualization-for-spectrum-comparison
-description: Use when after computing compareSpectra similarity scores between an experimental consensus MS2 spectrum and candidate reference spectra (e.
+description: Use when after computing compareSpectra similarity scores between an
+  experimental consensus MS2 spectrum and candidate reference spectra (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -15,12 +16,14 @@ metadata:
   - MetaboCoreUtils
   techniques:
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
 - library(MsBackendMgf)
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

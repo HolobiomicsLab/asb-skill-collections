@@ -1,6 +1,7 @@
 ---
 name: peak-network-to-metabolite-assignment
-description: Use when after peak clustering has produced peak network groups (ideally from the same compound) and you need to assign chemical identities.
+description: Use when after peak clustering has produced peak network groups (ideally
+  from the same compound) and you need to assign chemical identities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -12,6 +13,7 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

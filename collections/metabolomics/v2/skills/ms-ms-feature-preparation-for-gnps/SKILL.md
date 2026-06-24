@@ -1,6 +1,9 @@
 ---
 name: ms-ms-feature-preparation-for-gnps
-description: Use when you have completed LC-MS/MS data processing and feature alignment in MZmine2 or Optimus, generated a feature quantification matrix and MGF file, and now need to format these outputs for submission to GNPS to compute spectral similarity networks and retrieve node/edge tables.
+description: Use when you have completed LC-MS/MS data processing and feature alignment
+  in MZmine2 or Optimus, generated a feature quantification matrix and MGF file, and
+  now need to format these outputs for submission to GNPS to compute spectral similarity
+  networks and retrieve node/edge tables.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -15,6 +18,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

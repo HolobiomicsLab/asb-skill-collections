@@ -1,6 +1,8 @@
 ---
 name: two-layer-topology-traversal
-description: Use when you have an untargeted metabolomics dataset with partial metabolite annotations (from database matching or prior curation) and need to extend annotation coverage to unannotated metabolites.
+description: Use when you have an untargeted metabolomics dataset with partial metabolite
+  annotations (from database matching or prior curation) and need to extend annotation
+  coverage to unannotated metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -11,11 +13,13 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +43,7 @@ attribution:
 
 # two-layer-topology-traversal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and traverse a two-layer interactive network topology (knowledge-driven biochemical pathways + data-driven MS2 similarity networks) to propagate metabolite annotations recursively across both layers. This skill enables accurate annotation coverage in untargeted metabolomics by leveraging both prior biological knowledge and experimental spectral similarity evidence.

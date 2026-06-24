@@ -1,6 +1,8 @@
 ---
 name: package-version-compatibility-checking
-description: Use when after creating a fresh conda environment from a pinned dependency specification (environment.yml or requirements.txt) and installing packages via conda and/or pip.
+description: Use when after creating a fresh conda environment from a pinned dependency
+  specification (environment.yml or requirements.txt) and installing packages via
+  conda and/or pip.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -12,6 +14,7 @@ metadata:
   - conda
   - pip
   - uv
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

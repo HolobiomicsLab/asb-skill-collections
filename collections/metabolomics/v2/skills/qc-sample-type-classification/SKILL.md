@@ -1,6 +1,8 @@
 ---
 name: qc-sample-type-classification
-description: Use when when constructing a sample list from an Excel template for LC/GC-MS analysis, you must classify each QC sample by type before proceeding to plate layout and randomization steps.
+description: Use when when constructing a sample list from an Excel template for LC/GC-MS
+  analysis, you must classify each QC sample by type before proceeding to plate layout
+  and randomization steps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,6 +14,7 @@ metadata:
   - pandas or openpyxl
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
@@ -40,6 +43,7 @@ attribution:
 
 # QC Sample Type Classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify and designate quality control samples into predefined types (Blank QC, Solvent QC, Pooled QC, Long-Term Reference QC, or custom QC) within a sample list prior to injection-plate design. This classification enables systematic QC positioning and visual differentiation across LC/GC-MS injection sequences.

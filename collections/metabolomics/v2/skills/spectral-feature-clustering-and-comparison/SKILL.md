@@ -17,6 +17,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -52,6 +53,7 @@ attribution:
 
 # Spectral Feature Clustering and Comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group LC-MS features into structural clusters based on isotopologue signatures, adduct patterns, and cross-assay links, then compare clustering outputs across different parameterizations (e.g., all adducts vs. most-common adducts) to quantify the effect of parameter choice on cluster composition and size distribution.

@@ -1,6 +1,8 @@
 ---
 name: spectral-data-format-validation
-description: Use when after converting existing mass spectrometry formats (mzML, vendor formats) into mzPeak using command-line tools or when receiving mzPeak files from external sources.
+description: Use when after converting existing mass spectrometry formats (mzML, vendor
+  formats) into mzPeak using command-line tools or when receiving mzPeak files from
+  external sources.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -15,6 +17,7 @@ metadata:
   - MkDocs Material specification site
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -42,6 +45,7 @@ attribution:
 
 # Spectral Data Format Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate mass spectrometry spectral data files against the mzPeak format specification, ensuring correct Parquet schema structure, archive integrity, and metadata compliance. This skill confirms that converted or newly produced mzPeak files conform to the HUPO-PSI specification before downstream analysis.

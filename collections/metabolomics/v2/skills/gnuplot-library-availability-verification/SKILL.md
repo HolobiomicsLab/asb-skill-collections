@@ -1,6 +1,9 @@
 ---
 name: gnuplot-library-availability-verification
-description: Use when when deploying a Perl-based GUI application (such as LipidOne) on Microsoft Windows that depends on Gnuplot for visualization, and you need to ensure the application will not crash during dataset loading or plotting operations due to missing or inaccessible Gnuplot binaries.
+description: Use when when deploying a Perl-based GUI application (such as LipidOne)
+  on Microsoft Windows that depends on Gnuplot for visualization, and you need to
+  ensure the application will not crash during dataset loading or plotting operations
+  due to missing or inaccessible Gnuplot binaries.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -9,6 +12,7 @@ metadata:
   - Gnuplot
   - Perl Prima
   - Perl
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -37,6 +41,7 @@ attribution:
 
 # gnuplot-library-availability-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that Gnuplot 5.4.2 is installed and accessible on the system PATH before initializing a Perl Prima GUI application for lipidomic analysis. This skill prevents runtime failures by detecting missing graphing library dependencies at application startup.

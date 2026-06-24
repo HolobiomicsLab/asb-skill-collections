@@ -1,6 +1,8 @@
 ---
 name: feature-table-filtering-logic
-description: Use when when you have a quantitative feature table (peak intensities across samples) and need to isolate molecular features that show differential abundance between defined sample groups within a specified fold-change range.
+description: Use when when you have a quantitative feature table (peak intensities
+  across samples) and need to isolate molecular features that show differential abundance
+  between defined sample groups within a specified fold-change range.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - fermo_core
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO

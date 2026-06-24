@@ -1,6 +1,8 @@
 ---
 name: electronic-noise-ion-removal
-description: Use when working with raw MS/MS spectra that contain ions with repeated (identical) intensity values—a hallmark of electronic noise rather than true metabolite fragments.
+description: Use when working with raw MS/MS spectra that contain ions with repeated
+  (identical) intensity values—a hallmark of electronic noise rather than true metabolite
+  fragments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +18,7 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

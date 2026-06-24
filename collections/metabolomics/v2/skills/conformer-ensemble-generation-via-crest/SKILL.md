@@ -1,6 +1,9 @@
 ---
 name: conformer-ensemble-generation-via-crest
-description: Use when you have a molecular geometry (XYZ format) and need to explore its conformational space prior to quantum mechanical property calculation or when QCxMS2 workflow requires an ensemble of low-energy structures to enable systematic fragmentation pathways for EI mass spectrum simulation.
+description: Use when you have a molecular geometry (XYZ format) and need to explore
+  its conformational space prior to quantum mechanical property calculation or when
+  QCxMS2 workflow requires an ensemble of low-energy structures to enable systematic
+  fragmentation pathways for EI mass spectrum simulation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0360
@@ -17,11 +20,13 @@ metadata:
   - tblite
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**CREST** (version >= 3.0.2)'
 - '**orca** (version >= 6.0.0)'

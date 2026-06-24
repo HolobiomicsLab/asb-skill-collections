@@ -1,6 +1,7 @@
 ---
 name: retention-time-correction-and-alignment
-description: Use when you have multiple LC-MS runs with the same set of targets (compounds) and observe or expect retention time drift or jitter between runs.
+description: Use when you have multiple LC-MS runs with the same set of targets (compounds)
+  and observe or expect retention time drift or jitter between runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,12 +17,14 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 - kableExtra::kable
@@ -48,6 +51,7 @@ attribution:
 
 # retention-time-correction-and-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Correct systematic shifts in retention times across LC-MS runs using established algorithms (e.g., from xcms) to ensure accurate target matching and downstream peak detection. This step is essential before targeted peak integration when retention time variability between runs could cause targets to fall outside their expected RT windows.

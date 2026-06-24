@@ -1,6 +1,8 @@
 ---
 name: ion-species-confirmation-validation
-description: Use when after you have identified candidate ion-species pairs through pointwise correlation analysis of XIC temporal profiles and exact mass difference refinement, and you have MS2 fragment spectra available for those candidates.
+description: Use when after you have identified candidate ion-species pairs through
+  pointwise correlation analysis of XIC temporal profiles and exact mass difference
+  refinement, and you have MS2 fragment spectra available for those candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,11 +15,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # ion-species-confirmation-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Confirm that candidate ion-species pairs originate from the same analyte compound by calculating MS2 spectral similarity scores as the final validation step in DBDIpy's three-step identification procedure. This skill validates putative adduct and fragment assignments after temporal correlation and mass difference refinement.

@@ -1,6 +1,9 @@
 ---
 name: peak-intensity-normalization-method-selection
-description: Use when after peak filtering (by m/z, isotopic presence, formula assignment error, and sample prevalence) and before multivariate analysis (PCA, NMDS, PERMANOVA) when comparing peak abundance patterns across samples with potential differences in ionization efficiency, ion suppression, or total ion.
+description: Use when after peak filtering (by m/z, isotopic presence, formula assignment
+  error, and sample prevalence) and before multivariate analysis (PCA, NMDS, PERMANOVA)
+  when comparing peak abundance patterns across samples with potential differences
+  in ionization efficiency, ion suppression, or total ion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -26,12 +29,14 @@ metadata:
   - pmartR (R package)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 - It requires the Python dependencies NumPy
@@ -62,6 +67,7 @@ attribution:
 
 # peak-intensity-normalization-method-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selection and application of appropriate peak-intensity normalization methods for FT-ICR MS datasets to correct for systematic bias and enable valid multivariate statistical comparison across samples. This skill ensures that downstream chemodiversity and ordination analyses reflect true biochemical differences rather than technical artifacts.

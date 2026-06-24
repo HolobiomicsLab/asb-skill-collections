@@ -1,6 +1,9 @@
 ---
 name: resolution-effect-correction-unlabeled-samples
-description: Use when when you have paired LC-MS data from both labeled (isotope-tracer dosed) and unlabeled (control) samples of the same analytes, and you want to correct FAM to true MDV while accounting for resolution effects from the mass spectrometer (especially relevant for high-resolution instruments.
+description: Use when when you have paired LC-MS data from both labeled (isotope-tracer
+  dosed) and unlabeled (control) samples of the same analytes, and you want to correct
+  FAM to true MDV while accounting for resolution effects from the mass spectrometer
+  (especially relevant for high-resolution instruments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +14,7 @@ metadata:
   - ElemCor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

@@ -1,6 +1,7 @@
 ---
 name: mass-difference-network-construction
-description: Use when you have a preprocessed peak list (m/z values and assigned molecular formulas) from direct injection FT-ICR MS of a complex organic mixture (e.
+description: Use when you have a preprocessed peak list (m/z values and assigned molecular
+  formulas) from direct injection FT-ICR MS of a complex organic mixture (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -20,16 +21,21 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
-- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies NumPy, pandas
+- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies
+  NumPy, pandas
 - developed in Python 3.8 [38] and R 4.0.2 [39]
-- Networks are then constructed using Cytoscape and colored based on their molecular class
-- Networks are then constructed using Cytoscape [79] and colored based on their molecular class.
+- Networks are then constructed using Cytoscape and colored based on their molecular
+  class
+- Networks are then constructed using Cytoscape [79] and colored based on their molecular
+  class.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -56,6 +62,7 @@ attribution:
 
 # mass-difference-network-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Constructs biochemical transformation networks ab initio from FT-ICR MS peak data by computing all pairwise mass differences between detected m/z values and matching them against a reference database of known biochemical transformations. This skill enables discovery of metabolic pathways and hub metabolites without requiring compound identification or chromatographic separation.

@@ -1,6 +1,8 @@
 ---
 name: compound-candidate-ranking
-description: Use when after compound database dereplication has produced candidate annotations (from SIRIUS or MetFrag) and you need to select the most reliable candidates for final annotation.
+description: Use when after compound database dereplication has produced candidate
+  annotations (from SIRIUS or MetFrag) and you need to select the most reliable candidates
+  for final annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +17,7 @@ metadata:
   - MetFrag
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -43,6 +46,7 @@ attribution:
 
 # compound-candidate-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and filter metabolite candidates from compound database dereplication (SIRIUS/MetFrag output) using molecular property validation, structural descriptors, and confidence scoring. This skill applies chemical validity checks and descriptor-based selection criteria to produce a curated, scored candidate list for metabolome annotation.

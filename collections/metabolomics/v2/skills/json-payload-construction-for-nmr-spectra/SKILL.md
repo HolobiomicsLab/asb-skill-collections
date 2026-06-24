@@ -1,6 +1,9 @@
 ---
 name: json-payload-construction-for-nmr-spectra
-description: Use when when you have NMR peak assignments (1H and 13C chemical shift values) and need to submit them to the /api/smart3/search endpoint for automated structure classification. Use this skill before making API calls to ensure peak data conforms to the expected JSON schema.
+description: Use when when you have NMR peak assignments (1H and 13C chemical shift
+  values) and need to submit them to the /api/smart3/search endpoint for automated
+  structure classification. Use this skill before making API calls to ensure peak
+  data conforms to the expected JSON schema.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,6 +15,7 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -40,6 +44,7 @@ attribution:
 
 # json-payload-construction-for-nmr-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a JSON payload containing NMR peak data (1H and 13C chemical shifts) formatted as a list of dictionaries for submission to the DeepSAT SMART 3 classification API. This skill enables programmatic classification of NMR spectra by encoding peak coordinates in the expected schema.

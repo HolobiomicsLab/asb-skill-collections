@@ -1,6 +1,9 @@
 ---
 name: feature-quality-assessment-by-rsd-within-class
-description: Use when after blank subtraction and background drift removal in an MS-DIAL peak list, when you need to exclude features with high within-class measurement variability. Apply this when you have replicate samples assigned to distinct classes (e.
+description: Use when after blank subtraction and background drift removal in an MS-DIAL
+  peak list, when you need to exclude features with high within-class measurement
+  variability. Apply this when you have replicate samples assigned to distinct classes
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -40,6 +44,7 @@ attribution:
 
 # feature-quality-assess-by-RSD-within-class
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomic features by calculating relative standard deviation (RSD) within each sample class and removing features that exceed a user-defined RSD threshold for their respective class. This step identifies and removes features with poor reproducibility in their assigned sample groupings before downstream clustering and annotation.

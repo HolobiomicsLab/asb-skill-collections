@@ -1,6 +1,8 @@
 ---
 name: class-specific-modification-rule-application
-description: Use when after identifying putative BGC-encoded precursor peptides from a genome assembly via MetaMiner's BGC identifier, when preparing a RiPP structure database for downstream spectral matching via Dereplicator.
+description: Use when after identifying putative BGC-encoded precursor peptides from
+  a genome assembly via MetaMiner's BGC identifier, when preparing a RiPP structure
+  database for downstream spectral matching via Dereplicator.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,13 +17,18 @@ metadata:
   - Dereplicator
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +52,7 @@ attribution:
 
 # class-specific-modification-rule-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate putative post-translationally modified (PTM) variants of RiPP precursor peptides by applying class-specific modification rules (e.g., lantibiotic, lassopeptide, cyanobactin) to generate candidate structure databases. This skill bridges genome mining and spectral matching by ensuring only chemically feasible modifications for a given RiPP class are included in the search space.

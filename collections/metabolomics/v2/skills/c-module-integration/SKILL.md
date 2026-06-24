@@ -1,6 +1,8 @@
 ---
 name: c-module-integration
-description: Use when you have raw mass spectrometry data in mzML or mzXML format and need to compress it using a format-agnostic compressor that expects a standardized spectral data contract.
+description: Use when you have raw mass spectrometry data in mzML or mzXML format
+  and need to compress it using a format-agnostic compressor that expects a standardized
+  spectral data contract.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +16,7 @@ metadata:
   - gzip / bsc
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab636/6363791
   title: mspack

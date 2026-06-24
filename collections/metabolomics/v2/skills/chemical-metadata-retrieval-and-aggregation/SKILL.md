@@ -1,6 +1,8 @@
 ---
 name: chemical-metadata-retrieval-and-aggregation
-description: Use when after raw GC-MS CSV input has been parsed into separate matrices (Component.RT, Base.Peak.MZ, Compound.Name, Match.Factor, Component.Area) and you need to enrich sample-level identifications with authoritative chemical properties.
+description: Use when after raw GC-MS CSV input has been parsed into separate matrices
+  (Component.RT, Base.Peak.MZ, Compound.Name, Match.Factor, Component.Area) and you
+  need to enrich sample-level identifications with authoritative chemical properties.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3431
@@ -15,14 +17,17 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- To perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]
+- To perform the chemical structure matches and summarize atomic features, uafR taps
+  into an amazing set of cheminformatics packages -- [ChemmineR]
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR](https://bioconductor.org/packages/release/bioc
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR](https://bioconductor.org/packages/release/bioc
 - '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # chemical-metadata-retrieval-and-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve published chemical metadata (synonyms, exact molecular mass, top m/z peaks, retention time ranges) from external databases (PubChem, webchem) and aggregate it with GC-MS sample data into a nested, searchable index keyed by compound name. This enables downstream sorting, filtering, and categorization of mass spectrometry detections.

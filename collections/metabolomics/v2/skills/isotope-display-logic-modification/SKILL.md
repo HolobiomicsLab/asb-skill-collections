@@ -1,6 +1,9 @@
 ---
 name: isotope-display-logic-modification
-description: Use when when isotope visibility in the Maven GUI isotopes widget does not respect user selections made in application preferences, or when you need to restrict the widget display to a user-configured subset of available isotopes without modifying the underlying data model.
+description: Use when when isotope visibility in the Maven GUI isotopes widget does
+  not respect user selections made in application preferences, or when you need to
+  restrict the widget display to a user-configured subset of available isotopes without
+  modifying the underlying data model.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +13,7 @@ metadata:
   - make
   - Maven GUI
   - Qt5
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

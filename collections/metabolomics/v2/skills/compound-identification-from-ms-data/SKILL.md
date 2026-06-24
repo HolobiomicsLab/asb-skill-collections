@@ -1,6 +1,8 @@
 ---
 name: compound-identification-from-ms-data
-description: Use when you have raw GC-MS or LC-MS data in vendor format (NetCDF, .raw, .d) or generic mass lists, and you need to assign chemical identities to detected peaks.
+description: Use when you have raw GC-MS or LC-MS data in vendor format (NetCDF, .raw,
+  .d) or generic mass lists, and you need to assign chemical identities to detected
+  peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -17,12 +19,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -50,6 +54,7 @@ attribution:
 
 # compound-identification-from-ms-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of small-molecule compounds from mass spectrometry data via spectral library matching and retention index calibration. This skill applies cosine similarity and retention-index proximity scoring to assign compound names, CAS numbers, and match ranks from low-resolution GC-MS or high-resolution LC-MS spectra.

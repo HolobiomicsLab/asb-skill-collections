@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-decoding
-description: Use when after running spectrum-conditioned diffusion generation that produces latent molecular representations, when you need to convert continuous or abstract model outputs into discrete chemical formats suitable for structure matching, library comparison, or chemical database lookup.
+description: Use when after running spectrum-conditioned diffusion generation that
+  produces latent molecular representations, when you need to convert continuous or
+  abstract model outputs into discrete chemical formats suitable for structure matching,
+  library comparison, or chemical database lookup.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0369
@@ -10,6 +13,7 @@ metadata:
   tools:
   - DiffSpectra
   - Diffusion Molecule Transformer (DMT)
+  license_tier: open
 derived_from:
 - doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra

@@ -1,6 +1,9 @@
 ---
 name: visualization-format-conversion
-description: Use when you have generated exploratory data analysis plots (PCA, correlation heatmaps, missing-variable plots) in the pmartR Shiny interface and need to download them as static images for inclusion in reports, manuscripts, or presentations with specific width, height, and resolution requirements.
+description: Use when you have generated exploratory data analysis plots (PCA, correlation
+  heatmaps, missing-variable plots) in the pmartR Shiny interface and need to download
+  them as static images for inclusion in reports, manuscripts, or presentations with
+  specific width, height, and resolution requirements.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3561
@@ -14,6 +17,7 @@ metadata:
   - Docker
   - Kaleido
   - Shiny
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart
@@ -21,7 +25,8 @@ evidence_spans:
 - Shiny GUI implementation of the pmartR R package.
 - Shiny GUI implementation of the pmartR R package
 - Remove orca in favor of Kaleido
-- the bulk of the functionality of the package to be available to the user without the need for familiarity with R or the package itself
+- the bulk of the functionality of the package to be available to the user without
+  the need for familiarity with R or the package itself
 - '#### Docker Containers'
 claims: []
 provenance:

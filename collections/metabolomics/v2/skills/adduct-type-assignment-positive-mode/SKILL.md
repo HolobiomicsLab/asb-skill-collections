@@ -1,6 +1,8 @@
 ---
 name: adduct-type-assignment-positive-mode
-description: Use when you have an unknown MS/MS spectrum with a measured precursor m/z and want to determine which positive-mode adduct type ([M+H]+, [M+Na]+, [M+K]+, etc.) is most likely responsible for ionization.
+description: Use when you have an unknown MS/MS spectrum with a measured precursor
+  m/z and want to determine which positive-mode adduct type ([M+H]+, [M+Na]+, [M+K]+,
+  etc.) is most likely responsible for ionization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -40,6 +43,7 @@ attribution:
 
 # adduct-type-assignment-positive-mode
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate and rank multiple positive-mode adduct types ([M+H]+, [M+Na]+, [M+K]+, etc.) for unknown MS/MS precursor masses using a formula transformer neural network that scores consistency between candidate adduct–formula pairs and observed tandem mass spectra without referencing spectral databases.

@@ -1,6 +1,9 @@
 ---
 name: cross-domain-metadata-integration
-description: Use when when you have conducted batch MS/MS searches across one or more domain-specific MASST tools and need to combine their hit scores, metadata annotations, and taxonomic lineages into a single coherent result set for comparative analysis or publication.
+description: Use when when you have conducted batch MS/MS searches across one or more
+  domain-specific MASST tools and need to combine their hit scores, metadata annotations,
+  and taxonomic lineages into a single coherent result set for comparative analysis
+  or publication.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -20,6 +23,7 @@ metadata:
   - GNPS_MASST
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

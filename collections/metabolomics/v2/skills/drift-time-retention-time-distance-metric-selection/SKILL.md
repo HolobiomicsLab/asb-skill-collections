@@ -1,6 +1,7 @@
 ---
 name: drift-time-retention-time-distance-metric-selection
-description: Use when after peak detection in GCIMS when you need to group detected peaks across multiple samples into reproducible clusters.
+description: Use when after peak detection in GCIMS when you need to group detected
+  peaks across multiple samples into reproducible clusters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +13,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -40,6 +42,7 @@ attribution:
 
 # drift-time-retention-time-distance-metric-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an appropriate distance metric (Euclidean, Manhattan, etc.) for hierarchical clustering of Gas Chromatography–Ion Mobility Spectrometry peaks in two-dimensional drift time and retention time space. This choice directly affects cluster assignments and reproducibility across samples with similar chromatographic and ion-mobility profiles.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-feature-representation
-description: Use when after LC-MS feature clustering based on MS-DIAL peak character estimation, when you have grouped features that share similar chromatographic or spectral properties and need to select a single representative feature per cluster to reduce false positives and redundant annotations before.
+description: Use when after LC-MS feature clustering based on MS-DIAL peak character
+  estimation, when you have grouped features that share similar chromatographic or
+  spectral properties and need to select a single representative feature per cluster
+  to reduce false positives and redundant annotations before.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2928
@@ -13,6 +16,7 @@ metadata:
   - MS-FINDER 3.30 or higher
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -41,6 +45,7 @@ attribution:
 
 # mass-spectrometry-feature-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract representative parental signals from clustered LC-MS features using multi-level modularity optimization. This skill identifies and ranks the most informative feature from each cluster to reduce redundancy while preserving biological signal for downstream annotation.

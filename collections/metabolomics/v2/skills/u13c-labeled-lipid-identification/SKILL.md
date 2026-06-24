@@ -1,6 +1,7 @@
 ---
 name: u13c-labeled-lipid-identification
-description: Use when you have measured CCS values from (LC-)IM-MS samples spiked with U¹³C labeled internal standards (e.
+description: Use when you have measured CCS values from (LC-)IM-MS samples spiked
+  with U¹³C labeled internal standards (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -15,13 +16,16 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
-- MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias
+- MobiLipid aims to streamline lipidomics workflows by offering a fully automated
+  solution for assessing and correcting collision cross section (CCS) bias
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +52,7 @@ attribution:
 
 # u13c-labeled-lipid-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate U¹³C labeled lipids in ion mobility-mass spectrometry (IM-MS) lipidomics data by matching measured CCS values against a reference DTCCSN2 library and calculating bias to assess data quality. This skill enables internal standardization for CCS quality control without requiring external calibration.

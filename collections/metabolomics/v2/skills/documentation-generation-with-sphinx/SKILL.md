@@ -1,6 +1,8 @@
 ---
 name: documentation-generation-with-sphinx
-description: 'Use when you have a Python package with docstrings and want to produce publicly browsable API documentation. Typical triggers: (1) package is being released or deployed; (2) you need to host documentation on ReadTheDocs or similar;'
+description: 'Use when you have a Python package with docstrings and want to produce
+  publicly browsable API documentation. Typical triggers: (1) package is being released
+  or deployed; (2) you need to host documentation on ReadTheDocs or similar;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +12,7 @@ metadata:
   - pip
   - Sphinx
   - sphinx-apidoc
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-025-02663-3
   title: DreaMS

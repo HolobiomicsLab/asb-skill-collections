@@ -1,6 +1,9 @@
 ---
 name: spectral-similarity-measure-implementation
-description: Use when you have MSMS spectra from two or more compounds and need to identify which are structurally related. Use this skill when you want to rank spectrum pairs by similarity to discover novel analogs or validate structural assignments in untargeted metabolomics or natural products discovery.
+description: Use when you have MSMS spectra from two or more compounds and need to
+  identify which are structurally related. Use this skill when you want to rank spectrum
+  pairs by similarity to discover novel analogs or validate structural assignments
+  in untargeted metabolomics or natural products discovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3960
@@ -12,6 +15,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity
@@ -42,6 +46,7 @@ attribution:
 
 # spectral-similarity-measure-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement and apply cosine, modified cosine, and neutral loss similarity measures to compare MSMS spectra for discovery of structurally related molecules. This skill enables quantitative ranking of spectrum pairs by their similarity, supporting library search and molecular networking workflows.

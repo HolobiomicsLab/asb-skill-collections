@@ -1,6 +1,9 @@
 ---
 name: unit-test-design-for-data-structure-classes
-description: Use when when implementing a new data structure class that extends standard Python collections (e.g., collections.UserDict) and must support multiple initialization modes, operator overloading (__add__, __sub__), custom string formatting (__str__, __repr__), and validation logic.
+description: Use when when implementing a new data structure class that extends standard
+  Python collections (e.g., collections.UserDict) and must support multiple initialization
+  modes, operator overloading (__add__, __sub__), custom string formatting (__str__,
+  __repr__), and validation logic.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +11,7 @@ metadata:
   - Python unittest
   - Python collections.UserDict
   - mzapy.isotopes
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

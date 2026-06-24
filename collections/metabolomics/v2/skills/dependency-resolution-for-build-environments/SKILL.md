@@ -1,6 +1,9 @@
 ---
 name: dependency-resolution-for-build-environments
-description: Use when when preparing to build LipidSpace or similar desktop/CLI applications from source across multiple target platforms (Windows 10, Ubuntu 22.04, macOS 12+ ARM64), or when encountering build failures due to missing headers, libraries, or incompatible tool versions.
+description: Use when when preparing to build LipidSpace or similar desktop/CLI applications
+  from source across multiple target platforms (Windows 10, Ubuntu 22.04, macOS 12+
+  ARM64), or when encountering build failures due to missing headers, libraries, or
+  incompatible tool versions.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,6 +14,7 @@ metadata:
   - Qt6
   - CMake
   - OpenXLSX
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

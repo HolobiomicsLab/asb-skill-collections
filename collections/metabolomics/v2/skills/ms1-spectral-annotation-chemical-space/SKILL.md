@@ -1,6 +1,9 @@
 ---
 name: ms1-spectral-annotation-chemical-space
-description: Use when you have (1) a peaklist from untargeted LC/HRMS analysis with m/z and intensity values (typically output from IDSL.IPA or similar peak-picking tools), (2) a need to assign molecular formulas to detected peaks, and (3) only MS1 spectral data available (MS/MS is not required).
+description: Use when you have (1) a peaklist from untargeted LC/HRMS analysis with
+  m/z and intensity values (typically output from IDSL.IPA or similar peak-picking
+  tools), (2) a need to assign molecular formulas to detected peaks, and (3) only
+  MS1 spectral data available (MS/MS is not required).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +16,14 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c00563
   title: IDSL.UFA
 evidence_spans:
-- '**United Formula Annotation (UFA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me/) is a light-weight R package'
+- '**United Formula Annotation (UFA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me/) is a light-weight
+  R package'
 - annotate peaklists from the IDSL.IPA package with molecular formula
 - light-weight R package
 claims: []

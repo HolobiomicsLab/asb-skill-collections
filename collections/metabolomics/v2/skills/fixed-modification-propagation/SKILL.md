@@ -1,6 +1,7 @@
 ---
 name: fixed-modification-propagation
-description: Use when your search engine output (PSM file) omits fixed modifications that were configured during the search (e.
+description: Use when your search engine output (PSM file) omits fixed modifications
+  that were configured during the search (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3703
@@ -12,6 +13,7 @@ metadata:
   - psm_utils
   - DeepLC
   - ProForma
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

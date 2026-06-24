@@ -1,6 +1,9 @@
 ---
 name: tandem-mass-spectra-standardization
-description: Use when you have acquired raw tandem MS data from ProteomeXchange or vendor instruments in proprietary formats (e.g., Thermo .raw files) and need to perform comparative clustering benchmarks or quality assessments across multiple clustering tools.
+description: Use when you have acquired raw tandem MS data from ProteomeXchange or
+  vendor instruments in proprietary formats (e.g., Thermo .raw files) and need to
+  perform comparative clustering benchmarks or quality assessments across multiple
+  clustering tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3649
@@ -14,6 +17,7 @@ metadata:
   - GNPS 2.0 PerScanSummarizer
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT

@@ -1,6 +1,9 @@
 ---
 name: qt-application-compilation-and-packaging
-description: Use when you have a Qt5-based C++ GUI application source tree (e.g., Maven GUI) that must be compiled and packaged for end-user distribution across macOS and Windows platforms, especially when automated builds are managed by CI/CD services (AppVeyor, Travis).
+description: Use when you have a Qt5-based C++ GUI application source tree (e.g.,
+  Maven GUI) that must be compiled and packaged for end-user distribution across macOS
+  and Windows platforms, especially when automated builds are managed by CI/CD services
+  (AppVeyor, Travis).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3552
@@ -17,6 +20,7 @@ metadata:
   - pacman
   - Appveyor
   - Travis
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

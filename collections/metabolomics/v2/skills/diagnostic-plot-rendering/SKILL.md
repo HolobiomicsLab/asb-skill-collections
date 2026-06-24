@@ -1,6 +1,7 @@
 ---
 name: diagnostic-plot-rendering
-description: Use when when you have computed statistical or classification results (e.
+description: Use when when you have computed statistical or classification results
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +12,7 @@ metadata:
   tools:
   - R Shiny
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

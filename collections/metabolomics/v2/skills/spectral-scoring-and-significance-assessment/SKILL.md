@@ -1,6 +1,9 @@
 ---
 name: spectral-scoring-and-significance-assessment
-description: 'Use when you have executed multiple database search pipelines (Dereplicator, VarQuest, and/or Dereplicator+) on centroided LC-MS/MS spectra (in MGF, mzXML, mzML, or mzData format) against a chemical structure database of known natural products, and you need to: (1) identify which pipeline(s).'
+description: 'Use when you have executed multiple database search pipelines (Dereplicator,
+  VarQuest, and/or Dereplicator+) on centroided LC-MS/MS spectra (in MGF, mzXML, mzML,
+  or mzData format) against a chemical structure database of known natural products,
+  and you need to: (1) identify which pipeline(s).'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,16 +21,24 @@ metadata:
   - Dereplicator+
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator
-- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
-- uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- matches tandem mass spectra against the constructed post-translationally modified
+  RiPPs structure database using Dereplicator
+- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the
+  ProteoWizard package to convert spectra in other formats to MGF
+- uses msconvert utility from the ProteoWizard package to convert spectra in other
+  formats to MGF
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +62,7 @@ attribution:
 
 # spectral-scoring-and-significance-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and compare database search results from natural product mass spectrometry pipelines by computing match scores, p-values, and false discovery rates (FDR) to distinguish true identifications from noise. This skill is essential for validating which database search pipeline (Dereplicator, VarQuest, Dereplicator+) provides reliable identifications and assessing the statistical confidence of spectrum-to-structure matches.

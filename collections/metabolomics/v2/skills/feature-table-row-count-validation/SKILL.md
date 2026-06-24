@@ -1,6 +1,8 @@
 ---
 name: feature-table-row-count-validation
-description: Use when after peak quality filtering has been applied to a composite map peak detection output using SNR (>2), goodness-of-fit (peakshape > 0.5), minimum peak height (default 1e5), and prominence (≥20% of peak_height) thresholds.
+description: Use when after peak quality filtering has been applied to a composite
+  map peak detection output using SNR (>2), goodness-of-fit (peakshape > 0.5), minimum
+  peak height (default 1e5), and prominence (≥20% of peak_height) thresholds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,13 +15,16 @@ metadata:
   - scipy.signal.find_peaks
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list), [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
+- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list),
+  [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # feature-table-row-count-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the effectiveness of peak quality filtering by comparing row counts between the full unfiltered feature table and the filtered feature table to confirm appropriate selectivity. This quantitative check ensures that filtering thresholds (SNR, peak shape, height, prominence) have been applied and are reducing the feature list to a reasonable degree.

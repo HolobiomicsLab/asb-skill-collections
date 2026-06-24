@@ -1,6 +1,8 @@
 ---
 name: sampling-protocol-reconstruction
-description: Use when you have access to ALISTER's web app or codebase and need to understand, validate, or replicate the internal logic that maps (analyte, matrix, time-delay, temperature) tuples to stability assessments and protocol recommendations.
+description: Use when you have access to ALISTER's web app or codebase and need to
+  understand, validate, or replicate the internal logic that maps (analyte, matrix,
+  time-delay, temperature) tuples to stability assessments and protocol recommendations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -12,11 +14,13 @@ metadata:
   - Shiny
   - RStudio
   - ALISTER (Fraunhofer-ITMP/alister)
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cca.2024.117858
   title: ALISTER
 evidence_spans:
-- ALISTER is a web-app containing scientific information on pre-analytical blood sample stability in metabolomics and lipidomics
+- ALISTER is a web-app containing scientific information on pre-analytical blood sample
+  stability in metabolomics and lipidomics
 - '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: m-z-intensity-calibration
-description: Use when you have raw or processed MS spectrum data (m/z and intensity pairs) from DI-MS, ASAP-MS, or other high-throughput mass spectrometry instruments that requires automated peak detection.
+description: Use when you have raw or processed MS spectrum data (m/z and intensity
+  pairs) from DI-MS, ASAP-MS, or other high-throughput mass spectrometry instruments
+  that requires automated peak detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,7 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -43,6 +46,7 @@ attribution:
 
 # m/z-Intensity Calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibration of mass-to-charge ratio (m/z) and intensity values in raw or processed mass spectrometry spectra to ensure accurate peak detection and quantification. This skill normalizes spectral data before downstream analysis, enabling reliable automated peak identification and sample discrimination.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-quantification
-description: Use when you have measured MS intensity data from unknown samples and known-concentration standard compounds, and you need to convert sample intensities into predicted concentrations. Specifically applicable when intensity drift is observed across the measurement sequence (e.
+description: Use when you have measured MS intensity data from unknown samples and
+  known-concentration standard compounds, and you need to convert sample intensities
+  into predicted concentrations. Specifically applicable when intensity drift is observed
+  across the measurement sequence (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +15,13 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # mass-spectrometry-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw mass spectrometry intensities into quantitative analyte concentrations using external calibration with regression modeling, accounting for intensity drift through drift correction strategies. This skill is essential when processing targeted MS data where accurate concentration prediction depends on fitting and applying calibration curves derived from known standard compounds.

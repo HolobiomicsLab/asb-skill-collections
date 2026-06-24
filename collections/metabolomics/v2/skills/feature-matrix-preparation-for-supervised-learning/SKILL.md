@@ -1,6 +1,8 @@
 ---
 name: feature-matrix-preparation-for-supervised-learning
-description: Use when you have preprocessed metabolomics feature abundance data and want to train multiple classifiers (traditional ML or deep learning) to predict sample phenotype or disease status.
+description: Use when you have preprocessed metabolomics feature abundance data and
+  want to train multiple classifiers (traditional ML or deep learning) to predict
+  sample phenotype or disease status.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,12 +16,15 @@ metadata:
   - h2o
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 - DL via h2o
 claims: []
 provenance:

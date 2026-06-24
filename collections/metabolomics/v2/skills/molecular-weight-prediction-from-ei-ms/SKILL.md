@@ -1,6 +1,7 @@
 ---
 name: molecular-weight-prediction-from-ei-ms
-description: Use when you have EI-MS spectrum data (m/z and intensity pairs) from a sample and need a direct, model-based prediction of molecular weight.
+description: Use when you have EI-MS spectrum data (m/z and intensity pairs) from
+  a sample and need a direct, model-based prediction of molecular weight.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +17,7 @@ metadata:
   - PyTorch
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03781
   title: MWFormer

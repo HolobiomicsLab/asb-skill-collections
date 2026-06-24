@@ -1,6 +1,8 @@
 ---
 name: fragment-assembly-transformer-architecture
-description: Use when when you have 1D NMR spectra (1H and/or 13C) of an unknown compound with up to ~19 heavy atoms and need to predict both molecular formula and connectivity without manual structure hypothesis generation.
+description: Use when when you have 1D NMR spectra (1H and/or 13C) of an unknown compound
+  with up to ~19 heavy atoms and need to predict both molecular formula and connectivity
+  without manual structure hypothesis generation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -12,12 +14,14 @@ metadata:
   - convolutional neural network
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 evidence_spans:
 - a transformer architecture can be constructed to efficiently solve the task
-- we show how a transformer architecture can be constructed to efficiently solve the task
+- we show how a transformer architecture can be constructed to efficiently solve the
+  task
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # fragment-assembly-transformer-architecture
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A transformer-based approach that assembles ordered or unordered sets of molecular fragments into candidate molecular structures using attention mechanisms to model fragment relationships. This skill automates the manual chemist task of structure elucidation from spectroscopic data by learning to predict connectivity and molecular topology from fragment-structure training pairs.

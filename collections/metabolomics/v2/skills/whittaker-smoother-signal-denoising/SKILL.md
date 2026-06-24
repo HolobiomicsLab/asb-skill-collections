@@ -1,6 +1,9 @@
 ---
 name: whittaker-smoother-signal-denoising
-description: Use when after baseline correction (e.g., via asymmetric least squares) when raw GCxGC-MS chromatograms still contain high-frequency noise that obscures true signal structure. Use it when you need to reduce noise before peak alignment or multivariate analysis (e.
+description: Use when after baseline correction (e.g., via asymmetric least squares)
+  when raw GCxGC-MS chromatograms still contain high-frequency noise that obscures
+  true signal structure. Use it when you need to reduce noise before peak alignment
+  or multivariate analysis (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3563
@@ -14,13 +17,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # whittaker-smoother-signal-denoising
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the Whittaker smoother algorithm to baseline-corrected GCxGC-MS chromatograms to reduce instrumental and chemical noise while preserving peak shapes. The algorithm uses a user-specified penalty order and smoothing factor (lambda) to balance fidelity to the observed signal against smoothness.

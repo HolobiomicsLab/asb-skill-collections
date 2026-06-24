@@ -1,6 +1,9 @@
 ---
 name: concordance-score-calculation-cohen-kappa
-description: Use when you have paired quantitative variation patterns for the same set of reactions across multiple biological samples (cell lines) and need to discriminate whether flux variations correlate monotonically with substrate abundance changes (metabolic control) versus gene expression changes.
+description: Use when you have paired quantitative variation patterns for the same
+  set of reactions across multiple biological samples (cell lines) and need to discriminate
+  whether flux variations correlate monotonically with substrate abundance changes
+  (metabolic control) versus gene expression changes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - Flux Variability Analysis (FVA)
   - Cohen's kappa coefficient (statistical test)
   - concordanceAnalysis.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -40,6 +44,7 @@ attribution:
 
 # concordance-score-calculation-cohen-kappa
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Cohen's kappa concordance coefficients between paired reaction metrics (e.g., RPS vs FFD, RAS vs RPS) to quantify agreement in variation patterns across cell lines, enabling discrimination of metabolic control mechanisms (substrate-driven vs. transcriptionally-driven).

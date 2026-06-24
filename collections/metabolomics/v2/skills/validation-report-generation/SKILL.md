@@ -1,6 +1,8 @@
 ---
 name: validation-report-generation
-description: Use when when you have loaded a project JSON document from the Pairing Omics Data Platform and need to identify and document constraint violations (such as whitespace in URL fields) defined in the JSON schema.
+description: Use when when you have loaded a project JSON document from the Pairing
+  Omics Data Platform and need to identify and document constraint violations (such
+  as whitespace in URL fields) defined in the JSON schema.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -9,11 +11,13 @@ metadata:
   tools:
   - npm
   - JSON schema validator (implied by app/public/schema.json)
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

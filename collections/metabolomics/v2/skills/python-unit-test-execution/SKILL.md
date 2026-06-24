@@ -1,6 +1,8 @@
 ---
 name: python-unit-test-execution
-description: Use when after rewriting or modifying a Python module (such as calculate_feature_overlap.py in a metabolomics analysis tool) and you need to verify that the refactored code maintains backward compatibility and correctness against the original test suite.
+description: Use when after rewriting or modifying a Python module (such as calculate_feature_overlap.py
+  in a metabolomics analysis tool) and you need to verify that the refactored code
+  maintains backward compatibility and correctness against the original test suite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - pytest
   - FERMO
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO

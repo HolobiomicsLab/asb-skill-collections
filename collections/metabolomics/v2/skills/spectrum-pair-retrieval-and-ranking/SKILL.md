@@ -1,6 +1,9 @@
 ---
 name: spectrum-pair-retrieval-and-ranking
-description: Use when you have a test set of annotated MS/MS spectra with known structural similarity (via molecular fingerprints or InChIKey), and you want to assess how well a spectral similarity measure (learned or classical) retrieves structurally related compound pairs across a full range of thresholds.
+description: Use when you have a test set of annotated MS/MS spectra with known structural
+  similarity (via molecular fingerprints or InChIKey), and you want to assess how
+  well a spectral similarity measure (learned or classical) retrieves structurally
+  related compound pairs across a full range of thresholds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,6 +19,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -23,9 +27,13 @@ evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
 - recently introduced unsupervised Spec2V
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +57,7 @@ attribution:
 
 # Spectrum pair retrieval and ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and rank all unique spectrum pairs from a spectral library by computing pairwise similarity scores (MS2DeepScore, Spec2Vec, or modified cosine), then evaluate retrieval performance by thresholding similarity scores and comparing precision-recall trade-offs against structural similarity labels (Tanimoto fingerprints). This skill enables benchmarking of spectral similarity measures for their ability to identify structurally related compounds.

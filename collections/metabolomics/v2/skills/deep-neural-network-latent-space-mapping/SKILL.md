@@ -1,6 +1,8 @@
 ---
 name: deep-neural-network-latent-space-mapping
-description: Use when you have a pre-trained DNN model for retention time prediction and need to adapt it to a new chromatographic method or instrument where you have only 10–20 calibration molecules with known retention times;
+description: Use when you have a pre-trained DNN model for retention time prediction
+  and need to adapt it to a new chromatographic method or instrument where you have
+  only 10–20 calibration molecules with known retention times;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,11 +12,13 @@ metadata:
   tools:
   - alvaDesc
   - cmmrt
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +42,7 @@ attribution:
 
 # deep-neural-network-latent-space-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract intermediate feature representations from a pre-trained deep neural network and use them as a latent space onto which external data can be projected via Bayesian meta-learning, enabling rapid calibration-free or minimal-calibration transfer between chromatographic methods.

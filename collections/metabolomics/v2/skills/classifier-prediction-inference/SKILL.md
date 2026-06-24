@@ -1,6 +1,8 @@
 ---
 name: classifier-prediction-inference
-description: Use when you have a CSV or Excel file containing chemical structure descriptors for one or more molecules, and you want to obtain binary bitter/not-bitter predictions for each molecule using the BitterPredict classifier.
+description: Use when you have a CSV or Excel file containing chemical structure descriptors
+  for one or more molecules, and you want to obtain binary bitter/not-bitter predictions
+  for each molecule using the BitterPredict classifier.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -10,11 +12,13 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +42,7 @@ attribution:
 
 # classifier-prediction-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a trained machine-learning classifier to predict binary class labels (bitter/not-bitter) for a set of molecules given their chemical structure descriptors. This skill is used when you have pre-computed molecular descriptors and need to generate taste predictions without retraining the classifier.

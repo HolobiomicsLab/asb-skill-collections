@@ -1,6 +1,9 @@
 ---
 name: mgf-file-parsing
-description: Use when you have raw or MZmine-processed MGF files (containing MS/MS spectra with m/z values, intensities, and precursor masses) that need to be segmented by sample, deduplicated, or prepared for fragment annotation and adduct analysis in the MolNotator pipeline.
+description: Use when you have raw or MZmine-processed MGF files (containing MS/MS
+  spectra with m/z values, intensities, and precursor masses) that need to be segmented
+  by sample, deduplicated, or prepared for fragment annotation and adduct analysis
+  in the MolNotator pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -17,6 +20,7 @@ metadata:
   - run_gensim.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

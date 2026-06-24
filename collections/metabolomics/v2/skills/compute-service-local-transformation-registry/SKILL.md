@@ -1,6 +1,9 @@
 ---
 name: compute-service-local-transformation-registry
-description: 'Use when initializing a chemical metadata annotation pipeline and you need to: (1) establish which identifier conversions are available across your installed converter suite (CIR, CTS, PubChem, IDSM, BridgeDb, RDKit, custom); (2) validate that each conversion route can actually be invoked;'
+description: 'Use when initializing a chemical metadata annotation pipeline and you
+  need to: (1) establish which identifier conversions are available across your installed
+  converter suite (CIR, CTS, PubChem, IDSM, BridgeDb, RDKit, custom); (2) validate
+  that each conversion route can actually be invoked;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3500
@@ -17,6 +20,7 @@ metadata:
   - BridgeDb
   - RDKit
   - ConverterBuilder
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

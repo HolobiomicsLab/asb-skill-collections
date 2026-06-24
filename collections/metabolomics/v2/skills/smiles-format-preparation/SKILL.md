@@ -1,6 +1,8 @@
 ---
 name: smiles-format-preparation
-description: Use when you have molecular structures in raw or unstructured form and need to submit them to CypReact or similar command-line chemistry tools that accept CSV input.
+description: Use when you have molecular structures in raw or unstructured form and
+  need to submit them to CypReact or similar command-line chemistry tools that accept
+  CSV input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3406
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_3314
   tools:
   - CypReact
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -36,6 +39,7 @@ attribution:
 
 # SMILES Format Preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare molecular structure data in SMILES format as input for computational chemistry workflows, specifically for tools like CypReact that require standardized comma-separated SMILES strings in CSV files. This skill ensures molecular data is correctly formatted to enable downstream reactivity prediction and CYP isoform screening.

@@ -1,6 +1,9 @@
 ---
 name: virtual-environment-creation
-description: Use when before installing ENPKG dependencies for the first time, or when setting up the workflow on a new machine or user account. Trigger when you have cloned enpkg_full or enpkg_workflow and need to install runtime and optional development dependencies in isolation.
+description: Use when before installing ENPKG dependencies for the first time, or
+  when setting up the workflow on a new machine or user account. Trigger when you
+  have cloned enpkg_full or enpkg_workflow and need to install runtime and optional
+  development dependencies in isolation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -10,6 +13,7 @@ metadata:
   - uv
   - Anaconda / Miniconda
   - Git
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

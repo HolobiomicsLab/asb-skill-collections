@@ -1,6 +1,8 @@
 ---
 name: sequence-availability-assessment
-description: Use when you maintain or curate a specialized sequence repository (such as MIBiG) and need to identify which sequences in your local genbanks directory are not publicly available via NCBI GenBank/RefSeq databases.
+description: Use when you maintain or curate a specialized sequence repository (such
+  as MIBiG) and need to identify which sequences in your local genbanks directory
+  are not publicly available via NCBI GenBank/RefSeq databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +12,7 @@ metadata:
   tools:
   - Git
   - NCBI GenBank/RefSeq API
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkz882
   title: MIBiG 2.0
@@ -38,6 +41,7 @@ attribution:
 
 # sequence-availability-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cross-reference sequence files stored in a specialized repository's genbanks directory against NCBI GenBank/RefSeq to identify sequences absent from public databases. This skill is essential when determining data provenance and identifying sequences maintained only in specialized repositories.

@@ -1,6 +1,9 @@
 ---
 name: siamese-network-architecture-modification
-description: Use when when you need to reduce overfitting in a Siamese neural network trained on mass spectrometry spectral pairs by adding weight regularization, or when users require flexible control over L1 and L2 penalty coefficients rather than hard-coded defaults.
+description: Use when when you need to reduce overfitting in a Siamese neural network
+  trained on mass spectrometry spectral pairs by adding weight regularization, or
+  when users require flexible control over L1 and L2 penalty coefficients rather than
+  hard-coded defaults.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -14,11 +17,13 @@ metadata:
   - keras.regularizers
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 - use the search functionality [here](https://github.com/matchms/ms2deepscore/issues)
 claims: []
 provenance:

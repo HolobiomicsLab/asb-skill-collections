@@ -1,6 +1,8 @@
 ---
 name: automated-executable-distribution-generation
-description: Use when you need to produce final distributable executable artifacts for a Qt5-based C++ application across multiple platforms (macOS, Windows, Linux), and you want to avoid manual build–package–release steps.
+description: Use when you need to produce final distributable executable artifacts
+  for a Qt5-based C++ application across multiple platforms (macOS, Windows, Linux),
+  and you want to avoid manual build–package–release steps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3552
@@ -18,6 +20,7 @@ metadata:
   - pacman
   - Appveyor
   - Travis CI
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

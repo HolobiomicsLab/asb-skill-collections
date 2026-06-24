@@ -1,6 +1,7 @@
 ---
 name: transition-group-peak-picking
-description: Use when you have loaded extracted ion chromatogram (XIC) data from DIA mass spectrometry and need to identify peak boundaries for peptide precursor transitions.
+description: Use when you have loaded extracted ion chromatogram (XIC) data from DIA
+  mass spectrometry and need to identify peak boundaries for peptide precursor transitions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,11 +18,14 @@ metadata:
   - Bokeh
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading however since extraction has already been performed by the upstream analysis tool. This includes SqMassLoader'
+- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading
+  however since extraction has already been performed by the upstream analysis tool.
+  This includes SqMassLoader'
 - InteractivePlotter
 - MRMTransitionGroupPicker
 - pyMRMTransitionGroupPicker

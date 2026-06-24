@@ -1,6 +1,9 @@
 ---
 name: peptide-modification-representation-and-handling
-description: 'Use when when you have an observed MS/MS spectrum and need to annotate fragment peaks against a known modified peptide sequence. Specifically: (1) you possess a peptide amino acid sequence with known or predicted post-translational modifications at specific positions;'
+description: 'Use when when you have an observed MS/MS spectrum and need to annotate
+  fragment peaks against a known modified peptide sequence. Specifically: (1) you
+  possess a peptide amino acid sequence with known or predicted post-translational
+  modifications at specific positions;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3649
@@ -15,12 +18,15 @@ metadata:
   - Numba
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # peptide-modification-representation-and-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and represent post-translational modifications on peptidoforms using the ProForma 2.0 standard, enabling consistent annotation of modified amino acids in mass spectrometry workflows. This skill bridges modification ontologies (PSI-MOD) with peptide sequence specification for fragment ion matching and spectrum annotation.

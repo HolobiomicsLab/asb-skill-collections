@@ -1,6 +1,8 @@
 ---
 name: package-entry-point-verification
-description: Use when you need to confirm that a Python package (especially one distributed via pip or conda) has been correctly configured with a console script entry point and that the CLI is callable from the system shell.
+description: Use when you need to confirm that a Python package (especially one distributed
+  via pip or conda) has been correctly configured with a console script entry point
+  and that the CLI is callable from the system shell.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -9,6 +11,7 @@ metadata:
   tools:
   - metabolabpy
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo15010048
   title: MetaboLabPy

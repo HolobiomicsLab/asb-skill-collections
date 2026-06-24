@@ -1,6 +1,8 @@
 ---
 name: file-path-abstraction-and-normalization
-description: Use when a Shiny application or R package is confirmed to work on one OS (e.g., Windows only) but fails to initialize or run on others due to unresolved file path conventions, system library calls, or OS-specific package dependencies.
+description: Use when a Shiny application or R package is confirmed to work on one
+  OS (e.g., Windows only) but fails to initialize or run on others due to unresolved
+  file path conventions, system library calls, or OS-specific package dependencies.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -10,6 +12,7 @@ metadata:
   - Shiny
   - R (base)
   - RTools
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -37,6 +40,7 @@ attribution:
 
 # file-path-abstraction-and-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Abstracts platform-specific file path conventions (Windows backslashes vs. Unix forward slashes) and system calls to enable a codebase to run identically across Windows, Linux, and macOS. This skill ensures cross-platform portability by replacing hardcoded path separators with platform-agnostic functions and implementing conditional imports for OS-specific libraries.

@@ -1,6 +1,9 @@
 ---
 name: mass-difference-pattern-matching
-description: Use when after peak picking and sample alignment when you have an aligned feature table containing m/z and retention time coordinates. Use it when your untargeted LC-MS workflow needs to reduce feature redundancy caused by naturally occurring stable isotope patterns and common adduct formation.
+description: Use when after peak picking and sample alignment when you have an aligned
+  feature table containing m/z and retention time coordinates. Use it when your untargeted
+  LC-MS workflow needs to reduce feature redundancy caused by naturally occurring
+  stable isotope patterns and common adduct formation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -12,6 +15,7 @@ metadata:
   - SLAW grouping module
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -39,6 +43,7 @@ attribution:
 
 # mass-difference-pattern-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Grouping of detected LC-MS features into isotopologue and adduct clusters by identifying features that share the same molecular ion but differ by characteristic mass shifts (e.g., C13, N15, D isotopes or [M+H]+, [M+Na]+, [M+NH4]+ adducts). This skill consolidates redundant ion representations into interpretable molecular entities for downstream analysis.

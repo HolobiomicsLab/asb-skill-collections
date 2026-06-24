@@ -1,6 +1,8 @@
 ---
 name: data-quality-gating
-description: Use when after curating and integrating structure-organism pairs from heterogeneous sources when you need to enforce quality thresholds before publishing or analyzing a reference dataset.
+description: Use when after curating and integrating structure-organism pairs from
+  heterogeneous sources when you need to enforce quality thresholds before publishing
+  or analyzing a reference dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - 2_validating.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -42,6 +45,7 @@ attribution:
 
 # data-quality-gating
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A validation filtering step that cross-references curated structure-organism pairs against organism, structure, and reference dictionaries to retain only high-confidence pairs meeting platinum-tier standards. This skill ensures that only pairs with complete metadata, consistent dictionary mappings, and resolved literature citations advance to downstream analysis.

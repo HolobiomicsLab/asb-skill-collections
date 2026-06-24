@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-feature-mapping
-description: Use when you have (1) aligned LC-MS/MS feature quantification matrix (features × fractions with m/z and RT for each feature), (2) bioassay activity measurements across the same fractions, and (3) need to assign bioactivity values to individual molecular network nodes to identify bioactive compounds.
+description: Use when you have (1) aligned LC-MS/MS feature quantification matrix
+  (features × fractions with m/z and RT for each feature), (2) bioassay activity measurements
+  across the same fractions, and (3) need to assign bioactivity values to individual
+  molecular network nodes to identify bioactive compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,6 +18,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

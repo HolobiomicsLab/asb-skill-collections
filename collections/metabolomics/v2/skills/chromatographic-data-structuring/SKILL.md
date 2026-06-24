@@ -1,6 +1,8 @@
 ---
 name: chromatographic-data-structuring
-description: Use when after parsing a centroid mzML file into (m/z, scan_number, intensity) tuples, when you need to organize sparse MS1 data for efficient peak detection and cross-sample alignment. Apply this skill when high mass resolution (e.
+description: Use when after parsing a centroid mzML file into (m/z, scan_number, intensity)
+  tuples, when you need to organize sparse MS1 data for efficient peak detection and
+  cross-sample alignment. Apply this skill when high mass resolution (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -16,12 +18,14 @@ metadata:
   - metDataModel
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -46,6 +50,7 @@ attribution:
 
 # chromatographic-data-structuring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organize and index raw MS1 spectra into mass-indexed data structures (mzTree) and construct mass track objects (consensus m/z, intensity vector) that serve as the foundation for peak detection and feature alignment. This skill bridges raw mzML parsing and composite map construction by imposing m/z-based spatial organization on temporal (scan-number and retention-time) intensity measurements.

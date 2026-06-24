@@ -1,6 +1,7 @@
 ---
 name: tsne-embedding-dimensionality-reduction
-description: Use when when you have a precomputed similarity matrix of mass spectra (e.
+description: Use when when you have a precomputed similarity matrix of mass spectra
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -14,11 +15,13 @@ metadata:
   - Jupyter Notebooks
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
 evidence_spans:
-- t-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore
+- t-SNE embedding that serves as an overview representation of mass spectral similarities
+  based on ms2deepscore
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +45,7 @@ attribution:
 
 # tsne-embedding-dimensionality-reduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Applies t-SNE algorithm to a precomputed mass spectral similarity matrix (e.g., from ms2deepscore) to reduce high-dimensional spectral relationships into 2-D coordinates for interactive visualization and overview representation of LC-MS/MS data.

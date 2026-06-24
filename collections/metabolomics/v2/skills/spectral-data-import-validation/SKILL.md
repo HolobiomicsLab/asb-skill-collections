@@ -1,6 +1,9 @@
 ---
 name: spectral-data-import-validation
-description: Use when when you have raw mass spectrometry data in one or more of the six supported file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and need to transform it into matchms spectrum objects for processing, cleaning, or similarity comparisons.
+description: Use when when you have raw mass spectrometry data in one or more of the
+  six supported file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and need
+  to transform it into matchms spectrum objects for processing, cleaning, or similarity
+  comparisons.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,11 +16,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - matchms is a versatile open-source Python package
 - make sure the existing tests still work by running ``pytest``
 claims: []

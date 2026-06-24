@@ -1,6 +1,8 @@
 ---
 name: deep-learning-model-input-layer-adaptation
-description: Use when you have a trained deep-learning model (e.g., MSNovelist) that depends on a specific fingerprint format (e.g., SIRIUS 6 fingerprints) as input, but you want to substitute an alternative fingerprint prediction system (e.
+description: Use when you have a trained deep-learning model (e.g., MSNovelist) that
+  depends on a specific fingerprint format (e.g., SIRIUS 6 fingerprints) as input,
+  but you want to substitute an alternative fingerprint prediction system (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   - Singularity
   - SLURM
   - SIRIUS 6
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

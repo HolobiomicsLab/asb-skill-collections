@@ -1,6 +1,8 @@
 ---
 name: stable-isotope-probing-abundance-modeling
-description: Use when you have a high-resolution mass spectrum (FT scan) containing a peptide precursor at known charge state with known or suspected stable isotope labeling (e.
+description: Use when you have a high-resolution mass spectrum (FT scan) containing
+  a peptide precursor at known charge state with known or suspected stable isotope
+  labeling (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,13 +18,17 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
-- Integration with the mzR package from Bioconductor allows direct parsing of mzML and MGF files
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
+- Integration with the mzR package from Bioconductor allows direct parsing of mzML
+  and MGF files
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

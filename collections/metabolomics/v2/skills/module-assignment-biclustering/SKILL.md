@@ -1,6 +1,8 @@
 ---
 name: module-assignment-biclustering
-description: Use when you have a trained neural network model of microbiome-metabolome associations and have derived a feature attribution score matrix (microbes × metabolites) quantifying the strength of each microbe-metabolite interaction.
+description: Use when you have a trained neural network model of microbiome-metabolome
+  associations and have derived a feature attribution score matrix (microbes × metabolites)
+  quantifying the strength of each microbe-metabolite interaction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,14 +17,17 @@ metadata:
   - Hierarchical clustering (Euclidean distance, complete linkage)
   - Consensus clustering
   - Python (Numpy, Pandas, Scikit-learn)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - linkage using Seaborn’s clustermap function in
 - using Python's sci-kit-learn package
-- Networks showing microbe and metabolite modules and the interactions between them were constructed using Cytoscape
-- Networks showing the modules and the interactions between them were constructed using Cytoscape
+- Networks showing microbe and metabolite modules and the interactions between them
+  were constructed using Cytoscape
+- Networks showing the modules and the interactions between them were constructed
+  using Cytoscape
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # Reconstruct microbe-metabolite functional modules by clustering the feature attribution matrix
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill uses biclustering on normalized microbe-metabolite feature attribution score matrices to group microbes and metabolites into co-occurrence modules with similar interaction patterns. The method identifies optimal cluster numbers via consensus clustering across multiple trained models, enabling discovery of functional relationships in microbiome-metabolome networks.

@@ -1,6 +1,8 @@
 ---
 name: metacyc-database-query-and-retrieval
-description: Use when you need to (1) quantify how many MetaCyc reactions can be represented by different numbers of generalized rules, (2) select a subset of rules for reaction network expansion based on coverage targets (e.
+description: Use when you need to (1) quantify how many MetaCyc reactions can be represented
+  by different numbers of generalized rules, (2) select a subset of rules for reaction
+  network expansion based on coverage targets (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -11,6 +13,7 @@ metadata:
   - MINE-Database (Pickaxe)
   - RDKit
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

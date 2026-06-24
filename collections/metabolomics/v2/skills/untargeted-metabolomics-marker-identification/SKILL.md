@@ -1,6 +1,8 @@
 ---
 name: untargeted-metabolomics-marker-identification
-description: Use when when you have untargeted GC–MS or LC–MS data in the form of a two-dimensional m/z vs retention time map and need to identify marker features without conventional peak picking.
+description: Use when when you have untargeted GC–MS or LC–MS data in the form of
+  a two-dimensional m/z vs retention time map and need to identify marker features
+  without conventional peak picking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,6 +15,7 @@ metadata:
   - XCMS
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -20,9 +23,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # untargeted-metabolomics-marker-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of multivariate chemo-/biomarker features in untargeted metabolomics data by processing two-dimensional chromatography–mass spectrometry maps (m/z vs retention time) using image processing and machine learning, without conventional peak picking. This skill is particularly suited for human breath GC–MS analysis and other low-abundance analyte detection scenarios where false peak detection is a concern.

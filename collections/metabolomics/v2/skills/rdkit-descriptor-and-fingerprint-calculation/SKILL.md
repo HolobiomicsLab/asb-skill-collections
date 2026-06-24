@@ -1,6 +1,9 @@
 ---
 name: rdkit-descriptor-and-fingerprint-calculation
-description: Use when you need to (1) compare structural similarity between generated compounds and target/reference structures using Tanimoto similarity scores, (2) extract molecular descriptors for machine learning models that predict reaction feasibility, (3) implement compound filtering based on chemical.
+description: Use when you need to (1) compare structural similarity between generated
+  compounds and target/reference structures using Tanimoto similarity scores, (2)
+  extract molecular descriptors for machine learning models that predict reaction
+  feasibility, (3) implement compound filtering based on chemical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -12,12 +15,15 @@ metadata:
   - mordred
   - pytest
   - MINE-Database (Pickaxe)
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
 evidence_spans:
-- MINE-Database requires the use of rdkit, which currently is unavailable to install on pip
-- Default filters are created using [RDKit](https://rdkit.org/docs/api-docs.html), a python library providing a collection of cheminformatic tools.
+- MINE-Database requires the use of rdkit, which currently is unavailable to install
+  on pip
+- Default filters are created using [RDKit](https://rdkit.org/docs/api-docs.html),
+  a python library providing a collection of cheminformatic tools.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: archive-extraction-and-file-mapping
-description: 'Use when when you have downloaded a GNPS molecular networking job archive (from GNPS1 or GNPS2 workflows: METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING, classical_networking_workflow, or feature_based_molecular_networking_workflow) and need to extract and standardize.'
+description: 'Use when when you have downloaded a GNPS molecular networking job archive
+  (from GNPS1 or GNPS2 workflows: METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING,
+  classical_networking_workflow, or feature_based_molecular_networking_workflow) and
+  need to extract and standardize.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,13 +18,15 @@ metadata:
   - GNPSExtractor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 - doi: 10.1101/2024.10.11.617756
   title: ''
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 - NPLinker is a python framework for data mining microbial natural products

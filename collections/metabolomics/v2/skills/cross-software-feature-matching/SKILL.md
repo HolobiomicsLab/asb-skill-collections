@@ -1,6 +1,8 @@
 ---
 name: cross-software-feature-matching
-description: Use when you have collected feature lists in CSV format from two or more MS acquisition methods (e.g., LC-MS vs. LC-IMS-MS), processing software packages (e.g., vendor-specific vs. open-source), or instrument platforms (e.
+description: Use when you have collected feature lists in CSV format from two or more
+  MS acquisition methods (e.g., LC-MS vs. LC-IMS-MS), processing software packages
+  (e.g., vendor-specific vs. open-source), or instrument platforms (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -15,13 +17,15 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
 evidence_spans:
 - IonToolPack is a software suite housing tools for mass spectrometry data
 - IonToolPack is a software suite housing tools for mass spectrometry data.
-- 'Comparador: Tool to compare lists of features (CSV files) from different acquisition methods or processing software'
+- 'Comparador: Tool to compare lists of features (CSV files) from different acquisition
+  methods or processing software'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

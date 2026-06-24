@@ -1,6 +1,7 @@
 ---
 name: temporal-profile-correlation-analysis
-description: Use when you have time-resolved direct injection mass spectrometry data (e.
+description: Use when you have time-resolved direct injection mass spectrometry data
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -17,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -46,6 +49,7 @@ attribution:
 
 # temporal-profile-correlation-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies co-eluting feature pairs in time-resolved mass spectrometric datasets by computing Pearson correlation coefficients across all feature temporal intensity profiles. This workflow detects in-source fragments and adducts that share matching dynamics through the experiment, a core step in DBDIpy's adduct and fragment identification pipeline for direct injection plasma ionization techniques.

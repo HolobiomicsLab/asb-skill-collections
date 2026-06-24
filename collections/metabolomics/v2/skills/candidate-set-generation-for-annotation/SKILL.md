@@ -1,6 +1,8 @@
 ---
 name: candidate-set-generation-for-annotation
-description: Use when when you have raw or unprocessed PubChem compound records and need to produce a curated set of candidate metabolite structures for input to MAGMa job calculations.
+description: Use when when you have raw or unprocessed PubChem compound records and
+  need to produce a curated set of candidate metabolite structures for input to MAGMa
+  job calculations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -11,6 +13,7 @@ metadata:
   tools:
   - MAGMa
   - pubchem (eMetabolomics subproject)
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -39,6 +42,7 @@ attribution:
 
 # candidate-set-generation-for-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract, standardize, and validate chemical structures from the PubChem database to generate a candidate structure set compatible with MAGMa's mass-spectrometry annotation pipeline. This skill bridges public chemical databases to metabolite identification by ensuring structural data meets format, schema, and completeness requirements.

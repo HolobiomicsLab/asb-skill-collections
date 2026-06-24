@@ -1,6 +1,8 @@
 ---
 name: instrumental-drift-detection
-description: Use when you have a time-series of repeated QCpool (pooled quality control) injections measured at regular intervals during one or more LC-MS/MS sequences, exported from Sciex Multiquant software (v3.0.
+description: Use when you have a time-series of repeated QCpool (pooled quality control)
+  injections measured at regular intervals during one or more LC-MS/MS sequences,
+  exported from Sciex Multiquant software (v3.0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -12,11 +14,13 @@ metadata:
   - Sciex Multiquant
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
 evidence_spans:
-- The goal of the `QComics` package is to have a quick overview of the quality of a metabolomics or lipidomics study
+- The goal of the `QComics` package is to have a quick overview of the quality of
+  a metabolomics or lipidomics study
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # instrumental-drift-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and quantify instrumental signal drift or degradation across sequential metabolomics/lipidomics QC injections by computing trend metrics (slope, drift index, stability) from pooled sample intensities. This skill enables rapid assessment of whether instrument performance remained stable throughout an analytical sequence, flagging compounds or time windows where signal loss or systematic bias would compromise data quality.

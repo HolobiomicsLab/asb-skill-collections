@@ -1,6 +1,9 @@
 ---
 name: feature-intensity-preservation-across-correction
-description: Use when when you have loaded a raw MS quantification table (feature-by-sample intensity matrix) into QuantyFey and are applying drift-correction strategies (Internal Standard correction, statistical drift correction, Custom Bracketing, or Weighted Bracketing) but need to maintain traceability.
+description: Use when when you have loaded a raw MS quantification table (feature-by-sample
+  intensity matrix) into QuantyFey and are applying drift-correction strategies (Internal
+  Standard correction, statistical drift correction, Custom Bracketing, or Weighted
+  Bracketing) but need to maintain traceability.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +15,13 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # feature-intensity-preservation-across-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preserve feature identifiers and sample metadata while applying intensity drift correction strategies to mass spectrometry quantification matrices. This skill ensures that drift-corrected intensity values retain their association with specific analytes and experimental samples throughout the correction workflow.

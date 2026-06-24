@@ -19,6 +19,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -51,6 +52,7 @@ attribution:
 
 # chromatographic-resolution-evaluation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Evaluation of chromatographic peak resolution as a component of LC-MS feature quality assessment, determining whether detected peaks are sufficiently resolved from neighboring signals to be reliably characterized. This skill is applied within MassCube's comprehensive feature quality module to flag poorly resolved features that may confound downstream annotation and quantification.

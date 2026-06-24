@@ -1,6 +1,9 @@
 ---
 name: msflo-metabolite-annotation
-description: Use when after MS-DIAL has completed feature detection and peak alignment on .mzML LC-HRMS data, producing an aligned feature table. Use MSFLO when you need to assign metabolite identities to detected features and filter results by significance criteria before downstream interpretation.
+description: Use when after MS-DIAL has completed feature detection and peak alignment
+  on .mzML LC-HRMS data, producing an aligned feature table. Use MSFLO when you need
+  to assign metabolite identities to detected features and filter results by significance
+  criteria before downstream interpretation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -46,6 +50,7 @@ attribution:
 
 # msflo-metabolite-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 MSFLO is a containerized metabolite annotation module that processes aligned LC-HRMS feature tables from MS-DIAL to assign metabolite identities and perform statistical analysis. This skill encapsulates the post-feature-detection annotation and filtering stage within reproducible Nextflow4MS-DIAL workflows.

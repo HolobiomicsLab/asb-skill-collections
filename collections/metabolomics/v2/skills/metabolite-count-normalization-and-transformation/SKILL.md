@@ -1,6 +1,8 @@
 ---
 name: metabolite-count-normalization-and-transformation
-description: Use when you have a raw metabolite count data frame (e.g., c57_nos2KO_mouse_countDF) and need to prepare it for univariate statistical testing (e.g., omu_summary with log_transform=TRUE), multivariate analysis (e.g., PCA), or visualization.
+description: Use when you have a raw metabolite count data frame (e.g., c57_nos2KO_mouse_countDF)
+  and need to prepare it for univariate statistical testing (e.g., omu_summary with
+  log_transform=TRUE), multivariate analysis (e.g., PCA), or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,13 +14,16 @@ metadata:
   - omu (omu_summary function)
   - assign_hierarchy
   - omu
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
-- Omu supports two univariate statistical models, t test and anova, using the functions ```omu_summary``` and ```anova_function``` respectively
-- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
+- Omu supports two univariate statistical models, t test and anova, using the functions
+  ```omu_summary``` and ```anova_function``` respectively
+- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick
+  the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # metabolite-count-normalization-and-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and transform metabolite abundance counts in a data frame to prepare them for statistical testing or visualization. This skill applies column-wise (sample) or row-wise (metabolite) transformations such as log transformation, mean-centering, Pareto scaling, or relative abundance conversion to meet assumptions of downstream analyses.

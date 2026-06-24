@@ -1,6 +1,9 @@
 ---
 name: overlapped-peak-resolution-transformer
-description: Use when when GC-MS chromatograms contain overlapped or co-eluting peaks in a retention time region and you need to recover the individual pure mass spectra and relative abundances of each component without manual peak picking or external standards.
+description: Use when when GC-MS chromatograms contain overlapped or co-eluting peaks
+  in a retention time region and you need to recover the individual pure mass spectra
+  and relative abundances of each component without manual peak picking or external
+  standards.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

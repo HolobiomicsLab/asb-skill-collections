@@ -1,6 +1,8 @@
 ---
 name: dataset-serialization-for-deep-learning
-description: Use when after generating aligned multimodal feature tensors from molecular structures (graph-based features, Morgan fingerprints, and physicochemical descriptors) and before initiating model training loops.
+description: Use when after generating aligned multimodal feature tensors from molecular
+  structures (graph-based features, Morgan fingerprints, and physicochemical descriptors)
+  and before initiating model training loops.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,6 +17,7 @@ metadata:
   - scikit-learn
   - h5py
   - pickle
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -46,6 +49,7 @@ attribution:
 
 # dataset-serialization-for-deep-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize preprocessed multimodal molecular feature tensors (graph structures, fingerprints, physicochemical descriptors) into structured output files (HDF5 or pickle) aligned for downstream deep learning model training. This skill ensures reproducible, efficient data loading and prevents recomputation of expensive feature engineering steps.

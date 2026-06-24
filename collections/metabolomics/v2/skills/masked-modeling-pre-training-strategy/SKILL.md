@@ -1,6 +1,9 @@
 ---
 name: masked-modeling-pre-training-strategy
-description: Use when when you have unlabeled molecular structure data (SMILES or molecular graphs) from natural products and need to learn task-agnostic representations that capture both evolutionary (scaffold-level) and structural (side-chain) information before finetuning on downstream classification or.
+description: Use when when you have unlabeled molecular structure data (SMILES or
+  molecular graphs) from natural products and need to learn task-agnostic representations
+  that capture both evolutionary (scaffold-level) and structural (side-chain) information
+  before finetuning on downstream classification or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -13,6 +16,7 @@ metadata:
   - PyTorch Lightning
   - PyTorch Geometric (PyG)
   - NaFM Official Repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -41,6 +45,7 @@ attribution:
 
 # masked-modeling-pre-training-strategy
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Masked graph modeling is a self-supervised pre-training objective that learns molecular representations by predicting masked nodes and edges in graph-structured molecules, complementing contrastive learning to encode scaffold-derived evolutionary patterns and side-chain structural diversity in natural products.

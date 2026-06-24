@@ -1,6 +1,8 @@
 ---
 name: spectral-feature-annotation-and-labeling
-description: Use when you have a detected feature table (m/z, drift_time, retention_time, intensity) and need to identify and label C13 isotopic clusters for singly-charged features (z=+1).
+description: Use when you have a detected feature table (m/z, drift_time, retention_time,
+  intensity) and need to identify and label C13 isotopic clusters for singly-charged
+  features (z=+1).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,11 +17,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
@@ -47,6 +51,7 @@ attribution:
 
 # spectral-feature-annotation-and-labeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign isotopic group identifiers to detected mass spectrometry features by enumerating C13 singly-charged isotopologues and clustering matches within m/z, drift time, and retention time tolerances. This skill enables systematic labeling of isotopic clusters in high-dimensional MS data, improving feature characterization and downstream analysis confidence.

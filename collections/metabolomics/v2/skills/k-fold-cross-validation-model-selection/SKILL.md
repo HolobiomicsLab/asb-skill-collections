@@ -1,6 +1,8 @@
 ---
 name: k-fold-cross-validation-model-selection
-description: Use when when fitting a multi-block PLS discriminant model on multi-assay LC-MS metabolomics data and you need to determine the number of latent variables to retain without overfitting.
+description: Use when when fitting a multi-block PLS discriminant model on multi-assay
+  LC-MS metabolomics data and you need to determine the number of latent variables
+  to retain without overfitting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3765
@@ -18,6 +20,7 @@ metadata:
   - MamsiPls
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -25,7 +28,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
+  prediction modeling for Python.'
 - import pandas as pd
 - import numpy as np
 - from sklearn.model_selection import train_test_split
@@ -54,6 +58,7 @@ attribution:
 
 # k-fold-cross-validation-model-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use k-fold cross-validation to estimate the optimal number of latent variables in a multi-block PLS model by iteratively training on k−1 folds and evaluating on the held-out fold, selecting the latent variable count where model performance plateaus. This prevents overfitting and provides a data-driven criterion for model complexity in multi-assay metabolomics integration.

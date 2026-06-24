@@ -1,6 +1,9 @@
 ---
 name: distribution-channel-validation
-description: 'Use when when preparing a software release, testing contribution workflows, or auditing package availability: verify that matchms can be installed and imported successfully from all advertised distribution channels (PyPI and Bioconda) to confirm the package metadata, dependencies, and entry points.'
+description: 'Use when when preparing a software release, testing contribution workflows,
+  or auditing package availability: verify that matchms can be installed and imported
+  successfully from all advertised distribution channels (PyPI and Bioconda) to confirm
+  the package metadata, dependencies, and entry points.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -14,12 +17,14 @@ metadata:
   - bioconda-recipes
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
 - Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)
 - Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)
 claims: []

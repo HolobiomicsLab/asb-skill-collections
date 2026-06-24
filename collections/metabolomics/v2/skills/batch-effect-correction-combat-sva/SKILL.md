@@ -1,6 +1,9 @@
 ---
 name: batch-effect-correction-combat-sva
-description: Use when you have a normalized count matrix (from Salmon or similar quantification tool) with sample metadata that documents batch variables (e.g., sequencing run, processing date, lab site), and you observe or suspect that batch effects—not biological signal—are driving variance across samples.
+description: Use when you have a normalized count matrix (from Salmon or similar quantification
+  tool) with sample metadata that documents batch variables (e.g., sequencing run,
+  processing date, lab site), and you observe or suspect that batch effects—not biological
+  signal—are driving variance across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3218
@@ -14,12 +17,15 @@ metadata:
   - ComplexHeatmap
   - edgeR
   - Nextflow
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

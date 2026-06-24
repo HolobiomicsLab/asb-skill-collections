@@ -1,6 +1,9 @@
 ---
 name: neural-network-layer-metadata-interpretation
-description: Use when after deploying a TensorFlow-backed classification service, you need to verify that the model's input layer names ('input_2048' and 'input_4096') and output layer name ('output') are correctly configured before constructing inference requests.
+description: Use when after deploying a TensorFlow-backed classification service,
+  you need to verify that the model's input layer names ('input_2048' and 'input_4096')
+  and output layer name ('output') are correctly configured before constructing inference
+  requests.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +11,7 @@ metadata:
   - Python
   - TensorFlow Serving
   - Docker
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -36,6 +40,7 @@ attribution:
 
 # neural-network-layer-metadata-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and validate neural network model layer metadata (input/output layer names and shapes) from a TensorFlow Serving endpoint to confirm correct model deployment and identify the correct input and output tensors for downstream inference tasks.

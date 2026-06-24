@@ -1,6 +1,9 @@
 ---
 name: gcf-mf-hierarchical-aggregation
-description: Use when when you have predicted BGC-spectrum IOKR scores or other pairwise linking scores, and need to rank genomic clusters (GCFs from BiG-SCAPE) against metabolomic clusters (MFs from MS/MS spectra grouping), particularly in NPLinker workflows where one GCF may contain multiple BGCs and one MF.
+description: Use when when you have predicted BGC-spectrum IOKR scores or other pairwise
+  linking scores, and need to rank genomic clusters (GCFs from BiG-SCAPE) against
+  metabolomic clusters (MFs from MS/MS spectra grouping), particularly in NPLinker
+  workflows where one GCF may contain multiple BGCs and one MF.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,14 +16,17 @@ metadata:
   - IOKR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic data
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
+- Finally, we present NPLinker, a software framework to link genomic and metabolomic
+  data
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
 claims: []
@@ -47,6 +53,7 @@ attribution:
 
 # GCF-MF hierarchical aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generalizes pairwise BGC-spectrum link scores to Gene Cluster Family (GCF) to Molecular Family (MF) level by computing the maximum score over all constituent BGC-spectrum pairs. This hierarchical aggregation enables scoring of multi-BGC/multi-spectrum links in natural product discovery workflows.

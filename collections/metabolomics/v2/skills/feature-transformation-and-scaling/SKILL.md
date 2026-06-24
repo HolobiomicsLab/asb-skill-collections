@@ -1,6 +1,9 @@
 ---
 name: feature-transformation-and-scaling
-description: 'Use when after imputation and QC sample correction when: (1) your peak intensity data show heteroscedastic variance (e.g., variance increases with mean intensity); (2) you aim to improve normality of feature distributions for parametric statistical tests;'
+description: 'Use when after imputation and QC sample correction when: (1) your peak
+  intensity data show heteroscedastic variance (e.g., variance increases with mean
+  intensity); (2) you aim to improve normality of feature distributions for parametric
+  statistical tests;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +19,7 @@ metadata:
   - pcaMethods
   - vsn
   - NormalizeMets
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

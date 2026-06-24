@@ -1,6 +1,9 @@
 ---
 name: peak-table-extraction
-description: Use when you have raw or converted spectral data (jcamp, RAW, or mzML format) from NMR, IR, or MS instruments and need to identify individual peaks, extract their properties (chemical shift, m/z, intensity, width), and generate a structured peak table for annotation, comparison, or publication.
+description: Use when you have raw or converted spectral data (jcamp, RAW, or mzML
+  format) from NMR, IR, or MS instruments and need to identify individual peaks, extract
+  their properties (chemical shift, m/z, intensity, width), and generate a structured
+  peak table for annotation, comparison, or publication.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -17,15 +20,18 @@ metadata:
   - Docker (msconvert_docker service)
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
 evidence_spans:
 - Use the file pyproject.toml to determine the version of Python required.
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
-- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
+- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data
+  proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
 - git clone https://github.com/ComPlat/chem-spectra-app.git
 claims: []
 provenance:

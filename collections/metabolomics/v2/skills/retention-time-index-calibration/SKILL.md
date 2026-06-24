@@ -13,14 +13,18 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # retention-time-index-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate observed LC retention times against internal retention time (iRT) standards by fitting a linear regression model to map MS scan retention times to iRT scores, enabling downstream RT-based peptide identification and method validation. This skill establishes a quantitative RT–iRT relationship for quality control and cross-run alignment in Orbitrap proteomics workflows.

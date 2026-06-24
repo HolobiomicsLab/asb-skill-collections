@@ -1,6 +1,9 @@
 ---
 name: parameter-configuration-conditional-logic
-description: Use when setting up a LipidMatch analysis run and you need to select among three mutually-exclusive analysis modes (PFAS, Lipid, or Tween-positive detection). The trigger is application-level metadata or user specification that indicates which detection mode should execute.
+description: Use when setting up a LipidMatch analysis run and you need to select
+  among three mutually-exclusive analysis modes (PFAS, Lipid, or Tween-positive detection).
+  The trigger is application-level metadata or user specification that indicates which
+  detection mode should execute.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -38,6 +42,7 @@ attribution:
 
 # parameter-configuration-conditional-logic
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure boolean parameters (Lipid, TWeen_pos) in LipidMatch to conditionally route analysis toward lipid detection, Tween-positive detection, or PFAS analysis based on application intent. This skill encodes order-agnostic dispatch logic into parameter blocks within configuration files.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-raw-file-handling
-description: Use when you have raw MS data files from Thermo Orbitrap or other vendor instruments that must be uploaded into a centralized platform for automated processing. Use it at the start of a multi-stage omics workflow where data collection, management, processing, and visualization are integrated;
+description: Use when you have raw MS data files from Thermo Orbitrap or other vendor
+  instruments that must be uploaded into a centralized platform for automated processing.
+  Use it at the start of a multi-stage omics workflow where data collection, management,
+  processing, and visualization are integrated;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -17,6 +20,7 @@ metadata:
   - Django
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

@@ -1,6 +1,9 @@
 ---
 name: metabolite-genomic-network-mapping
-description: Use when you have independent metabolomic GWAS results (metabolite p-values, effect sizes) and separate meta-genome GWAS results (variant p-values, effect sizes) from similar diseases or phenotypes, and you want to identify statistically enriched metabolite–gene co-occurrences without paired.
+description: Use when you have independent metabolomic GWAS results (metabolite p-values,
+  effect sizes) and separate meta-genome GWAS results (variant p-values, effect sizes)
+  from similar diseases or phenotypes, and you want to identify statistically enriched
+  metabolite–gene co-occurrences without paired.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3559
@@ -14,6 +17,7 @@ metadata:
   - KEGG
   - HMDB
   - GWAS Catalog
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad523/7248906
   title: metGWAS 1.0
@@ -42,6 +46,7 @@ attribution:
 
 # metabolite-genomic-network-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map disease-associated metabolites and genomic variants to their respective nodes in a biological interaction network, then perform statistical over-representation analysis to link independent metabolomic and meta-genome GWAS results. This enables discovery of novel metabolite–gene associations when paired studies are unavailable.

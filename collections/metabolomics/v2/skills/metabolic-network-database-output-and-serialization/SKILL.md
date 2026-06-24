@@ -1,6 +1,8 @@
 ---
 name: metabolic-network-database-output-and-serialization
-description: Use when after completing a Pickaxe reaction network expansion across N generations, when you need to store the predicted compounds and reactions in a format suitable for querying, sharing, or integration with other bioinformatic pipelines.
+description: Use when after completing a Pickaxe reaction network expansion across
+  N generations, when you need to store the predicted compounds and reactions in a
+  format suitable for querying, sharing, or integration with other bioinformatic pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,6 +13,7 @@ metadata:
   - MongoDB
   - Python
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

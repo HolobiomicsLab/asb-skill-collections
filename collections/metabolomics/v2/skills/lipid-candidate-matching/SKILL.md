@@ -1,6 +1,7 @@
 ---
 name: lipid-candidate-matching
-description: Use when you have peak-picked MS/MS data (e.g., from MZmine, XCMS, MS-DIAL, or Compound Discoverer) and need to identify lipid species present in your sample.
+description: Use when you have peak-picked MS/MS data (e.g., from MZmine, XCMS, MS-DIAL,
+  or Compound Discoverer) and need to identify lipid species present in your sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,6 +16,7 @@ metadata:
   - LipidMatch
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

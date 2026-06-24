@@ -1,6 +1,7 @@
 ---
 name: environment-validation-and-verification
-description: Use when after installing ENPKG or any component of the workflow via conda/pip dependency manifests and before executing workflow scripts.
+description: Use when after installing ENPKG or any component of the workflow via
+  conda/pip dependency manifests and before executing workflow scripts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +14,7 @@ metadata:
   - uv
   - ENPKG (enpkg_full)
   - Sirius
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

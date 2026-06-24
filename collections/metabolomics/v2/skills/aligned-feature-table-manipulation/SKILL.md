@@ -1,6 +1,9 @@
 ---
 name: aligned-feature-table-manipulation
-description: Use when after multi-sample alignment has been completed in JPA (Part 5), when you have an aligned feature table containing consolidated features across samples and need to extract ion chromatograms, perform CAMERA annotation, or validate feature assignments prior to MS2 annotation.
+description: Use when after multi-sample alignment has been completed in JPA (Part
+  5), when you have an aligned feature table containing consolidated features across
+  samples and need to extract ion chromatograms, perform CAMERA annotation, or validate
+  feature assignments prior to MS2 annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +16,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

@@ -1,6 +1,9 @@
 ---
 name: qiime2-artifact-handling
-description: Use when you have raw mass-spectrometry files (MGF, BIOM, mzXML, mzML) or feature abundance tables from external tools (MZmine2, peak detection software) and need to convert them into QIIME 2's typed artifact format before running downstream plugins like q2-qemistree, diversity analyses, or.
+description: Use when you have raw mass-spectrometry files (MGF, BIOM, mzXML, mzML)
+  or feature abundance tables from external tools (MZmine2, peak detection software)
+  and need to convert them into QIIME 2's typed artifact format before running downstream
+  plugins like q2-qemistree, diversity analyses, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,11 +17,13 @@ metadata:
   - MZmine2
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # QIIME 2 Artifact Handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import, format, and manage mass-spectrometry and feature table data into QIIME 2 artifact types (.qza) to enable standardized downstream analysis. This skill ensures data interoperability across QIIME 2 plugins and preserves metadata throughout metabolomic or metagenomic pipelines.

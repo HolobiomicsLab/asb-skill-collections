@@ -1,6 +1,8 @@
 ---
 name: mass-spectral-feature-annotation
-description: Use when you have m/z values from spatially-resolved mass spectrometry imaging (e.g., MALDI-MSI, DESI-MSI) and need to assign molecular formulae to thousands of features with higher precision than traditional LC-MS approaches.
+description: Use when you have m/z values from spatially-resolved mass spectrometry
+  imaging (e.g., MALDI-MSI, DESI-MSI) and need to assign molecular formulae to thousands
+  of features with higher precision than traditional LC-MS approaches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,11 +14,13 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # mass-spectral-feature-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign molecular formulae to mass-to-charge (m/z) features in spatially-resolved mass spectrometry imaging using a machine-learning-guided database search. This skill bridges a critical gap in MSI annotation precision by leveraging a 2.8-million-formula knowledge base interconnected by biochemical evidence to rank formula candidates.

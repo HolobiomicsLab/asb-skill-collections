@@ -1,6 +1,8 @@
 ---
 name: spectral-data-compression-by-frame-and-mobility
-description: Use when you have raw IM-MS data in Agilent MassHunter (.d) or UIMF format from drift tube (DT) or SLIM instruments, and you need to reduce data volume while preserving signal integrity for subsequent HRdm demultiplexing and peak deconvolution.
+description: Use when you have raw IM-MS data in Agilent MassHunter (.d) or UIMF format
+  from drift tube (DT) or SLIM instruments, and you need to reduce data volume while
+  preserving signal integrity for subsequent HRdm demultiplexing and peak deconvolution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,14 +16,18 @@ metadata:
   - .NET Framework 4.7.2
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -48,6 +54,7 @@ attribution:
 
 # spectral-data-compression-by-frame-and-mobility
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reduce IM-MS data dimensionality and file size by compressing raw spectral intensity values along the frame (retention time) and ion mobility dimensions prior to demultiplexing and peak deconvolution. This preprocessing step improves computational efficiency and prepares data for downstream high-resolution demultiplexing workflows.

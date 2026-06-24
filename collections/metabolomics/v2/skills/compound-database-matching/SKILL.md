@@ -1,6 +1,7 @@
 ---
 name: compound-database-matching
-description: Use when you have MS2 .mzML spectral data from untargeted metabolomics and need to assign chemical identities to detected precursor ions.
+description: Use when you have MS2 .mzML spectral data from untargeted metabolomics
+  and need to assign chemical identities to detected precursor ions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -18,6 +19,7 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -50,6 +52,7 @@ attribution:
 
 # compound-database-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform compound database dereplication on MS2 spectral data by dispatching spectra through SIRIUS or MetFrag to generate per-spectrum candidate annotation lists ranked by match score. This skill reduces false-positive identifications and prioritizes putative metabolite assignments for downstream validation.

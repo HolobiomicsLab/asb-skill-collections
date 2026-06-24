@@ -1,6 +1,9 @@
 ---
 name: gcf-spectra-association-ranking
-description: Use when when you have integrated genomic data (GCFs from AntiSMASH via BigScape clustering) and metabolomic data (spectra and molecular families from GNPS molecular networking) and need to identify and rank which secondary metabolites detected in spectra are likely produced by which biosynthetic.
+description: Use when when you have integrated genomic data (GCFs from AntiSMASH via
+  BigScape clustering) and metabolomic data (spectra and molecular families from GNPS
+  molecular networking) and need to identify and rank which secondary metabolites
+  detected in spectra are likely produced by which biosynthetic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,11 +19,13 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 claims: []

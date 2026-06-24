@@ -1,6 +1,9 @@
 ---
 name: library-spectrum-database-format-parsing
-description: Use when you have experimental MS/MS spectra (from mzML, mzXML, or raw instrument formats) and wish to match them against a reference spectral library provided in MSP or CSV format. The skill is required as the first step before similarity scoring and candidate ranking.
+description: Use when you have experimental MS/MS spectra (from mzML, mzXML, or raw
+  instrument formats) and wish to match them against a reference spectral library
+  provided in MSP or CSV format. The skill is required as the first step before similarity
+  scoring and candidate ranking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -12,11 +15,13 @@ metadata:
   - IonToolPack
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
 evidence_spans:
-- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library formats.'
+- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library
+  formats.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,7 @@
 ---
 name: statistical-visualization-multi-group
-description: Use when when you have loaded search results from two or more DIA-MS analysis tools (e.
+description: Use when when you have loaded search results from two or more DIA-MS
+  analysis tools (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -17,6 +18,7 @@ metadata:
   - Bokeh
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash

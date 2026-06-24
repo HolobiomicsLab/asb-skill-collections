@@ -1,6 +1,8 @@
 ---
 name: blank-sample-background-interference-estimation
-description: Use when after MS1 feature detection and accurate mass annotation, when you have identified a set of blank injections (negative controls) run in the same analytical sequence segment as your biological or study samples.
+description: Use when after MS1 feature detection and accurate mass annotation, when
+  you have identified a set of blank injections (negative controls) run in the same
+  analytical sequence segment as your biological or study samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -18,13 +20,16 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak GUI provides functionality to facilitate users to get up and running as quickly as possible
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak GUI provides functionality to facilitate users to get up and running as
+  quickly as possible
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.

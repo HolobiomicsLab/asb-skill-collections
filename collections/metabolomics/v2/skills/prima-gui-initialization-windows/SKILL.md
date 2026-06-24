@@ -1,6 +1,8 @@
 ---
 name: prima-gui-initialization-windows
-description: Use when you are developing a standalone Perl application for Windows that requires a graphical interface and depends on external command-line tools (e.g., Gnuplot for visualization).
+description: Use when you are developing a standalone Perl application for Windows
+  that requires a graphical interface and depends on external command-line tools (e.g.,
+  Gnuplot for visualization).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -10,6 +12,7 @@ metadata:
   - Perl Prima
   - Gnuplot
   - Perl
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -38,6 +41,7 @@ attribution:
 
 # prima-gui-initialization-windows
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a Perl Prima graphical user interface on Microsoft Windows with pre-launch verification of external dependencies (Gnuplot) before enabling application functionality. This skill ensures robust startup behavior and user feedback when critical runtime libraries are missing.

@@ -1,6 +1,9 @@
 ---
 name: internal-standard-feature-extraction
-description: Use when you have processed LC-MS run data (feature table or peak detection output) containing internal standard identifications and need to monitor internal standard retention time, m/z, and intensity variation across samples as part of automated or user-defined QC checks during instrument runs.
+description: Use when you have processed LC-MS run data (feature table or peak detection
+  output) containing internal standard identifications and need to monitor internal
+  standard retention time, m/z, and intensity variation across samples as part of
+  automated or user-defined QC checks during instrument runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,6 +16,7 @@ metadata:
   - Pandas
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

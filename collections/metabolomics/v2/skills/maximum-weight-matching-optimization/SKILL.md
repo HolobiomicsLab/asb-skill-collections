@@ -1,6 +1,8 @@
 ---
 name: maximum-weight-matching-optimization
-description: Use when you have computed pairwise similarity or mass difference scores between all fragment ions across two tandem mass spectra and need to select the non-overlapping set of ion pair matches.
+description: Use when you have computed pairwise similarity or mass difference scores
+  between all fragment ions across two tandem mass spectra and need to select the
+  non-overlapping set of ion pair matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,11 +14,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # maximum-weight-matching-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maximum weight matching identifies the optimal set of fragment ion pairs across two MS/MS spectra that maximizes alignment score while minimizing redundancy, replacing monotonic alignment methods with improved performance. This graph-theoretic approach forms the foundation for subsequent Laplacian embedding and statistical significance testing in spectral comparison.

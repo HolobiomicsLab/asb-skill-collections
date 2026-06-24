@@ -1,6 +1,8 @@
 ---
 name: mzml-file-import-xcms
-description: Use when you have raw mzML files from a mass spectrometry instrument and need to begin a preprocessing workflow in xcms. This is the essential first step before any peak detection (centWave, MSWParam) or feature grouping can occur.
+description: Use when you have raw mzML files from a mass spectrometry instrument
+  and need to begin a preprocessing workflow in xcms. This is the essential first
+  step before any peak detection (centWave, MSWParam) or feature grouping can occur.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,14 +18,17 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- The *xcms* R package provides functionality to efficiently preprocess LC-MS (as well as GC-MS and LC-MS/MS) data.
+- The *xcms* R package provides functionality to efficiently preprocess LC-MS (as
+  well as GC-MS and LC-MS/MS) data.
 - 'Package: xcms'
 - library(MsDataHub)
-- '`r Biocpkg("xcms")` uses functionality from the *MassSpecWavelet* package to identify such peaks'
+- '`r Biocpkg("xcms")` uses functionality from the *MassSpecWavelet* package to identify
+  such peaks'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

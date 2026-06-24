@@ -1,6 +1,8 @@
 ---
 name: background-contamination-threshold-assessment
-description: Use when after batch correction of metabolomics data when you need to identify and remove compounds whose signal in background/blank samples exceeds a tolerable contamination level.
+description: Use when after batch correction of metabolomics data when you need to
+  identify and remove compounds whose signal in background/blank samples exceeds a
+  tolerable contamination level.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - R
   - SummarizedExperiment
   - mzQualityDashboard
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -20,8 +23,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # background-contamination-threshold-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess and filter metabolomics compounds based on background signal contamination levels relative to study samples. This skill applies a user-configurable background percentage threshold to flag compounds with excessive signal in blank/negative control samples, preventing false-positive identifications and ensuring reportable compound reliability.

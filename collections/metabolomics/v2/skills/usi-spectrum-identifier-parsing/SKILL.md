@@ -14,6 +14,7 @@ metadata:
   - GNPS Task Resolver
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
@@ -41,6 +42,7 @@ attribution:
 
 # USI Spectrum Identifier Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse Universal Spectrum Identifiers (USIs) to extract repository accession codes and file identifiers, enabling programmatic resolution and retrieval of mass spectrometry data from public repositories like GNPS, MassIVE, and MetaboLights. This skill is essential for automating data discovery and visualization workflows across heterogeneous mass spectrometry data sources.

@@ -1,6 +1,8 @@
 ---
 name: peak-deconvolution-preprocessing
-description: Use when you have raw IM-MS data in Agilent MassHunter (.d) or UIMF format from drift tube (DT) or SLIM instruments, and you intend to perform HRdm demultiplexing or peak deconvolution to resolve co-eluting or structurally similar ions.
+description: Use when you have raw IM-MS data in Agilent MassHunter (.d) or UIMF format
+  from drift tube (DT) or SLIM instruments, and you intend to perform HRdm demultiplexing
+  or peak deconvolution to resolve co-eluting or structurally similar ions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,14 +17,18 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -49,6 +55,7 @@ attribution:
 
 # peak-deconvolution-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare ion mobility-mass spectrometry (IM-MS) data for high-resolution demultiplexing and peak deconvolution by applying data compression, interpolation, smoothing, and noise filtering. This preprocessing step enhances the quality of downstream peak deconvolution and structural isomer resolution in complex omics samples.

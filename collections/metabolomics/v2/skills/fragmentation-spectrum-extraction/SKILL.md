@@ -1,6 +1,9 @@
 ---
 name: fragmentation-spectrum-extraction
-description: Use when you have raw or peak-detected mass spectrometry data (mzXML, mzML, or netCDF format) from untargeted metabolomics or exposomics studies and need to separate composite fragmentation spectra into individual constituent spectra for annotation.
+description: Use when you have raw or peak-detected mass spectrometry data (mzXML,
+  mzML, or netCDF format) from untargeted metabolomics or exposomics studies and need
+  to separate composite fragmentation spectra into individual constituent spectra
+  for annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -14,11 +17,13 @@ metadata:
   - IDSL.FSA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
 claims: []
 provenance:

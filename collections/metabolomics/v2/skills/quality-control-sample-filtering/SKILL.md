@@ -1,6 +1,7 @@
 ---
 name: quality-control-sample-filtering
-description: Use when after building a SummarizedExperiment from metabolomics measurements but before batch correction and internal standard recommendation.
+description: Use when after building a SummarizedExperiment from metabolomics measurements
+  but before batch correction and internal standard recommendation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -10,6 +11,7 @@ metadata:
   - R
   - mzQuality
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -18,8 +20,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # quality-control-sample-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and remove outlier pooled quality control (QC) samples and mis-injected study samples based on statistical tests and internal standard areas in metabolomics experiments. This skill ensures only reliable QC samples are retained for batch correction and compound reliability assessment.

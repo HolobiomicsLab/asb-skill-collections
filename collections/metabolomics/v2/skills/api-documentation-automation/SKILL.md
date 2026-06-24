@@ -1,6 +1,7 @@
 ---
 name: api-documentation-automation
-description: Use when when you have a Python package with docstrings in the source code and need to generate comprehensive, browsable HTML API documentation.
+description: Use when when you have a Python package with docstrings in the source
+  code and need to generate comprehensive, browsable HTML API documentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +12,7 @@ metadata:
   - pip
   - Sphinx
   - sphinx-apidoc
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-025-02663-3
   title: DreaMS

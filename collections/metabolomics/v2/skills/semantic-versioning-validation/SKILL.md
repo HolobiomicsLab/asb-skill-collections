@@ -1,11 +1,15 @@
 ---
 name: semantic-versioning-validation
-description: Use when when you need to confirm that a generated or retrieved release artifact from a version control system (e.g., git tag v1.0.0) produces byte-for-byte or functionally equivalent outputs to the official release published on a platform (e.g., GitHub Releases) on a specific date.
+description: Use when when you need to confirm that a generated or retrieved release
+  artifact from a version control system (e.g., git tag v1.0.0) produces byte-for-byte
+  or functionally equivalent outputs to the official release published on a platform
+  (e.g., GitHub Releases) on a specific date.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - Semantic Release
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
@@ -34,6 +38,7 @@ attribution:
 
 # semantic-versioning-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a software release artifact (versioned binary, source archive, or metadata) matches its published semantic version tag and reference release record. This skill ensures reproducibility and integrity of versioned deliverables in scientific software projects.

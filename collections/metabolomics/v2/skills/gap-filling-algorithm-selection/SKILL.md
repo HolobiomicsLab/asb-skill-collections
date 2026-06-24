@@ -1,6 +1,9 @@
 ---
 name: gap-filling-algorithm-selection
-description: Use when when processing untargeted LC-MS data with SLAW and observing incomplete feature detection across the sample cohort—i.e., features present in some samples but with missing values (zeros or NAs) in others due to signal dropout, retention time drift, or mass calibration drift.
+description: Use when when processing untargeted LC-MS data with SLAW and observing
+  incomplete feature detection across the sample cohort—i.e., features present in
+  some samples but with missing values (zeros or NAs) in others due to signal dropout,
+  retention time drift, or mass calibration drift.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -15,11 +18,13 @@ metadata:
   - xcms (XCMS Online)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # gap-filling-algorithm-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selection and optimization of gap-filling parameters within untargeted LC-MS workflows to recover missing feature intensities across samples. This skill ensures that features detected in some samples but absent in others are imputed or recovered, improving feature table completeness and reproducibility.

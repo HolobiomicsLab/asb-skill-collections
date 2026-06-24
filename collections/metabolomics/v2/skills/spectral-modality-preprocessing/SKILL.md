@@ -1,6 +1,9 @@
 ---
 name: spectral-modality-preprocessing
-description: Use when you have downloaded raw spectroscopic data files (NMR, HSQC, COSY, IR modalities) from the Zenodo repositories and need to convert them into the standardized multi-modal input format required by the MultiModalSpectralTransformer before inference or retraining.
+description: Use when you have downloaded raw spectroscopic data files (NMR, HSQC,
+  COSY, IR modalities) from the Zenodo repositories and need to convert them into
+  the standardized multi-modal input format required by the MultiModalSpectralTransformer
+  before inference or retraining.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - PyTorch
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST
@@ -51,6 +55,7 @@ attribution:
 
 # spectral-modality-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and preprocess multi-modal spectroscopic data (NMR, HSQC, COSY, IR) into the input format expected by the MultiModalSpectralTransformer architecture for automated molecular structure prediction. This skill bridges raw spectral files and the transformer model's tensor inputs.

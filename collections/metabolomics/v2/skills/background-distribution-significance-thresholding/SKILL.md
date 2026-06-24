@@ -10,16 +10,23 @@ metadata:
   - MelonnPan
   - Elastic Net
   - WGCNA
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed using the given instructions
-- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV using 5-fold internal cross-validation
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed
+  using the given instructions
+- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV
+  using 5-fold internal cross-validation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +50,7 @@ attribution:
 
 # background-distribution-significance-thresholding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## When to use
 
 Use when the workflow requires background-distribution-significance-thresholding.

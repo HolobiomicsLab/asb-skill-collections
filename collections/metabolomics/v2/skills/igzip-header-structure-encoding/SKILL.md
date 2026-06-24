@@ -1,6 +1,8 @@
 ---
 name: igzip-header-structure-encoding
-description: Use when when implementing an igzip parser, decoder, or validator that must interpret the custom header format; when debugging igzip file corruption or encoding errors; or when extending pymzML's igzip support to handle new index schemes.
+description: Use when when implementing an igzip parser, decoder, or validator that
+  must interpret the custom header format; when debugging igzip file corruption or
+  encoding errors; or when extending pymzML's igzip support to handle new index schemes.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +11,7 @@ metadata:
   - Python struct module
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -36,6 +39,7 @@ attribution:
 
 # igzip-header-structure-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and validate the binary header structure of indexed gzip (igzip) files, which encode custom metadata (version, index-offset mappings) in the gzip comment field to enable random-access seeking in compressed mass spectrometry data. This skill is essential for implementing or extending igzip parsers that need to read or write seekable gzip-compressed mzML files.

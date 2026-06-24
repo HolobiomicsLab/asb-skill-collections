@@ -1,6 +1,9 @@
 ---
 name: json-table-to-matrix-conversion
-description: Use when you have extracted tabular data (e.g., from experimental spreadsheets) in intermediate JSON form with a single table of records, and you need to produce a list of dictionaries (array of objects) for deposition into a data repository such as the Metabolomics Workbench, or when you need to.
+description: Use when you have extracted tabular data (e.g., from experimental spreadsheets)
+  in intermediate JSON form with a single table of records, and you need to produce
+  a list of dictionaries (array of objects) for deposition into a data repository
+  such as the Metabolomics Workbench, or when you need to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # json-table-to-matrix-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transforms a JSON table (array of records) into a list of dictionaries by mapping table columns to key–value pairs using a headers specification, with optional filtering, sorting, and record grouping. This skill is essential when converting semi-structured tabular metadata into clean, nested JSON objects suitable for repository submission or downstream processing.

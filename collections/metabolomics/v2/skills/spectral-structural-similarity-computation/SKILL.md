@@ -1,6 +1,8 @@
 ---
 name: spectral-structural-similarity-computation
-description: Use when when you have pre-trained embedding vectors (e.g., from MSBERT) for a collection of mass spectra and need to establish which spectra are chemically similar for validation, clustering, or library matching.
+description: Use when when you have pre-trained embedding vectors (e.g., from MSBERT)
+  for a collection of mass spectra and need to establish which spectra are chemically
+  similar for validation, clustering, or library matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -17,6 +19,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

@@ -1,6 +1,8 @@
 ---
 name: metabolite-identity-ground-truth-validation
-description: Use when after constructing candidate feature pair alignments and retention-time spline mappings in a multi-dataset LC-MS metabolomics integration workflow, when you have access to independent ground-truth annotations (e.
+description: Use when after constructing candidate feature pair alignments and retention-time
+  spline mappings in a multi-dataset LC-MS metabolomics integration workflow, when
+  you have access to independent ground-truth annotations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3941
@@ -12,12 +14,15 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # metabolite-identity-ground-truth-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate feature pair alignment scoring parameters by comparing predicted matches against known shared metabolite identities in reference metabolomics datasets. This skill ensures that the weighted similarity metric (combining retention time, m/z, and spectral similarity) correctly recovers ground-truth compound correspondences before applying it to the full dataset.

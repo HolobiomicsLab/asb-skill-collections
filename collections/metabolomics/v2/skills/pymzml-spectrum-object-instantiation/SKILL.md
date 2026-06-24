@@ -1,6 +1,9 @@
 ---
 name: pymzml-spectrum-object-instantiation
-description: Use when when you have mzML spectrum XML already parsed (either from a file, a database query, or an in-memory representation) and need to construct Spectrum or Chromatogram objects that expose methods like accessing MS level, retention time, m/z and intensity arrays, and other metadata.
+description: Use when when you have mzML spectrum XML already parsed (either from
+  a file, a database query, or an in-memory representation) and need to construct
+  Spectrum or Chromatogram objects that expose methods like accessing MS level, retention
+  time, m/z and intensity arrays, and other metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -13,12 +16,14 @@ metadata:
   - xml.etree.ElementTree
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
 evidence_spans:
 - import sqlite3
-- In order to make pymzML accept other kinds of mzML data (e.g databases), one can implement an own wrapper
+- In order to make pymzML accept other kinds of mzML data (e.g databases), one can
+  implement an own wrapper
 - import xml.etree.ElementTree as et
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # pymzml-spectrum-object-instantiation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate pymzML Spectrum or Chromatogram objects from mzML XML elements or from a custom file interface (e.g., SQLite database) to enable programmatic access to mass spectrometry metadata and peak data. This skill is essential when integrating non-standard data sources into pymzML's run.Reader interface.

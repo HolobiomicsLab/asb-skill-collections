@@ -1,6 +1,9 @@
 ---
 name: byte-offset-seek-operations
-description: 'Use when when you have an indexed gzip-compressed mzML file and need to retrieve individual spectra or chromatograms by index without sequential file reading or full decompression. Typical scenario: you want spectrum[42] from a 10 GB indexed mzML.gz file and need sub-second access time.'
+description: 'Use when when you have an indexed gzip-compressed mzML file and need
+  to retrieve individual spectra or chromatograms by index without sequential file
+  reading or full decompression. Typical scenario: you want spectrum[42] from a 10
+  GB indexed mzML.gz file and need sub-second access time.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +16,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,6 +45,7 @@ attribution:
 
 # byte-offset-seek-operations
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enable random access retrieval of indexed data blocks from compressed gzip files by implementing bracket notation access that translates integer indices to byte offsets and extracts decompressed XML elements. This skill is essential for handling large-scale mzML mass spectrometry data in seekable gzip format without decompressing the entire file.

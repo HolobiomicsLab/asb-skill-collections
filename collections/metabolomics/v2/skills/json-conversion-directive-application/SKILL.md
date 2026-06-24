@@ -1,6 +1,8 @@
 ---
 name: json-conversion-directive-application
-description: Use when you have validated intermediate JSON data conforming to the Experiment Description Specification and need to convert it to a target format (e.g., mwTab for Metabolomics Workbench deposition).
+description: Use when you have validated intermediate JSON data conforming to the
+  Experiment Description Specification and need to convert it to a target format (e.g.,
+  mwTab for Metabolomics Workbench deposition).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +13,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package that facilitates the conversion of tabular data into other formats
+- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
+  that facilitates the conversion of tabular data into other formats
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # json-conversion-directive-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply conversion directives (str, matrix, or section value_type patterns) to transform intermediate JSON metadata into target format representations, using filtering, sorting, and field selection to aggregate or restructure tabular records. This skill is essential when converting structured experimental metadata from MESSES's standardized JSON schema into domain-specific formats like mwTab for repository deposition.

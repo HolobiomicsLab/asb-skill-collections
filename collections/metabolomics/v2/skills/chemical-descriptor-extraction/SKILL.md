@@ -1,6 +1,8 @@
 ---
 name: chemical-descriptor-extraction
-description: Use when you have standardized molecular structures (SMILES or SDF format) and need to generate a uniform feature matrix for machine learning models (e.g., retention time prediction).
+description: Use when you have standardized molecular structures (SMILES or SDF format)
+  and need to generate a uniform feature matrix for machine learning models (e.g.,
+  retention time prediction).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0360
@@ -10,6 +12,7 @@ metadata:
   tools:
   - rcdk
   - PubChem standardization
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

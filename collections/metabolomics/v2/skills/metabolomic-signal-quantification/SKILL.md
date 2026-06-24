@@ -1,6 +1,9 @@
 ---
 name: metabolomic-signal-quantification
-description: Use when you have raw untargeted LC/MS data in open mzML or mzXML format and need to extract a quantified feature matrix (m/z and retention time coordinates with sample intensities) without prior knowledge of optimal signal detection parameters, batch effects, or quality control samples.
+description: Use when you have raw untargeted LC/MS data in open mzML or mzXML format
+  and need to extract a quantified feature matrix (m/z and retention time coordinates
+  with sample intensities) without prior knowledge of optimal signal detection parameters,
+  batch effects, or quality control samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,11 +15,13 @@ metadata:
   - mzLearn
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.01.26.634927v3
   title: mzLearn
 evidence_spans:
-- mzEmbed, a framework for developing pre-trained generative models and fine-tuning them for specific tasks for untargeted metabolomics datasets
+- mzEmbed, a framework for developing pre-trained generative models and fine-tuning
+  them for specific tasks for untargeted metabolomics datasets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

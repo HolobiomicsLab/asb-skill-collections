@@ -1,6 +1,8 @@
 ---
 name: chemical-formula-tokenization
-description: Use when you have collections of chemical formulae (e.g., from SIRIUS decomposition or subformula labeling) derived from MS/MS spectra and need to feed them into a transformer encoder.
+description: Use when you have collections of chemical formulae (e.g., from SIRIUS
+  decomposition or subformula labeling) derived from MS/MS spectra and need to feed
+  them into a transformer encoder.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0392
@@ -20,6 +22,7 @@ metadata:
   - MIST-CF formula transformer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)
@@ -54,6 +57,7 @@ attribution:
 
 # chemical-formula-tokenization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert chemical formulae extracted from tandem mass spectrometry data into discrete tokens and learned embeddings for use in transformer-based neural networks. This skill bridges raw chemical notation and neural sequence models by establishing a vocabulary and embedding scheme that preserves chemical semantics.

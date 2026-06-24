@@ -1,6 +1,8 @@
 ---
 name: python-object-serialization
-description: Use when after constructing a peak properties dictionary via csv_to_peak_properties or other data transformation steps, and before passing the dictionary to subsequent SMITER simulation functions (fragmentor selection, noise injection, mzML generation).
+description: Use when after constructing a peak properties dictionary via csv_to_peak_properties
+  or other data transformation steps, and before passing the dictionary to subsequent
+  SMITER simulation functions (fragmentor selection, noise injection, mzML generation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -11,13 +13,15 @@ metadata:
   - SMITER
   - Python pickle module
   - Python json module
+  license_tier: open
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
 evidence_spans:
 - https://pypi.python.org/pypi
 - SMITER (Synthetic mzML writer) is a python-based command-line tool
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
+  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

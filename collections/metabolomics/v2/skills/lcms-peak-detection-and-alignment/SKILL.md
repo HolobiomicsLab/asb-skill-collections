@@ -1,6 +1,8 @@
 ---
 name: lcms-peak-detection-and-alignment
-description: Use when you have one or more raw mzXML or mzML LCMS data files (from DDA, DIA, or fullscan acquisition) and need to extract quantitative metabolite features for multi-sample comparative analysis.
+description: Use when you have one or more raw mzXML or mzML LCMS data files (from
+  DDA, DIA, or fullscan acquisition) and need to extract quantitative metabolite features
+  for multi-sample comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,15 @@ metadata:
   - CAMERA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - To install ISFrag package R version 4.0.0 or above is required
 claims: []
 provenance:

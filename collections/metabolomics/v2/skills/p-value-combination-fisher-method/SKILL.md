@@ -1,6 +1,9 @@
 ---
 name: p-value-combination-fisher-method
-description: Use when when you have tabulated p-values and study sample sizes (N) from multiple independent metabolomics studies measuring the same compounds or metabolites, and you need to compute a single meta-analytic p-value that reflects both statistical significance and study weight.
+description: Use when when you have tabulated p-values and study sample sizes (N)
+  from multiple independent metabolomics studies measuring the same compounds or metabolites,
+  and you need to compute a single meta-analytic p-value that reflects both statistical
+  significance and study weight.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,14 +14,17 @@ metadata:
   - R
   - amanida
   - webchem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +49,7 @@ attribution:
 
 # p-value-combination-fisher-method
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combines statistical significance (p-values) from multiple metabolomics studies into a single meta-analytic p-value using a weighted variant of Fisher's method, where weights are gamma-distributed and proportional to study sample size. This enables aggregation of significance across studies without requiring raw data or standard deviations.

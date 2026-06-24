@@ -1,6 +1,8 @@
 ---
 name: library-object-validation
-description: Use when after applying mspcompiler pipeline transformation steps (e.g., reorganize_mona, assign_smiles, assign_ri, read_multilibs, separate_polarity, complete_mgf) to confirm the operation succeeded without data loss or structural corruption.
+description: Use when after applying mspcompiler pipeline transformation steps (e.g.,
+  reorganize_mona, assign_smiles, assign_ri, read_multilibs, separate_polarity, complete_mgf)
+  to confirm the operation succeeded without data loss or structural corruption.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,6 +17,7 @@ metadata:
   - future.apply
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -47,6 +50,7 @@ attribution:
 
 # Validate mass spectral library object structure and content
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a compiled mass spectral library object (EI or MS2) contains the expected field structure, populated key columns (especially SMILES and retention index fields), and correct row counts after pipeline transformation steps. This ensures data integrity before downstream processing or file export.

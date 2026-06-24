@@ -1,6 +1,9 @@
 ---
 name: shiny-reactive-programming
-description: Use when you have an R package with analytical functions (e.g., meta-analysis, statistical modeling, visualization) and need to expose it as an interactive web interface where end-users can upload data, adjust parameters, and view results in real time without rewriting backend logic.
+description: Use when you have an R package with analytical functions (e.g., meta-analysis,
+  statistical modeling, visualization) and need to expose it as an interactive web
+  interface where end-users can upload data, adjust parameters, and view results in
+  real time without rewriting backend logic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -12,6 +15,7 @@ metadata:
   - R
   - R package Amanida
   - webchem
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida
@@ -41,6 +45,7 @@ attribution:
 
 # shiny-reactive-programming
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build interactive web applications in R by mapping user interface inputs to reactive expressions and server-side handlers that trigger computational workflows and render outputs. This skill enables wrapping complex R analytical packages (like Amanida for meta-analysis) into responsive web dashboards where parameter changes automatically propagate through analysis pipelines.

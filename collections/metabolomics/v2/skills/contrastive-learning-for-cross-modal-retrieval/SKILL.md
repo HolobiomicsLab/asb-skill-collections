@@ -1,6 +1,8 @@
 ---
 name: contrastive-learning-for-cross-modal-retrieval
-description: Use when you have paired MS/MS spectra and molecular structures (SMILES or SDF format) and need to perform compound identification by retrieving the correct structure for an unknown spectrum.
+description: Use when you have paired MS/MS spectra and molecular structures (SMILES
+  or SDF format) and need to perform compound identification by retrieving the correct
+  structure for an unknown spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -18,6 +20,7 @@ metadata:
   - Distributed Data Parallel (DDP)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2
@@ -51,6 +54,7 @@ attribution:
 
 # contrastive-learning-for-cross-modal-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train contrastive embeddings to align MS/MS spectral and molecular structural feature spaces, enabling cross-modal retrieval where query spectra are matched against candidate structures via cosine similarity in a learned unified embedding space. This skill is essential when compound identification requires matching raw mass spectrometry data directly against molecular structure libraries without intermediate feature engineering.

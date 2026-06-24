@@ -1,6 +1,8 @@
 ---
 name: multi-algorithm-comparative-analysis
-description: Use when when you have prepared metabolomics data (e.g., covid_data) with a binary outcome variable and need to select the most appropriate predictive algorithm for your classification task.
+description: Use when when you have prepared metabolomics data (e.g., covid_data)
+  with a binary outcome variable and need to select the most appropriate predictive
+  algorithm for your classification task.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +12,7 @@ metadata:
   tools:
   - MeTEor
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -17,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # multi-algorithm-comparative-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically train and evaluate multiple classification algorithms (logistic regression, random forest, XGBoost) on the same metabolomics dataset under identical cross-validation conditions to compare their performance metrics and identify algorithm-specific feature importance. This skill is essential for determining which algorithm best generalizes to binary classification tasks on metabolomic biomarkers.

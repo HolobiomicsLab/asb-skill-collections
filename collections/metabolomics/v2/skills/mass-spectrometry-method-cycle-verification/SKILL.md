@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-method-cycle-verification
-description: Use when when you have a Thermo Fisher Scientific Orbitrap .raw file and need to confirm that a targeted acquisition method (e.g., PRM targeting a specific precursor m/z) is achieving uniform cycle timing.
+description: Use when when you have a Thermo Fisher Scientific Orbitrap .raw file
+  and need to confirm that a targeted acquisition method (e.g., PRM targeting a specific
+  precursor m/z) is achieving uniform cycle timing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +15,7 @@ metadata:
   - rawDiag
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -20,8 +23,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # mass-spectrometry-method-cycle-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that parallel reaction monitoring (PRM) or targeted MS/MS acquisition maintains consistent scan spacing across all monitoring cycles by extracting scan indices from raw Orbitrap files and validating inter-scan deltas. This skill ensures that the mass spectrometry method is executing as designed without drift or missed cycles.

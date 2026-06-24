@@ -1,6 +1,9 @@
 ---
 name: kegg-identifier-to-mass-mapping
-description: Use when you have raw LC-MS peak intensity data with mass-to-charge ratios and need to match them to known metabolites. This skill must be applied before the matching stage if you are working with a KEGG database (KeggDB or sample.keggDB) and require a precomputed adduct/fragment lookup table.
+description: Use when you have raw LC-MS peak intensity data with mass-to-charge ratios
+  and need to match them to known metabolites. This skill must be applied before the
+  matching stage if you are working with a KEGG database (KeggDB or sample.keggDB)
+  and require a precomputed adduct/fragment lookup table.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -16,15 +19,19 @@ metadata:
   - KEGG
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 - matching mass-to-charge ratio values to KEGG database
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 claims: []
 provenance:
@@ -49,6 +56,7 @@ attribution:
 
 # kegg-identifier-to-mass-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a lookup table (Cpd.Add) that associates KEGG compound identifiers with their exact masses and adduct/fragment modifications to enable mass-to-charge ratio matching in untargeted LC-MS annotation. This skill transforms static KEGG reference data into a dynamic, searchable resource indexed by observable m/z values.

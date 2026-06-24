@@ -1,6 +1,8 @@
 ---
 name: feature-abundance-pattern-matching
-description: Use when after initial retention-time-based feature grouping when you have groups of multiple features at similar m/z and retention time but need to determine which features actually arise from the same compound.
+description: Use when after initial retention-time-based feature grouping when you
+  have groups of multiple features at similar m/z and retention time but need to determine
+  which features actually arise from the same compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,11 +14,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

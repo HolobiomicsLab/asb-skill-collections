@@ -1,6 +1,8 @@
 ---
 name: spectral-feature-extraction-and-integration
-description: Use when when you have a base message passing neural network (e.g., chemprop) trained on molecular graphs and need to augment it with infrared spectral information to improve prediction accuracy for molecular properties.
+description: Use when when you have a base message passing neural network (e.g., chemprop)
+  trained on molecular graphs and need to augment it with infrared spectral information
+  to improve prediction accuracy for molecular properties.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -10,11 +12,13 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]
+- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
+  for Property Prediction]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +42,7 @@ attribution:
 
 # spectral-feature-extraction-and-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and integrate infrared spectral features into message passing neural network architectures to enable molecular property prediction from both graph structure and spectral data. This skill reconstructs extended chemprop models that fuse molecular representations with spectral feature embeddings.

@@ -1,6 +1,8 @@
 ---
 name: lipid-coverage-assessment
-description: Use when after hierarchical fragmentation library matching has produced candidate lipid annotations for a multi-species LC-MS/MS dataset, and you have applied retention time–based filtering rules (e.
+description: Use when after hierarchical fragmentation library matching has produced
+  candidate lipid annotations for a multi-species LC-MS/MS dataset, and you have applied
+  retention time–based filtering rules (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,15 @@ metadata:
   - LipidIN (Lipid Categories Intelligence module)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

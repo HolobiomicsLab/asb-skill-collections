@@ -1,6 +1,9 @@
 ---
 name: gene-expression-constraint-integration
-description: Use when when you have a generic constraint-based metabolic model, RNA-seq or transcriptomics data (FPKM or similar), and you want to reduce the underdetermination of metabolic flux predictions by encoding which reactions are expected to be active or inactive based on their constituent enzymes'.
+description: Use when when you have a generic constraint-based metabolic model, RNA-seq
+  or transcriptomics data (FPKM or similar), and you want to reduce the underdetermination
+  of metabolic flux predictions by encoding which reactions are expected to be active
+  or inactive based on their constituent enzymes'.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -16,14 +19,18 @@ metadata:
   - getNormalizedRAS (INTEGRATE step 3)
   - rasIntegration (INTEGRATE step 4)
   - rasTtest (INTEGRATE step 8)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
 - using constraint-based stoichiometric metabolic models as a scaffold
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
 - the implementation of optGpSampler algorithm [71] available in COBRApy [72]
 claims: []
 provenance:
@@ -48,6 +55,7 @@ attribution:
 
 # gene-expression-constraint-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate transcriptomics-derived gene expression constraints into constraint-based metabolic models by computing Reaction Activity Scores (RAS) from GPR rules and normalized expression data, then applying these scores as flux bounds to restrict the feasible solution space and improve model predictions of cell-line-specific metabolism.

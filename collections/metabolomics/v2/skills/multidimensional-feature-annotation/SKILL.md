@@ -1,6 +1,9 @@
 ---
 name: multidimensional-feature-annotation
-description: Use when you have a peak-picked feature table (HDF5 format) from high-dimensional MS data (m/z, drift_time, retention_time, intensity) and need to identify and label isotopic signatures to distinguish monoisotopic peaks from isotopologues, reduce feature redundancy, and support multi-dimensional.
+description: Use when you have a peak-picked feature table (HDF5 format) from high-dimensional
+  MS data (m/z, drift_time, retention_time, intensity) and need to identify and label
+  isotopic signatures to distinguish monoisotopic peaks from isotopologues, reduce
+  feature redundancy, and support multi-dimensional.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3648
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -42,6 +46,7 @@ attribution:
 
 # Multidimensional Feature Annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate detected mass spectrometry features with isotopologue labels and membership metadata by identifying C13 isotopic substitution patterns across m/z, drift time, and retention time dimensions. This enriches feature tables with monoisotopic designation, isotope count, and offset mass information for downstream filtering and interpretation.

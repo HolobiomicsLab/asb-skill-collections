@@ -1,6 +1,8 @@
 ---
 name: pip-requirements-file-creation
-description: Use when you have identified all pinned software dependencies for a Python project (typically from README, setup.py, or environment documentation) and need to create a machine-readable artifact that can reliably reconstruct that exact environment.
+description: Use when you have identified all pinned software dependencies for a Python
+  project (typically from README, setup.py, or environment documentation) and need
+  to create a machine-readable artifact that can reliably reconstruct that exact environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -23,6 +25,7 @@ metadata:
   - Pandas
   - h5py
   - pip-compile or pipdeptree
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac032/6510930
   title: massNet
@@ -56,6 +59,7 @@ attribution:
 
 # pip-requirements-file-creation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a pinned requirements.txt file that captures exact software dependency versions for a Python project, enabling reproducible environment reconstruction across platforms. This skill is essential when documenting machine learning implementations that depend on specific, incompatible library versions.

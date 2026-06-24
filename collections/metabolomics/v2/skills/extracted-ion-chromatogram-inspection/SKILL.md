@@ -1,6 +1,9 @@
 ---
 name: extracted-ion-chromatogram-inspection
-description: Use when after running tardisPeaks() in screening mode or peak detection mode, when you need to visually confirm that target compounds are visible in the expected m/z and retention time windows, verify that peak integration boundaries are correct, diagnose whether sawtooth artefacts are present.
+description: Use when after running tardisPeaks() in screening mode or peak detection
+  mode, when you need to visually confirm that target compounds are visible in the
+  expected m/z and retention time windows, verify that peak integration boundaries
+  are correct, diagnose whether sawtooth artefacts are present.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,14 +19,17 @@ metadata:
   - knitr
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - knitr::include_graphics
 claims: []
 provenance:
@@ -48,6 +54,7 @@ attribution:
 
 # extracted-ion-chromatogram-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visual and qualitative inspection of extracted ion chromatograms (EICs) saved as diagnostic PNG files to assess peak detection quality, identify sawtooth artefacts from overlapping scan windows, and verify target compound visibility within defined m/z and retention time windows in LC–MS metabolomics and lipidomics data.

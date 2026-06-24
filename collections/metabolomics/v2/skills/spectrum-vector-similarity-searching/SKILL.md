@@ -1,6 +1,8 @@
 ---
 name: spectrum-vector-similarity-searching
-description: Use when when clustering large collections (thousands to millions) of tandem mass spectra and you need to compute a sparse pairwise distance matrix for density-based clustering.
+description: Use when when clustering large collections (thousands to millions) of
+  tandem mass spectra and you need to compute a sparse pairwise distance matrix for
+  density-based clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -12,11 +14,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 - pip install falcon-ms spectrum-utils==0.3.5
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # spectrum-vector-similarity-searching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Efficiently retrieve k nearest neighbors for each spectrum vector using spatial indexing structures (k-d trees, LSH-based inverted indexes) to enable sparse pairwise distance computation without exhaustive all-vs-all comparisons. This skill is critical for scaling spectrum clustering to millions of MS/MS spectra.

@@ -1,6 +1,9 @@
 ---
 name: csv-data-aggregation-and-deduplication
-description: Use when when you have downloaded a multi-file .csv library repository (e.g., LipidMatch) and need to verify that it meets minimum thresholds for species diversity (e.g., 500,000+ distinct lipid species) and category breadth (e.g., 60+ lipid-type categories).
+description: Use when when you have downloaded a multi-file .csv library repository
+  (e.g., LipidMatch) and need to verify that it meets minimum thresholds for species
+  diversity (e.g., 500,000+ distinct lipid species) and category breadth (e.g., 60+
+  lipid-type categories).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3906
@@ -11,6 +14,7 @@ metadata:
   - LipidMatch
   - Python pandas or native set operations
   - R data.table or dplyr
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

@@ -1,6 +1,9 @@
 ---
 name: batch-correction-quality-assessment
-description: Use when after applying pycombat-based batch correction to multi-batch interpolated feature tables in LC-MS metabolomics workflows, when you need to verify that batch effects have been attenuated without loss of data dimensionality or sample information.
+description: Use when after applying pycombat-based batch correction to multi-batch
+  interpolated feature tables in LC-MS metabolomics workflows, when you need to verify
+  that batch effects have been attenuated without loss of data dimensionality or sample
+  information.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +17,7 @@ metadata:
   - pcpfm
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -45,6 +49,7 @@ attribution:
 
 # Batch-Correction Quality Assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that batch correction via pycombat preserves the structural integrity of multi-batch metabolomics feature tables while demonstrating systematic reduction in inter-batch variance. This skill ensures corrected tables retain identical sample and feature dimensions and exhibit lower inter-batch intensity variance for shared features.

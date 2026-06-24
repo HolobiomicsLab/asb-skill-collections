@@ -1,6 +1,8 @@
 ---
 name: gpu-accelerated-similarity-search
-description: Use when you have a large spectral library and many query spectra to search against it, and you need to identify both unmodified and open-modification peptides with strict false discovery rate control.
+description: Use when you have a large spectral library and many query spectra to
+  search against it, and you need to identify both unmodified and open-modification
+  peptides with strict false discovery rate control.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,11 +14,13 @@ metadata:
   - Faiss
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

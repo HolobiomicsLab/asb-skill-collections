@@ -1,6 +1,9 @@
 ---
 name: feature-table-subsetting-and-export
-description: Use when you have a raw metabolite abundance matrix with substantial missing data (NAs or zero-valued entries) and need to remove poorly-measured features before downstream analysis. Apply this skill when the proportion of missing values per metabolite exceeds a predefined threshold (e.
+description: Use when you have a raw metabolite abundance matrix with substantial
+  missing data (NAs or zero-valued entries) and need to remove poorly-measured features
+  before downstream analysis. Apply this skill when the proportion of missing values
+  per metabolite exceeds a predefined threshold (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - Bioconductor
   - marr (R/Bioconductor package)
   - R (base and SummarizedExperiment)
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -21,7 +25,8 @@ derived_from:
 evidence_spans:
 - 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
 - The R-package **marr** can be installed from GitHub using the R package [devtools]
-- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep software
+- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep
+  software
 - '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # feature-table-subsetting-and-export
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove metabolites exceeding a missingness threshold (e.g., >80% missing values) from a raw abundance matrix, then export the filtered feature table with sample annotations and metabolite identifiers preserved. This reduces noise and improves downstream reproducibility assessment by focusing on well-measured analytes.

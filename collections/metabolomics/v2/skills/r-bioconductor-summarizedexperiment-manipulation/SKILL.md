@@ -1,6 +1,9 @@
 ---
 name: r-bioconductor-summarizedexperiment-manipulation
-description: Use when when converting raw metabolomics data (tab-delimited text files, Sciex OS exports) into a structured object for batch processing, or when you need to organize compound-level measurements (assays), sample metadata (colData), and feature annotations (rowData) in a single container that.
+description: Use when when converting raw metabolomics data (tab-delimited text files,
+  Sciex OS exports) into a structured object for batch processing, or when you need
+  to organize compound-level measurements (assays), sample metadata (colData), and
+  feature annotations (rowData) in a single container that.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,6 +18,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -22,8 +26,10 @@ evidence_spans:
 - library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality is a user-friendly R package
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data.
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # R Bioconductor SummarizedExperiment Manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create, populate, and modify Bioconductor SummarizedExperiment objects to store and organize multi-dimensional omics data (assays, row metadata, column metadata) for downstream quality control and statistical analysis. This skill is foundational for working with metabolomics and other -omics datasets in R pipelines.

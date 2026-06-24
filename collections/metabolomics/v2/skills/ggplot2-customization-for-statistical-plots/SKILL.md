@@ -1,6 +1,8 @@
 ---
 name: ggplot2-customization-for-statistical-plots
-description: Use when when a statistical analysis function (e.g., random_forest or PCA_plot from Omu) returns a ggplot2 object and you need to adjust visual presentation—such as removing gridlines, applying a clean background theme (e.
+description: Use when when a statistical analysis function (e.g., random_forest or
+  PCA_plot from Omu) returns a ggplot2 object and you need to adjust visual presentation—such
+  as removing gridlines, applying a clean background theme (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -11,13 +13,15 @@ metadata:
   - R
   - ggplot2
   - Omu (plot_variable_importance, PCA_plot, plot_bar)
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
 - The figure is a ggplot2 object, so it is compatible with any ggplot2 themes
-- The figure is a ggplot2 object, so it is compatible with any ggplot2 themes you wish to use to edit the appearance
+- The figure is a ggplot2 object, so it is compatible with any ggplot2 themes you
+  wish to use to edit the appearance
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # ggplot2-customization-for-statistical-plots
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Customize ggplot2 statistical visualizations (e.g., variable importance plots from random forest models) by layering ggplot2 themes and removing default visual elements to produce publication-ready figures. This skill is essential when wrapper functions return ggplot2 objects that require aesthetic refinement without altering the underlying data or statistical computation.

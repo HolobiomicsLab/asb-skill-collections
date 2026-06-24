@@ -1,6 +1,9 @@
 ---
 name: ion-mobility-machine-learning-training
-description: Use when you have a curated dataset of molecular structures (or molecular descriptors) paired with experimentally measured or reference collision cross section values, and you need to predict CCS values for a set of ≤10,000 novel molecules to filter or prioritize metabolomics identifications.
+description: Use when you have a curated dataset of molecular structures (or molecular
+  descriptors) paired with experimentally measured or reference collision cross section
+  values, and you need to predict CCS values for a set of ≤10,000 novel molecules
+  to filter or prioritize metabolomics identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +18,7 @@ metadata:
   - CCSP 2.0
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0
@@ -46,6 +50,7 @@ attribution:
 
 # ion-mobility-machine-learning-training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a scikit-learn machine learning model on user-curated collision cross section (CCS) reference data to enable predictive CCS value estimation for novel ion-mobility molecules. This skill bridges experimental CCS measurements with supervised learning to support metabolomics false positive filtering.

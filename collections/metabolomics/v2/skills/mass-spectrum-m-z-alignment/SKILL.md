@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-m-z-alignment
-description: Use when when working with multidimensional MS data (LC–IM–MS/MS) converted to MZA format where spectra are stored in jagged arrays with m/z values distributed across individual HDF5 datasets per scan, and you need to ensure m/z consistency for downstream peak detection, isotope analysis, or.
+description: Use when when working with multidimensional MS data (LC–IM–MS/MS) converted
+  to MZA format where spectra are stored in jagged arrays with m/z values distributed
+  across individual HDF5 datasets per scan, and you need to ensure m/z consistency
+  for downstream peak detection, isotope analysis, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

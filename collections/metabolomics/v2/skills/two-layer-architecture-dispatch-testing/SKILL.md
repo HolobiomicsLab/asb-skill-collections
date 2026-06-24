@@ -1,6 +1,9 @@
 ---
 name: two-layer-architecture-dispatch-testing
-description: Use when when you need to verify that a wrapper package (e.g., rawrr) correctly bridges R and a managed .NET assembly (such as RawFileReader), specifically to confirm that internal dispatch functions can retrieve assembly location and version string before attempting actual spectral data extraction.
+description: Use when when you need to verify that a wrapper package (e.g., rawrr)
+  correctly bridges R and a managed .NET assembly (such as RawFileReader), specifically
+  to confirm that internal dispatch functions can retrieve assembly location and version
+  string before attempting actual spectral data extraction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0361
@@ -13,13 +16,15 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # Two-Layer Architecture Dispatch Testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that an R package's internal assembly dispatch mechanism successfully invokes compiled C# wrapper methods and retrieves assembly metadata (path and version) without requiring raw data file input. This tests the R↔.NET interop layer that underpins cross-platform mass spectrometry data access.

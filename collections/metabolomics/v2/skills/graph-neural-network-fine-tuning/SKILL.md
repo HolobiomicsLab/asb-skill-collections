@@ -1,6 +1,7 @@
 ---
 name: graph-neural-network-fine-tuning
-description: Use when when you have a pre-trained GNN checkpoint and a smaller, task-specific dataset (e.g., Eawag_XBridgeC18_364.
+description: Use when when you have a pre-trained GNN checkpoint and a smaller, task-specific
+  dataset (e.g., Eawag_XBridgeC18_364.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -20,6 +21,7 @@ metadata:
   - PyG (PyTorch Geometric)
   - TorchMetrics
   - torch-scatter, torch-sparse, torch-cluster
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
@@ -53,6 +55,7 @@ attribution:
 
 # graph-neural-network-fine-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fine-tune a pre-trained graph neural network model on a domain-specific dataset using transfer learning to adapt molecular property predictions to new chromatographic conditions or chemical spaces. This skill is applied when a general-purpose GNN model (trained on broad chemical data) must be adapted to a narrower, well-characterized target dataset with limited samples.

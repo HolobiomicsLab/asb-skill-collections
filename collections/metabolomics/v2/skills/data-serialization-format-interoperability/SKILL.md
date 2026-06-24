@@ -1,6 +1,9 @@
 ---
 name: data-serialization-format-interoperability
-description: Use when you have a new or draft file format specification (e.g., mzPeak) with multiple independent language implementations, and you need to verify that all readers agree on the structured data they extract before recommending the format for production use.
+description: Use when you have a new or draft file format specification (e.g., mzPeak)
+  with multiple independent language implementations, and you need to verify that
+  all readers agree on the structured data they extract before recommending the format
+  for production use.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +19,7 @@ metadata:
   - arrow (R)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -46,6 +50,7 @@ attribution:
 
 # data-serialization-format-interoperability
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that independent implementations of a file format specification (Rust, Python/pyarrow, R/arrow) produce field-level agreement when reading identical input files, ensuring correctness and interoperability across language ecosystems. This skill is essential when adopting or validating a nascent data format across multiple analytical platforms.

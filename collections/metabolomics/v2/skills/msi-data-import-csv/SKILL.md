@@ -1,6 +1,9 @@
 ---
 name: msi-data-import-csv
-description: Use when you have MSI intensity data exported from MSiReader or SCiLS software as a plain-text CSV file (with peaks as columns and pixels/spots as rows), and you need to import it into R to perform pairwise mass difference calculations and adduct identification.
+description: Use when you have MSI intensity data exported from MSiReader or SCiLS
+  software as a plain-text CSV file (with peaks as columns and pixels/spots as rows),
+  and you need to import it into R to perform pairwise mass difference calculations
+  and adduct identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,13 +19,16 @@ metadata:
   - msimunging.pl
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # Import MSI intensity data from CSV into matrix format
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load mass spectrometry imaging (MSI) intensity data exported from MSiReader or SCiLS as plain-text CSV files into an R data.frame object using the msimat() function, preparing it for downstream adduct analysis. This is the essential entry point for all mass2adduct workflows.

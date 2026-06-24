@@ -1,6 +1,8 @@
 ---
 name: peak-table-compilation
-description: Use when after peak detection has been applied to untargeted or targeted mass spectrometry data and peaks have been matched against metabolite databases and reference spectra.
+description: Use when after peak detection has been applied to untargeted or targeted
+  mass spectrometry data and peaks have been matched against metabolite databases
+  and reference spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,6 +14,7 @@ metadata:
   - R GUI
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

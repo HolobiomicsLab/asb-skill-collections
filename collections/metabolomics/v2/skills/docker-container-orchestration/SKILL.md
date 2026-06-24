@@ -1,6 +1,9 @@
 ---
 name: docker-container-orchestration
-description: Use when your analysis requires msconvert or another ProteoWizard tool on macOS, but native installation is infeasible or licensing-restricted. You need to convert vendor raw mass spectrometry files (.raw) to the open mzML format without installing ProteoWizard directly on your system.
+description: Use when your analysis requires msconvert or another ProteoWizard tool
+  on macOS, but native installation is infeasible or licensing-restricted. You need
+  to convert vendor raw mass spectrometry files (.raw) to the open mzML format without
+  installing ProteoWizard directly on your system.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -28,6 +31,7 @@ metadata:
   - TensorFlow 2.3.0
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer
@@ -38,7 +42,8 @@ derived_from:
 evidence_spans:
 - On PC, download the latest msconvert release from ProteoWizard
 - 'On PC, this can be installed normally from Proteowizard: https://proteowizard.sourceforge.io/download.html'
-- On Mac, download Docker and open up the GUI dashboard. The first time you go to convert raw files, it will prompt you to download the docker image for msconvert
+- On Mac, download Docker and open up the GUI dashboard. The first time you go to
+  convert raw files, it will prompt you to download the docker image for msconvert
 - On Mac, you can still run msconvert via a docker image. First, install Docker
 - import os import imzml_writer.utils as iw_utils
 - iw_utils.mzML_to_imzML_convert(PATH=mzML_path)
@@ -73,6 +78,7 @@ attribution:
 
 # docker-container-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Run platform-dependent bioinformatics tools (like msconvert) inside containerized Docker environments to ensure reproducibility and avoid native OS dependencies. This skill is essential when the target tool has restrictive licensing or vendor-specific requirements that complicate native installation.

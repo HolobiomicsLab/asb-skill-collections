@@ -1,6 +1,9 @@
 ---
 name: metabolomics-batch-correction-evaluation
-description: Use when when you have log2-transformed metabolomics data with known batch assignments and biological groupings, and you need to validate that a batch correction method (such as CordBat) has successfully removed batch-driven variation without collapsing true group differences in metabolite.
+description: Use when when you have log2-transformed metabolomics data with known
+  batch assignments and biological groupings, and you need to validate that a batch
+  correction method (such as CordBat) has successfully removed batch-driven variation
+  without collapsing true group differences in metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -13,12 +16,14 @@ metadata:
   - R
   - ggplot2
   - dplyr
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
 evidence_spans:
 - pca_res <- prcomp(cordbat_example[, metabolite_cols], scale. = TRUE)
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref", grouping = FALSE, print.detail = FALSE )
+- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
+  grouping = FALSE, print.detail = FALSE )
 - '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # metabolomics-batch-correction-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the efficacy of batch correction in metabolomics data by comparing PCA visualizations of uncorrected versus corrected metabolite matrices, assessing whether batch effects are removed while preserving biologically meaningful group structure.

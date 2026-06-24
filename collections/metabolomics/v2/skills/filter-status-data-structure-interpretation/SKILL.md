@@ -1,6 +1,9 @@
 ---
 name: filter-status-data-structure-interpretation
-description: Use when after applying a sequence of mpactr filters (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to an LC-MS/MS peak table in Progenesis or MS-DIAL format, call qc_summary() to obtain a structured report of per-ion filtering outcomes and use this skill to understand.
+description: Use when after applying a sequence of mpactr filters (filter_mispicked_ions,
+  filter_group, filter_cv, filter_insource_ions) to an LC-MS/MS peak table in Progenesis
+  or MS-DIAL format, call qc_summary() to obtain a structured report of per-ion filtering
+  outcomes and use this skill to understand.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +17,7 @@ metadata:
   - ggplot & plotly
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -46,6 +50,7 @@ attribution:
 
 # filter-status-data-structure-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret the data.table returned by qc_summary() to understand which ions passed or failed the complete mpactr filtering pipeline and which specific filter(s) caused rejection. This skill enables rapid identification of data quality outcomes and traceability of filtering decisions across mispicked, group, CV, and in-source filters.

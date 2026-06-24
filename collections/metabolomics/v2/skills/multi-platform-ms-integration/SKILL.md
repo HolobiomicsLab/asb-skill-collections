@@ -1,6 +1,7 @@
 ---
 name: multi-platform-ms-integration
-description: Use when you have untargeted metabolomics data from multiple MS instruments (e.
+description: Use when you have untargeted metabolomics data from multiple MS instruments
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -22,14 +23,18 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
 - doi: 10.1038/protex.2015.102
   title: ''
 evidence_spans:
-- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim Jaumot
-- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
+- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim
+  Jaumot
+- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine
+  Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox,
+  Parallel Computing'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -54,6 +59,7 @@ attribution:
 
 # multi-platform-ms-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Unified preprocessing and feature extraction across heterogeneous mass spectrometry platforms (CE-MS and LC-MS) by converting vendor formats to standardized mzXML/mzML, then applying parameter-driven ROI detection, normalization, and augmentation. Enables cross-platform metabolomics studies without platform-specific reimplementation.

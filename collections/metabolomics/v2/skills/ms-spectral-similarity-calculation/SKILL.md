@@ -1,6 +1,9 @@
 ---
 name: ms-spectral-similarity-calculation
-description: Use when when comparing two or more MS/MS spectra for compound identification, library matching, or spectral validation. Triggered when raw spectral data requires quantitative similarity assessment before database lookup, or when validating that two spectra originate from the same chemical compound.
+description: Use when when comparing two or more MS/MS spectra for compound identification,
+  library matching, or spectral validation. Triggered when raw spectral data requires
+  quantitative similarity assessment before database lookup, or when validating that
+  two spectra originate from the same chemical compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,6 +19,7 @@ metadata:
   - MS Viewer
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

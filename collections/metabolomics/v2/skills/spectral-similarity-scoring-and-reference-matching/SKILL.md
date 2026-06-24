@@ -1,6 +1,8 @@
 ---
 name: spectral-similarity-scoring-and-reference-matching
-description: Use when when you have extracted MS2 spectra from DDA chromatographic peaks and need to identify the originating compound by comparing against reference MS2 spectra (e.g., from Metlin or GNPS).
+description: Use when when you have extracted MS2 spectra from DDA chromatographic
+  peaks and need to identify the originating compound by comparing against reference
+  MS2 spectra (e.g., from Metlin or GNPS).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -17,12 +19,14 @@ metadata:
   - GNPS
   techniques:
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
 - library(MsBackendMgf)
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

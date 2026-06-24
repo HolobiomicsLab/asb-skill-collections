@@ -1,6 +1,8 @@
 ---
 name: survival-data-preparation
-description: Use when when you have clinical survival outcomes (event status and follow-up time) and high-dimensional metabolomic or expression data, and you need to feed them into Cox-PH or Cox-nnet prognosis models.
+description: Use when when you have clinical survival outcomes (event status and follow-up
+  time) and high-dimensional metabolomic or expression data, and you need to feed
+  them into Cox-PH or Cox-nnet prognosis models.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,12 +16,15 @@ metadata:
   - Cox-PH
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 - the deep-learning based Cox-nnet model
 - prognosis prediction, implemented by Cox-PH model
 claims: []

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-format-import
-description: Use when you have raw mass spectrometry data in one of the supported spectral formats (mzML, mzXML, msp, MGF, JSON, or metabolomics-USI) and need to load it into a Python environment for cleaning, processing, or similarity comparison.
+description: Use when you have raw mass spectrometry data in one of the supported
+  spectral formats (mzML, mzXML, msp, MGF, JSON, or metabolomics-USI) and need to
+  load it into a Python environment for cleaning, processing, or similarity comparison.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,13 +14,16 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - matchms is a versatile open-source Python package
-- A key feature of matchms is its ability to apply various pairwise similarity measures for comparing extensive amounts of spectra
+- A key feature of matchms is its ability to apply various pairwise similarity measures
+  for comparing extensive amounts of spectra
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

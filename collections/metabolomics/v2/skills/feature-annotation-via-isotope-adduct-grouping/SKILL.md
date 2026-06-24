@@ -1,6 +1,8 @@
 ---
 name: feature-annotation-via-isotope-adduct-grouping
-description: Use when after peak detection and feature extraction have produced a composite feature table with m/z, retention time, and intensity values for individual samples.
+description: Use when after peak detection and feature extraction have produced a
+  composite feature table with m/z, retention time, and intensity values for individual
+  samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -17,15 +19,18 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
-- The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
+- The empirical compounds are searched against known compound database (default HMDB
+  4) via another package JMS (https://github.com/shuzhao-li/JMS).
 - known compound database (default HMDB 4)
 claims: []
 provenance:
@@ -50,6 +55,7 @@ attribution:
 
 # feature-annotation-via-isotope-adduct-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group detected LC-MS peaks into empirical compounds by identifying isotopologue (13C/12C) and adduct (Na/H) relationships, then search the resulting neutral masses against metabolite databases to assign chemical identities. This skill bridges raw peak detection and metabolite annotation by collapsing degenerate ion signals into biological entities.

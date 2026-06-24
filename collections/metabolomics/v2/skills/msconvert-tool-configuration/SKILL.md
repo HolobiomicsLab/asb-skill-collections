@@ -1,6 +1,8 @@
 ---
 name: msconvert-tool-configuration
-description: Use when you have vendor-specific raw mass spectrometry data files (e.g., from Orbitrap, Q-TOF, or other MS instruments) and need to feed them into IsoFusion or other tools that require MS1 format as input.
+description: Use when you have vendor-specific raw mass spectrometry data files (e.g.,
+  from Orbitrap, Q-TOF, or other MS instruments) and need to feed them into IsoFusion
+  or other tools that require MS1 format as input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -12,6 +14,7 @@ metadata:
   - IsoFusion
   techniques:
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion

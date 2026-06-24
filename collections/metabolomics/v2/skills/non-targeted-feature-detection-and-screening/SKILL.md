@@ -1,6 +1,8 @@
 ---
 name: non-targeted-feature-detection-and-screening
-description: Use when you have raw LC/MS data in mzML format and your analysis goal is to comprehensively detect and annotate all mass spectral features present, rather than measuring predefined target analytes.
+description: Use when you have raw LC/MS data in mzML format and your analysis goal
+  is to comprehensively detect and annotate all mass spectral features present, rather
+  than measuring predefined target analytes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -18,6 +20,7 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF
@@ -51,6 +54,7 @@ attribution:
 
 # non-targeted-feature-detection-and-screening
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 The LAGF algorithm performs non-targeted screening on LC/MS data in mzML format to automatically detect and annotate mass spectral features without prior knowledge of target compounds. This skill is essential when exploring untargeted metabolomics datasets to discover all detectable features and their characteristics.

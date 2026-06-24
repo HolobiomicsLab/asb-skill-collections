@@ -1,6 +1,9 @@
 ---
 name: matplotlib-figure-customization
-description: 'Use when when rendering spectrum data (m/z vs. intensity arrays) from MZA files and need to control visual presentation: applying m/z range windows, setting line colors and labels for legend identification, sizing the figure, or choosing between interactive display versus file export.'
+description: 'Use when when rendering spectrum data (m/z vs. intensity arrays) from
+  MZA files and need to control visual presentation: applying m/z range windows, setting
+  line colors and labels for legend identification, sizing the figure, or choosing
+  between interactive display versus file export.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +16,7 @@ metadata:
   - mzapy
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

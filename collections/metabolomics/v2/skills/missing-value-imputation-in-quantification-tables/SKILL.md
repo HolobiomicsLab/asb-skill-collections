@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-in-quantification-tables
-description: Use when after feature alignment across multiple LC-MS/MS runs, when the unified feature list contains zeros or nulls for specific feature–sample pairs because peaks were not detected in those individual runs, but the feature was detected in other samples in the cohort.
+description: Use when after feature alignment across multiple LC-MS/MS runs, when
+  the unified feature list contains zeros or nulls for specific feature–sample pairs
+  because peaks were not detected in those individual runs, but the feature was detected
+  in other samples in the cohort.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

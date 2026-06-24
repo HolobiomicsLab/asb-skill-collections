@@ -1,6 +1,8 @@
 ---
 name: unit-test-design-for-biochemical-filters
-description: Use when after implementing a custom Filter subclass (e.g., MetabolomicsFilter, TanimotoFilter) in minedatabase/filters.py, you must write unit tests to validate that _choose_cpds_to_filter correctly identifies compounds to retain/remove.
+description: Use when after implementing a custom Filter subclass (e.g., MetabolomicsFilter,
+  TanimotoFilter) in minedatabase/filters.py, you must write unit tests to validate
+  that _choose_cpds_to_filter correctly identifies compounds to retain/remove.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - MINE-Database
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

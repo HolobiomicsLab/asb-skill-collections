@@ -1,6 +1,7 @@
 ---
 name: metabolite-similarity-scoring
-description: Use when you have an unknown compound's mass spectrum (m/z peaks and intensities) in .
+description: Use when you have an unknown compound's mass spectrum (m/z peaks and
+  intensities) in .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -11,11 +12,13 @@ metadata:
   - DeepMASS2
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
 evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
+  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +42,7 @@ attribution:
 
 # metabolite-similarity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank candidate metabolites by computing semantic similarity between an unknown compound's mass spectrum and a reference database of known metabolite spectra using deep-learned mass spectral language encodings. This enables prediction of structurally related metabolites and assists in ranking molecular structure database candidates.

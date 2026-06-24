@@ -1,6 +1,8 @@
 ---
 name: feature-matrix-normalization-and-scaling
-description: Use when you have a heterogeneous feature matrix combining molecular descriptors (from RDKit/mordred) and chromatographic metadata (column length, temperature, pH, flow rate, particle size) with different physical units, ranges, and scales.
+description: Use when you have a heterogeneous feature matrix combining molecular
+  descriptors (from RDKit/mordred) and chromatographic metadata (column length, temperature,
+  pH, flow rate, particle size) with different physical units, ranges, and scales.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +17,7 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
@@ -45,6 +48,7 @@ attribution:
 
 # feature-matrix-normalization-and-scaling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and scale numerical descriptor and chromatographic parameter features to standardized ranges (e.g., division by domain-specific factors) before machine learning model training. This preprocessing step improves model convergence and enables fair comparison of features with different physical units and magnitudes.

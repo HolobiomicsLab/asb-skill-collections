@@ -1,6 +1,9 @@
 ---
 name: molecular-format-conversion
-description: Use when when ingesting raw chemical structure data from multiple external sources (publications, databases, contributor submissions) that use different molecular file formats (SMILES strings, SDF files, or other representations), and you need to unify them into a single canonical format before.
+description: Use when when ingesting raw chemical structure data from multiple external
+  sources (publications, databases, contributor submissions) that use different molecular
+  file formats (SMILES strings, SDF files, or other representations), and you need
+  to unify them into a single canonical format before.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -10,6 +13,7 @@ metadata:
   tools:
   - PubChem standardization
   - rcdk
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

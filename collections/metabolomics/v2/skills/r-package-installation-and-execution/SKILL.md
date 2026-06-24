@@ -1,6 +1,8 @@
 ---
 name: r-package-installation-and-execution
-description: Use when when you have a new or updated R package available via a non-CRAN repository (such as r-universe) and need to verify it installs cleanly, passes R-CMD-check compliance, and is ready for downstream workflow execution.
+description: Use when when you have a new or updated R package available via a non-CRAN
+  repository (such as r-universe) and need to verify it installs cleanly, passes R-CMD-check
+  compliance, and is ready for downstream workflow execution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -12,6 +14,7 @@ metadata:
   - R-CMD-check
   - GitHub Actions
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

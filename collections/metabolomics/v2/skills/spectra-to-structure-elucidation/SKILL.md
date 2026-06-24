@@ -1,6 +1,9 @@
 ---
 name: spectra-to-structure-elucidation
-description: Use when you have one or more spectroscopic datasets (IR, Raman, UV-Vis, mass spectra, NMR) from an unknown compound and need to generate candidate molecular structures ranked by likelihood. Use this when retrieval-based approaches are infeasible (e.
+description: Use when you have one or more spectroscopic datasets (IR, Raman, UV-Vis,
+  mass spectra, NMR) from an unknown compound and need to generate candidate molecular
+  structures ranked by likelihood. Use this when retrieval-based approaches are infeasible
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - Diffusion Molecule Transformer (DMT)
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra

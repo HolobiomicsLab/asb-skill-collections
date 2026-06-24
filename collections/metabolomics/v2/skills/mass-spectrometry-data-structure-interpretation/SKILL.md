@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-data-structure-interpretation
-description: Use when you have converted multidimensional MS data (from Agilent .d, Bruker ion mobility .d, Thermo .
+description: Use when you have converted multidimensional MS data (from Agilent .d,
+  Bruker ion mobility .d, Thermo .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -19,13 +20,15 @@ metadata:
   - Rust mzPeak implementation
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 - doi: 10.1021/acs.jproteome.5c00435
   title: ''
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 - There is also an R implementation in `R/`
 claims: []
@@ -55,6 +58,7 @@ attribution:
 
 # mass-spectrometry-data-structure-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and navigate the hierarchical HDF5 structure of converted multidimensional mass spectrometry data (MZA format) to extract metadata, spectral arrays, and ion mobility calibration coefficients across programming languages. This skill enables reproducible access to complex LC–IM–MS datasets without vendor-specific tools.

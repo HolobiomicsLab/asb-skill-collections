@@ -1,6 +1,9 @@
 ---
 name: spectra-object-serialization-deserialization
-description: Use when you have Spectra objects in an R environment and need to apply Python MS algorithms (e.g., matchms similarity scoring, spectrum normalization, or filtering) that operate on Python spectral objects, then return results back to R for further analysis or visualization.
+description: Use when you have Spectra objects in an R environment and need to apply
+  Python MS algorithms (e.g., matchms similarity scoring, spectrum normalization,
+  or filtering) that operate on Python spectral objects, then return results back
+  to R for further analysis or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -16,13 +19,17 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
-- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
-- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
+- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
+- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy*
+  allows a seamless integration of Python libraries into R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +53,7 @@ attribution:
 
 # Spectra Object Serialization and Deserialization for Cross-Language Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert R Spectra objects to Python-compatible formats (matchms.Spectrum, spectrum_utils.spectrum.MsmsSpectrum) and back, enabling seamless data exchange between R and Python mass spectrometry workflows. This skill is essential for leveraging Python MS libraries within an R-based Spectra analysis pipeline.

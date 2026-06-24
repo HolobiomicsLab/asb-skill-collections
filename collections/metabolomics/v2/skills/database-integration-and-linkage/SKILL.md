@@ -1,6 +1,9 @@
 ---
 name: database-integration-and-linkage
-description: Use when you have a list of metabolite identifiers sourced from one metabolome database (e.g., HMDB IDs, PubChem CIDs) and need to map them to equivalent identifiers in other databases for data integration, cross-referencing, or standardization in downstream metabolomics analysis.
+description: Use when you have a list of metabolite identifiers sourced from one metabolome
+  database (e.g., HMDB IDs, PubChem CIDs) and need to map them to equivalent identifiers
+  in other databases for data integration, cross-referencing, or standardization in
+  downstream metabolomics analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +14,7 @@ metadata:
   - R
   - devtools
   - MetaFetcheR
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.02.28.433248v2
   title: MetaFetcheR

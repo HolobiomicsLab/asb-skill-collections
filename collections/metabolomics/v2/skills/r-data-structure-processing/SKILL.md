@@ -1,6 +1,9 @@
 ---
 name: r-data-structure-processing
-description: Use when you have a peak table matrix with NA values that need to be imputed using cluster statistics, or when a GCIMSDataset object requires filtering by retention time (0–1100 s) and drift time (5–16 ms) ranges, or when you need to apply smoothing, decimation, or baseline correction to raw GCIMS.
+description: Use when you have a peak table matrix with NA values that need to be
+  imputed using cluster statistics, or when a GCIMSDataset object requires filtering
+  by retention time (0–1100 s) and drift time (5–16 ms) ranges, or when you need to
+  apply smoothing, decimation, or baseline correction to raw GCIMS.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -42,6 +46,7 @@ attribution:
 
 # R data structure processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Process and transform R data structures (matrices, datasets, objects) through imputation, filtering, and normalization operations to prepare Gas Chromatography–Ion Mobility Spectrometry (GCIMS) sample data for downstream analysis. This skill ensures missing values are filled systematically and data conform to expected schemas.

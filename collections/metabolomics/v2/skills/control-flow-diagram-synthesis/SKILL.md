@@ -1,6 +1,8 @@
 ---
 name: control-flow-diagram-synthesis
-description: Use when when you need to understand how a multi-instrument mass spectrometry platform (such as mzmine) selectively routes data to different processing pipelines based on declared input type (LC, GC, IMS, or MS Imaging).
+description: Use when when you need to understand how a multi-instrument mass spectrometry
+  platform (such as mzmine) selectively routes data to different processing pipelines
+  based on declared input type (LC, GC, IMS, or MS Imaging).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +17,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

@@ -1,6 +1,9 @@
 ---
 name: principal-component-analysis-scaling
-description: Use when you have a log2-transformed metabolite abundance matrix and need to visualize sample clustering patterns, batch structure, or the effect of batch correction. Scaling is essential because metabolites often have widely different absolute concentrations;
+description: Use when you have a log2-transformed metabolite abundance matrix and
+  need to visualize sample clustering patterns, batch structure, or the effect of
+  batch correction. Scaling is essential because metabolites often have widely different
+  absolute concentrations;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -13,12 +16,14 @@ metadata:
   - R
   - ggplot2
   - dplyr
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
 evidence_spans:
 - pca_res <- prcomp(cordbat_example[, metabolite_cols], scale. = TRUE)
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref", grouping = FALSE, print.detail = FALSE )
+- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
+  grouping = FALSE, print.detail = FALSE )
 - '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # principal-component-analysis-scaling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform scaled principal component analysis (PCA) on metabolomics data matrices to project high-dimensional metabolite measurements into a lower-dimensional space while standardizing features to unit variance. This technique is used to visualize batch effects, group separation, and the efficacy of batch correction methods like CordBat on metabolomic samples.

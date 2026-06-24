@@ -1,6 +1,8 @@
 ---
 name: browser-security-policy-configuration
-description: Use when you need to run a web application locally (by opening index.html directly in the browser) and the application uses WebWorker or WebAssembly modules that fail to load with cross-origin policy or file-access errors.
+description: Use when you need to run a web application locally (by opening index.html
+  directly in the browser) and the application uses WebWorker or WebAssembly modules
+  that fail to load with cross-origin policy or file-access errors.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -13,6 +15,7 @@ metadata:
   - COLMARvista
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1007/s10858-025-00465-y#sec2
   title: COLMARvista

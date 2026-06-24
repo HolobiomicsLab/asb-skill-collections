@@ -1,6 +1,7 @@
 ---
 name: smiles-parsing-validation
-description: Use when when you have a dataset of molecular structures encoded as SMILES strings that will be processed downstream (e.
+description: Use when when you have a dataset of molecular structures encoded as SMILES
+  strings that will be processed downstream (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -12,6 +13,7 @@ metadata:
   - HassounLab/BAM
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -41,6 +43,7 @@ attribution:
 
 # SMILES Parsing and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate SMILES strings using RDKit to ensure chemical validity before applying biotransformation rules or other molecular transformations. This is a prerequisite quality-control step for untargeted metabolomics workflows where input structures must be chemically sound.

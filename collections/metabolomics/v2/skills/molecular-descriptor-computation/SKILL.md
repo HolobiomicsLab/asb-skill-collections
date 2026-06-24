@@ -1,6 +1,8 @@
 ---
 name: molecular-descriptor-computation
-description: Use when when you have a query mass spectrum and a set of candidate molecular structures (as SMILES or 2D/3D coordinates), and you need to prepare them for cross-view similarity comparison or machine learning-based ranking.
+description: Use when when you have a query mass spectrum and a set of candidate molecular
+  structures (as SMILES or 2D/3D coordinates), and you need to prepare them for cross-view
+  similarity comparison or machine learning-based ranking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3694
@@ -16,6 +18,7 @@ metadata:
   - subformula_assign.py
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.11.12.688047v1
   title: MVP
@@ -44,6 +47,7 @@ attribution:
 
 # molecular-descriptor-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute spectral features and molecular descriptors (views) from query spectra and candidate molecular structures to enable multi-view similarity scoring in mass spectrometry annotation. This is a prerequisite feature engineering step for ranking molecular candidates against experimental spectra.

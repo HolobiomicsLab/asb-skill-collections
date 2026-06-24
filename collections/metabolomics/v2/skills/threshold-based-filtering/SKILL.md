@@ -1,6 +1,8 @@
 ---
 name: threshold-based-filtering
-description: Use when after computing pairwise similarity scores between query molecular embeddings and a reference database, apply this skill when you need to distinguish high-confidence candidate matches from spurious matches.
+description: Use when after computing pairwise similarity scores between query molecular
+  embeddings and a reference database, apply this skill when you need to distinguish
+  high-confidence candidate matches from spurious matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - cosine similarity / Euclidean distance metric
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -40,6 +43,7 @@ attribution:
 
 # threshold-based-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter candidate molecule matches by applying a similarity score threshold to retain only high-confidence predictions from a CNN-based metabolite identification framework. This skill ensures that only embeddings sufficiently similar to the query meet downstream acceptance criteria.

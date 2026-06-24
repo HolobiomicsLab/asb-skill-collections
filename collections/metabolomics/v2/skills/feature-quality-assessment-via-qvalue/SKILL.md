@@ -1,6 +1,9 @@
 ---
 name: feature-quality-assessment-via-qvalue
-description: Use when you have loaded search results from an upstream proteomics database search (e.g., OpenSwath, DIA-NN) containing feature identification data with Q-value scores, and you need to populate analyte dropdown menus or restrict downstream analysis to only statistically confident identifications.
+description: Use when you have loaded search results from an upstream proteomics database
+  search (e.g., OpenSwath, DIA-NN) containing feature identification data with Q-value
+  scores, and you need to populate analyte dropdown menus or restrict downstream analysis
+  to only statistically confident identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +16,14 @@ metadata:
   - Streamlit
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
 - ResultsLoader
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 claims: []
 provenance:

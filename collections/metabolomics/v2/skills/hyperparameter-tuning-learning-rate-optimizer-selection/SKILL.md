@@ -1,6 +1,8 @@
 ---
 name: hyperparameter-tuning-learning-rate-optimizer-selection
-description: Use when when training a fresh NeatMS CNN model from scratch on LCMS peak classification and you need to determine which optimizer (Adam vs. SGD) and learning rate will produce an AUC ROC > 0.9 without overfitting.
+description: Use when when training a fresh NeatMS CNN model from scratch on LCMS
+  peak classification and you need to determine which optimizer (Adam vs. SGD) and
+  learning rate will produce an AUC ROC > 0.9 without overfitting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,15 +21,19 @@ metadata:
   - TensorFlow/Keras
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
-- calling the training method (1000 by default). NeatMS does not currently provides callback functions to automatically stop the training. Calling the training method will simply resume the training
+- calling the training method (1000 by default). NeatMS does not currently provides
+  callback functions to automatically stop the training. Calling the training method
+  will simply resume the training
 - from keras.optimizers import SGD, Adam
 claims: []
 provenance:
@@ -52,6 +58,7 @@ attribution:
 
 # hyperparameter-tuning-learning-rate-optimizer-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic selection and tuning of neural network learning rate and optimizer (Adam, SGD) for CNN-based LCMS peak classification. This skill optimizes model convergence speed and generalization to achieve target performance (AUC ROC > 0.9) without overfitting.

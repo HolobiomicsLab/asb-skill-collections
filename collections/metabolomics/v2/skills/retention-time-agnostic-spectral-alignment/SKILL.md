@@ -1,6 +1,9 @@
 ---
 name: retention-time-agnostic-spectral-alignment
-description: Use when you have MS2 fragmentation spectra from multiple samples (in .mgf, .mzML, or .mzXML format) and want to compare them despite poor feature overlap, strong RT shifts between acquisitions, or use of different LC-MS platforms (e.g., Orbitrap vs. Q-ToF).
+description: Use when you have MS2 fragmentation spectra from multiple samples (in
+  .mgf, .mzML, or .mzXML format) and want to compare them despite poor feature overlap,
+  strong RT shifts between acquisitions, or use of different LC-MS platforms (e.g.,
+  Orbitrap vs. Q-ToF).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3932
@@ -18,11 +21,13 @@ metadata:
   - TMAP
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 - conda install -c conda-forge scikit-bio

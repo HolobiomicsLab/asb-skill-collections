@@ -1,6 +1,9 @@
 ---
 name: cypreact-input-format-compliance
-description: Use when you have a collection of molecular structures intended for CypReact-based CYP isoform metabolism prediction and need to verify the input file conforms to CypReact's expected format (comma-separated SMILES in .csv or SDF molecular structure files) before submission to the tool.
+description: Use when you have a collection of molecular structures intended for CypReact-based
+  CYP isoform metabolism prediction and need to verify the input file conforms to
+  CypReact's expected format (comma-separated SMILES in .csv or SDF molecular structure
+  files) before submission to the tool.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -12,11 +15,13 @@ metadata:
   - CypReact
   - RDKit
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
 evidence_spans:
-- 'To run the CypReact tool, the user should use command in the terminal as: ->java -jar "PathOfCypReactBundle"'
+- 'To run the CypReact tool, the user should use command in the terminal as: ->java
+  -jar "PathOfCypReactBundle"'
 - java -jar "PathOfCypReactBundle"
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # cypreact-input-format-compliance
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and parse molecular structure input files (.csv or .sdf) to meet CypReact's format specifications before cytochrome P450 metabolism prediction. This skill ensures SMILES strings are syntactically correct, properly delimited, and deduplicated to avoid processing failures.

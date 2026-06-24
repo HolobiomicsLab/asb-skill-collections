@@ -1,6 +1,8 @@
 ---
 name: protein-domain-homology-search-and-annotation
-description: Use when after predicting coding potential (via CPAT) on differentially expressed isoforms and you need to assign functional annotations based on protein domain homology.
+description: Use when after predicting coding potential (via CPAT) on differentially
+  expressed isoforms and you need to assign functional annotations based on protein
+  domain homology.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0346
@@ -14,6 +16,7 @@ metadata:
   - fimo
   - IsoformSwitchAnalyzer
   - Pfam
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator

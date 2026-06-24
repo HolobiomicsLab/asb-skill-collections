@@ -1,6 +1,9 @@
 ---
 name: principal-component-extraction-from-pathway-subsets
-description: Use when you have a log2-normalized, zero-mean and unit-variance standardized intensity matrix of metabolite features (rows=metabolites, columns=samples) and need to compute a single activity score per pathway that reflects the coordinated expression behavior of all metabolites assigned to that.
+description: Use when you have a log2-normalized, zero-mean and unit-variance standardized
+  intensity matrix of metabolite features (rows=metabolites, columns=samples) and
+  need to compute a single activity score per pathway that reflects the coordinated
+  expression behavior of all metabolites assigned to that.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -14,14 +17,17 @@ metadata:
   - Reactome
   - GNPS
   - MS2LDA
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # Principal component extraction from pathway subsets
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract the first principal component (singular vector) from each metabolite pathway subset using singular value decomposition (SVD) to produce a single quantitative activity score per pathway. This approach is more robust to noise and missing peaks than Over-Representation Analysis or Gene Set Enrichment Analysis alternatives, making it well-suited for metabolomics data.

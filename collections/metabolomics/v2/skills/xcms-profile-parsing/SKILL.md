@@ -1,6 +1,9 @@
 ---
 name: xcms-profile-parsing
-description: Use when you have xcms-processed LC-MS data with detected feature groups (from xcms grouping), suspect retention time misalignment across samples due to long acquisition periods or large sample cohorts, and need to feed raw profiles into ncGTW's realignment algorithm.
+description: Use when you have xcms-processed LC-MS data with detected feature groups
+  (from xcms grouping), suspect retention time misalignment across samples due to
+  long acquisition periods or large sample cohorts, and need to feed raw profiles
+  into ncGTW's realignment algorithm.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3932
@@ -13,11 +16,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -43,6 +48,7 @@ attribution:
 
 # xcms-profile-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and structure raw LC-MS profile data from xcms-processed files into organized feature-by-sample objects for downstream realignment analysis. This skill extracts retention time and intensity profiles needed by ncGTW to detect and correct misaligned feature groups.

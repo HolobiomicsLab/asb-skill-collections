@@ -1,6 +1,9 @@
 ---
 name: custom-file-wrapper-class-implementation
-description: Use when when you have mass spectrometry data stored in a database or non-mzML file format and need to integrate it into the pymzML pipeline without converting to mzML. Use this skill when FileInterface does not natively recognize your file extension and you want to avoid data conversion overhead.
+description: Use when when you have mass spectrometry data stored in a database or
+  non-mzML file format and need to integrate it into the pymzML pipeline without converting
+  to mzML. Use this skill when FileInterface does not natively recognize your file
+  extension and you want to avoid data conversion overhead.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,6 +17,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,6 +47,7 @@ attribution:
 
 # custom-file-wrapper-class-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom file wrapper class to enable pymzML to read and randomly access mass spectrometry data stored in non-standard formats (e.g., SQLite databases) by wrapping the data source with __getitem__, read(), and get_spectrum_count() methods that pymzML's FileInterface can detect and instantiate.

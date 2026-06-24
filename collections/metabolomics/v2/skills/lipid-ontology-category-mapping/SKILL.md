@@ -1,6 +1,8 @@
 ---
 name: lipid-ontology-category-mapping
-description: Use when you have a list of detected lipids (e.g., from LC-MS/MS lipidomics data) with associated statistical measures (p-values, fold-changes), and you need to test whether specific lipid ontology categories (e.
+description: Use when you have a list of detected lipids (e.g., from LC-MS/MS lipidomics
+  data) with associated statistical measures (p-values, fold-changes), and you need
+  to test whether specific lipid ontology categories (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +17,13 @@ metadata:
   - Fisher's exact test
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - library(readr)
 claims: []
 provenance:

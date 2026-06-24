@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-intensity-scaling
-description: Use when after filtering and noise removal when you have a cleaned spectrum with m/z and intensity pairs and need to normalize the intensity distribution prior to peptide fragment annotation, spectral library matching, or machine learning-based spectrum analysis.
+description: Use when after filtering and noise removal when you have a cleaned spectrum
+  with m/z and intensity pairs and need to normalize the intensity distribution prior
+  to peptide fragment annotation, spectral library matching, or machine learning-based
+  spectrum analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -18,16 +21,20 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
 - pymzML (version 2.5.2)
 - pyOpenMS (version 2.7.0)
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 - import seaborn as sns
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +58,7 @@ attribution:
 
 # spectral-peak-intensity-scaling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply square-root or other intensity scaling transformations to mass spectrometry spectrum peak intensities to de-emphasize overly intense peaks and improve dynamic range for downstream spectral analysis and matching. This normalization step is critical for making weak and strong peaks more comparable in intensity-based search algorithms.

@@ -1,6 +1,9 @@
 ---
 name: smiles-structure-representation-handling
-description: Use when you have generated a TPs object (via generateTPs) containing transformation products with structural information and need to export these structures for MetFrag database creation, suspect screening list construction, or chemical similarity filtering.
+description: Use when you have generated a TPs object (via generateTPs) containing
+  transformation products with structural information and need to export these structures
+  for MetFrag database creation, suspect screening list construction, or chemical
+  similarity filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -12,13 +15,15 @@ metadata:
   - MetFrag
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
 evidence_spans:
 - The `generateTPs` function is used to obtain TPs for a particular set of parents.
 - componTP <- generateComponents(algorithm = "tp",
-- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents, only for TPs with structural information)
+- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents,
+  only for TPs with structural information)
 - Generates a [MetFrag] database for all TPs
 claims: []
 provenance:

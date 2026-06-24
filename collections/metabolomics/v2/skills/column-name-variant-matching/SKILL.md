@@ -1,6 +1,7 @@
 ---
 name: column-name-variant-matching
-description: Use when when processing mwTab metabolomics data files with variable column naming conventions (e.
+description: Use when when processing mwTab metabolomics data files with variable
+  column naming conventions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +14,7 @@ metadata:
   - pandas
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

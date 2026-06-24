@@ -1,6 +1,8 @@
 ---
 name: web-service-health-monitoring
-description: Use when your annotation pipeline depends on multiple external web converters and you need to diagnose why annotation jobs are failing, slow, or incomplete. Use it if you observe missing metadata fields in output .
+description: Use when your annotation pipeline depends on multiple external web converters
+  and you need to diagnose why annotation jobs are failing, slow, or incomplete. Use
+  it if you observe missing metadata fields in output .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +17,7 @@ metadata:
   - BridgeDb
   - pytest
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

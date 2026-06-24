@@ -1,6 +1,9 @@
 ---
 name: approximate-nearest-neighbor-index-construction
-description: Use when when you have a large collection of reference MS/MS spectra (spectral library) and need to search unknown query spectra against it rapidly, particularly for open modification searching where the modification mass is unknown and candidate space is large.
+description: Use when when you have a large collection of reference MS/MS spectra
+  (spectral library) and need to search unknown query spectra against it rapidly,
+  particularly for open modification searching where the modification mass is unknown
+  and candidate space is large.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -13,11 +16,13 @@ metadata:
   - NumPy
   techniques:
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

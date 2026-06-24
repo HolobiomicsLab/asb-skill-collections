@@ -1,6 +1,9 @@
 ---
 name: metabolite-set-composition-validation
-description: 'Use when after constructing a background set for ORA in metabolomics: you have loaded an experimental detection list and a metabolomics pathway database, applied background-set construction logic, and need to confirm that the resulting background set has the correct size, composition, pathway.'
+description: 'Use when after constructing a background set for ORA in metabolomics:
+  you have loaded an experimental detection list and a metabolomics pathway database,
+  applied background-set construction logic, and need to confirm that the resulting
+  background set has the correct size, composition, pathway.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -10,6 +13,7 @@ metadata:
   tools:
   - Python
   - Jupyter
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -37,6 +41,7 @@ attribution:
 
 # metabolite-set-composition-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a background-set or experimental metabolite collection is correctly constructed by validating its composition against the metabolomics pathway database, ensuring absence of contamination, appropriate pathway coverage, and statistical soundness for Over-representation Analysis.

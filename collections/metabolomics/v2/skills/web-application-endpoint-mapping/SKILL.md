@@ -1,6 +1,9 @@
 ---
 name: web-application-endpoint-mapping
-description: Use when you have a user-submitted spectrum with associated domain context metadata (e.g., selected as 'microbial origin', 'plant tissue', 'food sample') and need to route that spectrum to the appropriate domain-specific MASST application for searching.
+description: Use when you have a user-submitted spectrum with associated domain context
+  metadata (e.g., selected as 'microbial origin', 'plant tissue', 'food sample') and
+  need to route that spectrum to the appropriate domain-specific MASST application
+  for searching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -17,6 +20,7 @@ metadata:
   - GNPS_MASST
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

@@ -1,6 +1,7 @@
 ---
 name: mobility-scale-transformation
-description: Use when analyzing CE-MS(/MS) data where electroosmotic flow fluctuations cause variable migration times for the same compounds across runs.
+description: Use when analyzing CE-MS(/MS) data where electroosmotic flow fluctuations
+  cause variable migration times for the same compounds across runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,13 +18,15 @@ metadata:
   - ROMANCE
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("Spectra")`
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("xcms")`
 - The MT of the peak will be determined by `findChromPeaks` from `xcms`.
@@ -50,6 +53,7 @@ attribution:
 
 # mobility-scale-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform CE-MS migration time data to effective mobility (µeff) scale using calibration with internal EOF markers, producing reproducible compound peaks independent of electroosmotic flow variations. This skill is essential when CE-MS analyses show migration time drift caused by EOF instability, requiring normalization to a stable physicochemical property for reliable peak alignment and quantification across runs.

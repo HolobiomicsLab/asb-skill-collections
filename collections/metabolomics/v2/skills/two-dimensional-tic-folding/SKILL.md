@@ -1,6 +1,8 @@
 ---
 name: two-dimensional-tic-folding
-description: Use when immediately after acquiring raw GCxGC-MS data in NetCDF format (.cdf files) and before any signal enhancement (smoothing, baseline correction) or alignment steps.
+description: Use when immediately after acquiring raw GCxGC-MS data in NetCDF format
+  (.cdf files) and before any signal enhancement (smoothing, baseline correction)
+  or alignment steps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,13 +14,15 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # two-dimensional-tic-folding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts raw GCxGC chromatogram data from NetCDF format into a 2D-TIC (two-dimensional Total Intensity Chromatogram) object by folding the linear retention time axis according to the second-dimension modulation period. This is the foundational preprocessing step that restructures raw instrumental output into a matrix suitable for signal enhancement and multivariate analysis.

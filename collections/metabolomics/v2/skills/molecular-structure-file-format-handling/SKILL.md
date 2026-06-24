@@ -1,6 +1,8 @@
 ---
 name: molecular-structure-file-format-handling
-description: Use when when you have molecular structures in one format (e.g., SMILES strings in a spreadsheet or text file) but need to feed them to a tool that accepts a different format (e.g., CypReact requires .sdf or .csv with SMILES).
+description: Use when when you have molecular structures in one format (e.g., SMILES
+  strings in a spreadsheet or text file) but need to feed them to a tool that accepts
+  a different format (e.g., CypReact requires .sdf or .csv with SMILES).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_3314
   tools:
   - CypReact
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -36,6 +39,7 @@ attribution:
 
 # molecular-structure-file-format-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert and prepare molecular structures between standard file formats (.sdf, .csv with SMILES) for input to computational chemistry tools. This skill ensures compatibility between data sources and analysis pipelines that require specific structure representations.

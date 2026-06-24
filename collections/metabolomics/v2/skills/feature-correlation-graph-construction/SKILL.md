@@ -1,6 +1,7 @@
 ---
 name: feature-correlation-graph-construction
-description: Use when after imputing missing values and before assigning Cluster_IDs in the notame preprocessing pipeline.
+description: Use when after imputing missing values and before assigning Cluster_IDs
+  in the notame preprocessing pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +14,7 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -22,7 +24,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +50,7 @@ attribution:
 
 # Reconstruct the feature clustering algorithm producing Cluster_ID assignments
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a graph of correlated LC-MS metabolic features by identifying feature pairs with high correlation and similar retention times, then decompose the graph into connected components to group related features for subsequent cluster assignment. This is a prerequisite step for feature clustering and metabolite identification in non-targeted metabolomics workflows.

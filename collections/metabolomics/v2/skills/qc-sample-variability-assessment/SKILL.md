@@ -1,6 +1,9 @@
 ---
 name: qc-sample-variability-assessment
-description: Use when after batch correction of a metabolomics dataset using pooled study quality control (SQC) samples, when you have multiple candidate internal standards and need to systematically evaluate which one produces the most stable compound quantification (lowest QC variability) for each compound.
+description: Use when after batch correction of a metabolomics dataset using pooled
+  study quality control (SQC) samples, when you have multiple candidate internal standards
+  and need to systematically evaluate which one produces the most stable compound
+  quantification (lowest QC variability) for each compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +15,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -42,6 +46,7 @@ attribution:
 
 # qc-sample-variability-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Exhaustively calculate Relative Standard Deviation (RSDQC) of batch-corrected compound/internal-standard ratios across all internal standard candidates to identify which internal standard minimizes QC sample variability for each compound. This identifies the most reliable internal standard choice for normalizing each metabolite.

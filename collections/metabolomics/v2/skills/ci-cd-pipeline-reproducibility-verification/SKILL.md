@@ -10,6 +10,7 @@ metadata:
   - git
   - RDKit
   - GitHub Actions
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -39,6 +40,7 @@ attribution:
 
 # ci-cd-pipeline-reproducibility-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a GitHub Actions CI/CD workflow executes successfully locally and produces results matching the reported badge status. This skill validates the integrity and reproducibility of automated pipeline execution by comparing local test runs against the official CI logs.

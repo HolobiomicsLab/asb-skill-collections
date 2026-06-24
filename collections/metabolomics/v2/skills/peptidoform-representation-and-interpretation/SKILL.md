@@ -1,6 +1,9 @@
 ---
 name: peptidoform-representation-and-interpretation
-description: Use when when you have a tandem mass spectrometry spectrum with a known or inferred peptide sequence that may contain post-translational modifications (phosphorylation, glycosylation, cross-links), and you need to annotate which observed m/z peaks correspond to specific fragment ion types (b, y, a.
+description: Use when when you have a tandem mass spectrometry spectrum with a known
+  or inferred peptide sequence that may contain post-translational modifications (phosphorylation,
+  glycosylation, cross-links), and you need to annotate which observed m/z peaks correspond
+  to specific fragment ion types (b, y, a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -18,6 +21,7 @@ metadata:
   - Glycan Naming Ontology
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -49,6 +53,7 @@ attribution:
 
 # peptidoform-representation-and-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Represent and interpret modified peptides using the ProForma 2.0 specification to annotate observed mass spectrometry fragments with ion types and modifications. This skill enables systematic labeling of b and y ions with chemical modifications tracked via controlled vocabularies (Unimod, PSI-MOD, XL-MOD, Glycan Naming Ontology), facilitating publication-quality spectrum visualization and fragment validation.

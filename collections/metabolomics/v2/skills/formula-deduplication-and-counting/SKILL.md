@@ -1,6 +1,9 @@
 ---
 name: formula-deduplication-and-counting
-description: Use when when you have loaded a chemical database (e.g., HMDB pickle file) and need to understand how many distinct molecular formulas remain after filtering for a specific m/z range (e.g., 100–1000) and MS acquisition level (typically MS level 1).
+description: Use when when you have loaded a chemical database (e.g., HMDB pickle
+  file) and need to understand how many distinct molecular formulas remain after filtering
+  for a specific m/z range (e.g., 100–1000) and MS acquisition level (typically MS
+  level 1).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -13,14 +16,17 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # formula-deduplication-and-counting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deduplicate and count unique molecular formulas from a filtered chemical database after applying m/z range and MS level constraints. This skill quantifies the diversity of ionizable species available in a virtual metabolomics acquisition simulation.

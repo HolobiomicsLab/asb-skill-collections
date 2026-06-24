@@ -1,6 +1,9 @@
 ---
 name: paired-omics-data-structure-mapping
-description: Use when when you have a paired omics project document (JSON format) that combines MS/MS mass spectrometry data with genome identifiers, biosynthetic gene cluster information, sample preparation, extraction method, and instrumentation metadata, and you need to verify it conforms to the platform's.
+description: Use when when you have a paired omics project document (JSON format)
+  that combines MS/MS mass spectrometry data with genome identifiers, biosynthetic
+  gene cluster information, sample preparation, extraction method, and instrumentation
+  metadata, and you need to verify it conforms to the platform's.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,11 +15,13 @@ metadata:
   - Github
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 - pull request (https://help.github.com/articles/about-pull-requests/)
 claims: []
 provenance:

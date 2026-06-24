@@ -1,6 +1,9 @@
 ---
 name: molecular-formula-search-assignment
-description: Use when you have a recalibrated FT-ICR mass spectrum (Bruker .d format or equivalent) with detected, noise-thresholded peaks and need to assign chemical formulas to each peak. This is particularly relevant when analyzing samples with unknown composition (e.
+description: Use when you have a recalibrated FT-ICR mass spectrum (Bruker .d format
+  or equivalent) with detected, noise-thresholded peaks and need to assign chemical
+  formulas to each peak. This is particularly relevant when analyzing samples with
+  unknown composition (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +18,14 @@ metadata:
   - EnviroMS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 - import numpy as np
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # molecular-formula-search-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns molecular formulas to detected m/z peaks in high-resolution mass spectra by matching observed mass-to-charge ratios against a constrained search space of possible elemental compositions. This skill is essential for converting raw peak lists into chemically interpretable molecular annotations, especially for natural organic matter and complex mixture analysis on FT-ICR instruments.

@@ -1,6 +1,8 @@
 ---
 name: mass-to-charge-filtering
-description: Use when after generating theoretical B/Y ion spectra or after importing experimental MS/MS scans when your analysis goal requires restricting the ion population to a specific m/z window (e.g., m/z < 2000).
+description: Use when after generating theoretical B/Y ion spectra or after importing
+  experimental MS/MS scans when your analysis goal requires restricting the ion population
+  to a specific m/z window (e.g., m/z < 2000).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +15,15 @@ metadata:
   - mzR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 claims: []
 provenance:

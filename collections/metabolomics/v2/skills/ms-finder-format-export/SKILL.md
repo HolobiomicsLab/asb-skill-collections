@@ -1,6 +1,9 @@
 ---
 name: ms-finder-format-export
-description: Use when after completing MS-CleanR filtering (blank subtraction, background removal, RSD/RMD thresholding) and feature clustering steps, when you have a consolidated set of representative features and need structural identification via MS/MS spectral matching.
+description: Use when after completing MS-CleanR filtering (blank subtraction, background
+  removal, RSD/RMD thresholding) and feature clustering steps, when you have a consolidated
+  set of representative features and need structural identification via MS/MS spectral
+  matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +16,13 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
 evidence_spans:
-- all selected features are exported to MS-FINDER program for in silico-based annotation using hydrogen rearrangement rules (HRR) scoring system
+- all selected features are exported to MS-FINDER program for in silico-based annotation
+  using hydrogen rearrangement rules (HRR) scoring system
 - MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # MS-FINDER Format Export
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert filtered and clustered LC-MS features from MS-CleanR into MS-FINDER-compatible input format (m/z, retention time, MS/MS spectra) to enable in silico compound annotation using hydrogen rearrangement rules scoring across multiple metabolite databases.

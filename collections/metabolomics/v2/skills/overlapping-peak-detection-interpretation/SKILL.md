@@ -1,6 +1,8 @@
 ---
 name: overlapping-peak-detection-interpretation
-description: Use when annotating matrix-related signals in MSI datasets where chemical formulas or spatial distributions alone are ambiguous, or when multiple ions share nominal m/z values (isobaric peaks).
+description: Use when annotating matrix-related signals in MSI datasets where chemical
+  formulas or spatial distributions alone are ambiguous, or when multiple ions share
+  nominal m/z values (isobaric peaks).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +16,13 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - rMSIcleanup is an open-source R package
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # overlapping-peak-detection-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and document overlapping or isobaric peaks in mass spectrometry imaging data to prevent misclassification of matrix-related ions and transparently justify annotation decisions. This skill interprets overlap status as part of the classification rationale for each m/z feature.

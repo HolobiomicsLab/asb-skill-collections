@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-visualization-across-batches
-description: Use when after applying batch-effect correction methods (parametric ComBat, non-parametric ComBat, ber, or ber-bagging) to log-transformed metabolomics abundance matrices, use this skill when you need to visually inspect whether technical heterogeneity (drift across batch, signal shift) has been.
+description: Use when after applying batch-effect correction methods (parametric ComBat,
+  non-parametric ComBat, ber, or ber-bagging) to log-transformed metabolomics abundance
+  matrices, use this skill when you need to visually inspect whether technical heterogeneity
+  (drift across batch, signal shift) has been.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - sva
   - ber
   - R graphics
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -21,7 +25,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # metabolite-feature-visualization-across-batches
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate diagnostic visualizations that compare corrected versus uncorrected metabolomics feature distributions across batches to assess batch-effect correction model performance and select the statistical model that best fits the data structure.

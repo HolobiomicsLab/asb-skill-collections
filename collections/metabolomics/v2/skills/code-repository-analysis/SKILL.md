@@ -1,6 +1,8 @@
 ---
 name: code-repository-analysis
-description: Use when you have a published research article describing a new FT-ICR MS analysis tool and need to verify which analytical and visualization features are actually implemented (not just claimed).
+description: Use when you have a published research article describing a new FT-ICR
+  MS analysis tool and need to verify which analytical and visualization features
+  are actually implemented (not just claimed).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -21,16 +23,20 @@ metadata:
   - py4cytoscape
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - web-based applications such as UltraMassExplorer (UME)
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29], and DropMS [30]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -54,6 +60,7 @@ attribution:
 
 # code-repository-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically extract and cross-reference implementation details from a software repository's source code, dependency declarations, and documentation to construct a comprehensive feature inventory and comparative analysis table. This skill is essential when assessing the analytical capabilities of a bioinformatics pipeline against peer tools.

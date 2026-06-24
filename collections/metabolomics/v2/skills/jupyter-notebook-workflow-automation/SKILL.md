@@ -15,6 +15,7 @@ metadata:
   - MZmine3
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -43,6 +44,7 @@ attribution:
 
 # jupyter-notebook-workflow-automation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automate multi-stage LC-MS/MS spectral data processing pipelines within Jupyter notebooks to generate serialized session data objects for downstream visualization. This skill enables interactive, reproducible preprocessing of mass spectral data with integrated model inference and metadata validation.

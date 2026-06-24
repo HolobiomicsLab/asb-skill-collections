@@ -1,6 +1,9 @@
 ---
 name: multiomics-data-integration
-description: Use when when you have matched multiomics measurements across the same samples or cell lines (transcriptomics, proteomics, metabolomics, epigenomics, etc.) and need to train predictive models that learn regulatory relationships across biomolecular classes.
+description: Use when when you have matched multiomics measurements across the same
+  samples or cell lines (transcriptomics, proteomics, metabolomics, epigenomics, etc.)
+  and need to train predictive models that learn regulatory relationships across biomolecular
+  classes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -12,6 +15,7 @@ metadata:
   - ML_function.ipynb
   - preprocessing_example.ipynb
   - recon_mapping
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.17.608400v2
   title: Recon8D
@@ -39,6 +43,7 @@ attribution:
 
 # multiomics-data-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integration of ten feature sets spanning eight biomolecular classes (genomic CNV, mutations, DNA methylation, histone PTMs, coding/non-coding transcriptomics, proteomics, and phosphoproteomics) into unified feature spaces for machine learning prediction of metabolic regulation. This skill enables construction of systems-level metabolic regulome networks by aligning and normalizing heterogeneous omics layers.

@@ -1,6 +1,9 @@
 ---
 name: compound-library-construction-and-curation
-description: Use when when you have a set of query chemicals (e.g., ethyl hexanoate, methyl salicylate, octanal, undecane) and need to evaluate them against reference compound categories, or when you want to restrict structural matching to specific compound type sets (e.
+description: Use when when you have a set of query chemicals (e.g., ethyl hexanoate,
+  methyl salicylate, octanal, undecane) and need to evaluate them against reference
+  compound categories, or when you want to restrict structural matching to specific
+  compound type sets (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -14,13 +17,17 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- To perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR](https://bioconductor.org/packages/release/bioc
+- To perform the chemical structure matches and summarize atomic features, uafR taps
+  into an amazing set of cheminformatics packages -- [ChemmineR]
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR]
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR](https://bioconductor.org/packages/release/bioc
 - '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
@@ -47,6 +54,7 @@ attribution:
 
 # compound-library-construction-and-curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assemble and organize chemical reference libraries (e.g., GroupA, GroupB, or restricted type sets) as data structures for downstream structural matching and categorical enrichment. This skill ensures that query chemicals can be accurately matched against well-curated compound sets using cheminformatics tools.

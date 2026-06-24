@@ -1,6 +1,9 @@
 ---
 name: multi-criterion-score-combination-and-ranking
-description: Use when you have generated hypothetical links (e.g., GCF–MF pairs) and computed multiple independent scoring functions on them (e.g., strain co-occurrence, IOKR structural fingerprint matching), but individual scores show incomplete discrimination power.
+description: Use when you have generated hypothetical links (e.g., GCF–MF pairs) and
+  computed multiple independent scoring functions on them (e.g., strain co-occurrence,
+  IOKR structural fingerprint matching), but individual scores show incomplete discrimination
+  power.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,13 +17,15 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -50,6 +55,7 @@ attribution:
 
 # multi-criterion-score-combination-and-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine multiple independent scoring functions (strain correlation, structural similarity) using standardized ℓ₁/₂-norm aggregation to rank hypothetical links between genomic and metabolomic entities. This skill improves discrimination of true links by leveraging complementary scoring signals that separately may miss important associations.

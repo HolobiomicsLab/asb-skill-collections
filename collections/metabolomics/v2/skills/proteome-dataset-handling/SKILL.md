@@ -1,6 +1,9 @@
 ---
 name: proteome-dataset-handling
-description: 'Use when you have a collection of MS/MS spectra in MGF format and need to prepare them for GPU-based clustering. Dataset size and available GPU memory are critical: use GTX 1080Ti for smaller proteome datasets; use GTX 3090 for datasets like PXD000561 that exceed GTX 1080Ti capacity.'
+description: 'Use when you have a collection of MS/MS spectra in MGF format and need
+  to prepare them for GPU-based clustering. Dataset size and available GPU memory
+  are critical: use GTX 1080Ti for smaller proteome datasets; use GTX 3090 for datasets
+  like PXD000561 that exceed GTX 1080Ti capacity.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - CUDA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

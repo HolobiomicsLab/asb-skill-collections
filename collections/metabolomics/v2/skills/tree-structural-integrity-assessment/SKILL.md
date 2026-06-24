@@ -1,6 +1,9 @@
 ---
 name: tree-structural-integrity-assessment
-description: Use when after generating a Chemical Feature Tree artifact (Phylogeny[Rooted]) from q2-qemistree's make-hierarchy method, or when importing a tree from external sources, to confirm it is well-formed before proceeding to alpha/beta-diversity analysis.
+description: Use when after generating a Chemical Feature Tree artifact (Phylogeny[Rooted])
+  from q2-qemistree's make-hierarchy method, or when importing a tree from external
+  sources, to confirm it is well-formed before proceeding to alpha/beta-diversity
+  analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3440
@@ -10,11 +13,13 @@ metadata:
   tools:
   - q2-qemistree
   - QIIME 2 artifact inspection tools
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +43,7 @@ attribution:
 
 # tree-structural-integrity-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the structural integrity of a Chemical Feature Tree artifact produced by q2-qemistree by inspecting file format, counting nodes, verifying connectivity, and confirming absence of malformed branches. This ensures the tree is suitable for downstream phylogenetic diversity analysis on metabolomic data.

@@ -1,6 +1,7 @@
 ---
 name: ci-cd-workflow-adaptation-to-organization-standards
-description: Use when when a Python package is being relocated to a new GitHub organization (e.
+description: Use when when a Python package is being relocated to a new GitHub organization
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,6 +12,7 @@ metadata:
   - pip
   - GitHub Actions
   - Mummichog 3
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
@@ -38,6 +40,7 @@ attribution:
 
 # CI/CD Workflow Adaptation to Organization Standards
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Audit and migrate a Python package's continuous integration and deployment workflows to conform to an organization's established conventions, ensuring the relocated codebase installs and runs correctly in its new repository home. This skill is essential when moving projects between GitHub organizations or adopting shared CI/CD standards.

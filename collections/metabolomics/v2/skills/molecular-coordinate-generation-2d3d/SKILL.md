@@ -1,6 +1,8 @@
 ---
 name: molecular-coordinate-generation-2d3d
-description: Use when you have canonicalized SMILES strings from a chemical structure database and need both 2D (flat) and 3D (conformer) representations for molecular visualization, molecular docking, or structure archival.
+description: Use when you have canonicalized SMILES strings from a chemical structure
+  database and need both 2D (flat) and 3D (conformer) representations for molecular
+  visualization, molecular docking, or structure archival.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -13,6 +15,7 @@ metadata:
   - smiles.py
   - sanitizing.py
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -45,6 +48,7 @@ attribution:
 
 # molecular-coordinate-generation-2d3d
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and optimize 2D and 3D molecular coordinate representations from canonicalized SMILES strings using RDKit's geometry algorithms and force-field methods. This skill standardizes molecular structure depictions for computational chemistry workflows, enabling downstream docking, visualization, and structure-organism pair curation.

@@ -1,6 +1,9 @@
 ---
 name: thermodynamic-index-calculation
-description: Use when after molecular formula assignment and filtering of FT-ICR MS peaks, when you have elemental composition (C, H, O, N, S, P counts) and need to characterize metabolite thermodynamic stability, degree of oxidation, aromaticity, and unsaturation to compare compound reactivity across samples.
+description: Use when after molecular formula assignment and filtering of FT-ICR MS
+  peaks, when you have elemental composition (C, H, O, N, S, P counts) and need to
+  characterize metabolite thermodynamic stability, degree of oxidation, aromaticity,
+  and unsaturation to compare compound reactivity across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,15 +16,20 @@ metadata:
   - Formularity
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
 - It requires the Python dependencies NumPy [40], pandas [41, 42]
-- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24] which uses FT-ICR MS data in .xml format
-- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24]
+- it has been designed to work with the output file (in .csv format) generated directly
+  by Formularity [24] which uses FT-ICR MS data in .xml format
+- it has been designed to work with the output file (in .csv format) generated directly
+  by Formularity [24]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +53,7 @@ attribution:
 
 # thermodynamic-index-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate thermodynamic and molecular indices (DBE, GFE, AImod, NOSC) from assigned FT-ICR MS molecular formulas to characterize metabolite properties including saturation, lability, and oxidation state. These indices enable rapid assessment of compound degradability and structural complexity across large peak datasets.

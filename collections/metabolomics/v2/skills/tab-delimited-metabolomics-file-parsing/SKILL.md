@@ -1,6 +1,8 @@
 ---
 name: tab-delimited-metabolomics-file-parsing
-description: Use when when you have raw metabolomics measurements in tab-delimited text format (e.g., from Sciex OS exports) and need to load them into R for quality control analysis.
+description: Use when when you have raw metabolomics measurements in tab-delimited
+  text format (e.g., from Sciex OS exports) and need to load them into R for quality
+  control analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +16,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -44,6 +47,7 @@ attribution:
 
 # tab-delimited-metabolomics-file-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse tab-delimited metabolomics data files into validated data frames for downstream construction of SummarizedExperiment objects. This skill enforces mandatory column presence and data integrity before analyte ratio calculation and batch correction.

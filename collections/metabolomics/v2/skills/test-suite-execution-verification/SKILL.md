@@ -1,6 +1,9 @@
 ---
 name: test-suite-execution-verification
-description: Use when when you have cloned or obtained a Python package repository and need to confirm that the codebase's tests pass before integration, contribution, or deployment. Particularly relevant when the repository advertises a Tests badge linked to a CI/CD workflow (e.
+description: Use when when you have cloned or obtained a Python package repository
+  and need to confirm that the codebase's tests pass before integration, contribution,
+  or deployment. Particularly relevant when the repository advertises a Tests badge
+  linked to a CI/CD workflow (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +14,7 @@ metadata:
   - pip
   - pytest
   - GitHub Actions
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

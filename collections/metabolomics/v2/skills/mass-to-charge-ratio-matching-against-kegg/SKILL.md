@@ -1,6 +1,8 @@
 ---
 name: mass-to-charge-ratio-matching-against-kegg
-description: Use when you have an LC-MS peak-intensity matrix (rows = peaks with m/z and intensity; columns = samples) and need to assign KEGG compound identifiers to observed peaks.
+description: Use when you have an LC-MS peak-intensity matrix (rows = peaks with m/z
+  and intensity; columns = samples) and need to assign KEGG compound identifiers to
+  observed peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3755
@@ -16,15 +18,19 @@ metadata:
   - cliqueMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 - matching mass-to-charge ratio values to KEGG database
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 claims: []
 provenance:
@@ -49,6 +55,7 @@ attribution:
 
 # mass-to-charge-ratio-matching-against-kegg
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed m/z values from LC-MS peak-intensity matrices to KEGG database compounds by testing all possible neutral mass candidates derived from a precomputed adduct and in-source fragment table. This is the first critical step in untargeted metabolomics annotation, converting raw peaks into candidate metabolite identifiers.

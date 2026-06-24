@@ -1,6 +1,9 @@
 ---
 name: installation-validation-and-diagnostics
-description: Use when after installing a package via conda or pip from a distribution channel (e.g., Bioconda, PyPI), run this skill to confirm the installation succeeded and that critical submodules are importable before proceeding to use the package in analysis workflows.
+description: Use when after installing a package via conda or pip from a distribution
+  channel (e.g., Bioconda, PyPI), run this skill to confirm the installation succeeded
+  and that critical submodules are importable before proceeding to use the package
+  in analysis workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -11,6 +14,7 @@ metadata:
   - Bioconda
   - pip
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -39,6 +43,7 @@ attribution:
 
 # installation-validation-and-diagnostics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Python package (here, Pyteomics) has been successfully installed through a package manager and that its core modules load without import errors. This skill confirms both package availability in a distribution channel and functional integrity of the installed codebase.

@@ -1,6 +1,8 @@
 ---
 name: quality-control-metric-evaluation
-description: Use when you have measured IM-MS lipidomics data spiked with U13C labeled internal standards and need to assess whether CCS bias remains within acceptable limits for each lipid class-adduct combination.
+description: Use when you have measured IM-MS lipidomics data spiked with U13C labeled
+  internal standards and need to assess whether CCS bias remains within acceptable
+  limits for each lipid class-adduct combination.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3564
@@ -12,11 +14,13 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # Quality-Control Metric Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate and visualize collision cross section (CCS) bias metrics across lipid classes and adduct combinations to assess the quality of ion mobility-mass spectrometry lipidomics measurements. This skill determines whether CCS bias estimation remains acceptable across varying numbers of internal standards and quantifies the trade-off between analytical coverage and correction accuracy.

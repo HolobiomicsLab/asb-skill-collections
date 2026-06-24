@@ -1,6 +1,8 @@
 ---
 name: double-bond-positional-isomer-generation
-description: Use when when constructing a comprehensive lipid spectral reference library that must disambiguate lipids differing only in carbon-carbon double-bond position (e.
+description: Use when when constructing a comprehensive lipid spectral reference library
+  that must disambiguate lipids differing only in carbon-carbon double-bond position
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -13,12 +15,15 @@ metadata:
   - LipidIN
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

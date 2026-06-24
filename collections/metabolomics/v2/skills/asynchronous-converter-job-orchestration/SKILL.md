@@ -1,6 +1,9 @@
 ---
 name: asynchronous-converter-job-orchestration
-description: Use when you have mass spectrum records in .msp format lacking computed chemical metadata (SMILES, InChI, CAS numbers, formulas, IUPAC names) and want to fetch these properties from multiple heterogeneous web services without blocking on individual API calls.
+description: Use when you have mass spectrum records in .msp format lacking computed
+  chemical metadata (SMILES, InChI, CAS numbers, formulas, IUPAC names) and want to
+  fetch these properties from multiple heterogeneous web services without blocking
+  on individual API calls.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -19,6 +22,7 @@ metadata:
   - Python
   - pytest
   - aiohttp
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

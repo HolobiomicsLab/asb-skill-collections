@@ -1,6 +1,9 @@
 ---
 name: bioconductor-object-structure-inspection
-description: Use when after constructing a SummarizedExperiment object from raw metabolomics data via buildExperiment, or after batch correction and ratio computation steps, inspect rowData, colData, and assays slots to verify that compound identities, sample annotations, and computed assay values (primary.
+description: Use when after constructing a SummarizedExperiment object from raw metabolomics
+  data via buildExperiment, or after batch correction and ratio computation steps,
+  inspect rowData, colData, and assays slots to verify that compound identities, sample
+  annotations, and computed assay values (primary.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,6 +16,7 @@ metadata:
   - SummarizedExperiment
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -43,6 +47,7 @@ attribution:
 
 # bioconductor-object-structure-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and validate the internal structure of a Bioconductor SummarizedExperiment object to confirm correct assignment of row metadata (compounds), column metadata (samples), and assay matrices (e.g., compound areas, internal standard areas, computed ratios). This skill ensures data integrity and proper slot population before downstream quality control analyses.

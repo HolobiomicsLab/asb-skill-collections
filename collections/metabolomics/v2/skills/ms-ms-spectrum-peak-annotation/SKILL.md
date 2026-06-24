@@ -1,6 +1,9 @@
 ---
 name: ms-ms-spectrum-peak-annotation
-description: Use when you have an experimental MS/MS spectrum (e.g., from MassBank or local data) and need to identify significant fragment ions above noise, assign occurrence scores to peaks, and generate a CSV-formatted library entry for use in metabolite feature annotation pipelines.
+description: Use when you have an experimental MS/MS spectrum (e.g., from MassBank
+  or local data) and need to identify significant fragment ions above noise, assign
+  occurrence scores to peaks, and generate a CSV-formatted library entry for use in
+  metabolite feature annotation pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # MS/MS Spectrum Peak Annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate fragment peaks in an MS/MS spectrum by applying noise and marker peak thresholds, then scoring matched ions against a metabolite library using occurrence-based scoring. This skill converts experimental spectra into library entries with scored fragment annotations suitable for downstream feature annotation in untargeted metabolomics workflows.

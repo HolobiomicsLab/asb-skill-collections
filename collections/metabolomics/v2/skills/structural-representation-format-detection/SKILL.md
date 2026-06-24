@@ -20,6 +20,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab).
     url: https://bitbucket.org/wishartlab/classyfire_api.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
@@ -48,6 +49,7 @@ attribution:
 
 # structural-representation-format-detection
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Detect and classify chemical structure input formats (SMILES, InChI, IUPAC name, or FASTA) from query strings to enable correct routing to ClassyFire API endpoints. This skill disambiguates among multiple structural representation syntaxes so that downstream classification requests are submitted to the correct endpoint.

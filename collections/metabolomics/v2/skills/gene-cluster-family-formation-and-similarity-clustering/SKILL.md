@@ -1,6 +1,8 @@
 ---
 name: gene-cluster-family-formation-and-similarity-clustering
-description: Use when you have antiSMASH v5.0.0 BGC predictions from a set of microbial genomes and you need to integrate those predictions with GNPS metabolomic data (MS2 spectra and molecular families).
+description: Use when you have antiSMASH v5.0.0 BGC predictions from a set of microbial
+  genomes and you need to integrate those predictions with GNPS metabolomic data (MS2
+  spectra and molecular families).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,13 +17,15 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -51,6 +55,7 @@ attribution:
 
 # gene-cluster-family-formation-and-similarity-clustering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster antiSMASH-predicted biosynthetic gene clusters (BGCs) into Gene Cluster Families (GCFs) using BiG-SCAPE by grouping BGCs with similar product classes and sequence similarity, creating a hierarchical scaffold for linking genomic data to metabolomic families. This reduces the dimensionality of hypothetical BGC–metabolite links and enables strain-level and fingerprint-based scoring.

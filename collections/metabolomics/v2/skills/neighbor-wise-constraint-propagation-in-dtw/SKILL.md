@@ -1,6 +1,9 @@
 ---
 name: neighbor-wise-constraint-propagation-in-dtw
-description: Use when when XCMS or other DTW-based aligners have produced misaligned LC-MS feature groups across hundreds of samples or long acquisition periods (>1 week), particularly when individual m/z bins or compounds show inconsistent retention-time drift patterns across neighboring samples.
+description: Use when when XCMS or other DTW-based aligners have produced misaligned
+  LC-MS feature groups across hundreds of samples or long acquisition periods (>1
+  week), particularly when individual m/z bins or compounds show inconsistent retention-time
+  drift patterns across neighboring samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -15,11 +18,13 @@ metadata:
   - dynamic time warping (DTW)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # Neighbor-wise constraint propagation in dynamic time warping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply neighbor-wise constraint edges during dynamic time warping alignment to enforce consistency of retention-time warping functions across adjacent LC-MS samples, improving alignment accuracy for compound-specific features that would otherwise diverge under sample-independent warping assumptions.

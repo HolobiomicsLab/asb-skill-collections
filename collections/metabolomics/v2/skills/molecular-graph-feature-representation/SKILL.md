@@ -1,6 +1,7 @@
 ---
 name: molecular-graph-feature-representation
-description: Use when when you have molecular structures (as SMILES, SDF, or graph adjacency) and need to predict continuous properties (e.
+description: Use when when you have molecular structures (as SMILES, SDF, or graph
+  adjacency) and need to predict continuous properties (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3704
@@ -11,11 +12,13 @@ metadata:
   - chemprop
   - chemprop-IR
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]
+- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
+  for Property Prediction]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +42,7 @@ attribution:
 
 # molecular-graph-feature-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and transform molecular structures into learned graph-based feature representations suitable for property prediction tasks. This skill bridges molecular chemistry (atoms, bonds, connectivity) and neural network inputs by converting SMILES or molecular graphs into featurized node and edge embeddings that capture chemical semantics for downstream message passing architectures.

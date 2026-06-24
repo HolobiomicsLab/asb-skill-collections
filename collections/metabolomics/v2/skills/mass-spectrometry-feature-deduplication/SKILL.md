@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-feature-deduplication
-description: Use when immediately after MZmine feature detection when you have both MGF (MS/MS spectra) and CSV (metadata) output files for one or both ionization modes and wish to construct a deduplicated molecular network.
+description: Use when immediately after MZmine feature detection when you have both
+  MGF (MS/MS spectra) and CSV (metadata) output files for one or both ionization modes
+  and wish to construct a deduplicated molecular network.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

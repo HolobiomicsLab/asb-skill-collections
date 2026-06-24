@@ -1,6 +1,8 @@
 ---
 name: similarity-matrix-generation-and-storage
-description: Use when when you have cleaned and filtered mass spectrometry spectral data (in mzML, mzXML, msp, MGF, or JSON format) and need to identify or rank spectra by similarity for library matching, metabolite annotation, or network analysis.
+description: Use when when you have cleaned and filtered mass spectrometry spectral
+  data (in mzML, mzXML, msp, MGF, or JSON format) and need to identify or rank spectra
+  by similarity for library matching, metabolite annotation, or network analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3809
@@ -13,11 +15,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

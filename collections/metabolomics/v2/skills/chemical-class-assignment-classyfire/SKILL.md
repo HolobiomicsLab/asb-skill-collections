@@ -1,6 +1,8 @@
 ---
 name: chemical-class-assignment-classyfire
-description: Use when you have computed low-dimensional embeddings (e.g., t-SNE coordinates) or clusterings of mass spectra and need to validate that the learned representation space organizes molecules by chemical taxonomy.
+description: Use when you have computed low-dimensional embeddings (e.g., t-SNE coordinates)
+  or clusterings of mass spectra and need to validate that the learned representation
+  space organizes molecules by chemical taxonomy.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -17,15 +19,19 @@ metadata:
   - ClassyFire
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
 - Using the t-SNE [28] implementation from scikit-learn [29]
-- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates
+- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional
+  coordinates
 - Our MS2DeepScore Python library offers two types of data generators
 claims: []
 provenance:
@@ -50,6 +56,7 @@ attribution:
 
 # chemical-class-assignment-classyfire
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve or map ClassyFire chemical superclass and subclass annotations for molecular structures (via InChIKey) to enable chemically meaningful stratification and validation of spectral embeddings or clustering results. This skill verifies that learned representations capture true chemical structure relationships by confirming class-level coherence in dimensionality-reduced visualizations.

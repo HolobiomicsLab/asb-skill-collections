@@ -1,6 +1,9 @@
 ---
 name: data-frame-augmentation
-description: Use when after assign_hierarchy has added KEGG compound identifiers and hierarchical metadata to your metabolomics count data frame, and you need to link metabolites to their functional orthologs (KO numbers) and gene names for pathway or functional enrichment analysis.
+description: Use when after assign_hierarchy has added KEGG compound identifiers and
+  hierarchical metadata to your metabolomics count data frame, and you need to link
+  metabolites to their functional orthologs (KO numbers) and gene names for pathway
+  or functional enrichment analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -11,11 +14,13 @@ metadata:
   - KEGGREST
   - R
   - Omu
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
-- which retrieves data from the KEGG API using the function ```keggGet``` from the package KEGGREST
+- which retrieves data from the KEGG API using the function ```keggGet``` from the
+  package KEGGREST
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
 claims: []
 provenance:
@@ -40,6 +45,7 @@ attribution:
 
 # data-frame-augmentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Augment a metabolomics count data frame with functional orthology and gene information retrieved from the KEGG API via S3 dispatch. This enriches metabolite-annotated tables with KO numbers and associated gene names to enable downstream functional analysis.

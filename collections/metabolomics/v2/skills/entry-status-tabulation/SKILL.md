@@ -1,6 +1,8 @@
 ---
 name: entry-status-tabulation
-description: Use when you need to assess the curation completeness and status distribution of a MIBiG JSON dataset—for instance, to identify how many entries are in 'active', 'retired', or 'pending' states, or to audit changes in entry status over time.
+description: Use when you need to assess the curation completeness and status distribution
+  of a MIBiG JSON dataset—for instance, to identify how many entries are in 'active',
+  'retired', or 'pending' states, or to audit changes in entry status over time.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +13,7 @@ metadata:
   - pandas or equivalent tabular data library
   - Python json module
   - mibig-json repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -39,6 +42,7 @@ attribution:
 
 # entry-status-tabulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and aggregate entry status values from a MIBiG JSON annotation dataset by parsing the `cluster.status` field across all records, producing a tabular summary grouped by status. This skill enables systematic inventory and tracking of curation state across secondary metabolite gene cluster annotations.

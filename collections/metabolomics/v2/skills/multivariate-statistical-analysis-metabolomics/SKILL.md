@@ -1,6 +1,9 @@
 ---
 name: multivariate-statistical-analysis-metabolomics
-description: Use when when you have preprocessed non-targeted LC-MS/MS feature tables (post-merging, cleanup, blank removal, and batch correction) and seek to uncover multivariate patterns across samples, discriminate between experimental groups, or reduce dimensionality of high-dimensional metabolomic data.
+description: Use when when you have preprocessed non-targeted LC-MS/MS feature tables
+  (post-merging, cleanup, blank removal, and batch correction) and seek to uncover
+  multivariate patterns across samples, discriminate between experimental groups,
+  or reduce dimensionality of high-dimensional metabolomic data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -14,6 +17,7 @@ metadata:
   - MZmine3
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

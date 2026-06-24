@@ -1,6 +1,9 @@
 ---
 name: tracer-impurity-correction-modeling
-description: Use when when processing LC-MS data from isotope labeling experiments where the tracer (13C, 2H, 15N, 18O, or 34S) has known isotopic impurity and you observe discrepancies between measured isotopologue abundances (FAM) and expected labeling patterns.
+description: Use when when processing LC-MS data from isotope labeling experiments
+  where the tracer (13C, 2H, 15N, 18O, or 34S) has known isotopic impurity and you
+  observe discrepancies between measured isotopologue abundances (FAM) and expected
+  labeling patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +14,7 @@ metadata:
   - ElemCor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

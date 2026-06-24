@@ -15,11 +15,13 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []
@@ -45,6 +47,7 @@ attribution:
 
 # peak-data-extraction-and-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract m/z and intensity peak values from mass spectrometry backend objects and format them as NumericList or matrix structures for downstream analysis. This skill bridges MsBackend data storage and Spectra-based processing by implementing standardized accessor methods that present raw peak data in expected formats.

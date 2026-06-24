@@ -1,6 +1,8 @@
 ---
 name: adduct-ion-mass-calculation
-description: Use when when you have derivatized metabolite structures (SMILES or mol format) and need to predict their ionization products in MS imaging, particularly when the derivatizing matrix produces non-standard adducts (e.
+description: Use when when you have derivatized metabolite structures (SMILES or mol
+  format) and need to predict their ionization products in MS imaging, particularly
+  when the derivatizing matrix produces non-standard adducts (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -41,6 +44,7 @@ attribution:
 
 # adduct-ion-mass-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate m/z values for derivatized metabolite adduct ions beyond common [M+H]+ and [M-H]- forms, with explicit support for matrix-specific ions like those produced by FMP-10 derivatizing agents. This skill automates adduct enumeration for high-throughput metabolite identification in mass spectrometry imaging.

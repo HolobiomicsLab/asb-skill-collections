@@ -1,6 +1,8 @@
 ---
 name: spectral-match-result-consolidation
-description: Use when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST indices and need to integrate the resulting match outputs into a single coherent view.
+description: Use when you have executed batch searches of MS/MS spectra against multiple
+  domain-specific MASST indices and need to integrate the resulting match outputs
+  into a single coherent view.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -20,6 +22,7 @@ metadata:
   - GNPS_MASST
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

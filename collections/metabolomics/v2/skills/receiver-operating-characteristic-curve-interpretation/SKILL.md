@@ -1,6 +1,8 @@
 ---
 name: receiver-operating-characteristic-curve-interpretation
-description: Use when you have a trained NeatMS neural network model and labelled peak validation data, and need to select an operational classification threshold or understand how TPR and FPR vary across probability thresholds (e.g., 0.00–0.99).
+description: Use when you have a trained NeatMS neural network model and labelled
+  peak validation data, and need to select an operational classification threshold
+  or understand how TPR and FPR vary across probability thresholds (e.g., 0.00–0.99).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +17,13 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -48,6 +52,7 @@ attribution:
 
 # receiver-operating-characteristic-curve-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret ROC curves and extract threshold-dependent classification metrics (TPR, FPR, precision) from a trained neural network classifier to understand the trade-off between true and false positive rates across probability thresholds. This skill is essential for selecting optimal decision thresholds and evaluating classifier performance on imbalanced MS1 peak datasets.

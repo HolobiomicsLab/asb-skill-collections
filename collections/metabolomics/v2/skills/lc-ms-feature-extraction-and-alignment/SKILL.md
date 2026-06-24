@@ -1,6 +1,8 @@
 ---
 name: lc-ms-feature-extraction-and-alignment
-description: Use when you have centroid mzML files from LC-MS experiments (converted from Thermo .raw or other vendor formats) and need to identify and quantify individual chemical features across multiple samples.
+description: Use when you have centroid mzML files from LC-MS experiments (converted
+  from Thermo .raw or other vendor formats) and need to identify and quantify individual
+  chemical features across multiple samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -48,6 +51,7 @@ attribution:
 
 # LC-MS Feature Extraction and Alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction of chemical features (m/z and retention time peaks) from centroid mzML files and alignment across samples using Asari, producing full and preferred feature tables with configurable mass and time tolerances. This foundational step converts raw LC-MS data into a normalized feature matrix suitable for downstream statistical analysis.

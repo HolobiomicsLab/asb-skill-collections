@@ -1,6 +1,7 @@
 ---
 name: collision-cross-section-calibration
-description: Use when you have LC-IMS-MS/MS data with drift_time measurements and need to convert raw drift times into calibrated CCS values for structural annotation.
+description: Use when you have LC-IMS-MS/MS data with drift_time measurements and
+  need to convert raw drift times into calibrated CCS values for structural annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,15 +18,18 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment with required dependencies.
+- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment
+  with required dependencies.
 - 'Install DEIMoS using `pip <https://pypi.org/project/pip/>`_: ``pip install -e .``'
 claims: []
 provenance:
@@ -50,6 +54,7 @@ attribution:
 
 # collision-cross-section-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate collision cross section (CCS) values for ion mobility spectrometry data by mapping observed drift times to reference CCS standards. This skill enables accurate structural characterization of detected features across multidimensional LC-IMS-MS datasets.

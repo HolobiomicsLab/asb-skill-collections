@@ -1,6 +1,8 @@
 ---
 name: untargeted-metabolomics-workflow-implementation
-description: Use when you have LC-MS/MS data acquired in DDA mode from untargeted metabolomics experiments and need to remove chimeric (co-fragmented) MS/MS spectra that result from multiple precursor ions fragmented simultaneously.
+description: Use when you have LC-MS/MS data acquired in DDA mode from untargeted
+  metabolomics experiments and need to remove chimeric (co-fragmented) MS/MS spectra
+  that result from multiple precursor ions fragmented simultaneously.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - DNMS2Purifier_model_generation.r
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
@@ -41,6 +44,7 @@ attribution:
 
 # untargeted-metabolomics-workflow-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implementation of an untargeted LC-MS/MS metabolomics workflow using DNMS2Purifier to detect and remove chimeric MS/MS spectra acquired in Data-Dependent Acquisition (DDA) mode. This skill ensures data quality in untargeted metabolomics studies by purifying MS/MS spectra before downstream spectral library matching and metabolite identification.

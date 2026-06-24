@@ -1,6 +1,8 @@
 ---
 name: retention-time-calibration-integration
-description: Use when you have LC-MS data from authentic standards run in positive and negative ESI modes, converted to .mzML format, and you need to build an in-house metabolite reference library for untargeted identification workflows.
+description: Use when you have LC-MS data from authentic standards run in positive
+  and negative ESI modes, converted to .mzML format, and you need to build an in-house
+  metabolite reference library for untargeted identification workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,11 +18,13 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR
 evidence_spans:
-- This package provides an automated workflow for processing in-house metabolite library standards data
+- This package provides an automated workflow for processing in-house metabolite library
+  standards data
 - This package... can be launched using a function exported by this package
 - can be launched using a function exported by this package
 claims: []

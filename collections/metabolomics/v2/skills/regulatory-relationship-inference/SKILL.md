@@ -1,6 +1,9 @@
 ---
 name: regulatory-relationship-inference
-description: Use when you have matched multiomics measurements (CNV, mutations, DNA methylation, histone PTMs, coding/noncoding transcripts, miRNA, lncRNA, proteomics, phosphoproteomics) across a cohort of cell lines or samples and want to identify which upstream omics features predict metabolite abundance.
+description: Use when you have matched multiomics measurements (CNV, mutations, DNA
+  methylation, histone PTMs, coding/noncoding transcripts, miRNA, lncRNA, proteomics,
+  phosphoproteomics) across a cohort of cell lines or samples and want to identify
+  which upstream omics features predict metabolite abundance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -18,6 +21,7 @@ metadata:
   - preprocessing_example.ipynb
   - recon_mapping (MATLAB/Python scripts)
   - Recon3D
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.17.608400v2
   title: Recon8D
@@ -45,6 +49,7 @@ attribution:
 
 # regulatory-relationship-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer metabolic regulatory relationships by training machine learning models on aligned multiomics feature sets (genomic, epigenomic, transcriptomic, proteomic) to predict metabolite levels and extract feature importance scores as confidence-ranked regulatory edges. This skill bridges omics layers to construct systems-level metabolic regulome networks suitable for hypothesis generation and mechanistic validation.

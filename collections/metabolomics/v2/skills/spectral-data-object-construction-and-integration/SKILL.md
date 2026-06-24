@@ -1,6 +1,9 @@
 ---
 name: spectral-data-object-construction-and-integration
-description: Use when you have centroided mzML files from LC–MS experiments and need to perform targeted metabolomics or lipidomics analysis. Specifically, use it when you require polarity filtering, QC-sample stratification, or batch-aware peak detection—all of which depend on sampleData$type annotations (e.
+description: Use when you have centroided mzML files from LC–MS experiments and need
+  to perform targeted metabolomics or lipidomics analysis. Specifically, use it when
+  you require polarity filtering, QC-sample stratification, or batch-aware peak detection—all
+  of which depend on sampleData$type annotations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3209
@@ -17,13 +20,16 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 claims: []
@@ -49,6 +55,7 @@ attribution:
 
 # Spectral Data Object Construction and Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill encapsulates the process of loading LC–MS raw data (mzML files) into in-memory Spectra objects, annotating them with sample metadata (sampleData), and integrating them into MsExperiment containers for downstream targeted analysis. It bridges raw chromatographic data with structured experimental metadata required by TARDIS and related peak-detection workflows.

@@ -1,6 +1,7 @@
 ---
 name: code-quality-metrics-interpretation
-description: Use when after a GitHub Actions CI workflow has executed static analysis (e.g., via Sonarcloud) and generated a quality report.
+description: Use when after a GitHub Actions CI workflow has executed static analysis
+  (e.g., via Sonarcloud) and generated a quality report.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -11,6 +12,7 @@ metadata:
   - Sonarcloud
   - GitHub Actions
   - MS2Query CI_build.yml
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

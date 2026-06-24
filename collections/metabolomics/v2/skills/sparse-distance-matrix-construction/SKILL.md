@@ -1,6 +1,9 @@
 ---
 name: sparse-distance-matrix-construction
-description: Use when you have a large collection of MS/MS spectra (hundreds of thousands to millions) that need to be clustered, you have already constructed nearest neighbor indexes on low-dimensional spectrum vectors (via feature hashing), and you need to compute only the relevant pairwise distances between.
+description: Use when you have a large collection of MS/MS spectra (hundreds of thousands
+  to millions) that need to be clustered, you have already constructed nearest neighbor
+  indexes on low-dimensional spectrum vectors (via feature hashing), and you need
+  to compute only the relevant pairwise distances between.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3625
@@ -12,11 +15,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # Sparse Pairwise Distance Matrix Construction via Nearest Neighbor Indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill constructs a sparse pairwise distance matrix for large MS/MS spectrum datasets by querying pre-built nearest neighbor indexes, avoiding exhaustive all-versus-all comparison. It is essential for scaling density-based clustering to millions of spectra without prohibitive computational cost.

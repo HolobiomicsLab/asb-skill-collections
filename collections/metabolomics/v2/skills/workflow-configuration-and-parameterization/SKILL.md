@@ -1,6 +1,7 @@
 ---
 name: workflow-configuration-and-parameterization
-description: Use when when preparing to execute the Nextflow4MS-DIAL workflow on raw LC-HRMS metabolomics data (.mzML or .
+description: Use when when preparing to execute the Nextflow4MS-DIAL workflow on raw
+  LC-HRMS metabolomics data (.mzML or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -17,6 +18,7 @@ metadata:
   - Java
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -45,6 +47,7 @@ attribution:
 
 # workflow-configuration-and-parameterization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and parameterize a Nextflow-based LC-HRMS metabolomics workflow by specifying tool-specific configuration files, reference libraries, input paths, and container backends before execution. This skill ensures reproducible, portable workflow execution across local, containerized, and HPC environments.

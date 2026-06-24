@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -50,6 +51,7 @@ attribution:
 
 # retention-time-mz-feature-extraction
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Extract standardized two-dimensional (retention time × m/z) feature matrices from LC-HRMS profile-mode data by detecting local maxima and exporting them as fixed-size regions suitable for CNN model ingestion. This preprocessing step bridges raw chromatographic data and machine-learning-ready feature representations.

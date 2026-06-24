@@ -1,6 +1,9 @@
 ---
 name: linear-score-calculation-from-coefficients
-description: Use when when you have 1H-NMR metabolite measurements from Nightingale Health assayed on a new cohort and wish to compute risk scores (e.g., all-cause mortality, cardiovascular event, type 2 diabetes) using published metabolic biomarker weights from a reference study.
+description: Use when when you have 1H-NMR metabolite measurements from Nightingale
+  Health assayed on a new cohort and wish to compute risk scores (e.g., all-cause
+  mortality, cardiovascular event, type 2 diabetes) using published metabolic biomarker
+  weights from a reference study.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,6 +18,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -47,6 +51,7 @@ attribution:
 
 # Linear Score Calculation from Coefficients
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply published regression coefficients to a feature matrix of metabolomic measurements to compute risk scores for individual samples. This skill enables projection of previously validated metabolic risk models onto new 1H-NMR data assayed by Nightingale Health.

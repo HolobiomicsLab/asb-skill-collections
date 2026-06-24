@@ -1,6 +1,7 @@
 ---
 name: development-mode-installation
-description: Use when you need to run a local test suite, contribute code changes to a repository, or iterate rapidly on package modifications.
+description: Use when you need to run a local test suite, contribute code changes
+  to a repository, or iterate rapidly on package modifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +11,7 @@ metadata:
   - pip
   - pytest
   - black
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

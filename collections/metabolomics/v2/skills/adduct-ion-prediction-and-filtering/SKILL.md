@@ -1,6 +1,9 @@
 ---
 name: adduct-ion-prediction-and-filtering
-description: 'Use when when annotating m/z features against a metabolite database (HMDB, Lipidmaps, etc.) and the sample preparation, ionization method, or polarity mode favors specific adduct species. For example: negative-mode LC-MS or MS imaging will preferentially generate M-H and halide adducts (M+Cl);'
+description: 'Use when when annotating m/z features against a metabolite database
+  (HMDB, Lipidmaps, etc.) and the sample preparation, ionization method, or polarity
+  mode favors specific adduct species. For example: negative-mode LC-MS or MS imaging
+  will preferentially generate M-H and halide adducts (M+Cl);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -49,6 +53,7 @@ attribution:
 
 # adduct-ion-prediction-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict and filter metabolite m/z values by specifying expected adduct ion forms (e.g., M-H, M+Cl, M+K) during mass-to-charge annotation to reduce false positives and improve structural assignment confidence in LC-MS and MS imaging data.

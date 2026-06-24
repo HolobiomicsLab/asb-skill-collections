@@ -1,6 +1,7 @@
 ---
 name: sample-information-metadata-parsing
-description: Use when when you have a validated ReDU sample-information metadata file (gnps_metadata.
+description: Use when when you have a validated ReDU sample-information metadata file
+  (gnps_metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,6 +14,7 @@ metadata:
   - GNPS
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -46,6 +48,7 @@ attribution:
 
 # sample-information-metadata-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and inventory validated ReDU sample-information metadata (TSV format) to extract unique categories, their values, and associated MS/MS file counts across all rows. This enables systematic filtering and grouping of public mass spectrometry files by sample attributes for downstream cohort assembly.

@@ -1,6 +1,9 @@
 ---
 name: http-api-integration-with-external-services
-description: Use when when your application needs to enrich or predict spectral properties (NMR peaks, molecular structure) by querying external databases, and you have peak data (chemical shift, multiplicity, integration) that must be transformed into a remote service's query format, validated, and the.
+description: Use when when your application needs to enrich or predict spectral properties
+  (NMR peaks, molecular structure) by querying external databases, and you have peak
+  data (chemical shift, multiplicity, integration) that must be transformed into a
+  remote service's query format, validated, and the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,12 +18,14 @@ metadata:
   - nmrshiftdb
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
 evidence_spans:
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - Use the file pyproject.toml to determine the version of Python required.
 - curl xxx.xxx.xxx.xxx:3007/ping
 - gunicorn -w 4 -b 0.0.0.0:3007 server:app --daemon

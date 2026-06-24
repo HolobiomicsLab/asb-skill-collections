@@ -1,6 +1,9 @@
 ---
 name: y-ion-signal-detection-and-noise-assessment
-description: Use when you have extracted a centroided MS/MS spectrum from a Thermo Orbitrap raw file (via rawrr::readSpectrum or equivalent) and need to verify that the observed y-ion fragments for a known peptide precursor exhibit signal-to-noise ratios consistent with high-quality fragmentation.
+description: Use when you have extracted a centroided MS/MS spectrum from a Thermo
+  Orbitrap raw file (via rawrr::readSpectrum or equivalent) and need to verify that
+  the observed y-ion fragments for a known peptide precursor exhibit signal-to-noise
+  ratios consistent with high-quality fragmentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3636
@@ -13,6 +16,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -20,8 +24,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # y-ion signal detection and noise assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and validates y-ion fragment signals in centroided tandem MS spectra by comparing peak intensities to local baseline noise, ensuring peptide fragmentation quality meets analytical thresholds. Applied to high-resolution Orbitrap data to verify that observed ion signals are tens to hundreds of times above the noise floor.

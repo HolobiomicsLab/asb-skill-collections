@@ -1,6 +1,8 @@
 ---
 name: chemical-identifier-standardization-and-mapping
-description: Use when you have structure-organism pairs originating from multiple open databases (e.g., ChEMBL, PubChem, Wikidata) with disparate identifier schemes, file formats (TSV, JSON, XML, proprietary schemas), and taxonomic rank naming conventions.
+description: Use when you have structure-organism pairs originating from multiple
+  open databases (e.g., ChEMBL, PubChem, Wikidata) with disparate identifier schemes,
+  file formats (TSV, JSON, XML, proprietary schemas), and taxonomic rank naming conventions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -15,6 +17,7 @@ metadata:
   - standardizing.R
   - common.R
   - tcm.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -50,6 +53,7 @@ attribution:
 
 # chemical-identifier-standardization-and-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and map heterogeneous chemical identifiers (InChI, SMILES, structure IDs) and organism taxonomy across multiple source databases into unified controlled vocabularies. This skill is essential when ingesting multi-source natural product datasets where chemical nomenclature and taxonomic rank representations vary by source.

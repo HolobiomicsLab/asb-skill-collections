@@ -12,13 +12,17 @@ metadata:
   - MetNet
   - KEGG
   - Java
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
 evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network
-- their metabolic data are retrieved from KEGG and the corresponding networks of metabolic functions are built
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network of two organisms selected in KEGG
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network
+- their metabolic data are retrieved from KEGG and the corresponding networks of metabolic
+  functions are built
 - MetNet is a Java tool
 claims: []
 provenance:

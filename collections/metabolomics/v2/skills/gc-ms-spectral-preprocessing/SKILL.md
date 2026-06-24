@@ -1,6 +1,8 @@
 ---
 name: gc-ms-spectral-preprocessing
-description: Use when you have raw GC-MS data files containing overlapped peaks (unresolved components with coeluting retention times) and need to predict pure mass spectra for each individual component using a Transformer-based model.
+description: Use when you have raw GC-MS data files containing overlapped peaks (unresolved
+  components with coeluting retention times) and need to predict pure mass spectra
+  for each individual component using a Transformer-based model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

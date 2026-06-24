@@ -1,6 +1,9 @@
 ---
 name: pareto-scaling-multivariate-analysis
-description: Use when apply Pareto scaling when preparing normalized metabolomics data for unsupervised multivariate analysis (PCA or hierarchical clustering heatmaps) where features span multiple orders of magnitude in intensity and you want to reduce the influence of high-abundance metabolites without.
+description: Use when apply Pareto scaling when preparing normalized metabolomics
+  data for unsupervised multivariate analysis (PCA or hierarchical clustering heatmaps)
+  where features span multiple orders of magnitude in intensity and you want to reduce
+  the influence of high-abundance metabolites without.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +14,7 @@ metadata:
   - R
   - GetFeatistics
   - ggplot2
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

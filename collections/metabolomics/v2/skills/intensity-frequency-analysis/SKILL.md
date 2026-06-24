@@ -1,6 +1,9 @@
 ---
 name: intensity-frequency-analysis
-description: Use when you have an MS/MS peak list and need to remove electronic noise—specifically when you observe suspiciously identical intensity values repeated across multiple peaks in a single spectrum, which is characteristic of instrument-generated artifacts rather than genuine analyte signals.
+description: Use when you have an MS/MS peak list and need to remove electronic noise—specifically
+  when you observe suspiciously identical intensity values repeated across multiple
+  peaks in a single spectrum, which is characteristic of instrument-generated artifacts
+  rather than genuine analyte signals.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - ms_entropy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

@@ -1,6 +1,8 @@
 ---
 name: conda-environment-creation-and-management
-description: Use when when setting up a new computational workflow (e.g., ENPKG) that depends on pinned versions of Python packages and system libraries, or when collaborating across machines where package availability or versions may differ.
+description: Use when when setting up a new computational workflow (e.g., ENPKG) that
+  depends on pinned versions of Python packages and system libraries, or when collaborating
+  across machines where package availability or versions may differ.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -12,6 +14,7 @@ metadata:
   - conda
   - pip
   - Miniconda
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

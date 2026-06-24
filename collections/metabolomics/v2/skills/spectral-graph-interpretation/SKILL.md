@@ -1,6 +1,7 @@
 ---
 name: spectral-graph-interpretation
-description: Use when after submitting MS/MS data and feature tables to GNPS and receiving a molecular networking job result.
+description: Use when after submitting MS/MS data and feature tables to GNPS and receiving
+  a molecular networking job result.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

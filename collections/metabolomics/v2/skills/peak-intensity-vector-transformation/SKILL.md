@@ -1,6 +1,8 @@
 ---
 name: peak-intensity-vector-transformation
-description: Use when you have a peak intensity matrix from LC/GC-MS analysis with known QC sample indices and suspect batch-related systematic variation in feature intensities. Use it as a preprocessing step before downstream analysis (e.
+description: Use when you have a peak intensity matrix from LC/GC-MS analysis with
+  known QC sample indices and suspect batch-related systematic variation in feature
+  intensities. Use it as a preprocessing step before downstream analysis (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,11 +14,13 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # peak-intensity-vector-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 QC-based batch correction of LC/GC-MS peak intensity vectors using Pareto scaling normalization with optional log transformation. This skill attenuates batch effects by standardizing feature intensities relative to QC sample statistics.

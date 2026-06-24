@@ -1,6 +1,9 @@
 ---
 name: graphical-time-warping-parameter-tuning
-description: Use when your XCMS-processed LC-MS dataset exhibits retention-time drift or misalignment artifacts—particularly when analyzing hundreds of samples, data acquisition spans longer than one week, or you observe feature groups with inconsistent m/z or RT that XCMS grouped under a single global warping.
+description: Use when your XCMS-processed LC-MS dataset exhibits retention-time drift
+  or misalignment artifacts—particularly when analyzing hundreds of samples, data
+  acquisition spans longer than one week, or you observe feature groups with inconsistent
+  m/z or RT that XCMS grouped under a single global warping.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,15 +18,19 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
-- This algorithm is improved from graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW)
-- graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based alignment method
+- This algorithm is improved from graphical time warping (GTW) [@gtw16], a popular
+  dynamic time warping (DTW)
+- graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based
+  alignment method
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # graphical-time-warping-parameter-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize ncGTW alignment parameters (parSamp for parallel sample grouping and bpParam for worker configuration) to generate compound-specific retention-time warping functions that replace XCMS global warping assumptions. This skill addresses LC-MS feature misalignment caused by XCMS's single warping function per m/z bin, especially in large cohorts or long acquisition runs.

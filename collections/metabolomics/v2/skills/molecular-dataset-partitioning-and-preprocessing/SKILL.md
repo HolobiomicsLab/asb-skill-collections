@@ -1,6 +1,9 @@
 ---
 name: molecular-dataset-partitioning-and-preprocessing
-description: Use when you have raw molecular datasets (e.g., METLIN-CCS, CCSBase) with SMILES strings, 3D coordinates, adduct information, and ground-truth collision cross section labels, and you need to format them for GNN training and held-out test evaluation with consistent standardization.
+description: Use when you have raw molecular datasets (e.g., METLIN-CCS, CCSBase)
+  with SMILES strings, 3D coordinates, adduct information, and ground-truth collision
+  cross section labels, and you need to format them for GNN training and held-out
+  test evaluation with consistent standardization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,6 +19,7 @@ metadata:
   - Mol2CCS library functions (mol2ccs/train_and_predict.py)
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -43,6 +47,7 @@ attribution:
 
 # molecular-dataset-partitioning-and-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare molecular structure and collision cross section data for training and evaluating graph neural network models by applying standardized preprocessing and partitioning into train/validation/test splits. This skill ensures data consistency and reproducibility across GNN generalizability studies.

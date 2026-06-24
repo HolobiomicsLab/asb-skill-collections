@@ -1,6 +1,8 @@
 ---
 name: source-code-repository-cloning
-description: Use when you need to obtain the full source code of a scientific tool (such as LipidSpace) to build it locally, verify cross-platform compilation, inspect the codebase structure, or set up a development environment.
+description: Use when you need to obtain the full source code of a scientific tool
+  (such as LipidSpace) to build it locally, verify cross-platform compilation, inspect
+  the codebase structure, or set up a development environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -9,6 +11,7 @@ metadata:
   tools:
   - LipidSpace
   - Git
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

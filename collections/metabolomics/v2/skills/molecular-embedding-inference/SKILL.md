@@ -1,6 +1,8 @@
 ---
 name: molecular-embedding-inference
-description: Use when you have a set of molecules (as SMILES strings in CSV format) and a pre-trained NaFM checkpoint, and you need to generate embeddings or predictions for virtual screening, bioactivity regression, or compound ranking tasks.
+description: Use when you have a set of molecules (as SMILES strings in CSV format)
+  and a pre-trained NaFM checkpoint, and you need to generate embeddings or predictions
+  for virtual screening, bioactivity regression, or compound ranking tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +15,7 @@ metadata:
   - Git
   - PyTorch Geometric (PyG)
   - NaFM inference.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -42,6 +45,7 @@ attribution:
 
 # molecular-embedding-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate molecular embeddings and predictions for small molecules using a pre-trained foundation model (NaFM), producing fixed-dimensional vector representations that encode structural and evolutionary features of natural products. Use this to obtain meaningful molecular representations for downstream tasks like virtual screening, bioactivity prediction, or compound ranking without retraining.

@@ -1,6 +1,9 @@
 ---
 name: configuration-file-generation
-description: Use when you need to set up a LipoCLEAN analysis for MS-DIAL lipid identifications and do not yet have a configuration file, or you are switching between MS-DIAL versions 4 and 5 and need version-specific parameter defaults (e.g., column names and scaling factors that differ between versions).
+description: Use when you need to set up a LipoCLEAN analysis for MS-DIAL lipid identifications
+  and do not yet have a configuration file, or you are switching between MS-DIAL versions
+  4 and 5 and need version-specific parameter defaults (e.g., column names and scaling
+  factors that differ between versions).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,6 +15,7 @@ metadata:
   - MS-DIAL
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -40,6 +44,7 @@ attribution:
 
 # configuration-file-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate version-specific default TOML configuration files for LipoCLEAN that define MS-DIAL export locations, quality filtering parameters, and model selection. This skill enables users to obtain a template options file tailored to their MS-DIAL version (4 or 5) that can be subsequently edited for custom analyses.

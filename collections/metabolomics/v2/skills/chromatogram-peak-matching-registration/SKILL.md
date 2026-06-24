@@ -1,6 +1,8 @@
 ---
 name: chromatogram-peak-matching-registration
-description: Use when you have multiple LC-MS samples in mzML or mzXML format with variable retention times, at least one designated as a quality control (QC) reference file, and you need to correct for RT drift before peak/feature detection.
+description: Use when you have multiple LC-MS samples in mzML or mzXML format with
+  variable retention times, at least one designated as a quality control (QC) reference
+  file, and you need to correct for RT drift before peak/feature detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,12 +14,15 @@ metadata:
   - MetCohort
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04906
   title: MetCohort
 evidence_spans:
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool for large-scale metabolomics and exposomics
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool for large-scale metabolomics and exposomics
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

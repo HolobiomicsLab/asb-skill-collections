@@ -1,6 +1,8 @@
 ---
 name: ms-instrument-type-classification
-description: Use when when evaluating or designing a mass spectrometry data analysis platform, and you need to verify that every supported separation/ionisation technique (LC, GC, IMS, MS Imaging) is covered by at least one processing module.
+description: Use when when evaluating or designing a mass spectrometry data analysis
+  platform, and you need to verify that every supported separation/ionisation technique
+  (LC, GC, IMS, MS Imaging) is covered by at least one processing module.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +15,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -41,6 +44,7 @@ attribution:
 
 # MS Instrument Type Classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify mass spectrometry data and workflows by their input separation/ionisation techniques (LC, GC, IMS, MS Imaging) to verify comprehensive software support across all major MS instrument types. This skill ensures that data processing pipelines can handle the full diversity of modern MS workflows.

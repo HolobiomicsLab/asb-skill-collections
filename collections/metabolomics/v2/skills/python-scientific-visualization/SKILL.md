@@ -1,6 +1,8 @@
 ---
 name: python-scientific-visualization
-description: Use when you have per-sample model predictions and metabolite signal intensities from a trained deep learning model (e.g., DeepMSProfiler) and need to visualize which metabolites correlate most strongly with specific disease phenotypes.
+description: Use when you have per-sample model predictions and metabolite signal
+  intensities from a trained deep learning model (e.g., DeepMSProfiler) and need to
+  visualize which metabolites correlate most strongly with specific disease phenotypes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -14,6 +16,7 @@ metadata:
   - Python seaborn
   - Python numpy
   - DeepMSProfiler
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -42,6 +45,7 @@ attribution:
 
 # Reconstruct generation of metabolite-disease correlation heatmaps
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate publication-quality heatmap visualizations that depict correlations between metabolite signal intensities and disease class labels from deep learning model outputs. This skill transforms numerical correlation matrices into color-encoded 2D grids suitable for identifying disease-associated metabolite signatures.

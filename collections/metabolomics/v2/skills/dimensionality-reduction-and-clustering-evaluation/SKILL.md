@@ -1,6 +1,7 @@
 ---
 name: dimensionality-reduction-and-clustering-evaluation
-description: Use when you have high-dimensional feasible flux distributions sampled from constraint-based metabolic models for multiple biological samples (e.
+description: Use when you have high-dimensional feasible flux distributions sampled
+  from constraint-based metabolic models for multiple biological samples (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -13,13 +14,17 @@ metadata:
   - COBRApy
   - t-SNE
   - Flux Variability Analysis (FVA)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
 - the implementation of optGpSampler algorithm [71] available in COBRApy [72]
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # Dimensionality Reduction and Clustering Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply t-SNE dimensionality reduction to sampled metabolic flux distributions to visualize and evaluate the segregation quality of biological samples (cell lines or conditions) in two-dimensional space. This skill enables comparison of clustering fidelity across different constraint scenarios by measuring intra-sample cohesion and inter-sample separation.

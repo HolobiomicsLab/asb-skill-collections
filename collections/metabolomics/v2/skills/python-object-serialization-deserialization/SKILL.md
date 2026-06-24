@@ -1,6 +1,9 @@
 ---
 name: python-object-serialization-deserialization
-description: Use when when you have completed spectral data preprocessing in Jupyter notebooks and generated a specXplore session data object saved to disk, use this skill to restore that object into a live specXplore dashboard session instance for interactive LC-MS/MS spectral data exploration, without.
+description: Use when when you have completed spectral data preprocessing in Jupyter
+  notebooks and generated a specXplore session data object saved to disk, use this
+  skill to restore that object into a live specXplore dashboard session instance for
+  interactive LC-MS/MS spectral data exploration, without.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -13,6 +16,7 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -41,6 +45,7 @@ attribution:
 
 # Python Object Serialization and Deserialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load a serialized Python session data object from disk and instantiate it into an active dashboard session instance to enable interactive visualization. This skill bridges persistent storage and runtime exploration by reconstructing in-memory objects from saved state.

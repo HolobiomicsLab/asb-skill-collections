@@ -1,6 +1,8 @@
 ---
 name: gpu-environment-configuration
-description: Use when you need to run a PyTorch model that was trained on GPU (e.g., JESTR with released NPLIB1 weights) and require verified GPU availability (torch.cuda.is_available() returns True). Apply this skill when you have a requirements.
+description: Use when you need to run a PyTorch model that was trained on GPU (e.g.,
+  JESTR with released NPLIB1 weights) and require verified GPU availability (torch.cuda.is_available()
+  returns True). Apply this skill when you have a requirements.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -12,6 +14,7 @@ metadata:
   - PyTorch
   - conda
   - CUDA 11.8
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR

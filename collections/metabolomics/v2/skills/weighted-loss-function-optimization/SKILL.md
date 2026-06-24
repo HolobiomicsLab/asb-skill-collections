@@ -1,6 +1,8 @@
 ---
 name: weighted-loss-function-optimization
-description: Use when when training a dual-encoder architecture (bi-encoder + cross-encoder) on NMR spectral data where independent encoding and joint pair processing produce competing or imbalanced gradient signals.
+description: Use when when training a dual-encoder architecture (bi-encoder + cross-encoder)
+  on NMR spectral data where independent encoding and joint pair processing produce
+  competing or imbalanced gradient signals.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
@@ -43,6 +46,7 @@ attribution:
 
 # weighted-loss-function-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize a weighted loss function that balances contributions from bi-encoder and cross-encoder branches during end-to-end training of a hybrid CNN-Transformer model for NMR spectral compound identification. This skill ensures both encoder paths contribute meaningfully to the final relevance scores and compound predictions.

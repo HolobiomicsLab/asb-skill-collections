@@ -1,6 +1,9 @@
 ---
 name: grid-search-evaluation-and-threshold-identification
-description: Use when you have a fitted alignment model (e.g., metabCombiner object with pre-aligned feature pair candidates and RT spline mapping) and known shared compound identities (ground truth) from reference datasets, and you need to determine which combination of three or more continuous parameters (e.
+description: Use when you have a fitted alignment model (e.g., metabCombiner object
+  with pre-aligned feature pair candidates and RT spline mapping) and known shared
+  compound identities (ground truth) from reference datasets, and you need to determine
+  which combination of three or more continuous parameters (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,12 +16,15 @@ metadata:
   - mgcv
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # grid-search-evaluation-and-threshold-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate a multi-dimensional parameter space by computing similarity metrics across all combinations and validating results against ground-truth identities to identify optimal parameter ranges. This skill is essential when tuning weighted scoring functions in metabolomics feature alignment where the interplay of retention-time, m/z, and spectral similarity weights must be jointly optimized.

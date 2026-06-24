@@ -1,6 +1,9 @@
 ---
 name: metabolite-score-projection
-description: Use when you have Nightingale Health 1H-NMR metabolomics assay output (metabolite concentrations in a samples × features matrix) and you want to compute a published metabolic risk score or surrogate biomarker (mortality risk, metabolic age, cardiovascular event risk, type-2 diabetes risk, COVID-19.
+description: Use when you have Nightingale Health 1H-NMR metabolomics assay output
+  (metabolite concentrations in a samples × features matrix) and you want to compute
+  a published metabolic risk score or surrogate biomarker (mortality risk, metabolic
+  age, cardiovascular event risk, type-2 diabetes risk, COVID-19.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,6 +19,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -48,6 +52,7 @@ attribution:
 
 # metabolite-score-projection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Project pre-trained metabolic risk scores (e.g., all-cause mortality, MetaboAge) onto new Nightingale Health 1H-NMR metabolomics datasets by applying published linear coefficient models to feature matrices. This skill enables rapid risk stratification and metabolic phenotyping of cohorts using validated, externally-derived metabolite weights.

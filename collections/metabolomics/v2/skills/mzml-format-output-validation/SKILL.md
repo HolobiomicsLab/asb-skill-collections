@@ -1,6 +1,7 @@
 ---
 name: mzml-format-output-validation
-description: Use when after executing smiter.synthetic_mzml.write_mzml to generate synthetic LC-MS/MS runs from nucleoside or peptide fragmentation models.
+description: Use when after executing smiter.synthetic_mzml.write_mzml to generate
+  synthetic LC-MS/MS runs from nucleoside or peptide fragmentation models.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,11 +13,13 @@ metadata:
   - pyQms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
 evidence_spans:
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
+  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

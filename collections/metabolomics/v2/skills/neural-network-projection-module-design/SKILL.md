@@ -1,6 +1,8 @@
 ---
 name: neural-network-projection-module-design
-description: Use when when you have 512-dimensional (or other fixed-size) representation vectors output from paired encoders processing augmented versions of the same input (e.
+description: Use when when you have 512-dimensional (or other fixed-size) representation
+  vectors output from paired encoders processing augmented versions of the same input
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,6 +14,7 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
@@ -40,6 +43,7 @@ attribution:
 
 # neural-network-projection-module-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement Projection and Prediction modules that transform high-dimensional encoder outputs into lower-dimensional spaces suitable for contrastive learning while preventing representation collapse. This skill is essential when training self-supervised models on ion images or similar high-dimensional data where trivial solutions (uniform representations) must be actively avoided.

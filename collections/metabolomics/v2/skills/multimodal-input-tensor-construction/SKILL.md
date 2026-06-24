@@ -1,6 +1,9 @@
 ---
 name: multimodal-input-tensor-construction
-description: Use when when you have completed multimodal dataset production via data_prep.py and need to prepare sample or production input batches that combine molecular graph features and SMILES embeddings for forward pass validation or model training on TransG-Net.
+description: Use when when you have completed multimodal dataset production via data_prep.py
+  and need to prepare sample or production input batches that combine molecular graph
+  features and SMILES embeddings for forward pass validation or model training on
+  TransG-Net.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -17,6 +20,7 @@ metadata:
   - cuDNN
   - TransGNet.py
   - data_prep.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -50,6 +54,7 @@ attribution:
 
 # multimodal-input-tensor-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct PyTorch tensor pairs that combine graph and SMILES representations of molecules to serve as input to the TransG-Net multimodal neural network. This skill bridges the data preparation pipeline output with the model's dual input specification.

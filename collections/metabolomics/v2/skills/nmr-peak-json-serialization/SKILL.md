@@ -1,6 +1,9 @@
 ---
 name: nmr-peak-json-serialization
-description: Use when you have proton (1H) and carbon-13 (13C) NMR peak measurements from a molecular sample and need to classify the molecule using the SMART 3 deep learning API. The peaks must be reformatted from their native instrument output into JSON before submission to the /api/smart3/search endpoint.
+description: Use when you have proton (1H) and carbon-13 (13C) NMR peak measurements
+  from a molecular sample and need to classify the molecule using the SMART 3 deep
+  learning API. The peaks must be reformatted from their native instrument output
+  into JSON before submission to the /api/smart3/search endpoint.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +16,7 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -40,6 +44,7 @@ attribution:
 
 # nmr-peak-json-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize nuclear magnetic resonance peak data into JSON dictionary format with 1H and 13C headers for programmatic submission to the SMART 3 classification API. This skill bridges raw NMR spectroscopic measurements and machine learning-ready molecular classification requests.

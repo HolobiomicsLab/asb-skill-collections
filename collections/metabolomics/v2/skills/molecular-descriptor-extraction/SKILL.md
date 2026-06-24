@@ -1,6 +1,8 @@
 ---
 name: molecular-descriptor-extraction
-description: Use when you have a collection of chemical structures in SMILES format and need to create paired structure–spectrum training data for a generative model, but do not have experimental MS/MS spectra available.
+description: Use when you have a collection of chemical structures in SMILES format
+  and need to create paired structure–spectrum training data for a generative model,
+  but do not have experimental MS/MS spectra available.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -21,6 +23,7 @@ metadata:
   - Retip Python package (pyRetip)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo
@@ -63,6 +66,7 @@ attribution:
 
 # molecular-descriptor-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract in silico mass spectral descriptors (fragmentation patterns, peaks) from chemical structure inputs using computational fragmentation prediction tools. This enables generation of paired chemical structure–spectrum training datasets for machine learning models that predict molecular identity from tandem MS data.

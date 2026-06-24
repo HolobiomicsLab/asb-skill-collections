@@ -1,6 +1,9 @@
 ---
 name: jpa-module-execution-and-configuration
-description: Use when when you have raw LC-MS data in mzXML format (or vendor formats convertible via MS-Convert) and need to extract metabolic features as the first major step of untargeted metabolomics analysis. Choose MS1 peak picking for DDA/full-scan data;
+description: Use when when you have raw LC-MS data in mzXML format (or vendor formats
+  convertible via MS-Convert) and need to extract metabolic features as the first
+  major step of untargeted metabolomics analysis. Choose MS1 peak picking for DDA/full-scan
+  data;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +18,7 @@ metadata:
   - MS-Convert
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

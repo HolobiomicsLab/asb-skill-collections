@@ -1,6 +1,8 @@
 ---
 name: unique-compound-enumeration
-description: Use when you have a GC-MS results table with a Match.Factor column (representing identification confidence) and you need to understand how many distinct compounds survive at different quality cutoffs (e.g., ≥65, ≥80, ≥90).
+description: Use when you have a GC-MS results table with a Match.Factor column (representing
+  identification confidence) and you need to understand how many distinct compounds
+  survive at different quality cutoffs (e.g., ≥65, ≥80, ≥90).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +14,15 @@ metadata:
   - uafR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # unique-compound-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate and count unique chemical compounds in a mass spectrometry dataset after applying quality-based filtering thresholds. This skill isolates high-confidence identifications from GC-MS outputs by retaining only compounds that meet specified Match.Factor criteria, enabling comparison of compound set size across threshold levels.

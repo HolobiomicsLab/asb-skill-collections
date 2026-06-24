@@ -1,6 +1,9 @@
 ---
 name: bayesian-dimensionality-reduction-application
-description: Use when your input is a filtered metabolite abundance matrix with remaining sporadic missingness (after removing features with >80% missingness) and you need to produce a complete feature table for subsequent normalization and statistical analysis without data loss or listwise deletion.
+description: Use when your input is a filtered metabolite abundance matrix with remaining
+  sporadic missingness (after removing features with >80% missingness) and you need
+  to produce a complete feature table for subsequent normalization and statistical
+  analysis without data loss or listwise deletion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - Bioconductor
   - marr
   - devtools
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -46,6 +50,7 @@ attribution:
 
 # bayesian-dimensionality-reduction-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Bayesian Principal Component Analysis (BPCA) to impute missing values in high-dimensional metabolomic feature matrices after initial feature filtering and before downstream normalization. BPCA estimates and fills missing metabolite abundances using probabilistic dimensionality reduction, preserving the covariance structure of the data.

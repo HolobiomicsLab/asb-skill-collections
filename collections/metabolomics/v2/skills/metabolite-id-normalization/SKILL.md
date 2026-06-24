@@ -1,6 +1,9 @@
 ---
 name: metabolite-id-normalization
-description: Use when you have metabolite identifiers sourced from or annotated against heterogeneous metabolome databases (HMDB, ChEBI, PubChem, KEGG, LipidMaps) and need to resolve ambiguity in metabolite identity, create a unified metabolite reference table, or enable cross-database queries in a metabolomics.
+description: Use when you have metabolite identifiers sourced from or annotated against
+  heterogeneous metabolome databases (HMDB, ChEBI, PubChem, KEGG, LipidMaps) and need
+  to resolve ambiguity in metabolite identity, create a unified metabolite reference
+  table, or enable cross-database queries in a metabolomics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -17,6 +20,7 @@ metadata:
   - PubChem
   - Kyoto Encyclopedia of Genes and Genomes (KEGG)
   - Lipidomics Gateway (LipidMaps)
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.02.28.433248v2
   title: MetaFetcheR

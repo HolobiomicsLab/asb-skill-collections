@@ -1,6 +1,9 @@
 ---
 name: feature-table-parsing-and-loading
-description: Use when you have extracted volatile organic compound (VOC) features from individual breath samples (mzML or mzXML files) and wish to consolidate multiple per-sample feature tables into a single aligned feature table, or you need to programmatically access feature metadata (m/z, intensity, scan.
+description: Use when you have extracted volatile organic compound (VOC) features
+  from individual breath samples (mzML or mzXML files) and wish to consolidate multiple
+  per-sample feature tables into a single aligned feature table, or you need to programmatically
+  access feature metadata (m/z, intensity, scan.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -13,6 +16,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

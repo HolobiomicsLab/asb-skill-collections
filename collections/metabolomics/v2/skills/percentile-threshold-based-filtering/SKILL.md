@@ -14,13 +14,15 @@ metadata:
   - GNPS
   - MIBiG
   - Paired Omics Data Platform
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -50,6 +52,7 @@ attribution:
 
 # percentile-threshold-based-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply percentile-based cutoffs to link-scoring functions to rank and prioritize validated genomic-metabolomic associations. This skill filters links scoring above a fixed percentile threshold (e.g., 90th) for one or multiple scoring functions, then evaluates enrichment of validated links within the filtered set to assess whether the threshold reliably separates true from spurious links.

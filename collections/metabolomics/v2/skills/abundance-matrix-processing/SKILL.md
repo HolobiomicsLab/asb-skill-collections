@@ -1,6 +1,8 @@
 ---
 name: abundance-matrix-processing
-description: Use when you have multiple CSV files containing feature-by-sample matrices from different analytical experiments or batches, each with mass, retention time, intensity, isotope, and adduct information across different samples.
+description: Use when you have multiple CSV files containing feature-by-sample matrices
+  from different analytical experiments or batches, each with mass, retention time,
+  intensity, isotope, and adduct information across different samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -12,6 +14,7 @@ metadata:
   - ggplot2
   - mixOmics
   - ComBat (via sva Bioconductor package)
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -40,6 +43,7 @@ attribution:
 
 # abundance-matrix-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw feature-by-sample metabolomic intensity matrices into cleaned, batch-corrected, and integrated data ready for marker identification and statistical analysis. This skill encompasses data integration across multiple analytical experiments, batch effect removal, and sample separation visualization.

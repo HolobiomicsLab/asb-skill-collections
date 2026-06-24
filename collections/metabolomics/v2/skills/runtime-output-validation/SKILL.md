@@ -1,6 +1,8 @@
 ---
 name: runtime-output-validation
-description: Use when after invoking a Nextflow workflow via `make run` or equivalent command, to confirm the workflow executed without errors and generated expected output files.
+description: Use when after invoking a Nextflow workflow via `make run` or equivalent
+  command, to confirm the workflow executed without errors and generated expected
+  output files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +12,7 @@ metadata:
   tools:
   - Nextflow
   - make
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41586-023-06906-8
   title: Reverse metabolomics
@@ -37,6 +40,7 @@ attribution:
 
 # runtime-output-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validation of Nextflow workflow runtime outputs to confirm correct execution and data integrity of metabolomics pipeline runs. This skill ensures that workflow invocations complete successfully and produce expected results by capturing and examining runtime artifacts.

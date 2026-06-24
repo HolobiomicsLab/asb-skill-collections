@@ -1,6 +1,9 @@
 ---
 name: prefix-stripping-and-case-standardization
-description: Use when valueMatcher.series_match has detected database-ID values (HMDB IDs, PubChem CIDs, KEGG compound identifiers) in raw metabolite metadata columns and you need to normalize them into a canonical form for storage in standardized database-ID columns (e.g., HMDB_ID, PubChem_ID, KEGG_ID).
+description: Use when valueMatcher.series_match has detected database-ID values (HMDB
+  IDs, PubChem CIDs, KEGG compound identifiers) in raw metabolite metadata columns
+  and you need to normalize them into a canonical form for storage in standardized
+  database-ID columns (e.g., HMDB_ID, PubChem_ID, KEGG_ID).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3365
@@ -14,6 +17,7 @@ metadata:
   - Python re module
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

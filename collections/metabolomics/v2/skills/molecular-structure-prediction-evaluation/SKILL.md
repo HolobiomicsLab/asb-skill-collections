@@ -1,6 +1,7 @@
 ---
 name: molecular-structure-prediction-evaluation
-description: Use when you have trained a multitask NMR-to-structure model and need to quantify its predictive accuracy on held-out test molecules.
+description: Use when you have trained a multitask NMR-to-structure model and need
+  to quantify its predictive accuracy on held-out test molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +15,7 @@ metadata:
   - NMR2Struct model
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -41,6 +43,7 @@ attribution:
 
 # molecular-structure-prediction-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the accuracy and performance of machine learning models predicting molecular structures from NMR spectra by computing exact-match and graph-based metrics across different spectroscopic modalities and complexity ranges. This skill validates whether the multitask learning framework correctly infers molecular formula and connectivity from 1D ¹H NMR, ¹³C NMR, or combined spectral inputs.

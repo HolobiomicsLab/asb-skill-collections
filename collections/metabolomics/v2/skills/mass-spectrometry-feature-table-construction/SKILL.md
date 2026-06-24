@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-feature-table-construction
-description: Use when you have vendor-independent centroided mzML files from LC- or GC-HRMS data acquired in data-dependent acquisition (ddMS2) mode and need to extract detected features with m/z, retention time, and intensity attributes as input for non-target screening or PFAS prioritization workflows.
+description: Use when you have vendor-independent centroided mzML files from LC- or
+  GC-HRMS data acquired in data-dependent acquisition (ddMS2) mode and need to extract
+  detected features with m/z, retention time, and intensity attributes as input for
+  non-target screening or PFAS prioritization workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,12 +18,14 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
 claims: []
 provenance:
@@ -48,6 +53,7 @@ attribution:
 
 # mass-spectrometry-feature-table-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction of MS features (m/z, retention time, intensity) from centroided mzML files using pyOpenMS FeatureFinderCentroided, producing a structured feature table in mzTab or CSV format for downstream PFAS prioritization or metabolite screening.

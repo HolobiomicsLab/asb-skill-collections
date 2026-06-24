@@ -1,6 +1,9 @@
 ---
 name: taxonomic-classification-merging
-description: Use when you have a GNPS DBResult file with spectral library matches that lack ClassyFire superclass, class, and subclass annotations, and you need to augment those matches with standardized chemical taxonomy for consensus classification or downstream analysis.
+description: Use when you have a GNPS DBResult file with spectral library matches
+  that lack ClassyFire superclass, class, and subclass annotations, and you need to
+  augment those matches with standardized chemical taxonomy for consensus classification
+  or downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,12 +17,15 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

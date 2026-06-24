@@ -1,6 +1,8 @@
 ---
 name: coeluting-ion-separation
-description: Use when raw GC-MS data (netCDF or mzML format) exhibits overlapping chromatographic peaks—i.e., when multiple analytes elute at similar retention times and produce composite mass spectra with ambiguous m/z signals.
+description: Use when raw GC-MS data (netCDF or mzML format) exhibits overlapping
+  chromatographic peaks—i.e., when multiple analytes elute at similar retention times
+  and produce composite mass spectra with ambiguous m/z signals.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -11,6 +13,7 @@ metadata:
   - GNPS_GC
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

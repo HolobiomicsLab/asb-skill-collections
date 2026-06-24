@@ -1,6 +1,8 @@
 ---
 name: ms-spectra-dataset-preprocessing
-description: Use when when you have a raw or partially processed MS/MS spectra collection (e.g., GNPS-sourced Orbitrap or Q-TOF spectra in MGF format) and need to (1) restrict to a specific instrument type (e.
+description: Use when when you have a raw or partially processed MS/MS spectra collection
+  (e.g., GNPS-sourced Orbitrap or Q-TOF spectra in MGF format) and need to (1) restrict
+  to a specific instrument type (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +43,7 @@ attribution:
 
 # MS/MS Spectra Dataset Preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and partition tandem mass spectrometry (MS/MS) spectra datasets for deep learning model training by filtering spectra according to instrument type allowlists, quality thresholds, and metadata criteria, then splitting into training and test sets with target compound counts. This skill ensures reproducible dataset composition and verifiable alignment with downstream model training requirements.

@@ -1,6 +1,8 @@
 ---
 name: rest-api-endpoint-querying
-description: Use when when you need to verify that a deployed model service (such as TensorFlow Serving) is running and exposing the correct input and output layer names before sending classification requests.
+description: Use when when you need to verify that a deployed model service (such
+  as TensorFlow Serving) is running and exposing the correct input and output layer
+  names before sending classification requests.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -16,6 +18,7 @@ metadata:
   - Docker
   - Docker Compose
   - NP-Classifier
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation
@@ -57,6 +60,7 @@ attribution:
 
 # rest-api-endpoint-querying
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query a REST API endpoint to retrieve and validate structured metadata from a running service instance. This skill is essential for confirming that deployed models or services expose the correct interface specifications before downstream processing or integration.

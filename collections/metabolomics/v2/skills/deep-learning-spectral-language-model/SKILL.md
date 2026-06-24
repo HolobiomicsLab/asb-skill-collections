@@ -1,6 +1,8 @@
 ---
 name: deep-learning-spectral-language-model
-description: Use when when you have an unknown compound's mass spectrum (m/z peaks and intensities in .mgf or equivalent format with mandatory PRECURSOR_MZ and IONMODE tags) and need to identify structurally related metabolites from a reference database.
+description: Use when when you have an unknown compound's mass spectrum (m/z peaks
+  and intensities in .mgf or equivalent format with mandatory PRECURSOR_MZ and IONMODE
+  tags) and need to identify structurally related metabolites from a reference database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - DeepMASS2
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
 evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
+  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # deep-learning-spectral-language-model
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode mass spectra into semantic vector representations using a deep-learning model trained on mass spectral language, then compute cosine similarity scores against reference metabolite databases to rank and predict structurally related metabolites for unknown compounds. This approach leverages chemical space to improve candidate ranking and annotation confidence.

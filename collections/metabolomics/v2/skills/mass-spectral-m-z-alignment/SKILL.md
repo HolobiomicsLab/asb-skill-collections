@@ -1,6 +1,8 @@
 ---
 name: mass-spectral-m-z-alignment
-description: Use when after you have (1) identified putative labelled features with intensity and m/z measurements from LC/MS data (e.g., via basepeak_finder output in geoRge), (2) defined a list of expected ionization adducts (e.
+description: Use when after you have (1) identified putative labelled features with
+  intensity and m/z measurements from LC/MS data (e.g., via basepeak_finder output
+  in geoRge), (2) defined a list of expected ionization adducts (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -13,6 +15,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

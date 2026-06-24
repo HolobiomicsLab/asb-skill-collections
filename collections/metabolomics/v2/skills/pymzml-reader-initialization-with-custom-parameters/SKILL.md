@@ -1,6 +1,7 @@
 ---
 name: pymzml-reader-initialization-with-custom-parameters
-description: Use when you have an mzML file (e.g. Manuels_customs_ids.mzML) with non-standard custom index identifiers that cannot be parsed by pymzML's default index parser.
+description: Use when you have an mzML file (e.g. Manuels_customs_ids.mzML) with non-standard
+  custom index identifiers that cannot be parsed by pymzML's default index parser.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -11,11 +12,13 @@ metadata:
   - pymzML
   - Python
   - ElementTree
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
 evidence_spans:
-- In order to make pymzML accept other kinds of mzML data (e.g databases), one can implement an own wrapper
+- In order to make pymzML accept other kinds of mzML data (e.g databases), one can
+  implement an own wrapper
 - from pymzml import spec
 claims: []
 provenance:
@@ -40,6 +43,7 @@ attribution:
 
 # pymzml-reader-initialization-with-custom-parameters
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a pymzML Reader object with custom parameters (particularly index_regex) to enable random-access retrieval of spectra from mzML files with non-standard index formats. This skill is essential when mzML files use custom identifier schemes that deviate from the standard spectrum index layout.

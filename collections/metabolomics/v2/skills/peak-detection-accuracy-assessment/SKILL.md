@@ -1,6 +1,8 @@
 ---
 name: peak-detection-accuracy-assessment
-description: Use when after running a non-targeted preprocessing (NPP) pipeline (e.g., XCMS, MZmine 2, OpenMS) on the same set of centroided mzML files that were used to generate a validated benchmark dataset.
+description: Use when after running a non-targeted preprocessing (NPP) pipeline (e.g.,
+  XCMS, MZmine 2, OpenMS) on the same set of centroided mzML files that were used
+  to generate a validated benchmark dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,12 +18,14 @@ metadata:
   - Skyline
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - library(mzRAPP)
 claims: []
 provenance:

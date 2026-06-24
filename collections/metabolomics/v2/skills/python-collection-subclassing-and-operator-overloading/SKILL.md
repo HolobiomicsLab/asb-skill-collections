@@ -1,6 +1,9 @@
 ---
 name: python-collection-subclassing-and-operator-overloading
-description: Use when you need to represent structured scientific data (e.g., molecular formulas with element–count mappings) as a dict-like object, but standard dict does not preserve type across arithmetic operations, does not support domain-specific validation, or lacks convenient string representations.
+description: Use when you need to represent structured scientific data (e.g., molecular
+  formulas with element–count mappings) as a dict-like object, but standard dict does
+  not preserve type across arithmetic operations, does not support domain-specific
+  validation, or lacks convenient string representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3805
@@ -12,6 +15,7 @@ metadata:
   - Python collections.UserDict
   - mzapy.isotopes module
   - pytest or unittest
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

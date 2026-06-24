@@ -1,6 +1,9 @@
 ---
 name: multiclass-data-batch-correction
-description: Use when your input is a raw or prepared multi-class metabolomic peak table (in ExpressionSet format or CSV) where samples belong to distinct biological classes, and you have either QC samples (quality control replicates) or internal standards (IS) to anchor batch correction.
+description: Use when your input is a raw or prepared multi-class metabolomic peak
+  table (in ExpressionSet format or CSV) where samples belong to distinct biological
+  classes, and you have either QC samples (quality control replicates) or internal
+  standards (IS) to anchor batch correction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +19,7 @@ metadata:
   - limma
   - pcaMethods
   - Biobase
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

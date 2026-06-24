@@ -19,6 +19,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
@@ -48,6 +49,7 @@ attribution:
 
 # parent-product-relationship-mapping
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Map predicted biotransformation products to their parent compounds and classify the reaction types connecting them. This skill structures raw predicted metabolites from computational biotransformation modules into queryable parent-product networks with annotated reaction relationships.

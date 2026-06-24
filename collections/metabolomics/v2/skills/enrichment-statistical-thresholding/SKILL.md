@@ -1,6 +1,9 @@
 ---
 name: enrichment-statistical-thresholding
-description: Use when after running Enrichment() on a configured EnrichParam object (via KEGG_Enrich_PlotPanel or similar), when you have a full enrichment result table and need to reduce it to pathway hits meeting a specific significance threshold before visualization or export.
+description: Use when after running Enrichment() on a configured EnrichParam object
+  (via KEGG_Enrich_PlotPanel or similar), when you have a full enrichment result table
+  and need to reduce it to pathway hits meeting a specific significance threshold
+  before visualization or export.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,12 +19,15 @@ metadata:
   - Enrich_Plot
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
-- several R packages are utilized in the background processes, including ggplot2, igraph, MASS
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
+- several R packages are utilized in the background processes, including ggplot2,
+  igraph, MASS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # enrichment-statistical-thresholding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply p-value cutoffs to filter pathway enrichment results and retain only statistically significant associations between metabolites and biological pathways. This skill ensures that downstream pathway visualization and interpretation focus on robust, reproducible enrichment signals rather than noise.

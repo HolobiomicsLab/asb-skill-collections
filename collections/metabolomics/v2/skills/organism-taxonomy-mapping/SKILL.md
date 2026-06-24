@@ -1,6 +1,9 @@
 ---
 name: organism-taxonomy-mapping
-description: Use when you have a cleaned organism table (with validated, deduplicated organism names from sources like NCBI, manual curation, or previous cleaning steps) and need to annotate each organism with Open Tree of Life identifiers, taxonomic lineage, and standardized taxonomic annotations.
+description: Use when you have a cleaned organism table (with validated, deduplicated
+  organism names from sources like NCBI, manual curation, or previous cleaning steps)
+  and need to annotate each organism with Open Tree of Life identifiers, taxonomic
+  lineage, and standardized taxonomic annotations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -11,6 +14,7 @@ metadata:
   - R
   - 5_addingOTL.R
   - 4_cleaningTaxonomy.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +47,7 @@ attribution:
 
 # organism-taxonomy-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps cleaned organism names to standardized taxonomic identifiers using Open Tree of Life (OTL) to enrich organism data with validated phylogenetic and systematic annotations. This skill bridges cleaned taxonomy tables with authoritative external taxonomic references, enabling downstream computational natural products research with resolved organism provenance.

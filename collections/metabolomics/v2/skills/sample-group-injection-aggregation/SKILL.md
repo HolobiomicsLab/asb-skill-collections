@@ -1,6 +1,8 @@
 ---
 name: sample-group-injection-aggregation
-description: Use when when you have picked and annotated MS1 features from replicate injections of the same sample and need to produce a unified feature matrix indexed by sample (not injection).
+description: Use when when you have picked and annotated MS1 features from replicate
+  injections of the same sample and need to produce a unified feature matrix indexed
+  by sample (not injection).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -16,13 +18,16 @@ metadata:
   - BFAIR
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak GUI provides functionality to facilitate users to get up and running as quickly as possible
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak GUI provides functionality to facilitate users to get up and running as
+  quickly as possible
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.

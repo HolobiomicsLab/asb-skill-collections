@@ -1,6 +1,9 @@
 ---
 name: peak-picking-avoidance-ms-analysis
-description: Use when analyzing raw 2D MS data (m/z vs. retention time maps) where conventional peak picking introduces unacceptable error rates, particularly in untargeted metabolomics or chemometrics studies requiring sensitive marker identification at trace levels (e.g., parts per billion).
+description: Use when analyzing raw 2D MS data (m/z vs. retention time maps) where
+  conventional peak picking introduces unacceptable error rates, particularly in untargeted
+  metabolomics or chemometrics studies requiring sensitive marker identification at
+  trace levels (e.g., parts per billion).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -21,7 +25,8 @@ derived_from:
   title: ''
 evidence_spans:
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # peak-picking-avoidance-ms-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A workflow that bypasses conventional peak picking in chromatography–mass spectrometry analysis by combining image processing and machine learning to directly identify multivariate marker features on the m/z vs. retention time plane, reducing false positive peak detections.

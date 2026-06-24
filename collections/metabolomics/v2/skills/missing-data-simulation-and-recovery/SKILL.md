@@ -1,6 +1,8 @@
 ---
 name: missing-data-simulation-and-recovery
-description: Use when you have metabolomics peak intensity data with pathway annotations and want to benchmark whether a pathway scoring method (PALS, ORA, GSEA) degrades gracefully under conditions of missing peaks and measurement noise.
+description: Use when you have metabolomics peak intensity data with pathway annotations
+  and want to benchmark whether a pathway scoring method (PALS, ORA, GSEA) degrades
+  gracefully under conditions of missing peaks and measurement noise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
   - scipy.stats
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

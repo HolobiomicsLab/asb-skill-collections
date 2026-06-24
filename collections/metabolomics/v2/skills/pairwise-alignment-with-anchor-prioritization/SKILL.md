@@ -1,6 +1,7 @@
 ---
 name: pairwise-alignment-with-anchor-prioritization
-description: Use when when processing LC-MS metabolomics datasets with 10 or fewer samples and requiring reproducible mass track alignment across the cohort.
+description: Use when when processing LC-MS metabolomics datasets with 10 or fewer
+  samples and requiring reproducible mass track alignment across the cohort.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -15,11 +16,13 @@ metadata:
   - Python (3.8+)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -44,6 +47,7 @@ attribution:
 
 # pairwise-alignment-with-anchor-prioritization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A mass track alignment strategy for small LC-MS metabolomics studies (≤10 samples) that prioritizes alignment of anchor mass tracks (isotopes and adducts) before aligning remaining tracks, with optional m/z recalibration if systematic differences exceed 1 ppm. This approach exploits high-confidence anchor features to establish a robust reference frame before handling ambiguous mass tracks.

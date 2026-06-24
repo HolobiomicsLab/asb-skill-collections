@@ -1,12 +1,14 @@
 ---
 name: git-repository-tag-checkout
-description: Use when when you need to reproduce or validate a specific historical release artifact (e.g., a Semantic Release v1.0.
+description: Use when when you need to reproduce or validate a specific historical
+  release artifact (e.g., a Semantic Release v1.0.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - Semantic Release
   - git
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
@@ -34,6 +36,7 @@ attribution:
 
 # git-repository-tag-checkout
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve a specific versioned snapshot of a software repository by checking out a git tag, ensuring reproducibility of a particular release state for validation or replication workflows.

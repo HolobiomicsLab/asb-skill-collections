@@ -1,6 +1,8 @@
 ---
 name: analyte-discrimination-machine-learning
-description: Use when you have raw chromatography–mass spectrometry data (GC-MS or LC-MS) in 2D m/z–retention time format and need to identify and discriminate multiple analytes while avoiding false peak detections inherent in conventional peak picking.
+description: Use when you have raw chromatography–mass spectrometry data (GC-MS or
+  LC-MS) in 2D m/z–retention time format and need to identify and discriminate multiple
+  analytes while avoiding false peak detections inherent in conventional peak picking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -21,9 +24,12 @@ derived_from:
   title: ''
 evidence_spans:
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +54,7 @@ attribution:
 
 # analyte-discrimination-machine-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use machine learning classifiers to discriminate individual analytes in a two-dimensional MS map (m/z vs retention time) based on their spatial signatures, enabling automated marker feature identification without conventional peak picking. This skill is applied within the NPFimg pipeline to replace error-prone peak detection with multivariate chemo-/biomarker feature discovery.

@@ -1,6 +1,9 @@
 ---
 name: principal-component-analysis-for-metabolomics
-description: 'Use when after loading a Metaboprep object containing metabolomic abundance data when you need to: (1) identify samples that are statistical outliers in multivariate metabolite space; (2) determine the number of statistically significant principal components;'
+description: 'Use when after loading a Metaboprep object containing metabolomic abundance
+  data when you need to: (1) identify samples that are statistical outliers in multivariate
+  metabolite space; (2) determine the number of statistically significant principal
+  components;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +14,7 @@ metadata:
   - R
   - ggplot2
   - metaboprep
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -40,6 +44,7 @@ attribution:
 
 # principal-component-analysis-for-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply principal component analysis (PCA) to metabolomics abundance matrices to identify and enumerate sample outliers in reduced principal component space at user-specified standard deviation thresholds. This skill enables detection of multivariate outliers and assessment of data quality before downstream statistical analysis.

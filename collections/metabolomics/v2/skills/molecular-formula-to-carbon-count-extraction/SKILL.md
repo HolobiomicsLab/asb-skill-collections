@@ -1,6 +1,8 @@
 ---
 name: molecular-formula-to-carbon-count-extraction
-description: Use when when you have a feature list from HRMS data with molecular formula annotations (inferred or assigned) and need to compute per-carbon mass defect ratios (MD/C, m/C) as part of PFAS candidate prioritization.
+description: Use when when you have a feature list from HRMS data with molecular formula
+  annotations (inferred or assigned) and need to compute per-carbon mass defect ratios
+  (MD/C, m/C) as part of PFAS candidate prioritization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -40,6 +43,7 @@ attribution:
 
 # molecular-formula-to-carbon-count-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract or infer the number of carbon atoms from a molecular formula annotation associated with a mass spectrometry feature. This count is essential for computing normalized mass defect metrics (MD/C, m/C) used in PFAS prioritization workflows.

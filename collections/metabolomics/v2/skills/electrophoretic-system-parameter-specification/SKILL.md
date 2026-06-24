@@ -1,6 +1,7 @@
 ---
 name: electrophoretic-system-parameter-specification
-description: Use when you are preparing to perform effective mobility transformation of CE-MS data and must establish the electrophoretic system's calibration context.
+description: Use when you are preparing to perform effective mobility transformation
+  of CE-MS data and must establish the electrophoretic system's calibration context.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,13 +15,15 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +47,7 @@ attribution:
 
 # electrophoretic-system-parameter-specification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Specification and provision of electrical and physical parameters that define a capillary electrophoresis–mass spectrometry (CE-MS) system for effective mobility transformation. These parameters (applied voltage, capillary length, electrical field ramp time) are required inputs to the mobilityTransform function and must be accurately documented to enable reproducible mobility calibration across analytical runs.

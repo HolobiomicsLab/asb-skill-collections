@@ -1,6 +1,9 @@
 ---
 name: metabolite-chemodiversity-index-calculation-and-interpretation
-description: Use when you have peak-abundance data (after molecular formula assignment, peak filtering by m/z, isotope, ppm error, and sample presence thresholds) and you need to quantify and compare the molecular composition diversity across samples or conditions.
+description: Use when you have peak-abundance data (after molecular formula assignment,
+  peak filtering by m/z, isotope, ppm error, and sample presence thresholds) and you
+  need to quantify and compare the molecular composition diversity across samples
+  or conditions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,12 +23,14 @@ metadata:
   - FT-ICR MS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 - It requires the Python dependencies NumPy
@@ -53,6 +58,7 @@ attribution:
 
 # metabolite-chemodiversity-index-calculation-and-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and interpret chemodiversity indices (e.g., richness, evenness, heterogeneity metrics) on filtered peak-abundance matrices from FT-ICR MS data to quantify the molecular complexity and compositional structure of natural organic matter or metabolite pools. This skill enables researchers to compare chemical diversity across samples, treatments, or environmental conditions.

@@ -1,6 +1,8 @@
 ---
 name: computational-variation-detection
-description: Use when after peak detection and feature alignment in a metabolomic LC–MS/MS or GC–MS workflow, when you have a feature table (rows=metabolic features, columns=samples) split into separate .csv files for peak height and peak area.
+description: Use when after peak detection and feature alignment in a metabolomic
+  LC–MS/MS or GC–MS workflow, when you have a feature table (rows=metabolic features,
+  columns=samples) split into separate .csv files for peak height and peak area.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,11 +16,13 @@ metadata:
   - caret
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04046
   title: AVIR
 evidence_spans:
-- AVIR.R is a program developed to recognize computational variation among metabolic features in samples
+- AVIR.R is a program developed to recognize computational variation among metabolic
+  features in samples
 - AVIR.R
 claims: []
 provenance:

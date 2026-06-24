@@ -1,6 +1,8 @@
 ---
 name: manifest-generation
-description: Use when you maintain a local repository of biological sequences (such as MIBiG) and need to produce a searchable inventory that links local files to their metadata and external database availability status.
+description: Use when you maintain a local repository of biological sequences (such
+  as MIBiG) and need to produce a searchable inventory that links local files to their
+  metadata and external database availability status.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_3293
   tools:
   - Git
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkz882
   title: MIBiG 2.0
@@ -37,6 +40,7 @@ attribution:
 
 # manifest-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a structured manifest (CSV or JSON) that documents sequence files, their metadata, and cross-referenced availability status against external databases. This skill is essential for tracking curation status and identifying sequences unavailable from canonical public repositories.

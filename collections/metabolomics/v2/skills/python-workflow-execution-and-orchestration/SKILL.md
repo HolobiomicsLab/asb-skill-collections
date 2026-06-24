@@ -1,6 +1,7 @@
 ---
 name: python-workflow-execution-and-orchestration
-description: Use when you have raw LC/MS data in mzML format and need to execute a complete non-targeted screening workflow to extract and annotate chemical features.
+description: Use when you have raw LC/MS data in mzML format and need to execute a
+  complete non-targeted screening workflow to extract and annotate chemical features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -23,6 +24,7 @@ metadata:
   - LAGF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF
@@ -56,6 +58,7 @@ attribution:
 
 # python-workflow-execution-and-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a multi-stage LC/MS non-targeted screening workflow implemented in Python, coordinating data loading, feature extraction, algorithmic processing, and result serialization. This skill orchestrates the LAGF algorithm pipeline on mzML-formatted mass spectrometry data using task parallelization and progress tracking.

@@ -1,6 +1,9 @@
 ---
 name: flux-distribution-segregation-visualization
-description: Use when you have sampled feasible flux distributions from multiple constraint-based models (e.g., cell-line-specific variants of a metabolic model) and need to visually and quantitatively compare how well different constraint scenarios segregate biological samples.
+description: Use when you have sampled feasible flux distributions from multiple constraint-based
+  models (e.g., cell-line-specific variants of a metabolic model) and need to visually
+  and quantitatively compare how well different constraint scenarios segregate biological
+  samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -15,14 +18,19 @@ metadata:
   - t-SNE (scikit-learn or standalone)
   - scipy.stats.spearmanr
   - matplotlib / seaborn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
 - the implementation of optGpSampler algorithm [71] available in COBRApy [72]
 claims: []
 provenance:
@@ -47,6 +55,7 @@ attribution:
 
 # flux-distribution-segregation-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply t-SNE dimensionality reduction to sampled steady-state flux distributions from constraint-based metabolic models to visualize and quantify cell-line-specific segregation. This skill evaluates whether integrating multiple constraint types (nutrient availability, extracellular flux ratios, transcriptomics-derived reaction activity scores) improves inter-model separation and intra-model cohesion.

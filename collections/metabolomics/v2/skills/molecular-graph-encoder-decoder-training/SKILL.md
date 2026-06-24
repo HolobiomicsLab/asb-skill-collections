@@ -1,6 +1,8 @@
 ---
 name: molecular-graph-encoder-decoder-training
-description: Use when when you have a training dataset of NMR spectra-derived molecular fragments encoded as token sequences, and you need to predict both the molecular formula and complete bond connectivity of unknown molecules.
+description: Use when when you have a training dataset of NMR spectra-derived molecular
+  fragments encoded as token sequences, and you need to predict both the molecular
+  formula and complete bond connectivity of unknown molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - Transformer (architecture)
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -40,6 +43,7 @@ attribution:
 
 # molecular-graph-encoder-decoder-training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a transformer encoder-decoder architecture to map molecular fragment embeddings to complete molecular structures by predicting both molecular formula (via classification) and bond connectivity (via link prediction on molecular graphs). This skill enables automated assembly of fragmented spectroscopic data into chemically valid structures.

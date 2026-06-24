@@ -1,6 +1,9 @@
 ---
 name: fragment-recurrence-frequency-calculation
-description: Use when after extracting and grouping fragments from top x% TIC-filtered replicate spectra for a given feature, to quantify which fragments consistently appear across replicates. Use this when you have multiple MS/MS spectra for the same precursor (e.
+description: Use when after extracting and grouping fragments from top x% TIC-filtered
+  replicate spectra for a given feature, to quantify which fragments consistently
+  appear across replicates. Use this when you have multiple MS/MS spectra for the
+  same precursor (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,13 +20,17 @@ metadata:
   - label_individual_spectrum
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # fragment-recurrence-frequency-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the recurrence frequency of each fragment across replicate MS/MS spectra by aggregating top-TIC consensus spectra and counting how often each m/z value appears. This frequency metric is used downstream for denoising and selecting high-confidence signal fragments.

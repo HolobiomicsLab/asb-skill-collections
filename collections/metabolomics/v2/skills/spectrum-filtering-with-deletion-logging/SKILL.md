@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -48,6 +49,7 @@ attribution:
 
 # spectrum-filtering-with-deletion-logging
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 This skill removes mass spectra that fail structural completeness checks (lacking all three of SMILES, InChI, and InChIKey simultaneously) while preserving detailed audit logs of each deletion decision. It standardizes spectral datasets by enforcing chemical identifier requirements and maintaining traceable records of quality control decisions.

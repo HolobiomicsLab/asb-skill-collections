@@ -1,6 +1,9 @@
 ---
 name: csv-format-validation
-description: Use when when you have a .csv file intended as input to CypReact containing SMILES strings and need to verify it meets the required comma-separated format specification and that each SMILES string is syntactically valid before processing molecules through CYP isoform testing.
+description: Use when when you have a .csv file intended as input to CypReact containing
+  SMILES strings and need to verify it meets the required comma-separated format specification
+  and that each SMILES string is syntactically valid before processing molecules through
+  CYP isoform testing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - CypReact
   - RDKit
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -38,6 +42,7 @@ attribution:
 
 # CSV format validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that comma-separated SMILES input files (.csv) conform to CypReact's required format and contain syntactically correct molecular structure representations. This skill ensures molecules can be successfully ingested before running CYP isoform reactivity predictions.

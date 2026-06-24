@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-scan-extraction-by-target
-description: Use when you have raw LC-MS/MS chromatogram files in mzML/mzXML format (converted from Thermo, Waters, or Bruker instruments) acquired in DDA or targeted MS/MS mode, and you need to isolate specific MS1 precursors and their corresponding MS2 fragments based on known m/z values and optional.
+description: Use when you have raw LC-MS/MS chromatogram files in mzML/mzXML format
+  (converted from Thermo, Waters, or Bruker instruments) acquired in DDA or targeted
+  MS/MS mode, and you need to isolate specific MS1 precursors and their corresponding
+  MS2 fragments based on known m/z values and optional.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -15,6 +18,7 @@ metadata:
   - DrugBank
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
@@ -43,6 +47,7 @@ attribution:
 
 # Mass spectrometry scan extraction by target
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract MS1 and MS2 scans from raw chromatogram files (mzML/mzXML format) by matching user-specified m/z and retention time targets, enabling construction of local spectral libraries without data sharing. This skill is essential for building confidential spectral libraries in metabolomics and pharmaceutical workflows.

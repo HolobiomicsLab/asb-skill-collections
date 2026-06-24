@@ -1,6 +1,9 @@
 ---
 name: json-schema-validation-for-dashboard
-description: Use when after running the msfeast_pipeline notebook to generate dashboard_data.json from quantification tables, metadata, and spectral data. Use this skill to verify that the exported JSON contains all required fields and structure before attempting to load the file into msFeaST_Dashboard_bundle.
+description: Use when after running the msfeast_pipeline notebook to generate dashboard_data.json
+  from quantification tables, metadata, and spectral data. Use this skill to verify
+  that the exported JSON contains all required fields and structure before attempting
+  to load the file into msFeaST_Dashboard_bundle.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - msfeast_pipeline notebook
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

@@ -1,6 +1,9 @@
 ---
 name: twim-instrument-offset-correction
-description: Use when you have raw TWIM-MS data with arrival times (detector timestamps) rather than drift times, and you need to calibrate collision cross section values. TWIM platforms inherently record arrival time, not drift time, so this correction must precede CCS calibration workflows.
+description: Use when you have raw TWIM-MS data with arrival times (detector timestamps)
+  rather than drift times, and you need to calibrate collision cross section values.
+  TWIM platforms inherently record arrival time, not drift time, so this correction
+  must precede CCS calibration workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -41,6 +45,7 @@ attribution:
 
 # TWIM instrument offset correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert arrival times (detector arrival) recorded by TWIM-MS platforms into drift times (time spent in the mobility cell) by applying an instrument-specific time-of-flight offset, a prerequisite for accurate collision cross section (CCS) calibration.

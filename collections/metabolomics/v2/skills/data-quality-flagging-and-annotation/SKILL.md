@@ -1,6 +1,9 @@
 ---
 name: data-quality-flagging-and-annotation
-description: Use when after peak integration and feature alignment in metabolomic processing, when you have a feature table (rows=features, columns=samples) and need to identify which features are corrupted by processing artifacts (faulty peak integration, feature misalignment).
+description: Use when after peak integration and feature alignment in metabolomic
+  processing, when you have a feature table (rows=features, columns=samples) and need
+  to identify which features are corrupted by processing artifacts (faulty peak integration,
+  feature misalignment).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,11 +15,13 @@ metadata:
   - R
   - e1071
   - caret
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04046
   title: AVIR
 evidence_spans:
-- AVIR.R is a program developed to recognize computational variation among metabolic features in samples
+- AVIR.R is a program developed to recognize computational variation among metabolic
+  features in samples
 - AVIR.R
 claims: []
 provenance:

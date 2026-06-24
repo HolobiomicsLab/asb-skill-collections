@@ -1,6 +1,9 @@
 ---
 name: metabolite-vote-counting-qualitative-analysis
-description: Use when you have metabolomic results from multiple studies with only compound identifiers, directional trend labels (up-regulated, down-regulated, or no trend), and bibliographic references — and you want to quantify agreement on metabolite behavior direction across studies without requiring.
+description: Use when you have metabolomic results from multiple studies with only
+  compound identifiers, directional trend labels (up-regulated, down-regulated, or
+  no trend), and bibliographic references — and you want to quantify agreement on
+  metabolite behavior direction across studies without requiring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,14 +15,17 @@ metadata:
   - amanida
   - webchem
   - PubChem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # metabolite-vote-counting-qualitative-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Qualitative meta-analysis method that assigns directional votes (+1, −1, 0) to metabolites across multiple studies based on trend classification, then sums votes per compound to produce a consensus measure of consistency and direction. Used when raw data or standard deviations are unavailable but trend direction and study counts are present.

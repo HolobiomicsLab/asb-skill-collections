@@ -1,6 +1,9 @@
 ---
 name: feature-list-format-validation
-description: Use when a user supplies a custom feature list from external feature-finding software (vendor tools, alternative open-source pipelines) instead of using pyOpenMS automatic detection, or wishes to augment/replace pyOpenMS results with pre-processed features.
+description: Use when a user supplies a custom feature list from external feature-finding
+  software (vendor tools, alternative open-source pipelines) instead of using pyOpenMS
+  automatic detection, or wishes to augment/replace pyOpenMS results with pre-processed
+  features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,12 +17,14 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # Feature-List Format Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and parse user-supplied custom feature lists (CSV/TSV/XLSX) into PFΔScreen-compatible feature objects before downstream PFAS prioritization. This skill ensures that custom feature inputs meet required schema (m/z, retention time, intensity columns) and are properly converted to internal data structures compatible with MD/C-m/C, KMD, and MS2 fragment analysis modules.

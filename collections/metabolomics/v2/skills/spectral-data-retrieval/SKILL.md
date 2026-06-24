@@ -1,6 +1,9 @@
 ---
 name: spectral-data-retrieval
-description: Use when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-f.mwang87/data/... or mzspec:MSV000084951:AH22) and need to extract the corresponding mass spectrum peak list (m/z and intensity pairs) for downstream analysis, visualization, or cross-repository comparison.
+description: Use when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-f.mwang87/data/...
+  or mzspec:MSV000084951:AH22) and need to extract the corresponding mass spectrum
+  peak list (m/z and intensity pairs) for downstream analysis, visualization, or cross-repository
+  comparison.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,6 +14,7 @@ metadata:
   - GNPS LCMS Visualization Dashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
@@ -38,6 +42,7 @@ attribution:
 
 # spectral-data-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve a Universal Spectrum Identifier (USI) string to retrieve mass spectrometry peak lists from distributed repositories (GNPS, MassIVE, MetaboLights). This skill enables programmatic access to raw and processed MS data across multiple data sources using a standardized identifier format.

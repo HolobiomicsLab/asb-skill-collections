@@ -1,6 +1,9 @@
 ---
 name: deep-neural-network-training-regularization
-description: 'Use when training a DNN on retention time prediction or similar continuous regression tasks where: (1) the feature space is very high-dimensional (thousands of molecular descriptors and fingerprints), (2) the training set is moderately sized (tens of thousands of molecules), (3) you observe or.'
+description: 'Use when training a DNN on retention time prediction or similar continuous
+  regression tasks where: (1) the feature space is very high-dimensional (thousands
+  of molecular descriptors and fingerprints), (2) the training set is moderately sized
+  (tens of thousands of molecules), (3) you observe or.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,11 +13,13 @@ metadata:
   tools:
   - alvaDesc
   - constantino-garcia/cmmrt
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +43,7 @@ attribution:
 
 # deep-neural-network-training-regularization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Training a deep neural network with heavy L1/L2 regularization, cosine annealing warm restarts, and stochastic weight averaging to achieve robust regression on high-dimensional molecular feature spaces. This skill is used when you need to prevent overfitting on modestly-sized datasets (e.g., 80K molecules) with thousands of features and improve generalization on held-out test sets.

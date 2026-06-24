@@ -1,6 +1,8 @@
 ---
 name: metabolomics-analyte-stability-characterization
-description: Use when you are designing a blood sampling protocol for metabolomics or lipidomics analysis and need to predict whether specific analytes (polar metabolites or lipids) will degrade under planned pre-analytical conditions (e.
+description: Use when you are designing a blood sampling protocol for metabolomics
+  or lipidomics analysis and need to predict whether specific analytes (polar metabolites
+  or lipids) will degrade under planned pre-analytical conditions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +14,13 @@ metadata:
   - Shiny
   - RStudio
   - ALISTER web-app
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cca.2024.117858
   title: ALISTER
 evidence_spans:
-- ALISTER is a web-app containing scientific information on pre-analytical blood sample stability in metabolomics and lipidomics
+- ALISTER is a web-app containing scientific information on pre-analytical blood sample
+  stability in metabolomics and lipidomics
 - '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
 claims: []
 provenance:

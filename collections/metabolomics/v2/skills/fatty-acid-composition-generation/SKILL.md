@@ -1,6 +1,9 @@
 ---
 name: fatty-acid-composition-generation
-description: Use when you need to systematically enumerate all possible lipid species within a defined analytical scope—specifically when you have specified one or more lipid classes (e.g., phosphatidylcholine, triacylglycerol) and fatty acid composition ranges (e.
+description: Use when you need to systematically enumerate all possible lipid species
+  within a defined analytical scope—specifically when you have specified one or more
+  lipid classes (e.g., phosphatidylcholine, triacylglycerol) and fatty acid composition
+  ranges (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +14,7 @@ metadata:
   - LSG
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator
@@ -39,6 +43,7 @@ attribution:
 
 # fatty-acid-composition-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate enumerated lipid molecular species by combining user-specified lipid class constraints with fatty acid composition parameters (carbon count and degree of unsaturation). This skill produces structured lists of lipid species that serve as inputs to mass spectral library generation for downstream identification workflows.

@@ -1,6 +1,9 @@
 ---
 name: metabolomics-data-preprocessing
-description: Use when you have raw LC/HRMS data files in mzXML, mzML, or netCDF format and need to identify individual and aggregated aligned peaks with their retention time and m/z values before applying spectral deconvolution or chemical annotation. This is the obligatory first step when using IDSL.
+description: Use when you have raw LC/HRMS data files in mzXML, mzML, or netCDF format
+  and need to identify individual and aggregated aligned peaks with their retention
+  time and m/z values before applying spectral deconvolution or chemical annotation.
+  This is the obligatory first step when using IDSL.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,16 +18,20 @@ metadata:
   - Lilikoi v2.0
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 - doi: 10.1093/gigascience/giaa162
   title: ''
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -13,11 +13,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 - library(pheatmap)
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: peak-table-filtering-by-mz-and-retention-time
-description: Use when you have a table of detected chromatographic peaks (e.g., from CentWave peak detection in xcms) and need to isolate a single target m/z (e.g., m/z 304.1131 for a pesticide) or a narrow m/z range, or when you must restrict analysis to a known retention time window (e.
+description: Use when you have a table of detected chromatographic peaks (e.g., from
+  CentWave peak detection in xcms) and need to isolate a single target m/z (e.g.,
+  m/z 304.1131 for a pesticide) or a narrow m/z range, or when you must restrict analysis
+  to a known retention time window (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +18,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 - library(Spectra)
 - library(MsBackendMgf)
 - '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'

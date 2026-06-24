@@ -1,6 +1,9 @@
 ---
 name: dataset-integrity-assessment
-description: Use when when you have downloaded a released version of a structured dataset (e.g., LOTUS from Zenodo) and need to confirm it matches the documented headline statistics before downstream analysis, or when auditing data integrity after ingestion into a processing pipeline.
+description: Use when when you have downloaded a released version of a structured
+  dataset (e.g., LOTUS from Zenodo) and need to confirm it matches the documented
+  headline statistics before downstream analysis, or when auditing data integrity
+  after ingestion into a processing pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   tools:
   - R
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +48,7 @@ attribution:
 
 # dataset-integrity-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically verify the completeness and accuracy of a curated structure-organism dataset by reproducing reported aggregate statistics (unique pairs, structures, organisms, sources) and comparing observed counts against published benchmarks using absolute and relative difference metrics.

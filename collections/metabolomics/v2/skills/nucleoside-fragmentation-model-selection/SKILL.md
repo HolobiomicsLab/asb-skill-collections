@@ -1,6 +1,7 @@
 ---
 name: nucleoside-fragmentation-model-selection
-description: Use when when your input biomolecule is a nucleoside or modified nucleoside (not a peptide) and you are building a synthetic LC-MS/MS run with SMITER.
+description: Use when when your input biomolecule is a nucleoside or modified nucleoside
+  (not a peptide) and you are building a synthetic LC-MS/MS run with SMITER.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +14,13 @@ metadata:
   - pyQms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
 evidence_spans:
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
+  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

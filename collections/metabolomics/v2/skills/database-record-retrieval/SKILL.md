@@ -1,6 +1,9 @@
 ---
 name: database-record-retrieval
-description: Use when you need to access a stored chemical structure, NRP sequence, or building-block annotation from the MassSpecBlocks database in order to export it to an external format (e.g., CycloBranch), transform it for mass spectra analysis, or integrate it with another chemical database query.
+description: Use when you need to access a stored chemical structure, NRP sequence,
+  or building-block annotation from the MassSpecBlocks database in order to export
+  it to an external format (e.g., CycloBranch), transform it for mass spectra analysis,
+  or integrate it with another chemical database query.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3431
@@ -16,6 +19,7 @@ metadata:
   - CycloBranch
   - PHP/Symfony Framework
   - Doctrine ORM
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks

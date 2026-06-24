@@ -1,6 +1,7 @@
 ---
 name: molecular-fingerprint-extraction-and-vectorization
-description: Use when you have annotated metabolite structures (with SMILES strings) from a reference library (e.
+description: Use when you have annotated metabolite structures (with SMILES strings)
+  from a reference library (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -16,18 +17,25 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
-- To assign one or more molecular structures to BGCs, according to how many high-scoring matches are found in MIBiG
-- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit
-- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
+- To assign one or more molecular structures to BGCs, according to how many high-scoring
+  matches are found in MIBiG
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit [29]
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +60,7 @@ attribution:
 
 # molecular-fingerprint-extraction-and-vectorization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and vectorize molecular fingerprints from chemical structures (SMILES strings) using multiple fingerprint encodings (CDK Substructure, PubChem Substructure, Klekota-Roth) to create a feature space for training kernel regression models that link spectra to molecular structures. This skill enables encoding of metabolite chemical diversity in a format compatible with spectrum-to-fingerprint regression tasks.

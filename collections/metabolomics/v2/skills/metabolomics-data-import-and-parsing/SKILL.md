@@ -1,6 +1,9 @@
 ---
 name: metabolomics-data-import-and-parsing
-description: Use when when you have metabolomics comparison results from one or more studies in tabular format (spreadsheet or text file) with columns for compound name/identifier, statistical p-value, relative fold-change (including negative values indicating down-regulation), study sample size (N), and.
+description: Use when when you have metabolomics comparison results from one or more
+  studies in tabular format (spreadsheet or text file) with columns for compound name/identifier,
+  statistical p-value, relative fold-change (including negative values indicating
+  down-regulation), study sample size (N), and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - amanida
   - webchem
   - metaboprep
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -21,8 +25,10 @@ derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 - library(metaboprep)
 claims: []
 provenance:
@@ -52,6 +58,7 @@ attribution:
 
 # metabolomics-data-import-and-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import metabolomics datasets from standard file formats (xls/xlsx, csv, txt) into a structured tibble suitable for meta-analysis, handling column mapping, missing data, and fold-change sign normalization. This is the critical first step that prepares raw study results (compound identifiers, p-values, fold-changes, sample sizes, references) for downstream quantitative or qualitative meta-analysis workflows.

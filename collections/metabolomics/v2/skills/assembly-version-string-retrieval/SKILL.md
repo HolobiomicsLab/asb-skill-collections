@@ -1,6 +1,7 @@
 ---
 name: assembly-version-string-retrieval
-description: Use when when you need to validate that a .NET assembly (such as ThermoFisher.CommonCore.RawFileReader) is correctly installed and accessible before attempting data reading operations.
+description: Use when when you need to validate that a .NET assembly (such as ThermoFisher.CommonCore.RawFileReader)
+  is correctly installed and accessible before attempting data reading operations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -9,13 +10,15 @@ metadata:
   tools:
   - RawFileReader
   - rawrr
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -41,6 +44,7 @@ attribution:
 
 # assembly-version-string-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve the version string and file path of a precompiled .NET assembly bundled with an R package without requiring input data files. This skill verifies that internal R-to-C# dispatch mechanisms are functioning correctly and that managed code dependencies are properly deployed.

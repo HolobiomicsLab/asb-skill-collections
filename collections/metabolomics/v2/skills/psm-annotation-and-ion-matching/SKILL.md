@@ -1,6 +1,9 @@
 ---
 name: psm-annotation-and-ion-matching
-description: Use when when you have an MS2 scan with observed peak data (m/z, intensity, charge state), a known peptide sequence, and need to determine which observed ions correspond to B and Y fragment ions. Apply this skill particularly when working with natural abundance (1.
+description: Use when when you have an MS2 scan with observed peak data (m/z, intensity,
+  charge state), a known peptide sequence, and need to determine which observed ions
+  correspond to B and Y fragment ions. Apply this skill particularly when working
+  with natural abundance (1.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -16,12 +19,15 @@ metadata:
   - Sipros
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 - Extract visualization information from `.FT2` files
 claims: []

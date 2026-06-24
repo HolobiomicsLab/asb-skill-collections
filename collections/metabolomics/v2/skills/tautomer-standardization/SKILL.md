@@ -1,6 +1,8 @@
 ---
 name: tautomer-standardization
-description: Use when ingesting raw SMILES strings from curated structure inventories where the same chemical may be represented in multiple tautomeric forms (e.g., keto–enol pairs, lactam–lactim forms) across different literature sources or input databases.
+description: Use when ingesting raw SMILES strings from curated structure inventories
+  where the same chemical may be represented in multiple tautomeric forms (e.g., keto–enol
+  pairs, lactam–lactim forms) across different literature sources or input databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3962
@@ -11,6 +13,7 @@ metadata:
   - Python 3
   - RDKit
   - smiles.py
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +46,7 @@ attribution:
 
 # tautomer-standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize molecular structures by canonicalizing SMILES representations to remove tautomeric ambiguities and stereochemical variants, ensuring a single reference form per unique chemical entity. This is critical in natural products databases where raw inputs from multiple sources may represent the same molecule in different tautomeric states.

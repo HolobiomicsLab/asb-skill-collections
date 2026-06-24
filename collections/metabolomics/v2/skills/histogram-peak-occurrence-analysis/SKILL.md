@@ -1,6 +1,8 @@
 ---
 name: histogram-peak-occurrence-analysis
-description: Use when after you have computed a histogram of pairwise mass differences from MSI peak data and want to identify which mass shifts occur most frequently and whether they correspond to known chemical adducts.
+description: Use when after you have computed a histogram of pairwise mass differences
+  from MSI peak data and want to identify which mass shifts occur most frequently
+  and whether they correspond to known chemical adducts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,13 +15,16 @@ metadata:
   - R
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # Rank Mass Differences by Occurrence with topAdducts
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill ranks mass differences observed in MALDI-MS imaging data by their occurrence frequency and cross-references them against known chemical adducts. It surfaces the most abundant molecular adducts—which represent potential metabolite–matrix or metabolite–salt ion associations—from a binned mass difference histogram.

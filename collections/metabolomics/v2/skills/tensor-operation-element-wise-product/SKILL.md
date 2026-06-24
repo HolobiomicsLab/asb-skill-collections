@@ -1,6 +1,8 @@
 ---
 name: tensor-operation-element-wise-product
-description: Use when you have two embedding tensors of identical shape (e.g., both 512-dimensional) and need to produce a fused representation that captures multiplicative interactions between modalities.
+description: Use when you have two embedding tensors of identical shape (e.g., both
+  512-dimensional) and need to produce a fused representation that captures multiplicative
+  interactions between modalities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,6 +14,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +43,7 @@ attribution:
 
 # Tensor Operation: Element-wise Product
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute the element-wise (Hadamard) product of two equal-shaped tensors to combine learned representations, commonly used in neural architectures to fuse spectrum and formula embeddings into joint feature vectors.

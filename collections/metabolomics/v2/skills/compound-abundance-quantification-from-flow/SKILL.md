@@ -1,6 +1,8 @@
 ---
 name: compound-abundance-quantification-from-flow
-description: Use when you have an NMR mixture spectrum (1D or 2D) and a library of reference spectra for pure compounds, and you need to identify which compounds are present and in what proportions.
+description: Use when you have an NMR mixture spectrum (1D or 2D) and a library of
+  reference spectra for pure compounds, and you need to identify which compounds are
+  present and in what proportions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -12,6 +14,7 @@ metadata:
   - spec2csv
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

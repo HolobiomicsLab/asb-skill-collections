@@ -1,6 +1,9 @@
 ---
 name: experimental-predicted-fragment-comparison
-description: Use when when you have downloaded or retrieved fragment records from both experimental and predicted fragment databases as part of the DNA adductomics resource, and you need to verify that all fragments can be successfully mapped to their parent compound entries in the reference SDF-format compound.
+description: Use when when you have downloaded or retrieved fragment records from
+  both experimental and predicted fragment databases as part of the DNA adductomics
+  resource, and you need to verify that all fragments can be successfully mapped to
+  their parent compound entries in the reference SDF-format compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -10,6 +13,7 @@ metadata:
   - http://edamontology.org/topic_0154
   tools:
   - SDF file parser / molecular structure library
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -37,6 +41,7 @@ attribution:
 
 # experimental-predicted-fragment-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cross-reference and validate fragment records from experimental and predicted online databases against a reference compound database in SDF format to identify orphaned fragments and quantify matching success. This skill ensures data integrity and completeness in DNA adductomics fragment resources.

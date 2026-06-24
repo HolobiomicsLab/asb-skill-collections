@@ -1,6 +1,7 @@
 ---
 name: cli-application-invocation-with-file-io-management
-description: Use when when you have vendor mass spectrometry raw files (e.g., .raw format) that must be converted to an open format (Aird) using a Windows .
+description: Use when when you have vendor mass spectrometry raw files (e.g., .raw
+  format) that must be converted to an open format (Aird) using a Windows .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -17,6 +18,7 @@ metadata:
   - AirdPro V5 / V6
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -47,6 +49,7 @@ attribution:
 
 # CLI Application Invocation with File I/O Management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a command-line interface (CLI) application within a containerized environment with mounted input and output volumes, managing vendor mass spectrometry file conversion and monitoring first-run initialization overhead. This skill is essential when batch-processing large proprietary data formats that require platform-specific runtime initialization.

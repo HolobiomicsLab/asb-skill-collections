@@ -1,6 +1,9 @@
 ---
 name: ms2lda-feature-annotation
-description: Use when after creating a GNPS mass spectral molecular network and running an MS2LDA experiment, use this skill when you want to identify and visualize which substructural motifs (Mass2Motifs) are shared across clustered spectra, particularly to highlight fragmentation pattern similarities between.
+description: Use when after creating a GNPS mass spectral molecular network and running
+  an MS2LDA experiment, use this skill when you want to identify and visualize which
+  substructural motifs (Mass2Motifs) are shared across clustered spectra, particularly
+  to highlight fragmentation pattern similarities between.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

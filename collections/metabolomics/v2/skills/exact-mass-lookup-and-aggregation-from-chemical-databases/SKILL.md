@@ -1,6 +1,9 @@
 ---
 name: exact-mass-lookup-and-aggregation-from-chemical-databases
-description: Use when after loading raw Agilent Unknowns Analysis CSV output and when you need to convert tentative compound identifications (matched only by GC-MS library cosine similarity or Match.Factor score) into searchable, curated chemical records with exact masses and multi-source confirmation.
+description: Use when after loading raw Agilent Unknowns Analysis CSV output and when
+  you need to convert tentative compound identifications (matched only by GC-MS library
+  cosine similarity or Match.Factor score) into searchable, curated chemical records
+  with exact masses and multi-source confirmation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,13 +21,17 @@ metadata:
   - uafR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- The recommended software for generating the necessary data in the default format
+  (i.e. with correct column names) is Unknowns Analysis
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:
@@ -49,6 +56,7 @@ attribution:
 
 # exact-mass-lookup-and-aggregation-from-chemical-databases
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve exact masses, published chemical names, and spectroscopic metadata for compounds detected in GC-MS data by querying PubChem, ChemSpider, and literature databases, then aggregate redundant peak representations by chemical identity and dominant m/z fragments. This skill bridges raw mass spectrometry output to downstream retention time and mass-based sorting in the uafR pipeline.

@@ -1,6 +1,8 @@
 ---
 name: dia-data-format-recognition
-description: Use when you have raw mass spectrometry data from a DIA acquisition method and need to determine whether it is MS^E, All-Ion Fragmentation (AIF), or SWATH-MS before loading into IDSL.CSA for fragmentation spectra deconvolution.
+description: Use when you have raw mass spectrometry data from a DIA acquisition method
+  and need to determine whether it is MS^E, All-Ion Fragmentation (AIF), or SWATH-MS
+  before loading into IDSL.CSA for fragmentation spectra deconvolution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
 claims: []
 provenance:

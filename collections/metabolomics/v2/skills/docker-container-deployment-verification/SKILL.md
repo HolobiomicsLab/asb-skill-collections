@@ -1,6 +1,9 @@
 ---
 name: docker-container-deployment-verification
-description: Use when after building and starting a Dockerized TensorFlow Serving instance (via `make server-compose` or equivalent) to validate that the model has the expected input layer names ('input_2048' and 'input_4096') and output layer name ('output') before routing live inference traffic through the.
+description: Use when after building and starting a Dockerized TensorFlow Serving
+  instance (via `make server-compose` or equivalent) to validate that the model has
+  the expected input layer names ('input_2048' and 'input_4096') and output layer
+  name ('output') before routing live inference traffic through the.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - docker-compose
   - Python
   - TensorFlow Serving
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -38,6 +42,7 @@ attribution:
 
 # docker-container-deployment-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Dockerized model server (specifically TensorFlow Serving) is running and exposes the correct input/output layer metadata through its HTTP metadata endpoint. This skill ensures the deployed model conforms to expected interface specifications before classification queries are issued.

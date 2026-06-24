@@ -1,6 +1,7 @@
 ---
 name: ce-ms-migration-time-measurement
-description: Use when when processing raw CE-MS data and need to establish a baseline migration time scale before transforming to effective mobility.
+description: Use when when processing raw CE-MS data and need to establish a baseline
+  migration time scale before transforming to effective mobility.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -16,13 +17,15 @@ metadata:
   - msdata
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +49,7 @@ attribution:
 
 # CE-MS migration time measurement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and record migration times (retention times) of analytes from capillary electrophoresis–mass spectrometry (CE-MS) datasets, serving as the primary input for subsequent effective mobility transformation. Migration times vary with electroosmotic flow fluctuations and must be precisely measured to enable calibration against EOF markers.

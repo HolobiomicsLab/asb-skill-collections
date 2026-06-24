@@ -1,6 +1,8 @@
 ---
 name: gcf-assignment-from-distance-matrix
-description: Use when when you have pre-computed BGC feature vectors (from domain architecture or other representations) and need to group them into functionally coherent GCFs for comparative analysis.
+description: Use when when you have pre-computed BGC feature vectors (from domain
+  architecture or other representations) and need to group them into functionally
+  coherent GCFs for comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,6 +13,7 @@ metadata:
   - BiG-SLiCE
   - pyHMMER
   - antiSMASH v7.0.0
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

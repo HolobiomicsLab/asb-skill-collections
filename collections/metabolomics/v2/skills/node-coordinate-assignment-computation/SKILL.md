@@ -1,6 +1,8 @@
 ---
 name: node-coordinate-assignment-computation
-description: Use when you have constructed a network object (edges and nodes) in MetaNet and need to compute spatial coordinates for visualization. Use this skill when preparing networks for static plots (e.
+description: Use when you have constructed a network object (edges and nodes) in MetaNet
+  and need to compute spatial coordinates for visualization. Use this skill when preparing
+  networks for static plots (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3503
@@ -13,12 +15,15 @@ metadata:
   - R
   - igraph
   - pcutils
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # node-coordinate-assignment-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a layout algorithm from MetaNet's library of 40+ algorithms to assign spatial (x, y) coordinates to network nodes for visualization on static or interactive platforms. This skill enables reproducible positioning of nodes in correlation-based omics networks.

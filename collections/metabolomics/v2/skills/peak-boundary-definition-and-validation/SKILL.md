@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -52,6 +53,7 @@ attribution:
 
 # peak-boundary-definition-and-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Define and validate precise chromatographic peak boundaries in LC-MS data to extract quantitatively accurate peak characteristics (m/z, retention time, intensity, peak width). This skill ensures that detected peaks are correctly segmented and quality-evaluated before downstream feature annotation and metabolite identification.

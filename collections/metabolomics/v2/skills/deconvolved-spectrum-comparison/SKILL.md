@@ -1,6 +1,8 @@
 ---
 name: deconvolved-spectrum-comparison
-description: Use when after auto-deconvolution of GC-MS data has produced a table of deconvolved mass spectra, and you need to organize these spectra into clusters or detect which compounds co-elute or share similar fragmentation patterns.
+description: Use when after auto-deconvolution of GC-MS data has produced a table
+  of deconvolved mass spectra, and you need to organize these spectra into clusters
+  or detect which compounds co-elute or share similar fragmentation patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3932
@@ -12,6 +14,7 @@ metadata:
   - GNPS_GC
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

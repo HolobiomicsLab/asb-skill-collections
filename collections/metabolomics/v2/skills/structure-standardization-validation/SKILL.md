@@ -1,6 +1,8 @@
 ---
 name: structure-standardization-validation
-description: Use when you have raw or heterogeneous molecular structure inputs (SMILES strings or SDF files) that will be used for fingerprint calculation, descriptor extraction, or retention time prediction modeling.
+description: Use when you have raw or heterogeneous molecular structure inputs (SMILES
+  strings or SDF files) that will be used for fingerprint calculation, descriptor
+  extraction, or retention time prediction modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -10,6 +12,7 @@ metadata:
   tools:
   - PubChem standardization
   - rcdk
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

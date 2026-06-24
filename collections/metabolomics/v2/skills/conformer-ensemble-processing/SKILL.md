@@ -1,6 +1,9 @@
 ---
 name: conformer-ensemble-processing
-description: Use when you have a set of conformers that have already been filtered by ASE-ANI neural network potentials and need to extract quantum-mechanical electronic properties (polarizability tensor, dipole moment) required for collision cross section calculation.
+description: Use when you have a set of conformers that have already been filtered
+  by ASE-ANI neural network potentials and need to extract quantum-mechanical electronic
+  properties (polarizability tensor, dipole moment) required for collision cross section
+  calculation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2476
@@ -13,13 +16,15 @@ metadata:
   - ASE-ANI
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - 'QUICK: For quantum calculations'
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # conformer-ensemble-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load pre-filtered conformers (in xyz or molden format) from ASE-ANI filtering, prepare quantum calculation inputs for each conformer, and submit them in parallel to QUICK for quantum calculations. This skill bridges molecular geometry optimization and electronic property extraction in the CCS prediction workflow.

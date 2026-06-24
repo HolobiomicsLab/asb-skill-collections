@@ -1,6 +1,7 @@
 ---
 name: quality-control-metric-distribution-analysis
-description: Use when after composite-map peak detection has produced an unfiltered peak list with SNR, peakshape (goodness_fitting), peak_height, and prominence values.
+description: Use when after composite-map peak detection has produced an unfiltered
+  peak list with SNR, peakshape (goodness_fitting), peak_height, and prominence values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -18,13 +19,16 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list), [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
+- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list),
+  [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +52,7 @@ attribution:
 
 # quality-control-metric-distribution-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Analyze the distribution and selectivity of peak quality metrics (SNR, peak shape goodness-of-fit, peak height, prominence) across detected features to assess filtering efficacy and inform threshold tuning in LC-MS metabolomics workflows. This skill validates that peak filtering reduces false positives while retaining signal-rich features.

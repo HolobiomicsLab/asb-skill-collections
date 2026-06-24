@@ -1,6 +1,9 @@
 ---
 name: query-result-tabulation
-description: Use when after executing MassQL queries against mzML mass spectrometry files when you need to organize heterogeneous scan-level results (MS1 and MS2 data) into consistent tabular schemas for batch analysis, statistical comparison across files/queries, or visual summary generation.
+description: Use when after executing MassQL queries against mzML mass spectrometry
+  files when you need to organize heterogeneous scan-level results (MS1 and MS2 data)
+  into consistent tabular schemas for batch analysis, statistical comparison across
+  files/queries, or visual summary generation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - MassQL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab

@@ -1,6 +1,9 @@
 ---
 name: coefficient-of-variation-threshold-analysis
-description: 'Use when you have per-feature CV values from quality control analysis of NMR or MS metabolomic data and need to: (1) establish whether your dataset meets FDA reproducibility standards for downstream biomarker discovery or quantification; (2) benchmark data quality against regulatory thresholds;'
+description: 'Use when you have per-feature CV values from quality control analysis
+  of NMR or MS metabolomic data and need to: (1) establish whether your dataset meets
+  FDA reproducibility standards for downstream biomarker discovery or quantification;
+  (2) benchmark data quality against regulatory thresholds;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -14,13 +17,15 @@ metadata:
   - Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # coefficient-of-variation-threshold-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluates the reproducibility and quality of NMR metabolomic features by computing cumulative distributions of coefficient of variation (CV) values and assessing compliance with FDA regulatory thresholds (CV < 0.30 for biomarker discovery, CV < 0.15 for quantification). This skill validates data quality across high-throughput metabolic profiling datasets.

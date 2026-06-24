@@ -1,6 +1,9 @@
 ---
 name: spectral-library-matching-and-m-z-peak-ranking
-description: Use when you have raw GC-MS output in CSV format (with Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, and File.Name columns) and need to systematically rank putative identifications by match quality and exact mass agreement.
+description: Use when you have raw GC-MS output in CSV format (with Component.RT,
+  Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, and File.Name columns)
+  and need to systematically rank putative identifications by match quality and exact
+  mass agreement.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -17,13 +20,17 @@ metadata:
   - uafR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- The recommended software for generating the necessary data in the default format
+  (i.e. with correct column names) is Unknowns Analysis
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:
@@ -48,6 +55,7 @@ attribution:
 
 # spectral-library-matching-and-m-z-peak-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank chemical compounds in GC-MS data by matching observed mass spectra against published libraries and prioritizing peaks by match factor and m/z accuracy. This skill converts raw Agilent Unknowns Analysis output into a structured, ranked list of candidate identifications suitable for downstream cheminformatic filtering.

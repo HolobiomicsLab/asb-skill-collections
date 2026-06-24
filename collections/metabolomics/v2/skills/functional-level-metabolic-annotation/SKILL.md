@@ -1,6 +1,9 @@
 ---
 name: functional-level-metabolic-annotation
-description: Use when you have reconstructed the structural topology of two metabolic networks from KEGG and need to assign functional meaning (pathway annotations, metabolic functions) to each node or reaction so that you can compare the two organisms at the functional level rather than only at the topological.
+description: Use when you have reconstructed the structural topology of two metabolic
+  networks from KEGG and need to assign functional meaning (pathway annotations, metabolic
+  functions) to each node or reaction so that you can compare the two organisms at
+  the functional level rather than only at the topological.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3662
@@ -12,12 +15,15 @@ metadata:
   - MetNet
   - Java
   - KEGG
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
 evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network of two organisms selected in KEGG
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network
 - MetNet is a Java tool
 claims: []
 provenance:

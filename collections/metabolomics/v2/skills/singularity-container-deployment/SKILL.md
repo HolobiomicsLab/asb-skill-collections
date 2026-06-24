@@ -1,6 +1,8 @@
 ---
 name: singularity-container-deployment
-description: Use when you have a Nextflow workflow (e.g., Nextflow4MS-DIAL) that currently runs under Docker or bare metal, and you need to execute it on an HPC cluster that lacks Docker support or enforces Singularity as the container runtime.
+description: Use when you have a Nextflow workflow (e.g., Nextflow4MS-DIAL) that currently
+  runs under Docker or bare metal, and you need to execute it on an HPC cluster that
+  lacks Docker support or enforces Singularity as the container runtime.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -45,6 +48,7 @@ attribution:
 
 # singularity-container-deployment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy a Nextflow bioinformatics workflow under Singularity containerization for execution on high-performance computing (HPC) environments. This skill enables portable, reproducible LC-HRMS metabolomics data processing across HPC schedulers (e.g., Slurm) by configuring Singularity profiles, building or pulling container images, and validating end-to-end pipeline execution on HPC resource constraints.

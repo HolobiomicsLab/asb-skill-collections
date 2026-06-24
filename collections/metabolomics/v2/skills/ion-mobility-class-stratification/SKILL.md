@@ -1,6 +1,8 @@
 ---
 name: ion-mobility-class-stratification
-description: Use when you have TWIM-MS experimental data with assigned biomolecular class labels (e.g., peptides, lipids, carbohydrates) and arrival time measurements, and you need to compute CCS values conditioned on class membership.
+description: Use when you have TWIM-MS experimental data with assigned biomolecular
+  class labels (e.g., peptides, lipids, carbohydrates) and arrival time measurements,
+  and you need to compute CCS values conditioned on class membership.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -41,6 +44,7 @@ attribution:
 
 # ion-mobility-class-stratification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition TWIM-MS ion populations by biomolecular class assignment, then apply class-specific CCS calibration to compute collision cross section values without requiring prior feature identification. This enables direct CCS computation on class-stratified ion subsets.

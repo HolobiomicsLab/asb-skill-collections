@@ -1,6 +1,8 @@
 ---
 name: mpactr-data-object-lifecycle-tracking
-description: Use when when chaining multiple mpactr filters on a peak table and you need to decide whether to preserve intermediate filtered objects or accept in-place mutation for memory efficiency.
+description: Use when when chaining multiple mpactr filters on a peak table and you
+  need to decide whether to preserve intermediate filtered objects or accept in-place
+  mutation for memory efficiency.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,13 +14,15 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT
 evidence_spans:
 - To import these data into R, use the mpactr function
 - We will be using multiple libraries for data analysis and visualization
-- The goal of mpactr is to correct for errors that occur during the pre-processing of raw tandem MS/MS data.
+- The goal of mpactr is to correct for errors that occur during the pre-processing
+  of raw tandem MS/MS data.
 - Next, we need to extract the ion status with `mpactr` function `qc_summary()`.
 claims: []
 provenance:

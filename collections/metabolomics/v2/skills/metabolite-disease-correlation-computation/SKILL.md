@@ -1,6 +1,9 @@
 ---
 name: metabolite-disease-correlation-computation
-description: 'Use when after training a DeepMSProfiler deep learning model and generating per-sample predictions and metabolite signal intensities, use this skill when you need to: (1) identify which metabolites are most strongly associated with each disease class, (2) generate publication-ready visualizations.'
+description: 'Use when after training a DeepMSProfiler deep learning model and generating
+  per-sample predictions and metabolite signal intensities, use this skill when you
+  need to: (1) identify which metabolites are most strongly associated with each disease
+  class, (2) generate publication-ready visualizations.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +14,7 @@ metadata:
   - Python (matplotlib, seaborn)
   - DeepMSProfiler
   - SciPy / NumPy
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -38,6 +42,7 @@ attribution:
 
 # metabolite-disease-correlation-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute correlation coefficients between individual metabolite signal intensities and disease class labels across all samples, then construct and visualize a correlation matrix as a heatmap to reveal disease-associated metabolic signatures. This skill transforms raw model outputs into interpretable disease-metabolite associations.

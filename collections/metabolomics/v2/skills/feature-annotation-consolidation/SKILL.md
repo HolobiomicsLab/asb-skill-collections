@@ -1,6 +1,9 @@
 ---
 name: feature-annotation-consolidation
-description: Use when after chromatographic peak detection and feature detection in LC-MS preprocessing, when you have a set of detected features (m/z, retention time, intensity) and need to consolidate redundant or related ion signals into compound-level feature groups before downstream statistical or.
+description: Use when after chromatographic peak detection and feature detection in
+  LC-MS preprocessing, when you have a set of detected features (m/z, retention time,
+  intensity) and need to consolidate redundant or related ion signals into compound-level
+  feature groups before downstream statistical or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,11 +16,13 @@ metadata:
   - faahKO
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: cosine-similarity-computation
-description: Use when when comparing two MS/MS spectra (query and reference) to quantify their spectral resemblance for compound identification or molecular networking, particularly when you need a simple, symmetric measure that is insensitive to precursor mass differences and does not require peak alignment.
+description: Use when when comparing two MS/MS spectra (query and reference) to quantify
+  their spectral resemblance for compound identification or molecular networking,
+  particularly when you need a simple, symmetric measure that is insensitive to precursor
+  mass differences and does not require peak alignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,13 +16,15 @@ metadata:
   - spectrum_utils
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity
 - doi: 10.1016/1044-0305
   title: ''
 evidence_spans:
-- Code repository implements cosine similarity, modified cosine similarity, and neutral loss similarity measures
+- Code repository implements cosine similarity, modified cosine similarity, and neutral
+  loss similarity measures
 - github.com__bittremieux__cosine_neutral_loss
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # cosine-similarity-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute cosine similarity between two MS/MS spectra by normalizing their fragment peak intensity vectors and calculating their dot product. This foundational similarity measure is used to discover structurally related molecules in mass spectral library searching.

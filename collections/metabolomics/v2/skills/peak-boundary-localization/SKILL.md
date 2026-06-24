@@ -1,6 +1,9 @@
 ---
 name: peak-boundary-localization
-description: Use when after you have (1) extracted regions of interest (ROIs) around candidate peaks in LC-MS data and (2) run those ROIs through a trained CNN-Transformer peak detection model that outputs both binary peak classifications and bounding box coordinates.
+description: Use when after you have (1) extracted regions of interest (ROIs) around
+  candidate peaks in LC-MS data and (2) run those ROIs through a trained CNN-Transformer
+  peak detection model that outputs both binary peak classifications and bounding
+  box coordinates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,6 +17,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

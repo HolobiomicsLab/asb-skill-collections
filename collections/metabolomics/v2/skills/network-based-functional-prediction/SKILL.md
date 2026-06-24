@@ -1,6 +1,8 @@
 ---
 name: network-based-functional-prediction
-description: Use when you have an untargeted metabolomics feature table with m/z values, retention times, intensity measurements, and p-values from statistical testing, but lack or wish to bypass metabolite identification.
+description: Use when you have an untargeted metabolomics feature table with m/z values,
+  retention times, intensity measurements, and p-values from statistical testing,
+  but lack or wish to bypass metabolite identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -15,11 +17,13 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
 evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics
+- Mummichog is a Python program for analyzing data from high throughput, untargeted
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # network-based-functional-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict metabolic functional activity and pathway activation directly from untargeted metabolomics feature tables by propagating activity signals through a metabolic network graph, without requiring explicit metabolite identification. This approach leverages mass-to-network node mapping and graph-based algorithms to infer biochemical pathway engagement from feature intensities and statistical significance.

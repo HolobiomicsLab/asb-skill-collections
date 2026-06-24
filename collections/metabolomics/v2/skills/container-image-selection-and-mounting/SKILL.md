@@ -1,6 +1,9 @@
 ---
 name: container-image-selection-and-mounting
-description: Use when when deploying a Nextflow workflow across multiple execution environments (local machines, HPC clusters) where tool versions, dependencies, or OS configurations may differ. Choose this skill specifically when you need to process LC-HRMS .mzML or .
+description: Use when when deploying a Nextflow workflow across multiple execution
+  environments (local machines, HPC clusters) where tool versions, dependencies, or
+  OS configurations may differ. Choose this skill specifically when you need to process
+  LC-HRMS .mzML or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3233
@@ -15,6 +18,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -43,6 +47,7 @@ attribution:
 
 # container-image-selection-and-mounting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and configure containerized runtime environments (Docker or Singularity) for reproducible execution of bioinformatics workflows across heterogeneous compute platforms. This skill ensures portability and consistent tool behavior in LC-HRMS metabolomics data processing pipelines.

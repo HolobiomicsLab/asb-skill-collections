@@ -1,6 +1,7 @@
 ---
 name: peak-recovery-from-filtered-candidates
-description: Use when after applying cluster-based filtering with quasi-molecular adducts and frequency thresholds on candidate metabolites from KEGG matching.
+description: Use when after applying cluster-based filtering with quasi-molecular
+  adducts and frequency thresholds on candidate metabolites from KEGG matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3938
@@ -14,11 +15,13 @@ metadata:
   - igraph
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 - we will now use the sample graph provided by FELLA R package
 - g.metab <- igraph::as.undirected(sample.graph)
@@ -45,6 +48,7 @@ attribution:
 
 # peak-recovery-from-filtered-candidates
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recover LC-MS peaks that were completely removed during cluster-based filtering to prevent loss of potentially valid metabolite annotations. This skill reconstructs a complete peak inventory before final diffusion-based ranking, ensuring no valid candidates are discarded by conservative filtering thresholds.

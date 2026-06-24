@@ -1,6 +1,8 @@
 ---
 name: feature-missingness-threshold-filtering
-description: Use when after loading and formatting raw peak-picked LC-MS metabolomics data frames (via metabData constructor) when you need to eliminate features with poor sample coverage before feature alignment.
+description: Use when after loading and formatting raw peak-picked LC-MS metabolomics
+  data frames (via metabData constructor) when you need to eliminate features with
+  poor sample coverage before feature alignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +14,15 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # feature-missingness-threshold-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove low-abundance or sparsely-detected metabolomic features from LC-MS datasets by applying a sample-wise missingness threshold. This filtering step eliminates features detected in fewer than a specified percentage of samples, reducing noise and improving feature quality before downstream alignment and scoring.

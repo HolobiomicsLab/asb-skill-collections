@@ -1,6 +1,8 @@
 ---
 name: sodium-adduct-detection-and-classification
-description: Use when analyzing MALDI-mass spectrometry imaging data in which sodium or other alkali metal contamination is suspected, or when peak lists show unexplained mass differences in the range of ~20–25 Da (characteristic of Na adducts).
+description: Use when analyzing MALDI-mass spectrometry imaging data in which sodium
+  or other alkali metal contamination is suspected, or when peak lists show unexplained
+  mass differences in the range of ~20–25 Da (characteristic of Na adducts).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,11 +19,13 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -46,6 +50,7 @@ attribution:
 
 # Sodium-Adduct Detection and Classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and visually distinguish sodium adduct ions ([M+Na]+) from their parent metabolite ions in MALDI-MSI data by matching observed mass differences to known sodium adduct masses, then spatially correlating parent–adduct pairs to filter out false positives. This skill enables interrogation of the 'dark metabolome'—metabolites hidden as salt adducts in imaging datasets.

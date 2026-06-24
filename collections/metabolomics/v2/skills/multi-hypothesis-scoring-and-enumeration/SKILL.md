@@ -1,6 +1,8 @@
 ---
 name: multi-hypothesis-scoring-and-enumeration
-description: Use when when you have an unknown tandem mass spectrum (MS/MS peaks with m/z and intensity) and need to assign both the precursor chemical formula and its ionization adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+).
+description: Use when when you have an unknown tandem mass spectrum (MS/MS peaks with
+  m/z and intensity) and need to assign both the precursor chemical formula and its
+  ionization adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -12,11 +14,13 @@ metadata:
   - MIST-CF formula transformer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # multi-hypothesis-scoring-and-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank multiple candidate chemical formula–adduct pairs for an unknown tandem mass spectrum using end-to-end energy-based neural modeling, without relying on spectrum databases. This skill enumerates plausible formula and adduct hypotheses, scores each against observed fragment patterns, and returns ranked predictions with confidence signals.

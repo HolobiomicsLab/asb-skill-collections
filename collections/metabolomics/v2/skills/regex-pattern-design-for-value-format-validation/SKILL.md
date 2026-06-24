@@ -1,6 +1,8 @@
 ---
 name: regex-pattern-design-for-value-format-validation
-description: Use when when you have a metabolomics metadata table and need to automatically identify and standardize database-ID columns (HMDB_ID, PubChem_ID, KEGG_ID, etc.) whose values follow known format conventions.
+description: Use when when you have a metabolomics metadata table and need to automatically
+  identify and standardize database-ID columns (HMDB_ID, PubChem_ID, KEGG_ID, etc.)
+  whose values follow known format conventions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0002
@@ -12,6 +14,7 @@ metadata:
   - mwtab
   - pandas
   - Python re module
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

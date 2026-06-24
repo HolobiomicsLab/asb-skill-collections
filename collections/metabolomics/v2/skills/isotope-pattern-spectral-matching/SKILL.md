@@ -1,6 +1,8 @@
 ---
 name: isotope-pattern-spectral-matching
-description: Use when when you have LC/MS feature data with observed m/z and intensity values across multiple peaks (monoisotopic and isotopologues) and need to narrow candidate annotations from a metabolite database.
+description: Use when when you have LC/MS feature data with observed m/z and intensity
+  values across multiple peaks (monoisotopic and isotopologues) and need to narrow
+  candidate annotations from a metabolite database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -13,6 +15,7 @@ metadata:
   - ipaPy2
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad455
   title: ipaPy2

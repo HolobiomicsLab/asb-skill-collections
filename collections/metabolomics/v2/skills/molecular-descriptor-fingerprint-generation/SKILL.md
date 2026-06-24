@@ -1,6 +1,8 @@
 ---
 name: molecular-descriptor-fingerprint-generation
-description: Use when you have a collection of chemical structures (SMILES, InChI, SDF, or mol formats) and need to train or apply a machine learning model for retention time prediction or molecular property estimation.
+description: Use when you have a collection of chemical structures (SMILES, InChI,
+  SDF, or mol formats) and need to train or apply a machine learning model for retention
+  time prediction or molecular property estimation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3697
@@ -12,11 +14,13 @@ metadata:
   - alvaDesc
   - RDKit
   - cmmrt
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # molecular-descriptor-fingerprint-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate molecular descriptors and multiple fingerprint types (MACCS166, Extended Connectivity, Path) from chemical structures using alvaDesc to create feature vectors for machine learning-based retention time prediction and metabolite annotation. This skill bridges molecular structure representation and downstream ML models by systematically computing both handcrafted chemical properties and structural fingerprints.

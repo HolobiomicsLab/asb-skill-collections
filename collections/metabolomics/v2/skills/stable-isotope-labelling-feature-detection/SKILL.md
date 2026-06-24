@@ -1,6 +1,9 @@
 ---
 name: stable-isotope-labelling-feature-detection
-description: Use when you have XCMS-processed LC/MS peak tables from paired unlabeled (12C) and labeled (13C) metabolic samples with replicate measurements, and you want to systematically detect which features show significant enrichment in the labeled condition relative to the unlabeled control.
+description: Use when you have XCMS-processed LC/MS peak tables from paired unlabeled
+  (12C) and labeled (13C) metabolic samples with replicate measurements, and you want
+  to systematically detect which features show significant enrichment in the labeled
+  condition relative to the unlabeled control.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +16,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

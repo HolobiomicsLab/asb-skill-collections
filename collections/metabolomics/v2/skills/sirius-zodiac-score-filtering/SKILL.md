@@ -1,6 +1,9 @@
 ---
 name: sirius-zodiac-score-filtering
-description: Use when after running SIRIUS on a mass spectrometry feature set and obtaining compound_identification.tsv output containing Zodiac and Cosmic confidence scores, apply this filter to eliminate low-confidence SIRIUS annotations before downstream prioritization or chemical class analysis.
+description: Use when after running SIRIUS on a mass spectrometry feature set and
+  obtaining compound_identification.tsv output containing Zodiac and Cosmic confidence
+  scores, apply this filter to eliminate low-confidence SIRIUS annotations before
+  downstream prioritization or chemical class analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - CANOPUS
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa

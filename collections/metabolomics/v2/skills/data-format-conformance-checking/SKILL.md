@@ -1,6 +1,8 @@
 ---
 name: data-format-conformance-checking
-description: Use when you have retrieved a complete set of project JSON documents from a data platform and need to verify that each document's structure, field types, and required properties match a canonical JSON Schema definition (e.g., app/public/schema.json).
+description: Use when you have retrieved a complete set of project JSON documents
+  from a data platform and need to verify that each document's structure, field types,
+  and required properties match a canonical JSON Schema definition (e.g., app/public/schema.json).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,11 +12,13 @@ metadata:
   tools:
   - npm
   - JSON Schema validator
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-tolerance-calibration
-description: Use when after generating a feature table from mzML data (via Asari) and before performing MS1 or MS2 annotation.
+description: Use when after generating a feature table from mzML data (via Asari)
+  and before performing MS1 or MS2 annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +16,7 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,6 +48,7 @@ attribution:
 
 # mass-spectrometry-tolerance-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configures m/z and retention time tolerances in khipu's build_empCpds command to group features into empirical compounds by matching isotopes and adducts. Tolerance selection directly affects the specificity and sensitivity of feature clustering and downstream metabolite annotation.

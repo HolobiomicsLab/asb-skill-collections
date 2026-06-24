@@ -1,6 +1,9 @@
 ---
 name: latent-dirichlet-allocation-topic-inference
-description: Use when you have a preprocessed corpus of mass spectrometry spectra converted to bag-of-fragments format (with neutral losses extracted and noise filtered), and you seek to discover recurring fragmentation patterns or substructures that characterize multiple spectra without prior knowledge of the.
+description: Use when you have a preprocessed corpus of mass spectrometry spectra
+  converted to bag-of-fragments format (with neutral losses extracted and noise filtered),
+  and you seek to discover recurring fragmentation patterns or substructures that
+  characterize multiple spectra without prior knowledge of the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -15,12 +18,15 @@ metadata:
   - MotifDB
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- MS2LDA uses **Latent Dirichlet Allocation (LDA)** to infer which motifs are most likely to explain the observed fragmentation patterns.
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- MS2LDA uses **Latent Dirichlet Allocation (LDA)** to infer which motifs are most
+  likely to explain the observed fragmentation patterns.
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

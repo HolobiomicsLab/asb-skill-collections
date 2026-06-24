@@ -1,6 +1,8 @@
 ---
 name: order-agnostic-dispatch-routing
-description: Use when when your untargeted LC-MS pipeline must support multiple peak-picking backends and you need to let users specify which algorithm to use (via configuration file or parameter) without hard-coding algorithm dependencies.
+description: Use when when your untargeted LC-MS pipeline must support multiple peak-picking
+  backends and you need to let users specify which algorithm to use (via configuration
+  file or parameter) without hard-coding algorithm dependencies.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -14,11 +16,13 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # Order-Agnostic Dispatch Routing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Route untargeted LC-MS data to a user-selected peak-picking algorithm (Centwave, FeatureFinderMetabo, or ADAP) via configuration, execute it, and standardize output to a common feature matrix format. This skill decouples algorithm selection from workflow execution, enabling transparent algorithm swapping without changing calling code.

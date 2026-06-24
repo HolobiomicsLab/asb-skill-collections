@@ -1,6 +1,8 @@
 ---
 name: precursor-product-mass-pairing
-description: Use when you have centroided MS2 spectra from data-dependent acquisition (ddMS2) in mzML format and seek to prioritize potential PFAS features by detecting diagnostic fragment masses.
+description: Use when you have centroided MS2 spectra from data-dependent acquisition
+  (ddMS2) in mzML format and seek to prioritize potential PFAS features by detecting
+  diagnostic fragment masses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,11 +16,13 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # precursor-product-mass-pairing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match precursor–product ion mass pairs from MS2 spectra against a database of known PFAS diagnostic fragments to flag potential PFAS features in non-target HRMS screening. This skill identifies characteristic fragmentation patterns that distinguish PFAS from background features.

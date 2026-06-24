@@ -1,6 +1,9 @@
 ---
 name: spectral-clustering-density-based
-description: Use when you have computed a sparse pairwise distance matrix from MS/MS spectra (via nearest neighbor indexing) and need to partition spectra into homogeneous clusters—typically when clustering bottom-up proteomics data with the goal of grouping spectra from the same peptide sequence or when you.
+description: Use when you have computed a sparse pairwise distance matrix from MS/MS
+  spectra (via nearest neighbor indexing) and need to partition spectra into homogeneous
+  clusters—typically when clustering bottom-up proteomics data with the goal of grouping
+  spectra from the same peptide sequence or when you.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,11 +18,13 @@ metadata:
   - DBSCAN (sklearn.cluster or equivalent)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # Density-Based Clustering of MS/MS Spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply DBSCAN or equivalent density-based clustering to a sparse pairwise distance matrix derived from nearest neighbor indexes to group MS/MS spectra into clusters. This final step in the falcon pipeline identifies spectra that are close to each other and form dense data subspaces, yielding cluster assignments suitable for downstream analysis.

@@ -1,6 +1,8 @@
 ---
 name: bayesian-optimization-acquisition-function-selection
-description: Use when after fitting a Gaussian Process regression model to prior LC-MS gradient evaluations (where gradients are encoded as input and separation efficiency is output), use this skill to decide which candidate gradient to test next.
+description: Use when after fitting a Gaussian Process regression model to prior LC-MS
+  gradient evaluations (where gradients are encoded as input and separation efficiency
+  is output), use this skill to decide which candidate gradient to test next.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,13 +17,15 @@ metadata:
   - bago (Python package)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
 evidence_spans:
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
@@ -51,6 +55,7 @@ attribution:
 
 # bayesian-optimization-acquisition-function-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an acquisition function to a fitted Gaussian Process model to propose the next LC gradient point for evaluation in a Bayesian optimization loop. This skill determines whether to favor exploration, exploitation, or a balanced trade-off when navigating the gradient parameter space.

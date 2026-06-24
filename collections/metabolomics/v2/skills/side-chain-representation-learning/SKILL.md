@@ -1,6 +1,9 @@
 ---
 name: side-chain-representation-learning
-description: Use when working with natural product molecules where conventional synthetic-molecule representations fail to capture synthesis patterns, and you need to encode both scaffold topology and the diverse chemical substituents (side chains) that distinguish natural product variants.
+description: Use when working with natural product molecules where conventional synthetic-molecule
+  representations fail to capture synthesis patterns, and you need to encode both
+  scaffold topology and the diverse chemical substituents (side chains) that distinguish
+  natural product variants.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -10,11 +13,13 @@ metadata:
   - http://edamontology.org/topic_3474
   tools:
   - Git
-  - PyTorch or equivalent deep learning framework (inferred from GNN/contrastive learning context)
+  - PyTorch or equivalent deep learning framework (inferred from GNN/contrastive learning
+    context)
   - PyTorch
   - PyG (PyTorch Geometric)
   - PyTorch Lightning
   - RDKit (inferred from SMILES standardization)
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -44,6 +49,7 @@ attribution:
 
 # side-chain-representation-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Learn dense vector representations of molecular side-chain information in natural products by integrating masked graph modeling with contrastive learning objectives. This skill encodes the structural and chemical diversity of side chains alongside scaffold-derived evolutionary patterns to improve downstream task generalization.

@@ -1,6 +1,9 @@
 ---
 name: model-metadata-schema-verification
-description: Use when before submitting peak data or other inputs to a machine learning classification API for the first time, after a model update, or if you encounter unexpected prediction errors. It is essential when the underlying model's input names or structure may change and require code updates.
+description: Use when before submitting peak data or other inputs to a machine learning
+  classification API for the first time, after a model update, or if you encounter
+  unexpected prediction errors. It is essential when the underlying model's input
+  names or structure may change and require code updates.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - TensorFlow Serving
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -37,6 +41,7 @@ attribution:
 
 # model-metadata-schema-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify the input schema and model version of a deployed machine learning model by querying its metadata endpoint before constructing and submitting prediction requests. This skill ensures that your request payload matches the model's current input specification, preventing schema mismatch errors and outdated code.

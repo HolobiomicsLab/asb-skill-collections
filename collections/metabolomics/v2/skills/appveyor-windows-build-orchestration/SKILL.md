@@ -1,6 +1,8 @@
 ---
 name: appveyor-windows-build-orchestration
-description: Use when you are building a Qt5-based desktop application with cross-platform (macOS/Windows/Linux) distribution requirements and need to automate Windows executable generation as part of a CI/CD pipeline.
+description: Use when you are building a Qt5-based desktop application with cross-platform
+  (macOS/Windows/Linux) distribution requirements and need to automate Windows executable
+  generation as part of a CI/CD pipeline.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -15,6 +17,7 @@ metadata:
   - Homebrew
   - pacman
   - AppVeyor
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

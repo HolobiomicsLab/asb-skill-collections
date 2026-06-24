@@ -1,6 +1,9 @@
 ---
 name: metabolite-detection-matrix-construction
-description: Use when after GNPS spectral library matching has been completed on a batch of MS2 spectra from public MassIVE datasets and you need to aggregate chemical annotations into a tabular format suitable for downstream comparative metabolomics, co-analysis, or chemical explorer visualizations across.
+description: Use when after GNPS spectral library matching has been completed on a
+  batch of MS2 spectra from public MassIVE datasets and you need to aggregate chemical
+  annotations into a tabular format suitable for downstream comparative metabolomics,
+  co-analysis, or chemical explorer visualizations across.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3790
@@ -14,6 +17,7 @@ metadata:
   - Emperor
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -46,6 +50,7 @@ attribution:
 
 # metabolite-detection-matrix-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a binary detection matrix from GNPS spectral library search results, where rows represent MS files, columns represent chemically annotated compounds, and cells encode presence (1) or absence (0) of each metabolite. This enables pooled statistical and exploratory analysis of public tandem MS datasets at repository scale.

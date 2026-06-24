@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-deconvolution-algorithm-application
-description: Use when you have raw DDA, DIA (MS^E, AIF, SWATH-MS), or MS1-only mass spectrometry data in mzML, mzXML, or netCDF format and need to deconvolute fragmentation spectra by linking precursor ions to their fragment ions based on retention time and m/z relationships.
+description: Use when you have raw DDA, DIA (MS^E, AIF, SWATH-MS), or MS1-only mass
+  spectrometry data in mzML, mzXML, or netCDF format and need to deconvolute fragmentation
+  spectra by linking precursor ions to their fragment ions based on retention time
+  and m/z relationships.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,11 +17,13 @@ metadata:
   - IDSL.FSA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
 claims: []
 provenance:

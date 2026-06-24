@@ -1,6 +1,7 @@
 ---
 name: lipid-fragmentation-pattern-recognition
-description: Use when you have experimental tandem MS (MS/MS) spectra from lipid samples (in mzML format) and need to assign molecular identities and lipid classes.
+description: Use when you have experimental tandem MS (MS/MS) spectra from lipid samples
+  (in mzML format) and need to assign molecular identities and lipid classes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -16,12 +17,15 @@ metadata:
   - LipidIN Lipid Categories Intelligence (LCI) Module
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

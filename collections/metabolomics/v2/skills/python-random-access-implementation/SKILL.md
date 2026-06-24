@@ -1,6 +1,8 @@
 ---
 name: python-random-access-implementation
-description: Use when when you have an indexed gzip file (mzML.gz with internal index structure) and need to retrieve individual spectra or chromatograms by integer index without decompressing the entire file.
+description: Use when when you have an indexed gzip file (mzML.gz with internal index
+  structure) and need to retrieve individual spectra or chromatograms by integer index
+  without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +15,7 @@ metadata:
   - pymzML
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,6 +46,7 @@ attribution:
 
 # python-random-access-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement bracket-notation random access to indexed gzip-compressed mass spectrometry data by building a custom class with __getitem__ and read methods that translate integer indices to byte offsets and retrieve decompressed XML data blocks. This skill enables efficient, non-sequential queries of large mzML files compressed to RAW-comparable sizes.

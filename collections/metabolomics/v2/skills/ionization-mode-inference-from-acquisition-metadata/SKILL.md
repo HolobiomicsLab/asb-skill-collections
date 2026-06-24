@@ -1,6 +1,8 @@
 ---
 name: ionization-mode-inference-from-acquisition-metadata
-description: Use when when beginning preprocessing of a new LC-MS dataset with mzML files or raw acquisitions and you need to determine which ionization mode was used before running feature detection (Asari) or empirical compound grouping (khipu).
+description: Use when when beginning preprocessing of a new LC-MS dataset with mzML
+  files or raw acquisitions and you need to determine which ionization mode was used
+  before running feature detection (Asari) or empirical compound grouping (khipu).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -14,6 +16,7 @@ metadata:
   - Asari
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -45,6 +48,7 @@ attribution:
 
 # ionization-mode-inference-from-acquisition-metadata
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer the ionization polarity (positive or negative) of LC-MS acquisitions from instrument metadata embedded in mzML files or raw acquisition headers, enabling downstream selection of appropriate adduct definitions and annotation rules. This inference is necessary because empirical compound grouping and MS annotation both require knowledge of which ions were actually formed.

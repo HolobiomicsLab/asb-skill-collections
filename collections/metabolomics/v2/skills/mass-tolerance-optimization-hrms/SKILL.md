@@ -1,6 +1,8 @@
 ---
 name: mass-tolerance-optimization-hrms
-description: Use when you have experimental peak lists (m/z, retention time, intensity) from peak-picking software (MZmine, XCMS, MS-DIAL, or Compound Discoverer) and need to match them against a simulated lipid fragment library (500,000+ lipid species).
+description: Use when you have experimental peak lists (m/z, retention time, intensity)
+  from peak-picking software (MZmine, XCMS, MS-DIAL, or Compound Discoverer) and need
+  to match them against a simulated lipid fragment library (500,000+ lipid species).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -16,12 +18,15 @@ metadata:
   - Q-Exactive
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
 claims: []
 provenance:

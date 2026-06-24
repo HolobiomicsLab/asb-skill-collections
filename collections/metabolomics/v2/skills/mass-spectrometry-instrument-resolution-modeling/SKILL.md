@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-instrument-resolution-modeling
-description: Use when when correcting LC-MS fractional abundances of measured isotopologues (FAM) from isotope labeling experiments where instrument resolution (e.
+description: Use when when correcting LC-MS fractional abundances of measured isotopologues
+  (FAM) from isotope labeling experiments where instrument resolution (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +13,7 @@ metadata:
   - IsoCor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

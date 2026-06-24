@@ -1,6 +1,9 @@
 ---
 name: neutral-mass-inference-via-regression
-description: Use when use this skill after khipu has assigned observed ions to grid positions (isotope and adduct combinations). Apply it when you have a connected subnetwork of feature ions that have been matched to known isotope and adduct patterns and need to estimate the neutral mass of the parent compound.
+description: Use when use this skill after khipu has assigned observed ions to grid
+  positions (isotope and adduct combinations). Apply it when you have a connected
+  subnetwork of feature ions that have been matched to known isotope and adduct patterns
+  and need to estimate the neutral mass of the parent compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -17,6 +20,7 @@ metadata:
   - Python 3 (scipy.stats or sklearn.linear_model)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -49,6 +53,7 @@ attribution:
 
 # neutral-mass-inference-via-regression
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer the neutral mass of a metabolite from observed ion m/z values by fitting a linear regression model using theoretical isotope and adduct mass offsets from the khipu grid. This skill is essential for converting degenerate ion networks into empirical compounds with a single assigned neutral mass in untargeted metabolomics.

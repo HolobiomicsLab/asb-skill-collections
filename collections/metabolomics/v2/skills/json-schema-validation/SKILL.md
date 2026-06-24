@@ -1,6 +1,8 @@
 ---
 name: json-schema-validation
-description: Use when you have loaded an mwTab file into a structured MWTabFile object and need to verify it conforms to MS or NMR schema specifications before deposition, curation, or downstream analysis.
+description: Use when you have loaded an mwTab file into a structured MWTabFile object
+  and need to verify it conforms to MS or NMR schema specifications before deposition,
+  curation, or downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,6 +20,7 @@ metadata:
   - Github
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access
@@ -26,7 +29,8 @@ derived_from:
 evidence_spans:
 - The ``mwtab`` package is a Python library
 - jsonschema_ for validating functionality of ``mwTab`` files based on ``JSON`` schema
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 - pull request (https://help.github.com/articles/about-pull-requests/)
 claims: []
 provenance:

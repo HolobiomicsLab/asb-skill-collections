@@ -1,6 +1,8 @@
 ---
 name: vendor-raw-file-format-recognition
-description: Use when you have a directory containing mass spectrometry data files from multiple instrument vendors (Thermo, AB Sciex, Agilent, Bruker, etc.) and need to convert them to a common format (Aird or mzML).
+description: Use when you have a directory containing mass spectrometry data files
+  from multiple instrument vendors (Thermo, AB Sciex, Agilent, Bruker, etc.) and need
+  to convert them to a common format (Aird or mzML).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +17,7 @@ metadata:
   - ProteoWizard MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -46,6 +49,7 @@ attribution:
 
 # vendor-raw-file-format-recognition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and classify vendor-specific mass spectrometry raw file formats (e.g., .raw, .wiff2, .d) to select the appropriate conversion pathway and acquisition method handler in AirdPro. This skill is essential for batch or automated conversion pipelines where file origins are heterogeneous.

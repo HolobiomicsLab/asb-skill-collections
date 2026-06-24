@@ -1,6 +1,8 @@
 ---
 name: unified-vocabulary-construction
-description: Use when when you have parallel mass spectra and molecular structure data (e.g., CANOPUS or MassSpecGym datasets) and aim to train a single encoder-decoder model (e.g., BART) that must handle both modalities as input and output tokens.
+description: Use when when you have parallel mass spectra and molecular structure
+  data (e.g., CANOPUS or MassSpecGym datasets) and aim to train a single encoder-decoder
+  model (e.g., BART) that must handle both modalities as input and output tokens.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,11 +14,13 @@ metadata:
   - MS-BART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
 evidence_spans:
-- MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary
+- MS-BART is the first to leverage language model for mass spectra structure elucidation
+  by introducing a unified vocabulary
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # unified-vocabulary-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a unified token vocabulary that merges mass spectral features (m/z values, intensities) and molecular structure tokens (SMILES or graph representations) into a single coherent set for end-to-end sequence modeling. This enables a single language model to process both spectral and structural data with consistent tokenization.

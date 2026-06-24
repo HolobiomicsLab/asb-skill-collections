@@ -1,6 +1,9 @@
 ---
 name: validated-link-proportional-comparison
-description: Use when when you have scored GCF-MF (gene cluster family–molecular family) links using two or more complementary scoring approaches (e.g., standardised strain correlation and IOKR), and you need to determine whether combining scores improves discrimination of true links from false positives.
+description: Use when when you have scored GCF-MF (gene cluster family–molecular family)
+  links using two or more complementary scoring approaches (e.g., standardised strain
+  correlation and IOKR), and you need to determine whether combining scores improves
+  discrimination of true links from false positives.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,18 +19,23 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic data
-- After downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
+- Finally, we present NPLinker, a software framework to link genomic and metabolomic
+  data
+- After downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
-- antiSMASH to score the correspondence between the MIBiG entries and the detected BGCs
+- antiSMASH to score the correspondence between the MIBiG entries and the detected
+  BGCs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +60,7 @@ attribution:
 
 # Validated-Link Proportional Comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A statistical method to compare the enrichment of validated genomic-metabolomic links across partitioned scoring categories, using proportional analysis and Fisher exact tests to assess whether links meeting combined scoring thresholds are significantly more reliable than links meeting individual thresholds alone.

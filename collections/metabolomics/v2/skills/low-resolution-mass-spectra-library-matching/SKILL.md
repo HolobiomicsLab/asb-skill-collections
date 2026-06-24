@@ -1,6 +1,9 @@
 ---
 name: low-resolution-mass-spectra-library-matching
-description: Use when when processing low-resolution GC-MS data in NetCDF format where you have already performed retention-index calibration and peak deconvolution, and you need to assign compound identities by comparing experimental mass spectra to a curated reference library such as PNNLMetV20191015.MSL.
+description: Use when when processing low-resolution GC-MS data in NetCDF format where
+  you have already performed retention-index calibration and peak deconvolution, and
+  you need to assign compound identities by comparing experimental mass spectra to
+  a curated reference library such as PNNLMetV20191015.MSL.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +17,14 @@ metadata:
   - numpy
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +52,7 @@ attribution:
 
 # low-resolution-mass-spectra-library-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify unknown compounds in low-resolution GC-MS data by matching extracted mass spectra against a reference spectral library using cosine similarity and retention-index proximity scoring. This skill enables automated compound annotation when high-resolution mass accuracy is unavailable.

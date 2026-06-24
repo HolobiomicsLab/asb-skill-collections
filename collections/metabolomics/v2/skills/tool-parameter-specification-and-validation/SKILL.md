@@ -1,6 +1,9 @@
 ---
 name: tool-parameter-specification-and-validation
-description: Use when you have a working R package (e.g., IonFlow for ionomics data analysis) that performs well in standalone R environments, but need to expose it as a reusable Galaxy tool so that non-expert users can invoke it without writing R code, while preserving parameter semantics and validating input.
+description: Use when you have a working R package (e.g., IonFlow for ionomics data
+  analysis) that performs well in standalone R environments, but need to expose it
+  as a reusable Galaxy tool so that non-expert users can invoke it without writing
+  R code, while preserving parameter semantics and validating input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +16,7 @@ metadata:
   - Galaxy
   - ionflow (IonFlow R package)
   - planemo
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-021-01841-z
   title: IonFlow
@@ -42,6 +46,7 @@ attribution:
 
 # Tool Parameter Specification and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define and validate input/output parameter mappings between a domain-specific R package and a Galaxy tool wrapper via XML schema, ensuring correct type coercion, parameter passing, and compliance with Galaxy execution standards. This skill bridges package APIs and workflow systems by translating R function signatures into Galaxy-compatible declarative tool definitions.

@@ -1,6 +1,7 @@
 ---
 name: restful-api-endpoint-invocation
-description: Use when you have NMR peak data (1H and 13C chemical shift values) and need to obtain SMART 3 classification predictions from the DeepSAT service.
+description: Use when you have NMR peak data (1H and 13C chemical shift values) and
+  need to obtain SMART 3 classification predictions from the DeepSAT service.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,6 +14,7 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -41,6 +43,7 @@ attribution:
 
 # RESTful API endpoint invocation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Submit structured peak data (chemical shifts) to a remote classification API endpoint and parse the returned predictions and confidence scores. This skill enables programmatic access to machine-learning-based spectral classification without local model deployment.

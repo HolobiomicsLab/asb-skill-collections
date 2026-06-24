@@ -1,6 +1,8 @@
 ---
 name: prediction-ensemble-post-processing
-description: Use when you have retention order predictions from multiple trained ROASMI models (e.g., ROASMI_1 through ROASMI_5) for the same set of compounds and need to estimate prediction uncertainty to support small molecule identification.
+description: Use when you have retention order predictions from multiple trained ROASMI
+  models (e.g., ROASMI_1 through ROASMI_5) for the same set of compounds and need
+  to estimate prediction uncertainty to support small molecule identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -11,6 +13,7 @@ metadata:
   - pandas
   - NumPy
   - ROASMI
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI

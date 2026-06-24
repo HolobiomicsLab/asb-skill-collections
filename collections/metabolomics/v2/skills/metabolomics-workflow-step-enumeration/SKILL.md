@@ -1,6 +1,9 @@
 ---
 name: metabolomics-workflow-step-enumeration
-description: Use when when initializing a SmartPeak session and you have a workflow.csv file co-located with sequence.csv in the session directory, and you need to determine the precise order and validity of peak detection, calibration, and QC operations before execution.
+description: Use when when initializing a SmartPeak session and you have a workflow.csv
+  file co-located with sequence.csv in the session directory, and you need to determine
+  the precise order and validity of peak detection, calibration, and QC operations
+  before execution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -13,12 +16,14 @@ metadata:
   - OpenMS
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: workflow-pipeline-execution-validation
-description: Use when you have prepared metabolomics input files (feature quantification table, MS/MS spectra in MGF format, sample metadata) and are about to execute the TIMA taxonomically informed annotation pipeline, or after pipeline execution to verify all outputs were generated correctly.
+description: Use when you have prepared metabolomics input files (feature quantification
+  table, MS/MS spectra in MGF format, sample metadata) and are about to execute the
+  TIMA taxonomically informed annotation pipeline, or after pipeline execution to
+  verify all outputs were generated correctly.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -16,6 +19,7 @@ metadata:
   - Docker (adafede/tima-r image)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

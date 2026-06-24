@@ -1,6 +1,9 @@
 ---
 name: metabolite-edge-scoring-dbedges-bioedges
-description: Use when you have a measured m/z value from spatially-resolved metabolomics or mass spectrometry imaging and need to assign a molecular formula with high confidence. Use it specifically when you have access to a pre-constructed formula network (KnownSet database) linking 2.
+description: Use when you have a measured m/z value from spatially-resolved metabolomics
+  or mass spectrometry imaging and need to assign a molecular formula with high confidence.
+  Use it specifically when you have access to a pre-constructed formula network (KnownSet
+  database) linking 2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -12,11 +15,13 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # metabolite-edge-scoring-dbedges-bioedges
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score candidate molecular formulae for a given m/z value by quantifying their connectivity within a formula network using database edges (DBEdges) and biological edges (BioEdges) as strength-of-evidence criteria. This skill ranks formula candidates in spatially-resolved mass spectrometry imaging by combining network topology with mass accuracy, improving annotation precision over LC-MS approaches.

@@ -1,6 +1,9 @@
 ---
 name: mass-tolerance-window-filtering
-description: Use when after calculating neutral mass from observed m/z and adduct type, and before ranking candidates by chemical plausibility. Use it whenever querying a formula database (KEGG, PubChem, or custom) to retrieve all molecular formulae within a specified mass tolerance window of each neutral mass.
+description: Use when after calculating neutral mass from observed m/z and adduct
+  type, and before ranking candidates by chemical plausibility. Use it whenever querying
+  a formula database (KEGG, PubChem, or custom) to retrieve all molecular formulae
+  within a specified mass tolerance window of each neutral mass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3664
@@ -14,6 +17,7 @@ metadata:
   - PubChem
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

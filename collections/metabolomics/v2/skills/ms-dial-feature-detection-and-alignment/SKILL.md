@@ -1,6 +1,8 @@
 ---
 name: ms-dial-feature-detection-and-alignment
-description: Use when when you have raw LC-HRMS data in .mzML or .abf format and need to detect metabolite features (peaks) across multiple samples, align them temporally and by mass-to-charge ratio, and generate a reproducible feature matrix.
+description: Use when when you have raw LC-HRMS data in .mzML or .abf format and need
+  to detect metabolite features (peaks) across multiple samples, align them temporally
+  and by mass-to-charge ratio, and generate a reproducible feature matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,6 +17,7 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -49,6 +52,7 @@ attribution:
 
 # MS-DIAL Feature Detection and Alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 MS-DIAL is a containerized module within Nextflow4MS-DIAL that performs peak detection and chromatogram alignment on LC-HRMS metabolomics data in .mzML format. It transforms raw mass spectrometry signals into aligned feature tables suitable for downstream annotation and statistical analysis.

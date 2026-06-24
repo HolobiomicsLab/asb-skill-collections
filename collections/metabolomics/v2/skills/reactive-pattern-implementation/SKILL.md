@@ -1,6 +1,8 @@
 ---
 name: reactive-pattern-implementation
-description: Use when when developing or extending a WPF-based GUI application (such as MsdialGuiApp) that requires declarative, composable handling of user interactions, real-time data binding, and asynchronous event streams.
+description: Use when when developing or extending a WPF-based GUI application (such
+  as MsdialGuiApp) that requires declarative, composable handling of user interactions,
+  real-time data binding, and asynchronous event streams.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,12 +13,14 @@ metadata:
   - Windows Presentation Foundation (WPF)
   - Visual Studio
   - Visual Studio Code
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
 - utilizing packages such as ReactiveExtensions and ReactiveProperty
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # reactive-pattern-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement reactive UI patterns in WPF-based desktop applications using ReactiveExtensions and ReactiveProperty packages to enable responsive, event-driven GUI behavior. This skill is essential for building maintainable Windows Presentation Foundation applications where UI state must automatically propagate in response to user interactions and data model changes.

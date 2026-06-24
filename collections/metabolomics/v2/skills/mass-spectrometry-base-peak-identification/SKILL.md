@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-base-peak-identification
-description: Use when after PuInc_seeker has identified putative incorporations in XCMS-processed LC/MS data, when you have paired unlabeled and labeled sample groups (e.
+description: Use when after PuInc_seeker has identified putative incorporations in
+  XCMS-processed LC/MS data, when you have paired unlabeled and labeled sample groups
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

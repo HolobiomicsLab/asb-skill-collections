@@ -1,6 +1,9 @@
 ---
 name: correlation-network-construction-omics
-description: Use when when you have a feature abundance table (rows=features, columns=samples) with >10,000 features from microbiome, metabolomics, transcriptomics, or multi-omics data and need to identify correlated or co-occurring features for network-based analysis, module detection, or cross-omics.
+description: Use when when you have a feature abundance table (rows=features, columns=samples)
+  with >10,000 features from microbiome, metabolomics, transcriptomics, or multi-omics
+  data and need to identify correlated or co-occurring features for network-based
+  analysis, module detection, or cross-omics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3463
@@ -13,12 +16,15 @@ metadata:
   - R
   - igraph
   - pcutils
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:
@@ -43,6 +49,7 @@ attribution:
 
 # correlation-network-construction-omics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct correlation-based networks from high-dimensional omics feature abundance tables (>10,000 features) by computing pairwise correlations, applying statistical thresholding, and building graph objects with nodes representing features and weighted edges representing correlation strengths. This skill enables fast, scalable network construction and is essential when integrating multiple omics layers or identifying co-occurrence and co-abundance patterns.

@@ -1,6 +1,7 @@
 ---
 name: rescore-training-data-augmentation
-description: Use when when you have TCN-predicted candidate formulas with ranked scores and need to train a Siamese rescore model to re-rank those candidates.
+description: Use when when you have TCN-predicted candidate formulas with ranked scores
+  and need to train a Siamese rescore model to re-rank those candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3936
@@ -12,6 +13,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +42,7 @@ attribution:
 
 # rescore-training-data-augmentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Data augmentation pipeline for preparing balanced training and test sets for Siamese rescore models in MS/MS formula prediction. Applies positive example capping, cross-spectrum negative generation, and downsampling to enforce class balance before rescore model training.

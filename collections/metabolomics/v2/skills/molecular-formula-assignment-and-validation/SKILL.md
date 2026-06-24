@@ -1,6 +1,8 @@
 ---
 name: molecular-formula-assignment-and-validation
-description: Use when you have a calibrated FT-ICR transient (ESI_NEG or similar ionization mode) and need to annotate each detected m/z peak with its most likely elemental composition.
+description: Use when you have a calibrated FT-ICR transient (ESI_NEG or similar ionization
+  mode) and need to annotate each detected m/z peak with its most likely elemental
+  composition.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +17,14 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -48,6 +52,7 @@ attribution:
 
 # Molecular Formula Assignment and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies CoreMS SearchMolecularFormulas with elemental constraints (CHO) to assign molecular formulas to calibrated FT-ICR mass spectra, then validates assignments through mass error metrics and score distributions. It is essential for annotating natural organic matter and complex mixtures where multiple formula candidates exist per m/z.

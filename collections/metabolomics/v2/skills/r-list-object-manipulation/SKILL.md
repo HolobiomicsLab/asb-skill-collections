@@ -1,6 +1,7 @@
 ---
 name: r-list-object-manipulation
-description: Use when you have extracted metadata or spectral information from a Thermo Fisher Scientific .
+description: Use when you have extracted metadata or spectral information from a Thermo
+  Fisher Scientific .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,14 +14,17 @@ metadata:
   - jsonlite
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # R List Object Manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert R list objects returned from binary file readers (such as rawrr::readFileHeader()) into serialized formats like JSON, enabling interoperability with downstream analysis tools and reproducible storage of extracted metadata. This skill bridges proprietary binary data access with standard data exchange formats.

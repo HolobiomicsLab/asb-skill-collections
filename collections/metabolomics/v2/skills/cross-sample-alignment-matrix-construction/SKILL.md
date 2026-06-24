@@ -1,6 +1,9 @@
 ---
 name: cross-sample-alignment-matrix-construction
-description: Use when you have already generated per-sample MS2 fingerprints (count vectors of MS2 peaks and neutral losses to the precursor) from matchms-processed spectra using spec2vec document representations, and you need to align these fingerprints into a single matrix to enable comparison across samples.
+description: Use when you have already generated per-sample MS2 fingerprints (count
+  vectors of MS2 peaks and neutral losses to the precursor) from matchms-processed
+  spectra using spec2vec document representations, and you need to align these fingerprints
+  into a single matrix to enable comparison across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -15,12 +18,15 @@ metadata:
   - MEMO
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - pip install numpy
 - conda create --name memo python=3.8
 claims: []

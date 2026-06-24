@@ -1,6 +1,7 @@
 ---
 name: gpu-capability-detection-and-validation
-description: Use when after setting up a conda/pip environment with PyTorch and CUDA, before loading pretrained model weights or running inference/training pipelines.
+description: Use when after setting up a conda/pip environment with PyTorch and CUDA,
+  before loading pretrained model weights or running inference/training pipelines.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +10,7 @@ metadata:
   - CUDA
   - PyTorch
   - conda / pip
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR

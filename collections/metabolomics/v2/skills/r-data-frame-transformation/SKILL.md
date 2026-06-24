@@ -1,6 +1,8 @@
 ---
 name: r-data-frame-transformation
-description: Use when when you have autoQ output containing peak area measurements for isotopologues in data frame format and need to prepare data for metBarPlot visualization or cross-sample comparison. Specifically, use this skill when val.to.
+description: Use when when you have autoQ output containing peak area measurements
+  for isotopologues in data frame format and need to prepare data for metBarPlot visualization
+  or cross-sample comparison. Specifically, use this skill when val.to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,6 +17,7 @@ metadata:
   - metBarPlot
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
@@ -22,7 +25,8 @@ evidence_spans:
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

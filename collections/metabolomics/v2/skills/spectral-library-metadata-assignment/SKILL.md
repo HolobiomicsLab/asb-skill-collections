@@ -1,6 +1,8 @@
 ---
 name: spectral-library-metadata-assignment
-description: Use when you have a compiled EI or MS2 library object (read from MSP format via read_lib) and access to NIST ri.dat and USER.DBU files; you need to populate RI values for capillary GC-MS workflows.
+description: Use when you have a compiled EI or MS2 library object (read from MSP
+  format via read_lib) and access to NIST ri.dat and USER.DBU files; you need to populate
+  RI values for capillary GC-MS workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -43,6 +46,7 @@ attribution:
 
 # spectral-library-metadata-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign experimental Kovats retention index (RI) values from NIST database files to compiled mass spectral library objects, filtering by capillary column polarity and statistical robustness. This enriches spectral libraries with validated chemical reference data needed for GC-MS compound identification workflows.

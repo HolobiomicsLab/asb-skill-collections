@@ -1,6 +1,9 @@
 ---
 name: metabolomic-heatmap-visualization
-description: Use when after completing feature annotation and reaction assignment in an untargeted metabolomics workflow, specifically when you have a feature-by-sample intensity matrix aligned with metabolite identities and want to communicate cluster structure, reaction pathway groupings, and feature.
+description: Use when after completing feature annotation and reaction assignment
+  in an untargeted metabolomics workflow, specifically when you have a feature-by-sample
+  intensity matrix aligned with metabolite identities and want to communicate cluster
+  structure, reaction pathway groupings, and feature.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -20,6 +23,7 @@ metadata:
   - readxl
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN
@@ -53,6 +57,7 @@ attribution:
 
 # metabolomic-heatmap-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualization of annotated metabolomic feature clusters and their reaction pathway assignments using hierarchical heatmaps. This skill transforms aligned MS features and xenobiotic metabolite annotations into publication-ready cluster dendrograms that reveal co-fragmentation patterns and reaction relationships.

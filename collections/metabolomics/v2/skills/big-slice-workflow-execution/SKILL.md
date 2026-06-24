@@ -1,6 +1,9 @@
 ---
 name: big-slice-workflow-execution
-description: Use when you have a collection of antiSMASH-processed GenBank files (or custom BGC GenBank files prepared via the provided converter script) organized in a structured input folder, and you want to cluster them into Gene Cluster Families (GCFs) to chart biosynthetic diversity or identify.
+description: Use when you have a collection of antiSMASH-processed GenBank files (or
+  custom BGC GenBank files prepared via the provided converter script) organized in
+  a structured input folder, and you want to cluster them into Gene Cluster Families
+  (GCFs) to chart biosynthetic diversity or identify.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -12,12 +15,14 @@ metadata:
   - pyHMMER
   - antiSMASH v7.0.0
   - Flask
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE
 evidence_spans:
 - '**BiG-SLiCE** using pip'
-- Ability to __export pre-calculated BGCs and GCFs table into TSVs__ (use __--export-csv__ parameter)
+- Ability to __export pre-calculated BGCs and GCFs table into TSVs__ (use __--export-csv__
+  parameter)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

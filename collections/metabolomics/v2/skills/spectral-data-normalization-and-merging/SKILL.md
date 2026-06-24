@@ -1,6 +1,8 @@
 ---
 name: spectral-data-normalization-and-merging
-description: Use when you have acquired multiple MS1 spectra over a defined acquisition time range (e.g., 0–30 s in FIA-MS) and need to combine them into a unified spectrum before feature detection.
+description: Use when you have acquired multiple MS1 spectra over a defined acquisition
+  time range (e.g., 0–30 s in FIA-MS) and need to combine them into a unified spectrum
+  before feature detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
@@ -22,7 +25,8 @@ evidence_spans:
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

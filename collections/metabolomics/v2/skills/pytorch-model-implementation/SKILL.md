@@ -1,6 +1,9 @@
 ---
 name: pytorch-model-implementation
-description: Use when you have preprocessed MS/MS spectral data (m/z and intensity arrays) and need to map it to a fixed-size latent vector for use in an encoder–decoder architecture. Specifically applicable when the downstream task requires a molecular structure reconstruction (e.
+description: Use when you have preprocessed MS/MS spectral data (m/z and intensity
+  arrays) and need to map it to a fixed-size latent vector for use in an encoder–decoder
+  architecture. Specifically applicable when the downstream task requires a molecular
+  structure reconstruction (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,12 +15,14 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
 evidence_spans:
 - The implementation of the Spec2Mol architecture is based on the Pytorch library.
-- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/) software.
+- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/)
+  software.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

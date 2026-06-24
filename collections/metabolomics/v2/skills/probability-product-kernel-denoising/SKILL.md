@@ -1,6 +1,9 @@
 ---
 name: probability-product-kernel-denoising
-description: Use when you have raw MS2 spectra (m/z and intensity pairs) that you want to match against a large training dataset of annotated library spectra (e.g., GNPS), and you need to reduce noise and computational burden before applying kernel-based scoring methods such as IOKR.
+description: Use when you have raw MS2 spectra (m/z and intensity pairs) that you
+  want to match against a large training dataset of annotated library spectra (e.g.,
+  GNPS), and you need to reduce noise and computational burden before applying kernel-based
+  scoring methods such as IOKR.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -13,15 +16,20 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based on properties absent from an MS2 spectrum,
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
-- 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints: CDK Substructure,'
+- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based
+  on properties absent from an MS2 spectrum,
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
+- 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints:
+  CDK Substructure,'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +54,7 @@ attribution:
 
 # probability-product-kernel-denoising
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Denoise MS2 spectra by retaining only peaks present in a training dataset, then reweight peaks using a Probability Product Kernel (PPK) that adjusts intensities based on ion likelihood in the training set. This filtering reduces computational cost and noise while preserving signal diversity sufficient for downstream scoring.

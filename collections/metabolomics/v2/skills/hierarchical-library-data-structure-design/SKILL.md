@@ -1,6 +1,8 @@
 ---
 name: hierarchical-library-data-structure-design
-description: Use when when building a reference library for high-throughput spectral matching against experimental MS/MS data, and you need to support millions to billions of queries per second on a standardized dataset.
+description: Use when when building a reference library for high-throughput spectral
+  matching against experimental MS/MS data, and you need to support millions to billions
+  of queries per second on a standardized dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,12 +17,15 @@ metadata:
   - Rcpp
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

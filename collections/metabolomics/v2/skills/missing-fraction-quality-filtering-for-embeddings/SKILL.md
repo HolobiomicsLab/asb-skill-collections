@@ -1,6 +1,9 @@
 ---
 name: missing-fraction-quality-filtering-for-embeddings
-description: Use when after converting MS/MS spectra to fixed-length vector representations using a pre-trained Word2Vec model (as in Spec2Vec), filter spectra before computing similarity scores to flag those where a large fraction of the observed intensity comes from peaks or neutral losses not present in the.
+description: Use when after converting MS/MS spectra to fixed-length vector representations
+  using a pre-trained Word2Vec model (as in Spec2Vec), filter spectra before computing
+  similarity scores to flag those where a large fraction of the observed intensity
+  comes from peaks or neutral losses not present in the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,16 +20,21 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
+  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +58,7 @@ attribution:
 
 # missing-fraction-quality-filtering-for-embeddings
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter out spectra whose peak and neutral loss composition is poorly represented in a pre-trained Word2Vec embedding model, thereby avoiding unreliable spectral similarity scores for spectra with unknown fragments. This quality gate prevents downstream false positives in spectral matching and molecular networking.

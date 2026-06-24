@@ -1,6 +1,9 @@
 ---
 name: feature-normalization-standardization
-description: Use when after extracting and encoding molecular descriptors and structural features (atom types, bond connectivity, graph topology) from SMILES strings into a fixed-size numerical tensor, before passing the feature matrix to the PS2MS deep learning model for NPS prediction.
+description: Use when after extracting and encoding molecular descriptors and structural
+  features (atom types, bond connectivity, graph topology) from SMILES strings into
+  a fixed-size numerical tensor, before passing the feature matrix to the PS2MS deep
+  learning model for NPS prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +14,7 @@ metadata:
   - RDKit
   - NumPy
   - HDF5
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
@@ -39,6 +43,7 @@ attribution:
 
 # feature-normalization-standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize or standardize encoded molecular features to match the numerical scale and distribution expected by a deep learning model's input layer. This ensures feature values fall within the model's training range, preventing saturation or numerical instability during inference.

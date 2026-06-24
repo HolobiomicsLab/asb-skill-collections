@@ -1,6 +1,8 @@
 ---
 name: metabolite-structural-annotation-integration
-description: Use when after statistical analysis (e.g., MB-PLS with permutation testing) has identified a subset of significant LC-MS features (p < 0.05 or similar threshold) that require structural interpretation.
+description: Use when after statistical analysis (e.g., MB-PLS with permutation testing)
+  has identified a subset of significant LC-MS features (p < 0.05 or similar threshold)
+  that require structural interpretation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -22,6 +24,7 @@ metadata:
   - networkx
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -58,6 +61,7 @@ attribution:
 
 # Metabolite Structural Annotation Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate statistically significant LC-MS features into structural clusters by detecting isotopologue and adduct signatures, then cross-reference with retention time and m/z-based metabolite annotations to assign putative identities. This skill bridges the gap between multivariate statistical feature selection and structural/chemical interpretation of untargeted metabolomics.

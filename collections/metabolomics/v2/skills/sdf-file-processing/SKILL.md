@@ -1,6 +1,9 @@
 ---
 name: sdf-file-processing
-description: Use when you have molecular structures (from databases, design tools, or literature) that need to be analyzed for CYP reactivity or metabolic properties, and you must convert them into a format compatible with the CypReact command-line tool.
+description: Use when you have molecular structures (from databases, design tools,
+  or literature) that need to be analyzed for CYP reactivity or metabolic properties,
+  and you must convert them into a format compatible with the CypReact command-line
+  tool.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_2275
   tools:
   - CypReact
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -36,6 +40,7 @@ attribution:
 
 # sdf-file-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and format molecular structure data as .sdf (structure data format) files for input to computational chemistry tools like CypReact. SDF files are the standard interchange format for encoding 2D/3D molecular geometries and properties.

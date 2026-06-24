@@ -1,6 +1,9 @@
 ---
 name: mandatory-field-verification
-description: Use when after generating mzPeak files from prototype implementations (Rust, Python, R, or .NET) or after format conversion, and before integrating files into a mass spectrometry data repository or sharing them with collaborators. Use it when specification compliance is a hard requirement (e.
+description: Use when after generating mzPeak files from prototype implementations
+  (Rust, Python, R, or .NET) or after format conversion, and before integrating files
+  into a mass spectrometry data repository or sharing them with collaborators. Use
+  it when specification compliance is a hard requirement (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -15,6 +18,7 @@ metadata:
   - mzPeak-specification (HUPO-PSI)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -42,6 +46,7 @@ attribution:
 
 # mandatory-field-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that mzPeak file outputs conform to all mandatory fields and structural requirements defined in the published specification by systematically comparing parsed file contents against the normative schema. This skill ensures compliance before downstream consumption or publication.

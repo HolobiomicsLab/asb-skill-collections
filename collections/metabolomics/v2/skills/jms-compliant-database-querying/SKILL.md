@@ -1,6 +1,9 @@
 ---
 name: jms-compliant-database-querying
-description: Use when you have grouped LC-MS features into empirical compounds with inferred molecular formulas and adduct assignments (via khipu), and you need to assign candidate metabolite identities at Level 4 annotation depth by matching against curated reference libraries.
+description: Use when you have grouped LC-MS features into empirical compounds with
+  inferred molecular formulas and adduct assignments (via khipu), and you need to
+  assign candidate metabolite identities at Level 4 annotation depth by matching against
+  curated reference libraries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -18,12 +21,15 @@ metadata:
   - PCPFM (Python-Centric Pipeline for Metabolomics)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
 evidence_spans:
-- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using the `download extras` command
-- perform MS1 annotation using an authentic compound library, a public database (e.g. HMDB, LIPID MAP), or custom database
+- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using
+  the `download extras` command
+- perform MS1 annotation using an authentic compound library, a public database (e.g.
+  HMDB, LIPID MAP), or custom database
 - pre-annotation to group featues to empirical compounds (khipu)
 - Python-Centric Pipeline for Metabolomics
 claims: []
@@ -49,6 +55,7 @@ attribution:
 
 # JMS-compliant database querying
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query JMS-compliant versions of HMDB and LIPID MAPS Structure Database (LMSD) using inferred molecular formulas from empirical compounds to retrieve matching reference entries for Level 4 MS1 annotation. This skill bridges pre-annotated empirical compound objects (from khipu grouping) to standardized metabolite reference databases without requiring explicit m/z tolerance specification.

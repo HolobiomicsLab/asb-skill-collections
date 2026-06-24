@@ -1,6 +1,8 @@
 ---
 name: spectral-data-input-handling-mgf-format
-description: Use when when you have raw MS/MS mass spectrometry data and need to submit it to the Mass2SMILES Docker inference container for structure and functional group prediction.
+description: Use when when you have raw MS/MS mass spectrometry data and need to submit
+  it to the Mass2SMILES Docker inference container for structure and functional group
+  prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,6 +16,7 @@ metadata:
   - delser292/mass2smiles:final
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
@@ -42,6 +45,7 @@ attribution:
 
 # spectral-data-input-handling-mgf-format
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and validate MS/MS spectral data in GNPS-style MGF format for input to the Mass2SMILES deep learning model. This skill ensures that raw mass spectrometry data is correctly formatted and accessible to the inference pipeline before structure prediction begins.

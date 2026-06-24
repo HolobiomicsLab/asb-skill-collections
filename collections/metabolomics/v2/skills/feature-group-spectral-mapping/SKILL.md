@@ -1,6 +1,9 @@
 ---
 name: feature-group-spectral-mapping
-description: Use when after sample alignment and isotopologue/adduct grouping are complete, when you need to associate MS2 spectral data (DDA-acquired) with the consolidated feature groups to enable MS/MS-based compound annotation or to bundle MS1 quantification with MS2 evidence.
+description: Use when after sample alignment and isotopologue/adduct grouping are
+  complete, when you need to associate MS2 spectral data (DDA-acquired) with the consolidated
+  feature groups to enable MS/MS-based compound annotation or to bundle MS1 quantification
+  with MS2 evidence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,11 +15,14 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- Complete processing including peak picking, sample alignment, pick picking, grouping of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated MS2 spectra and isotopic
+- Complete processing including peak picking, sample alignment, pick picking, grouping
+  of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated
+  MS2 spectra and isotopic
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +46,7 @@ attribution:
 
 # Reconstruct the Isotopologue and Adduct Grouping Component
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map consolidated MS2 spectra and isotopic metadata to feature groups (isotopologues and adducts) that have already been aligned and clustered across samples. This skill extracts representative tandem mass spectra for each feature group and annotates their isotopic relationships and adduct identities.

@@ -1,6 +1,9 @@
 ---
 name: confidence-score-extraction-from-neural-networks
-description: Use when when you have a trained deep learning model (e.g., PS2MS) and an evaluation dataset of compounds, and you need to assess how prediction confidence varies across structural novelty classes (e.g., training-similar vs. structurally novel NPS analogues).
+description: Use when when you have a trained deep learning model (e.g., PS2MS) and
+  an evaluation dataset of compounds, and you need to assess how prediction confidence
+  varies across structural novelty classes (e.g., training-similar vs. structurally
+  novel NPS analogues).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - Pandas
   - Matplotlib or Seaborn
   - PS2MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
@@ -42,6 +46,7 @@ attribution:
 
 # confidence-score-extraction-from-neural-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract prediction confidence scores (softmax probabilities, prediction uncertainties) from a trained deep learning model to quantify model certainty across test compounds. This enables downstream stratification and statistical assessment of prediction reliability, especially for novel or out-of-distribution analogues.

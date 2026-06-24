@@ -1,6 +1,8 @@
 ---
 name: evaluation-data-collection-for-simulation-assessment
-description: Use when you are developing or comparing new data-dependent acquisition (DDA) strategies in ViMMS and need to evaluate how well each strategy fragments sampled compounds from the HMDB database.
+description: Use when you are developing or comparing new data-dependent acquisition
+  (DDA) strategies in ViMMS and need to evaluate how well each strategy fragments
+  sampled compounds from the HMDB database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -15,6 +17,7 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -47,6 +50,7 @@ attribution:
 
 # Evaluation-Data Collection for Simulation Assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enable systematic collection of diagnostic metrics during LC-MS/MS simulation runs to assess the performance of fragmentation acquisition strategies without requiring real instrument hardware. This skill bridges virtual metabolomics simulations and downstream evaluation by capturing scan-level data that can be post-processed to compute fragmentation coverage and strategy efficacy.

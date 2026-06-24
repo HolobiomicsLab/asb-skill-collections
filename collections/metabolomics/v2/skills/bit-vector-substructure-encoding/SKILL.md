@@ -1,6 +1,7 @@
 ---
 name: bit-vector-substructure-encoding
-description: Use when you need to represent natural product molecules as fixed-length bit vectors for downstream machine learning (e.
+description: Use when you need to represent natural product molecules as fixed-length
+  bit vectors for downstream machine learning (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -12,12 +13,14 @@ metadata:
   - pip
   - RDKit
   - black
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:

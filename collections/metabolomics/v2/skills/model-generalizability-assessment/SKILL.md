@@ -1,6 +1,9 @@
 ---
 name: model-generalizability-assessment
-description: Use when you have a pre-trained GNN model for CCS prediction and need to verify that it generalizes to test data that was held out during training. Use it specifically when comparing model performance across different molecular datasets (e.
+description: Use when you have a pre-trained GNN model for CCS prediction and need
+  to verify that it generalizes to test data that was held out during training. Use
+  it specifically when comparing model performance across different molecular datasets
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3665
@@ -14,6 +17,7 @@ metadata:
   - train-test.py script
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -42,6 +46,7 @@ attribution:
 
 # model-generalizability-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate whether a trained graph neural network model for collision cross section prediction generalizes effectively to held-out test data by computing standard regression metrics (RMSE, MAE, R²) and comparing against baseline values. This skill is essential for validating whether GNN models can reliably predict CCS across diverse molecular datasets beyond their training distribution.

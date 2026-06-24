@@ -1,6 +1,9 @@
 ---
 name: spectral-annotation-and-overlay-visualization
-description: Use when after correlation testing has validated putative parent–adduct ion pairs (e.g., via corrPairsMSI() on a massdiff object annotated with adductMatch results), use this skill to annotate and visualize the mass spectrum plot to confirm that identified pairs exhibit expected overlap—e.
+description: Use when after correlation testing has validated putative parent–adduct
+  ion pairs (e.g., via corrPairsMSI() on a massdiff object annotated with adductMatch
+  results), use this skill to annotate and visualize the mass spectrum plot to confirm
+  that identified pairs exhibit expected overlap—e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -12,11 +15,13 @@ metadata:
   - R
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # Spectral Annotation and Overlay Visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate mass spectra with identified parent ions and adduct ions, then visualize them as overlaid scatter plots using contrasting colors and symbols to reveal spatial and spectral relationships. This skill enables discrimination of adduct-parent ion pairs in MALDI-MSI data through simultaneous visual inspection of their co-occurrence patterns.

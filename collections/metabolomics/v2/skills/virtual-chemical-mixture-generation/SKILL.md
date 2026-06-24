@@ -1,6 +1,8 @@
 ---
 name: virtual-chemical-mixture-generation
-description: Use when you need to create a synthetic chemical population for testing data-dependent acquisition (DDA) strategies in a simulation environment before committing to real mass spectrometry analysis.
+description: Use when you need to create a synthetic chemical population for testing
+  data-dependent acquisition (DDA) strategies in a simulation environment before committing
+  to real mass spectrometry analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,7 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -44,6 +47,7 @@ attribution:
 
 # virtual-chemical-mixture-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate realistic virtual chemical mixtures by sampling molecular formulas across a specified m/z range and MS levels using ViMMS samplers and mixture creators. This skill enables simulation-based development of LC-MS/MS fragmentation strategies without requiring real chemical standards or instrument time.

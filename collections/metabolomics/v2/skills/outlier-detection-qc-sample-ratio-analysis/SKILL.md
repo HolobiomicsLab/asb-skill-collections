@@ -1,6 +1,9 @@
 ---
 name: outlier-detection-qc-sample-ratio-analysis
-description: Use when after building a SummarizedExperiment object from metabolomics LC-MS data with QC and Study Sample types defined, when you need to identify QC samples with aberrant Compound/Internal Standard ratios (indicating instrument drift, matrix effects, or sample degradation) and Study Samples with.
+description: Use when after building a SummarizedExperiment object from metabolomics
+  LC-MS data with QC and Study Sample types defined, when you need to identify QC
+  samples with aberrant Compound/Internal Standard ratios (indicating instrument drift,
+  matrix effects, or sample degradation) and Study Samples with.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -22,8 +26,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # outlier-detection-qc-sample-ratio-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and flags outlier Quality Control (QC) samples in metabolomics datasets by analyzing Compound/Internal Standard ratios using statistical tests, and simultaneously identifies mis-injected Study Samples via Internal Standard area anomalies. This filtering step removes unreliable samples before downstream reporting and interpretation.

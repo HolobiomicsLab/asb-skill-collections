@@ -1,6 +1,8 @@
 ---
 name: metabolite-ion-consolidation
-description: Use when after chromatographic peak detection in LC-MS data, when you have hundreds or thousands of features and need to consolidate ions presumed to originate from the same metabolite.
+description: Use when after chromatographic peak detection in LC-MS data, when you
+  have hundreds or thousands of features and need to consolidate ions presumed to
+  originate from the same metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,11 +15,13 @@ metadata:
   - MSnbase
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

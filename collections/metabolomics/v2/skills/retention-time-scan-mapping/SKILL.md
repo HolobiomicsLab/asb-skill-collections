@@ -1,6 +1,9 @@
 ---
 name: retention-time-scan-mapping
-description: Use when when you have loaded an LC-MS spectrum file (mzML, mzXML, or equivalent) into the GNPS LCMS Visualization Dashboard and need to annotate extracted ion chromatograms with the precise retention time or scan ID positions where MS2 events occurred.
+description: Use when when you have loaded an LC-MS spectrum file (mzML, mzXML, or
+  equivalent) into the GNPS LCMS Visualization Dashboard and need to annotate extracted
+  ion chromatograms with the precise retention time or scan ID positions where MS2
+  events occurred.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -11,6 +14,7 @@ metadata:
   - GNPS LCMS Visualization Dashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
@@ -38,6 +42,7 @@ attribution:
 
 # retention-time-scan-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map MS2 precursor scan positions to their corresponding retention times or scan identifiers on extracted ion chromatograms (XIC). This skill enables overlay of tandem mass spectrometry data points onto LC-MS chromatographic displays when the show_ms2_markers parameter is enabled.

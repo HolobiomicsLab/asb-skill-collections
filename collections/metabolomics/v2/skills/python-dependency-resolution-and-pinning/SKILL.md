@@ -1,6 +1,9 @@
 ---
 name: python-dependency-resolution-and-pinning
-description: Use when when setting up a multi-stage bioinformatics workflow (e.g., ENPKG) that calls external tools (MZmine, Sirius, SPARQL engines) and depends on specific Python libraries; when reproducibility across team members or cloud infrastructure is required;
+description: Use when when setting up a multi-stage bioinformatics workflow (e.g.,
+  ENPKG) that calls external tools (MZmine, Sirius, SPARQL engines) and depends on
+  specific Python libraries; when reproducibility across team members or cloud infrastructure
+  is required;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -12,6 +15,7 @@ metadata:
   - conda
   - pip
   - ENPKG full workflow
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

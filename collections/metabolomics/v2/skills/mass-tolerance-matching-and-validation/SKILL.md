@@ -1,6 +1,8 @@
 ---
 name: mass-tolerance-matching-and-validation
-description: Use when you have an MS/MS spectrum with observed peaks and a peptidoform specification (e.g., ProForma 2.0 notation such as 'EM[Oxidation]EVEES[Phospho]PEK'), and you need to annotate which observed peaks correspond to known fragment ions.
+description: Use when you have an MS/MS spectrum with observed peaks and a peptidoform
+  specification (e.g., ProForma 2.0 notation such as 'EM[Oxidation]EVEES[Phospho]PEK'),
+  and you need to annotate which observed peaks correspond to known fragment ions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,15 @@ metadata:
   - Numba
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # mass-tolerance-matching-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Matches observed peaks in a mass spectrometry spectrum to theoretical fragment ions within a specified mass tolerance window, validating fragment annotation by comparing observed m/z values against computed theoretical m/z values for peptide fragments (a, b, y, etc.) with configurable tolerance in parts-per-million (ppm) or Daltons (Da).

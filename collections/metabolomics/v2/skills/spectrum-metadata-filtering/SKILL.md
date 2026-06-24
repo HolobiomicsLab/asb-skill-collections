@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -48,6 +49,7 @@ attribution:
 
 # spectrum-metadata-filtering
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Filters mass spectra by validating ionmode–adduct polarity consistency and removing spectra with missing, malformed, or incompatible adduct annotations. Applied during MS data standardization to ensure only spectra with valid metadata annotations are retained in downstream analysis.

@@ -1,6 +1,9 @@
 ---
 name: memo-ms-api-usage-and-parameter-configuration
-description: Use when you have aligned feature tables (CSV format) with corresponding MS2 spectra data (MGF or mzML files), and need to construct a sample-level vectorization matrix where each row represents a sample and columns encode the occurrence counts of MS2 peaks and neutral losses observed in that.
+description: Use when you have aligned feature tables (CSV format) with corresponding
+  MS2 spectra data (MGF or mzML files), and need to construct a sample-level vectorization
+  matrix where each row represents a sample and columns encode the occurrence counts
+  of MS2 peaks and neutral losses observed in that.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -17,13 +20,16 @@ metadata:
   - scikit-bio
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- '**M**\ s2 bas\ **E**\ d sa\ **M**\ ple vect\ **O**\ rization (**MEMO**) is a method allowing a Retention Time (RT) agnostic alignment'
+- '**M**\ s2 bas\ **E**\ d sa\ **M**\ ple vect\ **O**\ rization (**MEMO**) is a method
+  allowing a Retention Time (RT) agnostic alignment'
 - pip install memo-ms
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 - conda install -c conda-forge scikit-bio

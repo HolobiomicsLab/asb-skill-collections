@@ -1,6 +1,9 @@
 ---
 name: metabolomics-software-benchmarking
-description: Use when you have completed peak picking with two or more competing tools (e.g., IDSL.IPA, MZmine 2, xcms, MS-DIAL) on the same LC/HRMS dataset(s) and need to quantify which performs better. Use this skill when tool selection claims require validation (e.g., 'IDSL.
+description: Use when you have completed peak picking with two or more competing tools
+  (e.g., IDSL.IPA, MZmine 2, xcms, MS-DIAL) on the same LC/HRMS dataset(s) and need
+  to quantify which performs better. Use this skill when tool selection claims require
+  validation (e.g., 'IDSL.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,11 +19,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2, *xcms
 - similar peak picking tools such as MZmine 2, *xcms
@@ -48,6 +54,7 @@ attribution:
 
 # metabolomics-software-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitatively compare peak-picking tools on untargeted LC/HRMS data by extracting and tabulating performance metrics (sensitivity, specificity, precision, recall, runtime, accuracy) across multiple algorithms. This skill enables practitioners to select the most appropriate tool for their population-scale metabolomics workflow based on empirical evidence rather than anecdotal claims.

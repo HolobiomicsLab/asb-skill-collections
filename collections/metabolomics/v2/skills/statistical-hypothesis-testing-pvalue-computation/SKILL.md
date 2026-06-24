@@ -1,6 +1,9 @@
 ---
 name: statistical-hypothesis-testing-pvalue-computation
-description: Use when after log-transformation and missing-value imputation of a metabolomics featuredata matrix, when you have a design matrix encoding one or more factors of interest and need to test the statistical significance of each metabolite's association with those factors.
+description: Use when after log-transformation and missing-value imputation of a metabolomics
+  featuredata matrix, when you have a design matrix encoding one or more factors of
+  interest and need to test the statistical significance of each metabolite's association
+  with those factors.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -10,11 +13,13 @@ metadata:
   tools:
   - R
   - NormalizeMets
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
 claims: []
 provenance:
@@ -39,6 +44,7 @@ attribution:
 
 # statistical-hypothesis-testing-pvalue-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute p-values and regression coefficients by fitting linear models to normalized metabolomics feature data matrices in order to identify biomarkers associated with factors of interest (e.g., exposure, disease status, or demographic variables). This skill enables downstream statistical comparison and filtering of metabolites.

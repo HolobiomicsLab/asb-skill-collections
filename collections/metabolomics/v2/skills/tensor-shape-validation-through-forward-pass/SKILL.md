@@ -1,6 +1,8 @@
 ---
 name: tensor-shape-validation-through-forward-pass
-description: Use when after assembling a Graphormer backbone with DGL molecular graph encoders, column-parameter embedding layers, and gradient-slope feature concatenation, but before training on the full dataset.
+description: Use when after assembling a Graphormer backbone with DGL molecular graph
+  encoders, column-parameter embedding layers, and gradient-slope feature concatenation,
+  but before training on the full dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,11 +15,13 @@ metadata:
   - DGL
   - PyTorch
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
 evidence_spans:
-- Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
+- Graphormer-RT is an extension to the Graphormer package, with documentation, and
+  the original code on Github
 - import dgl
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # tensor-shape-validation-through-forward-pass
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify correct tensor dimensionality propagation through a Graph Transformer model by executing a forward pass on sample molecular graphs and column-metadata batches, catching shape mismatches before full training. This guards against silent broadcasting errors and dimensional inconsistencies in heterogeneous graph encodings and multi-modal feature fusion.

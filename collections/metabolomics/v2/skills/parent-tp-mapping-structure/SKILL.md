@@ -1,6 +1,9 @@
 ---
 name: parent-tp-mapping-structure
-description: Use when you have generated a TP object (from generateTPs) with structural information (SMILES) for predicted or library-derived transformation products, and you need to either (1) construct a MetFrag-compatible database that preserves parent compound records alongside TPs, or (2) componentize.
+description: Use when you have generated a TP object (from generateTPs) with structural
+  information (SMILES) for predicted or library-derived transformation products, and
+  you need to either (1) construct a MetFrag-compatible database that preserves parent
+  compound records alongside TPs, or (2) componentize.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -17,6 +20,7 @@ metadata:
   - PubChemLite
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
@@ -26,7 +30,8 @@ evidence_spans:
 - '`generateTPs(algorithm = "biotransformer", ...)` | Parents | TPs structural information'
 - '`generateTPs(algorithm = "cts", ...)` | Parents | TPs with structural information'
 - Library ([PubChem][PubChemLiteTR] or custom)
-- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents, only for TPs with structural information)
+- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents,
+  only for TPs with structural information)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

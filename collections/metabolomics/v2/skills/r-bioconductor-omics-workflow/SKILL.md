@@ -1,6 +1,9 @@
 ---
 name: r-bioconductor-omics-workflow
-description: Use when you have a raw or partially processed multi-class or time-series metabolomic peak table (in standardized or software-specific format) and need to determine which combination of imputation, QC sample normalization, transformation, and metabolite/sample-based normalization methods will.
+description: Use when you have a raw or partially processed multi-class or time-series
+  metabolomic peak table (in standardized or software-specific format) and need to
+  determine which combination of imputation, QC sample normalization, transformation,
+  and metabolite/sample-based normalization methods will.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,6 +18,7 @@ metadata:
   - limma
   - pcaMethods
   - Biobase
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

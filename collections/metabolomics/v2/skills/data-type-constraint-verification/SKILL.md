@@ -1,6 +1,9 @@
 ---
 name: data-type-constraint-verification
-description: Use when when ingesting or updating MassBank records in plain-text or structured format, and you need to verify that metadata fields (accession, name, formula, mass, spectrum peaks) comply with type definitions, presence requirements, and allowed value ranges.
+description: Use when when ingesting or updating MassBank records in plain-text or
+  structured format, and you need to verify that metadata fields (accession, name,
+  formula, mass, spectrum peaks) comply with type definitions, presence requirements,
+  and allowed value ranges.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -12,6 +15,7 @@ metadata:
   - GitHub Actions
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank
@@ -39,6 +43,7 @@ attribution:
 
 # data-type-constraint-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated validation of MassBank record content against defined data-type and value-range constraints to ensure conformance to the MassBank format specification. This skill applies the MassBank Validator's rule engine to individual records during CI/CD workflows, catching schema violations, missing fields, and out-of-range values before data publication.

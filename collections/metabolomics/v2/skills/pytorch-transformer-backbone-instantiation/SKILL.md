@@ -1,6 +1,8 @@
 ---
 name: pytorch-transformer-backbone-instantiation
-description: Use when when building a graph-based molecular property prediction model that must process both molecular structures (as heterogeneous graphs) and tabular metadata (chromatographic column parameters).
+description: Use when when building a graph-based molecular property prediction model
+  that must process both molecular structures (as heterogeneous graphs) and tabular
+  metadata (chromatographic column parameters).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -15,11 +17,13 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
 evidence_spans:
-- Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
+- Graphormer-RT is an extension to the Graphormer package, with documentation, and
+  the original code on Github
 - import dgl
 - import torch
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # PyTorch Transformer Backbone Instantiation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a PyTorch Graph Transformer backbone (Graphormer module) with configured hidden dimensions, attention heads, and encoder layers for molecular graph and chromatographic parameter featurization. This skill prepares the core neural architecture before assembling compound embeddings and forward passes for retention-time prediction.

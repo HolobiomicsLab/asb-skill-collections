@@ -1,6 +1,8 @@
 ---
 name: mzml-mzxml-spectrum-reading
-description: Use when when you have raw mzML or mzXML files containing uncompressed m/z and intensity arrays and need to load spectra into a uniform data contract before compression, cross-format comparison, or algorithmic processing.
+description: Use when when you have raw mzML or mzXML files containing uncompressed
+  m/z and intensity arrays and need to load spectra into a uniform data contract before
+  compression, cross-format comparison, or algorithmic processing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +15,7 @@ metadata:
   - tinyxml2
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab636/6363791
   title: mspack

@@ -1,6 +1,9 @@
 ---
 name: flux-variability-analysis-interpretation
-description: Use when when you have sampled the feasible flux solution space of constraint-based metabolic models (via optGpSampler or equivalent uniform sampling) and need to normalize flux predictions across reactions and cell lines for concordance analysis with transcriptomics and metabolomics data.
+description: Use when when you have sampled the feasible flux solution space of constraint-based
+  metabolic models (via optGpSampler or equivalent uniform sampling) and need to normalize
+  flux predictions across reactions and cell lines for concordance analysis with transcriptomics
+  and metabolomics data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,6 +16,7 @@ metadata:
   - constraint-based stoichiometric metabolic models
   - randomSampling.py (INTEGRATE pipeline)
   - mannWhitneyUTest.py (INTEGRATE pipeline)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -40,6 +44,7 @@ attribution:
 
 # flux-variability-analysis-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret flux variability analysis (FVA) results by scaling metabolic reaction fluxes relative to maximum flux values identified across constraint-based model solutions, enabling normalized comparison of flux ranges across reactions and conditions. This approach standardizes flux predictions for downstream regulatory classification and cross-sample integration.

@@ -1,6 +1,9 @@
 ---
 name: community-metabolic-pathway-integration
-description: Use when you have multiple draft metabolic models (in JSON, XML, or SBML format) representing individual members or assembly variants of a community—such as Arabidopsis thaliana-associated microbiota—and need a single integrated model that captures the consensus metabolic potential while resolving.
+description: Use when you have multiple draft metabolic models (in JSON, XML, or SBML
+  format) representing individual members or assembly variants of a community—such
+  as Arabidopsis thaliana-associated microbiota—and need a single integrated model
+  that captures the consensus metabolic potential while resolving.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -10,6 +13,7 @@ metadata:
   - http://edamontology.org/topic_0621
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -38,6 +42,7 @@ attribution:
 
 # community-metabolic-pathway-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge multiple draft genome-scale metabolic reconstructions into a single consensus model for microbial communities by resolving pathway conflicts and gaps using community-dependent logic. This skill is essential when analyzing metabolic capacity of natural or engineered communities where individual member reconstructions must be unified to model community-level phenotypes.

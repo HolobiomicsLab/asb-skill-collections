@@ -1,6 +1,8 @@
 ---
 name: open-modification-mass-shift-detection
-description: Use when query mass spectra do not confidently match unmodified peptides in the spectral library, or when you suspect the sample contains unknown or unexpected post-translational modifications.
+description: Use when query mass spectra do not confidently match unmodified peptides
+  in the spectral library, or when you suspect the sample contains unknown or unexpected
+  post-translational modifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -12,11 +14,13 @@ metadata:
   - Faiss
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

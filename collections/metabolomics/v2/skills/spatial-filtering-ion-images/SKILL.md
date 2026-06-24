@@ -1,6 +1,7 @@
 ---
 name: spatial-filtering-ion-images
-description: Use when preparing raw ion image data from mass spectrometry imaging for deep learning-based representation learning.
+description: Use when preparing raw ion image data from mass spectrometry imaging
+  for deep learning-based representation learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3564
@@ -12,12 +13,14 @@ metadata:
   - kornia
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +44,7 @@ attribution:
 
 # spatial-filtering-ion-images
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply spatial filtering (e.g., Gaussian or morphological filters) to ion images in mass spectrometry imaging as part of data augmentation to reduce noise and smooth pixel intensity variations while preserving ion localization patterns. This preprocessing step is used to generate augmented image pairs for contrastive representation learning in DeepION.

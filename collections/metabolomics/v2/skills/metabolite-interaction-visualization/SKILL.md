@@ -1,6 +1,8 @@
 ---
 name: metabolite-interaction-visualization
-description: Use when after computing a Jacobian matrix from covariance data in MInfer, when you need to render metabolite-to-metabolite interaction networks as publication-quality figures.
+description: Use when after computing a Jacobian matrix from covariance data in MInfer,
+  when you need to render metabolite-to-metabolite interaction networks as publication-quality
+  figures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -13,6 +15,7 @@ metadata:
   - MInfer
   - igraph
   - tidygraph
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer

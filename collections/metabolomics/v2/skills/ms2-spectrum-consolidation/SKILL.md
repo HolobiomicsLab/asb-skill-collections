@@ -1,6 +1,9 @@
 ---
 name: ms2-spectrum-consolidation
-description: Use when after sample alignment and feature grouping steps in untargeted LC-MS workflows, when you have DDA-mode raw files with both MS1 and MS2 scans and need to link tandem mass spectra to quantified features for annotation and structural characterization.
+description: Use when after sample alignment and feature grouping steps in untargeted
+  LC-MS workflows, when you have DDA-mode raw files with both MS1 and MS2 scans and
+  need to link tandem mass spectra to quantified features for annotation and structural
+  characterization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,11 +19,13 @@ metadata:
   - SLAW (zamboni-lab/SLAW)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +52,7 @@ attribution:
 
 # MS2 Spectrum Consolidation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Consolidates and extracts MS2 spectra from DDA LC-MS experiments by mapping MS2 scans to aligned MS1 features and pooling reference spectra across samples. This produces a unified MS2 spectral library indexed to the quantitative feature table, enabling spectral annotation and confidence scoring for identified metabolites.

@@ -1,6 +1,9 @@
 ---
 name: network-file-format-export
-description: Use when after completing dereplication and cosine similarity clustering in the MolNotator pipeline, when you have finalized molecular network data with molecule–ion relationships and need to visualize, analyze, or share the network in external software.
+description: Use when after completing dereplication and cosine similarity clustering
+  in the MolNotator pipeline, when you have finalized molecular network data with
+  molecule–ion relationships and need to visualize, analyze, or share the network
+  in external software.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -13,6 +16,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

@@ -1,6 +1,8 @@
 ---
 name: r-internal-function-implementation
-description: Use when you need to expose capabilities of an external compiled dependency (e.g., a .NET assembly, C# wrapper, or executable) to R code, but direct R bindings do not exist.
+description: Use when you need to expose capabilities of an external compiled dependency
+  (e.g., a .NET assembly, C# wrapper, or executable) to R code, but direct R bindings
+  do not exist.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,14 +13,17 @@ metadata:
   - RawFileReader
   - rawrr
   - system2()
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # R Internal Function Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement internal R functions (prefixed with `.`) that wrap external system calls or compiled dependencies, handling I/O serialization, parsing, and error validation to expose lower-level functionality through a stable R interface. This skill is essential when bridging R with .NET assemblies, command-line tools, or compiled libraries that require interprocess communication and result marshalling.

@@ -1,6 +1,9 @@
 ---
 name: qt-widget-rendering-control
-description: Use when you need to restrict a Qt widget's display to a subset of its managed items—such as filtering isotope species in a metabolomics visualization—where the active subset is defined by application preferences stored outside the widget itself.
+description: Use when you need to restrict a Qt widget's display to a subset of its
+  managed items—such as filtering isotope species in a metabolomics visualization—where
+  the active subset is defined by application preferences stored outside the widget
+  itself.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +13,7 @@ metadata:
   - make
   - Maven GUI
   - Qt5
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

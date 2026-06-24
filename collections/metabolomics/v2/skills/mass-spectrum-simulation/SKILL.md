@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-simulation
-description: Use when when you have one or more peptide sequences (as strings) and need to predict their theoretical isotopic distribution patterns to compare against experimental MS data, validate peak assignments, or generate synthetic spectra for method development.
+description: Use when when you have one or more peptide sequences (as strings) and
+  need to predict their theoretical isotopic distribution patterns to compare against
+  experimental MS data, validate peak assignments, or generate synthetic spectra for
+  method development.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +20,7 @@ metadata:
   - pip / conda
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -50,6 +54,7 @@ attribution:
 
 # mass-spectrum-simulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute isotopic distribution envelopes for peptide sequences to predict mass spectrometry peak patterns. This skill generates m/z and relative intensity pairs for theoretical peptide ions, enabling validation of experimental spectra and rapid software prototyping in proteomics workflows.

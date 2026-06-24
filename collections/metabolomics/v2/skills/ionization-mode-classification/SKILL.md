@@ -1,6 +1,9 @@
 ---
 name: ionization-mode-classification
-description: Use when when converting raw MS/MS spectral records (e.g. from .msp format) into metabolite fragment database entries for MetaboAnnotatoR, and the output filenames or library index must distinguish between positive and negative ionization modes to ensure correct library selection during annotation.
+description: Use when when converting raw MS/MS spectral records (e.g. from .msp format)
+  into metabolite fragment database entries for MetaboAnnotatoR, and the output filenames
+  or library index must distinguish between positive and negative ionization modes
+  to ensure correct library selection during annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -12,11 +15,13 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # ionization-mode-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify MS/MS spectra by ionization mode (positive or negative) based on adduct type metadata to assign appropriate ionization mode suffixes to spectral library entries. This is essential for downstream metabolite annotation, as fragment libraries are mode-specific and misclassification leads to incorrect candidate ranking.

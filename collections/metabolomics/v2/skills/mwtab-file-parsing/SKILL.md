@@ -1,6 +1,9 @@
 ---
 name: mwtab-file-parsing
-description: Use when you have mwTab format files (Mass Spectrometry or Nuclear Magnetic Resonance experimental data from Metabolomics Workbench) that need to be loaded into Python for downstream analysis, validation, conversion to JSON, or programmatic manipulation of metadata and data sections.
+description: Use when you have mwTab format files (Mass Spectrometry or Nuclear Magnetic
+  Resonance experimental data from Metabolomics Workbench) that need to be loaded
+  into Python for downstream analysis, validation, conversion to JSON, or programmatic
+  manipulation of metadata and data sections.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,11 +17,13 @@ metadata:
   - pandas
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access
 evidence_spans:
-- The ``mwtab`` package is a Python library that facilitates reading and writing files in
+- The ``mwtab`` package is a Python library that facilitates reading and writing files
+  in
 - jsonschema_ for validating functionality of ``mwTab`` files based on ``JSON`` schema
 - The ``mwtab`` package is a Python library
 claims: []

@@ -1,6 +1,9 @@
 ---
 name: msms-spectrum-object-instantiation
-description: Use when when you have successfully resolved a USI string to extract raw spectrum data from an online proteomics/metabolomics repository (PRIDE, MassIVE, etc.) and need to construct a spectrum object that exposes spectrum data as Python attributes and methods for downstream processing (filtering.
+description: Use when when you have successfully resolved a USI string to extract
+  raw spectrum data from an online proteomics/metabolomics repository (PRIDE, MassIVE,
+  etc.) and need to construct a spectrum object that exposes spectrum data as Python
+  attributes and methods for downstream processing (filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,12 +15,15 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +47,7 @@ attribution:
 
 # msms-spectrum-object-instantiation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate an MsmsSpectrum object by populating it with resolved spectrum data (m/z array, intensity array, precursor m/z, charge state, retention time, and metadata) retrieved from online proteomics repositories via Universal Spectrum Identifier (USI) resolution. This creates a structured, in-memory spectrum object that is ready for subsequent processing and annotation workflows.

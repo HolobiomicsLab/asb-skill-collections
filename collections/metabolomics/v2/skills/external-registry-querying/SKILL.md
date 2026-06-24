@@ -1,6 +1,9 @@
 ---
 name: external-registry-querying
-description: Use when your project JSON document contains genome identifiers but lacks organism name or taxonomic annotations. The platform needs to auto-populate these fields to enable browsing and cross-linking with public genomic databases. Trigger this skill when you have genome IDs (e.
+description: Use when your project JSON document contains genome identifiers but lacks
+  organism name or taxonomic annotations. The platform needs to auto-populate these
+  fields to enable browsing and cross-linking with public genomic databases. Trigger
+  this skill when you have genome IDs (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -15,11 +18,13 @@ metadata:
   - paired-data-form
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

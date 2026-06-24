@@ -1,6 +1,8 @@
 ---
 name: metabologenomic-database-construction
-description: Use when you have genome FASTA or annotated genome files (antiSMASH .gbk, BOA .annotated.txt) and wish to discover ribosomally synthesized and post-translationally modified peptides (RiPPs) by integrating genomic and mass spectrometry data.
+description: Use when you have genome FASTA or annotated genome files (antiSMASH .gbk,
+  BOA .annotated.txt) and wish to discover ribosomally synthesized and post-translationally
+  modified peptides (RiPPs) by integrating genomic and mass spectrometry data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3349
@@ -18,13 +20,18 @@ metadata:
   - NPDtools
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +55,7 @@ attribution:
 
 # metabologenomic-database-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a searchable RiPP structure database by identifying putative biosynthetic gene clusters (BGCs) and precursor peptides from genome assemblies, then enumerating post-translationally modified variants according to class-specific rules. This intermediate database enables downstream matching of tandem mass spectra against predicted peptide structures.

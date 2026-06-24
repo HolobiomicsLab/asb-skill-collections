@@ -1,6 +1,8 @@
 ---
 name: spatial-coordinate-mapping-msi
-description: Use when after loading and preprocessing a Cardinal MSImagingExperiment object (with normalized peaks and optional spatial segmentation results), and before conducting spatial statistical tests or co-localization analyses.
+description: Use when after loading and preprocessing a Cardinal MSImagingExperiment
+  object (with normalized peaks and optional spatial segmentation results), and before
+  conducting spatial statistical tests or co-localization analyses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -15,6 +17,7 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -48,6 +51,7 @@ attribution:
 
 # Spatial coordinate mapping for MSI
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transfer pixel-level x,y spatial coordinates from a Cardinal MSImagingExperiment object into a Seurat spatial object, preserving the geometric layout of mass spectrometry imaging data for downstream spatial analysis and visualization.

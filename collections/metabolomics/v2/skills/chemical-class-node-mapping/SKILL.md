@@ -1,6 +1,8 @@
 ---
 name: chemical-class-node-mapping
-description: Use when you have a GNPS mass spectral molecular network (in graphml or cytoscape format) and want to enrich its nodes with chemical class information derived from GNPS public library spectral matches.
+description: Use when you have a GNPS mass spectral molecular network (in graphml
+  or cytoscape format) and want to enrich its nodes with chemical class information
+  derived from GNPS public library spectral matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -15,11 +17,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

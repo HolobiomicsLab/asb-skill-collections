@@ -1,6 +1,8 @@
 ---
 name: gcims-dataset-object-creation
-description: Use when you have raw GCIMS sample files (from a GC–IMS instrument) and an annotations table (Excel, CSV, or TSV) with sample metadata, and you need to begin the GCIMS preprocessing pipeline.
+description: Use when you have raw GCIMS sample files (from a GC–IMS instrument) and
+  an annotations table (Excel, CSV, or TSV) with sample metadata, and you need to
+  begin the GCIMS preprocessing pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,6 +16,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -43,6 +46,7 @@ attribution:
 
 # gcims-dataset-object-creation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create a GCIMSDataset object in R from raw Gas Chromatography–Ion Mobility Spectrometry data files to enable downstream preprocessing (filtering, smoothing, alignment, peak detection). This is the foundational step that wraps raw GCIMS samples and their metadata into a unified object suitable for the GCIMS pipeline.

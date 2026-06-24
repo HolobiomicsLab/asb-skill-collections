@@ -1,6 +1,9 @@
 ---
 name: signal-residual-deconvolution
-description: Use when analyzing 1D signal arrays (e.g., extracted ion chromatograms, arrival time distributions, or MS1 spectra intensity profiles) where multiple peaks may overlap or where peak shape information (amplitude, position, width) is required beyond simple local-maximum detection.
+description: Use when analyzing 1D signal arrays (e.g., extracted ion chromatograms,
+  arrival time distributions, or MS1 spectra intensity profiles) where multiple peaks
+  may overlap or where peak shape information (amplitude, position, width) is required
+  beyond simple local-maximum detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

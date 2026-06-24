@@ -1,6 +1,9 @@
 ---
 name: peaklist-format-parsing
-description: Use when you have raw or semi-processed m/z peak detection output from LC-MS/MS instruments (typically from XCMS, MSnbase, or other peak-picking tools) in one of several known formats (MetaboAnalyst-like, MetaboShiny native, or Metabolights) and need to ingest them into MetaboShiny for compound.
+description: Use when you have raw or semi-processed m/z peak detection output from
+  LC-MS/MS instruments (typically from XCMS, MSnbase, or other peak-picking tools)
+  in one of several known formats (MetaboAnalyst-like, MetaboShiny native, or Metabolights)
+  and need to ingest them into MetaboShiny for compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

@@ -1,6 +1,9 @@
 ---
 name: background-distribution-null-hypothesis-testing
-description: Use when when predicting one data modality (e.g., metabolite abundances) from another (e.g., microbiome composition) and you need to distinguish genuine microbe–metabolite associations from false positives driven by data compositionality, sample size artifacts, or confounding variation.
+description: Use when when predicting one data modality (e.g., metabolite abundances)
+  from another (e.g., microbiome composition) and you need to distinguish genuine
+  microbe–metabolite associations from false positives driven by data compositionality,
+  sample size artifacts, or confounding variation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -12,12 +15,15 @@ metadata:
   - MiMeNet
   - scikit-learn
   - scipy.stats
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +47,7 @@ attribution:
 
 # background-distribution-null-hypothesis-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate an empirical null distribution by shuffling paired input features independently and re-running cross-validation, then use percentile thresholds from this background to identify statistically significant predictions. This skill decouples true signal from spurious correlations arising from compositional data or batch effects.

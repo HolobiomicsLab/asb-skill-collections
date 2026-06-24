@@ -1,6 +1,7 @@
 ---
 name: lc-ms-eic-plot-interpretation
-description: Use when after executing TARDIS in screening_mode = TRUE on centroided .mzML files with a defined target compound list.
+description: Use when after executing TARDIS in screening_mode = TRUE on centroided
+  .mzML files with a defined target compound list.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,6 +15,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -22,7 +24,8 @@ evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
 - rmarkdown::html_document
 - Quick start for targeted peak integration of LC-MS data using TARDIS
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +49,7 @@ attribution:
 
 # LC-MS EIC Plot Interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visual inspection and validation of extracted ion chromatogram (EIC) plots to confirm successful target detection, peak localization within expected m/z and retention time windows, and integration quality in targeted LC-MS metabolomics workflows. This skill bridges automated peak detection (via TARDIS) and quality assessment by examining diagnostic EIC plots for visibility, correct elution timing, and peak morphology.

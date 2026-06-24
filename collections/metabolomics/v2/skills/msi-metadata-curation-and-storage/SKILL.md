@@ -1,6 +1,8 @@
 ---
 name: msi-metadata-curation-and-storage
-description: Use when after generating a 3D pixel array (shape n+1, y, x) from raw line-scan MSI data via MSIGen's get_image_data() call, curate and validate the accompanying JSON metadata file before visualization or downstream analysis.
+description: Use when after generating a 3D pixel array (shape n+1, y, x) from raw
+  line-scan MSI data via MSIGen's get_image_data() call, curate and validate the accompanying
+  JSON metadata file before visualization or downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -15,16 +17,20 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
-- If you want to use MSIGen in a Jupyter notebook, you may also need to install jupyter notebook
+- If you want to use MSIGen in a Jupyter notebook, you may also need to install jupyter
+  notebook
 - MSIGen is most easily used through Jupyter Notebooks or through the GUI.
-- If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
+- If you are planning on using Bruker .d data in the .baf format, you will also need
+  to install pyBaf2Sql from GitHub
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

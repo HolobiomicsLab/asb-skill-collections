@@ -1,6 +1,8 @@
 ---
 name: python-async-method-definition
-description: Use when when extending MSMetaEnhancer with a new local chemical transformation (e.g., SMILES to InChI) that should execute non-blockingly within an asynchronous annotation workflow.
+description: Use when when extending MSMetaEnhancer with a new local chemical transformation
+  (e.g., SMILES to InChI) that should execute non-blockingly within an asynchronous
+  annotation workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -13,6 +15,7 @@ metadata:
   - Python
   - RDKit
   - Python asyncio
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
@@ -21,7 +24,8 @@ evidence_spans:
 - 'Converter Builder: Automatically discovers and instantiates available converters'
 - make sure the existing tests still work by running ``pytest``
 - A Python package for mass spectra metadata annotation
-- Create a new Python file in `MSMetaEnhancer/libs/converters/web/` named after your service
+- Create a new Python file in `MSMetaEnhancer/libs/converters/web/` named after your
+  service
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

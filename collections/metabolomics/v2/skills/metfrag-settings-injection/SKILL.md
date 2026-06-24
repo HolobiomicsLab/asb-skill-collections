@@ -1,6 +1,9 @@
 ---
 name: metfrag-settings-injection
-description: Use when when deploying the ipbhalle/metfragweb container and you need to configure MetFrag parameters such as ChemSpider tokens, proxy settings for web services (MoNA, KEGG, MetaCyc), or local database connections (PubChem via MySQL/PostgreSQL) without modifying the container image itself.
+description: Use when when deploying the ipbhalle/metfragweb container and you need
+  to configure MetFrag parameters such as ChemSpider tokens, proxy settings for web
+  services (MoNA, KEGG, MetaCyc), or local database connections (PubChem via MySQL/PostgreSQL)
+  without modifying the container image itself.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - Docker
   - Tomcat
   - Java 21
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -37,6 +41,7 @@ attribution:
 
 # MetFrag Settings File Injection via Docker Volume Mount
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inject MetFrag configuration parameters into the ipbhalle/metfragweb Docker container by mounting a local settings.properties file to the /resources/settings.properties path, enabling dynamic configuration without rebuilding the container image.

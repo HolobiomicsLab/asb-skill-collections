@@ -1,6 +1,9 @@
 ---
 name: gnps-spectral-library-compound-retrieval
-description: Use when you have GNPS library accession IDs (e.g. CCMSLIB00011906190) for a reference compound and a chemically or biologically modified analog, and need to load their full MS/MS spectra and structural annotations to set up a modification-finding analysis.
+description: Use when you have GNPS library accession IDs (e.g. CCMSLIB00011906190)
+  for a reference compound and a chemically or biologically modified analog, and need
+  to load their full MS/MS spectra and structural annotations to set up a modification-finding
+  analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,7 @@ metadata:
   - GNPS Library
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -48,6 +52,7 @@ attribution:
 
 # GNPS Spectral Library Compound Retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fetches MS/MS spectra and structural metadata (SMILES, precursor m/z, charge, adduct) for known and modified compounds from the GNPS spectral library by accession identifier. This retrieval is the essential first step for comparative tandem mass spectral alignment workflows where ground-truth structures must be loaded before modification site analysis can begin.

@@ -1,6 +1,9 @@
 ---
 name: comparative-abundance-heatmap-generation
-description: Use when when you have parsed lipid expression data (quantitative abundance measurements) organized as rows (lipid identities) and columns (experimental conditions or samples), and need to simultaneously display relative abundance levels across many lipids and conditions to identify clustering.
+description: Use when when you have parsed lipid expression data (quantitative abundance
+  measurements) organized as rows (lipid identities) and columns (experimental conditions
+  or samples), and need to simultaneously display relative abundance levels across
+  many lipids and conditions to identify clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0531
@@ -11,11 +14,13 @@ metadata:
   - matplotlib
   - seaborn
   - pandas
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 - _No usage/docs found._
 claims: []
 provenance:

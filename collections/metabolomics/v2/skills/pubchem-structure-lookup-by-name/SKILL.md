@@ -1,6 +1,7 @@
 ---
 name: pubchem-structure-lookup-by-name
-description: Use when your metadata table contains compound names but lacks structure information (SMILES, InChI, molecular formula, or PubChem CID).
+description: Use when your metadata table contains compound names but lacks structure
+  information (SMILES, InChI, molecular formula, or PubChem CID).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -14,6 +15,7 @@ metadata:
   - prepare_wikidata_lotus_prefect.py
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

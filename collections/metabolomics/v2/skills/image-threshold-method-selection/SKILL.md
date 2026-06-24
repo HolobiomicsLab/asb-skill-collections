@@ -1,6 +1,8 @@
 ---
 name: image-threshold-method-selection
-description: Use when you have loaded a laser ablation ICP-MS image into pewpew and need to separate tissue pixels from background regions to enable region-based analysis or quantification.
+description: Use when you have loaded a laser ablation ICP-MS image into pewpew and
+  need to separate tissue pixels from background regions to enable region-based analysis
+  or quantification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -9,13 +11,15 @@ metadata:
   tools:
   - pewpew
   - pewlib
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -42,6 +46,7 @@ attribution:
 
 # image-threshold-method-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an appropriate thresholding method (e.g., Otsu's method) to segment tissue from background in laser ablation ICP-MS images. This skill involves choosing a comparison operator and optional restriction to pre-existing selections to generate binary masks that separate regions of interest.

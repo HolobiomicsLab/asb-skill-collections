@@ -1,6 +1,8 @@
 ---
 name: calibration-curve-validation
-description: Use when when you have loaded standard compound MS intensity measurements with known concentrations and need to select between linear or quadratic regression models before applying the calibration to unknown samples.
+description: Use when when you have loaded standard compound MS intensity measurements
+  with known concentrations and need to select between linear or quadratic regression
+  models before applying the calibration to unknown samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,11 +12,13 @@ metadata:
   tools:
   - Shiny
   - QuantyFey
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +42,7 @@ attribution:
 
 # calibration-curve-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and optimize calibration models (linear or quadratic regression) fitted to standard compound MS intensity measurements before applying them to convert sample intensities into quantitative concentrations. This skill ensures that the selected model accurately relates measured intensities to known concentrations across the dynamic range of the assay.

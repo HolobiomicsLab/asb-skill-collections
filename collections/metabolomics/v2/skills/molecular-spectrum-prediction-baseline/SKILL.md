@@ -1,6 +1,8 @@
 ---
 name: molecular-spectrum-prediction-baseline
-description: Use when you have multiple mass spectrum prediction models to compare and need to establish a level playing field by implementing at least one well-characterized baseline (such as NEIMS) with both FFN and GNN encoder variants.
+description: Use when you have multiple mass spectrum prediction models to compare
+  and need to establish a level playing field by implementing at least one well-characterized
+  baseline (such as NEIMS) with both FFN and GNN encoder variants.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

@@ -1,6 +1,9 @@
 ---
 name: retention-time-mass-correspondence-resolution
-description: Use when you have two LC-MS untargeted metabolomic feature tables (each containing m/z, retention time, and intensity columns) and need to establish which features in dataset A correspond to which features in dataset B, typically for comparative metabolomics, batch effect correction, or.
+description: Use when you have two LC-MS untargeted metabolomic feature tables (each
+  containing m/z, retention time, and intensity columns) and need to establish which
+  features in dataset A correspond to which features in dataset B, typically for comparative
+  metabolomics, batch effect correction, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -12,6 +15,7 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -40,6 +44,7 @@ attribution:
 
 # retention-time-mass-correspondence-resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match untargeted metabolomic features across two LC-MS datasets by resolving one-to-one correspondences based on m/z and retention time similarity. This skill enables cross-dataset feature alignment by computing pairwise similarity scores and selecting highest-confidence matches within specified mass and temporal tolerances.

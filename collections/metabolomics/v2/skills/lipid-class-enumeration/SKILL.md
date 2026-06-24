@@ -1,6 +1,9 @@
 ---
 name: lipid-class-enumeration
-description: Use when you have a lipid identification or library-generation task that requires you to define a target chemical space bounded by lipid classes (e.g., phosphatidylcholine, triglyceride) and fatty acid composition ranges (e.g., C14–C22 with 0–6 degrees of unsaturation).
+description: Use when you have a lipid identification or library-generation task that
+  requires you to define a target chemical space bounded by lipid classes (e.g., phosphatidylcholine,
+  triglyceride) and fatty acid composition ranges (e.g., C14–C22 with 0–6 degrees
+  of unsaturation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +16,7 @@ metadata:
   - Excalibur
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator
@@ -42,6 +46,7 @@ attribution:
 
 # Lipid Class and Fatty Acid Composition Enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a comprehensive inventory of lipid molecular species by systematically combining user-specified lipid class constraints with fatty acid composition parameters (carbon count and degree of unsaturation). This skill produces structured enumerated lipid species lists that serve as input for downstream spectral library generation and mass spectrometry-based identification workflows.

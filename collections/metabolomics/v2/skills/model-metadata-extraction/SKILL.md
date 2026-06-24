@@ -1,6 +1,7 @@
 ---
 name: model-metadata-extraction
-description: Use when when you need to programmatically interface with a TensorFlow Serving model instance and must discover or validate the expected input names (e.
+description: Use when when you need to programmatically interface with a TensorFlow
+  Serving model instance and must discover or validate the expected input names (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +10,7 @@ metadata:
   - TensorFlow Serving
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -37,6 +39,7 @@ attribution:
 
 # model-metadata-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate model input/output names and API contracts from a TensorFlow Serving instance via the /model/metadata endpoint. This skill is essential when integrating with deployed ML models where input field names must be verified before constructing prediction requests.

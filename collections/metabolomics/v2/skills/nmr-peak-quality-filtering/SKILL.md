@@ -1,6 +1,9 @@
 ---
 name: nmr-peak-quality-filtering
-description: Use when you have a CSV or table-formatted input spectral peak list (chemical shifts, intensities, metadata) destined for NMRformer metabolite identification, and you observe or suspect that the list contains noisy peaks or peaks with chemical shifts that do not match known reference standards.
+description: Use when you have a CSV or table-formatted input spectral peak list (chemical
+  shifts, intensities, metadata) destined for NMRformer metabolite identification,
+  and you observe or suspect that the list contains noisy peaks or peaks with chemical
+  shifts that do not match known reference standards.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - NMRformer
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05632
   title: NMRformer

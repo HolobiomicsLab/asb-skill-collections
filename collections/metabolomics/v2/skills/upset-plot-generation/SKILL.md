@@ -1,6 +1,9 @@
 ---
 name: upset-plot-generation
-description: Use when after loading and filtering search results from two or more DIA-MS analysis tools at a specified Q-value cutoff, when you need to summarize which analytes are identified by all tools, by specific subsets, or uniquely by individual tools.
+description: Use when after loading and filtering search results from two or more
+  DIA-MS analysis tools at a specified Q-value cutoff, when you need to summarize
+  which analytes are identified by all tools, by specific subsets, or uniquely by
+  individual tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -16,6 +19,7 @@ metadata:
   - Bokeh
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash

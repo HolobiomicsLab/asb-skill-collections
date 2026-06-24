@@ -1,6 +1,8 @@
 ---
 name: repository-file-enumeration
-description: Use when you need to inventory sequence files in a repository's designated directory and cross-reference them against public databases to identify sequences that are unique to the curated archive.
+description: Use when you need to inventory sequence files in a repository's designated
+  directory and cross-reference them against public databases to identify sequences
+  that are unique to the curated archive.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -9,6 +11,7 @@ metadata:
   tools:
   - Git
   - NCBI GenBank/RefSeq
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkz882
   title: MIBiG 2.0
@@ -37,6 +40,7 @@ attribution:
 
 # repository-file-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically list and catalog sequence files stored in a specialized bioinformatics repository directory (e.g., genbanks) to identify which entries lack corresponding public database records. This skill is essential when auditing data provenance and determining the scope of curated sequences not available through standard public archives.

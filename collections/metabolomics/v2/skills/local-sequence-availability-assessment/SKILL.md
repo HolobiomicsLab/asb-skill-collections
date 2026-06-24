@@ -1,6 +1,7 @@
 ---
 name: local-sequence-availability-assessment
-description: Use when you need to determine which sequence files in a repository like MIBiG are unique to that resource and not mirrored in NCBI public databases.
+description: Use when you need to determine which sequence files in a repository like
+  MIBiG are unique to that resource and not mirrored in NCBI public databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +11,7 @@ metadata:
   tools:
   - BLAST
   - NCBI E-utilities
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -38,6 +40,7 @@ attribution:
 
 # local-sequence-availability-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and catalog sequence files in a repository's local genbanks directory that are not publicly available in NCBI's GenBank/RefSeq databases. This skill is essential for understanding the scope of non-redundant sequences maintained by secondary metabolite repositories and for tracking curation inventory.

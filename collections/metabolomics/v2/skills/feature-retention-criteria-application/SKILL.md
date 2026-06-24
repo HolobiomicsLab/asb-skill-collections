@@ -1,6 +1,8 @@
 ---
 name: feature-retention-criteria-application
-description: Use when after signal drift correction and batch effect removal (step 4) have been completed and per-feature D-Ratio values are available, but before normalization (step 7).
+description: Use when after signal drift correction and batch effect removal (step
+  4) have been completed and per-feature D-Ratio values are available, but before
+  normalization (step 7).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   - R (≥4.1.2)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

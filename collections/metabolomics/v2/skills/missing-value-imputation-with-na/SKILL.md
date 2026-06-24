@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-with-na
-description: Use when you are implementing a custom MsBackend subclass for the Spectra package and need to ensure that spectraData() returns all core spectra variables (e.g., centroided, polarity, collisionEnergy) regardless of which ones are explicitly stored in your backend.
+description: Use when you are implementing a custom MsBackend subclass for the Spectra
+  package and need to ensure that spectraData() returns all core spectra variables
+  (e.g., centroided, polarity, collisionEnergy) regardless of which ones are explicitly
+  stored in your backend.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3391
@@ -13,11 +16,13 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []
@@ -43,6 +48,7 @@ attribution:
 
 # missing-value-imputation-with-na
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Populate missing core spectra variables in a mass spectrometry backend by filling them with NA values, ensuring that spectraData() returns a complete DataFrame with all expected columns even when only a subset of user-supplied variables are stored. This technique maintains API consistency across heterogeneous backend implementations while preserving data integrity.

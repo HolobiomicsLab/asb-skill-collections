@@ -1,6 +1,8 @@
 ---
 name: mzml-format-validation
-description: Use when after downloading an mzML file from a remote repository (e.g., MetaboLights, MassIVE, GNPS) via USI resolution, before attempting to parse it into a spectrum container or visualization dashboard.
+description: Use when after downloading an mzML file from a remote repository (e.g.,
+  MetaboLights, MassIVE, GNPS) via USI resolution, before attempting to parse it into
+  a spectrum container or visualization dashboard.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0336
@@ -17,6 +19,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
@@ -50,6 +53,7 @@ attribution:
 
 # mzml-format-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate downloaded mzML files against the mzML XML schema to confirm structural integrity, presence of spectrum list, and indexed offset consistency before loading into analysis pipelines. This ensures data quality and compatibility with downstream spectrum access and metadata retrieval tools.

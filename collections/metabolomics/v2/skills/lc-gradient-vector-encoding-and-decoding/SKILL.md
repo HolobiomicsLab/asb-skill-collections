@@ -1,6 +1,9 @@
 ---
 name: lc-gradient-vector-encoding-and-decoding
-description: Use when when preparing LC gradient configurations for Bayesian optimization, or when converting predicted optimal vectors back into actionable LC instrument parameters. Specifically, use this skill when you have a set of gradient parameters to optimize (e.
+description: Use when when preparing LC gradient configurations for Bayesian optimization,
+  or when converting predicted optimal vectors back into actionable LC instrument
+  parameters. Specifically, use this skill when you have a set of gradient parameters
+  to optimize (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +15,7 @@ metadata:
   - BAGO
   - Python
   - bago Python package
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
@@ -20,7 +24,8 @@ derived_from:
 evidence_spans:
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
 - a :class:`sklearn.gaussian_process.GaussianProcessRegressor` object
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - Download and install Python 3.8 or later from `python.org`
 - model.computeNextGradient()
@@ -48,6 +53,7 @@ attribution:
 
 # LC-gradient vector encoding and decoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts between human-readable LC gradient parameters (e.g., flow rate, solvent composition, temperature profiles) and normalized numerical vectors suitable for Bayesian optimization and Gaussian Process regression. This bidirectional transformation enables efficient exploration of high-dimensional gradient space while preserving chemical interpretability.

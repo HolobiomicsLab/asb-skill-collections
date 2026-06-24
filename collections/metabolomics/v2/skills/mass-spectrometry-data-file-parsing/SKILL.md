@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-file-parsing
-description: Use when you receive raw MS data files from LC-MS, LC-IMS-MS, direct infusion, or DDA/DIA experiments and need to extract ion chromatograms, mobility heatmaps, quality metrics, or perform spectral matching.
+description: Use when you receive raw MS data files from LC-MS, LC-IMS-MS, direct
+  infusion, or DDA/DIA experiments and need to extract ion chromatograms, mobility
+  heatmaps, quality metrics, or perform spectral matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -17,11 +19,13 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
 evidence_spans:
-- 'Mirador: Raw MS data visualization and export (PDF, CSV) including extracted ion chromatograms (XIC), extracted ion mobility (XIM) heatmaps, and MS/MS mirror plots'
+- 'Mirador: Raw MS data visualization and export (PDF, CSV) including extracted ion
+  chromatograms (XIC), extracted ion mobility (XIM) heatmaps, and MS/MS mirror plots'
 - IonToolPack is a software suite housing tools for mass spectrometry data
 - IonToolPack is a software suite housing tools for mass spectrometry data.
 claims: []

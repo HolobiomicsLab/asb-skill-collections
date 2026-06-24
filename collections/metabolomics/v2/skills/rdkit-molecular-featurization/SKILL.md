@@ -1,6 +1,8 @@
 ---
 name: rdkit-molecular-featurization
-description: Use when you have molecular structure data (SMILES strings or MOL files) from an in-house chemical database and need to prepare it as input for a graph neural network that predicts liquid chromatography retention times for small molecule identification.
+description: Use when you have molecular structure data (SMILES strings or MOL files)
+  from an in-house chemical database and need to prepare it as input for a graph neural
+  network that predicts liquid chromatography retention times for small molecule identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -15,6 +17,7 @@ metadata:
   - Preprocess.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

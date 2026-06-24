@@ -1,6 +1,7 @@
 ---
 name: molecular-structure-parsing-rdkit
-description: Use when you have raw molecular structures in SMILES or SDF format from a chemical database (e.
+description: Use when you have raw molecular structures in SMILES or SDF format from
+  a chemical database (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -13,6 +14,7 @@ metadata:
   - Python
   - torch_geometric
   - RT-Transformer
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -47,6 +49,7 @@ attribution:
 
 # Molecular structure parsing with RDKit
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse molecular structure files (SMILES or SDF format) using RDKit to extract chemical features and generate standardized molecular representations (fingerprints and graph encodings). This is essential preprocessing for machine learning models that require dual molecular inputs for retention time prediction and metabolite annotation.

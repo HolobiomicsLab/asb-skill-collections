@@ -1,6 +1,8 @@
 ---
 name: spectral-feature-engineering
-description: Use when you have molecular structures (SMILES or graph representations) and need to predict or analyze infrared spectral properties using message passing neural networks.
+description: Use when you have molecular structures (SMILES or graph representations)
+  and need to predict or analyze infrared spectral properties using message passing
+  neural networks.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,11 +11,13 @@ metadata:
   - chemprop-IR
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]
+- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
+  for Property Prediction]
 - The `chemprop-IR` architecture is an extension of `chemprop`
 claims: []
 provenance:
@@ -38,6 +42,7 @@ attribution:
 
 # spectral-feature-engineering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and engineer spectral features from molecular structures using message passing neural networks for infrared spectral prediction tasks. This skill implements domain-specific feature construction within the chemprop-IR pipeline to transform molecular representations into tensors suitable for spectral property prediction.

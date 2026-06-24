@@ -1,6 +1,8 @@
 ---
 name: metabolomics-dataset-handling-massive
-description: Use when you are beginning a non-targeted metabolomics analysis and need to source raw LC-MS/MS data files (in mzML or NetCDF format) that have been vetted for quality and are known to support FBMN and statistical analysis.
+description: Use when you are beginning a non-targeted metabolomics analysis and need
+  to source raw LC-MS/MS data files (in mzML or NetCDF format) that have been vetted
+  for quality and are known to support FBMN and statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3500
@@ -13,6 +15,7 @@ metadata:
   - MZmine3
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

@@ -1,6 +1,7 @@
 ---
 name: model-generalization-assessment-across-molecular-size-regimes
-description: Use when a deep learning model for molecular structure prediction (e.g., NMR2Struct) has been trained and evaluated on a limited molecular size range (e.
+description: Use when a deep learning model for molecular structure prediction (e.g.,
+  NMR2Struct) has been trained and evaluated on a limited molecular size range (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -13,6 +14,7 @@ metadata:
   - NMR spectrum simulator or experimental database
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -40,6 +42,7 @@ attribution:
 
 # model-generalization-assessment-across-molecular-size-regimes
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill assesses whether a trained structure-prediction model maintains accuracy when applied to molecules outside its training scope, specifically testing generalization across molecular size regimes. It quantifies performance degradation and failure modes when the model encounters out-of-scope inputs, establishing empirical boundaries on model applicability.

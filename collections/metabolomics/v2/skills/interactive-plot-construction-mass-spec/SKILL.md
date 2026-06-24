@@ -1,6 +1,9 @@
 ---
 name: interactive-plot-construction-mass-spec
-description: Use when after LC-MS data has been converted to mzML format and processed through peak detection (e.g., MS-DIAL output) to yield a feature table with internal standard identifications, retention times, m/z values, and intensity measurements across multiple samples.
+description: Use when after LC-MS data has been converted to mzML format and processed
+  through peak detection (e.g., MS-DIAL output) to yield a feature table with internal
+  standard identifications, retention times, m/z values, and intensity measurements
+  across multiple samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -15,11 +18,13 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS
 evidence_spans:
-- '**Interactive data visualization** of internal standard retention time, _m/z_, and intensity across samples'
+- '**Interactive data visualization** of internal standard retention time, _m/z_,
+  and intensity across samples'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

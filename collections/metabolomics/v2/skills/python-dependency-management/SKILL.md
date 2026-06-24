@@ -1,6 +1,9 @@
 ---
 name: python-dependency-management
-description: Use when when initializing a new Python project environment, reproducing a published analysis, or building documentation that requires external dependencies. Specifically apply this skill when you have a requirements.txt file listing pinned versions and need to ensure all downstream tools (e.
+description: Use when when initializing a new Python project environment, reproducing
+  a published analysis, or building documentation that requires external dependencies.
+  Specifically apply this skill when you have a requirements.txt file listing pinned
+  versions and need to ensure all downstream tools (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3365
@@ -10,6 +13,7 @@ metadata:
   - pip
   - conda
   - Sphinx
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-025-02663-3
   title: DreaMS

@@ -1,6 +1,8 @@
 ---
 name: sensitivity-threshold-stability-assessment
-description: 'Use when you have labeled MS/MS spectra from replicate measurements and need to determine a frequency threshold for denoising that balances competing objectives: retaining true fragment signals while removing noise.'
+description: 'Use when you have labeled MS/MS spectra from replicate measurements
+  and need to determine a frequency threshold for denoising that balances competing
+  objectives: retaining true fragment signals while removing noise.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,13 +20,18 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +55,7 @@ attribution:
 
 # sensitivity-threshold-stability-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill systematically evaluates the stability and robustness of a frequency threshold parameter across a spectrum of values (0.00–1.00 in 0.01 increments) using Pareto front analysis to identify optimal trade-offs between signal retention and noise reduction in tandem mass spectrometry spectra. It combines multi-objective optimization with statistical significance testing to pinpoint threshold values that maximize denoising performance while minimizing signal loss.

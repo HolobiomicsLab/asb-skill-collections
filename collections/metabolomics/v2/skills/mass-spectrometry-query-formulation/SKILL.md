@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-query-formulation
-description: Use when you have a high-resolution LC-MS/MS experiment with a measured [M+H]+ or [M-H]− ion mass and optionally a parent ion fragmentation spectrum (peak list with m/z and intensity pairs), and you seek to generate candidate molecular structures for an unknown metabolite that may not be in.
+description: Use when you have a high-resolution LC-MS/MS experiment with a measured
+  [M+H]+ or [M-H]− ion mass and optionally a parent ion fragmentation spectrum (peak
+  list with m/z and intensity pairs), and you seek to generate candidate molecular
+  structures for an unknown metabolite that may not be in.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +15,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

@@ -1,6 +1,8 @@
 ---
 name: training-metric-monitoring-torchmetrics
-description: Use when during supervised model training loops when you need to log loss and validation metrics at each epoch to assess whether the model is learning properly and to determine when to stop training.
+description: Use when during supervised model training loops when you need to log
+  loss and validation metrics at each epoch to assess whether the model is learning
+  properly and to determine when to stop training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,6 +21,7 @@ metadata:
   - torch-cluster
   - PyTorch
   - PyG (PyTorch Geometric)
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
@@ -52,6 +55,7 @@ attribution:
 
 # training-metric-monitoring-torchmetrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Monitor and track model training performance metrics (loss, validation accuracy) in real time during PyTorch training using TorchMetrics. This skill is essential for detecting convergence, overfitting, and training stability in graph neural network models like ABCoRT.

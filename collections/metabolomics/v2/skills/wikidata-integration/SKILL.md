@@ -1,6 +1,9 @@
 ---
 name: wikidata-integration
-description: Use when when building or maintaining a local natural-product reference database that requires current Wikidata entries, or when preparing metadata for mass-spectrometry queries that need enriched compound annotations (e.g., alternative names, chemical classifications, source organisms).
+description: Use when when building or maintaining a local natural-product reference
+  database that requires current Wikidata entries, or when preparing metadata for
+  mass-spectrometry queries that need enriched compound annotations (e.g., alternative
+  names, chemical classifications, source organisms).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -11,6 +14,7 @@ metadata:
   - prepare_wikidata_lotus_prefect.py
   - jobs.py
   - metadata_cleanup_prefect.py
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

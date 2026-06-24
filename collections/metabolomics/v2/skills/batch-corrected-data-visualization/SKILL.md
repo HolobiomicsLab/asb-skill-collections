@@ -1,6 +1,9 @@
 ---
 name: batch-corrected-data-visualization
-description: Use when after doAnalysis() has been completed and batch correction applied (ratio_corrected assay populated), use this skill when you need to inspect the effect of batch correction on QC sample clustering, verify that study samples group appropriately by type or aliquot, or identify remaining.
+description: Use when after doAnalysis() has been completed and batch correction applied
+  (ratio_corrected assay populated), use this skill when you need to inspect the effect
+  of batch correction on QC sample clustering, verify that study samples group appropriately
+  by type or aliquot, or identify remaining.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -12,6 +15,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -20,8 +24,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # batch-corrected-data-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate publication-ready plots and interactive visualizations of batch-corrected metabolomics data to inspect data quality, compound distributions, and sample clustering. This skill transforms post-analysis SummarizedExperiment objects into diagnostic plots and dimensionality reduction views that reveal batch effects, outlier patterns, and compound reliability.

@@ -1,6 +1,8 @@
 ---
 name: eigenmetabolite-direction-of-effect-validation
-description: Use when after computing module significance (MS) statistics for metabolic modules against a sample grouping factor (e.g., tumor vs. normal), and detecting a statistically significant module association (p < 0.05).
+description: Use when after computing module significance (MS) statistics for metabolic
+  modules against a sample grouping factor (e.g., tumor vs. normal), and detecting
+  a statistically significant module association (p < 0.05).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - R
   - WGCNA
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -23,7 +26,8 @@ evidence_spans:
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +52,7 @@ attribution:
 
 # Eigenmetabolite Direction-of-Effect Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates the biological directionality of metabolic module associations by verifying that module eigenmetabolite values and constituent metabolite abundances show concordant directional effects (e.g., higher in normal vs. tumor samples). This confirms that module significance associations reflect genuine metabolic shifts rather than statistical artifacts.

@@ -1,6 +1,8 @@
 ---
 name: missing-data-handling-in-metabolite-datasets
-description: Use when when importing metabolomics datasets with multiple studies into amanida_read for quantitative or qualitative meta-analysis, and some studies report missing values for p-values, fold-changes, sample sizes, or other effect size metrics.
+description: Use when when importing metabolomics datasets with multiple studies into
+  amanida_read for quantitative or qualitative meta-analysis, and some studies report
+  missing values for p-values, fold-changes, sample sizes, or other effect size metrics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,14 +12,17 @@ metadata:
   tools:
   - R
   - amanida
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # missing-data-handling-in-metabolite-datasets
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A strategy for handling missing values in metabolomics datasets during import and meta-analysis preparation. Missing data is ignored during the amanida_read import step, allowing incomplete compound records to be retained without imputation, which is appropriate when metabolomics studies report sparse or incomplete effect size information across multiple studies.

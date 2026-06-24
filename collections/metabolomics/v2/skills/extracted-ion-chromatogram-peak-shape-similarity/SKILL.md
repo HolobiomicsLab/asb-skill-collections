@@ -1,6 +1,8 @@
 ---
 name: extracted-ion-chromatogram-peak-shape-similarity
-description: Use when after features have been grouped by retention time similarity and abundance correlation across samples, but before downstream annotation or compound identification.
+description: Use when after features have been grouped by retention time similarity
+  and abundance correlation across samples, but before downstream annotation or compound
+  identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,11 +15,13 @@ metadata:
   - MSnbase
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

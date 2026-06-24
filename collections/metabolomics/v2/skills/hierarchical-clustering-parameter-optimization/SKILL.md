@@ -1,6 +1,9 @@
 ---
 name: hierarchical-clustering-parameter-optimization
-description: Use when after peak detection in GC-IMS preprocessing, when you need to group peaks across multiple samples and must decide whether euclidean distance is appropriate for your drift time and retention time coordinate space, and when you need to validate that your chosen dt_cluster_spread_ms and.
+description: Use when after peak detection in GC-IMS preprocessing, when you need
+  to group peaks across multiple samples and must decide whether euclidean distance
+  is appropriate for your drift time and retention time coordinate space, and when
+  you need to validate that your chosen dt_cluster_spread_ms and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +16,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +45,7 @@ attribution:
 
 # hierarchical-clustering-parameter-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize hierarchical clustering parameters (euclidean distance metric, drift time and retention time spread thresholds) to assign detected GC-IMS peaks to reproducible clusters across samples. This skill determines the correct distance metric and spread tolerances needed to group peaks with similar chromatographic and ion mobility properties.

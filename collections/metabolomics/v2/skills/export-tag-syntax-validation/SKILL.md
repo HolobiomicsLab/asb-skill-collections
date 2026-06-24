@@ -1,6 +1,9 @@
 ---
 name: export-tag-syntax-validation
-description: Use when you have a tabular file (CSV or Excel) that has been manually or semi-automatically tagged with export tags, and you need to verify tag correctness before running the extract command to convert the tagged table into intermediate JSON.
+description: Use when you have a tabular file (CSV or Excel) that has been manually
+  or semi-automatically tagged with export tags, and you need to verify tag correctness
+  before running the extract command to convert the tagged table into intermediate
+  JSON.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -42,6 +46,7 @@ attribution:
 
 # export-tag-syntax-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that tagged column headers in tabular export files conform to MESSES tag syntax (formats like #<table_name>.id and #.<field_name>) before attempting JSON conversion. This ensures malformed or inconsistent tags are caught early, preventing downstream JSON structure corruption.

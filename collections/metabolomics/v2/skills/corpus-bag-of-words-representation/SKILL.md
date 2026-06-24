@@ -1,6 +1,7 @@
 ---
 name: corpus-bag-of-words-representation
-description: Use when when you have raw LC-MS/MS data in MGF format and need to prepare it for unsupervised topic modeling of metabolomics fragmentation patterns.
+description: Use when when you have raw LC-MS/MS data in MGF format and need to prepare
+  it for unsupervised topic modeling of metabolomics fragmentation patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +14,7 @@ metadata:
   - run_gensim.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

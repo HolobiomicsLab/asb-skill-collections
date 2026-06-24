@@ -1,6 +1,9 @@
 ---
 name: bgc-mf-link-scoring-standardisation
-description: Use when you have computed raw strain correlation scores and IOKR scores for the same set of GCF–MF (gene cluster family–molecular feature) pairs, and you want to compare or combine them fairly without one score dominating due to scale differences.
+description: Use when you have computed raw strain correlation scores and IOKR scores
+  for the same set of GCF–MF (gene cluster family–molecular feature) pairs, and you
+  want to compare or combine them fairly without one score dominating due to scale
+  differences.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -14,13 +17,15 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -50,6 +55,7 @@ attribution:
 
 # BGC–MF Link Scoring Standardisation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardise raw strain correlation and IOKR scores for genomic-metabolomic (BGC–MF) links to enable fair comparison across heterogeneous scoring functions and improve enrichment of validated links. This skill transforms incomparable raw scores into z-score equivalents using hypergeometric null distributions, making it possible to combine them into a single ranking function.

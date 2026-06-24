@@ -1,6 +1,8 @@
 ---
 name: separation-metric-normalization
-description: Use when you have extracted retention times from top MS1 features across an LC-MS run and need a single, comparable metric to evaluate how effectively a gradient spreads compounds across the chromatographic window.
+description: Use when you have extracted retention times from top MS1 features across
+  an LC-MS run and need a single, comparable metric to evaluate how effectively a
+  gradient spreads compounds across the chromatographic window.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -15,6 +17,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
@@ -48,6 +51,7 @@ attribution:
 
 # separation-metric-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts a series of retention times from LC-MS data into a normalized quantitative separation efficiency score (0–1) that encodes compound-separation performance at omics scale. This skill enables standardized comparison of gradient performance across different experiments and chemical spaces.

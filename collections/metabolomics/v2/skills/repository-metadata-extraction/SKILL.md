@@ -1,6 +1,9 @@
 ---
 name: repository-metadata-extraction
-description: Use when when you need to inventory a collection of related web applications or tools distributed across multiple repositories, discover their live deployment URLs, trace their associated publications, and verify accessibility and metadata completeness.
+description: Use when when you need to inventory a collection of related web applications
+  or tools distributed across multiple repositories, discover their live deployment
+  URLs, trace their associated publications, and verify accessibility and metadata
+  completeness.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,6 +19,7 @@ metadata:
   - metadataMASST
   - GNPS_MASST
   - microbe_masst
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst
@@ -51,6 +55,7 @@ attribution:
 
 # repository-metadata-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate domain-specific tool URLs, associated publications, and metadata from repository README files and source code repositories. This skill systematically discovers live web application endpoints, peer-reviewed or preprint publication links, and taxonomic/data coverage information from structured repository documentation.

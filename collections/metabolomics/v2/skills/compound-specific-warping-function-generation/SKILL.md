@@ -1,6 +1,9 @@
 ---
 name: compound-specific-warping-function-generation
-description: Use when xCMS alignment produces suspected misaligned feature groups across hundreds of samples or long acquisition runs (>1 week), particularly when global XCMS warping functions fail to account for compound-specific or sample-neighborhood retention-time drift structures.
+description: Use when xCMS alignment produces suspected misaligned feature groups
+  across hundreds of samples or long acquisition runs (>1 week), particularly when
+  global XCMS warping functions fail to account for compound-specific or sample-neighborhood
+  retention-time drift structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,15 +18,19 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
-- This algorithm is improved from graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW)
-- graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based alignment method
+- This algorithm is improved from graphical time warping (GTW) [@gtw16], a popular
+  dynamic time warping (DTW)
+- graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based
+  alignment method
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # compound-specific-warping-function-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill detects and corrects misaligned LC-MS features produced by XCMS by generating individualized, compound-specific retention-time warping functions using neighbor-wise graphical time warping (ncGTW). It replaces global XCMS warping coefficients with RT-drift-aware, sample-neighbor-constrained warping functions to improve downstream peak grouping and filling accuracy.

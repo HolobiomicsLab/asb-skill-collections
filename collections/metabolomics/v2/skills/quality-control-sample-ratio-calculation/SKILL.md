@@ -1,6 +1,8 @@
 ---
 name: quality-control-sample-ratio-calculation
-description: Use when you have preprocessed metabolomics data stored in a SummarizedExperiment object containing QC sample measurements, assigned internal standards for compounds, and evidence of batch effects.
+description: Use when you have preprocessed metabolomics data stored in a SummarizedExperiment
+  object containing QC sample measurements, assigned internal standards for compounds,
+  and evidence of batch effects.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - SummarizedExperiment
   - mzQualityDashboard
   - xcms
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -21,8 +24,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # quality-control-sample-ratio-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate Relative Standard Deviation (RSD) of batch-corrected compound-to-internal-standard ratios in QC samples to identify and remove outlier QC measurements and to guide internal standard selection. This skill is essential for detecting systematic quality issues and recommending the most stable internal standard for each compound in metabolomics studies.

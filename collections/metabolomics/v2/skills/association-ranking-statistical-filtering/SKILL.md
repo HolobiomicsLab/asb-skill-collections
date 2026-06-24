@@ -1,6 +1,8 @@
 ---
 name: association-ranking-statistical-filtering
-description: Use when you have identified co-occurring metabolite–genomic variant associations from a network-driven over-representation analysis and need to rank them by confidence and control the family-wise error rate.
+description: Use when you have identified co-occurring metabolite–genomic variant
+  associations from a network-driven over-representation analysis and need to rank
+  them by confidence and control the family-wise error rate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,6 +15,7 @@ metadata:
   - metGWAS 1.0
   - qvalue R package
   - Benjamini–Hochberg correction
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad523/7248906
   title: metGWAS 1.0
@@ -41,6 +44,7 @@ attribution:
 
 # association-ranking-statistical-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and rank molecular associations (metabolite–variant pairs) by statistical significance, then adjust p-values for multiple testing to control false discovery rate. This skill bridges independent metabolomic and GWAS datasets by identifying robust cross-study associations that survive stringent correction.

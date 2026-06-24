@@ -1,6 +1,8 @@
 ---
 name: instrumental-noise-spike-identification
-description: Use when you have raw LA-ICP-MS image data (line-by-line, spot-wise, or ablation-time-aligned) that exhibits isolated high-intensity or low-intensity pixels inconsistent with neighboring pixels.
+description: Use when you have raw LA-ICP-MS image data (line-by-line, spot-wise,
+  or ablation-time-aligned) that exhibits isolated high-intensity or low-intensity
+  pixels inconsistent with neighboring pixels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -10,13 +12,15 @@ metadata:
   - pewpew
   - pewlib
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 - python library [pewlib]
@@ -45,6 +49,7 @@ attribution:
 
 # Instrumental Noise Spike Identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and flag outlier pixels in LA-ICP-MS image data that deviate anomalously from their local neighborhood, using rolling statistical comparisons (median or mean) to distinguish instrumental noise spikes from true signal. This skill is essential for preprocessing ablation image data before quantitative analysis.

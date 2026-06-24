@@ -1,6 +1,9 @@
 ---
 name: empirical-compound-annotation-and-representation
-description: Use when you have a tab-delimited feature table (m/z, retention time, intensities) from LC-MS preprocessing and need to group related ions (isotopologues, adducts, in-source fragments) into compound-level annotations with inferred neutral mass.
+description: Use when you have a tab-delimited feature table (m/z, retention time,
+  intensities) from LC-MS preprocessing and need to group related ions (isotopologues,
+  adducts, in-source fragments) into compound-level annotations with inferred neutral
+  mass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -17,6 +20,7 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -49,6 +53,7 @@ attribution:
 
 # empirical-compound-annotation-and-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate degenerate ions in LC-MS feature tables as structured empirical compounds by identifying isotope and adduct relationships, inferring neutral mass via linear regression, and representing them as optimized tree structures. This skill applies to regular LC-MS metabolomics and enables analysis of isotope tracing and chemical labeling experiments.

@@ -1,6 +1,9 @@
 ---
 name: chromatographic-data-structure-abstraction
-description: Use when when ingesting raw mass spectrometry data from multiple instrument vendors or file formats into a metabolomics processing pipeline, and you need to expose spectral and chromatographic metadata through a single, consistent interface regardless of the source format's internal structure.
+description: Use when when ingesting raw mass spectrometry data from multiple instrument
+  vendors or file formats into a metabolomics processing pipeline, and you need to
+  expose spectral and chromatographic metadata through a single, consistent interface
+  regardless of the source format's internal structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +16,7 @@ metadata:
   - bmxp (Chroma module)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

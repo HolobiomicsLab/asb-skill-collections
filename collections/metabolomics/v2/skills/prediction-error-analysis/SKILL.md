@@ -1,6 +1,7 @@
 ---
 name: prediction-error-analysis
-description: Use when when you have trained multiple machine learning regressors on the same prediction task (e.
+description: Use when when you have trained multiple machine learning regressors on
+  the same prediction task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -10,11 +11,13 @@ metadata:
   tools:
   - alvaDesc
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +41,7 @@ attribution:
 
 # prediction-error-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Comparative evaluation of machine learning model predictions by computing prediction errors (mean absolute error, median absolute error) across different feature sets or model configurations on a held-out test set. This skill enables quantitative assessment of whether different molecular representations (descriptors, fingerprints, or combinations) produce meaningfully different retention time prediction accuracy.

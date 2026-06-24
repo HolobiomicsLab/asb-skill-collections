@@ -1,6 +1,8 @@
 ---
 name: duplicate-spectrum-detection-removal
-description: Use when you have a large collection of MS/MS spectra with harmonized metadata and suspect that spectra for the same compound or adduct acquired under similar conditions may be duplicated or near-identical.
+description: Use when you have a large collection of MS/MS spectra with harmonized
+  metadata and suspect that spectra for the same compound or adduct acquired under
+  similar conditions may be duplicated or near-identical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -14,6 +16,7 @@ metadata:
   - spectraverse-analysis
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse

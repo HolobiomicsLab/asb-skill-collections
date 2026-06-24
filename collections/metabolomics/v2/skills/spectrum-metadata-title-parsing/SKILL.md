@@ -1,6 +1,8 @@
 ---
 name: spectrum-metadata-title-parsing
-description: Use when when you have PSM files from a search engine (e.g., MaxQuant, MSGFPlus, Mascot) and corresponding spectrum files in mzML or MGF format, and the spectrum identifiers in both files use different naming conventions or formats.
+description: Use when when you have PSM files from a search engine (e.g., MaxQuant,
+  MSGFPlus, Mascot) and corresponding spectrum files in mzML or MGF format, and the
+  spectrum identifiers in both files use different naming conventions or formats.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,6 +14,7 @@ metadata:
   - psm_utils
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

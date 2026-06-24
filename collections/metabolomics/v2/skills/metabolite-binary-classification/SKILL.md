@@ -1,6 +1,7 @@
 ---
 name: metabolite-binary-classification
-description: Use when you have a preprocessed metabolomics dataset with a binary outcome variable (e.
+description: Use when you have a preprocessed metabolomics dataset with a binary outcome
+  variable (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,7 @@ metadata:
   - tidyverse
   - VIM
   - MetaboAnalyst
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -21,7 +23,8 @@ derived_from:
   title: ''
 evidence_spans:
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 claims: []
 provenance:
@@ -47,6 +50,7 @@ attribution:
 
 # metabolite-binary-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply logistic regression, random forest, and XGBoost classifiers to binary classification tasks on preprocessed metabolomics data (e.g., covid_data), evaluating performance via cross-validation and extracting feature importance. This skill is essential when the research question requires comparing algorithmic predictive power on metabolite profiles under a specified validation scheme.

@@ -1,6 +1,8 @@
 ---
 name: gnps-workflow-result-processing
-description: Use when when you have run a spectral networking job on GNPS (e.g. ProteoSAFe-METABOLOMICS-SNETS-V2) and need to reuse the network output files locally with MetaMiner or another tool that accepts spectral network input directories.
+description: Use when when you have run a spectral networking job on GNPS (e.g. ProteoSAFe-METABOLOMICS-SNETS-V2)
+  and need to reuse the network output files locally with MetaMiner or another tool
+  that accepts spectral network input directories.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -17,15 +19,22 @@ metadata:
   - ProteoWizard (msconvert)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- Spectral network can be easily run through GNPS. Detailed instructions can be found in the [GNPS documentation]
-- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- Spectral network can be easily run through GNPS. Detailed instructions can be found
+  in the [GNPS documentation]
+- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib`
+  and `networkx` Python libraries
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +58,7 @@ attribution:
 
 # GNPS workflow result processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate output files from GNPS Spectral Networking / Molecular Networking workflows (e.g. ProteoSAFe-METABOLOMICS-SNETS-V2) to enable downstream metabologenomic analysis. This skill ensures that precomputed spectral network archives are correctly unpacked and integrated into tools like MetaMiner for RiPP identification and visualization.

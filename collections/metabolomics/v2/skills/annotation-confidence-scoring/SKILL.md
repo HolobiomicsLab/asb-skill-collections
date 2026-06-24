@@ -1,6 +1,8 @@
 ---
 name: annotation-confidence-scoring
-description: Use when after recursive annotation propagation has assigned metabolite labels to previously unannotated nodes in a two-layer metabolomic network, and before reporting final annotated metabolite identities.
+description: Use when after recursive annotation propagation has assigned metabolite
+  labels to previously unannotated nodes in a two-layer metabolomic network, and before
+  reporting final annotated metabolite identities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,11 +14,13 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # annotation-confidence-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and score confidence in propagated metabolite annotations by checking consistency with spectral similarity scores and chemical class rules within each network layer. This ensures that recursive annotation propagation produces reliable, layer-specific metabolite labels suitable for downstream metabolomic analysis.

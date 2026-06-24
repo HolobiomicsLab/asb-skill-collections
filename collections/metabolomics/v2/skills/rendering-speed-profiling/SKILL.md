@@ -1,6 +1,8 @@
 ---
 name: rendering-speed-profiling
-description: Use when when you have implemented the same visualization (e.g., chromatogram, spectrum, peakmap, mobilogram) across multiple plotting backends in pyOpenMS-viz and need to determine which backend minimizes rendering latency.
+description: Use when when you have implemented the same visualization (e.g., chromatogram,
+  spectrum, peakmap, mobilogram) across multiple plotting backends in pyOpenMS-viz
+  and need to determine which backend minimizes rendering latency.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,12 +18,14 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 - Multiple backends supported including matplotlib, bokeh, and plotly
@@ -49,6 +53,7 @@ attribution:
 
 # rendering-speed-profiling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure and compare execution times across multiple plotting backends (matplotlib, bokeh, plotly) to identify which backend renders mass spectrometry visualizations fastest for a given data type and scale. This skill enables evidence-based backend selection for interactive vs. static visualization workflows.

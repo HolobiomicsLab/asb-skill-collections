@@ -1,6 +1,9 @@
 ---
 name: xcms-parameter-estimation
-description: Use when you have raw untargeted metabolomics data (at least 3 samples in mzML, mzXML, or CDF format) from qTOF, orbitrap, or Fourier transform ion cyclotron resonance mass analyzers and need to obtain optimized XCMS processing parameters tailored to your specific instrument and dataset rather than.
+description: Use when you have raw untargeted metabolomics data (at least 3 samples
+  in mzML, mzXML, or CDF format) from qTOF, orbitrap, or Fourier transform ion cyclotron
+  resonance mass analyzers and need to obtain optimized XCMS processing parameters
+  tailored to your specific instrument and dataset rather than.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,13 +17,16 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection
 evidence_spans:
 - knitr::rmarkdown
-- AutoTuner is a parameter tuning algorithm for XCMS, MZmine2, and other metabolomics data processing softwares.
-- the estimates may be entered directly into XCMS to processes raw untargeted metabolomics data.
+- AutoTuner is a parameter tuning algorithm for XCMS, MZmine2, and other metabolomics
+  data processing softwares.
+- the estimates may be entered directly into XCMS to processes raw untargeted metabolomics
+  data.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: feature-matrix-normalization
-description: Use when after aggregating Pfam domain hits from HMM scanning into a domain-feature matrix (rows = BGCs, columns = Pfam domains, cells = bit-scores or binary presence), and before computing pairwise distances or clustering BGCs into gene cluster families (GCFs).
+description: Use when after aggregating Pfam domain hits from HMM scanning into a
+  domain-feature matrix (rows = BGCs, columns = Pfam domains, cells = bit-scores or
+  binary presence), and before computing pairwise distances or clustering BGCs into
+  gene cluster families (GCFs).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -10,6 +13,7 @@ metadata:
   tools:
   - pyHMMER
   - BiG-SLiCE
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

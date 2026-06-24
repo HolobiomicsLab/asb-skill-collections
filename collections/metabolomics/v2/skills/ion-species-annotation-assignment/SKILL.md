@@ -1,6 +1,9 @@
 ---
 name: ion-species-annotation-assignment
-description: Use when after temporal correlation has identified feature pairs with matching intensity profiles across time-resolved MS scans, but before final candidate validation. Apply this skill when you need to distinguish between competing ion-species hypotheses (e.
+description: Use when after temporal correlation has identified feature pairs with
+  matching intensity profiles across time-resolved MS scans, but before final candidate
+  validation. Apply this skill when you need to distinguish between competing ion-species
+  hypotheses (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,11 +16,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # Reconstruct the mass-difference open-search step to assign candidate adduct/fragment species
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A refinement step that uses exact mass differences to disambiguate and annotate ion-species relationships identified through temporal correlation in direct-injection mass spectrometry. This skill applies precise mass matching against a reference library of known in-source fragments and adducts to assign chemical identities to feature pairs and quantify mass accuracy.

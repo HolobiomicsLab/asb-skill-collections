@@ -1,6 +1,9 @@
 ---
 name: mass-feature-to-node-mapping
-description: Use when you have an untargeted metabolomics feature table with m/z values, retention times, and intensity measurements, a metabolic network representation with compound nodes and chemical formulas, and you want to infer functional pathway activity directly from features without performing.
+description: Use when you have an untargeted metabolomics feature table with m/z values,
+  retention times, and intensity measurements, a metabolic network representation
+  with compound nodes and chemical formulas, and you want to infer functional pathway
+  activity directly from features without performing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -14,11 +17,13 @@ metadata:
   - JMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
 evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics
+- Mummichog is a Python program for analyzing data from high throughput, untargeted
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # mass-feature-to-node-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map untargeted metabolomics m/z features to metabolic network nodes via mass matching to enable functional activity prediction without explicit metabolite identification. This is the critical bridge step that connects raw mass spectrometry observations to biochemical pathway context.

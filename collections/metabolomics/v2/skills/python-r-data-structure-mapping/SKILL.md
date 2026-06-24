@@ -1,6 +1,9 @@
 ---
 name: python-r-data-structure-mapping
-description: Use when when you have mass spectrometry data in R's Spectra format but need to leverage Python libraries (matchms, spectrum_utils) for specialized operations like spectral similarity scoring, filtering, or normalization that lack native R implementations or perform better in Python.
+description: Use when when you have mass spectrometry data in R's Spectra format but
+  need to leverage Python libraries (matchms, spectrum_utils) for specialized operations
+  like spectral similarity scoring, filtering, or normalization that lack native R
+  implementations or perform better in Python.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3356
@@ -18,14 +21,19 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
-- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R
-- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R. By wrapping Python functionality into R functions
-- allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R. By wrapping Python functionality into R functions
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
+- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy*
+  allows a seamless integration of Python libraries into R
+- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R. By wrapping Python functionality into R functions
+- allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R. By wrapping Python functionality into R functions
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +57,7 @@ attribution:
 
 # Python-R Data Structure Mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert between R Spectra objects and Python mass spectrometry data structures (matchms.Spectrum, spectrum_utils.MsmsSpectrum) to enable seamless execution of Python MS algorithms within R workflows. This skill bridges language barriers by serializing R objects, executing Python routines, and deserializing results back into R-compatible formats.

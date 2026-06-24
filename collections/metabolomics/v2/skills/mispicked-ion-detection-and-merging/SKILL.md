@@ -1,6 +1,7 @@
 ---
 name: mispicked-ion-detection-and-merging
-description: Use when immediately after importing raw LC-MS peak tables (e.g., Progenesis format) and before applying group or replicability filters.
+description: Use when immediately after importing raw LC-MS peak tables (e.g., Progenesis
+  format) and before applying group or replicability filters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +14,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -44,6 +46,7 @@ attribution:
 
 # mispicked-ion-detection-and-merging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and merge isotopic patterns that were incorrectly split during MS1 peak picking, consolidating mispicked ions back into single high-quality features. This step corrects a systematic preprocessing error that inflates feature counts and reduces reproducibility in metabolomics datasets.

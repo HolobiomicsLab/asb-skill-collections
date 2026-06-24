@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-clustering-gc-ims
-description: Use when after peak detection on individual GC-IMS samples, when you need to assign consistent cluster IDs to peaks detected across multiple samples to enable cross-sample comparison and quantification.
+description: Use when after peak detection on individual GC-IMS samples, when you
+  need to assign consistent cluster IDs to peaks detected across multiple samples
+  to enable cross-sample comparison and quantification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +15,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +44,7 @@ attribution:
 
 # spectral-peak-clustering-gc-ims
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster detected gas chromatography–ion mobility spectrometry (GC-IMS) peaks across samples using hierarchical clustering with Euclidean distance in drift time and retention time space. This skill groups peaks with similar spatiotemporal coordinates to produce unified peak identities across replicates.

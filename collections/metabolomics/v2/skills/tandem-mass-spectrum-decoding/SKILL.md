@@ -1,6 +1,9 @@
 ---
 name: tandem-mass-spectrum-decoding
-description: Use when when you have raw predictions from a trained fragment generation or intensity prediction neural network model and need to convert those predictions into a standard spectrum file format (m/z–intensity pairs) for comparison against experimental spectra or for structural elucidation workflows.
+description: Use when when you have raw predictions from a trained fragment generation
+  or intensity prediction neural network model and need to convert those predictions
+  into a standard spectrum file format (m/z–intensity pairs) for comparison against
+  experimental spectra or for structural elucidation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - ms-pred repository
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

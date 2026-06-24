@@ -1,6 +1,8 @@
 ---
 name: format-agnostic-data-ingestion
-description: Use when when you have mass spectrometry data in multiple formats (mzML, mzXML) that must be fed into a compression, analysis, or transformation pipeline that operates on a single canonical spectral data model.
+description: Use when when you have mass spectrometry data in multiple formats (mzML,
+  mzXML) that must be fed into a compression, analysis, or transformation pipeline
+  that operates on a single canonical spectral data model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +15,7 @@ metadata:
   - tinyxml2
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab636/6363791
   title: mspack

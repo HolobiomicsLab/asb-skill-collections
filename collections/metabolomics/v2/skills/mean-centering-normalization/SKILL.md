@@ -1,6 +1,9 @@
 ---
 name: mean-centering-normalization
-description: Use when apply mean-centering when you have a feature intensity table (samples × compounds) from metabolomics analysis and you need to standardize feature intensities by removing the average signal before multivariate analysis (e.g., PCA) or downstream statistical modeling.
+description: Use when apply mean-centering when you have a feature intensity table
+  (samples × compounds) from metabolomics analysis and you need to standardize feature
+  intensities by removing the average signal before multivariate analysis (e.g., PCA)
+  or downstream statistical modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +13,7 @@ metadata:
   tools:
   - R
   - GetFeatistics
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

@@ -1,6 +1,9 @@
 ---
 name: peptide-mass-calculation-average
-description: Use when you have a list of polypeptide sequences (one per line or CSV format) and need to compute average mass (weighted by natural isotope abundances) to compare against experimental LC-MS or MS/MS data where the full isotopic distribution—not just the most abundant peak—is relevant for peptide.
+description: Use when you have a list of polypeptide sequences (one per line or CSV
+  format) and need to compute average mass (weighted by natural isotope abundances)
+  to compare against experimental LC-MS or MS/MS data where the full isotopic distribution—not
+  just the most abundant peak—is relevant for peptide.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0399
@@ -15,6 +18,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -47,6 +51,7 @@ attribution:
 
 # peptide-mass-calculation-average
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate average molecular mass for polypeptide sequences using Pyteomics, complementing monoisotopic mass to characterize the full isotopic envelope of peptides. This is essential for relating theoretical peptide properties to experimental mass spectrometry observations where natural isotope abundances affect observed m/z.

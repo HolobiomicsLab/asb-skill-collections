@@ -1,6 +1,8 @@
 ---
 name: molecular-transformation-frequency-filtering
-description: Use when after clustering pairwise mass differences into transformation groups from FT-ICR MS formula-assigned datasets, apply this skill when you have a catalog of transformation pairs (e.
+description: Use when after clustering pairwise mass differences into transformation
+  groups from FT-ICR MS formula-assigned datasets, apply this skill when you have
+  a catalog of transformation pairs (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,11 +13,13 @@ metadata:
   - MoleTrans
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans
 evidence_spans:
-- MoleTrans is a webtool for post analysis and data mining on the formula assigned datasets from FT-ICR MS
+- MoleTrans is a webtool for post analysis and data mining on the formula assigned
+  datasets from FT-ICR MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

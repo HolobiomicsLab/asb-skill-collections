@@ -1,6 +1,9 @@
 ---
 name: lc-ms-data-calibration
-description: Use when when you have paired LC-MS measurements from labeled and unlabeled samples of the same analytes, and you need to isolate the true isotopic labeling contribution by removing confounding signal from naturally occurring isotopes and tracer isotopic impurity.
+description: Use when when you have paired LC-MS measurements from labeled and unlabeled
+  samples of the same analytes, and you need to isolate the true isotopic labeling
+  contribution by removing confounding signal from naturally occurring isotopes and
+  tracer isotopic impurity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +14,7 @@ metadata:
   - ElemCor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

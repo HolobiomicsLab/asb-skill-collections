@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-peak-enumeration
-description: Use when you have preprocessed MSI data (peaks already binned and normalized) and need to detect adduct formation patterns across the dataset.
+description: Use when you have preprocessed MSI data (peaks already binned and normalized)
+  and need to detect adduct formation patterns across the dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,13 +15,16 @@ metadata:
   - msimat()
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -45,6 +49,7 @@ attribution:
 
 # mass-spectrometry-peak-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically enumerate all pairwise mass differences from a mass spectrometry imaging (MSI) dataset to identify potential molecular adducts. This skill transforms a raw MSI intensity matrix into a ranked catalog of mass-difference patterns, enabling discovery of salt, matrix, and metabolite adducts that may otherwise remain hidden in complex datasets.

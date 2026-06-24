@@ -1,6 +1,7 @@
 ---
 name: structured-logging-and-metric-extraction
-description: Use when when executing a multi-converter annotation workflow on mass spectra metadata (.
+description: Use when when executing a multi-converter annotation workflow on mass
+  spectra metadata (.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -17,6 +18,7 @@ metadata:
   - ConverterBuilder
   - Logger component
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

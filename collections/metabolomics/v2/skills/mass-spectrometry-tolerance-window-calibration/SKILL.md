@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-tolerance-window-calibration
-description: Use when after feature extraction from raw LC-MS or GC-MS data (using XCMS, MS-Dial, or similar), when you have a feature intensity table with m/z and RT metadata and a reference compound database (known molecules list with m/z, RT, and annotation metadata), and you need to assign confidence-ranked.
+description: Use when after feature extraction from raw LC-MS or GC-MS data (using
+  XCMS, MS-Dial, or similar), when you have a feature intensity table with m/z and
+  RT metadata and a reference compound database (known molecules list with m/z, RT,
+  and annotation metadata), and you need to assign confidence-ranked.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

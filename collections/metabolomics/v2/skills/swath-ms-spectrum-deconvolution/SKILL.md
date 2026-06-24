@@ -1,6 +1,7 @@
 ---
 name: swath-ms-spectrum-deconvolution
-description: Use when you have SWATH-MS raw data (mzML or vendor format) from an untargeted metabolomics experiment and need to identify metabolites.
+description: Use when you have SWATH-MS raw data (mzML or vendor format) from an untargeted
+  metabolomics experiment and need to identify metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,6 +12,7 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA
@@ -39,6 +41,7 @@ attribution:
 
 # swath-ms-spectrum-deconvolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deconvolutes overlapping MS/MS spectra from SWATH-MS (Sequential Window Acquisition of All Theoretical Mass Spectra) data to recover individual component spectra for each precursor ion, enabling accurate metabolite identification in untargeted metabolomics. This skill resolves the fundamental challenge that SWATH-MS acquires multiplexed spectra across broad isolation windows, making direct spectral matching impossible.

@@ -1,6 +1,9 @@
 ---
 name: ms-dial-version-compatibility
-description: Use when you are preparing to run LipoCLEAN on MS-DIAL output and need to create or update a configuration file, or you have switched between MS-DIAL 4 and MS-DIAL 5 data and need to verify that your options file and trained model are compatible with the current version's column naming and scaling.
+description: Use when you are preparing to run LipoCLEAN on MS-DIAL output and need
+  to create or update a configuration file, or you have switched between MS-DIAL 4
+  and MS-DIAL 5 data and need to verify that your options file and trained model are
+  compatible with the current version's column naming and scaling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - MS-DIAL
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -40,6 +44,7 @@ attribution:
 
 # Generate and validate MS-DIAL version-specific configuration files
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate default TOML-formatted options files for MS-DIAL 4 or MS-DIAL 5 via the LipoCLEAN `--print` argument, then validate that the configuration matches the target MS-DIAL version's column schema and scaling conventions before running lipid quality filtering. This skill ensures model and configuration compatibility, since models trained on one MS-DIAL version will not work with the other.

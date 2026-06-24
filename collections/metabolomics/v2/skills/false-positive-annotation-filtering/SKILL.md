@@ -1,6 +1,9 @@
 ---
 name: false-positive-annotation-filtering
-description: Use when after high-scoring spectral library matching (e.g., EQ module output) of LC-MS/MS data yields candidate lipid annotations; when spectral similarity alone produces false positives and you have computed relative retention time intervals across species cohorts;
+description: Use when after high-scoring spectral library matching (e.g., EQ module
+  output) of LC-MS/MS data yields candidate lipid annotations; when spectral similarity
+  alone produces false positives and you have computed relative retention time intervals
+  across species cohorts;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,12 +17,15 @@ metadata:
   - LipidIN LCI module
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

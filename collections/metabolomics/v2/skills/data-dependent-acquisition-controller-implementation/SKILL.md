@@ -15,6 +15,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -47,6 +48,7 @@ attribution:
 
 # data-dependent-acquisition-controller-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement and configure a data-dependent acquisition (DDA) controller within the ViMMS simulation framework to prototype and evaluate MS/MS fragmentation strategies before testing on real mass spectrometry hardware. This skill enables rapid iteration of acquisition logic (e.g., TopN, WeightedDEW) with controlled parameters and comparative evaluation via mzML output and EvaluationData metrics.

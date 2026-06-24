@@ -1,6 +1,9 @@
 ---
 name: machine-learning-model-evaluation
-description: Use when you have a trained NeatMS neural network model and a labelled validation dataset of MS1 peaks (annotated as 'High_quality' or 'Low_quality'), and you need to identify the scalar probability threshold that separates true positive from false positive peak classifications in your specific.
+description: Use when you have a trained NeatMS neural network model and a labelled
+  validation dataset of MS1 peaks (annotated as 'High_quality' or 'Low_quality'),
+  and you need to identify the scalar probability threshold that separates true positive
+  from false positive peak classifications in your specific.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,11 +20,13 @@ metadata:
   - Keras
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -50,6 +55,7 @@ attribution:
 
 # machine-learning-model-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine the optimal classification threshold for a trained neural network model by computing true and false positive rates across probability thresholds and selecting the threshold that maximizes the difference between true positives and false positives. This skill is essential for validating model performance on labelled peak datasets and ensuring the model generalizes beyond training data.

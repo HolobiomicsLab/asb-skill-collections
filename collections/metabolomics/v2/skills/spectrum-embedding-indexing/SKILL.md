@@ -1,6 +1,8 @@
 ---
 name: spectrum-embedding-indexing
-description: Use when you have pre-computed Word2vec embeddings of mass spectra and need to retrieve the k most similar spectra from a library of hundreds of thousands to millions of candidates.
+description: Use when you have pre-computed Word2vec embeddings of mass spectra and
+  need to retrieve the k most similar spectra from a library of hundreds of thousands
+  to millions of candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +17,7 @@ metadata:
   - rdkit
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

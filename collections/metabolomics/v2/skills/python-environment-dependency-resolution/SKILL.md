@@ -1,6 +1,8 @@
 ---
 name: python-environment-dependency-resolution
-description: Use when when you have cloned a Python project repository and need to set up a working environment with all required packages, or when requirements.txt exists but dependencies are not yet installed in your current Python environment.
+description: Use when when you have cloned a Python project repository and need to
+  set up a working environment with all required packages, or when requirements.txt
+  exists but dependencies are not yet installed in your current Python environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -9,6 +11,7 @@ metadata:
   tools:
   - pip
   - conda
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-025-02663-3
   title: DreaMS

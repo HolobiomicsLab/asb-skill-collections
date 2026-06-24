@@ -1,6 +1,9 @@
 ---
 name: changelog-maintenance-and-documentation
-description: Use when you have added or modified user-facing parameters to a model class (such as L1/L2 regularization in SiameseModel), written unit tests to verify the new functionality, and need to communicate these changes to users and maintain a historical record.
+description: Use when you have added or modified user-facing parameters to a model
+  class (such as L1/L2 regularization in SiameseModel), written unit tests to verify
+  the new functionality, and need to communicate these changes to users and maintain
+  a historical record.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,11 +17,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 - use the search functionality [here](https://github.com/matchms/ms2deepscore/issues)
 claims: []
 provenance:

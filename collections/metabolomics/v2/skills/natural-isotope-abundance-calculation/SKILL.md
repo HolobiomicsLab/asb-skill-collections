@@ -1,6 +1,9 @@
 ---
 name: natural-isotope-abundance-calculation
-description: Use when when processing mass spectrometry imaging (MSI) data in positive ion mode where both [M+H]+ and [M+Na]+ adducts are present for the same lipid species, and you observe intensity overlap in [M+H]+ ion images caused by the isotopic fine structure of [M+Na]+ adducts.
+description: Use when when processing mass spectrometry imaging (MSI) data in positive
+  ion mode where both [M+H]+ and [M+Na]+ adducts are present for the same lipid species,
+  and you observe intensity overlap in [M+H]+ ion images caused by the isotopic fine
+  structure of [M+Na]+ adducts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,12 +15,14 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # natural-isotope-abundance-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the fractional contribution of sodium adducts ([M+Na]+) to protonated ions ([M+H]+) based on natural isotope abundance ratios, used to correct for isotopic overlap in mass spectrometry imaging. This calculation is the quantitative foundation for Type II isotopic correction in lipidomics.

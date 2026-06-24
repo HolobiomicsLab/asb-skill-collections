@@ -1,6 +1,9 @@
 ---
 name: natural-product-structure-encoding
-description: Use when you have natural product molecules in SMILES, InChI, or SDF format and need to convert them into fixed-length numerical feature vectors for downstream machine learning tasks (e.g., biosynthetic class prediction, molecular similarity analysis, or chemical space exploration).
+description: Use when you have natural product molecules in SMILES, InChI, or SDF
+  format and need to convert them into fixed-length numerical feature vectors for
+  downstream machine learning tasks (e.g., biosynthetic class prediction, molecular
+  similarity analysis, or chemical space exploration).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -12,6 +15,7 @@ metadata:
   - biosynfoni
   - RDKit
   - black
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

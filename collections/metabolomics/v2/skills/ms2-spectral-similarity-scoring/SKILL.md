@@ -1,6 +1,8 @@
 ---
 name: ms2-spectral-similarity-scoring
-description: Use when after temporal intensity profile correlation and exact mass difference refinement have identified candidate ion-species pairs in direct-injection plasma ionization MS data (e.g., DBDI-MS, DBDI-FT-ICR-MS).
+description: Use when after temporal intensity profile correlation and exact mass
+  difference refinement have identified candidate ion-species pairs in direct-injection
+  plasma ionization MS data (e.g., DBDI-MS, DBDI-FT-ICR-MS).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +15,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # MS2 spectral similarity scoring for ion-pair confirmation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute cosine similarity or related spectral matching scores between MS2 fragment ion profiles to confirm that candidate ion-species pairs originate from the same analyte compound. This is the final refinement step in a three-stage DBDIpy identification pipeline following temporal correlation and exact mass difference analysis.

@@ -1,6 +1,8 @@
 ---
 name: msimagingarray-object-manipulation
-description: Use when when you have loaded mass spectrometry imaging data into a MSImagingArrays object in Cardinal 3.6 and need to explore the effects of multiple preprocessing steps (e.
+description: Use when when you have loaded mass spectrometry imaging data into a MSImagingArrays
+  object in Cardinal 3.6 and need to explore the effects of multiple preprocessing
+  steps (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -16,12 +18,14 @@ metadata:
   - matter 2.4 / 2.6
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 claims: []

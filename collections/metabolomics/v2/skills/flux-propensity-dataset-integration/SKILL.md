@@ -1,6 +1,9 @@
 ---
 name: flux-propensity-dataset-integration
-description: Use when when you have (1) LC-MS normalized intracellular metabolite abundance data across multiple cell lines or samples, (2) a constraint-based metabolic model with stoichiometric coefficients, and (3) a need to quantify metabolic control through substrate availability independently of enzymatic.
+description: Use when when you have (1) LC-MS normalized intracellular metabolite
+  abundance data across multiple cell lines or samples, (2) a constraint-based metabolic
+  model with stoichiometric coefficients, and (3) a need to quantify metabolic control
+  through substrate availability independently of enzymatic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,11 +17,13 @@ metadata:
   - 'INTEGRATE pipeline (Step 10: concordanceAnalysis.py)'
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # Reconstruct the RPS computation from intracellular metabolomics via the mass action law
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes Reaction Propensity Scores (RPS) from LC-MS intracellular metabolite abundances using the mass action law, expressing each reaction's propensity as the product of substrate concentrations raised to their stoichiometric coefficients. This dataset enables downstream concordance analysis between metabolomic regulation (RPS), transcriptomic regulation (RAS), and constraint-based flux predictions (FFD).

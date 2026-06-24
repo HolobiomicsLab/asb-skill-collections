@@ -1,6 +1,8 @@
 ---
 name: latent-dirichlet-allocation-model-training
-description: Use when when you have preprocessed MS/MS spectral data (filtered, noise-reduced, with neutral losses extracted) and need to discover recurring fragmentation patterns across a spectral dataset.
+description: Use when when you have preprocessed MS/MS spectral data (filtered, noise-reduced,
+  with neutral losses extracted) and need to discover recurring fragmentation patterns
+  across a spectral dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -15,13 +17,16 @@ metadata:
   - Conda
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - ms2lda_runfull.py
-- MS2LDA uses **Latent Dirichlet Allocation (LDA)** to infer which motifs are most likely to explain the observed fragmentation patterns.
+- MS2LDA uses **Latent Dirichlet Allocation (LDA)** to infer which motifs are most
+  likely to explain the observed fragmentation patterns.
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - These steps assume you have [Conda](http://conda.io/) installed.

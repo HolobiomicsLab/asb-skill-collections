@@ -1,6 +1,8 @@
 ---
 name: structured-result-validation
-description: Use when after retrieving a JSON or tabular response from a web service endpoint (such as CANOPUS), validate the result before parsing or integrating it into your analysis pipeline.
+description: Use when after retrieving a JSON or tabular response from a web service
+  endpoint (such as CANOPUS), validate the result before parsing or integrating it
+  into your analysis pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - CANOPUS
   - SIRIUS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

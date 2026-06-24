@@ -1,6 +1,8 @@
 ---
 name: django-backend-development
-description: Use when you need to build a web-based data ingestion layer that accepts raw MS files (.raw, .mzML, .mzXML) from users, validates them before storage, and tracks their processing status through a data management pipeline.
+description: Use when you need to build a web-based data ingestion layer that accepts
+  raw MS files (.raw, .mzML, .mzXML) from users, validates them before storage, and
+  tracks their processing status through a data management pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +15,7 @@ metadata:
   - JavaScript
   - HTML
   - Raw File Uploader
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

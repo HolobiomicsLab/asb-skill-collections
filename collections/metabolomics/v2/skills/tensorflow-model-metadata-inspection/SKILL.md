@@ -1,6 +1,9 @@
 ---
 name: tensorflow-model-metadata-inspection
-description: Use when deploying a TensorFlow model through TensorFlow Serving and you need to verify that the exposed model's input layer names ('input_2048' and 'input_4096') and output layer name ('output') match the specifications required by downstream code.
+description: Use when deploying a TensorFlow model through TensorFlow Serving and
+  you need to verify that the exposed model's input layer names ('input_2048' and
+  'input_4096') and output layer name ('output') match the specifications required
+  by downstream code.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +11,7 @@ metadata:
   - TensorFlow Serving
   - Python
   - docker-compose
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

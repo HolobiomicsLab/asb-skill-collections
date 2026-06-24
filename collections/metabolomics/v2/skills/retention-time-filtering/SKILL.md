@@ -1,6 +1,8 @@
 ---
 name: retention-time-filtering
-description: Use when working with GCIMS datasets where retention time spans a wide range (e.g., 0–1500 s) but your analytes of interest are confined to a narrower window (e.g., 0–1100 s).
+description: Use when working with GCIMS datasets where retention time spans a wide
+  range (e.g., 0–1500 s) but your analytes of interest are confined to a narrower
+  window (e.g., 0–1100 s).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,6 +14,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -40,6 +43,7 @@ attribution:
 
 # retention-time-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Restrict Gas Chromatography–Ion Mobility Spectrometry samples to a biologically or analytically relevant retention time window before downstream preprocessing. This reduces noise, memory consumption, and computation time by excluding regions with no informative signal.

@@ -1,6 +1,9 @@
 ---
 name: deep-learning-model-training-and-inference
-description: Use when you have paired tandem MS/MS spectra with known molecular fingerprints, chemical formulae, or SMILES annotations, and you want to learn a generalizable model that can predict molecular properties or annotate unknown spectra by ranking candidates.
+description: Use when you have paired tandem MS/MS spectra with known molecular fingerprints,
+  chemical formulae, or SMILES annotations, and you want to learn a generalizable
+  model that can predict molecular properties or annotate unknown spectra by ranking
+  candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,6 +19,7 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)

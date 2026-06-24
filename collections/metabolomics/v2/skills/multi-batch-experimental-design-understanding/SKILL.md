@@ -1,6 +1,7 @@
 ---
 name: multi-batch-experimental-design-understanding
-description: Use when your metabolomics experiment includes samples acquired across multiple instrument runs, different preparation dates, or distinct sample cohorts.
+description: Use when your metabolomics experiment includes samples acquired across
+  multiple instrument runs, different preparation dates, or distinct sample cohorts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,6 +49,7 @@ attribution:
 
 # multi-batch-experimental-design-understanding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recognize and document batch structure in multi-batch LC-MS metabolomics experiments to enable proper batch effect detection and correction. Understanding batch metadata (acquisition timing, instrument configuration, sample preparation cohorts) is prerequisite to applying batch-aware normalization and validation.

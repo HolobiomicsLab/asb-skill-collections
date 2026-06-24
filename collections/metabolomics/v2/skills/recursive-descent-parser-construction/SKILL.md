@@ -1,6 +1,9 @@
 ---
 name: recursive-descent-parser-construction
-description: Use when you have a formal grammar specification for a domain-specific language (or can extract one from reference implementations) and need to convert user-written query strings into structured, machine-processable representations (ASTs or JSON) that preserve domain-specific semantics—such as mass.
+description: Use when you have a formal grammar specification for a domain-specific
+  language (or can extract one from reference implementations) and need to convert
+  user-written query strings into structured, machine-processable representations
+  (ASTs or JSON) that preserve domain-specific semantics—such as mass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,6 +16,7 @@ metadata:
   - massql Python API
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

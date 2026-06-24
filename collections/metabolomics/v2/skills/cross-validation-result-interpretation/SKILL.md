@@ -1,6 +1,9 @@
 ---
 name: cross-validation-result-interpretation
-description: Use when after running k-fold repeated cross-validation on a development set (via runCrossValidation with parameters k, repNum, and a subset of algorithms) and you need to select which trained classifier and hyperparameter combination to deploy.
+description: Use when after running k-fold repeated cross-validation on a development
+  set (via runCrossValidation with parameters k, repNum, and a subset of algorithms)
+  and you need to select which trained classifier and hyperparameter combination to
+  deploy.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -11,15 +14,19 @@ metadata:
   - MetaClean
   - R
   - caret
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 - MetaClean provides 8 classification algorithms (implemented with the R package caret)
 claims: []
@@ -46,6 +53,7 @@ attribution:
 
 # cross-validation-result-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract optimized hyperparameter values and evaluation metrics from cross-validation output to identify and validate the best-performing machine learning classifier configuration. This skill bridges model training and final classifier deployment by systematically comparing held-out predictions and performance measures across folds and repetitions.

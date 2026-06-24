@@ -1,6 +1,8 @@
 ---
 name: in-silico-fragmentation-prediction
-description: Use when you have candidate metabolite structures (from database lookup or enumeration) and experimental MS/MS spectra (mzML, mzXML format), and need to rank candidates by how well their predicted fragments match observed peaks.
+description: Use when you have candidate metabolite structures (from database lookup
+  or enumeration) and experimental MS/MS spectra (mzML, mzXML format), and need to
+  rank candidates by how well their predicted fragments match observed peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,6 +16,7 @@ metadata:
   - LC-MS
   - ion-mobility-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -42,6 +45,7 @@ attribution:
 
 # in-silico-fragmentation-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict theoretical fragment ion masses and intensities for candidate metabolite structures to enable scoring and ranking of metabolite annotations against experimental tandem MS/MS spectra. This skill bridges chemical structure space with MS/MS data by simulating fragmentation patterns, essential for high-throughput metabolite identification in metabolomics workflows.

@@ -1,6 +1,8 @@
 ---
 name: chemical-metadata-integration
-description: Use when when you have a GNPS molecular network (graphml or cytoscape format) and wish to annotate it with chemical class labels or MS2LDA-derived mass2motifs to highlight shared structural features or chemical families across spectral clusters.
+description: Use when when you have a GNPS molecular network (graphml or cytoscape
+  format) and wish to annotate it with chemical class labels or MS2LDA-derived mass2motifs
+  to highlight shared structural features or chemical families across spectral clusters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

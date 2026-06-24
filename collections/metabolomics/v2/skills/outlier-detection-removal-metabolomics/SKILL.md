@@ -1,6 +1,8 @@
 ---
 name: outlier-detection-removal-metabolomics
-description: Use when after kNN imputation of metabolite measurements but before variance-stabilizing normalization, when you have a MultiAssayExperiment object with potentially problematic samples.
+description: Use when after kNN imputation of metabolite measurements but before variance-stabilizing
+  normalization, when you have a MultiAssayExperiment object with potentially problematic
+  samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +48,7 @@ attribution:
 
 # Outlier Detection and Removal in Metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and removes outlier samples in metabolomic assays using k-means clustering on imputed metabolite data to ensure downstream analysis robustness. This preprocessing step detects samples with anomalous metabolite profiles before normalization, improving the quality of differential metabolomic inferences.

@@ -1,6 +1,8 @@
 ---
 name: class-imbalance-downsampling-ratio-adjustment
-description: Use when after generating cross-spectrum negative examples via precursor m/z windowing and before training a rescore model (e.g., Siamese architecture in FIDDLE v2.0.0).
+description: Use when after generating cross-spectrum negative examples via precursor
+  m/z windowing and before training a rescore model (e.g., Siamese architecture in
+  FIDDLE v2.0.0).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +43,7 @@ attribution:
 
 # class-imbalance-downsampling-ratio-adjustment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Downsample combined positive and negative training examples to enforce a 1:1 class ratio before training a rescore model. This prevents the model from learning a trivial majority-class classifier when negative examples substantially outnumber positives after data augmentation.

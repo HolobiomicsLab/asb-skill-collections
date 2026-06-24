@@ -1,6 +1,7 @@
 ---
 name: converter-architecture-traversal
-description: Use when when you need to understand which chemical identifier conversions are available in MSMetaEnhancer (e.
+description: Use when when you need to understand which chemical identifier conversions
+  are available in MSMetaEnhancer (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,6 +17,7 @@ metadata:
   - PubChem
   - BridgeDb
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

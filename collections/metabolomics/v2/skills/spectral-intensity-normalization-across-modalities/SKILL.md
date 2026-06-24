@@ -1,6 +1,9 @@
 ---
 name: spectral-intensity-normalization-across-modalities
-description: Use when you have raw spectral data from multiple complementary spectroscopic techniques (NMR, HSQC, COSY, IR) that must be combined into joint training records for a multimodal deep learning model, and the raw intensity values or chemical shift ranges differ significantly between modalities due to.
+description: Use when you have raw spectral data from multiple complementary spectroscopic
+  techniques (NMR, HSQC, COSY, IR) that must be combined into joint training records
+  for a multimodal deep learning model, and the raw intensity values or chemical shift
+  ranges differ significantly between modalities due to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - DataGenerationPipeline (MultiModalSpectralTransformer)
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

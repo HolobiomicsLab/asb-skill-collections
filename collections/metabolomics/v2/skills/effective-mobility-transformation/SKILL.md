@@ -1,6 +1,8 @@
 ---
 name: effective-mobility-transformation
-description: Use when you have raw CE-MS data (mzML or netCDF format) with migration time measurements and need to establish a reproducible compound-specific axis that is independent of run-to-run electroosmotic flow fluctuations.
+description: Use when you have raw CE-MS data (mzML or netCDF format) with migration
+  time measurements and need to establish a reproducible compound-specific axis that
+  is independent of run-to-run electroosmotic flow fluctuations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +19,7 @@ metadata:
   - ROMANCE
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -50,6 +53,7 @@ attribution:
 
 # effective-mobility-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform CE-MS migration time data to effective mobility (µeff) scale to account for electroosmotic flow variations and produce highly reproducible peak positions across electrophoretic runs. This is essential for compound identification and quantification in capillary electrophoresis–mass spectrometry when migration times alone are unstable.

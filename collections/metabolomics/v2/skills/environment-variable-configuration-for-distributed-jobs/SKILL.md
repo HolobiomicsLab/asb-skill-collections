@@ -1,6 +1,9 @@
 ---
 name: environment-variable-configuration-for-distributed-jobs
-description: Use when you have a multi-fold cross-validation training workflow that must run as parallel SLURM array jobs, each with its own GPU, and you need to ensure that all jobs can locate the same training data, code repository, container image, and results directory without hardcoded absolute paths or.
+description: Use when you have a multi-fold cross-validation training workflow that
+  must run as parallel SLURM array jobs, each with its own GPU, and you need to ensure
+  that all jobs can locate the same training data, code repository, container image,
+  and results directory without hardcoded absolute paths or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +16,7 @@ metadata:
   - SLURM
   - Singularity
   - Python (train.py)
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

@@ -1,6 +1,9 @@
 ---
 name: spectrum-preprocessing-precursor-masking
-description: Use when when training a formula-prediction model with a frozen pretrained TCN spectrum encoder and unfrozen FormulaEncoder and RescoreHead components, or when you suspect the model may use precursor intensity as a spurious feature rather than fragment-pattern information for molecular formula.
+description: Use when when training a formula-prediction model with a frozen pretrained
+  TCN spectrum encoder and unfrozen FormulaEncoder and RescoreHead components, or
+  when you suspect the model may use precursor intensity as a spurious feature rather
+  than fragment-pattern information for molecular formula.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +44,7 @@ attribution:
 
 # spectrum-preprocessing-precursor-masking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Zero the precursor m/z channel in tandem MS/MS spectra before passing them to a frozen neural encoder to prevent the model from over-relying on the precursor ion intensity as a trivial prediction signal. This preprocessing step is critical in transfer-learning scenarios where the encoder is frozen and only downstream formula-prediction heads are trained.

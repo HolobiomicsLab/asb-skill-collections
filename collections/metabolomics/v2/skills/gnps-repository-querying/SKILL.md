@@ -12,6 +12,7 @@ metadata:
   - GNPS LCMS Visualization Dashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
@@ -41,6 +42,7 @@ attribution:
 
 # GNPS Repository Querying
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve Universal Spectrum Identifiers (USI) to retrieve mass spectrometry data from GNPS analysis tasks, MassIVE datasets, MetaboLights, and other public repositories via the GNPS LCMS Visualization Dashboard. This skill enables programmatic and interactive access to spectrum peak lists and metadata across multiple mass spectrometry data sources.

@@ -1,6 +1,8 @@
 ---
 name: transformation-network-topology-analysis
-description: Use when when you have pre-processed FT-ICR MS peak lists with assigned molecular formulas and wish to move beyond univariate chemical composition analysis to understand metabolic transformation pathways and hub metabolites.
+description: Use when when you have pre-processed FT-ICR MS peak lists with assigned
+  molecular formulas and wish to move beyond univariate chemical composition analysis
+  to understand metabolic transformation pathways and hub metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -17,16 +19,21 @@ metadata:
   - KEGG database
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
-- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies NumPy, pandas
+- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies
+  NumPy, pandas
 - developed in Python 3.8 [38] and R 4.0.2 [39]
-- Networks are then constructed using Cytoscape and colored based on their molecular class
-- Networks are then constructed using Cytoscape [79] and colored based on their molecular class.
+- Networks are then constructed using Cytoscape and colored based on their molecular
+  class
+- Networks are then constructed using Cytoscape [79] and colored based on their molecular
+  class.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +57,7 @@ attribution:
 
 # transformation-network-topology-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and analyze biochemical transformation networks from FT-ICR MS data by identifying mass differences between detected peaks, then compute topological metrics (degree distribution, component count, hub identification) to characterize metabolic connectivity and transformation pathways in complex organic mixtures.

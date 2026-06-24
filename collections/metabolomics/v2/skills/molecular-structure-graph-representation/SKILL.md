@@ -1,6 +1,8 @@
 ---
 name: molecular-structure-graph-representation
-description: Use when when you have a set of chemical structures (SMILES strings or SDF files) that need to be processed for training a graph neural network model on molecular property prediction tasks, specifically when the target property (e.
+description: Use when when you have a set of chemical structures (SMILES strings or
+  SDF files) that need to be processed for training a graph neural network model on
+  molecular property prediction tasks, specifically when the target property (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -23,6 +25,7 @@ metadata:
   - torch-scatter, torch-sparse, torch-cluster
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
@@ -56,6 +59,7 @@ attribution:
 
 # molecular-structure-graph-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert chemical structures into graph neural network–compatible representations using RDKit and PyG for training retention-time prediction models. This skill bridges cheminformatics and deep learning by encoding molecular topology and atom features as graph tensors suitable for PyTorch GNN architectures.

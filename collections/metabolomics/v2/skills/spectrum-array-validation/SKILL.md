@@ -1,6 +1,9 @@
 ---
 name: spectrum-array-validation
-description: Use when after applying any sequence of spectrum preprocessing operations (set_mz_range, remove_precursor_peak, filter_intensity, scale_intensity) to an MsmsSpectrum object, to confirm that the resulting arrays fall within specified m/z windows, intensity bounds, and peak count limits before.
+description: Use when after applying any sequence of spectrum preprocessing operations
+  (set_mz_range, remove_precursor_peak, filter_intensity, scale_intensity) to an MsmsSpectrum
+  object, to confirm that the resulting arrays fall within specified m/z windows,
+  intensity bounds, and peak count limits before.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -12,12 +15,15 @@ metadata:
   - Python (numpy)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - spectrum_utils is a Python package
 - spectrum = sus.MsmsSpectrum.from_usi(usi)
 claims: []
@@ -43,6 +49,7 @@ attribution:
 
 # Spectrum Array Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that mass spectrometry spectrum m/z and intensity arrays conform to expected ranges, data types, and peak count constraints after preprocessing. This skill ensures data integrity and correct application of filtering operations in spectrum_utils workflows.

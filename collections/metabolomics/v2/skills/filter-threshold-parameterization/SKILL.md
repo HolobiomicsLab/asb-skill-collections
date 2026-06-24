@@ -1,6 +1,8 @@
 ---
 name: filter-threshold-parameterization
-description: Use when when expanding a compound set through multi-generation Pickaxe runs, use this skill if you want to retain compounds based on a similarity or property metric (e.
+description: Use when when expanding a compound set through multi-generation Pickaxe
+  runs, use this skill if you want to retain compounds based on a similarity or property
+  metric (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - pytest
   - Python
   - Pickaxe (MINE-Database)
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

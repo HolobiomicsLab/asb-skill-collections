@@ -1,6 +1,9 @@
 ---
 name: metabolite-background-set-construction
-description: Use when when preparing to run Over-representation Analysis (ORA) on metabolomics pathway data, after you have loaded both a metabolomics pathway database (e.g., KEGG, MetExplore) and an experimental detection list (metabolites measured in your study).
+description: Use when when preparing to run Over-representation Analysis (ORA) on
+  metabolomics pathway data, after you have loaded both a metabolomics pathway database
+  (e.g., KEGG, MetExplore) and an experimental detection list (metabolites measured
+  in your study).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +13,7 @@ metadata:
   tools:
   - Python
   - Jupyter
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -37,6 +41,7 @@ attribution:
 
 # metabolite-background-set-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a statistical background set of metabolites for Over-representation Analysis (ORA) in metabolomics by filtering a complete metabolomics pathway database to exclude experimental detection lists and apply method-specific criteria. This background set defines the universe against which pathway enrichment significance is computed.

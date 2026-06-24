@@ -1,6 +1,8 @@
 ---
 name: spectral-library-matching-validation
-description: Use when you have GC-MS data preprocessed into a structured spread format and need to confirm that a set of known or suspected compounds are correctly identified in your samples.
+description: Use when you have GC-MS data preprocessed into a structured spread format
+  and need to confirm that a set of known or suspected compounds are correctly identified
+  in your samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -16,13 +18,17 @@ metadata:
   - ChemmineR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- mzExacto() collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- mzExacto() collects the same information for a set of query chemicals and uses it
+  to precisely search the advanced dictionary for samples that have those chemicals
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # spectral-library-matching-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and extract mass spectrometry compound identifications by searching preprocessed spectral libraries for known query chemicals using retention time, m/z values, and match factor thresholds. This skill ensures that retrieved compound metadata (m/z, RT, match factor, area) meets quality standards before downstream analysis.

@@ -1,6 +1,8 @@
 ---
 name: graph-centrality-analysis
-description: Use when after constructing a network (adjacency matrix, edge list, or correlation network) when you need to identify which nodes are most central to network topology.
+description: Use when after constructing a network (adjacency matrix, edge list, or
+  correlation network) when you need to identify which nodes are most central to network
+  topology.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -12,12 +14,15 @@ metadata:
   - R
   - pcutils
   - igraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 - devtools::install_github("Asa12138/pcutils")
 claims: []
@@ -43,6 +48,7 @@ attribution:
 
 # graph-centrality-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute node-level centrality metrics (degree, betweenness, closeness, eigenvector centrality) from a network object to identify topologically influential nodes. This skill is essential for ranking nodes by their structural importance in network characterization and for prioritizing hub or bridge nodes in multi-omics networks.

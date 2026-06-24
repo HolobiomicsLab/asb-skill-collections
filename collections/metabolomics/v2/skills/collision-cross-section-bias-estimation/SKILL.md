@@ -1,6 +1,9 @@
 ---
 name: collision-cross-section-bias-estimation
-description: Use when when you have IM-MS lipidomics data spiked with U13C labeled lipid internal standards (e.g., fully labeled yeast extract) and want to assess whether measured CCS values deviate systematically from expected values in the DTCCS_N2 reference library.
+description: Use when when you have IM-MS lipidomics data spiked with U13C labeled
+  lipid internal standards (e.g., fully labeled yeast extract) and want to assess
+  whether measured CCS values deviate systematically from expected values in the DTCCS_N2
+  reference library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,12 +18,15 @@ metadata:
   - data.table
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
-- MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
+- MobiLipid aims to streamline lipidomics workflows by offering a fully automated
+  solution for assessing and correcting collision cross section (CCS) bias
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # collision-cross-section-bias-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify systematic bias in measured collision cross section (CCS) values from ion mobility-mass spectrometry by comparing them against a reference DTCCS_N2 library for U13C labeled lipid standards, stratified by lipid class and adduct type. This enables detection and correction of instrument-specific CCS measurement drift without requiring external calibrants beyond vendor specifications.

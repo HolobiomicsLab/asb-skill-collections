@@ -1,6 +1,9 @@
 ---
 name: mzml-xml-deserialization
-description: Use when your input is an mzML file (XML-based mass spectrometry data format) and you need to expose spectral metadata, scan information, and ion data in a structured, programmatic form for alignment, clustering, drift correction, or quantification within the BMXP pipeline.
+description: Use when your input is an mzML file (XML-based mass spectrometry data
+  format) and you need to expose spectral metadata, scan information, and ion data
+  in a structured, programmatic form for alignment, clustering, drift correction,
+  or quantification within the BMXP pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +18,7 @@ metadata:
   - Gravity
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

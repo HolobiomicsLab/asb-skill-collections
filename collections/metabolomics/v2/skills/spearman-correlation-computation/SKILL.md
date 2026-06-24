@@ -1,6 +1,8 @@
 ---
 name: spearman-correlation-computation
-description: 'Use when : (1) you have metabolomic data (NMR or MS-derived) and a continuous phenotype variable; (2) you need to quantify associations while controlling for known confounders (age, gender, disease status);'
+description: 'Use when : (1) you have metabolomic data (NMR or MS-derived) and a continuous
+  phenotype variable; (2) you need to quantify associations while controlling for
+  known confounders (age, gender, disease status);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3768
@@ -14,12 +16,14 @@ metadata:
   - Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # Spearman Correlation Computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute partial Spearman rank correlations between metabolites and a continuous phenotype (e.g., BMI) while adjusting for epidemiological confounders, producing correlation coefficients, raw p-values, and multiple-testing corrected p-values. This skill is essential for metabolome-wide association studies (MWAS) where linear assumptions may be violated or robustness to outliers is required.

@@ -1,6 +1,7 @@
 ---
 name: d-ratio-threshold-filtering
-description: Use when after signal drift correction (step 4) has computed per-feature D-Ratio values, and before normalization (step 7).
+description: Use when after signal drift correction (step 4) has computed per-feature
+  D-Ratio values, and before normalization (step 7).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +14,7 @@ metadata:
   - MetCorR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

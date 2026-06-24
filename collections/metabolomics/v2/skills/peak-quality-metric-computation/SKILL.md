@@ -1,6 +1,8 @@
 ---
 name: peak-quality-metric-computation
-description: Use when you have completed XCMS preprocessing (getEIC() and fillPeaks()) on untargeted LC-MS metabolomics data and need to assign per-peak quality scores prior to manual curation, classifier training, or downstream statistical analysis.
+description: Use when you have completed XCMS preprocessing (getEIC() and fillPeaks())
+  on untargeted LC-MS metabolomics data and need to assign per-peak quality scores
+  prior to manual curation, classifier training, or downstream statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,15 +15,19 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # peak-quality-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute 12 chromatographic peak-quality metrics from XCMS-derived extracted ion chromatograms (EICs) and peak objects to quantify peak morphology, consistency, and noise resilience in untargeted LC-MS metabolomics data. These metrics serve as input features for machine learning classifiers that detect low-quality peak integrations.

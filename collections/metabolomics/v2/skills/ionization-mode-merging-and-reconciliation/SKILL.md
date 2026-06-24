@@ -1,6 +1,8 @@
 ---
 name: ionization-mode-merging-and-reconciliation
-description: Use when you have acquired MS-DIAL peak lists in both positive and negative ionization modes on the same sample set and want to consolidate detected features across modes to avoid reporting duplicate annotations for the same molecule.
+description: Use when you have acquired MS-DIAL peak lists in both positive and negative
+  ionization modes on the same sample set and want to consolidate detected features
+  across modes to avoid reporting duplicate annotations for the same molecule.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,6 +15,7 @@ metadata:
   - MS-FINDER
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -41,6 +44,7 @@ attribution:
 
 # ionization-mode-merging-and-reconciliation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill merges feature clusters derived from positive ionization mode (PI) and negative ionization mode (NI) LC-MS acquisitions into a unified feature space, enabling detection of the same molecular entity across both modes. It is applied during the feature clustering phase of untargeted metabolomics workflows to reduce redundancy and improve annotation consistency.

@@ -1,6 +1,7 @@
 ---
 name: docker-image-deployment
-description: Use when when you have a containerized scientific tool available on Docker Hub (e.
+description: Use when when you have a containerized scientific tool available on Docker
+  Hub (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,12 +15,14 @@ metadata:
   - Java 21
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
 evidence_spans:
 - docker run -it --rm -p 8888:8080 ipbhalle/metfragweb
-- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched) webapp
+- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched)
+  webapp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +46,7 @@ attribution:
 
 # docker-image-deployment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy a containerized scientific application (MetFrag webapp) by pulling a Docker image, mapping network ports, configuring runtime environment variables, and verifying HTTP accessibility at the exposed endpoint. This skill bridges container orchestration with application deployment validation.

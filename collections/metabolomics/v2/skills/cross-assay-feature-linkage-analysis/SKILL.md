@@ -1,6 +1,9 @@
 ---
 name: cross-assay-feature-linkage-analysis
-description: Use when after identifying statistically significant features within individual LC-MS assays (e.g., via MB-VIP and permutation testing), use this skill when you have multiple parallel assays acquired in complementary ionization modes (e.
+description: Use when after identifying statistically significant features within
+  individual LC-MS assays (e.g., via MB-VIP and permutation testing), use this skill
+  when you have multiple parallel assays acquired in complementary ionization modes
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -18,6 +21,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -53,6 +57,7 @@ attribution:
 
 # cross-assay-feature-linkage-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Link statistically significant LC-MS features across multiple assays (e.g., HPOS, LPOS, LNEG) by matching their ionization states ([M+H]+/[M-H]− pairs) to identify the same metabolite detected in different chromatographic or ionization modes. This enables unified structural clustering and interpretation of multi-assay metabolomics datasets.

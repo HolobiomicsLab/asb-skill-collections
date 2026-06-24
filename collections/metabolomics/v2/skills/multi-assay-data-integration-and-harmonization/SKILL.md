@@ -1,6 +1,9 @@
 ---
 name: multi-assay-data-integration-and-harmonization
-description: Use when you have independent LC-MS assays (e.g., positive and negative ionization modes, different lipid profiling assays, or different chromatographic methods) analyzed on the same sample cohort and want to integrate them into a single discriminant or regression model without losing assay-level.
+description: Use when you have independent LC-MS assays (e.g., positive and negative
+  ionization modes, different lipid profiling assays, or different chromatographic
+  methods) analyzed on the same sample cohort and want to integrate them into a single
+  discriminant or regression model without losing assay-level.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -19,6 +22,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -26,7 +30,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
+  prediction modeling for Python.'
 - import pandas as pd
 - import numpy as np
 - from sklearn.model_selection import train_test_split
@@ -55,6 +60,7 @@ attribution:
 
 # multi-assay-data-integration-and-harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, prefix, and harmonize multi-assay LC-MS metabolomics intensity matrices (e.g., HPOS, LPOS, LNEG) into a unified block structure suitable for Multi-Block PLS modelling and cross-assay feature linking. This skill ensures assay identity is preserved in column names and sample correspondence is maintained across all blocks before statistical integration.

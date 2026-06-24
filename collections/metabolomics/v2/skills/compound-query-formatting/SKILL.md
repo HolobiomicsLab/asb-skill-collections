@@ -20,6 +20,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab).
     url: https://bitbucket.org/wishartlab/classyfire_api.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
@@ -48,6 +49,7 @@ attribution:
 
 # compound-query-formatting
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Format chemical compound identifiers and structural representations into tab-separated newline-delimited input for submission to the ClassyFire API POST endpoint. This skill ensures compounds are correctly serialized for batch classification queries.

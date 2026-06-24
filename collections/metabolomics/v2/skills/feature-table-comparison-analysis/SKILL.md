@@ -1,6 +1,9 @@
 ---
 name: feature-table-comparison-analysis
-description: Use when after running Paramounter's peak-height optimization on XCMS CentWave–extracted metabolomic features when you need to decide whether to accept the optimized threshold (maximizing true positives) or apply a higher threshold to reduce false positives and software crashes.
+description: Use when after running Paramounter's peak-height optimization on XCMS
+  CentWave–extracted metabolomic features when you need to decide whether to accept
+  the optimized threshold (maximizing true positives) or apply a higher threshold
+  to reduce false positives and software crashes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +13,7 @@ metadata:
   tools:
   - Paramounter
   - XCMS CentWave
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c04758
   title: Paramounter

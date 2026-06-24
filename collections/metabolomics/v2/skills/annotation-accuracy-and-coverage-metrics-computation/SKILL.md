@@ -1,6 +1,7 @@
 ---
 name: annotation-accuracy-and-coverage-metrics-computation
-description: Use when after executing an end-to-end structure annotation pipeline (such as BAM) on a validation dataset with known reference annotations.
+description: Use when after executing an end-to-end structure annotation pipeline
+  (such as BAM) on a validation dataset with known reference annotations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +12,7 @@ metadata:
   - HassounLab/BAM
   - HassounLab/PROXIMAL2
   - HassounLab/GNN-SOM
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -39,6 +41,7 @@ attribution:
 
 # annotation-accuracy-and-coverage-metrics-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute validation metrics (accuracy and coverage) for molecular structure annotations by comparing pipeline predictions against reference annotations. This skill quantifies the quality of biotransformation-based annotation methods on untargeted metabolomics data.

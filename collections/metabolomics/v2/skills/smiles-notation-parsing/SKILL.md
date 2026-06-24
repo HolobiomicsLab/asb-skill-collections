@@ -1,6 +1,9 @@
 ---
 name: smiles-notation-parsing
-description: Use when when processing downloaded mass spectral libraries (particularly MoNA EI or MS2 libraries) where SMILES information exists but is embedded in unstructured Comment fields rather than a dedicated SMILES field, or when assigning SMILES from external structure databases (SDF files) to library.
+description: Use when when processing downloaded mass spectral libraries (particularly
+  MoNA EI or MS2 libraries) where SMILES information exists but is embedded in unstructured
+  Comment fields rather than a dedicated SMILES field, or when assigning SMILES from
+  external structure databases (SDF files) to library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -14,6 +17,7 @@ metadata:
   - ChemmineR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -44,6 +48,7 @@ attribution:
 
 # SMILES Notation Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and standardize SMILES (Simplified Molecular Input Line Entry System) strings from mass spectral library records, typically sourced from Comment fields or structure databases. This skill reorganizes molecular structure information into a dedicated SMILES field required by downstream mass spectral analysis pipelines.

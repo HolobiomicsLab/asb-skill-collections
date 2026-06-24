@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-parent-product-pairing
-description: Use when you have mass spectrometry imaging data with a histogram of pairwise mass differences that have already been matched to known adducts (via adductMatch), and you need to retrieve the actual mass peak pairs corresponding to a specific adduct of interest—particularly when you want to test.
+description: Use when you have mass spectrometry imaging data with a histogram of
+  pairwise mass differences that have already been matched to known adducts (via adductMatch),
+  and you need to retrieve the actual mass peak pairs corresponding to a specific
+  adduct of interest—particularly when you want to test.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,13 +16,16 @@ metadata:
   - corrPairsMSI
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # spectral-peak-parent-product-pairing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and retrieve pairs of mass spectral peaks that represent parent ions and their derivative adduct ions by matching observed mass differences to a reference table of known chemical adducts. This skill bridges annotation (matching mass differences to known species) with spatial validation, enabling confirmation that putative parent–adduct pairs co-occur in imaging data.

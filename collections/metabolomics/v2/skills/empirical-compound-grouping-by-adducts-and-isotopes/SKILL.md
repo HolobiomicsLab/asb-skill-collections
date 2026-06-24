@@ -1,6 +1,7 @@
 ---
 name: empirical-compound-grouping-by-adducts-and-isotopes
-description: Use when after feature table normalization and imputation are complete, immediately before MS1 and MS2 annotation.
+description: Use when after feature table normalization and imputation are complete,
+  immediately before MS1 and MS2 annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -16,6 +17,7 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -48,6 +50,7 @@ attribution:
 
 # empirical-compound-grouping-by-adducts-and-isotopes
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups detected LC-MS features into putative empirical compounds by matching features that represent the same molecular entity under different ionization states (adducts) and isotopic variants (e.g., 13C). This pre-annotation step reduces feature table dimensionality and enables unified compound-level annotation before MS1/MS2 matching.

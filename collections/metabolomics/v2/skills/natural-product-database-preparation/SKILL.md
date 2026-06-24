@@ -1,6 +1,9 @@
 ---
 name: natural-product-database-preparation
-description: Use when you need to update your local LOTUS natural-product database file before running metadata enrichment or structure-query workflows, or when a pre-existing provided LOTUS file is unavailable or suspected to be stale. Trigger on project initialization or on a scheduled basis (e.
+description: Use when you need to update your local LOTUS natural-product database
+  file before running metadata enrichment or structure-query workflows, or when a
+  pre-existing provided LOTUS file is unavailable or suspected to be stale. Trigger
+  on project initialization or on a scheduled basis (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - prepare_wikidata_lotus_prefect.py
   - jobs.py
   - Prefect 2
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

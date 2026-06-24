@@ -1,6 +1,8 @@
 ---
 name: molecular-database-loading-and-parsing
-description: Use when when setting up a ViMMS chemical sampling environment and you need to restrict the chemical search space to a specific m/z range (e.g., 100–1000) and MS level (e.g., MS1 only) before generating virtual LC-MS/MS data.
+description: Use when when setting up a ViMMS chemical sampling environment and you
+  need to restrict the chemical search space to a specific m/z range (e.g., 100–1000)
+  and MS level (e.g., MS1 only) before generating virtual LC-MS/MS data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,14 +15,17 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # molecular-database-loading-and-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse serialized molecular structure databases (e.g., HMDB compounds in pickle format) into memory, then apply m/z range and MS level filters to extract a curated set of unique molecular formulas for chemical sampling in virtual metabolomics simulations.

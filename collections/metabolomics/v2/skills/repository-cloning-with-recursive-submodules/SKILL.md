@@ -1,6 +1,9 @@
 ---
 name: repository-cloning-with-recursive-submodules
-description: Use when you need to set up a development environment for a project that declares Git submodules (typically listed in .gitmodules), particularly when the build system (qmake, make, Maven, etc.) expects all dependencies to be present in the working tree.
+description: Use when you need to set up a development environment for a project that
+  declares Git submodules (typically listed in .gitmodules), particularly when the
+  build system (qmake, make, Maven, etc.) expects all dependencies to be present in
+  the working tree.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -13,6 +16,7 @@ metadata:
   - MSYS2
   - Homebrew
   - pacman
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

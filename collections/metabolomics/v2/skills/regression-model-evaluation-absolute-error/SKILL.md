@@ -1,6 +1,9 @@
 ---
 name: regression-model-evaluation-absolute-error
-description: Use when after training a regression model on labeled continuous data (e.g., retention times, physicochemical properties) and generating predictions on held-out test data, compute MAE and MedAE to assess model generalization and compare against published reference performance.
+description: Use when after training a regression model on labeled continuous data
+  (e.g., retention times, physicochemical properties) and generating predictions on
+  held-out test data, compute MAE and MedAE to assess model generalization and compare
+  against published reference performance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -10,11 +13,13 @@ metadata:
   tools:
   - alvaDesc
   - cmmrt
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +43,7 @@ attribution:
 
 # regression-model-evaluation-absolute-error
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate regression model performance on continuous-valued predictions (e.g., retention time) by computing mean absolute error (MAE) and median absolute error (MedAE) with confidence intervals. This skill enables quantitative assessment of prediction accuracy and reproducibility of model performance against reference benchmarks.

@@ -1,6 +1,8 @@
 ---
 name: chromatographic-method-transfer
-description: Use when you have retention time predictions from a source chromatographic method and need to predict retention times for a target chromatographic method, but have limited calibration data (10–100 molecules) measured on both methods.
+description: Use when you have retention time predictions from a source chromatographic
+  method and need to predict retention times for a target chromatographic method,
+  but have limited calibration data (10–100 molecules) measured on both methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -10,11 +12,13 @@ metadata:
   tools:
   - alvaDesc
   - cmmrt
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +42,7 @@ attribution:
 
 # chromatographic-method-transfer
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transfer retention time predictions between different chromatographic methods using Bayesian meta-learning trained on a small calibration set (as few as 10 molecules). This skill enables projection of retention times across chromatographic systems while maintaining competitive error rates without requiring large amounts of method-specific training data.

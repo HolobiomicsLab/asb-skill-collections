@@ -1,6 +1,9 @@
 ---
 name: record-grouping-and-collation
-description: Use when you have multiple rows in a table that describe the same logical entity (e.g., multiple measurements from the same sample, or repeated attributes under a common identifier) and need to merge them into a single dictionary entry keyed by that shared field.
+description: Use when you have multiple rows in a table that describe the same logical
+  entity (e.g., multiple measurements from the same sample, or repeated attributes
+  under a common identifier) and need to merge them into a single dictionary entry
+  keyed by that shared field.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - jsonschema
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -19,7 +23,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # Record Grouping and Collation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill groups multiple table records into single dictionary entries by collating on a shared field value, enabling consolidation of repetitive experimental metadata into hierarchical structures suitable for repository submission.

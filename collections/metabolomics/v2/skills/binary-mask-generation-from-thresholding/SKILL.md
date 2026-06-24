@@ -1,6 +1,7 @@
 ---
 name: binary-mask-generation-from-thresholding
-description: Use when you have imported a laser ablation ICP-MS image into pew² and need to distinguish tissue-bearing pixels from background noise or non-ablated regions.
+description: Use when you have imported a laser ablation ICP-MS image into pew² and
+  need to distinguish tissue-bearing pixels from background noise or non-ablated regions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -10,13 +11,15 @@ metadata:
   tools:
   - pewpew
   - pewlib
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -43,6 +46,7 @@ attribution:
 
 # binary-mask-generation-from-thresholding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a binary mask image from LA-ICP-MS ablation data by applying threshold-based segmentation methods (e.g., Otsu's method) to separate tissue pixels from background. This is a foundational preprocessing step in pew² for isolating regions of interest before quantitative analysis.

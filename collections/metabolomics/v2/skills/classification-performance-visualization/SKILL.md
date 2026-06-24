@@ -1,6 +1,9 @@
 ---
 name: classification-performance-visualization
-description: Use when you have a CSV file with predicted probabilities and true binary labels from a classification model, and you need to evaluate classification performance across decision thresholds and communicate it via a standard diagnostic plot suitable for publication or presentation.
+description: Use when you have a CSV file with predicted probabilities and true binary
+  labels from a classification model, and you need to evaluate classification performance
+  across decision thresholds and communicate it via a standard diagnostic plot suitable
+  for publication or presentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +13,7 @@ metadata:
   tools:
   - R Shiny
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

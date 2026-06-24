@@ -1,6 +1,8 @@
 ---
 name: mass-spectral-similarity-scoring-across-samples
-description: Use when after XCMS feature detection, grouping, and retention time correction when you have aligned features with consistent retention times and intensity patterns across samples.
+description: Use when after XCMS feature detection, grouping, and retention time correction
+  when you have aligned features with consistent retention times and intensity patterns
+  across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -18,13 +20,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []
@@ -50,6 +54,7 @@ attribution:
 
 # mass-spectral-similarity-scoring-across-samples
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute combined retention time and intensity-correlation similarity scores to group mass spectrometry features derived from the same compound. This skill combines approximate retention time matching with quantitative trend correlation across samples to identify co-eluting, co-varying features that represent isotopes, adducts, and fragments of a single metabolite.

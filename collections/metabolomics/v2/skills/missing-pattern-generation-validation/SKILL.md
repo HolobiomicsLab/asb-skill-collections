@@ -1,6 +1,8 @@
 ---
 name: missing-pattern-generation-validation
-description: Use when you have a complete metabolomics data matrix (simulated or real abundance table) and need to create reproducible, controlled MNAR scenarios for evaluating imputation algorithm performance.
+description: Use when you have a complete metabolomics data matrix (simulated or real
+  abundance table) and need to create reproducible, controlled MNAR scenarios for
+  evaluating imputation algorithm performance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,6 +16,7 @@ metadata:
   - R package imputeLCMD
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -43,6 +46,7 @@ attribution:
 
 # missing-pattern-generation-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic missing-not-at-random (MNAR) patterns in metabolomics abundance matrices by applying left-censoring thresholds and feature-dependent missingness mechanisms, then validate the resulting data against expected missingness distributions and coverage statistics. This skill enables benchmarking of imputation methods on realistic missing-data scenarios.

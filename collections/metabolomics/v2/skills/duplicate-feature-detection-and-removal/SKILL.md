@@ -1,6 +1,8 @@
 ---
 name: duplicate-feature-detection-and-removal
-description: Use when you have peak-picked LC-MS data with multiple features that may represent the same metabolite detected at slightly different m/z or retention time values due to instrument precision limits, isotope variants, or adduct forms.
+description: Use when you have peak-picked LC-MS data with multiple features that
+  may represent the same metabolite detected at slightly different m/z or retention
+  time values due to instrument precision limits, isotope variants, or adduct forms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +14,15 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # duplicate-feature-detection-and-removal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and remove redundant features in LC-MS metabolomics data that fall within close mass-to-charge and retention time distances, reducing false positives in downstream feature alignment. This step is essential after applying retention time and missingness filters to ensure a clean, non-redundant feature set for alignment.

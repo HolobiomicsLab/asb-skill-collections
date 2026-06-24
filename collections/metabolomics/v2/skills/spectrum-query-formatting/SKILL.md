@@ -1,6 +1,9 @@
 ---
 name: spectrum-query-formatting
-description: Use when you have parsed LC-MS/MS spectral data (precursor m/z, ionization mode, collision energy, and a list of fragment m/z and intensity pairs) and need to submit it to the CSI:FingerID web service for molecular fingerprint prediction as part of a metabolite identification workflow.
+description: Use when you have parsed LC-MS/MS spectral data (precursor m/z, ionization
+  mode, collision energy, and a list of fragment m/z and intensity pairs) and need
+  to submit it to the CSI:FingerID web service for molecular fingerprint prediction
+  as part of a metabolite identification workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -12,6 +15,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

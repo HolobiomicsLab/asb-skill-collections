@@ -1,6 +1,8 @@
 ---
 name: pathway-coverage-assessment
-description: Use when when preparing to run Over-representation Analysis (ORA) on a metabolomics study, after constructing the background set but before running the enrichment test.
+description: Use when when preparing to run Over-representation Analysis (ORA) on
+  a metabolomics study, after constructing the background set but before running the
+  enrichment test.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -11,6 +13,7 @@ metadata:
   - Python
   - Jupyter
   - cwieder/metabolomics-ORA
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -38,6 +41,7 @@ attribution:
 
 # pathway-coverage-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess and validate the statistical completeness of metabolic pathway databases by computing per-pathway metabolite coverage and overlap metrics between the experimental detection list and the ORA background set. This ensures that the background set used in Over-representation Analysis contains sufficient pathway representation to enable valid statistical inference.

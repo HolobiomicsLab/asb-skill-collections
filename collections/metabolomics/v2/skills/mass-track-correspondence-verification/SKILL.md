@@ -1,6 +1,8 @@
 ---
 name: mass-track-correspondence-verification
-description: Use when after constructing a LOWESS regression function (rt_cal_dict) to align retention times between a reference sample and a current sample, validate that high-selectivity landmark peaks in the reference sample (mSelectivity > 0.
+description: Use when after constructing a LOWESS regression function (rt_cal_dict)
+  to align retention times between a reference sample and a current sample, validate
+  that high-selectivity landmark peaks in the reference sample (mSelectivity > 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,11 +17,13 @@ metadata:
   - asari (peaks.quick_detect_unique_elution_peak)
   - asari (peaks.audit_mass_track)
   - asari (CompositeMap.calibrate_sample_RT)
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - scipy.signal module for LOWESS fitting via the regression function
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # mass-track-correspondence-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that landmark peaks identified in a reference sample correctly map to their counterparts in aligned samples by checking scan-number correspondence after LOWESS-based retention time calibration. This confirms that the RT alignment function preserves peak identity across the sample cohort.

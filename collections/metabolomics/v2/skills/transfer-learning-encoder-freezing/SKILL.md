@@ -1,6 +1,8 @@
 ---
 name: transfer-learning-encoder-freezing
-description: Use when you have a pretrained spectrum encoder (e.g., TCN on mass spectrometry data) that has learned useful representations, and you need to train new components (e.g., a rescoring module) for a related but distinct task (e.
+description: Use when you have a pretrained spectrum encoder (e.g., TCN on mass spectrometry
+  data) that has learned useful representations, and you need to train new components
+  (e.g., a rescoring module) for a related but distinct task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +43,7 @@ attribution:
 
 # Transfer-Learning Encoder Freezing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Freeze a pretrained encoder's parameters while training downstream task-specific modules (e.g., FormulaEncoder and RescoreHead) on a new objective function. This skill enables efficient transfer of learned spectrum representations without catastrophic forgetting or computational overhead of full model retraining.

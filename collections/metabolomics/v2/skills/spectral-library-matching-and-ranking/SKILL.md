@@ -1,6 +1,8 @@
 ---
 name: spectral-library-matching-and-ranking
-description: Use when when you have discovered Mass2Motifs from MS2LDA topic modeling and need to automatically annotate them by finding the most structurally similar known spectra in a reference library.
+description: Use when when you have discovered Mass2Motifs from MS2LDA topic modeling
+  and need to automatically annotate them by finding the most structurally similar
+  known spectra in a reference library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,13 +17,15 @@ metadata:
   - MotifDB
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

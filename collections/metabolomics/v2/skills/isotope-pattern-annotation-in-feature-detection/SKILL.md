@@ -1,6 +1,9 @@
 ---
 name: isotope-pattern-annotation-in-feature-detection
-description: Use when when performing feature detection on centroided DDA mzML files from LC- or GC-HRMS and you need to confirm the elemental composition or differentiate between candidate features—particularly for PFAS screening where isotopic signatures (chlorine, bromine, fluorine) are diagnostic.
+description: Use when when performing feature detection on centroided DDA mzML files
+  from LC- or GC-HRMS and you need to confirm the elemental composition or differentiate
+  between candidate features—particularly for PFAS screening where isotopic signatures
+  (chlorine, bromine, fluorine) are diagnostic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,13 +18,16 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data.
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data.
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -46,6 +52,7 @@ attribution:
 
 # Isotope-Pattern Annotation in Feature Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction and validation of isotope pattern information (m/z, intensity, charge state) from high-resolution MS1 features during pyOpenMS-based feature detection in centroided DDA mzML data. This enriches feature tables with isotopic signatures necessary for elemental composition inference and PFAS suspect confirmation.

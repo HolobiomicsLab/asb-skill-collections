@@ -1,6 +1,9 @@
 ---
 name: relative-standard-deviation-calculation-qc-replicates
-description: Use when you have a peak table from XCMS preprocessing with intensity measurements for the same set of metabolites across multiple QC replicate injections (samples marked SampleType='LQC'), and you need to filter out EICs with poor reproducibility before evaluating peak quality or training a.
+description: Use when you have a peak table from XCMS preprocessing with intensity
+  measurements for the same set of metabolites across multiple QC replicate injections
+  (samples marked SampleType='LQC'), and you need to filter out EICs with poor reproducibility
+  before evaluating peak quality or training a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -14,16 +17,20 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +55,7 @@ attribution:
 
 # relative-standard-deviation-calculation-qc-replicates
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate relative standard deviation (RSD) of peak intensities across quality control (QC) replicates to assess reproducibility of extracted ion chromatograms in untargeted LC-MS metabolomics. RSD is used as a filtering criterion to exclude low-reproducibility EICs prior to peak quality metric calculation and machine learning classifier training.

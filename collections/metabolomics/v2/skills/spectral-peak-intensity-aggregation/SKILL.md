@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-intensity-aggregation
-description: Use when you have multiple replicate MS/MS spectra for the same metabolic feature (e.g., 66 top-TIC spectra for feature 1982) and need to identify robust peaks by merging nearby m/z values and pooling their signal strength.
+description: Use when you have multiple replicate MS/MS spectra for the same metabolic
+  feature (e.g., 66 top-TIC spectra for feature 1982) and need to identify robust
+  peaks by merging nearby m/z values and pooling their signal strength.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,13 +18,17 @@ metadata:
   - call_aggregate
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # spectral-peak-intensity-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate m/z peaks and their intensities across multiple replicate MS/MS spectra by grouping fragments within a specified mass tolerance and summing their intensities to produce a consensus spectrum. This is a foundational denoising step that reduces noise by consolidating signal across replicates before applying frequency-based filters.

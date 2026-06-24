@@ -1,6 +1,8 @@
 ---
 name: vocabulary-coverage-validation
-description: Use when after merging separate vocabularies for distinct data modalities (e.g., spectral tokens for m/z values and intensities, structural tokens for SMILES or graphs) and before deploying the unified vocabulary in a language model.
+description: Use when after merging separate vocabularies for distinct data modalities
+  (e.g., spectral tokens for m/z values and intensities, structural tokens for SMILES
+  or graphs) and before deploying the unified vocabulary in a language model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,11 +15,13 @@ metadata:
   - MS-BART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
 evidence_spans:
-- MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary
+- MS-BART is the first to leverage language model for mass spectra structure elucidation
+  by introducing a unified vocabulary
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # Vocabulary Coverage Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that a unified token vocabulary correctly encodes representative samples from heterogeneous data domains (e.g., mass spectra and molecular structures) with complete coverage, no collisions, and correct bidirectional mapping. This skill ensures the vocabulary is ready for downstream pretraining and fine-tuning in multimodal sequence models.

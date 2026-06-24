@@ -1,6 +1,9 @@
 ---
 name: neural-network-ensemble-inference-via-dropout
-description: Use when when you have a trained neural network and need to quantify prediction uncertainty or improve accuracy by filtering low-confidence predictions. Particularly useful when input spectra pairs have variable quality or when downstream tasks (e.
+description: Use when when you have a trained neural network and need to quantify
+  prediction uncertainty or improve accuracy by filtering low-confidence predictions.
+  Particularly useful when input spectra pairs have variable quality or when downstream
+  tasks (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,16 +19,23 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles [17]. At inference time, dropout was applied to all but the first layer of the base network.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
+  [17]. At inference time, dropout was applied to all but the first layer of the base
+  network.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +59,7 @@ attribution:
 
 # neural-network-ensemble-inference-via-dropout
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate uncertainty-aware ensemble predictions from a trained neural network by enabling dropout during inference and aggregating multiple stochastic forward passes. This technique produces both point estimates and confidence intervals for each prediction without retraining.

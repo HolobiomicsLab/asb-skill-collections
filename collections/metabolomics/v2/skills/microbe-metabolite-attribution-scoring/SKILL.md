@@ -1,6 +1,9 @@
 ---
 name: microbe-metabolite-attribution-scoring
-description: Use when after training multi-layer perceptron neural networks via cross-validation to predict metabolite abundances from microbiome composition, when you need to interpret which microbes drive predictions of specific metabolites and to identify groups of microbes with coherent metabolite.
+description: Use when after training multi-layer perceptron neural networks via cross-validation
+  to predict metabolite abundances from microbiome composition, when you need to interpret
+  which microbes drive predictions of specific metabolites and to identify groups
+  of microbes with coherent metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -18,16 +21,23 @@ metadata:
   - Cytoscape
   - SciPy
   - Pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest models were implemented using
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- models can predict the entire set of metabolites at once, and all models were evaluated
+  using 10 iterations of 10-fold cross-validation. Random Forest models were implemented
+  using
 - CLR transformation applied to all data except IBD PRISM microbes
-- where W is the weight matrix connecting layer l−1 and layer l. Each element in S represents a microbe-metabolite feature attribution score
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
+- where W is the weight matrix connecting layer l−1 and layer l. Each element in S
+  represents a microbe-metabolite feature attribution score
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +61,7 @@ attribution:
 
 # microbe-metabolite-attribution-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute feature attribution scores linking individual microbes to predicted metabolites using Olden's method applied to trained neural network weights. This quantifies the directional and magnitude contribution of each microbe to each metabolite prediction, enabling downstream functional module discovery.

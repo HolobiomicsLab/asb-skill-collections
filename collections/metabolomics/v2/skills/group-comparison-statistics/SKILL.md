@@ -1,6 +1,9 @@
 ---
 name: group-comparison-statistics
-description: Use when after data integration, batch correction, and sample separation when you have a feature-by-sample abundance matrix (finalData) and corresponding sample group labels (finalLabel), and your research goal is to identify which metabolites significantly differ between experimental groups for.
+description: Use when after data integration, batch correction, and sample separation
+  when you have a feature-by-sample abundance matrix (finalData) and corresponding
+  sample group labels (finalLabel), and your research goal is to identify which metabolites
+  significantly differ between experimental groups for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - FSelector
   - mixOmics
   - siggenes
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -42,6 +46,7 @@ attribution:
 
 # group-comparison-statistics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply statistical tests to identify metabolic markers that differentiate between sample groups in large-scale metabolomic datasets. This skill encompasses 13 strategies including fold-change (FC), t-test, Wilcoxon rank sum (WRS), and machine-learning-based methods to rank and select features by their discriminatory power.

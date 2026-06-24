@@ -1,6 +1,9 @@
 ---
 name: pytorch-installation-and-verification
-description: Use when when setting up a computational environment to run pre-trained PyTorch models that were trained on GPU hardware (e.g., NVIDIA A100 with CUDA 11.8), and the released model weights are GPU-trained artifacts. Specifically, when you have a jestr_requirements.
+description: Use when when setting up a computational environment to run pre-trained
+  PyTorch models that were trained on GPU hardware (e.g., NVIDIA A100 with CUDA 11.8),
+  and the released model weights are GPU-trained artifacts. Specifically, when you
+  have a jestr_requirements.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -12,6 +15,7 @@ metadata:
   - CUDA
   - conda
   - CUDA 11.8
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR

@@ -1,6 +1,9 @@
 ---
 name: nmr-peak-prediction-via-database-lookup
-description: Use when you have extracted peak data (chemical shift values in ppm, multiplicities, integration) from a processed NMR spectrum (JCAMP, RAW, or mzML format) and need to match these peaks against known NMR signals to propose or confirm structural assignments.
+description: Use when you have extracted peak data (chemical shift values in ppm,
+  multiplicities, integration) from a processed NMR spectrum (JCAMP, RAW, or mzML
+  format) and need to match these peaks against known NMR signals to propose or confirm
+  structural assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,12 +19,14 @@ metadata:
   - chem-spectra-app
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
 evidence_spans:
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - Use the file pyproject.toml to determine the version of Python required.
 - curl xxx.xxx.xxx.xxx:3007/ping
 - gunicorn -w 4 -b 0.0.0.0:3007 server:app --daemon

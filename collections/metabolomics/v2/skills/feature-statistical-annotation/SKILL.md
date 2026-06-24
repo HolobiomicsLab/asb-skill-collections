@@ -1,6 +1,9 @@
 ---
 name: feature-statistical-annotation
-description: Use when after LC-MS feature detection, alignment, and quantification are complete and you have a feature table with m/z and retention time attributes. Use this skill when you have access to a reference list of molecules of interest (e.
+description: Use when after LC-MS feature detection, alignment, and quantification
+  are complete and you have a feature table with m/z and retention time attributes.
+  Use this skill when you have access to a reference list of molecules of interest
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/nprot.2017.122
   title: 3D molecular cartography (Optimus / 'ili)

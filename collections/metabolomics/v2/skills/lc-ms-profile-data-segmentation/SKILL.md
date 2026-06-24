@@ -1,6 +1,8 @@
 ---
 name: lc-ms-profile-data-segmentation
-description: Use when you have raw profile (not centroided) LC-MS data in .mzML format and need to prepare it for automated peak detection using a trained object detection network.
+description: Use when you have raw profile (not centroided) LC-MS data in .mzML format
+  and need to prepare it for automated peak detection using a trained object detection
+  network.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -14,6 +16,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

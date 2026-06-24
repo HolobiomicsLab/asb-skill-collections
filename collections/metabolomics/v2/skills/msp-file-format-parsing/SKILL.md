@@ -1,6 +1,9 @@
 ---
 name: msp-file-format-parsing
-description: Use when you have acquired EI or MS2 library files in MSP format (e.g., from NIST via Lib2NIST export, RIKEN, MoNA, SWGDRUG, or GNPS) and need to read them into R to assign SMILES, retention indices, or combine multiple libraries into a single consolidated MSP file for MS-DIAL.
+description: Use when you have acquired EI or MS2 library files in MSP format (e.g.,
+  from NIST via Lib2NIST export, RIKEN, MoNA, SWGDRUG, or GNPS) and need to read them
+  into R to assign SMILES, retention indices, or combine multiple libraries into a
+  single consolidated MSP file for MS-DIAL.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -19,6 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -28,7 +32,8 @@ evidence_spans:
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
 - MS-DIAL friendly msp file
-- both positive and negative modes are in a single file as well. Therefore, we need to separated the polarity
+- both positive and negative modes are in a single file as well. Therefore, we need
+  to separated the polarity
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +57,7 @@ attribution:
 
 # msp-file-format-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse mass spectral library files in MSP (NIST text) format into structured R objects for downstream enrichment, validation, and conversion. This skill transforms human-readable MSP text files into machine-manipulable library objects that preserve spectral metadata, molecular structure information, and retention indices.

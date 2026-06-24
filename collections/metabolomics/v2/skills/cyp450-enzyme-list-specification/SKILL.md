@@ -1,6 +1,9 @@
 ---
 name: cyp450-enzyme-list-specification
-description: Use when when you need to predict drug or xenobiotic metabolites across multiple CYP450 isoforms and must communicate which specific enzymes (e.g., 1A2, 2C9, 3A4) should be evaluated. Use this skill before invoking a metabolite prediction tool that accepts an enzyme list parameter.
+description: Use when when you need to predict drug or xenobiotic metabolites across
+  multiple CYP450 isoforms and must communicate which specific enzymes (e.g., 1A2,
+  2C9, 3A4) should be evaluated. Use this skill before invoking a metabolite prediction
+  tool that accepts an enzyme list parameter.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -10,6 +13,7 @@ metadata:
   - CyProduct
   - BioTransformerAPI
   - Java
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -38,6 +42,7 @@ attribution:
 
 # cyp450-enzyme-list-specification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Specify a list of cytochrome P450 (CYP450) enzyme isoforms as a formatted input parameter for metabolite prediction tools like CyProduct. This skill ensures correct enzyme selection and proper formatting to enable multi-enzyme metabolic transformation prediction.

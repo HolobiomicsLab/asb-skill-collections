@@ -1,6 +1,8 @@
 ---
 name: ribosomally-synthesized-peptide-identification
-description: Use when you have LC-MS/MS spectral data (in MGF, mzXML, mzML, or mzData format) and corresponding genomic sequence data (raw FASTA nucleotide sequences or genome mining tool outputs like antiSMASH .final.
+description: Use when you have LC-MS/MS spectral data (in MGF, mzXML, mzML, or mzData
+  format) and corresponding genomic sequence data (raw FASTA nucleotide sequences
+  or genome mining tool outputs like antiSMASH .final.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -19,16 +21,24 @@ metadata:
   - SPAdes
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator
-- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
-- uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- matches tandem mass spectra against the constructed post-translationally modified
+  RiPPs structure database using Dereplicator
+- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the
+  ProteoWizard package to convert spectra in other formats to MGF
+- uses msconvert utility from the ProteoWizard package to convert spectra in other
+  formats to MGF
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +62,7 @@ attribution:
 
 # ribosomally-synthesized-peptide-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify ribosomally synthesized and post-translationally modified peptides (RiPPs) by integrating metabolomic tandem mass spectra with genomic sequence data using MetaMiner, a metabologenomic pipeline that constructs putative RiPP structure databases and matches them against experimental spectra.

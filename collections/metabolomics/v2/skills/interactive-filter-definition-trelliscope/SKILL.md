@@ -1,6 +1,9 @@
 ---
 name: interactive-filter-definition-trelliscope
-description: Use when you have omics statistical results (p-values, effect sizes, fold-changes) mapped to individual trelliscope panel rows and need to allow end users to interactively explore subsets of features (proteins, metabolites, genes) by thresholds or annotations without re-running the visualization.
+description: Use when you have omics statistical results (p-values, effect sizes,
+  fold-changes) mapped to individual trelliscope panel rows and need to allow end
+  users to interactively explore subsets of features (proteins, metabolites, genes)
+  by thresholds or annotations without re-running the visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +14,7 @@ metadata:
   tools:
   - trelliscope
   - MODE ShinyApp
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00650
   title: MODE

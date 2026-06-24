@@ -1,6 +1,8 @@
 ---
 name: biomolecular-class-annotation
-description: Use when you have raw or processed TWIM-MS data with arrival time and m/z dimensions, and you need to label experimental features by biomolecular class before performing CCS calibration or validation.
+description: Use when you have raw or processed TWIM-MS data with arrival time and
+  m/z dimensions, and you need to label experimental features by biomolecular class
+  before performing CCS calibration or validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,12 +15,14 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
 evidence_spans:
 - MOCCal, or Multi-Omic CCS Calibrator, is a Python application
-- Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations
+- Functionality includes collision cross section (CCS) calibration, experimental data
+  biomolecular class assignment, and experimental class-specific CCS calculations
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # biomolecular-class-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign biomolecular class labels (lipid, peptide, carbohydrate, etc.) directly to experimental features in TWIM-MS data without prior feature identification, enabling downstream class-specific CCS calculations. This skill bypasses the need for peak picking or feature deconvolution by operating on high-dimensional arrival time and m/z dimensions.

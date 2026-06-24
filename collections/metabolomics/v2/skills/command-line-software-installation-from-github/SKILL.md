@@ -1,6 +1,8 @@
 ---
 name: command-line-software-installation-from-github
-description: Use when you need to install a Python package that is distributed via GitHub but not yet (or only occasionally) published to PyPI, such as pyBaf2Sql for Bruker .baf/.d mass spectrometry imaging data conversion.
+description: Use when you need to install a Python package that is distributed via
+  GitHub but not yet (or only occasionally) published to PyPI, such as pyBaf2Sql for
+  Bruker .baf/.d mass spectrometry imaging data conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3675
@@ -19,14 +21,18 @@ metadata:
   - Anaconda/Miniconda
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
-- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
+- If you are planning on using Bruker .d data in the .baf format, you will also need
+  to install pyBaf2Sql from GitHub
+- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert
+  tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
 - You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html.
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
 claims: []

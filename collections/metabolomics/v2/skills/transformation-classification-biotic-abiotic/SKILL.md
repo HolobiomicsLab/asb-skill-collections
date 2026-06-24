@@ -1,6 +1,9 @@
 ---
 name: transformation-classification-biotic-abiotic
-description: Use when after mass-difference network generation has matched pairwise peak mass differences to a reference biochemical transformation key with mass error ≤1 ppm, and you need to distinguish metabolic transformations driven by microbial activity from those arising from non-biological chemical.
+description: Use when after mass-difference network generation has matched pairwise
+  peak mass differences to a reference biochemical transformation key with mass error
+  ≤1 ppm, and you need to distinguish metabolic transformations driven by microbial
+  activity from those arising from non-biological chemical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3766
@@ -13,12 +16,14 @@ metadata:
   - KEGG database
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # transformation-classification-biotic-abiotic
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify matched mass-difference transformations detected in FT-ICR MS data as either biotic (microbial metabolic) or abiotic (chemical/environmental) based on prior categorization in a reference biochemical transformation key. This step anchors the interpretation of molecular transformation networks to biological process origin.

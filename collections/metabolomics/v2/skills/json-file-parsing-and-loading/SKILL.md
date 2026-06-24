@@ -1,6 +1,9 @@
 ---
 name: json-file-parsing-and-loading
-description: Use when after generating a structured JSON result file from a prior computational step (e.g., gensim LDA model output in myexp.ldaresult.json format) and needing to store it in PostgreSQL for web application access, visualization, or further analysis.
+description: Use when after generating a structured JSON result file from a prior
+  computational step (e.g., gensim LDA model output in myexp.ldaresult.json format)
+  and needing to store it in PostgreSQL for web application access, visualization,
+  or further analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +18,7 @@ metadata:
   - Django
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

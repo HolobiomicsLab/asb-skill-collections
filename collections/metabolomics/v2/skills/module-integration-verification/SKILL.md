@@ -1,6 +1,8 @@
 ---
 name: module-integration-verification
-description: Use when after rewriting or refactoring a Python module (such as calculate_feature_overlap.py in a metabolomics pipeline) to improve performance, maintainability, or functionality, you need to confirm that the new implementation does not introduce regressions.
+description: Use when after rewriting or refactoring a Python module (such as calculate_feature_overlap.py
+  in a metabolomics pipeline) to improve performance, maintainability, or functionality,
+  you need to confirm that the new implementation does not introduce regressions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,6 +11,7 @@ metadata:
   tools:
   - pytest
   - FERMO
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO
@@ -41,6 +44,7 @@ attribution:
 
 # module-integration-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a rewritten or refactored Python module passes its existing pytest unit-test suite when executed against a specific version of a scientific software package. This skill ensures that module-level changes maintain backward compatibility and functional correctness within the broader codebase.

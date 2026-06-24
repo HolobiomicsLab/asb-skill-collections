@@ -1,6 +1,9 @@
 ---
 name: normalization-for-unequal-group-sizes
-description: Use when when tabulating chemical annotation enrichment (e.g., GNPS spectral library matches) across sample groups stratified by metadata category (e.g., sample type, extraction method, ionization source), and the groups contain different numbers of files or samples.
+description: Use when when tabulating chemical annotation enrichment (e.g., GNPS spectral
+  library matches) across sample groups stratified by metadata category (e.g., sample
+  type, extraction method, ionization source), and the groups contain different numbers
+  of files or samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - Emperor
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -47,6 +51,7 @@ attribution:
 
 # normalization-for-unequal-group-sizes
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize chemical annotation enrichment across sample groups with unequal file counts by converting raw sample counts to percentages, enabling fair cross-group comparison in metabolomics cohort studies. This skill addresses the bias introduced when groups contain different numbers of reanalyzed mass spectrometry files.

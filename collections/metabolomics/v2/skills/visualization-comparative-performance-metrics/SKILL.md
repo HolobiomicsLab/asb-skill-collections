@@ -1,6 +1,8 @@
 ---
 name: visualization-comparative-performance-metrics
-description: Use when you have execution-time data for the same set of plotting operations (e.g., chromatogram, spectrum, peakmap rendering) across two or more backend implementations (e.
+description: Use when you have execution-time data for the same set of plotting operations
+  (e.g., chromatogram, spectrum, peakmap rendering) across two or more backend implementations
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -14,6 +16,7 @@ metadata:
   - pyOpenMS-Viz
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -41,6 +44,7 @@ attribution:
 
 # visualization-comparative-performance-metrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically extract, compute, and visualize execution-time metrics (median, min, max) across multiple plotting backends for mass spectrometry visualization plot types to identify performance leaders and bottlenecks. This skill enables quantitative backend comparison at the plot-type granularity, critical for choosing the optimal backend for interactive or static rendering workflows.

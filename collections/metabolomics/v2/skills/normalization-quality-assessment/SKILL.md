@@ -1,6 +1,8 @@
 ---
 name: normalization-quality-assessment
-description: Use when after completing intra-batch and inter-batch normalisation steps on a SummarizedExperiment object containing metabolomics assays. Use it to confirm that a normalisation method (e.
+description: Use when after completing intra-batch and inter-batch normalisation steps
+  on a SummarizedExperiment object containing metabolomics assays. Use it to confirm
+  that a normalisation method (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -13,6 +15,7 @@ metadata:
   - dplyr
   - SummarizedExperiment
   - Metanorm
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
@@ -22,11 +25,14 @@ derived_from:
   title: ''
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
 - Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
+- we will load the hRUV package and other packages required for the demonstration...
+  library(dplyr)
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -55,6 +61,7 @@ attribution:
 
 # normalization-quality-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visual comparison of PCA plots before and after batch normalisation to assess whether unwanted variation (batch effect) has been effectively removed from metabolomics data. This skill validates the efficacy of hierarchical RUV-based normalisation by detecting absence of batch clustering post-treatment.

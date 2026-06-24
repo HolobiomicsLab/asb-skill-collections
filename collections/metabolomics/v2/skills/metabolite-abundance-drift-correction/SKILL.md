@@ -1,6 +1,8 @@
 ---
 name: metabolite-abundance-drift-correction
-description: Use when you have a raw LCMS nontargeted metabolomics abundance table spanning multiple injections with embedded pooled technical replicate (PREF) or internal standard injections distributed across the run sequence.
+description: Use when you have a raw LCMS nontargeted metabolomics abundance table
+  spanning multiple injections with embedded pooled technical replicate (PREF) or
+  internal standard injections distributed across the run sequence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,6 +18,7 @@ metadata:
   - Gravity
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

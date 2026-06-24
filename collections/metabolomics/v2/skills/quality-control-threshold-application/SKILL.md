@@ -1,6 +1,8 @@
 ---
 name: quality-control-threshold-application
-description: Use when when you have a raw feature abundance matrix with missing values (NAs or zeros) and need to remove features with excessive sparsity before imputation or reproducibility analysis.
+description: Use when when you have a raw feature abundance matrix with missing values
+  (NAs or zeros) and need to remove features with excessive sparsity before imputation
+  or reproducibility analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -18,6 +20,7 @@ metadata:
   - Python
   - PCPFM (Python-Centric Pipeline for Metabolomics)
   - Asari
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -30,7 +33,8 @@ derived_from:
 evidence_spans:
 - 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
 - The R-package **marr** can be installed from GitHub using the R package [devtools]
-- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep software
+- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep
+  software
 - '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
@@ -66,6 +70,7 @@ attribution:
 
 # quality-control-threshold-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a quantitative missingness threshold to filter features (metabolites) from high-dimensional replicate experiments, retaining only those meeting a minimum presence criterion across samples. This skill removes low-quality features before downstream analysis and is essential for preparing metabolomics data for reproducibility assessment.

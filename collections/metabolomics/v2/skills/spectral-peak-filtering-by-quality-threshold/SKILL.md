@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-filtering-by-quality-threshold
-description: Use when you have raw or annotated MS/MS spectra (in MGF, mzML, or mzXML format) destined for de novo peptide sequencing with Casanovo. Use it specifically when your dataset contains variable spectral quality (e.
+description: Use when you have raw or annotated MS/MS spectra (in MGF, mzML, or mzXML
+  format) destined for de novo peptide sequencing with Casanovo. Use it specifically
+  when your dataset contains variable spectral quality (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,14 +16,17 @@ metadata:
   - CUDA Toolkit
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.
@@ -50,6 +55,7 @@ attribution:
 
 # spectral-peak-filtering-by-quality-threshold
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter MS/MS spectra by removing low-quality scans and retaining only the most intense peaks per spectrum to improve de novo peptide sequencing accuracy. This preprocessing step ensures that downstream transformer-based sequence prediction operates on high-signal-to-noise spectral data.

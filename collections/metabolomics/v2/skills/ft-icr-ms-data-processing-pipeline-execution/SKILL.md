@@ -26,16 +26,20 @@ metadata:
   - UltraMassExplorer
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
 - The MetaboDirect pipeline was developed in Python 3.8 [38]
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 - requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -59,6 +63,7 @@ attribution:
 
 # ft-icr-ms-data-processing-pipeline-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute the MetaboDirect command-line pipeline to process direct-injection FT-ICR MS datasets through automated data pre-processing, diagnostics, exploration, chemodiversity analysis, statistical analysis, and optional transformation network generation. This skill transforms raw peak lists with assigned molecular formulas (in Formularity .csv format) into normalized, filtered, annotated datasets with Van Krevelen diagrams, elemental composition plots, diversity metrics, and biochemical transformation networks.

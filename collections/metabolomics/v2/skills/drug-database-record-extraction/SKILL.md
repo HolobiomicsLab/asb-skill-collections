@@ -1,6 +1,8 @@
 ---
 name: drug-database-record-extraction
-description: Use when when you have obtained a DrugBank release file (requiring access credentials) and need to integrate drug chemical structure, name, and identifier information into a metadata cleanup or chemical enrichment pipeline.
+description: Use when when you have obtained a DrugBank release file (requiring access
+  credentials) and need to integrate drug chemical structure, name, and identifier
+  information into a metadata cleanup or chemical enrichment pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -13,6 +15,7 @@ metadata:
   - metadata_cleanup_prefect.py
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

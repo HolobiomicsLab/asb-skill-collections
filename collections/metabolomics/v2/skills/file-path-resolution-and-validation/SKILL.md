@@ -1,6 +1,8 @@
 ---
 name: file-path-resolution-and-validation
-description: Use when when initializing a SmartPeak session from a sequence file, you need to load and validate the workflow.csv and sequence.csv files that are co-located in the session directory.
+description: Use when when initializing a SmartPeak session from a sequence file,
+  you need to load and validate the workflow.csv and sequence.csv files that are co-located
+  in the session directory.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -14,12 +16,14 @@ metadata:
   - OpenMS
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

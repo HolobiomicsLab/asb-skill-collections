@@ -1,6 +1,9 @@
 ---
 name: marker-feature-visualization-retention-time-mz
-description: Use when after NPFimg's automated detection algorithm has identified marker features from a two-dimensional MS map (m/z vs retention time), especially when you need to validate feature positions, inspect co-localization patterns, or communicate results to stakeholders.
+description: Use when after NPFimg's automated detection algorithm has identified
+  marker features from a two-dimensional MS map (m/z vs retention time), especially
+  when you need to validate feature positions, inspect co-localization patterns, or
+  communicate results to stakeholders.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +16,7 @@ metadata:
   - XCMS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -20,9 +24,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # marker-feature-visualization-retention-time-mz
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize identified chemo-/biomarker features on a two-dimensional chromatography–mass spectrometry map (m/z vs retention time) to enable spatial interpretation and validation of discriminative analytes. This skill is essential for confirming marker detection results and communicating feature localization in untargeted metabolomics workflows.

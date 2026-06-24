@@ -1,6 +1,9 @@
 ---
 name: rippp-candidate-structure-generation
-description: Use when after identifying precursor peptides from genome assemblies via BGC mining, when you need to enumerate the chemical space of PTM variants (lantibiotic, lassopeptide, cyanobactin, or other RiPP classes) before matching tandem mass spectra against a constructed database using Dereplicator or.
+description: Use when after identifying precursor peptides from genome assemblies
+  via BGC mining, when you need to enumerate the chemical space of PTM variants (lantibiotic,
+  lassopeptide, cyanobactin, or other RiPP classes) before matching tandem mass spectra
+  against a constructed database using Dereplicator or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -15,13 +18,18 @@ metadata:
   - antiSMASH
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +53,7 @@ attribution:
 
 # RiPP Candidate Structure Generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate putative post-translationally modified (PTM) variants of identified RiPP precursor peptides according to class-specific modification rules, producing a structured database of candidate structures for downstream spectral matching. This skill bridges genome-mined precursor sequences to mass spectrometry-queryable structure space.

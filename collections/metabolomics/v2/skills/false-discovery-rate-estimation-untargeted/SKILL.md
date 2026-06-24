@@ -1,6 +1,8 @@
 ---
 name: false-discovery-rate-estimation-untargeted
-description: Use when performing untargeted metabolomics annotation (i.e., matching observed spectra to a compound database without a pre-defined target list) and you need to assign statistical significance or confidence to candidate metabolite identifications.
+description: Use when performing untargeted metabolomics annotation (i.e., matching
+  observed spectra to a compound database without a pre-defined target list) and you
+  need to assign statistical significance or confidence to candidate metabolite identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,7 @@ metadata:
   - Passatutto
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -46,6 +49,7 @@ attribution:
 
 # false-discovery-rate-estimation-untargeted
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 The Passatutto method enables false discovery rate (FDR) estimation in large-scale untargeted metabolomics annotation by generating synthetic decoy spectra and databases in parallel with reference entries. This skill is essential for controlling annotation error rates when matching observed mass spectra against compound libraries without predefined target lists.

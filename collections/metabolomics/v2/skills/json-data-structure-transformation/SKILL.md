@@ -1,6 +1,8 @@
 ---
 name: json-data-structure-transformation
-description: Use when when you have intermediate JSON data in the Experiment Description Specification schema and need to convert it to a different JSON structure or a repository-specific format (e.g., mwTab for Metabolomics Workbench submission).
+description: Use when when you have intermediate JSON data in the Experiment Description
+  Specification schema and need to convert it to a different JSON structure or a repository-specific
+  format (e.g., mwTab for Metabolomics Workbench submission).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +13,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # json-data-structure-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform intermediate JSON data structures into alternative JSON schemas or formats by applying conversion directives (str, matrix, section) that selectively extract, filter, aggregate, and coerce field values. This skill enables conversion of validated experimental metadata into repository-ready formats such as mwTab.

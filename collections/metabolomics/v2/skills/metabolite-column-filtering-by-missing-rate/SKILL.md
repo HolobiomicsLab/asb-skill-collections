@@ -1,6 +1,9 @@
 ---
 name: metabolite-column-filtering-by-missing-rate
-description: Use when apply this filter when raw metabolomics data contains metabolite columns with varying amounts of missing values and you aim to conduct statistical analysis or imputation. The trigger is the presence of column-wise NA prevalence >10% in metabolite features;
+description: Use when apply this filter when raw metabolomics data contains metabolite
+  columns with varying amounts of missing values and you aim to conduct statistical
+  analysis or imputation. The trigger is the presence of column-wise NA prevalence
+  >10% in metabolite features;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - R
   - MeTEor
   - tidyverse
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -21,7 +25,8 @@ evidence_spans:
 - library(VIM)
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # metabolite-column-filtering-by-missing-rate
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter out metabolite columns with excessive missing data before imputation to reduce noise and improve data quality in metabolomics preprocessing. This step removes uninformative metabolite features that exceed a prevalence threshold of missingness, typically >10%, to focus downstream analysis on well-measured analytes.

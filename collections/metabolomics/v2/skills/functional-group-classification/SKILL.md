@@ -1,6 +1,9 @@
 ---
 name: functional-group-classification
-description: Use when you have a set of query chemicals (chemical names or structures) and need to match them against a reference chemical library organized by type or category, with the goal of identifying structural similarity, functional group membership, or categorical assignment.
+description: Use when you have a set of query chemicals (chemical names or structures)
+  and need to match them against a reference chemical library organized by type or
+  category, with the goal of identifying structural similarity, functional group membership,
+  or categorical assignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -14,12 +17,15 @@ metadata:
   - fmcsR
   - webchem
   - uafR
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # functional-group-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify query chemicals into categorical groups based on structural and functional properties using cheminformatics packages that assess atomic features, ring systems, and molecular weight. This skill enables researchers to systematically organize and filter chemical inventories by structural similarity and functional characteristics.

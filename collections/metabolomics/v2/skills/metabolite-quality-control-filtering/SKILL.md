@@ -1,6 +1,7 @@
 ---
 name: metabolite-quality-control-filtering
-description: Use when after feature extraction (Asari) has produced a full feature table from mzML data, but before normalization and annotation.
+description: Use when after feature extraction (Asari) has produced a full feature
+  table from mzML data, but before normalization and annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +16,7 @@ metadata:
   - PCPFM (Python-Centric Pipeline for Metabolomics)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -50,6 +52,7 @@ attribution:
 
 # metabolite-quality-control-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove low-quality, rare, or contaminated metabolite features from LC-MS feature tables using blank masking, sample dropping, and missing-value retention thresholds. This skill ensures downstream statistical analysis operates on high-confidence, frequently observed metabolites.

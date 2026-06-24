@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-intensity-drift-correction
-description: Use when mS quantification data exhibits intensity drift—a systematic decline or variation in detector response across the run sequence. Intensity drift is particularly common in long measurement sessions and compromises the accuracy of feature-by-sample intensity matrices.
+description: Use when mS quantification data exhibits intensity drift—a systematic
+  decline or variation in detector response across the run sequence. Intensity drift
+  is particularly common in long measurement sessions and compromises the accuracy
+  of feature-by-sample intensity matrices.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,11 +15,13 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # mass-spectrometry-intensity-drift-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Corrects systematic intensity drifts that accumulate during mass spectrometry runs using calibration-aware statistical methods. This skill ensures accurate quantification of targeted analytes by normalizing feature intensities across the sample sequence.

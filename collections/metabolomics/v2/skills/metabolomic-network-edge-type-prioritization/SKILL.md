@@ -1,6 +1,9 @@
 ---
 name: metabolomic-network-edge-type-prioritization
-description: Use when when your metabolomic network contains multiple edge types (Biochemical, Structural, Mass Spectral, Correlation) between the same node pairs and you want to export a unique-edge network in which each node pair is connected by exactly one edge—the one with highest priority according to the.
+description: Use when when your metabolomic network contains multiple edge types (Biochemical,
+  Structural, Mass Spectral, Correlation) between the same node pairs and you want
+  to export a unique-edge network in which each node pair is connected by exactly
+  one edge—the one with highest priority according to the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -10,6 +13,7 @@ metadata:
   tools:
   - MetaMapR
   - cytoscape.js
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv194
   title: MetaMapR

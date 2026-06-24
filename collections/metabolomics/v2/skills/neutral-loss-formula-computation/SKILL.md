@@ -1,6 +1,9 @@
 ---
 name: neutral-loss-formula-computation
-description: Use when you have tandem mass spectra with precursor m/z and observed fragment peak m/z values (as mz/intensity pairs), and you need to construct interpretable feature vectors where each axis corresponds to a real chemical entity (peak or neutral loss) rather than a latent dimension.
+description: Use when you have tandem mass spectra with precursor m/z and observed
+  fragment peak m/z values (as mz/intensity pairs), and you need to construct interpretable
+  feature vectors where each axis corresponds to a real chemical entity (peak or neutral
+  loss) rather than a latent dimension.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,6 +15,7 @@ metadata:
   - Mass Query Language (MassQL)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho
@@ -42,6 +46,7 @@ attribution:
 
 # neutral-loss-formula-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute neutral loss m/z values from tandem mass spectra by subtracting each observed fragment peak m/z from the precursor m/z, then enumerate unique neutral loss formulas to populate a feature axis for sparse chemical feature vectors. This enables direct chemical interpretation of fragmentation patterns without latent representations.

@@ -15,6 +15,7 @@ metadata:
   - coleygroup/ms-pred repository
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
@@ -48,6 +49,7 @@ attribution:
 
 # Hyperparameter-sweep-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute systematic hyperparameter sweeps across multiple baseline spectrum prediction models using identical covariate sets and search spaces to enable fair comparative evaluation. This ensures that performance differences reflect architectural choices rather than tuning disparities.

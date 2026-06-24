@@ -1,6 +1,9 @@
 ---
 name: spectral-dataset-partitioning-and-train-test-curation
-description: Use when when you have a pre-cleaned spectral library (e.g., GNPS, MoNA, or MTBLS1572) with an existing training/test boundary established by prior work (e.g., MSBERT), and you need to report model performance with uncertainty quantification across multiple random partitions.
+description: Use when when you have a pre-cleaned spectral library (e.g., GNPS, MoNA,
+  or MTBLS1572) with an existing training/test boundary established by prior work
+  (e.g., MSBERT), and you need to report model performance with uncertainty quantification
+  across multiple random partitions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -17,6 +20,7 @@ metadata:
   - SpecEmbedding
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -49,6 +53,7 @@ attribution:
 
 # spectral-dataset-partitioning-and-train-test-curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implements reproducible 10-fold cross-validation on MS/MS spectral test sets while preserving the original upstream training split, enabling robust evaluation with reported average and standard deviation metrics across partitions. This skill ensures fair comparison by decoupling data curation (which determines the training set) from evaluation methodology (which applies random splitting only to test data).

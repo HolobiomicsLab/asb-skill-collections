@@ -1,6 +1,9 @@
 ---
 name: sciex-multiquant-data-export-format-recognition
-description: Use when you have txt files exported from Sciex MultiQuant (>v3.0.3) containing QCpool samples measured at regular intervals during mass spectrometry sequences, and you need to validate whether the file structure is compatible with the QComics package before parsing and quality assessment.
+description: Use when you have txt files exported from Sciex MultiQuant (>v3.0.3)
+  containing QCpool samples measured at regular intervals during mass spectrometry
+  sequences, and you need to validate whether the file structure is compatible with
+  the QComics package before parsing and quality assessment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -14,6 +17,7 @@ metadata:
   - QComics
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -43,6 +47,7 @@ attribution:
 
 # sciex-multiquant-data-export-format-recognition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate Sciex MultiQuant (>v3.0.3) txt export files containing QCpool sample measurements for downstream quality assessment. This skill ensures that exported metabolomics/lipidomics data meets structural and format requirements before parsing into QComics workflows.

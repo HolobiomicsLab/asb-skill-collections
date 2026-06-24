@@ -1,6 +1,8 @@
 ---
 name: sequential-and-random-access-file-interface-patterns
-description: Use when when you need to support custom data storage backends (e.g., SQLite, HDF5, or proprietary databases) for mzML-equivalent spectra, but the pymzML parser expects only standard file formats (mzML, mzML.gz, indexed gzip).
+description: Use when when you need to support custom data storage backends (e.g.,
+  SQLite, HDF5, or proprietary databases) for mzML-equivalent spectra, but the pymzML
+  parser expects only standard file formats (mzML, mzML.gz, indexed gzip).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +17,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -44,6 +47,7 @@ attribution:
 
 # sequential-and-random-access-file-interface-patterns
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement dual-mode file interface patterns that support both sequential iteration (via read()) and random access (via __getitem__()) for alternative mass spectrometry data storage backends. This skill enables pymzML to parse spectra from non-standard formats like SQLite databases by abstracting file handling through a polymorphic connector class pattern.

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-table-formatting
-description: Use when when you have raw or processed TWIM-MS data (arrival time and m/z values) from a mass spectrometry instrument and need to organize it into a feature table before biomolecular class assignment or CCS calculations.
+description: Use when when you have raw or processed TWIM-MS data (arrival time and
+  m/z values) from a mass spectrometry instrument and need to organize it into a feature
+  table before biomolecular class assignment or CCS calculations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -42,6 +45,7 @@ attribution:
 
 # mass-spectrometry-data-table-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Format TWIM-MS experimental data into tabular structures indexed by feature identifier, with columns for arrival time, m/z values, and assigned biomolecular class labels. This enables downstream CCS calibration and class-specific calculations without prior feature identification.

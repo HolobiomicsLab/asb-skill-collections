@@ -1,6 +1,7 @@
 ---
 name: chemical-identifier-mapping-smiles-to-pubchem-chemspider
-description: Use when you have a chemical structure in SMILES format and need to find matching compound records and standardized identifiers (e.
+description: Use when you have a chemical structure in SMILES format and need to find
+  matching compound records and standardized identifiers (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -18,6 +19,7 @@ metadata:
   - COCONUT
   - SmilesDrawer
   - React
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks

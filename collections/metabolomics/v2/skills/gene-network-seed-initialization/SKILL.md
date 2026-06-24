@@ -1,6 +1,8 @@
 ---
 name: gene-network-seed-initialization
-description: Use when when you have metabolomic enrichment scores for genes (e.g., from MSEA analysis comparing a patient to controls) and need to prepare them as seed labels for label propagation over a gene/protein interaction network.
+description: Use when when you have metabolomic enrichment scores for genes (e.g.,
+  from MSEA analysis comparing a patient to controls) and need to prepare them as
+  seed labels for label propagation over a gene/protein interaction network.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,6 +14,7 @@ metadata:
   - metPropagate
   - MSEA (Metabolite Set Enrichment Analysis)
   - STRING database
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41525-020-0132-5
   title: metPropagate
@@ -39,6 +42,7 @@ attribution:
 
 # gene-network-seed-initialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a label-propagation algorithm by mapping metabolomic hits (differentially abundant metabolites) to genes and seeding network nodes with these labels prior to propagation. This converts raw metabolomic enrichment signals into a ranked seed set that guides network-based disease gene prioritization.

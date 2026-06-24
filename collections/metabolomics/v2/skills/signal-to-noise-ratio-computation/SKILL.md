@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -52,6 +53,7 @@ attribution:
 
 # signal-to-noise-ratio-computation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Compute signal-to-noise ratio (SNR) as a per-feature quality metric in LC-MS data processing. SNR is a key component of MassCube's comprehensive feature quality evaluation module, used to assess the reliability of detected peaks by quantifying peak intensity relative to baseline noise.

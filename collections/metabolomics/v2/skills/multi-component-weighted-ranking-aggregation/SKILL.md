@@ -1,6 +1,9 @@
 ---
 name: multi-component-weighted-ranking-aggregation
-description: Use when you have completed LC–MS/MS feature detection and annotation (via MZmine2/3 and GNPS/SIRIUS/CANOPUS), have compiled a taxonomically annotated metadata table, and need to rank extracts by their likelihood of containing novel chemistry.
+description: Use when you have completed LC–MS/MS feature detection and annotation
+  (via MZmine2/3 and GNPS/SIRIUS/CANOPUS), have compiled a taxonomically annotated
+  metadata table, and need to rank extracts by their likelihood of containing novel
+  chemistry.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -20,18 +23,23 @@ metadata:
   - Inventa
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2
+- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time'
+  columns. -Inventa takes input directly from MZmine2
 - Inventa takes input directly from MZmine2 or MZmine 3
-- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares
-- 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/),
+  is possible to use other processing sofwares
+- 'tima_results_filename: timaR reponderated output format. - for performing in silico
+  annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'
-- 'Class Component (CC): a score considering the presence of predicted known chemical classes new to the species'
+- 'Class Component (CC): a score considering the presence of predicted known chemical
+  classes new to the species'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

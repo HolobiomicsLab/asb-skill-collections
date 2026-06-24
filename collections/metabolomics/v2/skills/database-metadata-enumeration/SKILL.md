@@ -1,6 +1,9 @@
 ---
 name: database-metadata-enumeration
-description: Use when when you have downloaded a curated structure-organism dataset (such as LOTUS) and need to verify the reported counts of unique entities (source databases, organisms, structures, and their pairs) to confirm dataset integrity, assess data coverage, or reproduce published statistics in a.
+description: Use when when you have downloaded a curated structure-organism dataset
+  (such as LOTUS) and need to verify the reported counts of unique entities (source
+  databases, organisms, structures, and their pairs) to confirm dataset integrity,
+  assess data coverage, or reproduce published statistics in a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - R
   - Python 3
   - lotus-processor
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -46,6 +50,7 @@ attribution:
 
 # database-metadata-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate and count distinct database sources, organisms, structures, and structure-organism pairs within a curated natural products dataset to verify dataset composition and metadata completeness. This skill validates the scale and scope of a data collection against documented headline statistics.

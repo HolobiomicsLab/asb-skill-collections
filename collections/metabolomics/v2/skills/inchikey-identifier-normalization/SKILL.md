@@ -1,6 +1,8 @@
 ---
 name: inchikey-identifier-normalization
-description: Use when gNPS has stopped supplying ClassyFire ontology information for spectral library matches (as of the ConCISE documentation snapshot) and you need to manually retrieve chemical classifications.
+description: Use when gNPS has stopped supplying ClassyFire ontology information for
+  spectral library matches (as of the ConCISE documentation snapshot) and you need
+  to manually retrieve chemical classifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -15,14 +17,17 @@ metadata:
   - ConCISE
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: comparative-machine-learning-benchmarking
-description: Use when you have developed a new machine learning model for predicting metabolomic profiles from microbiome data and need to quantify its performance improvement over existing methods.
+description: Use when you have developed a new machine learning model for predicting
+  metabolomic profiles from microbiome data and need to quantify its performance improvement
+  over existing methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -18,16 +20,23 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed using the given instructions
-- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV using 5-fold internal cross-validation
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed
+  using the given instructions
+- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV
+  using 5-fold internal cross-validation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +60,7 @@ attribution:
 
 # comparative-machine-learning-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic evaluation of a novel machine learning model (MiMeNet) against established baselines (MelonnPan, Random Forest, Elastic Net, NED) on paired microbiome-metabolome datasets using consistent train-test splits, cross-validation protocols, and correlation-based performance metrics. This skill enables assessment of whether a new predictive approach offers genuine improvements in metabolite prediction accuracy and discovery capacity.

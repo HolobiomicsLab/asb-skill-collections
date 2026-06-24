@@ -1,6 +1,8 @@
 ---
 name: euclidean-distance-computation-for-spatial-alignment
-description: Use when when you have preprocessed ST and SM AnnData objects with spatial coordinates and need to establish one-to-one spot correspondence between the two modalities prior to joint analysis.
+description: Use when when you have preprocessed ST and SM AnnData objects with spatial
+  coordinates and need to establish one-to-one spot correspondence between the two
+  modalities prior to joint analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - scikit-learn NearestNeighbors
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

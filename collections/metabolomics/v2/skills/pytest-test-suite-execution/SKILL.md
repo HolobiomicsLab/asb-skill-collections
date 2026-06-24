@@ -1,6 +1,8 @@
 ---
 name: pytest-test-suite-execution
-description: Use when after installing a package in development mode (e.g., via `pip install -e .[dev]`) to verify the package functions as intended, or before submitting pull requests to confirm no regressions were introduced by code changes.
+description: Use when after installing a package in development mode (e.g., via `pip
+  install -e .[dev]`) to verify the package functions as intended, or before submitting
+  pull requests to confirm no regressions were introduced by code changes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +13,7 @@ metadata:
   - pip
   - pytest
   - biosynfoni
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -18,7 +21,8 @@ evidence_spans:
 - pip install -e .[dev]
 - pytest tests/
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

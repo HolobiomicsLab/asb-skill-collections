@@ -1,6 +1,9 @@
 ---
 name: true-positive-false-positive-rate-calculation
-description: Use when you have a trained NeatMS neural network model (.h5 format) and need to assess its classification performance at a specific decision threshold (e.g., 0.01) to determine what fraction of true peaks are retained (TPR) versus what fraction of incorrect peaks are incorrectly accepted (FPR).
+description: Use when you have a trained NeatMS neural network model (.h5 format)
+  and need to assess its classification performance at a specific decision threshold
+  (e.g., 0.01) to determine what fraction of true peaks are retained (TPR) versus
+  what fraction of incorrect peaks are incorrectly accepted (FPR).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +18,13 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -48,6 +53,7 @@ attribution:
 
 # true-positive-false-positive-rate-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate True Positive Rate (TPR) and False Positive Rate (FPR) metrics from a trained NeatMS neural network model at a specified probability threshold. This skill is essential for evaluating classifier performance on untargeted LCMS peak classification and understanding the trade-off between retaining true peaks and filtering false positives.

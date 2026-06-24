@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-frequency-threshold-optimization
-description: 'Use when you have MS/MS spectra with fragment frequency annotations (from consensus spectrum generation) and need to decide which fragments to retain versus remove. Trigger conditions: (1) you have replicate MS/MS spectra for the same feature with per-fragment recurrence frequencies calculated;'
+description: 'Use when you have MS/MS spectra with fragment frequency annotations
+  (from consensus spectrum generation) and need to decide which fragments to retain
+  versus remove. Trigger conditions: (1) you have replicate MS/MS spectra for the
+  same feature with per-fragment recurrence frequencies calculated;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -18,13 +21,18 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +56,7 @@ attribution:
 
 # Spectral Peak Frequency Threshold Optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically identify the optimal frequency threshold for MS/MS fragment denoising by applying Pareto front analysis to evaluate trade-offs between signal retention and noise reduction across a range of threshold values. This skill determines which fragments to retain in tandem mass spectra based on their recurrence frequency across replicate spectra.

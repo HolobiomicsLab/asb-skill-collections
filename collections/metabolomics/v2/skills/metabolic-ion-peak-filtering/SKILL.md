@@ -1,6 +1,9 @@
 ---
 name: metabolic-ion-peak-filtering
-description: Use when you have a raw or extracted peak feature table (CSV or tabular format) containing mass-to-charge ratios, retention times, and intensity values across multiple samples from different experimental groups, and you need to identify which peaks show statistically significant differential.
+description: Use when you have a raw or extracted peak feature table (CSV or tabular
+  format) containing mass-to-charge ratios, retention times, and intensity values
+  across multiple samples from different experimental groups, and you need to identify
+  which peaks show statistically significant differential.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - openNAU
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU

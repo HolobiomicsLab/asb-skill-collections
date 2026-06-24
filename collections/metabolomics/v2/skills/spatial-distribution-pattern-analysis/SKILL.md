@@ -1,6 +1,9 @@
 ---
 name: spatial-distribution-pattern-analysis
-description: Use when when you have loaded MSI peak data with associated m/z values and need to disambiguate matrix ions from analyte ions. Apply this skill when chemical formula alone is insufficient (e.g., overlapping or isobaric peaks exist) and you have pixel-level spatial intensity maps for each ion.
+description: Use when when you have loaded MSI peak data with associated m/z values
+  and need to disambiguate matrix ions from analyte ions. Apply this skill when chemical
+  formula alone is insufficient (e.g., overlapping or isobaric peaks exist) and you
+  have pixel-level spatial intensity maps for each ion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -15,11 +18,13 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - devtools::install_github("prafols/rMSIproc", ref = "0.2")
 - rMSIcleanup is an open-source R package
@@ -47,6 +52,7 @@ attribution:
 
 # spatial-distribution-pattern-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and evaluate spatial distribution patterns of ions across a mass spectrometry imaging dataset to classify matrix-related vs. analyte signals. This skill leverages co-localization coherence and spatial heterogeneity as discriminative features alongside chemical formula matching.

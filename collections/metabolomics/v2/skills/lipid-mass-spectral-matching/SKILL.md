@@ -1,6 +1,8 @@
 ---
 name: lipid-mass-spectral-matching
-description: Use when you have peak-picked LC-HRMS/MS or direct infusion MS/MS data (m/z, retention time, intensity) from Q-Exactive, Agilent, Bruker, or SCIEX instruments and need to annotate experimental fragment patterns to known lipid structures.
+description: Use when you have peak-picked LC-HRMS/MS or direct infusion MS/MS data
+  (m/z, retention time, intensity) from Q-Exactive, Agilent, Bruker, or SCIEX instruments
+  and need to annotate experimental fragment patterns to known lipid structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,12 +18,15 @@ metadata:
   - Q-Exactive (Orbitrap UHPLC-HRMS/MS)
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
 claims: []
 provenance:

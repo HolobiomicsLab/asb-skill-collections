@@ -1,6 +1,9 @@
 ---
 name: dataset-preprocessing-and-filtering
-description: Use when when you have a raw GNPS or other spectral library dataset with inconsistent or incomplete instrument annotations, and you need to verify or reproduce reported dataset split counts (e.g., training/test compound ratios). Apply this skill when an instrument allowlist fix (e.
+description: Use when when you have a raw GNPS or other spectral library dataset with
+  inconsistent or incomplete instrument annotations, and you need to verify or reproduce
+  reported dataset split counts (e.g., training/test compound ratios). Apply this
+  skill when an instrument allowlist fix (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +44,7 @@ attribution:
 
 # dataset-preprocessing-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and preprocess tandem mass spectrometry (MS/MS) spectral datasets by applying instrument-specific allowlists and re-running dataset splitting logic to obtain curated training and test compound partitions. This skill ensures that spectral records matching updated instrument metadata criteria are retained and correctly split into balanced subsets for model training and evaluation.

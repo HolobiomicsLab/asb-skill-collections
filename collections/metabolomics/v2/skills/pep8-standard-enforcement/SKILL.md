@@ -1,6 +1,7 @@
 ---
 name: pep8-standard-enforcement
-description: Use when preparing code for contribution to a Python project that mandates PEP8 compliance, or when setting up pre-commit quality gates for a codebase.
+description: Use when preparing code for contribution to a Python project that mandates
+  PEP8 compliance, or when setting up pre-commit quality gates for a codebase.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -9,6 +10,7 @@ metadata:
   tools:
   - flake8
   - black
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-019-0400-9
   title: BiG-SCAPE biosynthetic diversity

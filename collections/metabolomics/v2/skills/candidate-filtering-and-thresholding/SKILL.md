@@ -1,6 +1,9 @@
 ---
 name: candidate-filtering-and-thresholding
-description: Use when after generating candidate molecular formula and adduct pairs for detected m/z features, when you have observed isotopic patterns from feature detection and need to reduce annotation ambiguity by eliminating candidates with poor isotopic fit.
+description: Use when after generating candidate molecular formula and adduct pairs
+  for detected m/z features, when you have observed isotopic patterns from feature
+  detection and need to reduce annotation ambiguity by eliminating candidates with
+  poor isotopic fit.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,6 +16,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

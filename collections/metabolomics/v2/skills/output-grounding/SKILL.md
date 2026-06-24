@@ -1,6 +1,7 @@
 ---
 name: output-grounding
-description: Use when after running 3DMolMS predictions (MS/MS spectra, RT, or CCS) on a test set with known experimental ground truth.
+description: Use when after running 3DMolMS predictions (MS/MS spectra, RT, or CCS)
+  on a test set with known experimental ground truth.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -264,6 +265,7 @@ metadata:
   techniques:
   - CE-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -455,9 +457,11 @@ evidence_spans:
 - PyTorch must be installed separately. Check the `official PyTorch website
 - '3DMolMS has the following dependencies: * Python 3.8+ * PyTorch * RDKit'
 - 'Source: github:gitlab.gwdg.de__joerg.buescher__automrm'
-- These are generated using RDKit... We extensively use the ChEMBL structure curation pipeline developed with RDKit to clean the data and curate the database.
+- These are generated using RDKit... We extensively use the ChEMBL structure curation
+  pipeline developed with RDKit to clean the data and curate the database.
 - snakemake --configfile config/config_fast.yaml --jobs 1 --dry-run -p
-- This entails conversion to molecules using `rdkit`, removing light fragments, neutralizing charges, filtering for valid elements
+- This entails conversion to molecules using `rdkit`, removing light fragments, neutralizing
+  charges, filtering for valid elements
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -870,6 +874,7 @@ attribution:
 
 # output_grounding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and ground predicted MS/MS spectra, retention times, and collision cross sections against experimental reference data or ground truth by computing similarity metrics, spectral alignment scores, and error distributions. This skill ensures that neural network predictions are scientifically interpretable and fit-for-purpose before integration into metabolomics workflows.

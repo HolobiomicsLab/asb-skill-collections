@@ -1,6 +1,9 @@
 ---
 name: tensor-encoding-deep-learning
-description: Use when when you have validated SMILES strings or RDKit molecule objects representing chemical structures and need to feed them into a pre-trained deep learning model (such as PS2MS, NEIMS, or DeepEI) that expects fixed-size numerical tensor inputs.
+description: Use when when you have validated SMILES strings or RDKit molecule objects
+  representing chemical structures and need to feed them into a pre-trained deep learning
+  model (such as PS2MS, NEIMS, or DeepEI) that expects fixed-size numerical tensor
+  inputs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -10,6 +13,7 @@ metadata:
   - http://edamontology.org/topic_3473
   tools:
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
@@ -38,6 +42,7 @@ attribution:
 
 # Tensor Encoding for Deep Learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert parsed molecular structures (SMILES, canonical molecule objects, or extracted descriptors) into fixed-size numerical tensor representations compatible with deep learning model input layers. This skill bridges chemical representation and neural network inference by standardizing feature dimensions and value ranges.

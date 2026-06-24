@@ -1,6 +1,7 @@
 ---
 name: string-concatenation-with-delimiters
-description: Use when when you need to aggregate values from multiple records in a JSON input document into a single concatenated string field (e.
+description: Use when when you need to aggregate values from multiple records in a
+  JSON input document into a single concatenated string field (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3908
@@ -11,6 +12,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +46,7 @@ attribution:
 
 # String Concatenation with Delimiters
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply str directives with for_each iteration, optional filtering, and delimiter-based field concatenation to combine values from multiple records into a single summary string. Used in JSON-to-JSON conversion workflows to aggregate protocol descriptions, metadata fields, or enumerated values across filtered record sets.

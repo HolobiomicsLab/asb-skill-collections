@@ -1,6 +1,9 @@
 ---
 name: time-series-intensity-normalization
-description: Use when when LCMS metabolomics abundance tables show systematic intensity drift across the injection sequence (e.g., instrument signal decay or gain over hours), and you have pooled technical replicate injections and/or internal standard compounds distributed throughout the run.
+description: Use when when LCMS metabolomics abundance tables show systematic intensity
+  drift across the injection sequence (e.g., instrument signal decay or gain over
+  hours), and you have pooled technical replicate injections and/or internal standard
+  compounds distributed throughout the run.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +17,7 @@ metadata:
   - bmxp (Python package)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

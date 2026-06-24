@@ -1,6 +1,9 @@
 ---
 name: command-line-interface-testing
-description: Use when after installing a Python package or before running a computational workflow for the first time, to verify that the CLI entry point is properly configured, the Python environment is correctly set up, and to discover available command-line arguments and their defaults (e.
+description: Use when after installing a Python package or before running a computational
+  workflow for the first time, to verify that the CLI entry point is properly configured,
+  the Python environment is correctly set up, and to discover available command-line
+  arguments and their defaults (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -12,6 +15,7 @@ metadata:
   - annotate.py
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty080
   title: ChemDistiller
@@ -40,6 +44,7 @@ attribution:
 
 # command-line-interface-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a Python-based command-line tool (such as ChemDistiller's annotate.py) executes correctly and emits expected help documentation when invoked with the --help flag. This skill confirms entry-point accessibility and documents available command-line arguments before running production analyses.

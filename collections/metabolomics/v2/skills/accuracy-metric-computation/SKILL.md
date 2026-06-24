@@ -1,6 +1,9 @@
 ---
 name: accuracy-metric-computation
-description: Use when after running inference on a trained structure prediction model with one or more input modalities (1H NMR, 13C NMR, or combined), you have generated predicted molecular formulas and connectivity graphs that need to be compared against known ground truth structures.
+description: Use when after running inference on a trained structure prediction model
+  with one or more input modalities (1H NMR, 13C NMR, or combined), you have generated
+  predicted molecular formulas and connectivity graphs that need to be compared against
+  known ground truth structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,6 +15,7 @@ metadata:
   - convolutional neural network
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -39,6 +43,7 @@ attribution:
 
 # accuracy-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute quantitative accuracy metrics (exact-match, graph edit distance, connectivity F1) to evaluate molecular structure predictions from spectroscopic inputs against ground truth labels. This skill measures prediction correctness across multiple structural representations and identifies performance gaps between modalities.

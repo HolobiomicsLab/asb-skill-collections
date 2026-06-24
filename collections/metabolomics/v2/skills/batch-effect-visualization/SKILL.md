@@ -1,6 +1,9 @@
 ---
 name: batch-effect-visualization
-description: Use when you have multi-batch metabolomics data in SummarizedExperiment format and need to demonstrate that batch clustering or run-order signal drift persists in raw/imputed assays but is eliminated after hRUV normalisation (intra-batch loess + RUV-III, followed by inter-batch concatenation).
+description: Use when you have multi-batch metabolomics data in SummarizedExperiment
+  format and need to demonstrate that batch clustering or run-order signal drift persists
+  in raw/imputed assays but is eliminated after hRUV normalisation (intra-batch loess
+  + RUV-III, followed by inter-batch concatenation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,6 +19,7 @@ metadata:
   - NormalizeMets
   - RStudio
   - Plotly
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
@@ -23,11 +27,15 @@ derived_from:
   title: ''
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
-- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate the unwanted variation within and between batches with RUV-III'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
+- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate
+  the unwanted variation within and between batches with RUV-III'
 - Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- we will load the hRUV package and other packages required for the demonstration...
+  library(dplyr)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -55,6 +63,7 @@ attribution:
 
 # batch-effect-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize batch effects and signal drift in metabolomics data before and after normalisation using PCA and run-order plots. This skill enables rapid assessment of whether hierarchical RUV normalisation has successfully removed unwanted variation across experimental batches.

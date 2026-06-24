@@ -1,6 +1,9 @@
 ---
 name: feature-set-performance-evaluation
-description: Use when when deciding which molecular representation to use for retention time prediction or similar regression tasks on small molecules, and you have access to multiple feature generation options (e.g., alvaDesc can generate both molecular descriptors and multiple fingerprint types).
+description: Use when when deciding which molecular representation to use for retention
+  time prediction or similar regression tasks on small molecules, and you have access
+  to multiple feature generation options (e.g., alvaDesc can generate both molecular
+  descriptors and multiple fingerprint types).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,11 +13,13 @@ metadata:
   tools:
   - alvaDesc
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +43,7 @@ attribution:
 
 # feature-set-performance-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare the predictive performance of alternative molecular feature representations (descriptors, fingerprints, or their combination) by training independent machine learning regressors on each and measuring prediction errors on held-out test data. This skill identifies which feature type or combination yields the lowest error for a given regression task.

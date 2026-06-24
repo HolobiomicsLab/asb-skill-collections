@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-transformation
-description: Use when when you have native metabolite structures (SMILES or mol format) and need to predict adduct ions for a mass spectrometry imaging experiment that uses a derivatizing matrix known to produce ions other than common [M+H]+ (positive mode) or [M-H]- (negative mode).
+description: Use when when you have native metabolite structures (SMILES or mol format)
+  and need to predict adduct ions for a mass spectrometry imaging experiment that
+  uses a derivatizing matrix known to produce ions other than common [M+H]+ (positive
+  mode) or [M-H]- (negative mode).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -12,6 +15,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -41,6 +45,7 @@ attribution:
 
 # molecular-structure-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply chemical derivatization reactions to metabolite structures to enumerate non-standard adduct ions characteristic of specific derivatizing matrices (e.g., FMP-10). This skill transforms native SMILES/mol structures into derivatized products and predicts their mass-to-charge ratios for mass spectrometry metabolite identification.

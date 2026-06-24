@@ -1,6 +1,7 @@
 ---
 name: neural-network-model-layer-validation
-description: Use when after converting Keras models to HDF5 TensorFlow 2.0 format and before deploying them to a TensorFlow Serving endpoint.
+description: Use when after converting Keras models to HDF5 TensorFlow 2.0 format
+  and before deploying them to a TensorFlow Serving endpoint.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,6 +13,7 @@ metadata:
   - TensorFlow
   - Keras
   - TensorFlow Serving
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

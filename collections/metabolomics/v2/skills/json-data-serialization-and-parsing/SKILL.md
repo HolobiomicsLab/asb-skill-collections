@@ -1,6 +1,7 @@
 ---
 name: json-data-serialization-and-parsing
-description: Use when you have discovered Mass2Motifs via LDA and need to (1) load a pre-computed motifset JSON file (e.g., motifset_optimized.
+description: Use when you have discovered Mass2Motifs via LDA and need to (1) load
+  a pre-computed motifset JSON file (e.g., motifset_optimized.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -14,13 +15,15 @@ metadata:
   - MS2LDAViz
   - Spec2Vec
   - MAG (Mass2Motif Annotation Guidance)
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

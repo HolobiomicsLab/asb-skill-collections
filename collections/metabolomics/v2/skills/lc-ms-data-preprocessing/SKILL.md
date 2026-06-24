@@ -1,6 +1,9 @@
 ---
 name: lc-ms-data-preprocessing
-description: 'Use when you have raw mzML files and corresponding feature tables (CSV format, mzmine-formatted) from untargeted LCMS experiments, and you need to convert them into uniformly-shaped peak matrices (2 × 120 per peak: margin + signal regions) as input for neural network classification of MS1 peak.'
+description: 'Use when you have raw mzML files and corresponding feature tables (CSV
+  format, mzmine-formatted) from untargeted LCMS experiments, and you need to convert
+  them into uniformly-shaped peak matrices (2 × 120 per peak: margin + signal regions)
+  as input for neural network classification of MS1 peak.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,11 +17,13 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -47,6 +52,7 @@ attribution:
 
 # lc-ms-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare untargeted liquid chromatography–mass spectrometry (LCMS) raw data and feature tables for neural network–based peak classification by converting mzML and feature table inputs into normalized peak matrices with consistent dimensionality. This skill is essential when you need to standardize heterogeneous LCMS outputs before filtering false positive MS1 peaks.

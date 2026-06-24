@@ -1,6 +1,8 @@
 ---
 name: fragmentation-strategy-comparison-across-datasets
-description: Use when you have extracted a chemical mixture from a real mzML acquisition (e.g., Beer1pos), simulated the same chemicals through ViMMS using a chosen controller (e.
+description: Use when you have extracted a chemical mixture from a real mzML acquisition
+  (e.g., Beer1pos), simulated the same chemicals through ViMMS using a chosen controller
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -14,6 +16,7 @@ metadata:
   - ChemicalMixtureFromMZML
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -21,7 +24,8 @@ derived_from:
   title: ''
 evidence_spans:
 - ViMMS is compatible with Python 3+
-- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation
+  coverage using OpenMS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # fragmentation-strategy-comparison-across-datasets
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare fragmentation coverage and intensity metrics between simulated and real LC-MS/MS data to validate whether a virtual acquisition strategy reproduces experimentally observed fragmentation patterns. This skill bridges simulation fidelity assessment by quantifying how well ViMMS-simulated Top-N (or other) controllers match real instrument behavior on the same chemical mixture.

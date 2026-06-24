@@ -1,6 +1,8 @@
 ---
 name: oldens-method-implementation
-description: Use when you have trained multi-layer perceptron neural networks on paired microbiome-metabolome data and need to extract interpretable feature attribution scores from the learned weights to identify microbe-metabolite interaction relationships.
+description: Use when you have trained multi-layer perceptron neural networks on paired
+  microbiome-metabolome data and need to extract interpretable feature attribution
+  scores from the learned weights to identify microbe-metabolite interaction relationships.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3625
@@ -15,16 +17,23 @@ metadata:
   - TensorFlow or PyTorch
   - TensorFlow / PyTorch
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest models were implemented using
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- models can predict the entire set of metabolites at once, and all models were evaluated
+  using 10 iterations of 10-fold cross-validation. Random Forest models were implemented
+  using
 - CLR transformation applied to all data except IBD PRISM microbes
-- where W is the weight matrix connecting layer l−1 and layer l. Each element in S represents a microbe-metabolite feature attribution score
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
+- where W is the weight matrix connecting layer l−1 and layer l. Each element in S
+  represents a microbe-metabolite feature attribution score
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +57,7 @@ attribution:
 
 # Olden's Method Implementation for Neural Network Feature Attribution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Olden's method computes microbe-metabolite feature attribution scores by multiplying weight matrices across all hidden layers of a trained neural network, producing a single attribution matrix per model where rows represent microbial input features and columns represent metabolite output features. This method enables identification of which microbes contribute to predicting each metabolite by quantifying the product-of-weights pathway through the network.

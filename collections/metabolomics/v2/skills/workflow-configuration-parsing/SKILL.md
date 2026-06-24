@@ -1,6 +1,8 @@
 ---
 name: workflow-configuration-parsing
-description: Use when you have a workflow.csv file co-located with sequence.csv in a SmartPeak session directory and need to load a default or custom workflow configuration into an executable command sequence.
+description: Use when you have a workflow.csv file co-located with sequence.csv in
+  a SmartPeak session directory and need to load a default or custom workflow configuration
+  into an executable command sequence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,12 +13,14 @@ metadata:
   - SmartPeak
   - SmartPeakCLI
   - OpenMS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

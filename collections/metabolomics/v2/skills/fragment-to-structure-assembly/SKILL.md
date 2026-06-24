@@ -1,6 +1,8 @@
 ---
 name: fragment-to-structure-assembly
-description: Use when when you have spectroscopic measurements (1D ¹H or ¹³C NMR) that have been decomposed into predicted substructures or fragments, and you need to reconstruct the full molecular formula and connectivity graph.
+description: Use when when you have spectroscopic measurements (1D ¹H or ¹³C NMR)
+  that have been decomposed into predicted substructures or fragments, and you need
+  to reconstruct the full molecular formula and connectivity graph.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,6 +14,7 @@ metadata:
   - Transformer (multi-head self-attention and cross-attention architecture)
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -40,6 +43,7 @@ attribution:
 
 # fragment-to-structure-assembly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a transformer encoder-decoder architecture to assemble predicted molecular fragments (encoded as token sequences) into complete molecular structures by jointly predicting molecular formula and bond connectivity. This skill maps fragment embeddings to structure space via multi-head attention, enabling rapid structure elucidation from spectroscopic data.

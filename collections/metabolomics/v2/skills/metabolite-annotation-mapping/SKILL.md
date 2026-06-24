@@ -1,6 +1,8 @@
 ---
 name: metabolite-annotation-mapping
-description: Use when you have a MultiAssayExperiment object with metabolite measurements (assay slot) and basic rowData (e.g., metabolite names or mass-to-charge ratios), but lack standardized chemical identifiers or pathway assignments.
+description: Use when you have a MultiAssayExperiment object with metabolite measurements
+  (assay slot) and basic rowData (e.g., metabolite names or mass-to-charge ratios),
+  but lack standardized chemical identifiers or pathway assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -13,6 +15,7 @@ metadata:
   - WGCNA
   - Small Molecular Pathway Database (SMPDB)
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -24,7 +27,8 @@ evidence_spans:
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +53,7 @@ attribution:
 
 # metabolite-annotation-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and map standardized metabolite identifiers (HMDB, KEGG, ChEBI) to pathway and chemical annotations from external databases (SMPDB). This enriches rowData in a MultiAssayExperiment object with biochemical context, enabling downstream pathway-level analysis and metabolite classification.

@@ -1,6 +1,9 @@
 ---
 name: reproducibility-seed-management
-description: Use when before invoking random forest imputation (impute_rf) or any other stochastic algorithm on a MetaboSet expression matrix. Seed-setting is mandatory when reproducibility is required—either for method validation, peer review, or when sharing analysis code with collaborators.
+description: Use when before invoking random forest imputation (impute_rf) or any
+  other stochastic algorithm on a MetaboSet expression matrix. Seed-setting is mandatory
+  when reproducibility is required—either for method validation, peer review, or when
+  sharing analysis code with collaborators.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,7 @@ metadata:
   - missForest
   - doParallel
   - Biobase
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -24,7 +28,8 @@ evidence_spans:
 - reads them to R, conducts additional preprocessing and statistical analyses
 - The implementation we use (from the missForest package) can be parallelized
 - Load the libraries (doParallel is used for parallel processing)
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # reproducibility-seed-management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Set a random seed before applying stochastic imputation algorithms (e.g., random forest) to ensure deterministic, reproducible results across multiple runs of the same analysis. This is essential for validating findings and enabling collaboration in computational metabolomics workflows.

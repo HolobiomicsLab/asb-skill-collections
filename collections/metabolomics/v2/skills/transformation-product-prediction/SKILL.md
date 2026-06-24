@@ -1,6 +1,8 @@
 ---
 name: transformation-product-prediction
-description: Use when after parent chemical suspects have been identified in a non-target screening workflow, use this skill when you need to screen for downstream products formed by chemical or biological transformation.
+description: Use when after parent chemical suspects have been identified in a non-target
+  screening workflow, use this skill when you need to screen for downstream products
+  formed by chemical or biological transformation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -18,6 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

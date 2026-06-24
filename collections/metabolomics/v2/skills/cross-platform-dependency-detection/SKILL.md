@@ -1,6 +1,8 @@
 ---
 name: cross-platform-dependency-detection
-description: Use when when developing a standalone scientific application that relies on external binaries or libraries and must run on a specific operating system (e.g., Microsoft Windows 64-bit). Use this skill to verify Gnuplot 5.4.
+description: Use when when developing a standalone scientific application that relies
+  on external binaries or libraries and must run on a specific operating system (e.g.,
+  Microsoft Windows 64-bit). Use this skill to verify Gnuplot 5.4.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0336
@@ -10,6 +12,7 @@ metadata:
   - Perl Prima
   - Gnuplot
   - Perl
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -37,6 +40,7 @@ attribution:
 
 # cross-platform-dependency-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and verify the availability of required external libraries and tools on the host operating system before launching a scientific application. This skill prevents runtime failures by validating prerequisites (e.g., Gnuplot 5.4.2) at startup and providing actionable feedback to the user.

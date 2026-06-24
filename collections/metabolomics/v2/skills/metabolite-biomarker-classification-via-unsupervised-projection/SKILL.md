@@ -1,6 +1,9 @@
 ---
 name: metabolite-biomarker-classification-via-unsupervised-projection
-description: Use when after preprocessing GCxGC-MS chromatograms (smoothing, baseline correction, peak alignment) when you need to uncover latent metabolite patterns that distinguish biological groups without prior class labels. Specifically useful for exploratory separation of disease states (e.
+description: Use when after preprocessing GCxGC-MS chromatograms (smoothing, baseline
+  correction, peak alignment) when you need to uncover latent metabolite patterns
+  that distinguish biological groups without prior class labels. Specifically useful
+  for exploratory separation of disease states (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -14,13 +17,15 @@ metadata:
   - colorRamps
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # metabolite-biomarker-classification-via-unsupervised-projection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and visualize principal component scores from preprocessed GCxGC-MS chromatogram data to reveal multivariate metabolite structure and separate sample groups (e.g., carriage vs. control) in an unsupervised manner. This skill uses multiway PCA to project high-dimensional chromatographic signals into a reduced score space where biomarker patterns become interpretable.

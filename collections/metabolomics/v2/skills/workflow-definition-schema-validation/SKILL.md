@@ -1,6 +1,8 @@
 ---
 name: workflow-definition-schema-validation
-description: Use when you have located a workflow definition file (YAML or JSON) in a versioned release or commit and need to verify that it conforms to the schema specification for that release version (e.g., v1.0.0).
+description: Use when you have located a workflow definition file (YAML or JSON) in
+  a versioned release or commit and need to verify that it conforms to the schema
+  specification for that release version (e.g., v1.0.0).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +13,7 @@ metadata:
   - manual expert review
   - YAML schema validator (e.g., yamllint, jsonschema)
   - QC4metabolomics repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
@@ -38,6 +41,7 @@ attribution:
 
 # workflow-definition-schema-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the structural integrity and schema compliance of a workflow definition file (YAML or JSON) against a formal specification, ensuring all required metadata fields are present, type-consistent, and free of syntax errors or undefined references. This skill is essential when reconstructing or auditing released workflow components to confirm they match their declared specification version.

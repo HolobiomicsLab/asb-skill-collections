@@ -1,6 +1,9 @@
 ---
 name: ionisation-method-hardware-correspondence
-description: Use when when evaluating whether a mass spectrometry analysis platform (such as mzmine) has comprehensive module support across multiple ionisation and separation techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique MS study and needing to confirm that all intended.
+description: Use when when evaluating whether a mass spectrometry analysis platform
+  (such as mzmine) has comprehensive module support across multiple ionisation and
+  separation techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique
+  MS study and needing to confirm that all intended.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,6 +16,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -41,6 +45,7 @@ attribution:
 
 # ionisation-method-hardware-correspondence
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a mass spectrometry data processing software or workflow provides module coverage across all supported ionisation techniques (LC, GC, IMS, MS Imaging) and MS instrument types. This skill ensures completeness of the analytical pipeline by mapping each separation/ionisation method to its corresponding processing modules.

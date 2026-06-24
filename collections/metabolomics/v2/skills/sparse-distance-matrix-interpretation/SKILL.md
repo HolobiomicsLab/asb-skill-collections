@@ -1,6 +1,9 @@
 ---
 name: sparse-distance-matrix-interpretation
-description: Use when you have computed a sparse pairwise distance matrix from nearest neighbor indexes (containing only cosine distances between neighboring spectra, not exhaustive pairwise comparisons) and need to partition spectra into groups of similar ions or peptides.
+description: Use when you have computed a sparse pairwise distance matrix from nearest
+  neighbor indexes (containing only cosine distances between neighboring spectra,
+  not exhaustive pairwise comparisons) and need to partition spectra into groups of
+  similar ions or peptides.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,11 +16,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # sparse-distance-matrix-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and apply density-based clustering to a sparse pairwise distance matrix computed from nearest neighbor indexes to group similar MS/MS spectra into clusters. This skill bridges the transition from similarity searching to final cluster assignment in high-throughput spectrum analysis.

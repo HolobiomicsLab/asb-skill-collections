@@ -1,6 +1,8 @@
 ---
 name: bi-encoder-cross-encoder-architecture-design
-description: Use when you have paired spectrum-compound reference data and need to simultaneously retrieve candidate compounds rapidly (bi-encoder) while also refining relevance scores through joint context modeling (cross-encoder).
+description: Use when you have paired spectrum-compound reference data and need to
+  simultaneously retrieve candidate compounds rapidly (bi-encoder) while also refining
+  relevance scores through joint context modeling (cross-encoder).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,6 +15,7 @@ metadata:
   - PyTorch
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
@@ -42,6 +45,7 @@ attribution:
 
 # bi-encoder-cross-encoder-architecture-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and train a hybrid bi-encoder and cross-encoder architecture to identify compounds in NMR spectra by combining independent and joint encoding pathways with fusion pooling and weighted loss. This dual-pathway approach balances efficiency (bi-encoder) with refined ranking (cross-encoder) to achieve accurate compound identification in flavor mixtures.

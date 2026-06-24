@@ -1,6 +1,9 @@
 ---
 name: m-z-annotation-reduction-quantification
-description: Use when you have spatial metabolomics data with semi-colon-delimited multi-isomer annotations (e.g., 'all_IsomerNames' column in SpaMTP Seurat objects) and you want to quantify the benefit of RefineLipids simplification with lipid_info='simple' parameter.
+description: Use when you have spatial metabolomics data with semi-colon-delimited
+  multi-isomer annotations (e.g., 'all_IsomerNames' column in SpaMTP Seurat objects)
+  and you want to quantify the benefit of RefineLipids simplification with lipid_info='simple'
+  parameter.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -16,6 +19,7 @@ metadata:
   - RefineLipids
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -52,6 +56,7 @@ attribution:
 
 # m/z annotation reduction quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the magnitude of annotation simplification achieved by applying RefineLipids lipid nomenclature simplification to spatial metabolomics annotations. This skill measures how many distinct lipid isomers or nomenclature variants collapse into unified Lipid Maps categories and classes per m/z value.

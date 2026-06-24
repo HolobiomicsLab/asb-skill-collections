@@ -1,6 +1,8 @@
 ---
 name: network-node-attribute-mapping
-description: Use when you have a GLASSO-generated network graph and corresponding PCA scores from a prior dimensionality-reduction step, and you need to identify which nodes or sub-networks are associated with high or significant PCA scores.
+description: Use when you have a GLASSO-generated network graph and corresponding
+  PCA scores from a prior dimensionality-reduction step, and you need to identify
+  which nodes or sub-networks are associated with high or significant PCA scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -10,6 +12,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -38,6 +41,7 @@ attribution:
 
 # network-node-attribute-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map computed scores (e.g., PCA scores) to network nodes and overlay them as visual or structural attributes to enable identification of significant sub-networks. This skill bridges dimensionality-reduction results with graph topology to reveal patterns in network structure.

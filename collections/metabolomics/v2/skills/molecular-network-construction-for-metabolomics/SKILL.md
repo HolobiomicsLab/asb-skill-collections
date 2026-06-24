@@ -1,6 +1,8 @@
 ---
 name: molecular-network-construction-for-metabolomics
-description: Use when you have untargeted metabolomics data (e.g., LC-MS/MS spectra) and need to organize compounds by structural relatedness to enable structure discovery for unknown metabolites.
+description: Use when you have untargeted metabolomics data (e.g., LC-MS/MS spectra)
+  and need to organize compounds by structural relatedness to enable structure discovery
+  for unknown metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -14,6 +16,7 @@ metadata:
   - BAM
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -42,6 +45,7 @@ attribution:
 
 # molecular-network-construction-for-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct global molecular networks from untargeted metabolomics data to link structurally related compounds and enable propagation of molecular structure annotations. This skill bridges suspect discovery with biotransformation-based annotation by organizing metabolites into networks where anchor compounds with known structures seed annotation of unknown suspects.

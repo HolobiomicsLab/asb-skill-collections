@@ -1,6 +1,9 @@
 ---
 name: graph-neural-network-model-loading
-description: Use when when you need to evaluate GNN performance on collision cross section prediction using the enveda/ccs-prediction repository, either by loading an existing pre-trained model checkpoint or by retraining from scratch using deposited datasets and published hyperparameters.
+description: Use when when you need to evaluate GNN performance on collision cross
+  section prediction using the enveda/ccs-prediction repository, either by loading
+  an existing pre-trained model checkpoint or by retraining from scratch using deposited
+  datasets and published hyperparameters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +18,7 @@ metadata:
   - Zenodo Dataset (DOI:10.5281/zenodo.11199061)
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -48,6 +52,7 @@ attribution:
 
 # Graph Neural Network Model Loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load pre-trained graph neural network models from serialized files (.h5 format) or retrain them using provided training pipelines and hyperparameters for collision cross section prediction tasks. This skill enables reproducible inference and generalizability evaluation by ensuring consistent model state across experimental runs.

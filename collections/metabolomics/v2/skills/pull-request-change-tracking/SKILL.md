@@ -1,6 +1,8 @@
 ---
 name: pull-request-change-tracking
-description: 'Use when investigating how a specific pull request (e.g., PR #72 introducing MS2Query''s two-branch workflow split) modified the codebase architecture, control flow, or data routing.'
+description: 'Use when investigating how a specific pull request (e.g., PR #72 introducing
+  MS2Query''s two-branch workflow split) modified the codebase architecture, control
+  flow, or data routing.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

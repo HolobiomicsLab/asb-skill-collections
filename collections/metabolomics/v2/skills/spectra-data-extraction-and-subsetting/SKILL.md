@@ -1,6 +1,8 @@
 ---
 name: spectra-data-extraction-and-subsetting
-description: Use when when you need to extract m/z and intensity peak values from a Spectra object backed by MsBackendMzR or similar on-disk backends; when analyzing subsets of spectra without loading all peaks into memory;
+description: Use when when you need to extract m/z and intensity peak values from
+  a Spectra object backed by MsBackendMzR or similar on-disk backends; when analyzing
+  subsets of spectra without loading all peaks into memory;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,15 +17,19 @@ metadata:
   - mzR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra
-- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files
+- The *Spectra* package defines an efficient infrastructure for storing and handling
+  mass spectrometry spectra
+- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from
+  the raw MS data files
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # spectra-data-extraction-and-subsetting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction and subsetting of mass spectrometry spectral data from MsBackend objects using peaksData(), intensity(), mz() accessor methods and extractByIndex() to retrieve peak m/z and intensity values for specified spectra. This skill enables efficient retrieval of peak data in chunk-wise fashion, reducing memory footprint by loading only the required spectra into memory.

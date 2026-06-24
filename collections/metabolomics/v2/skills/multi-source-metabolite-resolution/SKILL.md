@@ -1,6 +1,7 @@
 ---
 name: multi-source-metabolite-resolution
-description: Use when you have metabolite identifiers sourced from a single metabolome database (e.
+description: Use when you have metabolite identifiers sourced from a single metabolome
+  database (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +12,7 @@ metadata:
   - R
   - devtools
   - MetaFetcheR
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.02.28.433248v2
   title: MetaFetcheR

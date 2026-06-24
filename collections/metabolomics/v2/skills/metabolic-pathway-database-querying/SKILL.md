@@ -1,6 +1,9 @@
 ---
 name: metabolic-pathway-database-querying
-description: Use when you have a ranked list of metabolite identifiers (PubChemCIDs, KEGG IDs, or chemical names) from differential abundance or ANOVA testing and need to determine which metabolic pathways are overrepresented or enriched among the most significant features.
+description: Use when you have a ranked list of metabolite identifiers (PubChemCIDs,
+  KEGG IDs, or chemical names) from differential abundance or ANOVA testing and need
+  to determine which metabolic pathways are overrepresented or enriched among the
+  most significant features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -15,14 +18,18 @@ metadata:
   - ComplexHeatmap
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set
+  Enrichment Analysis (MSEA), based on clusterProfiler
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -51,6 +58,7 @@ attribution:
 
 # metabolic-pathway-database-querying
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query metabolic pathway databases (KEGG, Reactome) with a set of metabolite identifiers (PubChemCIDs or chemical names) to identify which biochemical pathways are represented, annotated, and statistically enriched within your detected feature set. This skill bridges mass spectrometry-derived metabolite lists to curated biological pathway knowledge.

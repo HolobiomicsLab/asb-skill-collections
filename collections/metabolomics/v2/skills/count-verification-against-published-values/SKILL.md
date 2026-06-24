@@ -1,6 +1,9 @@
 ---
 name: count-verification-against-published-values
-description: Use when when you have access to a curated dataset (such as LOTUS) with published headline statistics in a peer-reviewed article or enriched index, and you need to validate data integrity, trace reporting accuracy, or establish a reproducible baseline before downstream analysis.
+description: Use when when you have access to a curated dataset (such as LOTUS) with
+  published headline statistics in a peer-reviewed article or enriched index, and
+  you need to validate data integrity, trace reporting accuracy, or establish a reproducible
+  baseline before downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -10,6 +13,7 @@ metadata:
   tools:
   - R
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +48,7 @@ attribution:
 
 # count-verification-against-published-values
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Independently reproduce and verify aggregate counts of key entities (structure-organism pairs, unique structures, organisms, source databases) from a published natural products dataset by loading curated data files, deduplicating on identifier columns, and comparing results against reported values with absolute and relative difference metrics.

@@ -1,6 +1,8 @@
 ---
 name: container-image-size-verification
-description: Use when after completing a multi-stage Docker build targeting a compiled runtime environment (e.g., airdpro:cli produced from a Wine + .NET Framework 4.8 + Ubuntu 22.
+description: Use when after completing a multi-stage Docker build targeting a compiled
+  runtime environment (e.g., airdpro:cli produced from a Wine + .NET Framework 4.8
+  + Ubuntu 22.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +12,7 @@ metadata:
   - Wine
   - .NET Framework 4.8
   - build-docker.sh
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -38,6 +41,7 @@ attribution:
 
 # container-image-size-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Docker container image built from a multi-stage Dockerfile has been successfully created and falls within expected size constraints (typically 6–7 GB for Wine-based runtime environments). This skill ensures the build process completed correctly before attempting container instantiation or deployment.

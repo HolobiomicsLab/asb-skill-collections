@@ -1,6 +1,8 @@
 ---
 name: static-code-analysis
-description: Use when when preparing to submit a pull request to a collaborative Python project (like BiG-SCAPE) that mandates PEP8 compliance, or when establishing quality gates for a codebase that has adopted linters as part of its contribution guidelines.
+description: Use when when preparing to submit a pull request to a collaborative Python
+  project (like BiG-SCAPE) that mandates PEP8 compliance, or when establishing quality
+  gates for a codebase that has adopted linters as part of its contribution guidelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -13,6 +15,7 @@ metadata:
   - PlantUML
   - Git
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-019-0400-9
   title: BiG-SCAPE biosynthetic diversity

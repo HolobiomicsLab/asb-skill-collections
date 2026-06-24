@@ -1,6 +1,9 @@
 ---
 name: feature-hashing-representation-mass-spectra
-description: Use when when you have high-resolution mass spectra that must be rapidly searched against large spectral libraries with open modifications, and you need to reduce the dimensionality of spectral data without losing the ability to retrieve spectrally similar peptides.
+description: Use when when you have high-resolution mass spectra that must be rapidly
+  searched against large spectral libraries with open modifications, and you need
+  to reduce the dimensionality of spectral data without losing the ability to retrieve
+  spectrally similar peptides.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3765
@@ -12,11 +15,13 @@ metadata:
   - Faiss
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

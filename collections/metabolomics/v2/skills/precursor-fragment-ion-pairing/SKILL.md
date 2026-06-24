@@ -1,6 +1,8 @@
 ---
 name: precursor-fragment-ion-pairing
-description: Use when you have raw LC-MS/MS data files (mzML/mzXML format from Thermo, Waters, or Bruker instruments) and a list of target compounds defined by precursor m/z values (and optionally retention time windows).
+description: Use when you have raw LC-MS/MS data files (mzML/mzXML format from Thermo,
+  Waters, or Bruker instruments) and a list of target compounds defined by precursor
+  m/z values (and optionally retention time windows).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
@@ -42,6 +45,7 @@ attribution:
 
 # precursor-fragment-ion-pairing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and pair MS1 precursor ions with their corresponding MS2 fragment spectra from raw chromatogram files (mzML/mzXML) using user-specified m/z and retention time targets. This skill enables construction of local spectral libraries while preserving data confidentiality by selectively pulling only the scans of interest from DDA or targeted MS/MS acquisition modes.

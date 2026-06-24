@@ -1,6 +1,8 @@
 ---
 name: chemical-structure-fingerprint-comparison
-description: Use when when you have MS/MS spectra with known chemical structures (InChIKeys or SMILES) and want to validate whether a novel or existing spectral similarity scoring method actually reflects true chemical structural similarity.
+description: Use when when you have MS/MS spectra with known chemical structures (InChIKeys
+  or SMILES) and want to validate whether a novel or existing spectral similarity
+  scoring method actually reflects true chemical structural similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -20,16 +22,21 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
+  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -53,6 +60,7 @@ attribution:
 
 # Chemical Structure Fingerprint Comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare MS/MS spectra to chemical structure similarity using molecular fingerprints (e.g., Tanimoto-based) as a ground-truth benchmark for validating spectral similarity methods. This skill evaluates whether a spectral similarity metric (cosine, Spec2Vec, etc.) correlates with true structural relationships derived from InChIKey planar structure matching.

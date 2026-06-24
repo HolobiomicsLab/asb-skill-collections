@@ -1,6 +1,7 @@
 ---
 name: consensus-spectrum-assembly-from-fragmentation-spectra
-description: Use when you have detected a single chromatographic peak in DDA LC-MS/MS data that generated multiple MS2 fragmentation spectra (e.
+description: Use when you have detected a single chromatographic peak in DDA LC-MS/MS
+  data that generated multiple MS2 fragmentation spectra (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,13 +16,15 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
 - library(Spectra)
 - library(MsBackendMgf)
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

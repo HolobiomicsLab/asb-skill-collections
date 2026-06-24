@@ -1,6 +1,8 @@
 ---
 name: distance-clustering-in-high-dimensions
-description: Use when when you have detected feature tables from two or more LC-IMS-MS/MS samples and need to establish correspondence between features across samples (i.e., which features in sample A match which features in sample B).
+description: Use when when you have detected feature tables from two or more LC-IMS-MS/MS
+  samples and need to establish correspondence between features across samples (i.e.,
+  which features in sample A match which features in sample B).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,13 +17,15 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []
@@ -47,6 +51,7 @@ attribution:
 
 # distance-clustering-in-high-dimensions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster detected features across multiple LC-IMS-MS/MS samples by applying N-dimensional distance-based grouping in (mz, drift_time, retention_time) space with user-defined tolerances. This skill enables cross-sample feature matching and alignment by identifying features that occupy the same region across dimensions, accounting for instrument drift and calibration variation.

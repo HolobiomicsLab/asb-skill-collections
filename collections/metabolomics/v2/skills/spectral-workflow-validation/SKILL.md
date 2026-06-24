@@ -1,6 +1,9 @@
 ---
 name: spectral-workflow-validation
-description: Use when after implementing or modifying a cross-language integration layer that wraps Python mass spectrometry functions (e.g., spectral matching, peak detection, normalization from matchms or spectrum_utils) as R-callable functions within Spectra workflows.
+description: Use when after implementing or modifying a cross-language integration
+  layer that wraps Python mass spectrometry functions (e.g., spectral matching, peak
+  detection, normalization from matchms or spectrum_utils) as R-callable functions
+  within Spectra workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -16,12 +19,15 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:
@@ -46,6 +52,7 @@ attribution:
 
 # spectral-workflow-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that cross-language wrapped spectral analysis functions (Python MS libraries integrated into R via reticulate) execute correctly and return expected data structures when invoked from R Spectra workflows. This skill ensures type conversion, error handling, and data marshalling work as intended across R–Python process boundaries.

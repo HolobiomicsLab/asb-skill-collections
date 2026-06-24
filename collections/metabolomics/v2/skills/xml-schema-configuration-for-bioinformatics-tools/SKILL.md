@@ -1,6 +1,9 @@
 ---
 name: xml-schema-configuration-for-bioinformatics-tools
-description: Use when you have a working R package or bioinformatics pipeline (e.g., IonFlow for ionomics analysis) and need to wrap it as a Galaxy tool so that users can invoke it through Galaxy's web interface without direct command-line access. The inputs are tabular datasets (e.
+description: Use when you have a working R package or bioinformatics pipeline (e.g.,
+  IonFlow for ionomics analysis) and need to wrap it as a Galaxy tool so that users
+  can invoke it through Galaxy's web interface without direct command-line access.
+  The inputs are tabular datasets (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +16,7 @@ metadata:
   - Galaxy
   - planemo
   - IonFlow (R package)
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-021-01841-z
   title: IonFlow
@@ -42,6 +46,7 @@ attribution:
 
 # xml-schema-configuration-for-bioinformatics-tools
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define and validate Galaxy tool XML wrapper schemas that map bioinformatics package parameters to Galaxy data types, command-line invocations, and output declarations. This skill ensures reproducible exposure of analytical pipelines (e.g., ionomics R packages) as Galaxy tools with correct input/output bindings and compliance with Galaxy specifications.

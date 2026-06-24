@@ -1,6 +1,7 @@
 ---
 name: matrix-subsetting-with-index-reordering
-description: Use when when you need to subset a backend containing multiple MS spectra to a user-defined subset (e.
+description: Use when when you need to subset a backend containing multiple MS spectra
+  to a user-defined subset (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -44,6 +46,7 @@ attribution:
 
 # matrix-subsetting-with-index-reordering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement an extractByIndex() method for MsBackend objects that subsets MS spectral peak data (m/z and intensity matrices) to selected spectra while preserving peak ordering and supporting index duplication. This is essential for parallel processing workflows and spectral filtering operations where arbitrary reordering and selective duplication of spectra are required.

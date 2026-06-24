@@ -15,16 +15,25 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names, extracting adduct information from the given metadata, moving metadata to consistent fields
-- For each pair of molecular fingerprints Tanimoto scores were calculated, indicating the structural similarity of that pair. (as implemented in matchms [18])
-- We then ran an automated search against PubChem [42] using pubchempy [43] for spectra which still missed InChI or SMILES annotations.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names, extracting adduct information from the given metadata,
+  moving metadata to consistent fields
+- For each pair of molecular fingerprints Tanimoto scores were calculated, indicating
+  the structural similarity of that pair. (as implemented in matchms [18])
+- We then ran an automated search against PubChem [42] using pubchempy [43] for spectra
+  which still missed InChI or SMILES annotations.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +57,7 @@ attribution:
 
 # Tandem Mass Spectrometry Metadata Standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and validate MS/MS spectrum metadata (compound names, adducts, chemical structure annotations) using automated tools to enable downstream structural similarity prediction and machine learning. This skill transforms heterogeneous raw GNPS annotations into a consistent schema suitable for neural network training.

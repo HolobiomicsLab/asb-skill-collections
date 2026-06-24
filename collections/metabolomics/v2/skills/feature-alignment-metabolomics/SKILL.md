@@ -1,6 +1,8 @@
 ---
 name: feature-alignment-metabolomics
-description: Use when you have detected multiple ion peaks from replicate injections of the same sample in untargeted metabolomics and need to consolidate them into a single feature table.
+description: Use when you have detected multiple ion peaks from replicate injections
+  of the same sample in untargeted metabolomics and need to consolidate them into
+  a single feature table.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -12,6 +14,7 @@ metadata:
   - MetaQC
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU

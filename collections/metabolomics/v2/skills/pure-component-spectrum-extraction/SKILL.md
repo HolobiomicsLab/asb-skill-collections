@@ -1,6 +1,8 @@
 ---
 name: pure-component-spectrum-extraction
-description: Use when analyzing GC-MS data containing overlapped peaks where two or more components co-elute within the same retention time window, making direct spectral assignment impossible.
+description: Use when analyzing GC-MS data containing overlapped peaks where two or
+  more components co-elute within the same retention time window, making direct spectral
+  assignment impossible.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -17,6 +19,7 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

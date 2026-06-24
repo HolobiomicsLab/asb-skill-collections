@@ -1,6 +1,7 @@
 ---
 name: intensity-to-concentration-conversion
-description: Use when you have raw mass spectrometry intensity measurements from sample analyses and need absolute quantitative concentrations.
+description: Use when you have raw mass spectrometry intensity measurements from sample
+  analyses and need absolute quantitative concentrations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,11 +13,13 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +46,7 @@ attribution:
 
 # intensity-to-concentration-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry signal intensities into quantitative analyte concentrations using external calibration regression. This skill applies a fitted calibration model (linear or non-linear) derived from standard compounds to unknown sample intensity measurements, accounting for intensity drift during measurement runs.

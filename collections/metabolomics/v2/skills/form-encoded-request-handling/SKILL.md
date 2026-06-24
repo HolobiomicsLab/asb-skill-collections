@@ -1,6 +1,9 @@
 ---
 name: form-encoded-request-handling
-description: Use when when a web service must accept spectroscopic measurements (NMR peaks, IR/MS metadata) submitted as form-encoded POST parameters from a client, and those parameters need to be validated, reformatted into an external API query format, or passed to a downstream predictor service.
+description: Use when when a web service must accept spectroscopic measurements (NMR
+  peaks, IR/MS metadata) submitted as form-encoded POST parameters from a client,
+  and those parameters need to be validated, reformatted into an external API query
+  format, or passed to a downstream predictor service.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -16,12 +19,14 @@ metadata:
   - nmrshiftdb
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
 evidence_spans:
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - Use the file pyproject.toml to determine the version of Python required.
 - curl xxx.xxx.xxx.xxx:3007/ping
 - gunicorn -w 4 -b 0.0.0.0:3007 server:app --daemon

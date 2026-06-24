@@ -1,6 +1,8 @@
 ---
 name: spectral-library-format-conversion
-description: Use when when you have mass spectral libraries from multiple sources (NIST, MoNA, RIKEN, GNPS) in disparate formats (MSP, MGF, MOL folder structures) or with misaligned metadata (e.
+description: Use when when you have mass spectral libraries from multiple sources
+  (NIST, MoNA, RIKEN, GNPS) in disparate formats (MSP, MGF, MOL folder structures)
+  or with misaligned metadata (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -21,6 +23,7 @@ metadata:
   - ChemmineOB
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -60,6 +63,7 @@ attribution:
 
 # spectral-library-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectral libraries between formats (MSP, MGF, MOL/SDF, text) and reorganize metadata fields to conform to downstream tool requirements such as MS-DIAL. This skill is essential when compiling heterogeneous spectral sources (NIST, MoNA, RIKEN, GNPS) into a unified, polarity-separated library.

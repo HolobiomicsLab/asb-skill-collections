@@ -1,6 +1,8 @@
 ---
 name: chromatographic-baseline-estimation
-description: Use when you have extracted ion chromatogram (EIC) candidate data from untargeted LC/HRMS files (mzXML, mzML, or netCDF format) and need to identify genuine peaks within each EIC.
+description: Use when you have extracted ion chromatogram (EIC) candidate data from
+  untargeted LC/HRMS files (mzXML, mzML, or netCDF format) and need to identify genuine
+  peaks within each EIC.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,11 +16,14 @@ metadata:
   - xcms
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # chromatographic-baseline-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimation of the baseline signal intensity in LC/HRMS chromatograms to enable accurate peak detection and signal-to-noise ratio calculation. This is a prerequisite step in the IDSL.IPA peak detection workflow that distinguishes genuine peaks from noise by establishing a noise floor reference.

@@ -1,6 +1,8 @@
 ---
 name: structure-similarity-evaluation
-description: Use when after an NMR-based structure prediction model has generated predicted molecular structures (formula and connectivity) for a test set of molecules with up to 19 heavy atoms.
+description: Use when after an NMR-based structure prediction model has generated
+  predicted molecular structures (formula and connectivity) for a test set of molecules
+  with up to 19 heavy atoms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -12,11 +14,13 @@ metadata:
   - Transformer architecture
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 evidence_spans:
-- Integrating this capability with a convolutional neural network, we build an end-to-end model
+- Integrating this capability with a convolutional neural network, we build an end-to-end
+  model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # structure-similarity-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate predicted molecular structures against ground-truth structures using graph-based or chemical similarity metrics to quantify model accuracy. This skill applies structure matching metrics to assess whether an end-to-end spectroscopy-to-structure model has correctly recovered molecular formula, connectivity, and stereochemistry.

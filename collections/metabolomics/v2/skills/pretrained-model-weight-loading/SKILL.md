@@ -1,6 +1,8 @@
 ---
 name: pretrained-model-weight-loading
-description: Use when you have a pretrained PyTorch model checkpoint (e.g., JESTR weights for NPLIB1) and wish to apply it to rank candidate molecules or score spectra without modifying model parameters.
+description: Use when you have a pretrained PyTorch model checkpoint (e.g., JESTR
+  weights for NPLIB1) and wish to apply it to rank candidate molecules or score spectra
+  without modifying model parameters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   - CUDA 11.8
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR

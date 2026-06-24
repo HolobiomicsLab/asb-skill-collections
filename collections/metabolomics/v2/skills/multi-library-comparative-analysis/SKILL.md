@@ -1,6 +1,7 @@
 ---
 name: multi-library-comparative-analysis
-description: Use when you need to evaluate whether a newly released or candidate library (e.g., spectrum_utils v0.4.
+description: Use when you need to evaluate whether a newly released or candidate library
+  (e.g., spectrum_utils v0.4.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -21,6 +22,7 @@ metadata:
   - matplotlib / seaborn
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -54,6 +56,7 @@ attribution:
 
 # multi-library-comparative-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Benchmark competing mass spectrometry data processing libraries (spectrum_utils, pymzML, pyOpenMS) on identical datasets and filtering workflows to quantitatively compare throughput and processing efficiency. This skill isolates algorithmic and implementation differences by applying identical transformations across libraries and measuring wall-clock runtime per spectrum.

@@ -1,6 +1,9 @@
 ---
 name: multi-criteria-performance-evaluation
-description: Use when you have preprocessed multi-class or time-course metabolomic peak tables (with or without quality control samples and/or internal standards) and need to compare multiple preprocessing workflows to identify which performs for biomarker discovery or differential profiling.
+description: Use when you have preprocessed multi-class or time-course metabolomic
+  peak tables (with or without quality control samples and/or internal standards)
+  and need to compare multiple preprocessing workflows to identify which performs
+  for biomarker discovery or differential profiling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,6 +22,7 @@ metadata:
   - statTarget
   - ProteoMM
   - Biobase
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

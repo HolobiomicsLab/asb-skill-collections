@@ -1,6 +1,8 @@
 ---
 name: binary-format-specification-implementation
-description: Use when you have a compressed file format (e.g., igzip) with a custom binary header structure that encodes metadata (index-to-offset mappings) in a fixed layout, and you need to parse or generate compliant files.
+description: Use when you have a compressed file format (e.g., igzip) with a custom
+  binary header structure that encodes metadata (index-to-offset mappings) in a fixed
+  layout, and you need to parse or generate compliant files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -12,6 +14,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -39,6 +42,7 @@ attribution:
 
 # binary-format-specification-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a binary file format specification by defining header structure constants, encoding index-to-offset pairs as fixed-width tuples, and verifying byte-for-byte correctness against reference hex dumps. This skill is essential for enabling random access in compressed scientific data files like indexed gzip (igzip) used in mass spectrometry data.

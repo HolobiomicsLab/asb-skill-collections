@@ -1,6 +1,9 @@
 ---
 name: peptide-sequence-annotation-mapping
-description: 'Use when you have PSM files from a proteomics search engine (e.g., MaxQuant, MSGFPlus, MS Amanda) and need to convert their native modification notation into HUPO-PSI ProForma v2 format before rescoring. Specifically, use it when: (1) search engines report modifications with custom labels (e.'
+description: 'Use when you have PSM files from a proteomics search engine (e.g., MaxQuant,
+  MSGFPlus, MS Amanda) and need to convert their native modification notation into
+  HUPO-PSI ProForma v2 format before rescoring. Specifically, use it when: (1) search
+  engines report modifications with custom labels (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -12,6 +15,7 @@ metadata:
   - MS²Rescore
   - DeepLC
   - Percolator
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

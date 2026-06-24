@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-peak-intensity-encoding
-description: Use when working with imaging mass spectrometry (IMS) datasets where you need to (1) automatically identify marker ions without manual annotation, (2) reduce peak intensity dimensionality while preserving spatial relationships between measurement points, or (3) apply iterative peak picking.
+description: Use when working with imaging mass spectrometry (IMS) datasets where
+  you need to (1) automatically identify marker ions without manual annotation, (2)
+  reduce peak intensity dimensionality while preserving spatial relationships between
+  measurement points, or (3) apply iterative peak picking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -16,6 +19,7 @@ metadata:
   - direct-infusion-MS
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
@@ -47,6 +51,7 @@ attribution:
 
 # mass-spectrometry-peak-intensity-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encodes imaging mass spectrometry peak intensities into low-dimensional latent representations using a graph-attention autoencoder that preserves spatial adjacency structure. This enables automatic peak picking and marker ion identification in spatial metabolomics workflows.

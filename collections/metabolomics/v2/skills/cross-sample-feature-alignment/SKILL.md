@@ -1,6 +1,8 @@
 ---
 name: cross-sample-feature-alignment
-description: Use when you have run mass detection and chromatogram building independently on each LC-MS/MS sample and produced per-sample feature lists with m/z, retention time, and intensity values.
+description: Use when you have run mass detection and chromatogram building independently
+  on each LC-MS/MS sample and produced per-sample feature lists with m/z, retention
+  time, and intensity values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

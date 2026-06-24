@@ -1,6 +1,8 @@
 ---
 name: antismash-bgc-directory-organization-and-validation
-description: Use when when preparing genomic data for NPLinker analysis and you have AntiSMASH BGC predictions that need to be validated and organized into NPLinker's standardized directory layout.
+description: Use when when preparing genomic data for NPLinker analysis and you have
+  AntiSMASH BGC predictions that need to be validated and organized into NPLinker's
+  standardized directory layout.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   - AntiSMASH
   - MIBiG
   - Dynaconf
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

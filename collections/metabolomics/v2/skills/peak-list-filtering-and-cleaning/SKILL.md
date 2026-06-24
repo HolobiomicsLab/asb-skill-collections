@@ -1,6 +1,9 @@
 ---
 name: peak-list-filtering-and-cleaning
-description: Use when you have acquired MS/MS spectra containing suspect noise ions—either electronic noise (ions with identical intensities occurring >4 times in a single peak list, a signature of detector artifacts) or chemical noise (fragment ions chemically implausible given the precursor molecule's.
+description: Use when you have acquired MS/MS spectra containing suspect noise ions—either
+  electronic noise (ions with identical intensities occurring >4 times in a single
+  peak list, a signature of detector artifacts) or chemical noise (fragment ions chemically
+  implausible given the precursor molecule's.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - ms_entropy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

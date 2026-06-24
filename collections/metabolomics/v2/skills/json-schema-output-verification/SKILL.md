@@ -1,6 +1,7 @@
 ---
 name: json-schema-output-verification
-description: Use when after extracting tabular data into intermediate JSON form or after applying matrix conversion directives (e.
+description: Use when after extracting tabular data into intermediate JSON form or
+  after applying matrix conversion directives (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -11,6 +12,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +46,7 @@ attribution:
 
 # json-schema-output-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate converted JSON data against the Experiment Description Specification and format-specific JSON schemas to ensure structural and semantic correctness before repository submission. This skill catches extraction, tagging, and conversion errors early in the MESSES workflow.

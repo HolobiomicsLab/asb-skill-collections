@@ -1,6 +1,7 @@
 ---
 name: test-output-parsing-and-status-validation
-description: Use when you need to verify whether a GitHub Actions workflow badge (e.g., main.yml) accurately reports the CI pipeline's true pass/fail status.
+description: Use when you need to verify whether a GitHub Actions workflow badge (e.g.,
+  main.yml) accurately reports the CI pipeline's true pass/fail status.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +11,7 @@ metadata:
   - git
   - RDKit
   - GitHub Actions
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -39,6 +41,7 @@ attribution:
 
 # test-output-parsing-and-status-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse CI/CD workflow test output logs and validate that the final exit status matches the reported badge status, confirming reproducibility of automated checks. This skill is essential when verifying that a repository's public CI badge accurately reflects the true state of the automated test pipeline.

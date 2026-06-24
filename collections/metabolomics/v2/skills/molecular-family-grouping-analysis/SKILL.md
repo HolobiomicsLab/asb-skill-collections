@@ -1,6 +1,8 @@
 ---
 name: molecular-family-grouping-analysis
-description: Use when you have untargeted metabolomics peak intensity data and spectral groupings (Molecular Families or Mass2Motifs) but lack confident chemical annotations or want to avoid pathway database dependency.
+description: Use when you have untargeted metabolomics peak intensity data and spectral
+  groupings (Molecular Families or Mass2Motifs) but lack confident chemical annotations
+  or want to avoid pathway database dependency.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -16,6 +18,7 @@ metadata:
   - PALS Viewer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -48,6 +51,7 @@ attribution:
 
 # molecular-family-grouping-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply PALS decomposition (PLAGE method) to metabolite groupings from spectral clustering (Molecular Families from GNPS, Mass2Motifs from MS2LDA) to compute activity scores and identify significantly changing metabolite groups across experimental conditions. This extends classical pathway-based analysis to spectral phenotypes, which are often more robust to annotation uncertainty in untargeted metabolomics.

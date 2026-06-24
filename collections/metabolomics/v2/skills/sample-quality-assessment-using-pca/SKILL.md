@@ -1,6 +1,8 @@
 ---
 name: sample-quality-assessment-using-pca
-description: Use when after loading and basic filtering of (un)targeted metabolomic data (sample/feature missingness, peak area filters) but before aggregation or statistical modeling.
+description: Use when after loading and basic filtering of (un)targeted metabolomic
+  data (sample/feature missingness, peak area filters) but before aggregation or statistical
+  modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -11,6 +13,7 @@ metadata:
   - R
   - ggplot2
   - metaboprep
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -40,6 +43,7 @@ attribution:
 
 # sample-quality-assessment-using-pca
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify metabolomic sample outliers by performing principal component analysis on filtered metabolite data and flagging samples that deviate >3, 4, or 5 standard deviations from the mean on top principal components. This detects samples with atypical metabolic profiles that may compromise downstream analysis.

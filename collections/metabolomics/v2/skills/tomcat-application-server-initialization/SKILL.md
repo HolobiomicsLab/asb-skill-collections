@@ -1,6 +1,9 @@
 ---
 name: tomcat-application-server-initialization
-description: Use when when you need to deploy a Java web application packaged in a Tomcat Docker container to a specified HTTP endpoint, and must verify that the container starts successfully, the Tomcat server initializes, and the application becomes accessible at the mapped host port before proceeding with.
+description: Use when when you need to deploy a Java web application packaged in a
+  Tomcat Docker container to a specified HTTP endpoint, and must verify that the container
+  starts successfully, the Tomcat server initializes, and the application becomes
+  accessible at the mapped host port before proceeding with.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,12 +17,14 @@ metadata:
   - ipbhalle/metfragweb Docker image
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
 evidence_spans:
 - latest official tomcat docker container
-- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched) webapp
+- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched)
+  webapp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # tomcat-application-server-initialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize and verify a Tomcat application server instance running a containerized Java web application (MetFrag webapp) by launching the Docker container with appropriate port mapping and waiting for the server to become ready. This skill ensures the Tomcat service on port 8080 is properly exposed to the host and ready to serve HTTP requests.

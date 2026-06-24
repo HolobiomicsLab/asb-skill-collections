@@ -1,6 +1,9 @@
 ---
 name: in-silico-fragmentation-simulation-validation
-description: Use when you have experimental peak lists (m/z, retention time, intensity) from UHPLC-HRMS/MS or direct infusion MS/MS data and need to assign lipid identities with confidence scores. Use it when your instrument produces high-resolution tandem mass spectra (e.
+description: Use when you have experimental peak lists (m/z, retention time, intensity)
+  from UHPLC-HRMS/MS or direct infusion MS/MS data and need to assign lipid identities
+  with confidence scores. Use it when your instrument produces high-resolution tandem
+  mass spectra (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -17,12 +20,15 @@ metadata:
   - Agilent, Bruker, SCIEX Q-TOF
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
 claims: []
 provenance:

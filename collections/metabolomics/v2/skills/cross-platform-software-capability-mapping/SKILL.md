@@ -1,6 +1,9 @@
 ---
 name: cross-platform-software-capability-mapping
-description: Use when you are designing a new tool for FT-ICR MS analysis (or similar high-resolution mass spectrometry domain) and need to understand which analytical and visualization features are already implemented in competing or complementary tools (e.
+description: Use when you are designing a new tool for FT-ICR MS analysis (or similar
+  high-resolution mass spectrometry domain) and need to understand which analytical
+  and visualization features are already implemented in competing or complementary
+  tools (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -29,16 +32,20 @@ metadata:
   - KEGGREST (R package)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - web-based applications such as UltraMassExplorer (UME)
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29], and DropMS [30]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -62,6 +69,7 @@ attribution:
 
 # Cross-Platform Software Capability Mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically catalog and compare analytical features across multiple software tools designed for a shared analytical domain (e.g., FT-ICR MS data analysis) to identify capability gaps, redundancies, and unique strengths. This skill produces a structured feature-comparison matrix that guides tool selection and highlights innovation opportunities.

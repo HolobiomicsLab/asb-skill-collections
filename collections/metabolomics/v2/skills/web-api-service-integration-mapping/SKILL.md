@@ -1,6 +1,7 @@
 ---
 name: web-api-service-integration-mapping
-description: Use when you need to support multiple external services (CIR, CTS, PubChem, IDSM, BridgeDb, RDKit) for chemical identifier conversions (.
+description: Use when you need to support multiple external services (CIR, CTS, PubChem,
+  IDSM, BridgeDb, RDKit) for chemical identifier conversions (.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -18,6 +19,7 @@ metadata:
   - RDKit
   - ConverterBuilder
   - pytest
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

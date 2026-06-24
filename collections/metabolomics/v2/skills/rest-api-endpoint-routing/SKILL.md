@@ -19,6 +19,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab).
     url: https://bitbucket.org/wishartlab/classyfire_api.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
@@ -48,6 +49,7 @@ attribution:
 
 # rest-api-endpoint-routing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Route chemical structure query input (SMILES, InChI, IUPAC name, or FASTA) to the correct ClassyFire API endpoint by detecting the structural representation type via pattern matching and dispatching via REST POST. This skill enables correct parsing and submission of heterogeneous chemical compound formats to a unified classification API.

@@ -1,6 +1,8 @@
 ---
 name: longitudinal-data-analysis
-description: Use when you have imputed metabolomics data in long format (with id, time, categorical grouping variable, metabolite names, and numeric values) and need to rank metabolites by evidence of difference across groups or time trajectories.
+description: Use when you have imputed metabolomics data in long format (with id,
+  time, categorical grouping variable, metabolite names, and numeric values) and need
+  to rank metabolites by evidence of difference across groups or time trajectories.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,6 +13,7 @@ metadata:
   - MeTEor
   - R
   - tidyverse
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 - library(tidyverse)
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # longitudinal-data-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply repeated measures ANOVA and linear mixed models to imputed, long-format metabolomics datasets to identify and rank metabolites by statistical significance across time points and treatment groups. This skill enables feature selection and group comparison in longitudinal metabolomics studies.

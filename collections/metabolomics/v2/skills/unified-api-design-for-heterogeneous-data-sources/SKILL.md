@@ -1,6 +1,8 @@
 ---
 name: unified-api-design-for-heterogeneous-data-sources
-description: Use when your analysis pipeline must ingest mass-spectrometry data from mixed vendor sources (e.g., Thermo RAW, Agilent .d, Waters .raw, and open mzML) without writing separate parser logic for each format.
+description: Use when your analysis pipeline must ingest mass-spectrometry data from
+  mixed vendor sources (e.g., Thermo RAW, Agilent .d, Waters .raw, and open mzML)
+  without writing separate parser logic for each format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,11 +14,13 @@ metadata:
   - pwiz
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.9b00640
   title: Skyline (small molecules)
 evidence_spans:
-- The ProteoWizard Library and Tools are a set of modular and extensible open-source, cross-platform tools and software libraries
+- The ProteoWizard Library and Tools are a set of modular and extensible open-source,
+  cross-platform tools and software libraries
 - github.com__ProteoWizard__pwiz
 claims: []
 provenance:

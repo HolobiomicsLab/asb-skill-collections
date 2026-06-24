@@ -1,6 +1,7 @@
 ---
 name: peak-m-z-recalibration
-description: Use when after peak detection when you have a table of detected peaks with m/z values and need to improve mass accuracy for downstream annotation.
+description: Use when after peak detection when you have a table of detected peaks
+  with m/z values and need to improve mass accuracy for downstream annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +13,14 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # peak-m/z-recalibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recursive mass correction refines m/z accuracy of detected LC/HRMS peaks by recalibrating their mass-to-charge coordinates using internal reference standards or lock masses. This step is applied post-detection to improve mass accuracy metrics across large untargeted metabolomics datasets.

@@ -1,6 +1,9 @@
 ---
 name: compound-structure-processing
-description: Use when you have a collection of DNA adduct or small-molecule compound structures stored in SDF format and need to prepare them for computational workflows like CFM-ID fragment prediction, or when integrating new compounds into a structured compound database.
+description: Use when you have a collection of DNA adduct or small-molecule compound
+  structures stored in SDF format and need to prepare them for computational workflows
+  like CFM-ID fragment prediction, or when integrating new compounds into a structured
+  compound database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -9,12 +12,14 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - CFM-ID
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
 evidence_spans:
 - CFM-ID
-- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA adducts
+- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA
+  adducts
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +43,7 @@ attribution:
 
 # compound-structure-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and prepare chemical compound structures from SDF format files for downstream computational analysis, such as in-silico fragment prediction. This skill ensures compound structures are correctly formatted and validated before submission to spectral prediction tools.

@@ -1,6 +1,8 @@
 ---
 name: metabolomics-normalization-artifact-reproduction
-description: Use when you have raw metabolomics intensity data (rows = compounds, columns = samples) with batch annotations and QC/biological sample labels, and you need to select among five normalization methods.
+description: Use when you have raw metabolomics intensity data (rows = compounds,
+  columns = samples) with batch annotations and QC/biological sample labels, and you
+  need to select among five normalization methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - Metanorm
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -17,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # metabolomics-normalization-artifact-reproduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reproduce the comparative evaluation of five normalization methods (tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) from the Metanorm R package to verify reported robustness and computational speed rankings on metabolomics data. This skill validates whether a published normalization approach generalizes to your own metabolomics dataset by replicating the paper's comparative metrics and visual diagnostics.

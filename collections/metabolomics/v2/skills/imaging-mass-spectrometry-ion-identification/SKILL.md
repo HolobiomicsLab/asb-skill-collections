@@ -1,6 +1,9 @@
 ---
 name: imaging-mass-spectrometry-ion-identification
-description: Use when you have imaging mass spectrometry data from spatial metabolomics experiments and need to reduce the high-dimensional peak space to a ranked set of marker ions for downstream spatial analysis (e.g., tissue region annotation or biomarker discovery).
+description: Use when you have imaging mass spectrometry data from spatial metabolomics
+  experiments and need to reduce the high-dimensional peak space to a ranked set of
+  marker ions for downstream spatial analysis (e.g., tissue region annotation or biomarker
+  discovery).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
@@ -44,6 +48,7 @@ attribution:
 
 # imaging-mass-spectrometry-ion-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatically select marker ions from imaging mass spectrometry (IMS) datasets by iteratively ranking m/z peaks according to latent features learned by a graph-attention autoencoder. This skill identifies the most discriminative ions for spatial metabolomics analysis without manual curation.

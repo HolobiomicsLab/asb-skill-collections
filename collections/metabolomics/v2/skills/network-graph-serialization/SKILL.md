@@ -1,6 +1,9 @@
 ---
 name: network-graph-serialization
-description: Use when you have applied graphical lasso (GLASSO) to estimate a sparse inverse covariance matrix from a feature matrix and need to convert the non-zero precision matrix entries into an explicit graph representation suitable for visualization, topology analysis, or overlay with PCA scores.
+description: Use when you have applied graphical lasso (GLASSO) to estimate a sparse
+  inverse covariance matrix from a feature matrix and need to convert the non-zero
+  precision matrix entries into an explicit graph representation suitable for visualization,
+  topology analysis, or overlay with PCA scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -10,6 +13,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -38,6 +42,7 @@ attribution:
 
 # network-graph-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and serialize a network graph structure from a sparse precision matrix (produced by GLASSO) into a portable format (edge list, adjacency matrix, or GraphML). This enables downstream visualization, analysis, and integration with PCA-based feature scoring.

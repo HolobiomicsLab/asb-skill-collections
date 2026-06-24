@@ -19,6 +19,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -51,6 +52,7 @@ attribution:
 
 # lc-ms-feature-quality-scoring
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Compute per-feature quality scores for LC-MS detected features by evaluating peak shape, chromatographic metrics, signal-to-noise ratio, and coherence of isotopes/adducts. This skill produces a quality-annotated feature table with diagnostic flags (pass/fail/warning) suitable for downstream filtering and confidence assessment.

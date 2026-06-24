@@ -1,6 +1,8 @@
 ---
 name: peak-preservation-vs-noise-reduction-tradeoff
-description: Use when you have raw or baseline-corrected mass spectra from MSImagingArrays or MSImagingExperiment objects and need to decide between smoothing methods before peak picking or statistical analysis.
+description: Use when you have raw or baseline-corrected mass spectra from MSImagingArrays
+  or MSImagingExperiment objects and need to decide between smoothing methods before
+  peak picking or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -16,12 +18,14 @@ metadata:
   - BiocParallel
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 claims: []

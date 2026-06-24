@@ -1,6 +1,8 @@
 ---
 name: retention-time-peak-flagging
-description: Use when after applying peak detection algorithms to identify local maxima in feature signals across retention time or m/z dimensions, but before exporting or filtering the peak list for further analysis.
+description: Use when after applying peak detection algorithms to identify local maxima
+  in feature signals across retention time or m/z dimensions, but before exporting
+  or filtering the peak list for further analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -12,6 +14,7 @@ metadata:
   - BreathXplorer
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

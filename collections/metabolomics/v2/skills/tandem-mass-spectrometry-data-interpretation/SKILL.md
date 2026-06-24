@@ -1,6 +1,8 @@
 ---
 name: tandem-mass-spectrometry-data-interpretation
-description: Use when you have high-resolution MS2 data (.ms2 format) from tandem mass spectrometry analysis of lipid A-containing samples and need to perform automated structure annotation and identification at systems scale.
+description: Use when you have high-resolution MS2 data (.ms2 format) from tandem
+  mass spectrometry analysis of lipid A-containing samples and need to perform automated
+  structure annotation and identification at systems scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3929
@@ -13,6 +15,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER
@@ -42,6 +45,7 @@ attribution:
 
 # tandem-mass-spectrometry-data-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated structure annotation of lipid A from high-resolution tandem mass spectrometry (MS2) data using LipidA-IDER, an open-source tool that identifies and classifies lipid A molecular species at systems scale. This skill enables conversion of raw MS2 spectral data into annotated lipid structure outputs.

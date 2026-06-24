@@ -1,6 +1,9 @@
 ---
 name: python-bracket-notation-protocol-implementation
-description: Use when you have a blockwise-indexed compressed file (e.g., indexed gzip with chapter or spectrum identifiers) and need to retrieve individual logical blocks by key using Python bracket notation (e.g., `handler['chapter_1']` or `handler[0]`) rather than sequential iteration.
+description: Use when you have a blockwise-indexed compressed file (e.g., indexed
+  gzip with chapter or spectrum identifiers) and need to retrieve individual logical
+  blocks by key using Python bracket notation (e.g., `handler['chapter_1']` or `handler[0]`)
+  rather than sequential iteration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3216
@@ -11,6 +14,7 @@ metadata:
   - Python
   - ElementTree
   - pymzML
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,6 +45,7 @@ attribution:
 
 # Python Bracket Notation Protocol Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement the `__getitem__()` protocol in a custom Python class to enable random access to indexed data blocks (e.g., chapters in a compressed mzML file) using bracket notation. This allows seekable access to blockwise-indexed content without decompressing the entire file.

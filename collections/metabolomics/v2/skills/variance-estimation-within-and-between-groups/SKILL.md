@@ -1,6 +1,9 @@
 ---
 name: variance-estimation-within-and-between-groups
-description: Use when you have a QC-annotated LC-MS feature intensity table (CSV or data frame) with replicate QC samples and biological samples from multiple batches or run orders, and you need to assess which features maintain consistent signal intensity across technical replicates (within-group) relative to.
+description: Use when you have a QC-annotated LC-MS feature intensity table (CSV or
+  data frame) with replicate QC samples and biological samples from multiple batches
+  or run orders, and you need to assess which features maintain consistent signal
+  intensity across technical replicates (within-group) relative to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - MetCorR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

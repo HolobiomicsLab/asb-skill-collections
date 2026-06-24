@@ -1,6 +1,9 @@
 ---
 name: tensor-dimension-alignment-and-broadcasting
-description: Use when when implementing a multi-task deep learning model that predicts charge, isotope count, and retention time simultaneously from mass spectrometry data, and separate feature extraction branches produce tensors of different semantic dimensions that must be integrated.
+description: Use when when implementing a multi-task deep learning model that predicts
+  charge, isotope count, and retention time simultaneously from mass spectrometry
+  data, and separate feature extraction branches produce tensors of different semantic
+  dimensions that must be integrated.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -10,6 +13,7 @@ metadata:
   - IsoFusion
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion

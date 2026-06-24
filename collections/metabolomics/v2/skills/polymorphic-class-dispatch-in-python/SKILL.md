@@ -1,6 +1,9 @@
 ---
 name: polymorphic-class-dispatch-in-python
-description: Use when when you have multiple file format variants (compressed indexed gzip, standard gzip, SQLite database, uncompressed mzML) that all need to be read via a unified interface, and you want to avoid a long chain of conditional logic in client code.
+description: Use when when you have multiple file format variants (compressed indexed
+  gzip, standard gzip, SQLite database, uncompressed mzML) that all need to be read
+  via a unified interface, and you want to avoid a long chain of conditional logic
+  in client code.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,6 +15,7 @@ metadata:
   - sqlite3
   - xml.etree.ElementTree
   - pymzML
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -42,6 +46,7 @@ attribution:
 
 # polymorphic-class-dispatch-in-python
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement conditional branching logic in a factory method to instantiate the correct file handler class based on file extension and format detection (e.g., .gz with indexed gzip vs. standard gzip, .db for SQLite, or default .mzML). This skill enables a single entry point (FileInterface._open) to transparently route different mzML file formats to their appropriate handler implementations without exposing dispatch logic to callers.

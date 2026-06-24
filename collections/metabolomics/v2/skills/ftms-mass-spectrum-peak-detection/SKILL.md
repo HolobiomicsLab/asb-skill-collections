@@ -1,6 +1,8 @@
 ---
 name: ftms-mass-spectrum-peak-detection
-description: Use when you have loaded an FT-ICR raw spectrum (e.g., ESI_NEG_SRFA.d in Bruker or ThermoFisher .raw format) and need to identify the m/z positions and intensities of individual mass spectral peaks.
+description: Use when you have loaded an FT-ICR raw spectrum (e.g., ESI_NEG_SRFA.d
+  in Bruker or ThermoFisher .raw format) and need to identify the m/z positions and
+  intensities of individual mass spectral peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +51,7 @@ attribution:
 
 # FT-MS Mass Spectrum Peak Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification and localization of mass spectral peaks in Fourier-transform ion cyclotron resonance (FT-ICR) mass spectrometry data using apex quadratic fitting. This skill is essential for converting raw FT-MS transients into interpretable peak lists suitable for downstream calibration and molecular formula assignment.

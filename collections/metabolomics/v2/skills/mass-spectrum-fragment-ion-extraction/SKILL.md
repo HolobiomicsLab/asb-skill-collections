@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-fragment-ion-extraction
-description: Use when you have an experimental MS/MS spectrum (e.g., from MassBank or acquired data) for a single metabolite with known accurate precursor m/z and adduct type, and you need to generate a library entry with scored fragments for use in metabolite annotation pipelines.
+description: Use when you have an experimental MS/MS spectrum (e.g., from MassBank
+  or acquired data) for a single metabolite with known accurate precursor m/z and
+  adduct type, and you need to generate a library entry with scored fragments for
+  use in metabolite annotation pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,11 +20,13 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # mass-spectrum-fragment-ion-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and score fragment ions from experimental MS/MS spectra to construct metabolite library entries. This skill converts raw fragmentation data into annotated peak lists with occurrence scores, enabling downstream metabolite identification in untargeted LC–MS workflows.

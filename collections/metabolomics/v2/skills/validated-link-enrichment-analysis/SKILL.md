@@ -1,6 +1,9 @@
 ---
 name: validated-link-enrichment-analysis
-description: Use when when you have a ranked list of GCF-MF (genomic cluster family–molecular feature) link predictions from one or more scoring functions, a curated set of known validated links for the same strain(s), and need to assess whether combining or filtering by percentile thresholds improves.
+description: Use when when you have a ranked list of GCF-MF (genomic cluster family–molecular
+  feature) link predictions from one or more scoring functions, a curated set of known
+  validated links for the same strain(s), and need to assess whether combining or
+  filtering by percentile thresholds improves.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,13 +17,15 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -50,6 +55,7 @@ attribution:
 
 # validated-link-enrichment-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies whether genomic-metabolomic links scoring in the top percentile (e.g., 90th) of one or more scoring functions are enriched for experimentally validated pairs, using Fisher exact test to compare enrichment across individual and combined scoring strategies. This skill detects whether high-scoring predictions align significantly better with known true links than chance.

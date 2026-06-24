@@ -1,6 +1,7 @@
 ---
 name: build-system-monitoring
-description: Use when when you need to capture a snapshot of a research software project's health metrics from multiple CI/CD and repository services (Travis CI, Landscape.
+description: Use when when you need to capture a snapshot of a research software project's
+  health metrics from multiple CI/CD and repository services (Travis CI, Landscape.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +15,7 @@ metadata:
   - Coveralls
   - Docker Hub
   - Zenodo
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -49,6 +51,7 @@ attribution:
 
 # build-system-monitoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieves and tabulates the current status of project health indicators (build, code quality, test coverage, deployment, and archival badges) from live CI/CD and service endpoints embedded in a repository README. This skill enables reproducible documentation of project status at a point in time.

@@ -1,6 +1,8 @@
 ---
 name: biological-reactant-pair-mapping-kegg
-description: Use when constructing or enriching a chemical formula database that must capture not just structural similarity (DBEdges) but also biological co-occurrence patterns.
+description: Use when constructing or enriching a chemical formula database that must
+  capture not just structural similarity (DBEdges) but also biological co-occurrence
+  patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,11 +15,13 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # biological-reactant-pair-mapping-kegg
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and link chemical formulae that participate together in metabolic reactions by retrieving reactant pairs from KEGG and constructing BioEdges—graph edges that encode biological relationships between compounds. This skill bridges chemical structure databases with metabolic context, enabling formula assignment methods to score candidates based on whether they co-occur in known biochemical transformations.

@@ -1,6 +1,9 @@
 ---
 name: coding-potential-prediction-and-classification
-description: Use when you have differentially expressed isoform or exon FASTA sequences from transcript assembly or isoform-level analysis (e.g., IsoformSwitchAnalyzer output) and need to distinguish functional protein-coding transcripts from non-coding RNA.
+description: Use when you have differentially expressed isoform or exon FASTA sequences
+  from transcript assembly or isoform-level analysis (e.g., IsoformSwitchAnalyzer
+  output) and need to distinguish functional protein-coding transcripts from non-coding
+  RNA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -15,6 +18,7 @@ metadata:
   - IsoformSwitchAnalyzer
   - Pfam
   - Nextflow
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator

@@ -1,6 +1,9 @@
 ---
 name: mass-accuracy-alignment
-description: Use when after parsing MRM transition tables (m/z values, retention times, transition parameters) from mzML data, before statistical analysis or visualization. Use this skill when you have detected but unannotated transitions and need to map them to lipid species with quantified confidence.
+description: Use when after parsing MRM transition tables (m/z values, retention times,
+  transition parameters) from mzML data, before statistical analysis or visualization.
+  Use this skill when you have detected but unannotated transitions and need to map
+  them to lipid species with quantified confidence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

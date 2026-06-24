@@ -1,6 +1,9 @@
 ---
 name: metabolomics-batch-effect-adjustment
-description: Use when you have a log-transformed metabolomics featuredata matrix with missing values handled (via knn or replacement) and you observe systematic variation across batches, quality control samples, or sample order that is NOT of biological interest.
+description: Use when you have a log-transformed metabolomics featuredata matrix with
+  missing values handled (via knn or replacement) and you observe systematic variation
+  across batches, quality control samples, or sample order that is NOT of biological
+  interest.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,11 +19,13 @@ metadata:
   - LogTransform
   - MissingValues
   - LinearModelFit
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # metabolomics-batch-effect-adjustment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply statistical normalization methods to metabolomics feature matrices to remove unwanted variation from batch effects, matrix effects, and instrumental drift, enabling valid downstream biomarker discovery and classification. This skill selects and executes one or more normalization approaches (IS, NOMIS, CCMN, RUV2, RUVrand, RLSC) appropriate to the sources of variation in the dataset.

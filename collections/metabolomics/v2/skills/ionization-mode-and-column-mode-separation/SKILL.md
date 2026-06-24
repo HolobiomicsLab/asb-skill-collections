@@ -1,6 +1,8 @@
 ---
 name: ionization-mode-and-column-mode-separation
-description: Use when your LC-MS peak table from MS-DIAL or similar software contains data from multiple ionization modes (positive and/or negative) and/or multiple chromatographic columns (e.
+description: Use when your LC-MS peak table from MS-DIAL or similar software contains
+  data from multiple ionization modes (positive and/or negative) and/or multiple chromatographic
+  columns (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +18,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -25,8 +28,10 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
-- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet``` is built upon the ```ExpressionSet``` class'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
+- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet```
+  is built upon the ```ExpressionSet``` class'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +56,7 @@ attribution:
 
 # Ionization Mode and Column Mode Separation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Separates LC-MS peak table data by chromatographic column and ionization mode (e.g., positive/negative ESI) to create mode-specific MetaboSet objects, enabling independent preprocessing and later integration of multimodal data. This is a prerequisite step in the notame workflow to preserve mode-specific feature identities and quality metrics.

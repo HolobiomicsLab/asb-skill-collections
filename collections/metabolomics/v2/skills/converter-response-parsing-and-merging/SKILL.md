@@ -1,6 +1,9 @@
 ---
 name: converter-response-parsing-and-merging
-description: Use when after executing asynchronous conversion jobs across multiple external APIs during spectrum metadata enrichment, when you have received response dictionaries from one or more converters and need to integrate them into spectrum records while maintaining data integrity and handling partial or.
+description: Use when after executing asynchronous conversion jobs across multiple
+  external APIs during spectrum metadata enrichment, when you have received response
+  dictionaries from one or more converters and need to integrate them into spectrum
+  records while maintaining data integrity and handling partial or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,6 +21,7 @@ metadata:
   - Python
   - pytest
   - Throttler
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

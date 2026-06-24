@@ -1,6 +1,8 @@
 ---
 name: inadequate-spectral-interpretation
-description: Use when you have clustered peak networks from INADEQUATE NMR spectra (output from the Clustering module) and need to assign metabolite identities by comparing them to known spectral signatures.
+description: Use when you have clustered peak networks from INADEQUATE NMR spectra
+  (output from the Clustering module) and need to assign metabolite identities by
+  comparing them to known spectral signatures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,6 +14,7 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

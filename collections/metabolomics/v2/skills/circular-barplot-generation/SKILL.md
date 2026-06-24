@@ -1,6 +1,8 @@
 ---
 name: circular-barplot-generation
-description: Use when after running a comprehensive preprocessing workflow comparison (e.g., via normulticlassqcall or nortimecoursenoall) that produces an overall ranking CSV file of candidate workflows.
+description: Use when after running a comprehensive preprocessing workflow comparison
+  (e.g., via normulticlassqcall or nortimecoursenoall) that produces an overall ranking
+  CSV file of candidate workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -11,6 +13,7 @@ metadata:
   - R
   - norvisualization
   - ggord
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

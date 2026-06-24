@@ -1,6 +1,8 @@
 ---
 name: molecular-fingerprint-structural-similarity-tanimoto
-description: Use when when evaluating how well mass spectral similarity scores correlate with actual chemical structure for annotated spectral pairs (e.g., spectra with InChIKey metadata).
+description: Use when when evaluating how well mass spectral similarity scores correlate
+  with actual chemical structure for annotated spectral pairs (e.g., spectra with
+  InChIKey metadata).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -19,16 +21,22 @@ metadata:
   - NumPy / Pandas / SciPy
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
-- Tanimoto similarity (Jaccard index) based on daylight-like molecular fingerprints, version 2020.03.2, 2048 bits, derived using rdkit
+- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
+  and can be installed via conda
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
+- Tanimoto similarity (Jaccard index) based on daylight-like molecular fingerprints,
+  version 2020.03.2, 2048 bits, derived using rdkit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +60,7 @@ attribution:
 
 # Molecular Fingerprint Structural Similarity (Tanimoto)
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute structural similarity between pairs of molecules using daylight-like fingerprints (RDKit, 2048 bits) and Tanimoto/Jaccard distance, enabling quantitative correlation of spectral similarity scores with underlying chemical structure. This skill is essential for benchmarking mass spectral similarity methods against ground-truth structural relationships.

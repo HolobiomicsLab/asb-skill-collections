@@ -1,6 +1,9 @@
 ---
 name: microbial-genome-annotation-harmonization
-description: Use when you have draft metabolic reconstructions (in SBML or standard format) for multiple organisms sampled from the same microbial community and need to produce a single consensus model per organism that reflects only metabolic capabilities agreed upon across the input reconstructions, or when.
+description: Use when you have draft metabolic reconstructions (in SBML or standard
+  format) for multiple organisms sampled from the same microbial community and need
+  to produce a single consensus model per organism that reflects only metabolic capabilities
+  agreed upon across the input reconstructions, or when.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -9,13 +12,15 @@ metadata:
   - http://edamontology.org/topic_3697
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
 - doi: 10.5281/zenodo.363932874
   title: ''
 evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana
+- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis
+  thaliana
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # microbial-genome-annotation-harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate consensus metabolic reconstructions from multiple draft genome annotations of community member organisms by identifying and integrating conserved metabolic reactions across all input models. This skill is essential when working with microbial communities where individual genome annotations exist but need unified, community-aware metabolic representations.

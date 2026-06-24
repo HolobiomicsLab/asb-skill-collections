@@ -1,6 +1,9 @@
 ---
 name: coefficient-of-variation-comparison
-description: Use when after normalization of a metabolomic feature matrix but before statistical testing, when you have both QC (technical replicate) and non-QC (study) samples and need to remove features with unstable or poorly reproducible signal patterns.
+description: Use when after normalization of a metabolomic feature matrix but before
+  statistical testing, when you have both QC (technical replicate) and non-QC (study)
+  samples and need to remove features with unstable or poorly reproducible signal
+  patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - notame
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -21,7 +25,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # coefficient-of-variation-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomic features by comparing coefficient of variation (CV) between sample and quality control (QC) groups, retaining only features where the CV ratio (non-QC/QC) exceeds a threshold. This approach removes low-variance features that fail to differentiate between study samples and analytical controls, improving data quality for downstream statistical testing.

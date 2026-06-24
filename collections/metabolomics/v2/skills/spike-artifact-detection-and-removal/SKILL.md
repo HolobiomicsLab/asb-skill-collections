@@ -1,6 +1,9 @@
 ---
 name: spike-artifact-detection-and-removal
-description: Use when processing raw IM-MS data (Agilent MassHunter .d or UIMF format) that exhibits isolated high-intensity noise artifacts or instrumental artifacts that appear as discrete, non-continuous signals in the retention time, ion mobility, or m/z dimensions.
+description: Use when processing raw IM-MS data (Agilent MassHunter .d or UIMF format)
+  that exhibits isolated high-intensity noise artifacts or instrumental artifacts
+  that appear as discrete, non-continuous signals in the retention time, ion mobility,
+  or m/z dimensions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,14 +15,18 @@ metadata:
   - Agilent MassHunter
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -46,6 +53,7 @@ attribution:
 
 # spike-artifact-detection-and-removal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and eliminates isolated high-intensity noise artifacts (spikes) that do not represent true ion signals in IM-MS data, improving signal quality without removing low-abundance genuine peaks. This is a critical preprocessing step applied after low-intensity threshold filtering to refine multidimensional ion mobility–mass spectrometry datasets.

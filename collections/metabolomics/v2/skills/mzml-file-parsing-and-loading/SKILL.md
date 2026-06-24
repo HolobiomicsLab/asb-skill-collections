@@ -1,6 +1,7 @@
 ---
 name: mzml-file-parsing-and-loading
-description: Use when when you have centroided mzML format LC–MS files from multiple runs (e.
+description: Use when when you have centroided mzML format LC–MS files from multiple
+  runs (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3649
@@ -18,6 +19,7 @@ metadata:
   - Python
   - OpenMS
   - VIMMS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -30,7 +32,8 @@ evidence_spans:
 - rmarkdown::html_document
 - Quick start for targeted peak integration of LC-MS data using TARDIS
 - ViMMS is compatible with Python 3+
-- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation
+  coverage using OpenMS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -59,6 +62,7 @@ attribution:
 
 # mzML File Parsing and Loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load centroided mzML LC–MS files into Spectra/MsExperiment objects with sample type metadata annotation to enable downstream targeted peak integration and quality assessment workflows. This skill bridges raw MS data acquisition and targeted compound analysis by establishing a unified, annotated spectral container.

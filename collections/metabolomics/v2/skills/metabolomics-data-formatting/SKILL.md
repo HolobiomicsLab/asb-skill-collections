@@ -1,6 +1,9 @@
 ---
 name: metabolomics-data-formatting
-description: Use when after running feature clustering (Gravity) or drift correction (Blueshift) on LCMS data, when you have a processed feature table and need to standardize its structure, validate metadata completeness, enforce missing-value thresholds, and generate a QC report documenting pass/fail status.
+description: Use when after running feature clustering (Gravity) or drift correction
+  (Blueshift) on LCMS data, when you have a processed feature table and need to standardize
+  its structure, validate metadata completeness, enforce missing-value thresholds,
+  and generate a QC report documenting pass/fail status.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -20,6 +23,7 @@ metadata:
   - dplyr / tidyr
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

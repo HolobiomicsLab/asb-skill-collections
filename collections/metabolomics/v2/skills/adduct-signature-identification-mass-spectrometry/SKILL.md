@@ -1,6 +1,9 @@
 ---
 name: adduct-signature-identification-mass-spectrometry
-description: Use when you have statistically significant LC-MS features (e.g., filtered by p-value < 0.01) from multi-assay metabolomics datasets and need to group features that represent the same metabolite ionized under different ESI conditions (e.g., [M+H]+, [M+Na]+, [M+NH4]+).
+description: Use when you have statistically significant LC-MS features (e.g., filtered
+  by p-value < 0.01) from multi-assay metabolomics datasets and need to group features
+  that represent the same metabolite ionized under different ESI conditions (e.g.,
+  [M+H]+, [M+Na]+, [M+NH4]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,13 +18,15 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
 evidence_spans:
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 - import pandas as pd
 - import numpy as np
 - 'Dependencies: scipy'
@@ -49,6 +54,7 @@ attribution:
 
 # Adduct Signature Identification in Mass Spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies common electrospray ionization (ESI) adduct signatures in LC-MS features by calculating hypothetical neutral masses and grouping features with matching neutral masses within ppm tolerance. This enables structural annotation and cross-assay linking of metabolite features.

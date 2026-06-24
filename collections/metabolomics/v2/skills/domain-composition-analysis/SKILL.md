@@ -1,6 +1,9 @@
 ---
 name: domain-composition-analysis
-description: Use when you have a set of Biosynthetic Gene Clusters in GenBank format and need to understand the domain architecture of constituent genes, either to detect statistically significant domain co-occurrence patterns within BGCs, to filter redundant BGCs by domain similarity, or to link detected.
+description: Use when you have a set of Biosynthetic Gene Clusters in GenBank format
+  and need to understand the domain architecture of constituent genes, either to detect
+  statistically significant domain co-occurrence patterns within BGCs, to filter redundant
+  BGCs by domain similarity, or to link detected.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0224
@@ -10,11 +13,13 @@ metadata:
   - http://edamontology.org/topic_3372
   tools:
   - iPRESTO
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

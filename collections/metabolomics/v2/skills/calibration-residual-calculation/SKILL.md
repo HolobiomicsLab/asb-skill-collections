@@ -1,6 +1,8 @@
 ---
 name: calibration-residual-calculation
-description: Use when after a mass spectrum has been matched against a reference m/z file (e.g., SRFA.ref) and a sufficient number of calibration points (≥5) have been identified within a given PPM tolerance window.
+description: Use when after a mass spectrum has been matched against a reference m/z
+  file (e.g., SRFA.ref) and a sufficient number of calibration points (≥5) have been
+  identified within a given PPM tolerance window.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,12 +16,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +51,7 @@ attribution:
 
 # calibration-residual-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computation of mass calibration coefficients and residuals from matched reference m/z points using least-squares fitting or polynomial regression. This skill assesses the quality and accuracy of mass spectrum calibration by quantifying the deviation between theoretical and observed m/z values.

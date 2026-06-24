@@ -1,6 +1,9 @@
 ---
 name: systems-biology-model-standardization
-description: Use when you have multiple draft metabolic reconstructions of community members or assembly variants (e.g., from different annotation pipelines or genome assemblies) in diverse or non-standard formats, and you need to merge them into a single consensus model.
+description: Use when you have multiple draft metabolic reconstructions of community
+  members or assembly variants (e.g., from different annotation pipelines or genome
+  assemblies) in diverse or non-standard formats, and you need to merge them into
+  a single consensus model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -37,6 +41,7 @@ attribution:
 
 # systems-biology-model-standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and validate multiple draft genome-scale metabolic models into a common format (JSON, XML, or SBML) to enable their integration into consensus community reconstructions. This skill ensures structural integrity and annotation consistency across heterogeneous input models before downstream merging and gap-filling.

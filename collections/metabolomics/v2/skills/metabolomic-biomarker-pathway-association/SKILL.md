@@ -1,6 +1,7 @@
 ---
 name: metabolomic-biomarker-pathway-association
-description: Use when after marker identification (via fold-change, PLS-DA, t-test, or other feature selection methods) has produced a ranked list of metabolic features.
+description: Use when after marker identification (via fold-change, PLS-DA, t-test,
+  or other feature selection methods) has produced a ranked list of metabolic features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -14,12 +15,15 @@ metadata:
   - KEGG_Enrich_PlotPanel
   - Enrichment
   - KEGG_Enrich_Plot
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
-- several R packages are utilized in the background processes, including ggplot2, igraph, MASS
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
+- several R packages are utilized in the background processes, including ggplot2,
+  igraph, MASS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # metabolomic-biomarker-pathway-association
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill links identified metabolomic biomarkers to biological pathways through enrichment analysis, enabling interpretation of marker compounds in the context of KEGG or custom databases. It transforms a list of compound identifiers and their fold-change values into pathway statistics and visualizations.

@@ -1,6 +1,9 @@
 ---
 name: fold-change-frequency-aggregation
-description: Use when after performing univariate statistical testing (t-test or ANOVA via omu_summary or omu_anova) on metabolomics count data, use this skill when you need to summarize how many metabolites in each class showed significant increase or decrease (padj ≤ 0.05).
+description: Use when after performing univariate statistical testing (t-test or ANOVA
+  via omu_summary or omu_anova) on metabolomics count data, use this skill when you
+  need to summarize how many metabolites in each class showed significant increase
+  or decrease (padj ≤ 0.05).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - ra_table
   - pie_chart
   - plot_bar
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -43,6 +47,7 @@ attribution:
 
 # fold-change-frequency-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate fold-change results from univariate statistical testing into frequency counts of increased vs. decreased metabolites, stratified by compound class or other hierarchical metadata. This enables compact summary tables and downstream visualization of the direction and magnitude of metabolic shifts.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-compound-extraction
-description: Use when you have a preprocessed GC-MS dataset (from spreadOut) with standardized column names (Compound.Name, Component.RT, Base.Peak.MZ, Component.Area, Match.Factor) and a specific list of chemical compounds you want to extract and aggregate across multiple sample runs.
+description: Use when you have a preprocessed GC-MS dataset (from spreadOut) with
+  standardized column names (Compound.Name, Component.RT, Base.Peak.MZ, Component.Area,
+  Match.Factor) and a specific list of chemical compounds you want to extract and
+  aggregate across multiple sample runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -17,13 +20,17 @@ metadata:
   - webchem
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- mzExacto() collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- mzExacto() collects the same information for a set of query chemicals and uses it
+  to precisely search the advanced dictionary for samples that have those chemicals
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # mass-spectrometry-compound-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract m/z, retention time, match factor, and peak area values for a set of known query chemicals from preprocessed GC-MS data by searching an advanced dictionary keyed on compound names and spectral signatures. This skill bridges the transition from raw mass spectrometry output to compound-level tabular data suitable for downstream chemical classification and risk assessment.

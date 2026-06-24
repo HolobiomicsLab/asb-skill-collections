@@ -1,12 +1,15 @@
 ---
 name: jndi-binding-setup
-description: Use when deploying a Java web application (such as CEU Mass Mediator) that requires access to an internal or external database and the application server provides JNDI as the connection pooling and naming mechanism.
+description: Use when deploying a Java web application (such as CEU Mass Mediator)
+  that requires access to an internal or external database and the application server
+  provides JNDI as the connection pooling and naming mechanism.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - javax.faces-2.2.12.jar
   - CEU Mass Mediator
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00720
   title: CEU Mass Mediator 3.0

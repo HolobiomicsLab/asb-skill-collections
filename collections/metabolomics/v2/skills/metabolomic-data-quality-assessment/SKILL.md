@@ -1,6 +1,8 @@
 ---
 name: metabolomic-data-quality-assessment
-description: Use when when you have raw metabolomics data with missing values in metabolite columns and need to prepare the dataset for downstream statistical analysis (linear mixed models, ANOVA, dimensionality reduction, or prediction models).
+description: Use when when you have raw metabolomics data with missing values in metabolite
+  columns and need to prepare the dataset for downstream statistical analysis (linear
+  mixed models, ANOVA, dimensionality reduction, or prediction models).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - R
   - MeTEor
   - tidyverse
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -21,7 +24,8 @@ evidence_spans:
 - library(VIM)
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # metabolomic-data-quality-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assessment and remediation of missing data patterns in raw metabolomics datasets before statistical analysis. This skill identifies metabolite columns with excessive missingness and applies k-nearest neighbor imputation to preserve data integrity while handling missing values in metabolite concentrations.

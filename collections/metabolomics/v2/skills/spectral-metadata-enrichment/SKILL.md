@@ -1,6 +1,7 @@
 ---
 name: spectral-metadata-enrichment
-description: Use when you have a .msp spectral library file with sparse or incomplete metadata (e.
+description: Use when you have a .msp spectral library file with sparse or incomplete
+  metadata (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -17,6 +18,7 @@ metadata:
   - RDKit
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

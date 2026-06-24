@@ -1,6 +1,9 @@
 ---
 name: isobaric-ion-detection-msi
-description: Use when you have loaded MSI data with an extracted peak list and need to annotate matrix-related signals, particularly when the dataset may contain isobaric ions or peaks with overlapping spatial distributions that could be misclassified during downstream annotation filtering.
+description: Use when you have loaded MSI data with an extracted peak list and need
+  to annotate matrix-related signals, particularly when the dataset may contain isobaric
+  ions or peaks with overlapping spatial distributions that could be misclassified
+  during downstream annotation filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,13 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - rMSIcleanup is an open-source R package
 claims: []
@@ -44,6 +49,7 @@ attribution:
 
 # Isobaric Ion Detection in Mass Spectrometry Imaging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and flags ions with identical or near-identical m/z values (isobaric ions) and overlapping spatial distributions in MSI data to prevent their misclassification during matrix annotation. This skill is essential when processing MSI datasets where isobaric peaks can be erroneously assigned to matrix or analyte classes.

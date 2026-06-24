@@ -1,6 +1,9 @@
 ---
 name: ranked-result-extraction-and-display
-description: Use when after running annotateRC on LC–MS AIF data when you need to inspect whether a feature has multiple plausible annotations (e.g., isobaric lipids, isomers with the same fatty-acyl chain) or when the rank-1 annotation confidence is borderline and alternatives should be evaluated.
+description: Use when after running annotateRC on LC–MS AIF data when you need to
+  inspect whether a feature has multiple plausible annotations (e.g., isobaric lipids,
+  isomers with the same fatty-acyl chain) or when the rank-1 annotation confidence
+  is borderline and alternatives should be evaluated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,11 +17,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # ranked-result-extraction-and-display
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and display ranked candidate metabolite annotations for a specific LC–MS feature from the annotateRC results object, preserving annotation scores and rank order. This skill enables inspection of alternative candidate annotations beyond the top-ranked hit, critical for understanding annotation ambiguity and lipid isomer/isobar confusion in untargeted AIF metabolomics.

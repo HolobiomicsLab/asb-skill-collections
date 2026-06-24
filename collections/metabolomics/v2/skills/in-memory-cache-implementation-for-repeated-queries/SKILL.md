@@ -1,6 +1,9 @@
 ---
 name: in-memory-cache-implementation-for-repeated-queries
-description: Use when when deploying a high-throughput molecular classification API (e.g., /classify endpoint) where the same SMILES strings are expected to be queried repeatedly across multiple users or time windows, and response latency is a performance constraint.
+description: Use when when deploying a high-throughput molecular classification API
+  (e.g., /classify endpoint) where the same SMILES strings are expected to be queried
+  repeatedly across multiple users or time windows, and response latency is a performance
+  constraint.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -12,6 +15,7 @@ metadata:
   - TensorFlow Serving
   - Docker / docker-compose
   - NP Classifier models (Keras/HDF5)
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -40,6 +44,7 @@ attribution:
 
 # in-memory-cache-implementation-for-repeated-queries
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement server-side in-memory caching to store and retrieve prior classification results for repeated SMILES queries, reducing computational latency and improving API response time for duplicate requests.

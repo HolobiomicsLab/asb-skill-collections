@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-feature-detection-validation
-description: Use when when you have processed LC-HRMS mzML files through a non-targeted preprocessing tool (e.g., XCMS, MZmine 2, MS-DIAL) and need to assess whether peak detection rates, isotopologue ratio fidelity, and alignment accuracy meet acceptable thresholds before downstream analysis.
+description: Use when when you have processed LC-HRMS mzML files through a non-targeted
+  preprocessing tool (e.g., XCMS, MZmine 2, MS-DIAL) and need to assess whether peak
+  detection rates, isotopologue ratio fidelity, and alignment accuracy meet acceptable
+  thresholds before downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -18,12 +21,14 @@ metadata:
   - R (with mzRAPP library)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - Below we provided one more example for MZmine2
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)

@@ -1,6 +1,9 @@
 ---
 name: metabolomics-matrix-manipulation-r
-description: Use when you have a log2-scaled metabolomics feature matrix in CSV format with samples in rows, metabolic features in columns, and batch identifiers in the first column, and you need to remove technical heterogeneity or drift across analytical batches before estimating biological mechanisms.
+description: Use when you have a log2-scaled metabolomics feature matrix in CSV format
+  with samples in rows, metabolic features in columns, and batch identifiers in the
+  first column, and you need to remove technical heterogeneity or drift across analytical
+  batches before estimating biological mechanisms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +14,7 @@ metadata:
   - dbnorm
   - R
   - sva
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -19,7 +23,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # metabolomics-matrix-manipulation-r
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, preprocess, and apply batch effect correction to metabolomics feature matrices in R using the dbnorm package. This skill enables transformation of raw metabolomics data (log2-scaled, CSV format) into batch-corrected matrices suitable for downstream biological inference.

@@ -1,6 +1,8 @@
 ---
 name: clustering-tool-orchestration
-description: Use when you have raw tandem MS metabolomics data (in mzML or MGF format) and wish to compare the clustering performance of two or more MS clustering tools on the same dataset.
+description: Use when you have raw tandem MS metabolomics data (in mzML or MGF format)
+  and wish to compare the clustering performance of two or more MS clustering tools
+  on the same dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -19,6 +21,7 @@ metadata:
   - Clustering_benchmark_MS_RT.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT

@@ -1,6 +1,9 @@
 ---
 name: multi-source-spectrum-retrieval
-description: Use when when you have a Universal Spectrum Identifier (USI) string or collection of USI strings and need to programmatically retrieve the corresponding mass spectrometry spectrum data from one of seven supported repositories (GNPS Molecular Networking, GNPS Spectral Libraries, ProteoXchange.
+description: Use when when you have a Universal Spectrum Identifier (USI) string or
+  collection of USI strings and need to programmatically retrieve the corresponding
+  mass spectrometry spectrum data from one of seven supported repositories (GNPS Molecular
+  Networking, GNPS Spectral Libraries, ProteoXchange.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -18,6 +21,7 @@ metadata:
   - MetabolomicsSpectrumResolver
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

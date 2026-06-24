@@ -1,6 +1,8 @@
 ---
 name: bag-of-fragments-representation-construction
-description: Use when after noise filtering and polarity selection of MS/MS spectra (from .mgf, .mzML, or .msp files), when you need to prepare spectra for unsupervised discovery of recurring fragmentation patterns without prior compound identification.
+description: Use when after noise filtering and polarity selection of MS/MS spectra
+  (from .mgf, .mzML, or .msp files), when you need to prepare spectra for unsupervised
+  discovery of recurring fragmentation patterns without prior compound identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,11 +17,13 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - ms2lda_runfull.py
 - '::: MS2LDA.Preprocessing.load_and_clean'
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

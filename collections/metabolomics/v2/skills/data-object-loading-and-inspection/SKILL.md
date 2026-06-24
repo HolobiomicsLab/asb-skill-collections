@@ -1,6 +1,9 @@
 ---
 name: data-object-loading-and-inspection
-description: Use when you have identified example R or MATLAB scripts in a repository's Codes-Explained folder and need to execute them on a documented sub-sample scenario. The link-to-codes-and-data-objects file specifies which data object(s) to load, and the Read-Me.
+description: Use when you have identified example R or MATLAB scripts in a repository's
+  Codes-Explained folder and need to execute them on a documented sub-sample scenario.
+  The link-to-codes-and-data-objects file specifies which data object(s) to load,
+  and the Read-Me.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -10,6 +13,7 @@ metadata:
   - R
   - MATLAB
   - DisCoPad repository
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo15010028
   title: DisCo P-ad
@@ -38,6 +42,7 @@ attribution:
 
 # data-object-loading-and-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load sub-sample data objects referenced in a simulation workflow using language-appropriate methods (R or MATLAB), then inspect their structure, dimensions, and content to verify correctness before executing downstream analysis scripts. This skill ensures that input data conform to expected schemas and enables early detection of missing or malformed data.

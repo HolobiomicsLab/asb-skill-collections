@@ -1,6 +1,9 @@
 ---
 name: targeted-compound-metadata-formatting
-description: Use when you have a raw list of target compounds (in .xlsx, CSV, or database form) with heterogeneous column names and layouts, and you need to prepare it for targeted peak detection, EIC extraction, or quality metric calculation in TARDIS or similar LC–MS metabolomics tools.
+description: Use when you have a raw list of target compounds (in .xlsx, CSV, or database
+  form) with heterogeneous column names and layouts, and you need to prepare it for
+  targeted peak detection, EIC extraction, or quality metric calculation in TARDIS
+  or similar LC–MS metabolomics tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -42,6 +46,7 @@ attribution:
 
 # targeted-compound-metadata-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a standardized data.frame of targeted compound metadata (ID, name, m/z, RT, polarity) from raw source files (e.g., .xlsx targets list) for use as input to targeted peak detection workflows in LC–MS. This skill ensures that compound descriptors meet the schema and content requirements of downstream analysis tools like TARDIS.

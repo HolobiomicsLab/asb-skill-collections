@@ -1,6 +1,8 @@
 ---
 name: feature-frequency-filtering-imaging
-description: Use when after peak alignment across all spectra in an imaging dataset, use this skill when you have detected many peaks but need to reduce false positives and sparse features.
+description: Use when after peak alignment across all spectra in an imaging dataset,
+  use this skill when you have detected many peaks but need to reduce false positives
+  and sparse features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,12 +16,14 @@ metadata:
   - BiocParallel
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:

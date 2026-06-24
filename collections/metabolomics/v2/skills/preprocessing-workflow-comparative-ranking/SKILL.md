@@ -1,6 +1,9 @@
 ---
 name: preprocessing-workflow-comparative-ranking
-description: Use when you have multi-class or time-course metabolomic peak table data (raw or already peak-detected) with or without quality control samples and/or internal standards, and you need to evaluate which preprocessing workflow (normalization, imputation, scaling combination) will yield the most.
+description: Use when you have multi-class or time-course metabolomic peak table data
+  (raw or already peak-detected) with or without quality control samples and/or internal
+  standards, and you need to evaluate which preprocessing workflow (normalization,
+  imputation, scaling combination) will yield the most.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -18,6 +21,7 @@ metadata:
   - impute
   - statTarget
   - ProteoMM
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

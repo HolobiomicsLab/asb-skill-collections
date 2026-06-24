@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-spectrum-vectorization
-description: Use when you have high-resolution MS/MS spectra in mzML, mzXML, or MGF format and need to cluster or search across millions of spectra. The vectorization step is necessary before constructing nearest-neighbor indexes or computing pairwise distance matrices for spectrum clustering.
+description: Use when you have high-resolution MS/MS spectra in mzML, mzXML, or MGF
+  format and need to cluster or search across millions of spectra. The vectorization
+  step is necessary before constructing nearest-neighbor indexes or computing pairwise
+  distance matrices for spectrum clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,13 +19,15 @@ metadata:
   - pyproteolizard-algorithm
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 - doi: 10.1186/s12859-022-04833-5
   title: ''
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 - pip install falcon-ms spectrum-utils==0.3.5
 claims: []
 provenance:
@@ -51,6 +56,7 @@ attribution:
 
 # mass-spectrometry-spectrum-vectorization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert high-resolution MS/MS spectra into low-dimensional dense or sparse vectors using binning and feature hashing, enabling efficient similarity searching and clustering of millions of spectra. This is the critical first step in the falcon spectrum clustering pipeline.

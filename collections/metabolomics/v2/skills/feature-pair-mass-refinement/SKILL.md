@@ -1,6 +1,7 @@
 ---
 name: feature-pair-mass-refinement
-description: Use when after temporal correlation has identified feature pairs with matching intensity profiles across direct-injection MS experiments.
+description: Use when after temporal correlation has identified feature pairs with
+  matching intensity profiles across direct-injection MS experiments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,11 +14,13 @@ metadata:
   - matchms
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -42,6 +45,7 @@ attribution:
 
 # Reconstruct the mass-difference open-search step to assign candidate adduct/fragment species
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A refinement step that uses exact mass differences to disambiguate ion-species relationships identified through temporal correlation in direct-injection mass spectrometry. It matches observed m/z differences against a user-defined reference table of in-source fragments and adducts to assign chemical labels and assess mass accuracy.

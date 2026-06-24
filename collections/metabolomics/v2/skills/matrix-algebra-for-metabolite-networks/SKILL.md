@@ -1,6 +1,9 @@
 ---
 name: matrix-algebra-for-metabolite-networks
-description: Use when you have normalized and standardized metabolomics data (samples × metabolites matrix) and need to move beyond univariate or pairwise metabolite analysis to characterize the joint covariance structure or infer dynamic control relationships between metabolites under different growth.
+description: Use when you have normalized and standardized metabolomics data (samples
+  × metabolites matrix) and need to move beyond univariate or pairwise metabolite
+  analysis to characterize the joint covariance structure or infer dynamic control
+  relationships between metabolites under different growth.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +14,7 @@ metadata:
   - MInfer
   - R
   - MetaboAnalyst
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer

@@ -1,6 +1,9 @@
 ---
 name: pathway-score-aggregation
-description: Use when you have a metabolite intensity matrix (samples × metabolites) or gene expression matrix (samples × genes) with corresponding pathway definitions (pathway IDs mapped to feature sets), and you need to rank pathways by activity level to identify which biological processes are most affected.
+description: Use when you have a metabolite intensity matrix (samples × metabolites)
+  or gene expression matrix (samples × genes) with corresponding pathway definitions
+  (pathway IDs mapped to feature sets), and you need to rank pathways by activity
+  level to identify which biological processes are most affected.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -18,12 +21,15 @@ metadata:
   - MS2LDA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways,
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

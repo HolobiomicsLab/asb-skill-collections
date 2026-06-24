@@ -1,6 +1,7 @@
 ---
 name: cross-language-implementation-compatibility
-description: Use when when a new file format specification has multiple language implementations and you need to validate that all implementations correctly interpret the specification.
+description: Use when when a new file format specification has multiple language implementations
+  and you need to validate that all implementations correctly interpret the specification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -18,6 +19,7 @@ metadata:
   - Apache Arrow
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -48,6 +50,7 @@ attribution:
 
 # cross-language-implementation-compatibility
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that independent implementations of a file format reader (in Rust, Python/pyarrow, and R/arrow) produce field-level agreement when loading identical input files. This skill ensures interoperability and correctness of format specifications across language ecosystems before standardization.

@@ -1,6 +1,9 @@
 ---
 name: mass2motif-network-construction
-description: Use when after MS2LDA has inferred a motifset and you need to visualize and export the relationships between discovered Mass2Motifs for post-processing exploration, comparative annotation, or integration with external tools. Use this skill when you have motifset.json or motifset_optimized.
+description: Use when after MS2LDA has inferred a motifset and you need to visualize
+  and export the relationships between discovered Mass2Motifs for post-processing
+  exploration, comparative annotation, or integration with external tools. Use this
+  skill when you have motifset.json or motifset_optimized.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -13,12 +16,14 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-tensor-encoding
-description: Use when when you have parsed EI-MS spectrum data (m/z and intensity values) and need to feed it into a pre-trained MWFormer transformer model for direct molecular weight prediction.
+description: Use when when you have parsed EI-MS spectrum data (m/z and intensity
+  values) and need to feed it into a pre-trained MWFormer transformer model for direct
+  molecular weight prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,6 +20,7 @@ metadata:
   - MWFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03781
   title: MWFormer

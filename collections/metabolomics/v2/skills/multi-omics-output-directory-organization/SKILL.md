@@ -1,6 +1,8 @@
 ---
 name: multi-omics-output-directory-organization
-description: Use when after completing pathway enrichment analysis on differentially expressed features from genes, miRNA, proteins, or lipids using either clusterProfiler or biotranslator.
+description: Use when after completing pathway enrichment analysis on differentially
+  expressed features from genes, miRNA, proteins, or lipids using either clusterProfiler
+  or biotranslator.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,12 +15,14 @@ metadata:
   - biotranslator
   - ggplot2
   - ComplexHeatmap
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - Pathway enrichment analysis | Clusterprofiler, Biotranslator
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

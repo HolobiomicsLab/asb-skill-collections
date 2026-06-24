@@ -1,6 +1,9 @@
 ---
 name: feature-redundancy-reduction-with-ion-identity
-description: Use when when processing MZmine2/MZmine3 peak tables from LC–MS metabolomics data where you observe inflated feature counts due to multiple ionization states, isotopic satellites, and neutral losses of the same parent compound, particularly before computing extract-level metrics (e.
+description: Use when when processing MZmine2/MZmine3 peak tables from LC–MS metabolomics
+  data where you observe inflated feature counts due to multiple ionization states,
+  isotopic satellites, and neutral losses of the same parent compound, particularly
+  before computing extract-level metrics (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,18 +18,23 @@ metadata:
   - inventa
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2
+- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time'
+  columns. -Inventa takes input directly from MZmine2
 - Inventa takes input directly from MZmine2 or MZmine 3
-- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares
-- 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/),
+  is possible to use other processing sofwares
+- 'tima_results_filename: timaR reponderated output format. - for performing in silico
+  annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'
-- Inventa is capable to performe the calcultions based on the results from Ion Identity, reducing the total number of features.
+- Inventa is capable to performe the calcultions based on the results from Ion Identity,
+  reducing the total number of features.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

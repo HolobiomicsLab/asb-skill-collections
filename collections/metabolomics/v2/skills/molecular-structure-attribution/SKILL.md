@@ -1,6 +1,8 @@
 ---
 name: molecular-structure-attribution
-description: Use when you have a trained GNN model predicting CCS values from molecular graphs and need to understand which structural features (node and edge attributes) are most influential for specific predictions or across a test set.
+description: Use when you have a trained GNN model predicting CCS values from molecular
+  graphs and need to understand which structural features (node and edge attributes)
+  are most influential for specific predictions or across a test set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -16,6 +18,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -44,6 +47,7 @@ attribution:
 
 # molecular-structure-attribution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify which molecular structural features (atoms, bonds, functional groups) most strongly drive graph neural network predictions of collision cross section (CCS) through ablation and gradient-based attribution. This enables post-hoc interpretation of black-box GNN models trained on molecular graphs.

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-library-indexing
-description: Use when you have a large MS/MS experiment (mzML format) requiring lipid annotation and need to match experimental spectra against >10 million theoretical lipid fragments.
+description: Use when you have a large MS/MS experiment (mzML format) requiring lipid
+  annotation and need to match experimental spectra against >10 million theoretical
+  lipid fragments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -16,12 +18,15 @@ metadata:
   - Rcpp
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

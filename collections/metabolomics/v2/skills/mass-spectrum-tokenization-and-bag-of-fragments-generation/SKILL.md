@@ -1,6 +1,7 @@
 ---
 name: mass-spectrum-tokenization-and-bag-of-fragments-generation
-description: Use when after filtering and cleaning MS/MS spectra (positive/negative ion mode) but before applying Latent Dirichlet Allocation for Mass2Motif discovery.
+description: Use when after filtering and cleaning MS/MS spectra (positive/negative
+  ion mode) but before applying Latent Dirichlet Allocation for Mass2Motif discovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +14,13 @@ metadata:
   - Conda
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

@@ -1,6 +1,9 @@
 ---
 name: adduct-mass-difference-ranking
-description: Use when you have computed a histogram of mass differences from all pairwise mass comparisons in your MALDI-MS imaging dataset and need to prioritize which mass differences are most frequent and likely represent genuine molecular adducts (e.g., metabolite + matrix ions) rather than noise.
+description: Use when you have computed a histogram of mass differences from all pairwise
+  mass comparisons in your MALDI-MS imaging dataset and need to prioritize which mass
+  differences are most frequent and likely represent genuine molecular adducts (e.g.,
+  metabolite + matrix ions) rather than noise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,13 +15,16 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -43,6 +49,7 @@ attribution:
 
 # adduct-mass-difference-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank observed mass differences by their occurrence frequency in MALDI-MS imaging data and annotate matches to known adduct species. This skill identifies abundant adduct signals that would otherwise be obscured in the metabolome by systematically counting pairwise mass differences and cross-referencing them against reference adduct tables.

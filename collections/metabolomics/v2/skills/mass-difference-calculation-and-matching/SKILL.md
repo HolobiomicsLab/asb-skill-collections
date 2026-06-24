@@ -1,6 +1,8 @@
 ---
 name: mass-difference-calculation-and-matching
-description: Use when you have centroided data-dependent acquisition (DDA) MS2 spectra from LC- or GC-HRMS and need to annotate detected features with PFAS-specific diagnostic fragments. Use it after feature detection (e.
+description: Use when you have centroided data-dependent acquisition (DDA) MS2 spectra
+  from LC- or GC-HRMS and need to annotate detected features with PFAS-specific diagnostic
+  fragments. Use it after feature detection (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +16,13 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # Mass-difference calculation and matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes and matches characteristic fragment mass differences between precursor and fragment ions in MS2 data to identify diagnostic PFAS patterns (e.g., CF₂ loss, perfluoroalkyl chain fragments). This is one of several prioritization techniques used alongside MD/C-m/C and Kendrick mass defect analysis to screen potential PFAS features in non-target HRMS measurements.

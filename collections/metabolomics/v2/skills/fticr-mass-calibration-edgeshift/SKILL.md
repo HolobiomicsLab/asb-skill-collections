@@ -1,6 +1,7 @@
 ---
 name: fticr-mass-calibration-edgeshift
-description: Use when you have FTICR-MS direct injection (mzML) data with identified chromatographic peaks and need to correct systematic m/z bias.
+description: Use when you have FTICR-MS direct injection (mzML) data with identified
+  chromatographic peaks and need to correct systematic m/z bias.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +13,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
@@ -42,6 +44,7 @@ attribution:
 
 # FTICR Mass Calibration with Edgeshift
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply edgeshift calibration to correct m/z measurement bias in FTICR-MS direct injection data, where peaks within the calibrant range are adjusted via linear interpolation and peaks outside are corrected by constant shift factors. This skill quantifies and visualizes the magnitude of m/z corrections across the measured mass range.

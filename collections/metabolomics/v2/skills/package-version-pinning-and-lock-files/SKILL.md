@@ -1,6 +1,8 @@
 ---
 name: package-version-pinning-and-lock-files
-description: Use when when a multi-language analysis pipeline (R + Python) has been validated and you need to document the exact dependency tree so that other researchers or systems can recreate the same computational environment.
+description: Use when when a multi-language analysis pipeline (R + Python) has been
+  validated and you need to document the exact dependency tree so that other researchers
+  or systems can recreate the same computational environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3546
@@ -16,6 +18,7 @@ metadata:
   - renv
   - conda/environment.yml
   - r-miniconda
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
@@ -49,6 +52,7 @@ attribution:
 
 # package-version-pinning-and-lock-files
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Capture and document exact versions of R, Python, and all transitive dependencies required to execute a computational analysis pipeline reproducibly. This skill ensures that future executions of SERDA normalization (or similar multi-language workflows) produce identical results by freezing the software environment at the point of validation.

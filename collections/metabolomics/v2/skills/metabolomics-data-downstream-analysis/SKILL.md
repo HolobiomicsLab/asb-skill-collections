@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-downstream-analysis
-description: Use when you have deposited spatio-molecular matrices (e.g., MORPHnMOL.csv from SpaceM analysis) and need to reproduce or extend the data transformations, feature extractions, and figure generation reported in a metabolomics manuscript.
+description: Use when you have deposited spatio-molecular matrices (e.g., MORPHnMOL.csv
+  from SpaceM analysis) and need to reproduce or extend the data transformations,
+  feature extractions, and figure generation reported in a metabolomics manuscript.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - Fiji
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM

@@ -1,6 +1,8 @@
 ---
 name: molecular-structure-to-graph-conversion
-description: Use when when you have validated RDKit molecule objects from chemical databases (PubChem, HMDB) and need to generate graph-structured features for machine learning models that consume molecular topology as input.
+description: Use when when you have validated RDKit molecule objects from chemical
+  databases (PubChem, HMDB) and need to generate graph-structured features for machine
+  learning models that consume molecular topology as input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0379
@@ -13,6 +15,7 @@ metadata:
   - numpy
   - pandas
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -47,6 +50,7 @@ attribution:
 
 # molecular-structure-to-graph-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert RDKit molecule objects derived from PubChem/HMDB IDs into graph-based feature representations (node and edge tensors) suitable for neural network training. This skill bridges molecular structure validation and downstream multimodal feature alignment by extracting topology and connectivity information.

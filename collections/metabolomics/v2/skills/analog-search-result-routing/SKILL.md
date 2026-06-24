@@ -1,6 +1,9 @@
 ---
 name: analog-search-result-routing
-description: Use when after MS2Query has ranked and scored library matches against query spectra, when you need to apply different confidence thresholds, interpretation strategies, or downstream workflows depending on whether the result is an exact match (precursor m/z difference ≈ 0) or a chemical analog.
+description: Use when after MS2Query has ranked and scored library matches against
+  query spectra, when you need to apply different confidence thresholds, interpretation
+  strategies, or downstream workflows depending on whether the result is an exact
+  match (precursor m/z difference ≈ 0) or a chemical analog.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,11 +17,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 - push your feature branch to (your fork of) the ms2query repository on GitHub
 - you want to make some kind of change to the code base

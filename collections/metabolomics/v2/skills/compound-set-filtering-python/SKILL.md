@@ -1,6 +1,9 @@
 ---
 name: compound-set-filtering-python
-description: Use when when running Pickaxe reaction network expansion and you need to reduce the candidate compound set before each generation using criteria not covered by built-in filters (e.g., similarity thresholds, metabolomics matching, or target-based selection).
+description: Use when when running Pickaxe reaction network expansion and you need
+  to reduce the candidate compound set before each generation using criteria not covered
+  by built-in filters (e.g., similarity thresholds, metabolomics matching, or target-based
+  selection).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,11 +15,13 @@ metadata:
   - RDKit
   - pytest
   - MINE-Database (Pickaxe)
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
 evidence_spans:
-- MINE-Database, also referred to as Pickaxe, is a python library allows you to efficiently create reaction networks
+- MINE-Database, also referred to as Pickaxe, is a python library allows you to efficiently
+  create reaction networks
 - Pickaxe supports running through a command line interface
 claims: []
 provenance:

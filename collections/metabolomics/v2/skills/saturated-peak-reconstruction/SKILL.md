@@ -1,6 +1,9 @@
 ---
 name: saturated-peak-reconstruction
-description: Use when processing IM-MS data files (Agilent .d or UIMF format) that contain high-abundance ions suspected of signal saturation, particularly in untargeted or discovery proteomics/metabolomics workflows where dynamic range compression would obscure quantitative relationships.
+description: Use when processing IM-MS data files (Agilent .d or UIMF format) that
+  contain high-abundance ions suspected of signal saturation, particularly in untargeted
+  or discovery proteomics/metabolomics workflows where dynamic range compression would
+  obscure quantitative relationships.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,14 +17,18 @@ metadata:
   - Microsoft Visual C++ Runtime x64
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -48,6 +55,7 @@ attribution:
 
 # saturated-peak-reconstruction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and computationally reconstruct ion signals that have exceeded the dynamic range of the mass spectrometry detector in ion mobility–mass spectrometry (IM-MS) data. This skill applies multidimensional smoothing algorithms across m/z, mobility, and retention time dimensions to restore intensity information and enable accurate quantification of high-abundance ions.

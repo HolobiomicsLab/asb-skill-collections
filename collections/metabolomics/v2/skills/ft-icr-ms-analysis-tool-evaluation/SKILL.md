@@ -1,6 +1,9 @@
 ---
 name: ft-icr-ms-analysis-tool-evaluation
-description: Use when you are evaluating or selecting FT-ICR MS software for a specific metabolomics workflow and need to assess which tools support your required analytical dimensions (e.g., Van Krevelen diagrams, PERMANOVA, thermodynamic indices, chemodiversity metrics, transformation networks).
+description: Use when you are evaluating or selecting FT-ICR MS software for a specific
+  metabolomics workflow and need to assess which tools support your required analytical
+  dimensions (e.g., Van Krevelen diagrams, PERMANOVA, thermodynamic indices, chemodiversity
+  metrics, transformation networks).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -23,16 +26,20 @@ metadata:
   - UltraMassExplorer (UME)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - web-based applications such as UltraMassExplorer (UME)
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29], and DropMS [30]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -56,6 +63,7 @@ attribution:
 
 # ft-icr-ms-analysis-tool-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic evaluation and comparison of feature coverage across FT-ICR MS analysis software tools to assess which analytical and visualization capabilities are implemented in candidate pipelines relative to peer tools. This skill helps researchers select or benchmark software based on concrete feature support for data filtering, statistical analysis, molecular visualization, and transformation network construction.

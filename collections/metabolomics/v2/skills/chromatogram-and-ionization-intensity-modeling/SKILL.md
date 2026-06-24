@@ -1,6 +1,9 @@
 ---
 name: chromatogram-and-ionization-intensity-modeling
-description: 'Use when when you need to simulate LC-MS/MS data for fragmentation strategy development and do not have (or wish to augment) real experimental chromatograms. Specifically: (1) you have a list of known or sampled chemical compounds with molecular formulae;'
+description: 'Use when when you need to simulate LC-MS/MS data for fragmentation strategy
+  development and do not have (or wish to augment) real experimental chromatograms.
+  Specifically: (1) you have a list of known or sampled chemical compounds with molecular
+  formulae;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,6 +18,7 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -23,7 +27,8 @@ derived_from:
 evidence_spans:
 - ViMMS is compatible with Python 3+
 - ViMMS dependencies are managed with [Poetry](https://python-poetry.org/)
-- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation
+  coverage using OpenMS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # chromatogram-and-ionization-intensity-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate realistic liquid chromatography retention times, peak shapes, and ionization intensities for chemical compounds within a virtual mass spectrometry simulation. This skill enables creation of synthetic LC-MS/MS datasets that mimic empirical acquisition characteristics, supporting fragmentation strategy prototyping before physical instrument testing.

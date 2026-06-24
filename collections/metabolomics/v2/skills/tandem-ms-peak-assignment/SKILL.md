@@ -1,6 +1,9 @@
 ---
 name: tandem-ms-peak-assignment
-description: Use when when you have experimental tandem MS spectra (with peak m/z and intensity values) and need to annotate each peak with its chemical formula (SCARF) or molecular fragment origin (ICEBERG), particularly for structural elucidation campaigns where understanding the fragmentation pathway is.
+description: Use when when you have experimental tandem MS spectra (with peak m/z
+  and intensity values) and need to annotate each peak with its chemical formula (SCARF)
+  or molecular fragment origin (ICEBERG), particularly for structural elucidation
+  campaigns where understanding the fragmentation pathway is.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

@@ -1,6 +1,9 @@
 ---
 name: lantibiotic-structure-annotation
-description: Use when you have (1) genomic data from a Streptomyces or other RiPP-producing organism in raw FASTA format or annotated GenBank format, (2) high-resolution LC-MS/MS spectra in centroided MGF, mzML, mzXML, or mzData format, and (3) a known or predicted lantibiotic core peptide sequence you wish to.
+description: Use when you have (1) genomic data from a Streptomyces or other RiPP-producing
+  organism in raw FASTA format or annotated GenBank format, (2) high-resolution LC-MS/MS
+  spectra in centroided MGF, mzML, mzXML, or mzData format, and (3) a known or predicted
+  lantibiotic core peptide sequence you wish to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -19,16 +22,24 @@ metadata:
   - antiSMASH
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator
-- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
-- uses msconvert utility from the ProteoWizard package to convert spectra in other formats to MGF
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- matches tandem mass spectra against the constructed post-translationally modified
+  RiPPs structure database using Dereplicator
+- MetaMiner natively supports MGF, mzXML, mzData and uses msconvert utility from the
+  ProteoWizard package to convert spectra in other formats to MGF
+- uses msconvert utility from the ProteoWizard package to convert spectra in other
+  formats to MGF
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +63,7 @@ attribution:
 
 # lantibiotic-structure-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate lantibiotic structures in RiPP biosynthetic gene clusters by matching tandem mass spectra against computationally constructed post-translationally modified peptide databases using MetaMiner. This skill integrates genomic (FASTA nucleotide sequences) and metabolomic (centroided MS/MS spectra in MGF or mzML/mzData format) data to identify lanthipeptides with characteristic dehydrobutyrine and dehydroalanine modifications.

@@ -1,6 +1,9 @@
 ---
 name: bayesian-meta-learning-model-fitting
-description: Use when you have a pre-trained DNN RT predictor (e.g., trained on METLIN SMRT with 80,038 experimental RTs) and need to adapt it to predict retention times in a new or external chromatographic method for which you have only 10–50 calibration molecules with known RTs.
+description: Use when you have a pre-trained DNN RT predictor (e.g., trained on METLIN
+  SMRT with 80,038 experimental RTs) and need to adapt it to predict retention times
+  in a new or external chromatographic method for which you have only 10–50 calibration
+  molecules with known RTs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -10,11 +13,13 @@ metadata:
   tools:
   - alvaDesc
   - constantino-garcia/cmmrt
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +43,7 @@ attribution:
 
 # Bayesian meta-learning model fitting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a Bayesian Gaussian Process meta-learning model to project retention times between different chromatographic methods using minimal calibration data (as few as 10 molecules). This approach learns a generalizable mapping from one chromatographic method's space to a pre-trained deep neural network's latent feature space, enabling accurate RT prediction with minimal reference measurements.

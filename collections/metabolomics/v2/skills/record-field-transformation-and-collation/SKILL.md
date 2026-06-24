@@ -1,6 +1,9 @@
 ---
 name: record-field-transformation-and-collation
-description: Use when you have extracted tabular data into an intermediate JSON form and need to restructure records by mapping input fields to output dictionary keys, collating multiple records under a single grouping field, filtering records by test conditions or exclusion rules, or applying custom.
+description: Use when you have extracted tabular data into an intermediate JSON form
+  and need to restructure records by mapping input fields to output dictionary keys,
+  collating multiple records under a single grouping field, filtering records by test
+  conditions or exclusion rules, or applying custom.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # record-field-transformation-and-collation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform and collate tabular records into structured dictionaries by mapping source fields to output headers, filtering, grouping, and optionally applying custom Python code. This skill is essential when converting raw experimental metadata from spreadsheets into clean, schema-compliant JSON-intermediate representations suitable for validation and format conversion.

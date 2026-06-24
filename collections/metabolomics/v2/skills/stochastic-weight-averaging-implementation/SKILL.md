@@ -1,6 +1,7 @@
 ---
 name: stochastic-weight-averaging-implementation
-description: Use when training a deeply regularized deep neural network on a large molecular feature dataset (e.
+description: Use when training a deeply regularized deep neural network on a large
+  molecular feature dataset (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,11 +11,13 @@ metadata:
   tools:
   - alvaDesc
   - PyTorch or TensorFlow
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +41,7 @@ attribution:
 
 # stochastic-weight-averaging-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stochastic weight averaging (SWA) is a post-training technique that improves neural network generalization by averaging model weights collected at intervals during training, particularly effective when combined with cyclic learning rate schedules. In retention time prediction, SWA reduces test-set mean and median absolute errors by stabilizing learned representations across multiple training epochs.

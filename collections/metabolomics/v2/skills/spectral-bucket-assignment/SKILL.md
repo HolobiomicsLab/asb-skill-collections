@@ -1,6 +1,9 @@
 ---
 name: spectral-bucket-assignment
-description: Use when you have a collection of mass spectrometry spectral data (m/z and intensity pairs) that must be indexed for fast neighbor retrieval or similarity search, and you need to trade some precision in similarity matching for substantial gains in query speed and memory efficiency across large.
+description: Use when you have a collection of mass spectrometry spectral data (m/z
+  and intensity pairs) that must be indexed for fast neighbor retrieval or similarity
+  search, and you need to trade some precision in similarity matching for substantial
+  gains in query speed and memory efficiency across large.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +16,7 @@ metadata:
   - pyproteolizard-data
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-022-04833-5
   title: mzBucket

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-parsing
-description: Use when you have received raw or vendor-converted centroid mzML files from LC-MS, GC-MS, or DI-MS platforms and need to extract MS1 spectra before building mass tracks, performing peak detection, or constructing composite feature maps.
+description: Use when you have received raw or vendor-converted centroid mzML files
+  from LC-MS, GC-MS, or DI-MS platforms and need to extract MS1 spectra before building
+  mass tracks, performing peak detection, or constructing composite feature maps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3931
@@ -33,6 +35,7 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
@@ -46,9 +49,12 @@ derived_from:
   title: ''
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 - performs spectral database dereplication using R Package
 claims: []
@@ -90,6 +96,7 @@ attribution:
 
 # mass-spectrometry-data-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse centroid mzML files from LC-MS instruments to extract MS1 spectra as (m/z, scan_number, intensity) tuples, indexing them for efficient retrieval and downstream mass track construction. This is the foundational step that converts vendor instrument data into a structured, queryable representation suitable for high-resolution metabolomics feature extraction.

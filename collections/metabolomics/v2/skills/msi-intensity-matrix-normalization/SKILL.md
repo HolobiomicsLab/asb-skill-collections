@@ -1,6 +1,8 @@
 ---
 name: msi-intensity-matrix-normalization
-description: Use when after isotope correction when you have extracted intensity matrices from imzML or HDF5 MSI data and need to convert raw or isotope-corrected ion-image intensities into quantified values using a known internal standard lipid species.
+description: Use when after isotope correction when you have extracted intensity matrices
+  from imzML or HDF5 MSI data and need to convert raw or isotope-corrected ion-image
+  intensities into quantified values using a known internal standard lipid species.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +15,14 @@ metadata:
   - h5py / h5netcdf
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # msi-intensity-matrix-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize Mass Spectrometry Imaging (MSI) ion-image intensity matrices by dividing target lipid intensities element-wise by user-defined internal standard intensities, converting raw or isotope-corrected values into quantified measurements. This skill enables accurate lipid quantitation by correcting for instrument response variation and sample preparation differences across pixels.

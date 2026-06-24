@@ -1,6 +1,9 @@
 ---
 name: qc-sample-integration-normalization
-description: Use when normalizing multi-batch metabolomics intensity matrices where QC samples are available alongside biological samples, and when you need to detect whether QC samples are representative of the biological population (i.e., whether they follow the same systematic drift).
+description: Use when normalizing multi-batch metabolomics intensity matrices where
+  QC samples are available alongside biological samples, and when you need to detect
+  whether QC samples are representative of the biological population (i.e., whether
+  they follow the same systematic drift).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -10,6 +13,7 @@ metadata:
   tools:
   - R
   - Metanorm
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -17,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # QC-Sample Integration for Robust Metabolomics Normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate both QC and biological samples into a unified normalization model to correct for batch effects and signal drift while detecting representativeness discrepancies. This approach leverages QC sample consistency as an anchor while allowing the normalization surface to fit across the full sample population, improving robustness over QC-only methods.

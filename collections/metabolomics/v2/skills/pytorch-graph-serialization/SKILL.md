@@ -1,6 +1,9 @@
 ---
 name: pytorch-graph-serialization
-description: Use when you have constructed molecular graphs with atom features (atomic number, degree, formal charge, hybridization) and bond features (bond type, aromaticity) from SMILES or MOL files using RDKit, and need to feed them into a PyTorch-based GNN training pipeline without memory overhead or I/O.
+description: Use when you have constructed molecular graphs with atom features (atomic
+  number, degree, formal charge, hybridization) and bond features (bond type, aromaticity)
+  from SMILES or MOL files using RDKit, and need to feed them into a PyTorch-based
+  GNN training pipeline without memory overhead or I/O.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +17,7 @@ metadata:
   - RDKit
   - Python pickle module
   - HDF5 (h5py)
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

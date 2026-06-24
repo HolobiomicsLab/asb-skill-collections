@@ -1,6 +1,8 @@
 ---
 name: peak-neutral-loss-occurrence-data-manipulation
-description: Use when you have aligned MS2 spectra from multiple samples and need to create a matrix representation where rows are samples and columns are MS2 peaks or neutral losses (mass differences to the precursor), with counts of occurrences.
+description: Use when you have aligned MS2 spectra from multiple samples and need
+  to create a matrix representation where rows are samples and columns are MS2 peaks
+  or neutral losses (mass differences to the precursor), with counts of occurrences.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3563
@@ -15,12 +17,15 @@ metadata:
   - spec2vec
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - conda create --name memo python=3.8
 - pip install numpy
 claims: []

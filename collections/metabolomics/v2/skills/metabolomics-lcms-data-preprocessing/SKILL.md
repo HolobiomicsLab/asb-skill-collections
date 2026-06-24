@@ -1,6 +1,9 @@
 ---
 name: metabolomics-lcms-data-preprocessing
-description: Use when when you have raw LC-MS metabolomics data from multiple disease groups (e.g., .mzML or .npy format files) that must be converted into a uniform, normalized feature representation before training a deep learning classifier to distinguish disease states.
+description: Use when when you have raw LC-MS metabolomics data from multiple disease
+  groups (e.g., .mzML or .npy format files) that must be converted into a uniform,
+  normalized feature representation before training a deep learning classifier to
+  distinguish disease states.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,7 @@ metadata:
   - TensorFlow
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -40,6 +44,7 @@ attribution:
 
 # metabolomics-lcms-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing and normalization of raw LC-MS metabolomics spectra to extract disease-specific features for downstream deep-learning classification. This skill transforms raw mass spectrometry data into normalized feature matrices suitable for neural network ingestion.

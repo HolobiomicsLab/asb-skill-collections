@@ -1,6 +1,9 @@
 ---
 name: cnn-spectral-feature-extraction
-description: Use when you have preprocessed 1D NMR spectra (¹H and/or ¹³C) and need to extract spectral features for molecular structure inference on molecules with up to 19 heavy atoms. The skill is necessary as the first stage before fragment assembly or connectivity prediction;
+description: Use when you have preprocessed 1D NMR spectra (¹H and/or ¹³C) and need
+  to extract spectral features for molecular structure inference on molecules with
+  up to 19 heavy atoms. The skill is necessary as the first stage before fragment
+  assembly or connectivity prediction;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +15,13 @@ metadata:
   - Transformer architecture
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 evidence_spans:
-- Integrating this capability with a convolutional neural network, we build an end-to-end model
+- Integrating this capability with a convolutional neural network, we build an end-to-end
+  model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # CNN-based spectral feature extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract learned feature representations from 1D NMR spectra (¹H and/or ¹³C) using a convolutional neural network, transforming raw spectral intensity patterns into high-level encodings suitable for downstream molecular structure prediction. This skill is the foundational signal-processing stage in end-to-end NMR structure elucidation.

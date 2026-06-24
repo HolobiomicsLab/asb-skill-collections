@@ -1,6 +1,7 @@
 ---
 name: anova-feature-significance-filtering
-description: Use when you have a normalized LC-MS/MS metabolite abundance matrix (e.g., from MS-DIAL preprocessing) with multiple samples across experimental groups (e.
+description: Use when you have a normalized LC-MS/MS metabolite abundance matrix (e.g.,
+  from MS-DIAL preprocessing) with multiple samples across experimental groups (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,14 +15,18 @@ metadata:
   - ComplexHeatmap
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set
+  Enrichment Analysis (MSEA), based on clusterProfiler
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -50,6 +55,7 @@ attribution:
 
 # anova-feature-significance-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply parametric ANOVA to rank metabolite features by statistical significance, then filter to retain only features meeting a stringent adjusted p-value (q-value) threshold to identify the most confident biomarkers for downstream pathway enrichment analysis.

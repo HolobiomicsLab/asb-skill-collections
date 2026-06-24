@@ -1,6 +1,9 @@
 ---
 name: file-i-o-automation
-description: Use when you have MZmine-exported LC-MS/MS data (MGF spectra and CSV metadata files) in both positive and negative ionization modes and need to execute the full MolNotator pipeline from duplicate filtering through dereplication and network generation.
+description: Use when you have MZmine-exported LC-MS/MS data (MGF spectra and CSV
+  metadata files) in both positive and negative ionization modes and need to execute
+  the full MolNotator pipeline from duplicate filtering through dereplication and
+  network generation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -13,6 +16,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

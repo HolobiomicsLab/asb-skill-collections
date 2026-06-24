@@ -1,6 +1,9 @@
 ---
 name: spectral-dimension-verification
-description: Use when after reading an imzML file (continuous or processed format) using readMSIData() in Cardinal, verify the resulting MSImagingExperiment object before performing normalization, baseline reduction, peak-picking, or statistical analysis.
+description: Use when after reading an imzML file (continuous or processed format)
+  using readMSIData() in Cardinal, verify the resulting MSImagingExperiment object
+  before performing normalization, baseline reduction, peak-picking, or statistical
+  analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,12 +16,14 @@ metadata:
   - R
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []

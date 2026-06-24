@@ -1,6 +1,9 @@
 ---
 name: activity-score-computation-and-reporting
-description: Use when you have preprocessed metabolite intensity data (log2-transformed, zero-mean unit-variance standardized) mapped to compound annotations, and you need to derive activity scores for a set of metabolite groups (pathways, Molecular Families, Mass2Motifs, or custom metabolite sets) to rank them.
+description: Use when you have preprocessed metabolite intensity data (log2-transformed,
+  zero-mean unit-variance standardized) mapped to compound annotations, and you need
+  to derive activity scores for a set of metabolite groups (pathways, Molecular Families,
+  Mass2Motifs, or custom metabolite sets) to rank them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -12,6 +15,7 @@ metadata:
   - PALS (Pathway Activity Level Scoring)
   - GNPS
   - MS2LDA
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -19,8 +23,10 @@ derived_from:
   title: ''
 evidence_spans:
 - PALS Viewer
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # Activity-Score Computation and Reporting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pathway or metabolite set activity levels from intensity data using singular value decomposition (PLAGE method), then format and return scored results with statistical confidence metrics. This skill transforms raw metabolite intensities into ranked pathway activity tables suitable for downstream interpretation and visualization.

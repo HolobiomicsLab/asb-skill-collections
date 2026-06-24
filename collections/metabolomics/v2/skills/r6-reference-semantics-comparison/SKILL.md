@@ -1,6 +1,8 @@
 ---
 name: r6-reference-semantics-comparison
-description: Use when you need to understand or validate whether calling filter_mispicked_ions() (or similar R6 filter methods) with different copy_object settings will mutate your original data object in memory or preserve it.
+description: Use when you need to understand or validate whether calling filter_mispicked_ions()
+  (or similar R6 filter methods) with different copy_object settings will mutate your
+  original data object in memory or preserve it.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -44,6 +47,7 @@ attribution:
 
 # Compare R6 Reference vs. Copy Semantics in Data Filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill verifies whether R6-based filter functions in mpactr apply in-place modification (reference semantics with copy_object=FALSE) or create independent copies (deep copy with copy_object=TRUE) by comparing row counts and object identity between the original and assigned result objects. It is essential for understanding memory efficiency and data mutation side effects in metabolomics peak filtering workflows.

@@ -1,6 +1,9 @@
 ---
 name: metadata-field-verification
-description: Use when you have located a workflow definition file (YAML or JSON) from a versioned release and need to confirm that all mandatory workflow metadata fields (name, version, inputs, outputs, steps) are declared, properly formatted, and cross-references are resolved before validation or execution.
+description: Use when you have located a workflow definition file (YAML or JSON) from
+  a versioned release and need to confirm that all mandatory workflow metadata fields
+  (name, version, inputs, outputs, steps) are declared, properly formatted, and cross-references
+  are resolved before validation or execution.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -8,6 +11,7 @@ metadata:
   tools:
   - manual expert review
   - YAML/JSON schema validator
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
@@ -35,6 +39,7 @@ attribution:
 
 # metadata-field-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that all required metadata fields are present, correctly typed, and structurally consistent in workflow definition files for quality control systems. This skill ensures workflow components declare complete and schema-compliant metadata before deployment.

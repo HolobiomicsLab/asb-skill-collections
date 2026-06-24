@@ -1,6 +1,7 @@
 ---
 name: chemical-space-structure-ranking
-description: Use when you have an unknown compound's mass spectrum (m/z peaks and intensities in .
+description: Use when you have an unknown compound's mass spectrum (m/z peaks and
+  intensities in .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -12,11 +13,13 @@ metadata:
   - DeepMASS2
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
 evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
+  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +43,7 @@ attribution:
 
 # chemical-space-structure-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate metabolites from a structural database by computing semantic similarity scores between an unknown compound's mass spectrum encoding and a reference database of known metabolite spectra, using chemical space constraints to filter and prioritize structurally related candidates for annotation.

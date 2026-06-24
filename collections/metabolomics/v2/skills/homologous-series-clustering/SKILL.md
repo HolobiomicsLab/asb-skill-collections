@@ -1,6 +1,7 @@
 ---
 name: homologous-series-clustering
-description: Use when you have a feature list (m/z, retention time, intensity) from HRMS data and want to identify potential PFAS homologous series for prioritization.
+description: Use when you have a feature list (m/z, retention time, intensity) from
+  HRMS data and want to identify potential PFAS homologous series for prioritization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,6 +15,7 @@ metadata:
   - pyOpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -42,6 +44,7 @@ attribution:
 
 # homologous-series-clustering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group mass spectrometry features into homologous series by computing Kendrick mass defect (KMD) values and clustering features with similar KMD within a mass tolerance window. This technique is used to identify CF₂-repeating PFAS compounds in non-target HRMS workflows.

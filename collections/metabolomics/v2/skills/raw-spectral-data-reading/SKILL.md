@@ -1,6 +1,9 @@
 ---
 name: raw-spectral-data-reading
-description: Use when you have Thermo Orbitrap .raw files and need to extract specific spectral features (base-peak m/z, intensity values, chromatographic traces, scan-level metadata) for downstream statistical analysis or visualization in R. Use this skill when you want to avoid lossy format conversion (e.
+description: Use when you have Thermo Orbitrap .raw files and need to extract specific
+  spectral features (base-peak m/z, intensity values, chromatographic traces, scan-level
+  metadata) for downstream statistical analysis or visualization in R. Use this skill
+  when you want to avoid lossy format conversion (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -15,6 +18,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -22,9 +26,12 @@ derived_from:
   title: ''
 evidence_spans:
 - The `rawrr` executable will run out of the box
-- '`R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods'
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- '`R` functions requesting access to data stored in binary raw files (reader family
+  functions listed in Table 1) invoke compiled `C#` wrapper methods'
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +56,7 @@ attribution:
 
 # raw-spectral-data-reading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Direct programmatic access to spectral attributes (m/z, intensity, retention time, scan metadata) from proprietary Thermo Fisher Scientific .raw binary files without conversion to exchange formats. Enables modular end-to-end proteomics analysis pipelines in R by bridging the gap between instrument data and statistical analysis environments.

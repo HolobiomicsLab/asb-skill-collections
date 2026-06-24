@@ -1,6 +1,7 @@
 ---
 name: file-integrity-validation
-description: Use when you have a raw NV (NMRViewJ) binary file and need to confirm it is well-formed before parsing or processing.
+description: Use when you have a raw NV (NMRViewJ) binary file and need to confirm
+  it is well-formed before parsing or processing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0336
@@ -10,6 +11,7 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -39,6 +41,7 @@ attribution:
 
 # file-integrity-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate binary NV/NMRViewJ file format integrity by reading the fixed 2048-byte header, verifying magic integers, and confirming structural consistency across declared and actual dimensions. This ensures the file is uncorrupted and parseable before downstream NMR spectroscopy processing.

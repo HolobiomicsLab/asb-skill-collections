@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-file-format-conversion
-description: Use when you have raw MS data files in vendor-native format (.raw, .d, .ms) from CE-MS or LC-MS instruments and need to process them through AriumMS or other open-source metabolomics pipelines that require standardized XML-based interchange formats.
+description: Use when you have raw MS data files in vendor-native format (.raw, .d,
+  .ms) from CE-MS or LC-MS instruments and need to process them through AriumMS or
+  other open-source metabolomics pipelines that require standardized XML-based interchange
+  formats.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3649
@@ -20,6 +23,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
@@ -28,7 +32,8 @@ derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: ''
 evidence_spans:
-- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed with the ProteoWizard Project
+- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed
+  with the ProteoWizard Project
 - msconvert, distributed with the ProteoWizard Project
 - msconvert, distributed with the ProteoWizard Project http://proteowizard.sourceforge.net/download.html
 - github.com__xfcui__IsoFusion
@@ -65,6 +70,7 @@ attribution:
 
 # mass-spectrometry-file-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw mass spectrometry data from vendor-native formats (.raw, .d, .ms) to open, standardized .mzXML or .mzML formats using msconvert, enabling downstream processing by untargeted metabolomics workflows such as AriumMS. This conversion is a mandatory prerequisite for multi-platform CE-MS and LC-MS data integration.

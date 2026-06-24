@@ -1,6 +1,8 @@
 ---
 name: feature-abundance-table-preparation
-description: Use when you have raw omics data (microbiome OTU/ASV tables, metabolomic or transcriptomic abundance matrices) that needs to be reformatted or validated before correlation analysis.
+description: Use when you have raw omics data (microbiome OTU/ASV tables, metabolomic
+  or transcriptomic abundance matrices) that needs to be reformatted or validated
+  before correlation analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,12 +15,15 @@ metadata:
   - R
   - pcutils
   - igraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # feature-abundance-table-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and format feature abundance tables (rows = features, columns = samples) for correlation-based network construction. This skill ensures data is in the correct orientation and structure for high-dimensional omics datasets containing thousands of features, enabling downstream correlation computation and network building.

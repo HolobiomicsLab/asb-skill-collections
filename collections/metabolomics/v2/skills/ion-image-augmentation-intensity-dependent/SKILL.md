@@ -1,6 +1,7 @@
 ---
 name: ion-image-augmentation-intensity-dependent
-description: Use when training a contrastive encoder on mass spectrometry imaging (MSI) data in ISO mode (isotope ions from the same molecule).
+description: Use when training a contrastive encoder on mass spectrometry imaging
+  (MSI) data in ISO mode (isotope ions from the same molecule).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -13,12 +14,14 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +45,7 @@ attribution:
 
 # Ion-Image Augmentation with Intensity-Dependent Missing Values
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 T_ISO augmentation extends base color jitter, filtering, and Poisson noise transformations by adding intensity-dependent missing-value masking to generate contrastive image pairs for isotope ion images in mass spectrometry imaging. This skill is essential when training representation models on isotope ion data where missing-value patterns should correlate with pixel intensity rather than occur uniformly.

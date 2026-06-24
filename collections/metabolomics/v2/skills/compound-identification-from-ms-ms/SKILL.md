@@ -1,6 +1,9 @@
 ---
 name: compound-identification-from-ms-ms
-description: Use when you have LC-MS/MS data in mgf format and a custom spectral database prepared with CFM-id (or an in-built database), and you need to identify unknown compounds by comparing their experimental fragmentation patterns against predicted or reference spectra with quantified match scores.
+description: Use when you have LC-MS/MS data in mgf format and a custom spectral database
+  prepared with CFM-id (or an in-built database), and you need to identify unknown
+  compounds by comparing their experimental fragmentation patterns against predicted
+  or reference spectra with quantified match scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,13 +16,17 @@ metadata:
   - MS2Compound v1.0.2
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1089/omi.2021.0051
   title: MS2Compound
 evidence_spans:
-- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification of the compounds from LC-MS and MS/MS metabolomics data
-- compatible with the customized database prepared using CFM-id, the fragment prediction tool
-- The current version of MS2Compound is compatible with the customized database prepared using CFM-id, the fragment prediction tool.
+- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification
+  of the compounds from LC-MS and MS/MS metabolomics data
+- compatible with the customized database prepared using CFM-id, the fragment prediction
+  tool
+- The current version of MS2Compound is compatible with the customized database prepared
+  using CFM-id, the fragment prediction tool.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

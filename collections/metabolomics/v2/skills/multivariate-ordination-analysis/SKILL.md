@@ -1,6 +1,9 @@
 ---
 name: multivariate-ordination-analysis
-description: Use when when you have normalized peak intensities from FT-ICR MS metabolomic data (or similar high-dimensional compositional data) grouped by experimental treatments (e.g., phage type, incubation time) and want to visualize whether sample groups cluster separately in reduced dimensionality.
+description: Use when when you have normalized peak intensities from FT-ICR MS metabolomic
+  data (or similar high-dimensional compositional data) grouped by experimental treatments
+  (e.g., phage type, incubation time) and want to visualize whether sample groups
+  cluster separately in reduced dimensionality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -13,13 +16,16 @@ metadata:
   - R
   - R prcomp
   - ggplot2 (R)
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
+- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA
+  [64]
 - using functions from the R packages vegan [63]
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 claims: []
@@ -45,6 +51,7 @@ attribution:
 
 # multivariate-ordination-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Ordination analysis (NMDS and PCA) reduces high-dimensional metabolomic data to low-dimensional visual representations to assess whether treatment groups separate in chemical composition space. This skill is applied after distance matrix calculation to visualize subtle metabolite compositional differences, though it often fails to discriminate groups that PERMANOVA detects as statistically significant.

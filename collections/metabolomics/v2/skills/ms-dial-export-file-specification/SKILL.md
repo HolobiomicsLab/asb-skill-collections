@@ -1,6 +1,9 @@
 ---
 name: ms-dial-export-file-specification
-description: Use when you have MS-DIAL 4 or MS-DIAL 5 alignment results and need to configure LipoCLEAN for quality filtering of lipid identifications. Use this skill at the start of a LipoCLEAN analysis when you need to specify which MS-DIAL export files to analyze and how to locate them.
+description: Use when you have MS-DIAL 4 or MS-DIAL 5 alignment results and need to
+  configure LipoCLEAN for quality filtering of lipid identifications. Use this skill
+  at the start of a LipoCLEAN analysis when you need to specify which MS-DIAL export
+  files to analyze and how to locate them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +16,7 @@ metadata:
   - MS-DIAL 5
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -43,6 +47,7 @@ attribution:
 
 # ms-dial-export-file-specification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate version-specific default TOML-formatted configuration files for LipoCLEAN that specify MS-DIAL export file locations and filtering parameters. This skill bridges MS-DIAL's lipid identification output and LipoCLEAN's machine learning quality filter by establishing the correct export settings and file format expectations.

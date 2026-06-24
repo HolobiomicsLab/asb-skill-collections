@@ -1,6 +1,8 @@
 ---
 name: metabolite-set-enrichment-analysis
-description: Use when you have differential metabolomics results (p-values and log2 fold changes) for a set of metabolites and want to identify which known metabolic pathways or metabolite sets show concerted enrichment in your condition of interest.
+description: Use when you have differential metabolomics results (p-values and log2
+  fold changes) for a set of metabolites and want to identify which known metabolic
+  pathways or metabolite sets show concerted enrichment in your condition of interest.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -16,11 +18,13 @@ metadata:
   - enrichmet
   - KEGGREST
   - igraph
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - enrichmet integrates fgsea for fast MetSEA
 - library(readr)
 - library(readxl)

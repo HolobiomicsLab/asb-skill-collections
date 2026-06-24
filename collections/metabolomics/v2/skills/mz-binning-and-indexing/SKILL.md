@@ -1,6 +1,8 @@
 ---
 name: mz-binning-and-indexing
-description: Use when immediately after parsing mzML files into (m/z, scan_number, intensity) tuples when you need to build mass tracks from raw MS1 spectra. Use it when working with high-resolution instruments (e.
+description: Use when immediately after parsing mzML files into (m/z, scan_number,
+  intensity) tuples when you need to build mass tracks from raw MS1 spectra. Use it
+  when working with high-resolution instruments (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,14 @@ metadata:
   - asari.chromatograms.extract_massTracks_
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # mz-binning-and-indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organize high-resolution MS1 spectra into m/z-indexed data structures and merge adjacent bins to enable efficient mass track construction and alignment. This skill leverages integer-keyed indexing and proximity-based merging to separate and align masses prior to feature detection.

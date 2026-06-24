@@ -1,6 +1,9 @@
 ---
 name: compression-and-serialization-of-large-tabular-datasets
-description: Use when when consolidating multiple cleaned and validated data sources (organism, structure, reference subgraphs) into a single denormalized table containing hundreds of thousands of rows and many columns, and the result must be stored, archived, or transmitted with minimal storage overhead while.
+description: Use when when consolidating multiple cleaned and validated data sources
+  (organism, structure, reference subgraphs) into a single denormalized table containing
+  hundreds of thousands of rows and many columns, and the result must be stored, archived,
+  or transmitted with minimal storage overhead while.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,6 +15,7 @@ metadata:
   - R data.table
   - gzip
   - 1_integrating.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +48,7 @@ attribution:
 
 # compression-and-serialization-of-large-tabular-datasets
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize and compress large denormalized tabular datasets into compressed columnar formats (e.g., .tsv.gz) to enable efficient storage, transport, and downstream processing of structure-organism-reference tables. This skill ensures that consolidated multi-source data can be preserved without loss while reducing disk footprint.

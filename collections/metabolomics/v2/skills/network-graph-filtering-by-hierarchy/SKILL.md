@@ -1,6 +1,7 @@
 ---
 name: network-graph-filtering-by-hierarchy
-description: Use when your network contains multiple edge types between the same pair of nodes and you need a deterministic, single-edge representation per node pair.
+description: Use when your network contains multiple edge types between the same pair
+  of nodes and you need a deterministic, single-edge representation per node pair.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0323
@@ -10,6 +11,7 @@ metadata:
   tools:
   - MetaMapR
   - cytoscape.js
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv194
   title: MetaMapR

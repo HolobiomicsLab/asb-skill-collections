@@ -1,6 +1,9 @@
 ---
 name: dna-adduct-characterization
-description: Use when when you have a collection of DNA adduct compound structures in SDF format that requires validation for structural integrity and completeness, and you need to generate predicted fragment spectra at defined ionization levels and mass ranges for comparison against experimental mass.
+description: Use when when you have a collection of DNA adduct compound structures
+  in SDF format that requires validation for structural integrity and completeness,
+  and you need to generate predicted fragment spectra at defined ionization levels
+  and mass ranges for comparison against experimental mass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,12 +16,14 @@ metadata:
   - RDKit
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
 evidence_spans:
 - CFM-ID
-- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA adducts
+- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA
+  adducts
 - compound database in SDF format
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # DNA adduct characterization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computational workflow for validating and predicting fragment spectra from DNA adduct compound structures using structure file parsing and in-silico fragmentation. This skill integrates structural database validation with CFM-ID-based fragment prediction to build a curated, experimentally-aligned spectral resource.

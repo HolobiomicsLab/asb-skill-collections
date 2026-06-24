@@ -1,6 +1,9 @@
 ---
 name: r-function-calling
-description: Use when after AutoTuner has completed peak identification (TIC analysis), peak isolation, and EIC parameter extraction on at least 3 raw mass spectrometry samples (qTOF, orbitrap, or FTICR formats converted to mzML/mzXML/CDF), and you need to export the tuned parameters in a format ready for XCMS.
+description: Use when after AutoTuner has completed peak identification (TIC analysis),
+  peak isolation, and EIC parameter extraction on at least 3 raw mass spectrometry
+  samples (qTOF, orbitrap, or FTICR formats converted to mzML/mzXML/CDF), and you
+  need to export the tuned parameters in a format ready for XCMS.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - MZmine2
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

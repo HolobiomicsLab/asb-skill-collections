@@ -1,6 +1,8 @@
 ---
 name: mzml-file-random-access-by-spectrum-id
-description: Use when you have a compressed mzML file (mzML.gz or indexed gzip format) and need to extract a single spectrum or a small subset of spectra by their known numeric identifiers, rather than iterating through the entire file sequentially.
+description: Use when you have a compressed mzML file (mzML.gz or indexed gzip format)
+  and need to extract a single spectrum or a small subset of spectra by their known
+  numeric identifiers, rather than iterating through the entire file sequentially.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,6 +14,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -39,6 +42,7 @@ attribution:
 
 # mzml-file-random-access-by-spectrum-id
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve a specific mass spectrometry spectrum from a compressed mzML file by its numeric identifier using bracket notation, enabling efficient random access without sequential file parsing. This skill leverages pymzML's indexed gzip support to achieve near-instantaneous lookups in large compressed datasets.

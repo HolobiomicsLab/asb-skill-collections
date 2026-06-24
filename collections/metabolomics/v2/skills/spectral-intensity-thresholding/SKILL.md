@@ -1,6 +1,7 @@
 ---
 name: spectral-intensity-thresholding
-description: Use when you have loaded raw INADEQUATE NMR spectrum data and need to distinguish true molecular peaks from noise and instrumental artifacts.
+description: Use when you have loaded raw INADEQUATE NMR spectrum data and need to
+  distinguish true molecular peaks from noise and instrumental artifacts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,6 +13,7 @@ metadata:
   - PyINETA
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

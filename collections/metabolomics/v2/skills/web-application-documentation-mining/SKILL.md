@@ -1,6 +1,9 @@
 ---
 name: web-application-documentation-mining
-description: Use when you have access to a project README or repository documentation (Zenodo deposit, GitHub, or local clone) describing multiple domain-specific web applications, and you need to produce a machine-readable inventory of those applications with verified live URLs and associated publications for.
+description: Use when you have access to a project README or repository documentation
+  (Zenodo deposit, GitHub, or local clone) describing multiple domain-specific web
+  applications, and you need to produce a machine-readable inventory of those applications
+  with verified live URLs and associated publications for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -21,6 +24,7 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst
@@ -56,6 +60,7 @@ attribution:
 
 # Web Application Documentation Mining
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate metadata (URLs, publications, tool descriptions, and parameters) from project README files and repository documentation to create a structured inventory of domain-specific web applications and their capabilities. This skill enables systematic discovery and verification of live deployment URLs, associated peer-reviewed publications, and supported search parameters.

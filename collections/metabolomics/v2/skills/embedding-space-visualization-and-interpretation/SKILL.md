@@ -1,6 +1,9 @@
 ---
 name: embedding-space-visualization-and-interpretation
-description: Use when after training or loading a pre-trained deep learning model that produces high-dimensional embeddings (e.g., 200-dimensional vectors from MS2DeepScore). Use this skill when you have a set of spectra with known chemical class annotations (e.
+description: Use when after training or loading a pre-trained deep learning model
+  that produces high-dimensional embeddings (e.g., 200-dimensional vectors from MS2DeepScore).
+  Use this skill when you have a set of spectra with known chemical class annotations
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -16,15 +19,19 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
 - Using the t-SNE [28] implementation from scikit-learn [29]
-- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates
+- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional
+  coordinates
 - Our MS2DeepScore Python library offers two types of data generators
 claims: []
 provenance:
@@ -49,6 +56,7 @@ attribution:
 
 # embedding-space-visualization-and-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply dimensionality reduction (t-SNE) to high-dimensional spectral embeddings learned by deep neural networks to visualize chemical structure relationships in low-dimensional space and validate that embeddings encode chemically meaningful features. This skill confirms that learned embeddings cluster compounds of the same chemical superclass together, validating the representational capacity of the model.

@@ -1,6 +1,8 @@
 ---
 name: version-specific-deployment-configuration
-description: Use when you have edited core R scripts (Modular.r, genEIC.r, MS1Spectragen.r, Stats.R) in the InnovativeOmics/Core-Match repository on GitHub and need to integrate those changes into a local LipidMatch-4.2 or FluoroMatch distribution.
+description: Use when you have edited core R scripts (Modular.r, genEIC.r, MS1Spectragen.r,
+  Stats.R) in the InnovativeOmics/Core-Match repository on GitHub and need to integrate
+  those changes into a local LipidMatch-4.2 or FluoroMatch distribution.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -9,6 +11,7 @@ metadata:
   - R
   - LipidMatch
   - FluoroMatch
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -38,6 +41,7 @@ attribution:
 
 # version-specific-deployment-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and deploy edited R scripts into version-specific directories within the LipidMatch-4.2 distribution framework, ensuring correct parameter settings and file placement for either Flow or Modular analysis modes. This skill bridges developer-side algorithm edits on GitHub with end-user installations.

@@ -1,6 +1,9 @@
 ---
 name: multi-score-complementarity-evaluation
-description: Use when you have two or more independent scoring functions ranking the same set of candidate links (GCF-MF pairs, BGC-spectrum associations, etc.), and you want to determine whether they capture complementary information that justifies combining them.
+description: Use when you have two or more independent scoring functions ranking the
+  same set of candidate links (GCF-MF pairs, BGC-spectrum associations, etc.), and
+  you want to determine whether they capture complementary information that justifies
+  combining them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,13 +19,15 @@ metadata:
   - Paired Omics Data Platform
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -52,6 +57,7 @@ attribution:
 
 # multi-score-complementarity-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate whether combining independent scoring functions for genomic-metabolomic links produces enrichment for validated links beyond either individual scorer alone, using joint percentile filtering and statistical significance testing. This skill determines whether two complementary ranking methods (e.g. strain correlation and IOKR) should be integrated into a single composite score.

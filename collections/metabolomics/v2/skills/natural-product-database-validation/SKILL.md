@@ -1,6 +1,9 @@
 ---
 name: natural-product-database-validation
-description: Use when after curating and integrating structure-organism pairs from multiple source databases, and before publishing or using the dataset for computational research. Apply this skill when you have aggregated organism counts binned by structural diversity (e.
+description: Use when after curating and integrating structure-organism pairs from
+  multiple source databases, and before publishing or using the dataset for computational
+  research. Apply this skill when you have aggregated organism counts binned by structural
+  diversity (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - R
   - 1_sampling.R
   - 2_validating.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +48,7 @@ attribution:
 
 # natural-product-database-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate curated natural products databases by comparing observed organism-structure distributions against reference benchmarks and detecting discrepancies in binned counts. This skill ensures data integrity across large structure-organism pair collections before downstream computational chemistry applications.

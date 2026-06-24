@@ -1,6 +1,9 @@
 ---
 name: lcms-feature-table-construction
-description: Use when you have centroided, single-polarity mzML files from DDA LC-MS experiments and need to generate a quantitative feature table with aligned m/z and retention time coordinates, isotopic annotations, and MS2 spectra for downstream statistical or annotation analysis.
+description: Use when you have centroided, single-polarity mzML files from DDA LC-MS
+  experiments and need to generate a quantitative feature table with aligned m/z and
+  retention time coordinates, isotopic annotations, and MS2 spectra for downstream
+  statistical or annotation analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -14,11 +17,13 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # lcms-feature-table-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a consolidated feature table from untargeted LC-MS data by sequentially performing peak picking, sample alignment, isotopologue/adduct grouping, gap-filling, and MS2 annotation across all samples. This skill transforms raw mzML files into quantitative data matrices suitable for metabolomic analysis.

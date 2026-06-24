@@ -1,6 +1,7 @@
 ---
 name: peak-m-z-indexing
-description: Use when when you have LC-MS-MS metabolomics data in MGF format and need to prepare it for unsupervised analysis (e.g., topic modeling with LDA).
+description: Use when when you have LC-MS-MS metabolomics data in MGF format and need
+  to prepare it for unsupervised analysis (e.g., topic modeling with LDA).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +14,7 @@ metadata:
   - run_gensim.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

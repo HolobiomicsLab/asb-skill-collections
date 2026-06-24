@@ -1,6 +1,9 @@
 ---
 name: api-request-response-handling
-description: Use when you have nuclear magnetic resonance (NMR) peak data (proton 1H and carbon-13 13C measurements) that you need to classify using a deployed deep learning model, and you have access to a TensorFlow Serving instance running the SMART 3 classification model.
+description: Use when you have nuclear magnetic resonance (NMR) peak data (proton
+  1H and carbon-13 13C measurements) that you need to classify using a deployed deep
+  learning model, and you have access to a TensorFlow Serving instance running the
+  SMART 3 classification model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -12,6 +15,7 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -39,6 +43,7 @@ attribution:
 
 # api-request-response-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and submit programmatic requests to a TensorFlow Serving classification endpoint, formatting NMR peak data as JSON and parsing the structured response. This skill bridges raw spectroscopic measurements to machine-learning-backed molecular classification by managing endpoint schema, request serialization, and response deserialization.

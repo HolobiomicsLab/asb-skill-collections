@@ -1,6 +1,8 @@
 ---
 name: extracellular-flux-constraint-integration
-description: Use when you have constraint-based metabolic models of multiple cell lines, experimental measurements of extracellular metabolite concentrations at two timepoints (e.
+description: Use when you have constraint-based metabolic models of multiple cell
+  lines, experimental measurements of extracellular metabolite concentrations at two
+  timepoints (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -23,16 +25,21 @@ metadata:
   - rasIntegration.py
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
 - We used relative gene-expression values as in GX-FBA
 - using constraint-based stoichiometric metabolic models as a scaffold
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -56,6 +63,7 @@ attribution:
 
 # extracellular-flux-constraint-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate experimentally measured extracellular metabolite flux ratios (lactate/glucose, lactate/glutamine, glutamate/glutamine) as upper and lower bounds on exchange reactions in constraint-based metabolic models to improve prediction of cell-line-specific feasible flux distributions. This skill refines the flux prediction landscape by anchoring the model to observed substrate consumption and product secretion patterns.

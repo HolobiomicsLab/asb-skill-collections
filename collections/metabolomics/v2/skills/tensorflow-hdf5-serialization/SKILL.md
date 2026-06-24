@@ -1,6 +1,8 @@
 ---
 name: tensorflow-hdf5-serialization
-description: Use when when you have acquired Keras models (via get_models.sh or similar download) and need to deploy them locally through TensorFlow Serving within a Docker/docker-compose stack.
+description: Use when when you have acquired Keras models (via get_models.sh or similar
+  download) and need to deploy them locally through TensorFlow Serving within a Docker/docker-compose
+  stack.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -11,6 +13,7 @@ metadata:
   - TensorFlow
   - Keras
   - TensorFlow Serving
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

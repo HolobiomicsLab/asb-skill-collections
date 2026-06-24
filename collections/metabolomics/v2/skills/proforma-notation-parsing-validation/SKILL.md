@@ -1,6 +1,9 @@
 ---
 name: proforma-notation-parsing-validation
-description: Use when you have peptide sequences with chemical modifications encoded in ProForma notation (e.g., '[Phospho]-PEPTIDE[Carbamidomethyl]-C') and need to validate their syntax, extract modification positions, or prepare them for downstream physico-chemical property calculations (mass, charge, pI).
+description: Use when you have peptide sequences with chemical modifications encoded
+  in ProForma notation (e.g., '[Phospho]-PEPTIDE[Carbamidomethyl]-C') and need to
+  validate their syntax, extract modification positions, or prepare them for downstream
+  physico-chemical property calculations (mass, charge, pI).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0235
@@ -12,6 +15,7 @@ metadata:
   - psims
   - pyteomics.proforma
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -41,6 +45,7 @@ attribution:
 
 # proforma-notation-parsing-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate ProForma notation strings representing modified peptide sequences using the pyteomics.proforma module. This skill enables robust handling of standardized proteomics sequence representations with chemical modifications.

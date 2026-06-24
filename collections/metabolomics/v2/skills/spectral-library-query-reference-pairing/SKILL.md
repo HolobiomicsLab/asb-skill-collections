@@ -1,6 +1,9 @@
 ---
 name: spectral-library-query-reference-pairing
-description: Use when when evaluating a trained spectral embedding model on publicly available datasets (GNPS, MoNA, MTBLS1572, MassBank, or MassSpecGym) and you need to report averaged performance metrics with standard deviation to demonstrate robustness and reproducibility.
+description: Use when when evaluating a trained spectral embedding model on publicly
+  available datasets (GNPS, MoNA, MTBLS1572, MassBank, or MassSpecGym) and you need
+  to report averaged performance metrics with standard deviation to demonstrate robustness
+  and reproducibility.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +19,7 @@ metadata:
   - numba
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -48,6 +52,7 @@ attribution:
 
 # spectral-library-query-reference-pairing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct reproducible 10-fold query/reference test set partitions from pre-cleaned MS/MS spectral libraries while preserving the original training split, enabling robust evaluation of spectral embedding models across multiple random splits.

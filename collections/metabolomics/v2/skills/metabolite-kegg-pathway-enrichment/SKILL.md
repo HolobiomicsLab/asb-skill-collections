@@ -1,6 +1,8 @@
 ---
 name: metabolite-kegg-pathway-enrichment
-description: Use when you have an annotated list of metabolite compounds (with associated m/z features or compound IDs) and want to determine which KEGG metabolic pathways are significantly enriched or depleted in your experimental samples.
+description: Use when you have an annotated list of metabolite compounds (with associated
+  m/z features or compound IDs) and want to determine which KEGG metabolic pathways
+  are significantly enriched or depleted in your experimental samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -16,12 +18,15 @@ metadata:
   - KEGG_Enrich_Plot
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
-- several R packages are utilized in the background processes, including ggplot2, igraph, MASS
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
+- several R packages are utilized in the background processes, including ggplot2,
+  igraph, MASS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # metabolite-kegg-pathway-enrichment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill performs statistical enrichment analysis of metabolite compound lists against KEGG pathway databases to identify significantly over-represented metabolic pathways. It quantifies pathway associations using p-value filtering and fold-change values to support functional interpretation of metabolomic datasets.

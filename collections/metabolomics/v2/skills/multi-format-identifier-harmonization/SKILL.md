@@ -1,6 +1,8 @@
 ---
 name: multi-format-identifier-harmonization
-description: Use when you have metabolomics datasets from multiple studies that use different chemical identifier formats (names, InChI, InChIKey, SMILES), and you need to merge them for meta-analysis or cross-study comparison.
+description: Use when you have metabolomics datasets from multiple studies that use
+  different chemical identifier formats (names, InChI, InChIKey, SMILES), and you
+  need to merge them for meta-analysis or cross-study comparison.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,15 +14,18 @@ metadata:
   - webchem
   - amanida
   - PubChem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
 - the package will retrieve the PubChem ID from the ID using `webchem`
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # Multi-Format Identifier Harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts heterogeneous chemical identifiers (chemical names, InChI, InChIKey, SMILES) into a unified PubChem ID nomenclature and detects duplicate entries across metabolomics datasets. This standardization enables reliable comparison and meta-analysis of results from multiple independent studies.

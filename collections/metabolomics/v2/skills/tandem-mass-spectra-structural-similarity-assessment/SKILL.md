@@ -1,6 +1,9 @@
 ---
 name: tandem-mass-spectra-structural-similarity-assessment
-description: Use when you have pairs of cleaned tandem mass spectra with known chemical structure annotations (InChIKey, SMILES, or InChI), and you need to predict Tanimoto structural similarity scores directly from spectral data without pre-computing molecular fingerprints.
+description: Use when you have pairs of cleaned tandem mass spectra with known chemical
+  structure annotations (InChIKey, SMILES, or InChI), and you need to predict Tanimoto
+  structural similarity scores directly from spectral data without pre-computing molecular
+  fingerprints.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -17,16 +20,22 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
-- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
+- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional
+  coordinates
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +59,7 @@ attribution:
 
 # Tandem-mass-spectra structural similarity assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify structural similarity between pairs of MS/MS spectra using deep learning (MS2DeepScore) with optional uncertainty quantification via Monte-Carlo Dropout ensemble sampling and interquartile range (IQR) filtering to achieve calibrated RMSE predictions against reference Tanimoto scores.

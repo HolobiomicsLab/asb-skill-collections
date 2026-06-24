@@ -1,6 +1,9 @@
 ---
 name: retention-time-mass-proximity-matching
-description: Use when after sample alignment and grouping of isotopologues and adducts have been completed, when the aligned feature table contains NA or zero entries (missing intensities) for features that are detected in some samples but fall below the detection threshold in others.
+description: Use when after sample alignment and grouping of isotopologues and adducts
+  have been completed, when the aligned feature table contains NA or zero entries
+  (missing intensities) for features that are detected in some samples but fall below
+  the detection threshold in others.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,6 +16,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -40,6 +44,7 @@ attribution:
 
 # Retention Time and Mass Proximity Matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A recursive matching strategy that identifies missing feature intensities by searching across related samples using retention time and m/z proximity windows to recover intensity values absent in some samples but present in others. This is a core component of gap-filling in untargeted LC-MS feature tables.

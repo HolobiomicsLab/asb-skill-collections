@@ -1,6 +1,8 @@
 ---
 name: molecular-property-data-structuring
-description: Use when you have a CSV file with rows of molecule definitions (chemical formulas, retention times, intensities, or other peak properties) and need to feed them into SMITER's simulation workflow.
+description: Use when you have a CSV file with rows of molecule definitions (chemical
+  formulas, retention times, intensities, or other peak properties) and need to feed
+  them into SMITER's simulation workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -12,11 +14,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
 evidence_spans:
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
+  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

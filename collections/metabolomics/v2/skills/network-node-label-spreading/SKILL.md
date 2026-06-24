@@ -1,6 +1,9 @@
 ---
 name: network-node-label-spreading
-description: Use when you have an untargeted metabolomics dataset with a two-layer network topology already constructed (one layer representing biochemical knowledge/pathways, the other representing data-driven MS2 similarity), seed metabolites with reliable annotations from database matching or curation, and.
+description: Use when you have an untargeted metabolomics dataset with a two-layer
+  network topology already constructed (one layer representing biochemical knowledge/pathways,
+  the other representing data-driven MS2 similarity), seed metabolites with reliable
+  annotations from database matching or curation, and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -12,11 +15,13 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # network-node-label-spreading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recursive annotation propagation over a two-layer network topology (knowledge-driven and data-driven) that spreads metabolite labels from seed annotated nodes to neighboring unannotated nodes, enhancing coverage and confidence in untargeted metabolomics. This method integrates biochemical pathway knowledge with experimental MS2 similarity networks to systematically annotate metabolites across interconnected layers.

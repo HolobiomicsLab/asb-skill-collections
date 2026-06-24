@@ -1,6 +1,7 @@
 ---
 name: json-validation-and-formatting
-description: Use when after enriching a project JSON document with external metadata (e.g., organism names, genome identifiers) or before writing enriched JSON to disk.
+description: Use when after enriching a project JSON document with external metadata
+  (e.g., organism names, genome identifiers) or before writing enriched JSON to disk.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,11 +11,13 @@ metadata:
   tools:
   - npm
   - paired-data-form
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

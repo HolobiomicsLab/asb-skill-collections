@@ -1,6 +1,8 @@
 ---
 name: signal-anomaly-detection-chromatography
-description: Use when you have raw total ion current (TIC) traces extracted from mass spectrometry samples (e.g., from qTOF, orbitrap, or FTICR instruments) and need to identify and flag scans with anomalous peak intensities before feature detection.
+description: Use when you have raw total ion current (TIC) traces extracted from mass
+  spectrometry samples (e.g., from qTOF, orbitrap, or FTICR instruments) and need
+  to identify and flag scans with anomalous peak intensities before feature detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,6 +17,7 @@ metadata:
   - XCMS
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

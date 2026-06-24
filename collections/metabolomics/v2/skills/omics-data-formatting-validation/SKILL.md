@@ -1,6 +1,8 @@
 ---
 name: omics-data-formatting-validation
-description: Use when when preparing raw omics data (gene expression matrices, differential abundance tables, or other quantitative omics assays) paired with sample/group metadata for import into a visualization dashboard.
+description: Use when when preparing raw omics data (gene expression matrices, differential
+  abundance tables, or other quantitative omics assays) paired with sample/group metadata
+  for import into a visualization dashboard.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_0092
   tools:
   - R Shiny
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

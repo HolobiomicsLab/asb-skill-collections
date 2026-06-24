@@ -1,6 +1,8 @@
 ---
 name: representation-collapse-prevention
-description: Use when training a contrastive learning model on ion image data (mass spectrometry imaging) where augmented pairs of the same ion image must maximize similarity while different images minimize similarity.
+description: Use when training a contrastive learning model on ion image data (mass
+  spectrometry imaging) where augmented pairs of the same ion image must maximize
+  similarity while different images minimize similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -13,6 +15,7 @@ metadata:
   - kornia
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
@@ -41,6 +44,7 @@ attribution:
 
 # representation-collapse-prevention
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill prevents trivial (collapsed) solutions during contrastive learning of ion image representations by introducing an asymmetric Projection–Prediction module architecture that discourages the encoder from learning constant representations. It is essential when optimizing 512-dimensional encoder outputs under contrastive loss to preserve meaningful variation in learned ion image embeddings.

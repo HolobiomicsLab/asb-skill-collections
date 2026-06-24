@@ -1,6 +1,8 @@
 ---
 name: cosine-distance-clustering-of-genomic-clusters
-description: Use when you have pre-computed BGC feature vectors (e.g., from HMM domain hits extracted via antiSMASH or BiG-SLiCE) and need to group similar BGCs into families for comparative genomics, functional prediction, or novelty assessment.
+description: Use when you have pre-computed BGC feature vectors (e.g., from HMM domain
+  hits extracted via antiSMASH or BiG-SLiCE) and need to group similar BGCs into families
+  for comparative genomics, functional prediction, or novelty assessment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,6 +13,7 @@ metadata:
   - BiG-SLiCE
   - pyHMMER
   - antiSMASH v7.0.0
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

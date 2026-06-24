@@ -1,6 +1,8 @@
 ---
 name: metabolomics-feature-integration-assessment
-description: Use when after XCMS peak picking and fillPeaks() when you have xcmsEIC and filled xcmsSet objects and need to systematically flag low-quality or unreliable peak integrations prior to statistical modeling or machine learning classification.
+description: Use when after XCMS peak picking and fillPeaks() when you have xcmsEIC
+  and filled xcmsSet objects and need to systematically flag low-quality or unreliable
+  peak integrations prior to statistical modeling or machine learning classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,15 +16,19 @@ metadata:
   - caret
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 claims: []
 provenance:
@@ -48,6 +54,7 @@ attribution:
 
 # metabolomics-feature-integration-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute 12 peak-quality metrics from XCMS-derived EIC and peak objects to systematically assess the quality of integrated chromatographic peaks in untargeted LC-MS metabolomics data. This skill enables automated detection of low-quality peak integrations before downstream analysis.

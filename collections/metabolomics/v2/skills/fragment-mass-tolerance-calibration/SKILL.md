@@ -1,6 +1,8 @@
 ---
 name: fragment-mass-tolerance-calibration
-description: 'Use when when implementing fragment ion annotation in proteomics workflows and needing to determine whether neutral loss annotation (e.g., H2O: -18.010565, NH3: -17.026549) should be enabled to maximize peak interpretation.'
+description: 'Use when when implementing fragment ion annotation in proteomics workflows
+  and needing to determine whether neutral loss annotation (e.g., H2O: -18.010565,
+  NH3: -17.026549) should be enabled to maximize peak interpretation.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,7 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -44,6 +47,7 @@ attribution:
 
 # fragment-mass-tolerance-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate fragment mass tolerance parameters for spectrum annotation by measuring how neutral loss annotation affects peak interpretation coverage. This skill validates whether enabling neutral loss specification increases the fraction of observed peaks that receive ProForma 2.0 fragment ion interpretation.

@@ -1,6 +1,8 @@
 ---
 name: iterative-peak-selection-from-latent-space
-description: Use when you have latent low-dimension peak features extracted by a Graph-attention autoencoder from imaging mass spectrometry (IMS) datasets, and you need to automatically identify a ranked subset of marker ions without manual inspection.
+description: Use when you have latent low-dimension peak features extracted by a Graph-attention
+  autoencoder from imaging mass spectrometry (IMS) datasets, and you need to automatically
+  identify a ranked subset of marker ions without manual inspection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
@@ -45,6 +48,7 @@ attribution:
 
 # iterative-peak-selection-from-latent-space
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Iteratively select marker ions from imaging mass spectrometry data by ranking and filtering m/z peaks according to their importance or variance in a learned latent feature space. This skill automates the identification of diagnostic peaks when a graph-attention autoencoder has already extracted low-dimensional peak representations.

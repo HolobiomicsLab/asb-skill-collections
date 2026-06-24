@@ -1,6 +1,8 @@
 ---
 name: json-serialization-of-metabolomics-data
-description: Use when after pre-annotation grouping (e.g., via khipu) has assigned features to empirical compounds, or when exporting feature tables and metadata from asari for downstream analysis in MetaboAnalyst or custom R/Python workflows.
+description: Use when after pre-annotation grouping (e.g., via khipu) has assigned
+  features to empirical compounds, or when exporting feature tables and metadata from
+  asari for downstream analysis in MetaboAnalyst or custom R/Python workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +16,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -43,6 +46,7 @@ attribution:
 
 # JSON serialization of metabolomics data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize grouped empirical compounds (EmpCpd) and feature tables into JSON format for portable, standardized representation of metabolomics annotations and results. This enables interoperability between tools in the metabolomics processing pipeline and downstream statistical analysis.

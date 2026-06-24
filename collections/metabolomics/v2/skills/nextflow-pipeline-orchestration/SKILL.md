@@ -18,6 +18,7 @@ metadata:
   - Reifycs Abf Converter
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -49,6 +50,7 @@ attribution:
 
 # nextflow-pipeline-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Nextflow pipeline orchestration is a containerized workflow execution method for LC-HRMS metabolomics data processing that routes .mzML mass spectrometry files through modular analysis steps (MS-DIAL feature detection, MSFLO annotation) with reproducible results across local, container, and HPC environments.

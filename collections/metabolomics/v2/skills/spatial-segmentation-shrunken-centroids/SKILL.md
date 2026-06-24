@@ -1,6 +1,8 @@
 ---
 name: spatial-segmentation-shrunken-centroids
-description: Use when apply SSC when you have preprocessed and normalized MS imaging data (e.g., after TIC normalization and peak processing) and need to discover spatially distinct metabolite regions without prior tissue annotation.
+description: Use when apply SSC when you have preprocessed and normalized MS imaging
+  data (e.g., after TIC normalization and peak processing) and need to discover spatially
+  distinct metabolite regions without prior tissue annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,6 +18,7 @@ metadata:
   - Seurat
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -50,6 +53,7 @@ attribution:
 
 # Spatial Shrunken Centroids (SSC) Segmentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Spatial shrunken centroids (SSC) is an unsupervised clustering method for mass spectrometry imaging that identifies spatially coherent metabolite regions by combining feature selection with adaptive spatial weighting. It produces k tissue-specific clusters with tunable sparsity to control feature selection stringency.

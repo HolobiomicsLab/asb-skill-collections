@@ -1,6 +1,7 @@
 ---
 name: plant-metabolic-network-validation
-description: Use when after community-dependent gap-filling has proposed reactions to fill metabolic gaps in individual consensus reconstructions.
+description: Use when after community-dependent gap-filling has proposed reactions
+  to fill metabolic gaps in individual consensus reconstructions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -10,13 +11,15 @@ metadata:
   - http://edamontology.org/topic_0621
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
 - doi: 10.5281/zenodo.363932874
   title: ''
 evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana
+- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis
+  thaliana
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +44,7 @@ attribution:
 
 # plant-metabolic-network-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate gap-filled plant metabolic reconstructions by checking consistency with known plant metabolism and inter-member metabolic exchange requirements in microbial communities. This skill ensures that reactions proposed during community-dependent gap-filling are biologically plausible and compatible with the broader community metabolic context.

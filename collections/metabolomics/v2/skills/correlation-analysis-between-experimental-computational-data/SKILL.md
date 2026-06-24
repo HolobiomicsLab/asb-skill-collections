@@ -1,6 +1,7 @@
 ---
 name: correlation-analysis-between-experimental-computational-data
-description: Use when you have paired experimental and computational predictions for the same biological property (e.
+description: Use when you have paired experimental and computational predictions for
+  the same biological property (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -12,12 +13,16 @@ metadata:
   - Flux Variability Analysis (FVA)
   - Spearman rank correlation test (scipy.stats or equivalent)
   - Matplotlib or equivalent visualization library
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions of the ENGRO2 model
-- We performed a Flux Variability Analysis (FVA). FVA [67, 68] is a constraint-based modelling technique aimed at determining the maximal (and minimal) possible flux through any reaction
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions of the ENGRO2 model
+- We performed a Flux Variability Analysis (FVA). FVA [67, 68] is a constraint-based
+  modelling technique aimed at determining the maximal (and minimal) possible flux
+  through any reaction
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # correlation-analysis-between-experimental-computational-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify agreement between experimental measurements and in silico predictions by computing rank-based correlation coefficients and statistical significance tests, then visualize results to assess how well computational constraints discriminate biological samples. This validates whether integrating transcriptomics, metabolomics, or flux constraints improves model predictive power.

@@ -1,6 +1,8 @@
 ---
 name: spectral-mixture-deconvolution
-description: Use when you have an NMR spectrum of a mixture sample and a library of reference spectra for individual compounds, and you need to determine which compounds are present and in what proportions.
+description: Use when you have an NMR spectrum of a mixture sample and a library of
+  reference spectra for individual compounds, and you need to determine which compounds
+  are present and in what proportions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,6 +14,7 @@ metadata:
   - spec2csv
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

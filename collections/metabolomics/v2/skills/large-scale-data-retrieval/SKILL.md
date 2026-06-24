@@ -1,6 +1,9 @@
 ---
 name: large-scale-data-retrieval
-description: Use when you have a query mass spectrum (or a metabolite reference spectrum from public data) and need to search it against a large-scale spectral repository (≥billions of spectra, e.g., GNPS library) where execution time and resource efficiency are critical.
+description: Use when you have a query mass spectrum (or a metabolite reference spectrum
+  from public data) and need to search it against a large-scale spectral repository
+  (≥billions of spectra, e.g., GNPS library) where execution time and resource efficiency
+  are critical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - Spectrum USI (Spectrum Unique Spectrum Identifier)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST
@@ -42,6 +46,7 @@ attribution:
 
 # large-scale-data-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query and retrieve results from billion-scale mass spectrometry spectral databases using MASST+, enabling metabolomics searches across collections infeasible with prior tools. This skill is essential when the research question requires comprehensive spectral matching against globally-aggregated reference libraries without computational bottlenecks.

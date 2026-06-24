@@ -1,6 +1,9 @@
 ---
 name: cluster-assignment-extraction-and-labeling
-description: Use when after executing hierarchical clustering via Sample_Separation() with method='HCA' on a feature-by-sample metabolomic matrix, when you need to assign each sample to a discrete cluster group (typically k=2 clusters) for use in marker identification, batch effect assessment, or sample.
+description: Use when after executing hierarchical clustering via Sample_Separation()
+  with method='HCA' on a feature-by-sample metabolomic matrix, when you need to assign
+  each sample to a discrete cluster group (typically k=2 clusters) for use in marker
+  identification, batch effect assessment, or sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,13 +14,16 @@ metadata:
   - LargeMetabo
   - factoextra
   - ggplot2
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
 - install_github("LargeMetabo/LargeMetabo", force = TRUE, build_vignettes = TRUE)
-- several R packages are utilized in the background processes, including factoextra, FSelector, genefilter
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
+- several R packages are utilized in the background processes, including factoextra,
+  FSelector, genefilter
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +47,7 @@ attribution:
 
 # cluster-assignment-extraction-and-labeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and record cluster assignments for individual samples after performing hierarchical clustering analysis (HCA) on metabolomic feature matrices. This skill captures the step of translating a dendrogram into discrete, labeled cluster memberships for downstream analysis.

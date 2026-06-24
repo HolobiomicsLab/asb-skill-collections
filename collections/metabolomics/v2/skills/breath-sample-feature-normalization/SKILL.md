@@ -1,6 +1,8 @@
 ---
 name: breath-sample-feature-normalization
-description: Use when after peak recognition has identified significant m/z signals in individual breath samples and you need to aggregate features by sample identifier before aligning features across multiple samples.
+description: Use when after peak recognition has identified significant m/z signals
+  in individual breath samples and you need to aggregate features by sample identifier
+  before aligning features across multiple samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,6 +14,7 @@ metadata:
   - BreathXplorer
   techniques:
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

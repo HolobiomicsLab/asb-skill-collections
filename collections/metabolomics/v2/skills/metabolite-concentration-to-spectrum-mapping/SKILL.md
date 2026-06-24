@@ -1,6 +1,9 @@
 ---
 name: metabolite-concentration-to-spectrum-mapping
-description: Use when when you have a list of known metabolite concentrations and their corresponding J-coupling constants (spin systems) and need to generate realistic 1D 1H NMR spectra or 2D correlation spectra (COSY, HSQC, HMQC) for simulation, validation, or educational purposes, without access to actual.
+description: Use when when you have a list of known metabolite concentrations and
+  their corresponding J-coupling constants (spin systems) and need to generate realistic
+  1D 1H NMR spectra or 2D correlation spectra (COSY, HSQC, HMQC) for simulation, validation,
+  or educational purposes, without access to actual.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -11,6 +14,7 @@ metadata:
   - MetAssimulo 2
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0
@@ -38,6 +42,7 @@ attribution:
 
 # metabolite-concentration-to-spectrum-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform metabolite concentration inputs and spin-system coupling constants into realistic 1D and 2D metabolomic 1H NMR spectra by simulating first-order or density-matrix spin multiplets, convolving with lineshape functions, and applying Fourier transformation. This skill bridges quantitative metabolomic data to synthetic spectral predictions for validation, educational, or exploratory NMR simulation workflows.

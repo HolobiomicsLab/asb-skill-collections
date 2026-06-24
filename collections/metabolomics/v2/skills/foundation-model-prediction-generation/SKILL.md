@@ -1,6 +1,9 @@
 ---
 name: foundation-model-prediction-generation
-description: Use when you have a pre-trained foundation model checkpoint (e.g., NaFM.ckpt) and new molecules represented as SMILES strings or a CSV file, and you need to generate predictions (e.g., bioactivity scores, taxonomy class, screening rankings) or embeddings for downstream analysis.
+description: Use when you have a pre-trained foundation model checkpoint (e.g., NaFM.ckpt)
+  and new molecules represented as SMILES strings or a CSV file, and you need to generate
+  predictions (e.g., bioactivity scores, taxonomy class, screening rankings) or embeddings
+  for downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +17,7 @@ metadata:
   - PyTorch Lightning
   - inference.py
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -43,6 +47,7 @@ attribution:
 
 # foundation-model-prediction-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a pre-trained foundation model to generate molecular embeddings and predictions on downstream tasks (classification, regression, or virtual screening) by loading pre-trained weights and running inference on new molecular data. This skill leverages learned evolutionary and structural patterns to produce bioactivity predictions or molecular representations without task-specific retraining.

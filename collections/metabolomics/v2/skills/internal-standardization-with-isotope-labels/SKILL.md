@@ -1,6 +1,7 @@
 ---
 name: internal-standardization-with-isotope-labels
-description: Use when your IM-MS lipidomics samples have been spiked with fully labeled isotopic internal standards (e.
+description: Use when your IM-MS lipidomics samples have been spiked with fully labeled
+  isotopic internal standards (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +13,13 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:
@@ -41,6 +44,7 @@ attribution:
 
 # internal-standardization-with-isotope-labels
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use fully labeled isotopic standards (e.g., U13C-labeled lipids) spiked into samples to calculate and correct systematic bias in ion mobility-derived collisional cross section (CCS) measurements without requiring additional external calibration. This approach enables accurate quality control of IM-MS lipidomics data by leveraging a reference library of isotope CCS values.

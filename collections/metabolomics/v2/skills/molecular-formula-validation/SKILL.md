@@ -1,6 +1,8 @@
 ---
 name: molecular-formula-validation
-description: Use when when you have a feature list from HRMS with tentatively assigned molecular formulas (from in silico tools or databases) and need to assess formula plausibility before applying downstream PFAS-specific filters.
+description: Use when when you have a feature list from HRMS with tentatively assigned
+  molecular formulas (from in silico tools or databases) and need to assess formula
+  plausibility before applying downstream PFAS-specific filters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,7 @@ metadata:
   - OpenMS / pyOpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -41,6 +44,7 @@ attribution:
 
 # Molecular Formula Validation via Mass Defect Calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate assigned molecular formulas in high-resolution mass spectrometry (HRMS) features by calculating exact mass from elemental composition and comparing it to observed m/z to derive mass defect metrics. This skill underpins prioritization of potential PFAS in non-target screening workflows.

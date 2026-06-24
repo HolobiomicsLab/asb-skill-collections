@@ -1,6 +1,9 @@
 ---
 name: per-sample-spectral-aggregation
-description: Use when you have raw MS2 spectra from a sample and need to collapse them into a single sample-level representation for comparison across multiple samples, particularly when samples have poor feature overlap, strong retention time shifts between LC methods, or were acquired on different mass.
+description: Use when you have raw MS2 spectra from a sample and need to collapse
+  them into a single sample-level representation for comparison across multiple samples,
+  particularly when samples have poor feature overlap, strong retention time shifts
+  between LC methods, or were acquired on different mass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,11 +19,13 @@ metadata:
   - Python 3.8+
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 claims: []

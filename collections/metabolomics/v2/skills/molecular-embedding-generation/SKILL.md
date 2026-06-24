@@ -1,6 +1,8 @@
 ---
 name: molecular-embedding-generation
-description: Use when when you have molecular structures (SMILES or explicit graph representations) and need fixed-size vector representations to feed into a prediction head or transfer learning task.
+description: Use when when you have molecular structures (SMILES or explicit graph
+  representations) and need fixed-size vector representations to feed into a prediction
+  head or transfer learning task.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -12,6 +14,7 @@ metadata:
   - DGL
   - RDKit
   - retention_time_gnn
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn
@@ -39,6 +42,7 @@ attribution:
 
 # molecular-embedding-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate dense vector embeddings of molecular structures by forward-passing molecular graphs through pre-trained graph neural network encoder layers. This skill enables compact, learnable representations of molecules for downstream retention time prediction and other property forecasting tasks on small datasets.

@@ -1,6 +1,9 @@
 ---
 name: large-scale-spectral-matching
-description: Use when you have preprocessed mass spectra (peak-filtered, metadata-cleaned) in supported formats (mzML, mzXML, msp, MGF, JSON) and need to compare all-pairs or many-to-many spectrum similarity to identify related compounds, build spectral libraries, or perform large-scale library searching.
+description: Use when you have preprocessed mass spectra (peak-filtered, metadata-cleaned)
+  in supported formats (mzML, mzXML, msp, MGF, JSON) and need to compare all-pairs
+  or many-to-many spectrum similarity to identify related compounds, build spectral
+  libraries, or perform large-scale library searching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,12 +17,14 @@ metadata:
   - MS2DeepScore
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
 - Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

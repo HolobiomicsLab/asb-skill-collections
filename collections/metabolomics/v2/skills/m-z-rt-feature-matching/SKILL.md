@@ -1,6 +1,8 @@
 ---
 name: m-z-rt-feature-matching
-description: Use when you have extracted peaks from multiple LC/HRMS batches (n > 1) with their m/z and RT values, and you need to identify and align peaks representing the same compound across batches to build a consensus feature matrix.
+description: Use when you have extracted peaks from multiple LC/HRMS batches (n >
+  1) with their m/z and RT values, and you need to identify and align peaks representing
+  the same compound across batches to build a consensus feature matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -14,11 +16,14 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # m/z-rt-feature-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and match peaks across multiple LC/HRMS batches by harmonizing their mass-to-charge (m/z) and retention time (RT) coordinates, enabling construction of unified peak tables for population-scale untargeted metabolomics studies. This skill corrects for batch-to-batch RT drift while preserving mass accuracy, permitting detection of the same compounds across different instrument runs and sample cohorts.

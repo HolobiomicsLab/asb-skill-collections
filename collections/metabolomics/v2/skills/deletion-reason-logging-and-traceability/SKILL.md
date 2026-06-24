@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -50,6 +51,7 @@ attribution:
 
 # deletion-reason-logging-and-traceability
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 A data quality and provenance practice that systematically logs detailed reasons for every spectrum deletion during mass spectrometry data standardization, enabling traceability and audit trails for downstream validation and reprocessing decisions.

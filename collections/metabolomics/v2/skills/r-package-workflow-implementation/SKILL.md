@@ -1,6 +1,8 @@
 ---
 name: r-package-workflow-implementation
-description: Use when you have raw unnormalized metabolomics intensity data organized by batch and sample type (QC vs. biological), and you need to remove systematic variation (drift, batch effects) while preserving biological signal.
+description: Use when you have raw unnormalized metabolomics intensity data organized
+  by batch and sample type (QC vs. biological), and you need to remove systematic
+  variation (drift, batch effects) while preserving biological signal.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +13,7 @@ metadata:
   - R
   - Metanorm
   - pak
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # R Package Workflow Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a complete R package-based metabolomics data normalization workflow by loading raw intensity data, applying robust normalization methods (tGAM, rGAM, rLOESS, QC-RLSC, or QC-RSC), and validating batch effect removal through diagnostic plots and PCA. This skill demonstrates how to structure and execute a reproducible R package workflow for preprocessing large-scale metabolomics datasets.

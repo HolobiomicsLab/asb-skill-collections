@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-feature-extraction
-description: Use when you have raw mzML mass spectrometry data and need to detect which predicted candidate metabolites are present in the sample.
+description: Use when you have raw mzML mass spectrometry data and need to detect
+  which predicted candidate metabolites are present in the sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,6 +16,7 @@ metadata:
   - MetApp
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR

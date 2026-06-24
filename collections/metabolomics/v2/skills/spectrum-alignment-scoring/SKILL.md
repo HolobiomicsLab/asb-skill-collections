@@ -1,6 +1,7 @@
 ---
 name: spectrum-alignment-scoring
-description: Use when after generating probability predictions for potential modification sites (via ModiFinder.
+description: Use when after generating probability predictions for potential modification
+  sites (via ModiFinder.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +14,7 @@ metadata:
   - BasicEvaluationEngine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -46,6 +48,7 @@ attribution:
 
 # spectrum-alignment-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score the alignment quality between known and modified compound MS/MS spectra using an evaluation engine that compares predicted modification site probabilities against observed spectral patterns. This skill quantifies how well a candidate modification hypothesis explains the tandem mass spectra.

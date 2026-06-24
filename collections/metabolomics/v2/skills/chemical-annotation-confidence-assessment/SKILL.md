@@ -1,6 +1,9 @@
 ---
 name: chemical-annotation-confidence-assessment
-description: Use when when you have received chemical annotations from GNPS spectral library matching workflow and need to assess their reliability before downstream analysis (e.g., chemical explorer visualization, sample filtering, or comparative metabolomics).
+description: Use when when you have received chemical annotations from GNPS spectral
+  library matching workflow and need to assess their reliability before downstream
+  analysis (e.g., chemical explorer visualization, sample filtering, or comparative
+  metabolomics).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -48,6 +52,7 @@ attribution:
 
 # chemical-annotation-confidence-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the confidence level of chemical annotations produced by GNPS spectral library matching against MS2 product-ion spectra using the 2007 metabolomics standards initiative (MSI) classification scheme. This skill distinguishes between level 2 (putative annotation based on spectral library similarity) and level 3 (putatively characterized compound class) annotations to contextualize the reliability of chemical identifications in reanalyzed public mass spectrometry data.

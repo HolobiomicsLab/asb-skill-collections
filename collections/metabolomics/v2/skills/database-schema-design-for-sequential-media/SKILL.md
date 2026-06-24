@@ -1,6 +1,8 @@
 ---
 name: database-schema-design-for-sequential-media
-description: Use when when you have large sequential media files (mzML spectra, text chapters, or similar) and need to enable both random access by ID and sequential iteration without loading the entire file into memory.
+description: Use when when you have large sequential media files (mzML spectra, text
+  chapters, or similar) and need to enable both random access by ID and sequential
+  iteration without loading the entire file into memory.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -12,6 +14,7 @@ metadata:
   - xml.etree.ElementTree
   - Python
   - pymzML
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,6 +44,7 @@ attribution:
 
 # database-schema-design-for-sequential-media
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a relational database schema to store sequential media (spectra, chapters, or other indexed records) with ID and content columns, enabling efficient random access and iteration. This skill is essential when converting large sequential files into queryable databases for indexed, seekable access.

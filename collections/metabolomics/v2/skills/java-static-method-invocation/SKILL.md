@@ -1,6 +1,8 @@
 ---
 name: java-static-method-invocation
-description: Use when you have a Java application or standalone tool that needs to predict CYP450-catalyzed metabolites for one or more molecules and you require the option to compare predictions with and without CypReact filtering applied.
+description: Use when you have a Java application or standalone tool that needs to
+  predict CYP450-catalyzed metabolites for one or more molecules and you require the
+  option to compare predictions with and without CypReact filtering applied.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3371
@@ -12,6 +14,7 @@ metadata:
   - CyProduct
   - Java
   - CyProduct.jar
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -42,6 +45,7 @@ attribution:
 
 # Invoke BioTransformerAPI static functions to predict CYP450 metabolites with conditional filter toggling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Call static methods from the BioTransformerAPI class (packaged in CyProduct.jar) to predict metabolites of a query molecule for specified CYP450 enzymes, with the ability to toggle the CypReact filter module on or off via a boolean parameter. Use this skill when you need programmatic, fine-grained control over metabolite prediction and filter behavior within your own Java application or tool.

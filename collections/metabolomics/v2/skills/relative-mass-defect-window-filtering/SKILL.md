@@ -1,6 +1,9 @@
 ---
 name: relative-mass-defect-window-filtering
-description: Use when apply this filter when working with MS-DIAL peak lists (feature tables with m/z, retention time, and intensity) that contain features with anomalous mass defects—particularly when you have prior knowledge of the expected RMD range for your sample type or analytical method, or when you want.
+description: Use when apply this filter when working with MS-DIAL peak lists (feature
+  tables with m/z, retention time, and intensity) that contain features with anomalous
+  mass defects—particularly when you have prior knowledge of the expected RMD range
+  for your sample type or analytical method, or when you want.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - MS-FINDER
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -41,6 +45,7 @@ attribution:
 
 # relative-mass-defect-window-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter LC-MS features by removing those whose relative mass defect (RMD) values fall outside user-defined window bounds. This step removes spurious or chemically implausible features from MS-DIAL peak lists during untargeted metabolomics preprocessing.

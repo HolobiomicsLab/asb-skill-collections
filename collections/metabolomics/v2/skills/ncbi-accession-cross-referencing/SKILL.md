@@ -1,6 +1,7 @@
 ---
 name: ncbi-accession-cross-referencing
-description: Use when you have parsed a collection of sequence files with associated GenBank/RefSeq accession identifiers (typically from JSON metadata fields like cluster.
+description: Use when you have parsed a collection of sequence files with associated
+  GenBank/RefSeq accession identifiers (typically from JSON metadata fields like cluster.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +11,7 @@ metadata:
   tools:
   - Git
   - NCBI Entrez API
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkz882
   title: MIBiG 2.0
@@ -38,6 +40,7 @@ attribution:
 
 # ncbi-accession-cross-referencing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cross-reference sequence file accessions extracted from JSON metadata against NCBI GenBank/RefSeq databases to determine availability status and identify sequences maintained locally but absent from public repositories. This skill surfaces sequences of interest that may be curated, restricted, or otherwise unavailable through standard NCBI channels.

@@ -1,6 +1,8 @@
 ---
 name: latent-feature-interpretation
-description: Use when you have imaging mass spectrometry (IMS) data preprocessed into an h5py-backed feature matrix, and a trained graph-attention autoencoder has already extracted latent low-dimensional peak features.
+description: Use when you have imaging mass spectrometry (IMS) data preprocessed into
+  an h5py-backed feature matrix, and a trained graph-attention autoencoder has already
+  extracted latent low-dimensional peak features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
@@ -45,6 +48,7 @@ attribution:
 
 # latent-feature-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and rank latent low-dimensional peak features extracted by a graph-attention autoencoder to identify and select marker ions in imaging mass spectrometry datasets. This skill bridges unsupervised feature learning and interpretable marker-ion discovery by using learned latent representations as a ranking criterion for iterative peak selection.

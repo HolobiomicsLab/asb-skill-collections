@@ -1,6 +1,9 @@
 ---
 name: compound-identifier-mapping-curation
-description: Use when when integrating MS/MS spectra from multiple source repositories or instruments into a unified library, and the compound identifiers, adduct annotations, collision energies, and instrument types differ in format, terminology, or completeness across sources.
+description: Use when when integrating MS/MS spectra from multiple source repositories
+  or instruments into a unified library, and the compound identifiers, adduct annotations,
+  collision energies, and instrument types differ in format, terminology, or completeness
+  across sources.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,6 +17,7 @@ metadata:
   - spectraverse-analysis
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse

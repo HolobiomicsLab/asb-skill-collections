@@ -1,6 +1,9 @@
 ---
 name: sbml-model-manipulation
-description: Use when when you have consensus metabolic reconstructions in SBML format for individual community members and need to resolve metabolic gaps by leveraging cross-member dependencies and community-level constraints before phenotypic validation or flux analysis.
+description: Use when when you have consensus metabolic reconstructions in SBML format
+  for individual community members and need to resolve metabolic gaps by leveraging
+  cross-member dependencies and community-level constraints before phenotypic validation
+  or flux analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -37,6 +41,7 @@ attribution:
 
 # sbml-model-manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Manipulate and validate consensus metabolic models in SBML format by applying community-dependent gap-filling algorithms to identify and resolve metabolic gaps while preserving reaction balancing and biomass production feasibility. This skill bridges upstream consensus reconstruction with downstream community-level constraint propagation.

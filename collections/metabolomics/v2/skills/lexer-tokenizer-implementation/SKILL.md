@@ -1,6 +1,8 @@
 ---
 name: lexer-tokenizer-implementation
-description: Use when when you need to parse a domain-specific query language (like MassQL) into an abstract syntax tree (AST), and the query strings must be decomposed into discrete lexical units before syntactic analysis.
+description: Use when when you need to parse a domain-specific query language (like
+  MassQL) into an abstract syntax tree (AST), and the query strings must be decomposed
+  into discrete lexical units before syntactic analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -13,6 +15,7 @@ metadata:
   - massql (Python package)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

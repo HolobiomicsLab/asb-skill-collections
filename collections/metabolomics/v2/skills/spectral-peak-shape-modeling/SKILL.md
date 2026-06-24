@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-shape-modeling
-description: Use when when generating synthetic LC/GC-MS .mzML files from MoNA or HMDB spectral records where you need to compute absolute ground-truth maximum intensity (sim_ins) for each peak while accounting for chromatographic band broadening, peak tailing, and retention-time dispersion.
+description: Use when when generating synthetic LC/GC-MS .mzML files from MoNA or
+  HMDB spectral records where you need to compute absolute ground-truth maximum intensity
+  (sim_ins) for each peak while accounting for chromatographic band broadening, peak
+  tailing, and retention-time dispersion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,11 +20,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - The underlying engine handles binary data encoding via the `base64enc` package
 - github.com__yufree__mzrtsim
 claims: []
@@ -47,6 +52,7 @@ attribution:
 
 # spectral-peak-shape-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply chromatographic peak-shape modeling (Gaussian or exponentially-modified Gaussian) to simulated LC/GC-MS data to generate realistic retention-time profiles with configurable tailing and peak-width parameters. This skill is essential for raw mass spectrometry data simulation when ground-truth peak intensity and chromatographic behavior must be computationally generated from spectral databases.

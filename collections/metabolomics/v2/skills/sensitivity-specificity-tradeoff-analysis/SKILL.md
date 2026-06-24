@@ -1,6 +1,9 @@
 ---
 name: sensitivity-specificity-tradeoff-analysis
-description: Use when you have a trained neural network model and a labelled validation dataset (with high-quality and low-quality peak annotations), and you need to determine the optimal probability threshold that maximizes the difference between true positive rate and false positive rate for classifying MS1.
+description: Use when you have a trained neural network model and a labelled validation
+  dataset (with high-quality and low-quality peak annotations), and you need to determine
+  the optimal probability threshold that maximizes the difference between true positive
+  rate and false positive rate for classifying MS1.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -16,11 +19,13 @@ metadata:
   - Keras/TensorFlow
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -49,6 +54,7 @@ attribution:
 
 # sensitivity-specificity-tradeoff-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute optimal classification thresholds for neural network-based peak filtering by analyzing the tradeoff between true positive and false positive rates across a range of probability thresholds. This skill is essential when deploying trained classifiers to LCMS peak datasets where the cost of false positives must be balanced against detection sensitivity.

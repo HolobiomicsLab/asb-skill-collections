@@ -1,6 +1,8 @@
 ---
 name: r-object-size-measurement-and-benchmarking
-description: Use when evaluating alternative implementations of data storage or retrieval strategies in R objects—specifically when deciding whether to eagerly populate all columns in a data frame slot (e.
+description: Use when evaluating alternative implementations of data storage or retrieval
+  strategies in R objects—specifically when deciding whether to eagerly populate all
+  columns in a data frame slot (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -12,13 +14,15 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # r-object-size-measurement-and-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify memory consumption and execution latency of R objects before and after data operations using object.size() profiling and timing measurements. This skill is essential when evaluating memory–speed tradeoffs in data structure design, such as choosing between eager pre-population versus lazy on-demand initialization of mass spectrometry data backends.

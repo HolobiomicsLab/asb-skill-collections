@@ -1,6 +1,9 @@
 ---
 name: structure-organism-pair-counting-and-deduplication
-description: Use when when you have downloaded a curated structure-organism dataset (such as LOTUS) in TSV or CSV format with separate 2D and 3D structure-organism pair tables, and need to produce authoritative headline counts of unique referenced pairs, unique curated structures, unique organisms, and source.
+description: Use when when you have downloaded a curated structure-organism dataset
+  (such as LOTUS) in TSV or CSV format with separate 2D and 3D structure-organism
+  pair tables, and need to produce authoritative headline counts of unique referenced
+  pairs, unique curated structures, unique organisms, and source.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -9,6 +12,7 @@ metadata:
   tools:
   - R
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +47,7 @@ attribution:
 
 # structure-organism-pair-counting-and-deduplication
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Count and deduplicate structure-organism pairs and their constituent entities (unique structures, organisms, references) from curated natural products databases, separately for 2D and 3D molecular representations. This skill validates dataset integrity and produces summary statistics essential for understanding the scope and composition of structure-organism knowledge bases.

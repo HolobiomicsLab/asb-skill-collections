@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -48,6 +49,7 @@ attribution:
 
 # local-maxima-identification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Detect local maxima in LC-HRMS profile-mode chromatographic data using smoothing and gradient-descent algorithms, then extract each as a standardized two-dimensional (rt × mz) feature matrix for machine learning input. This preprocessing step converts raw mass spectrometry profiles into CNN-compatible peak candidates.

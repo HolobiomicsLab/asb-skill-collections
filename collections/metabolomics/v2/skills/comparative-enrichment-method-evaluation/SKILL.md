@@ -1,6 +1,8 @@
 ---
 name: comparative-enrichment-method-evaluation
-description: Use when you are selecting a pathway enrichment method for metabolomics peak data and need to assess which method will remain stable when your data contains noise, dropout, or missing identifications.
+description: Use when you are selecting a pathway enrichment method for metabolomics
+  peak data and need to assess which method will remain stable when your data contains
+  noise, dropout, or missing identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -13,6 +15,7 @@ metadata:
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
   - PALS Viewer
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -43,6 +46,7 @@ attribution:
 
 # comparative-enrichment-method-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically benchmark pathway/metabolite set enrichment methods (PALS, ORA, GSEA) by introducing controlled levels of noise and missing peaks into metabolomics peak data, then measuring robustness using rank correlation and effect size preservation. This skill is essential for validating that a chosen enrichment method will produce stable results even when real-world peak data contains artifacts.

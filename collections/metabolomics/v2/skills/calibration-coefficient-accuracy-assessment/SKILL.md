@@ -1,6 +1,9 @@
 ---
 name: calibration-coefficient-accuracy-assessment
-description: Use when after applying deimos.calibration.tunemix() to positive-mode or negative-mode tune mix reference data (containing known CCS values across m/z range 118–1522), assess whether the single-field calibration model's r-squared coefficient meets the expected precision (typically ≥0.
+description: Use when after applying deimos.calibration.tunemix() to positive-mode
+  or negative-mode tune mix reference data (containing known CCS values across m/z
+  range 118–1522), assess whether the single-field calibration model's r-squared coefficient
+  meets the expected precision (typically ≥0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -43,6 +47,7 @@ attribution:
 
 # calibration-coefficient-accuracy-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a collision cross section (CCS) calibration model applied to tuning reference compounds achieves a target goodness-of-fit (r-squared) by computing and comparing the calibration coefficient to a reference value at high precision. This skill ensures the calibration meets the statistical accuracy threshold required for reliable ion mobility–mass spectrometry workflows.

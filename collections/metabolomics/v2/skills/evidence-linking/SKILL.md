@@ -1,6 +1,9 @@
 ---
 name: evidence-linking
-description: Use when after generating MS/MS spectra, retention time, or collision cross section predictions using 3DMolMS, you need to validate predictions against reference spectra (MoNA, NIST20, HMDB), verify input molecule conformations were preprocessed correctly (ETKDGv3), or establish reproducibility by.
+description: Use when after generating MS/MS spectra, retention time, or collision
+  cross section predictions using 3DMolMS, you need to validate predictions against
+  reference spectra (MoNA, NIST20, HMDB), verify input molecule conformations were
+  preprocessed correctly (ETKDGv3), or establish reproducibility by.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -351,6 +354,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -666,7 +670,8 @@ evidence_spans:
 - 'Source: github:gitlab.gwdg.de__joerg.buescher__automrm'
 - 'Source: github:arina-iva__DI-MS2_scripts'
 - 'Source: github:jesilee__CIDMD_setup'
-- These are generated using RDKit... We extensively use the ChEMBL structure curation pipeline developed with RDKit to clean the data and curate the database.
+- These are generated using RDKit... We extensively use the ChEMBL structure curation
+  pipeline developed with RDKit to clean the data and curate the database.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -1350,6 +1355,7 @@ attribution:
 
 # evidence_linking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Link predicted MS/MS spectra and molecular property predictions (RT, CCS) back to their 3D conformational inputs and training data provenance, enabling validation of model outputs against known standards (HMDB, MoNA, NIST20) and traceability of predictions through the neural network pipeline.

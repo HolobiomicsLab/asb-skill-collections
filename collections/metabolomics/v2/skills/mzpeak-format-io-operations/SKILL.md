@@ -1,6 +1,9 @@
 ---
 name: mzpeak-format-io-operations
-description: Use when you have mass spectrometry run data (spectra, chromatograms, instrument metadata) that must be stored in or recovered from the mzPeak format, or when you need to validate that a mzPeak implementation correctly supports both read and write paths for round-trip fidelity.
+description: Use when you have mass spectrometry run data (spectra, chromatograms,
+  instrument metadata) that must be stored in or recovered from the mzPeak format,
+  or when you need to validate that a mzPeak implementation correctly supports both
+  read and write paths for round-trip fidelity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -14,6 +17,7 @@ metadata:
   - mzPeak specification
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -41,6 +45,7 @@ attribution:
 
 # mzPeak format I/O operations
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Read, write, and round-trip mass spectrometry spectra and chromatogram data using the mzPeak Parquet-based format, which stores spectrum metadata, signal arrays, and instrument configuration in an uncompressed ZIP archive. This skill validates interoperability of mzPeak implementations and enables lossless serialization of complex MS data structures.

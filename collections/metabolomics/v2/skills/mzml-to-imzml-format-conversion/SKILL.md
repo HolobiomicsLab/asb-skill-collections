@@ -1,6 +1,8 @@
 ---
 name: mzml-to-imzml-format-conversion
-description: Use when you have mzML files generated from raw vendor mass spectrometry imaging data and need to create imzML output compatible with software like Cardinal MSI, METASPACE, M2aia, or SCiLS Lab.
+description: Use when you have mzML files generated from raw vendor mass spectrometry
+  imaging data and need to create imzML output compatible with software like Cardinal
+  MSI, METASPACE, M2aia, or SCiLS Lab.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,12 +16,14 @@ metadata:
   - imzML Scout
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer
 evidence_spans:
 - iw_utils.RAW_to_mzML(raw_data_path)
-- 'imzML Writer is available as: (1) A distributable package on pypi (for CLI, stable GUI, `pip install imzML-Writer`)'
+- 'imzML Writer is available as: (1) A distributable package on pypi (for CLI, stable
+  GUI, `pip install imzML-Writer`)'
 - import os import imzml_writer.utils as iw_utils
 - iw_utils.mzML_to_imzML_convert(PATH=mzML_path)
 claims: []

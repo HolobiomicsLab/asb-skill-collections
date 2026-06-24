@@ -1,6 +1,8 @@
 ---
 name: box-cox-transformation-parameter-estimation
-description: 'Use when you have raw LC-MS feature-intensity tables (rows: samples, columns: metabolite features, values: raw intensities) with non-normal, skewed distributions and need to normalize them prior to statistical analysis.'
+description: 'Use when you have raw LC-MS feature-intensity tables (rows: samples,
+  columns: metabolite features, values: raw intensities) with non-normal, skewed distributions
+  and need to normalize them prior to statistical analysis.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - 'OUKS (step 7: Normalization.R)'
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

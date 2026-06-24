@@ -1,6 +1,8 @@
 ---
 name: signal-processing-prominence-filtering
-description: Use when when you have a 1D intensity array from a mass spectrum (m/z or retention time dimension) and need to identify and rank local maxima that are biochemically meaningful rather than noise-driven.
+description: Use when when you have a 1D intensity array from a mass spectrum (m/z
+  or retention time dimension) and need to identify and rank local maxima that are
+  biochemically meaningful rather than noise-driven.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -15,6 +17,7 @@ metadata:
   - h5py
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

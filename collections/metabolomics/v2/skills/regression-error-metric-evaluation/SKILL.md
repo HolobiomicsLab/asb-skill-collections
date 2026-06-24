@@ -1,6 +1,9 @@
 ---
 name: regression-error-metric-evaluation
-description: 'Use when when you have trained multiple regression models (e.g., using different feature sets: descriptors-only, fingerprints-only, or combined) on the same training data and need to objectively rank their generalization performance on unseen test data.'
+description: 'Use when when you have trained multiple regression models (e.g., using
+  different feature sets: descriptors-only, fingerprints-only, or combined) on the
+  same training data and need to objectively rank their generalization performance
+  on unseen test data.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3928
@@ -9,11 +12,13 @@ metadata:
   - http://edamontology.org/topic_0602
   tools:
   - alvaDesc
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -37,6 +42,7 @@ attribution:
 
 # Regression Error Metric Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitative assessment of machine learning regression model performance using mean absolute error (MAE) and median absolute error (MdAE) computed on held-out test sets. This skill is essential for comparing model architectures, feature representations, and hyperparameter choices in predictive tasks where absolute prediction accuracy matters.

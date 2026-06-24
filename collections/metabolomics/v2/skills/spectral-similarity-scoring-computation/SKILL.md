@@ -1,6 +1,8 @@
 ---
 name: spectral-similarity-scoring-computation
-description: Use when you have a query spectrum (or set of query spectra) and need to rank candidate library spectra by their likelihood of sharing the same chemical structure.
+description: Use when you have a query spectrum (or set of query spectra) and need
+  to rank candidate library spectra by their likelihood of sharing the same chemical
+  structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -22,16 +24,22 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
-- Tanimoto similarity (Jaccard index) based on daylight-like molecular fingerprints, version 2020.03.2, 2048 bits, derived using rdkit
+- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
+  and can be installed via conda
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
+- Tanimoto similarity (Jaccard index) based on daylight-like molecular fingerprints,
+  version 2020.03.2, 2048 bits, derived using rdkit
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -55,6 +63,7 @@ attribution:
 
 # Spectral Similarity Scoring Computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise similarity scores between mass spectra using cosine, modified cosine, or Spec2Vec methods to rank spectral matches by structural similarity. This skill is essential for library matching, molecular networking, and metabolite identification workflows where similarity thresholds determine which spectra are considered structurally related.

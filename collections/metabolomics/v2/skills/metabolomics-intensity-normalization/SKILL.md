@@ -1,6 +1,8 @@
 ---
 name: metabolomics-intensity-normalization
-description: Use when your input is a raw metabolomics intensity matrix (compounds × samples) with known batch assignment and QC sample labels, and you observe signal drift across the analytical sequence or batch-to-batch variation.
+description: Use when your input is a raw metabolomics intensity matrix (compounds
+  × samples) with known batch assignment and QC sample labels, and you observe signal
+  drift across the analytical sequence or batch-to-batch variation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,6 +14,7 @@ metadata:
   - Metanorm
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -19,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # metabolomics-intensity-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply robust normalization methods (tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) to correct for signal drift and batch effects in untargeted metabolomics intensity matrices. This skill removes systematic variation across analytical runs while preserving biological signal, essential for cross-batch and multi-scale metabolomics studies.

@@ -1,6 +1,9 @@
 ---
 name: isotopic-pattern-detection-and-merging
-description: Use when your peak table contains features suspected of being artifacts of incorrect isotopic pattern splitting during preprocessing—particularly when you observe multiple ions with very similar mass-to-charge ratios and retention times, or when visual inspection of m/z vs. retention time plots.
+description: Use when your peak table contains features suspected of being artifacts
+  of incorrect isotopic pattern splitting during preprocessing—particularly when you
+  observe multiple ions with very similar mass-to-charge ratios and retention times,
+  or when visual inspection of m/z vs. retention time plots.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -15,6 +18,7 @@ metadata:
   - ggplot2 + plotly
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

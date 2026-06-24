@@ -1,6 +1,8 @@
 ---
 name: missing-value-replacement-by-feature-minimum
-description: Use when after loading a feature table into memory when the table contains zero or missing values that represent true signal loss (not genuine absence), and you need to impute them before normalization, batch correction, or statistical analysis.
+description: Use when after loading a feature table into memory when the table contains
+  zero or missing values that represent true signal loss (not genuine absence), and
+  you need to impute them before normalization, batch correction, or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - PCPFM (PythonCentricPipelineForMetabolomics)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -43,6 +46,7 @@ attribution:
 
 # missing-value-replacement-by-feature-minimum
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace zero and missing values in a metabolomics feature table by calculating an imputation value as the interpolation_ratio parameter (default 0.5) multiplied by the minimum non-zero value observed for each feature. This strategy preserves the relative magnitude of features while avoiding artificial zeros that can distort downstream statistical analysis.

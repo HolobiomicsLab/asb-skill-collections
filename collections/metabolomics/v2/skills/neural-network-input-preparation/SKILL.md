@@ -1,6 +1,9 @@
 ---
 name: neural-network-input-preparation
-description: Use when when you have annotated representative LCMS samples (raw mzML files + labeled feature tables in mzmine CSV format) and need to convert them into balanced or unbalanced peak matrix batches with fixed dimensions for neural network training.
+description: Use when when you have annotated representative LCMS samples (raw mzML
+  files + labeled feature tables in mzmine CSV format) and need to convert them into
+  balanced or unbalanced peak matrix batches with fixed dimensions for neural network
+  training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,11 +17,13 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -47,6 +52,7 @@ attribution:
 
 # neural-network-input-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare peak matrix batches from raw LCMS data for neural network training by loading mzML and feature tables into a NeatMS Experiment, then instantiating a NN_handler to generate training/test/validation splits with configurable matrix dimensions, margin encoding, and class balancing. This skill ensures that input peak matrices conform to expected dimensions and class distributions before model training.

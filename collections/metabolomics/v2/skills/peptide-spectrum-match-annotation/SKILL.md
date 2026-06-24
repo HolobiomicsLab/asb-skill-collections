@@ -1,6 +1,9 @@
 ---
 name: peptide-spectrum-match-annotation
-description: Use when when you have a peptide sequence, observed MS2 spectrum peaks (m/z, intensity, charge state), and need to determine which theoretical fragment ions (B and Y ions) match the observed data—particularly in stable isotope probing (SIP) experiments where peptides carry heavy isotope labels (e.
+description: Use when when you have a peptide sequence, observed MS2 spectrum peaks
+  (m/z, intensity, charge state), and need to determine which theoretical fragment
+  ions (B and Y ions) match the observed data—particularly in stable isotope probing
+  (SIP) experiments where peptides carry heavy isotope labels (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3648
@@ -16,12 +19,15 @@ metadata:
   - Sipros
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

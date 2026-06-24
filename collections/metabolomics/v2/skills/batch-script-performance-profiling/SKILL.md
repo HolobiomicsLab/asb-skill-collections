@@ -1,6 +1,8 @@
 ---
 name: batch-script-performance-profiling
-description: Use when you have a collection of N scripts (e.g., 19 gallery examples) that must run on multiple backends or configurations, and you need to produce a reproducible benchmark table showing per-script execution times and aggregate totals.
+description: Use when you have a collection of N scripts (e.g., 19 gallery examples)
+  that must run on multiple backends or configurations, and you need to produce a
+  reproducible benchmark table showing per-script execution times and aggregate totals.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,6 +15,7 @@ metadata:
   - matplotlib
   - Bokeh
   - Plotly
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -40,6 +43,7 @@ attribution:
 
 # batch-script-performance-profiling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically measure wall-clock execution time and resource consumption for multiple scripts across different software backends or configurations to establish performance baselines and detect regressions. This skill is essential when validating that library integrations maintain consistent performance across plotting backends (matplotlib, Bokeh, Plotly) or when benchmarking reproducibility of gallery examples.

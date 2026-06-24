@@ -1,6 +1,9 @@
 ---
 name: lipid-graph-representation
-description: Use when when you have multiple lipid structures (from lipidomics data in CSV, XLSX, or mzTab-M format) and need to compute pairwise structural distances, identify lipids responsible for shaping a lipidome, or perform hierarchical clustering of lipidomes.
+description: Use when when you have multiple lipid structures (from lipidomics data
+  in CSV, XLSX, or mzTab-M format) and need to compute pairwise structural distances,
+  identify lipids responsible for shaping a lipidome, or perform hierarchical clustering
+  of lipidomes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2422
@@ -10,6 +13,7 @@ metadata:
   tools:
   - LipidSpace
   - cppGoslin
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

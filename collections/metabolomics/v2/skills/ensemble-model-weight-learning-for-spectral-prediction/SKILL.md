@@ -1,6 +1,9 @@
 ---
 name: ensemble-model-weight-learning-for-spectral-prediction
-description: Use when you have pre-trained MLP and GNN models that generate different spectral predictions for the same metabolite candidates, and you want to combine them to improve ranking performance (average rank, Rank@K metrics) without retraining the base models.
+description: Use when you have pre-trained MLP and GNN models that generate different
+  spectral predictions for the same metabolite candidates, and you want to combine
+  them to improve ranking performance (average rank, Rank@K metrics) without retraining
+  the base models.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

@@ -1,6 +1,9 @@
 ---
 name: json-format-conversion
-description: Use when when you have extracted file metadata or scan summaries as R list objects from .raw files using readFileHeader(), readIndex(), or readSpectrum(), and need to persist them to disk, share them across systems, or feed them into downstream tools that consume JSON (e.
+description: Use when when you have extracted file metadata or scan summaries as R
+  list objects from .raw files using readFileHeader(), readIndex(), or readSpectrum(),
+  and need to persist them to disk, share them across systems, or feed them into downstream
+  tools that consume JSON (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,14 +16,18 @@ metadata:
   - rawrr
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
 - rjson::toJSON
 claims: []
 provenance:
@@ -46,6 +53,7 @@ attribution:
 
 # json-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert R list objects extracted from Thermo Fisher Scientific binary raw files into JSON format for serialization and storage. This skill enables portable exchange and downstream parsing of structured proteomics metadata and spectral summaries.

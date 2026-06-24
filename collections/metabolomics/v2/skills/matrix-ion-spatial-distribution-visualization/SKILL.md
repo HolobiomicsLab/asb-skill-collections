@@ -1,6 +1,9 @@
 ---
 name: matrix-ion-spatial-distribution-visualization
-description: Use when after rMSIcleanup has classified ions as matrix-related or non-matrix, and you need to audit, validate, or communicate the annotation decisions. Use it when overlapping or isobaric peaks are present in the dataset and you must document misclassification risks per annotation.
+description: Use when after rMSIcleanup has classified ions as matrix-related or non-matrix,
+  and you need to audit, validate, or communicate the annotation decisions. Use it
+  when overlapping or isobaric peaks are present in the dataset and you must document
+  misclassification risks per annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -14,11 +17,13 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - rMSIcleanup is an open-source R package
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 claims: []
@@ -44,6 +49,7 @@ attribution:
 
 # matrix-ion-spatial-distribution-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate multi-panel visual reports that display ion spatial maps alongside chemical formula identifiers, peak overlap status, and classification justification to transparently document matrix-related annotations in MSI datasets. This skill enables practitioners to inspect and validate the rationale behind each matrix vs. non-matrix ion classification decision.

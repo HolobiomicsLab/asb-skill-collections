@@ -1,6 +1,9 @@
 ---
 name: hit-metric-evaluation-fold-averaging
-description: Use when when you have a trained MS/MS spectral embedding model and need to measure compound identification accuracy on a held-out test set, but want to mitigate sensitivity to a single random train/test split. Use this skill if the original training set split is fixed (e.
+description: Use when when you have a trained MS/MS spectral embedding model and need
+  to measure compound identification accuracy on a held-out test set, but want to
+  mitigate sensitivity to a single random train/test split. Use this skill if the
+  original training set split is fixed (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -17,6 +20,7 @@ metadata:
   - SpecEmbedding-Comparison
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -46,6 +50,7 @@ attribution:
 
 # hit-metric-evaluation-fold-averaging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate spectral retrieval model performance using hit-rate metrics (e.g., top-1 hit rate) computed independently across 10 random query/reference test-set partitions, then aggregate results as mean and standard deviation to characterize model robustness and generalization.

@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -48,6 +49,7 @@ attribution:
 
 # lc-hrms-2d-area-standardization
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Standardize local-maxima detected in LC-HRMS profile mode data into uniform two-dimensional areas (retention time × m/z) for input to machine-learning models. This preprocessing step ensures consistent representation of potential chromatographic peaks across diverse samples and instrument configurations.

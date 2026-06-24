@@ -1,6 +1,9 @@
 ---
 name: package-dependency-management
-description: 'Use when you need to set up a cloned or downloaded scientific Python package for local development, testing, or execution. Specifically, use it when: (1) you have a package repository with a pyproject.toml or setup.py that declares dev dependencies;'
+description: 'Use when you need to set up a cloned or downloaded scientific Python
+  package for local development, testing, or execution. Specifically, use it when:
+  (1) you have a package repository with a pyproject.toml or setup.py that declares
+  dev dependencies;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3823
@@ -14,6 +17,7 @@ metadata:
   - falcon
   - falcon-ms
   - spectrum-utils
+  license_tier: restricted
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -22,8 +26,10 @@ derived_from:
 evidence_spans:
 - pip install -e .[dev]
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +57,7 @@ attribution:
 
 # package-dependency-management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install and manage Python package dependencies in development mode, ensuring all required tooling and test infrastructure are available for reproducible builds and local validation. This skill is essential when setting up a scientific Python package for development, testing, or reproducible analysis.

@@ -1,6 +1,8 @@
 ---
 name: vendor-data-standardization
-description: Use when you have raw MS data files directly from a vendor instrument (Thermo .raw, Agilent .d, Waters .ms, etc.) and need to process them through AriumMS or any other metabolomics pipeline that accepts only .mzXML or .mzML formats.
+description: Use when you have raw MS data files directly from a vendor instrument
+  (Thermo .raw, Agilent .d, Waters .ms, etc.) and need to process them through AriumMS
+  or any other metabolomics pipeline that accepts only .mzXML or .mzML formats.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3643
@@ -14,11 +16,13 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
 evidence_spans:
-- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed with the ProteoWizard Project
+- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed
+  with the ProteoWizard Project
 - msconvert, distributed with the ProteoWizard Project
 - msconvert, distributed with the ProteoWizard Project http://proteowizard.sourceforge.net/download.html
 claims: []

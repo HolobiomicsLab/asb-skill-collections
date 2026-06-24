@@ -1,6 +1,9 @@
 ---
 name: quality-control-sample-integration-in-normalization
-description: Use when your multi-class metabolomic peak table includes quality control samples (technical replicates) but no internal standards, and you need to compare the performance of multiple preprocessing workflows (normalization, imputation, transformation methods) to select the optimal pipeline for.
+description: Use when your multi-class metabolomic peak table includes quality control
+  samples (technical replicates) but no internal standards, and you need to compare
+  the performance of multiple preprocessing workflows (normalization, imputation,
+  transformation methods) to select the optimal pipeline for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,6 +22,7 @@ metadata:
   - statTarget
   - ProteoMM
   - BiocManager / Biobase / pcaMethods / limma / impute / statTarget / ProteoMM
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

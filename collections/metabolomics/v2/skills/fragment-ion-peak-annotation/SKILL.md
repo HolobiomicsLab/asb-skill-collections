@@ -1,6 +1,9 @@
 ---
 name: fragment-ion-peak-annotation
-description: Use when you have experimental MS/MS spectra matched against a reference library (via cosine similarity or dot-product scoring) and need to map individual fragment peaks in the experimental spectrum to their corresponding m/z and intensity values in the matched library entry.
+description: Use when you have experimental MS/MS spectra matched against a reference
+  library (via cosine similarity or dot-product scoring) and need to map individual
+  fragment peaks in the experimental spectrum to their corresponding m/z and intensity
+  values in the matched library entry.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -14,11 +17,13 @@ metadata:
   techniques:
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
 evidence_spans:
-- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library formats.'
+- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library
+  formats.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

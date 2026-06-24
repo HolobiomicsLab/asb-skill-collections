@@ -1,6 +1,9 @@
 ---
 name: comparative-output-analysis-across-parameter-states
-description: Use when when you need to validate that a boolean control parameter in BioTransformerAPI (useCypReact) properly gates a filtering module, or when you want to understand the qualitative and quantitative impact of CypReact filtering rules on predicted metabolite outputs for a given substrate and.
+description: Use when when you need to validate that a boolean control parameter in
+  BioTransformerAPI (useCypReact) properly gates a filtering module, or when you want
+  to understand the qualitative and quantitative impact of CypReact filtering rules
+  on predicted metabolite outputs for a given substrate and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -10,6 +13,7 @@ metadata:
   - BioTransformerAPI
   - CyProduct
   - Java
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -39,6 +43,7 @@ attribution:
 
 # comparative-output-analysis-across-parameter-states
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare metabolite predictions from BioTransformerAPI under different boolean parameter states (useCypReact on vs. off) to validate that the CypReact filter module toggles correctly and understand how filtering constraints affect predicted metabolite sets.

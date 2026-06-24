@@ -1,6 +1,9 @@
 ---
 name: multivariate-statistical-quality-control
-description: Use when after data normalization (Step 7) when you have a preprocessed feature matrix and need to identify samples that deviate significantly from the multivariate center of the data distribution due to instrumental drift, batch effects, sample degradation, or genuine biological outliers that.
+description: Use when after data normalization (Step 7) when you have a preprocessed
+  feature matrix and need to identify samples that deviate significantly from the
+  multivariate center of the data distribution due to instrumental drift, batch effects,
+  sample degradation, or genuine biological outliers that.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - OUKS (Omics Untargeted Key Script)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

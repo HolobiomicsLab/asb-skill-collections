@@ -1,6 +1,8 @@
 ---
 name: lc-ms-spectral-data-import
-description: Use when you have raw LC-MS/MS spectral data in .mgf format (or vendor-specific raw data that can be converted to .mgf via MZmine or similar tools) and need to prepare it for interactive exploration using the specXplore dashboard.
+description: Use when you have raw LC-MS/MS spectral data in .mgf format (or vendor-specific
+  raw data that can be converted to .mgf via MZmine or similar tools) and need to
+  prepare it for interactive exploration using the specXplore dashboard.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +18,7 @@ metadata:
   - ms2query
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -43,6 +46,7 @@ attribution:
 
 # LC-MS spectral data import
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw LC-MS/MS spectral data in .mgf format into a serialized specXplore session data object through an interactive Jupyter notebook pipeline. This skill bridges raw mass spectral acquisition output and downstream interactive visualization by validating input format, computing similarity embeddings, and persisting a structured session object to disk.

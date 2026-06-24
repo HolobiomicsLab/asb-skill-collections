@@ -1,6 +1,8 @@
 ---
 name: adduct-based-feature-consolidation
-description: Use when after accurate mass searching has assigned multiple detected m/z features to the same metabolite via positive and negative adduct libraries, and before sample-level feature merging.
+description: Use when after accurate mass searching has assigned multiple detected
+  m/z features to the same metabolite via positive and negative adduct libraries,
+  and before sample-level feature merging.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -17,13 +19,16 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak GUI provides functionality to facilitate users to get up and running as quickly as possible
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak GUI provides functionality to facilitate users to get up and running as
+  quickly as possible
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.

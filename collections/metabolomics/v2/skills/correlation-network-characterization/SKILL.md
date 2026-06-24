@@ -1,6 +1,9 @@
 ---
 name: correlation-network-characterization
-description: Use when after constructing a correlation-based network (adjacency matrix, edge list, or correlation-thresholded output) and you need to quantify its structural properties—such as which nodes are most central, how tightly clustered communities are, or how the network responds to perturbation.
+description: Use when after constructing a correlation-based network (adjacency matrix,
+  edge list, or correlation-thresholded output) and you need to quantify its structural
+  properties—such as which nodes are most central, how tightly clustered communities
+  are, or how the network responds to perturbation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,12 +16,15 @@ metadata:
   - R
   - pcutils
   - igraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 - devtools::install_github("Asa12138/pcutils")
 claims: []
@@ -44,6 +50,7 @@ attribution:
 
 # Reconstruct topological and stability metric computation for a constructed network
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute comprehensive topological and stability metrics from a network object to characterize network properties, including degree, centrality, clustering coefficients, path lengths, and robustness measures. This skill quantifies structural and dynamic properties essential for interpreting biological or systems networks.

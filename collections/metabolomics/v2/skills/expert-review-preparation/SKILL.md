@@ -1,6 +1,9 @@
 ---
 name: expert-review-preparation
-description: Use when when you have a set of molecular structures (from HMDB, RefMet, MoNA, NIST, or custom sources) with associated MS/MS spectra or retention time data, and need to identify which molecules and spectra are suitable for expert human review—either to validate model predictions, flag edge cases.
+description: Use when when you have a set of molecular structures (from HMDB, RefMet,
+  MoNA, NIST, or custom sources) with associated MS/MS spectra or retention time data,
+  and need to identify which molecules and spectra are suitable for expert human review—either
+  to validate model predictions, flag edge cases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -63,7 +66,8 @@ metadata:
   - JDK (Java Development Kit)
   - Gradle (gradlew)
   - GitHub
-  - Python environment tools (pandas, numpy, scikit-learn, joblib, tqdm, scipy, matplotlib, seaborn)
+  - Python environment tools (pandas, numpy, scikit-learn, joblib, tqdm, scipy, matplotlib,
+    seaborn)
   - GitLab
   - BiG-MAP
   - BiG-SCAPE
@@ -335,6 +339,7 @@ metadata:
   - limma
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -654,7 +659,8 @@ evidence_spans:
 - 'Source: github:gitlab.gwdg.de__joerg.buescher__automrm'
 - 'Source: github:arina-iva__DI-MS2_scripts'
 - 'Source: github:jesilee__CIDMD_setup'
-- These are generated using RDKit... We extensively use the ChEMBL structure curation pipeline developed with RDKit to clean the data and curate the database.
+- These are generated using RDKit... We extensively use the ChEMBL structure curation
+  pipeline developed with RDKit to clean the data and curate the database.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -1340,6 +1346,7 @@ attribution:
 
 # expert_review_preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare molecular structure and MS/MS spectral data for expert human review and validation by filtering inputs to supported atom types and precursor forms, then generating predicted spectra that can be compared against ground truth. This skill is applied when outputs from 3DMolMS or related predictive models require quality assurance before publication or integration into reference libraries.

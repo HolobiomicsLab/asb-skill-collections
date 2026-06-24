@@ -1,6 +1,9 @@
 ---
 name: screening-performance-metric-computation
-description: Use when after running inference with a pre-trained or fine-tuned NaFM model on a virtual screening dataset (compounds with known bioactivity labels or ground truth), compute screening-specific performance metrics to evaluate retrieval and ranking capability.
+description: Use when after running inference with a pre-trained or fine-tuned NaFM
+  model on a virtual screening dataset (compounds with known bioactivity labels or
+  ground truth), compute screening-specific performance metrics to evaluate retrieval
+  and ranking capability.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - Git
   - NaFM inference.py
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -42,6 +46,7 @@ attribution:
 
 # screening-performance-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute ranking, retrieval accuracy, and hit rate metrics on virtual screening predictions from a pre-trained molecular foundation model to validate performance against published benchmarks. This skill quantifies how well NaFM-generated molecular embeddings and predictions identify bioactive compounds in screening tasks.

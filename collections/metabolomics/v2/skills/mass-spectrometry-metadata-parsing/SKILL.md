@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-metadata-parsing
-description: Use when you have a Thermo Fisher Orbitrap .raw file and need to programmatically inspect or validate its acquisition parameters (instrument type, total scan count, acquisition duration, file name) before extracting spectral data, or when you need to serialize metadata to JSON for data provenance.
+description: Use when you have a Thermo Fisher Orbitrap .raw file and need to programmatically
+  inspect or validate its acquisition parameters (instrument type, total scan count,
+  acquisition duration, file name) before extracting spectral data, or when you need
+  to serialize metadata to JSON for data provenance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,14 +16,18 @@ metadata:
   - rawrr
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
 - rjson::toJSON
 claims: []
 provenance:
@@ -46,6 +53,7 @@ attribution:
 
 # mass-spectrometry-metadata-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and deserialize instrument metadata from proprietary Thermo Fisher Scientific .raw files into structured R objects (lists, data frames) using the RawFileReader API. This skill bridges the gap between binary mass spectrometry data storage and downstream R-based statistical analysis by exposing file-level metadata such as instrument model, acquisition time range, scan count, and control software version.

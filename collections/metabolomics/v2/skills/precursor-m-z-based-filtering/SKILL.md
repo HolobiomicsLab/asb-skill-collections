@@ -1,6 +1,8 @@
 ---
 name: precursor-m-z-based-filtering
-description: 'Use when you have an unknown MS/MS query spectrum with a known or measured precursor m/z value and need to search a spectral library (local or public: GNPS, MASSBANK, DrugBANK) to annotate the compound.'
+description: 'Use when you have an unknown MS/MS query spectrum with a known or measured
+  precursor m/z value and need to search a spectral library (local or public: GNPS,
+  MASSBANK, DrugBANK) to annotate the compound.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +17,13 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
 evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # precursor-m-z-based-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and match MS/MS spectra by precursor mass-to-charge ratio (m/z) to reduce the search space during spectral library lookup and improve annotation specificity. This skill is essential when matching unknown query spectra against large spectral libraries or databases where exact precursor m/z alignment is a prerequisite for confident compound identification.

@@ -1,6 +1,9 @@
 ---
 name: response-status-code-interpretation
-description: Use when when you need to confirm that a documented web service endpoint is deployed and accessible before using it for analysis, or when troubleshooting tool availability in a bioinformatics pipeline. Apply this skill after obtaining a service URL (e.
+description: Use when when you need to confirm that a documented web service endpoint
+  is deployed and accessible before using it for analysis, or when troubleshooting
+  tool availability in a bioinformatics pipeline. Apply this skill after obtaining
+  a service URL (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -8,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_0769
   tools:
   - molDiscovery
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-021-23986-0
   title: moldiscovery
@@ -36,6 +40,7 @@ attribution:
 
 # response-status-code-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the operational status of a deployed web service by issuing HTTP requests and interpreting response status codes to confirm accessibility and correct deployment. This skill is essential for verifying that online tools and endpoints are live and functioning before integration into downstream scientific workflows.

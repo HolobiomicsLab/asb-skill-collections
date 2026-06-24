@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-transition-data-formatting
-description: Use when when you have raw mass spectrometry transition data from a triple-quadrupole or other tandem MS instrument and need to prepare it for suspect chemical screening using EISA-EXPOSOME, or when merging custom compound libraries into the T3DB format.
+description: Use when when you have raw mass spectrometry transition data from a triple-quadrupole
+  or other tandem MS instrument and need to prepare it for suspect chemical screening
+  using EISA-EXPOSOME, or when merging custom compound libraries into the T3DB format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +14,14 @@ metadata:
   - EISA-EXPOSOME
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME
 evidence_spans:
 - We provide a Rshiny program for EISA-EXPOSOME
-- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown below
+- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown
+  below
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

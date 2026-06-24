@@ -1,6 +1,9 @@
 ---
 name: genbank-format-parsing-and-processing
-description: Use when you have BGC sequences in GenBank format and need to extract gene-level features (coordinates, sequences, functional annotations) as input to domain annotation and tokenization pipelines. Use this skill when starting a BGC analysis from raw GenBank files rather than pre-parsed gene lists.
+description: Use when you have BGC sequences in GenBank format and need to extract
+  gene-level features (coordinates, sequences, functional annotations) as input to
+  domain annotation and tokenization pipelines. Use this skill when starting a BGC
+  analysis from raw GenBank files rather than pre-parsed gene lists.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3209
@@ -10,11 +13,13 @@ metadata:
   tools:
   - iPRESTO
   - BioPython
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: expression-level-filtering-with-edger
-description: Use when when you have a raw count matrix derived from Salmon or similar quantification tools and need to remove lowly-expressed features before normalization and batch correction.
+description: Use when when you have a raw count matrix derived from Salmon or similar
+  quantification tools and need to remove lowly-expressed features before normalization
+  and batch correction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,13 +16,16 @@ metadata:
   - ggplot2
   - ComplexHeatmap
   - Nextflow
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva'
 - 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

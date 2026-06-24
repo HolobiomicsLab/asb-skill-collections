@@ -1,6 +1,9 @@
 ---
 name: ms-spectrum-similarity-grouping
-description: Use when after computing a sparse pairwise distance matrix from nearest neighbor indexes of MS/MS spectra (in mzML, mzXML, or MGF format), and you need to assign each spectrum to a cluster group for downstream analysis such as peptide identification or spectral library construction.
+description: Use when after computing a sparse pairwise distance matrix from nearest
+  neighbor indexes of MS/MS spectra (in mzML, mzXML, or MGF format), and you need
+  to assign each spectrum to a cluster group for downstream analysis such as peptide
+  identification or spectral library construction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,11 +17,13 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 - pip install falcon-ms spectrum-utils==0.3.5
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # ms-spectrum-similarity-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply density-based clustering (DBSCAN) to a sparse pairwise distance matrix derived from nearest neighbor indexes to group similar MS/MS spectra into clusters. This is the final step in the falcon pipeline for large-scale spectrum clustering, assigning each spectrum a cluster label based on cosine distance thresholds and local density.

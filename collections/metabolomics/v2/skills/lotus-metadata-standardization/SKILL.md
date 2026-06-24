@@ -1,6 +1,9 @@
 ---
 name: lotus-metadata-standardization
-description: Use when you have raw compound or natural-product metadata in spreadsheet or tabular form with inconsistent column names, missing structure information, or when you need to query against the LOTUS natural-product database and suspect the local copy is stale or absent.
+description: Use when you have raw compound or natural-product metadata in spreadsheet
+  or tabular form with inconsistent column names, missing structure information, or
+  when you need to query against the LOTUS natural-product database and suspect the
+  local copy is stale or absent.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - drugbank_extraction.py
   - jobs.py
   - metadata_cleanup_prefect.py
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

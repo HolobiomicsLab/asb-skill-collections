@@ -1,6 +1,9 @@
 ---
 name: lipid-feature-identifier-matching
-description: Use when you have an isotope-corrected or raw MSI dataset stored in HDF5 format following Cardinal::HDF5 conventions, a user-provided internal standard definition (sample identifier and/or feature name), and need to locate and extract the intensity row for that lipid before performing ratio-based.
+description: Use when you have an isotope-corrected or raw MSI dataset stored in HDF5
+  format following Cardinal::HDF5 conventions, a user-provided internal standard definition
+  (sample identifier and/or feature name), and need to locate and extract the intensity
+  row for that lipid before performing ratio-based.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2421
@@ -13,12 +16,14 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # lipid-feature-identifier-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match user-specified lipid identifiers (internal standards or target species) to their corresponding feature rows in mass spectrometry imaging HDF5 data structures by querying featureData metadata. This skill enables precise extraction of intensity vectors for downstream quantitation or comparison operations.

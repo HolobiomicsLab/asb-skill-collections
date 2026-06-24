@@ -1,6 +1,8 @@
 ---
 name: java-library-dependency-provisioning
-description: Use when deploying a Java-based scientific application (such as CEU Mass Mediator) to an application server and the deployment documentation specifies required JAR libraries.
+description: Use when deploying a Java-based scientific application (such as CEU Mass
+  Mediator) to an application server and the deployment documentation specifies required
+  JAR libraries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3792
@@ -8,6 +10,7 @@ metadata:
   - http://edamontology.org/topic_0091
   tools:
   - javax.faces-2.2.12.jar
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00720
   title: CEU Mass Mediator 3.0

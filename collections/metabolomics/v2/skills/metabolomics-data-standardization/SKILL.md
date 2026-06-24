@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-standardization
-description: Use when you have raw 1D NMR spectral data (urine, worm, or other biological samples) that needs to be converted into peak tables for metabolite identification and quantification.
+description: Use when you have raw 1D NMR spectral data (urine, worm, or other biological
+  samples) that needs to be converted into peak tables for metabolite identification
+  and quantification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,11 +15,13 @@ metadata:
   - NMRBox
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03078
   title: SAND
 evidence_spans:
-- Any user is welcome to make new modificaitons on the SAND code, particularly its version for NMRBox
+- Any user is welcome to make new modificaitons on the SAND code, particularly its
+  version for NMRBox
 - interface to NMRPipe (pipe_scripts/)
 claims: []
 provenance:

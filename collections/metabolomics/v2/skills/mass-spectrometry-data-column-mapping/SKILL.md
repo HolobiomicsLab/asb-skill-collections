@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-column-mapping
-description: Use when you have generated a peak table or feature list from MZmine, XCMS, MS-DIAL, or Compound Discoverer in its native export format and need to ingest it into LipidMatch for lipid identification.
+description: Use when you have generated a peak table or feature list from MZmine,
+  XCMS, MS-DIAL, or Compound Discoverer in its native export format and need to ingest
+  it into LipidMatch for lipid identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,11 +17,13 @@ metadata:
   - LipidMatch
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

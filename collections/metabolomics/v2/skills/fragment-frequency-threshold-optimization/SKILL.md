@@ -1,6 +1,8 @@
 ---
 name: fragment-frequency-threshold-optimization
-description: Use when you have replicate MS/MS spectra with labeled fragment recurrence frequencies and need to select an optimal frequency threshold (beyond the default 0.1) that maximizes spectral quality metrics while minimizing false positive noise.
+description: Use when you have replicate MS/MS spectra with labeled fragment recurrence
+  frequencies and need to select an optimal frequency threshold (beyond the default
+  0.1) that maximizes spectral quality metrics while minimizing false positive noise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -21,13 +23,18 @@ metadata:
   - patchwork
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +58,7 @@ attribution:
 
 # fragment-frequency-threshold-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize the frequency cutoff threshold applied during MS/MS spectrum denoising to balance signal retention and noise reduction. This skill determines the minimal recurrence frequency at which fragment ions should be retained in consensus spectra, using statistical and Pareto front analysis methods.

@@ -1,6 +1,9 @@
 ---
 name: feature-matrix-aggregation-across-samples
-description: Use when after per-sample quantification is complete (e.g., salmon has produced quant.sf files for all samples in the cohort) and you need to prepare data for differential expression analysis, quality control comparisons, or multi-omics integration.
+description: Use when after per-sample quantification is complete (e.g., salmon has
+  produced quant.sf files for all samples in the cohort) and you need to prepare data
+  for differential expression analysis, quality control comparisons, or multi-omics
+  integration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -19,13 +22,15 @@ metadata:
   - Salmon
   - Nextflow
   - nf-core/rnaseq
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - Genes, miRNA, isoforms | SRA download | SRA toolkit
 - Genes, miRNA, isoforms | Quality control | FastQC, trimgalore
-- It uses Docker/Singularity containers making installation trivial and results highly reproducible.
+- It uses Docker/Singularity containers making installation trivial and results highly
+  reproducible.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

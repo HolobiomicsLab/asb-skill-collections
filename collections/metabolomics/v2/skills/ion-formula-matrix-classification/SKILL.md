@@ -1,6 +1,8 @@
 ---
 name: ion-formula-matrix-classification
-description: Use when you have peak data from MSI experiments (stored as .zip peak matrix files) where matrix ions (e.g., silver adducts in AgLDI-MSI) dominate the spectrum and obscure analyte signals.
+description: Use when you have peak data from MSI experiments (stored as .zip peak
+  matrix files) where matrix ions (e.g., silver adducts in AgLDI-MSI) dominate the
+  spectrum and obscure analyte signals.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -15,11 +17,13 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - devtools::install_github("prafols/rMSIproc", ref = "0.2")
 - rMSIcleanup is an open-source R package
@@ -47,6 +51,7 @@ attribution:
 
 # Ion formula and spatial distribution matrix classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify ions detected in mass spectrometry imaging (MSI) data as matrix-related or analyte-related by integrating chemical formula matching against known matrix characteristics with spatial distribution coherence metrics. This skill automates removal of matrix-background noise from MSI datasets, improving signal-to-noise and enabling more reliable downstream analysis of tissue-localized molecular species.

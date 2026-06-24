@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-feature-intensity-normalization
-description: Use when after aligning raw mass spectra into a 2D feature intensity matrix (features × time points) but before computing pointwise correlation to identify feature pairs with matching temporal profiles.
+description: Use when after aligning raw mass spectra into a 2D feature intensity
+  matrix (features × time points) but before computing pointwise correlation to identify
+  feature pairs with matching temporal profiles.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,11 +17,13 @@ metadata:
   - scipy.stats
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # mass-spectrometry-feature-intensity-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize extracted ion chromatogram (XIC) intensity profiles across mass spectrometric features to remove absolute intensity differences before correlation analysis. This preprocessing step ensures that temporal dynamics rather than signal magnitude drive the identification of co-eluting adducts and in-source fragments in time-resolved DBDI-MS datasets.

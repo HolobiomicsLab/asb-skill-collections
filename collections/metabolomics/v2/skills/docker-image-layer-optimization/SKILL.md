@@ -1,6 +1,9 @@
 ---
 name: docker-image-layer-optimization
-description: Use when you are building a Docker image for a .NET Framework 4.8 application (like AirdPro) that must run on both Windows native containers and Linux+Wine environments, and you need to reduce build time and image size while maintaining separate targets for GUI, CLI, and development modes.
+description: Use when you are building a Docker image for a .NET Framework 4.8 application
+  (like AirdPro) that must run on both Windows native containers and Linux+Wine environments,
+  and you need to reduce build time and image size while maintaining separate targets
+  for GUI, CLI, and development modes.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -12,6 +15,7 @@ metadata:
   - XQuartz
   - Wine
   - .NET Framework 4.8
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -45,6 +49,7 @@ attribution:
 
 # docker-image-layer-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize multi-stage Docker builds for Windows .NET Framework applications running under Wine on Linux by structuring build and runtime stages to minimize layer bloat, enable BuildKit caching, and reduce final image size. This skill is essential when deploying GUI or CLI applications that require both compilation and runtime dependencies across heterogeneous host platforms.

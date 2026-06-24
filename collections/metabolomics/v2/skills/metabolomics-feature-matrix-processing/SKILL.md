@@ -1,6 +1,9 @@
 ---
 name: metabolomics-feature-matrix-processing
-description: Use when you have a raw metabolomics intensity matrix with missing or zero values across samples in different experimental groups, and you need to input it into pathway activity scoring methods (PLAGE, ORA, GSEA) or metabolite set analysis pipelines that require normalized, zero-mean unit-variance.
+description: Use when you have a raw metabolomics intensity matrix with missing or
+  zero values across samples in different experimental groups, and you need to input
+  it into pathway activity scoring methods (PLAGE, ORA, GSEA) or metabolite set analysis
+  pipelines that require normalized, zero-mean unit-variance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +16,7 @@ metadata:
   - MS2LDA
   - PALS (Pathway Activity Level Scoring)
   - SciPy preprocessing module
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

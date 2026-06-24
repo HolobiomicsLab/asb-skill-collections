@@ -1,6 +1,8 @@
 ---
 name: probabilistic-classification-network-construction
-description: Use when when you have raw mass spectrometry imaging data tensors and need to build a trainable deep-learning classifier that outputs class probabilities (tumor vs. non-tumor) without preprocessing or manual peak detection.
+description: Use when when you have raw mass spectrometry imaging data tensors and
+  need to build a trainable deep-learning classifier that outputs class probabilities
+  (tumor vs. non-tumor) without preprocessing or manual peak detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,6 +19,7 @@ metadata:
   - massNet
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac032/6510930
   title: massNet
@@ -47,6 +50,7 @@ attribution:
 
 # probabilistic-classification-network-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and compile a Keras deep-learning network architecture for probabilistic classification of mass spectrometry imaging (MSI) data without requiring prior peak picking. This skill encapsulates the design, layer construction, and serialization of a neural network model that directly accepts raw MSI tensors and outputs probability distributions across tumor/non-tumor classes.

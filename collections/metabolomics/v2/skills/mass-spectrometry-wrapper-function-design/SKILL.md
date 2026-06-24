@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-wrapper-function-design
-description: Use when when you have a Spectra-based MS analysis workflow in R but need access to specialized spectral similarity, filtering, or normalization algorithms available only in Python libraries.
+description: Use when when you have a Spectra-based MS analysis workflow in R but
+  need access to specialized spectral similarity, filtering, or normalization algorithms
+  available only in Python libraries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,12 +18,15 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
-- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy* allows a seamless integration of Python libraries into R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
+- MS analysis in R. By wrapping Python functionality into R functions, *SpectriPy*
+  allows a seamless integration of Python libraries into R
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # Mass Spectrometry Wrapper Function Design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement R functions that wrap Python mass spectrometry library functionality to enable seamless cross-language integration of spectral analysis workflows. This skill enables reuse of specialized Python MS packages (e.g., matchms, spectrum_utils) within R-based Spectra objects without reimplementing algorithms.

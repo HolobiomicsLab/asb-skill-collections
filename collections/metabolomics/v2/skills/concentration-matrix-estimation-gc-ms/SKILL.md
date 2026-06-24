@@ -1,6 +1,8 @@
 ---
 name: concentration-matrix-estimation-gc-ms
-description: Use when after GCMSFormer (or similar Transformer model) has predicted pure mass spectra (matrix S) for all components in overlapped GC-MS peaks, apply this skill to quantify the relative abundance of each component.
+description: Use when after GCMSFormer (or similar Transformer model) has predicted
+  pure mass spectra (matrix S) for all components in overlapped GC-MS peaks, apply
+  this skill to quantify the relative abundance of each component.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,7 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

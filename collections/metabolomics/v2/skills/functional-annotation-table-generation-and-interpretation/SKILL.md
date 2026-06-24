@@ -1,6 +1,9 @@
 ---
 name: functional-annotation-table-generation-and-interpretation
-description: Use when after running CPAT, signalP, Pfam, and fimo tools on differentially expressed isoform or exon FASTA sequences, and you need to consolidate their individual outputs into a single indexed table to compare functional properties across isoforms, identify isoforms with specific domain.
+description: Use when after running CPAT, signalP, Pfam, and fimo tools on differentially
+  expressed isoform or exon FASTA sequences, and you need to consolidate their individual
+  outputs into a single indexed table to compare functional properties across isoforms,
+  identify isoforms with specific domain.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -15,6 +18,7 @@ metadata:
   - fimo
   - IsoformSwitchAnalyzer
   - Pfam
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator

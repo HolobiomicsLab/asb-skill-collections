@@ -1,6 +1,9 @@
 ---
 name: msms-spectrum-data-structure-manipulation
-description: Use when you have raw or downloaded MSMS spectra (from online resources via Universal Spectrum Identifier, or from local mzML/mzXML files) that require standardization, cleaning, and fragment assignment before visualization, statistical comparison, or machine-learning feature extraction.
+description: Use when you have raw or downloaded MSMS spectra (from online resources
+  via Universal Spectrum Identifier, or from local mzML/mzXML files) that require
+  standardization, cleaning, and fragment assignment before visualization, statistical
+  comparison, or machine-learning feature extraction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,12 +19,15 @@ metadata:
   - PSI-MOD
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # msms-spectrum-data-structure-manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, filter, annotate, and transform tandem mass spectrometry (MSMS) spectra using the spectrum_utils MsmsSpectrum data structure, enabling preparation of spectra for publication-quality visualization and downstream analysis. This skill encompasses mass range restriction, noise/precursor removal, intensity normalization, and fragment annotation via ProForma 2.0 peptide strings.

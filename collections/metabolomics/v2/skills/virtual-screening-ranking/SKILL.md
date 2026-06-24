@@ -1,6 +1,8 @@
 ---
 name: virtual-screening-ranking
-description: Use when you have a library of natural product compounds (encoded as SMILES strings) and wish to rank them by predicted bioactivity or fitness for a downstream task.
+description: Use when you have a library of natural product compounds (encoded as
+  SMILES strings) and wish to rank them by predicted bioactivity or fitness for a
+  downstream task.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +15,7 @@ metadata:
   - Git
   - inference.py
   - PyTorch Geometric (PyG)
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -42,6 +45,7 @@ attribution:
 
 # virtual-screening-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a pre-trained natural product foundation model to rank and prioritize compounds in virtual screening campaigns, generating molecular embeddings and bioactivity predictions to identify novel bioactive natural product candidates. This skill leverages NaFM's learned evolutionary patterns to evaluate screening compound libraries against target properties.

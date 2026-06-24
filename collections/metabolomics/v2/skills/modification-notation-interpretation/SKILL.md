@@ -1,6 +1,8 @@
 ---
 name: modification-notation-interpretation
-description: Use when you have a ProForma 2.0 peptidoform string (e.g., DLTDYLM[Oxidation]K) and need to extract the underlying peptide sequence and map modification positions to enable fragment ion annotation, mass calculation, or spectral matching.
+description: Use when you have a ProForma 2.0 peptidoform string (e.g., DLTDYLM[Oxidation]K)
+  and need to extract the underlying peptide sequence and map modification positions
+  to enable fragment ion annotation, mass calculation, or spectral matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -14,6 +16,7 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -44,6 +47,7 @@ attribution:
 
 # modification-notation-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and interpret standardized peptide modification notation (ProForma 2.0) to extract sequence and modification positions for downstream annotation and analysis. This skill enables computational tools to understand and work with complex modified peptidoforms deposited in public repositories.

@@ -1,6 +1,9 @@
 ---
 name: multivariate-feature-importance-extraction
-description: 'Use when you have a preprocessed peak table (feature matrix: samples × peaks) with known class labels or phenotype groupings, and you want to identify which individual peaks contribute most to classification or discrimination between groups.'
+description: 'Use when you have a preprocessed peak table (feature matrix: samples
+  × peaks) with known class labels or phenotype groupings, and you want to identify
+  which individual peaks contribute most to classification or discrimination between
+  groups.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2990
@@ -13,6 +16,7 @@ metadata:
   - R (base and statistical packages)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

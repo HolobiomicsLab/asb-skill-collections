@@ -1,6 +1,9 @@
 ---
 name: inference-performance-benchmarking
-description: Use when you have trained two or more graph neural network models on the same CCS dataset split (using identical hyperparameters, loss functions, and optimization settings) and need to rigorously compare their held-out test performance to determine which architecture balances prediction accuracy.
+description: Use when you have trained two or more graph neural network models on
+  the same CCS dataset split (using identical hyperparameters, loss functions, and
+  optimization settings) and need to rigorously compare their held-out test performance
+  to determine which architecture balances prediction accuracy.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,6 +16,7 @@ metadata:
   - scikit-learn metrics
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -41,6 +45,7 @@ attribution:
 
 # Inference-Performance Benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and compare the computational efficiency and predictive accuracy of alternative GNN architectures for collision cross section prediction by measuring inference speed, training time, and regression metrics (RMSE, MAE) on held-out test sets. This skill enables quantitative assessment of whether architectural changes improve model performance without sacrificing generalizability.

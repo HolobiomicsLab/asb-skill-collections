@@ -1,6 +1,9 @@
 ---
 name: organism-taxonomy-identifier-mapping
-description: Use when integrating organism records from 31 or more initial open databases with inconsistent taxonomy nomenclature, or when you need to count unique organisms in a validated structure-organism pair collection and verify the count against a known aggregate (e.
+description: Use when integrating organism records from 31 or more initial open databases
+  with inconsistent taxonomy nomenclature, or when you need to count unique organisms
+  in a validated structure-organism pair collection and verify the count against a
+  known aggregate (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -11,6 +14,7 @@ metadata:
   - R
   - Python 3
   - Kotlin
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -45,6 +49,7 @@ attribution:
 
 # organism-taxonomy-identifier-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map and deduplicate organism taxonomy identifiers from heterogeneous natural products databases to produce a unified, validated organism reference set. This skill consolidates taxonomy data across multiple source formats and standardizations to enable accurate structure-organism pairing.

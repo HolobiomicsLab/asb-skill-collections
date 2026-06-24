@@ -1,6 +1,8 @@
 ---
 name: retention-time-alignment-validation
-description: Use when after sample alignment step in untargeted LC-MS workflows, particularly when processing multi-sample cohorts with QC samples interspersed throughout the sequence.
+description: Use when after sample alignment step in untargeted LC-MS workflows, particularly
+  when processing multi-sample cohorts with QC samples interspersed throughout the
+  sequence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - SLAW alignment module
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -39,6 +42,7 @@ attribution:
 
 # Retention-Time Alignment Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validation of LC-MS retention time (RT) alignment across samples by comparing aligned RT coordinates against reference peaks detected in QC samples. This skill ensures that RT correction has been accurately applied before downstream feature grouping and gap-filling.

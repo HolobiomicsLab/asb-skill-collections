@@ -1,6 +1,8 @@
 ---
 name: metabolite-stability-database-retrieval
-description: Use when you have measured metabolites or lipids from blood samples (plasma or serum) and need to assess whether quantitative results may be compromised by pre-analytical handling.
+description: Use when you have measured metabolites or lipids from blood samples (plasma
+  or serum) and need to assess whether quantitative results may be compromised by
+  pre-analytical handling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,11 +14,13 @@ metadata:
   - Shiny
   - RStudio
   - ALISTER (web application)
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cca.2024.117858
   title: ALISTER
 evidence_spans:
-- ALISTER is a web-app containing scientific information on pre-analytical blood sample stability in metabolomics and lipidomics
+- ALISTER is a web-app containing scientific information on pre-analytical blood sample
+  stability in metabolomics and lipidomics
 - '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
 claims: []
 provenance:

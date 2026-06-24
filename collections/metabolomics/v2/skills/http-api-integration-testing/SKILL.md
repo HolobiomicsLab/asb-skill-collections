@@ -1,6 +1,9 @@
 ---
 name: http-api-integration-testing
-description: Use when you have deployed a microservice (e.g., TensorFlow Serving, REST API) and need to verify that specific endpoints (e.g., /model/metadata, /classify) return responses with correct schema, field names, and data types before consuming them in production workflows or downstream applications.
+description: Use when you have deployed a microservice (e.g., TensorFlow Serving,
+  REST API) and need to verify that specific endpoints (e.g., /model/metadata, /classify)
+  return responses with correct schema, field names, and data types before consuming
+  them in production workflows or downstream applications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -11,6 +14,7 @@ metadata:
   - docker-compose
   - TensorFlow Serving
   - curl / HTTP client library
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -38,6 +42,7 @@ attribution:
 
 # HTTP API Integration Testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a running service's HTTP API endpoints return correctly structured responses with expected field values and metadata. This skill is essential for confirming that API contracts (input/output layer names, response schemas) match implementation before downstream integration.

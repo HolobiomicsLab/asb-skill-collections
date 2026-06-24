@@ -1,6 +1,9 @@
 ---
 name: peptide-spectrum-matching-evaluation
-description: 'Use when when you have a tandem mass spectrum (MSMS) with known peptide sequence and wish to assess whether enabling neutral loss annotation (e.g., NH3: −17.026549, H2O: −18.010565) increases the proportion of observed m/z peaks that can be matched to predicted fragment ions.'
+description: 'Use when when you have a tandem mass spectrum (MSMS) with known peptide
+  sequence and wish to assess whether enabling neutral loss annotation (e.g., NH3:
+  −17.026549, H2O: −18.010565) increases the proportion of observed m/z peaks that
+  can be matched to predicted fragment ions.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,12 +17,15 @@ metadata:
   - Universal Spectrum Identifier (USI)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - spectrum_utils is a Python package
 - spectrum = sus.MsmsSpectrum.from_usi(usi)
 claims: []
@@ -45,6 +51,7 @@ attribution:
 
 # Peptide-Spectrum Matching Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the quality and completeness of peptide-spectrum matches by quantifying the fraction of observed peaks that receive fragment ion annotations under different annotation strategies (e.g., with and without neutral losses). This skill measures how effectively fragment annotation settings improve peak interpretation coverage.

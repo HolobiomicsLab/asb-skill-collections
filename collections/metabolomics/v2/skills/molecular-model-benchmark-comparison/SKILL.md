@@ -1,6 +1,9 @@
 ---
 name: molecular-model-benchmark-comparison
-description: Use when when you have (1) a candidate foundation model or pre-trained weights for natural products (e.g., NaFM), (2) one or more baseline models pre-trained on synthetic molecules (e.g., ChemBERTa, MolBERT), (3) a held-out test set from a downstream task (e.
+description: Use when when you have (1) a candidate foundation model or pre-trained
+  weights for natural products (e.g., NaFM), (2) one or more baseline models pre-trained
+  on synthetic molecules (e.g., ChemBERTa, MolBERT), (3) a held-out test set from
+  a downstream task (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -14,6 +17,7 @@ metadata:
   - scikit-learn
   - train.py
   - inference.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -41,6 +45,7 @@ attribution:
 
 # molecular-model-benchmark-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate a natural product foundation model (NaFM) against baseline models pre-trained on synthetic molecules on the same held-out test set, using unified metrics (accuracy, precision, recall, F1-score per taxonomy class) to quantify performance differences and demonstrate domain-specific advantages. This skill surfaces when assessing whether domain-specialized pre-training (natural products vs. synthetic chemistry) captures task-relevant structural and evolutionary patterns.

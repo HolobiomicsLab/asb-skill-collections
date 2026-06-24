@@ -14,16 +14,23 @@ metadata:
   - NumPy
   - TensorFlow or PyTorch
   - Scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest models were implemented using
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- models can predict the entire set of metabolites at once, and all models were evaluated
+  using 10 iterations of 10-fold cross-validation. Random Forest models were implemented
+  using
 - CLR transformation applied to all data except IBD PRISM microbes
-- where W is the weight matrix connecting layer l−1 and layer l. Each element in S represents a microbe-metabolite feature attribution score
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
+- where W is the weight matrix connecting layer l−1 and layer l. Each element in S
+  represents a microbe-metabolite feature attribution score
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # Reconstruct feature attribution score matrix from trained neural networks using Olden's method
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and interpret learned feature relationships from trained multilayer perceptron networks by computing element-wise products of weight matrices across all hidden layers, producing a normalized microbe-metabolite interaction score matrix where positive and negative values indicate predicted directional effects on metabolite abundance.

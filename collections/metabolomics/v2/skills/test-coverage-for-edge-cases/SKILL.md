@@ -1,6 +1,8 @@
 ---
 name: test-coverage-for-edge-cases
-description: Use when integrating a new metadata validation step into a conversion pipeline that fetches structured chemical identifiers (SMILES, InChI, CAS numbers, IUPAC names) from external services.
+description: Use when integrating a new metadata validation step into a conversion
+  pipeline that fetches structured chemical identifiers (SMILES, InChI, CAS numbers,
+  IUPAC names) from external services.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -17,6 +19,7 @@ metadata:
   - PubChem
   - IDSM
   - BridgeDb
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

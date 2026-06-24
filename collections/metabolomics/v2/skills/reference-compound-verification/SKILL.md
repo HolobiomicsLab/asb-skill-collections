@@ -1,6 +1,8 @@
 ---
 name: reference-compound-verification
-description: Use when after formatting raw mass spectrometry transition data into the EISA-EXPOSOME schema (NAME, PrecursorMZ, ProductMZ, Intensity, RT, ID columns), and before exporting the final database file.
+description: Use when after formatting raw mass spectrometry transition data into
+  the EISA-EXPOSOME schema (NAME, PrecursorMZ, ProductMZ, Intensity, RT, ID columns),
+  and before exporting the final database file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,12 +15,14 @@ metadata:
   - EISA-EXPOSOME
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME
 evidence_spans:
 - We provide a Rshiny program for EISA-EXPOSOME
-- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown below
+- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown
+  below
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

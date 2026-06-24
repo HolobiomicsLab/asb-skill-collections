@@ -1,6 +1,9 @@
 ---
 name: polymorphic-method-dispatch-on-plot-kind
-description: Use when when building a plotting library that must support multiple visualization types (1D spectra, chromatograms, mobilograms, 2D peak maps) across heterogeneous rendering backends, and you want users to specify plot type via a single kind parameter rather than importing backend-specific classes.
+description: Use when when building a plotting library that must support multiple
+  visualization types (1D spectra, chromatograms, mobilograms, 2D peak maps) across
+  heterogeneous rendering backends, and you want users to specify plot type via a
+  single kind parameter rather than importing backend-specific classes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,6 +19,7 @@ metadata:
   - bokeh
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -25,7 +29,8 @@ evidence_spans:
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # polymorphic-method-dispatch-on-plot-kind
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A class hierarchy and dispatch mechanism that routes plot kind arguments (spectrum, chromatogram, mobilogram, peakmap) to concrete plot subclasses, each implementing backend-specific rendering for mass spectrometry data visualization. This enables consistent Pandas-style plotting API across matplotlib (static) and bokeh/plotly (interactive) backends.

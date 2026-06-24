@@ -1,6 +1,9 @@
 ---
 name: tsv-file-generation
-description: Use when after completing a BiG-SLiCE v2 clustering analysis on an input folder of BGCs, when you need to retrieve the computed BGC and GCF cluster membership tables in a portable, widely-compatible tabular format rather than querying the SQLite database directly.
+description: Use when after completing a BiG-SLiCE v2 clustering analysis on an input
+  folder of BGCs, when you need to retrieve the computed BGC and GCF cluster membership
+  tables in a portable, widely-compatible tabular format rather than querying the
+  SQLite database directly.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -10,6 +13,7 @@ metadata:
   tools:
   - BiG-SLiCE
   - pyHMMER
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

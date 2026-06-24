@@ -1,6 +1,9 @@
 ---
 name: error-state-tracking-across-microservices
-description: Use when building or maintaining a system that fetches metadata from multiple independent external web services and needs to diagnose why annotation runs fail or slow down. Use it specifically when you need to distinguish between service-level failures (e.
+description: Use when building or maintaining a system that fetches metadata from
+  multiple independent external web services and needs to diagnose why annotation
+  runs fail or slow down. Use it specifically when you need to distinguish between
+  service-level failures (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -16,6 +19,7 @@ metadata:
   - BridgeDb
   - pytest
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

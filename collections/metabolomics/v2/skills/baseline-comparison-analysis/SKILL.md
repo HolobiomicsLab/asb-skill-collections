@@ -1,6 +1,8 @@
 ---
 name: baseline-comparison-analysis
-description: Use when when you have trained a candidate model (e.g., an ensemble, a new architecture) and need to demonstrate its advantage over published or reference implementations on the same test data.
+description: Use when when you have trained a candidate model (e.g., an ensemble,
+  a new architecture) and need to demonstrate its advantage over published or reference
+  implementations on the same test data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3809
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

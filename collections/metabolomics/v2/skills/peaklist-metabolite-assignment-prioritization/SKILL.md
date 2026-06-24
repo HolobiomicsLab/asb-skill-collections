@@ -1,6 +1,8 @@
 ---
 name: peaklist-metabolite-assignment-prioritization
-description: Use when you have extracted m/z and retention time (m/z-RT) information for peaks from untargeted LC/HRMS data (using tools like IDSL.IPA) and need to assign molecular formula identities to those peaks.
+description: Use when you have extracted m/z and retention time (m/z-RT) information
+  for peaks from untargeted LC/HRMS data (using tools like IDSL.IPA) and need to assign
+  molecular formula identities to those peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,11 +16,14 @@ metadata:
   techniques:
   - CE-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c00563
   title: IDSL.UFA
 evidence_spans:
-- '**United Formula Annotation (UFA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me/) is a light-weight R package'
+- '**United Formula Annotation (UFA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me/) is a light-weight
+  R package'
 - annotate peaklists from the IDSL.IPA package with molecular formula
 - light-weight R package
 claims: []

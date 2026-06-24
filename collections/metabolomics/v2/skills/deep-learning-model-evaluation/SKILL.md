@@ -1,6 +1,8 @@
 ---
 name: deep-learning-model-evaluation
-description: Use when after training a Siamese neural network on MS/MS spectrum pairs, use this skill to quantify prediction performance on a disjoint test set (e.g., 3600+ spectra from 500 unseen compounds).
+description: Use when after training a Siamese neural network on MS/MS spectrum pairs,
+  use this skill to quantify prediction performance on a disjoint test set (e.g.,
+  3600+ spectra from 500 unseen compounds).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -15,15 +17,20 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
 - mean squared error (MSE) loss
 claims: []
 provenance:
@@ -48,6 +55,7 @@ attribution:
 
 # deep-learning-model-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate a trained deep learning model's prediction accuracy on a held-out test set of spectrum pairs by computing root mean squared error (RMSE) between predicted and reference structural similarity scores. This skill assesses whether the model generalizes well to unseen data without applying uncertainty filtering.

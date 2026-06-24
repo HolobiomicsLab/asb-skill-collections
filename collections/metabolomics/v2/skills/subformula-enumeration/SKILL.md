@@ -1,6 +1,8 @@
 ---
 name: subformula-enumeration
-description: Use when when performing chemical noise removal on MS/MS spectra and you need to validate whether each fragment ion m/z is consistent with loss of a subformula from the precursor ion.
+description: Use when when performing chemical noise removal on MS/MS spectra and
+  you need to validate whether each fragment ion m/z is consistent with loss of a
+  subformula from the precursor ion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,6 +18,7 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

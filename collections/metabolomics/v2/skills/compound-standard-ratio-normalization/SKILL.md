@@ -1,6 +1,9 @@
 ---
 name: compound-standard-ratio-normalization
-description: Use when you have raw peak area or intensity measurements for both compounds and their corresponding internal standards across all study samples (including QC and calibration samples), and you need to normalize for instrument variability and injection efficiency before batch correction or quality.
+description: Use when you have raw peak area or intensity measurements for both compounds
+  and their corresponding internal standards across all study samples (including QC
+  and calibration samples), and you need to normalize for instrument variability and
+  injection efficiency before batch correction or quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -44,6 +48,7 @@ attribution:
 
 # compound-standard-ratio-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize metabolomics compound abundances by calculating ratios between each compound and its assigned internal standard to account for instrument response variation and sample preparation differences. This foundational preprocessing step enables downstream batch correction and quality control assessment in mass spectrometry-based metabolomics.

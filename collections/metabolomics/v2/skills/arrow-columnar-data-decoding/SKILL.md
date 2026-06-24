@@ -1,6 +1,9 @@
 ---
 name: arrow-columnar-data-decoding
-description: Use when when reading mzPeak files or other Parquet-backed mass spectrometry archives where spectral m/z and intensity arrays are stored in columnar layouts (point or chunked format) and you need to reconstruct them into Python NumPy arrays, pandas DataFrames, or equivalent in-memory structures for.
+description: Use when when reading mzPeak files or other Parquet-backed mass spectrometry
+  archives where spectral m/z and intensity arrays are stored in columnar layouts
+  (point or chunked format) and you need to reconstruct them into Python NumPy arrays,
+  pandas DataFrames, or equivalent in-memory structures for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -14,6 +17,7 @@ metadata:
   - mzPeak specification
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -42,6 +46,7 @@ attribution:
 
 # arrow-columnar-data-decoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Decode mass spectrometry spectral data (m/z values, intensities) from Apache Arrow columnar storage formats (Parquet) using language-specific Arrow libraries. This skill reconstructs spectrum arrays and metadata from scalable, interoperable columnar archives.

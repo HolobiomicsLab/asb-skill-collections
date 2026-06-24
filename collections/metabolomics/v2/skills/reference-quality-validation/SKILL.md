@@ -1,6 +1,9 @@
 ---
 name: reference-quality-validation
-description: Use when when you have curated structure-organism pairs with associated reference metadata and need to verify that each pair's literature citations are present, non-conflicting, and complete before publishing them as a high-confidence validated dataset.
+description: Use when when you have curated structure-organism pairs with associated
+  reference metadata and need to verify that each pair's literature citations are
+  present, non-conflicting, and complete before publishing them as a high-confidence
+  validated dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -41,6 +45,7 @@ attribution:
 
 # reference-quality-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates structure-organism pairs against curated reference dictionaries and metadata to ensure literature citations are complete, consistent, and meet platinum-tier quality standards before inclusion in a validated collection. This skill filters curated data by cross-referencing assertions against organism, structure, and reference authority records.

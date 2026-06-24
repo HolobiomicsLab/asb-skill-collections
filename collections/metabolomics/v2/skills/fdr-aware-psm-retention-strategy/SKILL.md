@@ -1,6 +1,7 @@
 ---
 name: fdr-aware-psm-retention-strategy
-description: 'Use when rescoring PSMs with machine learning or statistical models where: (1) you want to consider multiple candidate PSMs per spectrum (e.'
+description: 'Use when rescoring PSMs with machine learning or statistical models
+  where: (1) you want to consider multiple candidate PSMs per spectrum (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,7 @@ metadata:
   - Percolator
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

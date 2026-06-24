@@ -1,6 +1,8 @@
 ---
 name: dot-product-based-spectral-comparison
-description: Use when when searching an unknown MS/MS spectrum against a spectral library and you need to rapidly identify the most relevant candidate library spectra before applying cascade scoring with false discovery rate control.
+description: Use when when searching an unknown MS/MS spectrum against a spectral
+  library and you need to rapidly identify the most relevant candidate library spectra
+  before applying cascade scoring with false discovery rate control.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -12,12 +14,15 @@ metadata:
   - Faiss
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is
+  a spectral library search engine
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

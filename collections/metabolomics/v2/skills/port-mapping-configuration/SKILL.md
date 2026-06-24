@@ -1,6 +1,8 @@
 ---
 name: port-mapping-configuration
-description: Use when when you have a containerized web application with a fixed internal port (e.g., Tomcat on port 8080) and need to expose it on a different localhost port for local access or testing.
+description: Use when when you have a containerized web application with a fixed internal
+  port (e.g., Tomcat on port 8080) and need to expose it on a different localhost
+  port for local access or testing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3593
@@ -10,6 +12,7 @@ metadata:
   - Tomcat
   - Docker
   - ipbhalle/metfragweb
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -38,6 +41,7 @@ attribution:
 
 # port-mapping-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure Docker port mapping to expose containerized web applications at a specified localhost port, enabling HTTP access to the service. This skill is essential when deploying containerized scientific software (such as MetFrag webapp) that runs on a fixed internal port but must be accessible at a user-specified external port.

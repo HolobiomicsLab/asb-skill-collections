@@ -1,6 +1,9 @@
 ---
 name: assay-matrix-formatting
-description: Use when after generating a feature table via mzrtsim() containing simulated peak abundances across samples with condition and batch effects, and you need to expose the abundance data through Bioconductor's SummarizedExperiment interface for use with standard accessor functions (assay(), colData()).
+description: Use when after generating a feature table via mzrtsim() containing simulated
+  peak abundances across samples with condition and batch effects, and you need to
+  expose the abundance data through Bioconductor's SummarizedExperiment interface
+  for use with standard accessor functions (assay(), colData()).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,12 +16,15 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
-- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps the simulation in a `SummarizedExperiment`
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
+- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps
+  the simulation in a `SummarizedExperiment`
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -43,6 +49,7 @@ attribution:
 
 # assay-matrix-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform simulated LC/GC-MS peak list feature tables into a matrix format suitable for storage in the 'counts' assay slot of a SummarizedExperiment object. This enables seamless integration with Bioconductor workflows and standard accessors for downstream metabolomics analysis.

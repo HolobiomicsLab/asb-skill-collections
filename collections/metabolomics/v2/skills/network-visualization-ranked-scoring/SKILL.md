@@ -1,6 +1,9 @@
 ---
 name: network-visualization-ranked-scoring
-description: Use when when you have computed betweenness centrality (or other igraph topology metrics) for metabolites in a pathway-metabolite bipartite network and wish to highlight which metabolites occupy central positions—i.e., have high regulatory potential through bridging multiple pathways.
+description: Use when when you have computed betweenness centrality (or other igraph
+  topology metrics) for metabolites in a pathway-metabolite bipartite network and
+  wish to highlight which metabolites occupy central positions—i.e., have high regulatory
+  potential through bridging multiple pathways.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -14,13 +17,16 @@ metadata:
   - KEGGREST
   - ComplexHeatmap
   - STITCH database
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - integrates fgsea for fast MetSEA, igraph for topology-based metrics
-- pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST package
+- pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

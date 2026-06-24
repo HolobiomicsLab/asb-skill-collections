@@ -1,6 +1,8 @@
 ---
 name: pipeline-prerequisite-checking
-description: Use when before launching the DaDIA metabolomics pipeline or any multi-package workflow, when you have an R environment with potentially mixed or unknown package versions and need to confirm that R ≥4.0, XCMS ≥3.11.4, metaMS ≥1.25.
+description: Use when before launching the DaDIA metabolomics pipeline or any multi-package
+  workflow, when you have an R environment with potentially mixed or unknown package
+  versions and need to confirm that R ≥4.0, XCMS ≥3.11.4, metaMS ≥1.25.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -13,6 +15,7 @@ metadata:
   - DaDIA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA
@@ -43,6 +46,7 @@ attribution:
 
 # pipeline-prerequisite-checking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate software dependencies and version requirements before executing a scientific pipeline, ensuring all critical tools meet minimum thresholds to prevent runtime failures. This skill reconstructs environment prerequisites through systematic version extraction, semantic comparison, and structured reporting.

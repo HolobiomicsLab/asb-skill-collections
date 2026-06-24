@@ -1,6 +1,9 @@
 ---
 name: object-oriented-class-hierarchy-design
-description: Use when when you need to create a plotting or visualization framework that must support multiple plot kinds (spectrum, chromatogram, mobilogram, peakmap) each backed by multiple rendering engines (matplotlib, bokeh, plotly), and you want to avoid combinatorial explosion of concrete classes while.
+description: Use when when you need to create a plotting or visualization framework
+  that must support multiple plot kinds (spectrum, chromatogram, mobilogram, peakmap)
+  each backed by multiple rendering engines (matplotlib, bokeh, plotly), and you want
+  to avoid combinatorial explosion of concrete classes while.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -16,6 +19,7 @@ metadata:
   - bokeh
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -25,7 +29,8 @@ evidence_spans:
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # object-oriented-class-hierarchy-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a multi-level abstract class hierarchy with inheritance dispatch to enable concrete plot components to inherit common functionality while routing behavior based on plot kind and backend selection. This skill is essential when building extensible visualization frameworks that must support multiple data types (1D spectra, chromatograms, 2D peak maps) across multiple plotting backends (matplotlib, bokeh, plotly) without code duplication.

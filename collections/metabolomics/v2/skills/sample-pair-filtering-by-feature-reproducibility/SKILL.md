@@ -1,6 +1,8 @@
 ---
 name: sample-pair-filtering-by-feature-reproducibility
-description: Use when when you have a Marr() output object containing reproducibility statistics from replicate experiments, and your goal is to retain only those sample pairs (i,i') where reproducibility is robust across the majority of features.
+description: Use when when you have a Marr() output object containing reproducibility
+  statistics from replicate experiments, and your goal is to retain only those sample
+  pairs (i,i') where reproducibility is robust across the majority of features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - Bioconductor
   - marr
   - devtools
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -46,6 +49,7 @@ attribution:
 
 # sample-pair-filtering-by-feature-reproducibility
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter high-dimensional biological replicate data to retain only sample pairs where the percentage of reproducible signals across all features exceeds a user-defined threshold. This skill applies the MarrFilterData() function with by='samplePairs' mode to subset reproducible experimental pairs based on feature-level reproducibility consensus.

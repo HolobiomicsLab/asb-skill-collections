@@ -1,6 +1,7 @@
 ---
 name: lc-ms-mass-matching-reference-building
-description: Use when at the start of an untargeted LC-MS annotation pipeline when you have a KEGG database with exact masses and need to prepare a mass-matching reference.
+description: Use when at the start of an untargeted LC-MS annotation pipeline when
+  you have a KEGG database with exact masses and need to prepare a mass-matching reference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,14 +16,18 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # lc-ms-mass-matching-reference-building
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a compound–adduct lookup table (Cpd.Add) by combining KEGG database exact masses with curated adduct/fragment specifications to enable downstream mass-to-charge ratio matching in untargeted LC-MS metabolomics. This reference table serves as the foundation for matching observed m/z peaks to candidate metabolites.

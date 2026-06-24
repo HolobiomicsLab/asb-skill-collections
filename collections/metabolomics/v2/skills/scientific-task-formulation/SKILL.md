@@ -1,6 +1,9 @@
 ---
 name: scientific-task-formulation
-description: Use when you have a collection of molecules (HMDB, RefMet, METLIN, or proprietary library) with known MS/MS spectra, retention times, or CCS values, and you need to frame this as a supervised learning problem suitable for 3DMolMS training or transfer learning.
+description: Use when you have a collection of molecules (HMDB, RefMet, METLIN, or
+  proprietary library) with known MS/MS spectra, retention times, or CCS values, and
+  you need to frame this as a supervised learning problem suitable for 3DMolMS training
+  or transfer learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -361,6 +364,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -680,7 +684,8 @@ evidence_spans:
 - 'Source: github:gitlab.gwdg.de__joerg.buescher__automrm'
 - 'Source: github:arina-iva__DI-MS2_scripts'
 - 'Source: github:jesilee__CIDMD_setup'
-- These are generated using RDKit... We extensively use the ChEMBL structure curation pipeline developed with RDKit to clean the data and curate the database.
+- These are generated using RDKit... We extensively use the ChEMBL structure curation
+  pipeline developed with RDKit to clean the data and curate the database.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -1366,6 +1371,7 @@ attribution:
 
 # scientific_task_formulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Formulate a concrete computational task for predicting MS/MS spectra, retention time, or collision cross sections from molecular structure by defining input data format, preprocessing constraints, model architecture parameters, and evaluation metrics. This skill bridges between raw molecular datasets and trainable neural network objectives.

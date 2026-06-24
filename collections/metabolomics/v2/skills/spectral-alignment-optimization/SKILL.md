@@ -1,6 +1,8 @@
 ---
 name: spectral-alignment-optimization
-description: Use when when you have two MS/MS fragmentation spectra (with precursor m/z values and fragment ion lists) and need to establish correspondence between their fragment ions beyond simple pairwise comparison.
+description: Use when when you have two MS/MS fragmentation spectra (with precursor
+  m/z values and fragment ion lists) and need to establish correspondence between
+  their fragment ions beyond simple pairwise comparison.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,11 +14,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # Reconstruct the maximum weight matching alignment of MS/MS spectra in SIMILE
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace monotonic alignment with maximum weight matching to optimally align fragment ion pairs between two tandem mass spectra, maximizing the total edge weight of matched ions and improving alignment performance. This skill applies graph-based optimization to MS/MS fragmentation data to identify the globally optimal set of non-overlapping ion pair correspondences.

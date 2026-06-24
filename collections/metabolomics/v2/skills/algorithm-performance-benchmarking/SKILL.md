@@ -1,6 +1,9 @@
 ---
 name: algorithm-performance-benchmarking
-description: Use when you have refactored or reimplemented a core computational method (e.g., entropy similarity calculation) and need to verify that the new implementation produces mathematically equivalent results to the original before deploying it to production.
+description: Use when you have refactored or reimplemented a core computational method
+  (e.g., entropy similarity calculation) and need to verify that the new implementation
+  produces mathematically equivalent results to the original before deploying it to
+  production.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,6 +16,7 @@ metadata:
   - ms_distance
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

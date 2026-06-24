@@ -1,6 +1,8 @@
 ---
 name: isotopologue-ratio-quality-filtering
-description: Use when when extracting isotopologue patterns from centroided mzML files in non-targeted metabolomics workflows, apply this filter after detecting candidate isotopologue peaks but before finalizing the benchmark dataset.
+description: Use when when extracting isotopologue patterns from centroided mzML files
+  in non-targeted metabolomics workflows, apply this filter after detecting candidate
+  isotopologue peaks but before finalizing the benchmark dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -15,13 +17,16 @@ metadata:
   - Skyline
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
-- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided for all (enviPat predicted) isotopologues
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
+- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided
+  for all (enviPat predicted) isotopologues
 - library(mzRAPP)
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: prm-acquisition-event-identification
-description: Use when you have a Thermo Fisher Scientific .raw file containing PRM data and need to verify that acquisition of a specific precursor ion (e.g., LGGNEQVTR++ at m/z 487.2567) is happening at regular intervals consistent with your instrument method design.
+description: Use when you have a Thermo Fisher Scientific .raw file containing PRM
+  data and need to verify that acquisition of a specific precursor ion (e.g., LGGNEQVTR++
+  at m/z 487.2567) is happening at regular intervals consistent with your instrument
+  method design.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -22,8 +26,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -49,6 +55,7 @@ attribution:
 
 # PRM Acquisition Event Identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate parallel reaction monitoring (PRM) acquisition cycles in Thermo Orbitrap raw files by extracting the scan index, filtering for targeted precursor ion acquisitions, and confirming consistent inter-scan spacing. This skill enables quality control of PRM method consistency and detection of complete acquisition cycles targeting specific peptide precursors.

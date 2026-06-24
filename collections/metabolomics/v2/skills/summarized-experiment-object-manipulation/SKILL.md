@@ -1,6 +1,9 @@
 ---
 name: summarized-experiment-object-manipulation
-description: Use when when working with metabolomics, proteomics, or other high-throughput replicate experiments stored in Bioconductor SummarizedExperiment format (rows = features/metabolites, columns = samples/replicates), and you need to inspect raw feature dimensions, assess data completeness, or apply.
+description: Use when when working with metabolomics, proteomics, or other high-throughput
+  replicate experiments stored in Bioconductor SummarizedExperiment format (rows =
+  features/metabolites, columns = samples/replicates), and you need to inspect raw
+  feature dimensions, assess data completeness, or apply.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - MSPrep
   - Bioconductor
   - marr
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -20,7 +24,8 @@ derived_from:
 evidence_spans:
 - 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
 - The R-package **marr** can be installed from GitHub using the R package [devtools]
-- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep software
+- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep
+  software
 - '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # SummarizedExperiment object manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, inspect, and manipulate Bioconductor SummarizedExperiment objects containing high-dimensional assay data (e.g., metabolite abundance matrices) with associated sample and feature metadata. This skill enables extraction of raw feature counts, calculation of missingness statistics per feature, and preservation of annotations during filtering workflows.

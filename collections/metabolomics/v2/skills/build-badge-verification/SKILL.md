@@ -1,6 +1,8 @@
 ---
 name: build-badge-verification
-description: Use when you need to validate that a repository's automated build and publish pipeline is functioning correctly on a release or target branch, particularly when assessing the reliability of release artifacts or the health of a CI/CD workflow.
+description: Use when you need to validate that a repository's automated build and
+  publish pipeline is functioning correctly on a release or target branch, particularly
+  when assessing the reliability of release artifacts or the health of a CI/CD workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3552
@@ -9,6 +11,7 @@ metadata:
   tools:
   - GitHub Actions
   - SIRIUS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

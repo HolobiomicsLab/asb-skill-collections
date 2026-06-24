@@ -1,6 +1,8 @@
 ---
 name: sinusoidal-embedding-implementation
-description: Use when building a transformer-based neural network for chemical formula ranking or classification from mass spectrometry spectra, and you need to encode categorical chemical formulas (e.
+description: Use when building a transformer-based neural network for chemical formula
+  ranking or classification from mass spectrometry spectra, and you need to encode
+  categorical chemical formulas (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3365
@@ -15,13 +17,15 @@ metadata:
   - SIRIUS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # Sinusoidal Embedding Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement sinusoidal formula embeddings to convert chemical formulas into fixed-dimensional continuous vector representations using trigonometric positional encoding. This technique, developed in SCARF and adopted in MIST-CF, enables neural network models to learn chemical structure patterns from mass spectrometry data.

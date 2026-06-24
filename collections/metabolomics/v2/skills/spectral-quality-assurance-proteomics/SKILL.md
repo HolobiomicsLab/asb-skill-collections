@@ -1,6 +1,8 @@
 ---
 name: spectral-quality-assurance-proteomics
-description: Use when when you have extracted a raw Orbitrap scan from a .raw file and need to verify that the instrument operated within expected parameters and that observed peptide fragment ions rise substantially above noise—i.
+description: Use when when you have extracted a raw Orbitrap scan from a .raw file
+  and need to verify that the instrument operated within expected parameters and that
+  observed peptide fragment ions rise substantially above noise—i.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,7 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -21,8 +24,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -48,6 +53,7 @@ attribution:
 
 # Spectral Quality Assurance in Proteomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates Orbitrap mass spectrometry spectral data by confirming instrument metadata (resolving power, AGC injection time) and quantifying signal-to-noise ratios for fragment ions relative to baseline noise. Essential for ensuring high-quality peptide fragmentation spectra suitable for identification and quantification workflows.

@@ -1,6 +1,9 @@
 ---
 name: online-mode-environment-detection
-description: Use when when deploying an OpenMS streamlit application that must support both local development (offline mode with multiprocessing) and production cloud/HPC environments (online mode with Redis + RQ task queue), and you need to transparently route workflow job submissions to the correct backend.
+description: Use when when deploying an OpenMS streamlit application that must support
+  both local development (offline mode with multiprocessing) and production cloud/HPC
+  environments (online mode with Redis + RQ task queue), and you need to transparently
+  route workflow job submissions to the correct backend.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +13,7 @@ metadata:
   - Redis
   - multiprocessing
   - Streamlit
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -39,6 +43,7 @@ attribution:
 
 # online-mode-environment-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatically detect and configure the OpenMS streamlit template runtime for online (Docker + Redis/RQ) versus offline (local multiprocessing) deployment modes. This skill enables a single codebase to adapt its job-submission strategy without code changes based on deployment context.

@@ -1,6 +1,7 @@
 ---
 name: snr-based-signal-validation
-description: Use when after composite map peak detection has generated a full unfiltered peak list with SNR values computed for each candidate peak.
+description: Use when after composite map peak detection has generated a full unfiltered
+  peak list with SNR values computed for each candidate peak.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,14 +15,18 @@ metadata:
   - compute_noise_by_flanks
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- Asari uses a simple local maxima method (scipy.signal.find_peaks), with prominence control
-- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list), [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
+- Asari uses a simple local maxima method (scipy.signal.find_peaks), with prominence
+  control
+- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list),
+  [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # SNR-based signal validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filters detected LC-MS peaks by applying a signal-to-noise ratio (SNR > 2) threshold to retain only peaks with sufficient signal separation from background noise. This is a foundational selectivity step in the asari peak quality pipeline that reduces false positive features before downstream filtering on peak shape and height.

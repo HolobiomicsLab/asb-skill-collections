@@ -1,6 +1,8 @@
 ---
 name: metabolomic-feature-table-interpretation
-description: Use when after quality control, filtering, and normalization of an MS-DIAL-derived feature abundance matrix (e.g., Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt), when you have samples assigned to discrete experimental classes (e.
+description: Use when after quality control, filtering, and normalization of an MS-DIAL-derived
+  feature abundance matrix (e.g., Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt),
+  when you have samples assigned to discrete experimental classes (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3676
@@ -16,13 +18,16 @@ metadata:
   - pcaMethods
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -50,6 +55,7 @@ attribution:
 
 # metabolomic-feature-table-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interprets preprocessed LC-MS/MS metabolomic feature tables through univariate and multivariate statistical testing to identify metabolites with significant abundance differences across experimental groups, followed by pathway analysis to contextualize findings within biological systems.

@@ -1,6 +1,8 @@
 ---
 name: feature-matrix-preprocessing
-description: Use when you have raw metabolomics data in CSV format (samples as rows, features as columns, batch identifier in the first column) that contains missing values (zeros or NAs) and requires standardization before batch effect correction.
+description: Use when you have raw metabolomics data in CSV format (samples as rows,
+  features as columns, batch identifier in the first column) that contains missing
+  values (zeros or NAs) and requires standardization before batch effect correction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - dbnorm
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -18,7 +21,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # feature-matrix-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and apply dbnorm's 11 distinct preprocessing and missing-value estimation functions to prepare raw metabolomics data matrices (samples × features) for batch effect correction. This initial stage standardizes feature distributions, estimates and imputes missing values (zeros and NAs), and removes technical artifacts before downstream normalization.

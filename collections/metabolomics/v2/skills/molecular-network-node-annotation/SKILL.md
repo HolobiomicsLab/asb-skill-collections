@@ -1,6 +1,9 @@
 ---
 name: molecular-network-node-annotation
-description: Use when you have a GNPS-generated molecular network (classical or feature-based workflow) and corresponding MS2LDA LDA experiment results (Mass2Motif assignments and/or chemical class predictions), and you need to propagate those annotations to individual network nodes to support visual and.
+description: Use when you have a GNPS-generated molecular network (classical or feature-based
+  workflow) and corresponding MS2LDA LDA experiment results (Mass2Motif assignments
+  and/or chemical class predictions), and you need to propagate those annotations
+  to individual network nodes to support visual and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -16,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

@@ -1,6 +1,7 @@
 ---
 name: feature-correlation-sparsification
-description: Use when you have a feature matrix (rows=samples, columns=features) and want to infer the conditional independence structure among features.
+description: Use when you have a feature matrix (rows=samples, columns=features) and
+  want to infer the conditional independence structure among features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3958
@@ -10,6 +11,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -38,6 +40,7 @@ attribution:
 
 # feature-correlation-sparsification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate a sparse network graph of feature correlations using graphical lasso (GLASSO) to identify significant edges in a high-dimensional inverse covariance matrix. This skill is essential when you need to move from a dense correlation structure to an interpretable, regularized network of feature dependencies.

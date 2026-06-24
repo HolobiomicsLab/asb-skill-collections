@@ -1,6 +1,7 @@
 ---
 name: spectral-dimensionality-reduction
-description: Use when you have high-resolution tandem MS spectra (in mzML, mzXML, or MGF format) that need to be clustered or searched at scale (millions of spectra).
+description: Use when you have high-resolution tandem MS spectra (in mzML, mzXML,
+  or MGF format) that need to be clustered or searched at scale (millions of spectra).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,11 +13,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +43,7 @@ attribution:
 
 # spectral-dimensionality-reduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform high-resolution MS/MS spectra into fixed-size, low-dimensional vector representations using feature hashing, enabling efficient nearest-neighbor indexing and similarity searching at scale. This transformation preserves cosine similarity while reducing memory footprint and computational cost.

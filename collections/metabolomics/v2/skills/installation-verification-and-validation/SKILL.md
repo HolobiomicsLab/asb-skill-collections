@@ -1,6 +1,7 @@
 ---
 name: installation-verification-and-validation
-description: Use when after cloning the ENPKG repository and installing dependencies using uv sync or conda, before executing the workflow on metabolomics datasets.
+description: Use when after cloning the ENPKG repository and installing dependencies
+  using uv sync or conda, before executing the workflow on metabolomics datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -15,6 +16,7 @@ metadata:
   - Git
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

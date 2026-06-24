@@ -1,6 +1,8 @@
 ---
 name: compound-structure-enumeration-across-generations
-description: Use when you have a set of seed compounds (as SMILES strings) and want to predict downstream products by systematically applying generalized reaction rules (e.g., from MetaCyc) across multiple reaction generations.
+description: Use when you have a set of seed compounds (as SMILES strings) and want
+  to predict downstream products by systematically applying generalized reaction rules
+  (e.g., from MetaCyc) across multiple reaction generations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -13,6 +15,7 @@ metadata:
   - Python
   - MetaCyc
   - eQuilibrator
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

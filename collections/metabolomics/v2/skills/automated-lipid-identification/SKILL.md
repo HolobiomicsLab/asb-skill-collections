@@ -1,6 +1,8 @@
 ---
 name: automated-lipid-identification
-description: Use when you have high-resolution tandem mass spectrometry (MS2) data in .ms2 format and need to systematically identify and annotate lipid A molecular structures.
+description: Use when you have high-resolution tandem mass spectrometry (MS2) data
+  in .ms2 format and need to systematically identify and annotate lipid A molecular
+  structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,6 +15,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER
@@ -42,6 +45,7 @@ attribution:
 
 # automated-lipid-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 LipidA-IDER is an automated structure annotation tool that identifies lipid A from high-resolution tandem mass spectrometry (MS2) data at systems-level scale. Use this skill to rapidly annotate and structurally characterize lipid A molecules from MS2 spectra without manual intervention.

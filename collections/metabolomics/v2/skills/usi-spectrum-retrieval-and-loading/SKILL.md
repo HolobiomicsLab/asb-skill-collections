@@ -1,6 +1,9 @@
 ---
 name: usi-spectrum-retrieval-and-loading
-description: Use when you have a USI accession (e.g., 'mzspec:MSV000082283:f07074:scan:5475' or 'mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555') pointing to a publicly deposited tandem mass spectrometry scan in a GNPS or ProteomeXchange repository, and you need to retrieve and instantiate.
+description: Use when you have a USI accession (e.g., 'mzspec:MSV000082283:f07074:scan:5475'
+  or 'mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555') pointing
+  to a publicly deposited tandem mass spectrometry scan in a GNPS or ProteomeXchange
+  repository, and you need to retrieve and instantiate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -15,12 +18,15 @@ metadata:
   - ProteomeXchange (PXD datasets)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - spectrum_utils is a Python package
 - spectrum = sus.MsmsSpectrum.from_usi(usi)
 - import matplotlib.pyplot as plt
@@ -48,6 +54,7 @@ attribution:
 
 # USI-based spectrum retrieval and loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load mass spectrometry spectra from public proteomics and metabolomics repositories using Universal Spectrum Identifiers (USI), enabling direct programmatic access to published data without manual download. This skill bridges online data discovery and local analysis by parsing USI accessions and instantiating spectrum objects ready for downstream processing and visualization.

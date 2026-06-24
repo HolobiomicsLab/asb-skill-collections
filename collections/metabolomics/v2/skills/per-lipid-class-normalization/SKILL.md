@@ -1,6 +1,9 @@
 ---
 name: per-lipid-class-normalization
-description: Use when you have IM-MS lipidomic data from samples spiked with U13C-labeled internal standards (e.g., fully labeled yeast extract), measured CCS values stratified by lipid class and adduct type, and access to the DTCCS_N2 reference library for U13C lipids.
+description: Use when you have IM-MS lipidomic data from samples spiked with U13C-labeled
+  internal standards (e.g., fully labeled yeast extract), measured CCS values stratified
+  by lipid class and adduct type, and access to the DTCCS_N2 reference library for
+  U13C lipids.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,12 +18,15 @@ metadata:
   - data.table
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
-- MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
+- MobiLipid aims to streamline lipidomics workflows by offering a fully automated
+  solution for assessing and correcting collision cross section (CCS) bias
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # Per-Lipid-Class CCS Bias Calculation and Correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and correct collision cross section (CCS) bias in ion mobility–mass spectrometry (IM-MS) lipidomics by stratifying measured CCS values by lipid class, deriving per-class bias from U13C-labeled internal standards against the DTCCS_N2 library, and applying linear regression–based correction functions to all lipids in each class.

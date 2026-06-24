@@ -1,6 +1,8 @@
 ---
 name: multi-cell-line-rps-calculation
-description: Use when when you have LC-MS normalized intracellular metabolite abundance measurements for multiple cell lines and need to estimate reaction activity driven by substrate availability rather than enzyme expression alone.
+description: Use when when you have LC-MS normalized intracellular metabolite abundance
+  measurements for multiple cell lines and need to estimate reaction activity driven
+  by substrate availability rather than enzyme expression alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,11 +15,13 @@ metadata:
   - concordanceAnalysis.py
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # multi-cell-line-rps-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Reaction Propensity Scores (RPS) across multiple cell lines by applying the mass action law to LC-MS intracellular metabolomics data, yielding substrate-availability-based reaction activity estimates for downstream concordance analysis with transcriptomics and flux predictions.

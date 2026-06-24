@@ -1,6 +1,9 @@
 ---
 name: isotope-labeling-data-integration
-description: Use when you have LC-MS peak tables from parallel unlabeled and labeled (isotope-traced) sample cohorts, sample metadata defining groups and conditions, and you seek to identify metabolic intermediates that accumulate differentially in a perturbed system (e.
+description: Use when you have LC-MS peak tables from parallel unlabeled and labeled
+  (isotope-traced) sample cohorts, sample metadata defining groups and conditions,
+  and you seek to identify metabolic intermediates that accumulate differentially
+  in a perturbed system (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -23,6 +26,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair
@@ -55,6 +59,7 @@ attribution:
 
 # isotope-labeling-data-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate unlabeled (C12) and labeled (C13) peak tables with sample metadata to identify intermediate metabolites in stable isotope tracing studies. This skill combines differential analysis, feature redundancy merging, and C12/C13 pairing to screen candidate pathway intermediates.

@@ -1,6 +1,8 @@
 ---
 name: isotopic-pattern-mispicking-detection
-description: Use when you have a peak table from tandem MS preprocessing (e.g., MS-DIAL, Metaboscape) and suspect that isotopic patterns have been incorrectly split during feature detection.
+description: Use when you have a peak table from tandem MS preprocessing (e.g., MS-DIAL,
+  Metaboscape) and suspect that isotopic patterns have been incorrectly split during
+  feature detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,6 +17,7 @@ metadata:
   - ggplot2 / plotly
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -46,6 +49,7 @@ attribution:
 
 # isotopic-pattern-mispicking-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and correct isotopic patterns that are incorrectly split into separate peaks during mass spectrometry preprocessing. This skill identifies mispicked ions—where a single compound's isotopic distribution has been fragmented into multiple spurious features—and optionally merges them back to recover the true ion signal.

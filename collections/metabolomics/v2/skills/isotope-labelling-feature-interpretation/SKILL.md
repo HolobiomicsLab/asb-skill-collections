@@ -1,6 +1,7 @@
 ---
 name: isotope-labelling-feature-interpretation
-description: Use when after basepeak_finder has identified base peaks from isotope-labelled feature clusters with fold-change and intensity thresholds met.
+description: Use when after basepeak_finder has identified base peaks from isotope-labelled
+  feature clusters with fold-change and intensity thresholds met.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -14,6 +15,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

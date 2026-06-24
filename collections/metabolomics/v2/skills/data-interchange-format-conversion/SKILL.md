@@ -1,6 +1,9 @@
 ---
 name: data-interchange-format-conversion
-description: Use when you have deconvoluted or processed MS/MS spectra from SWATH-MS data that need to be (1) ingested into tools requiring open formats (e.g., spectral library matching, metabolite identification pipelines), (2) archived in public repositories, or (3) shared across different analysis platforms.
+description: Use when you have deconvoluted or processed MS/MS spectra from SWATH-MS
+  data that need to be (1) ingested into tools requiring open formats (e.g., spectral
+  library matching, metabolite identification pipelines), (2) archived in public repositories,
+  or (3) shared across different analysis platforms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +14,7 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA
@@ -39,6 +43,7 @@ attribution:
 
 # Data Interchange Format Conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry raw data and processed spectra between vendor-native formats and open interchange standards (mzML, MGF, mzTab) to enable downstream analysis, deposition, and interoperability. This skill is essential in untargeted metabolomics pipelines where spectral deconvolution output must be exported in formats compatible with spectral databases and identification tools.

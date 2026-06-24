@@ -1,6 +1,8 @@
 ---
 name: nmr-spectra-preprocessing-and-feature-extraction
-description: Use when when you have raw or lightly processed 1D NMR spectra (¹H and/or ¹³C) from unknown organic compounds and need to extract latent spectral features prior to structure elucidation.
+description: Use when when you have raw or lightly processed 1D NMR spectra (¹H and/or
+  ¹³C) from unknown organic compounds and need to extract latent spectral features
+  prior to structure elucidation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -39,6 +42,7 @@ attribution:
 
 # nmr-spectra-preprocessing-and-feature-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocess raw 1D NMR spectra (¹H and/or ¹³C) and extract spectral features using a convolutional neural network encoder to prepare inputs for downstream molecular structure prediction. This skill bridges raw spectroscopic data and learned feature representations suitable for transformer-based structure assembly.

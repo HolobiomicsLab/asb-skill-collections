@@ -1,6 +1,8 @@
 ---
 name: sql-query-optimization-for-similarity-search
-description: Use when when migrating spectral library data from file-based formats (JSON, CSV, binary) into a persistent store and need to support fast filtered queries on metadata and similarity computations against query spectra.
+description: Use when when migrating spectral library data from file-based formats
+  (JSON, CSV, binary) into a persistent store and need to support fast filtered queries
+  on metadata and similarity computations against query spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,13 +17,15 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
 - you want to make some kind of change to the code base
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:

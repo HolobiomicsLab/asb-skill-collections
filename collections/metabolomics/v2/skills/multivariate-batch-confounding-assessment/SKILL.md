@@ -1,6 +1,7 @@
 ---
 name: multivariate-batch-confounding-assessment
-description: Use when after data preprocessing and quality control, when your metabolomics feature matrix and sample metadata show evidence of batch structure (e.
+description: Use when after data preprocessing and quality control, when your metabolomics
+  feature matrix and sample metadata show evidence of batch structure (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +11,7 @@ metadata:
   tools:
   - R
   - SMART
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

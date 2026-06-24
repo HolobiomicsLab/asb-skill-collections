@@ -1,6 +1,8 @@
 ---
 name: vendor-export-schema-mapping
-description: Use when raw MRM lipidomics data arrives in vendor-specific export formats (e.g., Sciex, Waters, Thermo TSV/CSV) with inconsistent or proprietary column naming, numeric encoding, and lipid nomenclature.
+description: Use when raw MRM lipidomics data arrives in vendor-specific export formats
+  (e.g., Sciex, Waters, Thermo TSV/CSV) with inconsistent or proprietary column naming,
+  numeric encoding, and lipid nomenclature.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,12 +14,14 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
 - _No usage/docs found._
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

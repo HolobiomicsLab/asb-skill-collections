@@ -1,6 +1,8 @@
 ---
 name: spectral-features-module-integration
-description: Use when when you have a trained or untrained chemprop base model (graph convolution + readout layers) and need to extend it to predict infrared spectral properties rather than scalar molecular properties.
+description: Use when when you have a trained or untrained chemprop base model (graph
+  convolution + readout layers) and need to extend it to predict infrared spectral
+  properties rather than scalar molecular properties.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -10,11 +12,13 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]
+- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
+  for Property Prediction]
 - The `chemprop-IR` architecture is an extension of `chemprop`
 claims: []
 provenance:
@@ -39,6 +43,7 @@ attribution:
 
 # spectral-features-module-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate a spectral features module as an extension layer into the chemprop base message passing neural network architecture to enable infrared spectral predictions on molecular graphs. This skill bridges molecular graph representations with spectral property outputs by composing the base MPNN with learned spectral feature transformations.

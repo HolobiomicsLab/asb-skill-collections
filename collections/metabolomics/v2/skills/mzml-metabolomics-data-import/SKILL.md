@@ -1,6 +1,9 @@
 ---
 name: mzml-metabolomics-data-import
-description: 'Use when you have raw LC-HRMS metabolomics data in mzML or ABF format that needs to be processed through a reproducible pipeline. Use this skill when: (1) you have public or proprietary .mzML LC-MS datasets (e.g. from MetaboLights, MassIVE, or PRIDE);'
+description: 'Use when you have raw LC-HRMS metabolomics data in mzML or ABF format
+  that needs to be processed through a reproducible pipeline. Use this skill when:
+  (1) you have public or proprietary .mzML LC-MS datasets (e.g. from MetaboLights,
+  MassIVE, or PRIDE);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -18,6 +21,7 @@ metadata:
   - Reifycs Abf Converter
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -46,6 +50,7 @@ attribution:
 
 # mzML Metabolomics Data Import
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import and validate liquid chromatography–high-resolution mass spectrometry (LC-HRMS) metabolomics data in mzML format into a reproducible containerized Nextflow workflow for downstream processing with MS-DIAL. This skill ensures data integrity and format compliance before peak detection and feature quantification.

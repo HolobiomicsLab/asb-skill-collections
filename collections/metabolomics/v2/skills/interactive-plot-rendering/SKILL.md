@@ -1,6 +1,9 @@
 ---
 name: interactive-plot-rendering
-description: Use when you have validated omics data loaded into R (expression matrices, fold-change and p-value pairs, gene ontology enrichment statistics, survival or distribution data) and need to generate publication-quality figures that must be explored interactively via a web browser, support pan/zoom, and.
+description: Use when you have validated omics data loaded into R (expression matrices,
+  fold-change and p-value pairs, gene ontology enrichment statistics, survival or
+  distribution data) and need to generate publication-quality figures that must be
+  explored interactively via a web browser, support pan/zoom, and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +16,7 @@ metadata:
   - ggplot2
   - plotly
   - GraphBio
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

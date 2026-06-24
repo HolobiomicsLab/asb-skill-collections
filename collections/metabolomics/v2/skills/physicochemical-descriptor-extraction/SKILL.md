@@ -1,6 +1,9 @@
 ---
 name: physicochemical-descriptor-extraction
-description: Use when when you have validated RDKit molecule objects derived from PubChem or HMDB molecule IDs and need to generate quantitative chemical property representations as one modality in a multimodal feature tensor for neural network training.
+description: Use when when you have validated RDKit molecule objects derived from
+  PubChem or HMDB molecule IDs and need to generate quantitative chemical property
+  representations as one modality in a multimodal feature tensor for neural network
+  training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3625
@@ -14,6 +17,7 @@ metadata:
   - numpy
   - pandas
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -45,6 +49,7 @@ attribution:
 
 # physicochemical-descriptor-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract physicochemical descriptors (molecular weight, logP, HBA, HBD, rotatable bonds, aromatic rings) from molecular structures using RDKit to generate quantitative chemical property vectors for multimodal machine learning models. This skill bridges structural chemistry and feature engineering for molecular property prediction.

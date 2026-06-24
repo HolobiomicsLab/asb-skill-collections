@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-structure-elucidation
-description: Use when you have an experimental tandem mass spectrum (collision-induced dissociation, CID) and a known chemical formula (or narrow set of candidate formulas), and you need to identify the most likely structure(s) by ranking against a large candidate library such as PubChem.
+description: Use when you have an experimental tandem mass spectrum (collision-induced
+  dissociation, CID) and a known chemical formula (or narrow set of candidate formulas),
+  and you need to identify the most likely structure(s) by ranking against a large
+  candidate library such as PubChem.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,12 +18,14 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 evidence_spans:
 - You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:

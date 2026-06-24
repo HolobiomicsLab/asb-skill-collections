@@ -1,6 +1,7 @@
 ---
 name: mass-spectrum-query-processing
-description: Use when you have an unknown mass spectrum (as m/z and intensity arrays) and need to identify candidate compounds by matching against a mass spectral library.
+description: Use when you have an unknown mass spectrum (as m/z and intensity arrays)
+  and need to identify candidate compounds by matching against a mass spectral library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -14,6 +15,7 @@ metadata:
   - FlashEntropySearch
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02012-9
   title: Flash entropy search

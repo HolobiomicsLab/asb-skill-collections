@@ -1,6 +1,9 @@
 ---
 name: threshold-based-match-filtering
-description: Use when after calculating similarity metrics (e.g. cosine similarity or spectral correlation) between query peak networks and a simulated INADEQUATE database, when you need to distinguish true metabolite matches from spurious or low-confidence assignments and generate a curated list of identified.
+description: Use when after calculating similarity metrics (e.g. cosine similarity
+  or spectral correlation) between query peak networks and a simulated INADEQUATE
+  database, when you need to distinguish true metabolite matches from spurious or
+  low-confidence assignments and generate a curated list of identified.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +13,7 @@ metadata:
   tools:
   - PyINETA
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

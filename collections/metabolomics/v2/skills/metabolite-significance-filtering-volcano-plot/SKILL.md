@@ -1,6 +1,9 @@
 ---
 name: metabolite-significance-filtering-volcano-plot
-description: Use when you have meta-analyzed metabolomic results from multiple studies with p-values and fold-change estimates (e.g., from amanida quantitative meta-analysis), and you need to identify compounds that meet both statistical rigor (p ≤ 0.05) and biological magnitude (|fold-change| ≥ 3.
+description: Use when you have meta-analyzed metabolomic results from multiple studies
+  with p-values and fold-change estimates (e.g., from amanida quantitative meta-analysis),
+  and you need to identify compounds that meet both statistical rigor (p ≤ 0.05) and
+  biological magnitude (|fold-change| ≥ 3.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,14 +16,17 @@ metadata:
   - amanida
   - webchem
   - PubChem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # metabolite-significance-filtering-volcano-plot
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolites from meta-analysis results using statistical significance (p-value) and biological effect size (fold-change) thresholds applied to a volcano plot, then cross-validate consistency across multiple independent studies to identify robust biomarker candidates. This skill separates statistically and biologically meaningful metabolites from noise in multi-study metabolomic datasets.

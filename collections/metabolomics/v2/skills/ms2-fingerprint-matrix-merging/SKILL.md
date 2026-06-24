@@ -1,6 +1,7 @@
 ---
 name: ms2-fingerprint-matrix-merging
-description: Use when you have two MemoMatrix objects generated from separate sample cohorts (e.
+description: Use when you have two MemoMatrix objects generated from separate sample
+  cohorts (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -16,6 +17,7 @@ metadata:
   - Python 3.8+
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo

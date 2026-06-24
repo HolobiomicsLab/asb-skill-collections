@@ -1,6 +1,8 @@
 ---
 name: noise-level-parameter-tuning
-description: Use when when you have an aligned GCIMS dataset and need to configure the findPeaks function with CWT algorithm to detect peaks across retention time and drift time dimensions.
+description: Use when when you have an aligned GCIMS dataset and need to configure
+  the findPeaks function with CWT algorithm to detect peaks across retention time
+  and drift time dimensions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -13,6 +15,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +44,7 @@ attribution:
 
 # noise-level-parameter-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize the noise_level parameter for CWT-based peak detection in GCIMS samples by iterative testing on a representative sample before applying to the full dataset. This parameter controls the sensitivity threshold for distinguishing true peaks from noise in Gas Chromatography–Ion Mobility Spectrometry data.

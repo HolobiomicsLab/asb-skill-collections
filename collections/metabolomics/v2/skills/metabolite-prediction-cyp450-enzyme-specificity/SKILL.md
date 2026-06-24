@@ -1,6 +1,9 @@
 ---
 name: metabolite-prediction-cyp450-enzyme-specificity
-description: Use when you have a small-molecule query (acetaminophen, drug candidate, xenobiotic, or other compound as SMILES or SDF) and need to predict which metabolites would be formed if that molecule were metabolized by a defined subset of the nine major human CYP450 isoforms (1A2, 2A6, 2B6, 2C8, 2C9.
+description: Use when you have a small-molecule query (acetaminophen, drug candidate,
+  xenobiotic, or other compound as SMILES or SDF) and need to predict which metabolites
+  would be formed if that molecule were metabolized by a defined subset of the nine
+  major human CYP450 isoforms (1A2, 2A6, 2B6, 2C8, 2C9.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -11,6 +14,7 @@ metadata:
   - CyProduct
   - Java
   - BioTransformerAPI
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -39,6 +43,7 @@ attribution:
 
 # metabolite-prediction-cyp450-enzyme-specificity
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict phase I metabolites of a query molecule by simulating biotransformation reactions catalyzed by one or more cytochrome P450 (CYP450) enzymes using CyProduct. Use this skill when you need to enumerate probable metabolite structures and their enzymatic origins for drug development, toxicity assessment, or mechanistic pathway analysis.

@@ -1,6 +1,7 @@
 ---
 name: retention-time-correlation-similarity-scoring
-description: Use when when you have detected multiple features from non-targeted mass spectrometry and need to group them by putative compound origin.
+description: Use when when you have detected multiple features from non-targeted mass
+  spectrometry and need to group them by putative compound origin.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -15,13 +16,15 @@ metadata:
   - InterpretMSSpectrum
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 claims: []
 provenance:
@@ -46,6 +49,7 @@ attribution:
 
 # retention-time-correlation-similarity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute a combined similarity score for metabolomics features by integrating retention time proximity and quantitative correlation across samples, enabling unsupervised grouping of isotopologs and adducts from the same compound. This scoring approach grounds RAMClustR's feature clustering in two independent biological and physicochemical constraints.

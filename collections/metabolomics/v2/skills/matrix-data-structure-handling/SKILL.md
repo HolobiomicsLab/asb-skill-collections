@@ -1,6 +1,8 @@
 ---
 name: matrix-data-structure-handling
-description: Use when after feature filtering has removed low-abundance or highly sparse metabolites (e.g., >80% missingness), and before applying missing value imputation or normalization.
+description: Use when after feature filtering has removed low-abundance or highly
+  sparse metabolites (e.g., >80% missingness), and before applying missing value imputation
+  or normalization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,6 +14,7 @@ metadata:
   - Bioconductor
   - SummarizedExperiment
   - marr
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -45,6 +48,7 @@ attribution:
 
 # matrix-data-structure-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converting filtered metabolite abundance data into structured matrix or SummarizedExperiment formats suitable for downstream imputation, normalization, and reproducibility analysis. This skill ensures data integrity and compatibility with statistical packages like marr and Bioconductor.

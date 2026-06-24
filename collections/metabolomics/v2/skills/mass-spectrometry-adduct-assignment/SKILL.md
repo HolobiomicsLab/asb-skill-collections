@@ -21,6 +21,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -49,6 +50,7 @@ attribution:
 
 # mass-spectrometry-adduct-assignment
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Automatically assign ionization adducts ([M+H]+ or [M-H]-) to mass spectra with missing adduct annotations by inferring the appropriate adduct from the ionization mode (positive or negative). This standardization step ensures consistency and prevents downstream analysis errors caused by missing or inconsistent adduct information.

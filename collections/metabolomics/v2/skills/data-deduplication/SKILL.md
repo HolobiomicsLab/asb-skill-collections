@@ -1,6 +1,7 @@
 ---
 name: data-deduplication
-description: Use when after parsing and validating a .csv file containing comma-separated SMILES strings, and before formatting the molecule list for CypReact input.
+description: Use when after parsing and validating a .csv file containing comma-separated
+  SMILES strings, and before formatting the molecule list for CypReact input.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3364
@@ -11,6 +12,7 @@ metadata:
   - RDKit
   - pandas
   - CypReact
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -38,6 +40,7 @@ attribution:
 
 # data-deduplication
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove duplicate molecular structures from a parsed dataset of SMILES strings before submission to CypReact. Deduplication ensures that redundant molecules are not processed multiple times, reducing computational overhead and preventing inflated result sets.

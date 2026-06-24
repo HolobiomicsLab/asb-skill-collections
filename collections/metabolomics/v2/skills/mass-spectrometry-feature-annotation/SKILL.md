@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-feature-annotation
-description: Use when when you have peak-detected LC-MS/MS data (MGF files with MS1 and MS2 spectra, plus a feature abundance table from MZmine2) and need to assign chemical structures and molecular properties to individual MS1 features rather than relying on mass-to-charge alone.
+description: Use when when you have peak-detected LC-MS/MS data (MGF files with MS1
+  and MS2 spectra, plus a feature abundance table from MZmine2) and need to assign
+  chemical structures and molecular properties to individual MS1 features rather than
+  relying on mass-to-charge alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,11 +19,13 @@ metadata:
   - Classyfire
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # mass-spectrometry-feature-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate untargeted LC-MS/MS features with predicted molecular substructures and chemical taxonomy using fragmentation tree analysis, molecular formula ranking, and fingerprint prediction. This enables chemically-informed metabolomic profiling by assigning structural properties to detected mass-spectrometry features.

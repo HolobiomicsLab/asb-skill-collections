@@ -1,6 +1,9 @@
 ---
 name: chemical-classification-scheme-validation
-description: Use when you have structural annotations from in silico tools (SIRIUS, CANOPUS) and spectral library matches from GNPS, but need to (1) reconcile conflicting or incomplete ClassyFire ontology assignments, or (2) substitute NPClassifier taxonomy when ClassyFire ontology data is unavailable from GNPS.
+description: Use when you have structural annotations from in silico tools (SIRIUS,
+  CANOPUS) and spectral library matches from GNPS, but need to (1) reconcile conflicting
+  or incomplete ClassyFire ontology assignments, or (2) substitute NPClassifier taxonomy
+  when ClassyFire ontology data is unavailable from GNPS.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -16,14 +19,17 @@ metadata:
   - Fiehn Labs ClassyFire Batch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

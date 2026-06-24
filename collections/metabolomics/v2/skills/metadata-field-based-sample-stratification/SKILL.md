@@ -1,6 +1,8 @@
 ---
 name: metadata-field-based-sample-stratification
-description: Use when you have a feature table and accompanying CSV metadata that includes a 'Sample Type' field (or equivalent) with entries such as 'BLANK', 'QC', 'STD', or 'Unknown'.
+description: Use when you have a feature table and accompanying CSV metadata that
+  includes a 'Sample Type' field (or equivalent) with entries such as 'BLANK', 'QC',
+  'STD', or 'Unknown'.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - PCPFM
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -40,6 +43,7 @@ attribution:
 
 # metadata-field-based-sample-stratification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify LC-MS metabolomics samples into groups (blanks, QC, unknowns, standards) based on categorical metadata fields to enable targeted quality control, filtering, and downstream curation. This skill is essential for separating samples by experimental role before applying differential processing such as blank masking or batch correction.

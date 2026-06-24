@@ -1,6 +1,9 @@
 ---
 name: spectral-scan-metadata-matching
-description: Use when you have extracted MS1 and MS2 scans in mzML/mzXML format from raw chromatogram files and a structured metadata file (containing retention time, m/z, compound name, molecular weight, and annotation fields), and you need to pair each scan set with its corresponding chemical record to build.
+description: Use when you have extracted MS1 and MS2 scans in mzML/mzXML format from
+  raw chromatogram files and a structured metadata file (containing retention time,
+  m/z, compound name, molecular weight, and annotation fields), and you need to pair
+  each scan set with its corresponding chemical record to build.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,6 +15,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
@@ -40,6 +44,7 @@ attribution:
 
 # spectral-scan-metadata-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match extracted MS1 and MS2 scans to user-provided metadata (retention time, m/z, compound name, molecular weight) within specified tolerance windows to construct standardized spectral library records. This skill bridges raw chromatographic data and curated spectral libraries by associating instrumental measurements with chemical metadata.

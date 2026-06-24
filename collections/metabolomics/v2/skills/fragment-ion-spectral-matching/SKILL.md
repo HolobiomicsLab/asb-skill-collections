@@ -1,6 +1,8 @@
 ---
 name: fragment-ion-spectral-matching
-description: Use when after pointwise correlation analysis and exact mass difference refinement have identified candidate ion-species pairs that may share a common analyte origin.
+description: Use when after pointwise correlation analysis and exact mass difference
+  refinement have identified candidate ion-species pairs that may share a common analyte
+  origin.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +15,13 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # fragment-ion-spectral-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate MS2 spectral similarity scores between fragment ion profiles of candidate ion-species pairs to confirm they originate from the same analyte compound. This is the final confirmation step in DBDIpy's three-stage identification pipeline for direct-injection plasma ionization mass spectrometry.

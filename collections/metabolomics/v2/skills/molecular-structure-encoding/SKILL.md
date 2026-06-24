@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-encoding
-description: Use when you have molecular structures (SMILES strings or molecular graphs) that need to be input to a transformer model for property prediction (e.g., Collision Cross Section), and the model requires tokenized or embedded representations rather than raw chemical notation.
+description: Use when you have molecular structures (SMILES strings or molecular graphs)
+  that need to be input to a transformer model for property prediction (e.g., Collision
+  Cross Section), and the model requires tokenized or embedded representations rather
+  than raw chemical notation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -14,6 +17,7 @@ metadata:
   - MoLFormer (Pre-trained)
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03492
   title: HyperCCS

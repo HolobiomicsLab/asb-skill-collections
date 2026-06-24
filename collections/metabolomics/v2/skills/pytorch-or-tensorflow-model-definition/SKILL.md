@@ -1,6 +1,8 @@
 ---
 name: pytorch-or-tensorflow-model-definition
-description: Use when when you have molecular structure inputs (SMILES strings, molecular graphs, or feature vectors) and need to predict a continuous molecular property (e.g., CCS values, retention time, ionization efficiency).
+description: Use when when you have molecular structure inputs (SMILES strings, molecular
+  graphs, or feature vectors) and need to predict a continuous molecular property
+  (e.g., CCS values, retention time, ionization efficiency).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3363
@@ -15,6 +17,7 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03492
   title: HyperCCS

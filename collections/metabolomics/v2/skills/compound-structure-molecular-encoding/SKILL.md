@@ -1,6 +1,9 @@
 ---
 name: compound-structure-molecular-encoding
-description: Use when when you have SMILES strings or molecular structures for compounds and need to predict their retention behavior in reversed-phase liquid chromatography (RPLC) systems at pH ~2.7, but lack pre-computed molecular fingerprints or descriptor-based feature representations.
+description: Use when when you have SMILES strings or molecular structures for compounds
+  and need to predict their retention behavior in reversed-phase liquid chromatography
+  (RPLC) systems at pH ~2.7, but lack pre-computed molecular fingerprints or descriptor-based
+  feature representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -12,6 +15,7 @@ metadata:
   - chemprop
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI

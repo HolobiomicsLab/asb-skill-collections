@@ -1,6 +1,8 @@
 ---
 name: structure-organism-consistency-checking
-description: Use when after curating structure-organism pairs from multiple source databases (1_curating stage), when you need to filter curated pairs into high-confidence subsets for downstream analysis.
+description: Use when after curating structure-organism pairs from multiple source
+  databases (1_curating stage), when you need to filter curated pairs into high-confidence
+  subsets for downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - 2_validating.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -42,6 +45,7 @@ attribution:
 
 # structure-organism-consistency-checking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A validation filter that cross-references curated structure-organism pairs against organism and structure dictionaries to verify presence, consistency, and metadata completeness before promoting pairs to a high-confidence platinum collection. This skill ensures that only pairs with validated dictionary entries, consistent reference metadata, and no conflicting assertions advance downstream.

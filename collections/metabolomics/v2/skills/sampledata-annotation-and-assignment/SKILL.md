@@ -1,6 +1,8 @@
 ---
 name: sampledata-annotation-and-assignment
-description: Use when after loading multiple LC-MS .mzML files into an MsExperiment object using MsBackendMzR backend, when you have a documented injection sequence (e.
+description: Use when after loading multiple LC-MS .mzML files into an MsExperiment
+  object using MsBackendMzR backend, when you have a documented injection sequence
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -15,6 +17,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -45,6 +48,7 @@ attribution:
 
 # sampledata-annotation-and-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotation and assignment of sample metadata (e.g., QC vs. sample type) to loaded LC-MS spectral data in an MsExperiment object. This skill ensures that each injection is correctly labeled with its experimental role, enabling downstream QC-based filtering and stratified analysis.

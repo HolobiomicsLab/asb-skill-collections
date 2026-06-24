@@ -1,6 +1,9 @@
 ---
 name: simulation-output-validation
-description: Use when after executing a multi-stage simulation workflow in R and/or MATLAB, when you have generated intermediate and final outputs (tables, figures, model objects) and need to confirm that all artifacts conform to the documented format, structure, and expected content before downstream analysis.
+description: Use when after executing a multi-stage simulation workflow in R and/or
+  MATLAB, when you have generated intermediate and final outputs (tables, figures,
+  model objects) and need to confirm that all artifacts conform to the documented
+  format, structure, and expected content before downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2945
@@ -13,6 +16,7 @@ metadata:
   - MATLAB
   - Python
   - Jupyter
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo15010028
   title: DisCo P-ad
@@ -47,6 +51,7 @@ attribution:
 
 # simulation-output-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that simulation outputs (tables, figures, model objects) match expected format, structure, and content as documented in reference materials. This skill ensures reproducibility and correctness of computational workflows by systematically comparing generated artifacts against documented specifications.

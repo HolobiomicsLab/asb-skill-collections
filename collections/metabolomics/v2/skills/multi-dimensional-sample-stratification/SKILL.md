@@ -1,6 +1,9 @@
 ---
 name: multi-dimensional-sample-stratification
-description: Use when you have a parsed sample list with metadata (sample IDs, classification dimensions, QC designations) and need to generate a physical injection-plate layout that (1) will be run across multiple batches, (2) has a known confounding dimension (e.
+description: Use when you have a parsed sample list with metadata (sample IDs, classification
+  dimensions, QC designations) and need to generate a physical injection-plate layout
+  that (1) will be run across multiple batches, (2) has a known confounding dimension
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3897
@@ -12,6 +15,7 @@ metadata:
   - pandas / openpyxl
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
@@ -40,6 +44,7 @@ attribution:
 
 # multi-dimensional-sample-stratification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill partitions a sample cohort across multiple batches while preserving balance along a primary stratification axis and randomizing along a secondary axis to control for batch effects in LC/GC-MS injection-plate experiments. It ensures that each batch receives a representative distribution of sample groups or conditions, mitigating systematic bias in multi-batch metabolomics and proteomics workflows.

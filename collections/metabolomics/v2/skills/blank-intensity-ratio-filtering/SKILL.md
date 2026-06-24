@@ -1,6 +1,7 @@
 ---
 name: blank-intensity-ratio-filtering
-description: Use when apply this filter after feature detection and before downstream statistical analysis when your experimental design includes blank samples (e.
+description: Use when apply this filter after feature detection and before downstream
+  statistical analysis when your experimental design includes blank samples (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,7 @@ metadata:
   - Asari
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -44,6 +46,7 @@ attribution:
 
 # blank-intensity-ratio-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A quality control filter that removes low-abundance features from LC-MS metabolomics feature tables by comparing feature intensity in study samples to intensity in blank samples using a configurable ratio threshold. This step eliminates likely contaminants or instrument artifacts that appear at similar levels in blanks and unknowns.

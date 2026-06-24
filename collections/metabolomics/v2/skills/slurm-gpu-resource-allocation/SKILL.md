@@ -1,6 +1,8 @@
 ---
 name: slurm-gpu-resource-allocation
-description: Use when you have a machine learning training workflow (e.g., k-fold cross-validation) where each fold is independent, can run in parallel, and requires exactly one GPU per fold.
+description: Use when you have a machine learning training workflow (e.g., k-fold
+  cross-validation) where each fold is independent, can run in parallel, and requires
+  exactly one GPU per fold.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,6 +14,7 @@ metadata:
   - MSNovelist
   - Singularity
   - Python (train.py)
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

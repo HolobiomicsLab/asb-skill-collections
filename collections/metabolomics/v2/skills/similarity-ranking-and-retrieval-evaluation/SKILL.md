@@ -1,6 +1,7 @@
 ---
 name: similarity-ranking-and-retrieval-evaluation
-description: Use when after training contrastive embeddings that unify MS/MS spectra and molecular structures into a shared embedding space.
+description: Use when after training contrastive embeddings that unify MS/MS spectra
+  and molecular structures into a shared embedding space.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -19,6 +20,7 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2
@@ -52,6 +54,7 @@ attribution:
 
 # similarity-ranking-and-retrieval-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill evaluates cross-modal retrieval performance by computing cosine similarity between query embeddings and candidate embeddings, ranking results by score, and returning top-k matches with confidence scores. It is essential for assessing whether learned contrastive embeddings correctly align spectral and structural feature spaces for compound identification.

@@ -1,6 +1,8 @@
 ---
 name: spectral-metadata-integration
-description: Use when after isotopologue and adduct grouping has been completed and you need to associate MS2 spectra with consolidated feature groups in DDA LC-MS experiments.
+description: Use when after isotopologue and adduct grouping has been completed and
+  you need to associate MS2 spectra with consolidated feature groups in DDA LC-MS
+  experiments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,11 +14,14 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- Complete processing including peak picking, sample alignment, pick picking, grouping of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated MS2 spectra and isotopic
+- Complete processing including peak picking, sample alignment, pick picking, grouping
+  of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated
+  MS2 spectra and isotopic
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # Spectral Metadata Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract, consolidate, and annotate MS2 spectra with isotopic relationships and adduct information across grouped feature ions in untargeted LC-MS workflows. This skill bridges peak-picked, aligned, and grouped features to their corresponding tandem mass spectra and isotopic metadata, producing a unified spectral-feature data structure.

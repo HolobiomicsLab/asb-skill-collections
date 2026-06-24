@@ -1,6 +1,8 @@
 ---
 name: streamlit-session-state-integration
-description: Use when when building a Streamlit web application that must coordinate stateful workflow execution across multiple reruns triggered by user interactions (e.
+description: Use when when building a Streamlit web application that must coordinate
+  stateful workflow execution across multiple reruns triggered by user interactions
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +12,7 @@ metadata:
   - Redis Queue (RQ)
   - multiprocessing
   - settings.json
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -40,6 +43,7 @@ attribution:
 
 # streamlit-session-state-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate Streamlit session state to persist workflow configuration, deployment mode flags, and user parameters across reruns, enabling stateful control of dual-mode execution (online vs. local) without losing context between widget interactions.

@@ -1,6 +1,9 @@
 ---
 name: lipid-similarity-scoring
-description: Use when you have two or more lipid structures (represented as molecular graphs or parsed lipid names) and need to quantify their structural dissimilarity for dendrogram construction, lipidome clustering, or identification of structurally similar lipids.
+description: Use when you have two or more lipid structures (represented as molecular
+  graphs or parsed lipid names) and need to quantify their structural dissimilarity
+  for dendrogram construction, lipidome clustering, or identification of structurally
+  similar lipids.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_1812
@@ -10,6 +13,7 @@ metadata:
   tools:
   - LipidSpace
   - cppGoslin
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

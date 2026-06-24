@@ -1,6 +1,8 @@
 ---
 name: dictionary-and-metadata-extraction-from-relational-data
-description: 'Use when after performing left-join operations on cleaned organism, structure, and reference subgraphs but before final table denormalization. Trigger conditions: (1) you have a unified table with repeated entity_id columns (e.'
+description: 'Use when after performing left-join operations on cleaned organism,
+  structure, and reference subgraphs but before final table denormalization. Trigger
+  conditions: (1) you have a unified table with repeated entity_id columns (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - R data.table
   - 1_integrating.R
   - gzip compression
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +47,7 @@ attribution:
 
 # dictionary-and-metadata-extraction-from-relational-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract unique entities and their associated metadata from denormalized relational tables by grouping on entity identifiers and materializing separate dictionary and metadata artifacts. This skill is essential when consolidating multi-source data into a unified table and you need to support downstream lookup, validation, and cross-referencing without repeating entity information across thousands of rows.

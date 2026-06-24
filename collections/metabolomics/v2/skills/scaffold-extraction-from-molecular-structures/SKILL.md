@@ -1,6 +1,9 @@
 ---
 name: scaffold-extraction-from-molecular-structures
-description: 'Use when when pre-training or fine-tuning a molecular representation model on natural products and you need to encode scaffold-derived evolutionary patterns as a distinct learning signal. Trigger: input is SMILES strings or molecular graphs from natural product databases (e.'
+description: 'Use when when pre-training or fine-tuning a molecular representation
+  model on natural products and you need to encode scaffold-derived evolutionary patterns
+  as a distinct learning signal. Trigger: input is SMILES strings or molecular graphs
+  from natural product databases (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3369
@@ -10,10 +13,12 @@ metadata:
   - http://edamontology.org/topic_0121
   tools:
   - Git
-  - PyTorch or equivalent deep learning framework (inferred from GNN/contrastive learning context)
+  - PyTorch or equivalent deep learning framework (inferred from GNN/contrastive learning
+    context)
   - RDKit
   - PyTorch Geometric (PyG)
   - NaFM pre-training framework
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -43,6 +48,7 @@ attribution:
 
 # scaffold-extraction-from-molecular-structures
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract chemical scaffolds from natural product molecular structures to isolate conserved core frameworks that encode evolutionary lineage and biosynthetic ancestry. This isolates scaffold-derived patterns for contrastive learning in pre-training natural product foundation models.

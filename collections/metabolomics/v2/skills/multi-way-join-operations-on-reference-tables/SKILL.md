@@ -1,6 +1,9 @@
 ---
 name: multi-way-join-operations-on-reference-tables
-description: Use when you have independently cleaned and validated organism, structure, and reference tables (each keyed by organism_id, structure_id, and reference_id respectively) and need to consolidate them into a single denormalized curated table that maintains traceability to the original integrated table.
+description: Use when you have independently cleaned and validated organism, structure,
+  and reference tables (each keyed by organism_id, structure_id, and reference_id
+  respectively) and need to consolidate them into a single denormalized curated table
+  that maintains traceability to the original integrated table.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -13,6 +16,7 @@ metadata:
   - R data.table
   - 1_integrating.R
   - Make
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -45,6 +49,7 @@ attribution:
 
 # multi-way-join-operations-on-reference-tables
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Sequentially join cleaned organism, structure, and reference tables by their identifiers to consolidate multi-source entries into a unified denormalized curated table while preserving original record lineage. This skill is essential when integrating heterogeneous reference data sources into a single comprehensive structure-organism-reference resource.

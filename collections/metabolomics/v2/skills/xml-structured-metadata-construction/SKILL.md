@@ -1,6 +1,8 @@
 ---
 name: xml-structured-metadata-construction
-description: Use when when you have synthesized or assembled mass spectrometry spectral data (m/z values, intensities, retention times) and need to encode it as a portable, standard mzML file format rather than a proprietary binary or text representation.
+description: Use when when you have synthesized or assembled mass spectrometry spectral
+  data (m/z values, intensities, retention times) and need to encode it as a portable,
+  standard mzML file format rather than a proprietary binary or text representation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3932
@@ -14,11 +16,13 @@ metadata:
   - mzR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - The underlying engine handles binary data encoding via the `base64enc` package
 - github.com__yufree__mzrtsim
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # xml-structured-metadata-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct properly-formatted mzML XML structures with nested scan headers, precursor metadata, and base64-encoded binary product ion arrays for mass spectrometry data files. This skill is essential for generating standards-compliant MS data files that can be read by downstream analysis software.

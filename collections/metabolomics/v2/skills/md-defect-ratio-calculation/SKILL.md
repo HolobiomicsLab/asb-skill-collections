@@ -1,6 +1,9 @@
 ---
 name: md-defect-ratio-calculation
-description: Use when you have a feature table from LC- or GC-HRMS data (either detected via pyOpenMS or imported as a custom feature list) containing m/z, retention time, and intensity values, and you want to rapidly filter to candidate PFAS features that exhibit the elevated mass defects typical of.
+description: Use when you have a feature table from LC- or GC-HRMS data (either detected
+  via pyOpenMS or imported as a custom feature list) containing m/z, retention time,
+  and intensity values, and you want to rapidly filter to candidate PFAS features
+  that exhibit the elevated mass defects typical of.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -13,12 +16,14 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # MD/C-m/C Ratio Calculation for PFAS Feature Prioritization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the mass defect (MD) to molecular ion abundance ratio (C-m/C) for each detected feature to identify PFAS-like compounds with elevated mass defects characteristic of perfluorinated structures. This ratio-based filtering step prioritizes features most likely to be PFAS before more computationally intensive downstream analysis.

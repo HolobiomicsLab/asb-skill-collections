@@ -1,6 +1,9 @@
 ---
 name: drugbank-format-parsing
-description: Use when when you have obtained a DrugBank release file (requiring access credentials) and need to extract drug records with standardized fields (names, structures, identifiers, classification) for integration into a metadata enrichment or cleanup workflow that queries multiple drug/natural product.
+description: Use when when you have obtained a DrugBank release file (requiring access
+  credentials) and need to extract drug records with standardized fields (names, structures,
+  identifiers, classification) for integration into a metadata enrichment or cleanup
+  workflow that queries multiple drug/natural product.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -11,6 +14,7 @@ metadata:
   - drugbank_extraction.py
   - jobs.py
   - metadata_cleanup_prefect.py
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

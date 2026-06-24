@@ -1,6 +1,9 @@
 ---
 name: interactive-network-visualization-rendering
-description: Use when after structural clustering (isotopologue grouping, adduct detection, cross-assay linking) and correlation clustering of LC-MS features, when you need to inspect and communicate the topology of structural relationships—particularly when the number of features or link types is too dense for.
+description: Use when after structural clustering (isotopologue grouping, adduct detection,
+  cross-assay linking) and correlation clustering of LC-MS features, when you need
+  to inspect and communicate the topology of structural relationships—particularly
+  when the number of features or link types is too dense for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -17,6 +20,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -51,6 +55,7 @@ attribution:
 
 # interactive-network-visualization-rendering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert structural cluster assignments (isotopologue, adduct, and cross-assay links) into an interactive network graph suitable for dynamic exploration and annotation in web-based or desktop environments. This skill bridges programmatic network construction with human-centered curation by rendering NetworkX objects as interactive HTML visualizations or exporting to specialized tools like Cytoscape.

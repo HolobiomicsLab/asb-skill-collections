@@ -1,6 +1,7 @@
 ---
 name: metabolite-composition-comparison-across-treatments
-description: Use when you have normalized peak intensity tables from FT-ICR MS data (e.g., MetaboDirect .
+description: Use when you have normalized peak intensity tables from FT-ICR MS data
+  (e.g., MetaboDirect .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,13 +17,16 @@ metadata:
   - ggplot2 / ggpubr
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
+- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA
+  [64]
 - using functions from the R packages vegan [63]
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 claims: []
@@ -48,6 +52,7 @@ attribution:
 
 # metabolite-composition-comparison-across-treatments
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A multivariate statistical approach to test whether experimental treatments (e.g., phage type, incubation time) produce statistically significant differences in metabolite/organic compound composition detected by FT-ICR MS. This skill combines distance-based permutation analysis (PERMANOVA) with ordination visualization to detect subtle compositional shifts that may be invisible to unsupervised methods alone.

@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-data-validation-and-parsing
-description: Use when when you have received POST requests containing peaks data as form parameters (chemical shift, multiplicity, integration values) and need to accept, validate, and normalize those values before formatting them into a query compatible with an external NMR prediction service such as.
+description: Use when when you have received POST requests containing peaks data as
+  form parameters (chemical shift, multiplicity, integration values) and need to accept,
+  validate, and normalize those values before formatting them into a query compatible
+  with an external NMR prediction service such as.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,12 +18,14 @@ metadata:
   - nmrshiftdb
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
 evidence_spans:
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - Use the file pyproject.toml to determine the version of Python required.
 - curl xxx.xxx.xxx.xxx:3007/ping
 - gunicorn -w 4 -b 0.0.0.0:3007 server:app --daemon

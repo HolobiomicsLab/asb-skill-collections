@@ -1,6 +1,8 @@
 ---
 name: nearest-neighbor-index-construction
-description: Use when when you have millions of high-resolution MS/MS spectra converted to low-dimensional vectors (via feature hashing) and need to compute a sparse pairwise distance matrix for downstream density-based clustering.
+description: Use when when you have millions of high-resolution MS/MS spectra converted
+  to low-dimensional vectors (via feature hashing) and need to compute a sparse pairwise
+  distance matrix for downstream density-based clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,11 +14,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # nearest-neighbor-index-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct spatial indexes (e.g., inverted index with Voronoi partitioning) over low-dimensional spectrum vectors to enable fast similarity searching and sparse pairwise distance computation without exhaustive all-vs-all comparison. This skill accelerates large-scale MS/MS spectrum clustering by trading off memory and preprocessing cost for query-time efficiency.

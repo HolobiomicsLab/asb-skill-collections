@@ -1,6 +1,9 @@
 ---
 name: transcriptomics-reaction-activity-scoring
-description: Use when you have RNA-seq read counts (FPKM or similar) for multiple cell lines or biological samples, a genome-scale metabolic model with GPR associations, and you need to constrain or weight metabolic reactions based on transcriptional regulation.
+description: Use when you have RNA-seq read counts (FPKM or similar) for multiple
+  cell lines or biological samples, a genome-scale metabolic model with GPR associations,
+  and you need to constrain or weight metabolic reactions based on transcriptional
+  regulation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3792
@@ -20,16 +23,22 @@ metadata:
   - optGpSampler algorithm
   - t-SNE (t-distributed Stochastic Neighbor Embedding)
   - COBRApy
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36]
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in GX-FBA [26]
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA [38]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in GX-FBA [26]
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA [38]
 - raw reads were mapped with STAR aligner (v.2.6.1d) to human reference genome (hg38)
-- gene counts were calculated by HTSeq (v.0.6.1), using the hg38 Encode-Gencode GTF file (v28)
+- gene counts were calculated by HTSeq (v.0.6.1), using the hg38 Encode-Gencode GTF
+  file (v28)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -53,6 +62,7 @@ attribution:
 
 # transcriptomics-reaction-activity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Reaction Activity Scores (RAS) from RNA-seq read counts and Gene-Protein-Reaction (GPR) rules to quantify the transcriptional capacity of metabolic reactions. This bridges gene expression data to metabolic network models by assigning each reaction a normalized score that reflects the abundance of its encoding enzymes.

@@ -1,6 +1,9 @@
 ---
 name: gc-ci-ms-data-processing
-description: Use when you have vendor-format GC-CI-MS raw data from a stable isotope labeling experiment, a list of targeted compounds with known monoisotopic m/z, retention time, and molecular formula, and you need to extract per-isotopologue area and intensity values across multiple samples with consistent.
+description: Use when you have vendor-format GC-CI-MS raw data from a stable isotope
+  labeling experiment, a list of targeted compounds with known monoisotopic m/z, retention
+  time, and molecular formula, and you need to extract per-isotopologue area and intensity
+  values across multiple samples with consistent.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,12 +19,14 @@ metadata:
   - devtools
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
 evidence_spans:
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - isoSCAN uses `mzR` package in order to read MS files

@@ -1,6 +1,8 @@
 ---
 name: metabolite-detection-frequency-estimation
-description: Use when after loading spatial metabolomics data (from CSV, imzML, or merged positive/negative ionization modes) into an AnnData object, and before filtering metabolites or performing cross-modal integration.
+description: Use when after loading spatial metabolomics data (from CSV, imzML, or
+  merged positive/negative ionization modes) into an AnnData object, and before filtering
+  metabolites or performing cross-modal integration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -11,6 +13,7 @@ metadata:
   - spatialMETA
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

@@ -1,6 +1,8 @@
 ---
 name: docker-container-runtime-execution-and-monitoring
-description: Use when you have a vendor mass spectrometry raw file (e.g., .raw format) that requires conversion to Aird format using AirdPro CLI, and you are running on macOS or Linux.
+description: Use when you have a vendor mass spectrometry raw file (e.g., .raw format)
+  that requires conversion to Aird format using AirdPro CLI, and you are running on
+  macOS or Linux.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -18,6 +20,7 @@ metadata:
   - XQuartz
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -49,6 +52,7 @@ attribution:
 
 # docker-container-runtime-execution-and-monitoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a containerized application (e.g. AirdPro CLI) within a Docker container with mounted input/output volumes, monitor initialization overhead and runtime behavior, and verify output file integrity. This skill is essential when deploying Windows/.NET applications on macOS/Linux via Wine emulation, where first-run setup can exceed 30 minutes.

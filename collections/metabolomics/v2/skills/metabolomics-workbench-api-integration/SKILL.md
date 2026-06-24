@@ -1,6 +1,8 @@
 ---
 name: metabolomics-workbench-api-integration
-description: Use when when you need to analyze a publicly archived lipidomics study (identified by study_id like ST001111) and want to bypass manual data download and format conversion.
+description: Use when when you need to analyze a publicly archived lipidomics study
+  (identified by study_id like ST001111) and want to bypass manual data download and
+  format conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3761
@@ -11,13 +13,17 @@ metadata:
   - lipidr
   - Metabolomics Workbench API
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
-- Through integration with Metabolomics Workbench API, `lipidr` allows users, to quickly explore public lipidomics experiments.
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
+- Through integration with Metabolomics Workbench API, `lipidr` allows users, to quickly
+  explore public lipidomics experiments.
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -42,6 +48,7 @@ attribution:
 
 # metabolomics-workbench-api-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and parse public lipidomics datasets directly from Metabolomics Workbench into a structured LipidomicsExperiment object using the lipidr R package's API integration. This skill enables rapid access to standardized lipidomics data without manual download and reformatting.

@@ -1,6 +1,9 @@
 ---
 name: summarized-experiment-subsetting
-description: Use when when you have a SummarizedExperiment containing metabolomic abundances and a corresponding vector of quality metrics (e.g., coefficient of variation computed across QC samples), and you need to filter to retain only features meeting a reproducibility threshold (e.g., CV ≤ 0.
+description: Use when when you have a SummarizedExperiment containing metabolomic
+  abundances and a corresponding vector of quality metrics (e.g., coefficient of variation
+  computed across QC samples), and you need to filter to retain only features meeting
+  a reproducibility threshold (e.g., CV ≤ 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,13 +16,15 @@ metadata:
   - MWASTools
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # summarized-experiment-subsetting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Subset a Bioconductor SummarizedExperiment object to retain only rows (metabolic features) meeting quality criteria, such as coefficient of variation thresholds. This skill is essential for removing non-reproducible or low-quality features from metabolomic datasets before downstream association analysis.

@@ -1,6 +1,9 @@
 ---
 name: lipid-class-abundance-comparison
-description: 'Use when you have a LipidomicsExperiment object with logged and normalized Area measurements, sample-level phenotype annotations (e.g., SampleType: Cancer, Benign, Metastasis), and you want to identify which lipid classes show consistent directional change across all samples within a group.'
+description: 'Use when you have a LipidomicsExperiment object with logged and normalized
+  Area measurements, sample-level phenotype annotations (e.g., SampleType: Cancer,
+  Benign, Metastasis), and you want to identify which lipid classes show consistent
+  directional change across all samples within a group.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3668
@@ -11,12 +14,15 @@ metadata:
   - lipidr
   - limma
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - This step of the workflow requires the `limma` package to be installed.
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
@@ -42,6 +48,7 @@ attribution:
 
 # lipid-class-abundance-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare abundance patterns of lipid classes (e.g., phosphatidylcholines, cardiolipins, triglycerides) across sample groups to identify which lipid classes are systematically up- or down-regulated in disease versus control states. This skill enables discovery of lipid biomarker signatures by quantifying and visualizing differential regulation at the lipid class level rather than individual lipid species.

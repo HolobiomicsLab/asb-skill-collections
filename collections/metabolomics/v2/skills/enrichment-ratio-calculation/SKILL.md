@@ -1,6 +1,8 @@
 ---
 name: enrichment-ratio-calculation
-description: Use when after generating combined or alternative scores for a set of BGC-metabolite (GCF-MF) link candidates, you need to evaluate whether a scoring function preferentially ranks true validated links higher than spurious ones.
+description: Use when after generating combined or alternative scores for a set of
+  BGC-metabolite (GCF-MF) link candidates, you need to evaluate whether a scoring
+  function preferentially ranks true validated links higher than spurious ones.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,15 +17,18 @@ metadata:
   - scipy.stats
   - pandas
   - matplotlib / seaborn
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # enrichment-ratio-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the proportion of validated genomic-metabolomic links in ranked prediction tiers (e.g., 90th or 95th percentile) to quantify whether a scoring function enriches for true positive links relative to the background of all hypothetical links. This enables statistical comparison of alternative combination functions and identification of which parameters or function types yield significant enrichment.

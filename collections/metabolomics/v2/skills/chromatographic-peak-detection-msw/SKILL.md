@@ -1,6 +1,9 @@
 ---
 name: chromatographic-peak-detection-msw
-description: Use when you have raw mzML files from an FTICR-MS or other direct-injection MS instrument and need to identify discrete chromatographic peaks across the m/z and retention-time dimensions. Use this skill when you must isolate individual ion signals before applying calibration corrections (e.
+description: Use when you have raw mzML files from an FTICR-MS or other direct-injection
+  MS instrument and need to identify discrete chromatographic peaks across the m/z
+  and retention-time dimensions. Use this skill when you must isolate individual ion
+  signals before applying calibration corrections (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -16,13 +19,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 - doi: 10.5281/zenodo.18494293
   title: ''
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 - library(Spectra)
 - library(MsBackendMgf)
 - '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'
@@ -50,6 +55,7 @@ attribution:
 
 # chromatographic-peak-detection-msw
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect chromatographic peaks in direct-injection or LC-MS data using the MSWParam algorithm, which identifies signal clusters by integrating mass and intensity information. This skill is essential for isolating individual ion signals prior to mass calibration, feature grouping, or spectral annotation in untargeted metabolomics workflows.

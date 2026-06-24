@@ -1,6 +1,9 @@
 ---
 name: custom-code-execution-in-data-pipeline
-description: Use when when standard conversion directives (headers, collate, fields_to_headers, exclusion_headers, values_to_str, sort_by, test) cannot express the required transformation logic, or when domain-specific aggregation, conditional logic, or value derivation must be applied to records after field.
+description: Use when when standard conversion directives (headers, collate, fields_to_headers,
+  exclusion_headers, values_to_str, sort_by, test) cannot express the required transformation
+  logic, or when domain-specific aggregation, conditional logic, or value derivation
+  must be applied to records after field.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # Custom Code Execution in Data Pipeline
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill enables the injection and execution of user-defined Python code within a data transformation pipeline to apply custom logic that cannot be expressed through declarative directives alone. It is essential for complex, non-standard data transformations in extract-validate-convert workflows where built-in field mapping, filtering, and collation are insufficient.

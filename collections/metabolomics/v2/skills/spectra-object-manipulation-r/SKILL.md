@@ -1,6 +1,8 @@
 ---
 name: spectra-object-manipulation-r
-description: Use when when you have extracted and concatenated MS/MS spectra from multiple replicates for a set of metabolomic features (stored in a preprocessed list), and need to apply intensity-based filtering (e.
+description: Use when when you have extracted and concatenated MS/MS spectra from
+  multiple replicates for a set of metabolomic features (stored in a preprocessed
+  list), and need to apply intensity-based filtering (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,12 +16,16 @@ metadata:
   - dplyr
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # Spectra Object Manipulation in R
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, filter, and manipulate tandem MS/MS spectra as S4 Spectra objects in R, applying intensity thresholds and mass tolerance constraints to prepare concatenated replicate spectra for denoising and analysis.

@@ -1,6 +1,9 @@
 ---
 name: network-topology-metric-computation
-description: Use when after constructing or loading a network object (from adjacency matrix, edge list, or correlation output) and needing to quantify structural properties—such as identifying hub nodes via degree centrality, assessing clustering via coefficient distributions, measuring network resilience via.
+description: Use when after constructing or loading a network object (from adjacency
+  matrix, edge list, or correlation output) and needing to quantify structural properties—such
+  as identifying hub nodes via degree centrality, assessing clustering via coefficient
+  distributions, measuring network resilience via.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -12,12 +15,15 @@ metadata:
   - R
   - pcutils
   - igraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 - devtools::install_github("Asa12138/pcutils")
 claims: []
@@ -43,6 +49,7 @@ attribution:
 
 # Reconstruct topological and stability metric computation for a constructed network
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute comprehensive topological and stability metrics from a network object to characterize global and node-level network properties. MetaNet's metrics module calculates degree, centrality, clustering coefficients, path lengths, robustness, and perturbation-response metrics for in-depth network characterization.

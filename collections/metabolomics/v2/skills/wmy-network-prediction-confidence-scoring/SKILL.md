@@ -1,6 +1,9 @@
 ---
 name: wmy-network-prediction-confidence-scoring
-description: Use when after initial lipid candidate annotation via spectral library matching (e.g., from XCMS/CAMERA peak alignment and LipidIN EQ module querying), when you need to improve coverage and annotation confidence on unannotated or low-confidence lipid signals.
+description: Use when after initial lipid candidate annotation via spectral library
+  matching (e.g., from XCMS/CAMERA peak alignment and LipidIN EQ module querying),
+  when you need to improve coverage and annotation confidence on unannotated or low-confidence
+  lipid signals.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -14,12 +17,15 @@ metadata:
   - WMY network (PyTorch)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

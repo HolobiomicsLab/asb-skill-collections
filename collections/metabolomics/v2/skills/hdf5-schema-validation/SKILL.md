@@ -1,6 +1,7 @@
 ---
 name: hdf5-schema-validation
-description: Use when after converting proprietary vendor mass spectrometry files (Thermo .raw, Agilent .d, Bruker .d, or mzML) to MZA HDF5 format using the MZA executable.
+description: Use when after converting proprietary vendor mass spectrometry files
+  (Thermo .raw, Agilent .d, Bruker .d, or mzML) to MZA HDF5 format using the MZA executable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,11 +15,13 @@ metadata:
   - rhdf5
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 - the MZA simple data structure based on the HDF5 format
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 claims: []

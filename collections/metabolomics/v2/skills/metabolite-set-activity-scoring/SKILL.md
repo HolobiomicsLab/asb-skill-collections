@@ -1,6 +1,9 @@
 ---
 name: metabolite-set-activity-scoring
-description: Use when when you have log2-normalized, standardized peak intensity data (rows=peaks, columns=samples) with compound annotations (peak-to-metabolite mappings via KEGG/ChEBI IDs) and need to collapse individual peak signals into pathway-level summary scores for statistical comparison across.
+description: Use when when you have log2-normalized, standardized peak intensity data
+  (rows=peaks, columns=samples) with compound annotations (peak-to-metabolite mappings
+  via KEGG/ChEBI IDs) and need to collapse individual peak signals into pathway-level
+  summary scores for statistical comparison across.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -18,12 +21,15 @@ metadata:
   - MS2LDA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways,
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

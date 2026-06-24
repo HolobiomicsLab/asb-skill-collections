@@ -1,6 +1,8 @@
 ---
 name: molecular-descriptor-interpretation
-description: Use when you have a collection of molecules represented as CSV or EXCEL files containing computed molecular descriptors (e.g., physicochemical properties, structural features) and you need to predict whether each molecule will taste bitter.
+description: Use when you have a collection of molecules represented as CSV or EXCEL
+  files containing computed molecular descriptors (e.g., physicochemical properties,
+  structural features) and you need to predict whether each molecule will taste bitter.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -8,11 +10,13 @@ metadata:
   - http://edamontology.org/topic_2258
   tools:
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not
+- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules,
+  and calucautes a predictions if each molecule is bitter or not
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -36,6 +40,7 @@ attribution:
 
 # molecular-descriptor-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret molecular descriptor files (CSV or EXCEL format) as input to a bitterness classification model, translating chemical structure representations into per-molecule binary predictions (bitter or non-bitter). This skill bridges chemical descriptor preprocessing and taste prediction inference.

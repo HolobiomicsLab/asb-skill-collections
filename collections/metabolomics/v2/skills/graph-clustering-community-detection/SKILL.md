@@ -1,6 +1,7 @@
 ---
 name: graph-clustering-community-detection
-description: Use when after constructing a spectral similarity network from pairwise cosine similarity scores between deconvolved GC-MS spectra.
+description: Use when after constructing a spectral similarity network from pairwise
+  cosine similarity scores between deconvolved GC-MS spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -13,6 +14,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

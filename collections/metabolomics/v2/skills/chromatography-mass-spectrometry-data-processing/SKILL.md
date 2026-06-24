@@ -1,6 +1,8 @@
 ---
 name: chromatography-mass-spectrometry-data-processing
-description: Use when when you have raw GC–MS or LC–MS data (m/z vs retention time chromatography-mass spectrometry maps) and need to identify analyte signals and marker features without conventional peak picking;
+description: Use when when you have raw GC–MS or LC–MS data (m/z vs retention time
+  chromatography-mass spectrometry maps) and need to identify analyte signals and
+  marker features without conventional peak picking;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,6 +14,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -19,9 +22,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # chromatography-mass-spectrometry-data-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of multivariate chemo-/biomarker features in GC–MS and LC–MS data by combining image processing and machine learning on two-dimensional m/z–retention time maps, bypassing conventional peak picking to reduce false positives and false negatives.

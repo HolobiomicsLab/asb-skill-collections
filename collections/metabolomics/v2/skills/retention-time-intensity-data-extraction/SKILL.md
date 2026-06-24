@@ -1,6 +1,8 @@
 ---
 name: retention-time-intensity-data-extraction
-description: Use when you have xcms-processed LC-MS data with detected misaligned feature groups and need to recover the underlying raw retention time–intensity profiles for each feature and sample combination prior to realignment.
+description: Use when you have xcms-processed LC-MS data with detected misaligned
+  feature groups and need to recover the underlying raw retention time–intensity profiles
+  for each feature and sample combination prior to realignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,11 +15,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -43,6 +47,7 @@ attribution:
 
 # retention-time-intensity-data-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and organize raw LC-MS retention time and intensity profiles from xcms-processed source files for specific feature groups using the ncGTW loadProfile() function. This skill is essential for reconstructing raw profile data needed to realign misaligned features detected by xcms.

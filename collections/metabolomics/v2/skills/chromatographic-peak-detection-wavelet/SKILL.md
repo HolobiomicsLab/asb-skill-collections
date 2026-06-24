@@ -1,6 +1,8 @@
 ---
 name: chromatographic-peak-detection-wavelet
-description: Use when you have loaded raw LC-MS or direct-injection FTICR-MS data (in mzML or netCDF format) into an XCMSnExp object and need to identify individual chromatographic peaks before feature grouping.
+description: Use when you have loaded raw LC-MS or direct-injection FTICR-MS data
+  (in mzML or netCDF format) into an XCMSnExp object and need to identify individual
+  chromatographic peaks before feature grouping.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -14,12 +16,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
 - library(MsDataHub)
-- '`r Biocpkg("xcms")` uses functionality from the *MassSpecWavelet* package to identify such peaks'
+- '`r Biocpkg("xcms")` uses functionality from the *MassSpecWavelet* package to identify
+  such peaks'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

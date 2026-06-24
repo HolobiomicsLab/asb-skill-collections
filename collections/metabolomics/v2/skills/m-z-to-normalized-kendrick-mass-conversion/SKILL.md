@@ -1,6 +1,8 @@
 ---
 name: m-z-to-normalized-kendrick-mass-conversion
-description: Use when you have uploaded peak list data containing m/z values and wish to construct a Kendrick mass plot where alkane homolog series (or other homologous families) are expected to appear as horizontal lines.
+description: Use when you have uploaded peak list data containing m/z values and wish
+  to construct a Kendrick mass plot where alkane homolog series (or other homologous
+  families) are expected to appear as horizontal lines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -12,6 +14,7 @@ metadata:
   - d3.js
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

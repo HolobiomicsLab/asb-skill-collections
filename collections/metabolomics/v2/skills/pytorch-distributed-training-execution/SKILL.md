@@ -1,6 +1,9 @@
 ---
 name: pytorch-distributed-training-execution
-description: Use when when you have a pre-trained GNN model checkpoint and need to apply transfer learning to a new chromatography or molecular property prediction dataset (e.g., Eawag_XBridgeC18_364.xlsx) by fine-tuning the model weights on domain-specific examples without retraining from scratch.
+description: Use when when you have a pre-trained GNN model checkpoint and need to
+  apply transfer learning to a new chromatography or molecular property prediction
+  dataset (e.g., Eawag_XBridgeC18_364.xlsx) by fine-tuning the model weights on domain-specific
+  examples without retraining from scratch.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -20,6 +23,7 @@ metadata:
   - PyG (PyTorch Geometric)
   - TorchMetrics
   - torch-scatter, torch-sparse, torch-cluster
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
@@ -53,6 +57,7 @@ attribution:
 
 # PyTorch Distributed Training Execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute transfer learning workflows on graph neural network models using PyTorch and PyG with command-line parameter passing to enable fine-tuning on domain-specific molecular datasets. This skill bridges pre-trained model checkpoints and transfer learning datasets through scripted execution with structured dataset arguments.

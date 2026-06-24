@@ -1,6 +1,9 @@
 ---
 name: run-order-diagnostic-plotting
-description: Use when you have metabolomics data structured as a SummarizedExperiment with run-order metadata and need to diagnose whether signal intensity or abundance varies systematically with sample acquisition order (intra-batch drift) or batch assignment (inter-batch effects).
+description: Use when you have metabolomics data structured as a SummarizedExperiment
+  with run-order metadata and need to diagnose whether signal intensity or abundance
+  varies systematically with sample acquisition order (intra-batch drift) or batch
+  assignment (inter-batch effects).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -14,15 +17,19 @@ metadata:
   - dplyr
   - SummarizedExperiment
   - ggplot2
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
-- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate the unwanted variation within and between batches with RUV-III'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
+- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate
+  the unwanted variation within and between batches with RUV-III'
 - Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
+- we will load the hRUV package and other packages required for the demonstration...
+  library(dplyr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: kegg-candidate-network-integration
-description: Use when after cluster-based filtering has produced a set of candidate KEGG compounds for each feature cluster in untargeted LC-MS data, and you need to rank these candidates by their metabolic plausibility using network context rather than mass accuracy alone.
+description: Use when after cluster-based filtering has produced a set of candidate
+  KEGG compounds for each feature cluster in untargeted LC-MS data, and you need to
+  rank these candidates by their metabolic plausibility using network context rather
+  than mass accuracy alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,11 +17,13 @@ metadata:
   - igraph
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 - we will now use the sample graph provided by FELLA R package
 - g.metab <- igraph::as.undirected(sample.graph)
@@ -45,6 +50,7 @@ attribution:
 
 # KEGG Candidate Network Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate KEGG metabolite candidates into a metabolic network graph and apply diffusion-based scoring to prioritize annotations by propagating confidence scores through network topology. This skill transforms a flat list of candidate compounds into a ranked, network-contextualized annotation table.

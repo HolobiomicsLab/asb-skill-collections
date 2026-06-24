@@ -1,6 +1,9 @@
 ---
 name: neural-network-architecture-design
-description: Use when you have raw mzML files and feature tables (CSV from mzMine or XCMS) for LCMS data, have generated training/validation/test batches with known class imbalance, and need to train a CNN model from scratch to achieve AUC ROC > 0.9 for distinguishing true from false positive MS1 peaks.
+description: Use when you have raw mzML files and feature tables (CSV from mzMine
+  or XCMS) for LCMS data, have generated training/validation/test batches with known
+  class imbalance, and need to train a CNN model from scratch to achieve AUC ROC >
+  0.9 for distinguishing true from false positive MS1 peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -24,17 +27,21 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 - doi: 10.1038/s42004-023-00932-3
   title: ''
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
-- calling the training method (1000 by default). NeatMS does not currently provides callback functions to automatically stop the training. Calling the training method will simply resume the training
+- calling the training method (1000 by default). NeatMS does not currently provides
+  callback functions to automatically stop the training. Calling the training method
+  will simply resume the training
 - from keras.optimizers import SGD, Adam
 claims: []
 provenance:
@@ -63,6 +70,7 @@ attribution:
 
 # neural-network-architecture-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and instantiate a CNN architecture for automated LCMS false positive peak classification, tuned with specific hyperparameters to balance training convergence and validation generalization. This skill is essential when building a fresh neural network model for MS1 peak filtering tasks where domain-specific parameters (matrix size, margin, scan count thresholds) and optimizer settings directly impact classification performance.

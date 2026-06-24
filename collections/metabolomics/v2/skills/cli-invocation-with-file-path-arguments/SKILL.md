@@ -1,6 +1,9 @@
 ---
 name: cli-invocation-with-file-path-arguments
-description: Use when you have vendor raw mass spectrometry data files (e.g., .raw, .d, .wiff2 formats) that must be converted to mzML or Aird format, and you need to automate the conversion in a batch workflow, Docker container, or non-interactive environment.
+description: Use when you have vendor raw mass spectrometry data files (e.g., .raw,
+  .d, .wiff2 formats) that must be converted to mzML or Aird format, and you need
+  to automate the conversion in a batch workflow, Docker container, or non-interactive
+  environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -14,6 +17,7 @@ metadata:
   - Docker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -45,6 +49,7 @@ attribution:
 
 # cli-invocation-with-file-path-arguments
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke a command-line interface tool with input and output file path arguments to perform format conversion. This skill is essential for batch processing and automation workflows where vendor mass spectrometry raw files must be converted to standardized formats (mzML or Aird) without manual GUI interaction.

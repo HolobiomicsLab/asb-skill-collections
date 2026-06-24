@@ -1,6 +1,9 @@
 ---
 name: object-oriented-design-analysis
-description: Use when you need to understand or document the extensibility architecture of a modular OOP codebase—specifically when developers must identify which classes, interfaces, or modules to extend or improve, or when onboarding contributors to a project whose documentation does not explicitly expose its.
+description: Use when you need to understand or document the extensibility architecture
+  of a modular OOP codebase—specifically when developers must identify which classes,
+  interfaces, or modules to extend or improve, or when onboarding contributors to
+  a project whose documentation does not explicitly expose its.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   - Docker
   - PlantUML
   - Git
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet

@@ -1,6 +1,9 @@
 ---
 name: reactant-ion-peak-exclusion
-description: Use when when performing peak detection on Gas Chromatography–Ion Mobility Spectrometry samples where the Reactant Ion Peak (a high-intensity background signal from the ion source) would otherwise be misidentified as an analyte peak, causing false positives in the peak list.
+description: Use when when performing peak detection on Gas Chromatography–Ion Mobility
+  Spectrometry samples where the Reactant Ion Peak (a high-intensity background signal
+  from the ion source) would otherwise be misidentified as an analyte peak, causing
+  false positives in the peak list.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +16,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +45,7 @@ attribution:
 
 # reactant-ion-peak-exclusion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Suppress detection of Reactant Ion Peaks (RIP) during GCIMS peak detection to avoid false positives from instrument noise. RIP exclusion is a filtering parameter applied during the CWT-based findPeaks step to ensure only true analyte peaks are retained in the peak_list output.

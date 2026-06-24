@@ -18,6 +18,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab).
     url: https://bitbucket.org/wishartlab/classyfire_api.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
@@ -46,6 +47,7 @@ attribution:
 
 # http-post-request-construction
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Construct and execute HTTP POST requests to remote APIs, formatting compound data as tab-separated values with newline delimiters and capturing JSON responses for downstream processing. This skill enables programmatic submission of chemical structure queries to web services like ClassyFire for automated classification.

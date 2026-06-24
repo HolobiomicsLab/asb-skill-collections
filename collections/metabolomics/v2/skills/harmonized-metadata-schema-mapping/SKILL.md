@@ -1,6 +1,9 @@
 ---
 name: harmonized-metadata-schema-mapping
-description: Use when you have imported mass spectrometry spectra from multiple file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and need to standardize their metadata fields before performing spectral comparisons, similarity scoring, or library construction.
+description: Use when you have imported mass spectrometry spectra from multiple file
+  formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and need to standardize
+  their metadata fields before performing spectral comparisons, similarity scoring,
+  or library construction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +16,13 @@ metadata:
   - matchms
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

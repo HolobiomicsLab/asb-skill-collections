@@ -1,6 +1,9 @@
 ---
 name: retention-time-mz-alignment-matching
-description: Use when you have extracted feature tables (m/z, intensity, retention time) from multiple breath samples (mzML or mzXML files) via feature extraction, and need to identify which features represent the same volatile organic compound (VOC) across samples to enable cross-sample intensity comparisons.
+description: Use when you have extracted feature tables (m/z, intensity, retention
+  time) from multiple breath samples (mzML or mzXML files) via feature extraction,
+  and need to identify which features represent the same volatile organic compound
+  (VOC) across samples to enable cross-sample intensity comparisons.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - Python pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

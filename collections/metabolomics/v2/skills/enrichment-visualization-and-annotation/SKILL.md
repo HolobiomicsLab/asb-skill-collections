@@ -1,6 +1,8 @@
 ---
 name: enrichment-visualization-and-annotation
-description: Use when after pathway enrichment analysis has been executed by clusterProfiler or biotranslator on differentially expressed features filtered by layer-specific p-value cutoffs (genes_genespval=1, mirna_genespval=1, proteins_genespval=0.5, lipids_genespval=0.5).
+description: Use when after pathway enrichment analysis has been executed by clusterProfiler
+  or biotranslator on differentially expressed features filtered by layer-specific
+  p-value cutoffs (genes_genespval=1, mirna_genespval=1, proteins_genespval=0.5, lipids_genespval=0.5).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -14,12 +16,14 @@ metadata:
   - ggplot2
   - ComplexHeatmap
   - R
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - Pathway enrichment analysis | Clusterprofiler, Biotranslator
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

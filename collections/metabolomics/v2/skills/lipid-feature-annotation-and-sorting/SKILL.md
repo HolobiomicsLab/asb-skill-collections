@@ -1,6 +1,9 @@
 ---
 name: lipid-feature-annotation-and-sorting
-description: Use when after quantifying ion images in LipidQMap and before exporting to HDF5 format, when you need to organize per-feature metadata (lipid ID, class, adduct, m/z, internal standard flag) into aligned datasets that can be linked to intensity data via dimension scales and sorted for reproducible.
+description: Use when after quantifying ion images in LipidQMap and before exporting
+  to HDF5 format, when you need to organize per-feature metadata (lipid ID, class,
+  adduct, m/z, internal standard flag) into aligned datasets that can be linked to
+  intensity data via dimension scales and sorted for reproducible.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,12 +16,14 @@ metadata:
   techniques:
   - direct-infusion-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # lipid-feature-annotation-and-sorting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate quantified lipid features with chemical identity metadata (lipid class, adduct form, neutral mass, m/z) and sort them by m/z for HDF5 export, ensuring machine-readable and standardized feature organization in MSI data containers.

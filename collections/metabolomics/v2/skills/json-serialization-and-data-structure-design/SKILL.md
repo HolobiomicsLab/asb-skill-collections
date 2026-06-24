@@ -1,6 +1,9 @@
 ---
 name: json-serialization-and-data-structure-design
-description: Use when you have inferred or discovered structured results (e.g., LDA-derived motif sets with mass compositions, neutral-loss patterns, and ranked database matches) that must be shared between tools, stored durably, or consumed by visualization or annotation pipelines.
+description: Use when you have inferred or discovered structured results (e.g., LDA-derived
+  motif sets with mass compositions, neutral-loss patterns, and ranked database matches)
+  that must be shared between tools, stored durably, or consumed by visualization
+  or annotation pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,6 +15,7 @@ metadata:
   - MotifDB
   - MS2LDA
   - Python json module
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -19,7 +23,8 @@ evidence_spans:
 - Integration with MassQL-searchable MotifDB
 - Compare motifs to known entries in MotifDB
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: ft-icr-spectrum-recalibration-validation
-description: 'Use when after applying mass calibration functions (LedFord, linear, or quadratic equations) to an FT-ICR transient or magnitude-mode dataset, before running SearchMolecularFormulas. Specifically, validate recalibration when: (1) comparing recalibrated spectra against reference calibration files (e.'
+description: 'Use when after applying mass calibration functions (LedFord, linear,
+  or quadratic equations) to an FT-ICR transient or magnitude-mode dataset, before
+  running SearchMolecularFormulas. Specifically, validate recalibration when: (1)
+  comparing recalibrated spectra against reference calibration files (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +18,14 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 - import numpy as np
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # FT-ICR Spectrum Recalibration Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates the quality and accuracy of mass calibration in recalibrated FT-ICR mass spectra by assessing mass error distributions, resolving power, and peak assignment consistency across a 12 T field-strength instrument. This skill ensures that downstream molecular formula assignment relies on reliable m/z measurements within acceptable ppm error tolerances.

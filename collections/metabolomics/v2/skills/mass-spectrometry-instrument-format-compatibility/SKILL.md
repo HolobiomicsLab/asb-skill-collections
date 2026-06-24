@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-instrument-format-compatibility
-description: Use when you have raw mass spectrometry data from an instrument not yet validated in your pipeline (e.
+description: Use when you have raw mass spectrometry data from an instrument not yet
+  validated in your pipeline (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +14,7 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -42,6 +44,7 @@ attribution:
 
 # mass-spectrometry-instrument-format-compatibility
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extend mass spectrometry data processing pipelines to ingest and standardize spectral data from multiple ionization platforms (DI-MS, ASAP-MS, LDI-MS, AI-MS) by parsing vendor-native and open formats (mzML, mzXML) into a unified pre-processing workflow. This skill ensures that instrument-agnostic analysis, peak detection, and database search can proceed uniformly across heterogeneous MS methodologies.

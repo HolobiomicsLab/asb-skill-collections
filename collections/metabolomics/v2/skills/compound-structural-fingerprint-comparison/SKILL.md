@@ -1,6 +1,8 @@
 ---
 name: compound-structural-fingerprint-comparison
-description: Use when you have a set of query chemicals and a reference library (organized by type or group), and you need to determine which reference compounds most closely resemble each query chemical based on structural features.
+description: Use when you have a set of query chemicals and a reference library (organized
+  by type or group), and you need to determine which reference compounds most closely
+  resemble each query chemical based on structural features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,12 +17,15 @@ metadata:
   - uafR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # compound-structural-fingerprint-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill uses cheminformatics packages (ChemmineR, fmcsR, webchem) to compute structural similarity scores between query chemicals and a reference library, identifying best-matched compounds based on atomic fingerprints and molecular features. It is essential when you need to assess whether structurally similar compounds are correctly distinguished or grouped during chemical categorization.

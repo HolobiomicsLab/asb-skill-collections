@@ -1,6 +1,9 @@
 ---
 name: graph-community-detection
-description: Use when you have a sparse inverse covariance graph (GLASSO output) and multivariate PCA scores for the same samples/variables, and you need to partition the network into functionally or statistically coherent sub-networks rather than treating the graph as a monolithic structure.
+description: Use when you have a sparse inverse covariance graph (GLASSO output) and
+  multivariate PCA scores for the same samples/variables, and you need to partition
+  the network into functionally or statistically coherent sub-networks rather than
+  treating the graph as a monolithic structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3920
@@ -10,6 +13,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -38,6 +42,7 @@ attribution:
 
 # graph-community-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and label significant sub-networks within GLASSO-generated correlation graphs by overlaying PCA scores and applying community-detection algorithms. This skill reveals latent modular structure in high-dimensional biological or systems data.

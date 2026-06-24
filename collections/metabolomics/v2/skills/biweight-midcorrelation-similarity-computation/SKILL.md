@@ -1,6 +1,9 @@
 ---
 name: biweight-midcorrelation-similarity-computation
-description: Use when you have normalized and imputed metabolite abundance measurements (as a MultiAssayExperiment object or similar matrix) and need to construct a correlation network for co-expression module discovery. Use it specifically when outlier-robust similarity is required—i.
+description: Use when you have normalized and imputed metabolite abundance measurements
+  (as a MultiAssayExperiment object or similar matrix) and need to construct a correlation
+  network for co-expression module discovery. Use it specifically when outlier-robust
+  similarity is required—i.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - WGCNA
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -21,7 +25,8 @@ evidence_spans:
 - '`MetaboDiff` is available for all operating systems and can be installed via Github'
 - met = knn_impute(met,cutoff=0.4)
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 claims: []
@@ -48,6 +53,7 @@ attribution:
 
 # biweight-midcorrelation-similarity-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute a robust similarity matrix across metabolites using biweight midcorrelation, which downweights outliers and is more stable than Pearson correlation for hierarchical clustering and module detection in metabolomic data.

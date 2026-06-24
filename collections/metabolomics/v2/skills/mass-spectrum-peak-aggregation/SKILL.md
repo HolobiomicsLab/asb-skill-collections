@@ -1,6 +1,7 @@
 ---
 name: mass-spectrum-peak-aggregation
-description: Use when you have a processed mass spectrum object with assigned molecular formulas for individual peaks and need to summarize peaks by their heteroatom composition—e.
+description: Use when you have a processed mass spectrum object with assigned molecular
+  formulas for individual peaks and need to summarize peaks by their heteroatom composition—e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,12 +13,14 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 claims: []
 provenance:
@@ -42,6 +45,7 @@ attribution:
 
 # mass-spectrum-peak-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organize formula-assigned mass spectrum peaks into heteroatom classes (CHO, CHON, CHOS, CHOP, etc.) and aggregate their counts and abundances for classification-based analysis and visualization. This skill transforms a peak-resolved mass spectrum into a summary table stratified by elemental composition.

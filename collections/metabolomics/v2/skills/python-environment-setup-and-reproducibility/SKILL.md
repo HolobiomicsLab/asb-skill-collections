@@ -1,6 +1,8 @@
 ---
 name: python-environment-setup-and-reproducibility
-description: Use when when you need to execute a multi-backend visualization library (e.g., pyOpenMS-Viz with matplotlib, Bokeh, and Plotly) and must measure or validate execution times, memory usage, and output consistency across runs or team members.
+description: Use when when you need to execute a multi-backend visualization library
+  (e.g., pyOpenMS-Viz with matplotlib, Bokeh, and Plotly) and must measure or validate
+  execution times, memory usage, and output consistency across runs or team members.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -15,6 +17,7 @@ metadata:
   - matplotlib
   - Bokeh
   - Plotly
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -44,6 +47,7 @@ attribution:
 
 # Python Environment Setup and Reproducibility
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Establish isolated Python environments with pinned dependency versions to ensure reproducible execution of scientific workflows across multiple plotting backends and systems. This skill ensures that gallery scripts and benchmarking studies produce consistent results independent of global Python installations.

@@ -1,6 +1,9 @@
 ---
 name: release-branch-management
-description: 'Use when you need to validate that a software project''s release branch is stable and ready for distribution. Specifically, use it when: (1) a release tag has been created or code pushed to a release branch; (2) you need to confirm that CI/CD pipelines execute without failures;'
+description: 'Use when you need to validate that a software project''s release branch
+  is stable and ready for distribution. Specifically, use it when: (1) a release tag
+  has been created or code pushed to a release branch; (2) you need to confirm that
+  CI/CD pipelines execute without failures;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,6 +14,7 @@ metadata:
   - SIRIUS
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

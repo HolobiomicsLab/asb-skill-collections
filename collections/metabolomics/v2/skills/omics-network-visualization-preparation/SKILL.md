@@ -1,6 +1,8 @@
 ---
 name: omics-network-visualization-preparation
-description: Use when after constructing a correlation-based network from omics data (nodes and edges defined), when you need to assign visual positions to nodes for rendering.
+description: Use when after constructing a correlation-based network from omics data
+  (nodes and edges defined), when you need to assign visual positions to nodes for
+  rendering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,12 +15,15 @@ metadata:
   - R
   - igraph
   - pcutils
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # Apply layout algorithms to assign spatial coordinates to network nodes for visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill involves selecting and applying one of MetaNet's 40+ layout algorithms (force-directed, hierarchical, circular, or others) to compute two-dimensional spatial coordinates (x, y positions) for network nodes, enabling subsequent visualization on static or interactive platforms.

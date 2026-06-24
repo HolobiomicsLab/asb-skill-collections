@@ -1,6 +1,8 @@
 ---
 name: collision-cross-section-prediction-evaluation
-description: Use when you have a pre-trained GNN CCS prediction model and need to assess its predictive performance and cross-dataset generalizability. Use it specifically when evaluating whether models trained on one CCS database (e.
+description: Use when you have a pre-trained GNN CCS prediction model and need to
+  assess its predictive performance and cross-dataset generalizability. Use it specifically
+  when evaluating whether models trained on one CCS database (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - train-test.py script
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -42,6 +45,7 @@ attribution:
 
 # collision-cross-section-prediction-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the generalizability of graph neural network models trained for collision cross section (CCS) prediction by executing inference on held-out test sets and computing standardized accuracy metrics (RMSE, MAE, R²). This skill validates whether CCS predictors trained on one molecular database generalize effectively to unseen compounds and alternative reference datasets.

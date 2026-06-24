@@ -1,6 +1,8 @@
 ---
 name: rescore-column-standardization
-description: Use when after running FIDDLE v2.0.0 inference on MS/MS spectra and obtaining ranked formula candidates with confidence scores, apply this skill when the rescore model outputs columns named Rescore (0), Rescore (1), ...
+description: Use when after running FIDDLE v2.0.0 inference on MS/MS spectra and obtaining
+  ranked formula candidates with confidence scores, apply this skill when the rescore
+  model outputs columns named Rescore (0), Rescore (1), ...
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +14,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +43,7 @@ attribution:
 
 # rescore-column-standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rename and standardize Rescore (k) output columns from FIDDLE v2.0.0's Siamese-architecture rescore model to a uniform format for downstream analysis and CSV export. This ensures consistent column naming across different inference runs and integrations with external tools.

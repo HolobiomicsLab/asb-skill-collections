@@ -1,6 +1,9 @@
 ---
 name: precursor-fragment-pairing-for-mrm
-description: Use when when designing a targeted lipidomics experiment and you have lipid species definitions (including chain composition and adducts) but need to configure precursor–fragment transitions for MRM or PRM acquisition on a Thermo QExactive HF, Agilent QTOF, or compatible high-resolution or.
+description: Use when when designing a targeted lipidomics experiment and you have
+  lipid species definitions (including chain composition and adducts) but need to
+  configure precursor–fragment transitions for MRM or PRM acquisition on a Thermo
+  QExactive HF, Agilent QTOF, or compatible high-resolution or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,6 +17,7 @@ metadata:
   - Agilent QTOF
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-020-15960-z
   title: LipidCreator

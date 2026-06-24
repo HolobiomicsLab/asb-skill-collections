@@ -1,6 +1,9 @@
 ---
 name: binary-classification-output-interpretation
-description: Use when you have executed a binary classifier (such as BitterPredict.m) on a set of molecules with chemical structure descriptors and need to translate the raw predictions into a structured CSV output file that maps molecule identifiers to their predicted class labels (bitter or not-bitter).
+description: Use when you have executed a binary classifier (such as BitterPredict.m)
+  on a set of molecules with chemical structure descriptors and need to translate
+  the raw predictions into a structured CSV output file that maps molecule identifiers
+  to their predicted class labels (bitter or not-bitter).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3765
@@ -9,11 +12,13 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -37,6 +42,7 @@ attribution:
 
 # binary-classification-output-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and compile binary classification predictions (bitter/not-bitter) from a machine-learning classifier into structured output files linked to molecule identifiers. This skill bridges trained model inference and downstream analysis by organizing predictions into a reusable tabular format.

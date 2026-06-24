@@ -1,6 +1,9 @@
 ---
 name: adduct-mass-matching-and-clustering
-description: Use when after identifying statistically significant LC-MS features (e.g. via MB-VIP permutation testing) when you need to consolidate redundant measurements of the same metabolite arising from different ionisation adducts (e.g. [M+H]+, [M+Na]+, [M−H]−).
+description: Use when after identifying statistically significant LC-MS features (e.g.
+  via MB-VIP permutation testing) when you need to consolidate redundant measurements
+  of the same metabolite arising from different ionisation adducts (e.g. [M+H]+, [M+Na]+,
+  [M−H]−).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +20,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -53,6 +57,7 @@ attribution:
 
 # Adduct-Mass Matching and Clustering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill groups LC-MS features that share a common neutral mass by calculating hypothetical neutral masses from common electrospray ionisation adducts and matching them within a mass tolerance window. It is essential for linking multiply-charged or adducted ions of the same molecule into structural clusters.

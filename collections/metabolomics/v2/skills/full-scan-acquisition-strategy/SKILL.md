@@ -1,6 +1,8 @@
 ---
 name: full-scan-acquisition-strategy
-description: Use when you need to assess MS1-level ionization efficiency, peak detection sensitivity, and chromatographic separation without the overhead of MS/MS fragmentation. Use it to benchmark full-scan detection across chemically diverse samples (e.
+description: Use when you need to assess MS1-level ionization efficiency, peak detection
+  sensitivity, and chromatographic separation without the overhead of MS/MS fragmentation.
+  Use it to benchmark full-scan detection across chemically diverse samples (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,14 +18,17 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # full-scan-acquisition-strategy
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A mass spectrometry acquisition approach that configures a controller to collect MS1 scans only (without tandem MS/MS fragmentation) across a full retention time window, enabling rapid prototyping and evaluation of chemical ionization and detection strategies in a virtual metabolomics environment.

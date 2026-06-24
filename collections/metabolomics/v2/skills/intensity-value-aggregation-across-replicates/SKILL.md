@@ -1,6 +1,8 @@
 ---
 name: intensity-value-aggregation-across-replicates
-description: Use when after peak recognition has identified features (m/z and retention time pairs) across one or more MS replicates, and you need to collapse multiple intensity measurements per feature into a single representative value per sample.
+description: Use when after peak recognition has identified features (m/z and retention
+  time pairs) across one or more MS replicates, and you need to collapse multiple
+  intensity measurements per feature into a single representative value per sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - BreathXplorer
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

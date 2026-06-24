@@ -1,6 +1,8 @@
 ---
 name: candidate-match-retrieval
-description: Use when when you have a query MS/MS spectrum (m/z and intensity pairs) and need to find potential structural analogues or exact matches in a large spectral library. Apply this skill after preprocessing your spectra (e.
+description: Use when when you have a query MS/MS spectrum (m/z and intensity pairs)
+  and need to find potential structural analogues or exact matches in a large spectral
+  library. Apply this skill after preprocessing your spectra (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,6 +17,7 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

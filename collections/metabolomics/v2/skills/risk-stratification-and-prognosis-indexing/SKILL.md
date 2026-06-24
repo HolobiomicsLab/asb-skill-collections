@@ -1,6 +1,9 @@
 ---
 name: risk-stratification-and-prognosis-indexing
-description: Use when when you have paired survival data (event indicator and follow-up time vectors), expression or metabolomic feature matrices, and need to generate individual prognosis indices and assign samples to risk groups for downstream prognostic classification or treatment planning.
+description: Use when when you have paired survival data (event indicator and follow-up
+  time vectors), expression or metabolomic feature matrices, and need to generate
+  individual prognosis indices and assign samples to risk groups for downstream prognostic
+  classification or treatment planning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -13,12 +16,15 @@ metadata:
   - R
   - Cox-nnet
   - Cox-PH
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 - the deep-learning based Cox-nnet model
 - prognosis prediction, implemented by Cox-PH model
 claims: []

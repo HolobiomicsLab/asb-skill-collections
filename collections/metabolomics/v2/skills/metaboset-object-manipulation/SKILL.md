@@ -1,6 +1,9 @@
 ---
 name: metaboset-object-manipulation
-description: Use when when you have read LC-MS peak table data from Excel (or equivalent) into R and need to organize it into a structured object that tracks feature abundances, sample information (injection order, QC status), and feature metadata (mass, retention time, Feature_ID) simultaneously.
+description: Use when when you have read LC-MS peak table data from Excel (or equivalent)
+  into R and need to organize it into a structured object that tracks feature abundances,
+  sample information (injection order, QC status), and feature metadata (mass, retention
+  time, Feature_ID) simultaneously.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3643
@@ -16,6 +19,7 @@ metadata:
   - ExpressionSet
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -27,7 +31,8 @@ evidence_spans:
 - reads them to R, conducts additional preprocessing and statistical analyses
 - The implementation we use (from the missForest package) can be parallelized
 - Load the libraries (doParallel is used for parallel processing)
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +57,7 @@ attribution:
 
 # MetaboSet Object Manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create, inspect, and modify MetaboSet objects—the primary Biobase-derived data structure in the notame workflow—to organize LC-MS abundances, sample metadata, and feature annotations in a unified, interoperable format.

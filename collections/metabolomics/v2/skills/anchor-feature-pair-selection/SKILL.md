@@ -1,6 +1,7 @@
 ---
 name: anchor-feature-pair-selection
-description: Use when after completing feature m/z grouping and pairwise alignment detection on two LC-MS datasets acquired under non-identical conditions.
+description: Use when after completing feature m/z grouping and pairwise alignment
+  detection on two LC-MS datasets acquired under non-identical conditions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +14,15 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # Anchor Feature Pair Selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify high-confidence mutually abundant feature pairs across two LC-MS metabolomics datasets by applying retention time windows, m/z tolerance, and abundance similarity thresholds to enable robust retention time mapping. This step bridges initial feature grouping and spline-based RT correction by establishing a trusted set of aligned landmarks.

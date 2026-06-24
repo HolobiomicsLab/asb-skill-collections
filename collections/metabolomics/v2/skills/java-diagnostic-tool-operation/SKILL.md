@@ -1,6 +1,9 @@
 ---
 name: java-diagnostic-tool-operation
-description: Use when when you have deployed a JVM application in a Docker container with JAVA_OPTS heap size parameters and need to verify that the maximum and initial heap sizes are correctly configured before running memory-intensive workflows like metabolite fragmentation analysis.
+description: Use when when you have deployed a JVM application in a Docker container
+  with JAVA_OPTS heap size parameters and need to verify that the maximum and initial
+  heap sizes are correctly configured before running memory-intensive workflows like
+  metabolite fragmentation analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,6 +15,7 @@ metadata:
   - jps
   - jcmd
   - ipbhalle/metfragweb
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -40,6 +44,7 @@ attribution:
 
 # java-diagnostic-tool-operation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute JVM diagnostic commands (jps, jcmd) inside a running container to retrieve and validate active heap memory settings, confirming that environment variable configurations have been correctly applied to the JVM.

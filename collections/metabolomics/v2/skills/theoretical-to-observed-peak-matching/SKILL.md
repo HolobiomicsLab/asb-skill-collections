@@ -1,6 +1,9 @@
 ---
 name: theoretical-to-observed-peak-matching
-description: Use when you have a mass spectrum scan containing observed precursor ions (m/z, intensity pairs) in a narrow isolation window, a known peptide sequence with specified charge state and stable isotope labeling parameters (atom type, incorporation probability), and you need to determine which observed.
+description: Use when you have a mass spectrum scan containing observed precursor
+  ions (m/z, intensity pairs) in a narrow isolation window, a known peptide sequence
+  with specified charge state and stable isotope labeling parameters (atom type, incorporation
+  probability), and you need to determine which observed.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,13 +18,17 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
-- Integration with the mzR package from Bioconductor allows direct parsing of mzML and MGF files
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
+- Integration with the mzR package from Bioconductor allows direct parsing of mzML
+  and MGF files
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

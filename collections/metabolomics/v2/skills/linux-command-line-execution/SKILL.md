@@ -1,6 +1,7 @@
 ---
 name: linux-command-line-execution
-description: Use when you have vendor-specific raw mass spectrometry data (ThermoFisher .raw, Agilent .
+description: Use when you have vendor-specific raw mass spectrometry data (ThermoFisher
+  .raw, Agilent .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,11 +15,13 @@ metadata:
   - Ubuntu 20.04
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - available through our experiments conducted on an Ubuntu 20.04 environment
 claims: []
 provenance:
@@ -43,6 +46,7 @@ attribution:
 
 # linux-command-line-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute MSConvert on a Linux system (Ubuntu 20.04 or compatible) to convert vendor-specific raw mass spectrometry data (ThermoFisher .raw, Agilent .d) into MSThunder-compatible formats. This skill bridges raw instrument output and downstream deep-learning-based pollutant identification.

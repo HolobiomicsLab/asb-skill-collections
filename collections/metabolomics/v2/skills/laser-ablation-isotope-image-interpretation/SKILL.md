@@ -1,6 +1,8 @@
 ---
 name: laser-ablation-isotope-image-interpretation
-description: Use when you have imported a raw LA-ICP-MS raster image (line-by-line, spot-wise, or ablation-time-aligned format) and need to isolate tissue regions from instrumental background or air before quantifying regional elemental abundance.
+description: Use when you have imported a raw LA-ICP-MS raster image (line-by-line,
+  spot-wise, or ablation-time-aligned format) and need to isolate tissue regions from
+  instrumental background or air before quantifying regional elemental abundance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,13 +15,15 @@ metadata:
   - pew²
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -46,6 +50,7 @@ attribution:
 
 # Laser Ablation Isotope Image Interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and segment LA-ICP-MS ablation images to distinguish tissue from background using threshold-based methods like Otsu's algorithm, enabling quantitative regional analysis of elemental composition. This skill is essential for converting raw LA-ICP-MS raster scans into actionable spatial masks for downstream elemental quantification.

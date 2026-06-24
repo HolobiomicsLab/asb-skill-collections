@@ -1,6 +1,9 @@
 ---
 name: graph-attribute-annotation
-description: Use when after dereplication and cosine similarity clustering have been completed on merged LC-MS/MS data, when you need to construct the final molecular network output with predicted molecules as nodes and their parent ions as a second node class, connected by edges that preserve the fragmentation.
+description: Use when after dereplication and cosine similarity clustering have been
+  completed on merged LC-MS/MS data, when you need to construct the final molecular
+  network output with predicted molecules as nodes and their parent ions as a second
+  node class, connected by edges that preserve the fragmentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -16,6 +19,7 @@ metadata:
   - MolNotator.cosiner
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

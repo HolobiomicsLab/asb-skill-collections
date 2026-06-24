@@ -1,6 +1,8 @@
 ---
 name: feature-dereplication-mass-tolerance
-description: Use when you have a raw XCMS CentWave feature extraction table with m/z values, retention times, and intensities, and you observe that multiple features cluster around the same nominal mass and retention window.
+description: Use when you have a raw XCMS CentWave feature extraction table with m/z
+  values, retention times, and intensities, and you observe that multiple features
+  cluster around the same nominal mass and retention window.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -12,6 +14,7 @@ metadata:
   - Paramounter
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c04758
   title: Paramounter

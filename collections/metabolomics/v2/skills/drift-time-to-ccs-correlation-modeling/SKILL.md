@@ -1,6 +1,8 @@
 ---
 name: drift-time-to-ccs-correlation-modeling
-description: Use when you have tunemix or other reference standards with known m/z, drift-time, charge state, and CCS values, and you need to establish a predictive calibration model for your ion-mobility mass spectrometry instrument.
+description: Use when you have tunemix or other reference standards with known m/z,
+  drift-time, charge state, and CCS values, and you need to establish a predictive
+  calibration model for your ion-mobility mass spectrometry instrument.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -17,13 +19,15 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []
@@ -49,6 +53,7 @@ attribution:
 
 # drift-time-to-ccs-correlation-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a calibration model that converts ion mobility drift times and reference m/z values into collision cross section (CCS) values using the single-field calibration equation (Stow et al. 2017). This skill produces calibration coefficients (beta, tfix) that enable prediction of CCS for unknown ions in positive or negative ion-mobility spectrometry modes.

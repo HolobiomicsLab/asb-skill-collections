@@ -1,6 +1,9 @@
 ---
 name: inchikey-smiles-standardization
-description: Use when when you have raw MS/MS spectra from repositories like GNPS that lack or have inconsistent chemical structure annotations (InChI/SMILES), and you need to produce a curated dataset with uniform 14-character InChIKey and SMILES/InChI annotations for downstream machine learning or similarity.
+description: Use when when you have raw MS/MS spectra from repositories like GNPS
+  that lack or have inconsistent chemical structure annotations (InChI/SMILES), and
+  you need to produce a curated dataset with uniform 14-character InChIKey and SMILES/InChI
+  annotations for downstream machine learning or similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -15,16 +18,25 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names, extracting adduct information from the given metadata, moving metadata to consistent fields
-- For each pair of molecular fingerprints Tanimoto scores were calculated, indicating the structural similarity of that pair. (as implemented in matchms [18])
-- We then ran an automated search against PubChem [42] using pubchempy [43] for spectra which still missed InChI or SMILES annotations.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names, extracting adduct information from the given metadata,
+  moving metadata to consistent fields
+- For each pair of molecular fingerprints Tanimoto scores were calculated, indicating
+  the structural similarity of that pair. (as implemented in matchms [18])
+- We then ran an automated search against PubChem [42] using pubchempy [43] for spectra
+  which still missed InChI or SMILES annotations.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +60,7 @@ attribution:
 
 # inchikey-smiles-standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize chemical structure annotations (InChI, SMILES, InChIKey) for mass spectrometry spectra using automated PubChem lookups and metadata normalization. This skill ensures consistent, machine-readable chemical identifiers suitable for training deep learning models on spectral data.

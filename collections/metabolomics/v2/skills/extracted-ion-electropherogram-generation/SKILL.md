@@ -1,6 +1,8 @@
 ---
 name: extracted-ion-electropherogram-generation
-description: Use when you have CE-MS raw data (mzML or netCDF format) containing a target compound of known m/z ratio and you need to resolve it as a distinct peak on the effective mobility scale rather than migration time scale.
+description: Use when you have CE-MS raw data (mzML or netCDF format) containing a
+  target compound of known m/z ratio and you need to resolve it as a distinct peak
+  on the effective mobility scale rather than migration time scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -16,6 +18,7 @@ metadata:
   - R
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -49,6 +52,7 @@ attribution:
 
 # extracted-ion-electropherogram-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate extracted ion electropherograms (EIE) from CE-MS data by transforming migration times to effective mobility scale and isolating specific m/z signals within defined mobility windows. This skill enables reproducible peak visualization and quantification by converting raw electrophoretic separation data into a mobility-normalized coordinate system that accounts for electroosmotic flow variations.

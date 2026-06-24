@@ -1,6 +1,9 @@
 ---
 name: keras-model-conversion-to-hdf5
-description: Use when you have pre-trained Keras models from the NP-Classifier repository that must be deployed via TensorFlow Serving and need to expose standardized input/output layer names ('input_2048', 'input_4096', 'output') for integration with the classification API.
+description: Use when you have pre-trained Keras models from the NP-Classifier repository
+  that must be deployed via TensorFlow Serving and need to expose standardized input/output
+  layer names ('input_2048', 'input_4096', 'output') for integration with the classification
+  API.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -12,6 +15,7 @@ metadata:
   - Python
   - TensorFlow 2.3.0
   - Docker
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -41,6 +45,7 @@ attribution:
 
 # keras-model-conversion-to-hdf5
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert pre-trained Keras models to HDF5 TensorFlow 2.3.0 format with properly named input and output layers for deployment in the NP Classifier pipeline. This skill ensures structural compliance of the converted model with the pipeline's layer naming requirements.

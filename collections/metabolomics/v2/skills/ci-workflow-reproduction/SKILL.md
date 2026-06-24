@@ -1,6 +1,7 @@
 ---
 name: ci-workflow-reproduction
-description: Use when you have access to a GitHub repository with a Maven-based CI workflow (e.g., defined in .
+description: Use when you have access to a GitHub repository with a Maven-based CI
+  workflow (e.g., defined in .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,6 +12,7 @@ metadata:
   - Java
   - Apache Maven
   - GitHub Actions
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -39,6 +41,7 @@ attribution:
 
 # CI Workflow Reproduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reproduce a software project's continuous integration (CI) build pipeline locally by cloning the source repository and executing the build automation steps defined in the project's CI configuration. This skill validates that the project's documented build dependencies and workflow are sufficient to successfully compile the software from source.

@@ -1,6 +1,9 @@
 ---
 name: lc-ms-feature-quality-assessment
-description: Use when you have generated feature tables from LC-MS data using different parameter combinations (e.g., varying Centwave, FeatureFinderMetabo, or ADAP peak picking settings) and need to objectively compare their outputs to select the -performing configuration for your dataset.
+description: Use when you have generated feature tables from LC-MS data using different
+  parameter combinations (e.g., varying Centwave, FeatureFinderMetabo, or ADAP peak
+  picking settings) and need to objectively compare their outputs to select the -performing
+  configuration for your dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,11 +18,13 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # LC-MS Feature Quality Assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate LC-MS feature detection outcomes using quality metrics such as feature reproducibility, total feature count, and signal-to-noise ratio to determine whether parameter combinations produce acceptable peak picking, alignment, and gap-filling results. This skill is essential for automating the selection of optimal processing parameters in untargeted metabolomics workflows.

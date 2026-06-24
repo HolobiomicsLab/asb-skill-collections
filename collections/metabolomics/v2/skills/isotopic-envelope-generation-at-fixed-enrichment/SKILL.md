@@ -1,6 +1,7 @@
 ---
 name: isotopic-envelope-generation-at-fixed-enrichment
-description: Use when when you have a peptide sequence, MS2 fragment charge states, and a known isotope enrichment fraction (e.g., 1.
+description: Use when when you have a peptide sequence, MS2 fragment charge states,
+  and a known isotope enrichment fraction (e.g., 1.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +16,15 @@ metadata:
   - R (language/environment)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 - Extract visualization information from `.FT2` files
 claims: []

@@ -1,6 +1,7 @@
 ---
 name: deep-learning-model-layer-composition
-description: Use when you have unpaired mass spectrometry spectra and need to predict Tanimoto-based molecular structural similarity scores between spectrum pairs.
+description: Use when you have unpaired mass spectrometry spectra and need to predict
+  Tanimoto-based molecular structural similarity scores between spectrum pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -14,11 +15,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

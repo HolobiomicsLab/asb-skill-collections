@@ -1,6 +1,9 @@
 ---
 name: reference-library-alignment
-description: Use when when you have IM-MS lipidomics data with measured CCS values from samples spiked with U13C labeled internal standards, and you need to assess systematic CCS bias or enable CCS correction by comparing measured lipids against known library entries with validated CCS values.
+description: Use when when you have IM-MS lipidomics data with measured CCS values
+  from samples spiked with U13C labeled internal standards, and you need to assess
+  systematic CCS bias or enable CCS correction by comparing measured lipids against
+  known library entries with validated CCS values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3957
@@ -13,11 +16,13 @@ metadata:
   - R (ggplot2, data.table, DT packages)
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # reference-library-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align detected ion mobility-mass spectrometry lipid features to a curated reference library (DT CCS N2) by matching mass-to-charge and retention time identifiers, enabling quantitative bias assessment and correction of collision cross section (CCS) values against theoretical reference standards.

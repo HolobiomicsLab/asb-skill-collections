@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-smoothing-artifact-removal
-description: Use when raw Agilent MassHunter (.d) or UIMF mass spectrometry files exhibit jagged or noisy peaks, particularly for low-abundance ions where signal-to-noise ratio is poor.
+description: Use when raw Agilent MassHunter (.d) or UIMF mass spectrometry files
+  exhibit jagged or noisy peaks, particularly for low-abundance ions where signal-to-noise
+  ratio is poor.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -15,14 +17,18 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -49,6 +55,7 @@ attribution:
 
 # spectral-peak-smoothing-artifact-removal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Multidimensional smoothing reduces noise and artifacts in TOF-MS and IM-MS data by attenuating jagged peaks common in low-abundance ions while preserving real signals. This preprocessing step enhances signal quality across elution time, m/z, and ion mobility dimensions before downstream analysis.

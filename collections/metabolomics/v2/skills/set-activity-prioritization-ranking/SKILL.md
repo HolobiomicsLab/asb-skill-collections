@@ -1,6 +1,8 @@
 ---
 name: set-activity-prioritization-ranking
-description: Use when after computing activity scores for a collection of metabolite sets (pathways, GNPS Molecular Families, or MS2LDA Mass2Motifs) from intensity and annotation data.
+description: Use when after computing activity scores for a collection of metabolite
+  sets (pathways, GNPS Molecular Families, or MS2LDA Mass2Motifs) from intensity and
+  annotation data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,12 +17,15 @@ metadata:
   - Reactome
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways,
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways,
 - To access our interactive Web application PALS Viewer, please visit [https://pals.glasgowcompbio.org/app/]
 - Molecular Families from GNPS
 - This includes in particular *Molecular Families* from [GNPS](http://gnps.ucsd.edu/)

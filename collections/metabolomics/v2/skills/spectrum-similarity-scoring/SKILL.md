@@ -1,6 +1,9 @@
 ---
 name: spectrum-similarity-scoring
-description: 'Use when you have an unknown MS/MS spectrum (query spectrum with m/z and intensity pairs) and a reference spectral library (local or public: GNPS, MASSBANK, DrugBANK), and you need to identify the -matching compounds by ranking library entries by spectral similarity.'
+description: 'Use when you have an unknown MS/MS spectrum (query spectrum with m/z
+  and intensity pairs) and a reference spectral library (local or public: GNPS, MASSBANK,
+  DrugBANK), and you need to identify the -matching compounds by ranking library entries
+  by spectral similarity.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,11 +18,13 @@ metadata:
   - GNPS
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
 evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # spectrum-similarity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute similarity scores between an experimental MS/MS spectrum and library reference spectra using algorithms such as cosine similarity or spectral dot-product to rank and identify best-matching compounds. This is the core computational step that enables automated spectral library search and compound annotation.

@@ -1,6 +1,8 @@
 ---
 name: biosynthetic-gene-cluster-tokenization
-description: Use when you have GenBank-formatted BGC records and need to prepare them for sub-cluster detection, domain pattern analysis, or comparison across multiple BGCs.
+description: Use when you have GenBank-formatted BGC records and need to prepare them
+  for sub-cluster detection, domain pattern analysis, or comparison across multiple
+  BGCs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,11 +11,13 @@ metadata:
   - http://edamontology.org/topic_0160
   tools:
   - iPRESTO
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

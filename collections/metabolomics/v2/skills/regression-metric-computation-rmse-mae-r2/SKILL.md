@@ -1,6 +1,9 @@
 ---
 name: regression-metric-computation-rmse-mae-r2
-description: 'Use when you have model predictions and ground-truth labels for a test set and need to assess how well the trained model generalizes to unseen data. Typical triggers: after executing inference on a held-out test partition, after cross-dataset evaluation (e.'
+description: 'Use when you have model predictions and ground-truth labels for a test
+  set and need to assess how well the trained model generalizes to unseen data. Typical
+  triggers: after executing inference on a held-out test partition, after cross-dataset
+  evaluation (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -13,6 +16,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -40,6 +44,7 @@ attribution:
 
 # regression-metric-computation-rmse-mae-r2
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute root-mean-square error (RMSE), mean absolute error (MAE), and coefficient of determination (R²) to quantify the generalizability and predictive accuracy of regression models on held-out test data. This skill is essential for validating graph neural network models trained for molecular property prediction across independent datasets.

@@ -1,6 +1,8 @@
 ---
 name: ion-mobility-heatmap-visualization
-description: Use when you have raw LC-IMS-MS data (Agilent, Thermo, Bruker, or mzML format) and need to visualize and export the spatial distribution of a specific ion species (or ion family) across both ion mobility and retention time dimensions.
+description: Use when you have raw LC-IMS-MS data (Agilent, Thermo, Bruker, or mzML
+  format) and need to visualize and export the spatial distribution of a specific
+  ion species (or ion family) across both ion mobility and retention time dimensions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,11 +16,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
 evidence_spans:
-- 'Mirador: Raw MS data visualization and export (PDF, CSV) including extracted ion chromatograms (XIC), extracted ion mobility (XIM) heatmaps, and MS/MS mirror plots'
+- 'Mirador: Raw MS data visualization and export (PDF, CSV) including extracted ion
+  chromatograms (XIC), extracted ion mobility (XIM) heatmaps, and MS/MS mirror plots'
 - IonToolPack is a software suite housing tools for mass spectrometry data
 - IonToolPack is a software suite housing tools for mass spectrometry data.
 claims: []

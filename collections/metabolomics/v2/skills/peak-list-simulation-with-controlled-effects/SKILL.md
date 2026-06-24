@@ -1,6 +1,9 @@
 ---
 name: peak-list-simulation-with-controlled-effects
-description: Use when you need to validate batch correction or normalization algorithms, require ground-truth condition/batch effect annotations for method benchmarking, or want to systematically evaluate how different batch types (linear, random) and condition allocations affect feature recovery in metabolomic.
+description: Use when you need to validate batch correction or normalization algorithms,
+  require ground-truth condition/batch effect annotations for method benchmarking,
+  or want to systematically evaluate how different batch types (linear, random) and
+  condition allocations affect feature recovery in metabolomic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,11 +21,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # peak-list-simulation-with-controlled-effects
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic LC/GC-MS feature tables with controlled condition and batch effects using the mzrtsim() function to benchmark normalization and batch correction methods. This skill produces ground-truth peak-list simulations where effect magnitudes and patterns are known and reproducible.

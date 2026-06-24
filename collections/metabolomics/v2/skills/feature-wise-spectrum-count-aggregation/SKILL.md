@@ -1,6 +1,9 @@
 ---
 name: feature-wise-spectrum-count-aggregation
-description: Use when when you have extracted concatenated MS/MS spectra for multiple features from replicate mzML files and need to verify that a TIC-based filtering step (e.g., top x% TIC extraction) reduces per-feature spectrum counts to expected target levels.
+description: Use when when you have extracted concatenated MS/MS spectra for multiple
+  features from replicate mzML files and need to verify that a TIC-based filtering
+  step (e.g., top x% TIC extraction) reduces per-feature spectrum counts to expected
+  target levels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,13 +18,17 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +52,7 @@ attribution:
 
 # feature-wise-spectrum-count-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and aggregate MS/MS spectrum counts per metabolomic feature before and after applying TIC-based filtering to assess the efficacy of spectral denoising. This skill validates that quality-control filters (e.g., top 80% TIC cutoff) reduce spectrum redundancy consistently across features.

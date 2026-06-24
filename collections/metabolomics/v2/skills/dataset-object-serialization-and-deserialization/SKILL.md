@@ -1,6 +1,9 @@
 ---
 name: dataset-object-serialization-and-deserialization
-description: Use when you have mass spectrometry data arriving through heterogeneous input formats (Task ID from GNPS, Universal Spectrum Identifiers, or Feature-Based Molecular Networking identifiers) and need to load, validate, and store them as a single standardized dataset object for interactive peak.
+description: Use when you have mass spectrometry data arriving through heterogeneous
+  input formats (Task ID from GNPS, Universal Spectrum Identifiers, or Feature-Based
+  Molecular Networking identifiers) and need to load, validate, and store them as
+  a single standardized dataset object for interactive peak.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +19,7 @@ metadata:
   - requests
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA
@@ -43,6 +47,7 @@ attribution:
 
 # dataset-object-serialization-and-deserialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry data from multiple input identifier formats (Task ID, USI, FBMN) into standardized in-memory dataset objects, and persist them as JSON for downstream visualization and analysis. This skill bridges disparate data entry points with a unified internal representation.

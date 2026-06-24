@@ -1,6 +1,9 @@
 ---
 name: carbon-oxidation-state-assessment
-description: Use when after molecular formula assignment from FT-ICR MS peak data, when you need to classify metabolites by their redox state to predict bioavailability or lability, or when generating thermodynamic indices for chemodiversity analysis and environmental metabolomic interpretation.
+description: Use when after molecular formula assignment from FT-ICR MS peak data,
+  when you need to classify metabolites by their redox state to predict bioavailability
+  or lability, or when generating thermodynamic indices for chemodiversity analysis
+  and environmental metabolomic interpretation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,12 +17,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
 - It requires the Python dependencies NumPy [40], pandas [41, 42]
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # carbon-oxidation-state-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the nominal oxidation state of carbon (NOSC) from elemental composition of assigned molecular formulas to characterize metabolite oxidation degree and predict degradation likelihood in FT-ICR MS metabolomic datasets.

@@ -1,6 +1,8 @@
 ---
 name: infrared-spectral-prediction-task-design
-description: Use when when you have a dataset of molecules with experimentally measured or simulated infrared spectra and want to train a graph neural network to predict spectral features (e.g., absorption peaks, intensities) from molecular structure.
+description: Use when when you have a dataset of molecules with experimentally measured
+  or simulated infrared spectra and want to train a graph neural network to predict
+  spectral features (e.g., absorption peaks, intensities) from molecular structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,11 +13,13 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]
+- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
+  for Property Prediction]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +43,7 @@ attribution:
 
 # infrared-spectral-prediction-task-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement an infrared spectral prediction task by extending a message passing neural network (chemprop) with spectral feature processing and output layers. This skill enables molecular property models to predict infrared absorption spectra from molecular graphs.

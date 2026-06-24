@@ -1,6 +1,9 @@
 ---
 name: manifest-generation-and-documentation
-description: Use when you need to audit a bioinformatics repository (such as MIBiG) to determine which sequence files are maintained locally but lack public accessions in NCBI GenBank/RefSeq. Use this to support curation workflows, data provenance tracking, or to identify candidate sequences for public release.
+description: Use when you need to audit a bioinformatics repository (such as MIBiG)
+  to determine which sequence files are maintained locally but lack public accessions
+  in NCBI GenBank/RefSeq. Use this to support curation workflows, data provenance
+  tracking, or to identify candidate sequences for public release.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   tools:
   - BLAST
   - NCBI E-utilities
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -38,6 +42,7 @@ attribution:
 
 # Reconstruct the non-NCBI sequence inventory from the genbanks directory
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a structured inventory manifest of sequence files held in a repository's local `genbanks` directory that are not available from NCBI's GenBank/RefSeq databases. This skill reconciles local file metadata with public sequence databases to identify and document sequences unique to the repository.

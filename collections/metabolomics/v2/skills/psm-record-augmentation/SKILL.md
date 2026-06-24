@@ -1,6 +1,9 @@
 ---
 name: psm-record-augmentation
-description: Use when your PSM input file (e.g., from MaxQuant or other search engines that do not report fixed modifications) lacks modification annotations for residues that were chemically modified during sample preparation (e.g., carbamidomethylation of cysteines, TMT labeling of lysines and N-termini).
+description: Use when your PSM input file (e.g., from MaxQuant or other search engines
+  that do not report fixed modifications) lacks modification annotations for residues
+  that were chemically modified during sample preparation (e.g., carbamidomethylation
+  of cysteines, TMT labeling of lysines and N-termini).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -11,6 +14,7 @@ metadata:
   - MS²Rescore
   - psm_utils
   - DeepLC
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

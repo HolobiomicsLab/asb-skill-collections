@@ -1,6 +1,9 @@
 ---
 name: microbe-compound-identification
-description: Use when you have collected MS/MS spectra from a microbial sample (pure culture, environmental isolate, or mixed community) and need to assign chemical identities to observed m/z features while simultaneously resolving which microbial taxa are likely producers of each metabolite.
+description: Use when you have collected MS/MS spectra from a microbial sample (pure
+  culture, environmental isolate, or mixed community) and need to assign chemical
+  identities to observed m/z features while simultaneously resolving which microbial
+  taxa are likely producers of each metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -17,6 +20,7 @@ metadata:
   - MZmine
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
@@ -46,6 +50,7 @@ attribution:
 
 # microbe-compound-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify metabolites and trace their origins to specific microbial taxa using single-spectrum mass spectrometry searches against curated microbe-specific reference libraries. This skill enables taxonomically informed annotation of microbial metabolomics data by leveraging domain-specific mass spectral databases integrated with NCBI taxonomy lineage information.

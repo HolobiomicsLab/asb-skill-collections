@@ -1,6 +1,8 @@
 ---
 name: nmr-metabolite-identity-confirmation
-description: Use when you have preprocessed 1H NMR spectral data with an unknown or ambiguous peak (e.g., at a specific chemical shift δ), and you need to determine its chemical identity.
+description: Use when you have preprocessed 1H NMR spectral data with an unknown or
+  ambiguous peak (e.g., at a specific chemical shift δ), and you need to determine
+  its chemical identity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,13 +16,15 @@ metadata:
   - TopSpin 3.2
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # nmr-metabolite-identity-confirmation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use Statistical Total Correlation Spectroscopy (STOCSY) to confirm the chemical identity of unknown NMR signals by analyzing their covariance and correlation patterns with a known driver signal. This skill resolves ambiguous metabolic features to specific metabolites through spectral correlation analysis.

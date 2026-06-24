@@ -1,6 +1,8 @@
 ---
 name: metabolite-fold-change-calculation
-description: Use when you have paired count data and metadata from a two-group metabolomics experiment (e.g., Strep vs Mock treatment) and need to identify which metabolites show significant abundance shifts.
+description: Use when you have paired count data and metadata from a two-group metabolomics
+  experiment (e.g., Strep vs Mock treatment) and need to identify which metabolites
+  show significant abundance shifts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3223
@@ -14,13 +16,16 @@ metadata:
   - omu_summary
   - read.metabo
   - count_fold_changes
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
-- Omu supports two univariate statistical models, t test and anova, using the functions ```omu_summary``` and ```anova_function``` respectively
-- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
+- Omu supports two univariate statistical models, t test and anova, using the functions
+  ```omu_summary``` and ```anova_function``` respectively
+- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick
+  the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # metabolite-fold-change-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate log2 fold changes and statistical measures (p-values, adjusted p-values, standard error, standard deviation) for metabolites across treatment groups in metabolomics datasets. This skill quantifies the magnitude and significance of metabolite abundance differences between experimental conditions.

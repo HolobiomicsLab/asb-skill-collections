@@ -1,6 +1,7 @@
 ---
 name: tabular-data-parsing-and-structure-conversion
-description: Use when you have a txt or tabular export file from a liquid chromatography–mass spectrometry (LC-MS) instrument (e.g., Sciex MultiQuant > v3.0.
+description: Use when you have a txt or tabular export file from a liquid chromatography–mass
+  spectrometry (LC-MS) instrument (e.g., Sciex MultiQuant > v3.0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -13,6 +14,7 @@ metadata:
   - QComics
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -41,6 +43,7 @@ attribution:
 
 # tabular-data-parsing-and-structure-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse unstructured or semi-structured tabular export files (e.g., Sciex MultiQuant txt) into a standardized, machine-readable data frame with validated column names, data types, and metadata fields suitable for downstream analytical workflows. This skill is essential when integrating instrument-specific export formats into reproducible data pipelines.

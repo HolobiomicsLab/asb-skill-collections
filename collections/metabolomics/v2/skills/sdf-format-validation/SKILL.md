@@ -1,6 +1,9 @@
 ---
 name: sdf-format-validation
-description: Use when when you have downloaded an SDF-formatted compound database file (such as from the DNA adductomics database) and need to verify that the file is not corrupted, that each record represents a single valid chemical structure, and to obtain a record count before proceeding to structure-based.
+description: Use when when you have downloaded an SDF-formatted compound database
+  file (such as from the DNA adductomics database) and need to verify that the file
+  is not corrupted, that each record represents a single valid chemical structure,
+  and to obtain a record count before proceeding to structure-based.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_0154
   tools:
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -37,6 +41,7 @@ attribution:
 
 # sdf-format-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the structural integrity and parseable format of an SDF (Structure Data Format) compound database file, confirming one entry per compound and extracting metadata for database quality assurance. This skill ensures that downloaded or deposited SDF files are suitable for downstream cheminformatics analysis.

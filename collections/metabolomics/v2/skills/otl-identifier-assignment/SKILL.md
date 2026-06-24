@@ -1,6 +1,7 @@
 ---
 name: otl-identifier-assignment
-description: Use when after organism name cleaning and taxonomy verification (4_cleaningTaxonomy.R) have been completed and you have a cleaned organism table with standardized names.
+description: Use when after organism name cleaning and taxonomy verification (4_cleaningTaxonomy.R)
+  have been completed and you have a cleaned organism table with standardized names.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,6 +13,7 @@ metadata:
   - 5_addingOTL.R
   - 4_cleaningTaxonomy.R
   - Open Tree of Life
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +46,7 @@ attribution:
 
 # otl-identifier-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps cleaned organism names to Open Tree of Life (OTL) taxonomic identifiers and annotations. This enrichment step adds standardized phylogenetic context to organism records, enabling downstream comparative and validation workflows in natural products research.

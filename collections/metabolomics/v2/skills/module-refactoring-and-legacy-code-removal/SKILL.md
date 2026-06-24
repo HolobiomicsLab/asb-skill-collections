@@ -1,6 +1,9 @@
 ---
 name: module-refactoring-and-legacy-code-removal
-description: Use when when a major version release (e.g., v1.x → v2.0.0) deprecates a core neural module class, and new equivalent modules must be designed and integrated without breaking downstream prediction pipelines. Triggered by breaking changes in CHANGELOG or deprecation warnings in model initialization.
+description: Use when when a major version release (e.g., v1.x → v2.0.0) deprecates
+  a core neural module class, and new equivalent modules must be designed and integrated
+  without breaking downstream prediction pipelines. Triggered by breaking changes
+  in CHANGELOG or deprecation warnings in model initialization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3364
@@ -12,6 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +44,7 @@ attribution:
 
 # Module Refactoring and Legacy Code Removal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically replace deprecated or removed architectural components (e.g., FDRNet) with new module designs that maintain Siamese architecture compatibility and preserve forward-pass semantics. This skill ensures model behavior is preserved during major version transitions while removing technical debt.

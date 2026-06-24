@@ -1,6 +1,8 @@
 ---
 name: distance-matrix-clustering
-description: Use when you have a sparse pairwise distance matrix derived from nearest neighbor indexing of MS/MS spectra (or similar high-dimensional objects) and need to partition spectra into groups based on local density and neighborhood connectivity.
+description: Use when you have a sparse pairwise distance matrix derived from nearest
+  neighbor indexing of MS/MS spectra (or similar high-dimensional objects) and need
+  to partition spectra into groups based on local density and neighborhood connectivity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,11 +15,13 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # Density-Based Clustering on Sparse Distance Matrices
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply density-based clustering (DBSCAN) to a sparse pairwise distance matrix computed from nearest neighbor indexes to group similar MS/MS spectra into clusters. This skill is the final step in large-scale spectrum clustering pipelines, converting similarity relationships into labeled cluster assignments.

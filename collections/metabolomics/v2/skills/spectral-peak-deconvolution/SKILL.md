@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-deconvolution
-description: Use when you have a raw 1D NMR spectrum (FID or processed format) from urine, worm, or other biological samples and need to extract peak positions, intensities, and linewidths as a tabular peak list.
+description: Use when you have a raw 1D NMR spectrum (FID or processed format) from
+  urine, worm, or other biological samples and need to extract peak positions, intensities,
+  and linewidths as a tabular peak list.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -13,11 +15,13 @@ metadata:
   - NMRBox
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03078
   title: SAND
 evidence_spans:
-- Any user is welcome to make new modificaitons on the SAND code, particularly its version for NMRBox
+- Any user is welcome to make new modificaitons on the SAND code, particularly its
+  version for NMRBox
 - interface to NMRPipe (pipe_scripts/)
 claims: []
 provenance:

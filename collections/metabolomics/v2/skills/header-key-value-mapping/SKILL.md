@@ -1,6 +1,9 @@
 ---
 name: header-key-value-mapping
-description: Use when when you have JSON table records (arrays of field-indexed objects) and need to restructure them into dictionaries where specific table columns are mapped to new key names, and you want to control which columns appear in the output and under what names.
+description: Use when when you have JSON table records (arrays of field-indexed objects)
+  and need to restructure them into dictionaries where specific table columns are
+  mapped to new key names, and you want to control which columns appear in the output
+  and under what names.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES matrix directive
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # header-key-value-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps table columns to dictionary key-value pairs using a headers specification (key=value syntax), enabling transformation of flat tabular records into structured key-value objects. This is a core operation within the MESSES matrix directive for converting JSON table data into lists of dictionaries.

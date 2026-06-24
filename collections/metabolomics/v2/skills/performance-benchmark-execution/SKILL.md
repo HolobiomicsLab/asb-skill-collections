@@ -1,6 +1,9 @@
 ---
 name: performance-benchmark-execution
-description: Use when you have access to a tool with published performance claims (e.g., '~20 seconds on M2 Macbook') and want to validate those claims on your own hardware, or you need to benchmark processing speed before committing to a tool for production use on similarly sized datasets.
+description: Use when you have access to a tool with published performance claims
+  (e.g., '~20 seconds on M2 Macbook') and want to validate those claims on your own
+  hardware, or you need to benchmark processing speed before committing to a tool
+  for production use on similarly sized datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -8,12 +11,14 @@ metadata:
   - http://edamontology.org/topic_3674
   tools:
   - LipidQMap
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -37,6 +42,7 @@ attribution:
 
 # performance-benchmark-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute and measure processing speed of a scientific tool on a standardized dataset to validate claimed performance metrics. This skill involves loading a large-scale dataset (e.g., 5 GB imzML file with 2500 ion images), timing end-to-end execution, and recording system specifications to verify reproducibility of performance claims.

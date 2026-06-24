@@ -19,6 +19,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -51,6 +52,7 @@ attribution:
 
 # lcms-feature-extraction
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Nontargeted peak detection and segmentation of raw LC-MS data (mzML or vendor formats) to extract chromatographic features with precise m/z, retention time, intensity, and peak width metadata. This skill produces a feature table suitable for downstream metabolomics analysis.

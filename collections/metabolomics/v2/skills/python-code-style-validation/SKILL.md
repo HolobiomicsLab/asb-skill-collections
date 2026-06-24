@@ -1,6 +1,9 @@
 ---
 name: python-code-style-validation
-description: Use when preparing Python code for contribution to a project that documents style requirements (black and/or flake8), during pre-commit validation in a CI/CD pipeline, or when reviewing pull requests to enforce uniform code standards across the repository.
+description: Use when preparing Python code for contribution to a project that documents
+  style requirements (black and/or flake8), during pre-commit validation in a CI/CD
+  pipeline, or when reviewing pull requests to enforce uniform code standards across
+  the repository.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0227
@@ -10,6 +13,7 @@ metadata:
   tools:
   - flake8
   - black
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-019-0400-9
   title: BiG-SCAPE biosynthetic diversity

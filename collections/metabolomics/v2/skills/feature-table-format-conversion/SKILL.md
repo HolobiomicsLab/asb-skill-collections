@@ -1,6 +1,8 @@
 ---
 name: feature-table-format-conversion
-description: Use when you have raw feature tables exported from NPP tools (XCMS, MZmine 2, MS-DIAL, OpenMS, etc.) in their native formats and need to compare their peak detection and alignment performance against a mzRAPP benchmark dataset.
+description: Use when you have raw feature tables exported from NPP tools (XCMS, MZmine
+  2, MS-DIAL, OpenMS, etc.) in their native formats and need to compare their peak
+  detection and alignment performance against a mzRAPP benchmark dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,12 +16,14 @@ metadata:
   - MZmine 2
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - library(mzRAPP)
 - You can then assess the performance of NPP runs we have performed via XCMS
 - Download the XCMS- and MZmine 2-output files from [ucloud]

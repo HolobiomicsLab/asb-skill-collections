@@ -1,6 +1,8 @@
 ---
 name: qiime2-artifact-inspection
-description: Use when you need to verify that a QIIME 2 artifact (e.g., a Chemical Feature Tree from q2-qemistree, a FeatureTable[Frequency], or a Phylogeny[Rooted] object) has been correctly produced, before using it as input to downstream analyses.
+description: Use when you need to verify that a QIIME 2 artifact (e.g., a Chemical
+  Feature Tree from q2-qemistree, a FeatureTable[Frequency], or a Phylogeny[Rooted]
+  object) has been correctly produced, before using it as input to downstream analyses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,11 +15,13 @@ metadata:
   - QIIME 2
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # QIIME 2 Artifact Inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, validate, and parse QIIME 2 serialized artifacts (.qza files) to inspect their structure, format, and metadata. This skill is essential for understanding the composition and properties of intermediate and final analysis outputs, particularly phylogenetic trees and feature tables produced by metabolomic pipelines.

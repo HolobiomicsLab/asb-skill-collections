@@ -1,6 +1,7 @@
 ---
 name: neural-network-module-validation
-description: Use when after implementing a neural network component that will feed into a downstream architecture (e.g., a transformer).
+description: Use when after implementing a neural network component that will feed
+  into a downstream architecture (e.g., a transformer).
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +11,7 @@ metadata:
   - CLERMS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS
@@ -37,6 +39,7 @@ attribution:
 
 # neural-network-module-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate a neural network module (such as a sinusoidal embedder) by checking output tensor shape, numerical range, orthogonality properties, and behavior across edge cases. This skill ensures the module meets architectural constraints before integration into a larger pipeline.

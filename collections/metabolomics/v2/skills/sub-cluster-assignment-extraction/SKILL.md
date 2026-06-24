@@ -1,6 +1,7 @@
 ---
 name: sub-cluster-assignment-extraction
-description: Use when after PRESTO-TOP topic modelling has been run on redundancy-filtered tokenised BGCs and raw topic assignments have been generated.
+description: Use when after PRESTO-TOP topic modelling has been run on redundancy-filtered
+  tokenised BGCs and raw topic assignments have been generated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -9,11 +10,13 @@ metadata:
   - http://edamontology.org/topic_0749
   tools:
   - iPRESTO
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

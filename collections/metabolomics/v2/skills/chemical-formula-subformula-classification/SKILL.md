@@ -1,6 +1,8 @@
 ---
 name: chemical-formula-subformula-classification
-description: Use when you have tandem mass spectra with known molecular structures (SMILES, InChI, or chemical formula) and aim to train or evaluate a formula-level spectrum predictor.
+description: Use when you have tandem mass spectra with known molecular structures
+  (SMILES, InChI, or chemical formula) and aim to train or evaluate a formula-level
+  spectrum predictor.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +15,7 @@ metadata:
   - NIST20 (tandem MS database)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

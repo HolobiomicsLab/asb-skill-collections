@@ -1,6 +1,9 @@
 ---
 name: spectral-overview-representation-generation
-description: Use when you have processed LC-MS/MS spectral data (as a .mgf file with feature identifiers) and computed pairwise ms2deepscore similarity scores, and you need to create a 2-D projection suitable for dashboard visualization or high-level pattern discovery without losing similarity structure.
+description: Use when you have processed LC-MS/MS spectral data (as a .mgf file with
+  feature identifiers) and computed pairwise ms2deepscore similarity scores, and you
+  need to create a 2-D projection suitable for dashboard visualization or high-level
+  pattern discovery without losing similarity structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -15,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
 evidence_spans:
-- t-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore
+- t-SNE embedding that serves as an overview representation of mass spectral similarities
+  based on ms2deepscore
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # spectral-overview-representation-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a 2-D overview representation of mass spectral data by applying t-SNE dimensionality reduction to ms2deepscore-computed similarity matrices. This skill enables interactive visual exploration of LC-MS/MS spectral relationships in a condensed, interpretable format.

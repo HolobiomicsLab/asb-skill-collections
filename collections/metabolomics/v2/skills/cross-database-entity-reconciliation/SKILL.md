@@ -1,6 +1,9 @@
 ---
 name: cross-database-entity-reconciliation
-description: Use when you have chemical entity records scattered across two or more public repositories (e.g., HMDB, ChEMBL, PubChem, KEGG) and need a single authoritative, deduplicated knowledge base indexed by a queryable identifier (e.g., m/z value or chemical formula).
+description: Use when you have chemical entity records scattered across two or more
+  public repositories (e.g., HMDB, ChEMBL, PubChem, KEGG) and need a single authoritative,
+  deduplicated knowledge base indexed by a queryable identifier (e.g., m/z value or
+  chemical formula).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,11 +15,13 @@ metadata:
   - SMART
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # cross-database-entity-reconciliation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate and deduplicate chemical entities (formulae, structures) sourced from multiple independent repositories (HMDB, ChEMBL, PubChem) by resolving cross-references and assigning unique identifiers, then enrich the unified entity set with biological relationship edges (BioEdges) from KEGG metabolic reaction pairs. This skill enables construction of a comprehensive, interconnected reference database suitable for high-precision mass spectrometry annotation.

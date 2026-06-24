@@ -1,6 +1,7 @@
 ---
 name: dimple-pipeline-execution
-description: Use when when you have deposited mass spectrometry imaging data in NetCDF (CDF) format paired with MATLAB workspace files (.
+description: Use when when you have deposited mass spectrometry imaging data in NetCDF
+  (CDF) format paired with MATLAB workspace files (.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,6 +13,7 @@ metadata:
   - batchcdfread function
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
@@ -39,6 +41,7 @@ attribution:
 
 # dimple-pipeline-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute the DIMPLE (Developmental Imaging Mass Spectrometry Pipeline for Linear Evaluation) computational pipeline to process mass spectrometry imaging datasets along a linear axis and generate per-root quantitative analysis outputs. This skill is essential when reproducing published linear-axis imaging mass spectrometry analyses on root tissues.

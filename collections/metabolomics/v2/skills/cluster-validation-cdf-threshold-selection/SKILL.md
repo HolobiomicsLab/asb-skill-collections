@@ -1,6 +1,8 @@
 ---
 name: cluster-validation-cdf-threshold-selection
-description: Use when when you have generated multiple biclusters or clusterings from ensemble models (e.g., 100 trained neural network models via cross-validation) and need to select an objective cluster number k without manual inspection.
+description: Use when when you have generated multiple biclusters or clusterings from
+  ensemble models (e.g., 100 trained neural network models via cross-validation) and
+  need to select an objective cluster number k without manual inspection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,14 +16,17 @@ metadata:
   - Hierarchical clustering (Euclidean distance, complete linkage)
   - Consensus clustering
   - Python (NumPy, SciPy, Pandas)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - linkage using Seaborn’s clustermap function in
 - using Python's sci-kit-learn package
-- Networks showing microbe and metabolite modules and the interactions between them were constructed using Cytoscape
-- Networks showing the modules and the interactions between them were constructed using Cytoscape
+- Networks showing microbe and metabolite modules and the interactions between them
+  were constructed using Cytoscape
+- Networks showing the modules and the interactions between them were constructed
+  using Cytoscape
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # cluster-validation-cdf-threshold-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine the optimal number of clusters in a dataset by computing consensus matrices across multiple trained models, calculating cumulative distribution functions (CDFs), and selecting the largest cluster number where the proportional change in area under the CDF exceeds a predefined threshold (e.g., Δk > 0.025). This approach validates clustering stability and prevents over-clustering.

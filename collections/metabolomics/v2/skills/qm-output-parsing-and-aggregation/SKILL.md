@@ -1,6 +1,9 @@
 ---
 name: qm-output-parsing-and-aggregation
-description: Use when you have completed parallel QUICK quantum calculations on multiple conformers filtered by ASE-ANI and need to extract electronic properties from the output logs and consolidate them into a single structured table for use in CCS calculations or metabolite annotation workflows.
+description: Use when you have completed parallel QUICK quantum calculations on multiple
+  conformers filtered by ASE-ANI and need to extract electronic properties from the
+  output logs and consolidate them into a single structured table for use in CCS calculations
+  or metabolite annotation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,13 +16,15 @@ metadata:
   - ASE-ANI
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - 'QUICK: For quantum calculations'
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # QM Output Parsing and Aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse quantum mechanical (QM) output logs from QUICK to extract electronic properties (polarizability tensor components, dipole moment) and aggregate results into a structured table mapping conformer IDs to computed properties. This skill bridges the gap between raw QM calculations and downstream CCS prediction by collecting and organizing molecular descriptors needed for collision cross-section modeling.

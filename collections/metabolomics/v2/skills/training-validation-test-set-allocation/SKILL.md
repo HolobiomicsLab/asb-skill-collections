@@ -1,6 +1,9 @@
 ---
 name: training-validation-test-set-allocation
-description: Use when after labeling a representative subset of peaks (typically 10–20 pooled samples with corresponding feature tables) and before neural network training, when you need to split labeled data into independent subsets for model training, hyperparameter tuning, and unbiased performance evaluation.
+description: Use when after labeling a representative subset of peaks (typically 10–20
+  pooled samples with corresponding feature tables) and before neural network training,
+  when you need to split labeled data into independent subsets for model training,
+  hyperparameter tuning, and unbiased performance evaluation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,11 +17,13 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -45,6 +50,7 @@ attribution:
 
 # training-validation-test-set-allocation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition labeled LCMS peak data into training, validation, and test sets with optional class balancing to ensure neural network models are trained on representative data without leakage and evaluated fairly. In NeatMS, this is performed via the nn_handler.create_batches() method, which supports both class-normalized (equal peaks per class) and unnormalized (original distribution) allocation strategies.

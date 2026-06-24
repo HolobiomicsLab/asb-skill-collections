@@ -1,6 +1,8 @@
 ---
 name: dataset-storage-interface-architecture
-description: Use when you have NMR dataset metadata (cache-file flag, total point count, block layout configuration) and need to select an appropriate storage backend that balances memory efficiency, access patterns, and platform-specific constraints.
+description: Use when you have NMR dataset metadata (cache-file flag, total point
+  count, block layout configuration) and need to select an appropriate storage backend
+  that balances memory efficiency, access patterns, and platform-specific constraints.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +10,7 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -37,6 +40,7 @@ attribution:
 
 # dataset-storage-interface-architecture
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A conditional selection strategy for choosing among multiple storage backend implementations (SubMatrixFile, BigMappedMatrixFile, MappedSubMatrixFile, MappedMatrixFile) based on dataset metadata, memory constraints, and block layout configuration. This skill optimizes memory-mapped file access and cache performance for large NMR datasets.

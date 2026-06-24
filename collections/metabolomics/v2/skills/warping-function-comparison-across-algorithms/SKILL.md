@@ -1,6 +1,9 @@
 ---
 name: warping-function-comparison-across-algorithms
-description: 'Use when after applying two or more LC-MS alignment algorithms (such as XCMS and ncGTW) to the same dataset, use this skill to determine which produces warping functions. Specifically, apply this when: (1) you have detected or suspect misaligned features in XCMS output (e.'
+description: 'Use when after applying two or more LC-MS alignment algorithms (such
+  as XCMS and ncGTW) to the same dataset, use this skill to determine which produces
+  warping functions. Specifically, apply this when: (1) you have detected or suspect
+  misaligned features in XCMS output (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +16,13 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -43,6 +48,7 @@ attribution:
 
 # warping-function-comparison-across-algorithms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare retention time (RT) warping functions produced by different LC-MS alignment algorithms (e.g., ncGTW vs. XCMS) by measuring their impact on coefficient of variation (CV) before and after peak-filling. This skill identifies which algorithm produces lower CV values and more accurate feature alignment for downstream quantitative analysis.

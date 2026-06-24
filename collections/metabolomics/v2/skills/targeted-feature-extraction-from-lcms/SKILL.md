@@ -1,6 +1,9 @@
 ---
 name: targeted-feature-extraction-from-lcms
-description: Use when you have a curated target list of m/z values, retention times, and identifiers for specific metabolites of interest, and you want to extract only those features from LC-MS data (mzML or netCDF format) rather than performing untargeted feature discovery.
+description: Use when you have a curated target list of m/z values, retention times,
+  and identifiers for specific metabolites of interest, and you want to extract only
+  those features from LC-MS data (mzML or netCDF format) rather than performing untargeted
+  feature discovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -13,6 +16,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

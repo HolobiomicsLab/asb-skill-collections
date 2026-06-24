@@ -1,6 +1,8 @@
 ---
 name: multiway-principal-component-analysis-score-extraction
-description: Use when after preprocessing and aligning 2D chromatogram data (baseline correction, smoothing, peak alignment) and after running m_prcomp multiway PCA on the joined chromatogram matrix.
+description: Use when after preprocessing and aligning 2D chromatogram data (baseline
+  correction, smoothing, peak alignment) and after running m_prcomp multiway PCA on
+  the joined chromatogram matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,13 +15,15 @@ metadata:
   - mixOmics
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -45,6 +49,7 @@ attribution:
 
 # Multiway Principal Component Analysis Score Extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract principal component scores from preprocessed GCxGC-MS chromatogram data after multiway PCA decomposition using Wold's approach. This skill recovers the projection of individual samples onto the reduced principal component space, enabling downstream sample-level visualization and classification.

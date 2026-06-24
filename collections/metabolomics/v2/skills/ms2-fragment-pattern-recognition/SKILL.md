@@ -1,6 +1,8 @@
 ---
 name: ms2-fragment-pattern-recognition
-description: Use when you have data-dependent acquisition (DDA) MS2 spectra from HRMS measurements (ESI or APCI ionization) and need to prioritize potential PFAS features from a large pool of detected ions.
+description: Use when you have data-dependent acquisition (DDA) MS2 spectra from HRMS
+  measurements (ESI or APCI ionization) and need to prioritize potential PFAS features
+  from a large pool of detected ions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -14,11 +16,13 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # MS2 Fragment Pattern Recognition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and annotates diagnostic fragment patterns in tandem MS (MS2) spectra by computing characteristic mass differences between precursor and fragment ions, enabling prioritization of PFAS features in non-target HRMS workflows. This skill leverages fragment mass losses (e.g., CF₂ losses) and perfluoroalkyl chain signatures to screen and rank potential PFAS compounds.

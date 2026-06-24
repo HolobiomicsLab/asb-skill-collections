@@ -1,6 +1,9 @@
 ---
 name: descriptor-table-assembly
-description: Use when when you have calculated molecular descriptors from validated chemical structures and need to prepare them for BitterPredict.m classification. Use this skill after descriptor calculation is complete and before invoking BitterPredict.m for bitter/non-bitter predictions.
+description: Use when when you have calculated molecular descriptors from validated
+  chemical structures and need to prepare them for BitterPredict.m classification.
+  Use this skill after descriptor calculation is complete and before invoking BitterPredict.m
+  for bitter/non-bitter predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -11,11 +14,13 @@ metadata:
   - BitterPredict
   - BitterPredict.m
   - RDKit (implied from workflow)
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +44,7 @@ attribution:
 
 # descriptor-table-assembly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assemble pre-computed molecular descriptors into a structured CSV or Excel table formatted for input to BitterPredict classification. This skill bridges descriptor calculation and taste prediction by organizing descriptor columns and molecule rows into the exact input format required by the BitterPredict.m classifier.

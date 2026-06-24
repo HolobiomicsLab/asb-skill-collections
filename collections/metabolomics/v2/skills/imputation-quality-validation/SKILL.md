@@ -1,6 +1,8 @@
 ---
 name: imputation-quality-validation
-description: Use when after applying BPCA imputation to a filtered metabolite matrix (with metabolites having >80% missingness already removed) and before proceeding to median normalization.
+description: Use when after applying BPCA imputation to a filtered metabolite matrix
+  (with metabolites having >80% missingness already removed) and before proceeding
+  to median normalization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +13,7 @@ metadata:
   - R
   - Bioconductor
   - marr
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -44,6 +47,7 @@ attribution:
 
 # imputation-quality-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verification that Bayesian Principal Component Analysis (BPCA) missing-value imputation has successfully eliminated all missing values from a filtered metabolite abundance matrix prior to downstream normalization. This quality-control step ensures the imputed matrix is complete and ready for median normalization in the MSPrep preprocessing pipeline.

@@ -1,6 +1,8 @@
 ---
 name: detection-limit-threshold-definition
-description: Use when when preparing metabolomics abundance tables with left-censored missingness (values below instrument detection limit or quantification limit) for imputation.
+description: Use when when preparing metabolomics abundance tables with left-censored
+  missingness (values below instrument detection limit or quantification limit) for
+  imputation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   - kNN-TN (Truncation k-nearest neighbors)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -47,6 +50,7 @@ attribution:
 
 # Detection-Limit Threshold Definition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define and parameterize detection/quantification limits (LOD/LOQ) as the upper bound for left-censored missing values in metabolomics data, enabling proper constraint specification for imputation algorithms. This step operationalizes the biological and instrumental detection threshold as a computational boundary for missing-value simulation and bounds-constrained imputation.

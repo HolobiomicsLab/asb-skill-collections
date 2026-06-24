@@ -1,6 +1,9 @@
 ---
 name: link-scoring-metcalf-algorithm
-description: Use when you have loaded GCFs (from AntiSMASH via BigScape clustering), GNPS spectra, and molecular families (from GNPS molecular networking), and need to compute pairwise scoring between genomic and metabolomic entities to identify putative gene cluster–metabolite associations.
+description: Use when you have loaded GCFs (from AntiSMASH via BigScape clustering),
+  GNPS spectra, and molecular families (from GNPS molecular networking), and need
+  to compute pairwise scoring between genomic and metabolomic entities to identify
+  putative gene cluster–metabolite associations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -18,16 +21,19 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 - conda create -n npl-3.11 python=3.11
 - pip install nplinker
-- NPLinker can run BigScape automatically if the `bigscape` directory does not exist in the working directory.
+- NPLinker can run BigScape automatically if the `bigscape` directory does not exist
+  in the working directory.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

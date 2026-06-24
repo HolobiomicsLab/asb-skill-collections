@@ -1,6 +1,9 @@
 ---
 name: bruker-mass-spectrum-data-import
-description: Use when you have received a Bruker Solarix FT-ICR raw data directory (.d format, containing CompassXtract output or native ser/fid transients) and need to import it into a Python-based analysis workflow for FT-MS signal processing, calibration, or molecular formula search.
+description: Use when you have received a Bruker Solarix FT-ICR raw data directory
+  (.d format, containing CompassXtract output or native ser/fid transients) and need
+  to import it into a Python-based analysis workflow for FT-MS signal processing,
+  calibration, or molecular formula search.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,12 +17,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 - import numpy as np
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # bruker-mass-spectrum-data-import
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and initialize Bruker Solarix FT-ICR mass spectrometry raw data (.d format) into CoreMS data structures, preparing transient or magnitude-mode spectra for subsequent noise thresholding, peak picking, and molecular formula assignment.

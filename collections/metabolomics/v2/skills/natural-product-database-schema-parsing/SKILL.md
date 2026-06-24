@@ -1,6 +1,7 @@
 ---
 name: natural-product-database-schema-parsing
-description: Use when when ingesting raw data from multiple external natural-product databases with different formats, field naming conventions, and data structures.
+description: Use when when ingesting raw data from multiple external natural-product
+  databases with different formats, field naming conventions, and data structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +14,7 @@ metadata:
   - Python 3
   - Make
   - R (with standardizing.R, common.R scripts)
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -48,6 +50,7 @@ attribution:
 
 # natural-product-database-schema-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse heterogeneous natural-product database formats (TSV, JSON, XML, proprietary schemas) into a unified tabular schema with standardized columns (structure_id, organism, reference, source_db, raw_data). This is the foundational step in aggregating structure-organism pairs from multiple independent sources into a single normalized representation.

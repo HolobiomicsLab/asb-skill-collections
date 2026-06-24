@@ -1,6 +1,7 @@
 ---
 name: empirical-compound-construction-and-grouping
-description: Use when after generating a feature table from mzML data (via Asari) and before performing MS1 or MS2 annotation.
+description: Use when after generating a feature table from mzML data (via Asari)
+  and before performing MS1 or MS2 annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -20,12 +21,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
 evidence_spans:
-- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using the `download extras` command
-- perform MS1 annotation using an authentic compound library, a public database (e.g. HMDB, LIPID MAP), or custom database
+- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using
+  the `download extras` command
+- perform MS1 annotation using an authentic compound library, a public database (e.g.
+  HMDB, LIPID MAP), or custom database
 - pre-annotation to group featues to empirical compounds (khipu)
 - Python-Centric Pipeline for Metabolomics
 claims: []
@@ -51,6 +55,7 @@ attribution:
 
 # empirical-compound-construction-and-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construction and grouping of LC-MS features into empirical compounds (EmpCpds) with inferred molecular formulas and adduct assignments using the khipu pre-annotation framework. This skill bridges feature detection and MS1/MS2 annotation by organizing co-detected features into putative metabolites before library matching.

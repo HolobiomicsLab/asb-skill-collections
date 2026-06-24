@@ -1,6 +1,8 @@
 ---
 name: gnps-molecular-networking-data-parsing
-description: Use when you have downloaded a GNPS archive from either GNPS1 (https://gnps.ucsd.edu) or GNPS2 (https://gnps2.org) and need to programmatically load and validate its contents (spectra.mgf, molecular_families.tsv, annotations.tsv, file_mappings.
+description: Use when you have downloaded a GNPS archive from either GNPS1 (https://gnps.ucsd.edu)
+  or GNPS2 (https://gnps2.org) and need to programmatically load and validate its
+  contents (spectra.mgf, molecular_families.tsv, annotations.tsv, file_mappings.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,11 +16,13 @@ metadata:
   - pytest
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 - make sure the existing tests still work by running ``pytest``

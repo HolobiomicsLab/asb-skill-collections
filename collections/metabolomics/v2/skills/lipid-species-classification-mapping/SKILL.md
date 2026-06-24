@@ -1,6 +1,8 @@
 ---
 name: lipid-species-classification-mapping
-description: Use when you have a table of lipid species names or identifiers output from LipidSearch or LIQUID (with associated quantification data) and need to annotate each lipid with its standardized LIPID MAPS classification (e.
+description: Use when you have a table of lipid species names or identifiers output
+  from LipidSearch or LIQUID (with associated quantification data) and need to annotate
+  each lipid with its standardized LIPID MAPS classification (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,12 +14,15 @@ metadata:
   - LipidSearch
   - LIQUID
   - LIPID MAPS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
 evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.
+- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
+  per lipid and sample
+- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
+  of lipidomics data.
 - outputs from LipidSearch and LIQUID for lipid identification and quantification
 - parsing lipid species (using LIPID MAPS classification)
 claims: []

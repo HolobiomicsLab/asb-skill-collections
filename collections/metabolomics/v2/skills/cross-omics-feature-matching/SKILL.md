@@ -1,6 +1,7 @@
 ---
 name: cross-omics-feature-matching
-description: Use when when you have two feature matrices from different omics modalities (e.
+description: Use when when you have two feature matrices from different omics modalities
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3565
@@ -10,11 +11,13 @@ metadata:
   - http://edamontology.org/topic_3674
   tools:
   - haCCA
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.20.608773v2
   title: haCCA
 evidence_spans:
-- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified spatial morphological alignment
+- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified
+  spatial morphological alignment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +41,7 @@ attribution:
 
 # cross-omics-feature-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and ranks high-correlation feature pairs between two omics datasets (e.g., spatial transcriptome and metabolome) by computing pairwise correlation coefficients and filtering by correlation threshold. This skill forms the foundation for downstream spot-to-spot data integration in multi-modal omics workflows.

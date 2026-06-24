@@ -1,6 +1,8 @@
 ---
 name: metabolite-target-list-formatting
-description: Use when you have a raw LC–MS compound metadata file (xlsx or csv) with heterogeneous column names and column order, and you need to prepare it for targeted peak detection in TARDIS.
+description: Use when you have a raw LC–MS compound metadata file (xlsx or csv) with
+  heterogeneous column names and column order, and you need to prepare it for targeted
+  peak detection in TARDIS.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,11 +16,13 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # metabolite-target-list-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a standardized target data.frame for LC–MS targeted metabolomics by reading compound metadata from xlsx/csv input files, validating required columns (compound ID, name, theoretical m/z, expected RT, polarity indicator), filtering by ionization mode, and reordering columns to match the expected schema for downstream peak detection in TARDIS.

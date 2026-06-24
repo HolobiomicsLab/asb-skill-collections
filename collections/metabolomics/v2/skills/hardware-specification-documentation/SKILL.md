@@ -1,6 +1,8 @@
 ---
 name: hardware-specification-documentation
-description: Use when releasing or evaluating scientific software with claimed performance benefits, particularly when the software processes large datasets (e.g., multi-gigabyte files) or when execution speed is marketed as a key feature.
+description: Use when releasing or evaluating scientific software with claimed performance
+  benefits, particularly when the software processes large datasets (e.g., multi-gigabyte
+  files) or when execution speed is marketed as a key feature.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -9,12 +11,14 @@ metadata:
   - http://edamontology.org/topic_0092
   tools:
   - LipidQMap
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +42,7 @@ attribution:
 
 # hardware-specification-documentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document and validate the hardware specifications and performance characteristics of scientific software on target platforms, establishing reproducible benchmarks for computational requirements and execution time. This skill ensures that users can assess whether their own hardware meets necessary performance thresholds and can compare results across different system configurations.

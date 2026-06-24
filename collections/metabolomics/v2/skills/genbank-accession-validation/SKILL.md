@@ -1,6 +1,9 @@
 ---
 name: genbank-accession-validation
-description: Use when you have a collection of sequence files (e.g., in a `genbanks` directory) and need to determine which are publicly available via NCBI and which are maintained locally only. This is critical for repositories like MIBiG that curate sequence data with mixed provenance.
+description: Use when you have a collection of sequence files (e.g., in a `genbanks`
+  directory) and need to determine which are publicly available via NCBI and which
+  are maintained locally only. This is critical for repositories like MIBiG that curate
+  sequence data with mixed provenance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   tools:
   - BLAST
   - NCBI E-utilities
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -38,6 +42,7 @@ attribution:
 
 # genbank-accession-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate whether sequence files in a local repository have corresponding entries in NCBI's GenBank/RefSeq databases by cross-referencing accession identifiers. This skill identifies sequences maintained only locally (non-NCBI) and flags their availability status for inventory tracking.

@@ -1,6 +1,9 @@
 ---
 name: data-marshalling-and-type-conversion
-description: Use when you have Spectra::Spectra objects in R and need to apply Python MS algorithms from matchms or spectrum_utils (e.g., CosineGreedy similarity scoring, normalization, or filtering), or conversely need to convert Python spectral objects back to R for downstream Spectra workflows.
+description: Use when you have Spectra::Spectra objects in R and need to apply Python
+  MS algorithms from matchms or spectrum_utils (e.g., CosineGreedy similarity scoring,
+  normalization, or filtering), or conversely need to convert Python spectral objects
+  back to R for downstream Spectra workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3211
@@ -16,12 +19,15 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:
@@ -46,6 +52,7 @@ attribution:
 
 # data-marshalling-and-type-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry spectral objects between R Spectra::Spectra and Python matchms/spectrum_utils representations, marshalling data across language boundaries while preserving spectral metadata and peak m/z–intensity pairs. This enables seamless execution of Python-based MS algorithms within R workflows.

@@ -1,6 +1,8 @@
 ---
 name: r-parallel-backend-configuration
-description: Use when you have multiple MSP (mass spectrum) library files to read and merge in R, and your computational task is time-consuming (e.g., structure extraction, SMILES assignment, or RI assignment) and you have a multi-core system available.
+description: Use when you have multiple MSP (mass spectrum) library files to read
+  and merge in R, and your computational task is time-consuming (e.g., structure extraction,
+  SMILES assignment, or RI assignment) and you have a multi-core system available.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,6 +17,7 @@ metadata:
   - parallel
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -46,6 +49,7 @@ attribution:
 
 # Configure R Parallel Backend with future::plan() for Multisession Workers
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure the future package's multisession parallel backend to spawn multiple R worker sessions, enabling parallel execution of downstream library-reading and data-processing operations on multi-core systems. This skill is essential for reducing runtime on time-consuming mass spectral library compilation workflows.

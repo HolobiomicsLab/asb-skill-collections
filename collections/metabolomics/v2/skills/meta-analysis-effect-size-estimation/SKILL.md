@@ -1,6 +1,9 @@
 ---
 name: meta-analysis-effect-size-estimation
-description: Use when when you have tabulated results (p-value, fold-change, study size N) from two or more independent metabolomics studies addressing the same research question and need a single meta-analytic estimate of effect size and statistical significance without access to raw data or variance estimates.
+description: Use when when you have tabulated results (p-value, fold-change, study
+  size N) from two or more independent metabolomics studies addressing the same research
+  question and need a single meta-analytic estimate of effect size and statistical
+  significance without access to raw data or variance estimates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3807
@@ -11,14 +14,17 @@ metadata:
   - R
   - amanida
   - webchem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +49,7 @@ attribution:
 
 # meta-analysis-effect-size-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combines p-values and fold-changes across multiple metabolomics studies using study-size-weighted statistical methods to produce unified effect size estimates and significance values. This skill enables cross-study comparison in metabolomics where raw data and standard deviations are unavailable.

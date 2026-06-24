@@ -1,6 +1,9 @@
 ---
 name: heterogeneous-data-format-integration-and-harmonization
-description: Use when your input consists of multiple external databases with different file formats, column names, identifier schemes, and taxonomic/chemical vocabularies (e.g., 31 open natural product databases with heterogeneous structure and organism metadata).
+description: Use when your input consists of multiple external databases with different
+  file formats, column names, identifier schemes, and taxonomic/chemical vocabularies
+  (e.g., 31 open natural product databases with heterogeneous structure and organism
+  metadata).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - standardizing.R
   - common.R
   - tcm.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -50,6 +54,7 @@ attribution:
 
 # heterogeneous-data-format-integration-and-harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and ingest multiple heterogeneous source databases (TSV, JSON, XML, proprietary schemas) into a unified tabular format using format-specific parsing scripts and controlled-vocabulary mapping. This skill is essential when combining natural product data from 31+ independent sources with incompatible schemas into a single, queryable repository.

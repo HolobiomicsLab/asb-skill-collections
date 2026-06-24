@@ -1,6 +1,7 @@
 ---
 name: interactive-spectral-visualization-emperor
-description: Use when when you have computed PCA coordinates from chemical annotation matrices (e.
+description: Use when when you have computed PCA coordinates from chemical annotation
+  matrices (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -17,6 +18,7 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -51,6 +53,7 @@ attribution:
 
 # interactive-spectral-visualization-emperor
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Emperor is an interactive 3D/2D visualization tool for exploring high-dimensional spectral and chemical annotation data from mass spectrometry repositories. It enables researchers to dynamically explore sample relationships and chemical patterns through configurable PCA score plots with metadata-driven coloring and filtering.

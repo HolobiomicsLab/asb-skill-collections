@@ -1,6 +1,7 @@
 ---
 name: build-artifact-retrieval-and-validation
-description: Use when when you need to verify that a GitHub Actions workflow (such as dev_build_release.
+description: Use when when you need to verify that a GitHub Actions workflow (such
+  as dev_build_release.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +11,7 @@ metadata:
   - JavaFX 24
   - GitHub Actions
   - gradle
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

@@ -21,6 +21,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -49,6 +50,7 @@ attribution:
 
 # duplicate-spectrum-detection-splash
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Detect and remove duplicate mass spectra by computing SPLASH (SPectraL hASH) keys and grouping spectra with identical hash values. This enables systematic deduplication of spectral datasets while preserving a single representative entry per group.

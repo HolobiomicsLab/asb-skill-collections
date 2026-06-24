@@ -1,6 +1,8 @@
 ---
 name: peak-network-clustering-inadequate
-description: Use when you have picked peaks (coordinates and intensities) from INADEQUATE spectra and need to distinguish which peaks likely originate from the same metabolite before matching to a reference database.
+description: Use when you have picked peaks (coordinates and intensities) from INADEQUATE
+  spectra and need to distinguish which peaks likely originate from the same metabolite
+  before matching to a reference database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,6 +16,7 @@ metadata:
   - pyineta.finding
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

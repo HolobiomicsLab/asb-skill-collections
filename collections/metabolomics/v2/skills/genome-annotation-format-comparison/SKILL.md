@@ -1,6 +1,9 @@
 ---
 name: genome-annotation-format-comparison
-description: Use when when running metabologenomic RiPP detection pipelines (MetaMiner) on the same genomic dataset but with different input sequence formats (e.g., contigs.fasta vs. antiSMASH .final.gbk output), or when unexpected null results occur and input format choice is a plausible cause.
+description: Use when when running metabologenomic RiPP detection pipelines (MetaMiner)
+  on the same genomic dataset but with different input sequence formats (e.g., contigs.fasta
+  vs. antiSMASH .final.gbk output), or when unexpected null results occur and input
+  format choice is a plausible cause.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3227
@@ -16,15 +19,23 @@ metadata:
   - NPDtools
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools'' output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk` or `.gbk` file'
-- matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools''
+  output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk`
+  or `.gbk` file'
+- matches tandem mass spectra against the constructed post-translationally modified
+  RiPPs structure database using Dereplicator
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +59,7 @@ attribution:
 
 # genome-annotation-format-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare the detection performance of metabologenomic pipelines (e.g. MetaMiner) across different genome annotation input formats (raw FASTA sequences vs. tool-specific outputs like antiSMASH .gbk files) to identify format-dependent detection failures and inform format selection for downstream analysis.

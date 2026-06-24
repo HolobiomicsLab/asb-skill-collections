@@ -1,6 +1,9 @@
 ---
 name: lipid-nomenclature-parsing
-description: Use when you have received raw lipid identification output from LipidSearch or LIQUID in CSV or TSV format containing lipid species names or identifiers, and you need to extract their structural components and map them to standardized LIPID MAPS categories before building a quantitative data matrix.
+description: Use when you have received raw lipid identification output from LipidSearch
+  or LIQUID in CSV or TSV format containing lipid species names or identifiers, and
+  you need to extract their structural components and map them to standardized LIPID
+  MAPS categories before building a quantitative data matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -23,6 +26,7 @@ metadata:
   - Agilent QTOF
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
@@ -31,12 +35,15 @@ derived_from:
 - doi: 10.1038/s41467-020-15960-z
   title: ''
 evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.
+- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
+  per lipid and sample
+- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
+  of lipidomics data.
 - outputs from LipidSearch and LIQUID for lipid identification and quantification
 - parsing lipid species (using LIPID MAPS classification)
 - _No usage/docs found._
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

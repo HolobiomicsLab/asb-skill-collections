@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-detection-and-alignment
-description: Use when after noise filtering and baseline correction have been applied to mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other high-throughput MS formats in mzML, mzXML, or vendor formats).
+description: Use when after noise filtering and baseline correction have been applied
+  to mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other high-throughput MS formats
+  in mzML, mzXML, or vendor formats).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -13,6 +15,7 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -42,6 +45,7 @@ attribution:
 
 # Spectral Peak Detection and Alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification and localization of mass spectrometry peaks across preprocessed spectra, followed by alignment to enable consistent feature comparison across samples. This skill is essential for converting raw spectral noise into discrete, reproducible ion signals suitable for species discrimination and database matching.

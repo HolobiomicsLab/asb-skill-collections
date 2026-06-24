@@ -12,11 +12,13 @@ metadata:
   - pwiz
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.9b00640
   title: Skyline (small molecules)
 evidence_spans:
-- The ProteoWizard Library and Tools are a set of modular and extensible open-source, cross-platform tools and software libraries
+- The ProteoWizard Library and Tools are a set of modular and extensible open-source,
+  cross-platform tools and software libraries
 - github.com__ProteoWizard__pwiz
 claims: []
 provenance:

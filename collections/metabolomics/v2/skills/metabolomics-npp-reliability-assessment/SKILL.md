@@ -1,6 +1,9 @@
 ---
 name: metabolomics-npp-reliability-assessment
-description: Use when you have completed NPP runs from one or more metabolomics tools on a set of LC-HRMS mzML files AND you have reference information (target molecule list with molecular formula, main adduct, and RT boundaries) available for a subset of expected compounds in those files.
+description: Use when you have completed NPP runs from one or more metabolomics tools
+  on a set of LC-HRMS mzML files AND you have reference information (target molecule
+  list with molecular formula, main adduct, and RT boundaries) available for a subset
+  of expected compounds in those files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -17,12 +20,14 @@ metadata:
   - MSconvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - Below we provided one more example for MZmine2
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)

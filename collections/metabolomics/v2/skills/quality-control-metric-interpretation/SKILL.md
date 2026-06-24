@@ -1,6 +1,9 @@
 ---
 name: quality-control-metric-interpretation
-description: Use when after normalizing a metabolomics featuredata matrix (samples × metabolites), use this skill to visually and quantitatively assess normalization quality. Specifically, apply it when you need to decide whether a chosen normalization method (e.
+description: Use when after normalizing a metabolomics featuredata matrix (samples
+  × metabolites), use this skill to visually and quantitatively assess normalization
+  quality. Specifically, apply it when you need to decide whether a chosen normalization
+  method (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -14,13 +17,16 @@ metadata:
   - RlaPlots
   - PcaPlots
   - HeatMap
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # quality-control-metric-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret relative log abundance (RLA) diagnostic plots and other normalization quality metrics to assess whether batch effects, unwanted variation, and normalization success have been adequately controlled in metabolomics data. This skill enables selection of appropriate normalization methods by evaluating how well samples cluster by expected group and identifying outlier metabolites or samples that deviate beyond acceptable thresholds.

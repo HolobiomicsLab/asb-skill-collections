@@ -1,6 +1,8 @@
 ---
 name: m-z-tolerance-window-matching
-description: Use when when you have detected features with m/z, drift time, and retention time dimensions and need to associate peaks into isotopic groups (e.g., monoisotopes with C13 substitutions) or align features across multiple LC-IMS-MS/MS samples.
+description: Use when when you have detected features with m/z, drift time, and retention
+  time dimensions and need to associate peaks into isotopic groups (e.g., monoisotopes
+  with C13 substitutions) or align features across multiple LC-IMS-MS/MS samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,11 +17,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
@@ -47,6 +51,7 @@ attribution:
 
 # m/z-tolerance-window-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies matching peaks within a specified m/z tolerance window to form isotopic clusters or align features across datasets. This skill is essential for grouping chemically related ions (e.g., isotopologues) and improving feature matching confidence in N-dimensional mass spectrometry workflows.

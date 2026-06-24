@@ -1,6 +1,8 @@
 ---
 name: composite-mass-track-summation-across-samples
-description: Use when after mass tracks have been aligned across samples into a MassGrid structure (m/z-aligned, same mass-to-charge ratio) and retention time calibration dictionaries have been computed for each sample.
+description: Use when after mass tracks have been aligned across samples into a MassGrid
+  structure (m/z-aligned, same mass-to-charge ratio) and retention time calibration
+  dictionaries have been computed for each sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -15,11 +17,13 @@ metadata:
   - asari.peaks.stats_detect_elution_peaks
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # Reconstruct the composite map by summing aligned mass track intensities
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate intensity vectors from retention-time-aligned mass tracks across all samples into a composite map by element-wise summation at each scan position. This unified composite representation replaces independent peak detection on each sample, enabling statistics-guided peak detection on aggregated signal.

@@ -1,6 +1,7 @@
 ---
 name: lcms-target-visibility-screening
-description: Use when after loading centroided .mzML LC–MS runs and before executing full peak detection and integration.
+description: Use when after loading centroided .mzML LC–MS runs and before executing
+  full peak detection and integration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -17,14 +18,17 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - knitr::include_graphics
 claims: []
 provenance:
@@ -49,6 +53,7 @@ attribution:
 
 # lcms-target-visibility-screening
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A diagnostic preprocessing step in targeted LC–MS metabolomics that uses TARDIS screening mode to verify that all intended target compounds (internal standards and endogenous metabolites) are detectable within their expected m/z and retention time windows before launching full peak detection and integration. This step ensures data quality and prevents wasted computational effort on targets absent from the sample.

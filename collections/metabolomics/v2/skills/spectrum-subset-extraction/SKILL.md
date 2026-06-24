@@ -1,6 +1,8 @@
 ---
 name: spectrum-subset-extraction
-description: Use when after duplicate filtering of MZmine-exported MGF and CSV files, when you have combined spectra from multiple samples in a single MGF and need to segregate them by sample identifier before fragment annotation or adduct assignment.
+description: Use when after duplicate filtering of MZmine-exported MGF and CSV files,
+  when you have combined spectra from multiple samples in a single MGF and need to
+  segregate them by sample identifier before fragment annotation or adduct assignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

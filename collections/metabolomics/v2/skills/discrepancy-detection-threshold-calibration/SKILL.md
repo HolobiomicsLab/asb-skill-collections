@@ -1,6 +1,7 @@
 ---
 name: discrepancy-detection-threshold-calibration
-description: Use when normalizing metabolomics data using both QC and biological samples together.
+description: Use when normalizing metabolomics data using both QC and biological samples
+  together.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +12,7 @@ metadata:
   tools:
   - R
   - Metanorm
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -18,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +46,7 @@ attribution:
 
 # discrepancy-detection-threshold-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and flag metabolic features with significant distributional differences between QC and biological samples during normalization by computing discrepancy metrics and applying statistical thresholds. This quality-control step ensures that QC samples remain representative of biological sample behavior and detects potential normalization failures or sample-type contamination.

@@ -1,6 +1,9 @@
 ---
 name: custom-data-schema-mapping
-description: Use when a practitioner has pre-computed features from an external feature-finding procedure (e.g., vendor software, alternative open-source tools) and wishes to incorporate them into PFΔScreen's PFAS prioritization pipeline without re-detecting features from raw mzML data.
+description: Use when a practitioner has pre-computed features from an external feature-finding
+  procedure (e.g., vendor software, alternative open-source tools) and wishes to incorporate
+  them into PFΔScreen's PFAS prioritization pipeline without re-detecting features
+  from raw mzML data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,12 +17,14 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # Custom Data Schema Mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate user-supplied feature lists (CSV/TSV/XLSX format) into a standardized internal feature object representation compatible with downstream PFAS prioritization workflows. This skill enables PFΔScreen to accept features from external feature-finding tools or vendor software rather than relying solely on pyOpenMS-detected features.

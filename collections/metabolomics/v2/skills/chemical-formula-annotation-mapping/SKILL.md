@@ -1,6 +1,9 @@
 ---
 name: chemical-formula-annotation-mapping
-description: 'Use when you have processed MSI peak data (in rMSIproc format) and need to distinguish matrix-related ions from analyte signals. Specifically: (1) you have a peak matrix with m/z values and spatial intensity maps; (2) you have a reference matrix identity (e.g., ''Ag1'' for silver);'
+description: 'Use when you have processed MSI peak data (in rMSIproc format) and need
+  to distinguish matrix-related ions from analyte signals. Specifically: (1) you have
+  a peak matrix with m/z values and spatial intensity maps; (2) you have a reference
+  matrix identity (e.g., ''Ag1'' for silver);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -14,11 +17,13 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - rMSIcleanup is an open-source R package
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 claims: []
@@ -44,6 +49,7 @@ attribution:
 
 # chemical-formula-annotation-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map detected m/z peaks to chemical formulas and classify them as matrix-related or non-matrix ions by integrating chemical identity with spatial distribution patterns across the MSI dataset. This skill enables transparent, justified annotation of matrix signals in mass spectrometry imaging.

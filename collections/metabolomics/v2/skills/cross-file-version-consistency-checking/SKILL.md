@@ -1,12 +1,16 @@
 ---
 name: cross-file-version-consistency-checking
-description: Use when before initiating a release branch workflow for a multi-module Maven project, particularly when the repository contains multiple pom.xml files at different directory levels and a release branch naming convention (e.g., 'release/X.Y.Z') is planned.
+description: Use when before initiating a release branch workflow for a multi-module
+  Maven project, particularly when the repository contains multiple pom.xml files
+  at different directory levels and a release branch naming convention (e.g., 'release/X.Y.Z')
+  is planned.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
   edam_topics: []
   tools:
   - NMRFx
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -36,6 +40,7 @@ attribution:
 
 # cross-file-version-consistency-checking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that all version strings across distributed configuration files (pom.xml, build metadata) in a software repository are synchronized, preventing release branch creation with conflicting versions. This is essential for multi-module projects where version drift can cause build failures or deployment inconsistencies.

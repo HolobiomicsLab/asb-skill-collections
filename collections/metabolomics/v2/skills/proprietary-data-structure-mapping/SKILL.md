@@ -1,6 +1,8 @@
 ---
 name: proprietary-data-structure-mapping
-description: Use when you have received raw mass spectrometry data in one of four proprietary vendor formats (Agilent '.d', Bruker ion mobility 'd', Thermo '.raw', or mzML) and need to convert it to a cross-platform, cross-language accessible format.
+description: Use when you have received raw mass spectrometry data in one of four
+  proprietary vendor formats (Agilent '.d', Bruker ion mobility 'd', Thermo '.raw',
+  or mzML) and need to convert it to a cross-platform, cross-language accessible format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,11 +17,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

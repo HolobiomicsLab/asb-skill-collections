@@ -1,6 +1,8 @@
 ---
 name: lipid-adduct-pairing-by-neutral-mass
-description: Use when when processing mass spectrometry imaging data with multiple adduct forms of the same lipid species, and you need to correct one adduct form (e.g. [M+H]+) for isotopic interference from a co-occurring adduct (e.g. [M+Na]+).
+description: Use when when processing mass spectrometry imaging data with multiple
+  adduct forms of the same lipid species, and you need to correct one adduct form
+  (e.g. [M+H]+) for isotopic interference from a co-occurring adduct (e.g. [M+Na]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,12 +14,14 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # Lipid Adduct Pairing by Neutral Mass
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and match paired adduct ions (e.g. [M+H]+ and [M+Na]+) from the same neutral lipid species by comparing neutral lipid identifiers and m/z differences. This pairing is essential for applying Type II isotopic correction to remove adduct-specific overlap in mass spectrometry imaging quantitation.

@@ -1,6 +1,7 @@
 ---
 name: conditional-routing-logic
-description: Use when you have received a USI string (formatted as mzspec:<namespace>:<resource>:<identifier_type>:<identifier>) and need to retrieve the corresponding mass spectrum data.
+description: Use when you have received a USI string (formatted as mzspec:<namespace>:<resource>:<identifier_type>:<identifier>)
+  and need to retrieve the corresponding mass spectrum data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -18,6 +19,7 @@ metadata:
   - MetabolomicsSpectrumResolver
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

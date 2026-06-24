@@ -1,6 +1,9 @@
 ---
 name: model-residual-analysis
-description: Use when after fitting a linear model to normalized metabolomics featuredata using LinearModelFit(), to validate model assumptions (homogeneity of variance, normality), detect influential observations, and confirm that the model's coefficient and p-value estimates are reliable for downstream.
+description: Use when after fitting a linear model to normalized metabolomics featuredata
+  using LinearModelFit(), to validate model assumptions (homogeneity of variance,
+  normality), detect influential observations, and confirm that the model's coefficient
+  and p-value estimates are reliable for downstream.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +16,13 @@ metadata:
   - LinearModelFit
   - RlaPlots
   - PcaPlots
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # model-residual-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and analyze residuals from a fitted linear model to assess model assumptions, identify outliers, and evaluate the quality of biomarker identification in metabolomics data. Residual analysis validates whether the linear model adequately captures the relationship between metabolites and factors of interest after normalization.

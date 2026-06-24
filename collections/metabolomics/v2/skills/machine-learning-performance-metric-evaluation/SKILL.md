@@ -1,6 +1,7 @@
 ---
 name: machine-learning-performance-metric-evaluation
-description: Use when after training a binary MS/MS spectral classifier on labeled data, apply this skill to quantify classifier performance before deployment.
+description: Use when after training a binary MS/MS spectral classifier on labeled
+  data, apply this skill to quantify classifier performance before deployment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,6 +12,7 @@ metadata:
   - AnnoMe
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbag111
   title: AnnoMe

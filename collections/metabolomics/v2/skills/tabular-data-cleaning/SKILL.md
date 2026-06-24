@@ -1,6 +1,9 @@
 ---
 name: tabular-data-cleaning
-description: Use when you have a CSV or table-format spectral peak list (with chemical shift, intensity, and metadata columns) destined for NMRformer or similar peak-to-metabolite assignment models, and you need to exclude low-quality peaks that would otherwise harm prediction accuracy.
+description: Use when you have a CSV or table-format spectral peak list (with chemical
+  shift, intensity, and metadata columns) destined for NMRformer or similar peak-to-metabolite
+  assignment models, and you need to exclude low-quality peaks that would otherwise
+  harm prediction accuracy.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - NMRformer
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05632
   title: NMRformer

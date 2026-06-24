@@ -1,6 +1,7 @@
 ---
 name: ion-mobility-mass-spectrometry-data-preprocessing
-description: Use when when you have raw IM-MS data from drift tube (DT) or SLIM instruments in Agilent MassHunter (.
+description: Use when when you have raw IM-MS data from drift tube (DT) or SLIM instruments
+  in Agilent MassHunter (.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,14 +18,18 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -51,6 +56,7 @@ attribution:
 
 # ion-mobility-mass-spectrometry-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing pipeline for IM-MS data that removes noise, corrects artifacts, and interpolates ion mobility dimensions to prepare raw Agilent MassHunter (.d) or UIMF files for downstream omics analysis. This skill combines low-intensity thresholding, spike removal, multidimensional smoothing, and saturation repair to enhance signal quality in complex samples.

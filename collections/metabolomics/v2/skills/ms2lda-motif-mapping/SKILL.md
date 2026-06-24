@@ -1,6 +1,9 @@
 ---
 name: ms2lda-motif-mapping
-description: Use when you have a GNPS-generated molecular network (either classical or feature-based) and corresponding MS2LDA experiment output containing Mass2Motif-to-spectrum assignments, and you want to visualize which substructural motifs are shared across clusters or features and how they distribute.
+description: Use when you have a GNPS-generated molecular network (either classical
+  or feature-based) and corresponding MS2LDA experiment output containing Mass2Motif-to-spectrum
+  assignments, and you want to visualize which substructural motifs are shared across
+  clusters or features and how they distribute.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 - Map MS2LDA substructural information to mass spectral molecular networks
 claims: []

@@ -1,6 +1,9 @@
 ---
 name: machine-learning-pipeline-integration-testing
-description: Use when you have adapted an ML pipeline (e.g., MSNovelist) to consume a non-standard fingerprint representation (Morgan 4096-bit instead of bundled SIRIUS 6 fingerprints) and need to verify that the model's input layer correctly reshapes and processes the new fingerprint format before committing.
+description: Use when you have adapted an ML pipeline (e.g., MSNovelist) to consume
+  a non-standard fingerprint representation (Morgan 4096-bit instead of bundled SIRIUS
+  6 fingerprints) and need to verify that the model's input layer correctly reshapes
+  and processes the new fingerprint format before committing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,6 +17,7 @@ metadata:
   - Singularity
   - SLURM
   - Python (train.py, evaluation.py)
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

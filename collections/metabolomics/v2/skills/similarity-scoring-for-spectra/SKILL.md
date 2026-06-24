@@ -1,6 +1,9 @@
 ---
 name: similarity-scoring-for-spectra
-description: Use when you have LC-MS/MS query spectra in mgf format that you need to match against a custom database (e.g., prepared with CFM-id) to identify compounds. Apply this skill when you want to rank candidate compounds by spectral similarity and return scored match results for downstream interpretation.
+description: Use when you have LC-MS/MS query spectra in mgf format that you need
+  to match against a custom database (e.g., prepared with CFM-id) to identify compounds.
+  Apply this skill when you want to rank candidate compounds by spectral similarity
+  and return scored match results for downstream interpretation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,13 +16,17 @@ metadata:
   - MS2Compound v1.0.2
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1089/omi.2021.0051
   title: MS2Compound
 evidence_spans:
-- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification of the compounds from LC-MS and MS/MS metabolomics data
-- compatible with the customized database prepared using CFM-id, the fragment prediction tool
-- The current version of MS2Compound is compatible with the customized database prepared using CFM-id, the fragment prediction tool.
+- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification
+  of the compounds from LC-MS and MS/MS metabolomics data
+- compatible with the customized database prepared using CFM-id, the fragment prediction
+  tool
+- The current version of MS2Compound is compatible with the customized database prepared
+  using CFM-id, the fragment prediction tool.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

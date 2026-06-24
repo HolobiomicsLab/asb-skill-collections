@@ -1,6 +1,9 @@
 ---
 name: batch-effect-correction-chromatography
-description: Use when when analyzing untargeted LC/HRMS data from population-scale projects (n > 500) spanning multiple sample batches or instrument runs, peaks with identical or near-identical m/z values appear at systematically shifted retention times across batches due to instrument drift, column aging, or.
+description: Use when when analyzing untargeted LC/HRMS data from population-scale
+  projects (n > 500) spanning multiple sample batches or instrument runs, peaks with
+  identical or near-identical m/z values appear at systematically shifted retention
+  times across batches due to instrument drift, column aging, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,11 +18,14 @@ metadata:
   - MZmine 2
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # batch-effect-correction-chromatography
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retention time correction across multiple LC/HRMS batches aligns peaks with similar m/z and RT profiles, harmonizing retention times to enable reliable downstream peak annotation and quantification in population-scale untargeted studies. This corrects instrumental drift and batch-to-batch chromatographic variation that would otherwise confound peak identity across samples.

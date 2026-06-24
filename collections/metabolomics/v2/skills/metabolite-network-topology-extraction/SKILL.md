@@ -1,6 +1,8 @@
 ---
 name: metabolite-network-topology-extraction
-description: Use when after computing a Jacobian matrix from metabolomics covariance data, when you need to identify and visualize the structure of metabolite interactions (which metabolites regulate or influence which others) and their relative strengths.
+description: Use when after computing a Jacobian matrix from metabolomics covariance
+  data, when you need to identify and visualize the structure of metabolite interactions
+  (which metabolites regulate or influence which others) and their relative strengths.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -12,6 +14,7 @@ metadata:
   - MInfer
   - igraph
   - tidygraph
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer

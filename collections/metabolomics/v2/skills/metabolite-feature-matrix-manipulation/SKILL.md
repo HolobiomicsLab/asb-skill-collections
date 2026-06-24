@@ -1,6 +1,8 @@
 ---
 name: metabolite-feature-matrix-manipulation
-description: Use when you have raw metabolomics peak intensity or concentration data in matrix form (samples as rows, metabolites as columns) and need to prepare it for normalization or statistical analysis.
+description: Use when you have raw metabolomics peak intensity or concentration data
+  in matrix form (samples as rows, metabolites as columns) and need to prepare it
+  for normalization or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - NormalizeMets
   - LogTransform
   - MissingValues
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # metabolite-feature-matrix-manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and transform raw metabolomics intensity matrices into analysis-ready featuredata objects through log transformation and missing-value handling. This skill enables downstream normalization, biomarker identification, and statistical modeling by standardizing the input data format and distribution.

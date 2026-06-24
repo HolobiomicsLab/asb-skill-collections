@@ -1,6 +1,9 @@
 ---
 name: metabolomics-data-matrix-handling
-description: Use when when you have raw metabolomics peak intensities or concentrations and accompanying sample metadata (batch, run order, sample type, factors of interest) and need to organize them into the featuredata, sampledata, and metabolitedata dataframes that NormalizeMets functions expect.
+description: Use when when you have raw metabolomics peak intensities or concentrations
+  and accompanying sample metadata (batch, run order, sample type, factors of interest)
+  and need to organize them into the featuredata, sampledata, and metabolitedata dataframes
+  that NormalizeMets functions expect.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,13 +14,16 @@ metadata:
   - NormalizeMets
   - RStudio
   - Microsoft Excel
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +47,7 @@ attribution:
 
 # metabolomics-data-matrix-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Structuring and preparing metabolomics feature data, sample metadata, and metabolite annotations into the standardized three-part input format required by the NormalizeMets package. This skill ensures data are correctly formatted before normalization, quality-control assessment, and biomarker analysis workflows.

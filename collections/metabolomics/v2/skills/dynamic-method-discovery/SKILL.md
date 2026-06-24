@@ -1,6 +1,7 @@
 ---
 name: dynamic-method-discovery
-description: Use when you need to enumerate all supported metadata conversions in a plugin-based architecture without hard-coding converter names or method signatures.
+description: Use when you need to enumerate all supported metadata conversions in
+  a plugin-based architecture without hard-coding converter names or method signatures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -18,6 +19,7 @@ metadata:
   - RDKit
   - ConverterBuilder
   - pytest
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

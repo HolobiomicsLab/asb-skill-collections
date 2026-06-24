@@ -1,6 +1,8 @@
 ---
 name: run-order-batch-effect-correction
-description: Use when metabolomics featuredata exhibits run-order-dependent signal drift, matrix effects, or batch effects that correlate with the order in which samples were analyzed.
+description: Use when metabolomics featuredata exhibits run-order-dependent signal
+  drift, matrix effects, or batch effects that correlate with the order in which samples
+  were analyzed.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,13 +14,16 @@ metadata:
   - NormalizeMets
   - RStudio
   - Microsoft Excel
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # run-order-batch-effect-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Corrects unwanted variation in metabolomics feature data caused by run-order-dependent batch effects using RLSC (reference linear-based signal correction) normalization applied to quality-control samples. This skill removes systematic drift and instrumental variation that accumulates across the analytical sequence.

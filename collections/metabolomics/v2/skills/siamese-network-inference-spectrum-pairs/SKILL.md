@@ -1,6 +1,9 @@
 ---
 name: siamese-network-inference-spectrum-pairs
-description: Use when you have a collection of preprocessed tandem mass spectra (binned into 10,000 equally-sized m/z bins, intensities square-root transformed, top 1,000 peaks retained), a trained MS2DeepScore Siamese model, and you need to predict structural similarity scores (Tanimoto or Dice) for all or a.
+description: Use when you have a collection of preprocessed tandem mass spectra (binned
+  into 10,000 equally-sized m/z bins, intensities square-root transformed, top 1,000
+  peaks retained), a trained MS2DeepScore Siamese model, and you need to predict structural
+  similarity scores (Tanimoto or Dice) for all or a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,16 +17,20 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
-- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
+- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute
+  structural similarities
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # Siamese Network Inference on Spectrum Pairs
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a trained Siamese neural network to compute predicted structural similarity scores (Tanimoto or Dice) between pairs of preprocessed tandem mass spectra by computing cosine similarity between paired 200-dimensional embeddings. This skill enables rapid prediction of molecular structural resemblance directly from MS/MS data without explicit fingerprint computation.

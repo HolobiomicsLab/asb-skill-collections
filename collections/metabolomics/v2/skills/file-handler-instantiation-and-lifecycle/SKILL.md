@@ -1,6 +1,8 @@
 ---
 name: file-handler-instantiation-and-lifecycle
-description: Use when you need to open an mzML file in pymzML and must automatically select the correct handler based on file extension (.mzML, .mzML.gz, .db) and—for gzip files—indexed vs. non-indexed compression status. Use it whenever FileInterface.
+description: Use when you need to open an mzML file in pymzML and must automatically
+  select the correct handler based on file extension (.mzML, .mzML.gz, .db) and—for
+  gzip files—indexed vs. non-indexed compression status. Use it whenever FileInterface.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +16,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,6 +46,7 @@ attribution:
 
 # file-handler-instantiation-and-lifecycle
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate and manage file handler objects in pymzML by conditionally dispatching to specialized classes (IndexedGzip, StandardGzip, SQLiteDatabase, StandardMzml) based on file extension and compression metadata. This skill enables transparent support for multiple mzML file formats and storage backends within a unified Reader interface.

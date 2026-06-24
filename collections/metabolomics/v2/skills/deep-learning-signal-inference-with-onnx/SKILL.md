@@ -1,6 +1,9 @@
 ---
 name: deep-learning-signal-inference-with-onnx
-description: Use when when you have a TransitionGroup structure containing normalized intensity traces (1D signal data from chromatograms or mobilograms) and you want to automatically detect peak regions with high precision by leveraging a conformer-based deep learning model.
+description: Use when when you have a TransitionGroup structure containing normalized
+  intensity traces (1D signal data from chromatograms or mobilograms) and you want
+  to automatically detect peak regions with high precision by leveraging a conformer-based
+  deep learning model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,11 +17,13 @@ metadata:
   - massdash
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- optional dependencies are also required and can be installed with pip install -r requirements-optional.txt
+- optional dependencies are also required and can be installed with pip install -r
+  requirements-optional.txt
 - Tests are performed using Pytest
 - Syrupy is used to compare output to previous expected output states
 claims: []

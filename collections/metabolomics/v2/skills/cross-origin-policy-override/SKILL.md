@@ -1,6 +1,9 @@
 ---
 name: cross-origin-policy-override
-description: Use when you are loading index.html locally in a browser and WebWorker or WebAssembly components fail to initialize with cross-origin or file-access policy errors. This occurs when the default browser file-access policy blocks local resource sharing required by these technologies.
+description: Use when you are loading index.html locally in a browser and WebWorker
+  or WebAssembly components fail to initialize with cross-origin or file-access policy
+  errors. This occurs when the default browser file-access policy blocks local resource
+  sharing required by these technologies.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +13,7 @@ metadata:
   - Safari
   - WebWorker
   - WebAssembly
+  license_tier: open
 derived_from:
 - doi: 10.1007/s10858-025-00465-y#sec2
   title: COLMARvista

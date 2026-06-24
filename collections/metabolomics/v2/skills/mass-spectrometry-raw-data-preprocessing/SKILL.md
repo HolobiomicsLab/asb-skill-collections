@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-raw-data-preprocessing
-description: Use when when you have raw DIA mass spectrometry data files (.raw, .d, .
+description: Use when when you have raw DIA mass spectrometry data files (.raw, .d,
+  .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC

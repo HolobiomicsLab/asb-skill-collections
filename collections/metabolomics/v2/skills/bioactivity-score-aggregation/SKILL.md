@@ -1,6 +1,9 @@
 ---
 name: bioactivity-score-aggregation
-description: Use when when you have both (1) a molecular network graph from GNPS with aligned MS/MS features (nodes and edges) and (2) a bioassay-guided fractionation activity matrix (fractions × bioactivity measurements), and you need to determine which molecular features are responsible for observed.
+description: Use when when you have both (1) a molecular network graph from GNPS with
+  aligned MS/MS features (nodes and edges) and (2) a bioassay-guided fractionation
+  activity matrix (fractions × bioactivity measurements), and you need to determine
+  which molecular features are responsible for observed.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,6 +19,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

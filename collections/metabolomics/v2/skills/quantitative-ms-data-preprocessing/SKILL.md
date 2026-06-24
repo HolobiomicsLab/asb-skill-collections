@@ -1,6 +1,8 @@
 ---
 name: quantitative-ms-data-preprocessing
-description: Use when you have raw MS intensity tables showing systematic drift during a measurement sequence (e.g., declining or variable ion counts across a run), particularly in targeted quantification workflows where external calibration standards are available.
+description: Use when you have raw MS intensity tables showing systematic drift during
+  a measurement sequence (e.g., declining or variable ion counts across a run), particularly
+  in targeted quantification workflows where external calibration standards are available.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3564
@@ -11,6 +13,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -38,6 +41,7 @@ attribution:
 
 # quantitative-ms-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Correct intensity drifts in targeted mass spectrometry datasets using external calibration and multiple drift correction strategies (Internal Standard, statistical models, bracketing methods) to ensure accurate quantification before downstream analysis. This skill is essential when intensity artifacts accumulate during MS measurement runs and would otherwise bias quantitative results.

@@ -1,6 +1,8 @@
 ---
 name: isotopic-peak-intensity-distribution
-description: Use when when you have one or more peptide sequences (as strings) and need to predict their isotopic distribution pattern for MS instrument simulation, peak deconvolution, or validation of observed isotopic envelopes.
+description: Use when when you have one or more peptide sequences (as strings) and
+  need to predict their isotopic distribution pattern for MS instrument simulation,
+  peak deconvolution, or validation of observed isotopic envelopes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +18,7 @@ metadata:
   - Pyteomics
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -49,6 +52,7 @@ attribution:
 
 # isotopic-peak-intensity-distribution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and visualize the relative abundances of isotopic peaks (m/z and intensity pairs) for polypeptide sequences using Pyteomics' mass module. This skill enables quantitative prediction of how peptide ions will appear in mass spectrometry experiments across their natural isotopic envelope.

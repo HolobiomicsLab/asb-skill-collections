@@ -1,6 +1,9 @@
 ---
 name: gui-widget-filtering-implementation
-description: Use when a GUI widget (e.g., isotopes display, compound list, or metabolite selector) should honor user preferences to show only a subset of available items, and the filtering logic must read from application preferences and apply it during widget rendering or refresh cycles.
+description: Use when a GUI widget (e.g., isotopes display, compound list, or metabolite
+  selector) should honor user preferences to show only a subset of available items,
+  and the filtering logic must read from application preferences and apply it during
+  widget rendering or refresh cycles.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +13,7 @@ metadata:
   - make
   - Maven GUI
   - Qt5
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

@@ -1,6 +1,7 @@
 ---
 name: combination-function-parameterisation
-description: Use when you have two or more independent, standardised scoring functions that rank the same set of candidate pairs (e.
+description: Use when you have two or more independent, standardised scoring functions
+  that rank the same set of candidate pairs (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,15 +12,18 @@ metadata:
   - antiSMASH
   - Python (numpy, scipy.stats, pandas, matplotlib, seaborn)
   - NPLinker
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # Combination-function parameterisation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate alternative mathematical combination functions and their parameters to optimally merge complementary scoring functions (e.g. ℓp-norm with varying exponent p) for ranking BGC-metabolite predictions. This skill identifies which combination strategy most enriches validated links in high-ranking tiers.

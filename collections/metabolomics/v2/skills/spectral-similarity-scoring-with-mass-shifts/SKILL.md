@@ -1,6 +1,7 @@
 ---
 name: spectral-similarity-scoring-with-mass-shifts
-description: Use when you have an unknown query spectrum suspected to carry a post-translational modification and need to match it against a library of unmodified reference spectra.
+description: Use when you have an unknown query spectrum suspected to carry a post-translational
+  modification and need to match it against a library of unmodified reference spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,12 +13,15 @@ metadata:
   - Faiss
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is
+  a spectral library search engine
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

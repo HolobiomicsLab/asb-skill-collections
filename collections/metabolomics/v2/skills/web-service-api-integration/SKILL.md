@@ -1,6 +1,9 @@
 ---
 name: web-service-api-integration
-description: Use when when you have a parsed mass spectrum (precursor m/z, ionization mode, collision energy, and fragment peak list as m/z–intensity pairs) and need to obtain molecular fingerprint predictions, de-novo candidate structures, or chemical class annotations without maintaining local neural network.
+description: Use when when you have a parsed mass spectrum (precursor m/z, ionization
+  mode, collision energy, and fragment peak list as m/z–intensity pairs) and need
+  to obtain molecular fingerprint predictions, de-novo candidate structures, or chemical
+  class annotations without maintaining local neural network.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -15,6 +18,7 @@ metadata:
   - CANOPUS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

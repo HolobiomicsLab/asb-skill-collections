@@ -18,6 +18,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -47,6 +48,7 @@ attribution:
 
 # biodegradation-pathway-interpretation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct predicted environmental microbial degradation pathways for small molecules using BioTransformer's EAWAG-BBD-backed module to identify metabolites and transformation rules in soil and aquatic microbiota. This skill enables scientists to anticipate how xenobiotics and environmental contaminants will be metabolized by natural microbial communities.

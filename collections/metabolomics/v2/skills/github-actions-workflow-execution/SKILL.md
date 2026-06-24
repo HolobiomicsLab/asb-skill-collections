@@ -12,6 +12,7 @@ metadata:
   - MassBank-data repository
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank
@@ -44,6 +45,7 @@ attribution:
 
 # github-actions-workflow-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute automated validation workflows on a GitHub repository using GitHub Actions to test all records against a validator tool, generating pass/fail status reports. This skill enables continuous integration of quality control for scientific data repositories by triggering scheduled or event-driven validation jobs that persist results as machine-readable outputs and status badges.

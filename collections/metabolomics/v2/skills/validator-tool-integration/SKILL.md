@@ -1,6 +1,8 @@
 ---
 name: validator-tool-integration
-description: Use when you have a repository of structured records (e.g., mass spectrometry data, metadata, or domain-specific formats) and need to enforce validation rules systematically across all records.
+description: Use when you have a repository of structured records (e.g., mass spectrometry
+  data, metadata, or domain-specific formats) and need to enforce validation rules
+  systematically across all records.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +14,7 @@ metadata:
   - MassBank-cli-tools
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank
@@ -40,6 +43,7 @@ attribution:
 
 # validator-tool-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate a dedicated validator tool into a continuous integration (CI) workflow to automatically validate all records in a repository against a defined schema or specification. This skill ensures data quality and consistency are checked on every commit or pull request without manual intervention.

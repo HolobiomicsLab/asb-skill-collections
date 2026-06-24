@@ -1,6 +1,9 @@
 ---
 name: distribution-statistics-summarization
-description: Use when you have loaded a collection of molecular fingerprint vectors (such as biosynfoni fingerprints from a deposited dataset) and need to characterize their statistical and distributional properties before using them for machine learning, similarity searching, or method validation.
+description: Use when you have loaded a collection of molecular fingerprint vectors
+  (such as biosynfoni fingerprints from a deposited dataset) and need to characterize
+  their statistical and distributional properties before using them for machine learning,
+  similarity searching, or method validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -12,6 +15,7 @@ metadata:
   - biosynfoni
   - pip
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -19,7 +23,8 @@ derived_from:
   title: ''
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # distribution-statistics-summarization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute summary statistics and distributional characteristics of molecular fingerprint vector collections, including bit-frequency distributions, sparsity metrics, and pairwise similarity coefficients. This skill enables quantitative characterization of fingerprint datasets to understand their statistical properties and suitability for downstream applications.

@@ -1,6 +1,9 @@
 ---
 name: constraint-based-flux-sampling-and-analysis
-description: Use when when you have constraint-based metabolic models for multiple samples or cell lines, and you want to determine whether integrating multiple omics constraint types (nutrient availability, extracellular metabolite ratios, gene expression) produces distinct and biologically meaningful.
+description: Use when when you have constraint-based metabolic models for multiple
+  samples or cell lines, and you want to determine whether integrating multiple omics
+  constraint types (nutrient availability, extracellular metabolite ratios, gene expression)
+  produces distinct and biologically meaningful.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -18,15 +21,20 @@ metadata:
   - YSI bioanalyzer (YSI2950)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
 - using constraint-based stoichiometric metabolic models as a scaffold
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
 - the implementation of optGpSampler algorithm [71] available in COBRApy [72]
 claims: []
 provenance:
@@ -51,6 +59,7 @@ attribution:
 
 # constraint-based-flux-sampling-and-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Sample steady-state flux distributions from the feasible metabolic space of constraint-based stoichiometric models under different regulatory scenarios (nutrient availability, extracellular flux ratios, transcriptomics-derived constraints), then apply dimensionality reduction and statistical tests to evaluate how constraint combinations segregate metabolic phenotypes across biological samples.

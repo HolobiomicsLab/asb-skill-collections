@@ -1,6 +1,8 @@
 ---
 name: package-installation-verification
-description: Use when after installing ChemDistiller or similar Python-based command-line analysis packages, to confirm the package is properly installed in the Python environment and the primary entry point script is accessible and executable.
+description: Use when after installing ChemDistiller or similar Python-based command-line
+  analysis packages, to confirm the package is properly installed in the Python environment
+  and the primary entry point script is accessible and executable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -10,6 +12,7 @@ metadata:
   - Python
   - Anaconda
   - ChemDistiller
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty080
   title: ChemDistiller
@@ -38,6 +41,7 @@ attribution:
 
 # Verify Command-Line Entry Point Invocation with Help Flag
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that a scientific Python package's command-line entry point script executes successfully and emits help documentation when invoked with the --help flag. This skill confirms the package installation is functional and the CLI interface is available before attempting analysis workflows.

@@ -1,6 +1,8 @@
 ---
 name: computational-performance-benchmarking
-description: Use when you have multiple candidate normalization methods for metabolomics data and need to choose one based on both statistical robustness and computational cost.
+description: Use when you have multiple candidate normalization methods for metabolomics
+  data and need to choose one based on both statistical robustness and computational
+  cost.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - Metanorm
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -17,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # computational-performance-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically measure and rank competing normalization algorithms (tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) on robustness metrics (bias, variance, ground-truth recovery) and execution time to guide method selection for metabolomics batch correction. This skill enables reproducible performance trade-off analysis across computational speed and statistical accuracy dimensions.

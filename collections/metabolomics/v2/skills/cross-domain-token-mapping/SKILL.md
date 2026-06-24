@@ -11,11 +11,13 @@ metadata:
   - BART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
 evidence_spans:
-- MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary
+- MS-BART is the first to leverage language model for mass spectra structure elucidation
+  by introducing a unified vocabulary
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +41,7 @@ attribution:
 
 # cross-domain-token-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a unified token vocabulary that bridges mass spectra and molecular structures, enabling a single language model to jointly encode and decode both spectral peak data (m/z values, intensities) and chemical structures (SMILES or graph tokens). This skill is essential for end-to-end pretraining and fine-tuning in multimodal chemistry models.

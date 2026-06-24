@@ -1,6 +1,9 @@
 ---
 name: unified-mobility-scale-construction-across-polarities
-description: Use when you have CE-MS raw data in OnDiskMSnExp format with both positive and negative polarity acquisitions, migration times that vary due to electroosmotic flow drift, and access to two well-characterized mobility markers (e.g., Paracetamol and Procaine with known charges and migration times).
+description: Use when you have CE-MS raw data in OnDiskMSnExp format with both positive
+  and negative polarity acquisitions, migration times that vary due to electroosmotic
+  flow drift, and access to two well-characterized mobility markers (e.g., Paracetamol
+  and Procaine with known charges and migration times).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,11 +19,13 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MSnbase")`
@@ -49,6 +54,7 @@ attribution:
 
 # unified-mobility-scale-construction-across-polarities
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform CE-MS migration time data to a unified effective mobility scale spanning both positive and negative polarities using two-marker calibration. This produces a single polarity-agnostic .mzML file with reproducible, system-independent mobility values replacing migration times.

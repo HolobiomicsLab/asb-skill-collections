@@ -1,6 +1,9 @@
 ---
 name: smiles-formula-representation-chemistry
-description: 'Use when when obtaining transformation products through mixed algorithmic backends (library, CTS, BioTransformer, metabolic logic rules) that require different chemical representations: structure-based algorithms need SMILES strings with optional log P values, while formula-based algorithms need.'
+description: 'Use when when obtaining transformation products through mixed algorithmic
+  backends (library, CTS, BioTransformer, metabolic logic rules) that require different
+  chemical representations: structure-based algorithms need SMILES strings with optional
+  log P values, while formula-based algorithms need.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -14,6 +17,7 @@ metadata:
   - CTS
   - PubChem
   - MetFrag
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

@@ -1,6 +1,9 @@
 ---
 name: model-checkpoint-persistence
-description: Use when training a Transformer or neural network model on a large dataset (e.g., 80,000+ training samples) where validation performance is monitored to prevent overfitting, and you need to halt training early or recover the -performing model checkpoint without re-executing the entire training loop.
+description: Use when training a Transformer or neural network model on a large dataset
+  (e.g., 80,000+ training samples) where validation performance is monitored to prevent
+  overfitting, and you need to halt training early or recover the -performing model
+  checkpoint without re-executing the entire training loop.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -14,6 +17,7 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

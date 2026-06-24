@@ -1,6 +1,8 @@
 ---
 name: gc-ims-peak-alignment-evaluation
-description: Use when after peak detection in GC-IMS preprocessing, when you need to assess whether detected peaks from multiple samples align to the same chemical entities (clusters) using hierarchical clustering.
+description: Use when after peak detection in GC-IMS preprocessing, when you need
+  to assess whether detected peaks from multiple samples align to the same chemical
+  entities (clusters) using hierarchical clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +15,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +44,7 @@ attribution:
 
 # GC-IMS Peak Alignment Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Hierarchical clustering of detected peaks in Gas Chromatography–Ion Mobility Spectrometry data using Euclidean distance with specified drift time and retention time thresholds to assign peak cluster memberships and extract cluster statistics. This skill evaluates peak alignment reproducibility across samples by grouping peaks with similar drift time and retention time coordinates.

@@ -1,6 +1,8 @@
 ---
 name: search-mode-configuration-optimization
-description: Use when when you have a calibrated FT-ICR mass spectrum (e.g., ESI-NEG mode) and need to decide between rapid single-assignment (first_hit=True) and exhaustive multi-assignment (first_hit=False) modes.
+description: Use when when you have a calibrated FT-ICR mass spectrum (e.g., ESI-NEG
+  mode) and need to decide between rapid single-assignment (first_hit=True) and exhaustive
+  multi-assignment (first_hit=False) modes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -15,12 +17,14 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -48,6 +52,7 @@ attribution:
 
 # search-mode-configuration-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configuring and comparing molecular formula search modes (first-hit vs. all-hits) to understand how prioritization strategies affect assignment counts, score distributions, and computational efficiency. This skill is essential when optimizing molecular formula annotation workflows for different analytical goals—e.g., rapid screening vs. comprehensive assignment.

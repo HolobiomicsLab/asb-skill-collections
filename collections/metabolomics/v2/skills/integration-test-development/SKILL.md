@@ -1,6 +1,8 @@
 ---
 name: integration-test-development
-description: Use when when you have implemented or modified a data ingestion module (e.g., mzML parser) and need to verify that file deserialization produces correct internal representations.
+description: Use when when you have implemented or modified a data ingestion module
+  (e.g., mzML parser) and need to verify that file deserialization produces correct
+  internal representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,12 +18,15 @@ metadata:
   - MS-DIAL MsdialWorkbench repository
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
-- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and
+  .NET 6
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 - To conduct tests, please refer to section `test:` of GitHub Actions
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # integration-test-development
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Develop and execute integration tests to validate that parsed mass spectrometry raw data files (mzML format) correctly map metadata, spectral arrays, and quantitative fields into a software's internal data structures. This skill ensures reproducibility and correctness of file format ingestion pipelines across build configurations and CI/CD environments.

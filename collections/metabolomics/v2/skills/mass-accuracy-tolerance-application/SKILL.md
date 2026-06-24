@@ -1,6 +1,8 @@
 ---
 name: mass-accuracy-tolerance-application
-description: Use when when you have generated in silico annotations (from GNPS ISDB, SIRIUS, or timaR) and need to distinguish true matches from false positives by enforcing a mass accuracy constraint. Apply this skill before computing novelty metrics (e.
+description: Use when when you have generated in silico annotations (from GNPS ISDB,
+  SIRIUS, or timaR) and need to distinguish true matches from false positives by enforcing
+  a mass accuracy constraint. Apply this skill before computing novelty metrics (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -20,6 +22,7 @@ metadata:
   - MassBank
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
@@ -28,10 +31,13 @@ derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: ''
 evidence_spans:
-- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2
+- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time'
+  columns. -Inventa takes input directly from MZmine2
 - Inventa takes input directly from MZmine2 or MZmine 3
-- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares
-- 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/),
+  is possible to use other processing sofwares
+- 'tima_results_filename: timaR reponderated output format. - for performing in silico
+  annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'
 - github.com__daniellyz__meRgeION2
 claims: []
@@ -62,6 +68,7 @@ attribution:
 
 # mass-accuracy-tolerance-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Application of mass accuracy (ppm error) thresholds to filter and validate in silico annotations from spectral databases and structure prediction tools in metabolomics workflows. This skill is essential for ensuring that only high-confidence feature–compound matches are retained during annotation refinement.

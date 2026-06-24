@@ -1,6 +1,8 @@
 ---
 name: spectral-feature-scrambling-permutation
-description: Use when when performing large-scale untargeted metabolomics annotations where you need to assess the false discovery rate of metabolite identifications but lack sufficient negative control samples or decoy compound databases.
+description: Use when when performing large-scale untargeted metabolomics annotations
+  where you need to assess the false discovery rate of metabolite identifications
+  but lack sufficient negative control samples or decoy compound databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,7 @@ metadata:
   - Passatutto
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -46,6 +49,7 @@ attribution:
 
 # spectral-feature-scrambling-permutation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A decoy generation method that creates synthetic scrambled or permuted spectral features while preserving key statistical properties, enabling false discovery rate estimation in untargeted metabolomics annotation without requiring experimental negative controls.

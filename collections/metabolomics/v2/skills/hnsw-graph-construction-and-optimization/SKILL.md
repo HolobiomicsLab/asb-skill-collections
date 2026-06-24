@@ -1,6 +1,8 @@
 ---
 name: hnsw-graph-construction-and-optimization
-description: Use when when you have pre-computed Word2vec spectrum embeddings and need to perform fast approximate nearest-neighbor retrieval from a library of millions of spectra (e.g., NIST 2017, MassBank, or in-silico predicted spectra).
+description: Use when when you have pre-computed Word2vec spectrum embeddings and
+  need to perform fast approximate nearest-neighbor retrieval from a library of millions
+  of spectra (e.g., NIST 2017, MassBank, or in-silico predicted spectra).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -14,6 +16,7 @@ metadata:
   - Python 3.7
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

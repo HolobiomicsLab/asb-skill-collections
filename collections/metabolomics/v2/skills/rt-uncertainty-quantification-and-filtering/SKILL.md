@@ -1,6 +1,8 @@
 ---
 name: rt-uncertainty-quantification-and-filtering
-description: Use when you have a set of metabolite candidates with observed retention times and access to a trained DNN retention time predictor (MAE 39.2±1.2 s) or meta-learned projections between chromatographic methods.
+description: Use when you have a set of metabolite candidates with observed retention
+  times and access to a trained DNN retention time predictor (MAE 39.2±1.2 s) or meta-learned
+  projections between chromatographic methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,11 +13,13 @@ metadata:
   - alvaDesc
   - CMM-RT (cmmrt package)
   - CEU Mass Mediator
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +43,7 @@ attribution:
 
 # RT Uncertainty Quantification and Filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute confidence intervals around predicted retention times and use them to filter and rank metabolite annotation candidates by comparing observed versus predicted RT values. This probabilistic approach enables metabolite annotation workflows to prioritize candidates with high RT prediction confidence while excluding those falling outside expected uncertainty bounds.

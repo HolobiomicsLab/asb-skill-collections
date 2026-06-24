@@ -1,6 +1,8 @@
 ---
 name: bruker-transient-data-import
-description: Use when you have Bruker Solarix raw transient data (.d folders containing ser or fid files) from an FT-ICR instrument and need to load it into a Python environment for noise thresholding, peak picking, mass calibration, or molecular formula assignment.
+description: Use when you have Bruker Solarix raw transient data (.d folders containing
+  ser or fid files) from an FT-ICR instrument and need to load it into a Python environment
+  for noise thresholding, peak picking, mass calibration, or molecular formula assignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,12 +17,14 @@ metadata:
   - CoreMS ReadBrukerSolarix
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - import pandas as pd
 claims: []
@@ -46,6 +50,7 @@ attribution:
 
 # bruker-transient-data-import
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import and load raw Bruker Solarix FT-ICR transient data (ser and fid files) from .d directories into CoreMS mass spectrum objects for downstream signal processing and calibration. This is the first step in FT-MS workflows, converting vendor binary formats into a unified Python object model.

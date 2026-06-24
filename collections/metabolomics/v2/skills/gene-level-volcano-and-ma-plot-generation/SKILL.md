@@ -1,6 +1,9 @@
 ---
 name: gene-level-volcano-and-ma-plot-generation
-description: Use when after completing differential expression analysis (edgeR, DESeq2, or RankProduct) on count matrices to visualize fold-changes versus p-values and to assess the relationship between average expression levels and log2 fold-changes for gene-level omics data.
+description: Use when after completing differential expression analysis (edgeR, DESeq2,
+  or RankProduct) on count matrices to visualize fold-changes versus p-values and
+  to assess the relationship between average expression levels and log2 fold-changes
+  for gene-level omics data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -13,13 +16,15 @@ metadata:
   - ggplot2
   - ComplexHeatmap
   - edgeR
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
 - '### DESeq2 [deseq](../modules/local/deseq2)'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

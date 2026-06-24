@@ -1,6 +1,9 @@
 ---
 name: python-package-environment-setup
-description: Use when when you have cloned a Python package repository and need to verify that the package installs correctly and its test suite passes locally. This is the prerequisite workflow before running pytest or code formatters like black on the package source.
+description: Use when when you have cloned a Python package repository and need to
+  verify that the package installs correctly and its test suite passes locally. This
+  is the prerequisite workflow before running pytest or code formatters like black
+  on the package source.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3793
@@ -12,6 +15,7 @@ metadata:
   - pip
   - pytest
   - black
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

@@ -1,6 +1,9 @@
 ---
 name: cross-dataset-feature-matching
-description: Use when you have two or more feature tables in HDF5 format with detected features characterized by m/z, drift time, retention time, and intensity, and you need to match corresponding features across samples to account for systematic shifts caused by instrument variation or tuning differences.
+description: Use when you have two or more feature tables in HDF5 format with detected
+  features characterized by m/z, drift time, retention time, and intensity, and you
+  need to match corresponding features across samples to account for systematic shifts
+  caused by instrument variation or tuning differences.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +16,13 @@ metadata:
   - HDF5
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - is a Python application programming interface and command-line tool
 claims: []
@@ -43,6 +48,7 @@ attribution:
 
 # cross-dataset-feature-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align detected features across multiple mass spectrometry samples by exploiting multi-dimensional similarity in mass, drift time, and retention time to construct a reference-based coordinate transformation model. This reduces instrument variation and increases confidence in feature identification across datasets.

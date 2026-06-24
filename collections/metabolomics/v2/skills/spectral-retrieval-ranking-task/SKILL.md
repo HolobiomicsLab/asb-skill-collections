@@ -1,6 +1,9 @@
 ---
 name: spectral-retrieval-ranking-task
-description: Use when when you have pre-computed dense embeddings for query spectra (unknown compounds) and reference spectra (spectral library), and you need to rank library entries by similarity to each query for compound identification or structural similarity retrieval.
+description: Use when when you have pre-computed dense embeddings for query spectra
+  (unknown compounds) and reference spectra (spectral library), and you need to rank
+  library entries by similarity to each query for compound identification or structural
+  similarity retrieval.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -17,6 +20,7 @@ metadata:
   - Tokenizer
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -47,6 +51,7 @@ attribution:
 
 # spectral-retrieval-ranking-task
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute a cosine similarity matrix between query and reference MS/MS spectral embeddings to rank candidate compounds by retrieval score. This skill bridges embedding generation and compound identification by quantifying spectral similarity in the learned embedding space.

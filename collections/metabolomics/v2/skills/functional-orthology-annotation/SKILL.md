@@ -1,6 +1,9 @@
 ---
 name: functional-orthology-annotation
-description: Use when after assigning hierarchical KEGG identifiers to a metabolomics count data frame (via assign_hierarchy with identifier='KEGG'), use this skill when you need to link metabolites to their functional roles (KO numbers) and associated genes for downstream functional analysis, pathway.
+description: Use when after assigning hierarchical KEGG identifiers to a metabolomics
+  count data frame (via assign_hierarchy with identifier='KEGG'), use this skill when
+  you need to link metabolites to their functional roles (KO numbers) and associated
+  genes for downstream functional analysis, pathway.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,11 +15,13 @@ metadata:
   - KEGGREST
   - R
   - assign_hierarchy
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
-- which retrieves data from the KEGG API using the function ```keggGet``` from the package KEGGREST
+- which retrieves data from the KEGG API using the function ```keggGet``` from the
+  package KEGGREST
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # functional-orthology-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and annotate metabolite-associated functional orthology (KO numbers) and gene names from the KEGG API using S3 dispatch methods. This skill augments metabolomics count data frames with ortholog identifiers and gene information to enable functional interpretation of metabolite variation.

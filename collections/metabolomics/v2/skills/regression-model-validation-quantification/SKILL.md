@@ -1,6 +1,8 @@
 ---
 name: regression-model-validation-quantification
-description: Use when when you have fitted one or more regression models (linear or polynomial) to external calibration standards in MS data and need to verify model adequacy before applying it to unknown samples.
+description: Use when when you have fitted one or more regression models (linear or
+  polynomial) to external calibration standards in MS data and need to verify model
+  adequacy before applying it to unknown samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -11,6 +13,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -38,6 +41,7 @@ attribution:
 
 # regression-model-validation-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and optimize regression models (linear or polynomial) fitted to mass spectrometry external calibration data to ensure accurate conversion of raw intensity measurements to quantified concentration values. This skill ensures the selected model appropriately captures the intensity–concentration relationship and correctly handles intensity drift correction.

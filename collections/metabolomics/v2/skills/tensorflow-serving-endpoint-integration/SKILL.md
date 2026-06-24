@@ -1,6 +1,8 @@
 ---
 name: tensorflow-serving-endpoint-integration
-description: Use when you have nuclear magnetic resonance (NMR) peak data (1H and 13C measurements) that you need to classify using a deployed SMART 3 model, and you want to submit peaks programmatically rather than through a web UI.
+description: Use when you have nuclear magnetic resonance (NMR) peak data (1H and
+  13C measurements) that you need to classify using a deployed SMART 3 model, and
+  you want to submit peaks programmatically rather than through a web UI.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -41,6 +44,7 @@ attribution:
 
 # tensorflow-serving-endpoint-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate with a TensorFlow Serving inference endpoint to programmatically submit nuclear magnetic resonance peak data for molecular classification. This skill enables automated classification workflows by querying model metadata and invoking the classification API with properly formatted NMR peak payloads.

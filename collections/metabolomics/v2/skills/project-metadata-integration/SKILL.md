@@ -1,6 +1,9 @@
 ---
 name: project-metadata-integration
-description: Use when a paired omics project record contains a genome identifier (e.g., GenBank accession) but lacks the corresponding organism name field, and you need to populate that metadata field to enable full text search, sample tracking, or project validation before archival to Zenodo.
+description: Use when a paired omics project record contains a genome identifier (e.g.,
+  GenBank accession) but lacks the corresponding organism name field, and you need
+  to populate that metadata field to enable full text search, sample tracking, or
+  project validation before archival to Zenodo.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,6 +17,7 @@ metadata:
   - GenBank / NCBI Taxonomy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla

@@ -1,6 +1,9 @@
 ---
 name: peak-picking-performance-benchmarking
-description: Use when when you have completed non-targeted peak picking and alignment with tools such as MZmine 2, XCMS, or MS-DIAL on LC-HRMS mzML data and need to quantify performance metrics (found peaks %, degenerated isotopologue ratio, alignment errors) by comparing against a curated benchmark of known.
+description: Use when when you have completed non-targeted peak picking and alignment
+  with tools such as MZmine 2, XCMS, or MS-DIAL on LC-HRMS mzML data and need to quantify
+  performance metrics (found peaks %, degenerated isotopologue ratio, alignment errors)
+  by comparing against a curated benchmark of known.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,12 +20,14 @@ metadata:
   - MSconvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - Below we provided one more example for MZmine2
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)

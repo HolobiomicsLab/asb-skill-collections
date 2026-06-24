@@ -1,6 +1,8 @@
 ---
 name: lcms-spectral-peak-classification
-description: Use when you have raw LC-MS spectral peak data (in the format provided by DOI 10.25345/C5FD2F) and need to build a classifier that can distinguish valid peaks from false positives or background noise without manual feature engineering.
+description: Use when you have raw LC-MS spectral peak data (in the format provided
+  by DOI 10.25345/C5FD2F) and need to build a classifier that can distinguish valid
+  peaks from false positives or background noise without manual feature engineering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - EDML_deep_learning2.py
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier
@@ -44,6 +47,7 @@ attribution:
 
 # lcms-spectral-peak-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a deep neural network from scratch to classify LC-MS spectral peaks using TensorFlow/Keras on a curated peak dataset. This skill enables automated discrimination of true spectral signals from noise or artifacts in liquid chromatography–mass spectrometry data.

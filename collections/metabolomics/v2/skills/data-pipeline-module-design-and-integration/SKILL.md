@@ -1,6 +1,9 @@
 ---
 name: data-pipeline-module-design-and-integration
-description: Use when you have raw spectroscopic datasets from heterogeneous sources (multiple Zenodo repositories with different file formats and scales) that must be jointly normalized, deduplicated, and aligned by molecular identifier to feed a multimodal deep learning architecture.
+description: Use when you have raw spectroscopic datasets from heterogeneous sources
+  (multiple Zenodo repositories with different file formats and scales) that must
+  be jointly normalized, deduplicated, and aligned by molecular identifier to feed
+  a multimodal deep learning architecture.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +16,7 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST
@@ -50,6 +54,7 @@ attribution:
 
 # Data Pipeline Module Design and Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and integrate a modular data pipeline that ingests, parses, normalizes, and curates multimodal spectroscopic data (NMR, HSQC, COSY, IR) into aligned, quality-filtered tensor batches for transformer model training. This skill bridges raw spectroscopic datasets to machine-ready tensors by implementing standardized I/O contracts, cross-modal alignment, and deterministic quality gates.

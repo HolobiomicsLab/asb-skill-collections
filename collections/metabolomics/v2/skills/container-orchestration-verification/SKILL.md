@@ -1,6 +1,9 @@
 ---
 name: container-orchestration-verification
-description: Use when when a software tool is distributed as a Docker image and you need to confirm it is available on a registry (e.g., Docker Hub), that the image pulls without corruption, and that the application's entry point (help command, version output, or interactive shell) is accessible and responsive.
+description: Use when when a software tool is distributed as a Docker image and you
+  need to confirm it is available on a registry (e.g., Docker Hub), that the image
+  pulls without corruption, and that the application's entry point (help command,
+  version output, or interactive shell) is accessible and responsive.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -10,6 +13,7 @@ metadata:
   - R
   - Docker
   - tima
+  license_tier: open
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

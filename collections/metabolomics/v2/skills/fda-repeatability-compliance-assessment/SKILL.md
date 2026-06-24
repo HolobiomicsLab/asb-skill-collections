@@ -1,6 +1,9 @@
 ---
 name: fda-repeatability-compliance-assessment
-description: Use when you have completed NMR data quality control analysis and possess per-feature CV values, and you need to formally assess whether the metabolomic dataset meets FDA regulatory standards for downstream biomarker discovery or quantitative assays.
+description: Use when you have completed NMR data quality control analysis and possess
+  per-feature CV values, and you need to formally assess whether the metabolomic dataset
+  meets FDA regulatory standards for downstream biomarker discovery or quantitative
+  assays.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3928
@@ -12,13 +15,15 @@ metadata:
   - MWASTools
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # FDA repeatability compliance assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies the proportion of NMR metabolic features meeting FDA coefficient of variation (CV) thresholds for biomarker discovery (CV < 0.30) and quantification (CV < 0.15), establishing whether a metabolomic dataset exhibits acceptable reproducibility. This skill validates dataset quality against regulatory benchmarks.

@@ -1,6 +1,9 @@
 ---
 name: metabolite-to-gene-mapping
-description: Use when you have metabolomic data (e.g., from LC-MS or GC-MS comparing patient to controls) showing differential abundant metabolites (DAMs), candidate genes from exome sequencing or variant calling, and access to a protein–protein or gene–gene interaction network (e.g., STRING).
+description: Use when you have metabolomic data (e.g., from LC-MS or GC-MS comparing
+  patient to controls) showing differential abundant metabolites (DAMs), candidate
+  genes from exome sequencing or variant calling, and access to a protein–protein
+  or gene–gene interaction network (e.g., STRING).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -17,6 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41525-020-0132-5
   title: metPropagate
@@ -44,6 +48,7 @@ attribution:
 
 # Reconstruct the label-propagation algorithm for prioritizing metabolic disease genes
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map differential abundant metabolites (DAMs) to genes via enrichment scoring, then propagate metabolomic seed labels across a gene/protein interaction network to generate ranked scores for metabolic disease gene prioritization. This skill bridges metabolomic discovery (dysregulated metabolites) to genomic interpretation (candidate disease genes) by network diffusion.

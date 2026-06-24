@@ -1,6 +1,8 @@
 ---
 name: strain-correlation-hypergeometric-adjustment
-description: Use when you have genomic clusters (GCFs) and metabolomic features (MFs) from paired microbial datasets, each with strain membership information, and you need to score potential links between them.
+description: Use when you have genomic clusters (GCFs) and metabolomic features (MFs)
+  from paired microbial datasets, each with strain membership information, and you
+  need to score potential links between them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,13 +15,15 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -49,6 +53,7 @@ attribution:
 
 # strain-correlation-hypergeometric-adjustment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute standardised strain correlation scores for genomic-metabolomic links by adjusting raw co-occurrence counts against a hypergeometric null distribution. This makes correlation scores comparable across datasets and significantly enriches for validated links by accounting for expected co-occurrence by chance.

@@ -1,6 +1,9 @@
 ---
 name: molecular-fingerprint-bit-frequency-analysis
-description: Use when you have loaded a collection of molecular fingerprint vectors (e.g., from biosynfoni fingerprints deposited in Zenodo) and need to assess their statistical properties before using them for classification, similarity search, or method validation.
+description: Use when you have loaded a collection of molecular fingerprint vectors
+  (e.g., from biosynfoni fingerprints deposited in Zenodo) and need to assess their
+  statistical properties before using them for classification, similarity search,
+  or method validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -12,6 +15,7 @@ metadata:
   - pip
   - black
   - pytest
+  license_tier: restricted
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -19,7 +23,8 @@ derived_from:
   title: ''
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # molecular-fingerprint-bit-frequency-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and characterize the statistical distribution of bit frequencies across molecular fingerprint vectors in a deposited dataset. This skill quantifies sparsity, bit-level activation patterns, and pairwise similarity to validate fingerprint properties and suitability for downstream bioinformatic research.

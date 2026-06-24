@@ -1,6 +1,7 @@
 ---
 name: sequencing-adapter-trimming-and-quality-filtering
-description: Use when after receiving raw FASTQ files from SRA or local sequencing input, and after FastQC has identified adapter content and quality issues.
+description: Use when after receiving raw FASTQ files from SRA or local sequencing
+  input, and after FastQC has identified adapter content and quality issues.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3192
@@ -17,13 +18,15 @@ metadata:
   - Cutadapt
   - Salmon
   - Nextflow
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - Genes, miRNA, isoforms | SRA download | SRA toolkit
 - Genes, miRNA, isoforms | Quality control | FastQC, trimgalore
-- It uses Docker/Singularity containers making installation trivial and results highly reproducible.
+- It uses Docker/Singularity containers making installation trivial and results highly
+  reproducible.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

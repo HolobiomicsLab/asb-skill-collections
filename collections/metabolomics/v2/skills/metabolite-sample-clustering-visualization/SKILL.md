@@ -1,6 +1,8 @@
 ---
 name: metabolite-sample-clustering-visualization
-description: Use when when you have a feature-by-sample metabolomic matrix (finalData) and corresponding sample group labels (finalLabel) and need to visualize how samples cluster together and separate by group using hierarchical clustering;
+description: Use when when you have a feature-by-sample metabolomic matrix (finalData)
+  and corresponding sample group labels (finalLabel) and need to visualize how samples
+  cluster together and separate by group using hierarchical clustering;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,13 +13,16 @@ metadata:
   - LargeMetabo
   - factoextra
   - ggplot2
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
 - install_github("LargeMetabo/LargeMetabo", force = TRUE, build_vignettes = TRUE)
-- several R packages are utilized in the background processes, including factoextra, FSelector, genefilter
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
+- several R packages are utilized in the background processes, including factoextra,
+  FSelector, genefilter
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # metabolite-sample-clustering-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize the hierarchical clustering and separation of metabolomic samples using the Sample_Separation function with HCA (hierarchical clustering analysis) method to group samples by their metabolomic profiles and identify sample separation patterns.

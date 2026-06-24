@@ -1,6 +1,7 @@
 ---
 name: r-ggplot2-multi-dimension-encoding
-description: Use when when you have tabular GO enrichment or gene set analysis results with at least 3–4 quantitative or categorical dimensions (e.
+description: Use when when you have tabular GO enrichment or gene set analysis results
+  with at least 3–4 quantitative or categorical dimensions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0006
@@ -13,6 +14,7 @@ metadata:
   - ggplot2
   - plotly
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

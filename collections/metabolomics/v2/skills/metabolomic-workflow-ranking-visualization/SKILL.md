@@ -1,6 +1,9 @@
 ---
 name: metabolomic-workflow-ranking-visualization
-description: Use when after running NOREVA's multi-class or time-course assessment functions (normulticlassqcall, normulticlassnoall, normulticlassisall, nortimecourseqcall, or nortimecoursenoall) that produce an overall ranking CSV file of preprocessed workflows.
+description: Use when after running NOREVA's multi-class or time-course assessment
+  functions (normulticlassqcall, normulticlassnoall, normulticlassisall, nortimecourseqcall,
+  or nortimecoursenoall) that produce an overall ranking CSV file of preprocessed
+  workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -11,6 +14,7 @@ metadata:
   - R
   - norvisualization
   - NOREVA
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

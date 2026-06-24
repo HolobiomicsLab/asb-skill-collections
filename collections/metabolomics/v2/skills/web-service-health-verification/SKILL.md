@@ -1,6 +1,9 @@
 ---
 name: web-service-health-verification
-description: Use when after deploying a containerized web application (e.g., via `docker run`), before proceeding to functional testing or integration. Use this skill to confirm the application server (Tomcat, etc.) has fully initialized and the web service is listening on the mapped port and URL path.
+description: Use when after deploying a containerized web application (e.g., via `docker
+  run`), before proceeding to functional testing or integration. Use this skill to
+  confirm the application server (Tomcat, etc.) has fully initialized and the web
+  service is listening on the mapped port and URL path.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +13,7 @@ metadata:
   - Tomcat
   - Docker
   - curl or HTTP client
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -38,6 +42,7 @@ attribution:
 
 # web-service-health-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a containerized web application is accessible and operational by querying its HTTP endpoint and confirming a successful response code. This skill validates that the deployment pipeline—from container launch through application server initialization—has completed successfully.

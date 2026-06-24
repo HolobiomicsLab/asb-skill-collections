@@ -1,6 +1,7 @@
 ---
 name: lc-ms-peak-quantification
-description: Use when after a CNN-Transformer peak detection model has been run on LC-MS ROI images and has output predicted peak locations with confidence scores.
+description: Use when after a CNN-Transformer peak detection model has been run on
+  LC-MS ROI images and has output predicted peak locations with confidence scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,6 +14,7 @@ metadata:
   - xcms / centWave
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

@@ -1,6 +1,8 @@
 ---
 name: fragment-intensity-aggregation
-description: Use when after extracting raw MS/MS spectra from mzML files but before consensus spectrum generation, when you observe high-resolution fragment lists where nearby peaks (within a specified mass tolerance, typically 0.
+description: Use when after extracting raw MS/MS spectra from mzML files but before
+  consensus spectrum generation, when you observe high-resolution fragment lists where
+  nearby peaks (within a specified mass tolerance, typically 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,13 +16,17 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # fragment-intensity-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merges m/z-proximal MS/MS fragments within individual spectra by averaging their mass-to-charge ratios and summing their intensities, reducing fragment redundancy while preserving signal strength. This intra-spectrum grouping is a foundational denoising step that reduces fragment count while maintaining spectral information fidelity.

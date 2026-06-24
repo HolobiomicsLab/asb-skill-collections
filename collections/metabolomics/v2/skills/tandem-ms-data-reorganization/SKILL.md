@@ -1,6 +1,9 @@
 ---
 name: tandem-ms-data-reorganization
-description: Use when importing MS/MS spectral libraries (particularly from MoNA or GNPS) where SMILES or chemical structure identifiers are embedded in free-text or non-standard Comment fields rather than in dedicated SMILES/InChIKey fields, or when positive and negative ionization mode spectra are commingled.
+description: Use when importing MS/MS spectral libraries (particularly from MoNA or
+  GNPS) where SMILES or chemical structure identifiers are embedded in free-text or
+  non-standard Comment fields rather than in dedicated SMILES/InChIKey fields, or
+  when positive and negative ionization mode spectra are commingled.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -20,6 +23,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -53,6 +57,7 @@ attribution:
 
 # Tandem MS Data Reorganization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reorganize tandem mass spectrometry (MS/MS) library records by relocating chemical structure metadata (SMILES, InChIKey) from non-standard fields (e.g., Comment) into their proper schema fields, and separate mixed-polarity spectral records into polarity-specific outputs for downstream analysis in MS-DIAL or similar platforms.

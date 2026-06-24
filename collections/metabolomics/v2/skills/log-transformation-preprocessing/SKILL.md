@@ -1,6 +1,9 @@
 ---
 name: log-transformation-preprocessing
-description: Use when apply log transformation when peak intensity distributions are right-skewed with heteroscedastic variance (intensity-dependent noise), particularly in QC-based batch correction workflows where variance stabilization improves the effectiveness of subsequent Pareto scaling normalization.
+description: Use when apply log transformation when peak intensity distributions are
+  right-skewed with heteroscedastic variance (intensity-dependent noise), particularly
+  in QC-based batch correction workflows where variance stabilization improves the
+  effectiveness of subsequent Pareto scaling normalization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,11 +16,13 @@ metadata:
   - bcpareto
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # log-transformation-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply optional logarithmic transformation to peak intensity vectors in LC/GC-MS metabolomics data to stabilize variance and improve normality before batch correction. This preprocessing step is toggled conditionally based on data characteristics and is typically paired with Pareto scaling for robust QC-based batch effect attenuation.

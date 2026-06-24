@@ -1,6 +1,9 @@
 ---
 name: metabolite-network-format-conversion
-description: Use when after downloading GNPS molecular networking results (from GNPS1 or GNPS2 workflows), use this skill to extract and standardize the compressed archive into named, canonicalized files (spectra.mgf, molecular_families.tsv, annotations.tsv, file_mappings.tsv/.
+description: Use when after downloading GNPS molecular networking results (from GNPS1
+  or GNPS2 workflows), use this skill to extract and standardize the compressed archive
+  into named, canonicalized files (spectra.mgf, molecular_families.tsv, annotations.tsv,
+  file_mappings.tsv/.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +16,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

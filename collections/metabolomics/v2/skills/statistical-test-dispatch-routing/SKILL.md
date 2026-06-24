@@ -1,6 +1,8 @@
 ---
 name: statistical-test-dispatch-routing
-description: 'Use when after data preprocessing, quality control, and batch effect correction have produced a validated peak intensity matrix (feature table: samples × peaks) with associated sample metadata (phenotype, grouping, or class labels).'
+description: 'Use when after data preprocessing, quality control, and batch effect
+  correction have produced a validated peak intensity matrix (feature table: samples
+  × peaks) with associated sample metadata (phenotype, grouping, or class labels).'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,6 +13,7 @@ metadata:
   tools:
   - R
   - SMART
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

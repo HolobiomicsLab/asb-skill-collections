@@ -1,6 +1,8 @@
 ---
 name: batch-timing-analysis
-description: Use when when evaluating whether a new or candidate mass spectrometry processing library (e.g., spectrum_utils) offers faster spectrum processing throughput than established alternatives (e.
+description: Use when when evaluating whether a new or candidate mass spectrometry
+  processing library (e.g., spectrum_utils) offers faster spectrum processing throughput
+  than established alternatives (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -18,16 +20,20 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
 - pymzML (version 2.5.2)
 - pyOpenMS (version 2.7.0)
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 - import seaborn as sns
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +57,7 @@ attribution:
 
 # batch-timing-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the per-spectrum processing throughput of mass spectrometry data processing libraries by timing standardized workflow operations on a representative batch of valid spectra. This enables objective comparison of computational efficiency across competing tools and identification of performance bottlenecks.

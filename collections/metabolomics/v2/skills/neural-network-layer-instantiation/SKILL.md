@@ -1,6 +1,9 @@
 ---
 name: neural-network-layer-instantiation
-description: Use when when you have a neural network layer definition (parameters, weight initialization, embedding dimension) from a trained or pretrained model checkpoint and need to generate embeddings or activations for a new batch of chemical formulas or spectrum fragments.
+description: Use when when you have a neural network layer definition (parameters,
+  weight initialization, embedding dimension) from a trained or pretrained model checkpoint
+  and need to generate embeddings or activations for a new batch of chemical formulas
+  or spectrum fragments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,13 +15,15 @@ metadata:
   - SCARF
   - MIST-CF
   - PyTorch
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # Neural Network Layer Instantiation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate a configured neural network layer (e.g., sinusoidal formula embeddings) with its specified dimensionality and invoke its forward pass on a batch of input data to produce learned representations. This skill is essential for setting up transformer and deep learning components that encode domain-specific inputs (chemical formulas, mass spectra features) into continuous vector spaces for downstream model tasks.

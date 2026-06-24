@@ -1,6 +1,9 @@
 ---
 name: linear-regression-design-matrix-construction
-description: Use when after log-transformation and missing-value imputation of featuredata (via LogTransform and MissingValues functions), when you have normalized metabolomics intensity data and need to identify metabolites associated with specific biological or experimental factors encoded as covariates in a.
+description: Use when after log-transformation and missing-value imputation of featuredata
+  (via LogTransform and MissingValues functions), when you have normalized metabolomics
+  intensity data and need to identify metabolites associated with specific biological
+  or experimental factors encoded as covariates in a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -14,11 +17,13 @@ metadata:
   - LogTransform
   - MissingValues
   - NormQcmets
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # linear-regression-design-matrix-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construction of a design matrix (factormat) that encodes biological factors of interest (e.g., gender, age, BMI) for use in linear regression analysis of normalized metabolomics feature data. This skill is essential for enabling downstream biomarker identification and statistical comparison of metabolite abundance across experimental groups.

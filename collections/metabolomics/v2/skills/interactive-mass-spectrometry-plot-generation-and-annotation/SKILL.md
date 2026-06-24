@@ -1,6 +1,9 @@
 ---
 name: interactive-mass-spectrometry-plot-generation-and-annotation
-description: Use when when you have extracted ion chromatograms (XICs), ion mobilograms (IMs), or mass spectra from diaPASEF or other DIA workflows and need to visualize them interactively to inspect peak boundaries, compare MS1 vs MS2 traces, validate feature identifications, or communicate results.
+description: Use when when you have extracted ion chromatograms (XICs), ion mobilograms
+  (IMs), or mass spectra from diaPASEF or other DIA workflows and need to visualize
+  them interactively to inspect peak boundaries, compare MS1 vs MS2 traces, validate
+  feature identifications, or communicate results.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -19,11 +22,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 - MzMLDataLoader
 - InteractiveTwoDimensionPlotter

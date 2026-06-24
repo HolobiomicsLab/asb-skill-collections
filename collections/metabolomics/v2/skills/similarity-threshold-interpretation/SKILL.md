@@ -1,6 +1,9 @@
 ---
 name: similarity-threshold-interpretation
-description: Use when when you have computed Spec2Vec similarity scores (typically cosine similarity in [0, 1] range) between discovered Mass2Motifs and a spectral library, and need to decide which matches are sufficiently confident to include in per-motif annotation output.
+description: Use when when you have computed Spec2Vec similarity scores (typically
+  cosine similarity in [0, 1] range) between discovered Mass2Motifs and a spectral
+  library, and need to decide which matches are sufficiently confident to include
+  in per-motif annotation output.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,13 +20,15 @@ metadata:
   - MotifDB
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

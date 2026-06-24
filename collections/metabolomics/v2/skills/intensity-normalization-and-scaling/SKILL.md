@@ -1,6 +1,8 @@
 ---
 name: intensity-normalization-and-scaling
-description: Use when when working with raw or filtered MsmsSpectrum objects where peak intensities span a wide dynamic range and need to be normalized for downstream spectrum comparison, database matching, or publication-quality visualization.
+description: Use when when working with raw or filtered MsmsSpectrum objects where
+  peak intensities span a wide dynamic range and need to be normalized for downstream
+  spectrum comparison, database matching, or publication-quality visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -41,6 +44,7 @@ attribution:
 
 # intensity-normalization-and-scaling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply intensity normalization and scaling transformations to mass spectrometry spectra to standardize peak heights and improve comparability across spectra. This skill standardizes the dynamic range of fragment ion intensities, often as a final preprocessing step before spectrum matching or visualization.

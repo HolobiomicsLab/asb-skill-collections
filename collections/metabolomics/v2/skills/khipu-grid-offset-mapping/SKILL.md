@@ -1,6 +1,9 @@
 ---
 name: khipu-grid-offset-mapping
-description: Use when you have a set of ions detected in LC-MS data that are suspected to derive from the same neutral compound via different isotope and adduct patterns. Use this skill after ions have been matched to isotope and adduct patterns and assigned to grid positions (isotope row and adduct column).
+description: Use when you have a set of ions detected in LC-MS data that are suspected
+  to derive from the same neutral compound via different isotope and adduct patterns.
+  Use this skill after ions have been matched to isotope and adduct patterns and assigned
+  to grid positions (isotope row and adduct column).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,6 +18,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -45,6 +49,7 @@ attribution:
 
 # khipu-grid-offset-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps observed ion m/z values to a theoretical khipu grid of isotope and adduct mass offsets, then infers the neutral mass of a compound via linear regression using the matched grid positions. This skill enables systematic annotation of degenerate ions (isotopologues and adducts) relative to a single neutral parent compound.

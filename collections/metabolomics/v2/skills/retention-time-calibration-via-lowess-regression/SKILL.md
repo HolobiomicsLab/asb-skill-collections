@@ -1,6 +1,8 @@
 ---
 name: retention-time-calibration-via-lowess-regression
-description: Use when after mass track extraction and alignment across samples, when preparing to detect elution peaks on composite mass tracks. Use this when inter-sample retention time variation exceeds acceptable alignment tolerance (e.
+description: Use when after mass track extraction and alignment across samples, when
+  preparing to detect elution peaks on composite mass tracks. Use this when inter-sample
+  retention time variation exceeds acceptable alignment tolerance (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,15 +21,18 @@ metadata:
   - asari workflow module
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
-- The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
+- The empirical compounds are searched against known compound database (default HMDB
+  4) via another package JMS (https://github.com/shuzhao-li/JMS).
 - known compound database (default HMDB 4)
 claims: []
 provenance:
@@ -52,6 +57,7 @@ attribution:
 
 # retention-time-calibration-via-lowess-regression
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A statistically guided approach to correct sample-level retention time drift in LC-MS metabolomics by identifying high-confidence landmark peaks and applying LOWESS (locally weighted scatterplot smoothing) regression with boundary extension. This ensures consistent peak alignment across samples before composite feature detection.

@@ -1,6 +1,8 @@
 ---
 name: executable-version-string-parsing
-description: Use when your R package wraps a compiled .NET assembly or binary executable and you need to expose the version of that dependency to users at runtime for troubleshooting, validation, or documentation purposes.
+description: Use when your R package wraps a compiled .NET assembly or binary executable
+  and you need to expose the version of that dependency to users at runtime for troubleshooting,
+  validation, or documentation purposes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,14 +13,17 @@ metadata:
   - RawFileReader
   - rawrr
   - system2
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # executable-version-string-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse version strings returned by a compiled executable (invoked via system call) to enable runtime inspection of wrapped binary dependencies. This skill bridges R and external compiled assemblies by extracting version metadata that documents the underlying implementation.

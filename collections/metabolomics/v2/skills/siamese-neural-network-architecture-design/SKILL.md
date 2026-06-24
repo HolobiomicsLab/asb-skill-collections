@@ -1,6 +1,8 @@
 ---
 name: siamese-neural-network-architecture-design
-description: Use when when you have pairs of mass spectrometry spectra and need to predict their molecular structural similarity as a scalar Tanimoto score in the range [0, 1].
+description: Use when when you have pairs of mass spectrometry spectra and need to
+  predict their molecular structural similarity as a scalar Tanimoto score in the
+  range [0, 1].
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,11 +16,13 @@ metadata:
   - PyTorch
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

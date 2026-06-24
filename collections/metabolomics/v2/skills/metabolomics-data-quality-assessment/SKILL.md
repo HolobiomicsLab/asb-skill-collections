@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-quality-assessment
-description: Use when after consolidating aligned LC-MS peaks into a quantitative feature table (with m/z, retention time, and intensity values across all samples), and before proceeding to statistical analysis or functional interpretation.
+description: Use when after consolidating aligned LC-MS peaks into a quantitative
+  feature table (with m/z, retention time, and intensity values across all samples),
+  and before proceeding to statistical analysis or functional interpretation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -11,6 +13,7 @@ metadata:
   - MetaboAnalystR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr

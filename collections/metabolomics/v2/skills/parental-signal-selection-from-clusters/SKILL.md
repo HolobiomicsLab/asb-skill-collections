@@ -1,6 +1,8 @@
 ---
 name: parental-signal-selection-from-clusters
-description: Use when after feature clustering has grouped LC-MS peaks by MS-DIAL peak character estimation, you need to reduce the cluster to a single representative feature per biological entity.
+description: Use when after feature clustering has grouped LC-MS peaks by MS-DIAL
+  peak character estimation, you need to reduce the cluster to a single representative
+  feature per biological entity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,6 +15,7 @@ metadata:
   - MS-FINDER 3.30 or higher
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -41,6 +44,7 @@ attribution:
 
 # parental-signal-selection-from-clusters
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract representative parental features from LC-MS clustered data using multi-level optimization of modularity scoring. This skill ranks and selects the highest-modularity feature from each cluster to reduce redundancy and enable focused downstream annotation.

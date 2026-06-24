@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-interpretation
-description: Use when you have a set of ions already matched to a khipu instance (i.e., ions whose isotope and adduct assignments are known and positioned on the theoretical khipu grid), and you need to estimate the neutral mass of the parent compound.
+description: Use when you have a set of ions already matched to a khipu instance (i.e.,
+  ions whose isotope and adduct assignments are known and positioned on the theoretical
+  khipu grid), and you need to estimate the neutral mass of the parent compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +18,7 @@ metadata:
   - Python 3 (scipy.stats / numpy.linalg)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -49,6 +52,7 @@ attribution:
 
 # Neutral Mass Inference via Linear Regression on Khipu Grid
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill infers the neutral mass of a compound from observed LC-MS ions using linear regression, where the theoretical khipu grid (containing mass offsets for isotope and adduct patterns) serves as predictors and observed m/z values are the response. It bridges ion annotation to neutral mass recovery in untargeted metabolomics workflows.

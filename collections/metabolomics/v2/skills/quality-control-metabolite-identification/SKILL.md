@@ -1,6 +1,7 @@
 ---
 name: quality-control-metabolite-identification
-description: Use when you have loaded a metabolomics dataset with a metabolitedata dataframe containing annotation columns (e.
+description: Use when you have loaded a metabolomics dataset with a metabolitedata
+  dataframe containing annotation columns (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,13 +12,16 @@ metadata:
   - R
   - NormalizeMets
   - RStudio
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # quality-control-metabolite-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and extract quality control metabolites (internal standards, negative controls, or external standards) from metabolomics datasets by querying metabolite-specific annotation columns. This step enables subsequent normalization and quality assessment by flagging metabolites whose behavior is known a priori and should be used to correct for unwanted variation.

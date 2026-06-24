@@ -1,6 +1,9 @@
 ---
 name: noise-suppression-spectral-imaging
-description: Use when your input is a raw two-dimensional MS map (m/z vs retention time) derived from chromatography–mass spectrometry data with poor signal-to-noise characteristics, and you need to discriminate individual analytes and identify marker features reliably.
+description: Use when your input is a raw two-dimensional MS map (m/z vs retention
+  time) derived from chromatography–mass spectrometry data with poor signal-to-noise
+  characteristics, and you need to discriminate individual analytes and identify marker
+  features reliably.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -20,7 +24,8 @@ derived_from:
   title: ''
 evidence_spans:
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # Noise Suppression in Spectral Imaging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply image processing techniques to enhance signal-to-noise ratio and suppress noise in two-dimensional chromatography–mass spectrometry maps (m/z vs retention time) prior to analyte discrimination and feature identification. This step is critical for reducing false peak detections inherent in conventional peak picking.

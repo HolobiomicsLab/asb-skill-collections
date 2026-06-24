@@ -1,6 +1,9 @@
 ---
 name: multi-dimensional-feature-alignment
-description: Use when you have two or more feature tables in HDF5 format with detected peaks characterized across multiple dimensions (mz, drift_time, retention_time, intensity) and need to harmonize feature coordinates across samples to account for instrument variation, enabling downstream cross-sample.
+description: Use when you have two or more feature tables in HDF5 format with detected
+  peaks characterized across multiple dimensions (mz, drift_time, retention_time,
+  intensity) and need to harmonize feature coordinates across samples to account for
+  instrument variation, enabling downstream cross-sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +16,13 @@ metadata:
   - conda
   - pip
   - HDF5
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - is a Python application programming interface and command-line tool
 - Use conda to create a virtual environment with required dependencies.
@@ -45,6 +50,7 @@ attribution:
 
 # multi-dimensional-feature-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align detected features across multiple samples by exploiting multi-dimensional similarity in mass, drift time, and retention time using reference-based coordinate transformation. This approach increases alignment confidence and reduces false feature matches compared to single-dimension methods.

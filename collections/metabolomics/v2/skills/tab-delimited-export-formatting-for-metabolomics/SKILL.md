@@ -1,6 +1,9 @@
 ---
 name: tab-delimited-export-formatting-for-metabolomics
-description: Use when after completing batch normalization and quality control filtering on a Metaboprep object, when you need to share processed metabolomics data with collaborators, import into other statistical packages, or archive results in a platform-independent format.
+description: Use when after completing batch normalization and quality control filtering
+  on a Metaboprep object, when you need to share processed metabolomics data with
+  collaborators, import into other statistical packages, or archive results in a platform-independent
+  format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3837
@@ -13,6 +16,7 @@ metadata:
   - knitr
   - ggplot2
   - metaboprep
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -43,6 +47,7 @@ attribution:
 
 # tab-delimited-export-formatting-for-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export processed metabolite data, sample metadata, and feature metadata from a Metaboprep object into tab-delimited text files (.txt/.tsv) for downstream analysis in external tools. This skill enables interoperability by converting in-memory R objects into portable, standard tabular formats.

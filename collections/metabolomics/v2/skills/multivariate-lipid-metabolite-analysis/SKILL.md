@@ -1,6 +1,8 @@
 ---
 name: multivariate-lipid-metabolite-analysis
-description: Use when you have integrated, normalized lipidomic and metabolomic feature tables from the Multi-ABLE method or similar concurrent multiomics workflows, with matched sample phenotypes (e.
+description: Use when you have integrated, normalized lipidomic and metabolomic feature
+  tables from the Multi-ABLE method or similar concurrent multiomics workflows, with
+  matched sample phenotypes (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -15,6 +17,7 @@ metadata:
   - ProteoMM
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.isci.2023.106881
   title: MultiABLER
@@ -47,6 +50,7 @@ attribution:
 
 # Multivariate Analysis of Lipids and Metabolites
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply multivariate statistical methods to identify differential lipids and metabolites associated with biological phenotypes (e.g., atherosclerosis) from integrated lipidomic and metabolomic datasets. This skill enables detection of molecular signatures across multiple lipid and metabolite features simultaneously, rather than univariate feature-by-feature testing.

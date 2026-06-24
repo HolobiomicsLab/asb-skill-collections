@@ -1,6 +1,9 @@
 ---
 name: mixture-spectrum-comparison
-description: Use when you have an observed NMR mixture spectrum and one or more candidate reconstructed spectra (each formed by summing weighted single-compound spectra), and need a continuous, transportable distance metric to score how well the reconstruction approximates the observed mixture.
+description: Use when you have an observed NMR mixture spectrum and one or more candidate
+  reconstructed spectra (each formed by summing weighted single-compound spectra),
+  and need a continuous, transportable distance metric to score how well the reconstruction
+  approximates the observed mixture.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +16,7 @@ metadata:
   - mcfNMR
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

@@ -1,6 +1,8 @@
 ---
 name: simulation-output-serialization
-description: Use when after a ViMMS Environment.run() simulation completes with save_eval flag enabled, you have collected EvaluationData containing chemical compounds, their generated scans, and fragmentation events in memory.
+description: Use when after a ViMMS Environment.run() simulation completes with save_eval
+  flag enabled, you have collected EvaluationData containing chemical compounds, their
+  generated scans, and fragmentation events in memory.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3949
@@ -12,14 +14,17 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # Serialize Simulated LC-MS/MS Output to Persistent Artifacts
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Persist the in-memory evaluation data and chemical definitions generated during a ViMMS Environment simulation run into companion pickle and mzML files, enabling linkage between simulated MS/MS scans and their source metabolite definitions for downstream evaluation and reuse.

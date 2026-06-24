@@ -1,6 +1,7 @@
 ---
 name: json-parsing-motifset-extraction
-description: Use when you have completed the MS2LDA LDA modeling phase and possess motifset.json or motifset_optimized.json files containing inferred Mass2Motifs.
+description: Use when you have completed the MS2LDA LDA modeling phase and possess
+  motifset.json or motifset_optimized.json files containing inferred Mass2Motifs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,12 +13,14 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 claims: []
 provenance:

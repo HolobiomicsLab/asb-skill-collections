@@ -1,6 +1,9 @@
 ---
 name: per-pixel-array-arithmetic
-description: Use when you have multiple registered LA-ICP-MS elemental images (e.g., P31, Zn66 intensity maps) and need to compute a new derived image by applying per-pixel operations—such as elemental ratios, thresholding, masking, or conditional logic—across channels.
+description: Use when you have multiple registered LA-ICP-MS elemental images (e.g.,
+  P31, Zn66 intensity maps) and need to compute a new derived image by applying per-pixel
+  operations—such as elemental ratios, thresholding, masking, or conditional logic—across
+  channels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,14 +14,17 @@ metadata:
   - Calculator
   - pewpew
   - pewlib
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Calculator` can perform simple calculations on image data by entering the desired formula into the `Formula` text box
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Calculator` can perform simple calculations on image data by entering
+  the desired formula into the `Formula` text box
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -45,6 +51,7 @@ attribution:
 
 # per-pixel-array-arithmetic
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate mathematical expressions element-wise across multiple LA-ICP-MS elemental image arrays to produce derived quantitative images. This skill enables users to create new imaging layers by applying arithmetic, comparison, and conditional logic to pixel values from different isotope channels simultaneously.

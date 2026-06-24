@@ -1,6 +1,9 @@
 ---
 name: threshold-sweep-analysis
-description: Use when when you have predicted probabilities and binary true labels from a classifier and need to evaluate its discriminative ability across multiple operating points, or when you need to generate a publication-quality ROC curve with AUC to compare classifiers or communicate model performance to.
+description: Use when when you have predicted probabilities and binary true labels
+  from a classifier and need to evaluate its discriminative ability across multiple
+  operating points, or when you need to generate a publication-quality ROC curve with
+  AUC to compare classifiers or communicate model performance to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3957
   tools:
   - R Shiny
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

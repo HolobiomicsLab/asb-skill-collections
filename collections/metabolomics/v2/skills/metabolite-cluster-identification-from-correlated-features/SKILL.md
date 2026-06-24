@@ -1,6 +1,9 @@
 ---
 name: metabolite-cluster-identification-from-correlated-features
-description: Use when after preprocessing, imputation, and batch correction of LC-MS peak tables when you need to group redundant or related feature measurements (e.g., [M+H]+ and [M+Na]+ adducts, or isotope peaks) into metabolite-level clusters before statistical testing or identification.
+description: Use when after preprocessing, imputation, and batch correction of LC-MS
+  peak tables when you need to group redundant or related feature measurements (e.g.,
+  [M+H]+ and [M+Na]+ adducts, or isotope peaks) into metabolite-level clusters before
+  statistical testing or identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,6 +17,7 @@ metadata:
   - igraph
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -23,7 +27,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # metabolite-cluster-identification-from-correlated-features
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups correlated metabolic features into clusters based on mass-to-charge ratio proximity, retention time co-elution, and abundance correlation, then assigns each cluster a representative Cluster_ID derived from the feature with highest median peak area. This skill identifies putative metabolites that may represent the same compound across different ionization modes or adducts in non-targeted LC-MS data.

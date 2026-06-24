@@ -1,6 +1,8 @@
 ---
 name: dependency-requirement-validation
-description: Use when before launching the DaDIA pipeline or any multi-package R workflow that has strict version constraints. Use this skill when you have access to an R environment and need to confirm that R ≥4.0, XCMS ≥3.11.4, and metaMS ≥1.25.
+description: Use when before launching the DaDIA pipeline or any multi-package R workflow
+  that has strict version constraints. Use this skill when you have access to an R
+  environment and need to confirm that R ≥4.0, XCMS ≥3.11.4, and metaMS ≥1.25.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -14,6 +16,7 @@ metadata:
   - DaDIA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA
@@ -44,6 +47,7 @@ attribution:
 
 # dependency-requirement-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that installed software versions meet minimum thresholds before executing a bioinformatics pipeline. This skill systematically checks R, XCMS, and metaMS versions against documented requirements and generates a structured validation report to prevent runtime failures due to incompatible dependencies.

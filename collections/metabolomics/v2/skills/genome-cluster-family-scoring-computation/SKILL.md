@@ -1,6 +1,9 @@
 ---
 name: genome-cluster-family-scoring-computation
-description: Use when you have pre-processed AntiSMASH BGC annotations (optionally clustered via BigScape into GCFs), GNPS molecular networking spectra and molecular families, and you seek to computationally link biosynthetic gene clusters to observed metabolites without manual curation.
+description: Use when you have pre-processed AntiSMASH BGC annotations (optionally
+  clustered via BigScape into GCFs), GNPS molecular networking spectra and molecular
+  families, and you seek to computationally link biosynthetic gene clusters to observed
+  metabolites without manual curation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -16,11 +19,13 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 claims: []

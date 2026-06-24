@@ -1,6 +1,8 @@
 ---
 name: feature-annotation-mapping
-description: Use when you have a trained decision tree model on ChemEcho sparse feature vectors and need to convert a specific decision path (root to leaf) into a deployable query.
+description: Use when you have a trained decision tree model on ChemEcho sparse feature
+  vectors and need to convert a specific decision path (root to leaf) into a deployable
+  query.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,6 +15,7 @@ metadata:
   - LIME
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho
@@ -43,6 +46,7 @@ attribution:
 
 # Feature Annotation Mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map machine learning model split conditions (feature indices and thresholds) to interpretable chemical annotations (peak or neutral loss formulas) from ChemEcho feature vectors. This bridges the gap between opaque feature spaces and domain-specific language queries by translating learned decision boundaries into human-readable chemical entities.

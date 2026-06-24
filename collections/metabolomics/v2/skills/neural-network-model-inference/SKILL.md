@@ -1,6 +1,9 @@
 ---
 name: neural-network-model-inference
-description: Use when you have pre-trained MSGO model weights (PFAS or lipid variant) and a set of experimental mass spectra (either from reference evaluation sets or real wastewater/environmental samples) in CSV format with m/z and intensity pairs, and you need to obtain candidate molecular structures ranked.
+description: Use when you have pre-trained MSGO model weights (PFAS or lipid variant)
+  and a set of experimental mass spectra (either from reference evaluation sets or
+  real wastewater/environmental samples) in CSV format with m/z and intensity pairs,
+  and you need to obtain candidate molecular structures ranked.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -17,6 +20,7 @@ metadata:
   - PyTorch
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

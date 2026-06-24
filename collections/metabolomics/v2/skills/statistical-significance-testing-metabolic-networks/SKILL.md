@@ -1,6 +1,7 @@
 ---
 name: statistical-significance-testing-metabolic-networks
-description: Use when you have sampled flux distributions from two or more constraint-based metabolic models representing different biological conditions (e.
+description: Use when you have sampled flux distributions from two or more constraint-based
+  metabolic models representing different biological conditions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -15,14 +16,18 @@ metadata:
   - Mann-Whitney U test
   - Mann-Whitney U test (scipy.stats)
   - INTEGRATE pipeline
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
 - using constraint-based stoichiometric metabolic models as a scaffold
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD distributions of each pair of the five cell lines
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD
+  distributions of each pair of the five cell lines
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # Statistical Significance Testing in Metabolic Networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Mann-Whitney U tests and t-tests to determine whether directional changes in reaction activity scores (RAS) or metabolite abundances are statistically significant across pairwise sample comparisons in constraint-based metabolic models. This skill identifies which metabolic reactions exhibit genuine differential regulation between conditions.

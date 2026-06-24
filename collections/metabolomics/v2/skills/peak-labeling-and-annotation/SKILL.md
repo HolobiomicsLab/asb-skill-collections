@@ -1,6 +1,8 @@
 ---
 name: peak-labeling-and-annotation
-description: Use when immediately after automatic peak detection on a raw or processed MS spectrum when you have a list of candidate peaks with m/z and intensity values but lack systematic identifiers, confidence estimates, or ranked ordering.
+description: Use when immediately after automatic peak detection on a raw or processed
+  MS spectrum when you have a list of candidate peaks with m/z and intensity values
+  but lack systematic identifiers, confidence estimates, or ranked ordering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,7 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -43,6 +46,7 @@ attribution:
 
 # peak-labeling-and-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign systematic labels and confidence-ranked annotations to mass spectrometry peaks detected in high-resolution spectra, organizing them by intensity ranking and m/z values to enable downstream sample matching and database scoring. This skill transforms raw peak lists into structured, annotated tables suitable for species authentication and comparative analysis.

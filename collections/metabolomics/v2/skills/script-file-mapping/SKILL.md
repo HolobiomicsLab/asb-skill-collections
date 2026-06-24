@@ -1,6 +1,9 @@
 ---
 name: script-file-mapping
-description: Use when you have edited core algorithm scripts in the Core-Match GitHub repository and need to integrate those changes into a locally installed LipidMatch-4.2 distribution (downloaded from innovativeomics.com). The trigger is the presence of modified .
+description: Use when you have edited core algorithm scripts in the Core-Match GitHub
+  repository and need to integrate those changes into a locally installed LipidMatch-4.2
+  distribution (downloaded from innovativeomics.com). The trigger is the presence
+  of modified .
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +11,7 @@ metadata:
   - R
   - LipidMatch
   - FluoroMatch
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -37,6 +41,7 @@ attribution:
 
 # Reconstruct the script-file placement layout into the LipidMatch-4.2 distribution directories
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps edited R script files (Modular.r, genEIC.r, MS1Spectragen.r, Stats.R) from a development repository to their correct target locations within both Flow and Modular versions of the LipidMatch-4.2 distribution to integrate developer changes into the installed software framework.

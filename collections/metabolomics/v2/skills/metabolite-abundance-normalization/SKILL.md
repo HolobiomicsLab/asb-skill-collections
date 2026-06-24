@@ -1,6 +1,8 @@
 ---
 name: metabolite-abundance-normalization
-description: Use when after loading a raw metabolite abundance table (rows=metabolites, columns=samples) from Metabolomics Workbench format and before mapping metabolites to pathway identifiers or computing enrichment statistics.
+description: Use when after loading a raw metabolite abundance table (rows=metabolites,
+  columns=samples) from Metabolomics Workbench format and before mapping metabolites
+  to pathway identifiers or computing enrichment statistics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -15,6 +17,7 @@ metadata:
   - MetENP
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.11.20.391912
   title: MetENP

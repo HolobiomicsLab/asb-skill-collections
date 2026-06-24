@@ -1,6 +1,8 @@
 ---
 name: feature-vector-naming-convention
-description: Use when when applying sequential transformations to a metabolomics feature intensity table (samples × compounds) and you need to maintain a traceable record of original feature identities through each processing stage.
+description: Use when when applying sequential transformations to a metabolomics feature
+  intensity table (samples × compounds) and you need to maintain a traceable record
+  of original feature identities through each processing stage.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - GetFeatistics
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

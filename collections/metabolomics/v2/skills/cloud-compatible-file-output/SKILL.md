@@ -1,6 +1,8 @@
 ---
 name: cloud-compatible-file-output
-description: Use when after feature clustering and drift correction (Gravity and Blueshift outputs) are complete and you need to produce a final, validated feature table ready for storage, archival, or downstream analysis.
+description: Use when after feature clustering and drift correction (Gravity and Blueshift
+  outputs) are complete and you need to produce a final, validated feature table ready
+  for storage, archival, or downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +17,7 @@ metadata:
   - Gravity
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

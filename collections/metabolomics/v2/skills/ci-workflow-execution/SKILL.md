@@ -1,6 +1,9 @@
 ---
 name: ci-workflow-execution
-description: Use when you have a GitHub repository with published CI workflow badges (e.g., unit test or package test badges in the README) and need to independently verify that the workflows execute successfully, reproduce the pass/fail status, and collect structured test results.
+description: Use when you have a GitHub repository with published CI workflow badges
+  (e.g., unit test or package test badges in the README) and need to independently
+  verify that the workflows execute successfully, reproduce the pass/fail status,
+  and collect structured test results.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -10,11 +13,13 @@ metadata:
   - MassQL
   - pytest
   - GitHub Actions
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
 evidence_spans:
-- The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.
+- The Mass Spec Query Language (MassQL) is a domain specific language meant to be
+  a succinct way to express a query in a mass spectrometry centric fashion.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

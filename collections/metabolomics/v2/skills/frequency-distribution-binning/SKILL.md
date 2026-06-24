@@ -11,6 +11,7 @@ metadata:
   - R
   - Python 3
   - lotus-processor
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -45,6 +46,7 @@ attribution:
 
 # frequency-distribution-binning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partitions a collection of unique entities (e.g., 2D chemical structures) into discrete frequency bins based on a count attribute (e.g., organism prevalence), then tallies membership in each bin and compares results against a gold-standard reference. This skill enables validation of large structure–organism pair databases and reveals the diversity distribution of chemical scaffolds across biological systems.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-format-parsing
-description: Use when you have raw MS/MS spectra in one of the supported exchange formats (.mgf, .mzML, or .msp) and need to ingest them into an MS2LDA pipeline for unsupervised motif discovery. This skill is required before any preprocessing, filtering, or ionization-mode-specific handling can occur.
+description: Use when you have raw MS/MS spectra in one of the supported exchange
+  formats (.mgf, .mzML, or .msp) and need to ingest them into an MS2LDA pipeline for
+  unsupervised motif discovery. This skill is required before any preprocessing, filtering,
+  or ionization-mode-specific handling can occur.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -23,13 +26,15 @@ metadata:
   - mzPeak specification
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 - doi: 10.1021/acs.jproteome.5c00435
   title: ''
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
@@ -65,6 +70,7 @@ attribution:
 
 # mass-spectrometry-data-format-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse tandem mass spectrometry (MS/MS) spectral data from standard interchange formats (.mgf, .mzML, .msp) into memory for downstream preprocessing and modeling. This is the essential first step that converts heterogeneous file formats into a unified in-memory representation suitable for spectral filtering, fragmentation analysis, and bag-of-fragments conversion.

@@ -1,6 +1,8 @@
 ---
 name: binary-spectral-data-extraction
-description: Use when you have parsed imzML XML metadata and loaded the corresponding .ibd binary intensity file, and need to extract specific ion images at one or more target m/z values.
+description: Use when you have parsed imzML XML metadata and loaded the corresponding
+  .ibd binary intensity file, and need to extract specific ion images at one or more
+  target m/z values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -15,13 +17,15 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -48,6 +52,7 @@ attribution:
 
 # binary-spectral-data-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract mass-to-charge (m/z) image slices from binary imzML/ibd Imaging Mass Spectrometry data files at user-specified masses within a defined mass window tolerance. This skill enables selective ion image construction for downstream quantification and spatial analysis of LA-ICP-MS or IMS datasets.

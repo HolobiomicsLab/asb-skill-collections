@@ -1,6 +1,8 @@
 ---
 name: suspect-list-format-conversion
-description: Use when you have generated a set of transformation products (TPs) from one or more parent compounds using generateTPs (via BioTransformer, CTS, or PubChemLite library algorithms) and need to screen for these TPs in your LC-HRMS feature data.
+description: Use when you have generated a set of transformation products (TPs) from
+  one or more parent compounds using generateTPs (via BioTransformer, CTS, or PubChemLite
+  library algorithms) and need to screen for these TPs in your LC-HRMS feature data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   - screenSuspects
   - BioTransformer
   - CTS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

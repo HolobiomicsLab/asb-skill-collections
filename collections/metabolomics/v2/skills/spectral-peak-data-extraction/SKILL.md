@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-data-extraction
-description: Use when when you need to retrieve m/z–intensity pairs from a MsBackend-backed Spectra object for visualization, comparison, or processing; particularly when the backend stores peak data separately (e.
+description: Use when when you need to retrieve m/z–intensity pairs from a MsBackend-backed
+  Spectra object for visualization, comparison, or processing; particularly when the
+  backend stores peak data separately (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -45,6 +48,7 @@ attribution:
 
 # spectral-peak-data-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract m/z and intensity peak data from mass spectrometry spectra stored in a MsBackend, returning them as a list of numerical matrices with one matrix per spectrum. This is a core operation for accessing and validating MS peak data before downstream analysis.

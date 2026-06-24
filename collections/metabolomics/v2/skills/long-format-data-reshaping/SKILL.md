@@ -1,6 +1,9 @@
 ---
 name: long-format-data-reshaping
-description: Use when when you have a wide-format feature intensity table (samples in rows, analyzed compounds in columns) and need to conduct multiple regression linear models (lm or lmer) to estimate associations between independent variables (fixed effects) and each metabolomic feature as a dependent.
+description: Use when when you have a wide-format feature intensity table (samples
+  in rows, analyzed compounds in columns) and need to conduct multiple regression
+  linear models (lm or lmer) to estimate associations between independent variables
+  (fixed effects) and each metabolomic feature as a dependent.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,13 +16,15 @@ metadata:
   - R base reshape / tidyr::pivot_longer / reshape2::melt
   - GetFeatistics::gentab_lm_long
   - R (version ≥4.3.1)
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

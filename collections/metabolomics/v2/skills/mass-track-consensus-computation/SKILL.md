@@ -1,6 +1,9 @@
 ---
 name: mass-track-consensus-computation
-description: Use when after mass tracks have been aligned across all samples (either via pairwise alignment for ≤10 samples or nearest-neighbor clustering for larger cohorts), and you need to generate a single representative m/z per aligned bin for downstream feature extraction and annotation.
+description: Use when after mass tracks have been aligned across all samples (either
+  via pairwise alignment for ≤10 samples or nearest-neighbor clustering for larger
+  cohorts), and you need to generate a single representative m/z per aligned bin for
+  downstream feature extraction and annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -10,19 +13,24 @@ metadata:
   tools:
   - Python
   - asari mass_functions module (nn_cluster_by_mz_seeds)
-  - asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding, bin_track_mzs)
+  - asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding,
+    bin_track_mzs)
   - asari MassGrid class
   - asari mass_functions module
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- a nearest neighbor (NN) clustering is performed to establish the number of mass tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).
-- See [MassGrid.build_grid_sample_wise](MassGrid.build_grid_sample_wise), [MassGrid.add_sample](MassGrid.add_sample). See [MassGrid.build_grid_by_centroiding](MassGrid.build_grid_by_centroiding),
+- a nearest neighbor (NN) clustering is performed to establish the number of mass
+  tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).
+- See [MassGrid.build_grid_sample_wise](MassGrid.build_grid_sample_wise), [MassGrid.add_sample](MassGrid.add_sample).
+  See [MassGrid.build_grid_by_centroiding](MassGrid.build_grid_by_centroiding),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +54,7 @@ attribution:
 
 # mass-track-consensus-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute consensus m/z values for aligned mass tracks across LC-MS samples by combining median and intensity-weighted estimates. This step finalizes MassGrid construction after pairwise or nearest-neighbor alignment, ensuring reproducible mass calibration across study cohorts.

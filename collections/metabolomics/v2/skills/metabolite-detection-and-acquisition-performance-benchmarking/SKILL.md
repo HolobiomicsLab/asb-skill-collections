@@ -1,6 +1,7 @@
 ---
 name: metabolite-detection-and-acquisition-performance-benchmarking
-description: Use when you have simulated or experimental mzML data from two or more fragmentation controllers (e.
+description: Use when you have simulated or experimental mzML data from two or more
+  fragmentation controllers (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3699
@@ -15,6 +16,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -47,6 +49,7 @@ attribution:
 
 # metabolite-detection-and-acquisition-performance-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A comparative evaluation skill for quantifying how well different tandem MS fragmentation strategies (e.g., WeightedDEW with exclusion vs. TopN) detect and acquire metabolite spectra in virtual LC-MS/MS experiments. This skill measures coverage metrics, intensity profiles, and MS/MS acquisition efficiency using simulated or real mzML data against reference chemical libraries.

@@ -1,6 +1,8 @@
 ---
 name: sterol-structure-representation-and-curation
-description: Use when when you have a collection of N-Me derivatized unsaturated sterol structures from tissue samples or standards that must be fed into MS/MS fragmentation prediction or collision cross section (CCS) prediction workflows.
+description: Use when when you have a collection of N-Me derivatized unsaturated sterol
+  structures from tissue samples or standards that must be fed into MS/MS fragmentation
+  prediction or collision cross section (CCS) prediction workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -43,6 +46,7 @@ attribution:
 
 # sterol-structure-representation-and-curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Represent N-Me derived unsaturated sterol lipid structures as SMILES strings or molecular formulas, and curate them for downstream quantum chemistry and MS/MS fragmentation prediction. This skill ensures consistent, machine-readable encoding of sterol isomers and their double-bond positions for automated analysis pipelines.

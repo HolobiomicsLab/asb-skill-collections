@@ -1,6 +1,9 @@
 ---
 name: analysis-type-selection
-description: 'Use when preparing to run LipidMatch-4.2 and you need to determine which analysis mode should execute. Specifically: when your input data consists of lipid standards or lipid-rich samples (set Lipid analysis mode); when you are analyzing Tween surfactant-containing samples (set Tween-positive mode);'
+description: 'Use when preparing to run LipidMatch-4.2 and you need to determine which
+  analysis mode should execute. Specifically: when your input data consists of lipid
+  standards or lipid-rich samples (set Lipid analysis mode); when you are analyzing
+  Tween surfactant-containing samples (set Tween-positive mode);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -10,6 +13,7 @@ metadata:
   tools:
   - LipidMatch
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -39,6 +43,7 @@ attribution:
 
 # analysis-type-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select the correct analysis mode (Lipid, Tween-positive, or PFAS) in LipidMatch by configuring two boolean parameters that implement order-agnostic conditional dispatch. This skill ensures the integration scripts route metabolomics data toward the intended detection pipeline based on application requirements.

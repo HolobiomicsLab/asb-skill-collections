@@ -1,6 +1,8 @@
 ---
 name: cosine-similarity-spectral-clustering
-description: Use when you have a collection of deconvolved mass spectra (in MGF or mzTab format) from GC-MS analysis and need to group them into a molecular network to identify structural relationships and enable compound annotation.
+description: Use when you have a collection of deconvolved mass spectra (in MGF or
+  mzTab format) from GC-MS analysis and need to group them into a molecular network
+  to identify structural relationships and enable compound annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3932
@@ -13,12 +15,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
 evidence_spans:
 - MSHub auto-deconvolution
-- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry
+  data
 - GNPS molecular networking
 claims: []
 provenance:

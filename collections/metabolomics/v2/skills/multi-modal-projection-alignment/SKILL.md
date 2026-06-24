@@ -1,6 +1,7 @@
 ---
 name: multi-modal-projection-alignment
-description: Use when you have a mass spectrum and a set of candidate molecular structures, and need to rank candidates by their likelihood of matching the query spectrum.
+description: Use when you have a mass spectrum and a set of candidate molecular structures,
+  and need to rank candidates by their likelihood of matching the query spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -15,6 +16,7 @@ metadata:
   - PyTorch Geometric
   - MassSpecGym
   - MVP (HassounLab)
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.11.12.688047v1
   title: MVP
@@ -43,6 +45,7 @@ attribution:
 
 # multi-modal-projection-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 MultiView Projection (MVP) aligns spectral features and molecular descriptors across multiple feature spaces to compute cross-view similarity scores for ranking molecular candidates against a query mass spectrum. This skill is essential when you need to match an unknown spectrum to a set of candidate molecules by aggregating evidence from both spectral and structural representations.

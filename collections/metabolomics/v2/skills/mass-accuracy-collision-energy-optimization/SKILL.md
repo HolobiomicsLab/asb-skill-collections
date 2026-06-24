@@ -1,6 +1,9 @@
 ---
 name: mass-accuracy-collision-energy-optimization
-description: Use when you have defined a set of lipid targets (species, adducts, chain compositions) for PRM or MRM analysis and need to generate precursor-to-fragment transition rules that will maximize signal intensity and specificity on your mass spectrometer (Thermo QExactive HF, Agilent QTOF, or.
+description: Use when you have defined a set of lipid targets (species, adducts, chain
+  compositions) for PRM or MRM analysis and need to generate precursor-to-fragment
+  transition rules that will maximize signal intensity and specificity on your mass
+  spectrometer (Thermo QExactive HF, Agilent QTOF, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -12,6 +15,7 @@ metadata:
   - LipidCreator
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-020-15960-z
   title: LipidCreator

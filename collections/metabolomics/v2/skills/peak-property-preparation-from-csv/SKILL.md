@@ -1,6 +1,9 @@
 ---
 name: peak-property-preparation-from-csv
-description: Use when you have a CSV file containing nucleoside or peptide molecular data (formulas, identifiers, retention times, intensities) that you want to simulate as LC-MS/MS runs. Use this skill as the mandatory first step before selecting a fragmentation model and noise injector in SMITER.
+description: Use when you have a CSV file containing nucleoside or peptide molecular
+  data (formulas, identifiers, retention times, intensities) that you want to simulate
+  as LC-MS/MS runs. Use this skill as the mandatory first step before selecting a
+  fragmentation model and noise injector in SMITER.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,11 +15,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
 evidence_spans:
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
+  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

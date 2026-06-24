@@ -1,6 +1,9 @@
 ---
 name: marr-output-object-manipulation
-description: Use when when you have a Marr() output object containing reproducibility statistics computed across replicate experiments and need to reduce dimensionality by retaining only features or sample pairs that meet reproducibility criteria (percentage of reproducible signals exceeding feature-level.
+description: Use when when you have a Marr() output object containing reproducibility
+  statistics computed across replicate experiments and need to reduce dimensionality
+  by retaining only features or sample pairs that meet reproducibility criteria (percentage
+  of reproducible signals exceeding feature-level.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - devtools
   - BiocManager
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -23,7 +27,8 @@ evidence_spans:
 - 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
 - The R-package **marr** can be installed from GitHub using the R package [devtools]
 - devtools::install_github("Ghoshlab/marr")
-- marr (Maximum Rank Reproducibility) is a nonparametric approach that detects reproducible signals using a maximal rank statistic for high-dimensional biological data
+- marr (Maximum Rank Reproducibility) is a nonparametric approach that detects reproducible
+  signals using a maximal rank statistic for high-dimensional biological data
 - '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
@@ -49,6 +54,7 @@ attribution:
 
 # marr-output-object-manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract, filter, and subset high-dimensional biological replicate data using the MarrFilterData() function to isolate reproducible features, reproducible sample pairs, or both simultaneously based on reproducibility thresholds. This skill enables targeted downstream analysis by removing non-reproducible signals from Marr() output objects.

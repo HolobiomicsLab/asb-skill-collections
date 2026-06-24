@@ -1,6 +1,9 @@
 ---
 name: peak-annotation-refinement-structure-driven
-description: Use when you have two related compounds (a known reference and its structural analog with unknown modification site), baseline peak annotations from cosine alignment, and newly available structural information (SMILES or molecular structure) for the modified compound.
+description: Use when you have two related compounds (a known reference and its structural
+  analog with unknown modification site), baseline peak annotations from cosine alignment,
+  and newly available structural information (SMILES or molecular structure) for the
+  modified compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +20,7 @@ metadata:
   - MAGMaAnnotationEngine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -26,7 +30,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +55,7 @@ attribution:
 
 # peak-annotation-refinement-structure-driven
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Refine MS/MS peak annotations by propagating structural constraints from a known compound through a ModiFinder network to improve fragment-to-modification mappings. This skill uses oracle-mode annotation when a modified compound's structure becomes available, enabling more confident localization of modification sites via re-annotation and probability score regeneration.

@@ -1,6 +1,8 @@
 ---
 name: sra-data-retrieval-and-ingestion
-description: Use when your analysis requires raw sequencing reads stored in NCBI SRA (identified by SRR, SRX, or SRP accessions) OR you have local FASTQ files organized in a directory structure.
+description: Use when your analysis requires raw sequencing reads stored in NCBI SRA
+  (identified by SRR, SRX, or SRP accessions) OR you have local FASTQ files organized
+  in a directory structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3182
@@ -14,13 +16,15 @@ metadata:
   - Singularity
   - Nextflow
   - Docker/Singularity
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - Genes, miRNA, isoforms | SRA download | SRA toolkit
 - Genes, miRNA, isoforms | Quality control | FastQC, trimgalore
-- It uses Docker/Singularity containers making installation trivial and results highly reproducible.
+- It uses Docker/Singularity containers making installation trivial and results highly
+  reproducible.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

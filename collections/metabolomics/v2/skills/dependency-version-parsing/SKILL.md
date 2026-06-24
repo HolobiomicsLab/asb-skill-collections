@@ -1,6 +1,9 @@
 ---
 name: dependency-version-parsing
-description: 'Use when before launching a multi-tool computational workflow (e.g., QCxMS2 mass spectra calculations) that depends on external programs with version-sensitive APIs or features. Apply this skill when: (1) the workflow has explicit minimum version requirements for one or more dependencies;'
+description: 'Use when before launching a multi-tool computational workflow (e.g.,
+  QCxMS2 mass spectra calculations) that depends on external programs with version-sensitive
+  APIs or features. Apply this skill when: (1) the workflow has explicit minimum version
+  requirements for one or more dependencies;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,11 +19,13 @@ metadata:
   - orca
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**molbar** (version >= 1.1.3)'
 - '**geodesic_interpolate** (version'

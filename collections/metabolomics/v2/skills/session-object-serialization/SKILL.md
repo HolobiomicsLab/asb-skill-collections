@@ -1,6 +1,9 @@
 ---
 name: session-object-serialization
-description: Use when after you have processed raw LC-MS/MS spectral data through the specXplore importing pipeline in a Jupyter notebook and produced an in-memory specXplore session data object containing t-SNE embeddings (based on ms2deepscore similarity scores) and associated spectral metadata.
+description: Use when after you have processed raw LC-MS/MS spectral data through
+  the specXplore importing pipeline in a Jupyter notebook and produced an in-memory
+  specXplore session data object containing t-SNE embeddings (based on ms2deepscore
+  similarity scores) and associated spectral metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -13,6 +16,7 @@ metadata:
   - ms2deepscore
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -40,6 +44,7 @@ attribution:
 
 # session-object-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize and persist a specXplore session data object (containing processed LC-MS/MS spectral embeddings, similarity scores, and metadata) to disk as a file artifact that can be loaded into the interactive dashboard for visual exploration. This step bridges the offline Jupyter preprocessing stage and the online dashboard visualization stage.

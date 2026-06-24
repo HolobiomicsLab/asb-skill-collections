@@ -1,6 +1,9 @@
 ---
 name: neutral-loss-calculation-from-precursor-fragment-pairs
-description: Use when during MS/MS spectral preprocessing when converting raw spectra from .mgf, .msp, or .mzML formats into a bag-of-fragments corpus for LDA modeling. Use it after fragment ion masses have been extracted and normalized within each spectrum, and before noise filtering and corpus generation.
+description: Use when during MS/MS spectral preprocessing when converting raw spectra
+  from .mgf, .msp, or .mzML formats into a bag-of-fragments corpus for LDA modeling.
+  Use it after fragment ion masses have been extracted and normalized within each
+  spectrum, and before noise filtering and corpus generation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +18,14 @@ metadata:
   - MS2LDA.Preprocessing.generate_corpus
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - from MS2LDA.Preprocessing import load_and_clean
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - These steps assume you have Conda installed

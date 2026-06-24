@@ -1,6 +1,9 @@
 ---
 name: hierarchical-clustering-euclidean-complete-linkage
-description: Use when you have a normalized microbe-metabolite feature attribution score matrix (rows = microbes, columns = metabolites) and need to explore hierarchical structure and visually assess similarity patterns before determining the optimal number of clusters via consensus clustering.
+description: Use when you have a normalized microbe-metabolite feature attribution
+  score matrix (rows = microbes, columns = metabolites) and need to explore hierarchical
+  structure and visually assess similarity patterns before determining the optimal
+  number of clusters via consensus clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,16 +19,22 @@ metadata:
   - scipy.cluster.hierarchy
   - scikit-learn linkage functions
   - MiMeNet
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - linkage using Seaborn’s clustermap function in
-- cluster microbes (rows) and metabolites (columns) separately based on the Euclidean distance and complete linkage
-- for each fixed k, ranged from 2 to 20, a k-clustering of the rows using each normalized S was generated. Then a consensus matrix M(k) was calculated as the mean connectivity matrix across all
+- cluster microbes (rows) and metabolites (columns) separately based on the Euclidean
+  distance and complete linkage
+- for each fixed k, ranged from 2 to 20, a k-clustering of the rows using each normalized
+  S was generated. Then a consensus matrix M(k) was calculated as the mean connectivity
+  matrix across all
 - using Python's sci-kit-learn package
-- Networks showing microbe and metabolite modules and the interactions between them were constructed using Cytoscape
-- Networks showing the modules and the interactions between them were constructed using Cytoscape
+- Networks showing microbe and metabolite modules and the interactions between them
+  were constructed using Cytoscape
+- Networks showing the modules and the interactions between them were constructed
+  using Cytoscape
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +58,7 @@ attribution:
 
 # hierarchical-clustering-euclidean-complete-linkage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Hierarchical clustering using Euclidean distance and complete linkage to organize rows and columns of a normalized microbe-metabolite attribution score matrix into dendrograms, enabling identification of natural groupings before consensus-based optimal cluster selection.

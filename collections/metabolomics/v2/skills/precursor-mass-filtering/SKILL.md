@@ -1,6 +1,7 @@
 ---
 name: precursor-mass-filtering
-description: Use when after retrieving top-scoring library candidates from a full MS2Deepscore comparison, but before or during final re-ranking.
+description: Use when after retrieving top-scoring library candidates from a full
+  MS2Deepscore comparison, but before or during final re-ranking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +14,7 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

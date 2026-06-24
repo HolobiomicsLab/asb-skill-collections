@@ -1,6 +1,7 @@
 ---
 name: peak-detection-cwt-optimization
-description: Use when when you have a pre-aligned GCIMSDataset and need to systematically identify and annotate chromatographic peaks across multiple samples.
+description: Use when when you have a pre-aligned GCIMSDataset and need to systematically
+  identify and annotate chromatographic peaks across multiple samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -13,6 +14,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +43,7 @@ attribution:
 
 # peak-detection-cwt-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize Continuous Wavelet Transform (CWT) parameters and peak detection settings to accurately identify peaks across Gas Chromatography–Ion Mobility Spectrometry (GCIMS) samples. This skill determines noise thresholds and algorithmic parameters that maximize peak detection sensitivity while minimizing false positives in both drift time and retention time dimensions.

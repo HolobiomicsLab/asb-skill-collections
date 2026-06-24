@@ -1,6 +1,7 @@
 ---
 name: matrix-structure-validation-and-qc
-description: Use when after executing memo_from_unaligned or memo_from_aligned functions to generate a MemoMatrix object from MS2 spectra or aligned feature tables.
+description: Use when after executing memo_from_unaligned or memo_from_aligned functions
+  to generate a MemoMatrix object from MS2 spectra or aligned feature tables.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -17,11 +18,13 @@ metadata:
   - memo_publication_examples
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 - conda install -c conda-forge scikit-bio

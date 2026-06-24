@@ -1,6 +1,9 @@
 ---
 name: metabolite-pathway-mapping
-description: Use when after metabolite detection and normalization from Metabolomics Workbench format data, when you have a table of metabolite names or identifiers (rows=metabolites, columns=samples) and need to assign pathway membership to compute pathway-level enrichment statistics or visualize.
+description: Use when after metabolite detection and normalization from Metabolomics
+  Workbench format data, when you have a table of metabolite names or identifiers
+  (rows=metabolites, columns=samples) and need to assign pathway membership to compute
+  pathway-level enrichment statistics or visualize.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +17,7 @@ metadata:
   - pathview
   - MetENP (R package)
   - pandas, dplyr, tidyr
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.11.20.391912
   title: MetENP

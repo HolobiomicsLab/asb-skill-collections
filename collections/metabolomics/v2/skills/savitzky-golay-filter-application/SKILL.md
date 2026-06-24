@@ -1,6 +1,8 @@
 ---
 name: savitzky-golay-filter-application
-description: Use when apply Savitzky-Golay smoothing when your mass spectra contain significant noise but you need to preserve sharp peaks and spectral fine structure (e.g., isotope patterns, peak asymmetry).
+description: Use when apply Savitzky-Golay smoothing when your mass spectra contain
+  significant noise but you need to preserve sharp peaks and spectral fine structure
+  (e.g., isotope patterns, peak asymmetry).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -16,12 +18,14 @@ metadata:
   - BiocParallel
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 claims: []

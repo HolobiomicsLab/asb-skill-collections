@@ -1,6 +1,7 @@
 ---
 name: controlled-vocabulary-term-mapping
-description: Use when you have collected or inherited sample-information metadata from multiple sources (e.
+description: Use when you have collected or inherited sample-information metadata
+  from multiple sources (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -16,6 +17,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -49,6 +51,7 @@ attribution:
 
 # Controlled-Vocabulary Term Mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map free-text or heterogeneous sample-information metadata fields to standardized controlled vocabulary terms to enable interoperable filtering, querying, and aggregation across public mass spectrometry repositories. This skill ensures that diverse researcher annotations (e.g., organism names, tissue types, extraction methods) are reconciled to canonical terms, enabling downstream cohort assembly and comparative analysis.

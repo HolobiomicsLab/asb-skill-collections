@@ -1,6 +1,8 @@
 ---
 name: fold-change-calculation-metabolomics
-description: Use when you have a feature-by-sample metabolomic intensity matrix (finalData) with corresponding sample group labels (finalLabel), and you need to identify metabolic markers ranked by their fold-change between two or more groups.
+description: Use when you have a feature-by-sample metabolomic intensity matrix (finalData)
+  with corresponding sample group labels (finalLabel), and you need to identify metabolic
+  markers ranked by their fold-change between two or more groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - LargeMetabo
   - R
   - ggplot2
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -39,6 +42,7 @@ attribution:
 
 # fold-change-calculation-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fold-change (FC) marker identification is a method for ranking metabolic features by their abundance ratio between sample groups in a feature-by-sample metabolomic matrix. It is used to rapidly identify differential metabolites without statistical hypothesis testing, suitable for initial screening and biomarker discovery.

@@ -1,6 +1,8 @@
 ---
 name: blood-sample-handling-protocols
-description: Use when you are planning a blood sampling campaign and need to verify that lipids or polar metabolites of interest will remain stable through your anticipated sample-processing workflow (specific temperature regimes, delays before/after centrifugation).
+description: Use when you are planning a blood sampling campaign and need to verify
+  that lipids or polar metabolites of interest will remain stable through your anticipated
+  sample-processing workflow (specific temperature regimes, delays before/after centrifugation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,11 +14,13 @@ metadata:
   - Shiny
   - RStudio
   - ALISTER
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cca.2024.117858
   title: ALISTER
 evidence_spans:
-- ALISTER is a web-app containing scientific information on pre-analytical blood sample stability in metabolomics and lipidomics
+- ALISTER is a web-app containing scientific information on pre-analytical blood sample
+  stability in metabolomics and lipidomics
 - '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
 claims: []
 provenance:

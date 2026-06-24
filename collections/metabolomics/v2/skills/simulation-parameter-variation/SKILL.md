@@ -11,6 +11,7 @@ metadata:
   - Python
   - Jupyter
   - metabolomics-ORA
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -38,6 +39,7 @@ attribution:
 
 # Simulation Parameter Variation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically vary one or more input parameters across a defined range in a computational simulation to assess how changes in those parameters affect statistical outcomes and false-positive rates. This skill is essential for validating pathway analysis methods under realistic conditions of incomplete metabolite detection.

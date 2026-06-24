@@ -1,6 +1,8 @@
 ---
 name: ion-to-molecule-relationship-mapping
-description: Use when after dereplication and cosine similarity clustering have been completed and you have merged molecular predictions with ion metadata (m/z, adduct type, intensity).
+description: Use when after dereplication and cosine similarity clustering have been
+  completed and you have merged molecular predictions with ion metadata (m/z, adduct
+  type, intensity).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -13,6 +15,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

@@ -1,6 +1,8 @@
 ---
 name: algorithm-parameter-comparison-analysis
-description: Use when when you need to evaluate how a specific algorithm parameter (such as SearchMolecularFormulas first_hit mode) affects the quantity and quality of molecular formula assignments on a given spectrum or dataset.
+description: Use when when you need to evaluate how a specific algorithm parameter
+  (such as SearchMolecularFormulas first_hit mode) affects the quantity and quality
+  of molecular formula assignments on a given spectrum or dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,12 +18,14 @@ metadata:
   techniques:
   - GC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -49,6 +53,7 @@ attribution:
 
 # algorithm-parameter-comparison-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare molecular formula assignment behavior by running the same algorithm with different parameter configurations (e.g., first-hit vs. all-hits modes) and contrasting assignment counts, score distributions, and quality metrics. This skill enables evidence-based parameter tuning for mass spectrometry annotation workflows.

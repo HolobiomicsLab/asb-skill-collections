@@ -1,6 +1,8 @@
 ---
 name: correlation-threshold-optimization
-description: Use when after computing pairwise correlations across all features in a dataset (especially those exceeding 10,000 features), before constructing the final network object.
+description: Use when after computing pairwise correlations across all features in
+  a dataset (especially those exceeding 10,000 features), before constructing the
+  final network object.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +14,15 @@ metadata:
   - R
   - igraph
   - pcutils
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # correlation-threshold-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply correlation coefficient thresholds to filter network edges from high-dimensional feature abundance tables, retaining only statistically or biologically significant correlations. This step bridges pairwise correlation computation and final network construction, controlling sparsity, interpretability, and computational load.

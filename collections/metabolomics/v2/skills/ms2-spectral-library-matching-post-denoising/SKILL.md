@@ -1,6 +1,9 @@
 ---
 name: ms2-spectral-library-matching-post-denoising
-description: 'Use when after frequency-based denoising of MS/MS spectra, when you need to validate that denoising improves metabolite identifications and quantify the trade-off between signal retention and annotation confidence. Specifically: (1) you have denoised MS/MS spectra from replicate measurements;'
+description: 'Use when after frequency-based denoising of MS/MS spectra, when you
+  need to validate that denoising improves metabolite identifications and quantify
+  the trade-off between signal retention and annotation confidence. Specifically:
+  (1) you have denoised MS/MS spectra from replicate measurements;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -19,13 +22,18 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +57,7 @@ attribution:
 
 # MS/MS Spectral Library Matching Post-Denoising
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match experimental denoised MS/MS spectra against a curated reference library using modified dot product and fragment matching metrics to assign metabolite annotations with confidence filtering. This skill applies after denoising to evaluate whether noise removal improves spectral similarity and annotation quality.

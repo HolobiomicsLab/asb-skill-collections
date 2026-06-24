@@ -1,6 +1,9 @@
 ---
 name: spectral-signal-detection
-description: Use when you have mzML mass spectrometry data and a list of predicted candidate metabolites (with known mass-to-charge ratios and retention times) for a drug of interest, and you need to determine which candidates actually appear in the observed spectra rather than treating all predictions as.
+description: Use when you have mzML mass spectrometry data and a list of predicted
+  candidate metabolites (with known mass-to-charge ratios and retention times) for
+  a drug of interest, and you need to determine which candidates actually appear in
+  the observed spectra rather than treating all predictions as.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3697
@@ -15,6 +18,7 @@ metadata:
   - MetApp
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR

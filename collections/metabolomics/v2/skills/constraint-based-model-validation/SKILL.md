@@ -1,6 +1,9 @@
 ---
 name: constraint-based-model-validation
-description: Use when after gap-filling metabolic models in a community context when you need to verify that filled reactions maintain stoichiometric balance, that biomass production is feasible under community-level constraints, and that cross-member metabolic dependencies are satisfied.
+description: Use when after gap-filling metabolic models in a community context when
+  you need to verify that filled reactions maintain stoichiometric balance, that biomass
+  production is feasible under community-level constraints, and that cross-member
+  metabolic dependencies are satisfied.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -10,6 +13,7 @@ metadata:
   - http://edamontology.org/topic_2259
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -38,6 +42,7 @@ attribution:
 
 # constraint-based-model-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validation of metabolic model consistency by checking reaction balancing, biomass production feasibility, and cross-member metabolic dependencies in gap-filled community reconstructions. This skill ensures that gap-filled models satisfy stoichiometric and thermodynamic constraints before downstream analysis.

@@ -1,6 +1,9 @@
 ---
 name: retention-time-feature-clustering
-description: Use when after chromatographic peak detection (findChromPeaks) when you have a processed XcmsExperiment object with detected peaks and need to perform initial feature grouping. Use it when features of the same compound are expected to co-elute within a narrow retention-time window (e.
+description: Use when after chromatographic peak detection (findChromPeaks) when you
+  have a processed XcmsExperiment object with detected peaks and need to perform initial
+  feature grouping. Use it when features of the same compound are expected to co-elute
+  within a narrow retention-time window (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,11 +16,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

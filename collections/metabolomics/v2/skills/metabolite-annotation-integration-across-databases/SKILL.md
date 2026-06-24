@@ -1,6 +1,8 @@
 ---
 name: metabolite-annotation-integration-across-databases
-description: Use when you have MZmine-aligned features with m/z and retention time, and you have generated spectral annotations from two or more database sources (e.g., GNPS/ISDB spectral matching and SIRIUS in silico structure elucidation).
+description: Use when you have MZmine-aligned features with m/z and retention time,
+  and you have generated spectral annotations from two or more database sources (e.g.,
+  GNPS/ISDB spectral matching and SIRIUS in silico structure elucidation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -18,16 +20,20 @@ metadata:
   - Inventa
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2
+- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time'
+  columns. -Inventa takes input directly from MZmine2
 - Inventa takes input directly from MZmine2 or MZmine 3
-- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares
-- 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/),
+  is possible to use other processing sofwares
+- 'tima_results_filename: timaR reponderated output format. - for performing in silico
+  annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'
 claims: []
 provenance:

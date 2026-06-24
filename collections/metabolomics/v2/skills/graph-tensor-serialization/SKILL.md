@@ -1,6 +1,9 @@
 ---
 name: graph-tensor-serialization
-description: Use when after constructing feature tensors encoding atom adjacency matrices, bond types, and chemical properties from canonical SMILES—and before feeding graphs into a GNN training loop—to enable reproducible, portable, and memory-efficient storage of graph objects that will be loaded in batches.
+description: Use when after constructing feature tensors encoding atom adjacency matrices,
+  bond types, and chemical properties from canonical SMILES—and before feeding graphs
+  into a GNN training loop—to enable reproducible, portable, and memory-efficient
+  storage of graph objects that will be loaded in batches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3429
@@ -14,6 +17,7 @@ metadata:
   - Python pickle module
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -41,6 +45,7 @@ attribution:
 
 # graph-tensor-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts preprocessed molecular graph representations (atom and bond feature tensors) into standardized serialized formats (PyTorch .pt or pickle .pkl) for efficient storage, loading, and batching in deep learning pipelines. This skill ensures graph objects retain structural and chemical information while remaining compatible with GNN training frameworks.

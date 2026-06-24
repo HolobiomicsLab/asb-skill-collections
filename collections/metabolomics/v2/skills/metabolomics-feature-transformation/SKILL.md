@@ -1,6 +1,8 @@
 ---
 name: metabolomics-feature-transformation
-description: Use when when you have a feature intensity table (samples × compounds) from targeted or non-targeted metabolomics and need to prepare it for statistical modeling or multivariate analysis.
+description: Use when when you have a feature intensity table (samples × compounds)
+  from targeted or non-targeted metabolomics and need to prepare it for statistical
+  modeling or multivariate analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,13 +18,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

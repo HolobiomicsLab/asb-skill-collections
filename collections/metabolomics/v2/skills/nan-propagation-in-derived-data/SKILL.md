@@ -1,6 +1,8 @@
 ---
 name: nan-propagation-in-derived-data
-description: Use when when constructing derived elemental ratio images via Calculator formula evaluation in pew², and input element channels contain NaN pixels (from thresholding, signal dropout, or instrumental noise).
+description: Use when when constructing derived elemental ratio images via Calculator
+  formula evaluation in pew², and input element channels contain NaN pixels (from
+  thresholding, signal dropout, or instrumental noise).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,14 +13,17 @@ metadata:
   - Calculator
   - pewpew
   - pewlib
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Calculator` can perform simple calculations on image data by entering the desired formula into the `Formula` text box
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Calculator` can perform simple calculations on image data by entering
+  the desired formula into the `Formula` text box
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # NaN Propagation in Derived Data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Handle missing or invalid pixel values (NaN) consistently when evaluating per-pixel mathematical expressions across LA-ICP-MS element channels. NaN propagation ensures that pixels below detection limits, failed measurements, or invalid intermediates do not corrupt downstream derived image arrays.

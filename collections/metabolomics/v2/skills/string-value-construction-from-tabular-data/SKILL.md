@@ -1,6 +1,8 @@
 ---
 name: string-value-construction-from-tabular-data
-description: Use when you have a JSON table (e.g., protocol records with 'type', 'id', and 'description' fields) and need to create a single concatenated string value by selecting a subset of records matching a condition (e.
+description: Use when you have a JSON table (e.g., protocol records with 'type', 'id',
+  and 'description' fields) and need to create a single concatenated string value
+  by selecting a subset of records matching a condition (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package that facilitates the conversion of tabular data into other formats
+- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
+  that facilitates the conversion of tabular data into other formats
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # string-value-construction-from-tabular-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct single string values from filtered and sorted records in a tabular JSON table using the str conversion directive with test, sort_by, and delimiter fields. This skill enables aggregation of multiple protocol or metadata records into a human-readable summary field suitable for deposition into structured data repositories.

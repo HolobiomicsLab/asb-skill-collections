@@ -1,6 +1,7 @@
 ---
 name: qc-biological-sample-stratification
-description: Use when after metabolomics data normalization when both QC (quality control) and biological samples have been used in the same normalization run.
+description: Use when after metabolomics data normalization when both QC (quality
+  control) and biological samples have been used in the same normalization run.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +11,7 @@ metadata:
   tools:
   - R
   - Metanorm
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -17,7 +19,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +45,7 @@ attribution:
 
 # QC/Biological-Sample Stratification and Discrepancy Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition normalized metabolomics data into QC and biological sample subsets, compute distributional statistics per subset, and identify features with significant discrepancies between the two groups to flag potential normalization artifacts or sample contamination. This quality-control step ensures that QC samples remain representative when both sample types are used together during normalization.

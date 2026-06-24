@@ -1,6 +1,8 @@
 ---
 name: cross-validation-model-aggregation
-description: Use when after training multiple neural network models via k-fold cross-validation (e.g., 10 iterations × 10-fold = 100 models), when you need to extract and aggregate learned feature interactions rather than relying on a single trained model.
+description: Use when after training multiple neural network models via k-fold cross-validation
+  (e.g., 10 iterations × 10-fold = 100 models), when you need to extract and aggregate
+  learned feature interactions rather than relying on a single trained model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,16 +16,23 @@ metadata:
   - TensorFlow or PyTorch
   - TensorFlow / PyTorch
   - Scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest models were implemented using
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- models can predict the entire set of metabolites at once, and all models were evaluated
+  using 10 iterations of 10-fold cross-validation. Random Forest models were implemented
+  using
 - CLR transformation applied to all data except IBD PRISM microbes
-- where W is the weight matrix connecting layer l−1 and layer l. Each element in S represents a microbe-metabolite feature attribution score
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
+- where W is the weight matrix connecting layer l−1 and layer l. Each element in S
+  represents a microbe-metabolite feature attribution score
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +56,7 @@ attribution:
 
 # cross-validation-model-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate learned weight matrices from multiple cross-validated neural network models to construct a robust, consensus feature attribution score matrix that captures microbe-metabolite interaction patterns across model replicates. This skill isolates the signal in learned relationships from training variation by pooling weights across all CV folds and iterations.

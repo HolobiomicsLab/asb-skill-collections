@@ -1,6 +1,9 @@
 ---
 name: csv-format-specification-compliance
-description: 'Use when after feature extraction or feature alignment when you have FeatureSet or Sample objects that must be exported as CSV files for sharing, archival, or downstream analysis. Specifically: (1) when exporting single-sample feature tables from find_feature() output;'
+description: 'Use when after feature extraction or feature alignment when you have
+  FeatureSet or Sample objects that must be exported as CSV files for sharing, archival,
+  or downstream analysis. Specifically: (1) when exporting single-sample feature tables
+  from find_feature() output;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3703
@@ -13,6 +16,7 @@ metadata:
   - Python pandas
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

@@ -1,6 +1,9 @@
 ---
 name: chromatographic-modality-classification
-description: Use when when ingesting raw or vendor-format mass spectrometry data files of unknown or mixed acquisition modality, and you need to automatically determine whether the input originated from liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), or MS imaging (e.
+description: Use when when ingesting raw or vendor-format mass spectrometry data files
+  of unknown or mixed acquisition modality, and you need to automatically determine
+  whether the input originated from liquid chromatography (LC), gas chromatography
+  (GC), ion mobility spectrometry (IMS), or MS imaging (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -45,6 +49,7 @@ attribution:
 
 # chromatographic-modality-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and classifies mass spectrometry input data by acquisition modality (LC, GC, IMS, MS imaging) through file header and metadata inspection, enabling automatic routing to the appropriate mzmine analysis module. This skill is essential for flexible, modality-aware data processing workflows that must handle heterogeneous MS instrument types.

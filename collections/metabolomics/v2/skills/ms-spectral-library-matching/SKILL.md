@@ -1,6 +1,9 @@
 ---
 name: ms-spectral-library-matching
-description: 'Use when when you have a GC-MS dataset (CSV with columns: Component.RT, Component.Area, Base.Peak.MZ, File.Name, Compound.Name, Match.Factor) and a known set of target chemicals you wish to locate and extract with their spectral match quality and quantitation.'
+description: 'Use when when you have a GC-MS dataset (CSV with columns: Component.RT,
+  Component.Area, Base.Peak.MZ, File.Name, Compound.Name, Match.Factor) and a known
+  set of target chemicals you wish to locate and extract with their spectral match
+  quality and quantitation.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,14 +19,18 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
-- The first step in the process is to convert the raw input to a format that downstream functions can work with. `spreadOut()` prepares the read in .CSV for intelligent ***sorting*** (using retention
-- '`mzExacto()` collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals.'
+- The first step in the process is to convert the raw input to a format that downstream
+  functions can work with. `spreadOut()` prepares the read in .CSV for intelligent
+  ***sorting*** (using retention
+- '`mzExacto()` collects the same information for a set of query chemicals and uses
+  it to precisely search the advanced dictionary for samples that have those chemicals.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # ms-spectral-library-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match query chemicals against GC-MS sample data by comparing retention times, exact masses, and compound names to identify and extract best-match factors and quantified area values. This skill automates the lookup and validation of reference compounds in mass spectrometry datasets.

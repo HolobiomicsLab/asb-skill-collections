@@ -1,6 +1,9 @@
 ---
 name: biosynformatic-vector-computation
-description: Use when you have a natural product molecule structure in SMILES, InChI, or SDF format and need to convert it into a fixed-length numerical vector representation (fingerprint) that preserves biosynthetic and chemical information for machine learning, similarity searching, or class prediction tasks.
+description: Use when you have a natural product molecule structure in SMILES, InChI,
+  or SDF format and need to convert it into a fixed-length numerical vector representation
+  (fingerprint) that preserves biosynthetic and chemical information for machine learning,
+  similarity searching, or class prediction tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -13,6 +16,7 @@ metadata:
   - RDKit
   - black
   - pytest
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

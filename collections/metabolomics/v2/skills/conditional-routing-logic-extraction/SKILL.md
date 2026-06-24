@@ -1,6 +1,8 @@
 ---
 name: conditional-routing-logic-extraction
-description: Use when you need to understand how a data-processing software system discriminates among multiple input types (LC, GC, IMS, MALDI) and selectively instantiates processing pipelines.
+description: Use when you need to understand how a data-processing software system
+  discriminates among multiple input types (LC, GC, IMS, MALDI) and selectively instantiates
+  processing pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -16,6 +18,7 @@ metadata:
   - GC-MS
   - CE-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

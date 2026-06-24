@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-feature-hashing
-description: Use when when you have a large collection of query high-resolution mass spectra that must be rapidly matched against a spectral library containing modified and unmodified peptides, and you need to reduce computational overhead before approximate nearest neighbor indexing or GPU-accelerated.
+description: Use when when you have a large collection of query high-resolution mass
+  spectra that must be rapidly matched against a spectral library containing modified
+  and unmodified peptides, and you need to reduce computational overhead before approximate
+  nearest neighbor indexing or GPU-accelerated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -13,12 +16,15 @@ metadata:
   - NumPy
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is
+  a spectral library search engine
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

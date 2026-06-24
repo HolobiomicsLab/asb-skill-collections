@@ -1,6 +1,8 @@
 ---
 name: feature-occurrence-counting-across-spectra
-description: Use when when you have parsed MS2 spectra from a single metabolomics sample (via matchms or similar) and need to generate a sample-level feature vector that represents the chemical composition independently of chromatographic alignment.
+description: Use when when you have parsed MS2 spectra from a single metabolomics
+  sample (via matchms or similar) and need to generate a sample-level feature vector
+  that represents the chemical composition independently of chromatographic alignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,12 +17,15 @@ metadata:
   - MEMO
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - conda create --name memo python=3.8
 - pip install numpy
 claims: []

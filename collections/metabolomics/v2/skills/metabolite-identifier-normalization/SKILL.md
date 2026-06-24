@@ -1,6 +1,9 @@
 ---
 name: metabolite-identifier-normalization
-description: Use when your metabolomics dataset contains compound identifiers in mixed formats (chemical names, InChI strings, InChIKey hashes, or SMILES notation) and you need a single canonical identifier to enable meta-analysis across multiple studies or to avoid counting the same metabolite twice under.
+description: Use when your metabolomics dataset contains compound identifiers in mixed
+  formats (chemical names, InChI strings, InChIKey hashes, or SMILES notation) and
+  you need a single canonical identifier to enable meta-analysis across multiple studies
+  or to avoid counting the same metabolite twice under.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -18,6 +21,7 @@ metadata:
   - readr
   - readxl
   - dplyr
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -26,10 +30,13 @@ derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
 - the package will retrieve the PubChem ID from the ID using `webchem`
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - curated KEGG data for enrichment using Fisher's Exact Test
 claims: []
 provenance:
@@ -59,6 +66,7 @@ attribution:
 
 # metabolite-identifier-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert multiple chemical identifier formats (chemical name, InChI, InChIKey, SMILES) into a canonical standardized nomenclature using PubChem as the reference database, and detect and remove duplicate entries. This skill enables harmonization across metabolomics studies that report compounds using heterogeneous identifier schemes.

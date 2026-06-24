@@ -1,6 +1,8 @@
 ---
 name: open-modification-spectral-search-strategy
-description: Use when when searching an unknown query MS/MS spectrum against a large spectral library (>100k spectra) for both unmodified and modified peptides, and computational speed is critical without sacrificing sensitivity or FDR control.
+description: Use when when searching an unknown query MS/MS spectrum against a large
+  spectral library (>100k spectra) for both unmodified and modified peptides, and
+  computational speed is critical without sacrificing sensitivity or FDR control.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -12,11 +14,13 @@ metadata:
   - Faiss
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: deep-learning-layer-inspection
-description: Use when when you have downloaded pre-trained Keras models and need to confirm their layer naming and structure conform to requirements for TensorFlow Serving or other deployment pipelines—specifically before converting to HDF5 format or integrating into a production API that expects fixed.
+description: Use when when you have downloaded pre-trained Keras models and need to
+  confirm their layer naming and structure conform to requirements for TensorFlow
+  Serving or other deployment pipelines—specifically before converting to HDF5 format
+  or integrating into a production API that expects fixed.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   - Python
   - TensorFlow 2.3.0
   - Keras
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -38,6 +42,7 @@ attribution:
 
 # deep-learning-layer-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and validate layer names and architecture of pre-trained deep learning models (Keras/TensorFlow) to ensure conformance with downstream serving requirements. This skill verifies that input and output layer names match expected conventions before model deployment or format conversion.

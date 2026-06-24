@@ -1,6 +1,9 @@
 ---
 name: sample-metadata-annotation-for-lcms
-description: Use when when you have loaded centroided .mzML files into a Spectra object and plan to use TARDIS (tardisPeaks) with an MsExperiment object rather than file paths, and you need TARDIS to distinguish QC runs from sample runs for separate quality metric calculation, polarity filtering, and.
+description: Use when when you have loaded centroided .mzML files into a Spectra object
+  and plan to use TARDIS (tardisPeaks) with an MsExperiment object rather than file
+  paths, and you need TARDIS to distinguish QC runs from sample runs for separate
+  quality metric calculation, polarity filtering, and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,13 +19,16 @@ metadata:
   - knitr
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 claims: []
@@ -48,6 +54,7 @@ attribution:
 
 # sample-metadata-annotation-for-lcms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate LC–MS sample metadata (particularly sample type classification as QC vs. sample) within an MsExperiment object to enable TARDIS to perform polarity filtering, QC-stratified quality metrics, and screening-mode target visibility assessment without manual file subsetting.

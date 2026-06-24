@@ -1,6 +1,8 @@
 ---
 name: feedforward-network-configuration
-description: Use when when implementing multiple spectrum predictor baseline models (NEIMS, MassFormer, etc.) and you need to isolate the impact of encoder architecture on predictive performance.
+description: Use when when implementing multiple spectrum predictor baseline models
+  (NEIMS, MassFormer, etc.) and you need to isolate the impact of encoder architecture
+  on predictive performance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -11,6 +13,7 @@ metadata:
   - NEIMS
   - coleygroup/ms-pred
   - PyTorch / TensorFlow
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
@@ -41,6 +44,7 @@ attribution:
 
 # Feedforward Network Configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and implement FFN encoder architectures for mass spectrum prediction with matched hyperparameters and covariates across baseline models to enable fair performance comparison. This skill ensures that encoder variants (FFN vs. GNN) are trained under equivalent conditions so that architectural differences—rather than hyperparameter mismatches—drive performance variation.

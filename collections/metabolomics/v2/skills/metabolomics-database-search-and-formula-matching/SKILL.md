@@ -1,6 +1,8 @@
 ---
 name: metabolomics-database-search-and-formula-matching
-description: Use when after you have detected LC-MS features, grouped them into empirical compounds via isotope and adduct clustering (using khipu), and have accurate m/z and retention time values.
+description: Use when after you have detected LC-MS features, grouped them into empirical
+  compounds via isotope and adduct clustering (using khipu), and have accurate m/z
+  and retention time values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -17,15 +19,18 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
-- The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
+- The empirical compounds are searched against known compound database (default HMDB
+  4) via another package JMS (https://github.com/shuzhao-li/JMS).
 - known compound database (default HMDB 4)
 claims: []
 provenance:
@@ -50,6 +55,7 @@ attribution:
 
 # metabolomics-database-search-and-formula-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Search empirical compounds (grouped isotopes and adducts) against a reference metabolite database (HMDB 4) using mass-based queries to retrieve matched molecular formulas, isomers, and chemical annotations. This skill bridges untargeted feature detection to compound identification by leveraging high-resolution m/z values and pre-annotation groupings.

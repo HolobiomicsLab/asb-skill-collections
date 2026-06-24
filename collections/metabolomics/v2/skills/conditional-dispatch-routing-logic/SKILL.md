@@ -1,6 +1,9 @@
 ---
 name: conditional-dispatch-routing-logic
-description: Use when a mass spectrometry analysis pipeline must accept data from multiple sources with different identifier schemes (GNPS Task ID, Universal Spectrum Identifiers, or Feature-Based Molecular Networking task IDs), and you need to transparently route each to the correct loader without requiring.
+description: Use when a mass spectrometry analysis pipeline must accept data from
+  multiple sources with different identifier schemes (GNPS Task ID, Universal Spectrum
+  Identifiers, or Feature-Based Molecular Networking task IDs), and you need to transparently
+  route each to the correct loader without requiring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +17,7 @@ metadata:
   - requests library
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA
@@ -41,6 +45,7 @@ attribution:
 
 # conditional-dispatch-routing-logic
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Routes mass spectrometry data inputs from heterogeneous identifier formats (Task ID, USI, FBMN) to their respective specialized data loaders. This skill enables a web application to accept multiple input pathways and deserialize them into a standardized dataset object for downstream analysis.

@@ -1,6 +1,8 @@
 ---
 name: beam-search-decoding-optimization
-description: Use when using Casanovo for de novo peptide sequencing on high-stakes datasets (immunopeptidomics, paleoproteomics, or monoclonal antibody discovery) where missing the correct sequence in the top-1 prediction is costly.
+description: Use when using Casanovo for de novo peptide sequencing on high-stakes
+  datasets (immunopeptidomics, paleoproteomics, or monoclonal antibody discovery)
+  where missing the correct sequence in the top-1 prediction is costly.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -16,14 +18,17 @@ metadata:
   - limelight-import-casanovo
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.
@@ -52,6 +57,7 @@ attribution:
 
 # beam-search-decoding-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace greedy decoding with beam search decoding in Casanovo to generate multiple candidate peptide sequences ranked by confidence score, improving the likelihood of recovering correct sequences that greedy selection might miss. This skill is applied when MS/MS spectral predictions need higher accuracy and you can tolerate increased computational cost.

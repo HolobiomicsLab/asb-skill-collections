@@ -1,6 +1,8 @@
 ---
 name: arrival-time-to-ccs-conversion
-description: Use when when you have raw TWIM-MS arrival-time data and need to transform it into absolute CCS values for downstream biomolecular class assignment or comparative analysis.
+description: Use when when you have raw TWIM-MS arrival-time data and need to transform
+  it into absolute CCS values for downstream biomolecular class assignment or comparative
+  analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -14,6 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -43,6 +46,7 @@ attribution:
 
 # arrival-time-to-ccs-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw arrival-time measurements from TWIM-MS into calibrated collision cross section (CCS) values by establishing a mapping function from reference compounds with known CCS values. This enables standardized, comparable ion mobility measurements across multi-omic datasets.

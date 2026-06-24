@@ -1,6 +1,9 @@
 ---
 name: spectral-similarity-scoring-parent-tp
-description: Use when after generating TP candidates (via in-silico prediction or library lookup) and extracting MS/MS peak lists for both parent features and TP feature candidates, use spectral similarity scoring to quantify fragmentation pattern overlap.
+description: Use when after generating TP candidates (via in-silico prediction or
+  library lookup) and extracting MS/MS peak lists for both parent features and TP
+  feature candidates, use spectral similarity scoring to quantify fragmentation pattern
+  overlap.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - LC-MS
   - ion-mobility-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

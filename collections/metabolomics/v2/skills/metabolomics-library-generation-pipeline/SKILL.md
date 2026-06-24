@@ -1,6 +1,8 @@
 ---
 name: metabolomics-library-generation-pipeline
-description: Use when when you have cloned or accessed the Reverse_metabolomics_library_generation repository and need to verify that the Nextflow workflow is properly configured, executable, and produces expected spectral library outputs.
+description: Use when when you have cloned or accessed the Reverse_metabolomics_library_generation
+  repository and need to verify that the Nextflow workflow is properly configured,
+  executable, and produces expected spectral library outputs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,6 +16,7 @@ metadata:
   - make
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41586-023-06906-8
   title: Reverse metabolomics
@@ -41,6 +44,7 @@ attribution:
 
 # metabolomics-library-generation-pipeline
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a Nextflow-based workflow to generate reverse-phase metabolomics spectral libraries by running a documented test entrypoint. This skill enables reproducible invocation of the Reverse_metabolomics_library_generation pipeline to validate workflow structure and outputs.

@@ -1,6 +1,8 @@
 ---
 name: consensus-clustering-optimization
-description: Use when when you have a feature attribution matrix (e.g., microbe-metabolite interaction scores) from ensemble neural network training and need to group rows and columns into functionally coherent modules without pre-specifying cluster numbers.
+description: Use when when you have a feature attribution matrix (e.g., microbe-metabolite
+  interaction scores) from ensemble neural network training and need to group rows
+  and columns into functionally coherent modules without pre-specifying cluster numbers.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -17,16 +19,22 @@ metadata:
   - scikit-learn hierarchical clustering
   - scipy spatial
   - Python numpy/pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - linkage using Seaborn’s clustermap function in
-- cluster microbes (rows) and metabolites (columns) separately based on the Euclidean distance and complete linkage
-- for each fixed k, ranged from 2 to 20, a k-clustering of the rows using each normalized S was generated. Then a consensus matrix M(k) was calculated as the mean connectivity matrix across all
+- cluster microbes (rows) and metabolites (columns) separately based on the Euclidean
+  distance and complete linkage
+- for each fixed k, ranged from 2 to 20, a k-clustering of the rows using each normalized
+  S was generated. Then a consensus matrix M(k) was calculated as the mean connectivity
+  matrix across all
 - using Python's sci-kit-learn package
-- Networks showing microbe and metabolite modules and the interactions between them were constructed using Cytoscape
-- Networks showing the modules and the interactions between them were constructed using Cytoscape
+- Networks showing microbe and metabolite modules and the interactions between them
+  were constructed using Cytoscape
+- Networks showing the modules and the interactions between them were constructed
+  using Cytoscape
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +58,7 @@ attribution:
 
 # Consensus Clustering Optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine optimal cluster numbers for hierarchical clustering by computing consensus matrices across multiple trained models and selecting the cluster count where the proportional change in area under the cumulative distribution function (CDF) exceeds a stability threshold. This stabilizes cluster assignments and reduces model-specific artifacts in microbe-metabolite functional module discovery.

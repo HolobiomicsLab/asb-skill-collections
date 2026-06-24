@@ -1,6 +1,8 @@
 ---
 name: lc-hrms-data-preprocessing-pipeline
-description: Use when you have raw LC-HRMS metabolomics data in .mzML or .abf format and need to perform peak detection, feature alignment, and metabolite annotation in a reproducible, containerized environment.
+description: Use when you have raw LC-HRMS metabolomics data in .mzML or .abf format
+  and need to perform peak detection, feature alignment, and metabolite annotation
+  in a reproducible, containerized environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -17,6 +19,7 @@ metadata:
   - Reifycs Abf Converter
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -45,6 +48,7 @@ attribution:
 
 # lc-hrms-data-preprocessing-pipeline
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A reproducible Nextflow workflow for processing Liquid Chromatography-High Resolution Mass Spectrometry (LC-HRMS) metabolomics data through containerized MS-DIAL peak detection and feature identification followed by MSFLO annotation. The workflow executes sequentially on .mzML or .abf raw data files and outputs annotated feature tables suitable for downstream statistical analysis.

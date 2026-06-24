@@ -1,6 +1,9 @@
 ---
 name: package-manager-environment-setup
-description: Use when when you need to establish a working installation of a Python package in a fresh or isolated environment, particularly when the package is available through multiple distribution channels (PyPI, Bioconda, AUR) and you want to verify that the installation is complete and functional before.
+description: Use when when you need to establish a working installation of a Python
+  package in a fresh or isolated environment, particularly when the package is available
+  through multiple distribution channels (PyPI, Bioconda, AUR) and you want to verify
+  that the installation is complete and functional before.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -12,6 +15,7 @@ metadata:
   - pip
   - Bioconda
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -40,6 +44,7 @@ attribution:
 
 # package-manager-environment-setup
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install and verify a scientific Python package via a package manager (conda or pip) and confirm that core modules import without errors. This skill ensures reproducible, documented environment setup and validates that all critical dependencies resolve correctly before downstream analysis.

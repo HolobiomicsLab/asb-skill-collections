@@ -1,6 +1,8 @@
 ---
 name: metabolite-distance-metric-calculation
-description: Use when you have normalized peak intensity tables from FT-ICR MS data (or MetaboDirect pre-processed .csv output) with samples grouped by experimental treatments (e.
+description: Use when you have normalized peak intensity tables from FT-ICR MS data
+  (or MetaboDirect pre-processed .csv output) with samples grouped by experimental
+  treatments (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3960
@@ -14,13 +16,16 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
+- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA
+  [64]
 - using functions from the R packages vegan [63]
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # metabolite-distance-metric-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate Bray-Curtis distance matrices from normalized FT-ICR MS peak intensity data to quantify compositional dissimilarity between metabolomic samples. This distance metric is the prerequisite for ordination (NMDS, PCA) and permutation-based multivariate testing (PERMANOVA) to detect phage-type or treatment-driven shifts in metabolite content.

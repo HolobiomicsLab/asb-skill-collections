@@ -1,6 +1,9 @@
 ---
 name: mass-spectral-metadata-harmonization
-description: Use when you have multiple mass spectral libraries in different formats (NIST MSP + MOL folder, MoNA MSP, RIKEN MSP, SWGDRUG MSP) and need to merge them into a single, MS-DIAL-compatible MSP file with consistent SMILES assignments, Kovats retention indices (RI), and polarity annotations across all.
+description: Use when you have multiple mass spectral libraries in different formats
+  (NIST MSP + MOL folder, MoNA MSP, RIKEN MSP, SWGDRUG MSP) and need to merge them
+  into a single, MS-DIAL-compatible MSP file with consistent SMILES assignments, Kovats
+  retention indices (RI), and polarity annotations across all.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -21,6 +24,7 @@ metadata:
   - future / future.apply
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -30,7 +34,8 @@ evidence_spans:
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
 - MS-DIAL friendly msp file
-- both positive and negative modes are in a single file as well. Therefore, we need to separated the polarity
+- both positive and negative modes are in a single file as well. Therefore, we need
+  to separated the polarity
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -54,6 +59,7 @@ attribution:
 
 # mass-spectral-metadata-harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Harmonize and standardize metadata fields (SMILES, retention indices, polarity, molecular formula) across heterogeneous EI and MS/MS mass spectral libraries from NIST, MoNA, RIKEN, and SWGDRUG into a unified MSP format for MS-DIAL. This skill reconciles structural and retention data from multiple sources with different formats and completeness levels.

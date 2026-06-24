@@ -1,6 +1,8 @@
 ---
 name: circular-dependency-avoidance-in-method-design
-description: Use when you are implementing multiple accessor methods on a backend class that logically depend on each other (e.g., one returns full data and another returns column metadata), and both methods are required by downstream code.
+description: Use when you are implementing multiple accessor methods on a backend
+  class that logically depend on each other (e.g., one returns full data and another
+  returns column metadata), and both methods are required by downstream code.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -21,7 +24,8 @@ evidence_spans:
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
 - DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 - library(Spectra) library(IRanges)
-- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package
+- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # circular-dependency-avoidance-in-method-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A design pattern for implementing interdependent accessor methods in object-oriented backends that prevents infinite recursion by ensuring one method populates data without calling the other. This is essential when designing MsBackend subclasses where spectraData() and spectraVariables() must both be available but risk calling each other cyclically.

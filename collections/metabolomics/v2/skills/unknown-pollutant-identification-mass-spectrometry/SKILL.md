@@ -1,6 +1,9 @@
 ---
 name: unknown-pollutant-identification-mass-spectrometry
-description: Use when you have UPLC-HRMS raw data (ThermoFisher, Agilent, or compatible vendor format) from water samples or environmental matrices containing unknown organic pollutants, a Windows environment with ≥16 GB RAM and ≥2 GB NVIDIA GPU, and you need compound identification with confidence scores and.
+description: Use when you have UPLC-HRMS raw data (ThermoFisher, Agilent, or compatible
+  vendor format) from water samples or environmental matrices containing unknown organic
+  pollutants, a Windows environment with ≥16 GB RAM and ≥2 GB NVIDIA GPU, and you
+  need compound identification with confidence scores and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,13 +18,15 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 - doi: 10.5281/zenodo.12602805
   title: ''
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - A case file named “Pesticides” can be run in the Windows environment
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # unknown-pollutant-identification-mass-spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute MSThunder's deep learning-based nontargeted analytical workflow to identify unknown organic pollutants in UPLC-HRMS data by matching precursor ions, MS/MS spectra, and molecular formulas against trained models and spectral libraries. Use this skill when analyzing water samples or environmental matrices for unidentified contaminants where reference standards are unavailable.

@@ -1,6 +1,8 @@
 ---
 name: github-actions-workflow-configuration
-description: Use when when you have a Python package repository on GitHub and need to automatically verify that pull requests and commits pass unit tests and meet code quality standards before merge.
+description: Use when when you have a Python package repository on GitHub and need
+  to automatically verify that pull requests and commits pass unit tests and meet
+  code quality standards before merge.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,13 +15,15 @@ metadata:
   - GitHub Actions
   - Sonarcloud
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - A GitHub action will run which will publish the new version to [pypi](https://pypi.org/project/ms2query/)
 claims: []
 provenance:

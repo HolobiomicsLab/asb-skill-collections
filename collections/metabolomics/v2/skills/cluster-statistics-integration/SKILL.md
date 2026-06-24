@@ -1,6 +1,8 @@
 ---
 name: cluster-statistics-integration
-description: Use when after peak clustering has been performed on aligned GCIMS samples and a peak table matrix has been constructed, but the matrix contains NA values because some samples did not yield detected peaks at certain cluster positions.
+description: Use when after peak clustering has been performed on aligned GCIMS samples
+  and a peak table matrix has been constructed, but the matrix contains NA values
+  because some samples did not yield detected peaks at certain cluster positions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -40,6 +43,7 @@ attribution:
 
 # cluster-statistics-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate peak cluster statistics (centroids, sizes, member assignments) into a peak table matrix to impute missing or NA values that arise from incomplete peak detection or alignment across GCIMS samples. This step bridges peak clustering output and downstream quantitative analysis by filling gaps in the peak intensity matrix using cluster-level summary statistics.

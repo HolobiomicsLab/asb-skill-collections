@@ -1,6 +1,9 @@
 ---
 name: metabolism-prediction-result-aggregation
-description: Use when when you have run CypReact predictions on a molecular dataset against multiple CYP isoforms (e.g., 1A2, 2A6, 2B6) and need to consolidate the per-isoform output files into a single combined result file for cross-isoform comparison, visualization, or downstream metabolite identification.
+description: Use when when you have run CypReact predictions on a molecular dataset
+  against multiple CYP isoforms (e.g., 1A2, 2A6, 2B6) and need to consolidate the
+  per-isoform output files into a single combined result file for cross-isoform comparison,
+  visualization, or downstream metabolite identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3375
   tools:
   - CypReact
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -36,6 +40,7 @@ attribution:
 
 # metabolism-prediction-result-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate cytochrome P450 (CYP) metabolism predictions across multiple isoforms into a single consolidated result file. This skill enables comprehensive metabolic profiling by collecting per-isoform predictions and merging them for downstream pharmacokinetic or drug metabolism analysis.

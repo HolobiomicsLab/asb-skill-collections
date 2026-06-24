@@ -1,6 +1,8 @@
 ---
 name: retention-time-alignment-scoring
-description: Use when after feature m/z grouping and pairwise alignment detection have identified candidate feature pairs, and anchor points have been selected to establish retention time correspondence.
+description: Use when after feature m/z grouping and pairwise alignment detection
+  have identified candidate feature pairs, and anchor points have been selected to
+  establish retention time correspondence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,12 +16,15 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # retention-time-alignment-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Scoring and validation of feature pair alignments across LC-MS metabolomics datasets by mapping retention time relationships through anchor-based spline fitting and similarity metrics. This skill transforms raw feature pair candidates into validated alignments by establishing a nonlinear retention time transformation model between datasets.

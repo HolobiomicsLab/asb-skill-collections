@@ -1,6 +1,9 @@
 ---
 name: contrastive-learning-loss-implementation
-description: Use when when you have paired augmented ion images processed through ResNet18 encoders producing 512-dimensional representation vectors, and you need to learn meaningful low-dimensional representations without labeled data by enforcing that augmentations of the same image remain similar while.
+description: Use when when you have paired augmented ion images processed through
+  ResNet18 encoders producing 512-dimensional representation vectors, and you need
+  to learn meaningful low-dimensional representations without labeled data by enforcing
+  that augmentations of the same image remain similar while.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,7 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
@@ -41,6 +45,7 @@ attribution:
 
 # Contrastive Learning Loss Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply contrastive loss to maximize similarity between augmentations of the same ion image while minimizing similarity across different images, using Projection and Prediction modules on 512-dimensional encoder outputs to prevent representation collapse. This skill is essential for training self-supervised representation models on mass spectrometry imaging (MSI) data.

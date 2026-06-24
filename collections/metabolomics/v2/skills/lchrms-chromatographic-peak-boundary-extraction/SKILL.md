@@ -1,6 +1,9 @@
 ---
 name: lchrms-chromatographic-peak-boundary-extraction
-description: Use when you have a set of target molecules with known molecular formula, main adduct, and experimentally determined retention time boundaries, and you want to extract their chromatographic peaks and isotopologues from LC-HRMS mzML files to generate a ground-truth benchmark for validating.
+description: Use when you have a set of target molecules with known molecular formula,
+  main adduct, and experimentally determined retention time boundaries, and you want
+  to extract their chromatographic peaks and isotopologues from LC-HRMS mzML files
+  to generate a ground-truth benchmark for validating.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,13 +19,16 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
-- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided for all (enviPat predicted) isotopologues
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
+- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided
+  for all (enviPat predicted) isotopologues
 - library(mzRAPP)
 claims: []
 provenance:

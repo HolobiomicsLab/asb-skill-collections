@@ -1,6 +1,7 @@
 ---
 name: lcms-raw-data-import
-description: Use when you have raw LC/MS data in mzML or mzXML format and need to initiate untargeted metabolomics analysis.
+description: Use when you have raw LC/MS data in mzML or mzXML format and need to
+  initiate untargeted metabolomics analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -12,11 +13,13 @@ metadata:
   - mzLearn
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.01.26.634927v3
   title: mzLearn
 evidence_spans:
-- mzEmbed, a framework for developing pre-trained generative models and fine-tuning them for specific tasks for untargeted metabolomics datasets
+- mzEmbed, a framework for developing pre-trained generative models and fine-tuning
+  them for specific tasks for untargeted metabolomics datasets
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: ms-ms-spectrum-statistical-significance-testing
-description: Use when you have aligned fragment ion pairs from two MS/MS spectra (via maximum weight matching or other methods) and need to assign p-values or Z-scores to each matched pair to distinguish true biological/chemical relationships from random noise.
+description: Use when you have aligned fragment ion pairs from two MS/MS spectra (via
+  maximum weight matching or other methods) and need to assign p-values or Z-scores
+  to each matched pair to distinguish true biological/chemical relationships from
+  random noise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,11 +15,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # MS/MS spectrum statistical significance testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute statistical significance scores for fragment ion matches between pairs of tandem mass spectra using Laplacian embedding and null distribution permutation testing. This skill enables confidence-ranked alignment of MS/MS spectra robust to multiple chemical structure differences.

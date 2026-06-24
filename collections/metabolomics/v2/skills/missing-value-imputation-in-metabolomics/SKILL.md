@@ -1,6 +1,8 @@
 ---
 name: missing-value-imputation-in-metabolomics
-description: Use when after feature extraction and quality control filtering (blank masking, sample dropping, normalization) have been applied, but before statistical analysis or machine learning.
+description: Use when after feature extraction and quality control filtering (blank
+  masking, sample dropping, normalization) have been applied, but before statistical
+  analysis or machine learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   - PCPFM (Python-Centric Pipeline for Metabolomics)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,6 +50,7 @@ attribution:
 
 # Missing-value imputation in metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Impute missing or zero-intensity feature values in LC-MS metabolomics feature tables by computing multiples of the per-feature minimum value, enabling complete feature matrices for downstream statistical analysis without artificial feature removal.

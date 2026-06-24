@@ -1,6 +1,8 @@
 ---
 name: metadata-field-extraction
-description: Use when you have a directory of JSON-formatted annotation files and need to systematically extract a specific metadata field (such as curation status, entry identifier, or validation state) across all records.
+description: Use when you have a directory of JSON-formatted annotation files and
+  need to systematically extract a specific metadata field (such as curation status,
+  entry identifier, or validation state) across all records.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +12,7 @@ metadata:
   - pandas or equivalent tabular data library
   - Python json module
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -38,6 +41,7 @@ attribution:
 
 # metadata-field-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and aggregate structured metadata fields from a collection of JSON annotation records, organizing them into a searchable index or summary table. This skill is essential when you need to track curation status, inventory dataset properties, or build faceted views of large annotation repositories.

@@ -1,6 +1,9 @@
 ---
 name: msp-file-parsing
-description: Use when you have a Mass Spectrum Point (MSP) file containing electron ionization mass spectral records with header fields and peak intensity pairs, and you need to load it into an R data structure for library searching, format validation, or round-trip conversion.
+description: Use when you have a Mass Spectrum Point (MSP) file containing electron
+  ionization mass spectral records with header fields and peak intensity pairs, and
+  you need to load it into an R data structure for library searching, format validation,
+  or round-trip conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,12 +15,16 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:
@@ -45,6 +52,7 @@ attribution:
 
 # msp-file-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate electron ionization mass spectral library files in MSP format, extracting spectral records with their metadata annotations, peak lists, and precursor m/z values for downstream library search or format conversion workflows. This skill is essential for enabling reproducible mass spectral database operations in R environments.

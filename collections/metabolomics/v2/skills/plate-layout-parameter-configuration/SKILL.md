@@ -1,6 +1,7 @@
 ---
 name: plate-layout-parameter-configuration
-description: Use when after uploading a sample list to InjectionDesign and before performing inter-batch balancing and intra-batch randomization.
+description: Use when after uploading a sample list to InjectionDesign and before
+  performing inter-batch balancing and intra-batch randomization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +12,7 @@ metadata:
   - InjectionDesign
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
@@ -39,6 +41,7 @@ attribution:
 
 # Plate Layout Parameter Configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure plate type, sample capacity, injection order, and axis labeling in InjectionDesign to define the physical and logical layout constraints for LC/GC-MS injection plate design. This skill bridges sample list preparation and QC sample position predefinition by establishing the plate geometry and visualization parameters.

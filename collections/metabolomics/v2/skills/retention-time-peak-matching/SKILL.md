@@ -1,6 +1,9 @@
 ---
 name: retention-time-peak-matching
-description: Use when after drift correction and quality flagging, when you have a feature abundance matrix with associated metadata (Feature_ID, m/z, retention time) and need to identify which features likely represent the same underlying metabolite or adduct series before statistical analysis or metabolite.
+description: Use when after drift correction and quality flagging, when you have a
+  feature abundance matrix with associated metadata (Feature_ID, m/z, retention time)
+  and need to identify which features likely represent the same underlying metabolite
+  or adduct series before statistical analysis or metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +16,7 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -22,7 +26,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +52,7 @@ attribution:
 
 # Retention-time-peak-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify correlated metabolic features within a retention-time window by matching m/z values and temporal proximity, forming the basis for downstream feature clustering in LC-MS metabolomics. This skill groups isotopologues, adducts, and in-source fragments that co-elute but have different mass signatures.

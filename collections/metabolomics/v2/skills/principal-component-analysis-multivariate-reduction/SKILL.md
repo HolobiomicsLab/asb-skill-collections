@@ -1,6 +1,7 @@
 ---
 name: principal-component-analysis-multivariate-reduction
-description: Use when after normalizing and log-transforming lipidomics abundance data (e.
+description: Use when after normalizing and log-transforming lipidomics abundance
+  data (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -11,12 +12,15 @@ metadata:
   - lipidr
   - R
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # principal-component-analysis-multivariate-reduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply PCA to normalized and log-transformed lipidomics data to reveal separation patterns between sample groups (e.g., benign vs. cancer phenotypes) and detect outlier samples with anomalous lipid profiles. This multivariate analysis serves as an unsupervised quality control and exploratory step prior to differential lipid abundance testing.

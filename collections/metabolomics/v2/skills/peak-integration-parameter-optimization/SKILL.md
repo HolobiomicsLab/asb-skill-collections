@@ -1,6 +1,7 @@
 ---
 name: peak-integration-parameter-optimization
-description: Use when after peak detection and clustering have been completed on aligned and baseline-corrected GC-IMS data, and before imputation or statistical analysis.
+description: Use when after peak detection and clustering have been completed on aligned
+  and baseline-corrected GC-IMS data, and before imputation or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +14,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +43,7 @@ attribution:
 
 # peak-integration-parameter-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize peak integration parameters—specifically fixed-size integration method and RIP saturation threshold—to produce a well-formed peak intensity matrix with minimal missing values. This skill bridges peak detection and feature table construction in GC-IMS preprocessing.

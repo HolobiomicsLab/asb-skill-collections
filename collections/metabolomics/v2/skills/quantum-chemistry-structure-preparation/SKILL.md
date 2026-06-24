@@ -1,6 +1,8 @@
 ---
 name: quantum-chemistry-structure-preparation
-description: Use when when you have a collection of N-Me derived unsaturated sterol lipid identifiers or structures and need to generate predicted collision cross section (CCS) values for LC-IM-MS/MS analysis.
+description: Use when when you have a collection of N-Me derived unsaturated sterol
+  lipid identifiers or structures and need to generate predicted collision cross section
+  (CCS) values for LC-IM-MS/MS analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -43,6 +46,7 @@ attribution:
 
 # quantum-chemistry-structure-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preparation of structural input data (SMILES or molecular geometry files) for N-Me derived unsaturated sterol lipids prior to quantum chemistry calculations. This upstream step ensures molecular representations are standardized and computationally compatible for CCS prediction via 3D conformational and electronic structure modeling.

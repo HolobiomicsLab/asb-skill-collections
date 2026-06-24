@@ -1,6 +1,9 @@
 ---
 name: metabolite-abundance-matrix-filtering
-description: 'Use when when you have multiple batches of metabolomics data in SummarizedExperiment format with log-transformed abundance assays and need to: (1) remove poorly-quantified metabolites with >50% missing values within each batch, (2) retain only metabolites present across all batches for cross-batch.'
+description: 'Use when when you have multiple batches of metabolomics data in SummarizedExperiment
+  format with log-transformed abundance assays and need to: (1) remove poorly-quantified
+  metabolites with >50% missing values within each batch, (2) retain only metabolites
+  present across all batches for cross-batch.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,14 +16,17 @@ metadata:
   - dplyr
   - SummarizedExperiment
   - DMwR2
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
 - Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
+- we will load the hRUV package and other packages required for the demonstration...
+  library(dplyr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

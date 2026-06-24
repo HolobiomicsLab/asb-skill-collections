@@ -1,6 +1,9 @@
 ---
 name: classifier-output-parsing
-description: Use when after a classifier (such as BitterPredict.m) has computed binary predictions (e.g., bitter vs. non-bitter) on a batch of molecular descriptors and you need to organize those predictions into a structured, labeled output file for downstream analysis, validation, or reporting.
+description: Use when after a classifier (such as BitterPredict.m) has computed binary
+  predictions (e.g., bitter vs. non-bitter) on a batch of molecular descriptors and
+  you need to organize those predictions into a structured, labeled output file for
+  downstream analysis, validation, or reporting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -9,11 +12,13 @@ metadata:
   - http://edamontology.org/topic_3474
   tools:
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not
+- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules,
+  and calucautes a predictions if each molecule is bitter or not
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -37,6 +42,7 @@ attribution:
 
 # classifier-output-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and structure binary classification predictions from a machine-learning classifier into a formatted output file with molecule identifiers and predicted class labels. This skill is essential when compiling per-sample predictions from a classifier into a reusable, traceable result artifact.

@@ -1,6 +1,9 @@
 ---
 name: proforma-peptidoform-parsing
-description: Use when when you have a ProForma 2.0–formatted peptide string with PSI-MOD or UniMod modification labels and need to extract the underlying amino acid sequence and modification positions before performing theoretical fragment ion calculation or spectrum peak matching.
+description: Use when when you have a ProForma 2.0–formatted peptide string with PSI-MOD
+  or UniMod modification labels and need to extract the underlying amino acid sequence
+  and modification positions before performing theoretical fragment ion calculation
+  or spectrum peak matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -14,12 +17,15 @@ metadata:
   - spectrum_utils MsmsSpectrum.annotate_proforma()
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +49,7 @@ attribution:
 
 # ProForma 2.0 peptidoform parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse ProForma 2.0 peptidoform strings (e.g., 'EM[Oxidation]EVEES[Phospho]PEK') to extract amino acid sequences and position-specific post-translational modifications for subsequent fragment ion annotation and spectrum matching. This is a prerequisite for annotating observed MS/MS spectrum peaks against modified peptide sequences.

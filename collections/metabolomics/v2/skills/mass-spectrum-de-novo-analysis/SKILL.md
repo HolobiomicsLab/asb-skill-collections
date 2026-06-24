@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-de-novo-analysis
-description: Use when you have an unknown MS/MS spectrum (m/z and intensity pairs) from positive-mode ionization and need to identify the most likely molecular formula and adduct type (e.g., [M+H]+, [M+Na]+) when no reference library match is available or desirable.
+description: Use when you have an unknown MS/MS spectrum (m/z and intensity pairs)
+  from positive-mode ionization and need to identify the most likely molecular formula
+  and adduct type (e.g., [M+H]+, [M+Na]+) when no reference library match is available
+  or desirable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +15,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -40,6 +44,7 @@ attribution:
 
 # mass-spectrum-de-novo-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate chemical formula and adduct assignments for unknown tandem mass spectra using a data-driven transformer neural network without relying on spectral databases or fragmentation tree computation. MIST-CF learns end-to-end energy-based rankings directly from MS/MS peak patterns to infer precursor molecular identity in de novo settings.

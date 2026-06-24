@@ -1,6 +1,9 @@
 ---
 name: nps-classification-prediction
-description: Use when you have an unknown mass spectrum from a suspicious analyte and need to determine whether it matches a known NPS or a derivative thereof. The analyte's mass spectrum is available in MSP or equivalent format, and you have a core drug structure to enumerate derivatives from.
+description: Use when you have an unknown mass spectrum from a suspicious analyte
+  and need to determine whether it matches a known NPS or a derivative thereof. The
+  analyte's mass spectrum is available in MSP or equivalent format, and you have a
+  core drug structure to enumerate derivatives from.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -16,6 +19,7 @@ metadata:
   - rdkit
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
@@ -47,6 +51,7 @@ attribution:
 
 # nps-classification-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify unknown mass spectrometry analytes as novel psychoactive substances (NPS) by comparing their mass spectral and chemical fingerprint signatures against a synthetic derivative database using integrated similarity scoring. This skill applies deep learning inference to detect emerging illicit drugs that traditional spectral libraries may not contain.

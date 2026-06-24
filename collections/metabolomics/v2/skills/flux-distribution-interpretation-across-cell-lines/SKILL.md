@@ -1,6 +1,9 @@
 ---
 name: flux-distribution-interpretation-across-cell-lines
-description: Use when you have sampled 10,000+ steady-state flux solutions for each of multiple cell lines from a constraint-based model; computed Reaction Propensity Scores (RPS) from substrate abundance (metabolomics) and Reaction Activity Scores (RAS) from gene expression (transcriptomics);
+description: Use when you have sampled 10,000+ steady-state flux solutions for each
+  of multiple cell lines from a constraint-based model; computed Reaction Propensity
+  Scores (RPS) from substrate abundance (metabolomics) and Reaction Activity Scores
+  (RAS) from gene expression (transcriptomics);
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -16,11 +19,13 @@ metadata:
   - getRASscore (INTEGRATE pipeline Step 2)
   - concordanceAnalysis (INTEGRATE pipeline Step 10)
   - createMetabolicDataset (INTEGRATE pipeline Step 9)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # Flux-distribution interpretation across cell lines
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret feasible flux distributions (FFD) sampled from constraint-based metabolic models across multiple cell lines to distinguish metabolically controlled reactions (high RPSvsFFD concordance) from transcriptionally controlled ones (high RASvsFFD concordance). This skill enables classification of metabolic reactions by their regulatory mode using Cohen's kappa concordance coefficients.

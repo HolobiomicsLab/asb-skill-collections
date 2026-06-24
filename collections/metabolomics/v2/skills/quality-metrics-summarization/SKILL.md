@@ -1,6 +1,9 @@
 ---
 name: quality-metrics-summarization
-description: Use when after running QC analysis on NMR or MS metabolomic data and obtaining per-feature CV values, use this skill to validate that the dataset meets FDA thresholds (CV < 0.30 for discovery, CV < 0.15 for quantification) and to report the proportion of features meeting each threshold.
+description: Use when after running QC analysis on NMR or MS metabolomic data and
+  obtaining per-feature CV values, use this skill to validate that the dataset meets
+  FDA thresholds (CV < 0.30 for discovery, CV < 0.15 for quantification) and to report
+  the proportion of features meeting each threshold.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,13 +15,15 @@ metadata:
   - MWASTools
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # quality-metrics-summarization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and report cumulative distributions of quality control metrics (e.g., coefficient of variation) across metabolomic features to validate dataset reproducibility against regulatory thresholds. This skill aggregates pre-computed per-feature QC values into interpretable summary statistics and visualizations that confirm fitness for downstream analysis.

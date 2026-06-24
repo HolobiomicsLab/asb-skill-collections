@@ -1,6 +1,9 @@
 ---
 name: fusion-pooling-strategy-implementation
-description: Use when you have extracted parallel feature streams from a CNN backbone (local spectral patterns) and a Transformer backbone (global dependencies) in 1H NMR spectra, and you need to fuse them into a single embedding for bi-encoder or cross-encoder processing before compound identification scoring.
+description: Use when you have extracted parallel feature streams from a CNN backbone
+  (local spectral patterns) and a Transformer backbone (global dependencies) in 1H
+  NMR spectra, and you need to fuse them into a single embedding for bi-encoder or
+  cross-encoder processing before compound identification scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -14,6 +17,7 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
@@ -43,6 +47,7 @@ attribution:
 
 # Fusion Pooling Strategy Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fusion pooling combines CNN and Transformer feature outputs via learned or fixed aggregation to produce unified spectral embeddings for downstream identification tasks. This skill is essential when hybrid architectures must be reconciled into a single, discriminative representation without losing local or global context.

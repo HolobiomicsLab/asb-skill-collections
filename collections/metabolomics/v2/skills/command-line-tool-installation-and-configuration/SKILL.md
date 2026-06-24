@@ -1,6 +1,8 @@
 ---
 name: command-line-tool-installation-and-configuration
-description: 'Use when before launching any MetaboDirect pipeline run on a new system or environment. Trigger conditions: (1) first-time setup on a target OS (Windows, Linux, or macOS); (2) environment lacks Python 3.5+, R 4.0+, or Cytoscape 3.8+;'
+description: 'Use when before launching any MetaboDirect pipeline run on a new system
+  or environment. Trigger conditions: (1) first-time setup on a target OS (Windows,
+  Linux, or macOS); (2) environment lacks Python 3.5+, R 4.0+, or Cytoscape 3.8+;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -24,16 +26,20 @@ metadata:
   - pip
   - numpy
   - py4cytoscape
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
 - The MetaboDirect pipeline was developed in Python 3.8 [38]
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 - requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -57,6 +63,7 @@ attribution:
 
 # command-line-tool-installation-and-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Installation and configuration of MetaboDirect and its dependencies (Python, R, Cytoscape, and domain libraries) to establish a working command-line environment for FT-ICR MS data analysis. This skill ensures all required computational infrastructure is in place before running the pipeline.

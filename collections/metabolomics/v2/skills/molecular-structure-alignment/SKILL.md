@@ -1,6 +1,8 @@
 ---
 name: molecular-structure-alignment
-description: Use when when you have two or more lipid structures represented as labeled molecular graphs and need to compute pairwise structural distances to cluster lipidomes, identify similar lipid species, or rank lipids by structural relatedness.
+description: Use when when you have two or more lipid structures represented as labeled
+  molecular graphs and need to compute pairwise structural distances to cluster lipidomes,
+  identify similar lipid species, or rank lipids by structural relatedness.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0364
@@ -10,6 +12,7 @@ metadata:
   tools:
   - LipidSpace
   - cppGoslin
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

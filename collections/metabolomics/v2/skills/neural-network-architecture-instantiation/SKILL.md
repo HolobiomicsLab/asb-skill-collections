@@ -1,6 +1,9 @@
 ---
 name: neural-network-architecture-instantiation
-description: Use when when you have retrieved a model definition file (e.g., TransGNet.py) and need to verify it can be loaded, configured with correct hyperparameters, and executed on representative multimodal inputs (e.g., molecular graphs and SMILES embeddings) before training or inference.
+description: Use when when you have retrieved a model definition file (e.g., TransGNet.py)
+  and need to verify it can be loaded, configured with correct hyperparameters, and
+  executed on representative multimodal inputs (e.g., molecular graphs and SMILES
+  embeddings) before training or inference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -15,6 +18,7 @@ metadata:
   - scikit-learn
   - CUDA
   - cuDNN
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -48,6 +52,7 @@ attribution:
 
 # neural-network-architecture-instantiation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate a PyTorch neural network model from source code and verify its forward pass with multimodal input tensors matching the expected data format. This skill validates that the model architecture accepts and processes the correct input shapes and produces outputs with expected dimensions.

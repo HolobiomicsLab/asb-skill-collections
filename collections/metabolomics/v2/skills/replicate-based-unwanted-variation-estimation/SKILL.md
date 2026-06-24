@@ -1,6 +1,9 @@
 ---
 name: replicate-based-unwanted-variation-estimation
-description: Use when when you have metabolomics data organised across multiple experimental batches with deliberately embedded sample replicates within batches (short replicates) and across batches (batch replicates), and you observe batch effects or signal drift in PCA plots that obscure biological patterns.
+description: Use when when you have metabolomics data organised across multiple experimental
+  batches with deliberately embedded sample replicates within batches (short replicates)
+  and across batches (batch replicates), and you observe batch effects or signal drift
+  in PCA plots that obscure biological patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,13 +15,16 @@ metadata:
   - RUV-III
   - R
   - SummarizedExperiment
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
-- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate the unwanted variation within and between batches with RUV-III'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
+- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate
+  the unwanted variation within and between batches with RUV-III'
 - Install the R package from GitHub using the `devtools` package
 claims: []
 provenance:

@@ -1,6 +1,7 @@
 ---
 name: spectral-image-filtering
-description: Use when when generating augmented variants of single-channel or multi-channel ion images for contrastive learning in mass spectrometry imaging analysis.
+description: Use when when generating augmented variants of single-channel or multi-channel
+  ion images for contrastive learning in mass spectrometry imaging analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3564
@@ -12,12 +13,14 @@ metadata:
   - kornia
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +44,7 @@ attribution:
 
 # spectral-image-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply spatial filtering to ion images in mass spectrometry imaging (MSI) to smooth local intensity variations while preserving spatial structure for contrastive representation learning. This is a component of the T_COL data augmentation pipeline in DeepION for generating augmented ion image pairs.

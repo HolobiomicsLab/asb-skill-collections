@@ -1,6 +1,9 @@
 ---
 name: igraph-object-creation-manipulation
-description: Use when after computing pairwise correlations across features (10,000+ in high-dimensional omics datasets) and applying correlation thresholding to retain only significant edges, you need to construct an igraph object that preserves edge weights, supports node annotation, and enables module.
+description: Use when after computing pairwise correlations across features (10,000+
+  in high-dimensional omics datasets) and applying correlation thresholding to retain
+  only significant edges, you need to construct an igraph object that preserves edge
+  weights, supports node annotation, and enables module.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -13,12 +16,15 @@ metadata:
   - R
   - igraph
   - pcutils
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:
@@ -43,6 +49,7 @@ attribution:
 
 # igraph-object-creation-manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert thresholded correlation matrices into igraph network objects and perform flexible node/edge manipulation for downstream topological analysis and visualization. This skill bridges correlation computation and network characterization by constructing validated igraph objects with proper node and edge attributes.

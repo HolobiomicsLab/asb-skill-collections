@@ -1,6 +1,9 @@
 ---
 name: adduct-mass-difference-matching
-description: Use when you have computed a histogram of pairwise mass differences from MS imaging data and need to (1) identify which observed mass differences correspond to biologically relevant or chemically known adducts, or (2) rank the most frequently observed mass differences to discover dominant adduct.
+description: Use when you have computed a histogram of pairwise mass differences from
+  MS imaging data and need to (1) identify which observed mass differences correspond
+  to biologically relevant or chemically known adducts, or (2) rank the most frequently
+  observed mass differences to discover dominant adduct.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,11 +16,13 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # adduct-mass-difference-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill matches observed mass differences from MS imaging data against a reference database of known molecular adducts (such as matrix or salt ions) to identify and rank abundant adduct species. It is applied after computing pairwise mass differences between all detected peaks and binning them into a histogram, using the mass2adduct package's adductMatch() and topAdducts() functions.

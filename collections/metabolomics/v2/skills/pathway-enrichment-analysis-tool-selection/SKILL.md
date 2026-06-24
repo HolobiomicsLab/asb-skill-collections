@@ -1,6 +1,9 @@
 ---
 name: pathway-enrichment-analysis-tool-selection
-description: Use when you have completed differential expression analysis (DEA) on genes, miRNA, proteins, or lipids and need to identify significantly enriched biological pathways. The multiOmicsIntegrator pipeline requires explicit tool selection via the pea_genes parameter in params.
+description: Use when you have completed differential expression analysis (DEA) on
+  genes, miRNA, proteins, or lipids and need to identify significantly enriched biological
+  pathways. The multiOmicsIntegrator pipeline requires explicit tool selection via
+  the pea_genes parameter in params.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3791
@@ -13,12 +16,14 @@ metadata:
   - biotranslator
   - ggplot2
   - ComplexHeatmap
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - Pathway enrichment analysis | Clusterprofiler, Biotranslator
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

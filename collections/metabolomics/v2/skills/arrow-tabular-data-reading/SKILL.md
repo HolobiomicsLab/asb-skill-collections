@@ -16,6 +16,7 @@ metadata:
   - mobiusklein/mzpeak_prototyping
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -45,6 +46,7 @@ attribution:
 
 # arrow-tabular-data-reading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Read and parse binary tabular data (Parquet files) into structured in-memory columnar representations using Apache Arrow's language bindings. This skill enables efficient, schema-aware loading of mass spectrometry metadata and signal arrays without materializing the entire dataset into memory.

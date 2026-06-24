@@ -1,6 +1,8 @@
 ---
 name: pairwise-similarity-matrix-construction
-description: Use when after XCMS feature detection and retention time correction, when you have a feature abundance table aligned across samples and need to group features that likely arise from the same compound before downstream annotation.
+description: Use when after XCMS feature detection and retention time correction,
+  when you have a feature abundance table aligned across samples and need to group
+  features that likely arise from the same compound before downstream annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_1812
@@ -12,6 +14,7 @@ metadata:
   - XCMS
   - dynamicTreeCut
   - RAMClustR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -40,6 +43,7 @@ attribution:
 
 # pairwise-similarity-matrix-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a symmetric pairwise similarity matrix by multiplying retention time similarity and correlational similarity scores for all feature pairs in metabolomics data. This matrix serves as input to hierarchical clustering to group features derived from the same compound.

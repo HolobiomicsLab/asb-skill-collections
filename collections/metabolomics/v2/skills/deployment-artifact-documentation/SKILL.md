@@ -1,12 +1,16 @@
 ---
 name: deployment-artifact-documentation
-description: Use when preparing a scientific application (such as a metabolite annotation tool) for deployment to a shared or production app server, particularly when the deployment requires external database access, Java library dependencies, and credential management.
+description: Use when preparing a scientific application (such as a metabolite annotation
+  tool) for deployment to a shared or production app server, particularly when the
+  deployment requires external database access, Java library dependencies, and credential
+  management.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - javax.faces-2.2.12.jar
   - CEU Mass Mediator
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00720
   title: CEU Mass Mediator 3.0

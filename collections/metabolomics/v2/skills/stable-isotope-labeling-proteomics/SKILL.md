@@ -1,6 +1,8 @@
 ---
 name: stable-isotope-labeling-proteomics
-description: Use when when you have mass spectrometry data (MS1/MS2 scans from ThermoFisher .raw files, mzML, or MGF) from cells or organisms cultured with stable isotope-enriched substrates (e.g., 13C, 15N, 2H) at any enrichment level (natural 1.
+description: Use when when you have mass spectrometry data (MS1/MS2 scans from ThermoFisher
+  .raw files, mzML, or MGF) from cells or organisms cultured with stable isotope-enriched
+  substrates (e.g., 13C, 15N, 2H) at any enrichment level (natural 1.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -18,12 +20,15 @@ metadata:
   - Sipros
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 - Extract visualization information from `.FT2` files
 claims: []

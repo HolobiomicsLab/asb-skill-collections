@@ -1,6 +1,9 @@
 ---
 name: compound-identifier-standardization
-description: Use when ingesting compound metadata from multiple sources (PubChem, DrugBank, LOTUS, Dictionary of Natural Products, DrugCentral) that lack uniform column naming, have incomplete structure information, or contain only compound names without structural data.
+description: Use when ingesting compound metadata from multiple sources (PubChem,
+  DrugBank, LOTUS, Dictionary of Natural Products, DrugCentral) that lack uniform
+  column naming, have incomplete structure information, or contain only compound names
+  without structural data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -15,6 +18,7 @@ metadata:
   - drugbank_extraction.py
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

@@ -1,6 +1,9 @@
 ---
 name: unit-testing-conditional-branches
-description: Use when when implementing or refactoring a FileInterface._open method or similar polymorphic dispatcher that conditionally instantiates different handler classes based on file extension (e.g., .gz, .db) or format metadata (e.g., indexed gzip detection).
+description: Use when when implementing or refactoring a FileInterface._open method
+  or similar polymorphic dispatcher that conditionally instantiates different handler
+  classes based on file extension (e.g., .gz, .db) or format metadata (e.g., indexed
+  gzip detection).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -12,6 +15,7 @@ metadata:
   - xml.etree.ElementTree
   - pymzML
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,6 +45,7 @@ attribution:
 
 # unit-testing-conditional-branches
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically verify that each conditional branch in a file handler dispatch system correctly instantiates the appropriate handler class based on file extension and format detection. This skill ensures that polymorphic routing logic (e.g., .gz with index vs. without, .db, or standard mzML) produces the expected handler instances and integrates correctly with downstream readers.

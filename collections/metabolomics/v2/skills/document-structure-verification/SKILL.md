@@ -1,6 +1,9 @@
 ---
 name: document-structure-verification
-description: Use when when uploading or ingesting paired omics project documents into the Pairing Omics Data Platform, or when you need to verify that a JSON project file conforms to the expected schema structure before processing MS/MS mass spectra linkages, genome associations, or submission to external.
+description: Use when when uploading or ingesting paired omics project documents into
+  the Pairing Omics Data Platform, or when you need to verify that a JSON project
+  file conforms to the expected schema structure before processing MS/MS mass spectra
+  linkages, genome associations, or submission to external.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,11 +17,13 @@ metadata:
   - GitHub
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 - pull request (https://help.github.com/articles/about-pull-requests/)
 claims: []
 provenance:

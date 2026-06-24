@@ -1,6 +1,9 @@
 ---
 name: multi-regime-model-performance-comparison-visualization
-description: Use when you have paired microbiome-metabolome (or similar multivariate) datasets and want to quantify whether training on a superset of features (e.g., both annotated and unannotated metabolites) improves prediction accuracy for a well-defined target subset (e.
+description: Use when you have paired microbiome-metabolome (or similar multivariate)
+  datasets and want to quantify whether training on a superset of features (e.g.,
+  both annotated and unannotated metabolites) improves prediction accuracy for a well-defined
+  target subset (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -16,14 +19,19 @@ metadata:
   - scikit-learn
   - SciPy
   - matplotlib / seaborn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
 - using Seaborn's clustermap function in Python
 claims: []
 provenance:
@@ -48,6 +56,7 @@ attribution:
 
 # multi-regime-model-performance-comparison-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare predictive performance of machine learning models trained under different data regimes (e.g., all features vs. subset-only) by computing correlation coefficients across independent cross-validation folds and visualizing per-outcome effect sizes. This reveals whether incorporating broader feature sets improves predictions for a target output class.

@@ -1,6 +1,9 @@
 ---
 name: pearson-correlation-coefficient-computation
-description: Use when after annotating mass-difference pairs with candidate adduct identities, compute correlations to test whether putative parent and adduct ion intensities co-vary across the imaging pixel grid. High positive correlation (with Bonferroni-corrected p-value < 0.
+description: Use when after annotating mass-difference pairs with candidate adduct
+  identities, compute correlations to test whether putative parent and adduct ion
+  intensities co-vary across the imaging pixel grid. High positive correlation (with
+  Bonferroni-corrected p-value < 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,13 +16,16 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # Pearson Correlation Coefficient Computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute two-tailed Pearson correlation coefficients and p-values for pairs of mass spectrometry imaging intensity vectors to assess whether candidate parent and adduct ion abundances co-vary spatially across pixels. This identifies statistically significant ion relationships that support molecular adduct hypotheses.

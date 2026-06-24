@@ -1,6 +1,7 @@
 ---
 name: metabolite-quality-metric-assessment
-description: Use when after drift correction has been applied to a MetaboSet object, and before imputation and batch correction.
+description: Use when after drift correction has been applied to a MetaboSet object,
+  and before imputation and batch correction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +14,7 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -22,7 +24,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +50,7 @@ attribution:
 
 # metabolite-quality-metric-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Flag low-quality molecular features in LC-MS metabolomics data by applying conservative thresholds to relative standard deviation (RSD), robust RSD* (median absolute deviation–based), and D-ratio (QC vs. biological variance ratio) metrics. This quality control step identifies features with excessive internal spread or inconsistent QC reproducibility that should be excluded from downstream statistical analysis.

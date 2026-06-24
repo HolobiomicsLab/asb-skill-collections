@@ -1,6 +1,8 @@
 ---
 name: peak-table-row-count-validation
-description: Use when when using mpactr filter functions (e.g., filter_mispicked_ions, filter_group, filter_cv) with R6 reference semantics and uncertain whether the copy_object parameter controls deep copying or in-place modification.
+description: Use when when using mpactr filter functions (e.g., filter_mispicked_ions,
+  filter_group, filter_cv) with R6 reference semantics and uncertain whether the copy_object
+  parameter controls deep copying or in-place modification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -45,6 +48,7 @@ attribution:
 
 # peak-table-row-count-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that filtering operations on LC-MS peak tables have correctly modified the original data object by comparing row counts before and after filtering. This skill is essential for detecting unintended in-place modifications or shallow-copy behavior in R6-based metabolomics data structures.

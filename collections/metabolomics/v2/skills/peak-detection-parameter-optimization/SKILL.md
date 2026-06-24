@@ -1,6 +1,8 @@
 ---
 name: peak-detection-parameter-optimization
-description: Use when when loading and processing raw or recalibrated FT-ICR mass spectrum data (Bruker .d format) on a defined field-strength instrument (e.g., 12 T or 15 T), before executing molecular formula search.
+description: Use when when loading and processing raw or recalibrated FT-ICR mass
+  spectrum data (Bruker .d format) on a defined field-strength instrument (e.g., 12
+  T or 15 T), before executing molecular formula search.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,12 +16,14 @@ metadata:
   - Bruker Solarix (via ReadBrukerSolarix)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 - import numpy as np
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # peak-detection-parameter-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize noise thresholding and peak prominence parameters in FT-ICR mass spectrometry to correctly identify molecular ion peaks while minimizing false positives. This skill is essential for accurate molecular formula assignment downstream, as suboptimal parameter choice leads to either missed peaks or spurious assignments.

@@ -1,6 +1,7 @@
 ---
 name: decoy-database-generation-for-metabolomics
-description: Use when performing large-scale untargeted metabolomics annotation where you need to estimate the false discovery rate of metabolite identifications.
+description: Use when performing large-scale untargeted metabolomics annotation where
+  you need to estimate the false discovery rate of metabolite identifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -15,6 +16,7 @@ metadata:
   - Passatutto
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -46,6 +48,7 @@ attribution:
 
 # decoy-database-generation-for-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic decoy spectral databases in parallel with reference compound databases to enable false discovery rate estimation in untargeted metabolomics annotation. This skill addresses the critical need for significance control when annotating large numbers of metabolite matches against spectral databases.

@@ -1,6 +1,8 @@
 ---
 name: query-language-grammar-design
-description: Use when when you need to enable non-programmer mass spectrometry users to express complex spectral search patterns (e.g., isotope patterns, precursor mass constraints, scan-type filters) without writing procedural code.
+description: Use when when you need to enable non-programmer mass spectrometry users
+  to express complex spectral search patterns (e.g., isotope patterns, precursor mass
+  constraints, scan-type filters) without writing procedural code.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0361
@@ -13,6 +15,7 @@ metadata:
   - massql command-line utility
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-statistical-testing
-description: Use when you have a normalized abundance matrix from LC-MS/MS profiling with sample class assignments (e.g., phenotypic groups, disease states, treatment conditions) and need to filter metabolic features for downstream pathway analysis or biological validation.
+description: Use when you have a normalized abundance matrix from LC-MS/MS profiling
+  with sample class assignments (e.g., phenotypic groups, disease states, treatment
+  conditions) and need to filter metabolic features for downstream pathway analysis
+  or biological validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -14,13 +17,16 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -48,6 +54,7 @@ attribution:
 
 # mass-spectrometry-data-statistical-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply univariate statistical tests (parametric ANOVA or non-parametric alternatives) to LC-MS/MS metabolomic feature tables to identify metabolites with statistically significant abundance differences across sample classes, followed by multiple-testing correction and feature selection based on q-value thresholds.

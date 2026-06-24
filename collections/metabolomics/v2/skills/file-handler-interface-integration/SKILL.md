@@ -1,6 +1,9 @@
 ---
 name: file-handler-interface-integration
-description: Use when you have mass spectrometry data stored in a non-standard format (SQLite database, custom indexed gzip files, or other database backends) and want to enable pymzML's Reader to access it with both random-access by spectrum ID and sequential iteration capabilities, avoiding the need to.
+description: Use when you have mass spectrometry data stored in a non-standard format
+  (SQLite database, custom indexed gzip files, or other database backends) and want
+  to enable pymzML's Reader to access it with both random-access by spectrum ID and
+  sequential iteration capabilities, avoiding the need to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -14,6 +17,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,6 +47,7 @@ attribution:
 
 # file-handler-interface-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom file-handler class that integrates with pymzML's FileInterface to enable random-access and sequential retrieval of mass spectrometry data from alternative storage backends (e.g., SQLite databases, indexed gzip archives). This skill allows transparent access to spectrum and chromatogram objects through pymzML's standard Reader interface without requiring the data to be in native mzML format.

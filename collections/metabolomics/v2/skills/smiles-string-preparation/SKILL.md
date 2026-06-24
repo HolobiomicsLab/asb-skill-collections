@@ -1,6 +1,8 @@
 ---
 name: smiles-string-preparation
-description: Use when you have a target molecule (e.g., acetaminophen, a drug candidate, or a xenobiotic) whose structure you need to encode for metabolite prediction, reaction rule matching, or other structure-based cheminformatics workflow.
+description: Use when you have a target molecule (e.g., acetaminophen, a drug candidate,
+  or a xenobiotic) whose structure you need to encode for metabolite prediction, reaction
+  rule matching, or other structure-based cheminformatics workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0360
@@ -10,6 +12,7 @@ metadata:
   tools:
   - CyProduct
   - Java
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -38,6 +41,7 @@ attribution:
 
 # SMILES String Preparation for Molecular Input
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Format a molecule's SMILES representation as a queryable input string for computational chemistry tools that predict metabolites or other molecular properties. This skill ensures the SMILES notation is syntactically correct and wrapped in the tool-specific format required by command-line or API invocation.

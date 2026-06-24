@@ -1,6 +1,9 @@
 ---
 name: neutral-loss-feature-extraction-from-spectra
-description: Use when you have MS2 spectra data (MGF/mzML format) and aligned feature tables, and your analysis goal is to compare samples that may have poor MS1 feature overlap, strong retention-time shifts across runs, or were acquired on different LC-MS platforms.
+description: Use when you have MS2 spectra data (MGF/mzML format) and aligned feature
+  tables, and your analysis goal is to compare samples that may have poor MS1 feature
+  overlap, strong retention-time shifts across runs, or were acquired on different
+  LC-MS platforms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -18,11 +21,13 @@ metadata:
   - Python 3.8+
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 - conda install -c conda-forge scikit-bio

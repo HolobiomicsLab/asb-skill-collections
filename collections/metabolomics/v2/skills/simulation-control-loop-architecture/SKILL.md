@@ -1,6 +1,9 @@
 ---
 name: simulation-control-loop-architecture
-description: Use when you have a set of metabolites or chemical formulas to analyze and want to evaluate how different MS/MS fragmentation strategies (e.g., TopN, exclusion lists, dynamic window selection) would perform without access to real instrument time.
+description: Use when you have a set of metabolites or chemical formulas to analyze
+  and want to evaluate how different MS/MS fragmentation strategies (e.g., TopN, exclusion
+  lists, dynamic window selection) would perform without access to real instrument
+  time.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,6 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -49,6 +53,7 @@ attribution:
 
 # Simulation Control Loop Architecture
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Set up and execute a complete virtual mass spectrometry control loop by orchestrating three core components—chemical sample generators, a simulated mass spectrometer, and a fragmentation strategy controller—within a time-bounded Environment to produce realistic MS/MS scan data. This skill is essential for prototyping and testing data-dependent acquisition (DDA) strategies before instrument deployment.

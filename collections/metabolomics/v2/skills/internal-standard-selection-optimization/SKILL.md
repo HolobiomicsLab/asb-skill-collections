@@ -1,6 +1,9 @@
 ---
 name: internal-standard-selection-optimization
-description: Use when after batch correction of metabolomics QC samples using pooled study quality control (SQC) samples, when you have multiple candidate internal standards and need to determine which one stabilizes the compound/internal standard ratio for each compound.
+description: Use when after batch correction of metabolomics QC samples using pooled
+  study quality control (SQC) samples, when you have multiple candidate internal standards
+  and need to determine which one stabilizes the compound/internal standard ratio
+  for each compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,6 +15,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -42,6 +46,7 @@ attribution:
 
 # internal-standard-selection-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify the optimal internal standard for each compound by exhaustively calculating Relative Standard Deviation of QC samples (RSDQC) across all internal standard candidates on batch-corrected metabolomics data. This skill selects the internal standard that minimizes measurement variance, improving data quality and downstream quantification reliability.

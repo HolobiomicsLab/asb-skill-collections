@@ -1,6 +1,7 @@
 ---
 name: file-format-handling-csv-excel
-description: Use when you have molecular descriptor data in CSV or EXCEL format and need to pass it to BitterPredict.m or another descriptor-based classifier.
+description: Use when you have molecular descriptor data in CSV or EXCEL format and
+  need to pass it to BitterPredict.m or another descriptor-based classifier.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -9,11 +10,13 @@ metadata:
   - http://edamontology.org/topic_3373
   tools:
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not
+- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules,
+  and calucautes a predictions if each molecule is bitter or not
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -37,6 +40,7 @@ attribution:
 
 # file-format-handling-csv-excel
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse CSV or EXCEL files containing molecular descriptors into a structured table format suitable for classifier input. This skill bridges raw descriptor data files and machine-learning prediction workflows by ensuring proper file I/O and data integrity.

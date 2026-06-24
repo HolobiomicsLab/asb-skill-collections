@@ -1,6 +1,8 @@
 ---
 name: workflow-branching-logic-design
-description: Use when when a spectral matching tool produces mixed output containing both exact library matches and analog search results, and your analysis or publication requires separate handling, interpretation, or reporting of these two match classes.
+description: Use when when a spectral matching tool produces mixed output containing
+  both exact library matches and analog search results, and your analysis or publication
+  requires separate handling, interpretation, or reporting of these two match classes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -15,11 +17,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 - push your feature branch to (your fork of) the ms2query repository on GitHub
 - you want to make some kind of change to the code base

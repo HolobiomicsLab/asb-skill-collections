@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectrum-preprocessing
-description: Use when you have raw or semi-processed MS/MS spectral data from bottom-up tandem mass spectrometry experiments (data-dependent acquisition) that you intend to input to de novo peptide sequencing tools like Casanovo.
+description: Use when you have raw or semi-processed MS/MS spectral data from bottom-up
+  tandem mass spectrometry experiments (data-dependent acquisition) that you intend
+  to input to de novo peptide sequencing tools like Casanovo.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -22,6 +24,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -34,12 +37,15 @@ derived_from:
 - doi: 10.1016/1044-0305
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -73,6 +79,7 @@ attribution:
 
 # MS/MS Spectrum Preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare raw tandem mass spectrometry (MS/MS) spectra for de novo peptide sequencing by converting, validating, and standardizing spectral data into formats suitable for neural network-based peptide prediction. This skill ensures data quality and consistency across diverse mass spectrometry instruments and acquisition protocols.

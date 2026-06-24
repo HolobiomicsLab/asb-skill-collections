@@ -1,6 +1,9 @@
 ---
 name: smiles-structure-annotation-from-molfiles
-description: Use when you have a mass spectral library in MSP format (e.g., from NIST, SWGDRUG, or other sources) exported alongside a folder of MOL files, and you need to populate the SMILES field in each library record to enable structure-based filtering, annotation, or downstream MS-DIAL analysis.
+description: Use when you have a mass spectral library in MSP format (e.g., from NIST,
+  SWGDRUG, or other sources) exported alongside a folder of MOL files, and you need
+  to populate the SMILES field in each library record to enable structure-based filtering,
+  annotation, or downstream MS-DIAL analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -21,6 +24,7 @@ metadata:
   - ChemmineOB
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -30,7 +34,8 @@ evidence_spans:
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
 - MS-DIAL friendly msp file
-- both positive and negative modes are in a single file as well. Therefore, we need to separated the polarity
+- both positive and negative modes are in a single file as well. Therefore, we need
+  to separated the polarity
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -54,6 +59,7 @@ attribution:
 
 # SMILES structure annotation from MOL files
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a folder of MOL files into a single SDF file, extract chemical structures, and assign SMILES strings to a mass spectral library record by matching on compound name or InChIKey. This skill bridges structural data (MOL format) with spectral records (MSP format) for integrated cheminformatics workflows.

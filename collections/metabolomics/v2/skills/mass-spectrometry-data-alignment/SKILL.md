@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-alignment
-description: Use when you have two LC-MS feature tables (each containing m/z, retention time, and intensity columns) from the same or related biological samples and need to identify which features in dataset A correspond to which features in dataset B.
+description: Use when you have two LC-MS feature tables (each containing m/z, retention
+  time, and intensity columns) from the same or related biological samples and need
+  to identify which features in dataset A correspond to which features in dataset
+  B.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -41,6 +45,7 @@ attribution:
 
 # mass-spectrometry-data-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align untargeted metabolomic features across two LC-MS datasets by computing pairwise similarity scores on m/z and retention time dimensions, then resolving one-to-one feature correspondences. This skill enables integration of metabolomic datasets for comparative analysis.

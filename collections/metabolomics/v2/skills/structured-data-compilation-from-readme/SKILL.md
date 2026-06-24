@@ -1,6 +1,9 @@
 ---
 name: structured-data-compilation-from-readme
-description: Use when when a scientific software repository documents multiple standalone tools, web applications, or resources with associated metadata (URLs, publications, taxonomic coverage) in its README, and you need to create a machine-readable inventory for downstream indexing, validation, or reuse.
+description: Use when when a scientific software repository documents multiple standalone
+  tools, web applications, or resources with associated metadata (URLs, publications,
+  taxonomic coverage) in its README, and you need to create a machine-readable inventory
+  for downstream indexing, validation, or reuse.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -18,6 +21,7 @@ metadata:
   - microbe_masst
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

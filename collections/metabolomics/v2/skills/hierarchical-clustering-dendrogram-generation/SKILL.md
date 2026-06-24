@@ -1,6 +1,7 @@
 ---
 name: hierarchical-clustering-dendrogram-generation
-description: Use when you have a normalized and imputed metabolite abundance matrix (as a MultiAssayExperiment object) and want to identify groups of co-expressed metabolites.
+description: Use when you have a normalized and imputed metabolite abundance matrix
+  (as a MultiAssayExperiment object) and want to identify groups of co-expressed metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,6 +12,7 @@ metadata:
   - MetaboDiff
   - WGCNA
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -20,7 +22,8 @@ evidence_spans:
 - '`MetaboDiff` is available for all operating systems and can be installed via Github'
 - met = knn_impute(met,cutoff=0.4)
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 claims: []
@@ -47,6 +50,7 @@ attribution:
 
 # hierarchical-clustering-dendrogram-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a hierarchical clustering dendrogram from a metabolite correlation matrix to organize and visualize co-expression relationships. This is applied after computing biweight midcorrelation similarity and soft-thresholded adjacency to reveal the hierarchical structure of metabolic modules before dynamic branch cutting.

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-image-preprocessing
-description: Use when you have raw or preprocessed single-channel (2D array) or multi-channel (spectral) ion images from mass spectrometry imaging (MSI) data and need to train a contrastive deep learning model.
+description: Use when you have raw or preprocessed single-channel (2D array) or multi-channel
+  (spectral) ion images from mass spectrometry imaging (MSI) data and need to train
+  a contrastive deep learning model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,12 +16,14 @@ metadata:
   - scikit-image or scipy.ndimage
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # mass-spectrometry-image-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Augment ion images from mass spectrometry imaging data by applying four stochastic transformations (color jitter, filtering, Poisson noise, random missing value) to generate two contrastive variants for self-supervised deep learning. This skill is essential for preparing MSI data to train representation models that learn robust, low-dimensional embeddings of ion spatial distributions.

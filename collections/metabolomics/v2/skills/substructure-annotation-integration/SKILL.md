@@ -1,6 +1,9 @@
 ---
 name: substructure-annotation-integration
-description: Use when you have (1) a GNPS molecular network (classical or feature-based) with cluster/feature identifiers, (2) MS2LDA output containing Mass2Motif assignments with probability and overlap scores for those same clusters/features, and (3) a goal to annotate network nodes with substructural and.
+description: Use when you have (1) a GNPS molecular network (classical or feature-based)
+  with cluster/feature identifiers, (2) MS2LDA output containing Mass2Motif assignments
+  with probability and overlap scores for those same clusters/features, and (3) a
+  goal to annotate network nodes with substructural and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -16,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

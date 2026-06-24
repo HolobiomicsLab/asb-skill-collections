@@ -1,6 +1,8 @@
 ---
 name: compound-clustering-from-inadequate-spectra
-description: Use when after peak picking has identified individual signals in an INADEQUATE NMR spectrum, apply this skill when you need to collapse thousands of individual peaks into fewer, more interpretable compound-level peak networks.
+description: Use when after peak picking has identified individual signals in an INADEQUATE
+  NMR spectrum, apply this skill when you need to collapse thousands of individual
+  peaks into fewer, more interpretable compound-level peak networks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +14,7 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

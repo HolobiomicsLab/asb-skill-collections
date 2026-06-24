@@ -1,6 +1,8 @@
 ---
 name: test-suite-execution-and-validation
-description: Use when when you have cloned or obtained a Python package repository and need to verify that the package can be installed from source and that its test suite passes without errors.
+description: Use when when you have cloned or obtained a Python package repository
+  and need to verify that the package can be installed from source and that its test
+  suite passes without errors.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -11,6 +13,7 @@ metadata:
   - pip
   - pytest
   - black
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

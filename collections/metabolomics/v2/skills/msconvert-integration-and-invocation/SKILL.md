@@ -1,6 +1,9 @@
 ---
 name: msconvert-integration-and-invocation
-description: Use when when you have vendor-format LC-MS acquisition files (Thermo .raw, Bruker .d, Sciex .ms, Agilent, Waters formats) that need to be ingested into a quality control or data processing pipeline that requires open, standardized spectral formats.
+description: Use when when you have vendor-format LC-MS acquisition files (Thermo
+  .raw, Bruker .d, Sciex .ms, Agilent, Waters formats) that need to be ingested into
+  a quality control or data processing pipeline that requires open, standardized spectral
+  formats.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,12 +16,14 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS
 evidence_spans:
 - its dependency on MSConvert for vendor format data conversion
-- its dependency on [MSConvert](https://proteowizard.sourceforge.io/tools/msconvert.html) for vendor format data conversion
+- its dependency on [MSConvert](https://proteowizard.sourceforge.io/tools/msconvert.html)
+  for vendor format data conversion
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

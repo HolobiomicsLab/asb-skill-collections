@@ -1,6 +1,9 @@
 ---
 name: spectral-database-matching
-description: Use when when you have MS2 .mzML format data files from untargeted metabolomics or proteomics experiments and need to perform an initial annotation step by matching experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with a defined precursor mass tolerance (e.g., 15 ppm).
+description: Use when when you have MS2 .mzML format data files from untargeted metabolomics
+  or proteomics experiments and need to perform an initial annotation step by matching
+  experimental spectra against known reference libraries (GNPS, HMDB, MassBank) with
+  a defined precursor mass tolerance (e.g., 15 ppm).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -17,6 +20,7 @@ metadata:
   - CE-MS
   - ion-mobility-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -47,6 +51,7 @@ attribution:
 
 # spectral-database-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Spectral database matching identifies and ranks MS2 spectra from untargeted metabolomics data by comparing them against reference spectral libraries using the Spectra R package. This dereplication step assigns confidence scores to potential metabolite identifications before downstream compound database searching.

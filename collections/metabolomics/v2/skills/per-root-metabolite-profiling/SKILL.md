@@ -1,6 +1,9 @@
 ---
 name: per-root-metabolite-profiling
-description: Use when when you have deposited mass spectrometry imaging datasets for plant roots in CDF format paired with pre-computed Matlab workspaces, and you need to reproduce per-root linear-axis metabolite profiling outputs to validate reported genotype-level results (e.
+description: Use when when you have deposited mass spectrometry imaging datasets for
+  plant roots in CDF format paired with pre-computed Matlab workspaces, and you need
+  to reproduce per-root linear-axis metabolite profiling outputs to validate reported
+  genotype-level results (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3431
@@ -13,6 +16,7 @@ metadata:
   - batchcdfread
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
@@ -40,6 +44,7 @@ attribution:
 
 # per-root-metabolite-profiling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A workflow for reproducing linear-axis mass spectrometry imaging analysis on individual root samples using the DIMPLE computational pipeline, which processes NetCDF (CDF) files and associated Matlab workspaces to quantify metabolite distributions along the root axis.

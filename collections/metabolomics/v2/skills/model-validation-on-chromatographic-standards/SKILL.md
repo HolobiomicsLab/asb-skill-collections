@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -48,6 +49,7 @@ attribution:
 
 # model-validation-on-chromatographic-standards
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validate a trained CNN peak-picker against held-out chromatographic standards by measuring classification accuracy (peak vs. background) and regression error (bounding-box and peak-center coordinates). This ensures the model generalizes correctly to unseen LC-HRMS profile data.

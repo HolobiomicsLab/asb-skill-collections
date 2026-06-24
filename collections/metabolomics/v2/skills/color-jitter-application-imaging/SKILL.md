@@ -1,6 +1,8 @@
 ---
 name: color-jitter-application-imaging
-description: Use when preparing ion image data for representation learning in mass spectrometry imaging, specifically when you need to augment raw ion images to generate pairs of diverse views for contrastive loss training.
+description: Use when preparing ion image data for representation learning in mass
+  spectrometry imaging, specifically when you need to augment raw ion images to generate
+  pairs of diverse views for contrastive loss training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3564
@@ -13,12 +15,14 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # color-jitter-application-imaging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Color jitter is a data augmentation technique applied to ion images in mass spectrometry imaging to introduce controlled intensity variations across pixel channels, improving model robustness in contrastive learning. It is a component of the T_COL augmentation pipeline used in both COL (co-localized ion) and ISO (isotope ion) modes of DeepION.

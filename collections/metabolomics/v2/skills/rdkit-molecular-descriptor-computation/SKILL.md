@@ -1,6 +1,8 @@
 ---
 name: rdkit-molecular-descriptor-computation
-description: Use when when annotating .msp mass spectrometry files with chemical structure metadata and you need fast, offline molecular transformations (SMILES↔InChI, canonical SMILES generation) without network latency or service availability constraints;
+description: Use when when annotating .msp mass spectrometry files with chemical structure
+  metadata and you need fast, offline molecular transformations (SMILES↔InChI, canonical
+  SMILES generation) without network latency or service availability constraints;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3696
@@ -14,6 +16,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

@@ -1,6 +1,8 @@
 ---
 name: lipid-abundance-differential-analysis
-description: Use when you have a preprocessed and normalized lipid abundance matrix with batch identifiers and experimental group assignments, and you need to compare lipid levels across treatment conditions (e.
+description: Use when you have a preprocessed and normalized lipid abundance matrix
+  with batch identifiers and experimental group assignments, and you need to compare
+  lipid levels across treatment conditions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -15,13 +17,17 @@ metadata:
   - LIPID MAPS
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
 evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.
-- allows the identification of differentially abundant lipids in simple and complex experimental designs
+- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
+  per lipid and sample
+- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
+  of lipidomics data.
+- allows the identification of differentially abundant lipids in simple and complex
+  experimental designs
 - dealing with batch effect correction.
 claims: []
 provenance:

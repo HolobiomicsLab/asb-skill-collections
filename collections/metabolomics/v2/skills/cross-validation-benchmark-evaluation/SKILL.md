@@ -1,6 +1,9 @@
 ---
 name: cross-validation-benchmark-evaluation
-description: Use when you have developed a predictive model and need to compare its performance against established baselines (e.g., linear regression, Random Forest, Canonical Correlation Analysis) across multiple datasets with paired input-output features.
+description: Use when you have developed a predictive model and need to compare its
+  performance against established baselines (e.g., linear regression, Random Forest,
+  Canonical Correlation Analysis) across multiple datasets with paired input-output
+  features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -18,13 +21,18 @@ metadata:
   - Canonical Correlation Analysis (CCA)
   - scikit-learn
   - TensorFlow / Keras
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- these models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate Elastic Net, and Canonical
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- these models can predict the entire set of metabolites at once, and all models were
+  evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate
+  Elastic Net, and Canonical
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +56,7 @@ attribution:
 
 # cross-validation-benchmark-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A systematic evaluation protocol that uses nested and repeated cross-validation to rigorously benchmark a novel predictive model (MiMeNet) against multiple baseline methods across diverse datasets, ensuring fair comparison and robust performance estimation. This skill is essential when claiming methodological improvements over existing approaches and when generalization performance must be validated across multiple biological contexts.

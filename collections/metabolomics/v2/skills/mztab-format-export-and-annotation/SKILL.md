@@ -1,6 +1,8 @@
 ---
 name: mztab-format-export-and-annotation
-description: Use when after Casanovo has generated ranked peptide sequence predictions from MS/MS spectra and you need to persist, share, or integrate the results into a proteomics data management or visualization pipeline.
+description: Use when after Casanovo has generated ranked peptide sequence predictions
+  from MS/MS spectra and you need to persist, share, or integrate the results into
+  a proteomics data management or visualization pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3765
@@ -16,14 +18,17 @@ metadata:
   - PDV (Proteomics Data Viewer)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.
@@ -52,6 +57,7 @@ attribution:
 
 # mztab-format-export-and-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export de novo peptide sequencing predictions from Casanovo to mzTab format with standardized metadata, modification annotations in ProForma 2.0 notation, and per-residue confidence scores. This skill ensures that predicted peptide sequences, along with their MS/MS spectral metadata and quality metrics, are recorded in a portable, standards-compliant format suitable for downstream analysis and integration with visualization tools.

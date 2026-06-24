@@ -1,6 +1,8 @@
 ---
 name: group-annotation-integration
-description: Use when you have an expression matrix (e.g., heatmap_test.csv with genes as rows and samples as columns) and a corresponding group annotation file (e.g., group_info.csv with sample IDs and their group assignments).
+description: Use when you have an expression matrix (e.g., heatmap_test.csv with genes
+  as rows and samples as columns) and a corresponding group annotation file (e.g.,
+  group_info.csv with sample IDs and their group assignments).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3938
@@ -11,6 +13,7 @@ metadata:
   tools:
   - R Shiny
   - GraphBio
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

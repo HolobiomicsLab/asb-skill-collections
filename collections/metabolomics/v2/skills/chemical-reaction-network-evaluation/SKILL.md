@@ -1,6 +1,9 @@
 ---
 name: chemical-reaction-network-evaluation
-description: Use when you have a rule-based reaction prediction system (like Pickaxe) with a large rule set (e.g., ~1221 MetaCyc generalized rules), and you need to understand the scaling relationship between rule count and reaction coverage to decide how many rules to deploy for a specific application.
+description: Use when you have a rule-based reaction prediction system (like Pickaxe)
+  with a large rule set (e.g., ~1221 MetaCyc generalized rules), and you need to understand
+  the scaling relationship between rule count and reaction coverage to decide how
+  many rules to deploy for a specific application.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,6 +15,7 @@ metadata:
   - Python
   - MINE-Database (Pickaxe)
   - MongoDB or TSV export
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

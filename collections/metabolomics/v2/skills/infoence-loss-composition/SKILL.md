@@ -1,6 +1,8 @@
 ---
 name: infoence-loss-composition
-description: Use when when training embeddings from MS/MS spectra data where you need both discriminative power (to distinguish similar spectra) and reconstruction accuracy (to preserve peak and metadata information).
+description: Use when when training embeddings from MS/MS spectra data where you need
+  both discriminative power (to distinguish similar spectra) and reconstruction accuracy
+  (to preserve peak and metadata information).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - CLERMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS
@@ -40,6 +43,7 @@ attribution:
 
 # Compose InfoNCE and MSE Loss for Embedding Training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine InfoNCE contrastive loss and MSE reconstruction loss into a weighted composite loss function for training embeddings from MS/MS spectra peak information and metadata. This hybrid approach balances contrastive learning (discriminative separation) with reconstruction fidelity in a transformer-based embedding architecture.

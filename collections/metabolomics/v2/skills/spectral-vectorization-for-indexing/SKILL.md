@@ -1,6 +1,9 @@
 ---
 name: spectral-vectorization-for-indexing
-description: Use when when you have a collection of MS/MS reference spectra and unknown query spectra that must be rapidly matched against a large spectral library, and you need to enable approximate nearest neighbor indexing to reduce computational cost from exhaustive pairwise comparison to K-nearest neighbor.
+description: Use when when you have a collection of MS/MS reference spectra and unknown
+  query spectra that must be rapidly matched against a large spectral library, and
+  you need to enable approximate nearest neighbor indexing to reduce computational
+  cost from exhaustive pairwise comparison to K-nearest neighbor.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -12,11 +15,13 @@ metadata:
   - Faiss
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

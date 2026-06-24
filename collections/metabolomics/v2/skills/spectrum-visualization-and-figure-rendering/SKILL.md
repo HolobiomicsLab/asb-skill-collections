@@ -1,6 +1,9 @@
 ---
 name: spectrum-visualization-and-figure-rendering
-description: Use when when you have a processed or annotated MsmsSpectrum object (from USI loading or direct instantiation) and need to generate a figure showing observed peaks, their intensities, and assigned fragment ions (e.g., b/y ions) for publication or presentation.
+description: Use when when you have a processed or annotated MsmsSpectrum object (from
+  USI loading or direct instantiation) and need to generate a figure showing observed
+  peaks, their intensities, and assigned fragment ions (e.g., b/y ions) for publication
+  or presentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -14,12 +17,15 @@ metadata:
   - ProForma 2.0
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - spectrum_utils is a Python package
 - spectrum = sus.MsmsSpectrum.from_usi(usi)
 - import matplotlib.pyplot as plt
@@ -47,6 +53,7 @@ attribution:
 
 # Spectrum Visualization and Figure Rendering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create publication-quality mass spectrometry spectrum plots annotated with fragment ion assignments using spectrum_utils.plot and Matplotlib. This skill enables interactive and static visualization of tandem mass spectrometry data with customizable peak annotations, intensity scaling, and output formats suitable for peer-reviewed manuscripts.

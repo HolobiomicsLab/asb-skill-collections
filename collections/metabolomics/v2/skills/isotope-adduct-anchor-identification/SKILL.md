@@ -1,6 +1,8 @@
 ---
 name: isotope-adduct-anchor-identification
-description: Use when when you have extracted mass tracks (EICs) from individual LC-MS samples and need to establish reliable landmarks for subsequent pairwise or global alignment across a cohort.
+description: Use when when you have extracted mass tracks (EICs) from individual LC-MS
+  samples and need to establish reliable landmarks for subsequent pairwise or global
+  alignment across a cohort.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -17,11 +19,13 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 claims: []
@@ -47,6 +51,7 @@ attribution:
 
 # isotope-adduct-anchor-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify anchor mass tracks within individual LC-MS samples by detecting characteristic m/z differences corresponding to 13C/12C isotope patterns or common adducts (e.g., Na/H). These anchors serve as high-confidence reference points for cross-sample mass track alignment into a unified MassGrid.

@@ -14,6 +14,7 @@ metadata:
   - trelliscope
   - RStudio
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00650
   title: MODE

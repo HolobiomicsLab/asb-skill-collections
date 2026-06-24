@@ -1,6 +1,9 @@
 ---
 name: compositional-data-transformation-clr
-description: Use when apply CLR transformation when you have microbiome or metabolomic count data that sums to a constant across samples (relative abundance or compositional data) and intend to train supervised or unsupervised machine learning models (especially neural networks) that assume unbounded, linear.
+description: Use when apply CLR transformation when you have microbiome or metabolomic
+  count data that sums to a constant across samples (relative abundance or compositional
+  data) and intend to train supervised or unsupervised machine learning models (especially
+  neural networks) that assume unbounded, linear.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,13 +17,18 @@ metadata:
   - MiMeNet
   - scikit-learn
   - TensorFlow / Keras
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- these models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate Elastic Net, and Canonical
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- these models can predict the entire set of metabolites at once, and all models were
+  evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate
+  Elastic Net, and Canonical
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +52,7 @@ attribution:
 
 # Compositional Data Transformation (CLR)
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Center log-ratio (CLR) transformation converts compositional microbiome and metabolomic abundance data into a form suitable for neural network training by addressing the constant-sum constraint inherent in relative abundance data. This normalization is essential when modeling microbe-metabolite relationships to prevent spurious correlations and ensure the network learns true ecological associations rather than artifacts of compositional closure.

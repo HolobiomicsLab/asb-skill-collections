@@ -1,6 +1,8 @@
 ---
 name: xcms-ramclustr-data-object-integration
-description: Use when when you have raw LC-MS all-ion fragmentation (AIF) chromatograms in centroid mode and need to prepare them for metabolite annotation using fragment ion matching.
+description: Use when when you have raw LC-MS all-ion fragmentation (AIF) chromatograms
+  in centroid mode and need to prepare them for metabolite annotation using fragment
+  ion matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,13 +16,16 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
-- An example of feature annotation using LC-MS AIF chromatograms processed using xcms and RamClustR packages
+- An example of feature annotation using LC-MS AIF chromatograms processed using xcms
+  and RamClustR packages
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # xcms-ramclustr-data-object-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integration of xcms peak-picked data with RamClustR pseudo-MS/MS spectra to create a unified R object pair suitable for fragment-based metabolite annotation. This skill bridges feature detection and spectral clustering, enabling downstream annotation workflows in untargeted LC-MS all-ion fragmentation metabolomics.

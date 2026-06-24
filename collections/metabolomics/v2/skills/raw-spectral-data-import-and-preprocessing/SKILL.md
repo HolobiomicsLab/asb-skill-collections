@@ -1,6 +1,8 @@
 ---
 name: raw-spectral-data-import-and-preprocessing
-description: Use when you have raw metabolomics data in mzML or mzXML format and need to convert it into a normalized feature table (CSV or mzTab) via automated batch processing.
+description: Use when you have raw metabolomics data in mzML or mzXML format and need
+  to convert it into a normalized feature table (CSV or mzTab) via automated batch
+  processing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,6 +13,7 @@ metadata:
   - MZmine
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST
@@ -38,6 +41,7 @@ attribution:
 
 # raw-spectral-data-import-and-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import raw mass spectrometry data (mzML/mzXML format) into MZmine and apply batch processing configuration to perform feature detection, alignment, and normalization for metabolomics analysis. This skill bridges raw instrumental output to a processed feature table suitable for downstream chemotaxonomic or comparative metabolomics work.

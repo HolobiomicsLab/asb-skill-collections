@@ -1,6 +1,9 @@
 ---
 name: pixel-intensity-scaling-and-thresholding
-description: Use when after normalizing an MSI pixel array to TIC or an internal standard, when the raw pixel intensity distribution spans multiple orders of magnitude and produces images with poor contrast or where extreme outlier intensities would wash out spatial detail.
+description: Use when after normalizing an MSI pixel array to TIC or an internal standard,
+  when the raw pixel intensity distribution spans multiple orders of magnitude and
+  produces images with poor contrast or where extreme outlier intensities would wash
+  out spatial detail.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,14 +17,17 @@ metadata:
   - NumPy
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
-- If you want to use MSIGen in a Jupyter notebook, you may also need to install jupyter notebook
+- If you want to use MSIGen in a Jupyter notebook, you may also need to install jupyter
+  notebook
 - MSIGen is most easily used through Jupyter Notebooks or through the GUI.
 claims: []
 provenance:

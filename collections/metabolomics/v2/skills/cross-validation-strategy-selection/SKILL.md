@@ -1,6 +1,9 @@
 ---
 name: cross-validation-strategy-selection
-description: Use when when preparing to train supervised binary classification models (logistic regression, random forest, XGBoost) on metabolomics datasets in MeTEor, you must first decide between stratified k-fold cross-validation (suitable for larger, balanced cohorts) and leave-one-out cross-validation.
+description: Use when when preparing to train supervised binary classification models
+  (logistic regression, random forest, XGBoost) on metabolomics datasets in MeTEor,
+  you must first decide between stratified k-fold cross-validation (suitable for larger,
+  balanced cohorts) and leave-one-out cross-validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3957
@@ -10,6 +13,7 @@ metadata:
   tools:
   - MeTEor
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -17,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # cross-validation-strategy-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selection and configuration of appropriate cross-validation schemes (stratified k-fold or leave-one-out) for binary classification tasks on metabolomics data in MeTEor. This skill ensures that model performance metrics and ROC curves are computed under appropriate validation conditions that match the data structure and sample size.

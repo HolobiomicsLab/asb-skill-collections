@@ -1,6 +1,8 @@
 ---
 name: structural-annotation-integration
-description: Use when you have structural candidates from in silico tools (SIRIUS/CANOPUS) and library spectral matches from GNPS, but need to resolve conflicting or incomplete chemical classifications into a unified consensus.
+description: Use when you have structural candidates from in silico tools (SIRIUS/CANOPUS)
+  and library spectral matches from GNPS, but need to resolve conflicting or incomplete
+  chemical classifications into a unified consensus.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,14 +17,17 @@ metadata:
   - ConCISE
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

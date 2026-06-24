@@ -1,6 +1,8 @@
 ---
 name: multi-charge-state-ccs-handling
-description: Use when your TWIM-MS dataset contains ions with multiple charge states (e.g., +1, +2, +3 for the same molecular species) and you need CCS values that correctly account for the relationship between drift time, m/z, and charge state.
+description: Use when your TWIM-MS dataset contains ions with multiple charge states
+  (e.g., +1, +2, +3 for the same molecular species) and you need CCS values that correctly
+  account for the relationship between drift time, m/z, and charge state.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -41,6 +44,7 @@ attribution:
 
 # multi-charge-state-ccs-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate collision cross section (CCS) values for ions across multiple charge states in TWIM-MS data by establishing separate or unified calibration curves and applying charge-state-aware regression. This skill enables accurate CCS assignment for complex biomolecular mixtures where ions exist in multiple protonation or ionization states.

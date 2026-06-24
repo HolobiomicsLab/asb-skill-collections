@@ -1,6 +1,7 @@
 ---
 name: retention-time-alignment-index-mapping
-description: Use when when processing multiple LC-MS samples with varying scan numbers or retention-time drift, before constructing composite mass tracks for peak detection.
+description: Use when when processing multiple LC-MS samples with varying scan numbers
+  or retention-time drift, before constructing composite mass tracks for peak detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,11 +16,13 @@ metadata:
   - asari.mass_functions.nn_cluster_by_mz_seeds
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -44,6 +47,7 @@ attribution:
 
 # Retention-time alignment index mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps scan numbers across LC-MS samples to a reference retention-time coordinate system using sample-specific calibration dictionaries, enabling synchronized intensity summation across aligned mass tracks for downstream composite peak detection. This step is critical for accurate composite-map construction when samples have different scan acquisition patterns or retention-time drift.

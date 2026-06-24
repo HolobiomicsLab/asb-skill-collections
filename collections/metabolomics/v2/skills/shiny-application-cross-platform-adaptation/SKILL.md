@@ -1,6 +1,9 @@
 ---
 name: shiny-application-cross-platform-adaptation
-description: Use when when a Shiny application is documented or observed to run only on Windows, blocking deployment to Linux or macOS users. Typical triggers include hardcoded Windows path separators, unavailable packages on non-Windows systems, or system calls specific to the Windows API.
+description: Use when when a Shiny application is documented or observed to run only
+  on Windows, blocking deployment to Linux or macOS users. Typical triggers include
+  hardcoded Windows path separators, unavailable packages on non-Windows systems,
+  or system calls specific to the Windows API.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,11 +13,13 @@ metadata:
   - Shiny
   - R
   - RStudio / R IDE
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- QuantyFey is a Shiny application for the visualization, analysis, and quantification of mass spectrometry (MS) data
+- QuantyFey is a Shiny application for the visualization, analysis, and quantification
+  of mass spectrometry (MS) data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +43,7 @@ attribution:
 
 # shiny-application-cross-platform-adaptation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Audit and refactor a Windows-only Shiny application to run on Linux and macOS by identifying platform-specific dependencies, replacing OS-dependent code patterns, and validating cross-platform functionality. This skill ensures interactive R web applications can reach users across operating systems.

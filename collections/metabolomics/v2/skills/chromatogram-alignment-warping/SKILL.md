@@ -1,6 +1,9 @@
 ---
 name: chromatogram-alignment-warping
-description: Use when you have baseline-corrected and smoothed 2D-TIC chromatogram objects from individual GCxGC-MS samples that exhibit retention-time variations relative to a reference chromatogram, and you need to align peak positions across both dimensions before joining multiple samples for multiway PCA or.
+description: Use when you have baseline-corrected and smoothed 2D-TIC chromatogram
+  objects from individual GCxGC-MS samples that exhibit retention-time variations
+  relative to a reference chromatogram, and you need to align peak positions across
+  both dimensions before joining multiple samples for multiway PCA or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,13 +15,15 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # chromatogram-alignment-warping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns preprocessed 2D gas chromatography samples to a reference chromatogram using 2D correlation optimized warping (2DCOW), which corrects for retention-time drift and nonlinear distortion across both chromatographic dimensions. This skill is essential after baseline correction and smoothing to enable accurate multivariate comparison of GCxGC-MS profiles.

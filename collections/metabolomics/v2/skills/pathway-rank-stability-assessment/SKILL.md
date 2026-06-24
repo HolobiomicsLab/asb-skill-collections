@@ -1,6 +1,8 @@
 ---
 name: pathway-rank-stability-assessment
-description: Use when when you have completed a PALS pathway analysis on a clean metabolomics peak intensity matrix and pathway annotation set, and you need to verify that the ranked pathway discoveries are not artifacts of favorable data quality.
+description: Use when when you have completed a PALS pathway analysis on a clean metabolomics
+  peak intensity matrix and pathway annotation set, and you need to verify that the
+  ranked pathway discoveries are not artifacts of favorable data quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -16,14 +18,17 @@ metadata:
   - GSEA
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # pathway-rank-stability-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the robustness of pathway activity rankings under realistic perturbations (Gaussian noise and random peak dropout) to validate that top-scoring pathways remain stable across degraded metabolomics data. This skill is essential for assessing whether PALS pathway decomposition produces reliable discoveries despite the noise and missing peaks prevalent in mass spectrometry workflows.

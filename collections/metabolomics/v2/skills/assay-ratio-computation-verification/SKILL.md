@@ -1,6 +1,8 @@
 ---
 name: assay-ratio-computation-verification
-description: Use when after calling buildExperiment on metabolomics data to construct a SummarizedExperiment object, before performing batch correction, outlier detection, or other QC calculations that depend on ratio assay values.
+description: Use when after calling buildExperiment on metabolomics data to construct
+  a SummarizedExperiment object, before performing batch correction, outlier detection,
+  or other QC calculations that depend on ratio assay values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - SummarizedExperiment
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -43,6 +46,7 @@ attribution:
 
 # assay-ratio-computation-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that the ratio assay (compound area divided by internal standard area) is correctly computed in a SummarizedExperiment object, including validation of default behavior when no secondary assay is provided. This skill ensures the mathematical correctness of the normalized compound/internal standard ratios before downstream QC analyses.

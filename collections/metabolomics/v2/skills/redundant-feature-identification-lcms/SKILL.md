@@ -1,6 +1,8 @@
 ---
 name: redundant-feature-identification-lcms
-description: Use when after alignment of two or more same-method nontargeted LCMS datasets (e.g., via Eclipse) when you have a feature table containing retention times and feature intensities across samples. Use it when redundancy is expected—e.
+description: Use when after alignment of two or more same-method nontargeted LCMS
+  datasets (e.g., via Eclipse) when you have a feature table containing retention
+  times and feature intensities across samples. Use it when redundancy is expected—e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,6 +17,7 @@ metadata:
   - Blueshift
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

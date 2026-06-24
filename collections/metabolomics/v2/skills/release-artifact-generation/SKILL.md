@@ -1,11 +1,15 @@
 ---
 name: release-artifact-generation
-description: Use when when a software project has reached a stable milestone (v-tagged commit) and you need to produce official distribution artifacts with verified version metadata, checksums, and release documentation that can be validated against a published GitHub release record.
+description: Use when when a software project has reached a stable milestone (v-tagged
+  commit) and you need to produce official distribution artifacts with verified version
+  metadata, checksums, and release documentation that can be validated against a published
+  GitHub release record.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - Semantic Release
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
@@ -34,6 +38,7 @@ attribution:
 
 # release-artifact-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and validate versioned release artifacts (binaries, source distributions, release notes) from a tagged repository state using automated semantic versioning tools. This skill ensures reproducible, traceable software releases with checksummed outputs that match reference records.

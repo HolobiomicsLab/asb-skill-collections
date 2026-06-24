@@ -1,6 +1,8 @@
 ---
 name: pre-trained-model-fine-tuning
-description: Use when you have a small training dataset for molecular property prediction (e.g., <500 samples from PredRet or MoNA databases) and a pre-trained GNN model is available that was trained on a related, larger molecular corpus.
+description: Use when you have a small training dataset for molecular property prediction
+  (e.g., <500 samples from PredRet or MoNA databases) and a pre-trained GNN model
+  is available that was trained on a related, larger molecular corpus.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -14,6 +16,7 @@ metadata:
   - retention_time_gnn
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn
@@ -41,6 +44,7 @@ attribution:
 
 # pre-trained-model-fine-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transfer a pre-trained graph neural network model to a new retention time prediction task by loading frozen encoder weights and retraining only the prediction head on a small target dataset. This approach leverages knowledge from large pre-training corpora (METLIN-SMRT) to overcome data scarcity in specialized domains.

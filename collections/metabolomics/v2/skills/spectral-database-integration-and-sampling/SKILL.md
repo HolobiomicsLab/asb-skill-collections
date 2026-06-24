@@ -1,6 +1,8 @@
 ---
 name: spectral-database-integration-and-sampling
-description: Use when you need to generate synthetic LC/GC-MS feature tables or raw mzML files with realistic peak complexity, ion multiplicities, and natural spectral variation—not just theoretical m/z values.
+description: Use when you need to generate synthetic LC/GC-MS feature tables or raw
+  mzML files with realistic peak complexity, ion multiplicities, and natural spectral
+  variation—not just theoretical m/z values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3812
@@ -17,11 +19,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -46,6 +50,7 @@ attribution:
 
 # spectral-database-integration-and-sampling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load experimental mass spectrometry spectral databases (MoNA, HMDB) and probabilistically sample compounds and their fragmentation patterns to seed realistic LC/GC-MS data simulation. This skill bridges real spectral repositories to synthetic peak generation, ensuring simulated data retains structural and chemical complexity of observed MS1 spectra.

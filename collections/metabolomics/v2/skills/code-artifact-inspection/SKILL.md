@@ -7,6 +7,7 @@ metadata:
   tools:
   - GitHub
   - local code artifact
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fmolb.2022.952149
   title: TurboPutative
@@ -37,6 +38,7 @@ attribution:
 
 # code_artifact_inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## When to use
 
 Use when the workflow requires code_artifact_inspection.

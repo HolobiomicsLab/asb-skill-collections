@@ -1,6 +1,9 @@
 ---
 name: msi-data-matrix-import-and-validation
-description: Use when you have MSI intensity data exported from MSiReader, SCiLS, or Cardinal as plain-text CSV files or as Cardinal MSProcessedImagingExperiment/MSContinuousImagingExperiment objects, and need to load it into R as a validated msimat object for mass difference and adduct analysis.
+description: Use when you have MSI intensity data exported from MSiReader, SCiLS,
+  or Cardinal as plain-text CSV files or as Cardinal MSProcessedImagingExperiment/MSContinuousImagingExperiment
+  objects, and need to load it into R as a validated msimat object for mass difference
+  and adduct analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -15,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # MSI Data Matrix Import and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import mass spectrometry imaging (MSI) intensity data from CSV or Cardinal objects into R and validate the resulting matrix representation. This skill ensures data integrity and correct format conversion before downstream adduct detection and correlation analysis.

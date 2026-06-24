@@ -1,6 +1,9 @@
 ---
 name: model-checkpoint-serialization
-description: Use when after successfully training a spectrum prediction model (FFN encoder, GNN encoder, intensity predictor, or fragment generator) to completion or at intermediate milestones, and before using that model for inference on test sets, structural elucidation queries, or transfer learning.
+description: Use when after successfully training a spectrum prediction model (FFN
+  encoder, GNN encoder, intensity predictor, or fragment generator) to completion
+  or at intermediate milestones, and before using that model for inference on test
+  sets, structural elucidation queries, or transfer learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -19,6 +22,7 @@ metadata:
   - AnnData
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
@@ -26,7 +30,8 @@ derived_from:
   title: ''
 evidence_spans:
 - _No usage/docs found._
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 - spatialMETA is a method for integrating spatial multi-omics data
 - spatialmeta.pp.calculate_qc_metrics_sm

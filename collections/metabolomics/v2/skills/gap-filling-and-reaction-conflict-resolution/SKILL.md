@@ -1,6 +1,9 @@
 ---
 name: gap-filling-and-reaction-conflict-resolution
-description: Use when when merging multiple draft metabolic models (in JSON, XML, or SBML format) from community members or assembly variants and you encounter conflicting reaction annotations, missing metabolic pathways, or incomplete gap-filling decisions that require arbitration across inputs.
+description: Use when when merging multiple draft metabolic models (in JSON, XML,
+  or SBML format) from community members or assembly variants and you encounter conflicting
+  reaction annotations, missing metabolic pathways, or incomplete gap-filling decisions
+  that require arbitration across inputs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3837
@@ -10,6 +13,7 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -38,6 +42,7 @@ attribution:
 
 # gap-filling-and-reaction-conflict-resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve metabolic pathway conflicts and fill gaps in consensus reconstructions by applying community-dependent logic to select the most-supported reactions across multiple draft genome-scale models. This skill ensures the final consensus reconstruction captures biologically plausible pathways that are collectively supported by the input community members.

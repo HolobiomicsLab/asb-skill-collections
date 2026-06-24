@@ -1,6 +1,8 @@
 ---
 name: spectrum-filtering-and-normalization
-description: Use when you have raw or minimally processed tandem MS spectra (in mzML, mgf, or other standard formats) and need to prepare them for spectral matching, library searching, or quantitative analysis.
+description: Use when you have raw or minimally processed tandem MS spectra (in mzML,
+  mgf, or other standard formats) and need to prepare them for spectral matching,
+  library searching, or quantitative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -18,12 +20,15 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - pymzML](https://github.com/pymzml/pymzML/) (version 2.5.2)
 - pyOpenMS](https://pyopenms.readthedocs.io/) (version 2.7.0)
 - spectrum_utils is a Python package
@@ -51,6 +56,7 @@ attribution:
 
 # spectrum-filtering-and-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A suite of computational operations to clean and standardize mass spectrometry spectra by removing noise, filtering peaks by intensity, adjusting m/z ranges, and applying intensity scaling transformations. These operations optimize spectra for downstream analysis while reducing computational overhead and improving comparability across datasets.

@@ -1,6 +1,8 @@
 ---
 name: batch-spectral-record-processing
-description: Use when you have acquired MS/MS spectra in .msp format (e.g., from MassBank or experimental acquisition) and need to transform them into a structured library format compatible with automated annotation tools.
+description: Use when you have acquired MS/MS spectra in .msp format (e.g., from MassBank
+  or experimental acquisition) and need to transform them into a structured library
+  format compatible with automated annotation tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +15,13 @@ metadata:
   - MassBank
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # Batch spectral record processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert MS/MS spectra from library files (e.g., .msp format) into metabolite annotation database entries by applying peak-picking, occurrence scoring, and ionization-mode classification. This skill enables high-throughput transformation of raw spectral data into structured, reusable fragment libraries for metabolite identification.

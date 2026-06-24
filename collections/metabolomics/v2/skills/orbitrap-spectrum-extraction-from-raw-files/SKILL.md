@@ -1,6 +1,9 @@
 ---
 name: orbitrap-spectrum-extraction-from-raw-files
-description: Use when you have a Thermo Fisher Orbitrap .raw file and need to retrieve a specific scan's spectral data (m/z and intensity arrays), validate instrument parameters (resolving power, AGC injection time), or assess signal-to-noise characteristics of fragment ions for a known precursor peptide (e.
+description: Use when you have a Thermo Fisher Orbitrap .raw file and need to retrieve
+  a specific scan's spectral data (m/z and intensity arrays), validate instrument
+  parameters (resolving power, AGC injection time), or assess signal-to-noise characteristics
+  of fragment ions for a known precursor peptide (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,6 +18,7 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -22,8 +26,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -49,6 +55,7 @@ attribution:
 
 # orbitrap-spectrum-extraction-from-raw-files
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract individual MS/MS spectra from Thermo Fisher Scientific Orbitrap .raw files with full instrument metadata (resolving power, AGC target, injection time) and centroided m/z–intensity arrays. This skill enables reproducible access to raw spectral data and quality assessment of peptide fragmentation in bottom-up proteomics workflows.

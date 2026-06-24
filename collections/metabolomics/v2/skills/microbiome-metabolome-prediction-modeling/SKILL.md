@@ -1,6 +1,9 @@
 ---
 name: microbiome-metabolome-prediction-modeling
-description: Use when you have paired microbiome (16S rRNA, metagenomic) and metabolomic (LC-MS, GC-MS) abundance tables from the same biosamples, and you want to predict which metabolites are recoverable from microbial composition alone and identify groups of microbes and metabolites with correlated.
+description: Use when you have paired microbiome (16S rRNA, metagenomic) and metabolomic
+  (LC-MS, GC-MS) abundance tables from the same biosamples, and you want to predict
+  which metabolites are recoverable from microbial composition alone and identify
+  groups of microbes and metabolites with correlated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -21,13 +24,18 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- these models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate Elastic Net, and Canonical
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- these models can predict the entire set of metabolites at once, and all models were
+  evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate
+  Elastic Net, and Canonical
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +59,7 @@ attribution:
 
 # microbiome-metabolome-prediction-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and evaluate neural network models to predict metabolite abundances from microbiome composition data, with cross-validated performance assessment and identification of well-predicted metabolites above a background correlation threshold. This skill enables data-driven discovery of microbe-metabolite interaction structures without mechanistic prior knowledge.

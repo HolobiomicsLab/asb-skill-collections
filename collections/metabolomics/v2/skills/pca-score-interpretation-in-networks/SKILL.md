@@ -1,6 +1,8 @@
 ---
 name: pca-score-interpretation-in-networks
-description: Use when you have both (1) a sparse network graph from GLASSO showing conditional dependencies among variables, and (2) PCA scores representing variance or loadings in a lower-dimensional space.
+description: Use when you have both (1) a sparse network graph from GLASSO showing
+  conditional dependencies among variables, and (2) PCA scores representing variance
+  or loadings in a lower-dimensional space.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -11,6 +13,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -39,6 +42,7 @@ attribution:
 
 # PCA-score interpretation in networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill overlays PCA scores onto GLASSO-generated network graphs to visually identify and label significant sub-networks based on score patterns and topology. It bridges dimensionality reduction (PCA) with sparse inverse covariance estimation (GLASSO) to reveal structure-function relationships in high-dimensional data.

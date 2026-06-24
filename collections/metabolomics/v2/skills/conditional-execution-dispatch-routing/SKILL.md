@@ -1,6 +1,9 @@
 ---
 name: conditional-execution-dispatch-routing
-description: Use when when you have a Streamlit workflow application that must support both offline (local machine, Windows installer) and online (Docker, cloud) deployment modes, and you need to decide at runtime whether to queue jobs remotely via Redis or spawn local processes.
+description: Use when when you have a Streamlit workflow application that must support
+  both offline (local machine, Windows installer) and online (Docker, cloud) deployment
+  modes, and you need to decide at runtime whether to queue jobs remotely via Redis
+  or spawn local processes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - RQ (Redis Queue)
   - multiprocessing
   - Streamlit
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -42,6 +46,7 @@ attribution:
 
 # conditional-execution-dispatch-routing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Route workflow execution between distributed (Redis Queue) and local (multiprocessing) backends based on deployment mode, ensuring graceful fallback when remote infrastructure is unavailable. This skill enables a single codebase to scale from local development to cloud-hosted deployments without code changes.

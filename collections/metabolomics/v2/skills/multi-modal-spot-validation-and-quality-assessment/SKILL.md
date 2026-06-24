@@ -1,6 +1,9 @@
 ---
 name: multi-modal-spot-validation-and-quality-assessment
-description: Use when after performing spot_align_byknn to map SM spots to ST spots, validate that all SM spots have been successfully assigned and that the Euclidean distance distributions between SM spots and their assigned nearest ST neighbors are reasonable (no outliers or failed assignments that would.
+description: Use when after performing spot_align_byknn to map SM spots to ST spots,
+  validate that all SM spots have been successfully assigned and that the Euclidean
+  distance distributions between SM spots and their assigned nearest ST neighbors
+  are reasonable (no outliers or failed assignments that would.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +16,7 @@ metadata:
   - scikit-learn NearestNeighbors
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

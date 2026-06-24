@@ -1,6 +1,8 @@
 ---
 name: json-response-parsing
-description: Use when when querying a TensorFlow Serving metadata endpoint or similar REST API that returns JSON-formatted model metadata, and you need to programmatically extract and validate input/output layer names against known specifications (e.
+description: Use when when querying a TensorFlow Serving metadata endpoint or similar
+  REST API that returns JSON-formatted model metadata, and you need to programmatically
+  extract and validate input/output layer names against known specifications (e.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -10,6 +12,7 @@ metadata:
   - TensorFlow Serving
   - docker-compose
   - tensorflow serving
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation
@@ -48,6 +51,7 @@ attribution:
 
 # JSON Response Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate structured metadata from JSON responses returned by service endpoints (e.g., TensorFlow Serving /model/metadata). This skill is essential when deploying machine learning models through containerized services and need to verify that model layer names and signatures match expected specifications.

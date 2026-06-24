@@ -1,6 +1,9 @@
 ---
 name: residue-position-mapping-to-spectrum-peaks
-description: Use when when you have an MS2 spectrum (FT2 scan or mzML) with observed peak data (m/z, intensity, charge states), a peptide sequence, and need to annotate which amino acid residues generated each matched fragment ion—particularly in stable isotope labeling experiments where isotopic mass shifts.
+description: Use when when you have an MS2 spectrum (FT2 scan or mzML) with observed
+  peak data (m/z, intensity, charge states), a peptide sequence, and need to annotate
+  which amino acid residues generated each matched fragment ion—particularly in stable
+  isotope labeling experiments where isotopic mass shifts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,12 +17,15 @@ metadata:
   - mzR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 - Extract visualization information from `.FT2` files
 claims: []

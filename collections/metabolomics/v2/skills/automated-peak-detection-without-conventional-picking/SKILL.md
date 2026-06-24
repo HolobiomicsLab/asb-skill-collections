@@ -1,6 +1,9 @@
 ---
 name: automated-peak-detection-without-conventional-picking
-description: Use when you have a two-dimensional GC–MS or LC–MS dataset (m/z vs retention time) and need to identify discriminative analyte features without relying on conventional peak picking algorithms. This is especially valuable when analyzing complex, low-abundance samples (e.
+description: Use when you have a two-dimensional GC–MS or LC–MS dataset (m/z vs retention
+  time) and need to identify discriminative analyte features without relying on conventional
+  peak picking algorithms. This is especially valuable when analyzing complex, low-abundance
+  samples (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -21,9 +25,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +55,7 @@ attribution:
 
 # Automated Peak Detection Without Conventional Picking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies image processing and machine learning to chromatography–mass spectrometry data to automatically identify multivariate marker features directly from two-dimensional MS maps (m/z vs retention time), bypassing conventional peak picking which suffers from false detections. It is particularly suited for untargeted metabolomics of complex samples like human breath at parts per billion sensitivity levels.

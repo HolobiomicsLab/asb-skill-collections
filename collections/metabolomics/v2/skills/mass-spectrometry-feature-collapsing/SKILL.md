@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-feature-collapsing
-description: Use when after XCMS CentWave feature extraction when your feature table contains redundant entries — multiple features with highly similar m/z and retention time values that represent the same metabolite.
+description: Use when after XCMS CentWave feature extraction when your feature table
+  contains redundant entries — multiple features with highly similar m/z and retention
+  time values that represent the same metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -12,6 +14,7 @@ metadata:
   - Paramounter
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c04758
   title: Paramounter

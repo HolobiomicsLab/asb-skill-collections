@@ -1,6 +1,8 @@
 ---
 name: tanimoto-similarity-pairwise-calculation
-description: Use when you have a collection of molecular fingerprint vectors (such as biosynfoni count fingerprints) and need to measure structural similarity between all pairs of molecules.
+description: Use when you have a collection of molecular fingerprint vectors (such
+  as biosynfoni count fingerprints) and need to measure structural similarity between
+  all pairs of molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -11,12 +13,14 @@ metadata:
   - biosynfoni
   - pip
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: json-configuration-parsing
-description: Use when you need to implement a converter or standardization system that must map multiple incompatible nomenclature styles (e.g., lipid abbreviations from 5+ databases and 17+ software programs) into a single unified format.
+description: Use when you need to implement a converter or standardization system
+  that must map multiple incompatible nomenclature styles (e.g., lipid abbreviations
+  from 5+ databases and 17+ software programs) into a single unified format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,12 +14,14 @@ metadata:
   - Black
   - Visual Studio Code
   - PyCharm
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.04.09.033894
   title: LipidLynxX
 evidence_spans:
 - The LipidLynxX project is aimed to provide a unified identifier for major lipids
-- LipidLynxX source code use [code style Black](https://github.com/psf/black) for all python codes
+- LipidLynxX source code use [code style Black](https://github.com/psf/black) for
+  all python codes
 - JSON configurations are formatted by Visual Studio Code / PyCharm editor
 claims: []
 provenance:

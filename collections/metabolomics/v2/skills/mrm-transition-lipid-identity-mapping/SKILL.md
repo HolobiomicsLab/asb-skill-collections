@@ -1,6 +1,7 @@
 ---
 name: mrm-transition-lipid-identity-mapping
-description: Use when after parsing raw MRM data into a transition table containing m/z values, retention times, and transition parameters.
+description: Use when after parsing raw MRM data into a transition table containing
+  m/z values, retention times, and transition parameters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,6 +14,7 @@ metadata:
   - pymzml
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

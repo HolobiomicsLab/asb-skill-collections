@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-fragmentation-modeling
-description: Use when you are generating synthetic LC-MS/MS data for method validation, algorithm benchmarking, or co-fragmentation analysis, and need to model how specific biomolecules (peptides, nucleosides, or other chemical formulas) fragment under collision-induced dissociation.
+description: Use when you are generating synthetic LC-MS/MS data for method validation,
+  algorithm benchmarking, or co-fragmentation analysis, and need to model how specific
+  biomolecules (peptides, nucleosides, or other chemical formulas) fragment under
+  collision-induced dissociation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,11 +15,13 @@ metadata:
   - pyQms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
 evidence_spans:
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
+  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

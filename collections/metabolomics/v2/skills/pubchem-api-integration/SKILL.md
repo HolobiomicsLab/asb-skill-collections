@@ -1,6 +1,9 @@
 ---
 name: pubchem-api-integration
-description: Use when when you have raw chemical structures in diverse input formats (SMILES, SDF, or other molecular representations) from multiple sources and need to produce a uniform, canonicalized representation before molecular descriptor calculation, fingerprinting, or retention time modeling.
+description: Use when when you have raw chemical structures in diverse input formats
+  (SMILES, SDF, or other molecular representations) from multiple sources and need
+  to produce a uniform, canonicalized representation before molecular descriptor calculation,
+  fingerprinting, or retention time modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -10,6 +13,7 @@ metadata:
   tools:
   - PubChem standardization
   - rcdk
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

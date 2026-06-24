@@ -1,6 +1,9 @@
 ---
 name: dysregulation-score-computation
-description: Use when you have per-sample metabolite abundance data (e.g., from LC-MS or GC-MS) and a metabolite-to-pathway assignment table, and need to generate a sample-by-pathway dysregulation matrix for downstream classification, prognosis prediction, or pathway-level phenotype association.
+description: Use when you have per-sample metabolite abundance data (e.g., from LC-MS
+  or GC-MS) and a metabolite-to-pathway assignment table, and need to generate a sample-by-pathway
+  dysregulation matrix for downstream classification, prognosis prediction, or pathway-level
+  phenotype association.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,12 +18,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: spot-level-intensity-aggregation
-description: Use when after loading spatial metabolomics data (from CSV, imzML, or merged positive/negative ion modes) into an AnnData object, and before filtering or alignment steps.
+description: Use when after loading spatial metabolomics data (from CSV, imzML, or
+  merged positive/negative ion modes) into an AnnData object, and before filtering
+  or alignment steps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - spatialmeta.pp.filter_cells_sm
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

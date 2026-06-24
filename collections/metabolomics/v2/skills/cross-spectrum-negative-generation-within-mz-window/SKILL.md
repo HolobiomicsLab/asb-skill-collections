@@ -1,6 +1,7 @@
 ---
 name: cross-spectrum-negative-generation-within-mz-window
-description: Use when when preparing augmented training data for a Siamese rescore model that must learn to rank correct molecular formulas above incorrect ones;
+description: Use when when preparing augmented training data for a Siamese rescore
+  model that must learn to rank correct molecular formulas above incorrect ones;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -12,6 +13,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +42,7 @@ attribution:
 
 # cross-spectrum-negative-generation-within-mz-window
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate negative training examples for MS/MS rescore models by pairing spectra within a defined precursor m/z window, creating hard negatives that improve model discrimination between correct and incorrect molecular formula candidates.

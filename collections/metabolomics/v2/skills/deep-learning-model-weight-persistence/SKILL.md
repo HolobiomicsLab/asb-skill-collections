@@ -1,6 +1,8 @@
 ---
 name: deep-learning-model-weight-persistence
-description: Use when you are training a deep learning model using k-fold cross-validation on an HPC cluster with SLURM job arrays, where each fold runs as a separate independent job with its own GPU allocation.
+description: Use when you are training a deep learning model using k-fold cross-validation
+  on an HPC cluster with SLURM job arrays, where each fold runs as a separate independent
+  job with its own GPU allocation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - MSNovelist
   - SLURM
   - Singularity
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

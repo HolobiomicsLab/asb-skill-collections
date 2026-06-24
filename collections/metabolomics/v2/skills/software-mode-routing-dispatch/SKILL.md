@@ -1,6 +1,8 @@
 ---
 name: software-mode-routing-dispatch
-description: 'Use when you are preparing to run LipidMatch or FluoroMatch and need to select the correct analysis mode for your sample type: lipid profiling, Tween-positive surfactant analysis, or PFAS (per- and polyfluoroalkyl substances) analysis.'
+description: 'Use when you are preparing to run LipidMatch or FluoroMatch and need
+  to select the correct analysis mode for your sample type: lipid profiling, Tween-positive
+  surfactant analysis, or PFAS (per- and polyfluoroalkyl substances) analysis.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,6 +14,7 @@ metadata:
   - LipidMatch
   - R
   - FluoroMatch
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -41,6 +44,7 @@ attribution:
 
 # software-mode-routing-dispatch
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure boolean parameters in LipidMatch to route analysis execution toward lipid detection, Tween-positive detection, or PFAS analysis based on intended application. This skill encodes conditional dispatch logic that determines which algorithmic pathway executes at runtime.

@@ -1,6 +1,8 @@
 ---
 name: metadata-batch-assignment-verification
-description: Use when after data merging and before applying batch correction algorithms (ComBat, SVA, or normalization techniques) to a merged feature table from non-targeted LC-MS/MS metabolomics data.
+description: Use when after data merging and before applying batch correction algorithms
+  (ComBat, SVA, or normalization techniques) to a merged feature table from non-targeted
+  LC-MS/MS metabolomics data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,6 +15,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

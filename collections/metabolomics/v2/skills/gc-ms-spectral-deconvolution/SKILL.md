@@ -1,6 +1,8 @@
 ---
 name: gc-ms-spectral-deconvolution
-description: Use when you have raw GC-MS data (in netCDF or vendor format) containing overlapping chromatographic peaks from complex mixtures where individual compound spectra cannot be resolved by simple peak picking.
+description: Use when you have raw GC-MS data (in netCDF or vendor format) containing
+  overlapping chromatographic peaks from complex mixtures where individual compound
+  spectra cannot be resolved by simple peak picking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +15,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
 evidence_spans:
 - MSHub auto-deconvolution
-- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry
+  data
 - GNPS molecular networking
 claims: []
 provenance:

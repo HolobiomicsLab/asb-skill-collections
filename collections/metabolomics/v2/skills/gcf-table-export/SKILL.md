@@ -1,6 +1,9 @@
 ---
 name: gcf-table-export
-description: Use when you have completed a BiG-SLiCE v2 clustering run and need to extract the pre-calculated BGC and GCF cluster assignments in TSV format for postprocessing, integration with SQL pipelines, or sharing with collaborators who require flat tabular output rather than the SQLite database or.
+description: Use when you have completed a BiG-SLiCE v2 clustering run and need to
+  extract the pre-calculated BGC and GCF cluster assignments in TSV format for postprocessing,
+  integration with SQL pipelines, or sharing with collaborators who require flat tabular
+  output rather than the SQLite database or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +13,7 @@ metadata:
   tools:
   - BiG-SLiCE
   - pyHMMER
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

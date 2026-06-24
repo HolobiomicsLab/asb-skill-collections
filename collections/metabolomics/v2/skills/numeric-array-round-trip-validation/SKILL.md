@@ -1,6 +1,9 @@
 ---
 name: numeric-array-round-trip-validation
-description: Use when after implementing or modifying a numerical compression codec (such as MSNumpressCoder for m/z and intensity arrays in mass-spectrometry workflows) to verify that round-trip encode–decode cycles preserve numerical values within expected tolerance.
+description: Use when after implementing or modifying a numerical compression codec
+  (such as MSNumpressCoder for m/z and intensity arrays in mass-spectrometry workflows)
+  to verify that round-trip encode–decode cycles preserve numerical values within
+  expected tolerance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +16,7 @@ metadata:
   - OpenMS unit test suite
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -41,6 +45,7 @@ attribution:
 
 # numeric-array-round-trip-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate numerical compression and decompression by encoding test arrays, decoding the result, and comparing decoded values against originals for equality within machine precision. This skill ensures fidelity of lossy or lossless compression codecs used in mass-spectrometry data pipelines.

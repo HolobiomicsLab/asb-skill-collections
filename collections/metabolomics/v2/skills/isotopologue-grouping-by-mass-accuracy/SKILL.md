@@ -1,6 +1,8 @@
 ---
 name: isotopologue-grouping-by-mass-accuracy
-description: Use when after PuInc_seeker has identified putative incorporations in a stable-isotope-labeled LC/MS dataset (e.g., CELL_Glc12 unlabeled vs. CELL_Glc13 labeled samples).
+description: Use when after PuInc_seeker has identified putative incorporations in
+  a stable-isotope-labeled LC/MS dataset (e.g., CELL_Glc12 unlabeled vs. CELL_Glc13
+  labeled samples).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

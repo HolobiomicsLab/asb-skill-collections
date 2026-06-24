@@ -1,6 +1,8 @@
 ---
 name: system-environment-configuration
-description: Use when you need to execute a complex computational chemistry workflow (QCxMS2) that depends on multiple external semiempirical and ab initio quantum chemistry packages.
+description: Use when you need to execute a complex computational chemistry workflow
+  (QCxMS2) that depends on multiple external semiempirical and ab initio quantum chemistry
+  packages.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,11 +18,13 @@ metadata:
   - orca
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**molbar** (version >= 1.1.3)'
 - '**geodesic_interpolate** (version'

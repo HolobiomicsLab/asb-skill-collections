@@ -1,6 +1,9 @@
 ---
 name: lipid-library-format-specification
-description: Use when when you have curated or synthesized a set of custom lipid species (e.g., rare or organism-specific lipids, modified lipids, or synthetic standards) and need to integrate them into LipidMatch for candidate matching against your experimental MS/MS datasets.
+description: Use when when you have curated or synthesized a set of custom lipid species
+  (e.g., rare or organism-specific lipids, modified lipids, or synthetic standards)
+  and need to integrate them into LipidMatch for candidate matching against your experimental
+  MS/MS datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +14,7 @@ metadata:
   - LipidMatch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

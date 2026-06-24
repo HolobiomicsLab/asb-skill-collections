@@ -1,6 +1,9 @@
 ---
 name: spectral-library-integration-workflow
-description: Use when when you have experimental UHPLC-HRMS/MS data targeting lipid species not adequately covered by LipidMatch's built-in library (500,000+ species across 60+ lipid types), or when working with specialized applications requiring custom lipid definitions (e.
+description: Use when when you have experimental UHPLC-HRMS/MS data targeting lipid
+  species not adequately covered by LipidMatch's built-in library (500,000+ species
+  across 60+ lipid types), or when working with specialized applications requiring
+  custom lipid definitions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,12 +18,15 @@ metadata:
   - Compound Discoverer
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
 claims: []
 provenance:

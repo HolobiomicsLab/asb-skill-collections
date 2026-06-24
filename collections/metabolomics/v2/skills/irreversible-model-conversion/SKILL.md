@@ -1,6 +1,9 @@
 ---
 name: irreversible-model-conversion
-description: Use when you have a constraint-based metabolic model in SBML or similar format with reversible reactions and need to sample the feasible steady-state flux region using optGpSampler or other samplers that require an irreversible stoichiometric matrix.
+description: Use when you have a constraint-based metabolic model in SBML or similar
+  format with reversible reactions and need to sample the feasible steady-state flux
+  region using optGpSampler or other samplers that require an irreversible stoichiometric
+  matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,16 +19,22 @@ metadata:
   - optGpSampler
   - COBRApy
   - MATLAB/libSBML
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA
 - We used relative gene-expression values as in GX-FBA
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +58,7 @@ attribution:
 
 # Convert constraint-based metabolic model from reversible to irreversible format
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform a reversible constraint-based stoichiometric metabolic model into irreversible form by splitting each reversible reaction into distinct forward and backward variants. This conversion is necessary to enable uniform sampling of the feasible flux region using optGpSampler and other sampling algorithms that operate on irreversible model representations.

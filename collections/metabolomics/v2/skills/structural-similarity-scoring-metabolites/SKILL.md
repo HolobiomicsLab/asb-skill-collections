@@ -1,6 +1,9 @@
 ---
 name: structural-similarity-scoring-metabolites
-description: Use when when you have paired MS/MS spectra from unknown metabolites and a reference database of known metabolites, and you want to rank candidate structures for unknown compounds by their predicted structural similarity rather than exact spectral matching.
+description: Use when when you have paired MS/MS spectra from unknown metabolites
+  and a reference database of known metabolites, and you want to rank candidate structures
+  for unknown compounds by their predicted structural similarity rather than exact
+  spectral matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.8b05405
   title: Deep MS/MS similarity

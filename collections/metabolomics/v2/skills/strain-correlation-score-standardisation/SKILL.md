@@ -1,6 +1,9 @@
 ---
 name: strain-correlation-score-standardisation
-description: Use when you have computed raw strain correlation scores (based on shared strain membership) between genomic and metabolomic objects of heterogeneous sizes, and you need to compare link quality fairly across pairs with different numbers of strains.
+description: Use when you have computed raw strain correlation scores (based on shared
+  strain membership) between genomic and metabolomic objects of heterogeneous sizes,
+  and you need to compare link quality fairly across pairs with different numbers
+  of strains.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,18 +17,22 @@ metadata:
   - GNPS
   - MIBiG
   - NPLinker
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
+- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +57,7 @@ attribution:
 
 # strain-correlation-score-standardisation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardise raw strain correlation scores between gene cluster families (GCFs) and molecular families (MFs) by z-normalizing them against their hypergeometric expectation and variance, enabling fair comparison across links with different GCF and MF sizes. This converts size-biased raw scores into a uniform null distribution where validated links show significantly elevated z-scores.

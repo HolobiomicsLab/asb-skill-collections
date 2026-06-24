@@ -1,6 +1,8 @@
 ---
 name: tanimoto-similarity-computation
-description: Use when you have a trained MS2DeepScore neural network and a set of MS/MS spectra (52 binned peaks per spectrum after preprocessing) for which you need to compute pairwise structural similarity predictions.
+description: Use when you have a trained MS2DeepScore neural network and a set of
+  MS/MS spectra (52 binned peaks per spectrum after preprocessing) for which you need
+  to compute pairwise structural similarity predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,15 +18,20 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
 - mean squared error (MSE) loss
 claims: []
 provenance:
@@ -49,6 +56,7 @@ attribution:
 
 # tanimoto-similarity-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Tanimoto structural similarity scores between pairs of mass spectra by converting predicted cosine similarities of learned 200-dimensional spectral embeddings into Tanimoto scores, benchmarked against reference RDKit Daylight fingerprint (2048 bits) similarities. This skill quantifies how well predicted structural similarities match ground-truth fingerprint-based chemical similarity.

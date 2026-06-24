@@ -1,6 +1,8 @@
 ---
 name: multiassayexperiment-object-manipulation
-description: Use when when you have parsed metabolite measurements into a table (rows = metabolites, columns = samples) and have corresponding sample-level covariates (e.g., disease status, treatment group) and/or feature-level annotations (e.
+description: Use when when you have parsed metabolite measurements into a table (rows
+  = metabolites, columns = samples) and have corresponding sample-level covariates
+  (e.g., disease status, treatment group) and/or feature-level annotations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,6 +14,7 @@ metadata:
   - MetaboDiff
   - MultiAssayExperiment
   - SMPDB (Small Molecular Pathway Database)
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -46,6 +49,7 @@ attribution:
 
 # MultiAssayExperiment Object Manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construction and management of MultiAssayExperiment objects that integrate assay matrices, sample metadata, and feature annotations into a unified data structure for downstream metabolomic analysis. This skill enables seamless coordination of heterogeneous data layers required for differential metabolomic workflows.

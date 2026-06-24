@@ -1,6 +1,9 @@
 ---
 name: nmr-spectrum-to-structure-inference
-description: Use when you have 1D NMR spectra (¹H or ¹³C or both) for an unknown organic compound with ≤19 heavy atoms and need to rapidly predict its molecular formula and connectivity graph without manual peak interpretation or exhaustive combinatorial search.
+description: Use when you have 1D NMR spectra (¹H or ¹³C or both) for an unknown organic
+  compound with ≤19 heavy atoms and need to rapidly predict its molecular formula
+  and connectivity graph without manual peak interpretation or exhaustive combinatorial
+  search.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -12,6 +15,7 @@ metadata:
   - Convolutional neural network
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -39,6 +43,7 @@ attribution:
 
 # nmr-spectrum-to-structure-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a multitask transformer–CNN architecture to predict molecular structure (formula and connectivity) directly from 1D ¹H and/or ¹³C NMR spectra. This skill automates the chemist's task of assembling molecular fragments into complete structures, applicable to molecules with up to 19 heavy atoms.

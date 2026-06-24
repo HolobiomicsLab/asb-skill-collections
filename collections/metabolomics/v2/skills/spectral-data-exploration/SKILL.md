@@ -1,6 +1,7 @@
 ---
 name: spectral-data-exploration
-description: Use when you have completed msFeaST pipeline preprocessing and generated a JSON output file (dashboard_data.
+description: Use when you have completed msFeaST pipeline preprocessing and generated
+  a JSON output file (dashboard_data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -12,6 +13,7 @@ metadata:
   - jupyter-notebook
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

@@ -1,6 +1,8 @@
 ---
 name: feature-table-gap-filling
-description: Use when you have an aligned feature table from untargeted LC-MS with missing intensity values (NA or zero entries) for features that are present in some samples but fell below detection threshold in others.
+description: Use when you have an aligned feature table from untargeted LC-MS with
+  missing intensity values (NA or zero entries) for features that are present in some
+  samples but fell below detection threshold in others.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,6 +15,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -40,6 +43,7 @@ attribution:
 
 # Feature-Table Gap-Filling by Data Recursion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Gap-filling by data recursion recovers missing feature intensities (NA or zero entries) in aligned LC-MS feature tables by recursively searching related samples to locate intensity values in alternate sample batches or replicates. This step follows peak picking, alignment, and grouping of isotopologues and adducts to produce a complete sample-feature matrix.

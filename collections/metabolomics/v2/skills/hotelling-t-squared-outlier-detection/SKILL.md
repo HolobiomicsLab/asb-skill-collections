@@ -1,6 +1,8 @@
 ---
 name: hotelling-t-squared-outlier-detection
-description: Use when after data normalization (Step 7) on the preprocessed feature matrix when you need to identify and flag anomalous samples before statistical testing or biomarker discovery.
+description: Use when after data normalization (Step 7) on the preprocessed feature
+  matrix when you need to identify and flag anomalous samples before statistical testing
+  or biomarker discovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,6 +15,7 @@ metadata:
   - OUKS (Omics Untargeted Key Script)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

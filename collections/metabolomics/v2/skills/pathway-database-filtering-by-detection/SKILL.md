@@ -1,6 +1,9 @@
 ---
 name: pathway-database-filtering-by-detection
-description: Use when you have run a metabolomics experiment with incomplete coverage of a reference pathway database (e.g., 10–100% of database metabolites detected), and you plan to use ORA for pathway enrichment. The skill is essential if your detection method has known sensitivity limits (e.
+description: Use when you have run a metabolomics experiment with incomplete coverage
+  of a reference pathway database (e.g., 10–100% of database metabolites detected),
+  and you plan to use ORA for pathway enrichment. The skill is essential if your detection
+  method has known sensitivity limits (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - cwieder/metabolomics-ORA
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -41,6 +45,7 @@ attribution:
 
 # pathway-database-filtering-by-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter pathway databases to include only metabolites detected in an experiment before running Over-representation Analysis (ORA), reducing false positives driven by coverage bias. This skill addresses a critical pitfall in metabolomics pathway analysis where undetected metabolites in the reference database inflate null distributions and distort p-value calibration.

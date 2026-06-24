@@ -1,6 +1,8 @@
 ---
 name: spectral-library-similarity-matching
-description: Use when you have an unknown experimental mass spectrum (e.g., from liquid chromatography–mass spectrometry) and need to retrieve the most structurally similar candidate molecules from a database of millions of predicted or experimental spectra.
+description: Use when you have an unknown experimental mass spectrum (e.g., from liquid
+  chromatography–mass spectrometry) and need to retrieve the most structurally similar
+  candidate molecules from a database of millions of predicted or experimental spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,7 @@ metadata:
   - FastEI
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

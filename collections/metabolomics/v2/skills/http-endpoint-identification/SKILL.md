@@ -1,6 +1,9 @@
 ---
 name: http-endpoint-identification
-description: Use when when you have source code access to a webservice component (such as the MAGMa joblauncher) and need to enumerate all exposed HTTP endpoints, their methods (GET, POST, etc.), URL patterns, parameter names, request/response payload structures, and authentication requirements in order to.
+description: Use when when you have source code access to a webservice component (such
+  as the MAGMa joblauncher) and need to enumerate all exposed HTTP endpoints, their
+  methods (GET, POST, etc.), URL patterns, parameter names, request/response payload
+  structures, and authentication requirements in order to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +13,7 @@ metadata:
   - MAGMa
   - MAGMa joblauncher
   - OpenAPI 3.0
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -39,6 +43,7 @@ attribution:
 
 # http-endpoint-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic extraction of HTTP endpoints, request/response schemas, and authentication mechanisms from a webservice codebase by analyzing source files, route definitions, and function signatures. This skill produces a machine-readable API specification (e.g., OpenAPI 3.0) suitable for client integration and documentation.

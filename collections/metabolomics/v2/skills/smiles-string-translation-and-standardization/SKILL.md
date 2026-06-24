@@ -1,6 +1,9 @@
 ---
 name: smiles-string-translation-and-standardization
-description: 'Use when you have raw SMILES strings from multiple external database sources (e.g., PubChem, ChEMBL, vendor databases) that need to be integrated into a unified structure registry. Indicators include: (1) raw SMILES table exists at a known interim input path (e.'
+description: 'Use when you have raw SMILES strings from multiple external database
+  sources (e.g., PubChem, ChEMBL, vendor databases) that need to be integrated into
+  a unified structure registry. Indicators include: (1) raw SMILES table exists at
+  a known interim input path (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -13,6 +16,7 @@ metadata:
   - sanitizing.py
   - Python 3
   - RDKit (implied dependency)
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -46,6 +50,7 @@ attribution:
 
 # SMILES String Translation and Standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A two-stage transformation that converts raw SMILES strings into standardized, deduplicated structural identifiers through translation and sanitization. This skill is essential in natural products databases where raw SMILES from heterogeneous sources must be normalized to enable consistent structure-organism pair representation and chemical validity verification.

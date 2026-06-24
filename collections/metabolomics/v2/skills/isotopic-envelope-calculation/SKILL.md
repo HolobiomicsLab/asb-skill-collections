@@ -1,6 +1,9 @@
 ---
 name: isotopic-envelope-calculation
-description: Use when when you have one or more peptide sequences (as strings) and need to predict their theoretical isotopic distribution for comparison against experimental MS peaks, validation of mass calibration, or simulation of expected peptide signals in a mass spectrometry assay.
+description: Use when when you have one or more peptide sequences (as strings) and
+  need to predict their theoretical isotopic distribution for comparison against experimental
+  MS peaks, validation of mass calibration, or simulation of expected peptide signals
+  in a mass spectrometry assay.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +20,7 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -50,6 +54,7 @@ attribution:
 
 # isotopic-envelope-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute the relative abundance distribution of isotopic peaks (m/z and intensity pairs) for a given polypeptide sequence using Pyteomics' mass module. This enables prediction of the mass spectrum envelope expected from a peptide, which is essential for matching experimental MS data to theoretical values in proteomics.

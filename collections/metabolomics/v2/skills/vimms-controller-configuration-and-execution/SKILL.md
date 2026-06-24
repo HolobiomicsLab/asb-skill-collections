@@ -1,6 +1,8 @@
 ---
 name: vimms-controller-configuration-and-execution
-description: Use when you have a set of chemical compounds (with known retention times and intensities) loaded into a ViMMS IndependentMassSpectrometer and need to simulate a specific MS/MS fragmentation strategy (e.
+description: Use when you have a set of chemical compounds (with known retention times
+  and intensities) loaded into a ViMMS IndependentMassSpectrometer and need to simulate
+  a specific MS/MS fragmentation strategy (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,13 +16,15 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- a flexible and modular framework designed to simulate fragmentation strategies in tandem mass spectrometry-based metabolomics
+- a flexible and modular framework designed to simulate fragmentation strategies in
+  tandem mass spectrometry-based metabolomics
 - a flexible and modular framework designed to simulate fragmentation strategies
 - ViMMS is compatible with Python 3+
 - ViMMS dependencies are managed with [Poetry](https://python-poetry.org/)
@@ -48,6 +52,7 @@ attribution:
 
 # ViMMS Controller Configuration and Execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute a ViMMS controller to simulate MS/MS fragmentation acquisition strategies on a virtual mass spectrometer, then export the resulting scan data as mzML files. This skill bridges the gap between strategy design and evaluation by enabling rapid prototyping of data-dependent or data-independent acquisition methods without access to real MS hardware.

@@ -1,6 +1,8 @@
 ---
 name: spectrum-preprocessing-for-similarity-analysis
-description: Use when when you have raw MS/MS spectra with residual noise or low-intensity peaks and plan to calculate spectral entropy, entropy similarity, or perform spectral library matching.
+description: Use when when you have raw MS/MS spectra with residual noise or low-intensity
+  peaks and plan to calculate spectral entropy, entropy similarity, or perform spectral
+  library matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -13,6 +15,7 @@ metadata:
   - Entropy Search GUI
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

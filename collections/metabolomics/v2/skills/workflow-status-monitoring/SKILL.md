@@ -14,6 +14,7 @@ metadata:
   - GitHub Actions API
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

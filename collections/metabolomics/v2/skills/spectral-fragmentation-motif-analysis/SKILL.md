@@ -1,6 +1,9 @@
 ---
 name: spectral-fragmentation-motif-analysis
-description: Use when when you have metabolomics intensity data with metabolites grouped by fragmentation spectral similarity (Molecular Families or Mass2Motifs) and need to rank or score these groups by their differential activity across experimental conditions, especially when traditional pathway databases.
+description: Use when when you have metabolomics intensity data with metabolites grouped
+  by fragmentation spectral similarity (Molecular Families or Mass2Motifs) and need
+  to rank or score these groups by their differential activity across experimental
+  conditions, especially when traditional pathway databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -15,6 +18,7 @@ metadata:
   - PALS Viewer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -47,6 +51,7 @@ attribution:
 
 # spectral-fragmentation-motif-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Analyze metabolite groupings derived from fragmentation spectra (Molecular Families from GNPS and Mass2Motifs from MS2LDA) using the PLAGE decomposition method to compute activity scores across experimental samples. This extends pathway-level activity scoring to spectral-motif-based metabolite sets.

@@ -1,6 +1,9 @@
 ---
 name: jupyter-notebook-workflow-execution
-description: Use when you have a curated training dataset of molecular structures with known CCS values, a target set of ≤10,000 molecules requiring CCS predictions, and need to apply a pre-configured Sklearn-based machine learning model within a reproducible, browser-accessible environment.
+description: Use when you have a curated training dataset of molecular structures
+  with known CCS values, a target set of ≤10,000 molecules requiring CCS predictions,
+  and need to apply a pre-configured Sklearn-based machine learning model within a
+  reproducible, browser-accessible environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +18,7 @@ metadata:
   - CCSP 2.0
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0
@@ -46,6 +50,7 @@ attribution:
 
 # Jupyter Notebook Workflow Execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a curated machine learning workflow for collision cross section (CCS) prediction within a Jupyter notebook environment, either cloud-hosted (Google Colab) or locally, to generate CCS predictions for molecular datasets without requiring local Python installation or package management.

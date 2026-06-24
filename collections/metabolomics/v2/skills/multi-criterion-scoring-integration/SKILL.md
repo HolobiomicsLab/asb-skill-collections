@@ -1,6 +1,9 @@
 ---
 name: multi-criterion-scoring-integration
-description: Use when you have an LC-HRMS feature table (m/z, retention time, isotope ratios, fragmentation patterns) and a suspect compound database with reference properties (m/z, expected RT windows, theoretical isotope ratios, characteristic neutral losses), and you need to rank which features most likely.
+description: Use when you have an LC-HRMS feature table (m/z, retention time, isotope
+  ratios, fragmentation patterns) and a suspect compound database with reference properties
+  (m/z, expected RT windows, theoretical isotope ratios, characteristic neutral losses),
+  and you need to rank which features most likely.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -11,11 +14,13 @@ metadata:
   - Scannotation
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.est.3c04764
   title: Scannotation
 evidence_spans:
-- Scannotation is an automated and user-friendly suspect screening tool for the rapid pre-annotation of LC-HRMS datasets.
+- Scannotation is an automated and user-friendly suspect screening tool for the rapid
+  pre-annotation of LC-HRMS datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

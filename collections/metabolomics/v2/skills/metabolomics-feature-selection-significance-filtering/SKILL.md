@@ -1,6 +1,8 @@
 ---
 name: metabolomics-feature-selection-significance-filtering
-description: Use when you have fitted an MB-PLS model on multi-assay LC-MS intensity data (e.g., HPOS, LPOS, LNEG), computed MB-VIP scores for all features, and need to identify which features are statistically significant for your phenotypic outcome.
+description: Use when you have fitted an MB-PLS model on multi-assay LC-MS intensity
+  data (e.g., HPOS, LPOS, LNEG), computed MB-VIP scores for all features, and need
+  to identify which features are statistically significant for your phenotypic outcome.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -18,6 +20,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -25,7 +28,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
+  prediction modeling for Python.'
 - import pandas as pd
 - import numpy as np
 - from sklearn.model_selection import train_test_split
@@ -54,6 +58,7 @@ attribution:
 
 # metabolomics-feature-selection-significance-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select statistically significant metabolomic features from multi-assay LC-MS datasets using Multi-Block Variable Importance in Projection (MB-VIP) scores combined with empirical permutation testing. This skill filters features to those with robust discriminatory power across assay blocks, reducing noise and enabling downstream structural annotation.

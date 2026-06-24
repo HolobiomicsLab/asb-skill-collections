@@ -1,6 +1,8 @@
 ---
 name: peak-boundary-identification-in-extracted-ion-data
-description: Use when after extracting ion chromatograms and ion mobilograms from raw diaPASEF or DIA data within specified m/z, retention time, and ion mobility windows.
+description: Use when after extracting ion chromatograms and ion mobilograms from
+  raw diaPASEF or DIA data within specified m/z, retention time, and ion mobility
+  windows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,11 +19,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 - MzMLDataLoader
 - InteractiveTwoDimensionPlotter

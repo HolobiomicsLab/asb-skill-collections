@@ -1,6 +1,9 @@
 ---
 name: repository-match-consolidation-and-deduplication
-description: 'Use when use this skill after parallel or sequential dispatch queries to multiple chemical repositories have returned results. Specifically: (1) you have received match records from two or more of {PubChem, ChemSpider, Norine, ChEBI, COCONUT, NP Atlas} with differing schemas or identifiers;'
+description: 'Use when use this skill after parallel or sequential dispatch queries
+  to multiple chemical repositories have returned results. Specifically: (1) you have
+  received match records from two or more of {PubChem, ChemSpider, Norine, ChEBI,
+  COCONUT, NP Atlas} with differing schemas or identifiers;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3906
@@ -19,6 +22,7 @@ metadata:
   - COCONUT
   - SmilesDrawer
   - PHP/Symfony
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks

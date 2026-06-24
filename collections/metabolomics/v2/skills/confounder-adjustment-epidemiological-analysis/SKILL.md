@@ -1,6 +1,9 @@
 ---
 name: confounder-adjustment-epidemiological-analysis
-description: Use when when testing associations between metabolic features (from NMR or MS) and a phenotype of interest (e.g., BMI, disease status) in a cohort where age, gender, or clinical confounders are known to correlate with both the metabolite and phenotype.
+description: Use when when testing associations between metabolic features (from NMR
+  or MS) and a phenotype of interest (e.g., BMI, disease status) in a cohort where
+  age, gender, or clinical confounders are known to correlate with both the metabolite
+  and phenotype.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,12 +17,14 @@ metadata:
   - Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # confounder-adjustment-epidemiological-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Adjust metabolite–phenotype associations for epidemiological confounders (age, gender, disease status) using partial correlations or generalized linear models to isolate true disease signals and prevent confounding bias. This is essential in metabolome-wide association studies (MWAS) where multivariate models alone fail to properly account for cofounding factors that distort observed associations.

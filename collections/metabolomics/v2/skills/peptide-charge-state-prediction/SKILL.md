@@ -1,6 +1,7 @@
 ---
 name: peptide-charge-state-prediction
-description: Use when you have raw mass spectrometry data in MS1 format and need to assign charge states to peptide ions without manual curation or rule-based heuristics.
+description: Use when you have raw mass spectrometry data in MS1 format and need to
+  assign charge states to peptide ions without manual curation or rule-based heuristics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +13,7 @@ metadata:
   - MSConvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion

@@ -1,6 +1,9 @@
 ---
 name: lipid-maps-database-lookup
-description: Use when when you have a parsed lipid species table (output from LipidSearch or LIQUID) containing lipid names or identifiers, and you need to annotate each entry with its standardized LIPID MAPS category (e.g., Glycerophospholipids, Sphingolipids) and subcategory (e.
+description: Use when when you have a parsed lipid species table (output from LipidSearch
+  or LIQUID) containing lipid names or identifiers, and you need to annotate each
+  entry with its standardized LIPID MAPS category (e.g., Glycerophospholipids, Sphingolipids)
+  and subcategory (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,12 +17,15 @@ metadata:
   - LIQUID
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
 evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.
+- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
+  per lipid and sample
+- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
+  of lipidomics data.
 - parsing lipid species (using LIPID MAPS classification)
 claims: []
 provenance:

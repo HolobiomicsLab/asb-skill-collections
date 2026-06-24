@@ -1,6 +1,9 @@
 ---
 name: retention-time-abundance-correlation-visualization
-description: Use when after applying AbundanceSimilarityParam (with threshold ≥0.7 and log2 transform) to retention-time-based feature groups from SimilarRtimeParam, when you need to examine the internal correlation structure of specific feature sub-groups (e.g., FG.
+description: Use when after applying AbundanceSimilarityParam (with threshold ≥0.7
+  and log2 transform) to retention-time-based feature groups from SimilarRtimeParam,
+  when you need to examine the internal correlation structure of specific feature
+  sub-groups (e.g., FG.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,11 +14,13 @@ metadata:
   - MsFeatures
   - pheatmap
   - xcms
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 - library(pheatmap)
 claims: []
 provenance:

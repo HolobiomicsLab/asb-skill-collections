@@ -1,6 +1,9 @@
 ---
 name: graph-neural-network-model-inference
-description: Use when you have a trained GNN model (stored as .h5 weights) and molecular graph representations (SMILES strings and/or 3D coordinates), and you need to compute predicted CCS values or perform feature importance analysis via ablation or gradient-based saliency mapping.
+description: Use when you have a trained GNN model (stored as .h5 weights) and molecular
+  graph representations (SMILES strings and/or 3D coordinates), and you need to compute
+  predicted CCS values or perform feature importance analysis via ablation or gradient-based
+  saliency mapping.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -14,6 +17,7 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -42,6 +46,7 @@ attribution:
 
 # graph-neural-network-model-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load a trained graph neural network model and use it to generate predictions on molecular structures represented as graphs. This skill enables post-hoc analysis of GNN predictions, such as attribution studies to identify which molecular features drive collision cross section predictions.

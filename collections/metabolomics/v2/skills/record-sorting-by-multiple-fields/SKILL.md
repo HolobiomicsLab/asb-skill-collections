@@ -1,6 +1,7 @@
 ---
 name: record-sorting-by-multiple-fields
-description: Use when when applying str or matrix directives to JSON table data, and you need deterministic ordering of records before building output values—e.
+description: Use when when applying str or matrix directives to JSON table data, and
+  you need deterministic ordering of records before building output values—e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -10,6 +11,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES convert command
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -17,7 +19,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +45,7 @@ attribution:
 
 # record-sorting-by-multiple-fields
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Sort JSON table records by one or more fields in ascending or descending order before transformation into string or matrix output formats. This preprocessing step is essential for controlling the order in which records are selected, aggregated, or iterated over during JSON-to-JSON conversion.

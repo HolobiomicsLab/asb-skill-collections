@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-imaging-data-interpretation
-description: Use when when you have preprocessed MALDI-MSI data (in msimat format) and want to determine whether abundant peaks are actually molecular adducts of simpler parent ions rather than distinct metabolites.
+description: Use when when you have preprocessed MALDI-MSI data (in msimat format)
+  and want to determine whether abundant peaks are actually molecular adducts of simpler
+  parent ions rather than distinct metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,11 +18,13 @@ metadata:
   - MSiReader
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -45,6 +49,7 @@ attribution:
 
 # mass-spectrometry-imaging-data-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A workflow for identifying and visualizing sodium adduct ions relative to their parent ions in MALDI-MSI data by computing pairwise mass differences, matching them to known adducts, testing spatial correlation, and overlaying adduct and parent peaks on mass spectra with color-coded scatter plots. This skill reveals ion relationships that would otherwise remain hidden in the 'dark metabolome'.

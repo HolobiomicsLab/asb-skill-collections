@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-validation
-description: Use when after compound database dereplication with SIRIUS or MetFrag has produced candidate annotations (CSV or JSON format), and you need to filter implausible structures, compute standardized molecular descriptors, and rank candidates by confidence before reporting final metabolite.
+description: Use when after compound database dereplication with SIRIUS or MetFrag
+  has produced candidate annotations (CSV or JSON format), and you need to filter
+  implausible structures, compute standardized molecular descriptors, and rank candidates
+  by confidence before reporting final metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,6 +18,7 @@ metadata:
   - MetFrag
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -43,6 +47,7 @@ attribution:
 
 # chemical-structure-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate chemical structures and compute molecular properties for metabolite candidates using RDKit and PubChemPy after compound database dereplication. This skill filters and ranks candidates by chemical validity, descriptor ranges, and database match confidence to curate final annotations.

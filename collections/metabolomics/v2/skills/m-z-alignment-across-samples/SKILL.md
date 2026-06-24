@@ -1,6 +1,7 @@
 ---
 name: m-z-alignment-across-samples
-description: Use when you have extracted mass tracks (EICs) from multiple LC-MS samples at 0.001 amu resolution and need to construct a sample-agnostic m/z reference frame.
+description: Use when you have extracted mass tracks (EICs) from multiple LC-MS samples
+  at 0.001 amu resolution and need to construct a sample-agnostic m/z reference frame.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -19,11 +20,13 @@ metadata:
   - ext_Experiment.get_reference_sample_id
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 claims: []
@@ -52,6 +55,7 @@ attribution:
 
 # m-z-alignment-across-samples
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align mass tracks (EICs) detected in individual LC-MS samples into a unified MassGrid structure by leveraging high mass resolution to detect and resolve m/z differences corresponding to isotopes and adducts, then bin and centroid m/z values across the cohort. This enables reproducible tracking between detected features and their underlying chromatographic traces.

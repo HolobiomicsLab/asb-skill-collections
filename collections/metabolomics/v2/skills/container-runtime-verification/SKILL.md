@@ -1,6 +1,9 @@
 ---
 name: container-runtime-verification
-description: Use when when deploying a containerized application (e.g., ipbhalle/metfragweb) with injected configuration files via Docker volume mounts, and you need to confirm that the container accepted the mounted file and applied its settings before proceeding with downstream analysis or services.
+description: Use when when deploying a containerized application (e.g., ipbhalle/metfragweb)
+  with injected configuration files via Docker volume mounts, and you need to confirm
+  that the container accepted the mounted file and applied its settings before proceeding
+  with downstream analysis or services.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +11,7 @@ metadata:
   - ipbhalle/metfragweb
   - Docker
   - Tomcat
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -36,6 +40,7 @@ attribution:
 
 # container-runtime-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Docker container has successfully loaded configuration files mounted at a specific path and applied the settings correctly. This skill confirms that volume mounts are properly linked and that the application has ingested the injected configuration.

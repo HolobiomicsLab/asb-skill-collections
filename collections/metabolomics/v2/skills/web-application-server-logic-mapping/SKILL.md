@@ -1,6 +1,9 @@
 ---
 name: web-application-server-logic-mapping
-description: Use when you are wrapping an existing R package or analytical library in a web interface and need to connect UI form inputs (file uploads, parameter selections, configuration checkboxes) to the backend computation functions and render their outputs reactively.
+description: Use when you are wrapping an existing R package or analytical library
+  in a web interface and need to connect UI form inputs (file uploads, parameter selections,
+  configuration checkboxes) to the backend computation functions and render their
+  outputs reactively.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -12,6 +15,7 @@ metadata:
   - Shiny
   - R package Amanida
   - R package webchem
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida
@@ -40,6 +44,7 @@ attribution:
 
 # web-application-server-logic-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map reactive handlers in web frameworks (e.g., Shiny) to underlying computational functions, ensuring data flows from user interface inputs through backend computation to reactive output displays. This skill bridges the gap between interactive UI controls and the statistical or analytical R packages they wrap.

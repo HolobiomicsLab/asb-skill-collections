@@ -1,6 +1,9 @@
 ---
 name: metabolite-benchmark-peak-matching
-description: Use when you have LC-HRMS mzML files processed by a non-targeted peak-detection tool (XCMS, MZmine 2/3, MS-DIAL, OpenMS, etc.) and want to quantify how many of a known set of target molecules (47+ compounds with isotopologues) were correctly detected, aligned, and preserved with intact isotopologue.
+description: Use when you have LC-HRMS mzML files processed by a non-targeted peak-detection
+  tool (XCMS, MZmine 2/3, MS-DIAL, OpenMS, etc.) and want to quantify how many of
+  a known set of target molecules (47+ compounds with isotopologues) were correctly
+  detected, aligned, and preserved with intact isotopologue.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +18,14 @@ metadata:
   - MZmine 2
   - enviPat
   - Skyline
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - You can then assess the performance of NPP runs we have performed via XCMS
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)

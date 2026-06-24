@@ -1,6 +1,8 @@
 ---
 name: molecular-graph-representation-parsing
-description: Use when you have molecular identifiers (SMILES strings or molecular structure files) that need to be converted into node-edge graph tensors for input to message passing neural network models like chemprop or chemprop-IR.
+description: Use when you have molecular identifiers (SMILES strings or molecular
+  structure files) that need to be converted into node-edge graph tensors for input
+  to message passing neural network models like chemprop or chemprop-IR.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -10,11 +12,13 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]
+- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
+  for Property Prediction]
 - The `chemprop-IR` architecture is an extension of `chemprop`
 claims: []
 provenance:
@@ -39,6 +43,7 @@ attribution:
 
 # molecular-graph-representation-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse molecular inputs (SMILES strings or graph structures) into standardized graph representations compatible with message passing neural networks. This skill bridges chemical notation and computational graph formats required for chemprop and chemprop-IR model ingestion.

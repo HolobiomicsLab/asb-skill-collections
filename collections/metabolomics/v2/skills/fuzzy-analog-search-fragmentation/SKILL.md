@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -52,6 +53,7 @@ attribution:
 
 # fuzzy-analog-search-fragmentation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Identify structurally related compounds with similar MS/MS fragmentation patterns but different molecular identities by performing fuzzy (analog) search against a spectral library. This complements identity search to discover chemical analogs and detect novel compounds with known fragmentation signatures.

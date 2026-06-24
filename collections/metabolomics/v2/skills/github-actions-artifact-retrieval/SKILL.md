@@ -1,6 +1,9 @@
 ---
 name: github-actions-artifact-retrieval
-description: Use when you need to verify that a GitHub Actions workflow (such as a development build release pipeline) has completed successfully, capture its build artifacts (installers, portable binaries, or packages), and document the workflow run metadata.
+description: Use when you need to verify that a GitHub Actions workflow (such as a
+  development build release pipeline) has completed successfully, capture its build
+  artifacts (installers, portable binaries, or packages), and document the workflow
+  run metadata.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - JDK 25
   - JavaFX 24
   - GitHub Actions
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -39,6 +43,7 @@ attribution:
 
 # github-actions-artifact-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and document build artifacts and workflow execution logs from a GitHub Actions CI/CD pipeline to verify successful completion and capture deliverables. This skill is essential when validating that automated build workflows produce expected outputs and to capture version-specific binaries for distribution or testing.

@@ -1,6 +1,8 @@
 ---
 name: library-spectrum-database-searching
-description: Use when you have an unknown electron ionization (EI) mass spectrum and need to identify the compound by comparing it against a reference library (msp file format).
+description: Use when you have an unknown electron ionization (EI) mass spectrum and
+  need to identify the compound by comparing it against a reference library (msp file
+  format).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,12 +15,16 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:
@@ -43,6 +49,7 @@ attribution:
 
 # library-spectrum-database-searching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Search electron ionization mass spectra against reference libraries using spectral similarity algorithms to identify unknown compounds. This skill compares a query mass spectrum against library entries using standardized matching algorithms, returning ranked candidate identifications with quantitative similarity scores.

@@ -1,6 +1,9 @@
 ---
 name: multi-service-integration-testing
-description: Use when when building or modifying an asynchronous annotation pipeline that dispatches metadata enrichment requests to multiple heterogeneous web services and must verify that each service's HTTP calls succeed, response parsing is correct, and enriched fields are correctly merged into the output.
+description: Use when when building or modifying an asynchronous annotation pipeline
+  that dispatches metadata enrichment requests to multiple heterogeneous web services
+  and must verify that each service's HTTP calls succeed, response parsing is correct,
+  and enriched fields are correctly merged into the output.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -16,6 +19,7 @@ metadata:
   - BridgeDb
   - pytest
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

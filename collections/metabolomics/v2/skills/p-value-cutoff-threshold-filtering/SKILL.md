@@ -1,6 +1,8 @@
 ---
 name: p-value-cutoff-threshold-filtering
-description: Use when after differential expression analysis (DEA) has produced p-values and log fold-change values for multiple omics layers (genes, miRNA, proteins, lipids), and you need to select only statistically significant features for pathway enrichment.
+description: Use when after differential expression analysis (DEA) has produced p-values
+  and log fold-change values for multiple omics layers (genes, miRNA, proteins, lipids),
+  and you need to select only statistically significant features for pathway enrichment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,12 +18,14 @@ metadata:
   - DESeq2
   - edgeR
   - limma
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - Pathway enrichment analysis | Clusterprofiler, Biotranslator
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: intensity-color-representation
-description: Use when when visualizing 2D peak maps (x=m/z, y=retention time or ion mobility, z=intensity) using pyOpenMS-viz with any plotting backend (matplotlib, bokeh, plotly).
+description: Use when when visualizing 2D peak maps (x=m/z, y=retention time or ion
+  mobility, z=intensity) using pyOpenMS-viz with any plotting backend (matplotlib,
+  bokeh, plotly).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,12 +18,14 @@ metadata:
   - plotly
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 claims: []
@@ -47,6 +51,7 @@ attribution:
 
 # intensity-color-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map mass spectrometry intensity values to a color scale in 2D peak map visualizations to enable intuitive perception of signal strength across m/z and retention time dimensions. This skill is essential for interactive and static peak map plots where color intensity conveys the third dimension (intensity/abundance) of the data.

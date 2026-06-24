@@ -1,6 +1,9 @@
 ---
 name: metabolic-reaction-classification-by-regulatory-layer
-description: Use when you have integrated transcriptomics, intracellular metabolomics, and extracellular flux ratio data from multiple cell lines or conditions, and need to determine whether observed differences in metabolic fluxes originate from gene expression changes, substrate availability changes, or both.
+description: Use when you have integrated transcriptomics, intracellular metabolomics,
+  and extracellular flux ratio data from multiple cell lines or conditions, and need
+  to determine whether observed differences in metabolic fluxes originate from gene
+  expression changes, substrate availability changes, or both.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -21,6 +24,7 @@ metadata:
   - Agilent 6550 iFunnel Q-TOF mass spectrometer with MassHunter ProFinder
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -49,6 +53,7 @@ attribution:
 
 # Metabolic Reaction Classification by Regulatory Layer
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Distinguish between transcriptionally and metabolically controlled metabolic reactions by computing concordance between reaction propensity scores (RPS, derived from gene expression) and feasible flux distributions (FFD, derived from constraint-based modeling), then comparing against reaction activity scores (RAS). Reactions with high RPSvsFFD concordance but low RPSvsRAS concordance are classified as metabolically regulated (substrate availability–driven) rather than transcriptionally regulated.

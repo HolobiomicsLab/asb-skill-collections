@@ -1,6 +1,9 @@
 ---
 name: metabolomic-spectral-annotation-and-molecular-family-clustering
-description: Use when when you have raw or GNPS-processed MS2 spectral data from microbial strains and need to organize spectra into molecular families (grouped by spectral similarity) while preserving strain provenance, as a prerequisite for linking metabolomic families to gene cluster families (GCFs) via.
+description: Use when when you have raw or GNPS-processed MS2 spectral data from microbial
+  strains and need to organize spectra into molecular families (grouped by spectral
+  similarity) while preserving strain provenance, as a prerequisite for linking metabolomic
+  families to gene cluster families (GCFs) via.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,13 +18,15 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
@@ -51,6 +56,7 @@ attribution:
 
 # metabolomic-spectral-annotation-and-molecular-family-clustering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import and organize tandem MS (MS2) spectra from GNPS into NPLinker Spectrum objects, cluster spectra into molecular families (MFs) via spectral similarity, and maintain strain-level associations to enable downstream correlation scoring with genomic clusters. This prepares metabolomic data for integration with BGC/GCF predictions.

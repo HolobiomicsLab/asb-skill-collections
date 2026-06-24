@@ -1,6 +1,8 @@
 ---
 name: adduct-mass-offset-assignment
-description: Use when when you have an LC-MS feature table with m/z and retention time columns and need to identify which observed ions correspond to the same neutral compound under different ionization conditions and isotopic enrichment.
+description: Use when when you have an LC-MS feature table with m/z and retention
+  time columns and need to identify which observed ions correspond to the same neutral
+  compound under different ionization conditions and isotopic enrichment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,7 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -42,6 +45,7 @@ attribution:
 
 # Adduct Mass Offset Assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and populate a theoretical khipu grid that maps all combinations of isotopologues (M0 through M+6 ¹³C substitutions) and common ionization adducts (M+H, M+NH₄, M+Na, M+HCl+H, M+K, M+ACN+H) to their theoretical m/z mass shift values. This grid serves as the reference basis for matching observed LC-MS features to ion species and inferring neutral masses via linear regression.

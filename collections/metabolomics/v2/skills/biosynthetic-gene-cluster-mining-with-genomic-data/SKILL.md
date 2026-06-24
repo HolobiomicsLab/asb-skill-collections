@@ -1,6 +1,8 @@
 ---
 name: biosynthetic-gene-cluster-mining-with-genomic-data
-description: Use when you have LC-MS/MS spectra (MGF, mzXML, mzML, or mzData format) from a bacterial or fungal strain and corresponding genomic sequence data (FASTA, antiSMASH .final.gbk, or BOA .annotated.
+description: Use when you have LC-MS/MS spectra (MGF, mzXML, mzML, or mzData format)
+  from a bacterial or fungal strain and corresponding genomic sequence data (FASTA,
+  antiSMASH .final.gbk, or BOA .annotated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3454
@@ -19,15 +21,23 @@ metadata:
   - NPDtools
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools'' output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk` or `.gbk` file'
-- matches tandem mass spectra against the constructed post-translationally modified RiPPs structure database using Dereplicator
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- 'MetaMiner uses either raw nucleotide sequences or specific genome mining tools''
+  output: raw nucleotide sequences `.fasta` format or *antiSMASH*''s `.final.gbk`
+  or `.gbk` file'
+- matches tandem mass spectra against the constructed post-translationally modified
+  RiPPs structure database using Dereplicator
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +61,7 @@ attribution:
 
 # biosynthetic-gene-cluster-mining-with-genomic-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 MetaMiner integrates tandem mass spectrometry data with genomic sequences to identify ribosomally synthesized and post-translationally modified peptides (RiPPs) by mining biosynthetic gene clusters (BGCs). This skill applies metabologenomics to discover novel natural products by matching MS/MS spectra against putative RiPP structure databases constructed from genome mining.

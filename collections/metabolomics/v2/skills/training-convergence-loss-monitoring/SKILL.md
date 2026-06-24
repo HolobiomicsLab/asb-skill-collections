@@ -1,6 +1,9 @@
 ---
 name: training-convergence-loss-monitoring
-description: Use when executing a multi-stage deep learning pipeline (pretraining → fine-tuning → alignment) where each stage loads a checkpoint from the previous stage and you need to confirm that loss is decreasing monotonically within each stage, that checkpoints are being saved, and that no training.
+description: Use when executing a multi-stage deep learning pipeline (pretraining
+  → fine-tuning → alignment) where each stage loads a checkpoint from the previous
+  stage and you need to confirm that loss is decreasing monotonically within each
+  stage, that checkpoints are being saved, and that no training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +13,7 @@ metadata:
   tools:
   - PyTorch
   - Hugging Face Transformers
+  license_tier: restricted
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
@@ -38,6 +42,7 @@ attribution:
 
 # training-convergence-loss-monitoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Monitor and validate training convergence across pretraining, fine-tuning, and alignment stages by logging loss metrics at each stage and verifying model checkpoint files are saved correctly. This skill ensures that multi-stage training pipelines (like MS-BART's three-stage process) are progressing as expected and that intermediate trained states are properly persisted.

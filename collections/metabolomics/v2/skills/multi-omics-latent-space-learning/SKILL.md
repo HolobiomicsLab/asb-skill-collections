@@ -1,6 +1,9 @@
 ---
 name: multi-omics-latent-space-learning
-description: Use when you have preprocessed and jointly normalized ST and SM data from the same sample(s) aligned to a common spatial resolution (via joint_adata_sm_st and normalize_total_joint_adata_sm_st), and you need to discover shared latent structure across modalities to identify co-localized spatial.
+description: Use when you have preprocessed and jointly normalized ST and SM data
+  from the same sample(s) aligned to a common spatial resolution (via joint_adata_sm_st
+  and normalize_total_joint_adata_sm_st), and you need to discover shared latent structure
+  across modalities to identify co-localized spatial.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -12,6 +15,7 @@ metadata:
   - spatialMETA
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

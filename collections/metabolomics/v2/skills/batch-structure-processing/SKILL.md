@@ -1,6 +1,8 @@
 ---
 name: batch-structure-processing
-description: Use when you have a collection of 100+ molecules in SMILES, SDF, MOL, or MOL2 format and need to compute a unified feature representation combining physicochemical descriptors and structural fingerprints for downstream machine learning.
+description: Use when you have a collection of 100+ molecules in SMILES, SDF, MOL,
+  or MOL2 format and need to compute a unified feature representation combining physicochemical
+  descriptors and structural fingerprints for downstream machine learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0306
@@ -12,11 +14,13 @@ metadata:
   - alvaDesc
   - RDKit
   - cmmrt/build_data.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # batch-structure-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Batch processing of chemical structures through alvaDesc to generate standardized molecular descriptors and fingerprints (MACCS166, Extended Connectivity, Path) for large molecular datasets. This skill is essential for preparing feature matrices for machine learning models in retention time prediction and metabolite annotation workflows.

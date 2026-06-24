@@ -1,6 +1,9 @@
 ---
 name: msp-to-csv-parsing
-description: Use when you have a .msp format MS/MS spectrum library (e.g., from MassBank or similar public databases) and need to convert it into individual CSV entries indexed by positive or negative ionisation mode for use as a custom fragment library in MetaboAnnotatoR annotation pipelines.
+description: Use when you have a .msp format MS/MS spectrum library (e.g., from MassBank
+  or similar public databases) and need to convert it into individual CSV entries
+  indexed by positive or negative ionisation mode for use as a custom fragment library
+  in MetaboAnnotatoR annotation pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,11 +16,13 @@ metadata:
   - MassBank
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # msp-to-csv-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert MS/MS spectra from .msp library files into individual CSV library entries with ionisation mode suffixes using the mspToLib function. This skill enables organisation of custom MS/MS fragment libraries for use in metabolite annotation workflows.

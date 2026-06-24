@@ -1,6 +1,9 @@
 ---
 name: multi-head-attention-mechanism-application
-description: Use when you have embedded sequences of chemical formulae (tokenized and converted to dense vectors) from tandem MS/MS spectra and need to learn context-dependent representations that capture dependencies between formula tokens at multiple semantic levels.
+description: Use when you have embedded sequences of chemical formulae (tokenized
+  and converted to dense vectors) from tandem MS/MS spectra and need to learn context-dependent
+  representations that capture dependencies between formula tokens at multiple semantic
+  levels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,6 +18,7 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)

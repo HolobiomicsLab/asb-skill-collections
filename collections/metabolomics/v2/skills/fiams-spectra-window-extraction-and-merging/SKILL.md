@@ -1,6 +1,8 @@
 ---
 name: fiams-spectra-window-extraction-and-merging
-description: Use when you have raw FIA-MS full-scan data in mzML format and need to prepare it for untargeted metabolite discovery. Apply this skill when your goal is to detect and annotate unknown metabolites across a wide m/z range (e.
+description: Use when you have raw FIA-MS full-scan data in mzML format and need to
+  prepare it for untargeted metabolite discovery. Apply this skill when your goal
+  is to detect and annotate unknown metabolites across a wide m/z range (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,13 +17,16 @@ metadata:
   - pyOpenMS
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
 evidence_spans:
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak GUI provides functionality to facilitate users to get up and running as quickly as possible
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak GUI provides functionality to facilitate users to get up and running as
+  quickly as possible
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.

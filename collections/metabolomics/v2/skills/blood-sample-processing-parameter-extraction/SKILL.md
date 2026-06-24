@@ -1,6 +1,7 @@
 ---
 name: blood-sample-processing-parameter-extraction
-description: Use when when you have peripheral blood sample cohorts (plasma/serum) with multiple timestamps (e.
+description: Use when when you have peripheral blood sample cohorts (plasma/serum)
+  with multiple timestamps (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +13,7 @@ metadata:
   - QC-Tool
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel
@@ -40,6 +42,7 @@ attribution:
 
 # blood-sample-processing-parameter-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract pre- and post-centrifugation processing delay times from date+time stamp differences in peripheral blood sample metadata to enable stratified analysis of processing effects on NMR metabolomic measurements. This skill is essential for quantifying and annotating the pre-analytical variables that drive metabolite stability variation.

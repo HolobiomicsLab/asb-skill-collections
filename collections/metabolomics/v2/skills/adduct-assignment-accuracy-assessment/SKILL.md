@@ -1,6 +1,9 @@
 ---
 name: adduct-assignment-accuracy-assessment
-description: Use when you have a trained formula ranking model (such as MIST-CF) and want to measure the specific performance gain from incorporating multiple positive-mode adduct types (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) instead of restricting predictions to [M+H]+ only.
+description: Use when you have a trained formula ranking model (such as MIST-CF) and
+  want to measure the specific performance gain from incorporating multiple positive-mode
+  adduct types (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) instead of restricting predictions
+  to [M+H]+ only.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,12 +16,14 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # adduct-assignment-accuracy-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the contribution of multi-adduct support to chemical formula ranking accuracy by comparing model performance in [M+H]+-only mode versus full multi-adduct mode. This skill isolates the performance delta attributable to adduct type diversity in MS/MS-based formula inference.

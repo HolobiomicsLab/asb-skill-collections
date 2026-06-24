@@ -1,6 +1,9 @@
 ---
 name: interactive-workflow-validation
-description: 'Use when after automated peak detection has identified candidate peaks from LC-MS mzML files, but before exporting the final metabolite library. Use this skill when you need to: (1) optimize noise and peak-detection parameters by visualizing their effect on a representative subset of peaks;'
+description: 'Use when after automated peak detection has identified candidate peaks
+  from LC-MS mzML files, but before exporting the final metabolite library. Use this
+  skill when you need to: (1) optimize noise and peak-detection parameters by visualizing
+  their effect on a representative subset of peaks;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -16,11 +19,13 @@ metadata:
   - MoNA (MassBank of North America)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR
 evidence_spans:
-- This package provides an automated workflow for processing in-house metabolite library standards data
+- This package provides an automated workflow for processing in-house metabolite library
+  standards data
 - This package... can be launched using a function exported by this package
 - can be launched using a function exported by this package
 claims: []

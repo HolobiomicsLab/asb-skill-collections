@@ -1,6 +1,8 @@
 ---
 name: enrichment-score-interpretation
-description: Use when after differential expression analysis has produced gene lists with p-values and log fold-change values, and after pathway enrichment tools (clusterProfiler or biotranslator) have computed enrichment scores and adjusted p-values.
+description: Use when after differential expression analysis has produced gene lists
+  with p-values and log fold-change values, and after pathway enrichment tools (clusterProfiler
+  or biotranslator) have computed enrichment scores and adjusted p-values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -13,12 +15,14 @@ metadata:
   - biotranslator
   - ggplot2
   - ComplexHeatmap
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - Pathway enrichment analysis | Clusterprofiler, Biotranslator
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

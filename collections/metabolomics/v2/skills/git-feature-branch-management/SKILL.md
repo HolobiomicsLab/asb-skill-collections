@@ -1,6 +1,9 @@
 ---
 name: git-feature-branch-management
-description: Use when when contributing a new feature, bug fix, or documentation update to a shared repository (like iomega/ms2query), and you need to isolate your changes from the main development branch to allow for testing, review, and conditional integration without disrupting the primary codebase.
+description: Use when when contributing a new feature, bug fix, or documentation update
+  to a shared repository (like iomega/ms2query), and you need to isolate your changes
+  from the main development branch to allow for testing, review, and conditional integration
+  without disrupting the primary codebase.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,11 +14,13 @@ metadata:
   - Git
   - MS2Query
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 - push your feature branch to (your fork of) the ms2query repository on GitHub
 - you want to make some kind of change to the code base

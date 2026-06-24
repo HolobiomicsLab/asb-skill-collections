@@ -1,6 +1,8 @@
 ---
 name: multivariate-regression-comparison
-description: Use when you have paired microbiome and metabolomic (or similar compositional) data with a new regression model and want to rigorously demonstrate its predictive advantage over alternatives (Elastic Net, Random Forest, CCA).
+description: Use when you have paired microbiome and metabolomic (or similar compositional)
+  data with a new regression model and want to rigorously demonstrate its predictive
+  advantage over alternatives (Elastic Net, Random Forest, CCA).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -20,16 +22,25 @@ metadata:
   - Canonical Correlation Analysis (CCA)
   - scikit-learn
   - TensorFlow
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed using the given instructions.
-- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV using 5-fold internal cross-validation for hyper-parameter tuning where the hyper-parameter grid contained
-- Random Forest models were implemented using RandomForestRegressor with the default parameter set-tings of 100 tree estimators.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- these models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate Elastic Net, and Canonical
+- MelonnPan was downloaded from https://github.com/biobakery/melonnpan and executed
+  using the given instructions.
+- Multivariate Elastic Net models were implemented using ElasticNet and GridSearchCV
+  using 5-fold internal cross-validation for hyper-parameter tuning where the hyper-parameter
+  grid contained
+- Random Forest models were implemented using RandomForestRegressor with the default
+  parameter set-tings of 100 tree estimators.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- these models can predict the entire set of metabolites at once, and all models were
+  evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate
+  Elastic Net, and Canonical
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -53,6 +64,7 @@ attribution:
 
 # Multivariate Regression Comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically benchmark a novel multivariate regression model (e.g., neural network) against established linear and ensemble baselines using identical cross-validation protocols, computing effect sizes (Spearman correlation coefficients) and counts of well-predicted features to quantify improvement. This skill is essential when claiming superiority of a new predictive method over prior work.

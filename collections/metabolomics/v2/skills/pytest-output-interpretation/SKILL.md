@@ -1,6 +1,8 @@
 ---
 name: pytest-output-interpretation
-description: Use when after running `pytest tests/` on a Python package (especially one with dev extras installed), you need to determine if the full test suite passed, identify which tests failed, and extract error messages or stack traces for debugging.
+description: Use when after running `pytest tests/` on a Python package (especially
+  one with dev extras installed), you need to determine if the full test suite passed,
+  identify which tests failed, and extract error messages or stack traces for debugging.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   - pip
   - pytest
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

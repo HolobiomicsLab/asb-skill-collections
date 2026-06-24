@@ -1,6 +1,7 @@
 ---
 name: cross-tool-performance-comparison
-description: Use when when you have raw tandem MS metabolomics data in vendor formats (.
+description: Use when when you have raw tandem MS metabolomics data in vendor formats
+  (.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,6 +20,7 @@ metadata:
   - Clustering_benchmark_MS_RT.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT

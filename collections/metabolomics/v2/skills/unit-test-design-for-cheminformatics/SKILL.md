@@ -1,6 +1,8 @@
 ---
 name: unit-test-design-for-cheminformatics
-description: Use when when implementing a new ComputeConverter subclass for MSMetaEnhancer that performs local chemical structure conversions using RDKit (e.g., SMILES to InChI, canonical SMILES generation).
+description: Use when when implementing a new ComputeConverter subclass for MSMetaEnhancer
+  that performs local chemical structure conversions using RDKit (e.g., SMILES to
+  InChI, canonical SMILES generation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +13,7 @@ metadata:
   - MSMetaEnhancer
   - pytest
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

@@ -1,6 +1,8 @@
 ---
 name: containerized-api-service-validation
-description: Use when after building and starting a Dockerized server via docker-compose orchestration, particularly when deploying machine learning inference services that depend on pre-trained models behind an API gateway.
+description: Use when after building and starting a Dockerized server via docker-compose
+  orchestration, particularly when deploying machine learning inference services that
+  depend on pre-trained models behind an API gateway.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,6 +13,7 @@ metadata:
   - TensorFlow Serving
   - nginx
   - NP Classifier API
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

@@ -1,6 +1,8 @@
 ---
 name: maldi-imaging-mass-spectrometry-data-interpretation
-description: Use when you have paired pre- and post-MALDI microscopy images with visible, non-overlapping ablation marks, MALDI raw data files (.RAW, .UDP, .imzML, .ibd) analyzed by METASPACE, and a segmented cell mask from CellProfiler.
+description: Use when you have paired pre- and post-MALDI microscopy images with visible,
+  non-overlapping ablation marks, MALDI raw data files (.RAW, .UDP, .imzML, .ibd)
+  analyzed by METASPACE, and a segmented cell mask from CellProfiler.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -17,6 +19,7 @@ metadata:
   - Python 3 with requirements.txt
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM

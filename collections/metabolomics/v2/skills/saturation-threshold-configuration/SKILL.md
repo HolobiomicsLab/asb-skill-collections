@@ -1,6 +1,9 @@
 ---
 name: saturation-threshold-configuration
-description: Use when when executing peak integration on preprocessed GC-IMS data (after alignment and baseline correction) and you need to decide whether to include or exclude peaks that exhibit saturation artifacts from the RIP signal. Set a threshold (e.g., 0.
+description: Use when when executing peak integration on preprocessed GC-IMS data
+  (after alignment and baseline correction) and you need to decide whether to include
+  or exclude peaks that exhibit saturation artifacts from the RIP signal. Set a threshold
+  (e.g., 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -11,6 +14,7 @@ metadata:
   - GCIMS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -39,6 +43,7 @@ attribution:
 
 # saturation-threshold-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure the RIP (Reactant Ion Peak) saturation threshold parameter during peak integration in GC-IMS preprocessing to control which saturated peaks are retained or excluded from the peak table. This parameter directly affects the quality and completeness of the final intensity matrix used in downstream analysis.

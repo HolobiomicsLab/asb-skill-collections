@@ -1,6 +1,9 @@
 ---
 name: multiple-testing-correction-bonferroni
-description: Use when when you have computed raw p-values for multiple independent statistical tests (e.g., Pearson correlation tests across all pairwise ion combinations in MSI data) and need to report which results remain significant after accounting for multiple comparisons.
+description: Use when when you have computed raw p-values for multiple independent
+  statistical tests (e.g., Pearson correlation tests across all pairwise ion combinations
+  in MSI data) and need to report which results remain significant after accounting
+  for multiple comparisons.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,11 +18,13 @@ metadata:
   - mass2adduct (R package)
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # Multiple-testing correction (Bonferroni)
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Bonferroni correction to control false-positive rate when testing statistical significance across many pairwise comparisons in mass spectrometry imaging data. This correction adjusts p-value thresholds by the total number of tests performed, protecting against spurious findings when screening thousands of ion-pair correlations.

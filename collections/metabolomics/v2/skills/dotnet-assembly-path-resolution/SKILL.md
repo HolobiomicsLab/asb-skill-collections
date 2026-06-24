@@ -1,20 +1,26 @@
 ---
 name: dotnet-assembly-path-resolution
-description: Use when your R package wraps a .NET assembly (e.g., RawFileReader) and you need to (1) report to users or logs which assembly file is actually being used, (2) verify that the assembly exists on disk before attempting to invoke it via system calls, or (3) enable diagnostic output showing the exact.
+description: Use when your R package wraps a .NET assembly (e.g., RawFileReader) and
+  you need to (1) report to users or logs which assembly file is actually being used,
+  (2) verify that the assembly exists on disk before attempting to invoke it via system
+  calls, or (3) enable diagnostic output showing the exact.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - RawFileReader
   - rawrr
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +45,7 @@ attribution:
 
 # dotnet-assembly-path-resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Locate and validate the file path to a cached .NET assembly at runtime, then retrieve and report its version string. This skill enables R packages wrapping compiled C# dependencies to inspect and confirm the presence and identity of the underlying managed code without requiring user-supplied paths.

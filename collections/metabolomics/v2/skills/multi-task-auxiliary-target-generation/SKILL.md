@@ -1,6 +1,8 @@
 ---
 name: multi-task-auxiliary-target-generation
-description: Use when training neural network models (MLP or GNN) for metabolite annotation on mass spectrometry data and you have access to a large unlabeled or weakly labeled spectral dataset.
+description: Use when training neural network models (MLP or GNN) for metabolite annotation
+  on mass spectrometry data and you have access to a large unlabeled or weakly labeled
+  spectral dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3465
@@ -13,6 +15,7 @@ metadata:
   - ESP (Ensembled Spectral Prediction)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

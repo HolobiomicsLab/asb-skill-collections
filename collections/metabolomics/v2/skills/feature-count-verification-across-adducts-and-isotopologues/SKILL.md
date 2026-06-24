@@ -1,6 +1,9 @@
 ---
 name: feature-count-verification-across-adducts-and-isotopologues
-description: Use when after mzRAPP has exported a benchmark CSV file from centroided mzML files and you need to confirm the benchmark was constructed correctly before using it to evaluate NPP tool performance. Specifically, when you have a reference expectation (e.
+description: Use when after mzRAPP has exported a benchmark CSV file from centroided
+  mzML files and you need to confirm the benchmark was constructed correctly before
+  using it to evaluate NPP tool performance. Specifically, when you have a reference
+  expectation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,12 +16,14 @@ metadata:
   - enviPat
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - library(mzRAPP)
 claims: []
 provenance:

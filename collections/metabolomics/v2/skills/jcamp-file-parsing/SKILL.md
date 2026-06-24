@@ -1,6 +1,9 @@
 ---
 name: jcamp-file-parsing
-description: Use when you receive uploaded spectral data in JCAMP format (jcamp) as input to the /api/v1/chemspectra/file/convert endpoint, or when you need to extract and validate metadata and peak information from an existing JCAMP file before converting to another format or performing spectral analysis.
+description: Use when you receive uploaded spectral data in JCAMP format (jcamp) as
+  input to the /api/v1/chemspectra/file/convert endpoint, or when you need to extract
+  and validate metadata and peak information from an existing JCAMP file before converting
+  to another format or performing spectral analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -15,15 +18,18 @@ metadata:
   - chem-spectra-app
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
 evidence_spans:
 - Use the file pyproject.toml to determine the version of Python required.
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
-- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
+- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data
+  proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

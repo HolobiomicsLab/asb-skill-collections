@@ -1,6 +1,7 @@
 ---
 name: tensor-shape-validation-and-numerical-correctness-checking
-description: Use when after implementing a shared-weight ResNet18 encoder module but before integrating it into the DeepION data augmentation and projection workflow.
+description: Use when after implementing a shared-weight ResNet18 encoder module but
+  before integrating it into the DeepION data augmentation and projection workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -11,12 +12,14 @@ metadata:
   - ResNet18
   - PyTorch
   - TensorFlow
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +43,7 @@ attribution:
 
 # Tensor Shape Validation and Numerical Correctness Checking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verification step that confirms forward passes through a ResNet18-based encoder produce output tensors of expected shape (two 512-dimensional vectors) with numerically valid values before integration into the full DeepION contrastive learning pipeline. This prevents silent failures in representation learning that could compromise downstream ion image analysis.

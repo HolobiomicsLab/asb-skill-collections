@@ -1,6 +1,8 @@
 ---
 name: gcf-mf-link-scoring-computation
-description: Use when you have paired GCF and MF datasets with strain membership information and need to rank candidate GCF–MF links to identify which biosynthetic gene clusters likely produce detected metabolites.
+description: Use when you have paired GCF and MF datasets with strain membership information
+  and need to rank candidate GCF–MF links to identify which biosynthetic gene clusters
+  likely produce detected metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -18,6 +20,7 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -25,7 +28,8 @@ derived_from:
   title: ''
 evidence_spans:
 - follows the hypergeometric distribution as previously stated
-- NPLinker, a Python module to accelerate and support the process of automatically linking GCFs
+- NPLinker, a Python module to accelerate and support the process of automatically
+  linking GCFs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +54,7 @@ attribution:
 
 # GCF-MF Link Scoring Computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes standardised strain correlation scores and IOKR scores for Gene Cluster Family (GCF) to Metabolite Feature (MF) links, then combines them into a unified ranking to prioritise true genomic–metabolomic associations. This skill addresses the inability of raw strain correlation scores to be reliably compared across links of different sizes by standardising via hypergeometric null-model normalisation.

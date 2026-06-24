@@ -1,6 +1,9 @@
 ---
 name: precursor-mz-window-filtering
-description: Use when when preparing augmented training data for Siamese or contrastive learning architectures in mass spectrometry, specifically when you need to generate hard negative examples that are spectrally distinct but mass-similar to positive examples.
+description: Use when when preparing augmented training data for Siamese or contrastive
+  learning architectures in mass spectrometry, specifically when you need to generate
+  hard negative examples that are spectrally distinct but mass-similar to positive
+  examples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +44,7 @@ attribution:
 
 # precursor-mz-window-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter mass spectrometry spectra by precursor m/z proximity to generate negative training examples within a defined mass window. This skill enforces spectral diversity in training datasets for machine learning models by selecting spectra whose precursor m/z values fall within a specified tolerance of a query spectrum's precursor m/z.

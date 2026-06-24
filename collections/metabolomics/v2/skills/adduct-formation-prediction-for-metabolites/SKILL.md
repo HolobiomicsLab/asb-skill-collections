@@ -1,6 +1,8 @@
 ---
 name: adduct-formation-prediction-for-metabolites
-description: Use when when you have unidentified LC/MS features (m/z, retention time, intensity) and need to disambiguate which metabolites they represent by accounting for the fact that observed m/z values may correspond to different adduct forms (e.
+description: Use when when you have unidentified LC/MS features (m/z, retention time,
+  intensity) and need to disambiguate which metabolites they represent by accounting
+  for the fact that observed m/z values may correspond to different adduct forms (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,7 @@ metadata:
   - ipaPy2
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad455
   title: ipaPy2

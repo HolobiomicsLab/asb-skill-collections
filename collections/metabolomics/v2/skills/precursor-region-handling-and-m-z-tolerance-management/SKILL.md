@@ -1,6 +1,8 @@
 ---
 name: precursor-region-handling-and-m-z-tolerance-management
-description: Use when when computing entropy_similarity() between experimental (noisy or denoised) MS/MS spectra and reference library spectra, if the precursor m/z value is known and available.
+description: Use when when computing entropy_similarity() between experimental (noisy
+  or denoised) MS/MS spectra and reference library spectra, if the precursor m/z value
+  is known and available.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +18,7 @@ metadata:
   - spectral_denoising
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

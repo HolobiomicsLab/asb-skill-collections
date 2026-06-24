@@ -1,6 +1,8 @@
 ---
 name: peak-detection-and-mass-alignment
-description: Use when when you have raw LC-MS/MS data files (.mzML, .raw, or vendor formats) from multiple samples and need to identify reproducible molecular features across the cohort before annotation or statistical analysis.
+description: Use when when you have raw LC-MS/MS data files (.mzML, .raw, or vendor
+  formats) from multiple samples and need to identify reproducible molecular features
+  across the cohort before annotation or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

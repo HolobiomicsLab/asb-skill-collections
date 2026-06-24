@@ -1,6 +1,9 @@
 ---
 name: lc-ms-dataset-acquisition-and-curation
-description: Use when when beginning an untargeted LC-MS metabolomics study and need to assemble a cohort of mzML files for processing; particularly when establishing performance baselines across sample counts (10, 50, 100+ samples), validating reproducibility, or preparing data for publication.
+description: Use when when beginning an untargeted LC-MS metabolomics study and need
+  to assemble a cohort of mzML files for processing; particularly when establishing
+  performance baselines across sample counts (10, 50, 100+ samples), validating reproducibility,
+  or preparing data for publication.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -16,11 +19,13 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # LC-MS Dataset Acquisition and Curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic retrieval, preparation, and organization of centroid mzML LC-MS metabolomics datasets from public repositories (MetaboLights, MassIVE) or vendor instruments, with format conversion and sample registry construction to enable downstream feature detection and scalability benchmarking.

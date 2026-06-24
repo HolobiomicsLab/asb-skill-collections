@@ -1,6 +1,8 @@
 ---
 name: outlier-sample-removal-quality-control
-description: Use when visual inspection (PCA plots, TIC plots, or boxplots) reveals samples with aberrant lipid abundance profiles, or when domain knowledge suggests specific samples are technical replicates, biological outliers, or failed QC metrics.
+description: Use when visual inspection (PCA plots, TIC plots, or boxplots) reveals
+  samples with aberrant lipid abundance profiles, or when domain knowledge suggests
+  specific samples are technical replicates, biological outliers, or failed QC metrics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,12 +13,15 @@ metadata:
   - lipidr
   - limma
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - This step of the workflow requires the `limma` package to be installed.
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
@@ -42,6 +47,7 @@ attribution:
 
 # outlier-sample-removal-quality-control
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and remove anomalous samples from a LipidomicsExperiment object prior to differential analysis to improve statistical power and reliability of lipid biomarker discovery. This quality control step prevents outlier samples from inflating variance and obscuring genuine lipid class regulation patterns.

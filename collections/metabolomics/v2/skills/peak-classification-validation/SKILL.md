@@ -1,6 +1,7 @@
 ---
 name: peak-classification-validation
-description: Use when after training or loading a NeatMS neural network model, before applying it to filter false positive MS1 peaks in a new dataset.
+description: Use when after training or loading a NeatMS neural network model, before
+  applying it to filter false positive MS1 peaks in a new dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -15,11 +16,13 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -48,6 +51,7 @@ attribution:
 
 # peak-classification-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate a trained neural network classifier's optimal decision threshold on a labelled peak dataset by computing true vs. false positive rates across probability thresholds and selecting the threshold that maximizes (TP − FP). This skill ensures the classifier is correctly tuned before deployment on unlabelled LCMS data.

@@ -1,6 +1,9 @@
 ---
 name: feature-fidelity-prediction
-description: Use when you have a feature table (CSV with m/z and retention time columns) and corresponding .mzXML or .mzML mass spectrometry files from an LC-MS metabolomics experiment, and you need to filter out false or low-quality chromatographic peaks before downstream analysis.
+description: Use when you have a feature table (CSV with m/z and retention time columns)
+  and corresponding .mzXML or .mzML mass spectrometry files from an LC-MS metabolomics
+  experiment, and you need to filter out false or low-quality chromatographic peaks
+  before downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,12 +19,15 @@ metadata:
   - PyCharm / VS Code
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01309
   title: EVA
 evidence_spans:
-- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems. Please check out pyEVA
-- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems
+- EVA now has a python version that can be easily installed and used on Mac, PC, and
+  Linux systems. Please check out pyEVA
+- EVA now has a python version that can be easily installed and used on Mac, PC, and
+  Linux systems
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

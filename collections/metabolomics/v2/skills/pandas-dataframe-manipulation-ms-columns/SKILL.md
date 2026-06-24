@@ -1,6 +1,9 @@
 ---
 name: pandas-dataframe-manipulation-ms-columns
-description: Use when when you have raw mass spectrometry data (from mzML, Bruker .d, or CSV format) loaded into a Pandas DataFrame and need to ensure it has the correct column structure (m/z, retention time, intensity) before invoking pyOpenMS-Viz plotting functions like .plot(kind='spectrum'), .
+description: Use when when you have raw mass spectrometry data (from mzML, Bruker
+  .d, or CSV format) loaded into a Pandas DataFrame and need to ensure it has the
+  correct column structure (m/z, retention time, intensity) before invoking pyOpenMS-Viz
+  plotting functions like .plot(kind='spectrum'), .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -16,6 +19,7 @@ metadata:
   - pyOpenMS-Viz
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -46,6 +50,7 @@ attribution:
 
 # pandas-dataframe-manipulation-ms-columns
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and structure mass spectrometry data within Pandas DataFrames by organizing and selecting columns for m/z, retention time, and intensity dimensions required by pyOpenMS-Viz plotting methods. This skill ensures data is in the correct format and column names are compatible with the visualization backend.

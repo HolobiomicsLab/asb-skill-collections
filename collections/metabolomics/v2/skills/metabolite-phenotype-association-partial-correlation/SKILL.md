@@ -1,6 +1,9 @@
 ---
 name: metabolite-phenotype-association-partial-correlation
-description: Use when you have a SummarizedExperiment object containing NMR or MS metabolomic data with aligned phenotype information (BMI, disease status, age, gender), and you need to identify metabolites associated with a continuous or categorical outcome while controlling for known confounders that might.
+description: Use when you have a SummarizedExperiment object containing NMR or MS
+  metabolomic data with aligned phenotype information (BMI, disease status, age, gender),
+  and you need to identify metabolites associated with a continuous or categorical
+  outcome while controlling for known confounders that might.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3676
@@ -14,12 +17,14 @@ metadata:
   - Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # metabolite-phenotype-association-partial-correlation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute partial Spearman correlations between metabolic features and a phenotype of interest while simultaneously adjusting for epidemiological confounders (age, gender, disease status). This generates metabolome-wide association estimates, raw p-values, and multiple-testing corrected p-values suitable for hypothesis testing in metabolomic cohorts.

@@ -1,6 +1,8 @@
 ---
 name: pfas-homologous-series-detection
-description: Use when you have an m/z-resolved feature list from LC- or GC-HRMS analysis (either detected by pyOpenMS or provided as a custom Excel table) and need to prioritize potential PFAS compounds by identifying clusters of homologous structures.
+description: Use when you have an m/z-resolved feature list from LC- or GC-HRMS analysis
+  (either detected by pyOpenMS or provided as a custom Excel table) and need to prioritize
+  potential PFAS compounds by identifying clusters of homologous structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,6 +15,7 @@ metadata:
   - pyOpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -41,6 +44,7 @@ attribution:
 
 # PFAS Homologous Series Detection via Kendrick Mass Defect Analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects homologous series of per- and polyfluoroalkyl substances (PFAS) in high-resolution MS feature lists by calculating Kendrick mass defect (KMD) values and grouping features with equivalent or near-equivalent KMD values within a user-specified tolerance. This prioritization technique identifies systematically related PFAS members that differ by repeating units (e.g., CF₂) and share characteristic chromatographic or spectroscopic signatures.

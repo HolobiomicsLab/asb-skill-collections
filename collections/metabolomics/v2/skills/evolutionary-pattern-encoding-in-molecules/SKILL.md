@@ -1,6 +1,9 @@
 ---
 name: evolutionary-pattern-encoding-in-molecules
-description: Use when when building or fine-tuning a molecular representation model intended for natural product mining, taxonomy classification, or bioactivity prediction, and you have access to natural product SMILES data with scaffold and side-chain structural annotations.
+description: Use when when building or fine-tuning a molecular representation model
+  intended for natural product mining, taxonomy classification, or bioactivity prediction,
+  and you have access to natural product SMILES data with scaffold and side-chain
+  structural annotations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0009
@@ -15,6 +18,7 @@ metadata:
   - PyTorch Lightning
   - RDKit or equivalent chemoinformatics library
   - NaFM-Official repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -43,6 +47,7 @@ attribution:
 
 # evolutionary-pattern-encoding-in-molecules
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A pre-training strategy that encodes scaffold-derived evolutionary patterns and side-chain structural diversity in natural product molecules using dual objectives: contrastive learning and masked graph modeling. This approach enables foundation models to capture biosynthetic lineage information absent in synthetic molecule datasets.

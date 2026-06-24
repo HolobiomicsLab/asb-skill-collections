@@ -1,6 +1,8 @@
 ---
 name: random-walk-graph-propagation
-description: 'Use when you have: (1) a set of spectral library matches (seed identities) mapped to molecular structures, (2) a candidate structure graph derived from in silico fragmentation (e.'
+description: 'Use when you have: (1) a set of spectral library matches (seed identities)
+  mapped to molecular structures, (2) a candidate structure graph derived from in
+  silico fragmentation (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +17,7 @@ metadata:
   - ChemWalker
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad078/7067745
   title: ChemWalker

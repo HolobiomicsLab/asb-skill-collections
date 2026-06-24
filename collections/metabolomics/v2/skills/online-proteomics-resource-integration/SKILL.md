@@ -1,6 +1,7 @@
 ---
 name: online-proteomics-resource-integration
-description: Use when your analysis requires MS/MS spectra from public proteomics datasets but you want to avoid manual download and format conversion.
+description: Use when your analysis requires MS/MS spectra from public proteomics
+  datasets but you want to avoid manual download and format conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -16,12 +17,15 @@ metadata:
   - PSI-MOD Protein Modifications Ontology
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # online-proteomics-resource-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load tandem mass spectrometry spectra from distributed online proteomics and metabolomics repositories (PRIDE, MassIVE) using Universal Spectrum Identifier (USI) strings, resolving them to raw spectral data and instantiating searchable spectrum objects. This skill bridges the gap between web-accessible MS/MS data archives and local processing pipelines.

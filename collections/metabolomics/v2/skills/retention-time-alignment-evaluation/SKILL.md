@@ -1,6 +1,8 @@
 ---
 name: retention-time-alignment-evaluation
-description: Use when you have run an NPP tool (XCMS, MZmine 2, etc.) on mzML files and need to assess whether the alignment stage preserved peak detection fidelity and isotopologue abundance ratios.
+description: Use when you have run an NPP tool (XCMS, MZmine 2, etc.) on mzML files
+  and need to assess whether the alignment stage preserved peak detection fidelity
+  and isotopologue abundance ratios.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,12 +17,14 @@ metadata:
   - enviPat
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - You can then assess the performance of NPP runs we have performed via XCMS
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)

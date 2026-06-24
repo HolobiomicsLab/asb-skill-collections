@@ -1,6 +1,9 @@
 ---
 name: chemical-transformation-prediction-via-rule-application
-description: 'Use when you have: (1) a set of starting compounds in SMILES format; (2) a library of reaction rules (SMARTS-encoded) from MetaCyc or custom sources; (3) a need to discover predicted reaction products and novel compounds across multiple reaction generations; and (4) constraints (e.'
+description: 'Use when you have: (1) a set of starting compounds in SMILES format;
+  (2) a library of reaction rules (SMARTS-encoded) from MetaCyc or custom sources;
+  (3) a need to discover predicted reaction products and novel compounds across multiple
+  reaction generations; and (4) constraints (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -13,6 +16,7 @@ metadata:
   - RDKit
   - eQuilibrator
   - mordred
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

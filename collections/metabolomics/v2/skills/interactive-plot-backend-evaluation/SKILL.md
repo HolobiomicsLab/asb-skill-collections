@@ -1,6 +1,9 @@
 ---
 name: interactive-plot-backend-evaluation
-description: Use when you have mass spectrometry data (chromatograms, spectra, peak maps, mobilograms) that you want to visualize interactively using pyOpenMS-viz, and you need to select between bokeh and plotly backends based on execution time and feature parity.
+description: Use when you have mass spectrometry data (chromatograms, spectra, peak
+  maps, mobilograms) that you want to visualize interactively using pyOpenMS-viz,
+  and you need to select between bokeh and plotly backends based on execution time
+  and feature parity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,12 +18,14 @@ metadata:
   - Pandas
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 - Multiple backends supported including matplotlib, bokeh, and plotly
@@ -48,6 +53,7 @@ attribution:
 
 # interactive-plot-backend-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare rendering performance and feature support across interactive plotting backends (bokeh, plotly) for mass spectrometry visualizations. This skill identifies which backend best balances speed, interactivity, and plot-type coverage for a given visualization workload.

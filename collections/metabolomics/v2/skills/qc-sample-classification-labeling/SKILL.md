@@ -1,6 +1,8 @@
 ---
 name: qc-sample-classification-labeling
-description: Use when when loading multiple LC-MS runs (mzML files) into an MsExperiment object and the injection sequence contains an interleaved or documented pattern of QC and sample runs (e.g., two QC, four sample, two QC, four sample, two QC).
+description: Use when when loading multiple LC-MS runs (mzML files) into an MsExperiment
+  object and the injection sequence contains an interleaved or documented pattern
+  of QC and sample runs (e.g., two QC, four sample, two QC, four sample, two QC).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +17,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -45,6 +48,7 @@ attribution:
 
 # QC-Sample Classification and Labeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic annotation of LC-MS injection runs as either QC (quality control) or sample based on their position in an acquisition sequence, implemented by populating the sampleData 'type' column of an MsExperiment object. This classification enables downstream quality assessment and differential treatment of QC versus analytical samples.

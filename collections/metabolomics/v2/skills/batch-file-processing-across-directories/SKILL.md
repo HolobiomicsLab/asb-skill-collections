@@ -1,6 +1,9 @@
 ---
 name: batch-file-processing-across-directories
-description: Use when when you need to systematically extract a specific field or set of fields from multiple files scattered across nested directories—for example, to reconstruct an index of entry statuses from thousands of JSON annotation records, or to audit a repository's content without manually visiting.
+description: Use when when you need to systematically extract a specific field or
+  set of fields from multiple files scattered across nested directories—for example,
+  to reconstruct an index of entry statuses from thousands of JSON annotation records,
+  or to audit a repository's content without manually visiting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   - pandas or equivalent tabular data library
   - Python json module
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -38,6 +42,7 @@ attribution:
 
 # batch-file-processing-across-directories
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recursively scan a directory tree to locate and parse all files of a target format (e.g., JSON), extract structured fields from each file, and aggregate results into a uniform table. This skill is essential for inventory and metadata extraction tasks across large distributed datasets.

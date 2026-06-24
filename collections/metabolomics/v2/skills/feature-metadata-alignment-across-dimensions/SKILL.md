@@ -1,6 +1,7 @@
 ---
 name: feature-metadata-alignment-across-dimensions
-description: Use when you have loaded a feature-by-pixel intensity matrix from an MSI HDF5 container and need to perform dimension-preserving corrections (e.
+description: Use when you have loaded a feature-by-pixel intensity matrix from an
+  MSI HDF5 container and need to perform dimension-preserving corrections (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,12 +14,14 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +45,7 @@ attribution:
 
 # feature-metadata-alignment-across-dimensions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and preserve feature metadata (lipid identifiers, adduct forms, isotope relationships) across the feature and pixel dimensions of a mass spectrometry imaging intensity matrix during correction and transformation workflows. This skill ensures that derived datasets (isotope-corrected, quantified) maintain consistent feature-to-metadata mappings and dimensional scale metadata required by downstream visualization and export steps.

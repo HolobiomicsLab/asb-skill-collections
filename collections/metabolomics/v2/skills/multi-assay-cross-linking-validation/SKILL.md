@@ -1,6 +1,8 @@
 ---
 name: multi-assay-cross-linking-validation
-description: Use when you have statistically significant features from multiple LC-MS assays with different ionization modes (e.g., positive and negative ESI) and need to collapse redundant feature representations into single structural entities.
+description: Use when you have statistically significant features from multiple LC-MS
+  assays with different ionization modes (e.g., positive and negative ESI) and need
+  to collapse redundant feature representations into single structural entities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -19,6 +21,7 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -55,6 +58,7 @@ attribution:
 
 # Multi-Assay Cross-Linking Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and link structurally equivalent features across multiple LC-MS assays by searching for canonical adduct pairs ([M+H]+/[M-H]−) that represent the same neutral mass, enabling integration of complementary ionization modes. This skill consolidates multi-assay metabolomics data into unified structural clusters by resolving ionization-mode-specific fragmentation patterns.

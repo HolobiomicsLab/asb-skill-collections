@@ -1,6 +1,8 @@
 ---
 name: peak-removal-robustness-testing
-description: Use when when validating a metabolomics pathway analysis method (particularly decomposition-based approaches like PLAGE) against data quality degradation, or when comparing robustness across methods (PLAGE vs. ORA vs. GSEA).
+description: Use when when validating a metabolomics pathway analysis method (particularly
+  decomposition-based approaches like PLAGE) against data quality degradation, or
+  when comparing robustness across methods (PLAGE vs. ORA vs. GSEA).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -12,6 +14,7 @@ metadata:
   - PLAGE (Pathway Level Analysis of Gene Expression)
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -42,6 +45,7 @@ attribution:
 
 # peak-removal-robustness-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess the stability of pathway activity rankings under random peak dropout to validate that pathway scoring methods can tolerate missing metabolite identifications—a common problem in metabolomics datasets. This skill measures whether top-ranking pathways remain stable as peaks are progressively removed from the dataset.

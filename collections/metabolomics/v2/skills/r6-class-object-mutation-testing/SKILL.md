@@ -1,6 +1,8 @@
 ---
 name: r6-class-object-mutation-testing
-description: Use when when applying a series of mpactr filter functions (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) with copy_object=FALSE to confirm that the original peak table object is mutated as intended, not silently copied.
+description: Use when when applying a series of mpactr filter functions (filter_mispicked_ions,
+  filter_group, filter_cv, filter_insource_ions) with copy_object=FALSE to confirm
+  that the original peak table object is mutated as intended, not silently copied.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -12,6 +14,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

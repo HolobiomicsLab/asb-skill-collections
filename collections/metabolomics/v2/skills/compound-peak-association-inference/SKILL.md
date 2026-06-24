@@ -1,6 +1,8 @@
 ---
 name: compound-peak-association-inference
-description: Use when after peak picking on INADEQUATE NMR spectra when you have a set of peak coordinates and intensities and need to determine which peaks belong to the same molecular compound.
+description: Use when after peak picking on INADEQUATE NMR spectra when you have a
+  set of peak coordinates and intensities and need to determine which peaks belong
+  to the same molecular compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +14,7 @@ metadata:
   - PyINETA
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

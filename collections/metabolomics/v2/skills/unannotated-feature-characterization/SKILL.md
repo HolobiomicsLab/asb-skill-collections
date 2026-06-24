@@ -1,6 +1,9 @@
 ---
 name: unannotated-feature-characterization
-description: Use when you have aligned feature tables from LC–MS/MS, corresponding in silico annotations (from GNPS/ISDB or SIRIUS), and metadata describing sample origin. Use it to rank extracts by the proportion of sample-specific, unannotated features—a proxy for structural novelty.
+description: Use when you have aligned feature tables from LC–MS/MS, corresponding
+  in silico annotations (from GNPS/ISDB or SIRIUS), and metadata describing sample
+  origin. Use it to rank extracts by the proportion of sample-specific, unannotated
+  features—a proxy for structural novelty.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -19,16 +22,20 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time' columns. -Inventa takes input directly from MZmine2
+- MZmine output format using only the 'Peak area', 'row m/z' and 'row retention time'
+  columns. -Inventa takes input directly from MZmine2
 - Inventa takes input directly from MZmine2 or MZmine 3
-- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/), is possible to use other processing sofwares
-- 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
+- -Inventa takes input directly from MZmine2 or [MZmine 3](http://mzmine.github.io/),
+  is possible to use other processing sofwares
+- 'tima_results_filename: timaR reponderated output format. - for performing in silico
+  annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'
 claims: []
 provenance:

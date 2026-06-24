@@ -1,6 +1,9 @@
 ---
 name: scoring-function-sensitivity-analysis
-description: Use when you have two or more complementary scoring functions (e.g., strain correlation and IOKR scores) that you wish to combine, and you need to determine which combination strategy and parameters maximize enrichment of known true links in a validation set.
+description: Use when you have two or more complementary scoring functions (e.g.,
+  strain correlation and IOKR scores) that you wish to combine, and you need to determine
+  which combination strategy and parameters maximize enrichment of known true links
+  in a validation set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,15 +17,18 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # Scoring-function sensitivity analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate how parameter choices in scoring function combinations affect enrichment of validated links in BGC-metabolite predictions. This skill determines which combination function (e.g., ℓp-norm with varying exponents, weighted linear combinations, or alternative aggregation methods) best prioritizes true links across multiple datasets.

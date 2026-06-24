@@ -1,6 +1,9 @@
 ---
 name: count-matrix-statistical-modeling
-description: Use when after count matrix preprocessing (normalization, batch correction, low-count filtering) when you have a feature-by-sample count matrix and phenotype metadata, and you need to identify differentially expressed genes, miRNAs, isoforms, or other features across treatment groups or conditions.
+description: Use when after count matrix preprocessing (normalization, batch correction,
+  low-count filtering) when you have a feature-by-sample count matrix and phenotype
+  metadata, and you need to identify differentially expressed genes, miRNAs, isoforms,
+  or other features across treatment groups or conditions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3223
@@ -14,13 +17,15 @@ metadata:
   - ggplot2
   - ComplexHeatmap
   - edgeR
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
 - '### DESeq2 [deseq](../modules/local/deseq2)'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

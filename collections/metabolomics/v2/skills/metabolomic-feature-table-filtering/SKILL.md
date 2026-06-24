@@ -1,6 +1,7 @@
 ---
 name: metabolomic-feature-table-filtering
-description: Use when after feature detection (e.g., Asari processing of mzML files to feature tables) but before normalization, batch correction, or annotation.
+description: Use when after feature detection (e.g., Asari processing of mzML files
+  to feature tables) but before normalization, batch correction, or annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -43,6 +45,7 @@ attribution:
 
 # metabolomic-feature-table-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove unreliable metabolomic features from LC-MS feature tables using intensity-based filtering criteria (blank masking and feature prevalence thresholds). This skill prepares high-quality feature tables for downstream statistical analysis by eliminating background contamination and low-frequency features.

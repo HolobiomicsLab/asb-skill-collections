@@ -1,6 +1,9 @@
 ---
 name: pytorch-model-checkpoint-management
-description: Use when you have a pretrained GNN-RT model trained on a reference molecular database and need to adapt it to predict LC retention times on a different in-house molecular dataset with potentially different chromatographic conditions or chemical space.
+description: Use when you have a pretrained GNN-RT model trained on a reference molecular
+  database and need to adapt it to predict LC retention times on a different in-house
+  molecular dataset with potentially different chromatographic conditions or chemical
+  space.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -15,6 +18,7 @@ metadata:
   - RDKit
   - Preprocess.py
   - Transferlearning.py
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

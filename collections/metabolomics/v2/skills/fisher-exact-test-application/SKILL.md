@@ -1,6 +1,7 @@
 ---
 name: fisher-exact-test-application
-description: Use when you have a list of metabolites or lipids with associated p-values (e.
+description: Use when you have a list of metabolites or lipids with associated p-values
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,11 +18,13 @@ metadata:
   - igraph
   - KEGG / KEGGREST
   - LION lipid ontology database
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - curated KEGG data for enrichment using Fisher's Exact Test
 - library(readr)
 claims: []

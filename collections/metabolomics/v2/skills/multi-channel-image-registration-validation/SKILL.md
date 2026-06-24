@@ -1,6 +1,8 @@
 ---
 name: multi-channel-image-registration-validation
-description: Use when after importing and manually aligning two element channels in LA-ICP-MS images, use this skill to confirm registration quality before computing spatial relationships.
+description: Use when after importing and manually aligning two element channels in
+  LA-ICP-MS images, use this skill to confirm registration quality before computing
+  spatial relationships.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,13 +13,15 @@ metadata:
   - pewpew
   - pewlib
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 - python library [pewlib]
@@ -46,6 +50,7 @@ attribution:
 
 # Multi-channel Image Registration Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates spatial alignment of two co-registered element channels in LA-ICP-MS images by computing quantitative colocalization coefficients (Pearson R, Li ICQ, and Manders) to confirm registration fidelity before downstream spatial analysis.

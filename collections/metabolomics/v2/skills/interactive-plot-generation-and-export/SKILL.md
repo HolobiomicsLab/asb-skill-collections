@@ -1,6 +1,8 @@
 ---
 name: interactive-plot-generation-and-export
-description: Use when after normalizing a featuredata matrix (samples × metabolites), when you need to visually assess the success of normalization across batches or sample groups.
+description: Use when after normalizing a featuredata matrix (samples × metabolites),
+  when you need to visually assess the success of normalization across batches or
+  sample groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -14,13 +16,16 @@ metadata:
   - RlaPlots
   - PcaPlots
   - HeatMap
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # interactive-plot-generation-and-export
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate interactive and non-interactive diagnostic visualizations of normalized metabolomics data using RlaPlots or PcaPlots functions, with options to save outputs as HTML widgets or static image files. This skill enables assessment of normalization quality and batch effects through interactive Plotly-based plots that highlight outlier samples.

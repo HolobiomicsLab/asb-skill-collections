@@ -1,6 +1,8 @@
 ---
 name: tic-peak-identification-sliding-window
-description: Use when you have loaded raw mass spectrometry data (mzML, mzXML, or CDF format) into AutoTuner and need to identify peak regions in the TIC trace prior to extracted ion chromatogram (EIC) analysis.
+description: Use when you have loaded raw mass spectrometry data (mzML, mzXML, or
+  CDF format) into AutoTuner and need to identify peak regions in the TIC trace prior
+  to extracted ion chromatogram (EIC) analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -16,6 +18,7 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

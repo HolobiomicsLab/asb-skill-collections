@@ -1,6 +1,8 @@
 ---
 name: annotation-pipeline-data-preparation
-description: Use when when you have raw PubChem compound records or other public chemical structure databases and need to supply candidate metabolite structures to a mass spectrometry annotation workflow like MAGMa.
+description: Use when when you have raw PubChem compound records or other public chemical
+  structure databases and need to supply candidate metabolite structures to a mass
+  spectrometry annotation workflow like MAGMa.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +15,7 @@ metadata:
   - pubchem (subproject)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -41,6 +44,7 @@ attribution:
 
 # annotation-pipeline-data-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and standardize chemical structure data from public databases (PubChem) into a validated candidate set formatted for metabolite annotation pipelines (MAGMa). This skill bridges raw compound record extraction and annotation-ready structure libraries by filtering, standardizing molecular representations, and validating schema compliance.

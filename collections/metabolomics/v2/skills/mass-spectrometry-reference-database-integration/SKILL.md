@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-reference-database-integration
-description: Use when you have individual MS/MS spectra or batch .mgf files from untargeted metabolomics experiments and need to search them against domain-specific reference libraries (e.
+description: Use when you have individual MS/MS spectra or batch .mgf files from untargeted
+  metabolomics experiments and need to search them against domain-specific reference
+  libraries (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -20,6 +22,7 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
@@ -49,6 +52,7 @@ attribution:
 
 # mass-spectrometry-reference-database-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate standalone mass spectrometry search applications with domain-specific reference databases to enable single-spectrum or batch spectral queries against curated microbe, plant, tissue, microbiome, or food metabolite libraries. This skill configures spectral indexing and deploys web applications that match experimental MS/MS spectra to reference data and generate structured outputs for downstream taxonomic and metabolomic inference.

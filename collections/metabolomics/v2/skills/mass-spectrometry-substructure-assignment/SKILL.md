@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-substructure-assignment
-description: Use when after Mass2Motif discovery via LDA on preprocessed MS/MS spectra, when you have a set of inferred motifs (fragments and neutral losses with LDA probabilities) and need to assign putative substructure identities rather than retain anonymous motif labels.
+description: Use when after Mass2Motif discovery via LDA on preprocessed MS/MS spectra,
+  when you have a set of inferred motifs (fragments and neutral losses with LDA probabilities)
+  and need to assign putative substructure identities rather than retain anonymous
+  motif labels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0224
@@ -16,11 +19,13 @@ metadata:
   - MassQL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - Automated annotation of **M2M** using **MAG**
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

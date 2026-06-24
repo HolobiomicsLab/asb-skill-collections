@@ -1,6 +1,9 @@
 ---
 name: ccs-library-format-parsing
-description: Use when when you have received or cloned a CCS reference library (such as the DTCCSN2 library for U13C labeled lipids) bundled with lipidomics software and need to verify its integrity, understand its lipid class composition, or extract metadata before using it for CCS bias calculation or.
+description: Use when when you have received or cloned a CCS reference library (such
+  as the DTCCSN2 library for U13C labeled lipids) bundled with lipidomics software
+  and need to verify its integrity, understand its lipid class composition, or extract
+  metadata before using it for CCS bias calculation or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -13,11 +16,13 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # Parse and validate CCS library file format
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate the structure, metadata, and numeric ranges of a collision cross section (CCS) reference library file distributed with ion mobility–mass spectrometry lipidomics software. This skill ensures the library's lipid class coverage, CCS value distributions, and measurement conditions are correctly parsed and match documented specifications.

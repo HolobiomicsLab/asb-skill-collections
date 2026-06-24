@@ -1,6 +1,9 @@
 ---
 name: qc-metric-visualization-across-samples
-description: Use when you have processed LC-MS peak detection output or feature tables containing internal standard identifications with retention times, m/z values, and intensity measurements across multiple samples, and you need to visually monitor whether internal standards are within acceptable QC.
+description: Use when you have processed LC-MS peak detection output or feature tables
+  containing internal standard identifications with retention times, m/z values, and
+  intensity measurements across multiple samples, and you need to visually monitor
+  whether internal standards are within acceptable QC.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -13,6 +16,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

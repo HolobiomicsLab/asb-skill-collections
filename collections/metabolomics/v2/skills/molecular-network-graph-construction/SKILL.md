@@ -1,6 +1,9 @@
 ---
 name: molecular-network-graph-construction
-description: Use when after completing dereplication and cosine similarity clustering in the MolNotator pipeline, when you have merged deduplicated molecular predictions and ion annotations and need to construct the final network representation for visualization and compound identification.
+description: Use when after completing dereplication and cosine similarity clustering
+  in the MolNotator pipeline, when you have merged deduplicated molecular predictions
+  and ion annotations and need to construct the final network representation for visualization
+  and compound identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3625
@@ -15,6 +18,7 @@ metadata:
   - MolNotator.dereplicator
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

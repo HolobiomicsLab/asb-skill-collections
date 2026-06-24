@@ -1,6 +1,9 @@
 ---
 name: concentration-prediction-from-calibration-model
-description: Use when you have (1) a set of calibration samples with known spiked concentrations of target compounds, (2) measured compound/internal-standard ratios for both calibration and study samples, and (3) need to convert ratios to absolute concentrations for reporting.
+description: Use when you have (1) a set of calibration samples with known spiked
+  concentrations of target compounds, (2) measured compound/internal-standard ratios
+  for both calibration and study samples, and (3) need to convert ratios to absolute
+  concentrations for reporting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,6 +18,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -23,8 +27,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +54,7 @@ attribution:
 
 # concentration-prediction-from-calibration-model
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a weighted linear regression model to calibration-line samples with known concentrations, then apply the fitted model to predict absolute concentrations for study samples from their measured compound/internal-standard ratios. This enables quantification of metabolites in untargeted metabolomics when authentic standards are available.

@@ -1,6 +1,8 @@
 ---
 name: metabolite-fold-change-statistical-testing
-description: Use when you have XCMS-processed LC/MS peak data from dual-labeled (e.g., 13C) and unlabeled (12C) metabolomics samples and need to distinguish features genuinely enriched by stable isotope incorporation from noise or background variation.
+description: Use when you have XCMS-processed LC/MS peak data from dual-labeled (e.g.,
+  13C) and unlabeled (12C) metabolomics samples and need to distinguish features genuinely
+  enriched by stable isotope incorporation from noise or background variation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5b03628
   title: geoRge

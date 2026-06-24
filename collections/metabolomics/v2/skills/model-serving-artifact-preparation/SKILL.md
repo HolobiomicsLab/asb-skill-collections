@@ -1,6 +1,9 @@
 ---
 name: model-serving-artifact-preparation
-description: Use when you have trained Keras models that need to be deployed in a TensorFlow Serving container, and the serving infrastructure requires HDF5 TensorFlow 2.0+ format with specific input/output layer naming conventions (e.g., 'input_2048', 'input_4096', 'output').
+description: Use when you have trained Keras models that need to be deployed in a
+  TensorFlow Serving container, and the serving infrastructure requires HDF5 TensorFlow
+  2.0+ format with specific input/output layer naming conventions (e.g., 'input_2048',
+  'input_4096', 'output').
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -11,6 +14,7 @@ metadata:
   - TensorFlow
   - Keras
   - TensorFlow Serving
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

@@ -1,6 +1,9 @@
 ---
 name: in-silico-fragment-prediction
-description: Use when you have a collection of compound structures in SDF format (e.g., DNA adduct structures) and need to systematically generate predicted fragment spectra across a defined ionization level and mass range to populate a reference spectral database or validate experimental fragmentation patterns.
+description: Use when you have a collection of compound structures in SDF format (e.g.,
+  DNA adduct structures) and need to systematically generate predicted fragment spectra
+  across a defined ionization level and mass range to populate a reference spectral
+  database or validate experimental fragmentation patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -11,12 +14,14 @@ metadata:
   - CFM-ID
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
 evidence_spans:
 - CFM-ID
-- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA adducts
+- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA
+  adducts
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # in-silico-fragment-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate predicted mass spectrometry fragment spectra computationally from compound chemical structures using CFM-ID, enabling rapid annotation and validation of experimental fragmentations for metabolites and DNA adducts without requiring wet-lab MS/MS experiments.

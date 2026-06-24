@@ -1,6 +1,8 @@
 ---
 name: tree-structure-optimization-for-metabolite-deconvolution
-description: Use when you have a connected subnetwork of LC-MS features that matched isotope or adduct patterns, and you need to establish a canonical tree representation with a single neutral mass assignment.
+description: Use when you have a connected subnetwork of LC-MS features that matched
+  isotope or adduct patterns, and you need to establish a canonical tree representation
+  with a single neutral mass assignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -16,6 +18,7 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -48,6 +51,7 @@ attribution:
 
 # tree-structure-optimization-for-metabolite-deconvolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts feature-pair networks into optimized tree structures representing empirical compounds by separating isotope and adduct edges, establishing an adduct trunk with a root path, and inferring neutral mass via linear regression against a theoretical khipu grid. This skill removes redundant nodes and resolves ambiguous ion relationships in LC-MS feature tables.

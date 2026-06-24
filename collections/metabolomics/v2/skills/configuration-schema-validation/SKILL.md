@@ -1,6 +1,9 @@
 ---
 name: configuration-schema-validation
-description: Use when when you have generated or edited a LipoCLEAN `options.txt` file using `--print MSD4` or `--print MSD5` and need to verify it is well-formed before running the analysis. Use this skill as a pre-flight check before invoking `--options options.
+description: Use when when you have generated or edited a LipoCLEAN `options.txt`
+  file using `--print MSD4` or `--print MSD5` and need to verify it is well-formed
+  before running the analysis. Use this skill as a pre-flight check before invoking
+  `--options options.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -13,6 +16,7 @@ metadata:
   - MS-DIAL 5
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -41,6 +45,7 @@ attribution:
 
 # configuration-schema-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a TOML-formatted options file for LipoCLEAN contains all required configuration fields with correct syntax and structure before passing it to the tool for lipid identification filtering. This skill ensures the configuration is version-specific (MS-DIAL 4 or 5) and ready for execution.

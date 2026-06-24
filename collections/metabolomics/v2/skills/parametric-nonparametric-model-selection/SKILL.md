@@ -1,6 +1,8 @@
 ---
 name: parametric-nonparametric-model-selection
-description: Use when you have preprocessed, log₂-scaled metabolomics data in CSV format (samples × features) with batch assignment labels and need to decide which batch effect correction model to apply.
+description: Use when you have preprocessed, log₂-scaled metabolomics data in CSV
+  format (samples × features) with batch assignment labels and need to decide which
+  batch effect correction model to apply.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,6 +14,7 @@ metadata:
   - sva
   - R
   - ber
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -21,7 +24,8 @@ evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - ComBat(parametric and non-parametric)-model [PMID:16632515] from sva package [PMID:22257669]
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # parametric-nonparametric-model-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select between parametric ComBat, non-parametric ComBat, two-stage (ber), and bagging-based batch correction models by comparing their performance on metabolomics data using adjusted R² scores and diagnostic plots. This skill enables practitioners to choose the statistical model that best fits their dataset's batch structure before applying correction.

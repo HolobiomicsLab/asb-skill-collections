@@ -1,6 +1,7 @@
 ---
 name: differential-metabolite-abundance-analysis
-description: Use when you have raw metabolomics data structured as a matrix with metabolites as rows and samples as columns, samples are annotated with group labels (e.
+description: Use when you have raw metabolomics data structured as a matrix with metabolites
+  as rows and samples as columns, samples are annotated with group labels (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -11,11 +12,13 @@ metadata:
   - R
   - run_de()
   - enrichmet()
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

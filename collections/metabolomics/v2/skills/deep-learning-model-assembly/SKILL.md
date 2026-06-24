@@ -1,6 +1,9 @@
 ---
 name: deep-learning-model-assembly
-description: Use when you have transformer encoder components and a prediction head specification, and need to wire them into a single trainable model that maps molecular structure inputs (SMILES, molecular graphs, or feature vectors) to scalar or vector molecular property predictions.
+description: Use when you have transformer encoder components and a prediction head
+  specification, and need to wire them into a single trainable model that maps molecular
+  structure inputs (SMILES, molecular graphs, or feature vectors) to scalar or vector
+  molecular property predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -14,6 +17,7 @@ metadata:
   - HyperCCS repository
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03492
   title: HyperCCS

@@ -1,6 +1,8 @@
 ---
 name: mzml-file-format-writing
-description: Use when you have peak properties (mass, intensity, retention time) for biomolecules, selected noise and fragmentation models, and instrument parameters (e.
+description: Use when you have peak properties (mass, intensity, retention time) for
+  biomolecules, selected noise and fragmentation models, and instrument parameters
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -13,11 +15,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
 evidence_spans:
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
+  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

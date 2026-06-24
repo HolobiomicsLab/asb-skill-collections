@@ -1,6 +1,9 @@
 ---
 name: spectral-coverage-and-intensity-metric-computation
-description: Use when you have completed a ViMMS simulation run or processed real LC-MS/MS data and need to quantitatively assess whether one DDA controller (e.g., WeightedDEWController with exclusion) outperforms another (e.g., TopNController) in terms of spectral coverage and signal recovery.
+description: Use when you have completed a ViMMS simulation run or processed real
+  LC-MS/MS data and need to quantitatively assess whether one DDA controller (e.g.,
+  WeightedDEWController with exclusion) outperforms another (e.g., TopNController)
+  in terms of spectral coverage and signal recovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -48,6 +52,7 @@ attribution:
 
 # spectral-coverage-and-intensity-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute fragmentation coverage and cumulative intensity metrics from simulated or real LC-MS/MS acquisitions to evaluate and compare the efficacy of different data-dependent acquisition (DDA) strategies. This skill quantifies how completely a fragmentation strategy captures MS/MS spectra across detected analytes and measures total signal intensity recovered.

@@ -1,6 +1,8 @@
 ---
 name: mass-recalibration-lock-mass-correction
-description: Use when converting mzML files to imzML format for imaging mass spectrometry data and you have a known internal standard (lock mass) whose exact m/z value is available. Use it specifically during the metadata annotation stage (iw_utils.
+description: Use when converting mzML files to imzML format for imaging mass spectrometry
+  data and you have a known internal standard (lock mass) whose exact m/z value is
+  available. Use it specifically during the metadata annotation stage (iw_utils.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,7 @@ metadata:
   - msconvert
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer

@@ -1,6 +1,9 @@
 ---
 name: concentration-based-signal-scaling
-description: Use when you have loaded m/z peak data with metadata that includes a concentration column representing sample loading mass or volume, and systematic intensity variation across samples is suspected to reflect preparation differences rather than true biological variation.
+description: Use when you have loaded m/z peak data with metadata that includes a
+  concentration column representing sample loading mass or volume, and systematic
+  intensity variation across samples is suspected to reflect preparation differences
+  rather than true biological variation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +15,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

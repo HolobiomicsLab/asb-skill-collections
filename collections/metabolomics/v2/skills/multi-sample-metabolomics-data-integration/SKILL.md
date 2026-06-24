@@ -1,6 +1,8 @@
 ---
 name: multi-sample-metabolomics-data-integration
-description: Use when you have two or more independently processed MemoMatrix objects (each generated from a separate sample set) and your analysis goal requires direct comparison of MS2 fingerprint profiles across those samples.
+description: Use when you have two or more independently processed MemoMatrix objects
+  (each generated from a separate sample set) and your analysis goal requires direct
+  comparison of MS2 fingerprint profiles across those samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -16,6 +18,7 @@ metadata:
   - Python 3.8+
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo

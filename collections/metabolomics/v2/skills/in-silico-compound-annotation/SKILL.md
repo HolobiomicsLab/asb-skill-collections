@@ -1,6 +1,9 @@
 ---
 name: in-silico-compound-annotation
-description: Use when after feature filtering and clustering have been completed in MS-CleanR and you have a cleaned feature set with m/z, retention time, and MS/MS spectra data ready for structural assignment. Use it when you need to identify unknown compounds by querying multiple chemical databases (e.
+description: Use when after feature filtering and clustering have been completed in
+  MS-CleanR and you have a cleaned feature set with m/z, retention time, and MS/MS
+  spectra data ready for structural assignment. Use it when you need to identify unknown
+  compounds by querying multiple chemical databases (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -13,6 +16,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -41,6 +45,7 @@ attribution:
 
 # in-silico-compound-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Exports filtered and clustered LC-MS features to MS-FINDER for structure prediction and compound identification using hydrogen rearrangement rules (HRR) scoring across multiple chemical databases. This skill bridges feature detection and annotation, enabling prioritized structural assignment when experimental MS/MS spectra alone are insufficient.

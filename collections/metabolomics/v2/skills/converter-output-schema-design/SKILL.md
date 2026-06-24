@@ -1,6 +1,9 @@
 ---
 name: converter-output-schema-design
-description: Use when when integrating multiple heterogeneous metadata services (e.g., CIR, CTS, PubChem, IDSM, BridgeDb) that return unstructured or variably-formatted responses, and you need to enforce uniform output contracts before committing fetched values to mass spectra files (.msp format).
+description: Use when when integrating multiple heterogeneous metadata services (e.g.,
+  CIR, CTS, PubChem, IDSM, BridgeDb) that return unstructured or variably-formatted
+  responses, and you need to enforce uniform output contracts before committing fetched
+  values to mass spectra files (.msp format).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +19,7 @@ metadata:
   - PubChem
   - IDSM
   - BridgeDb
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

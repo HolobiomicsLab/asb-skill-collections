@@ -1,6 +1,9 @@
 ---
 name: distance-geometry-embedding
-description: Use when when you have ionized adduct structures (in SMILES or MOL format) from an upstream ionization-state determination step and need to produce multiple low-energy 3D conformations for collision cross section prediction, metabolite annotation, or structure-property modeling.
+description: Use when when you have ionized adduct structures (in SMILES or MOL format)
+  from an upstream ionization-state determination step and need to produce multiple
+  low-energy 3D conformations for collision cross section prediction, metabolite annotation,
+  or structure-property modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -14,12 +17,14 @@ metadata:
   - ASE-ANI
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # distance-geometry-embedding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate initial 3D molecular coordinates from 2D SMILES or MOL structures using RDKit's distance-geometry algorithm, producing a diverse ensemble of conformers that serve as starting geometries for subsequent force-field optimization and quantum filtering in CCS prediction workflows.

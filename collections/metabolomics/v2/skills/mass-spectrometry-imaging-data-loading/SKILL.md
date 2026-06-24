@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-imaging-data-loading
-description: Use when you have raw or preprocessed MS imaging data archived as an RDS file or from a Zenodo deposit that includes the full m/z feature set (e.g., 10,200 m/z values spanning 150–1000 m/z range) and spectrum count (e.
+description: Use when you have raw or preprocessed MS imaging data archived as an
+  RDS file or from a Zenodo deposit that includes the full m/z feature set (e.g.,
+  10,200 m/z values spanning 150–1000 m/z range) and spectrum count (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -53,6 +56,7 @@ attribution:
 
 # Mass Spectrometry Imaging Data Loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and initialize unprocessed MS imaging data (e.g., from Zenodo) into a Cardinal object, establishing the raw feature matrix, m/z axis, and spatial coordinates for downstream processing. This is the foundational step that materializes the high-dimensional m/z × spectrum matrix before normalization or peak refinement.

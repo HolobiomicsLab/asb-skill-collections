@@ -1,6 +1,8 @@
 ---
 name: spectral-similarity-scoring
-description: Use when when you have extracted low-resolution mass spectra from individual chromatographic peaks in GC-MS data and need to match them against a spectral library (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.
+description: Use when when you have extracted low-resolution mass spectra from individual
+  chromatographic peaks in GC-MS data and need to match them against a spectral library
+  (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -31,6 +33,7 @@ metadata:
   techniques:
   - GC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -46,7 +49,8 @@ derived_from:
   title: ''
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -97,6 +101,7 @@ attribution:
 
 # spectral-similarity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the similarity between an experimental mass spectrum and library reference spectra using cosine similarity and retention-index proximity metrics. This skill is essential for automated compound identification in GC-MS workflows where multiple spectral candidates must be ranked and selected.

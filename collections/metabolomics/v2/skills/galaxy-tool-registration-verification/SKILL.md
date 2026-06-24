@@ -1,6 +1,9 @@
 ---
 name: galaxy-tool-registration-verification
-description: Use when after deploying Galaxy-M tool files and XML wrappers into a Galaxy installation's tool directories and restarting the Galaxy service, use this skill to confirm all metabolomics tools appear in the Galaxy admin interface and are ready for end-user access.
+description: Use when after deploying Galaxy-M tool files and XML wrappers into a
+  Galaxy installation's tool directories and restarting the Galaxy service, use this
+  skill to confirm all metabolomics tools appear in the Galaxy admin interface and
+  are ready for end-user access.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +16,7 @@ metadata:
   - R 3.0.1
   - MATLAB Compiler Runtime 8.3
   - Galaxy-M
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M

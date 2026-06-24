@@ -1,6 +1,8 @@
 ---
 name: sample-metadata-stratification-and-filtering
-description: Use when when you have retrieved a large, heterogeneous collection of tandem MS files from ReDU or MassIVE and need to isolate a subset sharing specific sample characteristics (e.
+description: Use when when you have retrieved a large, heterogeneous collection of
+  tandem MS files from ReDU or MassIVE and need to isolate a subset sharing specific
+  sample characteristics (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - Emperor
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -47,6 +50,7 @@ attribution:
 
 # sample-metadata-stratification-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify and filter mass spectrometry samples by their metadata attributes (e.g., organism, sample type, geography) to enable targeted reanalysis and comparison of chemical annotations within ReDU. This skill reduces the scope of exploratory analysis by selecting cohesive subsets of public tandem MS data sharing common sample information properties.

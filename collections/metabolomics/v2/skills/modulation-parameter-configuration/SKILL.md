@@ -1,6 +1,8 @@
 ---
 name: modulation-parameter-configuration
-description: Use when you have a raw GCxGC-MS chromatogram in NetCDF format (.cdf file) and need to import it into R as a 2D-TIC object for preprocessing (smoothing, baseline correction, peak alignment) or multivariate analysis.
+description: Use when you have a raw GCxGC-MS chromatogram in NetCDF format (.cdf
+  file) and need to import it into R as a 2D-TIC object for preprocessing (smoothing,
+  baseline correction, peak alignment) or multivariate analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,13 +14,15 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # modulation-parameter-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure the modulation parameter when importing raw GCxGC-MS chromatograms from NetCDF files to correctly fold the one-dimensional raw signal into a two-dimensional Total Intensity Chromatogram (2D-TIC). The modulation parameter specifies the period (in seconds) of the second dimension, which is critical for proper data structure and subsequent preprocessing.

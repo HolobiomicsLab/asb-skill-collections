@@ -1,6 +1,8 @@
 ---
 name: metabolomic-data-preprocessing-optimization
-description: Use when you have multi-class or time-course metabolomic peak tables (with or without quality control samples and/or internal standards) and need to select the preprocessing workflow from hundreds of candidate combinations.
+description: Use when you have multi-class or time-course metabolomic peak tables
+  (with or without quality control samples and/or internal standards) and need to
+  select the preprocessing workflow from hundreds of candidate combinations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -19,6 +21,7 @@ metadata:
   - statTarget
   - ProteoMM
   - Biobase
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

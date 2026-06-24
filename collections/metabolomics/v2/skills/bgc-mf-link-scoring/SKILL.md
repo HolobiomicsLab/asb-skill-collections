@@ -1,6 +1,9 @@
 ---
 name: bgc-mf-link-scoring
-description: Use when you have preprocessed GCF-MF link pairs from paired genomics–metabolomics datasets (antiSMASH-detected BGCs clustered into GCFs, and GNPS spectra grouped into MFs) and need to rank them by likelihood of representing true natural product–biosynthetic gene associations.
+description: Use when you have preprocessed GCF-MF link pairs from paired genomics–metabolomics
+  datasets (antiSMASH-detected BGCs clustered into GCFs, and GNPS spectra grouped
+  into MFs) and need to rank them by likelihood of representing true natural product–biosynthetic
+  gene associations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,18 +19,23 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic data
-- After downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
+- Finally, we present NPLinker, a software framework to link genomic and metabolomic
+  data
+- After downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
-- antiSMASH to score the correspondence between the MIBiG entries and the detected BGCs
+- antiSMASH to score the correspondence between the MIBiG entries and the detected
+  BGCs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +60,7 @@ attribution:
 
 # BGC-MF link scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute complementary scoring functions (strain correlation and IOKR) to rank potential links between bacterial gene cluster families (GCFs) and metabolomic features (MFs), enabling prioritization of validated natural product–BGC associations. Combining both scores significantly enriches for true links compared to either score alone.

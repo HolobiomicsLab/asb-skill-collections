@@ -1,6 +1,8 @@
 ---
 name: public-database-query-integration
-description: Use when you have an experimental MS/MS spectrum (m/z and intensity pairs with known precursor m/z) and need to identify the compound by searching against public repositories or a local reference library.
+description: Use when you have an experimental MS/MS spectrum (m/z and intensity pairs
+  with known precursor m/z) and need to identify the compound by searching against
+  public repositories or a local reference library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -17,11 +19,13 @@ metadata:
   - RChemMass
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
 evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
 claims: []
 provenance:
@@ -46,6 +50,7 @@ attribution:
 
 # public-database-query-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query and annotate unknown MS/MS spectra against public spectral libraries (GNPS, MASSBANK, DrugBANK) or local databases using spectral similarity algorithms. This skill enables rapid compound identification by matching experimental fragmentation patterns to curated reference spectra with associated metadata.

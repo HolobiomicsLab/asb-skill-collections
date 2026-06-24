@@ -1,6 +1,9 @@
 ---
 name: metabolomics-quality-control-report-generation
-description: Use when after completing outlier detection, batch correction, and quality metric calculation on a SummarizedExperiment object using mzQuality's doAnalysis function, and after manually or automatically filtering compounds and samples using the 'use' column in rowData and colData.
+description: Use when after completing outlier detection, batch correction, and quality
+  metric calculation on a SummarizedExperiment object using mzQuality's doAnalysis
+  function, and after manually or automatically filtering compounds and samples using
+  the 'use' column in rowData and colData.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,6 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -44,6 +48,7 @@ attribution:
 
 # metabolomics-quality-control-report-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate organized quality-control reports from mass spectrometry metabolomics data by creating structured directories containing publication-ready plots, tab-delimited tables, and Excel exports that categorize compounds and samples by confidence levels. This skill produces human-friendly and programmatic-access formats suitable for downstream analysis and stakeholder communication.

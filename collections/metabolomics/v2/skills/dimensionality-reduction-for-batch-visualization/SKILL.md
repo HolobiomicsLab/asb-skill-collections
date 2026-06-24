@@ -1,6 +1,9 @@
 ---
 name: dimensionality-reduction-for-batch-visualization
-description: Use when after data preprocessing and standardization of a metabolomics feature matrix, when you need to detect and visually characterize batch effects arising from known experimental conditions, unknown latent groups, or hidden substructures before formal statistical testing.
+description: Use when after data preprocessing and standardization of a metabolomics
+  feature matrix, when you need to detect and visually characterize batch effects
+  arising from known experimental conditions, unknown latent groups, or hidden substructures
+  before formal statistical testing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -12,6 +15,7 @@ metadata:
   - SMART
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

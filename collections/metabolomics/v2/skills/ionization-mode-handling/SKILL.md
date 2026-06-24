@@ -1,6 +1,9 @@
 ---
 name: ionization-mode-handling
-description: Use when your MZmine MGF and CSV input files contain mixed or ambiguous ionization modes, or when your experimental design specifies separate negative (NEG) and positive (POS) ionization mode acquisitions that must be processed independently before merging.
+description: Use when your MZmine MGF and CSV input files contain mixed or ambiguous
+  ionization modes, or when your experimental design specifies separate negative (NEG)
+  and positive (POS) ionization mode acquisitions that must be processed independently
+  before merging.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

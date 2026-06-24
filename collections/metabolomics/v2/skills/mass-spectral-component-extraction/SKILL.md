@@ -1,6 +1,8 @@
 ---
 name: mass-spectral-component-extraction
-description: Use when raw GC-MS data (netCDF or mzML format) contains overlapping chromatographic peaks with co-eluting ions that cannot be resolved by retention time alone.
+description: Use when raw GC-MS data (netCDF or mzML format) contains overlapping
+  chromatographic peaks with co-eluting ions that cannot be resolved by retention
+  time alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -12,6 +14,7 @@ metadata:
   - GNPS_GC
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

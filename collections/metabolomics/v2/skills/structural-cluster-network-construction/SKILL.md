@@ -1,6 +1,8 @@
 ---
 name: structural-cluster-network-construction
-description: Use when after you have identified statistically significant LC-MS features and run MamsiStructSearch to generate structural clusters (isotopologue groups, adduct groups, cross-assay links) and computed correlation cluster assignments.
+description: Use when after you have identified statistically significant LC-MS features
+  and run MamsiStructSearch to generate structural clusters (isotopologue groups,
+  adduct groups, cross-assay links) and computed correlation cluster assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -17,6 +19,7 @@ metadata:
   - MAMSI MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -51,6 +54,7 @@ attribution:
 
 # Reconstruct the structural network graph generation from significant features
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert structural cluster assignments (isotopologues, adducts, cross-assay links) and correlation cluster memberships into an interactive NetworkX graph, then visualize in Cytoscape or pyvis for interactive exploration of metabolite structural relationships.

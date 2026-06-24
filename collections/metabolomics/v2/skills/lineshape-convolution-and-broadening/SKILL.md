@@ -1,6 +1,8 @@
 ---
 name: lineshape-convolution-and-broadening
-description: Use when after generating theoretical spin multiplets for individual metabolites via first-order or density-matrix NMR simulation, but before combining spectra or applying Fourier transformation.
+description: Use when after generating theoretical spin multiplets for individual
+  metabolites via first-order or density-matrix NMR simulation, but before combining
+  spectra or applying Fourier transformation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +13,7 @@ metadata:
   - MetAssimulo 2
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0
@@ -38,6 +41,7 @@ attribution:
 
 # lineshape-convolution-and-broadening
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply realistic peak broadening to theoretically simulated NMR multiplets by convolving with a lineshape function (Lorentzian or Gaussian), producing spectral peaks that approximate experimental line widths and instrumental resolution.

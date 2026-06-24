@@ -1,6 +1,8 @@
 ---
 name: multiple-testing-correction
-description: Use when whenever you have performed Fisher's exact test or another statistical enrichment test on multiple pathways, lipid categories, or metabolite sets simultaneously (typically ≥2 tests, often 50–100+ tests in practice).
+description: Use when whenever you have performed Fisher's exact test or another statistical
+  enrichment test on multiple pathways, lipid categories, or metabolite sets simultaneously
+  (typically ≥2 tests, often 50–100+ tests in practice).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -23,6 +25,7 @@ metadata:
   - MetENP (R package)
   - R (base stats and Bioconductor)
   - qvalue package
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
@@ -31,7 +34,8 @@ derived_from:
 - doi: 10.1093/bioinformatics/btad523/7248906
   title: ''
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - library(readr)
 - curated KEGG data for enrichment using Fisher's Exact Test
 - MetENP
@@ -67,6 +71,7 @@ attribution:
 
 # multiple-testing-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply multiple-testing correction (Benjamini–Hochberg or other family-wise error rate control) to p-values derived from pathway enrichment tests to control false discovery rate across many simultaneous statistical tests. This skill prevents inflated Type I error when testing hundreds of pathways or metabolite categories against a single input metabolite set.

@@ -1,6 +1,8 @@
 ---
 name: cascade-search-strategy-for-peptide-identification
-description: Use when use this strategy when analyzing tandem mass spectrometry data where you expect both unmodified and modified peptide identifications and require high confidence assignments with controlled false discovery rates.
+description: Use when use this strategy when analyzing tandem mass spectrometry data
+  where you expect both unmodified and modified peptide identifications and require
+  high confidence assignments with controlled false discovery rates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -11,11 +13,13 @@ metadata:
   - ANN-SoLo
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

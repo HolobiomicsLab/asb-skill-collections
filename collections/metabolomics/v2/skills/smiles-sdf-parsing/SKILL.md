@@ -1,6 +1,9 @@
 ---
 name: smiles-sdf-parsing
-description: Use when you have a natural product molecule or compound library provided as SMILES strings, InChI strings, or SDF files, and you need to convert them into an in-memory molecular representation (RDKit Mol object) suitable for fingerprinting, property prediction, or other cheminformatic operations.
+description: Use when you have a natural product molecule or compound library provided
+  as SMILES strings, InChI strings, or SDF files, and you need to convert them into
+  an in-memory molecular representation (RDKit Mol object) suitable for fingerprinting,
+  property prediction, or other cheminformatic operations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +14,7 @@ metadata:
   - pip
   - RDKit
   - biosynfoni
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

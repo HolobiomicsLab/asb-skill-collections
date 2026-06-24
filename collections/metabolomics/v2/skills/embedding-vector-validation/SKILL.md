@@ -1,6 +1,9 @@
 ---
 name: embedding-vector-validation
-description: Use when after instantiating and invoking a sinusoidal formula embedding layer (such as SCARF embeddings in MIST-CF) on chemical formula inputs, validate that the output embeddings meet dimensionality and value constraints before using them for downstream transformer or ranking tasks.
+description: Use when after instantiating and invoking a sinusoidal formula embedding
+  layer (such as SCARF embeddings in MIST-CF) on chemical formula inputs, validate
+  that the output embeddings meet dimensionality and value constraints before using
+  them for downstream transformer or ranking tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -11,13 +14,15 @@ metadata:
   - MIST
   - SCARF
   - MIST-CF
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # embedding-vector-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate sinusoidal formula embedding vectors produced by a neural network layer by checking dimensionality, numerical range, and reproducibility against reference outputs. This skill ensures embeddings are correctly instantiated and can be reliably compared across runs or implementations.

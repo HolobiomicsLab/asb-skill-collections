@@ -1,6 +1,9 @@
 ---
 name: fragment-canonicalization-and-matching
-description: Use when you have a collection of molecular fragments (e.g., from molecular decomposition, retrosynthesis, or synthetic planning) that must be matched to known fragment libraries or standardized representations before feeding them into a transformer assembly model.
+description: Use when you have a collection of molecular fragments (e.g., from molecular
+  decomposition, retrosynthesis, or synthetic planning) that must be matched to known
+  fragment libraries or standardized representations before feeding them into a transformer
+  assembly model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -10,6 +13,7 @@ metadata:
   tools:
   - transformer architecture
   - convolutional neural network
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -37,6 +41,7 @@ attribution:
 
 # fragment-canonicalization-and-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Canonicalize and match molecular fragments to standardized representations for use in transformer-based assembly workflows. This skill converts raw fragment inputs into a consistent format suitable for training and inference in fragment-to-structure prediction models.

@@ -1,6 +1,8 @@
 ---
 name: cross-spectrum-negative-mining
-description: Use when when training a Siamese architecture rescore model for MS/MS-based molecular formula prediction and you have an imbalanced training set with far fewer negative than positive spectrum pairs.
+description: Use when when training a Siamese architecture rescore model for MS/MS-based
+  molecular formula prediction and you have an imbalanced training set with far fewer
+  negative than positive spectrum pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -41,6 +44,7 @@ attribution:
 
 # cross-spectrum-negative-mining
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A data augmentation technique that generates hard negative training examples for Siamese network training by selecting spectra with precursor m/z values within a defined window around query spectra. This addresses class imbalance in molecular formula prediction by creating diverse negative pairs that improve model discrimination.

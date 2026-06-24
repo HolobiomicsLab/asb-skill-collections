@@ -1,6 +1,9 @@
 ---
 name: mass-spectral-metadata-standardization
-description: Use when you have acquired EI or MS/MS spectral libraries from multiple public sources (NIST, RIKEN, MoNA, SWGDRUG, GNPS) with inconsistent metadata field layouts, missing or misplaced SMILES entries, undocumented retention indices, or mixed polarity modes, and you need to merge them into a single.
+description: Use when you have acquired EI or MS/MS spectral libraries from multiple
+  public sources (NIST, RIKEN, MoNA, SWGDRUG, GNPS) with inconsistent metadata field
+  layouts, missing or misplaced SMILES entries, undocumented retention indices, or
+  mixed polarity modes, and you need to merge them into a single.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -20,6 +23,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -29,7 +33,8 @@ evidence_spans:
 - library(future)
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
-- The total number of spectra that your NIST library have can be checked in the *MS Search* program
+- The total number of spectra that your NIST library have can be checked in the *MS
+  Search* program
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -53,6 +58,7 @@ attribution:
 
 # mass-spectral-metadata-standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and reorganize mass spectral library metadata (SMILES, retention indices, molecular formulas, polarity) from heterogeneous public sources (NIST, RIKEN, MoNA, SWGDRUG) into a unified, MS-DIAL-compatible MSP format with consistent field organization and validated structure assignments.

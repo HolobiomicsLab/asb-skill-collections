@@ -1,6 +1,9 @@
 ---
 name: statistical-filtering-metabolite-features
-description: Use when when you have peak area tables (unlabeled C12 and labeled C13) from LC-MS metabolomics with sample metadata indicating case and control groups, and you need to distinguish true metabolic changes from instrumental noise or batch artifacts before attempting isotopic pairing.
+description: Use when when you have peak area tables (unlabeled C12 and labeled C13)
+  from LC-MS metabolomics with sample metadata indicating case and control groups,
+  and you need to distinguish true metabolic changes from instrumental noise or batch
+  artifacts before attempting isotopic pairing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -22,6 +25,7 @@ metadata:
   - IsoPairFinder
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair
@@ -54,6 +58,7 @@ attribution:
 
 # statistical-filtering-metabolite-features
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply differential abundance analysis and statistical cutoff filtering to metabolite peak tables to identify significantly altered features between experimental groups in stable isotope tracing metabolomics. This skill prioritizes biologically relevant intermediates by removing noise and non-significant signals based on p-value and fold-change thresholds.

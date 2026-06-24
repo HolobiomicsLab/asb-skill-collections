@@ -1,6 +1,9 @@
 ---
 name: smiles-string-parsing-and-validation
-description: Use when when you have SMILES strings as input to a molecular machine learning pipeline (e.g., retention time prediction, spectral prediction) and need to convert them into structured molecular representations before calculating descriptors or constructing molecular graphs.
+description: Use when when you have SMILES strings as input to a molecular machine
+  learning pipeline (e.g., retention time prediction, spectral prediction) and need
+  to convert them into structured molecular representations before calculating descriptors
+  or constructing molecular graphs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -23,6 +26,7 @@ metadata:
   - NP Classifier (mwang87/NP-Classifier)
   - MongoDB
   - Pickaxe
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
@@ -74,6 +78,7 @@ attribution:
 
 # SMILES String Parsing and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert SMILES (Simplified Molecular Input Line Entry System) strings into RDKit molecule objects for downstream descriptor calculation and molecular property prediction. This foundational step validates chemical notation syntax and prepares molecules for featurization in graph transformer and descriptor-based workflows.

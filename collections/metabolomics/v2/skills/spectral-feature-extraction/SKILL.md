@@ -1,6 +1,8 @@
 ---
 name: spectral-feature-extraction
-description: Use when you have raw mass-spectrometry data (precursor m/z, ionization mode, and fragment m/z–intensity pairs) and need to feed it into a CNN-based metabolite annotation pipeline.
+description: Use when you have raw mass-spectrometry data (precursor m/z, ionization
+  mode, and fragment m/z–intensity pairs) and need to feed it into a CNN-based metabolite
+  annotation pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -22,6 +24,7 @@ metadata:
   - PyTorch Geometric
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID
@@ -57,6 +60,7 @@ attribution:
 
 # spectral-feature-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and normalize mass-spectrometry spectral features (m/z and intensity pairs) into a tensor format suitable for CNN input in metabolite fingerprint prediction. This skill bridges raw MS data and deep learning by standardizing fragmentation patterns into feature vectors that preserve chemical information.

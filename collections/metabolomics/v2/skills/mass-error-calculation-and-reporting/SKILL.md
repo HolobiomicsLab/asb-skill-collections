@@ -1,6 +1,9 @@
 ---
 name: mass-error-calculation-and-reporting
-description: Use when after molecular formula assignment has been performed on calibrated m/z values. Apply this skill when you need to quantify the accuracy of formula-to-peak matching, validate mass calibration performance against reference standards (e.g., SRFA.
+description: Use when after molecular formula assignment has been performed on calibrated
+  m/z values. Apply this skill when you need to quantify the accuracy of formula-to-peak
+  matching, validate mass calibration performance against reference standards (e.g.,
+  SRFA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -15,12 +18,14 @@ metadata:
   - EnviroMS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -48,6 +53,7 @@ attribution:
 
 # mass-error-calculation-and-reporting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and report mass error metrics (ppm deviation, absolute mass difference) for assigned molecular formulas in FT-ICR and related high-resolution mass spectrometry workflows. Mass error quantification is essential for validating molecular formula assignments and assessing calibration quality.

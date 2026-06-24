@@ -1,6 +1,9 @@
 ---
 name: python-conda-environment-management
-description: Use when when setting up a multi-language data analysis pipeline that requires both R and Python components to coexist with exact version constraints, especially when deep learning (keras) and machine learning (caret, pROC) packages must share a common Python backend.
+description: Use when when setting up a multi-language data analysis pipeline that
+  requires both R and Python components to coexist with exact version constraints,
+  especially when deep learning (keras) and machine learning (caret, pROC) packages
+  must share a common Python backend.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +18,7 @@ metadata:
   - Python
   - numpy
   - r-miniconda
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
@@ -48,6 +52,7 @@ attribution:
 
 # python-conda-environment-management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Establish and document a reproducible Python environment pinned to specific versions (Python 3.6.10, numpy 1.18.1) via r-miniconda, integrated with R via reticulate for cross-language interoperability in SERDA normalization workflows. This skill ensures that deep learning (keras), statistical analysis (pROC, caret), and numerical computation dependencies are locked and portable.

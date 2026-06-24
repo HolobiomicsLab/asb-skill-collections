@@ -1,6 +1,8 @@
 ---
 name: unsupervised-clustering-in-high-dimensional-space
-description: Use when you have a preprocessed feature matrix from metabolomics data and suspect unknown batch effects, hidden sample substructures, or latent groups not captured by experimental metadata.
+description: Use when you have a preprocessed feature matrix from metabolomics data
+  and suspect unknown batch effects, hidden sample substructures, or latent groups
+  not captured by experimental metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - SMART
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

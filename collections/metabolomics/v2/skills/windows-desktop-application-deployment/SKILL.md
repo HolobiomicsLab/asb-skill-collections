@@ -1,6 +1,9 @@
 ---
 name: windows-desktop-application-deployment
-description: Use when when you have cloned a .NET Framework or .NET Core WPF project from a GitHub repository and need to compile it into an executable binary for Windows deployment. Specifically, when the project uses ReactiveExtensions/ReactiveProperty packages, declares a .NET Framework 4.7.2 or .
+description: Use when when you have cloned a .NET Framework or .NET Core WPF project
+  from a GitHub repository and need to compile it into an executable binary for Windows
+  deployment. Specifically, when the project uses ReactiveExtensions/ReactiveProperty
+  packages, declares a .NET Framework 4.7.2 or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3222
@@ -19,13 +22,15 @@ metadata:
   - GitHub Actions (dotnet_test.yml)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
 - we are using the WPF (Windows Presentation Foundation) UI framework for GUI implementation
 - utilizing packages such as ReactiveExtensions and ReactiveProperty
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # windows-desktop-application-deployment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build and deploy a Windows desktop WPF application from source code using Visual Studio, targeting .NET Framework 4.7.2, with NuGet dependency management and verification on a Windows runtime environment. This skill is essential when reconstructing metabolomics software (MS-DIAL) from source for reproducible open-science workflows.

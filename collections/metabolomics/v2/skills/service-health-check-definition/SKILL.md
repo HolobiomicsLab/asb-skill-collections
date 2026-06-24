@@ -1,6 +1,9 @@
 ---
 name: service-health-check-definition
-description: 'Use when when deploying a multi-service microarchitecture (such as MAGMa''s four distinct subprojects: magmaweb, joblauncher, job, and pubchem) via Docker Compose and you need to ensure that service startup order respects true readiness rather than container existence—particularly when services have.'
+description: 'Use when when deploying a multi-service microarchitecture (such as MAGMa''s
+  four distinct subprojects: magmaweb, joblauncher, job, and pubchem) via Docker Compose
+  and you need to ensure that service startup order respects true readiness rather
+  than container existence—particularly when services have.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0361
@@ -9,6 +12,7 @@ metadata:
   tools:
   - MAGMa
   - Docker Compose
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -38,6 +42,7 @@ attribution:
 
 # service-health-check-definition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define and configure health checks for containerized microservices in a Docker Compose orchestration to monitor service readiness and inter-service dependencies. Health checks enable the orchestrator to validate that dependent services are running correctly before allowing downstream services to start or retry communication.

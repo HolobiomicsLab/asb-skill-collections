@@ -1,6 +1,9 @@
 ---
 name: bioconda-package-installation
-description: Use when you have identified a package available in the Bioconda channel (indicated by a conda version badge or Bioconda recipe URL) and need to verify that installation succeeds and that the package's critical modules are importable in the target Python environment, especially before integrating.
+description: Use when you have identified a package available in the Bioconda channel
+  (indicated by a conda version badge or Bioconda recipe URL) and need to verify that
+  installation succeeds and that the package's critical modules are importable in
+  the target Python environment, especially before integrating.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -11,6 +14,7 @@ metadata:
   - conda
   - Bioconda
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -40,6 +44,7 @@ attribution:
 
 # bioconda-package-installation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install a Python package from the Bioconda conda channel and verify that core modules import without errors. Use this skill when you need to deploy a bioinformatics tool in a reproducible, cross-platform environment and confirm functional installation before downstream analysis.

@@ -1,6 +1,9 @@
 ---
 name: workflow-context-preservation
-description: 'Use when when submitting OpenMS workflows to RQ (Redis Queue) in online Docker mode, you need to preserve the job ID and execution context for recovery after container restarts or worker failures. Apply this skill if: (1) you are using QueueManager.'
+description: 'Use when when submitting OpenMS workflows to RQ (Redis Queue) in online
+  Docker mode, you need to preserve the job ID and execution context for recovery
+  after container restarts or worker failures. Apply this skill if: (1) you are using
+  QueueManager.'
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +13,7 @@ metadata:
   - Redis
   - QueueManager
   - Streamlit
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -39,6 +43,7 @@ attribution:
 
 # workflow-context-preservation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preserve workflow execution context and job metadata across distributed queue submissions and worker recoveries by storing and retrieving uniquely-keyed job identifiers and parameters in persistent workflow directories. This skill ensures RQ-based job artifacts remain traceable and recoverable in online Docker deployments.

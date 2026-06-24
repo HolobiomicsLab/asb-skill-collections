@@ -1,6 +1,9 @@
 ---
 name: compound-identifier-lookup
-description: Use when you have an experimental MS/MS spectrum (m/z and intensity pairs in mzML/mzXML format from DDA or targeted acquisition on Thermo, Waters, or Bruker instruments) and need to identify the unknown compound by comparing it against a reference database.
+description: Use when you have an experimental MS/MS spectrum (m/z and intensity pairs
+  in mzML/mzXML format from DDA or targeted acquisition on Thermo, Waters, or Bruker
+  instruments) and need to identify the unknown compound by comparing it against a
+  reference database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -17,11 +20,13 @@ metadata:
   - RChemMass
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
 evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # Reconstruct library search annotation of an unknown spectrum against a local or public database
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Search and annotate an unknown MS/MS spectrum by matching its fragmentation pattern and precursor m/z against a spectral library (local or public) using cosine similarity or spectral dot-product algorithms. This skill enables confident compound identification without sharing proprietary data to public repositories.

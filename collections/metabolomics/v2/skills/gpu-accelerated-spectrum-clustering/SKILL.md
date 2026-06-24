@@ -1,6 +1,9 @@
 ---
 name: gpu-accelerated-spectrum-clustering
-description: Use when you have a large collection of tandem mass spectra (≥100k spectra) in MGF format and need to group spectra by similarity (precursor m/z, charge, and fragment ion patterns) for spectral library construction, peptide identification, or quality control.
+description: Use when you have a large collection of tandem mass spectra (≥100k spectra)
+  in MGF format and need to group spectra by similarity (precursor m/z, charge, and
+  fragment ion patterns) for spectral library construction, peptide identification,
+  or quality control.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,6 +18,7 @@ metadata:
   - CUDA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

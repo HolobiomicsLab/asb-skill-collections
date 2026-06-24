@@ -1,6 +1,8 @@
 ---
 name: spectral-quality-control-assessment
-description: Use when after MS1 extraction (coarse/fine error correction, EIC window extraction) and retention time windowing on a set of mzML files tagged with ionization mode and compound adducts.
+description: Use when after MS1 extraction (coarse/fine error correction, EIC window
+  extraction) and retention time windowing on a set of mzML files tagged with ionization
+  mode and compound adducts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +16,13 @@ metadata:
   - Docker
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-025-01044-x
   title: Shinyscreen
 evidence_spans:
-- Shinyscreen is a Shiny application for visualizing and analyzing high resolution mass spectrometry data.
+- Shinyscreen is a Shiny application for visualizing and analyzing high resolution
+  mass spectrometry data.
 - Shinyscreen can be installed in R via `devtools`
 - docker run -p 3838:3838 \ -v C:/your/path/project:/home/ssuser/projects
 - docker pull registry.gitlab.com/uniluxembourg/lcsb/eci/shinyscreen:master

@@ -1,6 +1,9 @@
 ---
 name: batch-corrected-data-extraction
-description: Use when after batch correction has been applied to metabolomics data using pooled SQC samples, and you need to retrieve the corrected ratios (compound / internal standard) for quality metrics calculation, internal standard recommendation, concentration estimation, or statistical modelling.
+description: Use when after batch correction has been applied to metabolomics data
+  using pooled SQC samples, and you need to retrieve the corrected ratios (compound
+  / internal standard) for quality metrics calculation, internal standard recommendation,
+  concentration estimation, or statistical modelling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3196
@@ -12,6 +15,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -42,6 +46,7 @@ attribution:
 
 # batch-corrected-data-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract batch-corrected compound/internal-standard ratios and their metadata from a SummarizedExperiment object after pooled study quality control (SQC) sample-based batch correction. This skill enables downstream analyses requiring normalized, drift-corrected abundance data.

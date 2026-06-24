@@ -1,6 +1,7 @@
 ---
 name: multi-fold-split-validation-reporting
-description: Use when when evaluating a spectral embedding or compound identification model on a dataset where the training/test split has already been finalized (e.
+description: Use when when evaluating a spectral embedding or compound identification
+  model on a dataset where the training/test split has already been finalized (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3658
@@ -15,6 +16,7 @@ metadata:
   - figshare
   - SpecEmbedding
   - SpecEmbedding-Comparison
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -47,6 +49,7 @@ attribution:
 
 # multi-fold-split-validation-reporting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A structured approach to partitioning spectral test sets into multiple random query/reference splits while preserving the original training set boundary, enabling robust evaluation with uncertainty quantification across folds. This skill ensures reproducibility and fair comparison by reporting results as mean and standard deviation across all partitions.

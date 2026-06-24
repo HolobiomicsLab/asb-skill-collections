@@ -1,6 +1,7 @@
 ---
 name: electronic-noise-generation-uniform-sampling
-description: Use when when you need to create synthetic noisy MS/MS spectra for benchmarking or validating denoising algorithms.
+description: Use when when you need to create synthetic noisy MS/MS spectra for benchmarking
+  or validating denoising algorithms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +15,7 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

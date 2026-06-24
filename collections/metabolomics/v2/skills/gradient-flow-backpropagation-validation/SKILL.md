@@ -1,6 +1,9 @@
 ---
 name: gradient-flow-backpropagation-validation
-description: Use when after implementing a multi-task fusion module (such as FuseBlock) that combines feature tensors from multiple prediction branches (e.g., isotope, charge, retention-time) and must verify that backpropagation signals flow from the fused representation to each upstream branch.
+description: Use when after implementing a multi-task fusion module (such as FuseBlock)
+  that combines feature tensors from multiple prediction branches (e.g., isotope,
+  charge, retention-time) and must verify that backpropagation signals flow from the
+  fused representation to each upstream branch.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -10,6 +13,7 @@ metadata:
   tools:
   - PyTorch
   - IsoFusion
+  license_tier: open
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion

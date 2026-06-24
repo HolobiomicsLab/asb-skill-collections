@@ -1,6 +1,8 @@
 ---
 name: biomolecular-class-label-assignment
-description: Use when you have raw or processed TWIM-MS data with arrival time and m/z values for multiple features, but lack prior structural identification (e.g., from spectral libraries or databases).
+description: Use when you have raw or processed TWIM-MS data with arrival time and
+  m/z values for multiple features, but lack prior structural identification (e.g.,
+  from spectral libraries or databases).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,7 @@ metadata:
   techniques:
   - CE-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -44,6 +47,7 @@ attribution:
 
 # biomolecular-class-label-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign biomolecular class labels (e.g., lipid, peptide, carbohydrate) to unidentified TWIM-MS features based on their physico-chemical properties, without requiring prior feature identification. This enables downstream class-specific collision cross section (CCS) calculations and multi-omic data interpretation.

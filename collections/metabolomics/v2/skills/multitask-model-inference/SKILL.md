@@ -1,6 +1,9 @@
 ---
 name: multitask-model-inference
-description: Use when you have a trained multitask model checkpoint and preprocessed spectral inputs (1D NMR spectra, 1H-only, 13C-only, or combined 1H+13C), and you need to generate simultaneous predictions of molecular formula and connectivity structure to quantify modality contributions, compare single vs..
+description: Use when you have a trained multitask model checkpoint and preprocessed
+  spectral inputs (1D NMR spectra, 1H-only, 13C-only, or combined 1H+13C), and you
+  need to generate simultaneous predictions of molecular formula and connectivity
+  structure to quantify modality contributions, compare single vs..
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,6 +15,7 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -39,6 +43,7 @@ attribution:
 
 # multitask-model-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Run inference on a trained multitask machine learning model to predict multiple correlated outputs (e.g., molecular formula and connectivity) from a single input modality or multiple fused input modalities. This skill applies a pre-trained CNN–transformer pipeline to generate structured predictions suitable for comparative multimodal analysis.

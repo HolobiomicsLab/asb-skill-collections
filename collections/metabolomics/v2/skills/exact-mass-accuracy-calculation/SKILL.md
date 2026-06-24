@@ -1,6 +1,8 @@
 ---
 name: exact-mass-accuracy-calculation
-description: Use when you have feature pairs identified by temporal correlation in direct-injection MS data and need to confirm their relationship is consistent with known adduct/fragment mass shifts.
+description: Use when you have feature pairs identified by temporal correlation in
+  direct-injection MS data and need to confirm their relationship is consistent with
+  known adduct/fragment mass shifts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # Exact Mass Accuracy Calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and evaluate mass accuracy of observed m/z differences against reference adduct and fragment masses to refine ion-species candidate assignments in direct-injection mass spectrometry. This refinement step disambiguates correlations by matching measured mass differences to expected adduct/fragment patterns within user-specified ppm tolerance.

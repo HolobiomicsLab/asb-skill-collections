@@ -1,6 +1,8 @@
 ---
 name: normalization-method-comparative-evaluation
-description: Use when you have raw metabolomics intensity data affected by batch effects and signal drift, and need to select among multiple normalization approaches based on published comparative metrics.
+description: Use when you have raw metabolomics intensity data affected by batch effects
+  and signal drift, and need to select among multiple normalization approaches based
+  on published comparative metrics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - Metanorm
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -17,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # Comparative Evaluation of Metabolomics Normalization Methods
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill reproduces and validates published rankings of five normalization methods (tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) across robustness and computational speed dimensions using the Metanorm R package on metabolomics datasets. It enables practitioners to verify which method best suits their experimental design and performance requirements.

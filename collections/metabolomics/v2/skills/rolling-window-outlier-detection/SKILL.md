@@ -1,6 +1,8 @@
 ---
 name: rolling-window-outlier-detection
-description: Use when raw LA-ICP-MS image data contains isolated spike artifacts—pixels with anomalously high or low intensities relative to their spatial neighborhood—that distort downstream quantification or visualization.
+description: Use when raw LA-ICP-MS image data contains isolated spike artifacts—pixels
+  with anomalously high or low intensities relative to their spatial neighborhood—that
+  distort downstream quantification or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,13 +13,15 @@ metadata:
   - pewlib
   - Python
   - pew²
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 - python library [pewlib]
@@ -46,6 +50,7 @@ attribution:
 
 # rolling-window-outlier-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and removes spike outliers from LA-ICP-MS image data by comparing each pixel against local rolling-window statistics (median or mean). The skill identifies pixels deviating beyond a configurable threshold and replaces them with the local statistic, preserving spatial structure while suppressing instrumental noise.

@@ -1,6 +1,8 @@
 ---
 name: parallel-factor-generation-from-metadata
-description: Use when when you have a Spectra object backed by an on-disk MS data source (e.g., MsBackendMzR reading mzML, mzXML, or CDF files) and need to process large numbers of spectra in parallel or serial chunks.
+description: Use when when you have a Spectra object backed by an on-disk MS data
+  source (e.g., MsBackendMzR reading mzML, mzXML, or CDF files) and need to process
+  large numbers of spectra in parallel or serial chunks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -15,14 +17,17 @@ metadata:
   - mzR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files
+- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from
+  the raw MS data files
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # parallel-factor-generation-from-metadata
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a grouping factor from MS backend metadata (typically dataStorage file paths) to enable chunk-wise parallel or serial processing of spectra without loading all peak data into memory simultaneously. This skill is essential when scaling MS data analysis to large datasets where memory-efficient batch processing is required.

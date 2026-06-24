@@ -1,6 +1,8 @@
 ---
 name: metabolite-signal-extraction-from-lc-hrms
-description: Use when you have raw untargeted LC/HRMS data (mzXML, mzML, or netCDF format) from population-scale studies (n > 500 samples) and need to extract a comprehensive peaklist with aligned features across all samples.
+description: Use when you have raw untargeted LC/HRMS data (mzXML, mzML, or netCDF
+  format) from population-scale studies (n > 500 samples) and need to extract a comprehensive
+  peaklist with aligned features across all samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -19,11 +21,14 @@ metadata:
   - IDSL.CSA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -48,6 +53,7 @@ attribution:
 
 # metabolite-signal-extraction-from-lc-hrms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction of metabolite peaks from untargeted LC/HRMS data through a multi-stage algorithmic pipeline that begins with EIC candidate generation, followed by peak detection, property evaluation, and batch-wise retention time correction. This skill is essential for generating high-quality feature tables from population-scale metabolomics studies where sensitivity and specificity across hundreds of samples are critical.

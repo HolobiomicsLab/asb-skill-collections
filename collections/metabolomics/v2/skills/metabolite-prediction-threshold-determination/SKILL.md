@@ -1,6 +1,9 @@
 ---
 name: metabolite-prediction-threshold-determination
-description: Use when after training and cross-validating a regression model (e.g., neural network or Elastic Net) that predicts metabolite abundances from microbiome features, you have Spearman correlation coefficients (SCCs) for each metabolite between predicted and observed values.
+description: Use when after training and cross-validating a regression model (e.g.,
+  neural network or Elastic Net) that predicts metabolite abundances from microbiome
+  features, you have Spearman correlation coefficients (SCCs) for each metabolite
+  between predicted and observed values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,16 +19,24 @@ metadata:
   - NumPy
   - SciPy (Spearman correlation)
   - MelonnPan
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- Canonical correlation analysis models were implemented using Python's scikit-learn package.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation function since previous studies have shown that it is resilient to the problems of exploding and vanishing
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- Canonical correlation analysis models were implemented using Python's scikit-learn
+  package.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation
+  function since previous studies have shown that it is resilient to the problems
+  of exploding and vanishing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +60,7 @@ attribution:
 
 # metabolite-prediction-threshold-determination
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine which metabolites are reliably predicted by a microbiome-to-metabolome model by establishing a statistical cutoff threshold from an empirical background distribution of correlations on shuffled data. This separates signal from noise and identifies metabolites suitable for downstream biological interpretation.

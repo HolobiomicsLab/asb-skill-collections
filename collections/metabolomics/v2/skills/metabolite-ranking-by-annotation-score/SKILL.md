@@ -1,6 +1,8 @@
 ---
 name: metabolite-ranking-by-annotation-score
-description: Use when when you have generated a set of candidate metabolites for a given experimental MS/MS spectrum and need to determine which candidate is most likely to be the true metabolite.
+description: Use when when you have generated a set of candidate metabolites for a
+  given experimental MS/MS spectrum and need to determine which candidate is most
+  likely to be the true metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,6 +13,7 @@ metadata:
   - MAGMa
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -39,6 +42,7 @@ attribution:
 
 # metabolite-ranking-by-annotation-score
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate metabolites by comparing experimental MS/MS peaks against theoretical fragment ions using cosine similarity or peak-matching algorithms. This skill identifies the most probable metabolite annotations from a scored candidate list, enabling prioritization of biochemically relevant hits in untargeted metabolomics workflows.

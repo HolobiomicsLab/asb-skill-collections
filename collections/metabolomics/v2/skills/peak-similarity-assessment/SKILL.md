@@ -1,6 +1,8 @@
 ---
 name: peak-similarity-assessment
-description: Use when you have a set of picked peaks from INADEQUATE NMR spectra and need to group them into networks to identify which peaks co-originate from the same metabolite compound.
+description: Use when you have a set of picked peaks from INADEQUATE NMR spectra and
+  need to group them into networks to identify which peaks co-originate from the same
+  metabolite compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +14,7 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

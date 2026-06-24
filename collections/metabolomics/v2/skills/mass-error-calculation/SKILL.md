@@ -1,6 +1,9 @@
 ---
 name: mass-error-calculation
-description: 'Use when when screening LC-HRMS datasets for suspect compounds: you have detected features with measured m/z values and a database of reference compounds with theoretical m/z values, and you need to rank candidate matches by mass accuracy before proceeding to retention time and fragmentation.'
+description: 'Use when when screening LC-HRMS datasets for suspect compounds: you
+  have detected features with measured m/z values and a database of reference compounds
+  with theoretical m/z values, and you need to rank candidate matches by mass accuracy
+  before proceeding to retention time and fragmentation.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,11 +14,13 @@ metadata:
   - Scannotation
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.est.3c04764
   title: Scannotation
 evidence_spans:
-- Scannotation is an automated and user-friendly suspect screening tool for the rapid pre-annotation of LC-HRMS datasets.
+- Scannotation is an automated and user-friendly suspect screening tool for the rapid
+  pre-annotation of LC-HRMS datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

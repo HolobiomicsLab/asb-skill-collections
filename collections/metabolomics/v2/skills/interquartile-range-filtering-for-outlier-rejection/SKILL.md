@@ -1,6 +1,8 @@
 ---
 name: interquartile-range-filtering-for-outlier-rejection
-description: Use when when you have ensemble predictions (e.g., from Monte-Carlo Dropout inference with N ≥ 10 forward passes per input) and need to distinguish high-confidence from uncertain predictions before downstream analysis.
+description: Use when when you have ensemble predictions (e.g., from Monte-Carlo Dropout
+  inference with N ≥ 10 forward passes per input) and need to distinguish high-confidence
+  from uncertain predictions before downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,16 +18,20 @@ metadata:
   - Monte-Carlo Dropout
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
-- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute
+  structural similarities
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +55,7 @@ attribution:
 
 # Interquartile-range filtering for outlier rejection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter ensemble predictions by interquartile range (IQR) thresholds to identify and retain only high-confidence predictions, reducing model uncertainty and improving error metrics across prediction bins. This technique leverages multiple forward passes through a Monte-Carlo Dropout network to quantify prediction confidence and reject outliers.

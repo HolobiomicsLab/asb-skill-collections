@@ -1,6 +1,7 @@
 ---
 name: quality-control-summary-generation
-description: Use when after applying one or more mpactr filters (mispicked, group, CV, or insource) to a peak table in a chained filtering workflow.
+description: Use when after applying one or more mpactr filters (mispicked, group,
+  CV, or insource) to a peak table in a chained filtering workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +16,7 @@ metadata:
   - plotly
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

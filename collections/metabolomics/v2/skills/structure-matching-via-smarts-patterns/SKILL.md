@@ -1,6 +1,7 @@
 ---
 name: structure-matching-via-smarts-patterns
-description: Use when when you need to identify compounds matching specific structural motifs or apply reaction transformation rules to a set of molecules.
+description: Use when when you need to identify compounds matching specific structural
+  motifs or apply reaction transformation rules to a set of molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -13,6 +14,7 @@ metadata:
   - Pickaxe (MINE-Database)
   - Python
   - MongoDB or TSV output
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

@@ -1,6 +1,8 @@
 ---
 name: quantum-input-file-preparation
-description: Use when you have a set of RDKit-generated conformers ranked by ASE-ANI single-point energies, and you need to submit the lowest-energy subset to quantum software (e.g. QUICK) for CCS-relevant electronic structure calculations.
+description: Use when you have a set of RDKit-generated conformers ranked by ASE-ANI
+  single-point energies, and you need to submit the lowest-energy subset to quantum
+  software (e.g. QUICK) for CCS-relevant electronic structure calculations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -14,6 +16,7 @@ metadata:
   - Dimorphite-DL
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
@@ -42,6 +45,7 @@ attribution:
 
 # quantum-input-file-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare conformer geometries filtered by neural-network potential energies into formats compatible with quantum-chemical software for downstream CCS prediction. This skill bridges molecular conformation generation and single-point quantum calculations by standardizing geometry representation and ensuring only low-energy conformers are submitted to expensive quantum workflows.

@@ -1,6 +1,9 @@
 ---
 name: nmr-spectral-comparative-analysis
-description: Use when you have 2D NMR spectral data (heteronuclear and/or homonuclear experiments) from multiple samples in a natural products library or mixture, and you need to identify common structural scaffolds, correlate features across samples, or prioritize samples for further structural annotation.
+description: Use when you have 2D NMR spectral data (heteronuclear and/or homonuclear
+  experiments) from multiple samples in a natural products library or mixture, and
+  you need to identify common structural scaffolds, correlate features across samples,
+  or prioritize samples for further structural annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,13 +16,16 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.0c01076
   title: MADByTE
 evidence_spans:
-- MADByTE stands for **M**etabolomics **A**nd **D**ereplication **By** **T**wo-dimensional **E**xperiments.
+- MADByTE stands for **M**etabolomics **A**nd **D**ereplication **By** **T**wo-dimensional
+  **E**xperiments.
 - conda env create -f environment.yml
-- If you have followed the installation guide and setup the MADByTE Python virtual environment
+- If you have followed the installation guide and setup the MADByTE Python virtual
+  environment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

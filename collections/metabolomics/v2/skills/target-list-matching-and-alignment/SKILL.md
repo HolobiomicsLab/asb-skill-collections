@@ -1,6 +1,8 @@
 ---
 name: target-list-matching-and-alignment
-description: Use when you have LC-MS data (mzML or netCDF format) and a predefined list of target metabolites with known m/z values and retention time windows that you wish to extract and quantify.
+description: Use when you have LC-MS data (mzML or netCDF format) and a predefined
+  list of target metabolites with known m/z values and retention time windows that
+  you wish to extract and quantify.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,6 +14,7 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

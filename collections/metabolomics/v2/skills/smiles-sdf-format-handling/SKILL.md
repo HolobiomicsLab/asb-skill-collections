@@ -1,6 +1,7 @@
 ---
 name: smiles-sdf-format-handling
-description: Use when you have downloaded or obtained a dataset of small molecules with structures encoded as SMILES strings or SDF files (e.
+description: Use when you have downloaded or obtained a dataset of small molecules
+  with structures encoded as SMILES strings or SDF files (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -14,6 +15,7 @@ metadata:
   - PyTorch Geometric (torch_geometric)
   - Python pickle / torch.save
   - RT-Transformer
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -46,6 +48,7 @@ attribution:
 
 # SMILES/SDF Format Handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and convert molecular structure files in SMILES or SDF format into standardized representations (Morgan fingerprints and graph encodings) suitable for machine learning model ingestion. This skill bridges raw chemical data into featurized inputs for retention time prediction and other molecular property models.

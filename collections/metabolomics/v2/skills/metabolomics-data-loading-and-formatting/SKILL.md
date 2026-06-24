@@ -1,6 +1,9 @@
 ---
 name: metabolomics-data-loading-and-formatting
-description: Use when you have raw metabolomics count data (e.g., from mass spectrometry or NMR experiments) in tabular format and associated sample metadata (e.g., treatment groups, experimental factors) that need to be imported into R for analysis with packages like Omu.
+description: Use when you have raw metabolomics count data (e.g., from mass spectrometry
+  or NMR experiments) in tabular format and associated sample metadata (e.g., treatment
+  groups, experimental factors) that need to be imported into R for analysis with
+  packages like Omu.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -15,6 +18,7 @@ metadata:
   - assign_hierarchy
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -43,6 +47,7 @@ attribution:
 
 # metabolomics-data-loading-and-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and structure raw metabolomics count data and metadata into R using specialized functions that ensure proper class assignment and hierarchical organization. This skill establishes the foundation for downstream statistical analysis and visualization of metabolite abundance patterns.

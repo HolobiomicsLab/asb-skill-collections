@@ -1,6 +1,9 @@
 ---
 name: cross-language-workflow-orchestration
-description: Use when you have multi-language code implementations (R and MATLAB scripts) for a single scientific workflow, documented example scripts for a reference sub-sample scenario, and need to verify that outputs from one language can serve as inputs to the next, or that both implementations produce.
+description: Use when you have multi-language code implementations (R and MATLAB scripts)
+  for a single scientific workflow, documented example scripts for a reference sub-sample
+  scenario, and need to verify that outputs from one language can serve as inputs
+  to the next, or that both implementations produce.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3552
@@ -9,6 +12,7 @@ metadata:
   - R
   - MATLAB
   - DisCoPad repository (KechrisLab)
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo15010028
   title: DisCo P-ad
@@ -37,6 +41,7 @@ attribution:
 
 # cross-language-workflow-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a coordinated simulation workflow across R and MATLAB environments using documented example scripts and shared data objects. This skill is essential when a single analysis requires language-specific implementations (e.g., statistical modeling in R, visualization or specialized toolboxes in MATLAB) and reproducibility depends on sequencing and validation across both platforms.

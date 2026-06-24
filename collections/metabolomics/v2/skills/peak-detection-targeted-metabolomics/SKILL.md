@@ -1,6 +1,8 @@
 ---
 name: peak-detection-targeted-metabolomics
-description: Use when you have mass spectrometry data in .raw, .d, or mzXML format and a predefined list of target compounds (m/z and retention time ranges) you wish to quantify.
+description: Use when you have mass spectrometry data in .raw, .d, or mzXML format
+  and a predefined list of target compounds (m/z and retention time ranges) you wish
+  to quantify.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -12,6 +14,7 @@ metadata:
   - R GUI
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

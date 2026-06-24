@@ -1,6 +1,9 @@
 ---
 name: intensity-normalization-spectra
-description: Use when after noise reduction when working with imported imzML MSI data where pixel-to-pixel or sample-to-sample intensity variations due to instrumental sensitivity or sample loading differences must be corrected before mean intensity calculation, ROI analysis, or metabolite annotation.
+description: Use when after noise reduction when working with imported imzML MSI data
+  where pixel-to-pixel or sample-to-sample intensity variations due to instrumental
+  sensitivity or sample loading differences must be corrected before mean intensity
+  calculation, ROI analysis, or metabolite annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,11 +16,13 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: python-sqlite-migration-and-etl
-description: Use when you have MS/MS spectral library data currently stored in multiple file formats (JSON, CSV, or binary) and need to enable fast, filtered queries by metadata (e.g., precursor m/z, retention time, molecular class) without loading entire libraries into memory.
+description: Use when you have MS/MS spectral library data currently stored in multiple
+  file formats (JSON, CSV, or binary) and need to enable fast, filtered queries by
+  metadata (e.g., precursor m/z, retention time, molecular class) without loading
+  entire libraries into memory.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -16,6 +19,7 @@ metadata:
   - pytest
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
@@ -23,7 +27,8 @@ evidence_spans:
 - you want to make some kind of change to the code base
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
 - make sure the existing tests still work by running ``python setup.py test``
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: module-coverage-mapping
-description: Use when evaluating whether a mass spectrometry data analysis platform (such as mzmine) provides complete module coverage across all advertised separation and ionisation techniques.
+description: Use when evaluating whether a mass spectrometry data analysis platform
+  (such as mzmine) provides complete module coverage across all advertised separation
+  and ionisation techniques.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +15,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -41,6 +44,7 @@ attribution:
 
 # module-coverage-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically inventory all processing modules in a mass spectrometry software suite and cross-reference them against supported separation/ionisation techniques (LC, GC, IMS, MS imaging) to verify complete workflow coverage. This skill ensures that every supported instrument type and analysis modality has at least one corresponding processing module in the software architecture.

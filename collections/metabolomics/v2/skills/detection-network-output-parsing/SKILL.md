@@ -1,6 +1,8 @@
 ---
 name: detection-network-output-parsing
-description: Use when you have raw LC-MS data in mzML format with regions of interest (ROI) already identified, and a trained detection model (e.g., checkpoint0029.pth) has produced bounding box predictions with confidence scores.
+description: Use when you have raw LC-MS data in mzML format with regions of interest
+  (ROI) already identified, and a trained detection model (e.g., checkpoint0029.pth)
+  has produced bounding box predictions with confidence scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +16,7 @@ metadata:
   - xcms (R package)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

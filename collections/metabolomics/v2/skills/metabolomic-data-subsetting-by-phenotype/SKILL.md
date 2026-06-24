@@ -1,6 +1,9 @@
 ---
 name: metabolomic-data-subsetting-by-phenotype
-description: Use when you have a preprocessed MultiAssayExperiment with metabolite measurements across multiple phenotypic or disease subgroups, and you want to isolate one or more groups for comparison—for example, to compare AKT1-high versus MYC-high prostate tumor samples before applying diff_test for.
+description: Use when you have a preprocessed MultiAssayExperiment with metabolite
+  measurements across multiple phenotypic or disease subgroups, and you want to isolate
+  one or more groups for comparison—for example, to compare AKT1-high versus MYC-high
+  prostate tumor samples before applying diff_test for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +14,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +49,7 @@ attribution:
 
 # metabolomic-data-subsetting-by-phenotype
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Subset a MultiAssayExperiment object containing normalized metabolite measurements to retain only samples belonging to specific phenotypic groups (e.g., AKT1-high vs MYC-high tumor classes). This prepares cohort-stratified data for downstream differential abundance testing.

@@ -1,6 +1,9 @@
 ---
 name: shiny-ui-component-implementation
-description: Use when you have an existing R package with statistical or data-processing functions and need to expose its functionality through an interactive web interface where end users (non-R programmers) can upload datasets, configure analysis parameters (e.
+description: Use when you have an existing R package with statistical or data-processing
+  functions and need to expose its functionality through an interactive web interface
+  where end users (non-R programmers) can upload datasets, configure analysis parameters
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -12,6 +15,7 @@ metadata:
   - R
   - R package Amanida
   - R package webchem
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida
@@ -41,6 +45,7 @@ attribution:
 
 # shiny-ui-component-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct interactive web application user interfaces in Shiny by mapping R package functions to reactive input controls, data upload mechanisms, and parameter configuration fields. This skill bridges statistical R packages and web-based interactivity by exposing computation parameters through dashboard UI components.

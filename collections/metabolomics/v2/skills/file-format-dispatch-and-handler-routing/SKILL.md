@@ -1,6 +1,8 @@
 ---
 name: file-format-dispatch-and-handler-routing
-description: Use when you have a parser library that must support multiple file formats (e.g., mzML, SQLite, compressed gzip) and want to avoid conditional logic scattered throughout the parsing code.
+description: Use when you have a parser library that must support multiple file formats
+  (e.g., mzML, SQLite, compressed gzip) and want to avoid conditional logic scattered
+  throughout the parsing code.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +16,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,6 +46,7 @@ attribution:
 
 # file-format-dispatch-and-handler-routing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Route file I/O operations to format-specific handler classes by detecting file extension or metadata in a central FileInterface dispatcher. This skill enables a parser library to support multiple data formats (mzML, .db, indexed gzip) without duplicating parsing logic, by instantiating the appropriate connector class at open time.

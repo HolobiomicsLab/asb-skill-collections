@@ -1,6 +1,8 @@
 ---
 name: peak-data-integrity-checks
-description: Use when implementing or modifying a writable MsBackend subclass (e.g., MsBackendMemory, MsBackendDataFrame) and need to replace peak data (m/z values, intensity values, or peaksData).
+description: Use when implementing or modifying a writable MsBackend subclass (e.g.,
+  MsBackendMemory, MsBackendDataFrame) and need to replace peak data (m/z values,
+  intensity values, or peaksData).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -43,6 +46,7 @@ attribution:
 
 # peak-data-integrity-checks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate m/z and intensity peak data in mass spectrometry backends to enforce data integrity constraints before replacement or storage. This skill ensures that writable MsBackend implementations maintain sortedness, length consistency, and type safety across spectral datasets.

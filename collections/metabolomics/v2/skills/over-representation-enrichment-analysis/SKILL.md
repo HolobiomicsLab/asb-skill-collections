@@ -1,6 +1,9 @@
 ---
 name: over-representation-enrichment-analysis
-description: Use when you have p-values and effect sizes from two independent association studies (metabolomic GWAS and meta-genome GWAS) and want to identify whether variants associated with disease phenotypes co-occur with metabolites that share biochemical pathways or protein interactions.
+description: Use when you have p-values and effect sizes from two independent association
+  studies (metabolomic GWAS and meta-genome GWAS) and want to identify whether variants
+  associated with disease phenotypes co-occur with metabolites that share biochemical
+  pathways or protein interactions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -15,6 +18,7 @@ metadata:
   - KEGG database
   - HMDB
   - GWAS Catalog
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad523/7248906
   title: metGWAS 1.0
@@ -43,6 +47,7 @@ attribution:
 
 # over-representation-enrichment-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A statistical method that tests whether disease-associated metabolites or genomic variants are non-randomly enriched in known biological pathways or gene sets. This skill bridges independent metabolomic and GWAS studies by mapping their results to shared biological networks and quantifying co-occurrence significance using hypergeometric tests.

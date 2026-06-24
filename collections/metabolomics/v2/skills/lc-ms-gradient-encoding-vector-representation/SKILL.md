@@ -1,6 +1,9 @@
 ---
 name: lc-ms-gradient-encoding-vector-representation
-description: Use when when you have a set of candidate LC gradients (parameter combinations) that you wish to evaluate with a Gaussian process model, or when you need to convert raw gradient specifications into a standardized numerical format for Bayesian optimization acquisition function computation.
+description: Use when when you have a set of candidate LC gradients (parameter combinations)
+  that you wish to evaluate with a Gaussian process model, or when you need to convert
+  raw gradient specifications into a standardized numerical format for Bayesian optimization
+  acquisition function computation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,13 +18,15 @@ metadata:
   - bago
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
 evidence_spans:
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
@@ -51,6 +56,7 @@ attribution:
 
 # LC-MS Gradient Encoding Vector Representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode liquid chromatography gradient parameters (e.g., solvent composition, flow rate, column properties) into numerical vectors suitable for input to machine learning models. This enables omics-scale evaluation of compound separation performance by transforming discrete gradient specifications into continuous feature spaces that Gaussian process regressors can consume.

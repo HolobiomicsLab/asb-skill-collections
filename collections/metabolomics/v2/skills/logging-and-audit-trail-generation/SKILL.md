@@ -1,6 +1,7 @@
 ---
 name: logging-and-audit-trail-generation
-description: Use when when implementing a metadata annotation pipeline for mass spectra that fetches values from multiple external services (e.
+description: Use when when implementing a metadata annotation pipeline for mass spectra
+  that fetches values from multiple external services (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +17,7 @@ metadata:
   - PubChem
   - IDSM
   - BridgeDb
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

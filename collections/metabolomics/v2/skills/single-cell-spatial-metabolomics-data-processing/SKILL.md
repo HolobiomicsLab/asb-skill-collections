@@ -1,6 +1,9 @@
 ---
 name: single-cell-spatial-metabolomics-data-processing
-description: 'Use when you have raw IMC and SIMS image data from the same tissue region(s) and need to: (1) register the two modalities spatially, (2) segment individual cells across both images, (3) extract per-cell protein and metabolite intensity vectors, and (4) prepare the data for downstream joint analysis.'
+description: 'Use when you have raw IMC and SIMS image data from the same tissue region(s)
+  and need to: (1) register the two modalities spatially, (2) segment individual cells
+  across both images, (3) extract per-cell protein and metabolite intensity vectors,
+  and (4) prepare the data for downstream joint analysis.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -16,6 +19,7 @@ metadata:
   - Keras VAE (scSpaMet/)
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-43917-5
   title: scSpaMet
@@ -46,6 +50,7 @@ attribution:
 
 # single-cell-spatial-metabolomics-data-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A multi-stage pipeline for aligning, segmenting, and extracting single-cell intensity measurements from co-registered imaging mass cytometry (IMC) protein and secondary ion mass spectrometry (SIMS) metabolite image pairs. This skill enables joint proteomics and metabolomics profiling at subcellular resolution in tissue.

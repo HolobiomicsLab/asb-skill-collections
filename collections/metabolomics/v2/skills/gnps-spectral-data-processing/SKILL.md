@@ -1,6 +1,8 @@
 ---
 name: gnps-spectral-data-processing
-description: Use when your input is raw or semi-processed MS/MS spectra fetched from GNPS or a compatible library (e.g., EMBL-MCF 2.0, NIST23) and you need to prepare them for neural-network-based formula prediction.
+description: Use when your input is raw or semi-processed MS/MS spectra fetched from
+  GNPS or a compatible library (e.g., EMBL-MCF 2.0, NIST23) and you need to prepare
+  them for neural-network-based formula prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +15,7 @@ metadata:
   - GNPS
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -41,6 +44,7 @@ attribution:
 
 # GNPS spectral data processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, parse, and standardize tandem mass spectrometry (MS/MS) spectra from GNPS databases into a structured format suitable for molecular formula inference. This skill prepares raw spectral data with required metadata fields (precursor m/z, adduct type, collision energy) for downstream deep learning prediction.

@@ -1,6 +1,9 @@
 ---
 name: pandas-dataframe-plotting-interface
-description: Use when you have mass spectrometry data (retention time, m/z, intensity, or mobility dimensions) already loaded into a Pandas DataFrame and need to produce publication-ready or exploratory visualizations. Use this when you want to leverage Pandas' native .
+description: Use when you have mass spectrometry data (retention time, m/z, intensity,
+  or mobility dimensions) already loaded into a Pandas DataFrame and need to produce
+  publication-ready or exploratory visualizations. Use this when you want to leverage
+  Pandas' native .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,6 +19,7 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -23,7 +27,8 @@ evidence_spans:
 - Plot directly from a pandas dataframe object
 - provides a simple interface for extending the plotting capabilities of Pandas DataFrames
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +52,7 @@ attribution:
 
 # pandas-dataframe-plotting-interface
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use pyOpenMS-viz's Pandas plotting backend to generate static or interactive mass spectrometry visualizations (chromatograms, spectra, peak maps) directly from DataFrame objects with flexible backend selection (matplotlib, bokeh, plotly). This skill encapsulates the procedural interface for extending Pandas' native plotting API to handle multi-dimensional MS data without manual matplotlib figure construction.

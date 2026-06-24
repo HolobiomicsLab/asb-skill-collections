@@ -1,6 +1,8 @@
 ---
 name: scalable-network-inference-high-dimensional
-description: Use when when working with feature abundance tables (rows=features, columns=samples) where the feature count exceeds 10,000 and you need to infer a network of correlations between features.
+description: Use when when working with feature abundance tables (rows=features, columns=samples)
+  where the feature count exceeds 10,000 and you need to infer a network of correlations
+  between features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,12 +17,15 @@ metadata:
   - pcutils
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # Scalable Network Inference for High-Dimensional Feature Datasets
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct correlation-based networks from feature abundance tables containing >10,000 features using optimized vectorized matrix algorithms to compute pairwise correlations and p-values with reduced memory and runtime. This skill is essential when integrating multi-omics data or analyzing microbiome/metabolome datasets where traditional network tools become computationally prohibitive.

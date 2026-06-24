@@ -1,6 +1,8 @@
 ---
 name: spectrum-grouping-and-aggregation
-description: Use when you have loaded raw PSM search results from a proteomics search engine (e.g., MaxQuant, MSGFPlus, Sage) and need to prepare them for multi-rank rescoring in MS²Rescore.
+description: Use when you have loaded raw PSM search results from a proteomics search
+  engine (e.g., MaxQuant, MSGFPlus, Sage) and need to prepare them for multi-rank
+  rescoring in MS²Rescore.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - Percolator
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-representation
-description: Use when you have a raw MGF file containing fragmented LC-MS-MS metabolomics spectra and want to apply Latent Dirichlet Allocation (LDA) to discover hidden topics (molecular families, biochemical patterns) across your sample set.
+description: Use when you have a raw MGF file containing fragmented LC-MS-MS metabolomics
+  spectra and want to apply Latent Dirichlet Allocation (LDA) to discover hidden topics
+  (molecular families, biochemical patterns) across your sample set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3663
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

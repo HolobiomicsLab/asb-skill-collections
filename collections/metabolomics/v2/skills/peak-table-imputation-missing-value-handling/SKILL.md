@@ -1,6 +1,9 @@
 ---
 name: peak-table-imputation-missing-value-handling
-description: Use when after peak clustering in a GCIMS preprocessing pipeline, when the peak table matrix contains NA values corresponding to peaks detected in some samples but not others, and you have computed cluster statistics that characterize each peak cluster's properties.
+description: Use when after peak clustering in a GCIMS preprocessing pipeline, when
+  the peak table matrix contains NA values corresponding to peaks detected in some
+  samples but not others, and you have computed cluster statistics that characterize
+  each peak cluster's properties.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -9,6 +12,7 @@ metadata:
   tools:
   - R
   - GCIMS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -37,6 +41,7 @@ attribution:
 
 # peak-table-imputation-missing-value-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Imputes NA values in GCIMS peak table matrices using cluster statistics to fill missing intensity measurements. This step is essential after peak clustering to ensure a complete, analyzable peak intensity matrix for downstream statistical analysis.

@@ -1,6 +1,9 @@
 ---
 name: psm-rank-filtering-input-selection
-description: Use when you have a PSM file from a proteomics search engine containing multiple candidate identifications per spectrum and need to prepare input for rescoring with MS²Rescore. Use it when computational resources are limited or when you want to focus rescoring on high-confidence candidates (e.
+description: Use when you have a PSM file from a proteomics search engine containing
+  multiple candidate identifications per spectrum and need to prepare input for rescoring
+  with MS²Rescore. Use it when computational resources are limited or when you want
+  to focus rescoring on high-confidence candidates (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - psm_utils
   - Mokapot
   - Percolator
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

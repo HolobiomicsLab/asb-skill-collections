@@ -1,6 +1,8 @@
 ---
 name: gradient-flow-verification
-description: Use when after implementing a composite loss function that combines multiple loss terms (e.g., InfoNCE contrastive loss and MSE reconstruction loss) in a PyTorch module, and before running full-scale training on MS/MS spectra data.
+description: Use when after implementing a composite loss function that combines multiple
+  loss terms (e.g., InfoNCE contrastive loss and MSE reconstruction loss) in a PyTorch
+  module, and before running full-scale training on MS/MS spectra data.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +11,7 @@ metadata:
   - Transformer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS
@@ -36,6 +39,7 @@ attribution:
 
 # Gradient-flow-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that gradients propagate correctly through a composite loss function (combining InfoNCE and MSE terms) during backpropagation in a transformer-based embedding model. This validation ensures that both contrastive and reconstruction loss components contribute meaningfully to weight updates during training.

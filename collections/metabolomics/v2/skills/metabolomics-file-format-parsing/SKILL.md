@@ -1,6 +1,9 @@
 ---
 name: metabolomics-file-format-parsing
-description: Use when you have mwTab-formatted files from the Metabolomics Workbench containing MS or NMR experimental metadata and tabular data sections (e.g., METABOLITES, DATA blocks), and need to load them into memory for downstream conversion, validation, or analysis rather than manual text parsing.
+description: Use when you have mwTab-formatted files from the Metabolomics Workbench
+  containing MS or NMR experimental metadata and tabular data sections (e.g., METABOLITES,
+  DATA blocks), and need to load them into memory for downstream conversion, validation,
+  or analysis rather than manual text parsing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -18,6 +21,7 @@ metadata:
   - SMART (Data Import module)
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

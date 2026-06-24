@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -52,6 +53,7 @@ attribution:
 
 # peak-shape-assessment
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the morphological quality of detected LC-MS peaks by extracting and analyzing peak shape attributes (e.g., symmetry, width, definition) as part of comprehensive feature quality scoring. This skill surfaces problematic peaks that may indicate instrumental artifacts, co-elution, or poor signal quality before downstream annotation.

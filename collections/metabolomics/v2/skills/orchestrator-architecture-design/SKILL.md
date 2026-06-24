@@ -1,6 +1,9 @@
 ---
 name: orchestrator-architecture-design
-description: Use when when building a multi-backend visualization library where users specify both a plot type (spectrum, chromatogram, peakmap) and a backend (matplotlib for static output, Bokeh or Plotly for interactive), and you need to avoid code duplication across backends while keeping the user-facing API.
+description: Use when when building a multi-backend visualization library where users
+  specify both a plot type (spectrum, chromatogram, peakmap) and a backend (matplotlib
+  for static output, Bokeh or Plotly for interactive), and you need to avoid code
+  duplication across backends while keeping the user-facing API.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -15,6 +18,7 @@ metadata:
   - Plotly
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -42,6 +46,7 @@ attribution:
 
 # orchestrator-architecture-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a layered orchestrator architecture that routes configuration and plot-type specifications through abstraction layers to dispatch rendering requests to the correct backend-specific implementation. This skill enables polymorphic backend selection (matplotlib, Bokeh, Plotly) while maintaining a unified user-facing API.

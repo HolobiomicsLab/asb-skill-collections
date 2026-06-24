@@ -15,14 +15,18 @@ metadata:
   - KEGG / Reactome
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set
+  Enrichment Analysis (MSEA), based on clusterProfiler
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -51,6 +55,7 @@ attribution:
 
 # Pathway Over-Representation Analysis (ORA)
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 ORA identifies metabolic pathways that are significantly enriched among a set of significant metabolites (e.g., those meeting stringent ANOVA q-value thresholds) when tested against the complete set of detected metabolites in an untargeted LC-MS/MS study. This provides biological interpretation of which canonical metabolic processes are disrupted or altered in the experimental condition.

@@ -1,6 +1,8 @@
 ---
 name: job-artifact-persistence
-description: Use when when deploying OpenMS workflows in online mode via RQ (Redis Queue) in a Docker container where the Streamlit frontend may restart or rerun without losing track of submitted jobs.
+description: Use when when deploying OpenMS workflows in online mode via RQ (Redis
+  Queue) in a Docker container where the Streamlit frontend may restart or rerun without
+  losing track of submitted jobs.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +12,7 @@ metadata:
   - Redis
   - QueueManager
   - Streamlit
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -39,6 +42,7 @@ attribution:
 
 # job-artifact-persistence
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Persist RQ job identifiers to disk so that queued workflow jobs can be recovered and monitored across container restarts or Streamlit reruns. This skill ensures that asynchronous job submissions in online mode do not orphan jobs when the web frontend reconnects.

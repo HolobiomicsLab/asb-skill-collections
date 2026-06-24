@@ -1,6 +1,9 @@
 ---
 name: representation-vector-dimensionality-reduction
-description: Use when after obtaining 512-dimensional representation vectors from the Encoder module, when you need to compress these vectors for visualization, clustering, or downstream classification tasks on mass spectrometry imaging data while maintaining interpretability of ion relationships.
+description: Use when after obtaining 512-dimensional representation vectors from
+  the Encoder module, when you need to compress these vectors for visualization, clustering,
+  or downstream classification tasks on mass spectrometry imaging data while maintaining
+  interpretability of ion relationships.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -14,6 +17,7 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
@@ -42,6 +46,7 @@ attribution:
 
 # Representation Vector Dimensionality Reduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reduce 512-dimensional encoder output vectors to low-dimensional representations (e.g., 20-D) suitable for downstream analysis tasks in mass spectrometry imaging. This skill applies unsupervised dimensionality reduction to learned ion image representations while preserving spatial and chemical relationships.

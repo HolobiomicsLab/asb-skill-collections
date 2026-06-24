@@ -1,6 +1,8 @@
 ---
 name: software-regression-testing
-description: Use when after implementing code changes to MS2Query (e.g., modifying the workflow branching logic for true library matches vs. analog search results), before committing or pushing to the repository.
+description: Use when after implementing code changes to MS2Query (e.g., modifying
+  the workflow branching logic for true library matches vs. analog search results),
+  before committing or pushing to the repository.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,11 +16,13 @@ metadata:
   - Python
   - pytest or unittest framework
   - GitHub Actions CI
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 - push your feature branch to (your fork of) the ms2query repository on GitHub
 - you want to make some kind of change to the code base

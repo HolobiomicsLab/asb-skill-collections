@@ -1,6 +1,8 @@
 ---
 name: lc-ms-peak-feature-engineering
-description: Use when you have LC-MS feature tables with m/z and retention time coordinates paired with raw .mzXML or .mzML data files, and you need to systematically assess which features correspond to genuine chromatographic peaks versus noise or artifacts.
+description: Use when you have LC-MS feature tables with m/z and retention time coordinates
+  paired with raw .mzXML or .mzML data files, and you need to systematically assess
+  which features correspond to genuine chromatographic peaks versus noise or artifacts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,12 +16,15 @@ metadata:
   - Anaconda
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01309
   title: EVA
 evidence_spans:
-- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems. Please check out pyEVA
-- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems
+- EVA now has a python version that can be easily installed and used on Mac, PC, and
+  Linux systems. Please check out pyEVA
+- EVA now has a python version that can be easily installed and used on Mac, PC, and
+  Linux systems
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

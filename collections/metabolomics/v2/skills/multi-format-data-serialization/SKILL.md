@@ -1,6 +1,9 @@
 ---
 name: multi-format-data-serialization
-description: 'Use when after completing quality control, batch normalization, and outlier assessment on a Metaboprep object, when you need to: (1) save processed data matrices and metadata in human-readable tab-delimited format for use in other statistical or visualization tools;'
+description: 'Use when after completing quality control, batch normalization, and
+  outlier assessment on a Metaboprep object, when you need to: (1) save processed
+  data matrices and metadata in human-readable tab-delimited format for use in other
+  statistical or visualization tools;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,7 @@ metadata:
   - metaboprep
   - dendextend
   - kableExtra
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -45,6 +49,7 @@ attribution:
 
 # multi-format-data-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export processed metabolomic data and quality control outputs from an in-memory Metaboprep object into multiple serialized formats (tab-delimited text files, HTML reports) for downstream analysis, archival, and cross-platform compatibility. This skill bridges the gap between interactive R-based QC and format-agnostic data sharing.

@@ -20,6 +20,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -49,6 +50,7 @@ attribution:
 
 # enzyme-family-classification-and-mapping
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Extract and normalize enzyme family classifications and biotransformation rules from curated biodegradation databases (e.g., EAWAG BBD) into structured rule sets compatible with cheminformatics libraries. This skill enables substrate pattern matching and reaction template expansion for metabolite prediction across microbial degradation pathways.

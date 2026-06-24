@@ -1,6 +1,8 @@
 ---
 name: deep-learning-feature-extraction
-description: Use when you have preprocessed and normalized LC-MS metabolomics data from multiple disease groups (e.g., healthy, disease-A, disease-B) and need to identify which m/z features or their patterns discriminate between phenotypes.
+description: Use when you have preprocessed and normalized LC-MS metabolomics data
+  from multiple disease groups (e.g., healthy, disease-A, disease-B) and need to identify
+  which m/z features or their patterns discriminate between phenotypes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +17,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -42,6 +45,7 @@ attribution:
 
 # deep-learning-feature-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply deep learning models (e.g., DenseNet121) to extract disease-specific metabolic features from preprocessed LC-MS metabolomics data, producing interpretable heatmaps and feature importance maps that link individual m/z signals to disease phenotypes. This skill bridges raw spectra and actionable biomarker discovery.

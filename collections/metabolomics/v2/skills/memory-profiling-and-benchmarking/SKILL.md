@@ -1,6 +1,8 @@
 ---
 name: memory-profiling-and-benchmarking
-description: Use when when designing or optimizing backends that handle large MS datasets (mzML, mzXML, CDF files via MsBackendMzR), to verify that claimed memory advantages of on-disk or chunked approaches actually materialize in practice.
+description: Use when when designing or optimizing backends that handle large MS datasets
+  (mzML, mzXML, CDF files via MsBackendMzR), to verify that claimed memory advantages
+  of on-disk or chunked approaches actually materialize in practice.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,14 +17,17 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files
+- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from
+  the raw MS data files
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # memory-profiling-and-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A technique to quantify and compare memory consumption across alternative computational strategies (e.g., whole-load vs. chunk-wise processing) using profiling tools and controlled benchmarks. Applied to mass spectrometry backends, it validates that lazy-loading and factored processing reduce peak memory demand relative to in-memory approaches.

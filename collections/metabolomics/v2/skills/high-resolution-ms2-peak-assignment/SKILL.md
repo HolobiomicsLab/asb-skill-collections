@@ -1,6 +1,8 @@
 ---
 name: high-resolution-ms2-peak-assignment
-description: Use when you have high-resolution MS2 data in .ms2 format from lipid A samples and need to perform automated structure annotation to identify lipid A molecular variants and their fragmentation patterns at scale.
+description: Use when you have high-resolution MS2 data in .ms2 format from lipid
+  A samples and need to perform automated structure annotation to identify lipid A
+  molecular variants and their fragmentation patterns at scale.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -13,6 +15,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER
@@ -42,6 +45,7 @@ attribution:
 
 # high-resolution-ms2-peak-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated structure annotation of lipid A from high-resolution tandem mass spectrometry (MS2) data by assigning fragment peaks to lipid A structural moieties. This skill is essential when you have MS2 spectra and need to identify and annotate lipid A molecular structures at systems level.

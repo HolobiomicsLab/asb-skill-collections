@@ -1,6 +1,9 @@
 ---
 name: chromatographic-method-transfer-learning
-description: 'Use when you have experimental RT measurements from a source chromatographic method and need to predict RTs for the same molecules on a target chromatographic method, but lack a large calibration dataset (typical scenario: 10–100 molecules with ground truth RTs on both methods).'
+description: 'Use when you have experimental RT measurements from a source chromatographic
+  method and need to predict RTs for the same molecules on a target chromatographic
+  method, but lack a large calibration dataset (typical scenario: 10–100 molecules
+  with ground truth RTs on both methods).'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,11 +16,13 @@ metadata:
   - cmmrt (CMM-RT)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # chromatographic-method-transfer-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Bayesian meta-learning to project retention times (RTs) across chromatographic methods using a minimal calibration set (≥10 molecules), enabling rapid method transfer without full retraining. This skill bridges different LC-MS platforms by learning a probabilistic RT projection mapping from a small set of known compounds.

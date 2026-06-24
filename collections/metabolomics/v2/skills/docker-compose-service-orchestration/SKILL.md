@@ -1,6 +1,7 @@
 ---
 name: docker-compose-service-orchestration
-description: Use when when a research software project is decomposed into distinct subproject components (e.
+description: Use when when a research software project is decomposed into distinct
+  subproject components (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +12,7 @@ metadata:
   - MAGMa
   - Docker
   - docker-compose
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -40,6 +42,7 @@ attribution:
 
 # docker-compose-service-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate multi-service containerized applications using docker-compose.yml to define and manage interdependent microservices (web frontend, calculation engine, job launcher, data processing) with shared networking, volume mounts, and health checks. This skill is essential when a research platform comprises multiple loosely coupled components that must be deployed, networked, and scaled together.

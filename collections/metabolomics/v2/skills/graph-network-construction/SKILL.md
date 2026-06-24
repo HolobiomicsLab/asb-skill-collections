@@ -1,6 +1,7 @@
 ---
 name: graph-network-construction
-description: Use when you have trained ML models that predict pairwise relationships (e.
+description: Use when you have trained ML models that predict pairwise relationships
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -12,6 +13,7 @@ metadata:
   - ML_function.ipynb
   - recon_mapping (MATLAB and Python scripts)
   - Recon3D
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.17.608400v2
   title: Recon8D
@@ -39,6 +41,7 @@ attribution:
 
 # graph-network-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a regulatory network graph by integrating machine learning predictions with known metabolic pathway topology, then validate edges against curated databases. This skill bridges model outputs to interpretable network representations suitable for systems-level biological inference.

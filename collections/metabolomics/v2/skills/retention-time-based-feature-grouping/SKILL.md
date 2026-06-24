@@ -1,6 +1,8 @@
 ---
 name: retention-time-based-feature-grouping
-description: Use when after chromatographic peak detection on preprocessed LC-MS data when you have an xcms result object (XcmsExperiment or xcmsSet) with detected peaks and need to collapse redundant m/z signals into feature groups.
+description: Use when after chromatographic peak detection on preprocessed LC-MS data
+  when you have an xcms result object (XcmsExperiment or xcmsSet) with detected peaks
+  and need to collapse redundant m/z signals into feature groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -14,11 +16,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

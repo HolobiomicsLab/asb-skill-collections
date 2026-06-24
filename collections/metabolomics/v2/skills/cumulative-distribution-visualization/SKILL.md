@@ -1,6 +1,9 @@
 ---
 name: cumulative-distribution-visualization
-description: 'Use when when you have per-feature quality metrics (such as CV values from NMR or MS reproducibility analysis) and need to: (1) confirm that a specified proportion of features meet regulatory thresholds (e.g., 99% < 0.30, 92% < 0.15 for CV);'
+description: 'Use when when you have per-feature quality metrics (such as CV values
+  from NMR or MS reproducibility analysis) and need to: (1) confirm that a specified
+  proportion of features meet regulatory thresholds (e.g., 99% < 0.30, 92% < 0.15
+  for CV);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,13 +15,15 @@ metadata:
   - MWASTools
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # cumulative-distribution-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize the empirical cumulative distribution of a continuous quality metric (e.g., coefficient of variation) across features to assess reproducibility against regulatory thresholds. This skill enables rapid validation of whether a dataset meets predefined FDA or domain-specific quality gates.

@@ -1,6 +1,9 @@
 ---
 name: metabolomics-software-build-reproducibility
-description: Use when when developing or maintaining a multi-platform metabolomics GUI tool (such as Maven GUI) that must produce binary executables for end users, and you need to ensure that builds are reproducible across different OS platforms, dependency versions are pinned and tracked, and release artifacts.
+description: Use when when developing or maintaining a multi-platform metabolomics
+  GUI tool (such as Maven GUI) that must produce binary executables for end users,
+  and you need to ensure that builds are reproducible across different OS platforms,
+  dependency versions are pinned and tracked, and release artifacts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -18,6 +21,7 @@ metadata:
   - Appveyor
   - Maven (GUI)
   - maven_core
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

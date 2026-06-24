@@ -1,6 +1,8 @@
 ---
 name: metadata-confidence-filtering
-description: Use when you have curated structure-organism pairs from multiple sources and need to distinguish high-confidence, well-documented assertions from incomplete or conflicting records.
+description: Use when you have curated structure-organism pairs from multiple sources
+  and need to distinguish high-confidence, well-documented assertions from incomplete
+  or conflicting records.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - lotus-processor
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -42,6 +45,7 @@ attribution:
 
 # metadata-confidence-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter structure-organism pairs to retain only those meeting platinum-tier confidence standards by validating reference metadata, cross-checking against organism and structure dictionaries, and applying quality thresholds for high-confidence mappings. This skill ensures that curated natural products data meets reproducibility and completeness criteria before downstream analysis.

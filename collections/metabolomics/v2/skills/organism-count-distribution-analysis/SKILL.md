@@ -11,6 +11,7 @@ metadata:
   tools:
   - R
   - dplyr / tidyr (R packages)
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +44,7 @@ attribution:
 
 # organism-count-distribution-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partitions organisms in a structure-organism pair dataset into four bins by the count of unique 2D chemical structures each organism contains, enabling characterization of structural diversity across the organismal taxonomy. This skill is essential for validating the completeness and composition of natural products databases and understanding which organisms have been most extensively characterized chemically.

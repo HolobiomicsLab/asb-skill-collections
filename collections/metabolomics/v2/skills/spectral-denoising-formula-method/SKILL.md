@@ -1,6 +1,8 @@
 ---
 name: spectral-denoising-formula-method
-description: Use when you have a noisy MS/MS spectrum and need to identify and remove chemical noise ions (as opposed to electronic noise). You have the precursor compound's SMILES string or molecular formula and its adduct type.
+description: Use when you have a noisy MS/MS spectrum and need to identify and remove
+  chemical noise ions (as opposed to electronic noise). You have the precursor compound's
+  SMILES string or molecular formula and its adduct type.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -16,6 +18,7 @@ metadata:
   - spectral_denoising package
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

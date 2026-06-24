@@ -1,6 +1,8 @@
 ---
 name: nearest-neighbor-clustering-for-mass-spectrometry
-description: Use when you have extracted mass tracks (EICs) from individual samples at 0.001 amu m/z resolution and need to align them into a composite mass grid for feature detection.
+description: Use when you have extracted mass tracks (EICs) from individual samples
+  at 0.001 amu m/z resolution and need to align them into a composite mass grid for
+  feature detection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -17,14 +19,17 @@ metadata:
   - chromatograms.extract_single_track_fullrt_length
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
-- nearest neighbor (NN) clustering is performed to establish the number of mass tracks. The NN clustering assigns each data point to its nearest 'peak mz value'.
+- nearest neighbor (NN) clustering is performed to establish the number of mass tracks.
+  The NN clustering assigns each data point to its nearest 'peak mz value'.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # nearest-neighbor-clustering-for-mass-spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster and bin m/z values from mass tracks across multiple LC-MS samples using nearest-neighbor methods to resolve overlapping chromatograms and construct a unified mass grid. This skill leverages high mass resolution to group chemically equivalent ions and align them reproducibly across the cohort.

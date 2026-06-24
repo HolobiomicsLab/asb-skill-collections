@@ -1,6 +1,9 @@
 ---
 name: smiles-sdf-molecule-format-handling
-description: Use when when you have molecular structures in SMILES or SDF format that need to be passed to CyProduct for metabolite prediction, or when you need to switch between string-based and file-based molecular representations for compatibility with different CYP450 enzyme prediction workflows.
+description: Use when when you have molecular structures in SMILES or SDF format that
+  need to be passed to CyProduct for metabolite prediction, or when you need to switch
+  between string-based and file-based molecular representations for compatibility
+  with different CYP450 enzyme prediction workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -12,6 +15,7 @@ metadata:
   - BioTransformerAPI
   - CyProduct
   - Java
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -41,6 +45,7 @@ attribution:
 
 # SMILES/SDF molecule format handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and validate molecular input data for CYP450 metabolite prediction by converting between SMILES strings and SDF file formats, and ensuring correct syntax conventions. This skill is essential for feeding query molecules into the BioTransformerAPI and command-line CyProduct tools.

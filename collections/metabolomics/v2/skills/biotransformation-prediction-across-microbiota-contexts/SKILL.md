@@ -21,6 +21,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -50,6 +51,7 @@ attribution:
 
 # biotransformation-prediction-across-microbiota-contexts
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Predict small-molecule metabolism across three distinct biological compartments—mammalian, gut microbiota, and soil/aquatic microbiota—using BioTransformer 3.0.0 to generate metabolite structures, reaction types, and metabolic pathway information. This skill enables computational metabolite identification and pathway elucidation when characterizing how xenobiotics or natural products are transformed across different microenvironments.

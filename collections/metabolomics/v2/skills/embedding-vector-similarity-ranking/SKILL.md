@@ -1,6 +1,8 @@
 ---
 name: embedding-vector-similarity-ranking
-description: Use when you have a query mass spectrum and need to retrieve the most chemically similar reference spectra from a large experimental or predicted library (thousands to millions of entries).
+description: Use when you have a query mass spectrum and need to retrieve the most
+  chemically similar reference spectra from a large experimental or predicted library
+  (thousands to millions of entries).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3814
@@ -14,6 +16,7 @@ metadata:
   - Python 3.7
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

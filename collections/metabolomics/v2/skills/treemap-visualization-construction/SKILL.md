@@ -1,6 +1,9 @@
 ---
 name: treemap-visualization-construction
-description: Use when after applying one or more mpactr filters (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to an mpactr object, use this skill when you need to communicate the count and percentage breakdown of ions retained vs. rejected across filter status categories.
+description: Use when after applying one or more mpactr filters (filter_mispicked_ions,
+  filter_group, filter_cv, filter_insource_ions) to an mpactr object, use this skill
+  when you need to communicate the count and percentage breakdown of ions retained
+  vs. rejected across filter status categories.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -16,6 +19,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -23,7 +27,8 @@ derived_from:
   title: ''
 evidence_spans:
 - This table can be used for a variety of analyses that can be conducted in R
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # treemap-visualization-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a treemap visualization to display the distribution and proportions of ions across filter status categories (passed/failed) from qc_summary() output. This skill enables rapid visual assessment of filtering efficiency and ion loss across multiple quality control filters in metabolomics workflows.

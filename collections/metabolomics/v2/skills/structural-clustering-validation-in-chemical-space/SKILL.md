@@ -1,6 +1,9 @@
 ---
 name: structural-clustering-validation-in-chemical-space
-description: Use when you have trained or loaded a deep learning model that produces high-dimensional spectral embeddings (e.g., 200-dimensional vectors from MS2DeepScore base network) and need to validate that these embeddings capture chemical structure information rather than learning spurious patterns.
+description: Use when you have trained or loaded a deep learning model that produces
+  high-dimensional spectral embeddings (e.g., 200-dimensional vectors from MS2DeepScore
+  base network) and need to validate that these embeddings capture chemical structure
+  information rather than learning spurious patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3745
@@ -15,15 +18,19 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
 - Using the t-SNE [28] implementation from scikit-learn [29]
-- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates
+- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional
+  coordinates
 - Our MS2DeepScore Python library offers two types of data generators
 claims: []
 provenance:
@@ -48,6 +55,7 @@ attribution:
 
 # Structural clustering validation in chemical space
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that learned molecular embeddings encode chemically meaningful information by applying dimensionality reduction to spectral embeddings and verifying that compounds cluster by chemical class. This skill confirms whether an embedding space preserves structural relationships needed for similarity prediction and molecular family discovery.

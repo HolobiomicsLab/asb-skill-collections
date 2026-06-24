@@ -1,6 +1,9 @@
 ---
 name: inchikey-extraction-from-spectral-library
-description: Use when you have a GNPS DBResult file from spectral library matching that lacks ClassyFire superclass, class, and subclass columns, and you need to restore chemical ontology annotations by submitting compound identifiers to external batch classification services for re-annotation.
+description: Use when you have a GNPS DBResult file from spectral library matching
+  that lacks ClassyFire superclass, class, and subclass columns, and you need to restore
+  chemical ontology annotations by submitting compound identifiers to external batch
+  classification services for re-annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,12 +17,15 @@ metadata:
   - ConCISE
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

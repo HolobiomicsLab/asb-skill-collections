@@ -1,6 +1,8 @@
 ---
 name: statistical-significance-threshold-application
-description: Use when you have generated omu_summary or anova_function output (a dataframe with padj values for all tested metabolites) and need to subset compounds for class-specific frequency counting, fold-change analysis, or visualization.
+description: Use when you have generated omu_summary or anova_function output (a dataframe
+  with padj values for all tested metabolites) and need to subset compounds for class-specific
+  frequency counting, fold-change analysis, or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - ra_table
   - pie_chart
   - ggplot2
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -42,6 +45,7 @@ attribution:
 
 # statistical-significance-threshold-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply adjusted p-value (padj) thresholds to metabolomics summary statistics to identify and isolate significantly altered metabolites for downstream analysis and visualization. This skill filters omu_summary output to retain only compounds meeting a user-defined statistical significance criterion, typically padj ≤ 0.05.

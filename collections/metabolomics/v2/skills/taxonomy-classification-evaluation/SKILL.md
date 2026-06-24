@@ -1,6 +1,8 @@
 ---
 name: taxonomy-classification-evaluation
-description: Use when you have a pre-trained model (or candidate models) and need to assess whether it generalizes better than existing synthetic-molecule baselines on natural product taxonomy classification.
+description: Use when you have a pre-trained model (or candidate models) and need
+  to assess whether it generalizes better than existing synthetic-molecule baselines
+  on natural product taxonomy classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3928
@@ -13,6 +15,7 @@ metadata:
   - train.py
   - inference.py
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -40,6 +43,7 @@ attribution:
 
 # taxonomy-classification-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Benchmarking a foundation model's taxonomy classification performance against synthetic-molecule pre-trained baselines on natural product datasets using standardized metrics. This skill validates whether a model captures natural synthesis patterns through quantitative comparison of accuracy, precision, recall, and F1-score across taxonomy classes.

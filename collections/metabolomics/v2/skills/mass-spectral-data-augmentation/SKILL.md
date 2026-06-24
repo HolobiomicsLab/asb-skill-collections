@@ -1,6 +1,7 @@
 ---
 name: mass-spectral-data-augmentation
-description: Use when when you have limited real GC-MS overlapped peak data but need thousands of labeled examples to train a deep learning model for mass spectral deconvolution.
+description: Use when when you have limited real GC-MS overlapped peak data but need
+  thousands of labeled examples to train a deep learning model for mass spectral deconvolution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +15,7 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

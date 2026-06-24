@@ -11,6 +11,7 @@ metadata:
   - GNPS LCMS Visualization Dashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
@@ -38,6 +39,7 @@ attribution:
 
 # usi-string-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse Unified Spectrum Identifier (USI) strings to extract repository identifiers, file paths, and scan numbers, enabling programmatic retrieval of mass spectrometry data from distributed repositories (GNPS, MassIVE, MetaboLights). This skill bridges human-readable spectrum citations with machine-actionable data access.

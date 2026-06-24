@@ -1,6 +1,8 @@
 ---
 name: spectral-mz-window-filtering
-description: Use when when you have resolved mzML or mzXML spectrum files and need to isolate signals for a target m/z value (e.g., 870.954) across all retention times or a specific scan.
+description: Use when when you have resolved mzML or mzXML spectrum files and need
+  to isolate signals for a target m/z value (e.g., 870.954) across all retention times
+  or a specific scan.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - mzmine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
@@ -40,6 +43,7 @@ attribution:
 
 # spectral-mz-window-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter mass spectrometry scans to extract signals within a specified mass-to-charge (m/z) tolerance window, isolating ions of interest for downstream chromatographic or spectral analysis. This is a foundational step in extracted-ion chromatogram (XIC) computation and targeted metabolite detection.

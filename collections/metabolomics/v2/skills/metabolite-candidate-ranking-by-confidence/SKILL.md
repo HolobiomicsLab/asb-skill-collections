@@ -1,6 +1,9 @@
 ---
 name: metabolite-candidate-ranking-by-confidence
-description: Use when you have a set of candidate metabolites for an unknown compound detected in a liquid chromatography–mass spectrometry (LC-MS) experiment, predicted RTs from a trained DNN model, and access to calibration molecules (minimum 10) that connect your observed chromatographic method to a source.
+description: Use when you have a set of candidate metabolites for an unknown compound
+  detected in a liquid chromatography–mass spectrometry (LC-MS) experiment, predicted
+  RTs from a trained DNN model, and access to calibration molecules (minimum 10) that
+  connect your observed chromatographic method to a source.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -12,11 +15,13 @@ metadata:
   - cmmrt
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # metabolite-candidate-ranking-by-confidence
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and filter metabolite annotation candidates by computing retention time (RT) prediction confidence intervals and comparing observed versus predicted RT values using a Bayesian meta-learned approach. This skill integrates predicted RTs from a deep neural network with meta-learned chromatographic method projections to produce scored candidate lists suitable for prioritizing follow-up identification work.

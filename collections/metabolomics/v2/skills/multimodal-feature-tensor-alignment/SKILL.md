@@ -1,6 +1,9 @@
 ---
 name: multimodal-feature-tensor-alignment
-description: Use when when you have molecule IDs converted to multiple independent feature modalities (graph-based node/edge tensors from RDKit, Morgan fingerprints, and computed physicochemical descriptors) and need to combine them into a single structured tensor representation for multimodal model training.
+description: Use when when you have molecule IDs converted to multiple independent
+  feature modalities (graph-based node/edge tensors from RDKit, Morgan fingerprints,
+  and computed physicochemical descriptors) and need to combine them into a single
+  structured tensor representation for multimodal model training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3366
@@ -14,6 +17,7 @@ metadata:
   - pandas
   - scikit-learn
   - torch
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -45,6 +49,7 @@ attribution:
 
 # multimodal-feature-tensor-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns and stacks heterogeneous molecular feature representations (graph tensors, fingerprints, physicochemical descriptors) into coherent multimodal tensors for joint model training. This skill ensures that diverse structural and chemical modalities are combined into compatible array structures suitable for downstream neural network ingestion.

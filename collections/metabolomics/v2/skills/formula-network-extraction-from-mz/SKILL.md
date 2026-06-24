@@ -1,6 +1,8 @@
 ---
 name: formula-network-extraction-from-mz
-description: Use when you have an observed m/z value from spatially-resolved mass spectrometry imaging and need to assign one or more plausible molecular formulae with confidence metrics.
+description: Use when you have an observed m/z value from spatially-resolved mass
+  spectrometry imaging and need to assign one or more plausible molecular formulae
+  with confidence metrics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,11 +14,13 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # formula-network-extraction-from-mz
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract candidate molecular formulae and their interconnection networks for a given mass-to-charge (m/z) value by querying a precomputed database of 2.8 million formulae linked via chemical and biological edges, then rank them using a multiple linear regression model trained on mass accuracy, database connectivity, and biochemical relationship strength.

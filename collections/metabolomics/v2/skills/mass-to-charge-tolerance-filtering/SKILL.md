@@ -1,6 +1,7 @@
 ---
 name: mass-to-charge-tolerance-filtering
-description: Use when extracting migration times of specific analyte or reference markers (e.g., Paracetamol EOF marker) from CE-MS files using peak-picking workflows.
+description: Use when extracting migration times of specific analyte or reference
+  markers (e.g., Paracetamol EOF marker) from CE-MS files using peak-picking workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,11 +18,13 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package
@@ -53,6 +56,7 @@ attribution:
 
 # mass-to-charge-tolerance-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter ion peaks in CE-MS data by specifying narrow m/z tolerance windows to ensure correct peak detection during extracted ion electropherogram (EIE) generation. This skill is essential when extracting migration times of known markers (e.g., EOF markers) where precise m/z ranges prevent false peak assignments.

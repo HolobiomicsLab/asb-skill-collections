@@ -1,6 +1,9 @@
 ---
 name: relative-log-abundance-calculation
-description: Use when after applying a normalization method (e.g., median scaling, RUV, RLSC) to metabolomics peak intensity data, when you need to visually assess whether normalization has successfully reduced batch effects and whether samples cluster appropriately by biological group.
+description: Use when after applying a normalization method (e.g., median scaling,
+  RUV, RLSC) to metabolomics peak intensity data, when you need to visually assess
+  whether normalization has successfully reduced batch effects and whether samples
+  cluster appropriately by biological group.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,13 +15,16 @@ metadata:
   - NormalizeMets
   - RStudio
   - Plotly
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # relative-log-abundance-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute relative log abundances (RLA) from normalized metabolomics feature matrices by centering each metabolite's intensities on the median within sample groups, enabling detection of normalization artifacts and outlier samples. This diagnostic visualization reveals batch effects and within-group heterogeneity that persist after normalization.

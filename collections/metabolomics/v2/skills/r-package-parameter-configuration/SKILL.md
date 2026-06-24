@@ -1,6 +1,8 @@
 ---
 name: r-package-parameter-configuration
-description: Use when when preparing to preprocess Salmon-derived count matrices or other omics abundance data, and you need to specify multiple configurable options (e.
+description: Use when when preparing to preprocess Salmon-derived count matrices or
+  other omics abundance data, and you need to specify multiple configurable options
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,12 +16,15 @@ metadata:
   - ComplexHeatmap
   - edgeR
   - Nextflow
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

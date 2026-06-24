@@ -1,6 +1,9 @@
 ---
 name: json-response-validation
-description: Use when after sending HTTP requests to API endpoints (such as /classify or /model/metadata on an NP-Classifier server) to verify that the response is parseable JSON and contains the expected output fields and metadata before attempting to extract or process the data programmatically.
+description: Use when after sending HTTP requests to API endpoints (such as /classify
+  or /model/metadata on an NP-Classifier server) to verify that the response is parseable
+  JSON and contains the expected output fields and metadata before attempting to extract
+  or process the data programmatically.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +13,7 @@ metadata:
   - Python
   - TensorFlow Serving
   - docker-compose
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -38,6 +42,7 @@ attribution:
 
 # json-response-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that API endpoints return well-formed JSON responses with expected fields, correct HTTP status codes, and proper schema structure. This skill ensures that downstream programmatic consumers of the API can reliably parse and use the returned data.

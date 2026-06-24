@@ -1,6 +1,8 @@
 ---
 name: phylogenetic-tree-validation
-description: Use when after generating a Chemical Feature Tree from q2-qemistree (or any tree artifact) and before using it for alpha-diversity or beta-diversity phylogenetic analyses.
+description: Use when after generating a Chemical Feature Tree from q2-qemistree (or
+  any tree artifact) and before using it for alpha-diversity or beta-diversity phylogenetic
+  analyses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2423
@@ -14,11 +16,13 @@ metadata:
   - SIRIUS / CSI:FingerID
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # phylogenetic-tree-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the structural integrity and correctness of a phylogenetic tree artifact produced by q2-qemistree or similar tree-building pipelines. This skill ensures the tree is properly formatted, correctly connected, and suitable for downstream phylogenetic diversity analyses.

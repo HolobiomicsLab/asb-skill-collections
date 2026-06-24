@@ -1,6 +1,9 @@
 ---
 name: lcms-data-format-parsing
-description: Use when when you have raw LC/MS data in mzML format and need to execute the LAGF non-targeted screening pipeline. Use this skill as the first step before applying the LAGF algorithm workflow to extract and annotate features from mass spectrometry data.
+description: Use when when you have raw LC/MS data in mzML format and need to execute
+  the LAGF non-targeted screening pipeline. Use this skill as the first step before
+  applying the LAGF algorithm workflow to extract and annotate features from mass
+  spectrometry data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -18,6 +21,7 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF
@@ -51,6 +55,7 @@ attribution:
 
 # lcms-data-format-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load LC/MS raw data files in mzML format using pymzml as a prerequisite step for non-targeted feature screening and annotation. This skill enables ingestion of mass spectrometry instrument output into a Python environment for downstream algorithmic processing.

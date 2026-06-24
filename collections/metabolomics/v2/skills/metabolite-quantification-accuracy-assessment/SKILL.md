@@ -1,6 +1,8 @@
 ---
 name: metabolite-quantification-accuracy-assessment
-description: Use when you have executed mzExacto() on a preprocessed GC-MS dataset and need to verify that the returned dataframe correctly matches query chemicals to their m/z peaks, retention times, and quantitative measurements (area values).
+description: Use when you have executed mzExacto() on a preprocessed GC-MS dataset
+  and need to verify that the returned dataframe correctly matches query chemicals
+  to their m/z peaks, retention times, and quantitative measurements (area values).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,13 +17,17 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- mzExacto() collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- mzExacto() collects the same information for a set of query chemicals and uses it
+  to precisely search the advanced dictionary for samples that have those chemicals
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # metabolite-quantification-accuracy-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a mass spectrometry data extraction function (mzExacto) correctly retrieves m/z values, retention times, match factors, and peak areas for known query chemicals by comparing extracted dataframe outputs against expected compound identifiers and retention time/m/z reference standards. This skill ensures quantification accuracy before downstream chemical categorization or database lookups.

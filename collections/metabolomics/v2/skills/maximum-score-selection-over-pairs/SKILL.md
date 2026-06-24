@@ -1,6 +1,8 @@
 ---
 name: maximum-score-selection-over-pairs
-description: Use when when you have individual pairwise scores (e.g., between BGCs and spectra) and need to rank composite links where one or both sides are collections (e.
+description: Use when when you have individual pairwise scores (e.g., between BGCs
+  and spectra) and need to rank composite links where one or both sides are collections
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,14 +13,17 @@ metadata:
   - NPLinker
   - BiG-SCAPE
   - IOKR
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic data
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
+- Finally, we present NPLinker, a software framework to link genomic and metabolomic
+  data
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # maximum-score-selection-over-pairs
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generalize pairwise scoring functions (e.g., BGC-spectrum IOKR scores) to group-level links (e.g., GCF-MF pairs) by computing the maximum score over all possible combinations of elements within each group. This approach enables ranking of composite genomic-metabolomic links when one or both sides contain multiple entities.

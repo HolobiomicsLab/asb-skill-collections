@@ -1,6 +1,9 @@
 ---
 name: algorithm-interface-abstraction
-description: Use when you have multiple independent peak-picking algorithms available and need to allow end-users to select among them for the same analytical task (peak detection in untargeted LC-MS data) without coupling the rest of your pipeline to each algorithm's API.
+description: Use when you have multiple independent peak-picking algorithms available
+  and need to allow end-users to select among them for the same analytical task (peak
+  detection in untargeted LC-MS data) without coupling the rest of your pipeline to
+  each algorithm's API.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,11 +17,13 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # algorithm-interface-abstraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design a unified interface that wraps multiple interchangeable peak-picking algorithms (Centwave, FeatureFinderMetabo, ADAP) and routes raw LC-MS data to the selected algorithm via configuration-driven dispatch, standardizing outputs to a common feature table format. This abstraction isolates algorithm-specific details and allows users to swap peak-picking methods without rewriting downstream processing logic.

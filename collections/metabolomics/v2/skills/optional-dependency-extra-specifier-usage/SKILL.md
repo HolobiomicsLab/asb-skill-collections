@@ -1,6 +1,7 @@
 ---
 name: optional-dependency-extra-specifier-usage
-description: Use when when a Python package provides optional support for specialized data formats or functionality (e.
+description: Use when when a Python package provides optional support for specialized
+  data formats or functionality (e.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -10,6 +11,7 @@ metadata:
   - h5py
   - hdf5plugin
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -40,6 +42,7 @@ attribution:
 
 # optional-dependency-extra-specifier-usage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install optional feature-specific dependencies in a Python package using pip's extra specifier syntax (e.g., `pip install package[extra_name]`). This skill enables conditional loading of modules that require external libraries for specialized functionality—such as mzMLb format support in proteomics—without forcing all dependencies on base installations.

@@ -1,6 +1,7 @@
 ---
 name: natural-product-classification-prediction
-description: Use when you have molecular structures encoded as SMILES strings and need to classify them into natural-product chemical classes.
+description: Use when you have molecular structures encoded as SMILES strings and
+  need to classify them into natural-product chemical classes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,6 +16,7 @@ metadata:
   - Keras
   - TensorFlow Serving
   - NP Classifier Repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -43,6 +45,7 @@ attribution:
 
 # natural-product-classification-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill deploys a pre-trained deep-learning classifier to predict natural-product chemical classes from SMILES molecular strings via a containerized REST API. It is used when you need to rapidly annotate chemical structures with their likely biosynthetic or functional class.

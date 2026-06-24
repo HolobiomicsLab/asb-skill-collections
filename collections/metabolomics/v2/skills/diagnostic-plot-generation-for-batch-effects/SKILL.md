@@ -1,6 +1,8 @@
 ---
 name: diagnostic-plot-generation-for-batch-effects
-description: Use when after loading log-transformed metabolomics feature abundance tables (samples as rows, metabolic features as columns) with batch identifiers, and before committing to a single batch-correction model.
+description: Use when after loading log-transformed metabolomics feature abundance
+  tables (samples as rows, metabolic features as columns) with batch identifiers,
+  and before committing to a single batch-correction model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - sva
   - ggplot2
   - ber
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -22,7 +25,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +51,7 @@ attribution:
 
 # diagnostic-plot-generation-for-batch-effects
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and compare diagnostic visualizations (PCA, RLA, correlation, and probability density function plots) before and after batch-effect correction to evaluate which statistical model (parametric vs. non-parametric ComBat, or two-stage ber procedure) best fits the structure and quality of metabolomics datasets.

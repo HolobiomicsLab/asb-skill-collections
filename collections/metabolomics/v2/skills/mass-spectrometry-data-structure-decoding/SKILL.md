@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-structure-decoding
-description: Use when when you have a mzPeak file (uncompressed ZIP archive containing Parquet tables) and need to access decoded spectral data arrays (m/z, intensity), spectrum metadata (scan descriptors, precursors), or chromatogram data in a form suitable for Python/R analysis pipelines.
+description: Use when when you have a mzPeak file (uncompressed ZIP archive containing
+  Parquet tables) and need to access decoded spectral data arrays (m/z, intensity),
+  spectrum metadata (scan descriptors, precursors), or chromatogram data in a form
+  suitable for Python/R analysis pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,6 +19,7 @@ metadata:
   - mzpeakts
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -45,6 +49,7 @@ attribution:
 
 # mass-spectrometry-data-structure-decoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Decode mass spectrometry spectral and chromatographic data from columnar Apache Arrow/Parquet storage formats (mzPeak) into language-native arrays and metadata structures. This skill extracts m/z values, intensities, spectrum-level metadata, and instrument parameters from binary-packed mzPeak archives for downstream analysis.

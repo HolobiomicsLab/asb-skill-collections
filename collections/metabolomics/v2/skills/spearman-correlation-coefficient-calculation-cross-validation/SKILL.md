@@ -1,6 +1,9 @@
 ---
 name: spearman-correlation-coefficient-calculation-cross-validation
-description: Use when you have trained predictive models (e.g., MiMeNet neural networks) on microbiome-metabolome paired data using k-fold cross-validation, held out test folds for each fold-iteration, and generated continuous abundance predictions for metabolites.
+description: Use when you have trained predictive models (e.g., MiMeNet neural networks)
+  on microbiome-metabolome paired data using k-fold cross-validation, held out test
+  folds for each fold-iteration, and generated continuous abundance predictions for
+  metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,14 +16,19 @@ metadata:
   - ADAM optimizer
   - scipy.stats.spearmanr (Python)
   - scikit-learn (Python)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +52,7 @@ attribution:
 
 # Spearman Correlation Coefficient Calculation across Cross-Validation Folds
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Spearman correlation coefficients (SCC) between predicted and observed metabolite abundances across multiple cross-validation iterations and folds to assess prediction accuracy and identify well-predicted metabolites in microbiome-metabolome modeling. This skill quantifies how well a neural network model captures the rank-order relationship between predicted and observed metabolomic profiles.

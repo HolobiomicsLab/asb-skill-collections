@@ -1,6 +1,9 @@
 ---
 name: raw-file-format-parsing
-description: Use when you have native Thermo Fisher RAW files and need to recover file-level metadata (instrument details, run statistics), scan headers (retention time, total ion current, scan mode for MS1 or MS2), or peak lists (m/z and intensity arrays) in tabular or array form suitable for computational.
+description: Use when you have native Thermo Fisher RAW files and need to recover
+  file-level metadata (instrument details, run statistics), scan headers (retention
+  time, total ion current, scan mode for MS1 or MS2), or peak lists (m/z and intensity
+  arrays) in tabular or array form suitable for computational.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,11 +19,13 @@ metadata:
   - PyArrow
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.11.12.687968v1
   title: MetaXtract
 evidence_spans:
-- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from **Thermo Fisher RAW** mass spectrometry files.
+- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from
+  **Thermo Fisher RAW** mass spectrometry files.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

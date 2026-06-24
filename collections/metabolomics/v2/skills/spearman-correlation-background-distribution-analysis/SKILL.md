@@ -1,6 +1,8 @@
 ---
 name: spearman-correlation-background-distribution-analysis
-description: Use when after cross-validated neural network or regression models have generated predicted metabolite abundances and you need to distinguish genuinely predictable metabolites from those with spuriously high correlations.
+description: Use when after cross-validated neural network or regression models have
+  generated predicted metabolite abundances and you need to distinguish genuinely
+  predictable metabolites from those with spuriously high correlations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3463
@@ -16,16 +18,24 @@ metadata:
   - NumPy
   - SciPy Spearman correlation
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- Canonical correlation analysis models were implemented using Python's scikit-learn package.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation function since previous studies have shown that it is resilient to the problems of exploding and vanishing
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- Canonical correlation analysis models were implemented using Python's scikit-learn
+  package.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation
+  function since previous studies have shown that it is resilient to the problems
+  of exploding and vanishing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +59,7 @@ attribution:
 
 # Spearman correlation background distribution analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A statistical validation technique that establishes significance thresholds for metabolite prediction by generating an empirical null distribution through shuffled cross-validation, enabling distinction between genuine metabolite-microbe relationships and random correlations. This skill is essential for determining which metabolites have been predicted with confidence above background noise.

@@ -1,6 +1,9 @@
 ---
 name: precursor-mass-tolerance-filtering
-description: Use when after cosine similarity or dot-product scoring of experimental MS/MS spectra against a reference library, when you need to eliminate matches whose precursor m/z values deviate too far from the experimental precursor m/z, thereby improving specificity of library matching before final.
+description: Use when after cosine similarity or dot-product scoring of experimental
+  MS/MS spectra against a reference library, when you need to eliminate matches whose
+  precursor m/z values deviate too far from the experimental precursor m/z, thereby
+  improving specificity of library matching before final.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -11,11 +14,13 @@ metadata:
   - TandemMatch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
 evidence_spans:
-- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library formats.'
+- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library
+  formats.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

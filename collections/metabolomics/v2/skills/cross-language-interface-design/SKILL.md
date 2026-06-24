@@ -1,6 +1,9 @@
 ---
 name: cross-language-interface-design
-description: Use when when you have domain-specific functionality (e.g., spectral similarity scoring, peak detection algorithms) implemented in one language (Python) but need to make it callable and composable within an R-based analytical pipeline (Spectra objects);
+description: Use when when you have domain-specific functionality (e.g., spectral
+  similarity scoring, peak detection algorithms) implemented in one language (Python)
+  but need to make it callable and composable within an R-based analytical pipeline
+  (Spectra objects);
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0224
@@ -16,12 +19,15 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:
@@ -46,6 +52,7 @@ attribution:
 
 # cross-language-interface-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement function wrapping and object marshalling layers that translate APIs between compiled/interpreted languages (Python ↔ R) while preserving type semantics and enabling seamless execution within unified analytical workflows. This skill is essential when integrating specialized libraries from one language ecosystem into another without forcing users to switch execution contexts.

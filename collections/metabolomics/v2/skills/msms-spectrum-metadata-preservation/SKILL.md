@@ -1,6 +1,7 @@
 ---
 name: msms-spectrum-metadata-preservation
-description: Use when removing invalid or malformed entries (e.g., SMILES validation, format errors) from large spectral datasets (GNPS, MoNA, MTBLS1572, MassBank).
+description: Use when removing invalid or malformed entries (e.g., SMILES validation,
+  format errors) from large spectral datasets (GNPS, MoNA, MTBLS1572, MassBank).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +17,7 @@ metadata:
   - PyTorch 2.6.0
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -45,6 +47,7 @@ attribution:
 
 # MS/MS Spectrum Metadata Preservation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retain and propagate auxiliary annotations (precursor m/z, peak lists, chemical identifiers) linked to each spectrum record throughout filtering and preprocessing workflows. This ensures that cleaned spectral embeddings remain scientifically interpretable and traceable to their original library sources.

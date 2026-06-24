@@ -1,6 +1,8 @@
 ---
 name: github-actions-workflow-inspection-and-execution
-description: Use when a GitHub repository displays a CI workflow badge (e.g., passing/failing status in README) and you need to verify that the reported status is accurate, reproduce the CI environment locally, or debug workflow failures.
+description: Use when a GitHub repository displays a CI workflow badge (e.g., passing/failing
+  status in README) and you need to verify that the reported status is accurate, reproduce
+  the CI environment locally, or debug workflow failures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -10,6 +12,7 @@ metadata:
   - git
   - GitHub Actions
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -40,6 +43,7 @@ attribution:
 
 # GitHub Actions Workflow Inspection and Execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and locally reproduce a GitHub Actions CI workflow by examining the main.yml configuration file and executing the same test suite and dependency installation steps to verify that the workflow passes and matches the reported badge status. This skill validates the integrity of automated CI pipelines and confirms reproducibility of build artifacts.

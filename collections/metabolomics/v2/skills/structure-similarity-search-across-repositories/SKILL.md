@@ -1,6 +1,8 @@
 ---
 name: structure-similarity-search-across-repositories
-description: Use when you have a SMILES string or chemical structure and need to determine whether it exists in public chemical repositories, or locate reference identifiers and metadata for the same compound across multiple authoritative sources.
+description: Use when you have a SMILES string or chemical structure and need to determine
+  whether it exists in public chemical repositories, or locate reference identifiers
+  and metadata for the same compound across multiple authoritative sources.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0348
@@ -18,6 +20,7 @@ metadata:
   - COCONUT
   - SmilesDrawer
   - React + TypeScript
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks

@@ -1,6 +1,8 @@
 ---
 name: retention-time-drift-detection
-description: Use when you have LC-MS data processed through XCMS grouping that shows signs of RT drift (e.g., data acquired over extended periods or across many samples) and you suspect misalignment of feature groups.
+description: Use when you have LC-MS data processed through XCMS grouping that shows
+  signs of RT drift (e.g., data acquired over extended periods or across many samples)
+  and you suspect misalignment of feature groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -13,11 +15,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -43,6 +47,7 @@ attribution:
 
 # retention-time-drift-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect misaligned feature groups in LC-MS data caused by retention time (RT) drift and incorrect XCMS grouping parameters by comparing two XCMS grouping results with different bandwidth settings. This skill identifies features that failed to align correctly due to RT drift structures or suboptimal parameter choices, enabling targeted realignment before downstream analysis.

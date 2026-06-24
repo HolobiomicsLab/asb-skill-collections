@@ -1,6 +1,8 @@
 ---
 name: unsupervised-spectrum-clustering
-description: Use when when you have high-dimensional embedding vectors from pretrained models (e.g., MSBERT) and need to verify that the learned representation space groups spectra by chemical similarity without labeled training data.
+description: Use when when you have high-dimensional embedding vectors from pretrained
+  models (e.g., MSBERT) and need to verify that the learned representation space groups
+  spectra by chemical similarity without labeled training data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -18,6 +20,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

@@ -1,6 +1,7 @@
 ---
 name: ion-count-percentage-calculation
-description: Use when after applying one or more mpactr filters (mispicked, group, cv, insource) to an mpactr object and generating a qc_summary() data.
+description: Use when after applying one or more mpactr filters (mispicked, group,
+  cv, insource) to an mpactr object and generating a qc_summary() data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3208
@@ -15,6 +16,7 @@ metadata:
   - ggplot2
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -22,7 +24,8 @@ derived_from:
   title: ''
 evidence_spans:
 - This table can be used for a variety of analyses that can be conducted in R
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +50,7 @@ attribution:
 
 # ion-count-percentage-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate ion counts by filter status category and compute the percentage of total ions within each status using data.table operations on qc_summary() output. This calculation provides a quantitative breakdown of how many ions passed or failed each filtering step, enabling downstream visualization and quality assessment.

@@ -1,6 +1,8 @@
 ---
 name: batch-prediction-comparison
-description: Use when when you have a trained molecular classifier (like BitterPredict) that accepts structured descriptor input, and you need to understand which chemical descriptor subgroups drive prediction outcomes.
+description: Use when when you have a trained molecular classifier (like BitterPredict)
+  that accepts structured descriptor input, and you need to understand which chemical
+  descriptor subgroups drive prediction outcomes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -11,11 +13,13 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +43,7 @@ attribution:
 
 # batch-prediction-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare predictions across multiple ablated feature sets by systematically removing descriptor subgroups from a classifier input and measuring prediction stability. This skill quantifies which molecular descriptor families are most influential on bitter/not-bitter classification outcomes.

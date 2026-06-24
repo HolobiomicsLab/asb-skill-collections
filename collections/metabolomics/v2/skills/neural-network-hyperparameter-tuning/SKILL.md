@@ -1,6 +1,9 @@
 ---
 name: neural-network-hyperparameter-tuning
-description: Use when when training a multilayer perceptron to predict metabolomic features from microbiome abundances, you need dataset-specific hyperparameter configurations because prediction performance (Spearman correlation and well-predicted metabolite counts) varies substantially across microbiome.
+description: Use when when training a multilayer perceptron to predict metabolomic
+  features from microbiome abundances, you need dataset-specific hyperparameter configurations
+  because prediction performance (Spearman correlation and well-predicted metabolite
+  counts) varies substantially across microbiome.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3795
@@ -20,16 +23,24 @@ metadata:
   - ReLU activation
   - NumPy
   - SciPy
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -56,6 +67,7 @@ attribution:
 
 # neural-network-hyperparameter-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic selection of multilayer perceptron hyperparameters (layer size, number of layers, L2 regularization, dropout rate) optimized per dataset to maximize metabolite prediction accuracy. This skill involves empirical tuning via cross-validation to identify dataset-specific configurations that balance model complexity and generalization.

@@ -1,6 +1,7 @@
 ---
 name: isotope-labeling-data-interpretation
-description: Use when you have LC-MS FAM measurements from an isotope-labeling experiment and need to correct them to obtain true MDV values.
+description: Use when you have LC-MS FAM measurements from an isotope-labeling experiment
+  and need to correct them to obtain true MDV values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,6 +12,7 @@ metadata:
   - ElemCor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

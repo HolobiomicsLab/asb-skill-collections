@@ -1,6 +1,8 @@
 ---
 name: similarity-score-computation-for-spectra
-description: Use when you have a preprocessed unknown sample spectrum (m/z peaks and intensities) and need to identify the most likely species or reference entries by scoring it against a database of known spectra.
+description: Use when you have a preprocessed unknown sample spectrum (m/z peaks and
+  intensities) and need to identify the most likely species or reference entries by
+  scoring it against a database of known spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -11,6 +13,7 @@ metadata:
   - RapidMass
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -40,6 +43,7 @@ attribution:
 
 # Similarity-score computation for spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute quantitative similarity scores between an unknown mass spectrometry sample spectrum and reference spectra in a database using distance or correlation metrics on aligned m/z features. This enables ranking and candidate species assignment for automated sample authentication.

@@ -1,6 +1,9 @@
 ---
 name: r-data-frame-construction-and-validation
-description: Use when when you have instrument-exported text files (e.g., Sciex MultiQuant txt format) containing QCpool sample measurements, metadata, and timestamps that need to be converted into a reproducible, schema-validated R object for metabolomics or lipidomics quality overview analysis.
+description: Use when when you have instrument-exported text files (e.g., Sciex MultiQuant
+  txt format) containing QCpool sample measurements, metadata, and timestamps that
+  need to be converted into a reproducible, schema-validated R object for metabolomics
+  or lipidomics quality overview analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -11,6 +14,7 @@ metadata:
   - R
   - Sciex Multiquant
   - QComics
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -39,6 +43,7 @@ attribution:
 
 # R data frame construction and validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse tabular data from instrument export files into structured R data frames with standardized column names, correct data types, and validated schema. This skill ensures that downstream analytical workflows receive clean, machine-readable input suitable for quality assessment and statistical analysis.

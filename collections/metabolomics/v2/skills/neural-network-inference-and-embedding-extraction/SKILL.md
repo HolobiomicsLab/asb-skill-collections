@@ -1,6 +1,9 @@
 ---
 name: neural-network-inference-and-embedding-extraction
-description: Use when when you have paired or unpaired MS/MS spectra and need to compute structural similarity scores without explicit molecular fingerprint computation, or when you want to generate low-dimensional embeddings for spectral visualization, clustering, or retrieval tasks.
+description: Use when when you have paired or unpaired MS/MS spectra and need to compute
+  structural similarity scores without explicit molecular fingerprint computation,
+  or when you want to generate low-dimensional embeddings for spectral visualization,
+  clustering, or retrieval tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -17,6 +20,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -24,9 +28,13 @@ evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
 - recently introduced unsupervised Spec2V
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +58,7 @@ attribution:
 
 # neural-network-inference-and-embedding-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract fixed-dimensional vector embeddings and compute pairwise structural similarity predictions from tandem mass spectra using a trained Siamese neural network. This skill produces both continuous similarity scores (Tanimoto predictions) and intermediate spectrum representations suitable for dimensionality reduction and clustering.

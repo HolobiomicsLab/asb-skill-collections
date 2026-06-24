@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-matrix-background-simulation
-description: Use when when you need to create negative control or background-only reference datasets for LC/GC-MS analysis pipelines—specifically to validate peak-picking algorithms, assess false-positive rates, or simulate instrument background and matrix effects (e.
+description: Use when when you need to create negative control or background-only
+  reference datasets for LC/GC-MS analysis pipelines—specifically to validate peak-picking
+  algorithms, assess false-positive rates, or simulate instrument background and matrix
+  effects (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -15,11 +18,13 @@ metadata:
   - mzR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - The underlying engine handles binary data encoding via the `base64enc` package
 - github.com__yufree__mzrtsim
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # mass-spectrometry-matrix-background-simulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate realistic background-only .mzML files for LC/GC-MS data, containing either pure noise or noise combined with matrix ion peaks, without analyte signals. This skill produces ground-truth reference files for benchmarking feature detection and noise modeling in untargeted metabolomics workflows.

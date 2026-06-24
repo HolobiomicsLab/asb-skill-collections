@@ -1,6 +1,9 @@
 ---
 name: sample-metadata-integration-for-qc
-description: Use when when you have an aligned MemoMatrix (sample-by-feature occurrence matrix where features are MS2 peaks and neutral losses) and corresponding sample annotations (especially blank/control sample labels), and you need to exclude background-derived peaks and losses before applying visualization.
+description: Use when when you have an aligned MemoMatrix (sample-by-feature occurrence
+  matrix where features are MS2 peaks and neutral losses) and corresponding sample
+  annotations (especially blank/control sample labels), and you need to exclude background-derived
+  peaks and losses before applying visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +16,15 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - conda create --name memo python=3.8
 - pip install numpy
 claims: []

@@ -1,6 +1,8 @@
 ---
 name: database-accessor-initialization
-description: Use when a Python module declares optional/conditional dependencies (e.g., sqlalchemy for database access) and you need to confirm that the module can be imported and instantiated without exceptions when those dependencies are present in the environment.
+description: Use when a Python module declares optional/conditional dependencies (e.g.,
+  sqlalchemy for database access) and you need to confirm that the module can be imported
+  and instantiated without exceptions when those dependencies are present in the environment.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +10,7 @@ metadata:
   - pip
   - sqlalchemy
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -37,6 +40,7 @@ attribution:
 
 # database-accessor-initialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a module depending on conditional dependencies successfully initializes its database accessor when those dependencies are installed. This skill ensures optional dependencies are correctly resolved and do not cause import failures.

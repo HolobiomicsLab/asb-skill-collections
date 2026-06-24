@@ -1,6 +1,9 @@
 ---
 name: spectral-data-integration
-description: Use when you have three distinct mass spectrometry data sources (quantification table, metadata table, and spectral data from an MS library or reference dataset like omsw_pleurotus_ms2deepscore) and need to combine them into a single JSON output that preserves all three modalities for interactive.
+description: Use when you have three distinct mass spectrometry data sources (quantification
+  table, metadata table, and spectral data from an MS library or reference dataset
+  like omsw_pleurotus_ms2deepscore) and need to combine them into a single JSON output
+  that preserves all three modalities for interactive.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,6 +16,7 @@ metadata:
   - msFeaST_Dashboard_bundle.html
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

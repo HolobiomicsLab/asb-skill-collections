@@ -1,6 +1,9 @@
 ---
 name: metabolic-module-significance-calculation
-description: 'Use when after you have constructed metabolic correlation modules via WGCNA on normalized and imputed metabolomic data, and you want to test whether specific modules (e.g., Module 2: Creatine/Glutathione metabolism) associate significantly with a categorical sample trait.'
+description: 'Use when after you have constructed metabolic correlation modules via
+  WGCNA on normalized and imputed metabolomic data, and you want to test whether specific
+  modules (e.g., Module 2: Creatine/Glutathione metabolism) associate significantly
+  with a categorical sample trait.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - R
   - WGCNA
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -23,7 +27,8 @@ evidence_spans:
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # metabolic-module-significance-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculates module significance (MS) statistics to assess whether metabolic correlation modules show statistically significant associations with sample groupings (e.g., tumor vs. normal). This skill quantifies the average absolute metabolite significance per module and tests for differential module-trait relationships in preprocessed metabolomic data.

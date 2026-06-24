@@ -1,6 +1,9 @@
 ---
 name: node-pair-edge-deduplication
-description: Use when your input network contains multiple edge types (Biochemical, Structural, Mass Spectral, Correlation) linking the same node pairs, and you want to export or visualize a single-edge-per-pair network to avoid visual clutter and ambiguous interpretations.
+description: Use when your input network contains multiple edge types (Biochemical,
+  Structural, Mass Spectral, Correlation) linking the same node pairs, and you want
+  to export or visualize a single-edge-per-pair network to avoid visual clutter and
+  ambiguous interpretations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -10,6 +13,7 @@ metadata:
   tools:
   - MetaMapR
   - cytoscape.js
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv194
   title: MetaMapR

@@ -1,6 +1,8 @@
 ---
 name: pubchem-compound-database-retrieval
-description: Use when you need to supply candidate metabolite structures for mass spectrometry annotation when working within an integrative metabolomics data analysis workflow (such as MAGMa).
+description: Use when you need to supply candidate metabolite structures for mass
+  spectrometry annotation when working within an integrative metabolomics data analysis
+  workflow (such as MAGMa).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3095
@@ -13,6 +15,7 @@ metadata:
   - PubChem
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -41,6 +44,7 @@ attribution:
 
 # pubchem-compound-database-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract, parse, and standardize chemical structures from the PubChem database to generate a validated candidate structure set for metabolite annotation workflows. This skill bridges public chemical data repositories with chemo-informatics pipelines by ensuring structural compatibility and format compliance.

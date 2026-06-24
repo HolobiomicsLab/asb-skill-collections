@@ -1,6 +1,9 @@
 ---
 name: batch-effect-correction-metabolomics
-description: Use when your metabolomics dataset exhibits samples analyzed across multiple batches or analytical runs with suspected technical drift or batch-to-batch signal shift visible as systematic separation in unsupervised clustering (PCA, hierarchical clustering).
+description: Use when your metabolomics dataset exhibits samples analyzed across multiple
+  batches or analytical runs with suspected technical drift or batch-to-batch signal
+  shift visible as systematic separation in unsupervised clustering (PCA, hierarchical
+  clustering).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +15,7 @@ metadata:
   - R
   - sva
   - ber
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -20,7 +24,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # batch-effect-correction-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Correct technical batch effects and drift across analytical runs in preprocessed, log2-scaled metabolomics datasets using statistical models (ber, ComBat parametric/non-parametric) implemented in the dbnorm package. This skill removes systematic technical heterogeneity while preserving biological signal, enabling robust downstream analysis of disease mechanisms.

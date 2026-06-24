@@ -1,6 +1,9 @@
 ---
 name: k-nearest-neighbor-algorithm-application
-description: Use when your raw metabolomics dataset contains missing values scattered across metabolite columns, and you intend to perform statistical analysis (e.g., linear mixed models, ANOVA, or dimensionality reduction) that requires complete observations.
+description: Use when your raw metabolomics dataset contains missing values scattered
+  across metabolite columns, and you intend to perform statistical analysis (e.g.,
+  linear mixed models, ANOVA, or dimensionality reduction) that requires complete
+  observations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - R
   - MeTEor
   - tidyverse
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -21,7 +25,8 @@ evidence_spans:
 - library(VIM)
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # k-nearest-neighbor-algorithm-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply k-nearest neighbor imputation to fill missing values in metabolite columns of raw metabolomics datasets after filtering out columns with excessive missingness. This preprocessing step enables downstream statistical analysis by handling data incompleteness while preserving the structure and relationships in the metabolite matrix.

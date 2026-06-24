@@ -1,6 +1,9 @@
 ---
 name: cardinal-to-seurat-object-conversion
-description: Use when after completing Cardinal-based preprocessing (feature summarization, TIC normalization, peak processing, spatial segmentation, and SSC annotation), use this conversion when you need to leverage Seurat's downstream statistical methods—such as differential metabolite expression testing.
+description: Use when after completing Cardinal-based preprocessing (feature summarization,
+  TIC normalization, peak processing, spatial segmentation, and SSC annotation), use
+  this conversion when you need to leverage Seurat's downstream statistical methods—such
+  as differential metabolite expression testing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,6 +19,7 @@ metadata:
   - R
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -52,6 +56,7 @@ attribution:
 
 # cardinal-to-seurat-object-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a processed Cardinal object (containing mass-spectrometry imaging data with spatial annotations and segmentation results) into a SpaMTP-compatible Seurat object to enable downstream statistical analysis, metabolite annotation, and integrative spatial-omics workflows. This bridging step unifies spatial metabolomics data with the mature Seurat ecosystem for differential expression, pathway analysis, and visualization.

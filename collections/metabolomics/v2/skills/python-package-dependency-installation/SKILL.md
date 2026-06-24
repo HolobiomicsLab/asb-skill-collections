@@ -1,6 +1,9 @@
 ---
 name: python-package-dependency-installation
-description: Use when you need to enable optional modules in Pyteomics that depend on external libraries not bundled with the core package—such as h5py and hdf5plugin for mzMLb format access, sqlalchemy for Unimod database queries, or psims for ProForma parsing.
+description: Use when you need to enable optional modules in Pyteomics that depend
+  on external libraries not bundled with the core package—such as h5py and hdf5plugin
+  for mzMLb format access, sqlalchemy for Unimod database queries, or psims for ProForma
+  parsing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -17,6 +20,7 @@ metadata:
   - conda
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -50,6 +54,7 @@ attribution:
 
 # python-package-dependency-installation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install Python packages and their conditional dependencies using pip or conda to enable specific functionality modules. This skill is essential when a proteomics analysis workflow requires optional features (e.g., mzMLb format support, Unimod database access) that are not included in the base package installation.

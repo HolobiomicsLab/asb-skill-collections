@@ -1,6 +1,9 @@
 ---
 name: linear-regression-model-fitting
-description: Use when when you have a targeted metabolomics dataset with known concentration values for calibration ('curve') and quality control ('qc') samples, peak area intensities for those samples, and you need to establish and validate a concentration-prediction model before applying it to unknown samples.
+description: Use when when you have a targeted metabolomics dataset with known concentration
+  values for calibration ('curve') and quality control ('qc') samples, peak area intensities
+  for those samples, and you need to establish and validate a concentration-prediction
+  model before applying it to unknown samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -22,6 +25,7 @@ metadata:
   - RawFileReader
   - rawrr
   - R base stats package (lm function)
+  license_tier: restricted
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
@@ -34,8 +38,10 @@ derived_from:
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
-- linear models with mixed effects (random and fixed), using the _lmer_ function from the lme4 package
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
+- linear models with mixed effects (random and fixed), using the _lmer_ function from
+  the lme4 package
 - TOBIT linear models, using the _tobit_ function of the AER package
 - Khipu is developed as an open source Python 3 package
 claims: []
@@ -70,6 +76,7 @@ attribution:
 
 # linear-regression-model-fitting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit linear regression models to targeted metabolomics calibration data to estimate compound concentrations from peak area intensities. This skill produces fitted models with slope, intercept, and R² coefficients that quantify the relationship between known standard concentrations and observed intensities.

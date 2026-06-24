@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-preprocessing-and-normalization
-description: Use when when you have raw MS/MS spectra in MGF or mzML/mzXML formats and need to feed them into Casanovo or similar transformer-based de novo sequencing models.
+description: Use when when you have raw MS/MS spectra in MGF or mzML/mzXML formats
+  and need to feed them into Casanovo or similar transformer-based de novo sequencing
+  models.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -17,6 +19,7 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -25,8 +28,10 @@ derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.
@@ -59,6 +64,7 @@ attribution:
 
 # mass-spectrum-preprocessing-and-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing and normalization of MS/MS spectra converts raw peak data into a standardized, high-quality format suitable for de novo peptide sequencing inference. This step removes noise, filters low-quality scans, normalizes peak intensities, and retains only the most informative peaks to maximize downstream transformer model performance.

@@ -1,6 +1,9 @@
 ---
 name: spectral-smoothing-method-comparison
-description: Use when when you have raw mass spectra in an MSImagingArrays object and need to decide between Savitzky-Golay and Gaussian smoothing methods based on their effects on peak shape fidelity and baseline noise. Apply this skill when peak preservation is a priority (e.
+description: Use when when you have raw mass spectra in an MSImagingArrays object
+  and need to decide between Savitzky-Golay and Gaussian smoothing methods based on
+  their effects on peak shape fidelity and baseline noise. Apply this skill when peak
+  preservation is a priority (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -16,12 +19,14 @@ metadata:
   - BiocParallel
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 claims: []

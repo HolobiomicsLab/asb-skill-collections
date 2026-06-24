@@ -1,6 +1,9 @@
 ---
 name: ionization-mode-detection-from-mass-spectrometry-data
-description: Use when when you have raw LC-MS data in mzML format (converted from .raw or acquired directly in that format) and need to invoke Asari for feature extraction, but the ionization mode is not explicitly specified in your experimental metadata or pipeline configuration.
+description: Use when when you have raw LC-MS data in mzML format (converted from
+  .raw or acquired directly in that format) and need to invoke Asari for feature extraction,
+  but the ionization mode is not explicitly specified in your experimental metadata
+  or pipeline configuration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -43,6 +47,7 @@ attribution:
 
 # ionization-mode-detection-from-mass-spectrometry-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer the ionization polarity (positive or negative) from mzML file headers prior to feature extraction, enabling correct parameterization of Asari processing. This is a prerequisite step that ensures downstream feature detection uses appropriate ion mass-to-charge calibration for the experimental acquisition mode.

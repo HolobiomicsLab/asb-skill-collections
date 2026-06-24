@@ -1,6 +1,9 @@
 ---
 name: data-handoff-pipeline-orchestration
-description: 'Use when you have raw MS files (with associated metadata: filename, upload path, file format) staged in an uploader repository and need to route them to a proteomics processor for analysis while preserving audit trails and ensuring format compatibility before processing begins.'
+description: 'Use when you have raw MS files (with associated metadata: filename,
+  upload path, file format) staged in an uploader repository and need to route them
+  to a proteomics processor for analysis while preserving audit trails and ensuring
+  format compatibility before processing begins.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,6 +18,7 @@ metadata:
   - MSConnect
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

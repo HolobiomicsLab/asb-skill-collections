@@ -1,6 +1,9 @@
 ---
 name: reference-database-tolerance-mapping
-description: Use when you have calculated pairwise mass differences from MS peaks (via massdiff()) and binned them into a histogram, and now need to identify which observed mass differences correspond to known molecular adducts (e.g., [M+Na]+, [M+H]+, matrix-related species) rather than random noise.
+description: Use when you have calculated pairwise mass differences from MS peaks
+  (via massdiff()) and binned them into a histogram, and now need to identify which
+  observed mass differences correspond to known molecular adducts (e.g., [M+Na]+,
+  [M+H]+, matrix-related species) rather than random noise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,13 +16,16 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # Reference-Database Tolerance Mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass differences to known chemical adducts by finding the closest-matching bin in a mass difference histogram within a user-specified tolerance window. This skill annotates mass spectrometry peaks with their likely adduct identities, enabling metabolite annotation and validation.

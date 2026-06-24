@@ -1,6 +1,9 @@
 ---
 name: msimagingexperiment-object-validation
-description: Use when after reading an imzML file (continuous or processed format) using readMSIData() and before proceeding to preprocessing or statistical analysis steps. Use this skill whenever you need to confirm that a parsed imaging dataset meets expected structural requirements—e.
+description: Use when after reading an imzML file (continuous or processed format)
+  using readMSIData() and before proceeding to preprocessing or statistical analysis
+  steps. Use this skill whenever you need to confirm that a parsed imaging dataset
+  meets expected structural requirements—e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,12 +15,14 @@ metadata:
   - R
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []

@@ -1,6 +1,9 @@
 ---
 name: s7-object-construction-and-validation
-description: Use when after successfully parsing vendor-specific metabolomic data files (Metabolon Excel, Nightingale, Olink, SomaLogic) into separate data, samples, and features tables, and before applying quality control or batch normalization pipelines.
+description: Use when after successfully parsing vendor-specific metabolomic data
+  files (Metabolon Excel, Nightingale, Olink, SomaLogic) into separate data, samples,
+  and features tables, and before applying quality control or batch normalization
+  pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -9,6 +12,7 @@ metadata:
   tools:
   - R
   - metaboprep
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -37,6 +41,7 @@ attribution:
 
 # S7 Object Construction and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and validate S7 class objects (specifically Metaboprep) from parsed metabolomic data components, ensuring correct integration of data matrices, sample metadata, and feature metadata into a coherent analytical container. This skill verifies object integrity through schema validation and dimensional consistency checks.

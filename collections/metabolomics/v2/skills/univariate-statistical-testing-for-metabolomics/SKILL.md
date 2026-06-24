@@ -1,6 +1,9 @@
 ---
 name: univariate-statistical-testing-for-metabolomics
-description: Use when you have paired metabolomics count data (metabolite abundance matrix) and sample metadata with categorical treatment or experimental factor assignments, and you need to test for statistically significant differences in individual metabolite abundances between exactly two groups (t-test) or.
+description: Use when you have paired metabolomics count data (metabolite abundance
+  matrix) and sample metadata with categorical treatment or experimental factor assignments,
+  and you need to test for statistically significant differences in individual metabolite
+  abundances between exactly two groups (t-test) or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,13 +18,16 @@ metadata:
   - omu_anova
   - count_fold_changes
   - transform_samples
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
-- Omu supports two univariate statistical models, t test and anova, using the functions ```omu_summary``` and ```anova_function``` respectively
-- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
+- Omu supports two univariate statistical models, t test and anova, using the functions
+  ```omu_summary``` and ```anova_function``` respectively
+- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick
+  the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # univariate-statistical-testing-for-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply univariate statistical tests (t-test or ANOVA) to metabolomics count data to quantify differences in metabolite abundance between treatment groups, producing effect sizes, p-values, and adjusted significance thresholds. This skill generates interpretable statistics tables for hypothesis-driven metabolomics comparisons.

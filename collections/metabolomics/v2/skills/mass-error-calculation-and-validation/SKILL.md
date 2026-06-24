@@ -1,6 +1,9 @@
 ---
 name: mass-error-calculation-and-validation
-description: Use when when annotating observed mass spectrometry peaks against theoretical fragment ions (b, y, or other ion types) using ProForma 2.0 peptidoforms, compute the m/z deviation for each matched peak to verify that the annotation adheres to your specified mass tolerance (e.g., ±10 ppm or ±0.
+description: Use when when annotating observed mass spectrometry peaks against theoretical
+  fragment ions (b, y, or other ion types) using ProForma 2.0 peptidoforms, compute
+  the m/z deviation for each matched peak to verify that the annotation adheres to
+  your specified mass tolerance (e.g., ±10 ppm or ±0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - ProForma 2.0
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -44,6 +48,7 @@ attribution:
 
 # mass-error-calculation-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and validate the mass deviation (Δm/z) between theoretical fragment ion m/z values and observed spectrum peaks to assess annotation accuracy and fragment ion assignment correctness. This skill ensures that annotated ions fall within specified mass tolerance thresholds, a prerequisite for reliable peptidoform identification.

@@ -1,6 +1,8 @@
 ---
 name: peak-list-column-mapping
-description: Use when when uploading a new peak list or complex sample data file with delimiter-separated columns to Punc'data, especially when column headers are ambiguous or use non-standard naming conventions.
+description: Use when when uploading a new peak list or complex sample data file with
+  delimiter-separated columns to Punc'data, especially when column headers are ambiguous
+  or use non-standard naming conventions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +13,7 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

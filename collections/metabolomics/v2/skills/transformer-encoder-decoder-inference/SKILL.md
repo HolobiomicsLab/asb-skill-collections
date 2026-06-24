@@ -1,6 +1,8 @@
 ---
 name: transformer-encoder-decoder-inference
-description: Use when when you have preprocessed MS/MS spectra (normalized intensities, filtered for quality, with top peaks retained) that have been encoded using a spectral representation method (e.
+description: Use when when you have preprocessed MS/MS spectra (normalized intensities,
+  filtered for quality, with top peaks retained) that have been encoded using a spectral
+  representation method (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3092
@@ -17,14 +19,17 @@ metadata:
   - limelight-import-casanovo
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.
@@ -53,6 +58,7 @@ attribution:
 
 # transformer-encoder-decoder-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a pretrained transformer encoder–decoder model with beam search decoding to convert preprocessed MS/MS spectral data into candidate peptide sequences ranked by confidence score. This skill encapsulates the core inference step of deep learning–based de novo peptide sequencing, where spectral features are translated into amino acid sequences through learned representations.

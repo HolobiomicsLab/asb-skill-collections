@@ -1,6 +1,9 @@
 ---
 name: cmake-build-configuration-for-extensions
-description: Use when when you have C++ source code that needs to be wrapped as a Python extension module (e.g., pyOpenMS nanobind bindings), and you need to automate the build process via CMake to handle compilation, linking, and module artifact generation across multiple platforms (Windows, macOS, Linux).
+description: Use when when you have C++ source code that needs to be wrapped as a
+  Python extension module (e.g., pyOpenMS nanobind bindings), and you need to automate
+  the build process via CMake to handle compilation, linking, and module artifact
+  generation across multiple platforms (Windows, macOS, Linux).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0227
@@ -11,6 +14,7 @@ metadata:
   - CMake
   - nanobind
   - Python development headers
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -38,6 +42,7 @@ attribution:
 
 # cmake-build-configuration-for-extensions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and compile C++ extension modules (such as nanobind Python bindings) using CMake build system integration. This skill enables conversion of compiled C++ libraries into importable Python extension modules by managing build flags, dependency resolution, and module output location.

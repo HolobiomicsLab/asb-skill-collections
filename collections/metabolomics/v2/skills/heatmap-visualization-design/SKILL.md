@@ -1,6 +1,9 @@
 ---
 name: heatmap-visualization-design
-description: 'Use when after training a DeepMSProfiler model and generating per-sample predictions: when you need to display Pearson or Spearman correlation coefficients between individual metabolite signals and disease class labels in a matrix form suitable for publication or exploratory review of.'
+description: 'Use when after training a DeepMSProfiler model and generating per-sample
+  predictions: when you need to display Pearson or Spearman correlation coefficients
+  between individual metabolite signals and disease class labels in a matrix form
+  suitable for publication or exploratory review of.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - DeepMSProfiler
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -41,6 +45,7 @@ attribution:
 
 # heatmap-visualization-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate color-encoded correlation heatmaps that depict relationships between metabolite signals and disease classes from deep learning model outputs. This visualization enables rapid identification of disease-associated metabolite signatures in mass spectrometry data.

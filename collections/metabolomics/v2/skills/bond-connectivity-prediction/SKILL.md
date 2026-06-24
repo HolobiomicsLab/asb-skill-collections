@@ -1,6 +1,9 @@
 ---
 name: bond-connectivity-prediction
-description: Use when you have predicted or partially assembled molecular fragments (as token sequences or substructure embeddings) and need to determine which atoms are bonded to which—that is, when the formula (atom inventory) is known or predicted but the connectivity graph is uncertain.
+description: Use when you have predicted or partially assembled molecular fragments
+  (as token sequences or substructure embeddings) and need to determine which atoms
+  are bonded to which—that is, when the formula (atom inventory) is known or predicted
+  but the connectivity graph is uncertain.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0276
@@ -12,6 +15,7 @@ metadata:
   - Transformer (architecture)
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -40,6 +44,7 @@ attribution:
 
 # bond-connectivity-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict molecular bond connectivity (graph structure) from spectroscopic or fragmentary inputs using transformer-based link prediction on molecular graphs. This skill recovers the missing edges and atom adjacencies in a partial or inferred molecular structure.

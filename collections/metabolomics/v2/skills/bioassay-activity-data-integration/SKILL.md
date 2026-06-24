@@ -1,6 +1,8 @@
 ---
 name: bioassay-activity-data-integration
-description: Use when when you have (1) a molecular network graph from GNPS with node identifiers and edges, (2) LC-MS/MS features quantified across fractions in a feature table, and (3) bioassay measurements (e.
+description: Use when when you have (1) a molecular network graph from GNPS with node
+  identifiers and edges, (2) LC-MS/MS features quantified across fractions in a feature
+  table, and (3) bioassay measurements (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -17,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

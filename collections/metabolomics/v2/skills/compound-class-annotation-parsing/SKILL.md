@@ -1,6 +1,7 @@
 ---
 name: compound-class-annotation-parsing
-description: Use when after submitting a fingerprint or spectrum query to the CANOPUS web service and receiving a structured response.
+description: Use when after submitting a fingerprint or spectrum query to the CANOPUS
+  web service and receiving a structured response.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -11,6 +12,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

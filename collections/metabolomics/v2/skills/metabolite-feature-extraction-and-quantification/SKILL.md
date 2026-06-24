@@ -1,6 +1,7 @@
 ---
 name: metabolite-feature-extraction-and-quantification
-description: Use when after retention-time correction and data alignment have been completed on centroided LC-MS data (mzML or mzXML format).
+description: Use when after retention-time correction and data alignment have been
+  completed on centroided LC-MS data (mzML or mzXML format).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -11,12 +12,15 @@ metadata:
   - MetCohort
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04906
   title: MetCohort
 evidence_spans:
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool for large-scale metabolomics and exposomics
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool for large-scale metabolomics and exposomics
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: structural-cluster-annotation-metabolomics
-description: Use when after identifying statistically significant LC-MS features (e.g., via MB-VIP with p < 0.01 and permutation testing), when you need to consolidate multiple ionization and isotopic forms of the same metabolite into structural groups for annotation and pathway mapping.
+description: Use when after identifying statistically significant LC-MS features (e.g.,
+  via MB-VIP with p < 0.01 and permutation testing), when you need to consolidate
+  multiple ionization and isotopic forms of the same metabolite into structural groups
+  for annotation and pathway mapping.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -20,13 +23,15 @@ metadata:
   - pyvis
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
 evidence_spans:
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 - import pandas as pd
 - import numpy as np
 - 'Dependencies: scipy'
@@ -54,6 +59,7 @@ attribution:
 
 # Reconstruct MAMSI structural feature clustering of significant LC-MS features by m/z and RT
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group statistically significant LC-MS features into structural clusters by systematically detecting isotopologue and adduct signatures across retention-time windows, then merge overlapping clusters and annotate cross-assay links. This enables metabolite-level interpretation of untargeted metabolomics by linking ionization variants and mass isotopologues to putative neutral masses.

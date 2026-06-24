@@ -1,6 +1,9 @@
 ---
 name: machine-learning-regulatory-prediction
-description: Use when you have matched multiomics data (CNV, mutations, DNA methylation, histone PTMs, transcriptomics, miRNA, lncRNA, proteomics, phosphoproteomics) and metabolomics measurements across a cell line panel or cohort, and you want to infer which molecular features (genes, regulatory marks, splice.
+description: Use when you have matched multiomics data (CNV, mutations, DNA methylation,
+  histone PTMs, transcriptomics, miRNA, lncRNA, proteomics, phosphoproteomics) and
+  metabolomics measurements across a cell line panel or cohort, and you want to infer
+  which molecular features (genes, regulatory marks, splice.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2945
@@ -14,6 +17,7 @@ metadata:
   - ML_function.ipynb
   - preprocessing_example.ipynb
   - recon_mapping (MATLAB/Python scripts)
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.17.608400v2
   title: Recon8D
@@ -41,6 +45,7 @@ attribution:
 
 # machine-learning-regulatory-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train ensemble and regression machine learning models on multiomics feature sets to predict metabolite levels and infer regulatory relationships in a metabolic regulome network. This skill integrates transcriptomics, proteomics, epigenomics, and metabolomics data to rank feature importance and surface novel regulatory associations.

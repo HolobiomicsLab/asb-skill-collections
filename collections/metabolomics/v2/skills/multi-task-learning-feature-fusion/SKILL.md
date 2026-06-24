@@ -1,6 +1,9 @@
 ---
 name: multi-task-learning-feature-fusion
-description: Use when when you have multi-branch deep learning architecture predicting related but distinct peptide properties (charge state, isotope count, retention time) from raw mass spectrum, and you want to leverage auxiliary task gradients to improve primary task learning.
+description: Use when when you have multi-branch deep learning architecture predicting
+  related but distinct peptide properties (charge state, isotope count, retention
+  time) from raw mass spectrum, and you want to leverage auxiliary task gradients
+  to improve primary task learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,6 +15,7 @@ metadata:
   - IsoFusion
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion

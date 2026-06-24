@@ -1,6 +1,9 @@
 ---
 name: imaging-mass-spectrometry-characterization
-description: Use when you have raw mass spectrometry data files (mzML, NetCDF, or vendor formats) with unknown or mixed acquisition modalities, and you need to automatically determine whether the input is LC-MS, GC-MS, IMS (ion mobility spectrometry), or MS imaging (e.
+description: Use when you have raw mass spectrometry data files (mzML, NetCDF, or
+  vendor formats) with unknown or mixed acquisition modalities, and you need to automatically
+  determine whether the input is LC-MS, GC-MS, IMS (ion mobility spectrometry), or
+  MS imaging (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,6 +19,7 @@ metadata:
   - GC-MS
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -46,6 +50,7 @@ attribution:
 
 # imaging-mass-spectrometry-characterization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and classify mass spectrometry imaging data (e.g., MALDI) from raw instrument output by scanning file headers and metadata, then route the classified input to the appropriate mzmine analysis module. This skill enables flexible handling of multiple MS modalities within a unified workflow.

@@ -1,6 +1,8 @@
 ---
 name: docker-container-health-verification
-description: Use when when you have deployed NP Classifier using Docker Compose and need to confirm that both the server and TensorFlow Serving containers are running and healthy before sending SMILES strings to the /classify endpoint.
+description: Use when when you have deployed NP Classifier using Docker Compose and
+  need to confirm that both the server and TensorFlow Serving containers are running
+  and healthy before sending SMILES strings to the /classify endpoint.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -15,6 +17,7 @@ metadata:
   - Docker Compose
   - TensorFlow Serving
   - mwang87/NP-Classifier
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -44,6 +47,7 @@ attribution:
 
 # docker-container-health-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that Docker containers running NP Classifier services (server and TensorFlow Serving) are operational and responding correctly before executing classification requests. This skill ensures the API is ready to accept SMILES queries and return properly structured responses.

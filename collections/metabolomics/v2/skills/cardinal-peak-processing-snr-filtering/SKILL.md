@@ -1,6 +1,9 @@
 ---
 name: cardinal-peak-processing-snr-filtering
-description: Use when when you have loaded an unprocessed Cardinal object from MS imaging data (e.g., from Zenodo or native formats) containing thousands of m/z features across many spectra, and you need to produce a curated peak list with known expected peak count (e.g., 687 cleaned peaks from PIGII_206).
+description: Use when when you have loaded an unprocessed Cardinal object from MS
+  imaging data (e.g., from Zenodo or native formats) containing thousands of m/z features
+  across many spectra, and you need to produce a curated peak list with known expected
+  peak count (e.g., 687 cleaned peaks from PIGII_206).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,6 +18,7 @@ metadata:
   - Seurat
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -50,6 +54,7 @@ attribution:
 
 # Cardinal peak processing with SNR filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Cardinal's peakProcess function to detect and filter MS imaging peaks using signal-to-noise ratio thresholds, generating a cleaned peak list suitable for downstream annotation and spatial analysis. This skill reduces noise-driven false positives in high-dimensional MS imaging datasets.

@@ -1,6 +1,9 @@
 ---
 name: sample-metadata-integration
-description: Use when when you have LC-MS peak table data in Excel format (e.g., from MS-DIAL peak picking) with separate compartments for sample information, feature properties, and intensity values, and you need to construct a structured R object that enforces consistency between sample metadata (e.
+description: Use when when you have LC-MS peak table data in Excel format (e.g., from
+  MS-DIAL peak picking) with separate compartments for sample information, feature
+  properties, and intensity values, and you need to construct a structured R object
+  that enforces consistency between sample metadata (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -15,6 +18,7 @@ metadata:
   - ExpressionSet
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -24,8 +28,10 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
-- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet``` is built upon the ```ExpressionSet``` class'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
+- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet```
+  is built upon the ```ExpressionSet``` class'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -53,6 +59,7 @@ attribution:
 
 # sample-metadata-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integration of sample metadata (phenotypic data) with LC-MS feature abundance matrices into a unified MetaboSet object that preserves sample identifiers, injection order, QC status, and experimental design information. This skill enables downstream quality control, batch correction, and statistical analysis by co-locating sample annotations with their corresponding intensity measurements.

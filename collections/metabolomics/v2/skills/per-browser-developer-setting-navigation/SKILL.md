@@ -1,6 +1,9 @@
 ---
 name: per-browser-developer-setting-navigation
-description: Use when you are attempting to run a web application (such as COLMARvista) locally by opening index.html directly in a browser, the application uses WebWorker and/or WebAssembly components, and these fail to load due to default file-access policies.
+description: Use when you are attempting to run a web application (such as COLMARvista)
+  locally by opening index.html directly in a browser, the application uses WebWorker
+  and/or WebAssembly components, and these fail to load due to default file-access
+  policies.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -12,6 +15,7 @@ metadata:
   - WebAssembly
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1007/s10858-025-00465-y#sec2
   title: COLMARvista

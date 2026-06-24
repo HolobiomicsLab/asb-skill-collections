@@ -1,6 +1,9 @@
 ---
 name: bonferroni-multiple-testing-correction
-description: Use when when you have performed many pairwise correlation tests between candidate parent and adduct ion intensity pairs in MSI data and need to identify statistically significant relationships while controlling for multiple-comparison bias.
+description: Use when when you have performed many pairwise correlation tests between
+  candidate parent and adduct ion intensity pairs in MSI data and need to identify
+  statistically significant relationships while controlling for multiple-comparison
+  bias.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,13 +18,16 @@ metadata:
   - corrPairsMSIchunks
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -46,6 +52,7 @@ attribution:
 
 # bonferroni-multiple-testing-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Bonferroni multiple-testing correction to control family-wise error rate when performing many pairwise statistical tests (e.g., correlation tests) on mass spectrometry imaging data. This corrects raw p-values by dividing the significance threshold by the number of tests performed, reducing false positives in high-dimensional adduct discovery.

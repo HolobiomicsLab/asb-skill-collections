@@ -1,6 +1,9 @@
 ---
 name: jvm-dependency-resolution
-description: Use when when you have obtained source code for a Maven-based Java project and need to determine whether your local build environment can successfully compile it, or when preparing to reproduce a published CI/CD build workflow from a GitHub Actions or similar pipeline configuration.
+description: Use when when you have obtained source code for a Maven-based Java project
+  and need to determine whether your local build environment can successfully compile
+  it, or when preparing to reproduce a published CI/CD build workflow from a GitHub
+  Actions or similar pipeline configuration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -10,6 +13,7 @@ metadata:
   - Git
   - Java 21
   - Apache Maven 3.8
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -38,6 +42,7 @@ attribution:
 
 # Resolve and verify JVM build dependencies for Maven projects
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify, verify, and confirm the availability of Java Runtime Environment and Apache Maven versions required to successfully compile a Maven-based JVM project from source. This skill ensures that the build environment meets explicit version requirements before attempting compilation.

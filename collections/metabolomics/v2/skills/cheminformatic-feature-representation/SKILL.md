@@ -1,6 +1,9 @@
 ---
 name: cheminformatic-feature-representation
-description: Use when when you have natural product structures in SMILES, InChI, or SDF format and need to convert them into numerical feature vectors for downstream tasks such as biosynthetic class prediction, molecular similarity analysis, or machine learning-based natural product classification.
+description: Use when when you have natural product structures in SMILES, InChI, or
+  SDF format and need to convert them into numerical feature vectors for downstream
+  tasks such as biosynthetic class prediction, molecular similarity analysis, or machine
+  learning-based natural product classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -14,6 +17,7 @@ metadata:
   - RDKit
   - black
   - pytest
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

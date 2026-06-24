@@ -1,6 +1,9 @@
 ---
 name: api-error-handling-and-rate-limiting
-description: Use when when enriching mass spectra metadata by querying multiple external web services (CIR, CTS, PubChem, IDSM, BridgeDb) asynchronously, and you need to avoid API rate-limit violations, gracefully skip missing or malformed responses, and maintain pipeline stability without losing partial.
+description: Use when when enriching mass spectra metadata by querying multiple external
+  web services (CIR, CTS, PubChem, IDSM, BridgeDb) asynchronously, and you need to
+  avoid API rate-limit violations, gracefully skip missing or malformed responses,
+  and maintain pipeline stability without losing partial.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3761
@@ -18,6 +21,7 @@ metadata:
   - Python
   - pytest
   - aiohttp
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

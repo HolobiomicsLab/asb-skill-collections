@@ -1,6 +1,7 @@
 ---
 name: structural-type-categorization
-description: Use when when you have a set of query chemical compounds (by name or SMILES) and a reference library organized into named groups (e.
+description: Use when when you have a set of query chemical compounds (by name or
+  SMILES) and a reference library organized into named groups (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3345
@@ -13,12 +14,15 @@ metadata:
   - fmcsR
   - webchem
   - uafR
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # structural-type-categorization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A cheminformatics workflow that categorizes query chemicals against a reference library by computing structural similarity scores and identifying best-matched compounds in each library group. Uses ChemmineR, fmcsR, and webchem to enable structural matching and assessment across chemical types.

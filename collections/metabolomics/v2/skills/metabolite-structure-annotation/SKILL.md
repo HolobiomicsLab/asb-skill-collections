@@ -18,6 +18,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
@@ -47,6 +48,7 @@ attribution:
 
 # metabolite-structure-annotation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Predict biotransformation products and their parent-product relationships for environmental microbial degradation pathways using rule-based databases. This skill is essential when you need to annotate metabolite structures with likely degradation reactions and transformations derived from curated biodegradation knowledge bases.

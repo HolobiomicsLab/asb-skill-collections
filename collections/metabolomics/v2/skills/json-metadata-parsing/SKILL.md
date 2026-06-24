@@ -1,6 +1,8 @@
 ---
 name: json-metadata-parsing
-description: Use when you have a repository of JSON-formatted scientific annotations (e.g., MIBiG curation data) and need to systematically extract structured metadata fields (such as cluster.
+description: Use when you have a repository of JSON-formatted scientific annotations
+  (e.g., MIBiG curation data) and need to systematically extract structured metadata
+  fields (such as cluster.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +13,7 @@ metadata:
   - Git
   - JSON parser (Python json module or equivalent)
   - NCBI Entrez API or local GenBank/RefSeq mirror
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkz882
   title: MIBiG 2.0
@@ -39,6 +42,7 @@ attribution:
 
 # json-metadata-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and parse metadata from JSON-formatted scientific data files to identify entry status, accession information, and availability flags. This skill enables cross-referencing of JSON annotations against external databases to compile manifests of sequence provenance and curation state.

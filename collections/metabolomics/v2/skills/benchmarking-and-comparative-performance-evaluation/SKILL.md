@@ -1,6 +1,9 @@
 ---
 name: benchmarking-and-comparative-performance-evaluation
-description: Use when you have trained a new machine learning model for chemical formula or adduct assignment from MS/MS spectra and need to assess whether it offers genuine performance gains over established baselines. Use it specifically when you have access to ground-truth annotations (e.
+description: Use when you have trained a new machine learning model for chemical formula
+  or adduct assignment from MS/MS spectra and need to assess whether it offers genuine
+  performance gains over established baselines. Use it specifically when you have
+  access to ground-truth annotations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -17,13 +20,16 @@ metadata:
   - Xformer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
@@ -48,6 +54,7 @@ attribution:
 
 # Benchmarking and Comparative Performance Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare a novel method (MIST-CF) against established baseline approaches (SIRIUS, FFN, Xformer) on standardized benchmark datasets using ranking accuracy metrics (top-1, top-3, top-k). This skill enables quantitative assessment of whether a new chemical formula inference model outperforms existing tools on retrospective and prospective MS/MS data.

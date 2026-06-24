@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-spectrum-preprocessing
-description: Use when when you have raw LC–QTOF wastewater spectra (or other real experimental mass spectrometry data) and need to feed them into a pretrained MSGO model for molecular structure prediction.
+description: Use when when you have raw LC–QTOF wastewater spectra (or other real
+  experimental mass spectrometry data) and need to feed them into a pretrained MSGO
+  model for molecular structure prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,6 +16,7 @@ metadata:
   - MSGO model
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

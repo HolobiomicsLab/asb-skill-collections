@@ -1,6 +1,9 @@
 ---
 name: ms-ms-spectrum-matching
-description: Use when you have a cleaned and clustered set of LC-MS features (m/z, retention time, MS/MS spectra) from MS-CleanR output and need to assign putative compound identities by matching observed MS/MS fragmentation patterns against reference spectral libraries using HRR-based scoring.
+description: Use when you have a cleaned and clustered set of LC-MS features (m/z,
+  retention time, MS/MS spectra) from MS-CleanR output and need to assign putative
+  compound identities by matching observed MS/MS fragmentation patterns against reference
+  spectral libraries using HRR-based scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3094
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -43,6 +47,7 @@ attribution:
 
 # MS/MS spectrum matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export filtered LC-MS features to MS-FINDER for in silico annotation using hydrogen rearrangement rules (HRR) scoring and multi-database querying to assign compound identities to detected metabolites. This skill bridges MS-CleanR's feature curation with MS-FINDER's spectral library matching to produce annotated compound tables.

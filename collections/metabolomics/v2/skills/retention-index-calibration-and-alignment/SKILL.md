@@ -1,6 +1,7 @@
 ---
 name: retention-index-calibration-and-alignment
-description: Use when processing raw GC-MS data in NetCDF format where peaks have been detected but lack standardized retention indices.
+description: Use when processing raw GC-MS data in NetCDF format where peaks have
+  been detected but lack standardized retention indices.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -16,12 +17,14 @@ metadata:
   - LowResMassSpectralMatch
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -49,6 +52,7 @@ attribution:
 
 # Retention-Index Calibration and Alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate gas chromatography retention times against reference alkane standards to compute retention indices (RI) for each detected peak, enabling standardized peak identification across different instruments and experimental conditions. This skill is essential for GC-MS compound identification workflows where spectral library matching relies on both mass spectral similarity and retention-index proximity.

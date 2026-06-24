@@ -1,6 +1,8 @@
 ---
 name: stocsy-metabolite-assignment
-description: Use when use STOCSY when you have preprocessed 1H NMR spectral data with an unidentified peak of interest (driver signal at a specific δ ppm value) and need to determine its metabolite identity by finding correlated signals across the spectrum.
+description: Use when use STOCSY when you have preprocessed 1H NMR spectral data with
+  an unidentified peak of interest (driver signal at a specific δ ppm value) and need
+  to determine its metabolite identity by finding correlated signals across the spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
@@ -23,7 +26,8 @@ evidence_spans:
 - metabolite assignment using Statistical Total Correlation Spectroscopy (STOCSY)
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +51,7 @@ attribution:
 
 # stocsy-metabolite-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 STOCSY (Statistical Total Correlation Spectroscopy) is a multivariate NMR analysis technique that identifies the chemical identity of unknown metabolic features by correlating their spectral patterns with a driver signal across all chemical shifts. It enables rapid metabolite assignment without prior structural knowledge by detecting covariance signatures characteristic of specific compounds.

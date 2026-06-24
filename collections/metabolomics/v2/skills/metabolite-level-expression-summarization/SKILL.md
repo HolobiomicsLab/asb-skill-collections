@@ -1,6 +1,8 @@
 ---
 name: metabolite-level-expression-summarization
-description: Use when after loading spatial metabolomics data (from CSV, imzML, or merged positive/negative mode files) into an AnnData object and before filtering or integrating with spatial transcriptomics.
+description: Use when after loading spatial metabolomics data (from CSV, imzML, or
+  merged positive/negative mode files) into an AnnData object and before filtering
+  or integrating with spatial transcriptomics.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +13,7 @@ metadata:
   - spatialMETA
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

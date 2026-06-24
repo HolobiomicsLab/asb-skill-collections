@@ -1,6 +1,8 @@
 ---
 name: multi-module-joint-training
-description: Use when when you have a pretrained encoder that captures domain knowledge (e.g., spectral feature extraction) and need to train task-specific decoder or scoring modules on top of it without degrading the encoder's learned representations.
+description: Use when when you have a pretrained encoder that captures domain knowledge
+  (e.g., spectral feature extraction) and need to train task-specific decoder or scoring
+  modules on top of it without degrading the encoder's learned representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,6 +15,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -41,6 +44,7 @@ attribution:
 
 # Multi-module joint training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train multiple neural network modules jointly while selectively freezing components to preserve learned representations and focus optimization on trainable submodules. In FIDDLE's rescore pipeline, this involves freezing a pretrained TCN spectrum encoder while jointly optimizing a FormulaEncoder and RescoreHead with binary cross-entropy loss.

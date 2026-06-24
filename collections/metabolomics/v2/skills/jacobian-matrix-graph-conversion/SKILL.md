@@ -1,6 +1,8 @@
 ---
 name: jacobian-matrix-graph-conversion
-description: Use when after computing a Jacobian matrix from covariance data in MInfer, when you need to visualize and interpret the structure of metabolite-to-metabolite interactions as a network.
+description: Use when after computing a Jacobian matrix from covariance data in MInfer,
+  when you need to visualize and interpret the structure of metabolite-to-metabolite
+  interactions as a network.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,6 +14,7 @@ metadata:
   - MInfer
   - igraph
   - tidygraph
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer

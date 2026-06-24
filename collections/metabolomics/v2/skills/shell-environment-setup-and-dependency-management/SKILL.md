@@ -1,6 +1,8 @@
 ---
 name: shell-environment-setup-and-dependency-management
-description: Use when when you need to verify that a GitHub Actions workflow (e.g., main.yml) executes successfully on your local machine, reproduce a reported passing or failing CI build status, or debug why a workflow badge reports success/failure.
+description: Use when when you need to verify that a GitHub Actions workflow (e.g.,
+  main.yml) executes successfully on your local machine, reproduce a reported passing
+  or failing CI build status, or debug why a workflow badge reports success/failure.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,6 +13,7 @@ metadata:
   - Rust (cargo)
   - Python
   - npm/Node.js
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -40,6 +43,7 @@ attribution:
 
 # shell-environment-setup-and-dependency-management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Set up a local shell environment and install all dependencies required to execute a project's CI/CD pipeline locally, mirroring the configuration and test commands defined in the workflow file. This skill is essential for reproducing automated build status, debugging workflow failures, and validating that local execution matches CI badge-reported results.

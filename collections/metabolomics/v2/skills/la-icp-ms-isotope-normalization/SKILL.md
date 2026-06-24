@@ -11,14 +11,17 @@ metadata:
   - Calculator
   - pewpew
   - pewlib
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Calculator` can perform simple calculations on image data by entering the desired formula into the `Formula` text box
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Calculator` can perform simple calculations on image data by entering
+  the desired formula into the `Formula` text box
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -45,6 +48,7 @@ attribution:
 
 # LA-ICP-MS Isotope Normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize elemental abundance or intensity data in LA-ICP-MS images by ratioing one isotope channel against another (e.g., dividing by a reference isotope or internal standard) to correct for ablation efficiency, plasma conditions, or matrix effects. This skill is essential when deriving quantitative elemental ratios or correcting for instrumental drift across line-by-line, spot-wise, or ablation-time-aligned acquisitions.

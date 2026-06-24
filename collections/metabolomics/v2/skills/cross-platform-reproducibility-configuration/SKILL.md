@@ -1,6 +1,8 @@
 ---
 name: cross-platform-reproducibility-configuration
-description: Use when when you have documented pinned package versions for a Python-based scientific implementation (e.g., from a README or project documentation) and need to distribute a reproducible computational environment to other users or CI/CD systems.
+description: Use when when you have documented pinned package versions for a Python-based
+  scientific implementation (e.g., from a README or project documentation) and need
+  to distribute a reproducible computational environment to other users or CI/CD systems.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -19,6 +21,7 @@ metadata:
   - pip-tools
   - Keras
   - Tensorflow
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac032/6510930
   title: massNet
@@ -52,6 +55,7 @@ attribution:
 
 # cross-platform-reproducibility-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and validate pinned software dependency specifications in multiple formats (requirements.txt and environment.yml) to enable exact reproduction of a computational environment across platforms. This skill ensures that all transitive dependencies and their exact versions are captured and compatible with the target Python runtime.

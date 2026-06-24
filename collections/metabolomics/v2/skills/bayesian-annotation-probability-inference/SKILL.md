@@ -1,6 +1,8 @@
 ---
 name: bayesian-annotation-probability-inference
-description: Use when you have LC/MS feature data (m/z, retention time, intensity) and need to assign metabolite annotations with confidence scores rather than binary peak-to-compound matches.
+description: Use when you have LC/MS feature data (m/z, retention time, intensity)
+  and need to assign metabolite annotations with confidence scores rather than binary
+  peak-to-compound matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -12,6 +14,7 @@ metadata:
   - ipaPy2
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad455
   title: ipaPy2

@@ -1,6 +1,8 @@
 ---
 name: mass-binning-and-tokenization-for-topic-modeling
-description: Use when you have extracted and intensity-normalized fragment ion masses and neutral loss values from MS/MS spectra and need to prepare them for unsupervised topic modeling to discover recurring fragmentation motifs.
+description: Use when you have extracted and intensity-normalized fragment ion masses
+  and neutral loss values from MS/MS spectra and need to prepare them for unsupervised
+  topic modeling to discover recurring fragmentation motifs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,12 +18,14 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - from MS2LDA.Preprocessing import load_and_clean
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - These steps assume you have Conda installed

@@ -1,6 +1,7 @@
 ---
 name: quality-control-sample-outlier-detection
-description: Use when you have a SummarizedExperiment object containing pooled quality control samples with measured compound and internal standard peak areas.
+description: Use when you have a SummarizedExperiment object containing pooled quality
+  control samples with measured compound and internal standard peak areas.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -14,6 +15,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -44,6 +46,7 @@ attribution:
 
 # quality-control-sample-outlier-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and flagging of statistical outliers in pooled quality control (QC) samples using Compound/Internal Standard ratios in metabolomics mass spectrometry data. This skill identifies unreliable QC measurements that deviate significantly from the expected distribution, enabling informed decisions about sample retention or exclusion before batch correction and downstream analysis.

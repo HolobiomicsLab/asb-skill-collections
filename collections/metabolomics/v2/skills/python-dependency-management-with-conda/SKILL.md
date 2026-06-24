@@ -13,6 +13,7 @@ metadata:
   - CUDA
   - PyTorch
   - CUDA 11.8
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR

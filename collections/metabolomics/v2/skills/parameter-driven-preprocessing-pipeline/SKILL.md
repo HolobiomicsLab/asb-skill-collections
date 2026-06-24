@@ -1,6 +1,8 @@
 ---
 name: parameter-driven-preprocessing-pipeline
-description: Use when you have converted mass spectrometry data in mzXML or mzML format and need to extract metabolic features via region-of-interest (ROI) search followed by preprocessing and augmentation.
+description: Use when you have converted mass spectrometry data in mzXML or mzML format
+  and need to extract metabolic features via region-of-interest (ROI) search followed
+  by preprocessing and augmentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -25,12 +27,16 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
 evidence_spans:
-- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim Jaumot
-- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
+- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim
+  Jaumot
+- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine
+  Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox,
+  Parallel Computing'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

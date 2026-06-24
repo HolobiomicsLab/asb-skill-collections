@@ -1,6 +1,8 @@
 ---
 name: natural-product-classifier-substitution
-description: Use when gNPS has ceased supplying ClassyFire ontology information for spectral library matches, causing downstream ConCISE consensus classification to fail or produce incomplete ontology fields.
+description: Use when gNPS has ceased supplying ClassyFire ontology information for
+  spectral library matches, causing downstream ConCISE consensus classification to
+  fail or produce incomplete ontology fields.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -16,14 +18,17 @@ metadata:
   - ConCISE
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

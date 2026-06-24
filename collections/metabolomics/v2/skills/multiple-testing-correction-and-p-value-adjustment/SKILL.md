@@ -1,6 +1,9 @@
 ---
 name: multiple-testing-correction-and-p-value-adjustment
-description: Use when when you have generated raw p-values from differential expression analysis on preprocessed count matrices (mRNA, miRNA, isoforms, lipids, or proteins) using edgeR, DESeq2, or RankProduct and need to identify statistically significant features while controlling familywise error rate or.
+description: Use when when you have generated raw p-values from differential expression
+  analysis on preprocessed count matrices (mRNA, miRNA, isoforms, lipids, or proteins)
+  using edgeR, DESeq2, or RankProduct and need to identify statistically significant
+  features while controlling familywise error rate or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,13 +17,15 @@ metadata:
   - ComplexHeatmap
   - edgeR
   - RankProduct
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
 - '### DESeq2 [deseq](../modules/local/deseq2)'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

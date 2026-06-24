@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-format-validation
-description: Use when you have a tab-delimited metabolomics data file (raw measurement output from xcms, Sciex OS, or similar acquisition pipelines) and need to load it into mzQuality before building a SummarizedExperiment.
+description: Use when you have a tab-delimited metabolomics data file (raw measurement
+  output from xcms, Sciex OS, or similar acquisition pipelines) and need to load it
+  into mzQuality before building a SummarizedExperiment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -23,8 +26,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # metabolomics-data-format-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate tab-delimited metabolomics input files for mandatory columns, data types, and completeness before constructing SummarizedExperiment objects. This skill ensures data integrity and early detection of format errors that would otherwise propagate through downstream QC analyses.

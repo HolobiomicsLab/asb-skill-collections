@@ -1,6 +1,9 @@
 ---
 name: energy-based-formula-scoring
-description: Use when you have an unknown MS/MS spectrum (precursor m/z and fragment peak list) and a set of candidate molecular formulae, and you need to rank them by likelihood without access to a spectrum database or precomputed fragmentation trees.
+description: Use when you have an unknown MS/MS spectrum (precursor m/z and fragment
+  peak list) and a set of candidate molecular formulae, and you need to rank them
+  by likelihood without access to a spectrum database or precomputed fragmentation
+  trees.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,11 +15,13 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # energy-based-formula-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank candidate chemical formulae against tandem mass spectra using end-to-end energy-based neural modeling, without reliance on fragmentation tree databases or external spectrum libraries. This approach learns formula-spectrum agreement directly from MS/MS peak patterns and intensities.

@@ -1,6 +1,9 @@
 ---
 name: loess-smoothing-parameter-tuning
-description: Use when your metabolomics SummarizedExperiment object shows signal drift across replicate measurements within individual batches (visible as systematic trends in PCA plots or replicate scatter), and you have intra-batch replicate samples available to estimate smooth drift corrections.
+description: Use when your metabolomics SummarizedExperiment object shows signal drift
+  across replicate measurements within individual batches (visible as systematic trends
+  in PCA plots or replicate scatter), and you have intra-batch replicate samples available
+  to estimate smooth drift corrections.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -17,6 +20,7 @@ metadata:
   - RStudio
   - RlaPlots
   - PcaPlots
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
@@ -24,10 +28,13 @@ derived_from:
   title: ''
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
-- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate the unwanted variation within and between batches with RUV-III'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
+- 'utilises 2 types of replicates: intra-batch and inter-batch replicates to estimate
+  the unwanted variation within and between batches with RUV-III'
 - Install the R package from GitHub using the `devtools` package
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
 claims: []
 provenance:
@@ -56,6 +63,7 @@ attribution:
 
 # loess-smoothing-parameter-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply loess smoothing with optimized parameters (e.g., loessShort with k=5) to correct intra-batch signal drift in metabolomics assays. This non-linear smoothing technique removes unwanted variation within experimental batches while preserving true biological signal.

@@ -1,6 +1,8 @@
 ---
 name: cross-modal-alignment-training
-description: Use when after completing pretraining and fine-tuning stages when you have a checkpoint with task-specific performance but need to improve cross-modal consistency.
+description: Use when after completing pretraining and fine-tuning stages when you
+  have a checkpoint with task-specific performance but need to improve cross-modal
+  consistency.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - PyTorch
   - Hugging Face Transformers
   - MS-BART
+  license_tier: restricted
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
@@ -40,6 +43,7 @@ attribution:
 
 # cross-modal-alignment-training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a unified sequence-to-sequence model to align representations of two distinct modalities (mass spectra and molecular structures) in a shared latent space using contrastive feedback. This skill enables joint end-to-end modeling of both modalities for improved structure elucidation.

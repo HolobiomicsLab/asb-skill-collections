@@ -1,6 +1,7 @@
 ---
 name: community-metabolic-reconstruction-synthesis
-description: Use when you have draft metabolic reconstructions (in SBML or equivalent format) for multiple organisms sampled from a single ecological community (e.
+description: Use when you have draft metabolic reconstructions (in SBML or equivalent
+  format) for multiple organisms sampled from a single ecological community (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,13 +11,15 @@ metadata:
   - http://edamontology.org/topic_2259
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
 - doi: 10.5281/zenodo.363932874
   title: ''
 evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana
+- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis
+  thaliana
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +44,7 @@ attribution:
 
 # community-metabolic-reconstruction-synthesis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Synthesize a single consensus metabolic model from multiple draft genome-scale reconstructions of organisms in a microbial community by identifying and retaining only reactions and metabolites conserved across all input models. This approach enables faithful representation of community metabolism while reducing redundancy and improving model interpretability.

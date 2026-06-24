@@ -1,6 +1,9 @@
 ---
 name: molecular-network-metadata-organization
-description: 'Use when when you have a GNPS molecular networking task ID (from GNPS1 or GNPS2 workflows: METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING, classical_networking_workflow, or feature_based_molecular_networking_workflow) and need to prepare the job archive for NPLinker.'
+description: 'Use when when you have a GNPS molecular networking task ID (from GNPS1
+  or GNPS2 workflows: METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING,
+  classical_networking_workflow, or feature_based_molecular_networking_workflow) and
+  need to prepare the job archive for NPLinker.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -15,11 +18,13 @@ metadata:
   - GNPSExtractor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 claims: []

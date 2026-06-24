@@ -1,6 +1,8 @@
 ---
 name: sequential-and-random-access-dual-mode-support
-description: Use when when parsing mzML or other blockwise-structured scientific data files where analysis requires both sequential scanning (e.g., iterating all spectra) and random direct access by identifier (e.
+description: Use when when parsing mzML or other blockwise-structured scientific data
+  files where analysis requires both sequential scanning (e.g., iterating all spectra)
+  and random direct access by identifier (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +15,7 @@ metadata:
   - Black
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,6 +44,7 @@ attribution:
 
 # sequential-and-random-access-dual-mode-support
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement dual-mode file access (sequential iteration and random indexing) for compressed mass spectrometry data formats by creating a wrapper class that bridges pymzML's FileInterface with custom storage backends, enabling both blockwise iteration and key-based random access to indexed gzip archives.

@@ -1,6 +1,7 @@
 ---
 name: scan-index-filtering-by-ms-level
-description: Use when when you have generated a scan index from rawrr::readIndex() on a Thermo .
+description: Use when when you have generated a scan index from rawrr::readIndex()
+  on a Thermo .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,15 +14,20 @@ metadata:
   - rawrr
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
-- Our implementation consists of two language layers, the top `R` layer and the hidden `C#` layer.
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
+- Our implementation consists of two language layers, the top `R` layer and the hidden
+  `C#` layer.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # scan-index-filtering-by-ms-level
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a scan index data.frame to retain only MS1-level (precursor-ion) scans from a Thermo Orbitrap raw file. This isolates full-scan survey spectra from tandem MS fragments, enabling focused analysis of parent ion m/z and intensity without interference from product-ion scans.

@@ -1,6 +1,9 @@
 ---
 name: peak-parameter-optimization-for-targeted-compounds
-description: Use when you have centroided high-resolution Orbitrap or GC-CI-MS mzML files and a formulaTable of target compounds with known m/z, retention time, and molecular formula, and you need to extract isotopologue abundances and quantification metrics (area, maxo intensity, ppm error) for each labeled.
+description: Use when you have centroided high-resolution Orbitrap or GC-CI-MS mzML
+  files and a formulaTable of target compounds with known m/z, retention time, and
+  molecular formula, and you need to extract isotopologue abundances and quantification
+  metrics (area, maxo intensity, ppm error) for each labeled.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +18,14 @@ metadata:
   - Proteowizard MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
 evidence_spans:
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - isoSCAN uses `mzR` package in order to read MS files

@@ -1,6 +1,8 @@
 ---
 name: mass-error-and-retention-time-alignment
-description: Use when when processing low- or high-resolution mass spectrometry data (mzML profile or centroided format) for isotopologue quantification and you need to match detected peaks to a targeted formulaTable of compounds.
+description: Use when when processing low- or high-resolution mass spectrometry data
+  (mzML profile or centroided format) for isotopologue quantification and you need
+  to match detected peaks to a targeted formulaTable of compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,12 +17,14 @@ metadata:
   - Proteowizard MSconvert
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
 evidence_spans:
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - isoSCAN uses `mzR` package in order to read MS files

@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-loading-into-containers
-description: Use when you have raw metabolomics data (e.g., in standard bioinformatics formats supported by maplet) and need to initialize an analytical pipeline that will integrate multiple processing and analysis steps.
+description: Use when you have raw metabolomics data (e.g., in standard bioinformatics
+  formats supported by maplet) and need to initialize an analytical pipeline that
+  will integrate multiple processing and analysis steps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,13 +14,15 @@ metadata:
   - SummarizedExperiment
   - magrittr
   - maplet
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab741/6409851
   title: maplet
 evidence_spans:
 - maplet is an R package
 - The toolbox builds upon the bioconductor package SummarizedExperiment (SE)
-- maplet is designed to work with a pipe operator - either the popular %>% operator from the magrittr package
+- maplet is designed to work with a pipe operator - either the popular %>% operator
+  from the magrittr package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

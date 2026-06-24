@@ -1,6 +1,9 @@
 ---
 name: quantitation-table-generation
-description: Use when you have raw MS data in a supported instrument format (Agilent .d, Thermo .raw, Bruker .d, mzML) and a defined list of m/z, retention time, or other identifiers for which you need to extract and quantify peak abundances across one or more samples.
+description: Use when you have raw MS data in a supported instrument format (Agilent
+  .d, Thermo .raw, Bruker .d, mzML) and a defined list of m/z, retention time, or
+  other identifiers for which you need to extract and quantify peak abundances across
+  one or more samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

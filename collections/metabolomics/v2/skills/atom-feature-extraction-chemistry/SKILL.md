@@ -1,6 +1,7 @@
 ---
 name: atom-feature-extraction-chemistry
-description: Use when you have canonicalized SMILES strings from a chemical database (e.
+description: Use when you have canonicalized SMILES strings from a chemical database
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +16,7 @@ metadata:
   - PyTorch
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -42,6 +44,7 @@ attribution:
 
 # atom-feature-extraction-chemistry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract atomic-level chemical features (atomic number, formal charge, hybridization, aromaticity) and bond-level features (bond type, aromaticity, stereochemistry) from canonicalized SMILES strings to construct molecular graph representations for GNN input. This skill bridges chemical structure notation and learnable tensor representations required by graph neural networks.

@@ -1,6 +1,9 @@
 ---
 name: isotopologue-abundance-correction
-description: 'Use when you have LC-MS data from isotope labeling experiments where FAM measurements must be transformed to MDV values. Specifically, apply this when: (1) you have measured fractional abundances of isotopologues (FAM) in XLSX format from a high-resolution instrument (e.g., Orbitrap);'
+description: 'Use when you have LC-MS data from isotope labeling experiments where
+  FAM measurements must be transformed to MDV values. Specifically, apply this when:
+  (1) you have measured fractional abundances of isotopologues (FAM) in XLSX format
+  from a high-resolution instrument (e.g., Orbitrap);'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,6 +15,7 @@ metadata:
   - IsoCor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

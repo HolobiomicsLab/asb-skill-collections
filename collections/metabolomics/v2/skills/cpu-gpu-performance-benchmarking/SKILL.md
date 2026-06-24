@@ -1,6 +1,8 @@
 ---
 name: cpu-gpu-performance-benchmarking
-description: Use when you have implemented both CPU and GPU versions of a spectral search algorithm (e.g., approximate nearest neighbor indexing with cascade filtering) and need to validate whether GPU acceleration is justified.
+description: Use when you have implemented both CPU and GPU versions of a spectral
+  search algorithm (e.g., approximate nearest neighbor indexing with cascade filtering)
+  and need to validate whether GPU acceleration is justified.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,12 +15,15 @@ metadata:
   - NumPy
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is
+  a spectral library search engine
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

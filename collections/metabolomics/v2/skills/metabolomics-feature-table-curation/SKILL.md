@@ -1,6 +1,7 @@
 ---
 name: metabolomics-feature-table-curation
-description: Use when you have a raw feature table (TSV/CSV) derived from LC-MS peak detection (e.
+description: Use when you have a raw feature table (TSV/CSV) derived from LC-MS peak
+  detection (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -16,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,6 +48,7 @@ attribution:
 
 # metabolomics-feature-table-curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Curation of LC-MS feature tables through blank masking, normalization, batch correction, and quality control to produce analysis-ready metabolomics datasets. This skill removes contamination, corrects for systematic bias, and prepares feature abundance matrices for downstream statistical analysis.

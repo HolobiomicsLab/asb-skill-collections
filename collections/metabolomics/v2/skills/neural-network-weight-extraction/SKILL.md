@@ -1,6 +1,9 @@
 ---
 name: neural-network-weight-extraction
-description: Use when you have trained MLPNN models on paired microbiome-metabolome data (via 10-fold cross-validation repeated across multiple iterations) and need to derive interpretable microbe-metabolite interaction scores rather than treating the network as a black box.
+description: Use when you have trained MLPNN models on paired microbiome-metabolome
+  data (via 10-fold cross-validation repeated across multiple iterations) and need
+  to derive interpretable microbe-metabolite interaction scores rather than treating
+  the network as a black box.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -23,14 +26,17 @@ metadata:
   - NumPy
   - TensorFlow or PyTorch
   - PyTorch
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - An MLPNN model is composed of multiple fully connected hidden layers
 - we present MiMeNet, a neural network framework for modeling microbe-metabolite relationships
-- Weighted correlation network analysis (WGCNA) of microbial features was performed using the WGCNA library in R
-- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet to those identified by the Weighted Correlation Network Analysis (WGCNA)
+- Weighted correlation network analysis (WGCNA) of microbial features was performed
+  using the WGCNA library in R
+- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet
+  to those identified by the Weighted Correlation Network Analysis (WGCNA)
 - using Seaborn's clustermap function in Python
 - using Cytoscape
 claims: []
@@ -59,6 +65,7 @@ attribution:
 
 # neural-network-weight-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract weight matrices from trained multilayer perceptron neural networks across multiple cross-validation folds to compute microbe-metabolite feature attribution scores via Olden's method. This enables downstream biclustering and module discovery by quantifying how individual network weights contribute to metabolite abundance predictions.

@@ -1,6 +1,8 @@
 ---
 name: json-directive-application
-description: Use when when you have extracted intermediate JSON conforming to the Experiment Description Specification and need to restructure, filter, sort, or aggregate records (e.
+description: Use when when you have extracted intermediate JSON conforming to the
+  Experiment Description Specification and need to restructure, filter, sort, or aggregate
+  records (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +13,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # json-directive-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply conversion directives (matrix, str, and other operations) to intermediate JSON representations to transform, filter, aggregate, and format experimental metadata for deposition into structured data repositories. This skill is essential when converting extracted tabular metadata into final repository formats like mwTab.

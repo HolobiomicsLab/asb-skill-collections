@@ -1,6 +1,9 @@
 ---
 name: kegg-api-querying
-description: Use when after metabolite KEGG identifiers and hierarchy metadata have been assigned (via assign_hierarchy with 'KEGG' identifier) and you need to enrich your metabolomics count data frame with functional orthology and associated gene information from KEGG.
+description: Use when after metabolite KEGG identifiers and hierarchy metadata have
+  been assigned (via assign_hierarchy with 'KEGG' identifier) and you need to enrich
+  your metabolomics count data frame with functional orthology and associated gene
+  information from KEGG.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,11 +14,13 @@ metadata:
   - KEGGREST
   - R
   - Omu
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
-- which retrieves data from the KEGG API using the function ```keggGet``` from the package KEGGREST
+- which retrieves data from the KEGG API using the function ```keggGet``` from the
+  package KEGGREST
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
 claims: []
 provenance:
@@ -40,6 +45,7 @@ attribution:
 
 # kegg-api-querying
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query the KEGG API via the KEGGREST package to retrieve functional orthology (KO numbers) and gene names for metabolite-annotated data frames. This skill integrates KEGG functional data into metabolomics count tables, enabling orthology-based downstream analysis.

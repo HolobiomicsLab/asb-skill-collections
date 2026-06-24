@@ -1,6 +1,9 @@
 ---
 name: multiple-hypothesis-correction-in-metabolomics
-description: Use when after computing raw p-values from differential metabolomics analysis or Fisher's exact test enrichment, and before reporting significant pathways or metabolites. Essential when testing multiple metabolites against multiple pathway hypotheses (e.
+description: Use when after computing raw p-values from differential metabolomics
+  analysis or Fisher's exact test enrichment, and before reporting significant pathways
+  or metabolites. Essential when testing multiple metabolites against multiple pathway
+  hypotheses (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -20,18 +23,21 @@ metadata:
   - assign_hierarchy
   - omu_summary
   - R stats (base statistical functions)
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 - doi: 10.1128/mra.00129-19
   title: ''
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - enrichmet integrates fgsea for fast MetSEA
 - library(readr)
 - library(readxl)
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
-- Omu supports two univariate statistical models, t test and anova, using the functions ```omu_summary``` and ```anova_function``` respectively
+- Omu supports two univariate statistical models, t test and anova, using the functions
+  ```omu_summary``` and ```anova_function``` respectively
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -59,6 +65,7 @@ attribution:
 
 # multiple-hypothesis-correction-in-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply adjusted p-value thresholds and multiple-testing corrections during metabolite set enrichment analysis to control false discovery rates across pathway and metabolite hypotheses. This prevents spurious pathway assignments when testing many metabolites and pathways simultaneously.

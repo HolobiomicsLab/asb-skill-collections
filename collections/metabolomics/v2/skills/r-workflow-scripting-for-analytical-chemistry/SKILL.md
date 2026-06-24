@@ -1,6 +1,9 @@
 ---
 name: r-workflow-scripting-for-analytical-chemistry
-description: Use when you have raw CE-MS or LC-MS instrument files (stored as OnDiskMSnExp objects or similar Bioconductor containers) and need to extract quantitative features (migration times, m/z values, peak intensities) by orchestrating multiple R packages in a controlled, documented sequence.
+description: Use when you have raw CE-MS or LC-MS instrument files (stored as OnDiskMSnExp
+  objects or similar Bioconductor containers) and need to extract quantitative features
+  (migration times, m/z values, peak intensities) by orchestrating multiple R packages
+  in a controlled, documented sequence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -19,11 +22,13 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package
@@ -52,6 +57,7 @@ attribution:
 
 # R workflow scripting for analytical chemistry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct multi-step R pipelines that chain specialized analytical chemistry packages (xcms, MSnbase, Spectra, MetaboCoreUtils) to process raw mass spectrometry or capillary electrophoresis–mass spectrometry data through signal detection, peak picking, and feature extraction. This skill is essential when raw instrumental data must be transformed into standardized, reproducible feature tables for downstream chemometric or metabolomic analysis.

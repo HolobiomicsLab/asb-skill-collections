@@ -1,6 +1,8 @@
 ---
 name: parameter-sharing-mechanism-design
-description: Use when designing a contrastive learning pipeline for ion images or other data modalities where you need to process multiple augmented versions of the same input through an encoder and enforce similarity between the resulting representations.
+description: Use when designing a contrastive learning pipeline for ion images or
+  other data modalities where you need to process multiple augmented versions of the
+  same input through an encoder and enforce similarity between the resulting representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -11,6 +13,7 @@ metadata:
   - ResNet18
   - PyTorch
   - kornia
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
@@ -39,6 +42,7 @@ attribution:
 
 # parameter-sharing-mechanism-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and instantiate a shared-weight encoder architecture that processes multiple augmented inputs through a single set of learnable parameters to produce consistent representation vectors. This skill is essential in contrastive learning frameworks where the same encoder must enforce invariance across different augmentations of the same input.

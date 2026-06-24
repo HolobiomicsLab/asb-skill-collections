@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-dataset-handling-preprocessing
-description: Use when you have raw or semi-processed MS/MS spectra in MSP format (e.g., from GNPS, Orbitrap instruments) and need to feed them into MSBERT or similar transformer-based embedding models for library matching, clustering, or similarity scoring.
+description: Use when you have raw or semi-processed MS/MS spectra in MSP format (e.g.,
+  from GNPS, Orbitrap instruments) and need to feed them into MSBERT or similar transformer-based
+  embedding models for library matching, clustering, or similarity scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -18,6 +20,7 @@ metadata:
   - Python 3.12 with Anaconda
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

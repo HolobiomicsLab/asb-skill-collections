@@ -1,6 +1,7 @@
 ---
 name: protocol-metadata-extraction
-description: Use when you have experimental protocol information scattered across multiple rows in a spreadsheet or table (e.
+description: Use when you have experimental protocol information scattered across
+  multiple rows in a spreadsheet or table (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +12,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package that facilitates the conversion of tabular data into other formats
+- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
+  that facilitates the conversion of tabular data into other formats
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +46,7 @@ attribution:
 
 # Protocol Metadata Extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and aggregate protocol metadata from tabular experimental data into a unified, filtered JSON representation using tagging and iteration directives. This skill enables systematic transformation of dispersed protocol records into queryable metadata suitable for repository submission and quality control.

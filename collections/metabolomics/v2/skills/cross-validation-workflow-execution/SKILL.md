@@ -1,6 +1,8 @@
 ---
 name: cross-validation-workflow-execution
-description: Use when you have paired microbiome (16S rRNA/metagenomic) and metabolome (LC-MS/MS or similar) count data and need to evaluate how well a predictive model (e.g., neural network, Elastic Net) generalizes across samples.
+description: Use when you have paired microbiome (16S rRNA/metagenomic) and metabolome
+  (LC-MS/MS or similar) count data and need to evaluate how well a predictive model
+  (e.g., neural network, Elastic Net) generalizes across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,16 +20,24 @@ metadata:
   - SciPy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +61,7 @@ attribution:
 
 # cross-validation-workflow-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute multiple iterations of k-fold cross-validation on paired microbiome-metabolome datasets to obtain empirical performance distributions (Spearman correlation coefficients) and establish statistical thresholds for identifying well-predicted metabolites. This workflow trains neural network models repeatedly on held-out folds to measure predictive robustness and generate background distributions for significance testing.

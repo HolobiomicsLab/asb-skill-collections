@@ -1,6 +1,9 @@
 ---
 name: metabolite-pathway-annotation-mapping
-description: Use when after peak detection and statistical association or classification analysis has identified a set of significant peaks, use this skill when you need to move from individual feature-level results (peak intensities, p-values, importance scores) to functional biological interpretation via.
+description: Use when after peak detection and statistical association or classification
+  analysis has identified a set of significant peaks, use this skill when you need
+  to move from individual feature-level results (peak intensities, p-values, importance
+  scores) to functional biological interpretation via.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -13,6 +16,7 @@ metadata:
   - SMART
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

@@ -1,6 +1,9 @@
 ---
 name: feature-flagging-threshold-calibration
-description: Use when after drift correction in non-targeted LC-MS metabolomics workflows, when you need to decide which molecular features are sufficiently reproducible (low instrument/QC variance) and biologically informative (high QC-versus-biological signal ratio) to retain for downstream statistical.
+description: Use when after drift correction in non-targeted LC-MS metabolomics workflows,
+  when you need to decide which molecular features are sufficiently reproducible (low
+  instrument/QC variance) and biologically informative (high QC-versus-biological
+  signal ratio) to retain for downstream statistical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -22,7 +26,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +52,7 @@ attribution:
 
 # feature-flagging-threshold-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically apply quality-metric thresholds to identify and mark low-quality metabolic features in LC-MS data using relative standard deviation (RSD), robust RSD variants, and detection ratios. This skill bridges preprocessing and statistical analysis by deciding which features to retain, flag, or exclude based on reproducibility and biological signal strength.

@@ -1,6 +1,8 @@
 ---
 name: metabolite-abundance-normalization-comparison
-description: Use when you have normalized peak intensities using MetaboDirect's data preprocessing step and are preparing to perform PERMANOVA or NMDS ordination on a bacterium-phage or environmental metabolomics dataset (36+ samples).
+description: Use when you have normalized peak intensities using MetaboDirect's data
+  preprocessing step and are preparing to perform PERMANOVA or NMDS ordination on
+  a bacterium-phage or environmental metabolomics dataset (36+ samples).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -17,13 +19,17 @@ metadata:
   - Python (3.8+)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
-- distances (depending on the selected normalization method) using the "vegdist" function for the vegan package and then used to perform a permutational analysis of variance (PERMANOVA)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
+- distances (depending on the selected normalization method) using the "vegdist" function
+  for the vegan package and then used to perform a permutational analysis of variance
+  (PERMANOVA)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 claims: []
@@ -49,6 +55,7 @@ attribution:
 
 # metabolite-abundance-normalization-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare the effects of different peak intensity normalization methods on downstream multivariate statistical analysis (PERMANOVA, NMDS) of FT-ICR MS metabolomics data to ensure robust and reproducible findings. This skill validates whether normalization choice materially affects the significance and interpretation of phage-type or treatment effects on metabolite composition.

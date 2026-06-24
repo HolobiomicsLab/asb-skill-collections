@@ -1,6 +1,9 @@
 ---
 name: neural-network-transfer-learning-for-spectral-models
-description: Use when your input is a corpus of MS/MS spectra with annotated molecular formulas and adduct types that represent a new ionisation mode, instrument type, or adduct chemistry not well-represented in the pre-trained model's training data. You have access to a trained formula transformer (e.
+description: Use when your input is a corpus of MS/MS spectra with annotated molecular
+  formulas and adduct types that represent a new ionisation mode, instrument type,
+  or adduct chemistry not well-represented in the pre-trained model's training data.
+  You have access to a trained formula transformer (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -15,6 +18,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,6 +48,7 @@ attribution:
 
 # neural-network-transfer-learning-for-spectral-models
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Adapt a pre-trained formula transformer neural network (MIST-CF) to new ionisation modes or mass spectrometry platforms by fine-tuning on a held-out dataset of annotated MS/MS spectra, preserving learned sinusoidal formula embeddings while retraining the adduct tokenization and ranking layers. This skill is critical when extending spectral interpretation models to conditions (e.g., negative ionisation mode) not covered by the original training distribution.

@@ -1,6 +1,9 @@
 ---
 name: lc-ms-adduct-pattern-detection
-description: Use when when you have statistically significant features from multi-assay LC-MS metabolomics data (with m/z and retention time annotations) and need to group features that may represent the same compound ionized as different adducts (e.g., [M+H]⁺ vs. [M+Na]⁺).
+description: Use when when you have statistically significant features from multi-assay
+  LC-MS metabolomics data (with m/z and retention time annotations) and need to group
+  features that may represent the same compound ionized as different adducts (e.g.,
+  [M+H]⁺ vs. [M+Na]⁺).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -16,6 +19,7 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -51,6 +55,7 @@ attribution:
 
 # LC-MS adduct pattern detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies common adduct signatures in untargeted LC-MS features by calculating hypothetical neutral masses from known electrospray ionization adducts and matching them within a mass tolerance window. This clustering step links features that likely derive from the same molecular species ionized under different conditions.

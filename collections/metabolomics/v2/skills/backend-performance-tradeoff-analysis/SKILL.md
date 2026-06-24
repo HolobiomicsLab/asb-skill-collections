@@ -1,6 +1,9 @@
 ---
 name: backend-performance-tradeoff-analysis
-description: Use when you are designing or optimizing an MsBackend implementation and need to decide whether to pre-populate the @spectraVars slot with all core spectra variable columns (mz, intensity, rtime, scanIndex, precursorMz, precursorIntensity, acquisitionNum, msLevel) at initialization time, or defer.
+description: Use when you are designing or optimizing an MsBackend implementation
+  and need to decide whether to pre-populate the @spectraVars slot with all core spectra
+  variable columns (mz, intensity, rtime, scanIndex, precursorMz, precursorIntensity,
+  acquisitionNum, msLevel) at initialization time, or defer.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,13 +12,15 @@ metadata:
   - S4Vectors
   - Spectra
   - R base
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +44,7 @@ attribution:
 
 # Backend Performance Tradeoff Analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify memory consumption and access latency when choosing between eager pre-population versus lazy on-demand initialization of spectra variables in MsBackend implementations. This skill enables informed design decisions for MS data backends by empirically measuring the cost–benefit of storing all core spectra variables upfront versus populating them during spectraData() calls.

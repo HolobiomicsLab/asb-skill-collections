@@ -1,6 +1,7 @@
 ---
 name: p-value-computation-and-multiple-testing-correction
-description: Use when after matched lipid abundances have been grouped by experimental condition and descriptive statistics (mean, SD, median) calculated per group.
+description: Use when after matched lipid abundances have been grouped by experimental
+  condition and descriptive statistics (mean, SD, median) calculated per group.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,6 +16,7 @@ metadata:
   - SciPy
   - R base stats
   - tidyverse
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

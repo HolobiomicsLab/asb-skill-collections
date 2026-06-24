@@ -1,6 +1,7 @@
 ---
 name: nmr-spectrum-reconstruction-from-library
-description: Use when you have an NMR spectrum of a mixture sample and a library of reference spectra for individual compounds.
+description: Use when you have an NMR spectrum of a mixture sample and a library of
+  reference spectra for individual compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +13,7 @@ metadata:
   - spec2csv
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

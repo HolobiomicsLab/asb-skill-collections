@@ -1,6 +1,9 @@
 ---
 name: spectral-result-visualization-verification
-description: Use when after running annotateRC to generate ranked candidate annotations for LC-MS AIF features, when you need to confirm that (1) the top-ranked candidate match is chemically plausible given the observed fragment ions, (2) alternative candidate annotations exist and are correctly ranked, and (3).
+description: Use when after running annotateRC to generate ranked candidate annotations
+  for LC-MS AIF features, when you need to confirm that (1) the top-ranked candidate
+  match is chemically plausible given the observed fragment ions, (2) alternative
+  candidate annotations exist and are correctly ranked, and (3).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,11 +18,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # Spectral Result Visualization and Verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify and visually inspect annotated metabolite spectra with matched fragment ions to confirm candidate ranking accuracy and annotation quality. This skill combines human-readable visualization of pseudo-MS/MS spectra against candidate matches with file-based auditing to ensure the annotation pipeline produced complete, valid outputs.

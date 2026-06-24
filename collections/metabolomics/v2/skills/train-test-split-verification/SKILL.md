@@ -1,6 +1,9 @@
 ---
 name: train-test-split-verification
-description: Use when after applying a configuration fix (e.g., adding an instrument type to an allowlist, updating filtering thresholds) to a dataset preprocessing pipeline, you need to confirm that the change produces the documented training/test split counts.
+description: Use when after applying a configuration fix (e.g., adding an instrument
+  type to an allowlist, updating filtering thresholds) to a dataset preprocessing
+  pipeline, you need to confirm that the change produces the documented training/test
+  split counts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +15,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +44,7 @@ attribution:
 
 # train-test-split-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that dataset preprocessing and filtering operations (e.g., instrument allowlist updates) produce expected training and test set sizes by rerunning the splitting workflow and comparing counts against reported baselines. This skill detects when configuration changes or bug fixes have the intended effect on dataset composition.

@@ -1,6 +1,8 @@
 ---
 name: lipid-abundance-statistical-comparison
-description: Use when after lipid matching is complete and you have a table of normalized lipid abundances aligned across samples, grouped into distinct experimental conditions or phenotypic categories (e.g., diseased vs. control, treated vs. untreated).
+description: Use when after lipid matching is complete and you have a table of normalized
+  lipid abundances aligned across samples, grouped into distinct experimental conditions
+  or phenotypic categories (e.g., diseased vs. control, treated vs. untreated).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   - SciPy
   - R tidyverse / base stats
   - edgeR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

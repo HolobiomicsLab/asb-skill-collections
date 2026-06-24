@@ -1,6 +1,8 @@
 ---
 name: isotopologue-mass-delta-calculation
-description: Use when when constructing a reference mass-matching framework for untargeted metabolomics or isotope-tracing LC-MS data, before pattern-matching observed features to isotopic and adduct variants.
+description: Use when when constructing a reference mass-matching framework for untargeted
+  metabolomics or isotope-tracing LC-MS data, before pattern-matching observed features
+  to isotopic and adduct variants.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,7 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -42,6 +45,7 @@ attribution:
 
 # isotopologue-mass-delta-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compute theoretical m/z mass shifts for all combinations of stable isotope substitutions (13C, typically M0 through M6) and ionization adducts (M+H, M+NH4, M+Na, M+HCl+H, M+K, M+ACN+H), organizing results into a reference grid ('khipu grid') used to match observed LC-MS features to theoretical ion species and infer neutral mass via linear regression.

@@ -1,6 +1,9 @@
 ---
 name: r-data-structure-serialization
-description: Use when after completing Part 4 (Identification of ISF Features) in the ISFrag workflow, when you have a feature table with identified ISF features and their hierarchical fragmentation relationships, and you need to export this relationship structure for interpretation, integration with external.
+description: Use when after completing Part 4 (Identification of ISF Features) in
+  the ISFrag workflow, when you have a feature table with identified ISF features
+  and their hierarchical fragmentation relationships, and you need to export this
+  relationship structure for interpretation, integration with external.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,12 +16,15 @@ metadata:
   - RStudio
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - To install ISFrag package R version 4.0.0 or above is required
 - we recommend using RStudio to complete the installation and usage of ISFrag
 claims: []

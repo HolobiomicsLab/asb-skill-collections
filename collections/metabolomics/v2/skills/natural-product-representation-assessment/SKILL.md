@@ -1,6 +1,9 @@
 ---
 name: natural-product-representation-assessment
-description: Use when you have a natural product dataset with taxonomy labels (Class, Superclass, or Pathway), pre-trained molecular models (both natural-product-specialized and synthetic-molecule baselines), and a question about whether standard molecular representations are sufficient for natural product.
+description: Use when you have a natural product dataset with taxonomy labels (Class,
+  Superclass, or Pathway), pre-trained molecular models (both natural-product-specialized
+  and synthetic-molecule baselines), and a question about whether standard molecular
+  representations are sufficient for natural product.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,6 +16,7 @@ metadata:
   - PyTorch Lightning
   - scikit-learn
   - ChemBERTa / MolBERT
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -40,6 +44,7 @@ attribution:
 
 # natural-product-representation-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Benchmark a natural-product-aware molecular representation model (e.g., NaFM) against synthetic-molecule pre-trained baselines on taxonomy classification tasks to quantify whether conventional representations adequately capture natural synthesis patterns and evolutionary information. This skill surfaces representational gaps that justify domain-specific pre-training.

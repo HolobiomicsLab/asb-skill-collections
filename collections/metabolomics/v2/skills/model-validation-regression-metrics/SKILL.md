@@ -1,6 +1,9 @@
 ---
 name: model-validation-regression-metrics
-description: Use when after training a deep-learning model on paired MS/MS spectra with annotated structural similarity labels, use this skill to assess whether predicted similarity scores correlate with ground-truth reference similarities on data the model has never seen.
+description: Use when after training a deep-learning model on paired MS/MS spectra
+  with annotated structural similarity labels, use this skill to assess whether predicted
+  similarity scores correlate with ground-truth reference similarities on data the
+  model has never seen.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,6 +16,7 @@ metadata:
   - Keras
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.8b05405
   title: Deep MS/MS similarity

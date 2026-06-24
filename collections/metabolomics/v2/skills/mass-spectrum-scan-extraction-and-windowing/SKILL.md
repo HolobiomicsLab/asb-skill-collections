@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-scan-extraction-and-windowing
-description: Use when when you have a full mass spectrum scan (e.g., FT1 or FT2 scan from an Orbitrap or IonTrap instrument) and need to isolate a narrow m/z window containing a known or predicted precursor ion before matching it to theoretical isotopic envelopes.
+description: Use when when you have a full mass spectrum scan (e.g., FT1 or FT2 scan
+  from an Orbitrap or IonTrap instrument) and need to isolate a narrow m/z window
+  containing a known or predicted precursor ion before matching it to theoretical
+  isotopic envelopes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -15,13 +18,17 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
-- Integration with the mzR package from Bioconductor allows direct parsing of mzML and MGF files
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
+- Integration with the mzR package from Bioconductor allows direct parsing of mzML
+  and MGF files
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

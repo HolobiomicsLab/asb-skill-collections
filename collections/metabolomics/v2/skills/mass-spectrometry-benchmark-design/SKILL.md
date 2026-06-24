@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-benchmark-design
-description: Use when when claiming that one mass spectrometry processing library achieves higher throughput than competitors, or when evaluating whether a new or optimized implementation delivers the expected computational efficiency gains.
+description: Use when when claiming that one mass spectrometry processing library
+  achieves higher throughput than competitors, or when evaluating whether a new or
+  optimized implementation delivers the expected computational efficiency gains.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -20,6 +22,7 @@ metadata:
   - Python time module
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -53,6 +56,7 @@ attribution:
 
 # mass-spectrometry-benchmark-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and execute a controlled benchmark experiment to compare the throughput (spectra per second) of multiple mass spectrometry data processing libraries on identical datasets and processing pipelines. This skill validates performance claims by measuring wall-clock execution time and computing processing rates under standardized conditions.

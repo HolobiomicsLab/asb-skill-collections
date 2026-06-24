@@ -1,6 +1,9 @@
 ---
 name: asynchronous-api-orchestration
-description: Use when you have a batch of mass spectra records in .msp format that lack standardized metadata fields (SMILES, InChI, CAS numbers, molecular formula, IUPAC names) and need to populate them by querying multiple independent web APIs in parallel.
+description: Use when you have a batch of mass spectra records in .msp format that
+  lack standardized metadata fields (SMILES, InChI, CAS numbers, molecular formula,
+  IUPAC names) and need to populate them by querying multiple independent web APIs
+  in parallel.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,6 +19,7 @@ metadata:
   - BridgeDb
   - RDKit
   - asyncio
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

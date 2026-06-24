@@ -1,6 +1,8 @@
 ---
 name: functional-trait-diversity-analysis
-description: Use when when you have abundance-normalized FT-ICR MS peak data with assigned molecular formulas and need to distinguish between richness (total number of distinct metabolites) and functional diversity (diversity in metabolic potential).
+description: Use when when you have abundance-normalized FT-ICR MS peak data with
+  assigned molecular formulas and need to distinguish between richness (total number
+  of distinct metabolites) and functional diversity (diversity in metabolic potential).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +15,14 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - diversity metrics using functions from the R packages vegan [63]
 - diversity metrics using functions from the R packages vegan
 - diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
@@ -46,6 +50,7 @@ attribution:
 
 # functional-trait-diversity-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies functional diversity of molecular metabolites by integrating trait-based metrics (elemental composition, decomposability, aromaticity/unsaturation) into entropy calculations, revealing how microbial inoculation alters not just metabolite richness but the functional repertoire of decomposable and reactive species.

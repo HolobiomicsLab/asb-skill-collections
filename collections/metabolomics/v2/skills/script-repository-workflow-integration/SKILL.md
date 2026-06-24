@@ -1,6 +1,8 @@
 ---
 name: script-repository-workflow-integration
-description: Use when you have cloned or downloaded scripts from a development repository (e.g., github.com/InnovativeOmics/Core-Match) and need to incorporate edits into an installed distribution copy of LipidMatch-4.2 or FluoroMatch.
+description: Use when you have cloned or downloaded scripts from a development repository
+  (e.g., github.com/InnovativeOmics/Core-Match) and need to incorporate edits into
+  an installed distribution copy of LipidMatch-4.2 or FluoroMatch.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -12,6 +14,7 @@ metadata:
   - LipidMatch
   - FluoroMatch
   - Core-Match repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -40,6 +43,7 @@ attribution:
 
 # script-repository-workflow-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate edited R scripts from a developer repository into a distributed software installation by placing files into version-specific directories and configuring execution mode flags. This skill ensures that locally modified algorithms (e.g., Modular.r, genEIC.r) are correctly staged for both Flow and Modular execution modes in LipidMatch or FluoroMatch.

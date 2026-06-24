@@ -1,6 +1,8 @@
 ---
 name: community-constraint-propagation
-description: Use when you have consensus metabolic reconstructions for multiple community members (e.g., from a plant microbiome or synthetic consortium) and need to gap-fill incomplete models while preserving community-level feasibility.
+description: Use when you have consensus metabolic reconstructions for multiple community
+  members (e.g., from a plant microbiome or synthetic consortium) and need to gap-fill
+  incomplete models while preserving community-level feasibility.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_3174
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -37,6 +40,7 @@ attribution:
 
 # community-constraint-propagation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply metabolic constraints derived from community-level dependencies to identify and resolve gaps in individual member reconstructions within a multi-organism system. This skill enables gap-filling that respects cross-member metabolic interactions rather than treating organisms in isolation.

@@ -1,6 +1,9 @@
 ---
 name: spec2vec-similarity-scoring
-description: Use when after discovering Mass2Motifs via LDA on preprocessed MS/MS spectra, use this skill to assign putative substructure annotations by matching each motif's fragmentation pattern against a pre-indexed spectral library using learned spectral embeddings.
+description: Use when after discovering Mass2Motifs via LDA on preprocessed MS/MS
+  spectra, use this skill to assign putative substructure annotations by matching
+  each motif's fragmentation pattern against a pre-indexed spectral library using
+  learned spectral embeddings.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,6 +18,7 @@ metadata:
   - MS2LDAViz
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -22,7 +26,8 @@ evidence_spans:
 - Automated Mass2Motif Annotation Guidance (MAG) with Spec2Vec
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

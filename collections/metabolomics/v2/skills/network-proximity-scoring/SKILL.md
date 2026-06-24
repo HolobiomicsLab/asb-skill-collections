@@ -1,6 +1,9 @@
 ---
 name: network-proximity-scoring
-description: Use when you have (1) metabolomic hits (DAMs or enriched metabolites) mapped to seed genes, (2) a protein–protein or gene interaction network (e.g., STRING), and (3) a set of candidate disease genes that need ranking by their functional proximity to metabolomic evidence.
+description: Use when you have (1) metabolomic hits (DAMs or enriched metabolites)
+  mapped to seed genes, (2) a protein–protein or gene interaction network (e.g., STRING),
+  and (3) a set of candidate disease genes that need ranking by their functional proximity
+  to metabolomic evidence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,6 +16,7 @@ metadata:
   - STRING database
   - label_propagation (Yuto Yamaguchi)
   - MSEA (metabolomic set enrichment analysis)
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41525-020-0132-5
   title: metPropagate
@@ -40,6 +44,7 @@ attribution:
 
 # network-proximity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score genes by their network proximity to metabolomic seed labels using iterative label propagation over a gene/protein interaction network. This skill prioritizes metabolic disease genes by distributing metabolomic evidence across connected network nodes, producing ranked scores that reflect both propagation confidence and topological distance from seed hits.

@@ -1,6 +1,8 @@
 ---
 name: gpu-accelerated-neural-network-training
-description: Use when when you have a trainable neural network model (e.g., MSNovelist), labeled training data with known input/output pairs, GPU resource availability on a compute cluster, and need to optimize model weights via backpropagation.
+description: Use when when you have a trainable neural network model (e.g., MSNovelist),
+  labeled training data with known input/output pairs, GPU resource availability on
+  a compute cluster, and need to optimize model weights via backpropagation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -14,6 +16,7 @@ metadata:
   - SLURM
   - Singularity
   - PyTorch / TensorFlow
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

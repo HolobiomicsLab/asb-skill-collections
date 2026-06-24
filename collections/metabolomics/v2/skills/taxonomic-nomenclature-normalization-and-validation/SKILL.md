@@ -1,6 +1,9 @@
 ---
 name: taxonomic-nomenclature-normalization-and-validation
-description: Use when you have organism names originating from 31+ heterogeneous natural product databases that use different taxonomic authorities, nomenclature versions, or rank assignments, and you need to harmonize them into a single organism subgraph with validated ranks before linking to chemical.
+description: Use when you have organism names originating from 31+ heterogeneous natural
+  product databases that use different taxonomic authorities, nomenclature versions,
+  or rank assignments, and you need to harmonize them into a single organism subgraph
+  with validated ranks before linking to chemical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -16,6 +19,7 @@ metadata:
   - 4_cleaningTaxonomy.R
   - 5_addingOTL.R
   - Kotlin
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -51,6 +55,7 @@ attribution:
 
 # taxonomic-nomenclature-normalization-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardizes organism names from heterogeneous source databases into controlled taxonomic vocabularies and validates ranks, resolving nomenclatural conflicts and ensuring consistent organism identity across a structure-organism pair collection. This skill is essential when ingesting natural product data from multiple curated databases with divergent taxonomic authority standards.

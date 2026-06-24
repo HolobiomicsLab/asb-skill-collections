@@ -1,6 +1,9 @@
 ---
 name: api-data-retrieval
-description: Use when you need to obtain all project JSON documents currently deposited in a data platform (such as the Paired Omics Data Platform) to validate their structure against a JSON Schema specification, or when you require a complete snapshot of published records for quality assurance, data migration.
+description: Use when you need to obtain all project JSON documents currently deposited
+  in a data platform (such as the Paired Omics Data Platform) to validate their structure
+  against a JSON Schema specification, or when you require a complete snapshot of
+  published records for quality assurance, data migration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -10,11 +13,13 @@ metadata:
   tools:
   - npm
   - OpenAPI specification
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

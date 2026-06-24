@@ -1,6 +1,7 @@
 ---
 name: metabolomics-data-input-validation
-description: Use when when importing a tab-delimited or Sciex OS text export metabolomics dataset into mzQuality, before building the SummarizedExperiment object.
+description: Use when when importing a tab-delimited or Sciex OS text export metabolomics
+  dataset into mzQuality, before building the SummarizedExperiment object.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +14,7 @@ metadata:
   - SummarizedExperiment
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -43,6 +45,7 @@ attribution:
 
 # metabolomics-data-input-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate tab-delimited metabolomics data files for mandatory column presence, correct format, and data integrity before constructing a SummarizedExperiment object. This upstream quality gate prevents malformed input from propagating through downstream quality control and analysis workflows in mzQuality.

@@ -1,6 +1,8 @@
 ---
 name: microbiome-metabolome-data-preprocessing
-description: Use when when starting with raw paired microbiome (16S rRNA, metagenomic taxonomic or functional features) and metabolome (LC-MS/MS, NMR) count tables from the same biospecimens, and planning to train prediction models or co-abundance networks.
+description: Use when when starting with raw paired microbiome (16S rRNA, metagenomic
+  taxonomic or functional features) and metabolome (LC-MS/MS, NMR) count tables from
+  the same biospecimens, and planning to train prediction models or co-abundance networks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -24,16 +26,24 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- Canonical correlation analysis models were implemented using Python's scikit-learn package.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation function since previous studies have shown that it is resilient to the problems of exploding and vanishing
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- Canonical correlation analysis models were implemented using Python's scikit-learn
+  package.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation
+  function since previous studies have shown that it is resilient to the problems
+  of exploding and vanishing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -57,6 +67,7 @@ attribution:
 
 # microbiome-metabolome-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preparation and normalization of paired microbiome and metabolome feature tables for downstream prediction modeling, including low-abundance filtering, compositional transformations (CLR or relative abundance), and feature quality control. This skill ensures that heterogeneous omics measurements are made commensurable and that rare features do not dominate the learning signal.

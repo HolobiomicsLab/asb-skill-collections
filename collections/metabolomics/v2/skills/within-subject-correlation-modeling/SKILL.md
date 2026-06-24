@@ -1,6 +1,8 @@
 ---
 name: within-subject-correlation-modeling
-description: Use when your metabolomics dataset is in long format with repeated measurements per subject (id), a grouping variable (e.g., disease status or treatment arm), and metabolite abundances measured across time or visits.
+description: Use when your metabolomics dataset is in long format with repeated measurements
+  per subject (id), a grouping variable (e.g., disease status or treatment arm), and
+  metabolite abundances measured across time or visits.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -12,6 +14,7 @@ metadata:
   - R
   - tidyverse
   - MetaboAnalyst
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -19,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 - library(tidyverse)
 claims: []
@@ -46,6 +50,7 @@ attribution:
 
 # within-subject-correlation-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Repeated measures ANOVA with subject-level random effects applied to longitudinal metabolomics data to identify and rank metabolites by statistical significance of group differences across time or condition. This skill enables feature selection by isolating between-group variance while accounting for within-subject correlation structure.

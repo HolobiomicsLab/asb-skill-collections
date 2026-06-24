@@ -1,6 +1,7 @@
 ---
 name: r-object-inspection-and-validation
-description: Use when after performing assignment operations (assign_ri, assign_smiles) or combining multiple library objects (e.
+description: Use when after performing assignment operations (assign_ri, assign_smiles)
+  or combining multiple library objects (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +14,7 @@ metadata:
   - MS-DIAL
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -41,6 +43,7 @@ attribution:
 
 # R Object Inspection and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that mass spectral library objects in R have been correctly populated with expected fields (e.g., RI, SMILES, InChIKey) after compilation and assignment operations. This skill ensures data integrity before writing libraries to MSP format or downstream use in MS-DIAL.

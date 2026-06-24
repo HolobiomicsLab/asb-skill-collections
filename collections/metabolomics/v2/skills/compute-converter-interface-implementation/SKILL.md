@@ -1,6 +1,9 @@
 ---
 name: compute-converter-interface-implementation
-description: Use when you need to add a new local chemical structure conversion capability to MSMetaEnhancer when existing web-service converters (CTS, CIR, PubChem) are unavailable, too slow, or unsuitable for your workflow, and you have a chemical transformation (e.
+description: Use when you need to add a new local chemical structure conversion capability
+  to MSMetaEnhancer when existing web-service converters (CTS, CIR, PubChem) are unavailable,
+  too slow, or unsuitable for your workflow, and you have a chemical transformation
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +14,7 @@ metadata:
   - MSMetaEnhancer
   - pytest
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

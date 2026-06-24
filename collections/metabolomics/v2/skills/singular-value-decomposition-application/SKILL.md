@@ -1,6 +1,9 @@
 ---
 name: singular-value-decomposition-application
-description: Use when you have a metabolite intensity matrix (samples × metabolites, log₂-transformed and standardized) and pathway definitions (pathway IDs mapped to metabolite sets), and you need to score pathway activity across samples in a way that tolerates noise and missing peaks.
+description: Use when you have a metabolite intensity matrix (samples × metabolites,
+  log₂-transformed and standardized) and pathway definitions (pathway IDs mapped to
+  metabolite sets), and you need to score pathway activity across samples in a way
+  that tolerates noise and missing peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3565
@@ -14,11 +17,13 @@ metadata:
   - Scipy preprocessing
   - Reactome
   - KEGG
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

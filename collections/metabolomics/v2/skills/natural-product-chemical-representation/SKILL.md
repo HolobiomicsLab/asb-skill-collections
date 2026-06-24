@@ -1,6 +1,9 @@
 ---
 name: natural-product-chemical-representation
-description: Use when you have a set of natural product molecules (or suspected natural products) in SMILES, InChI, or SDF format and need a chemical representation suitable for biosynthetic classification, structural screening, or machine learning tasks where standard generic fingerprints (e.
+description: Use when you have a set of natural product molecules (or suspected natural
+  products) in SMILES, InChI, or SDF format and need a chemical representation suitable
+  for biosynthetic classification, structural screening, or machine learning tasks
+  where standard generic fingerprints (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0291
@@ -14,12 +17,14 @@ metadata:
   - RDKit
   - black
   - pytest
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:

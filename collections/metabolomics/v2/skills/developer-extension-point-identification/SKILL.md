@@ -1,6 +1,9 @@
 ---
 name: developer-extension-point-identification
-description: Use when when you need to onboard developers into a modular, object-oriented codebase (such as CloMet) and want to pinpoint specific classes, abstract interfaces, or factory patterns that serve as official extension points rather than requiring developers to read through entire source trees.
+description: Use when when you need to onboard developers into a modular, object-oriented
+  codebase (such as CloMet) and want to pinpoint specific classes, abstract interfaces,
+  or factory patterns that serve as official extension points rather than requiring
+  developers to read through entire source trees.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - Docker
   - PlantUML
   - Git
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet

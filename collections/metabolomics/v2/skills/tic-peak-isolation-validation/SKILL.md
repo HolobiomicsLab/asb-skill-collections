@@ -1,6 +1,9 @@
 ---
 name: tic-peak-isolation-validation
-description: Use when you have raw mass spectrometry data (mzML, mzXML, or CDF format) from at least 3 samples and need to automatically identify candidate peak regions in the TIC chromatogram before extracting ion-level parameters for XCMS or MZmine2 processing.
+description: Use when you have raw mass spectrometry data (mzML, mzXML, or CDF format)
+  from at least 3 samples and need to automatically identify candidate peak regions
+  in the TIC chromatogram before extracting ion-level parameters for XCMS or MZmine2
+  processing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +17,7 @@ metadata:
   - XCMS
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

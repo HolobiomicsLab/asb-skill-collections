@@ -1,6 +1,8 @@
 ---
 name: pathway-level-statistical-inference
-description: Use when when you have genotype data (variants grouped by pathway annotation) and quantitative or binary phenotype data, and you want to test whether a pathway as a whole is associated with the phenotype, rather than testing individual variants.
+description: Use when when you have genotype data (variants grouped by pathway annotation)
+  and quantitative or binary phenotype data, and you want to test whether a pathway
+  as a whole is associated with the phenotype, rather than testing individual variants.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -10,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_2885
   tools:
   - PaIRKAT
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -38,6 +41,7 @@ attribution:
 
 # pathway-level-statistical-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply kernel association tests to detect pathway-level genetic associations by integrating genotype and phenotype data across multiple variants within a pathway. This skill uses PaIRKAT (Pathway-Integrated Rank Kernel Association Test) to test for collective pathway effects while accounting for variant correlation structure.

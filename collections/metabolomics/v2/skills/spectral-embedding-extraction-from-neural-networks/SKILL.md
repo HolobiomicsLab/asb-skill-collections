@@ -1,6 +1,9 @@
 ---
 name: spectral-embedding-extraction-from-neural-networks
-description: Use when you have a set of preprocessed MS/MS spectra (binned to 10,000 m/z bins with intensities square-root transformed) and a trained MS2DeepScore Siamese neural network model, and you need to compute 200-dimensional spectral embeddings for dimensionality reduction, clustering, or chemical space.
+description: Use when you have a set of preprocessed MS/MS spectra (binned to 10,000
+  m/z bins with intensities square-root transformed) and a trained MS2DeepScore Siamese
+  neural network model, and you need to compute 200-dimensional spectral embeddings
+  for dimensionality reduction, clustering, or chemical space.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,15 +19,19 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
 - Using the t-SNE [28] implementation from scikit-learn [29]
-- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates
+- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional
+  coordinates
 - Our MS2DeepScore Python library offers two types of data generators
 claims: []
 provenance:
@@ -49,6 +56,7 @@ attribution:
 
 # spectral-embedding-extraction-from-neural-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract fixed-dimensional dense vector representations (embeddings) from MS/MS spectra using a trained Siamese neural network's base network component. These embeddings encode learned chemically meaningful features and enable downstream tasks such as spectral clustering, visualization, and structural similarity prediction without requiring explicit molecular fingerprint computation.

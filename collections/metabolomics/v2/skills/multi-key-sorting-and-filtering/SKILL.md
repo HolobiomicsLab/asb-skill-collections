@@ -1,6 +1,9 @@
 ---
 name: multi-key-sorting-and-filtering
-description: Use when when converting tabular data to JSON via the matrix directive, you need to exclude records that fail domain-specific validation (e.g., only retain records where a 'test' condition evaluates to true) and/or reorder the output list by one or more fields in ascending or descending order.
+description: Use when when converting tabular data to JSON via the matrix directive,
+  you need to exclude records that fail domain-specific validation (e.g., only retain
+  records where a 'test' condition evaluates to true) and/or reorder the output list
+  by one or more fields in ascending or descending order.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # multi-key-sorting-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply multi-field sorting and record-level filtering to extracted JSON tabular data using sort_by, sort_order, and test directives in the matrix directive handler. This skill enables selective organization and subset extraction of records based on custom Boolean conditions and field-based ordering.

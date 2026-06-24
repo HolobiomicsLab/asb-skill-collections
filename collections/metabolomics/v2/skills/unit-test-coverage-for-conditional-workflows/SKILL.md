@@ -1,6 +1,7 @@
 ---
 name: unit-test-coverage-for-conditional-workflows
-description: Use when when refactoring or adding workflow branching logic that routes spectral results into separate processing paths (e.
+description: Use when when refactoring or adding workflow branching logic that routes
+  spectral results into separate processing paths (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,11 +16,13 @@ metadata:
   - GitHub Actions / CI
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 - push your feature branch to (your fork of) the ms2query repository on GitHub
 - you want to make some kind of change to the code base

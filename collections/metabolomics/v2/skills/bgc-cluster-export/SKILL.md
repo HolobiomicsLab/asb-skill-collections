@@ -1,6 +1,9 @@
 ---
 name: bgc-cluster-export
-description: Use when you have completed a BiG-SLiCE v2 clustering analysis and need to convert the internal SQLite3 database results into human-readable, tabular TSV files for import into spreadsheet applications, statistical tools, or custom analysis pipelines that do not support SQLite3 directly.
+description: Use when you have completed a BiG-SLiCE v2 clustering analysis and need
+  to convert the internal SQLite3 database results into human-readable, tabular TSV
+  files for import into spreadsheet applications, statistical tools, or custom analysis
+  pipelines that do not support SQLite3 directly.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3999
@@ -10,6 +13,7 @@ metadata:
   tools:
   - BiG-SLiCE
   - pyHMMER
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

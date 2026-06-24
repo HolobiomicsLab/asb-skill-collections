@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-chromatogram-generation
-description: Use when after MS2 annotation and sample alignment have been completed in JPA, when you need to visualize ion chromatograms for quality control, validate feature identities, or export chromatographic evidence for specific metabolic features across multiple samples.
+description: Use when after MS2 annotation and sample alignment have been completed
+  in JPA, when you need to visualize ion chromatograms for quality control, validate
+  feature identities, or export chromatographic evidence for specific metabolic features
+  across multiple samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +16,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

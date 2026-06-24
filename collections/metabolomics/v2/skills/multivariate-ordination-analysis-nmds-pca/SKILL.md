@@ -1,6 +1,9 @@
 ---
 name: multivariate-ordination-analysis-nmds-pca
-description: Use when after peak filtering and normalization, when you have a peak-abundance matrix (samples × assigned molecular formulas) and need to visualize and test for differences in overall molecular composition across experimental conditions or sample groups.
+description: Use when after peak filtering and normalization, when you have a peak-abundance
+  matrix (samples × assigned molecular formulas) and need to visualize and test for
+  differences in overall molecular composition across experimental conditions or sample
+  groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3697
@@ -19,12 +22,14 @@ metadata:
   - SYNCSA
   - ggpubr
   - factoextra
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 - It requires the Python dependencies NumPy
@@ -52,6 +57,7 @@ attribution:
 
 # Multivariate Ordination Analysis (NMDS & PCA)
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply non-metric multidimensional scaling (NMDS) and Principal Component Analysis (PCA) to reduced-dimensional visualization and statistical characterization of FT-ICR MS peak abundance matrices, enabling comparison of molecular composition across samples and identification of compositional gradients or clusters.

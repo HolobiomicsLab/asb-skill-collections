@@ -1,6 +1,8 @@
 ---
 name: retention-time-mz-indexing
-description: Use when when you have parsed .mzML or Thermo .raw LC-MS data and need to support interactive or programmatic queries by retention time (RT) and mass-to-charge ratio (m/z) without re-scanning the entire file.
+description: Use when when you have parsed .mzML or Thermo .raw LC-MS data and need
+  to support interactive or programmatic queries by retention time (RT) and mass-to-charge
+  ratio (m/z) without re-scanning the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -13,6 +15,7 @@ metadata:
   - mzML parser
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00618
   title: lcmsWorld

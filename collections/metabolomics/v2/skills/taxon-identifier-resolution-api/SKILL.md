@@ -1,6 +1,9 @@
 ---
 name: taxon-identifier-resolution-api
-description: Use when you have a metadata table with raw, non-standardized taxonomy strings (e.g. misspellings, deprecated nomenclature, or aliases) in separate species, genus, and family columns, and you need to standardize them before performing taxon-dependent scoring (e.
+description: Use when you have a metadata table with raw, non-standardized taxonomy
+  strings (e.g. misspellings, deprecated nomenclature, or aliases) in separate species,
+  genus, and family columns, and you need to standardize them before performing taxon-dependent
+  scoring (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -11,13 +14,15 @@ metadata:
   - Open Tree of Life
   - INVENTA
   - Lotus Database
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- The taxonomy should be cleaned to uptoday recognized names, you can use the Open Tree of Life
+- The taxonomy should be cleaned to uptoday recognized names, you can use the Open
+  Tree of Life
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

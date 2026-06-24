@@ -1,6 +1,9 @@
 ---
 name: feature-relationship-edge-weighting
-description: Use when after structural clusters have been identified by MamsiStructSearch (via isotopologue, adduct, and cross-assay link detection), and you need to construct a NetworkX graph where edges encode the biochemical relationship type and strength between features for downstream curation.
+description: Use when after structural clusters have been identified by MamsiStructSearch
+  (via isotopologue, adduct, and cross-assay link detection), and you need to construct
+  a NetworkX graph where edges encode the biochemical relationship type and strength
+  between features for downstream curation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -16,6 +19,7 @@ metadata:
   - Python
   - NetworkX
   - MamsiStructSearch
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -26,7 +30,8 @@ evidence_spans:
 - 'Dependencies: pyvis'
 - 'Dependencies: matplotlib'
 - import pandas as pd
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +56,7 @@ attribution:
 
 # feature-relationship-edge-weighting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign weighted edges in a metabolomics feature network graph based on structural relationship types (isotopologue, adduct, cross-assay) detected from mass-to-charge ratio and retention time patterns. This differentiates the strength and type of biochemical linkage between features during network visualization and interpretation.

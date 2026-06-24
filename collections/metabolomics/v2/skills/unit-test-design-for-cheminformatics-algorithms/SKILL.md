@@ -1,6 +1,8 @@
 ---
 name: unit-test-design-for-cheminformatics-algorithms
-description: Use when you have implemented a custom Filter subclass (e.g., Tanimoto sampling, metabolomics matching, or target filtering) in minedatabase/filters.py and need to verify that similarity scoring, scaling transformations (e.
+description: Use when you have implemented a custom Filter subclass (e.g., Tanimoto
+  sampling, metabolomics matching, or target filtering) in minedatabase/filters.py
+  and need to verify that similarity scoring, scaling transformations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +13,7 @@ metadata:
   - pytest
   - RDKit
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-molecular-formula-handling
-description: 'Use when you have raw or processed FT-ICR MS spectra with detected peaks (m/z values) and need to: (1) assign elemental compositions to each peak, (2) filter assignments by mass error tolerance and isotopic presence, or (3) prepare a peak table with molecular formula annotations for chemodiversity.'
+description: 'Use when you have raw or processed FT-ICR MS spectra with detected peaks
+  (m/z values) and need to: (1) assign elemental compositions to each peak, (2) filter
+  assignments by mass error tolerance and isotopic presence, or (3) prepare a peak
+  table with molecular formula annotations for chemodiversity.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,12 +18,14 @@ metadata:
   - KEGG database
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # mass-spectrometry-molecular-formula-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign molecular formulas to detected m/z peaks in high-resolution FT-ICR MS data and filter results by mass accuracy and isotopic consistency. This is a foundational preprocessing step that converts raw peak lists into chemically interpretable, annotated peak tables suitable for downstream analysis.

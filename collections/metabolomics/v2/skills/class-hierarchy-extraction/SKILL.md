@@ -1,6 +1,8 @@
 ---
 name: class-hierarchy-extraction
-description: Use when you need to understand the extensibility surface of a modular object-oriented codebase, particularly when planning to contribute new modules, extend existing functionality, or onboard developers unfamiliar with the architecture.
+description: Use when you need to understand the extensibility surface of a modular
+  object-oriented codebase, particularly when planning to contribute new modules,
+  extend existing functionality, or onboard developers unfamiliar with the architecture.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -10,6 +12,7 @@ metadata:
   - Docker
   - Git
   - PlantUML
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet

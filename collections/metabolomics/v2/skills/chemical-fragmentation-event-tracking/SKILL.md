@@ -1,6 +1,9 @@
 ---
 name: chemical-fragmentation-event-tracking
-description: Use when when running a ViMMS Environment simulation with save_eval flag enabled and you need to correlate fragmentation events in the output mzML file back to their originating chemical compounds for downstream evaluation, optimization, or validation of acquisition strategies.
+description: Use when when running a ViMMS Environment simulation with save_eval flag
+  enabled and you need to correlate fragmentation events in the output mzML file back
+  to their originating chemical compounds for downstream evaluation, optimization,
+  or validation of acquisition strategies.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -13,14 +16,17 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # Chemical Fragmentation Event Tracking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Track and persist fragmentation events and their source chemical definitions during simulated mass spectrometry acquisitions, enabling post-run linkage between generated MS/MS scans and the chemicals that produced them. This skill is essential for evaluating data-dependent acquisition strategies where understanding which chemical gave rise to which fragmentation spectrum is necessary for validation and optimization.

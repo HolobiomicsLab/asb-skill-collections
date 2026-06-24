@@ -1,6 +1,7 @@
 ---
 name: cyp-isoform-substrate-prediction
-description: Use when you have a set of molecular structures (in .sdf or .csv SMILES format) and need to predict which CYP isoforms will metabolize them.
+description: Use when you have a set of molecular structures (in .sdf or .csv SMILES
+  format) and need to predict which CYP isoforms will metabolize them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -9,6 +10,7 @@ metadata:
   - http://edamontology.org/topic_3375
   tools:
   - CypReact
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -36,6 +38,7 @@ attribution:
 
 # cyp-isoform-substrate-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict cytochrome P450 (CYP) isoform-specific metabolic reactivity for molecular structures using the CypReact command-line tool. This skill enables screening of drug candidates and xenobiotics against single or multiple CYP isoforms to assess metabolic stability and drug–drug interaction potential.

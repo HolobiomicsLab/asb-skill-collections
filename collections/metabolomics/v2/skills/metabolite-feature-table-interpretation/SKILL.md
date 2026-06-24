@@ -1,6 +1,7 @@
 ---
 name: metabolite-feature-table-interpretation
-description: Use when immediately after executing the MetaboAnalystR 4.0 unified LC-MS workflow (feature detection and quantification module) on raw mzML or netCDF data.
+description: Use when immediately after executing the MetaboAnalystR 4.0 unified LC-MS
+  workflow (feature detection and quantification module) on raw mzML or netCDF data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -11,6 +12,7 @@ metadata:
   - MetaboAnalystR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr

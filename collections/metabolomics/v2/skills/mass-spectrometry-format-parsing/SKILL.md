@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-format-parsing
-description: Use when you have mzML or mzXML mass spectrometry data files and need to extract and validate spectral records (m/z and intensity arrays) for lossless compression, lossy transformation, or format conversion.
+description: Use when you have mzML or mzXML mass spectrometry data files and need
+  to extract and validate spectral records (m/z and intensity arrays) for lossless
+  compression, lossy transformation, or format conversion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +15,7 @@ metadata:
   - msconvert
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab636/6363791
   title: mspack

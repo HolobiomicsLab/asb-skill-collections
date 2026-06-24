@@ -1,6 +1,9 @@
 ---
 name: bioconductor-summarized-experiment-construction
-description: 'Use when after successfully reading and validating a tab-delimited metabolomics file (containing mandatory columns: aliquot, compound, area, type, injection_time, batch) using readData, and before applying batch correction, outlier detection, or other QC filters.'
+description: 'Use when after successfully reading and validating a tab-delimited metabolomics
+  file (containing mandatory columns: aliquot, compound, area, type, injection_time,
+  batch) using readData, and before applying batch correction, outlier detection,
+  or other QC filters.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3791
@@ -18,6 +21,7 @@ metadata:
   - mzrtsim
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -28,8 +32,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -57,6 +63,7 @@ attribution:
 
 # bioconductor-summarized-experiment-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a validated tab-delimited metabolomics data frame into a Bioconductor SummarizedExperiment object with automatically computed assays (primary compound areas, internal standard areas, and compound/IS ratios) and structured metadata. This skill bridges raw data import and downstream quality control analysis in mzQuality workflows.

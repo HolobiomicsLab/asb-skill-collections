@@ -1,6 +1,9 @@
 ---
 name: pathway-kernel-association-testing
-description: Use when you have paired genotype and phenotype data and want to test for association between a predefined genetic pathway (set of genes or variants) and a quantitative or binary trait, particularly when individual-variant tests lack power or when pathway-level aggregation is scientifically.
+description: Use when you have paired genotype and phenotype data and want to test
+  for association between a predefined genetic pathway (set of genes or variants)
+  and a quantitative or binary trait, particularly when individual-variant tests lack
+  power or when pathway-level aggregation is scientifically.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3197
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3053
   tools:
   - PaIRKAT
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -37,6 +41,7 @@ attribution:
 
 # pathway-kernel-association-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the PaIRKAT (pathway-integrated kernel association test) function to genotype and phenotype data to compute pathway-level association test statistics and p-values. This skill enables detection of associations between genetic pathways and phenotypic traits by aggregating variant effects within biologically defined gene sets.

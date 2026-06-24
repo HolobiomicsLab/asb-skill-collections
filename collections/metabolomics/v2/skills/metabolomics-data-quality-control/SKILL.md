@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-quality-control
-description: Use when after loading raw metabolomics data (e.g., from Metabolon, Nightingale, Olink, or SomaLogic platforms) into a Metaboprep object and before statistical analysis or modeling.
+description: Use when after loading raw metabolomics data (e.g., from Metabolon, Nightingale,
+  Olink, or SomaLogic platforms) into a Metaboprep object and before statistical analysis
+  or modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - ggplot2
   - metaboprep
   - dendextend
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -44,6 +47,7 @@ attribution:
 
 # metabolomics-data-quality-control
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A systematic pipeline for filtering untargeted and targeted metabolomics datasets by applying user-defined thresholds on sample missingness, feature missingness, total peak area outliers, and principal component outliers. This skill removes low-quality samples and features while preserving data integrity for downstream analysis.

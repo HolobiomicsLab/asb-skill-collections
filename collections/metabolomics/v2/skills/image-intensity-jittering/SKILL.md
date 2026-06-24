@@ -1,6 +1,8 @@
 ---
 name: image-intensity-jittering
-description: Use when when preparing ion images (single-channel 2D arrays or multi-channel spectral images) from mass spectrometry imaging for contrastive learning in DeepION's COL or ISO modes.
+description: Use when when preparing ion images (single-channel 2D arrays or multi-channel
+  spectral images) from mass spectrometry imaging for contrastive learning in DeepION's
+  COL or ISO modes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,12 +14,14 @@ metadata:
   - kornia
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # image-intensity-jittering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply color jitter augmentation to ion images in mass spectrometry imaging to modulate pixel intensity values, generating varied augmented versions for contrastive learning. This technique helps prevent representation collapse and improves the robustness of learned embeddings.

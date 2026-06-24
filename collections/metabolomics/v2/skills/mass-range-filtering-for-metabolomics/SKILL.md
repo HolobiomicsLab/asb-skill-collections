@@ -1,6 +1,8 @@
 ---
 name: mass-range-filtering-for-metabolomics
-description: Use when when preparing a chemical database for virtual or real MS/MS acquisition, and you need to focus on a specific m/z window (e.g., 100–1000) that matches your instrument's scan range or your metabolomics study's analytical scope.
+description: Use when when preparing a chemical database for virtual or real MS/MS
+  acquisition, and you need to focus on a specific m/z window (e.g., 100–1000) that
+  matches your instrument's scan range or your metabolomics study's analytical scope.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,14 +14,17 @@ metadata:
   - Python pickle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # mass-range-filtering-for-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a metabolite database by m/z range to retain only compounds within a target mass spectrometry analysis window. This preprocessing step isolates chemically relevant formulas before acquisition strategy simulation or spectral library construction.

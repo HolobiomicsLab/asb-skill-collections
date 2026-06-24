@@ -1,6 +1,8 @@
 ---
 name: hpc-job-array-orchestration
-description: Use when you have a machine learning training workflow (e.g., k-fold cross-validation) where each fold is independent, GPU-accelerated, and can run in parallel.
+description: Use when you have a machine learning training workflow (e.g., k-fold
+  cross-validation) where each fold is independent, GPU-accelerated, and can run in
+  parallel.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,6 +14,7 @@ metadata:
   - MSNovelist
   - SLURM
   - Singularity
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

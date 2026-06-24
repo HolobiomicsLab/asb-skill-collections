@@ -1,6 +1,8 @@
 ---
 name: multiassay-data-structure-construction
-description: 'Use when you have three separate data components from a metabolomics assay: (1) a matrix of metabolite measurements (assay) with samples as columns and metabolites as rows, (2) a table of metabolite annotations (rowData, e.'
+description: 'Use when you have three separate data components from a metabolomics
+  assay: (1) a matrix of metabolite measurements (assay) with samples as columns and
+  metabolites as rows, (2) a table of metabolite annotations (rowData, e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3906
@@ -11,6 +13,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +48,7 @@ attribution:
 
 # MultiAssayExperiment Data Structure Construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge heterogeneous metabolomic assay data (metabolite measurements, metabolite annotations, and sample metadata) into a unified MultiAssayExperiment object to enable standardized downstream analysis in R. This skill is essential for preparing metabolite tables with associated metadata for quality control, normalization, and differential analysis workflows.

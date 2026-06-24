@@ -1,6 +1,8 @@
 ---
 name: data-column-recognition-and-mapping
-description: Use when when uploading a delimited CSV or similar tabular file to Punc'data containing high-resolution mass spectrometry results, and the column headers are present but their semantic roles (e.
+description: Use when when uploading a delimited CSV or similar tabular file to Punc'data
+  containing high-resolution mass spectrometry results, and the column headers are
+  present but their semantic roles (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,12 +13,15 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data
 evidence_spans:
-- Punc'data is an interactive attribution and vizualization tool made for high resolution mass spectrometry results.
-- Punc'data is an interactive attribution and vizualization tool made for high resolution mass spectrometry results
+- Punc'data is an interactive attribution and vizualization tool made for high resolution
+  mass spectrometry results.
+- Punc'data is an interactive attribution and vizualization tool made for high resolution
+  mass spectrometry results
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

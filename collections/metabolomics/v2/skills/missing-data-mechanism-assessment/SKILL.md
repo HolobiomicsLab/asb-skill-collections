@@ -1,6 +1,9 @@
 ---
 name: missing-data-mechanism-assessment
-description: Use when when you have a filtered metabolite abundance matrix with remaining missing values after feature-level filtering (e.g., removal of metabolites with >80% missingness), and you need to decide whether missingness is concentrated in specific features or sample pairs, or distributed randomly.
+description: Use when when you have a filtered metabolite abundance matrix with remaining
+  missing values after feature-level filtering (e.g., removal of metabolites with
+  >80% missingness), and you need to decide whether missingness is concentrated in
+  specific features or sample pairs, or distributed randomly.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +14,7 @@ metadata:
   - R
   - Bioconductor
   - marr
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -44,6 +48,7 @@ attribution:
 
 # missing-data-mechanism-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assessment of missingness patterns in high-dimensional biological replicate data to determine whether missing values are systematic (feature-level or sample-pair-level) or random, informing choice of imputation strategy. This skill is critical before applying Bayesian Principal Component Analysis (BPCA) or other missing-value handlers in metabolomics preprocessing pipelines.

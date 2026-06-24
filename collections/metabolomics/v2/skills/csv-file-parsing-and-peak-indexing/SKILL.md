@@ -1,6 +1,9 @@
 ---
 name: csv-file-parsing-and-peak-indexing
-description: Use when you have a metabolomics dataset (CSV format) containing detected peaks with m/z values and optionally retention time windows, and you need to filter a Pickaxe-generated compound expansion to keep only compounds whose masses match these observed peaks within a specified mass tolerance.
+description: Use when you have a metabolomics dataset (CSV format) containing detected
+  peaks with m/z values and optionally retention time windows, and you need to filter
+  a Pickaxe-generated compound expansion to keep only compounds whose masses match
+  these observed peaks within a specified mass tolerance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - pandas (implied)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

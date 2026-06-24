@@ -1,6 +1,9 @@
 ---
 name: strain-spectrum-mapping-linkage
-description: Use when when you have downloaded and extracted a GNPS archive (from GNPS1 or GNPS2 workflows) and need to establish which spectral records (from spectra.mgf) were generated from which bacterial strains or samples. The file_mappings.tsv or file_mappings.
+description: Use when when you have downloaded and extracted a GNPS archive (from
+  GNPS1 or GNPS2 workflows) and need to establish which spectral records (from spectra.mgf)
+  were generated from which bacterial strains or samples. The file_mappings.tsv or
+  file_mappings.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,11 +17,13 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 - make sure the existing tests still work by running ``pytest``

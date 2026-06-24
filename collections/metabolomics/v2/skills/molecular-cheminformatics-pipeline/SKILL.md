@@ -1,6 +1,8 @@
 ---
 name: molecular-cheminformatics-pipeline
-description: Use when you have raw molecular structures in SMILES or SDF format and need to prepare molecular descriptors as input to a descriptor-based classifier (e.g., BitterPredict.m).
+description: Use when you have raw molecular structures in SMILES or SDF format and
+  need to prepare molecular descriptors as input to a descriptor-based classifier
+  (e.g., BitterPredict.m).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -11,11 +13,13 @@ metadata:
   - BitterPredict
   - RDKit
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +43,7 @@ attribution:
 
 # Reconstruct the chemical structure descriptor extraction pipeline
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw molecular structures (SMILES or SDF) into pre-computed descriptor tables (CSV or Excel) suitable for downstream machine-learning classifiers like BitterPredict. This pipeline bridges molecular representation and feature engineering by validating chemical syntax, calculating descriptors, and formatting output.

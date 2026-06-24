@@ -1,6 +1,7 @@
 ---
 name: dataframe-construction-from-backend-sources
-description: Use when when implementing a new MsBackend subclass that stores only a subset of core spectra variables (e.
+description: Use when when implementing a new MsBackend subclass that stores only
+  a subset of core spectra variables (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,11 +11,13 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []
@@ -40,6 +43,7 @@ attribution:
 
 # dataframe-construction-from-backend-sources
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a DataFrame object containing complete spectra variables by implementing a spectraData() method that retrieves user-supplied variables from a backend storage slot and fills missing core spectra variables with NA values. This ensures uniform access to all expected spectra metadata across heterogeneous MsBackend implementations.

@@ -1,6 +1,9 @@
 ---
 name: statistical-distribution-visualization
-description: Use when after computing aggregate statistics (mean, median, standard deviation, frequency distributions, similarity coefficients) over a large dataset of molecular fingerprints or feature vectors, when you need to verify that computed metrics exhibit expected distributional shapes and to identify.
+description: Use when after computing aggregate statistics (mean, median, standard
+  deviation, frequency distributions, similarity coefficients) over a large dataset
+  of molecular fingerprints or feature vectors, when you need to verify that computed
+  metrics exhibit expected distributional shapes and to identify.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -21,6 +24,7 @@ metadata:
   - Jupyter
   - matplotlib / seaborn
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -28,7 +32,8 @@ derived_from:
   title: ''
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:
@@ -57,6 +62,7 @@ attribution:
 
 # statistical-distribution-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and display distribution plots (histograms, density curves) for computed statistical metrics to characterize the shape, spread, and shape of a dataset's key properties. This skill is essential for exploratory analysis of fingerprint or molecular feature datasets where understanding distributional properties (bit-frequency distributions, sparsity, similarity scores) directly informs downstream model selection and data quality assessment.

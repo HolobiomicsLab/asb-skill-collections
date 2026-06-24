@@ -1,6 +1,8 @@
 ---
 name: count-verification-and-validation
-description: Use when you have grouped unique 2D chemical structures by organism prevalence and need to confirm that the counts in each frequency bin (singleton, low-diversity, medium-diversity, high-diversity) match published or curated reference values.
+description: Use when you have grouped unique 2D chemical structures by organism prevalence
+  and need to confirm that the counts in each frequency bin (singleton, low-diversity,
+  medium-diversity, high-diversity) match published or curated reference values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +47,7 @@ attribution:
 
 # Count Verification and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that binned frequency counts of unique chemical structures match gold-standard reference counts across organism-prevalence categories. This skill ensures data integrity in large structure-organism pair datasets by detecting discrepancies between computed and expected distributions.

@@ -1,6 +1,9 @@
 ---
 name: dda-precursor-fragment-ion-grouping
-description: Use when when you have raw DDA mass spectrometry data (mzML, mzXML, or netCDF format) where precursor ions have been fragmented and you need to associate each fragment ion back to its parent precursor ion to generate coherent, precursor-specific fragmentation spectra for chemical annotation.
+description: Use when when you have raw DDA mass spectrometry data (mzML, mzXML, or
+  netCDF format) where precursor ions have been fragmented and you need to associate
+  each fragment ion back to its parent precursor ion to generate coherent, precursor-specific
+  fragmentation spectra for chemical annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,13 @@ metadata:
   - IDSL.IPA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
 claims: []
 provenance:

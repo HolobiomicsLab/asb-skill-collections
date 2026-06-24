@@ -1,6 +1,9 @@
 ---
 name: linear-regression-concentration-calibration
-description: Use when your metabolomics experiment includes calibration line samples with known concentrations for spiked compounds, and you have computed batch-corrected compound/internal-standard ratios (ratio_corrected assay) and wish to convert relative ratios into absolute quantitative values for pathway.
+description: Use when your metabolomics experiment includes calibration line samples
+  with known concentrations for spiked compounds, and you have computed batch-corrected
+  compound/internal-standard ratios (ratio_corrected assay) and wish to convert relative
+  ratios into absolute quantitative values for pathway.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -11,6 +14,7 @@ metadata:
   - mzQuality
   - R
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -41,6 +45,7 @@ attribution:
 
 # linear-regression-concentration-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate absolute compound concentrations in metabolomics samples by fitting linear regression models to calibration line samples with known spiked concentrations, applied to batch-corrected compound/internal-standard ratios. This enables quantitative downstream analysis when reference standards are available.

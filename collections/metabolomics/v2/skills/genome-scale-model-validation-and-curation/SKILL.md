@@ -1,6 +1,9 @@
 ---
 name: genome-scale-model-validation-and-curation
-description: Use when you have multiple draft genome-scale metabolic reconstructions in standard formats (JSON, XML, SBML) representing individual community members or assembly variants, and you need to verify they are structurally sound and consistently annotated before merging them into a consensus model or.
+description: Use when you have multiple draft genome-scale metabolic reconstructions
+  in standard formats (JSON, XML, SBML) representing individual community members
+  or assembly variants, and you need to verify they are structurally sound and consistently
+  annotated before merging them into a consensus model or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -37,6 +41,7 @@ attribution:
 
 # genome-scale-model-validation-and-curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and curate draft genome-scale metabolic models by parsing, checking structural integrity, and ensuring annotation consistency before integration into consensus reconstructions. This skill ensures input models meet quality standards required for reliable community-level metabolic analysis.

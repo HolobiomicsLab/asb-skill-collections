@@ -1,6 +1,8 @@
 ---
 name: enrichment-metric-scaling-and-normalization
-description: Use when you have parsed GO enrichment results (CSV with GO term identifiers, p-values or adjusted p-values, gene ratios, and gene counts) and need to prepare these metrics for dotplot visualization.
+description: Use when you have parsed GO enrichment results (CSV with GO term identifiers,
+  p-values or adjusted p-values, gene ratios, and gene counts) and need to prepare
+  these metrics for dotplot visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +15,7 @@ metadata:
   - ggplot2
   - plotly
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

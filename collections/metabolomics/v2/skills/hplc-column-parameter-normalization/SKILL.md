@@ -1,6 +1,9 @@
 ---
 name: hplc-column-parameter-normalization
-description: Use when when you have raw HPLC column specifications from RepoRT or similar metadata repositories and need to prepare them as input features for machine learning models. Apply this skill before featurizing molecular structures or training graph transformers for retention time prediction.
+description: Use when when you have raw HPLC column specifications from RepoRT or
+  similar metadata repositories and need to prepare them as input features for machine
+  learning models. Apply this skill before featurizing molecular structures or training
+  graph transformers for retention time prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +15,7 @@ metadata:
   - Graphormer-RT
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
@@ -41,6 +45,7 @@ attribution:
 
 # HPLC Column Parameter Normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalizes raw HPLC column metadata (length, temperature, pH) and encodes categorical column features (company, USP type, solvents, additives) into a unified numeric feature vector combining HSM parameter blocks with Tanaka physicochemical parameters. This standardization enables method-independent retention time prediction across reverse-phase and HILIC chromatography.

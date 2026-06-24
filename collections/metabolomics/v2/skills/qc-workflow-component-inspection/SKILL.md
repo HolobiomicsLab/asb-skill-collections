@@ -1,6 +1,7 @@
 ---
 name: qc-workflow-component-inspection
-description: Use when you have acquired a versioned QC workflow definition file (YAML or JSON) from a metabolomics QC system release (e.g., v1.0.
+description: Use when you have acquired a versioned QC workflow definition file (YAML
+  or JSON) from a metabolomics QC system release (e.g., v1.0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -9,6 +10,7 @@ metadata:
   tools:
   - manual expert review
   - QC4Metabolomics
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
@@ -36,6 +38,7 @@ attribution:
 
 # qc-workflow-component-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and validate the structural integrity of QC workflow component definitions bundled in metabolomics software releases. This skill verifies schema compliance, field presence, and type consistency across workflow metadata and step declarations.

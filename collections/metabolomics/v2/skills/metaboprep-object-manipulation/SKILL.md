@@ -1,6 +1,8 @@
 ---
 name: metaboprep-object-manipulation
-description: Use when you have imported raw (un)targeted metabolite data (from Metabolon, Nightingale, Olink, or SomaLogic platforms, or custom tab-delimited tables) and need to apply a uniform, reproducible QC and normalization pipeline.
+description: Use when you have imported raw (un)targeted metabolite data (from Metabolon,
+  Nightingale, Olink, or SomaLogic platforms, or custom tab-delimited tables) and
+  need to apply a uniform, reproducible QC and normalization pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,12 +17,14 @@ metadata:
   - ggplot2
   - dendextend
   - kableExtra
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
 evidence_spans:
 - library(metaboprep)
-- quality_control(m, source_layer = "input", sample_missingness = 0.2, feature_missingness = 0.2)
+- quality_control(m, source_layer = "input", sample_missingness = 0.2, feature_missingness
+  = 0.2)
 - '%\VignetteEngine{knitr::rmarkdown}'
 - library(ggplot2)
 claims: []
@@ -46,6 +50,7 @@ attribution:
 
 # metaboprep-object-manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct, inspect, and transform Metaboprep objects—data structures that bundle metabolite abundance matrices, sample metadata, and feature metadata—through piped operations (batch normalization, quality control) and export them as tab-delimited or HTML outputs. This is the core workflow for standardizing (un)targeted metabolomic datasets before downstream analysis.

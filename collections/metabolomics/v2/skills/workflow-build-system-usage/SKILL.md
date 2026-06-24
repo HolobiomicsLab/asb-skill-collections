@@ -1,6 +1,9 @@
 ---
 name: workflow-build-system-usage
-description: 'Use when when you have a Nextflow workflow repository with a Makefile, and you need to execute the workflow for local testing or validation. Triggers include: (1) first-time setup of a downloaded workflow; (2) regression testing after code changes;'
+description: 'Use when when you have a Nextflow workflow repository with a Makefile,
+  and you need to execute the workflow for local testing or validation. Triggers include:
+  (1) first-time setup of a downloaded workflow; (2) regression testing after code
+  changes;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -11,6 +14,7 @@ metadata:
   - Nextflow
   - Make
   - conda/mamba
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41586-023-06906-8
   title: Reverse metabolomics
@@ -38,6 +42,7 @@ attribution:
 
 # workflow-build-system-usage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a build system (Make) to invoke and test a Nextflow workflow, encapsulating the workflow entrypoint and runtime environment setup. This skill ensures reproducible, documented execution of complex bioinformatics pipelines without manual parameter assembly.

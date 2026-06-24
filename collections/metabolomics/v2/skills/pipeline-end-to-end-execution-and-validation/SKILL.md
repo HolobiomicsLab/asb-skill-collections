@@ -1,6 +1,9 @@
 ---
 name: pipeline-end-to-end-execution-and-validation
-description: Use when you have a published computational pipeline with deposited code and validation data, and you need to verify that the pipeline can be executed end-to-end to reproduce reported validation metrics (annotation accuracy, coverage, or equivalent performance benchmarks).
+description: Use when you have a published computational pipeline with deposited code
+  and validation data, and you need to verify that the pipeline can be executed end-to-end
+  to reproduce reported validation metrics (annotation accuracy, coverage, or equivalent
+  performance benchmarks).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -15,6 +18,7 @@ metadata:
   - BAM
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -43,6 +47,7 @@ attribution:
 
 # pipeline-end-to-end-execution-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a complete bioinformatics pipeline (BAM) on a validation dataset and compare predicted outputs against reference annotations to assess reproduction of reported metrics. This skill validates that a computational method produces expected results when applied to the same data used in the original study.

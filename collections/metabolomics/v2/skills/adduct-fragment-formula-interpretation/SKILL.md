@@ -1,6 +1,7 @@
 ---
 name: adduct-fragment-formula-interpretation
-description: Use when after temporal correlation has identified candidate feature pairs with matching intensity profiles across time-resolved DBDI-MS experiments.
+description: Use when after temporal correlation has identified candidate feature
+  pairs with matching intensity profiles across time-resolved DBDI-MS experiments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -15,11 +16,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -44,6 +47,7 @@ attribution:
 
 # Reconstruct the mass-difference open-search step to assign candidate adduct/fragment species
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill uses exact mass differences between correlated ion features to disambiguate and annotate in-source adducts and fragments (e.g., [M-H₂O+H]⁺, [M+nO+H]⁺) in direct-injection plasma mass spectrometry data. It refines temporal-correlation-identified candidate pairs by matching observed m/z deltas against a user-defined reference table within a specified mass accuracy tolerance.

@@ -1,6 +1,8 @@
 ---
 name: unit-test-design-for-data-processing
-description: Use when building or extending a data extraction and conversion system (such as MESSES) where tabular data is transformed via conversion directives into JSON intermediate formats and then into domain-specific schemas.
+description: Use when building or extending a data extraction and conversion system
+  (such as MESSES) where tabular data is transformed via conversion directives into
+  JSON intermediate formats and then into domain-specific schemas.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +13,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # unit-test-design-for-data-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement unit tests to validate the correctness of data extraction, validation, and conversion operations in tabular-to-JSON pipelines. This skill ensures that directive handlers (e.g., str, code, record_id resolution) and schema-based transformations produce expected outputs before deploying them in production data curation workflows.

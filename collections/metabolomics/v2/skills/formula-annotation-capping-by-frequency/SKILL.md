@@ -1,6 +1,8 @@
 ---
 name: formula-annotation-capping-by-frequency
-description: Use when when preparing multi-formula MS/MS training data for a rescore model, if the raw positive examples show extreme imbalance (some formulas represented by hundreds of spectra while others have only a few).
+description: Use when when preparing multi-formula MS/MS training data for a rescore
+  model, if the raw positive examples show extreme imbalance (some formulas represented
+  by hundreds of spectra while others have only a few).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +43,7 @@ attribution:
 
 # formula-annotation-capping-by-frequency
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cap the number of positive (correctly annotated) examples per molecular formula in training data to enforce class balance constraints before rescore model training. This prevents high-frequency formulas from dominating the training set and skewing model performance toward common analytes.

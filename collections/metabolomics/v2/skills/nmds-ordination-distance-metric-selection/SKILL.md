@@ -1,6 +1,8 @@
 ---
 name: nmds-ordination-distance-metric-selection
-description: Use when when you have normalized peak intensity matrices from FT-ICR MS data or other high-resolution metabolomics experiments and need to visualize sample relationships and assess whether categorical grouping factors (e.
+description: Use when when you have normalized peak intensity matrices from FT-ICR
+  MS data or other high-resolution metabolomics experiments and need to visualize
+  sample relationships and assess whether categorical grouping factors (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3697
@@ -14,13 +16,17 @@ metadata:
   - R 4.0.2
   - R (4.0.2 or above)
   - ggplot2 or base R graphics
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
-- distances (depending on the selected normalization method) using the "vegdist" function for the vegan package and then used to perform a permutational analysis of variance (PERMANOVA)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
+- distances (depending on the selected normalization method) using the "vegdist" function
+  for the vegan package and then used to perform a permutational analysis of variance
+  (PERMANOVA)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 claims: []
@@ -46,6 +52,7 @@ attribution:
 
 # NMDS Ordination with Distance Metric Selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an appropriate distance metric (Bray-Curtis, Euclidean, or Jaccard) to calculate pairwise distances among normalized metabolite abundance samples, then perform non-metric multidimensional scaling (NMDS) to generate a 2D ordination for visualization of sample clustering and biological grouping effects.

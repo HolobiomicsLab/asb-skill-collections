@@ -1,6 +1,9 @@
 ---
 name: metabolic-network-reconstruction
-description: Use when you have matched multiomics data (genomics, epigenomics, transcriptomics, proteomics, metabolomics) across a cohort of cell lines or samples and want to infer which molecular features (genes, transcripts, proteins, methylation sites) regulate metabolite abundance.
+description: Use when you have matched multiomics data (genomics, epigenomics, transcriptomics,
+  proteomics, metabolomics) across a cohort of cell lines or samples and want to infer
+  which molecular features (genes, transcripts, proteins, methylation sites) regulate
+  metabolite abundance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -13,6 +16,7 @@ metadata:
   - Recon8D / Recon3D
   - scikit-learn RandomForest / XGBoost / Ridge / Lasso
   - Cancer Cell Line Encyclopedia (CCLE)
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.08.17.608400v2
   title: Recon8D
@@ -40,6 +44,7 @@ attribution:
 
 # metabolic-network-reconstruction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct a multiomic metabolic regulatory network by training machine learning models on aligned multiomics features (CNV, mutations, epigenomics, transcriptomics, proteomics) to predict metabolite levels and infer regulatory relationships across a reference cell line panel. This skill integrates diverse biomolecular layers to propose systems-level metabolic regulation mechanisms.

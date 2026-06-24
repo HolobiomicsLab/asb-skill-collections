@@ -1,6 +1,9 @@
 ---
 name: field-type-identification
-description: Use when when working with JSON project documents that must conform to a schema-defined structure, and you need to apply type-specific validation, sanitization, or transformation rules (e.g., URL whitespace detection, numeric range checking, mandatory field enforcement).
+description: Use when when working with JSON project documents that must conform to
+  a schema-defined structure, and you need to apply type-specific validation, sanitization,
+  or transformation rules (e.g., URL whitespace detection, numeric range checking,
+  mandatory field enforcement).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -10,11 +13,13 @@ metadata:
   tools:
   - npm
   - paired-data-form repository
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

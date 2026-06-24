@@ -1,6 +1,8 @@
 ---
 name: snakemake-dag-generation-and-execution
-description: Use when you have multiple mzML or mzML.gz files from LC-IMS-MS/MS instruments and need to apply DEIMoS feature detection, alignment, and calibration operations in a reproducible, traceable manner.
+description: Use when you have multiple mzML or mzML.gz files from LC-IMS-MS/MS instruments
+  and need to apply DEIMoS feature detection, alignment, and calibration operations
+  in a reproducible, traceable manner.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -17,16 +19,19 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - A Snakemake configuration file in `YAML <http://yaml.org/>`_ format is required.
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment with required dependencies.
+- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment
+  with required dependencies.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +55,7 @@ attribution:
 
 # snakemake-dag-generation-and-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and execute a Snakemake directed acyclic graph (DAG) to orchestrate DEIMoS multi-dimensional mass spectrometry workflows, automating mzML ingestion, peak detection, feature alignment, and CCS calibration across local or cluster compute environments. This skill ensures reproducible, scalable processing of high-dimensional LC-IMS-MS/MS data with explicit rule dependencies and configurable execution modes.

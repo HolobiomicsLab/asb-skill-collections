@@ -1,6 +1,9 @@
 ---
 name: metabolomics-chemical-mixture-generation-from-hmdb
-description: Use when you need to create realistic, diverse chemical populations for simulating LC-MS/MS acquisition strategies in a virtual environment. It is essential when you lack real metabolomics data but want to prototype and compare fragmentation strategies (e.
+description: Use when you need to create realistic, diverse chemical populations for
+  simulating LC-MS/MS acquisition strategies in a virtual environment. It is essential
+  when you lack real metabolomics data but want to prototype and compare fragmentation
+  strategies (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,6 +17,7 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -46,6 +50,7 @@ attribution:
 
 # metabolomics-chemical-mixture-generation-from-hmdb
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic chemical mixtures by sampling molecular formulas from the HMDB database within a specified m/z range, then create KnownChemical objects with realistic retention times, intensities, and chromatographic profiles for LC-MS simulation. This skill enables in-silico prototyping of fragmentation strategies before real instrument testing.

@@ -1,6 +1,9 @@
 ---
 name: xcms-grouping-result-interpretation
-description: Use when xCMS grouping has been performed on LC-MS data from studies with hundreds of samples or data acquisition periods longer than a week, where retention time drift structures are complex and the single-warping-function assumption is likely violated.
+description: Use when xCMS grouping has been performed on LC-MS data from studies
+  with hundreds of samples or data acquisition periods longer than a week, where retention
+  time drift structures are complex and the single-warping-function assumption is
+  likely violated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,12 +16,15 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
-- '`ncGTW` is an R package developed as a plug-in of `xcms`, a popular LC-MS data analysis R package'
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
+- '`ncGTW` is an R package developed as a plug-in of `xcms`, a popular LC-MS data
+  analysis R package'
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -44,6 +50,7 @@ attribution:
 
 # xcms-grouping-result-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and validate XCMS grouping results by detecting misaligned feature groups using ncGTW's misalignDetect() function with dual bandwidth parameters. This skill identifies alignment artifacts that arise when XCMS assumes a single warping function across all m/z bins, enabling targeted realignment of problematic features before downstream analysis.

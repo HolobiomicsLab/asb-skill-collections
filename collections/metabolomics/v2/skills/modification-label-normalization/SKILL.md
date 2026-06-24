@@ -1,6 +1,8 @@
 ---
 name: modification-label-normalization
-description: Use when when PSM files from heterogeneous proteomics search engines (MaxQuant, MSGFPlus, Sage, X!Tandem, etc.) use inconsistent or proprietary modification notations that cannot be directly consumed by feature generators (e.
+description: Use when when PSM files from heterogeneous proteomics search engines
+  (MaxQuant, MSGFPlus, Sage, X!Tandem, etc.) use inconsistent or proprietary modification
+  notations that cannot be directly consumed by feature generators (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   - DeepLC
   - Percolator
   - Mokapot
+  license_tier: open
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

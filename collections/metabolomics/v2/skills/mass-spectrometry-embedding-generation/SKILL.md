@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-embedding-generation
-description: Use when when you have preprocessed MS/MS spectral data (normalized peak intensities and m/z values) and need to convert individual spectra into fixed-dimensional vector representations for similarity-based metabolite matching or comparative analysis.
+description: Use when when you have preprocessed MS/MS spectral data (normalized peak
+  intensities and m/z values) and need to convert individual spectra into fixed-dimensional
+  vector representations for similarity-based metabolite matching or comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +15,7 @@ metadata:
   - ChemEmbed
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -41,6 +44,7 @@ attribution:
 
 # mass-spectrometry-embedding-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract multidimensional molecular embedding vectors from preprocessed MS/MS spectra using a trained Convolutional Neural Network (CNN) model. These embeddings serve as feature representations for downstream metabolite identification and candidate matching against reference databases.

@@ -1,6 +1,7 @@
 ---
 name: imaging-parameter-metadata-annotation
-description: Use when after mzML-to-imzML conversion has produced barebones imzML files with pixel alignment but no experimental metadata.
+description: Use when after mzML-to-imzML conversion has produced barebones imzML
+  files with pixel alignment but no experimental metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +17,7 @@ metadata:
   - Docker
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer

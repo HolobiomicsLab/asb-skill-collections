@@ -1,6 +1,8 @@
 ---
 name: tensorflow-model-layer-inspection
-description: Use when after converting or downloading a pre-trained Keras model to HDF5 TensorFlow 2.3.0 format, particularly when integrating the model into a fixed-interface pipeline (e.g., NP Classifier) that expects specific named input/output layers.
+description: Use when after converting or downloading a pre-trained Keras model to
+  HDF5 TensorFlow 2.3.0 format, particularly when integrating the model into a fixed-interface
+  pipeline (e.g., NP Classifier) that expects specific named input/output layers.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -12,6 +14,7 @@ metadata:
   - TensorFlow 2.3.0
   - Python
   - Docker
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -42,6 +45,7 @@ attribution:
 
 # tensorflow-model-layer-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and validate the layer architecture of a TensorFlow 2.3.0 HDF5 model to confirm the presence and names of input and output layers required for downstream pipeline integration. This skill ensures structural compliance before model deployment in containerized environments.

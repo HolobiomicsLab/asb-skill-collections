@@ -1,6 +1,8 @@
 ---
 name: low-resolution-mass-spectrometry-analysis
-description: Use when you have low-resolution MS data (e.g., from quadrupole instruments) in vendor format, a list of target compounds with known monoisotopic m/z and retention times, and need to extract per-isotopologue area and intensity values.
+description: Use when you have low-resolution MS data (e.g., from quadrupole instruments)
+  in vendor format, a list of target compounds with known monoisotopic m/z and retention
+  times, and need to extract per-isotopologue area and intensity values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,12 +17,14 @@ metadata:
   - Proteowizard MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
 evidence_spans:
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - isoSCAN uses `mzR` package in order to read MS files

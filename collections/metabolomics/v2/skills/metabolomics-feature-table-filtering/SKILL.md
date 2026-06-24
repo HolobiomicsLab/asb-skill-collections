@@ -1,6 +1,7 @@
 ---
 name: metabolomics-feature-table-filtering
-description: Use when when you have a raw LC-MS peak table imported from vendor software (e.
+description: Use when when you have a raw LC-MS peak table imported from vendor software
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +16,7 @@ metadata:
   - MPACT
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -47,6 +49,7 @@ attribution:
 
 # metabolomics-feature-table-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a chain of independent filter operations to LC-MS peak tables to remove artifactual or low-quality features (mispicked ions, carryover contaminants, non-reproducible peaks, and in-source fragments) while preserving biologically meaningful metabolite signals. Each filter operates via reference semantics on R6 objects, enabling memory-efficient in-place updates to the peak abundance matrix and metadata.

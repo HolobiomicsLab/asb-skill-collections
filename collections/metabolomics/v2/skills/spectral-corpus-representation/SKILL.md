@@ -1,6 +1,7 @@
 ---
 name: spectral-corpus-representation
-description: Use when you have a collection of tandem mass spectrometry spectra in mzML or similar format and need to prepare them for LDA-based motif discovery.
+description: Use when you have a collection of tandem mass spectrometry spectra in
+  mzML or similar format and need to prepare them for LDA-based motif discovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -15,12 +16,14 @@ metadata:
   - Conda
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - Apply LDA to the processed spectra
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 claims: []

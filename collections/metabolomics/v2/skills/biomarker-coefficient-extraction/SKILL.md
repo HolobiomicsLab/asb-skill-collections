@@ -1,6 +1,9 @@
 ---
 name: biomarker-coefficient-extraction
-description: Use when after normalizing a log-transformed metabolomics featuredata matrix (with missing values imputed via knn or replacement) and encoding experimental factors into a design matrix (factormat), use this skill to fit a linear model and extract per-metabolite coefficients and p-values for each.
+description: Use when after normalizing a log-transformed metabolomics featuredata
+  matrix (with missing values imputed via knn or replacement) and encoding experimental
+  factors into a design matrix (factormat), use this skill to fit a linear model and
+  extract per-metabolite coefficients and p-values for each.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -10,11 +13,13 @@ metadata:
   tools:
   - R
   - NormalizeMets
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
 claims: []
 provenance:
@@ -39,6 +44,7 @@ attribution:
 
 # biomarker-coefficient-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract coefficient and p-value matrices from a fitted linear model applied to normalized, log-transformed metabolomics feature data to identify biomarkers associated with factors of interest (e.g., gender, age, BMI). This skill produces quantitative association metrics and statistical significance estimates required for downstream biomarker validation and visualization.

@@ -1,6 +1,8 @@
 ---
 name: molecular-fingerprint-generation-and-encoding
-description: Use when when you have paired tandem MS spectra and corresponding molecular structures (as SMILES strings or InChI keys) and need to train a model that jointly embeds spectra and structures for structure annotation by database lookup.
+description: Use when when you have paired tandem MS spectra and corresponding molecular
+  structures (as SMILES strings or InChI keys) and need to train a model that jointly
+  embeds spectra and structures for structure annotation by database lookup.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0310
@@ -13,11 +15,13 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)
 evidence_spans:
-- and, when trained in a contrastive learning framework, enable embedding and structure annotation by database lookup.
+- and, when trained in a contrastive learning framework, enable embedding and structure
+  annotation by database lookup.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

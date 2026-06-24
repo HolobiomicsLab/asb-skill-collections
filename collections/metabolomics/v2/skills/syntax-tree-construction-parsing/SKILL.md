@@ -1,6 +1,8 @@
 ---
 name: syntax-tree-construction-parsing
-description: Use when you have a domain-specific language (DSL) grammar specification and raw query strings that must be converted into structured intermediate representations for validation, transformation, or execution.
+description: Use when you have a domain-specific language (DSL) grammar specification
+  and raw query strings that must be converted into structured intermediate representations
+  for validation, transformation, or execution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -10,11 +12,13 @@ metadata:
   - MassQL
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
 evidence_spans:
-- The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.
+- The Mass Spec Query Language (MassQL) is a domain specific language meant to be
+  a succinct way to express a query in a mass spectrometry centric fashion.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,7 @@
 ---
 name: mzml-format-output-generation-and-validation
-description: Use when after running a ViMMS simulation loop with a fragmentation controller (e.
+description: Use when after running a ViMMS simulation loop with a fragmentation controller
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -14,6 +15,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -46,6 +48,7 @@ attribution:
 
 # mzML-Format Output Generation and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export simulated LC-MS/MS scan data from ViMMS to industry-standard mzML format, enabling downstream analysis, archival, and comparative evaluation against real or baseline acquisition strategies. This skill bridges virtual simulation output to standard proteomics/metabolomics workflows.

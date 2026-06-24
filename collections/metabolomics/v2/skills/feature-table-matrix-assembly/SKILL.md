@@ -1,6 +1,9 @@
 ---
 name: feature-table-matrix-assembly
-description: Use when when you need to generate a realistic LC/GC-MS feature table (peak intensity matrix) with controlled, quantifiable condition effects (e.g., differential metabolite abundance across disease states) and batch effects (e.g., instrument drift, sample processing day).
+description: Use when when you need to generate a realistic LC/GC-MS feature table
+  (peak intensity matrix) with controlled, quantifiable condition effects (e.g., differential
+  metabolite abundance across disease states) and batch effects (e.g., instrument
+  drift, sample processing day).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3635
@@ -14,11 +17,13 @@ metadata:
   - R base
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # feature-table-matrix-assembly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a feature intensity matrix from baseline compound data by populating peaks across conditions and batches, then modulating intensities according to condition-specific and batch-specific effect profiles. This skill is essential for generating ground-truth LC/GC-MS peak-list simulations with known condition and batch effects for benchmarking normalisation and batch-correction algorithms.

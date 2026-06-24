@@ -1,6 +1,8 @@
 ---
 name: resource-capacity-calculation
-description: Use when when configuring an OpenMS Streamlit application for online deployment with Redis and RQ worker processes, you need to determine how many worker processes can safely run in parallel within a Docker container's memory constraint.
+description: Use when when configuring an OpenMS Streamlit application for online
+  deployment with Redis and RQ worker processes, you need to determine how many worker
+  processes can safely run in parallel within a Docker container's memory constraint.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +12,7 @@ metadata:
   - RQ (Redis Queue)
   - Streamlit
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -37,6 +40,7 @@ attribution:
 
 # resource-capacity-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the maximum number of parallel worker processes that can be deployed in a containerized task queue system based on available system memory. This skill applies a memory-per-worker overhead formula to determine safe parallelism limits for online (Redis/RQ-based) deployments.

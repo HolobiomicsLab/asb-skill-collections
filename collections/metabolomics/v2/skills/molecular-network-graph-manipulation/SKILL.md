@@ -1,6 +1,9 @@
 ---
 name: molecular-network-graph-manipulation
-description: Use when you have a GNPS-generated classical or feature-based molecular network (in graphml or JSON format) and corresponding MS2LDA or chemical class assignment data, and you need to embed substructural motif identifiers, confidence scores, or chemical class labels as node/edge attributes for.
+description: Use when you have a GNPS-generated classical or feature-based molecular
+  network (in graphml or JSON format) and corresponding MS2LDA or chemical class assignment
+  data, and you need to embed substructural motif identifiers, confidence scores,
+  or chemical class labels as node/edge attributes for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -17,11 +20,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

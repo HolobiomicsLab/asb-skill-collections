@@ -1,6 +1,8 @@
 ---
 name: nmr-spin-system-simulation
-description: Use when when you have known metabolite concentrations and their spin-system coupling constants (J-values) and need to generate synthetic ¹H NMR spectra for method validation, metabolite library construction, or as a training dataset.
+description: Use when when you have known metabolite concentrations and their spin-system
+  coupling constants (J-values) and need to generate synthetic ¹H NMR spectra for
+  method validation, metabolite library construction, or as a training dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +13,7 @@ metadata:
   - MetAssimulo 2
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0
@@ -38,6 +41,7 @@ attribution:
 
 # nmr-spin-system-simulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate realistic 1D and 2D metabolomic ¹H NMR spectra by computing theoretical spin multiplets from metabolite concentration and J-coupling inputs, convolving with lineshape functions, and transforming to frequency domain. This skill enables in silico validation of metabolite identification and spectral interpretation without wet-lab acquisition.

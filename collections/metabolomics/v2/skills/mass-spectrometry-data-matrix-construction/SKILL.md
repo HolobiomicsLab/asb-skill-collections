@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-matrix-construction
-description: Use when you have raw spatial metabolomics imzML files (paired with .ibd binary data files) that need to be loaded into a unified AnnData format for integration with spatial transcriptomics data or for cross-modal spatial pattern identification in single or multiple sample datasets.
+description: Use when you have raw spatial metabolomics imzML files (paired with .ibd
+  binary data files) that need to be loaded into a unified AnnData format for integration
+  with spatial transcriptomics data or for cross-modal spatial pattern identification
+  in single or multiple sample datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +14,7 @@ metadata:
   - spatialMETA
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

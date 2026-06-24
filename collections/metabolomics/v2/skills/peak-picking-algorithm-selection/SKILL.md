@@ -1,6 +1,8 @@
 ---
 name: peak-picking-algorithm-selection
-description: 'Use when at the entry point of SLAW processing when you have centroided mzML or netCDF LC-MS files and need to decide which peak-picking algorithm to use. Trigger this skill when: (1) raw LC-MS data must be converted into a feature matrix;'
+description: 'Use when at the entry point of SLAW processing when you have centroided
+  mzML or netCDF LC-MS files and need to decide which peak-picking algorithm to use.
+  Trigger this skill when: (1) raw LC-MS data must be converted into a feature matrix;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -14,11 +16,13 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # peak-picking-algorithm-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and route untargeted LC-MS data through one of three wrapped peak-picking algorithms (Centwave, FeatureFinderMetabo, or ADAP) via configuration-driven dispatch, producing standardized feature matrices with m/z, retention time, and intensity columns. This skill encapsulates the conditional logic that allows users to choose the most suitable algorithm for their LC-MS data characteristics without reimplementing each algorithm wrapper.

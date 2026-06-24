@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-data-representation
-description: Use when you need to store or retrieve mass spectrometry spectra (m/z and intensity pairs) from a novel data source or storage medium (e.
+description: Use when you need to store or retrieve mass spectrometry spectra (m/z
+  and intensity pairs) from a novel data source or storage medium (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -17,11 +18,13 @@ metadata:
   - MsBackendSql
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []
@@ -47,6 +50,7 @@ attribution:
 
 # mass-spectrometry-data-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement custom MsBackend subclasses to represent mass spectrometry spectral data in memory, on-disk, or from external sources, decoupling data storage from analysis workflows. This skill enables extension of the Spectra package ecosystem with new backend implementations for diverse MS data formats and storage strategies.

@@ -1,6 +1,9 @@
 ---
 name: http-api-endpoint-design
-description: Use when when you need to expose a multi-step spectral processing workflow (parse → extract → render → annotate → compress) as a web service endpoint that accepts jcamp/RAW/mzML spectral files and must return coordinated output artifacts (modified JCAMP files, peak tables, and PNG images) in a.
+description: Use when when you need to expose a multi-step spectral processing workflow
+  (parse → extract → render → annotate → compress) as a web service endpoint that
+  accepts jcamp/RAW/mzML spectral files and must return coordinated output artifacts
+  (modified JCAMP files, peak tables, and PNG images) in a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3761
@@ -15,15 +18,18 @@ metadata:
   - gunicorn
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
 evidence_spans:
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - Use the file pyproject.toml to determine the version of Python required.
 - git clone https://github.com/ComPlat/chem-spectra-app.git
-- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
+- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data
+  proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
 - docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
 claims: []
 provenance:

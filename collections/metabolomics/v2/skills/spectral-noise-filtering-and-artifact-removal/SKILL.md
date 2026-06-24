@@ -1,6 +1,8 @@
 ---
 name: spectral-noise-filtering-and-artifact-removal
-description: Use when you have raw MS/MS spectra in supported formats (.mgf, .mzML, or .msp) containing both chemical signal and experimental noise, prior to structural motif discovery via topic modeling.
+description: Use when you have raw MS/MS spectra in supported formats (.mgf, .mzML,
+  or .msp) containing both chemical signal and experimental noise, prior to structural
+  motif discovery via topic modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,11 +15,13 @@ metadata:
   - Conda
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

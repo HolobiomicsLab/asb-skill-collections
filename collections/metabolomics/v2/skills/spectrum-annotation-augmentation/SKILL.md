@@ -1,6 +1,7 @@
 ---
 name: spectrum-annotation-augmentation
-description: Use when you have a TCN-predicted training set of MS/MS spectra with formula annotations and need to prepare it for Siamese rescore model training.
+description: Use when you have a TCN-predicted training set of MS/MS spectra with
+  formula annotations and need to prepare it for Siamese rescore model training.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +13,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +42,7 @@ attribution:
 
 # spectrum-annotation-augmentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Augment tandem mass spectra training sets by capping positive examples per molecular formula, generating cross-spectrum negatives within precursor m/z windows, and downsampling to balanced positive:negative ratios. This prepares diverse, balanced datasets suitable for training Siamese architecture rescore models in formula prediction workflows.

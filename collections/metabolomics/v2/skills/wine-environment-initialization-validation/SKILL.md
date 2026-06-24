@@ -1,6 +1,8 @@
 ---
 name: wine-environment-initialization-validation
-description: Use when use this skill after building a Docker image that installs Wine and .NET Framework 4.8 on a Ubuntu 22.04 base, but before running production conversion tasks or batch jobs with AirdPro.
+description: Use when use this skill after building a Docker image that installs Wine
+  and .NET Framework 4.8 on a Ubuntu 22.04 base, but before running production conversion
+  tasks or batch jobs with AirdPro.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +12,7 @@ metadata:
   - .NET Framework 4.8
   - Docker Desktop for Mac
   - AirdPro V5 / V6
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -39,6 +42,7 @@ attribution:
 
 # Wine Environment Initialization and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Wine environment has successfully initialized .NET Framework 4.8 and associated dependencies before executing Windows-based scientific applications (such as AirdPro CLI) in Linux containers. This skill is essential when deploying C#-based proteomics tools via Docker on non-Windows hosts, as Wine initialization is a prerequisite for correct binary execution and can consume >30 minutes.

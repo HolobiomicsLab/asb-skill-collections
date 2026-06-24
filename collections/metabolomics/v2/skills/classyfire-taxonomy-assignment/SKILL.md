@@ -1,6 +1,9 @@
 ---
 name: classyfire-taxonomy-assignment
-description: Use when after molecular structures have been standardized (e.g., via PubChem standardization) and you need to enrich them with chemical taxonomy labels for cohort stratification, chemical space analysis, or retention time prediction model development.
+description: Use when after molecular structures have been standardized (e.g., via
+  PubChem standardization) and you need to enrich them with chemical taxonomy labels
+  for cohort stratification, chemical space analysis, or retention time prediction
+  model development.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -11,6 +14,7 @@ metadata:
   - ClassyFire
   - PubChem standardization
   - rcdk
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

@@ -1,6 +1,7 @@
 ---
 name: metabolite-feature-annotation-aggregation
-description: Use when after selecting statistically significant features from multi-assay LC-MS metabolomics datasets (e.g., via MB-VIP and permutation testing with p < 0.01).
+description: Use when after selecting statistically significant features from multi-assay
+  LC-MS metabolomics datasets (e.g., via MB-VIP and permutation testing with p < 0.01).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -21,6 +22,7 @@ metadata:
   - pandas / numpy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -57,6 +59,7 @@ attribution:
 
 # metabolite-feature-annotation-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated annotation and structural linking of statistically significant untargeted LC-MS features into metabolite clusters defined by mass-to-charge ratio (m/z), retention time (RT), and structural properties (isotopologues, adducts, cross-assay links). This skill aggregates isolated feature detections into coherent metabolite signatures for improved biological interpretation.

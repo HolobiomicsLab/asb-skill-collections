@@ -16,6 +16,7 @@ metadata:
   - MZmine
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

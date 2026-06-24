@@ -1,6 +1,9 @@
 ---
 name: metabolomics-data-output-formatting
-description: Use when after completing feature annotation with the annotateRC function on LC–MS All-ion fragmentation (AIF) datasets, when you need to persist ranked metabolite candidates, matched ion spectra, and global summary tables to disk for archival, manual review, or integration into downstream.
+description: Use when after completing feature annotation with the annotateRC function
+  on LC–MS All-ion fragmentation (AIF) datasets, when you need to persist ranked metabolite
+  candidates, matched ion spectra, and global summary tables to disk for archival,
+  manual review, or integration into downstream.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -12,11 +15,13 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # metabolomics-data-output-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export annotated LC–MS metabolomics features and their ranked candidate matches to a multi-format output directory, including global results tables, ranked results per feature, ranked spectra PDFs, and pseudo-MS/MS MGF files. This skill ensures reproducible, auditable dissemination of annotation outputs suitable for downstream curation and publication.

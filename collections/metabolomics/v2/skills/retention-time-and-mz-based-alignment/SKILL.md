@@ -1,6 +1,8 @@
 ---
 name: retention-time-and-mz-based-alignment
-description: Use when after peak detection has been completed on individual LC-MS samples and you have a collection of detected peaks with m/z, retention time, and intensity values from each sample.
+description: Use when after peak detection has been completed on individual LC-MS
+  samples and you have a collection of detected peaks with m/z, retention time, and
+  intensity values from each sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -11,6 +13,7 @@ metadata:
   - MetaboAnalystR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr

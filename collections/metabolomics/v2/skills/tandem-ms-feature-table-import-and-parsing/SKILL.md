@@ -1,6 +1,9 @@
 ---
 name: tandem-ms-feature-table-import-and-parsing
-description: Use when when you have raw feature tables exported from a tandem LC-MS/MS preprocessing tool (e.g., Progenesis QI, MS-DIAL, Bruker Metaboscape) and need to combine them with sample metadata (group assignments, replicate structure) before applying feature filtering or quality control workflows.
+description: Use when when you have raw feature tables exported from a tandem LC-MS/MS
+  preprocessing tool (e.g., Progenesis QI, MS-DIAL, Bruker Metaboscape) and need to
+  combine them with sample metadata (group assignments, replicate structure) before
+  applying feature filtering or quality control workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,6 +17,7 @@ metadata:
   - MPACT (Python/Anaconda)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -46,6 +50,7 @@ attribution:
 
 # tandem-ms-feature-table-import-and-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load tandem mass spectrometry feature tables (m/z, retention time, abundance) from vendor-specific formats (Progenesis, MS-DIAL, Bruker Metaboscape) into a standardized in-memory object for downstream filtering and analysis. This is the necessary first step before any quality control or statistical analysis can be applied to metabolomics features.

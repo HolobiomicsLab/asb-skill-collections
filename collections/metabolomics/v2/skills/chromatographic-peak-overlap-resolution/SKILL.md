@@ -1,6 +1,9 @@
 ---
 name: chromatographic-peak-overlap-resolution
-description: Use when analyzing GC-MS data containing overlapping chromatographic peaks—a common scenario in untargeted metabolomics and environmental screening where sample complexity or chromatographic resolution limitations cause co-elution of structurally similar or temporally proximate compounds.
+description: Use when analyzing GC-MS data containing overlapping chromatographic
+  peaks—a common scenario in untargeted metabolomics and environmental screening where
+  sample complexity or chromatographic resolution limitations cause co-elution of
+  structurally similar or temporally proximate compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,12 +16,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
 evidence_spans:
 - MSHub auto-deconvolution
-- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry
+  data
 - GNPS molecular networking
 claims: []
 provenance:

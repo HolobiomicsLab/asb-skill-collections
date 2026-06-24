@@ -1,6 +1,8 @@
 ---
 name: peptide-sequence-prediction-comparison
-description: Use when when you have a pre-trained Casanovo model, annotated MS/MS spectra in MGF format, and want to benchmark whether beam search decoding improves peptide prediction quality over the default greedy decoding strategy.
+description: Use when when you have a pre-trained Casanovo model, annotated MS/MS
+  spectra in MGF format, and want to benchmark whether beam search decoding improves
+  peptide prediction quality over the default greedy decoding strategy.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -13,14 +15,17 @@ metadata:
   - PDV
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 claims: []
@@ -47,6 +52,7 @@ attribution:
 
 # peptide-sequence-prediction-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare de novo peptide sequences predicted by Casanovo using different decoding strategies (greedy vs. beam search) to assess whether alternative inference methods yield higher-quality predictions on MS/MS spectra. This skill quantifies prediction accuracy differences at both amino acid and peptide levels using precision, recall, and F1 scores.

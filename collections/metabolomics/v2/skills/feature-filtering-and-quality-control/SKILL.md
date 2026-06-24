@@ -1,6 +1,8 @@
 ---
 name: feature-filtering-and-quality-control
-description: Use when after batch correction and concentration normalization have been applied to a merged m/z peak table and metadata file, but before statistical testing or machine learning.
+description: Use when after batch correction and concentration normalization have
+  been applied to a merged m/z peak table and metadata file, but before statistical
+  testing or machine learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

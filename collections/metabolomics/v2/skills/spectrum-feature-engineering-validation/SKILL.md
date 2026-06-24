@@ -1,6 +1,8 @@
 ---
 name: spectrum-feature-engineering-validation
-description: Use when when implementing or auditing a deep learning pipeline for MS/MS-based molecular formula prediction, verify that precursor m/z values in the input feature array are zeroed before they reach the spectrum encoder (e.g., TCN).
+description: Use when when implementing or auditing a deep learning pipeline for MS/MS-based
+  molecular formula prediction, verify that precursor m/z values in the input feature
+  array are zeroed before they reach the spectrum encoder (e.g., TCN).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -12,6 +14,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +43,7 @@ attribution:
 
 # spectrum-feature-engineering-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that precursor m/z values are consistently zeroed before spectrum encoding in neural network pipelines to prevent mass-based leakage during formula prediction. This ensures the model learns chemical composition patterns from fragment ions rather than precursor mass.

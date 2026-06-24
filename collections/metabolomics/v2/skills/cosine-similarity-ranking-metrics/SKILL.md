@@ -1,6 +1,8 @@
 ---
 name: cosine-similarity-ranking-metrics
-description: Use when when you have pre-computed spectral embeddings (vectors) for both query spectra and a reference library, and you need to measure retrieval performance by ranking reference compounds by similarity to each query.
+description: Use when when you have pre-computed spectral embeddings (vectors) for
+  both query spectra and a reference library, and you need to measure retrieval performance
+  by ranking reference compounds by similarity to each query.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -20,6 +22,7 @@ metadata:
   - PyTorch 2.6.0 with CUDA 12.4
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -50,6 +53,7 @@ attribution:
 
 # cosine-similarity-ranking-metrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise cosine similarity between query and reference MS/MS spectral embeddings, then retrieve top-k candidate indices and calculate hit@k retrieval metrics to evaluate compound identification performance. This skill quantifies how often the correct match appears within the top k retrieved candidates across random query/reference splits.

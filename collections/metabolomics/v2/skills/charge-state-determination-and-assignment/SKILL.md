@@ -1,6 +1,8 @@
 ---
 name: charge-state-determination-and-assignment
-description: Use when when analyzing high-resolution mass spectrometry data from natural-abundance or labeled peptides where multiple charge states (+2, +3, +4, etc.) may be present within the same m/z isolation window (e.g., 880–890 m/z).
+description: Use when when analyzing high-resolution mass spectrometry data from natural-abundance
+  or labeled peptides where multiple charge states (+2, +3, +4, etc.) may be present
+  within the same m/z isolation window (e.g., 880–890 m/z).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,13 +17,17 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
-- Integration with the mzR package from Bioconductor allows direct parsing of mzML and MGF files
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
+- Integration with the mzR package from Bioconductor allows direct parsing of mzML
+  and MGF files
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

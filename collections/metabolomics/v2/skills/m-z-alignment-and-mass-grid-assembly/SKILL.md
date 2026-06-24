@@ -1,6 +1,8 @@
 ---
 name: m-z-alignment-and-mass-grid-assembly
-description: Use when when processing multiple centroided mzML LC-MS files from the same study and you need to identify which mass tracks represent the same metabolite across samples.
+description: Use when when processing multiple centroided mzML LC-MS files from the
+  same study and you need to identify which mass tracks represent the same metabolite
+  across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -17,15 +19,18 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
-- The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
+- The empirical compounds are searched against known compound database (default HMDB
+  4) via another package JMS (https://github.com/shuzhao-li/JMS).
 - known compound database (default HMDB 4)
 claims: []
 provenance:
@@ -50,6 +55,7 @@ attribution:
 
 # m/z-alignment-and-mass-grid-assembly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns mass tracks (extracted ion chromatograms) across multiple LC-MS samples using high-mass-resolution m/z separation and hierarchical clustering to build a unified MassGrid that serves as the foundation for composite peak detection and feature extraction. This skill prioritizes mass resolution over retention time to handle co-eluting isomers and complex mixtures.

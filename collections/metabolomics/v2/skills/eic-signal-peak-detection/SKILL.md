@@ -1,6 +1,9 @@
 ---
 name: eic-signal-peak-detection
-description: Use when after EIC candidate generation from LC/HRMS data (mzXML, mzML, or netCDF formats), when you need to localize discrete peaks within chromatographic profiles and assign retention time boundaries, apex intensities, and quality scores prior to peak annotation or cross-sample alignment.
+description: Use when after EIC candidate generation from LC/HRMS data (mzXML, mzML,
+  or netCDF formats), when you need to localize discrete peaks within chromatographic
+  profiles and assign retention time boundaries, apex intensities, and quality scores
+  prior to peak annotation or cross-sample alignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,11 +18,14 @@ metadata:
   - xcms
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # EIC Signal Peak Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and delineates individual peaks within extracted ion chromatograms (EICs) from LC/HRMS data by analyzing signal continuity, intensity transitions, and morphological properties. This is a critical intermediate step between EIC candidate generation and peak property quantification in untargeted metabolomics workflows.

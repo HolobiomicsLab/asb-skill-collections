@@ -1,6 +1,9 @@
 ---
 name: internal-standard-normalization
-description: Use when your metabolomics dataset includes internal standard metabolites (marked in the metabolitedata IS column), log-transformed featuredata are available, and you need to remove systematic variation attributable to instrument drift, sample matrix effects, or batch differences while preserving.
+description: Use when your metabolomics dataset includes internal standard metabolites
+  (marked in the metabolitedata IS column), log-transformed featuredata are available,
+  and you need to remove systematic variation attributable to instrument drift, sample
+  matrix effects, or batch differences while preserving.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,13 +19,16 @@ metadata:
   - MissingValues
   - RlaPlots
   - PcaPlots
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +55,7 @@ attribution:
 
 # internal-standard-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize metabolomics featuredata matrices using internal standard (IS) metabolites as reference anchors to correct for unwanted variation (batch effects, matrix effects) across samples. This skill applies the 'is' method within the NormQcmets function, which requires identification of internal standard metabolites and uses their relative intensities to scale all features within each sample.

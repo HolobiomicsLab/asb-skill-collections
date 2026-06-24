@@ -1,6 +1,8 @@
 ---
 name: composite-mass-track-assembly-and-peak-detection
-description: Use when after mass tracks have been aligned across all samples into a MassGrid (via sample-wise or centroid-based alignment), you have a unified set of m/z features tracked across the entire study.
+description: Use when after mass tracks have been aligned across all samples into
+  a MassGrid (via sample-wise or centroid-based alignment), you have a unified set
+  of m/z features tracked across the entire study.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -21,15 +23,18 @@ metadata:
   - asari.MassGrid
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
-- The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
+- The empirical compounds are searched against known compound database (default HMDB
+  4) via another package JMS (https://github.com/shuzhao-li/JMS).
 - known compound database (default HMDB 4)
 claims: []
 provenance:
@@ -54,6 +59,7 @@ attribution:
 
 # composite-mass-track-assembly-and-peak-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assemble aligned mass tracks from multiple LC-MS samples into a composite mass track, then detect elution peaks on this composite map using statistics-guided local maxima detection. This approach prioritizes mass resolution and selectivity, avoiding repeated peak detection on individual samples and improving reproducibility across the cohort.

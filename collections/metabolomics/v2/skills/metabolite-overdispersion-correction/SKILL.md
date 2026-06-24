@@ -1,6 +1,8 @@
 ---
 name: metabolite-overdispersion-correction
-description: Use when working with untransformed metabolomics count data (e.g., c57_nos2KO_mouse_countDF) that will be input to variance-sensitive methods such as random forest classification or univariate statistical tests.
+description: Use when working with untransformed metabolomics count data (e.g., c57_nos2KO_mouse_countDF)
+  that will be input to variance-sensitive methods such as random forest classification
+  or univariate statistical tests.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - transform_samples
   - random_forest
   - randomForest
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -40,6 +43,7 @@ attribution:
 
 # metabolite-overdispersion-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Log-transform metabolomics count data column-wise to stabilize variance and address overdispersion before applying statistical or machine-learning methods. This preprocessing step is particularly useful when count data exhibits heteroscedasticity that could bias downstream analyses.

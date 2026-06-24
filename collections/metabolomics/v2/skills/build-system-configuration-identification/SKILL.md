@@ -1,6 +1,8 @@
 ---
 name: build-system-configuration-identification
-description: Use when you have cloned a source repository and need to compile it on a supported operating system (Windows 10, Ubuntu 22.04, macOS 12+ ARM64) but do not know what build tools, dependencies, or compilation commands are required.
+description: Use when you have cloned a source repository and need to compile it on
+  a supported operating system (Windows 10, Ubuntu 22.04, macOS 12+ ARM64) but do
+  not know what build tools, dependencies, or compilation commands are required.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3364
@@ -13,6 +15,7 @@ metadata:
   - Homebrew
   - apt (Advanced Package Tool)
   - git
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

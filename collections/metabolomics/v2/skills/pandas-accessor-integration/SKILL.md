@@ -1,6 +1,7 @@
 ---
 name: pandas-accessor-integration
-description: Use when you have mass-spectrometry data in a Pandas DataFrame and need to expose plot kinds (spectrum, chromatogram, mobilogram, peakmap) as a `.plot(kind='...
+description: Use when you have mass-spectrometry data in a Pandas DataFrame and need
+  to expose plot kinds (spectrum, chromatogram, mobilogram, peakmap) as a `.plot(kind='...
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,6 +17,7 @@ metadata:
   - bokeh
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -25,7 +27,8 @@ evidence_spans:
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +52,7 @@ attribution:
 
 # pandas-accessor-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate a custom visualization backend into Pandas DataFrames via the accessor pattern, enabling domain-specific plot kinds (spectrum, chromatogram, mobilogram, peakmap) to be called directly on DataFrame objects with a consistent API across multiple plotting backends (matplotlib, bokeh, plotly).

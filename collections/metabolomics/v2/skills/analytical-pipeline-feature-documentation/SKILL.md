@@ -1,6 +1,9 @@
 ---
 name: analytical-pipeline-feature-documentation
-description: Use when you are evaluating a new or existing data analysis pipeline (e.g., MetaboDirect) and need to produce a transparent, evidence-based feature matrix showing which analyses it supports—particularly when the pipeline is positioned as an alternative to or improvement over established tools.
+description: Use when you are evaluating a new or existing data analysis pipeline
+  (e.g., MetaboDirect) and need to produce a transparent, evidence-based feature matrix
+  showing which analyses it supports—particularly when the pipeline is positioned
+  as an alternative to or improvement over established tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -22,16 +25,20 @@ metadata:
   - py4cytoscape
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - web-based applications such as UltraMassExplorer (UME)
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29], and DropMS [30]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -55,6 +62,7 @@ attribution:
 
 # analytical-pipeline-feature-documentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document and cross-validate the analytical and visualization features implemented in a bioinformatics pipeline by extracting capabilities from source code, official documentation, and dependency declarations, then comparing against peer software. This skill ensures comprehensive, reusable feature inventories and enables informed tool selection for FT-ICR MS analysis.

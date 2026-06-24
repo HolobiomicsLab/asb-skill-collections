@@ -1,6 +1,9 @@
 ---
 name: betweenness-centrality-computation
-description: Use when when you have a pathway-metabolite bipartite network and a filtered set of input metabolites (e.g., from differential analysis or experimental selection), and you need to rank metabolites by their topological importance within the network structure—i.
+description: Use when when you have a pathway-metabolite bipartite network and a filtered
+  set of input metabolites (e.g., from differential analysis or experimental selection),
+  and you need to rank metabolites by their topological importance within the network
+  structure—i.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0577
@@ -12,13 +15,16 @@ metadata:
   - igraph
   - KEGGREST
   - enrichmet
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - integrates fgsea for fast MetSEA, igraph for topology-based metrics
-- pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST package
+- pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

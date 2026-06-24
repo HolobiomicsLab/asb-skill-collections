@@ -1,6 +1,9 @@
 ---
 name: statistical-power-analysis
-description: Use when you have implemented or obtained a statistical method (e.g., PaIRKAT) and need to quantify its statistical power—the probability of correctly rejecting a false null hypothesis—across a range of realistic experimental scenarios before applying it to real data or publishing results.
+description: Use when you have implemented or obtained a statistical method (e.g.,
+  PaIRKAT) and need to quantify its statistical power—the probability of correctly
+  rejecting a false null hypothesis—across a range of realistic experimental scenarios
+  before applying it to real data or publishing results.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,6 +14,7 @@ metadata:
   - R (or language used by PaIRKAT scripts)
   - PaIRKAT
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -39,6 +43,7 @@ attribution:
 
 # statistical-power-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute power simulation scripts to compute statistical power across tested scenarios and generate summary statistics for a statistical method. This skill validates whether a method achieves adequate power under varying sample sizes, effect sizes, or other experimental conditions.

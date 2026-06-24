@@ -1,6 +1,9 @@
 ---
 name: spectral-search-logic-control-flow
-description: Use when when you need to understand or modify how MS2Query routes query spectra through its dual-pathway architecture, or when integrating MS2Query into another tool and need to trace how spectral similarity scores (MS2Deepscore) feed into library-match versus analogue-search branches with.
+description: Use when when you need to understand or modify how MS2Query routes query
+  spectra through its dual-pathway architecture, or when integrating MS2Query into
+  another tool and need to trace how spectral similarity scores (MS2Deepscore) feed
+  into library-match versus analogue-search branches with.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -14,6 +17,7 @@ metadata:
   - GNPS Library
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

@@ -1,6 +1,9 @@
 ---
 name: lipid-derivatization-chemistry-modeling
-description: Use when you have N-methyl-derivatized unsaturated sterol lipid structures (as SMILES or molecular formula) and need to predict their MS/MS fragmentation behavior before experimental acquisition, or to build a reference spectral library for isomer-level sterol identification in tissue samples.
+description: Use when you have N-methyl-derivatized unsaturated sterol lipid structures
+  (as SMILES or molecular formula) and need to predict their MS/MS fragmentation behavior
+  before experimental acquisition, or to build a reference spectral library for isomer-level
+  sterol identification in tissue samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3941
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -44,6 +48,7 @@ attribution:
 
 # lipid-derivatization-chemistry-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Models fragmentation chemistry and MS/MS patterns for N-methyl-derivatized unsaturated sterol lipids using quantum chemistry calculations and RDKit-based double-bond recognition. Produces predicted fragment ions with m/z values and relative intensities for downstream CCS prediction and LC-IM-MS/MS matching.

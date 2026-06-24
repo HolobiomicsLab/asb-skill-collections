@@ -1,6 +1,8 @@
 ---
 name: poisson-noise-injection-for-imaging
-description: Use when augmenting mass spectrometry ion images for contrastive learning, particularly when the model must generalize across different detector conditions or signal-to-noise ratios.
+description: Use when augmenting mass spectrometry ion images for contrastive learning,
+  particularly when the model must generalize across different detector conditions
+  or signal-to-noise ratios.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,6 +16,7 @@ metadata:
   - boly_pytorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
@@ -43,6 +46,7 @@ attribution:
 
 # poisson-noise-injection-for-imaging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Poisson noise injection is a data augmentation technique that adds photon counting artifacts to ion images in mass spectrometry imaging (MSI) to simulate realistic detector noise. It is applied as part of the DeepION data augmentation pipeline to improve the robustness of deep learning models for ion image representation learning.

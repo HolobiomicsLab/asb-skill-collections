@@ -1,6 +1,9 @@
 ---
 name: string-value-concatenation-with-delimiters
-description: Use when converting intermediate JSON to a target format (e.g., mwTab) and a single string field must be populated from multiple source records—for example, combining author names separated by semicolons, or concatenating a list of instrument names or experimental conditions.
+description: Use when converting intermediate JSON to a target format (e.g., mwTab)
+  and a single string field must be populated from multiple source records—for example,
+  combining author names separated by semicolons, or concatenating a list of instrument
+  names or experimental conditions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3281
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES convert command
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # string-value-concatenation-with-delimiters
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a single string value from multiple records in JSON by iterating over filtered and sorted records, concatenating their values with a specified delimiter. This skill is essential in the MESSES conversion pipeline when a target metadata field requires aggregation of repeated or multi-value fields from a source table.

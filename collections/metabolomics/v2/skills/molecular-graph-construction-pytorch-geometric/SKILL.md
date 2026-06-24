@@ -1,6 +1,9 @@
 ---
 name: molecular-graph-construction-pytorch-geometric
-description: Use when when you have parsed molecular structures (SMILES or SDF) and need to represent them as attributed graphs for neural network models that accept graph-based inputs. Specifically applicable when your architecture requires dual representations (e.
+description: Use when when you have parsed molecular structures (SMILES or SDF) and
+  need to represent them as attributed graphs for neural network models that accept
+  graph-based inputs. Specifically applicable when your architecture requires dual
+  representations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,6 +15,7 @@ metadata:
   - torch
   - Python
   - rdkit-pypi
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -45,6 +49,7 @@ attribution:
 
 # Molecular Graph Construction with PyTorch Geometric
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts molecular structures (SMILES or SDF format) into graph representations with atom and bond features encoded as node and edge attributes using RDKit and PyTorch Geometric, enabling dual-input architectures for machine learning models like RT-Transformer that predict molecular properties such as retention time.

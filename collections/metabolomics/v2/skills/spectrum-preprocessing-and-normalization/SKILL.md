@@ -1,6 +1,9 @@
 ---
 name: spectrum-preprocessing-and-normalization
-description: Use when you have raw MS/MS spectra in MGF or other standard formats that need to be ingested into a machine learning pipeline for cross-modal matching against molecular structures, or when spectra from different collision energy levels or instruments require standardization before comparative.
+description: Use when you have raw MS/MS spectra in MGF or other standard formats
+  that need to be ingested into a machine learning pipeline for cross-modal matching
+  against molecular structures, or when spectra from different collision energy levels
+  or instruments require standardization before comparative.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -17,6 +20,7 @@ metadata:
   - pip
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2
@@ -50,6 +54,7 @@ attribution:
 
 # spectrum-preprocessing-and-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocess MS/MS spectra from raw instrument data into normalized, standardized feature representations suitable for machine learning and cross-modal retrieval tasks. This skill prepares spectra for contrastive embedding by cleaning noise, normalizing intensity values, and aligning metadata.

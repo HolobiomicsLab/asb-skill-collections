@@ -1,6 +1,9 @@
 ---
 name: batch-wise-normalization-application
-description: Use when when processing a SummarizedExperiment containing metabolomics peak areas or intensities organized by batch (e.g., LC-MS/MS runs on different days or instruments), and you have pooled quality control samples injected repeatedly within or across batches to serve as batch anchors.
+description: Use when when processing a SummarizedExperiment containing metabolomics
+  peak areas or intensities organized by batch (e.g., LC-MS/MS runs on different days
+  or instruments), and you have pooled quality control samples injected repeatedly
+  within or across batches to serve as batch anchors.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,6 +18,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -23,8 +27,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +54,7 @@ attribution:
 
 # batch-wise-normalization-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply batch correction to metabolomics assay data using pooled study quality control (SQC) samples as reference anchors, normalizing compound/internal standard ratios across analytical batches to remove batch-dependent systematic variation while preserving biological signal.

@@ -1,6 +1,8 @@
 ---
 name: untargeted-lcms-peak-annotation
-description: Use when you have a peak-intensity matrix from untargeted LC-MS analysis (raw detected peaks with m/z and intensity values) and need to assign putative metabolite identities.
+description: Use when you have a peak-intensity matrix from untargeted LC-MS analysis
+  (raw detected peaks with m/z and intensity values) and need to assign putative metabolite
+  identities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,14 +17,18 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # untargeted-lcms-peak-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate detected LC-MS peaks by matching their mass-to-charge ratios against a KEGG compound database using precomputed adduct and in-source fragment tables. This skill addresses a major bottleneck in untargeted metabolomics by systematically resolving observed m/z values to candidate metabolites.

@@ -1,6 +1,9 @@
 ---
 name: tracer-metabolite-pair-matching
-description: Use when you have acquired LC-MS peak tables from both unlabeled (12C) and isotope-labeled (13C) samples from a stable isotope tracing experiment, paired with sample metadata distinguishing case and control groups, and you need to systematically identify which unlabeled features correspond to.
+description: Use when you have acquired LC-MS peak tables from both unlabeled (12C)
+  and isotope-labeled (13C) samples from a stable isotope tracing experiment, paired
+  with sample metadata distinguishing case and control groups, and you need to systematically
+  identify which unlabeled features correspond to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -22,6 +25,7 @@ metadata:
   - IsoPairFinder
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair
@@ -54,6 +58,7 @@ attribution:
 
 # tracer-metabolite-pair-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and matches 12C/13C isotope-labeled metabolite pairs in stable isotope tracing metabolomics to discover biochemical pathway intermediates. This skill applies differential analysis, feature redundancy merging, and statistical pairing to pinpoint candidate intermediate metabolites between unlabeled and labeled peak tables.

@@ -1,6 +1,8 @@
 ---
 name: error-handling-confirmation
-description: Use when when implementing or auditing a data replacement method (e.g., `mz<-`, `intensity<-`) in an MsBackend subclass that must enforce ordering or format constraints on peak data.
+description: Use when when implementing or auditing a data replacement method (e.g.,
+  `mz<-`, `intensity<-`) in an MsBackend subclass that must enforce ordering or format
+  constraints on peak data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,13 +15,15 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # error-handling-confirmation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a replacement method for mass spectrometry backend data raises informative errors when input violates domain constraints, using efficient vectorised checks. This skill ensures that data integrity rules (e.g., m/z sorting) are enforced at assignment time through explicit error messages rather than silent failure.

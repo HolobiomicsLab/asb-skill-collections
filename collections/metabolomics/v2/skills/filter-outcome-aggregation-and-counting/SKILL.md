@@ -1,6 +1,9 @@
 ---
 name: filter-outcome-aggregation-and-counting
-description: Use when after applying one or more mpactr filters (mispicked, group, cv, insource) to a feature table, you need to quantify the distribution of ions by their pass/fail status across filters to understand filtering impact, identify potential over-filtering, or communicate QC results via treemap or.
+description: Use when after applying one or more mpactr filters (mispicked, group,
+  cv, insource) to a feature table, you need to quantify the distribution of ions
+  by their pass/fail status across filters to understand filtering impact, identify
+  potential over-filtering, or communicate QC results via treemap or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,13 +18,15 @@ metadata:
   - ggplot2
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT
 evidence_spans:
 - To import these data into R, use the mpactr function
 - We will be using multiple libraries for data analysis and visualization
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

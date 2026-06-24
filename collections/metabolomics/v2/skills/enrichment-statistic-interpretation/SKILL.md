@@ -1,6 +1,9 @@
 ---
 name: enrichment-statistic-interpretation
-description: Use when after performing two-group or multi-group differential analysis on a lipidomics dataset and obtaining log fold-change (logFC) values for individual lipid molecules, use this skill to determine whether specific lipid classes, chain lengths, or unsaturation patterns are systematically up- or.
+description: Use when after performing two-group or multi-group differential analysis
+  on a lipidomics dataset and obtaining log fold-change (logFC) values for individual
+  lipid molecules, use this skill to determine whether specific lipid classes, chain
+  lengths, or unsaturation patterns are systematically up- or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,12 +14,15 @@ metadata:
   - lipidr
   - R
   - limma
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -41,6 +47,7 @@ attribution:
 
 # enrichment-statistic-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret lipid set enrichment analysis (LSEA) results ranked by log fold-change to identify significantly enriched or depleted lipid classes and chain properties in differential lipidomics experiments. This skill extracts and visualizes enrichment statistics to reveal preferential regulation patterns across lipid molecular features.

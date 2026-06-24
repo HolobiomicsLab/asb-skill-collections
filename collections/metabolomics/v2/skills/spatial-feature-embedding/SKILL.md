@@ -1,6 +1,8 @@
 ---
 name: spatial-feature-embedding
-description: Use when when analyzing imaging mass spectrometry datasets where you need to reduce high-dimensional peak intensity features while preserving spatial structure, and when automatic peak picking and marker ion identification are required.
+description: Use when when analyzing imaging mass spectrometry datasets where you
+  need to reduce high-dimensional peak intensity features while preserving spatial
+  structure, and when automatic peak picking and marker ion identification are required.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
@@ -47,6 +50,7 @@ attribution:
 
 # Reconstruct the graph-attention autoencoder for latent peak-feature embedding on IMS data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A graph-attention autoencoder architecture that transforms imaging mass spectrometry (IMS) peak intensities into low-dimensional latent representations by encoding spatial adjacency and node features, enabling automatic peak picking and marker ion identification in spatial metabolomics.

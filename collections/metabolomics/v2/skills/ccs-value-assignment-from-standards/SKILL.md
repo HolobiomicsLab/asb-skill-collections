@@ -1,6 +1,7 @@
 ---
 name: ccs-value-assignment-from-standards
-description: Use when you have TWIM-MS experimental data with arrival/drift times and m/z values, and you possess calibrant reference standards with known CCS values.
+description: Use when you have TWIM-MS experimental data with arrival/drift times
+  and m/z values, and you possess calibrant reference standards with known CCS values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +14,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -41,6 +43,7 @@ attribution:
 
 # CCS value assignment from standards
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign collision cross section (CCS) values to ions in TWIM-MS data by loading known calibrant reference standards and establishing a calibration curve that maps drift time to CCS across the m/z range. This enables accurate CCS determination without requiring prior feature identification.

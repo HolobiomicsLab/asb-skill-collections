@@ -1,6 +1,8 @@
 ---
 name: api-endpoint-communication
-description: Use when you have fingerprint or spectrum data that requires compound-class annotation but prefer not to run SIRIUS locally, or need to integrate predictions into an automated analysis pipeline.
+description: Use when you have fingerprint or spectrum data that requires compound-class
+  annotation but prefer not to run SIRIUS locally, or need to integrate predictions
+  into an automated analysis pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,6 +15,7 @@ metadata:
   - CSI:FingerID
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

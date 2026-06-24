@@ -1,6 +1,8 @@
 ---
 name: numpress-compression-algorithm-encoding
-description: Use when you have raw floating-point m/z and intensity arrays extracted from mass-spectrometry experiments (e.g., from mzML or mzXML files) and need to compress them for storage or transmission.
+description: Use when you have raw floating-point m/z and intensity arrays extracted
+  from mass-spectrometry experiments (e.g., from mzML or mzXML files) and need to
+  compress them for storage or transmission.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +15,7 @@ metadata:
   - pyOpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -41,6 +44,7 @@ attribution:
 
 # numpress-compression-algorithm-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encodes m/z and intensity numeric arrays from mass-spectrometry data using the Numpress compression algorithm to produce byte-level compressed representations. This skill is essential for reducing file size and transmission bandwidth of LC-MS datasets while preserving numerical precision within machine epsilon.

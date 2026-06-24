@@ -1,6 +1,8 @@
 ---
 name: ce-ms-data-import-and-parsing
-description: Use when you have raw CE-MS instrument output in mzML or netCDF format and need to extract specific ion traces (by m/z value), filter by effective mobility windows, or apply transformations to migration time data.
+description: Use when you have raw CE-MS instrument output in mzML or netCDF format
+  and need to extract specific ion traces (by m/z value), filter by effective mobility
+  windows, or apply transformations to migration time data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -18,6 +20,7 @@ metadata:
   - BiocManager
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -51,6 +54,7 @@ attribution:
 
 # CE-MS data import and parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse raw capillary electrophoresis–mass spectrometry (CE-MS) data from standard formats (mzML, netCDF) into R memory structures that preserve spectral, mobility, and mass-to-charge information for downstream transformation and feature extraction. This is the foundational step that enables reproducible analysis of CE-MS electropherograms.

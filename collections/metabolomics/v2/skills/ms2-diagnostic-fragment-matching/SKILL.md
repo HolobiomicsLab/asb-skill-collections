@@ -1,6 +1,8 @@
 ---
 name: ms2-diagnostic-fragment-matching
-description: Use when you have centroided MS2 spectra from data-dependent LC- or GC-HRMS measurements and need to rapidly prioritize potential PFAS features within a larger feature set.
+description: Use when you have centroided MS2 spectra from data-dependent LC- or GC-HRMS
+  measurements and need to rapidly prioritize potential PFAS features within a larger
+  feature set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -14,11 +16,13 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # MS2 Diagnostic Fragment Matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A mass spectrometry screening technique that identifies potential PFAS features by matching precursor–product ion pairs in MS2 spectra against a database of known PFAS diagnostic fragments and characteristic mass differences. This prioritization method flags features whose fragmentation patterns contain diagnostic signatures indicative of PFAS structure.

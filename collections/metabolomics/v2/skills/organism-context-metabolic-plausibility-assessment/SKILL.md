@@ -19,6 +19,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
@@ -48,6 +49,7 @@ attribution:
 
 # organism-context-metabolic-plausibility-assessment
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Rank and filter predicted metabolite candidates by their biological plausibility within a specific organismal context (mammalian, gut microbial, or soil/aquatic). This skill validates computationally predicted structures against the metabolic capacity and biochemistry of the target organism or environment, reducing false positives in metabolite identification.

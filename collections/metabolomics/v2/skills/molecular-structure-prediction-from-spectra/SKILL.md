@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-prediction-from-spectra
-description: Use when you have preprocessed 1D ¹H and/or ¹³C NMR spectra (as numerical arrays or feature tensors) from an unknown organic compound with ≤19 heavy atoms, and you need to predict both the molecular formula and the connectivity graph of the compound without prior structural hypotheses or reference.
+description: Use when you have preprocessed 1D ¹H and/or ¹³C NMR spectra (as numerical
+  arrays or feature tensors) from an unknown organic compound with ≤19 heavy atoms,
+  and you need to predict both the molecular formula and the connectivity graph of
+  the compound without prior structural hypotheses or reference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +15,13 @@ metadata:
   - Transformer architecture
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 evidence_spans:
-- Integrating this capability with a convolutional neural network, we build an end-to-end model
+- Integrating this capability with a convolutional neural network, we build an end-to-end
+  model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # molecular-structure-prediction-from-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict molecular structure (formula and connectivity) from routine 1D ¹H and/or ¹³C NMR spectra using an end-to-end CNN–transformer model. This skill is applicable to small organic molecules with up to 19 heavy atoms, where traditional manual interpretation becomes intractable.

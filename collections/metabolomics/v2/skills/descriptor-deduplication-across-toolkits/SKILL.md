@@ -1,6 +1,8 @@
 ---
 name: descriptor-deduplication-across-toolkits
-description: Use when when computing molecular descriptors from SMILES strings using both RDKit and mordred libraries simultaneously, and you need to combine their outputs into a single feature matrix without redundant features.
+description: Use when when computing molecular descriptors from SMILES strings using
+  both RDKit and mordred libraries simultaneously, and you need to combine their outputs
+  into a single feature matrix without redundant features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - NumPy
   - pandas
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
@@ -42,6 +45,7 @@ attribution:
 
 # descriptor-deduplication-across-toolkits
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove redundant molecular descriptors that exist in both RDKit and mordred libraries, retaining only the RDKit version to create a unified, non-redundant descriptor feature set for machine learning. This deduplication step is essential when combining multiple descriptor calculation toolkits to avoid feature duplication and reduce dimensionality in molecular featurization pipelines.

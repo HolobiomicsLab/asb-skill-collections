@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-querying
-description: Use when you have a directory of mzML mass spectrometry files and need to systematically identify and extract scans or peaks matching specific m/z values, retention time windows, intensity thresholds, or spectral fingerprints (e.g., product ion patterns, neutral loss signatures).
+description: Use when you have a directory of mzML mass spectrometry files and need
+  to systematically identify and extract scans or peaks matching specific m/z values,
+  retention time windows, intensity thresholds, or spectral fingerprints (e.g., product
+  ion patterns, neutral loss signatures).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - MassQL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab

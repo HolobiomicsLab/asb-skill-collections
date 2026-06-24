@@ -1,6 +1,9 @@
 ---
 name: json-document-enrichment
-description: Use when when your project JSON document contains public identifiers (genome IDs, biosample accessions, etc.) that lack human-readable or linked metadata, and you need to populate those fields programmatically before storage or publication to enable full-text search, validation, or cross-linking.
+description: Use when when your project JSON document contains public identifiers
+  (genome IDs, biosample accessions, etc.) that lack human-readable or linked metadata,
+  and you need to populate those fields programmatically before storage or publication
+  to enable full-text search, validation, or cross-linking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -12,11 +15,13 @@ metadata:
   - paired-data-form (iomega)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

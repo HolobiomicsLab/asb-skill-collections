@@ -1,6 +1,9 @@
 ---
 name: ranking-metric-computation-for-spectral-predictions
-description: Use when after generating ranked predictions of chemical formulas or subformulas for MS/MS spectra (from a neural network model like MIST-CF's formula transformer), compare predicted assignments against ground-truth reference labels to measure ranking quality.
+description: Use when after generating ranked predictions of chemical formulas or
+  subformulas for MS/MS spectra (from a neural network model like MIST-CF's formula
+  transformer), compare predicted assignments against ground-truth reference labels
+  to measure ranking quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,12 +18,14 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # Ranking Metric Computation for Spectral Predictions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute per-peak accuracy, exact-match rate per spectrum, and ranking metrics (e.g., fraction of correct subformulas in top-k predictions) to evaluate how well predicted chemical subformula or formula assignments match reference labels in MS/MS spectra. This skill quantifies the quality of candidate ranking without external databases or fragmentation tree computation.

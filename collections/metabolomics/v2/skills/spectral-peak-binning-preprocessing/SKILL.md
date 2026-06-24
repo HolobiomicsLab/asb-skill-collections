@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-binning-preprocessing
-description: Use when when you have raw high-resolution tandem mass spectra (mzML, mzXML, or MGF format) that you intend to cluster or compare at scale, and you need to convert continuous m/z and intensity measurements into discrete bins suitable for feature hashing or similarity searching.
+description: Use when when you have raw high-resolution tandem mass spectra (mzML,
+  mzXML, or MGF format) that you intend to cluster or compare at scale, and you need
+  to convert continuous m/z and intensity measurements into discrete bins suitable
+  for feature hashing or similarity searching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # spectral-peak-binning-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Discretize high-resolution MS/MS spectra by binning m/z and intensity dimensions into small mass bins, preparing them for dimensionality reduction via feature hashing. This preprocessing step conserves spectral information while enabling efficient vectorization for large-scale clustering.

@@ -1,6 +1,8 @@
 ---
 name: inter-scan-interval-validation
-description: Use when after acquiring a PRM experiment on a Thermo Fisher Orbitrap instrument when you need to verify that the mass spectrometer's data acquisition controller executed the scheduled method with correct temporal spacing.
+description: Use when after acquiring a PRM experiment on a Thermo Fisher Orbitrap
+  instrument when you need to verify that the mass spectrometer's data acquisition
+  controller executed the scheduled method with correct temporal spacing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +15,7 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -20,8 +23,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # inter-scan-interval-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that parallel reaction monitoring (PRM) acquisition maintains consistent scan spacing across all targeted cycles by extracting scan indices from a Thermo Fisher Scientific .raw file, filtering for a specific precursor m/z and scan type, and confirming that inter-scan deltas match the expected cycle length. This skill detects acquisition irregularities that would indicate missed or duplicated scans in targeted proteomics workflows.

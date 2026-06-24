@@ -1,6 +1,9 @@
 ---
 name: build-artifact-validation
-description: Use when after completing a platform-specific build (e.g., mvn clean package, qmake6 && make, cmake && make) to confirm the generated artifact is not corrupted and can execute on the intended OS (Windows 10, Ubuntu 22.04, macOS 12+ ARM64, or other documented targets).
+description: Use when after completing a platform-specific build (e.g., mvn clean
+  package, qmake6 && make, cmake && make) to confirm the generated artifact is not
+  corrupted and can execute on the intended OS (Windows 10, Ubuntu 22.04, macOS 12+
+  ARM64, or other documented targets).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -9,6 +12,7 @@ metadata:
   tools:
   - LipidSpace
   - LipidSpaceRest
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

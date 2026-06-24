@@ -1,6 +1,8 @@
 ---
 name: structure-annotation-via-similarity-ranking
-description: Use when you have an unknown tandem MS spectrum and seek to assign a chemical structure by matching against a curated reference database (e.g., NIST, GNPS, or custom metabolite libraries) without requiring an exact spectral match.
+description: Use when you have an unknown tandem MS spectrum and seek to assign a
+  chemical structure by matching against a curated reference database (e.g., NIST,
+  GNPS, or custom metabolite libraries) without requiring an exact spectral match.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,11 +15,13 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)
 evidence_spans:
-- and, when trained in a contrastive learning framework, enable embedding and structure annotation by database lookup.
+- and, when trained in a contrastive learning framework, enable embedding and structure
+  annotation by database lookup.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

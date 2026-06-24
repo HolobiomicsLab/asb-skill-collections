@@ -1,6 +1,9 @@
 ---
 name: molecular-network-graph-parsing
-description: Use when after GNPS_GC molecular networking job completion, when you have retrieved raw network output files and need to extract, validate, and structure the network topology for further metabolite assignment, comparative network analysis, or visualization.
+description: Use when after GNPS_GC molecular networking job completion, when you
+  have retrieved raw network output files and need to extract, validate, and structure
+  the network topology for further metabolite assignment, comparative network analysis,
+  or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -11,6 +14,7 @@ metadata:
   - GNPS_GC
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-constraint-validation
-description: Use when implementing replacement methods ($<-, [<-, spectraData<-, mz<-, intensity<-, peaksData<-) for a writable MsBackend subclass, or when modifying peak data in an existing backend.
+description: Use when implementing replacement methods ($<-, [<-, spectraData<-, mz<-,
+  intensity<-, peaksData<-) for a writable MsBackend subclass, or when modifying peak
+  data in an existing backend.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   - IRanges
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -44,6 +47,7 @@ attribution:
 
 # mass-spectrometry-data-constraint-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enforce data integrity constraints on m/z values, intensity values, and peak data when implementing or modifying writable MsBackend instances in the Spectra package. This skill ensures that replacement methods maintain critical invariants: length matching, data type validation, peak-count preservation, and m/z ordering.

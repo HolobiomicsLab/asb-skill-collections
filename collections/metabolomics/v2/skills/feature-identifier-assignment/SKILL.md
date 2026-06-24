@@ -1,6 +1,7 @@
 ---
 name: feature-identifier-assignment
-description: Use when after constructing MetaboSet objects from Excel-formatted LC-MS peak tables and before drift correction or quality flagging.
+description: Use when after constructing MetaboSet objects from Excel-formatted LC-MS
+  peak tables and before drift correction or quality flagging.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +15,7 @@ metadata:
   - ExpressionSet
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -23,8 +25,10 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
-- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet``` is built upon the ```ExpressionSet``` class'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
+- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet```
+  is built upon the ```ExpressionSet``` class'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +53,7 @@ attribution:
 
 # Feature-identifier assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and assign unique Feature_ID identifiers to LC-MS metabolomic features by combining Split mode, mass, and retention time values into row names of the expression matrix. This ensures consistent feature tracking and traceability across the MetaboSet object structure.

@@ -1,6 +1,9 @@
 ---
 name: threshold-based-sample-classification
-description: Use when after normalization (step 7) in untargeted metabolomic profiling pipelines, when you have a preprocessed feature matrix and need to identify samples with anomalous metabolic profiles that violate multivariate assumptions or represent technical failures.
+description: Use when after normalization (step 7) in untargeted metabolomic profiling
+  pipelines, when you have a preprocessed feature matrix and need to identify samples
+  with anomalous metabolic profiles that violate multivariate assumptions or represent
+  technical failures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - OUKS (step 9. Statistics.R)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

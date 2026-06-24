@@ -1,6 +1,9 @@
 ---
 name: reaction-activity-score-computation-from-gpr
-description: Use when you have RNA-seq FPKM abundance data for genes across multiple cell lines or samples, a metabolic model with embedded GPR associations, and need to translate differential gene expression into reaction-level constraints for flux prediction.
+description: Use when you have RNA-seq FPKM abundance data for genes across multiple
+  cell lines or samples, a metabolic model with embedded GPR associations, and need
+  to translate differential gene expression into reaction-level constraints for flux
+  prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,16 +18,22 @@ metadata:
   - GX-FBA
   - optGpSampler
   - COBRApy
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA
 - We used relative gene-expression values as in GX-FBA
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +57,7 @@ attribution:
 
 # Reaction Activity Score Computation from Gene-Protein-Reaction Rules
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Reaction Activity Scores (RAS) that represent differential expression of metabolic enzymes across cell lines by resolving Gene-Protein-Reaction (GPR) logical rules against RNA-seq transcript abundance data. RAS values integrate gene expression via AND (minimum) and OR (sum) operations, then normalize across cell lines to constrain flux boundaries in constraint-based metabolic models.

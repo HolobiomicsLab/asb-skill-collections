@@ -1,6 +1,9 @@
 ---
 name: score-standardisation-z-score-normalization
-description: Use when when comparing raw link scores (strain correlation or IOKR) across different GCF-MF or BGC-spectrum pairs and you need to distinguish true positive links from background noise. Raw scores depend on overlap size and are incomparable across links with different cluster sizes;
+description: Use when when comparing raw link scores (strain correlation or IOKR)
+  across different GCF-MF or BGC-spectrum pairs and you need to distinguish true positive
+  links from background noise. Raw scores depend on overlap size and are incomparable
+  across links with different cluster sizes;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,18 +19,23 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- After downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- After downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
-- antiSMASH to score the correspondence between the MIBiG entries and the detected BGCs
-- the MIBiG database [32] has emerged as a central repository of characterised microbial BGCs
-- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based on properties absent from an MS2 spectrum,
+- antiSMASH to score the correspondence between the MIBiG entries and the detected
+  BGCs
+- the MIBiG database [32] has emerged as a central repository of characterised microbial
+  BGCs
+- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based
+  on properties absent from an MS2 spectrum,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +60,7 @@ attribution:
 
 # Score Standardisation (Z-Score Normalization)
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw scoring functions (strain correlation or IOKR) to zero mean and unit variance by subtracting the hypergeometric expected value and dividing by the standard deviation, enabling reliable cross-link comparison and statistical ranking. This standardisation resolves the inability of raw scores to distinguish links with identical strain/spectrum patterns.

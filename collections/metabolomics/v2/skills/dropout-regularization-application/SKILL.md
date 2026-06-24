@@ -1,6 +1,9 @@
 ---
 name: dropout-regularization-application
-description: Use when when training a deep neural network on mass spectrometry spectral data where overfitting is a risk (especially with data augmentation applied), and when you need both regularization during training AND uncertainty quantification at inference time via multiple forward passes with dropout.
+description: Use when when training a deep neural network on mass spectrometry spectral
+  data where overfitting is a risk (especially with data augmentation applied), and
+  when you need both regularization during training AND uncertainty quantification
+  at inference time via multiple forward passes with dropout.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2426
@@ -16,11 +19,13 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # dropout-regularization-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply dropout regularization during training of a Siamese neural network to prevent overfitting and improve generalization when predicting structural similarities from MS/MS spectral pairs. Dropout probabilistically removes activations during training and is selectively applied at inference time to quantify prediction uncertainty via Monte-Carlo ensembles.

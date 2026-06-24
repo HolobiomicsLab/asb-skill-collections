@@ -1,6 +1,9 @@
 ---
 name: model-parameter-inspection-and-logging
-description: Use when after instantiating a neural network model (such as TransG-Net) with multimodal inputs but before beginning training, to validate that the model architecture correctly accepts graph features and SMILES embeddings as separate modalities and produces expected output tensor shapes.
+description: Use when after instantiating a neural network model (such as TransG-Net)
+  with multimodal inputs but before beginning training, to validate that the model
+  architecture correctly accepts graph features and SMILES embeddings as separate
+  modalities and produces expected output tensor shapes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -17,6 +20,7 @@ metadata:
   - cuDNN
   - TransGNet.py
   - data_prep.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -50,6 +54,7 @@ attribution:
 
 # model-parameter-inspection-and-logging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically inspect and log the architecture, parameter counts, and input/output tensor dimensions of an instantiated neural network model to verify correctness before training. This skill ensures the model's structure matches the intended multimodal input specification and documents the computational footprint for reproducibility.

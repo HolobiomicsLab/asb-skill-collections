@@ -1,6 +1,8 @@
 ---
 name: docker-image-management
-description: Use when when you need to confirm that a published Docker image (e.g., hosted on Docker Hub) can be pulled and instantiated successfully, and when the target tool has a defined entry point or CLI interface.
+description: Use when when you need to confirm that a published Docker image (e.g.,
+  hosted on Docker Hub) can be pulled and instantiated successfully, and when the
+  target tool has a defined entry point or CLI interface.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,6 +13,7 @@ metadata:
   - Docker
   - Docker Hub
   - tima (R package)
+  license_tier: open
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

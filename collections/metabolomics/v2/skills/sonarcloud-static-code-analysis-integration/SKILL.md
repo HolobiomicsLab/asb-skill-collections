@@ -1,6 +1,9 @@
 ---
 name: sonarcloud-static-code-analysis-integration
-description: Use when when you have a GitHub-hosted Python project (or other supported language) with an existing test suite and want to gate code contributions on multiple quality dimensions beyond unit tests—specifically when you need automated reporting of code coverage, technical debt, security issues, and.
+description: Use when when you have a GitHub-hosted Python project (or other supported
+  language) with an existing test suite and want to gate code contributions on multiple
+  quality dimensions beyond unit tests—specifically when you need automated reporting
+  of code coverage, technical debt, security issues, and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,6 +14,7 @@ metadata:
   - GitHub Actions
   - Sonarcloud
   - Python (setup.py)
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

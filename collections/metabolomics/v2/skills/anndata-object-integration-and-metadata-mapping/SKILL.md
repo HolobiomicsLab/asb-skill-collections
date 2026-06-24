@@ -1,6 +1,8 @@
 ---
 name: anndata-object-integration-and-metadata-mapping
-description: Use when you have preprocessed and filtered ST and SM AnnData objects with spatial coordinates and features, and you need to establish spot-level correspondence between the two modalities to enable downstream joint analysis.
+description: Use when you have preprocessed and filtered ST and SM AnnData objects
+  with spatial coordinates and features, and you need to establish spot-level correspondence
+  between the two modalities to enable downstream joint analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3198
@@ -12,6 +14,7 @@ metadata:
   - scikit-learn NearestNeighbors
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-strategy
-description: Use when your feature intensity table (samples × compounds) contains NA values and you intend to apply log transformation or scaling-based normalization. Specifically, apply this skill when the transf_data function is invoked with missing_replace=TRUE, before any log transformation or scaling step.
+description: Use when your feature intensity table (samples × compounds) contains
+  NA values and you intend to apply log transformation or scaling-based normalization.
+  Specifically, apply this skill when the transf_data function is invoked with missing_replace=TRUE,
+  before any log transformation or scaling step.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3409
@@ -11,6 +14,7 @@ metadata:
   - R
   - GetFeatistics
   - R (≥ 4.3.1)
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

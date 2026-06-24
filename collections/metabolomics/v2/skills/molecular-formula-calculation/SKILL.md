@@ -12,6 +12,7 @@ metadata:
   - Excalibur
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator
@@ -40,6 +41,7 @@ attribution:
 
 # molecular-formula-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and output molecular formulas for enumerated lipid species by combining lipid class identifiers with fatty acid chain descriptors (carbon count, degree of unsaturation). This skill enables systematic generation of lipid molecular identities for spectral library construction and mass spectrometry-based identification workflows.

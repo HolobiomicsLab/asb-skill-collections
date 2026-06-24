@@ -1,6 +1,8 @@
 ---
 name: batch-effect-correction-combat-model
-description: Use when your metabolomics matrix shows evidence of systematic variation correlated with batch/run assignment (detectable via PCA separation by batch, elevated batch-dependent variance, or RLA plots showing non-zero median log-ratios).
+description: Use when your metabolomics matrix shows evidence of systematic variation
+  correlated with batch/run assignment (detectable via PCA separation by batch, elevated
+  batch-dependent variance, or RLA plots showing non-zero median log-ratios).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +13,7 @@ metadata:
   - dbnorm
   - sva
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -20,7 +23,8 @@ evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - ComBat(parametric and non-parametric)-model [PMID:16632515] from sva package [PMID:22257669]
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # batch-effect-correction-combat-model
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply parametric or non-parametric ComBat models from the sva package via dbnorm to remove batch effects and technical heterogeneity from metabolomics datasets. This skill uses empirical Bayes methods to adjust feature intensities for known batch assignments, preserving biological signal while standardizing technical variation across analytical runs.

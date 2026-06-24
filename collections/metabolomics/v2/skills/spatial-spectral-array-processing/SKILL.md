@@ -1,6 +1,9 @@
 ---
 name: spatial-spectral-array-processing
-description: Use when you have preprocessed MSImagingArrays data (after normalization, smoothing, and baseline reduction) and need to detect peaks consistently across all spectra in an imaging experiment, create reference peak positions from a representative subset, and filter by signal-to-noise ratio and.
+description: Use when you have preprocessed MSImagingArrays data (after normalization,
+  smoothing, and baseline reduction) and need to detect peaks consistently across
+  all spectra in an imaging experiment, create reference peak positions from a representative
+  subset, and filter by signal-to-noise ratio and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,14 +17,18 @@ metadata:
   - matter
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods and any statistical analysis methods with a `BPPARAM` option
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods and any statistical analysis methods with a `BPPARAM` option
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:

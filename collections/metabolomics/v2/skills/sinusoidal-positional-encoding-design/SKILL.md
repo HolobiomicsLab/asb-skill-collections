@@ -1,6 +1,8 @@
 ---
 name: sinusoidal-positional-encoding-design
-description: Use when you have variable-length lists of MS/MS peaks (m/z and intensity pairs) that need to be encoded into a fixed-dimensional representation compatible with transformer architecture.
+description: Use when you have variable-length lists of MS/MS peaks (m/z and intensity
+  pairs) that need to be encoded into a fixed-dimensional representation compatible
+  with transformer architecture.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3444
@@ -14,6 +16,7 @@ metadata:
   - CLERMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS
@@ -41,6 +44,7 @@ attribution:
 
 # sinusoidal-positional-encoding-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a sinusoidal embedder that encodes MS/MS peak m/z and intensity metadata into fixed-length tensor representations for transformer input. This skill is essential when building transformer-based models for mass spectrometry data where peak positions and magnitudes must be converted into learnable token embeddings.

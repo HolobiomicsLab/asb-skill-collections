@@ -1,6 +1,7 @@
 ---
 name: block-layout-analysis-for-io-optimization
-description: Use when when preparing NMR datasets for processing in NMRFx and the Dataset.createDataFile() method must choose among competing storage backends.
+description: Use when when preparing NMR datasets for processing in NMRFx and the
+  Dataset.createDataFile() method must choose among competing storage backends.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +9,7 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -37,6 +39,7 @@ attribution:
 
 # block-layout-analysis-for-io-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Analyzes dataset block layout configuration to select the optimal memory-mapped storage backend (MappedMatrixFile, MappedSubMatrixFile, BigMappedMatrixFile, or SubMatrixFile) for efficient I/O and memory access patterns. This skill balances memory constraints, file size, and tiling strategy to minimize latency and memory pressure during large dataset operations.

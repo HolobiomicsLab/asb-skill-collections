@@ -1,6 +1,8 @@
 ---
 name: taxonomic-metadata-integration
-description: Use when after organism name cleaning and standardization (via 1_cleaningOriginal.R and 4_cleaningTaxonomy.R) has produced a cleaned organism table (interim/tables/2_cleaned/organism/cleaned.tsv.gz), apply this skill to map those cleaned names to Open Tree of Life (OTL) identifiers.
+description: Use when after organism name cleaning and standardization (via 1_cleaningOriginal.R
+  and 4_cleaningTaxonomy.R) has produced a cleaned organism table (interim/tables/2_cleaned/organism/cleaned.tsv.gz),
+  apply this skill to map those cleaned names to Open Tree of Life (OTL) identifiers.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -11,6 +13,7 @@ metadata:
   - R
   - 5_addingOTL.R
   - Open Tree of Life (OTL)
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +46,7 @@ attribution:
 
 # taxonomic-metadata-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integration of cleaned organism names with standardized taxonomic identifiers (Open Tree of Life) to produce an enriched organism dictionary. This skill bridges curated organism records with external taxonomic authority data, enabling downstream computational natural products research to leverage standardized, resolvable organism references.

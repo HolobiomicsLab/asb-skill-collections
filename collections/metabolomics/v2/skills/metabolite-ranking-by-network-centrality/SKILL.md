@@ -1,6 +1,9 @@
 ---
 name: metabolite-ranking-by-network-centrality
-description: Use when when you have a directed metabolic network (digraph) and want to identify which metabolites are most central to observed perturbations; specifically when you have (1) a global network as an edge list, (2) seed nodes with known or hypothesized perturbation (e.
+description: Use when when you have a directed metabolic network (digraph) and want
+  to identify which metabolites are most central to observed perturbations; specifically
+  when you have (1) a global network as an edge list, (2) seed nodes with known or
+  hypothesized perturbation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_2259
   tools:
   - FNICM
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04131
   title: FNICM

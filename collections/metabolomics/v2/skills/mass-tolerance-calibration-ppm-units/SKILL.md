@@ -1,6 +1,9 @@
 ---
 name: mass-tolerance-calibration-ppm-units
-description: Use when when linking statistically significant LC-MS features into structural clusters based on adduct signatures and cross-assay references (e.g., [M+H]+/[M-H]−), and you need to specify the maximum allowed deviation (in ppm) between observed m/z values and calculated neutral masses.
+description: Use when when linking statistically significant LC-MS features into structural
+  clusters based on adduct signatures and cross-assay references (e.g., [M+H]+/[M-H]−),
+  and you need to specify the maximum allowed deviation (in ppm) between observed
+  m/z values and calculated neutral masses.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -19,6 +22,7 @@ metadata:
   - pandas / numpy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -55,6 +59,7 @@ attribution:
 
 # mass-tolerance-calibration-ppm-units
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate and apply mass-to-charge ratio (m/z) tolerance thresholds expressed in parts-per-million (ppm) units to match features across LC-MS assays during structural clustering and adduct annotation. This skill ensures that hypothetical neutral masses calculated from common electrospray ionization (ESI) adducts are correctly paired with observed features within instrument-specific accuracy bounds.

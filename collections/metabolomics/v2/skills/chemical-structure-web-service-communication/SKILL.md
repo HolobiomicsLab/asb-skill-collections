@@ -20,6 +20,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab).
     url: https://bitbucket.org/wishartlab/classyfire_api.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
@@ -48,6 +49,7 @@ attribution:
 
 # chemical-structure-web-service-communication
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Construct and execute HTTP POST requests to the ClassyFire API to submit batches of chemical compounds for automatic structure-based classification, receiving a query ID for downstream polling and result retrieval.

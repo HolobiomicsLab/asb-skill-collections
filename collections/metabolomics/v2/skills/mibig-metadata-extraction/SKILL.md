@@ -1,6 +1,9 @@
 ---
 name: mibig-metadata-extraction
-description: Use when when you need to audit, inventory, or report on the curation state of MIBiG entries; when cluster.status values must be validated or aggregated for quality control; when building a status index to support data governance or release workflows.
+description: Use when when you need to audit, inventory, or report on the curation
+  state of MIBiG entries; when cluster.status values must be validated or aggregated
+  for quality control; when building a status index to support data governance or
+  release workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   tools:
   - mibig-json repository
   - MIBiG web interface
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkz882
   title: MIBiG 2.0
@@ -37,6 +41,7 @@ attribution:
 
 # mibig-metadata-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and aggregate entry-level metadata from MIBiG JSON files, particularly the cluster.status field, to construct a comprehensive index of curation status across the repository. This skill enables systematic tracking and validation of annotation completeness in the MIBiG secondary metabolite database.

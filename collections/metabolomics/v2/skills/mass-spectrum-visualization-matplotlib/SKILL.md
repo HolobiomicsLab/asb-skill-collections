@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-visualization-matplotlib
-description: Use when you have an annotated MsmsSpectrum object (with fragment assignments via ProForma 2.0) and need to produce a high-resolution, static PNG figure showing both the observed spectrum and color-highlighted fragment ion matches for inclusion in a manuscript or supplementary materials.
+description: Use when you have an annotated MsmsSpectrum object (with fragment assignments
+  via ProForma 2.0) and need to produce a high-resolution, static PNG figure showing
+  both the observed spectrum and color-highlighted fragment ion matches for inclusion
+  in a manuscript or supplementary materials.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -14,12 +17,15 @@ metadata:
   - ProForma 2.0
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 - import matplotlib.pyplot as plt
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # mass-spectrum-visualization-matplotlib
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate publication-quality static plots of annotated mass spectrometry spectra using spectrum_utils' Matplotlib backend. This skill enables customizable visualization of fragment ion annotations overlaid on observed m/z intensity distributions for peer-reviewed figure production.

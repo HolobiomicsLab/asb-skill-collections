@@ -1,6 +1,9 @@
 ---
 name: statistical-significance-filtering-q-value
-description: Use when after performing univariate statistical tests (e.g., ANOVA, t-tests) across sample classes in a normalized metabolomic feature table, you need to control false discovery rate and select a high-confidence subset of significantly differentiated metabolites for downstream analysis (e.
+description: Use when after performing univariate statistical tests (e.g., ANOVA,
+  t-tests) across sample classes in a normalized metabolomic feature table, you need
+  to control false discovery rate and select a high-confidence subset of significantly
+  differentiated metabolites for downstream analysis (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,13 +14,16 @@ metadata:
   - margheRita
   - R
   - MS-DIAL
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -45,6 +51,7 @@ attribution:
 
 # Statistical significance filtering by q-value
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomic features based on multiple-testing-corrected significance thresholds (q-values) to identify features with robust statistical evidence across sample classes. This skill applies Benjamini–Hochberg FDR correction to raw p-values from univariate tests and retains only features meeting a user-specified q-value cutoff.

@@ -1,6 +1,8 @@
 ---
 name: ci-cd-pipeline-monitoring
-description: Use when you need to verify that a GitHub Actions workflow (such as a Build and Publish pipeline) executes successfully on a specific branch (e.g., release branch) and produces a passing build status.
+description: Use when you need to verify that a GitHub Actions workflow (such as a
+  Build and Publish pipeline) executes successfully on a specific branch (e.g., release
+  branch) and produces a passing build status.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +10,7 @@ metadata:
   - GitHub Actions
   - distribute.yaml
   - SIRIUS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

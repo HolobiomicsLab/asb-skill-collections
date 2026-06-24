@@ -1,6 +1,7 @@
 ---
 name: differential-metabolite-abundance-testing
-description: Use when you have preprocessed and normalized metabolite measurements from two or more distinct biological groups (e.
+description: Use when you have preprocessed and normalized metabolite measurements
+  from two or more distinct biological groups (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,6 +12,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +47,7 @@ attribution:
 
 # differential-metabolite-abundance-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply statistical hypothesis testing to identify metabolites with significantly different abundance between two or more sample groups in a preprocessed MultiAssayExperiment object. This skill detects disease-specific or condition-specific metabolic signatures using Student's t-test with Benjamini-Hochberg multiple-testing correction.

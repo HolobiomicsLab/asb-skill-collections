@@ -1,6 +1,8 @@
 ---
 name: cross-view-similarity-scoring
-description: Use when you have an experimental mass spectrum (query) and a set of molecular candidate structures, and you need to rank the candidates by how well their predicted spectral features match the query spectrum.
+description: Use when you have an experimental mass spectrum (query) and a set of
+  molecular candidate structures, and you need to rank the candidates by how well
+  their predicted spectral features match the query spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3765
@@ -16,6 +18,7 @@ metadata:
   - MassSpecGym
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.11.12.688047v1
   title: MVP
@@ -44,6 +47,7 @@ attribution:
 
 # cross-view-similarity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply MultiView Projection (MVP) to compute cross-view similarity scores between a query spectrum and molecular candidate structures, enabling ranking of candidates by aggregated similarity. This skill is essential when you need to match an experimental mass spectrum against a library of putative molecular structures.

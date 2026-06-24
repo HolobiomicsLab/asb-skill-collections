@@ -1,6 +1,8 @@
 ---
 name: retention-time-projection-across-chromatographic-methods
-description: Use when when you have retention times measured on one chromatographic method and need to predict or map them to another method with minimal or no overlap in measured molecules.
+description: Use when when you have retention times measured on one chromatographic
+  method and need to predict or map them to another method with minimal or no overlap
+  in measured molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,11 +15,13 @@ metadata:
   - cmmrt
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # retention-time-projection-across-chromatographic-methods
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Project retention times between different chromatographic methods using a Bayesian meta-learning approach that learns a mapping from minimal calibration data (as few as 10 molecules) to a pre-trained DNN's latent feature space. This enables metabolite annotation and cross-method RT prediction with competitive accuracy relative to larger calibration sets.

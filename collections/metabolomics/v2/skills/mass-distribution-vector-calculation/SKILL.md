@@ -1,6 +1,8 @@
 ---
 name: mass-distribution-vector-calculation
-description: Use when you have raw LC-MS fractional abundances (FAM) data from isotope labeling experiments and need to obtain true mass distribution vectors (MDV) that represent only the isotopic labeling contribution.
+description: Use when you have raw LC-MS fractional abundances (FAM) data from isotope
+  labeling experiments and need to obtain true mass distribution vectors (MDV) that
+  represent only the isotopic labeling contribution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +14,7 @@ metadata:
   - IsoCor
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

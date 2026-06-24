@@ -1,6 +1,9 @@
 ---
 name: pathway-annotation-mapping
-description: Use when you have a metabolomics dataset with metabolite identifiers in mixed formats (e.g., common names, KEGG accessions, HMDB IDs) and need to assign each metabolite to its canonical pathway(s) before performing pathway-level classification, feature selection, or prognosis modeling.
+description: Use when you have a metabolomics dataset with metabolite identifiers
+  in mixed formats (e.g., common names, KEGG accessions, HMDB IDs) and need to assign
+  each metabolite to its canonical pathway(s) before performing pathway-level classification,
+  feature selection, or prognosis modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,12 +15,15 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

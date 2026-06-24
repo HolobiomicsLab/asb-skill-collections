@@ -1,6 +1,8 @@
 ---
 name: cluster-assignment-mapping
-description: Use when after density-based clustering (e.g., DBSCAN) has been performed on a sparse pairwise distance matrix derived from MS/MS spectra nearest neighbor indexes.
+description: Use when after density-based clustering (e.g., DBSCAN) has been performed
+  on a sparse pairwise distance matrix derived from MS/MS spectra nearest neighbor
+  indexes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,11 +14,13 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # cluster-assignment-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map spectrum identifiers to their assigned cluster IDs after density-based clustering on a sparse pairwise distance matrix. This skill produces a machine-readable assignment table and summary statistics that document cluster composition and quality.

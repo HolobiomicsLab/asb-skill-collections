@@ -1,6 +1,9 @@
 ---
 name: spectral-denoising-via-training-data-filtering
-description: Use when you have untargeted MS2 spectra from environmental or clinical samples that will be used for natural product identification (e.g., linking to BGCs via IOKR or other kernel-based methods), and you have access to a high-quality training library of annotated spectra with known structures.
+description: Use when you have untargeted MS2 spectra from environmental or clinical
+  samples that will be used for natural product identification (e.g., linking to BGCs
+  via IOKR or other kernel-based methods), and you have access to a high-quality training
+  library of annotated spectra with known structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,18 +20,25 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
-- To assign one or more molecular structures to BGCs, according to how many high-scoring matches are found in MIBiG
-- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit
-- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
+- To assign one or more molecular structures to BGCs, according to how many high-scoring
+  matches are found in MIBiG
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit [29]
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -53,6 +63,7 @@ attribution:
 
 # Spectral denoising via training data filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter MS2 spectra to retain only peaks present in a reference training library, then apply the Probability Product Kernel (PPK) as a denoising step before downstream scoring. This reduces computational burden and noise in spectrum-to-BGC matching by excluding unexplained fragmentation peaks.

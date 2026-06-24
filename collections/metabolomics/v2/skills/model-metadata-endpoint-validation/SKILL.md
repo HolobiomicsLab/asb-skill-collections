@@ -1,6 +1,8 @@
 ---
 name: model-metadata-endpoint-validation
-description: Use when after starting a TensorFlow Serving instance (e.g., via docker-compose) and before attempting classification tasks, to confirm that input layers are named 'input_2048' and 'input_4096' and the output layer is named 'output'.
+description: Use when after starting a TensorFlow Serving instance (e.g., via docker-compose)
+  and before attempting classification tasks, to confirm that input layers are named
+  'input_2048' and 'input_4096' and the output layer is named 'output'.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +10,7 @@ metadata:
   - Python
   - TensorFlow Serving
   - docker-compose
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -36,6 +39,7 @@ attribution:
 
 # model-metadata-endpoint-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a deployed TensorFlow Serving model exposes the correct input and output layer names by querying the /model/metadata HTTP endpoint. This skill ensures the model interface matches deployment expectations before executing inference workflows.

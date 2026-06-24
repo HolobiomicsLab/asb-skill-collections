@@ -1,6 +1,8 @@
 ---
 name: retention-index-calibration-application
-description: Use when when processing GC-MS data where retention time alone is insufficient for compound identification due to instrument drift or method variation, and you need to match detected peaks against a spectral library (e.
+description: Use when when processing GC-MS data where retention time alone is insufficient
+  for compound identification due to instrument drift or method variation, and you
+  need to match detected peaks against a spectral library (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -14,12 +16,14 @@ metadata:
   - PNNLMetV20191015.MSL
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # retention-index-calibration-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retention index (RI) calibration transforms GC-MS retention times into standardized indices using FAMES (fatty acid methyl ester) standards, enabling reliable compound identification across instruments and methods by normalizing peak elution order to a reference scale. This calibration is prerequisite for spectral library matching in low-resolution GC-MS workflows.

@@ -1,6 +1,9 @@
 ---
 name: network-stability-assessment
-description: Use when you have constructed a network object (from correlation data, adjacency matrices, or edge lists) and need to evaluate which nodes are most critical to network integrity, how the network responds to the removal of highly connected nodes, or whether the network exhibits robust or fragile.
+description: Use when you have constructed a network object (from correlation data,
+  adjacency matrices, or edge lists) and need to evaluate which nodes are most critical
+  to network integrity, how the network responds to the removal of highly connected
+  nodes, or whether the network exhibits robust or fragile.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +16,15 @@ metadata:
   - R
   - pcutils
   - igraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 - devtools::install_github("Asa12138/pcutils")
 claims: []
@@ -44,6 +50,7 @@ attribution:
 
 # network-stability-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute robustness and perturbation-response metrics to characterize how network topology and connectivity respond to node or edge removal. This skill quantifies network resilience by measuring changes in network properties under systematic or random perturbations, enabling identification of critical nodes and assessment of network fragility.

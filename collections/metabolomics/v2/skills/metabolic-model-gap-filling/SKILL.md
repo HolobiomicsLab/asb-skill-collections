@@ -1,6 +1,8 @@
 ---
 name: metabolic-model-gap-filling
-description: Use when you have consensus metabolic reconstructions in SBML or JSON format for community members and need to resolve incomplete reactions, missing cofactor availability, or blocked pathways that prevent feasibility of biomass production.
+description: Use when you have consensus metabolic reconstructions in SBML or JSON
+  format for community members and need to resolve incomplete reactions, missing cofactor
+  availability, or blocked pathways that prevent feasibility of biomass production.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -10,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_0621
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -38,6 +41,7 @@ attribution:
 
 # metabolic-model-gap-filling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Gap-filling identifies and resolves metabolic dead-ends in genome-scale reconstructions by leveraging community-level constraints and cross-member dependencies. This skill is essential when individual member models contain metabolic gaps that prevent biomass production or violate stoichiometric balance—conditions common in consensus models derived from annotation pipelines.

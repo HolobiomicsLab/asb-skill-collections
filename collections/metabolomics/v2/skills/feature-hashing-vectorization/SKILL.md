@@ -1,6 +1,7 @@
 ---
 name: feature-hashing-vectorization
-description: Use when when you have high-resolution tandem MS/MS spectra in mzML, mzXML, or MGF format and need to cluster or search millions of spectra efficiently.
+description: Use when when you have high-resolution tandem MS/MS spectra in mzML,
+  mzXML, or MGF format and need to cluster or search millions of spectra efficiently.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -12,11 +13,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +43,7 @@ attribution:
 
 # feature-hashing-vectorization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts high-resolution MS/MS spectra into fixed-size, low-dimensional dense vectors by binning m/z ranges and applying non-cryptographic hash functions, enabling efficient nearest-neighbor indexing and similarity searching at scale.

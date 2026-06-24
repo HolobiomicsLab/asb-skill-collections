@@ -1,6 +1,9 @@
 ---
 name: performance-benchmarking-computational-systems
-description: Use when you have implemented or reconstructed a performance-critical computational module (e.g., an expeditious querying engine, a database lookup accelerator, or a real-time matching algorithm) and need to validate that it achieves claimed throughput targets.
+description: Use when you have implemented or reconstructed a performance-critical
+  computational module (e.g., an expeditious querying engine, a database lookup accelerator,
+  or a real-time matching algorithm) and need to validate that it achieves claimed
+  throughput targets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,12 +16,15 @@ metadata:
   - LipidIN
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

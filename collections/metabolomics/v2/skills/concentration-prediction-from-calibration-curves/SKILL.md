@@ -1,6 +1,9 @@
 ---
 name: concentration-prediction-from-calibration-curves
-description: Use when when you have a targeted metabolomics peak area intensity table with samples classified into calibration curve standards (with known concentration values), quality control (QC) samples, blanks, and unknowns, and you need to convert raw peak intensities into predicted concentrations for.
+description: Use when when you have a targeted metabolomics peak area intensity table
+  with samples classified into calibration curve standards (with known concentration
+  values), quality control (QC) samples, blanks, and unknowns, and you need to convert
+  raw peak intensities into predicted concentrations for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,14 +15,17 @@ metadata:
   - GetFeatistics
   - lme4
   - AER
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
-- linear models with mixed effects (random and fixed), using the _lmer_ function from the lme4 package
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
+- linear models with mixed effects (random and fixed), using the _lmer_ function from
+  the lme4 package
 - TOBIT linear models, using the _tobit_ function of the AER package
 claims: []
 provenance:

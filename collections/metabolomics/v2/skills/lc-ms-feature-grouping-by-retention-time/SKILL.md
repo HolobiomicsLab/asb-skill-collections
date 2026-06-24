@@ -1,6 +1,8 @@
 ---
 name: lc-ms-feature-grouping-by-retention-time
-description: Use when immediately after chromatographic peak detection (findChromPeaks) when you have detected peaks across multiple samples and need to identify which peaks represent the same feature across the sample cohort.
+description: Use when immediately after chromatographic peak detection (findChromPeaks)
+  when you have detected peaks across multiple samples and need to identify which
+  peaks represent the same feature across the sample cohort.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

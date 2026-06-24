@@ -1,6 +1,8 @@
 ---
 name: metabolite-network-diffusion-propagation
-description: Use when after cluster-based filtering of KEGG candidates has produced a set of candidate metabolites with assigned scores, but before final annotation ranking.
+description: Use when after cluster-based filtering of KEGG candidates has produced
+  a set of candidate metabolites with assigned scores, but before final annotation
+  ranking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -12,11 +14,13 @@ metadata:
   - R
   - FELLA
   - igraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 - we will now use the sample graph provided by FELLA R package
 - g.metab <- igraph::as.undirected(sample.graph)
@@ -43,6 +47,7 @@ attribution:
 
 # metabolite-network-diffusion-propagation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Propagate candidate metabolite scores through a KEGG-derived metabolic network graph to prioritize annotations by network proximity and topology. This skill ranks metabolite identifications by diffusing association scores across the network, accounting for graph structure via z-score normalization, to produce a final ranked annotation table.

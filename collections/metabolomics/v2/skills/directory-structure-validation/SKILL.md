@@ -1,6 +1,9 @@
 ---
 name: directory-structure-validation
-description: Use when after editing core R scripts in the Core-Match repository and before running LipidMatch-4.2 analysis, to verify that developer modifications have been correctly distributed across the Flow version (LipidMatch_Distribution) and Modular version (FluoroMatch_Modular) directory trees.
+description: Use when after editing core R scripts in the Core-Match repository and
+  before running LipidMatch-4.2 analysis, to verify that developer modifications have
+  been correctly distributed across the Flow version (LipidMatch_Distribution) and
+  Modular version (FluoroMatch_Modular) directory trees.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - R
   - LipidMatch
   - FluoroMatch
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -40,6 +44,7 @@ attribution:
 
 # directory-structure-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that edited script files (Modular.r, genEIC.r, MS1Spectragen.r, Stats.R) are placed into the correct target directories within LipidMatch-4.2 distribution to ensure developer changes integrate properly into both Flow and Modular analysis versions.

@@ -1,19 +1,24 @@
 ---
 name: r-object-slot-inspection
-description: Use when after calling a data import function (such as read_chrom on a NetCDF chromatogram file) that returns a structured S4 object, inspect its slots to confirm the object was constructed correctly, validate that retention times and modulation parameters were parsed as expected, and ensure the.
+description: Use when after calling a data import function (such as read_chrom on
+  a NetCDF chromatogram file) that returns a structured S4 object, inspect its slots
+  to confirm the object was constructed correctly, validate that retention times and
+  modulation parameters were parsed as expected, and ensure the.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - RGCxGC
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -39,6 +44,7 @@ attribution:
 
 # R Object Slot Inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and validate the internal structure of S4 R objects returned by data import functions, verifying that slots contain expected data types, dimensions, and metadata. This skill is essential for confirming correct parsing of instrument output files (e.g., NetCDF chromatograms) before downstream preprocessing.

@@ -1,6 +1,8 @@
 ---
 name: tabular-data-field-comparison
-description: Use when you have multiple independent implementations of the same data format reader (e.g., Rust, Python, R versions) and need to verify they produce identical or equivalent output.
+description: Use when you have multiple independent implementations of the same data
+  format reader (e.g., Rust, Python, R versions) and need to verify they produce identical
+  or equivalent output.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +18,7 @@ metadata:
   - R arrow
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -46,6 +49,7 @@ attribution:
 
 # Tabular Data Field Comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare structured tabular outputs (CSV, Parquet) exported from independent implementations of the same file reader to detect field-level discrepancies in names, types, row counts, and numerical values. This skill validates implementation interoperability and identifies divergences in data interpretation across language/library variants.

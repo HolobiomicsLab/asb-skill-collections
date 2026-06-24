@@ -1,6 +1,9 @@
 ---
 name: spectral-feature-vector-aggregation
-description: Use when you have generated per-sample MS2 fingerprints (as spec2vec document representations counting MS2 peaks and neutral losses to precursor in each sample) and need to align them into a single matrix for downstream cross-sample comparison, filtering, or visualization (e.
+description: Use when you have generated per-sample MS2 fingerprints (as spec2vec
+  document representations counting MS2 peaks and neutral losses to precursor in each
+  sample) and need to align them into a single matrix for downstream cross-sample
+  comparison, filtering, or visualization (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3209
@@ -15,12 +18,15 @@ metadata:
   - MEMO
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - pip install numpy
 - conda create --name memo python=3.8
 claims: []

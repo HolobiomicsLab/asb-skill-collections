@@ -1,6 +1,9 @@
 ---
 name: software-testing-unit-validation
-description: Use when after making code modifications (bug fixes, new features, or refactoring) to the MS2Query codebase, or when contributing changes via pull request. The skill is essential before pushing feature branches to the repository or merging changes into master.
+description: Use when after making code modifications (bug fixes, new features, or
+  refactoring) to the MS2Query codebase, or when contributing changes via pull request.
+  The skill is essential before pushing feature branches to the repository or merging
+  changes into master.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3807
@@ -13,6 +16,7 @@ metadata:
   - GitHub Actions
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

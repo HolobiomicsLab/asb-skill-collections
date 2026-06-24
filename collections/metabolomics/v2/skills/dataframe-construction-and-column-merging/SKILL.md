@@ -1,6 +1,9 @@
 ---
 name: dataframe-construction-and-column-merging
-description: Use when when implementing a new MsBackend subclass and need to return complete spectra data as a single DataFrame object that combines required core variables with backend-specific metadata columns, while avoiding cyclic function calls between spectraData() and spectraVariables().
+description: Use when when implementing a new MsBackend subclass and need to return
+  complete spectra data as a single DataFrame object that combines required core variables
+  with backend-specific metadata columns, while avoiding cyclic function calls between
+  spectraData() and spectraVariables().
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +18,7 @@ metadata:
   - IRanges
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -22,7 +26,8 @@ evidence_spans:
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
 - DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 - library(Spectra) library(IRanges)
-- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package
+- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # dataframe-construction-and-column-merging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a unified DataFrame for mass spectrometry spectra by merging core spectra variables (m/z, intensity, retention time, scan index) with backend-specific columns, ensuring no circular dependencies between accessor methods. This skill is essential for implementing the spectraData() method in custom MsBackend subclasses.

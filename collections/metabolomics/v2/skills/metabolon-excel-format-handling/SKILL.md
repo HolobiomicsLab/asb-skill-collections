@@ -1,6 +1,7 @@
 ---
 name: metabolon-excel-format-handling
-description: Use when you have raw Metabolon Excel workbooks (metabolon_v1.1_example.xlsx or metabolon_v1.2_example.
+description: Use when you have raw Metabolon Excel workbooks (metabolon_v1.1_example.xlsx
+  or metabolon_v1.2_example.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +11,7 @@ metadata:
   tools:
   - R
   - metaboprep
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -38,6 +40,7 @@ attribution:
 
 # metabolon-excel-format-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and import Metabolon untargeted metabolomics Excel workbooks (v1.1 and v1.2 formats) into structured R data objects for downstream quality control and analysis. This skill handles the specifics of Metabolon's OrigScale sheet layout and converts vendor-specific formats into a standardized Metaboprep object.

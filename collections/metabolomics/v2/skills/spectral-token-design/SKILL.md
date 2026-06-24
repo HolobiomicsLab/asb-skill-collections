@@ -1,6 +1,9 @@
 ---
 name: spectral-token-design
-description: Use when when you need to prepare mass spectra and molecular structures for joint modeling in a BART or transformer-based sequence model, and you lack a unified representation scheme that allows both modalities to be encoded and decoded without collision or information loss.
+description: Use when when you need to prepare mass spectra and molecular structures
+  for joint modeling in a BART or transformer-based sequence model, and you lack a
+  unified representation scheme that allows both modalities to be encoded and decoded
+  without collision or information loss.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -13,11 +16,13 @@ metadata:
   - MS-BART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
 evidence_spans:
-- MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary
+- MS-BART is the first to leverage language model for mass spectra structure elucidation
+  by introducing a unified vocabulary
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # spectral-token-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and validate a unified token vocabulary that encodes both mass spectral features (m/z values, intensities) and molecular structures (SMILES or graph tokens) into a single discrete token set for end-to-end pretraining in a language model. This skill ensures bidirectional mapping and complete coverage of the chemical data domain.

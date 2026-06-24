@@ -1,6 +1,9 @@
 ---
 name: command-line-tool-invocation
-description: Use when you need to bootstrap a tool workflow by generating a version- or instrument-specific default configuration file (e.g., for MS-DIAL 4 vs. 5), execute an analysis on formatted input files (e.g., MS-DIAL export .txt files), or capture tool output for downstream validation.
+description: Use when you need to bootstrap a tool workflow by generating a version-
+  or instrument-specific default configuration file (e.g., for MS-DIAL 4 vs. 5), execute
+  an analysis on formatted input files (e.g., MS-DIAL export .txt files), or capture
+  tool output for downstream validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -19,6 +22,7 @@ metadata:
   - Apache Parquet
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -53,6 +57,7 @@ attribution:
 
 # command-line-tool-invocation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke command-line bioinformatics tools with version-specific or mode-specific arguments to generate configuration files, run analyses, or produce formatted output. This skill is essential for reproducible automation of tool-driven workflows where configuration and execution are separated.

@@ -1,6 +1,8 @@
 ---
 name: webassembly-local-loading-setup
-description: Use when you have downloaded a web application (e.g., COLMARvista) that uses WebWorker and WebAssembly components and need to run it locally by opening index.html in a browser, rather than accessing it through a web server.
+description: Use when you have downloaded a web application (e.g., COLMARvista) that
+  uses WebWorker and WebAssembly components and need to run it locally by opening
+  index.html in a browser, rather than accessing it through a web server.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -13,6 +15,7 @@ metadata:
   - COLMARvista
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1007/s10858-025-00465-y#sec2
   title: COLMARvista

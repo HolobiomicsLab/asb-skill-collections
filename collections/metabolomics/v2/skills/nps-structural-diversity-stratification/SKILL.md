@@ -1,6 +1,9 @@
 ---
 name: nps-structural-diversity-stratification
-description: Use when you have a trained PS2MS deep learning model, a set of evaluation compounds (especially novel NPS analogues), and want to understand whether prediction confidence (softmax probabilities, uncertainties) degrades gracefully or sharply as structural distance from the training set increases.
+description: Use when you have a trained PS2MS deep learning model, a set of evaluation
+  compounds (especially novel NPS analogues), and want to understand whether prediction
+  confidence (softmax probabilities, uncertainties) degrades gracefully or sharply
+  as structural distance from the training set increases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2945
@@ -14,6 +17,7 @@ metadata:
   - PyTorch or TensorFlow
   - Pandas
   - Matplotlib or Seaborn
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
@@ -42,6 +46,7 @@ attribution:
 
 # NPS Structural Diversity Stratification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify novel psychoactive substance (NPS) evaluation compounds by structural similarity to training data using molecular fingerprints, then aggregate prediction confidence scores by novelty stratum to assess how PS2MS model performance varies across structurally diverse or novel analogues. This reveals whether the deep learning system maintains prediction reliability on truly novel chemical scaffolds versus close structural neighbors.

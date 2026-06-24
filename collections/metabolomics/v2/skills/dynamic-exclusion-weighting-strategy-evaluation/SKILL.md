@@ -1,6 +1,9 @@
 ---
 name: dynamic-exclusion-weighting-strategy-evaluation
-description: Use when you have prototyped a novel data-dependent acquisition strategy that uses dynamic exclusion with intensity or ROI weighting, and you need to quantitatively compare its MS/MS coverage and intensity performance against a simpler baseline (TopN) before testing on real instrumentation.
+description: Use when you have prototyped a novel data-dependent acquisition strategy
+  that uses dynamic exclusion with intensity or ROI weighting, and you need to quantitatively
+  compare its MS/MS coverage and intensity performance against a simpler baseline
+  (TopN) before testing on real instrumentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3699
@@ -15,6 +18,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -47,6 +51,7 @@ attribution:
 
 # dynamic-exclusion-weighting-strategy-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate how weighted dynamic exclusion fragmentation strategies (e.g., WeightedDEWController) compare to baseline TopN acquisition in LC-MS/MS by running parallel simulations through the ViMMS framework and measuring coverage and intensity metrics on the resulting mzML and EvaluationData outputs.

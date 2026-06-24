@@ -1,6 +1,9 @@
 ---
 name: msp-file-parsing-and-writing
-description: Use when you have one or more .msp spectral library files (NIST format) that need to be ingested for metadata curation, enrichment via web services, or export after transformation. Use this skill as the entry and exit point for any .msp-based annotation or analysis pipeline.
+description: Use when you have one or more .msp spectral library files (NIST format)
+  that need to be ingested for metadata curation, enrichment via web services, or
+  export after transformation. Use this skill as the entry and exit point for any
+  .msp-based annotation or analysis pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -17,6 +20,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

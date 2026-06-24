@@ -1,6 +1,8 @@
 ---
 name: deep-learning-model-architecture-validation
-description: Use when after converting or loading a Keras model to HDF5 TensorFlow 2.3.0 format, especially when the model will be served through a pipeline (e.g., NP Classifier) that expects specific input/output layer names.
+description: Use when after converting or loading a Keras model to HDF5 TensorFlow
+  2.3.0 format, especially when the model will be served through a pipeline (e.g.,
+  NP Classifier) that expects specific input/output layer names.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -10,6 +12,7 @@ metadata:
   - get_models.sh
   - Python
   - TensorFlow 2.3.0
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -39,6 +42,7 @@ attribution:
 
 # deep-learning-model-architecture-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a converted Keras deep learning model exposes the correct input and output layer names required by a downstream inference pipeline. This skill ensures structural compliance before deployment, preventing runtime failures due to layer naming mismatches.

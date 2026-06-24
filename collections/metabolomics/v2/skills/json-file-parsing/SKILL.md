@@ -1,6 +1,9 @@
 ---
 name: json-file-parsing
-description: Use when when you have JSON-formatted curation data organized in a directory structure (e.g., the MIBiG `data` directory) and need to extract a specific nested field (e.g., `cluster.status`) across all entries to build an index, summary table, or quality report.
+description: Use when when you have JSON-formatted curation data organized in a directory
+  structure (e.g., the MIBiG `data` directory) and need to extract a specific nested
+  field (e.g., `cluster.status`) across all entries to build an index, summary table,
+  or quality report.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +14,7 @@ metadata:
   - pandas or equivalent tabular data library
   - Python json module
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -43,6 +47,7 @@ attribution:
 
 # json-file-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and extract structured fields from JSON files distributed across a directory tree, aggregating results into a tabular format. This skill is essential when source data is curated in JSON format with nested schema (like MIBiG cluster annotations) and you need to index or summarize a particular field across all records.

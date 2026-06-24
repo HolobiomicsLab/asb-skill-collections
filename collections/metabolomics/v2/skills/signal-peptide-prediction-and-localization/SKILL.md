@@ -1,6 +1,9 @@
 ---
 name: signal-peptide-prediction-and-localization
-description: Use when you have differentially expressed isoform or exon FASTA sequences from transcript assembly (e.g., IsoformSwitchAnalyzer output) and need to identify which predicted coding isoforms encode signal peptides for secretion or membrane targeting.
+description: Use when you have differentially expressed isoform or exon FASTA sequences
+  from transcript assembly (e.g., IsoformSwitchAnalyzer output) and need to identify
+  which predicted coding isoforms encode signal peptides for secretion or membrane
+  targeting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0418
@@ -14,6 +17,7 @@ metadata:
   - fimo
   - IsoformSwitchAnalyzer
   - Pfam
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator

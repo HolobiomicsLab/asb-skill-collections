@@ -1,6 +1,9 @@
 ---
 name: technical-replicate-signal-modeling
-description: Use when your LCMS metabolomics dataset exhibits run-order-dependent intensity drift (signal decay or gain over the course of a sample batch), you have pooled technical replicates (identical biospecimen injected multiple times across the run sequence) and/or known internal standard compounds, and.
+description: Use when your LCMS metabolomics dataset exhibits run-order-dependent
+  intensity drift (signal decay or gain over the course of a sample batch), you have
+  pooled technical replicates (identical biospecimen injected multiple times across
+  the run sequence) and/or known internal standard compounds, and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -14,6 +17,7 @@ metadata:
   - bmxp (package)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

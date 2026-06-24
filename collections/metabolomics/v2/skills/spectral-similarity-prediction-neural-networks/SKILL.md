@@ -1,6 +1,9 @@
 ---
 name: spectral-similarity-prediction-neural-networks
-description: Use when when you have paired MS/MS spectra with known structural similarity labels (Tanimoto scores from molecular fingerprints) and need to predict structural similarity for new spectrum pairs faster than fingerprint-based methods, or when you want to assess model prediction confidence per.
+description: Use when when you have paired MS/MS spectra with known structural similarity
+  labels (Tanimoto scores from molecular fingerprints) and need to predict structural
+  similarity for new spectrum pairs faster than fingerprint-based methods, or when
+  you want to assess model prediction confidence per.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -16,16 +19,20 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
-- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
+- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute
+  structural similarities
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +56,7 @@ attribution:
 
 # spectral-similarity-prediction-neural-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and apply a Siamese neural network to predict structural similarity scores (Tanimoto or Dice) directly from pairs of tandem mass spectra without computing molecular fingerprints. This skill enables rapid similarity assessment and uncertainty quantification via Monte-Carlo Dropout on MS/MS spectral pairs.

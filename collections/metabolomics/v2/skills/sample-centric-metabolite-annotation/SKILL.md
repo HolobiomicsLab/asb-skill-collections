@@ -1,6 +1,9 @@
 ---
 name: sample-centric-metabolite-annotation
-description: Use when after MZmine feature detection and molecular networking on a single LC-MS/MS DDA sample, when you have a feature table (with retention time, m/z, fragmentation spectra) and sample-level taxonomical metadata, and you want to assign both spectral identity and predicted chemical structure to.
+description: Use when after MZmine feature detection and molecular networking on a
+  single LC-MS/MS DDA sample, when you have a feature table (with retention time,
+  m/z, fragmentation spectra) and sample-level taxonomical metadata, and you want
+  to assign both spectral identity and predicted chemical structure to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -21,6 +24,7 @@ metadata:
   - ChEMBL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

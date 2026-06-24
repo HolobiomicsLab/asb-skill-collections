@@ -1,6 +1,9 @@
 ---
 name: test-driven-development-validation
-description: 'Use when when you have implemented or modified a bioinformatic fingerprint generation function (or similar molecular computation module) and need to verify that: (1) the function accepts the correct input types (molecule objects from RDKit or equivalent), (2) it produces fixed-length numerical.'
+description: 'Use when when you have implemented or modified a bioinformatic fingerprint
+  generation function (or similar molecular computation module) and need to verify
+  that: (1) the function accepts the correct input types (molecule objects from RDKit
+  or equivalent), (2) it produces fixed-length numerical.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,6 +16,7 @@ metadata:
   - pytest
   - RDKit
   - black
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

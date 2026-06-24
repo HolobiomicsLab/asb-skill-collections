@@ -1,6 +1,8 @@
 ---
 name: dda-spectrum-association-to-features
-description: Use when you have centroided DDA mzML data and have already detected MS1 features (either via pyOpenMS or external feature finding), and need to extract MS2 fragment m/z values and diagnostic patterns (e.
+description: Use when you have centroided DDA mzML data and have already detected
+  MS1 features (either via pyOpenMS or external feature finding), and need to extract
+  MS2 fragment m/z values and diagnostic patterns (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,11 +16,13 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # DDA Spectrum Association to Features
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Associate MS2 fragment spectra from data-dependent acquisition (DDA) to their parent features detected in MS1, enabling diagnostic fragment analysis and mass difference calculation for PFAS prioritization. This skill bridges raw spectral data to feature-level annotations by linking precursor ions to their fragment mass patterns.

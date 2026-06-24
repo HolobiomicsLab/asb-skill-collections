@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-imaging-data-processing
-description: Use when you have raw or processed MSI data (in imzML or rMSIproc formats) and need to identify and annotate matrix-related peaks before statistical analysis or metabolite identification. Use it specifically when your MSI experiment employed a chemical matrix (e.
+description: Use when you have raw or processed MSI data (in imzML or rMSIproc formats)
+  and need to identify and annotate matrix-related peaks before statistical analysis
+  or metabolite identification. Use it specifically when your MSI experiment employed
+  a chemical matrix (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3929
@@ -15,11 +18,13 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - devtools::install_github("prafols/rMSIproc", ref = "0.2")
 - rMSIcleanup is an open-source R package
@@ -47,6 +52,7 @@ attribution:
 
 # Mass-spectrometry imaging data processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, preprocess, and annotate mass spectrometry imaging (MSI) peak matrices by integrating chemical formula and spatial distribution patterns to classify matrix-related ions, detect overlapping peaks, and generate transparent visual justification reports. This skill is essential for cleaning MSI datasets prior to downstream analysis by removing or flagging matrix contamination that would confound metabolite or biomarker discovery.

@@ -1,6 +1,9 @@
 ---
 name: validity-constraint-enforcement-for-msdata
-description: Use when when designing a custom MsBackend subclass (e.g., MsBackendTest) that stores spectral data in multiple slots (a data.frame for spectra variables, NumericList objects for m/z and intensity peaks). Use this skill to guard against slot desynchronization—e.
+description: Use when when designing a custom MsBackend subclass (e.g., MsBackendTest)
+  that stores spectral data in multiple slots (a data.frame for spectra variables,
+  NumericList objects for m/z and intensity peaks). Use this skill to guard against
+  slot desynchronization—e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +17,7 @@ metadata:
   - R (S4 system)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -44,6 +48,7 @@ attribution:
 
 # validity-constraint-enforcement-for-msdata
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enforce consistency constraints across S4 slots in custom MsBackend classes to ensure that spectra variable metadata, m/z values, and intensity values remain synchronized and meet mass spectrometry data requirements (sorted m/z, no NA values). This is critical when extending the virtual MsBackend class to create new mass spectrometry data storage backends.

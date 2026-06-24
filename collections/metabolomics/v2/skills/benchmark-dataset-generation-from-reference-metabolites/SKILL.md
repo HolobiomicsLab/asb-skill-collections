@@ -1,6 +1,9 @@
 ---
 name: benchmark-dataset-generation-from-reference-metabolites
-description: Use when you have a set of centroided mzML files from LC-HRMS analysis, a list of target metabolites with known molecular formula and retention time windows, and you need to create a reference dataset to benchmark the reliability of NPP tools (XCMS, MZmine, MS-DIAL, etc.) on the same files.
+description: Use when you have a set of centroided mzML files from LC-HRMS analysis,
+  a list of target metabolites with known molecular formula and retention time windows,
+  and you need to create a reference dataset to benchmark the reliability of NPP tools
+  (XCMS, MZmine, MS-DIAL, etc.) on the same files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,13 +18,16 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
-- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided for all (enviPat predicted) isotopologues
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
+- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided
+  for all (enviPat predicted) isotopologues
 - library(mzRAPP)
 claims: []
 provenance:

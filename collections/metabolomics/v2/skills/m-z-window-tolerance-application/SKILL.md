@@ -1,6 +1,8 @@
 ---
 name: m-z-window-tolerance-application
-description: Use when after parsing an imzML XML metadata file and loading the corresponding .ibd binary intensity data, when you need to isolate and visualize the spatial distribution of specific isotopes, chemical species, or mass fragments.
+description: Use when after parsing an imzML XML metadata file and loading the corresponding
+  .ibd binary intensity data, when you need to isolate and visualize the spatial distribution
+  of specific isotopes, chemical species, or mass fragments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,13 +14,15 @@ metadata:
   - pewlib
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # m/z-window-tolerance-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract image slices from Imaging Mass Spectrometry binary data (.ibd files) by specifying target m/z values and a mass tolerance window in parts-per-million (ppm). This skill maps mass-to-charge ratios to their corresponding intensity distributions across spatial coordinates, enabling multi-channel image reconstruction.

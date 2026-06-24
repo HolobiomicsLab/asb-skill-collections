@@ -1,6 +1,9 @@
 ---
 name: metadata-structure-transformation
-description: Use when you have raw tabular experimental metadata (mass spectrometry or NMR sample descriptions, sample-to-treatment mappings, instrument parameters, etc.) that needs to be deposited into a structured online repository like Metabolomics Workbench, but the raw format does not conform to the.
+description: Use when you have raw tabular experimental metadata (mass spectrometry
+  or NMR sample descriptions, sample-to-treatment mappings, instrument parameters,
+  etc.) that needs to be deposited into a structured online repository like Metabolomics
+  Workbench, but the raw format does not conform to the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -13,6 +16,7 @@ metadata:
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -20,7 +24,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # metadata-structure-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform tabular experimental metadata (Excel/CSV) into clean, standardized JSONized intermediate format using a tagging system, then convert to repository-compliant output formats (e.g., mwTab for Metabolomics Workbench). This skill bridges raw data entry and repository submission by enforcing schema compliance and enabling format-agnostic validation.

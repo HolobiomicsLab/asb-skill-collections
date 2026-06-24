@@ -1,6 +1,9 @@
 ---
 name: pathway-enrichment-visualization
-description: Use when after running ORA on a set of significant metabolite PubChemCIDs (e.g., features with q-value < 1e-9 from ANOVA) against a metabolic pathway database, and you need to identify and communicate which pathways are robustly enriched in your case.
+description: Use when after running ORA on a set of significant metabolite PubChemCIDs
+  (e.g., features with q-value < 1e-9 from ANOVA) against a metabolic pathway database,
+  and you need to identify and communicate which pathways are robustly enriched in
+  your case.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -12,14 +15,18 @@ metadata:
   - margheRita
   - R
   - ComplexHeatmap
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set
+  Enrichment Analysis (MSEA), based on clusterProfiler
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -48,6 +55,7 @@ attribution:
 
 # pathway-enrichment-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and visualize metabolic pathway enrichment results from Over Representation Analysis (ORA) of significant metabolites, ranked by statistical significance and filtered by robust effect size. This skill transforms ORA output into publication-ready barplots and tabular summaries for biological interpretation.

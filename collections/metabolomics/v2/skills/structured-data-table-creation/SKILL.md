@@ -1,6 +1,9 @@
 ---
 name: structured-data-table-creation
-description: Use when you have obtained a raw reference library file (such as the DTCCS_N2 library for U13C labeled lipids) and need to validate its structure, verify that all expected lipid entries are present, and ensure CCS values fall within physically plausible ranges (typically 50–300 Ų for small lipids).
+description: Use when you have obtained a raw reference library file (such as the
+  DTCCS_N2 library for U13C labeled lipids) and need to validate its structure, verify
+  that all expected lipid entries are present, and ensure CCS values fall within physically
+  plausible ranges (typically 50–300 Ų for small lipids).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,12 +15,15 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
-- MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
+- MobiLipid aims to streamline lipidomics workflows by offering a fully automated
+  solution for assessing and correcting collision cross section (CCS) bias
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +47,7 @@ attribution:
 
 # structured-data-table-creation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate a reference library file (CSV/TSV) into a structured table with standardized columns (lipid class, species identifier, CCS value) and numeric range checks. This skill ensures that curated lipidomics reference data conforms to schema expectations before downstream bias calculation and correction workflows.

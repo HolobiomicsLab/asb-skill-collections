@@ -1,6 +1,9 @@
 ---
 name: unit-test-development-for-spectral-loaders
-description: Use when when you have implemented parser functions for one or more mass spectrometry file formats and need to verify that metadata and peak lists are correctly extracted and converted into matchms Spectrum objects before committing to a feature branch.
+description: Use when when you have implemented parser functions for one or more mass
+  spectrometry file formats and need to verify that metadata and peak lists are correctly
+  extracted and converted into matchms Spectrum objects before committing to a feature
+  branch.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,11 +16,13 @@ metadata:
   - matchms
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

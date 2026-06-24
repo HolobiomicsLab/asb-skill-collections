@@ -1,6 +1,8 @@
 ---
 name: perl-entry-point-development
-description: Use when you are building a standalone Perl application for Windows that uses Prima for GUI rendering and depends on external binaries (e.g., Gnuplot 5.4.2) that must be verified before the user can interact with the main interface.
+description: Use when you are building a standalone Perl application for Windows that
+  uses Prima for GUI rendering and depends on external binaries (e.g., Gnuplot 5.4.2)
+  that must be verified before the user can interact with the main interface.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0231
@@ -11,6 +13,7 @@ metadata:
   - Perl
   - Perl Prima
   - Gnuplot 5.4.2
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -40,6 +43,7 @@ attribution:
 
 # perl-entry-point-development
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Develop a Perl script entry point that detects the host operating system, initializes a graphical user interface framework, and implements pre-launch dependency verification before enabling application functionality. This skill is essential for cross-platform Perl applications that require external libraries and must fail gracefully when prerequisites are unmet.

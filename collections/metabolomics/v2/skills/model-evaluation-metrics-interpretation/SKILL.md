@@ -1,6 +1,7 @@
 ---
 name: model-evaluation-metrics-interpretation
-description: Use when you have retrained or modified a neural network model (e.g., MSNovelist) to accept a different input fingerprint representation (e.
+description: Use when you have retrained or modified a neural network model (e.g.,
+  MSNovelist) to accept a different input fingerprint representation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +17,7 @@ metadata:
   - evaluation.py
   - MSNovelist (Singularity container)
   - SLURM (sbatch)
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

@@ -1,6 +1,7 @@
 ---
 name: r-script-validation-and-execution
-description: Use when when you have obtained an R-based bioinformatic program (such as DNMS2Purifier.
+description: Use when when you have obtained an R-based bioinformatic program (such
+  as DNMS2Purifier.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,7 @@ metadata:
   - DNMS2Purifier_model_generation.r
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
@@ -42,6 +44,7 @@ attribution:
 
 # R Script Validation and Execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate R script syntax, function definitions, and MS/MS purification logic before executing on LC-MS/MS metabolomics data to ensure chimeric spectrum detection and removal workflows run correctly. This skill verifies that the R environment and dependencies are properly configured and that output spectra meet expected formatting and purity standards.

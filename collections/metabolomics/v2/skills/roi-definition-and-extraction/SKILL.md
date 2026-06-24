@@ -1,6 +1,8 @@
 ---
 name: roi-definition-and-extraction
-description: Use when when you have loaded imzML MSI data into napari and need to focus analysis on a specific anatomical or morphological region rather than the entire image.
+description: Use when when you have loaded imzML MSI data into napari and need to
+  focus analysis on a specific anatomical or morphological region rather than the
+  entire image.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,11 +15,13 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:

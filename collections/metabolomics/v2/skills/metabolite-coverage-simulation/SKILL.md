@@ -1,6 +1,9 @@
 ---
 name: metabolite-coverage-simulation
-description: Use when designing or validating a metabolomics pathway analysis experiment, especially when you have uncertainty about how many metabolites your detection platform will reliably measure relative to a pathway database. Use it if you want to understand whether your expected metabolite coverage (e.
+description: Use when designing or validating a metabolomics pathway analysis experiment,
+  especially when you have uncertainty about how many metabolites your detection platform
+  will reliably measure relative to a pathway database. Use it if you want to understand
+  whether your expected metabolite coverage (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -11,6 +14,7 @@ metadata:
   - Python
   - Jupyter
   - metabolomics-ORA
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -38,6 +42,7 @@ attribution:
 
 # metabolite-coverage-simulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate Over-representation Analysis (ORA) outcomes across varying fractions of detected metabolites to quantify how metabolite detection coverage affects p-value distributions and false-positive rates in pathway analysis. This skill reveals coverage-dependent statistical artifacts that can inflate false discovery.

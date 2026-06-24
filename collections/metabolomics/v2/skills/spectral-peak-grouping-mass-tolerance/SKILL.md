@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-grouping-mass-tolerance
-description: Use when after extracting raw MS/MS spectra from mzML files when you observe high fragment counts per spectrum (e.g., 98 fragments) and want to reduce noise from instrument measurement uncertainty.
+description: Use when after extracting raw MS/MS spectra from mzML files when you
+  observe high fragment counts per spectrum (e.g., 98 fragments) and want to reduce
+  noise from instrument measurement uncertainty.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -14,13 +16,17 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # spectral-peak-grouping-mass-tolerance
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge MS/MS spectral peaks (m/z and intensity) within a specified mass tolerance to reduce fragment redundancy and noise in tandem mass spectrometry data. This intra-spectrum grouping step consolidates nearby m/z values by averaging their positions and summing their intensities, typically reducing fragment counts by 10–20% before downstream denoising.

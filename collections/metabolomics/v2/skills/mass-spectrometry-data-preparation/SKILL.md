@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-preparation
-description: Use when you have raw mass spectrometry data in CSV or mzML format and need to visualize it using pyOpenMS-viz, or you are working with MS data that contains retention time (rt), m/z, intensity, and optionally ion mobility dimensions that must be structured as a Pandas DataFrame before plotting.
+description: Use when you have raw mass spectrometry data in CSV or mzML format and
+  need to visualize it using pyOpenMS-viz, or you are working with MS data that contains
+  retention time (rt), m/z, intensity, and optionally ion mobility dimensions that
+  must be structured as a Pandas DataFrame before plotting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,12 +17,14 @@ metadata:
   - OpenMS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # mass-spectrometry-data-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load mass spectrometry data from CSV or mzML files into a Pandas DataFrame with properly named columns (m/z, retention time, intensity, ion mobility) to enable downstream visualization and analysis. This skill ensures data is in the standardized tabular format required by pyOpenMS-viz and other MS analysis libraries.

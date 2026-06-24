@@ -1,6 +1,8 @@
 ---
 name: multi-task-loss-function-formulation
-description: Use when when training an object detection network that must predict both discrete labels (e.g., true peak vs. false peak) and continuous coordinates (e.
+description: Use when when training an object detection network that must predict
+  both discrete labels (e.g., true peak vs. false peak) and continuous coordinates
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -13,6 +15,7 @@ metadata:
   - QuanFormer
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

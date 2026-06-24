@@ -11,6 +11,7 @@ metadata:
   tools:
   - PyTorch
   - Hugging Face Transformers
+  license_tier: restricted
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
@@ -39,6 +40,7 @@ attribution:
 
 # sequence-to-sequence-model-training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Training a sequence-to-sequence model through a three-stage pipeline (pretraining, fine-tuning, alignment) on unified tokenized inputs to enable joint modeling of multiple modalities (e.g., mass spectra and molecular structures). This skill applies when you need to leverage language model architectures for multimodal scientific prediction tasks requiring end-to-end learning across precomputed and experimental data.

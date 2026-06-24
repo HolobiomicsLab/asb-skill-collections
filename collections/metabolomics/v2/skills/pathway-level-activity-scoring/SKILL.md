@@ -1,6 +1,9 @@
 ---
 name: pathway-level-activity-scoring
-description: Use when you have a metabolite intensity matrix (samples × metabolites) with assigned annotations (peak IDs mapped to KEGG or ChEBI compound IDs), a metabolic pathway database, and need to rank pathways by activity level within experimental groups or comparisons.
+description: Use when you have a metabolite intensity matrix (samples × metabolites)
+  with assigned annotations (peak IDs mapped to KEGG or ChEBI compound IDs), a metabolic
+  pathway database, and need to rank pathways by activity level within experimental
+  groups or comparisons.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -14,14 +17,17 @@ metadata:
   - PALS Viewer
   - GNPS
   - MS2LDA
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # Pathway-Level Activity Scoring via PLAGE Decomposition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Decompose a metabolite intensity matrix into quantitative pathway activity scores using singular value decomposition (SVD), enabling robust ranking of metabolic pathways without losing information through dichotomous thresholding. This approach is more resilient to noise and missing peaks than over-representation analysis (ORA) or gene set enrichment analysis (GSEA).

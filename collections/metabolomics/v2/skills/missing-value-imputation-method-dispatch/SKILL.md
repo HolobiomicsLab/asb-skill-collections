@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-method-dispatch
-description: Use when you have a metabolomics data matrix with missing-not-at-random (MNAR) left-censored values and need to apply multiple imputation methods to the same data in a standardized way, compare their outputs, or integrate the imputation step into a larger pre-processing pipeline.
+description: Use when you have a metabolomics data matrix with missing-not-at-random
+  (MNAR) left-censored values and need to apply multiple imputation methods to the
+  same data in a standardized way, compare their outputs, or integrate the imputation
+  step into a larger pre-processing pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - GSimp_evaluation.R
   - imputeLCMD R package
   - Trunc_KNN
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -43,6 +47,7 @@ attribution:
 
 # missing-value-imputation-method-dispatch
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Route a missing-value matrix to one of multiple left-censored imputation methods (GSimp, QRILC, kNN-TN) via a wrapper function that handles method selection, parameter passing, and output collection. This skill is essential when comparing or selecting the best imputation strategy for metabolomics data with left-censored missingness.

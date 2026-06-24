@@ -1,6 +1,9 @@
 ---
 name: file-format-export-and-validation
-description: Use when after executing MassQL queries on mass spectrometry data that produce tabulated results (e.g., MS1 or MS2 scan metadata, peak intensities, retention times), and you need to persist those results for archival, sharing, or downstream statistical analysis.
+description: Use when after executing MassQL queries on mass spectrometry data that
+  produce tabulated results (e.g., MS1 or MS2 scan metadata, peak intensities, retention
+  times), and you need to persist those results for archival, sharing, or downstream
+  statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -13,6 +16,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab

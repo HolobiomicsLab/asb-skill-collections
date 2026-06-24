@@ -1,6 +1,9 @@
 ---
 name: batch-construction-parameter-optimization
-description: Use when preparing labeled LC-MS peak data for neural network training and you need to decide whether class imbalance in your dataset should be preserved or corrected in batch construction. Use it particularly when your annotated peak dataset has unequal class distributions (e.
+description: Use when preparing labeled LC-MS peak data for neural network training
+  and you need to decide whether class imbalance in your dataset should be preserved
+  or corrected in batch construction. Use it particularly when your annotated peak
+  dataset has unequal class distributions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +16,13 @@ metadata:
   - Keras
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -44,6 +49,7 @@ attribution:
 
 # Batch Construction Parameter Optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize the creation of training, validation, and test batches for neural network training by systematically comparing class-normalized versus unnormalized batch creation strategies. This skill determines whether to balance class distributions within batches based on dataset characteristics and model training objectives.

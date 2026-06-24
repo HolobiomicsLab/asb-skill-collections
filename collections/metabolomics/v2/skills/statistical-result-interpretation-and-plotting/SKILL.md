@@ -1,6 +1,8 @@
 ---
 name: statistical-result-interpretation-and-plotting
-description: Use when after statistical analysis has produced a results table with lipid identities, quantitative expression values, p-values, fold-changes, and experimental condition labels.
+description: Use when after statistical analysis has produced a results table with
+  lipid identities, quantitative expression values, p-values, fold-changes, and experimental
+  condition labels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -14,11 +16,13 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 - _No usage/docs found._
 claims: []
 provenance:

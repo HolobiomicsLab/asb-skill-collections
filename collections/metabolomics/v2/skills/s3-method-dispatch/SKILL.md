@@ -1,6 +1,7 @@
 ---
 name: s3-method-dispatch
-description: Use when your metabolomics data frame has inherited or assigned class metadata (e.
+description: Use when your metabolomics data frame has inherited or assigned class
+  metadata (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +14,13 @@ metadata:
   - assign_hierarchy
   - make_omelette
   - plate_omelette
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
-- which retrieves data from the KEGG API using the function ```keggGet``` from the package KEGGREST
+- which retrieves data from the KEGG API using the function ```keggGet``` from the
+  package KEGGREST
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
 claims: []
 provenance:
@@ -42,6 +45,7 @@ attribution:
 
 # s3-method-dispatch
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use S3 method dispatch to dynamically route data-frame processing logic based on metadata class attributes, enabling flexible annotation and transformation pipelines that adapt to heterogeneous metabolomics data structures. This skill ensures that generic operations like KEGG_gather select the correct class-specific implementation (e.g., plate_omelette) without explicit conditional branching.

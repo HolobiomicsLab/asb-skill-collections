@@ -1,6 +1,8 @@
 ---
 name: feature-intensity-normalization-and-batch-correction
-description: Use when after blank masking and sample dropping, when you have a feature table with intensity values that exhibit systematic variation across sample collection batches or instrument runs.
+description: Use when after blank masking and sample dropping, when you have a feature
+  table with intensity values that exhibit systematic variation across sample collection
+  batches or instrument runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -17,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -49,6 +52,7 @@ attribution:
 
 # feature-intensity-normalization-and-batch-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize LC-MS feature intensities using total ion chromatogram (TIC) scaling on common features, optionally followed by batch-aware correction to remove systematic intensity variation across experimental batches. This skill removes confounding batch effects while preserving biological signal in metabolomics feature tables.

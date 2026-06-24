@@ -1,6 +1,9 @@
 ---
 name: sub-network-detection-from-scored-graphs
-description: Use when you have a GLASSO-inferred sparse network graph and associated PCA scores (e.g., from prior dimension reduction of omics or imaging data), and you need to identify which nodes cluster together based on both their PCA score patterns and their connectivity in the graph.
+description: Use when you have a GLASSO-inferred sparse network graph and associated
+  PCA scores (e.g., from prior dimension reduction of omics or imaging data), and
+  you need to identify which nodes cluster together based on both their PCA score
+  patterns and their connectivity in the graph.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3766
@@ -10,6 +13,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -38,6 +42,7 @@ attribution:
 
 # sub-network-detection-from-scored-graphs
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Overlay dimensionality-reduced scores (PCA) onto sparse network graphs (GLASSO) to identify and label significant sub-networks based on joint patterns of node attributes and network topology. This skill bridges dimensionality reduction and network community detection to reveal functionally coherent clusters in high-dimensional biological or systems data.

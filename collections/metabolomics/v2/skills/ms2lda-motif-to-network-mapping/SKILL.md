@@ -1,6 +1,9 @@
 ---
 name: ms2lda-motif-to-network-mapping
-description: Use when when you have a GNPS molecular network (classical or feature-based) and corresponding MS2LDA experiment results, and you want to annotate network nodes with discovered substructural motifs to support structural elucidation and chemical family interpretation.
+description: Use when when you have a GNPS molecular network (classical or feature-based)
+  and corresponding MS2LDA experiment results, and you want to annotate network nodes
+  with discovered substructural motifs to support structural elucidation and chemical
+  family interpretation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -16,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

@@ -1,6 +1,8 @@
 ---
 name: quality-control-visualization-metabolomics
-description: Use when after completing kNN imputation, outlier sample removal, and variance-stabilizing normalization (vsn) on a MultiAssayExperiment object containing metabolite measurements.
+description: Use when after completing kNN imputation, outlier sample removal, and
+  variance-stabilizing normalization (vsn) on a MultiAssayExperiment object containing
+  metabolite measurements.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -12,6 +14,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -46,6 +49,7 @@ attribution:
 
 # quality-control-visualization-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and interpret quality control plots that verify normalized metabolite measurements show comparable distributions across samples and experimental groups after preprocessing. This skill validates that variance stabilization and outlier removal have achieved homogeneous signal quality before downstream statistical analysis.

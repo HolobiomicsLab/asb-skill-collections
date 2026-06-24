@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-integration-with-xcms
-description: Use when you have untargeted LC-MS metabolomics data preprocessed with XCMS and need to filter out low-quality peak integrations that could introduce false positives or noise into metabolite quantification.
+description: Use when you have untargeted LC-MS metabolomics data preprocessed with
+  XCMS and need to filter out low-quality peak integrations that could introduce false
+  positives or noise into metabolite quantification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,15 +18,19 @@ metadata:
   - MetaCleanData
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 - MetaClean provides 8 classification algorithms (implemented with the R package caret)
 - devtools::install_github("KelseyChetnik/MetaCleanData")
@@ -52,6 +58,7 @@ attribution:
 
 # metabolomics-data-integration-with-xcms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate peak-quality assessment into untargeted LC-MS metabolomics preprocessing pipelines by coupling XCMS chromatographic peak detection with MetaClean's machine learning classifier for flagging low-quality peaks. This skill enables quality control of extracted ion chromatograms (EICs) and peaks before downstream analysis.

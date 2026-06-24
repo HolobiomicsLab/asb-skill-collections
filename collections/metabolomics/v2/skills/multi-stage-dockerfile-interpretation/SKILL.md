@@ -1,6 +1,9 @@
 ---
 name: multi-stage-dockerfile-interpretation
-description: Use when you need to validate that Docker image builds for multiple deployment variants (e.g., cli, dev, linux, windows) meet documented compressed size ranges, or when you must audit storage footprint across a multi-target build pipeline without pre-computed metrics.
+description: Use when you need to validate that Docker image builds for multiple deployment
+  variants (e.g., cli, dev, linux, windows) meet documented compressed size ranges,
+  or when you must audit storage footprint across a multi-target build pipeline without
+  pre-computed metrics.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - Dockerfile (multi-stage build with --target flag)
   - Docker
   - Dockerfile (multi-stage build syntax)
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -38,6 +42,7 @@ attribution:
 
 # Multi-stage Dockerfile Interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and execute multi-stage Docker builds to produce variant container images from a single Dockerfile, then measure and validate their compressed and uncompressed sizes against documented ranges. This skill is essential when verifying that containerized applications meet storage and performance SLAs across different deployment targets (CLI, development, Linux, Windows).

@@ -1,6 +1,9 @@
 ---
 name: asynchronous-method-introspection
-description: Use when you have a plugin-based converter architecture (e.g., web services and compute libraries in separate directories) and you need to automatically discover all available (source_attribute, target_attribute, converter_name) conversion triples without hardcoding them.
+description: Use when you have a plugin-based converter architecture (e.g., web services
+  and compute libraries in separate directories) and you need to automatically discover
+  all available (source_attribute, target_attribute, converter_name) conversion triples
+  without hardcoding them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -17,6 +20,7 @@ metadata:
   - BridgeDb
   - RDKit
   - ConverterBuilder
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

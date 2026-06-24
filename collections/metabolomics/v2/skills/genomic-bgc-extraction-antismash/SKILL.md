@@ -1,6 +1,8 @@
 ---
 name: genomic-bgc-extraction-antismash
-description: Use when when you have genomic DNA sequences (from isolates or metagenomes) and need to identify and characterize biosynthetic gene clusters as input for downstream natural product linkage analysis.
+description: Use when when you have genomic DNA sequences (from isolates or metagenomes)
+  and need to identify and characterize biosynthetic gene clusters as input for downstream
+  natural product linkage analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0436
@@ -16,11 +18,13 @@ metadata:
   - AntiSMASH
   - BigScape
   - NPLinker
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 - conda create -n npl-3.11 python=3.11

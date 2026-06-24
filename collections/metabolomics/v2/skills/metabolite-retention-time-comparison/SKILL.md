@@ -1,6 +1,9 @@
 ---
 name: metabolite-retention-time-comparison
-description: Use when after executing retention-order prediction on a test set of metabolites, you have both predicted retention orderings and experimentally measured ground-truth retention orderings for the same set of compounds, and you need to quantify prediction accuracy to validate the model's performance.
+description: Use when after executing retention-order prediction on a test set of
+  metabolites, you have both predicted retention orderings and experimentally measured
+  ground-truth retention orderings for the same set of compounds, and you need to
+  quantify prediction accuracy to validate the model's performance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -13,6 +16,7 @@ metadata:
   - SVR (Support Vector Regression)
   - scipy, numpy, pandas
   - scikit-learn
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty590
   title: LC retention order prediction

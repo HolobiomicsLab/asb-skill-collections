@@ -1,6 +1,8 @@
 ---
 name: raw-mass-spectrometry-data-ingestion
-description: Use when you have raw mass spectrometry data in mzML, abf (Reifycs), or cdf (NetCDF) format and need to load it into MS-DIAL or a similar open-source metabolomics platform.
+description: Use when you have raw mass spectrometry data in mzML, abf (Reifycs),
+  or cdf (NetCDF) format and need to load it into MS-DIAL or a similar open-source
+  metabolomics platform.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -16,12 +18,15 @@ metadata:
   - Visual Studio / Visual Studio Code
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
-- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and
+  .NET 6
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 - To conduct tests, please refer to section `test:` of GitHub Actions
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # raw-mass-spectrometry-data-ingestion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and deserialize raw mass spectrometry data files (mzML, abf, cdf formats) into a software's internal data structures, mapping metadata (instrument type, acquisition parameters) and spectral arrays (m/z values, intensity values) for downstream metabolomics or lipidomics analysis. This skill is essential when ingesting vendor-independent or open-format MS data into analysis platforms that do not bundle proprietary manufacturer SDKs.

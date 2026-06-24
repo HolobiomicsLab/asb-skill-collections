@@ -1,6 +1,9 @@
 ---
 name: ms1-feature-extraction
-description: Use when when you have an LC-HRMS feature table (with m/z values, retention times, and isotopic signatures) and a suspect compound database (with reference m/z, expected retention time windows, isotope ratios, and neutral loss fragments), and you need to rapidly prioritize which features are most.
+description: Use when when you have an LC-HRMS feature table (with m/z values, retention
+  times, and isotopic signatures) and a suspect compound database (with reference
+  m/z, expected retention time windows, isotope ratios, and neutral loss fragments),
+  and you need to rapidly prioritize which features are most.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +15,13 @@ metadata:
   - Scannotation
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.est.3c04764
   title: Scannotation
 evidence_spans:
-- Scannotation is an automated and user-friendly suspect screening tool for the rapid pre-annotation of LC-HRMS datasets.
+- Scannotation is an automated and user-friendly suspect screening tool for the rapid
+  pre-annotation of LC-HRMS datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

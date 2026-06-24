@@ -1,6 +1,9 @@
 ---
 name: gwas-result-integration
-description: Use when you have independent metabolomic GWAS results (metabolite p-values, effect sizes, metabolite IDs) and separate meta-genome GWAS results (variant p-values, effect sizes, genomic variant IDs) from similar diseases or phenotypes, and you want to discover novel metabolite–gene associations and.
+description: Use when you have independent metabolomic GWAS results (metabolite p-values,
+  effect sizes, metabolite IDs) and separate meta-genome GWAS results (variant p-values,
+  effect sizes, genomic variant IDs) from similar diseases or phenotypes, and you
+  want to discover novel metabolite–gene associations and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -14,6 +17,7 @@ metadata:
   - KEGG
   - HMDB
   - GWAS Catalog
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad523/7248906
   title: metGWAS 1.0
@@ -42,6 +46,7 @@ attribution:
 
 # gwas-result-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate independent metabolomic and meta-genome wide association study results through network-driven over-representation analysis, mapping disease-associated metabolites to interacting genes and comparing them against a GWAS-derived gene network using hypergeometric enrichment testing.

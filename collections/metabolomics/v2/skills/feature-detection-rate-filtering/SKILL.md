@@ -1,6 +1,8 @@
 ---
 name: feature-detection-rate-filtering
-description: Use when after constructing a MetaboSet object with LC-MS peak abundances, sample metadata (pData with QC labels), and feature metadata (fData), and after marking missing values as NA.
+description: Use when after constructing a MetaboSet object with LC-MS peak abundances,
+  sample metadata (pData with QC labels), and feature metadata (fData), and after
+  marking missing values as NA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - ExpressionSet
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -23,8 +26,10 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
-- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet``` is built upon the ```ExpressionSet``` class'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
+- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet```
+  is built upon the ```ExpressionSet``` class'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # feature-detection-rate-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and flags LC-MS metabolomic features that fail to meet a minimum detection-rate threshold (e.g., 70% of QC samples) to exclude low-quality or sporadic features from downstream multivariate analysis. This filtering step operates on a MetaboSet object after data import and missing-value markup, removing features with insufficient QC reproducibility before imputation and statistical modeling.

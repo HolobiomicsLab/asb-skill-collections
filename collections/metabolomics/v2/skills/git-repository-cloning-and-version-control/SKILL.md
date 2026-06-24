@@ -1,6 +1,9 @@
 ---
 name: git-repository-cloning-and-version-control
-description: Use when when you need to reproduce a computational workflow described in a GitHub repository, validate CI/CD pipeline definitions (e.g., GitHub Actions workflows), inspect source code structure, or execute local versions of automated tests.
+description: Use when when you need to reproduce a computational workflow described
+  in a GitHub repository, validate CI/CD pipeline definitions (e.g., GitHub Actions
+  workflows), inspect source code structure, or execute local versions of automated
+  tests.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -12,6 +15,7 @@ metadata:
   - GitHub Actions
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -44,6 +48,7 @@ attribution:
 
 # git-repository-cloning-and-version-control
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Clone a remote Git repository to a local development environment and inspect version-controlled artifacts (e.g., workflow files, source code) to understand project structure, CI/CD configuration, and reproducibility prerequisites. This skill is essential for reproducing computational workflows and validating automated checks defined in repository metadata.

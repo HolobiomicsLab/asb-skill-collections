@@ -1,6 +1,8 @@
 ---
 name: data-quality-validation-lipidomics
-description: Use when after loading and parsing raw MRM export files (TSV, CSV, or vendor-specific formats) into a pandas DataFrame and decomposing lipid nomenclature, before performing lipid matching, statistical analysis, or visualization.
+description: Use when after loading and parsing raw MRM export files (TSV, CSV, or
+  vendor-specific formats) into a pandas DataFrame and decomposing lipid nomenclature,
+  before performing lipid matching, statistical analysis, or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,12 +15,14 @@ metadata:
   - Python regex (re module)
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
 - _No usage/docs found._
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

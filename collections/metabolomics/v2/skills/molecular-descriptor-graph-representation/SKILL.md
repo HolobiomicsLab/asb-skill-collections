@@ -1,6 +1,8 @@
 ---
 name: molecular-descriptor-graph-representation
-description: Use when when you need to train or evaluate a graph neural network for molecular property prediction (collision cross section, ion mobility, or related descriptors) and have access to SMILES strings and/or 3D conformer coordinates.
+description: Use when when you need to train or evaluate a graph neural network for
+  molecular property prediction (collision cross section, ion mobility, or related
+  descriptors) and have access to SMILES strings and/or 3D conformer coordinates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -14,6 +16,7 @@ metadata:
   - Poetry (dependency manager)
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -41,6 +44,7 @@ attribution:
 
 # molecular-descriptor-graph-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert molecular structures into graph neural network–compatible representations by encoding SMILES strings and optional 3D coordinates as node–edge graphs, enabling learned feature extraction for collision cross section prediction and generalizability evaluation.

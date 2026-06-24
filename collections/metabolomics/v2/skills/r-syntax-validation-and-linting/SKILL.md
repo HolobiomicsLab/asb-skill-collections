@@ -1,6 +1,8 @@
 ---
 name: r-syntax-validation-and-linting
-description: Use when after editing R configuration scripts (e.g., Modular.r) that control execution modes (Modular vs Flow) or toggling analysis parameters (Lipid, TWeen_pos, PFAS). Apply this skill before integrating edited scripts into the LipidMatch-4.
+description: Use when after editing R configuration scripts (e.g., Modular.r) that
+  control execution modes (Modular vs Flow) or toggling analysis parameters (Lipid,
+  TWeen_pos, PFAS). Apply this skill before integrating edited scripts into the LipidMatch-4.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0230
@@ -9,6 +11,7 @@ metadata:
   tools:
   - R
   - Modular.r
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -37,6 +40,7 @@ attribution:
 
 # r-syntax-validation-and-linting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate R script syntax and detect errors before execution by running a parse check in R. This skill ensures edited configuration scripts (such as Modular.r) are free of syntax errors and ready for deployment across multiple software distribution directories.

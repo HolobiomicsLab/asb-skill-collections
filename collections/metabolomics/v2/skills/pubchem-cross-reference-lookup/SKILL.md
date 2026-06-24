@@ -1,6 +1,9 @@
 ---
 name: pubchem-cross-reference-lookup
-description: 'Use when you have metabolite or compound identifiers in mixed formats (chemical name, InChI, InChIKey, SMILES) across multiple studies or datasets and need to: (1) unify them to a single canonical identifier (PubChem ID) for deduplication, (2) detect and resolve duplicate entries that differ only.'
+description: 'Use when you have metabolite or compound identifiers in mixed formats
+  (chemical name, InChI, InChIKey, SMILES) across multiple studies or datasets and
+  need to: (1) unify them to a single canonical identifier (PubChem ID) for deduplication,
+  (2) detect and resolve duplicate entries that differ only.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0533
@@ -12,16 +15,19 @@ metadata:
   - webchem
   - PubChem
   - amanida
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
 - the package will retrieve the PubChem ID from the ID using `webchem`
 - all ids are converted to a unique one, in this case the PubChem ID
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # pubchem-cross-reference-lookup
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert heterogeneous chemical identifiers (chemical names, InChI, InChIKey, SMILES) into a unified PubChem ID and retrieve standardized compound descriptors. This skill enables harmonization of metabolite nomenclature across multi-study datasets, essential for meta-analysis where identifier format inconsistency would otherwise prevent duplicate detection and comparison.

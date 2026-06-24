@@ -1,6 +1,9 @@
 ---
 name: systematic-mass-calibration-and-drift-correction
-description: Use when when processing multiple LC-MS samples in a cohort study and MassGrid construction reveals that anchor mass tracks (13C/12C isotope or Na/H adduct pairs) in non-reference samples deviate systematically from the reference sample's m/z values by >1 ppm.
+description: Use when when processing multiple LC-MS samples in a cohort study and
+  MassGrid construction reveals that anchor mass tracks (13C/12C isotope or Na/H adduct
+  pairs) in non-reference samples deviate systematically from the reference sample's
+  m/z values by >1 ppm.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,14 +19,17 @@ metadata:
   - MassGrid.build_grid_sample_wise
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
-- nearest neighbor (NN) clustering is performed to establish the number of mass tracks. The NN clustering assigns each data point to its nearest 'peak mz value'.
+- nearest neighbor (NN) clustering is performed to establish the number of mass tracks.
+  The NN clustering assigns each data point to its nearest 'peak mz value'.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # Systematic Mass Calibration and Drift Correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and correct systematic m/z drift across multiple LC-MS samples by comparing anchor mass tracks (isotopes and adducts) between a reference sample and other samples, recalibrating all m/z values when drift exceeds 1 ppm. This ensures reproducible mass track alignment and prevents false feature misalignment in cross-sample metabolomics studies.

@@ -1,6 +1,8 @@
 ---
 name: coefficient-of-variation-computation
-description: Use when you have loaded raw NMR or MS metabolomic abundance data into a SummarizedExperiment object and need to assess feature reproducibility before downstream association modeling.
+description: Use when you have loaded raw NMR or MS metabolomic abundance data into
+  a SummarizedExperiment object and need to assess feature reproducibility before
+  downstream association modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,6 +18,7 @@ metadata:
   - xcms
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
@@ -24,8 +27,10 @@ derived_from:
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -55,6 +60,7 @@ attribution:
 
 # coefficient-of-variation-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute coefficient of variation (CV) for each metabolic feature across samples in a metabolomic SummarizedExperiment object to quantify reproducibility and identify low-variance, high-quality features. This step is foundational for quality control filtering in metabolome-wide association studies.

@@ -1,6 +1,8 @@
 ---
 name: structure-database-candidate-retrieval
-description: Use when you have a mass spectrum of an unknown metabolite with a known or inferred precursor m/z, you have run a deep-learning semantic similarity model (e.
+description: Use when you have a mass spectrum of an unknown metabolite with a known
+  or inferred precursor m/z, you have run a deep-learning semantic similarity model
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3559
@@ -12,11 +14,13 @@ metadata:
   - DeepMASS2
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
 evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
+  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # structure-database-candidate-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and rank candidate structures from molecular databases (PubChem, HMDB) for an unknown compound by leveraging deep-learning predictions of structurally related metabolites and computing chemical-space similarity metrics. This skill improves annotation accuracy by reordering database candidates based on their proximity to predicted structural neighbors in chemical space.

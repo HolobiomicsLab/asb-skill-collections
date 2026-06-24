@@ -1,6 +1,8 @@
 ---
 name: heatmap-clustering-and-visualization
-description: Use when you have a gene expression matrix (samples × genes, with numeric values) and corresponding sample group/phenotype labels, and you need to identify co-expression patterns, sample clustering, or condition-specific expression trends.
+description: Use when you have a gene expression matrix (samples × genes, with numeric
+  values) and corresponding sample group/phenotype labels, and you need to identify
+  co-expression patterns, sample clustering, or condition-specific expression trends.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0564
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R Shiny
   - GraphBio
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

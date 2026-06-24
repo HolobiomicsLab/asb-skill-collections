@@ -1,6 +1,8 @@
 ---
 name: neural-network-threshold-optimization
-description: Use when after training a NeatMS neural network model on labelled peak data (High_quality, Low_quality, Noise) and you need to determine the optimal probability threshold for classifying peaks in your untargeted LCMS dataset.
+description: Use when after training a NeatMS neural network model on labelled peak
+  data (High_quality, Low_quality, Noise) and you need to determine the optimal probability
+  threshold for classifying peaks in your untargeted LCMS dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,11 +18,13 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -49,6 +53,7 @@ attribution:
 
 # neural-network-threshold-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize classification thresholds for a trained neural network model by computing true vs. false positive rates across probability thresholds and selecting the threshold that maximizes the difference between true positives and false positives. This skill is essential for tuning NeatMS peak classification to balance sensitivity and specificity in automated LCMS false positive filtering.

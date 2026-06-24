@@ -1,6 +1,8 @@
 ---
 name: biobase-object-serialization
-description: Use when when you have raw peak table data from mass spectrometry or other metabolomic instruments in either a standardized tabular format or one of 12 common software tool outputs (e.
+description: Use when when you have raw peak table data from mass spectrometry or
+  other metabolomic instruments in either a standardized tabular format or one of
+  12 common software tool outputs (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,6 +18,7 @@ metadata:
   - NOREVA
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

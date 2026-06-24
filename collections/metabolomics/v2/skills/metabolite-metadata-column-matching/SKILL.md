@@ -1,6 +1,8 @@
 ---
 name: metabolite-metadata-column-matching
-description: Use when validating mwTab files deposited to the Metabolomics Workbench and you need to verify that metadata columns match standard naming conventions and contain values in the expected format.
+description: Use when validating mwTab files deposited to the Metabolomics Workbench
+  and you need to verify that metadata columns match standard naming conventions and
+  contain values in the expected format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,7 @@ metadata:
   - mwtab
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

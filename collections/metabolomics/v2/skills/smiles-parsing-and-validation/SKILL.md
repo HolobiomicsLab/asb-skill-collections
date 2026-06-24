@@ -1,6 +1,8 @@
 ---
 name: smiles-parsing-and-validation
-description: Use when you have SMILES strings for candidate novel psychoactive substance structures and need to convert them into a machine-readable molecular representation before computing descriptors, generating mass spectra, or calculating chemical fingerprints.
+description: Use when you have SMILES strings for candidate novel psychoactive substance
+  structures and need to convert them into a machine-readable molecular representation
+  before computing descriptors, generating mass spectra, or calculating chemical fingerprints.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3929
@@ -11,6 +13,7 @@ metadata:
   - RDKit
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
@@ -39,6 +42,7 @@ attribution:
 
 # SMILES Parsing and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert SMILES strings representing chemical structures into validated canonical molecule objects using RDKit, ensuring structural correctness before downstream feature encoding. This is a foundational step in computational chemistry workflows where chemical identity must be unambiguously resolved before mass spectrum prediction or fingerprint generation.

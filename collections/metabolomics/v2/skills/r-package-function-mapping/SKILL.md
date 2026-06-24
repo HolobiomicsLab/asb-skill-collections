@@ -1,6 +1,9 @@
 ---
 name: r-package-function-mapping
-description: Use when you have a working R package (e.g., IonFlow for ionomics analysis) with documented functions and parameters, and you need to wrap it as a Galaxy tool so end users can invoke the R workflow through Galaxy's web interface without command-line expertise.
+description: Use when you have a working R package (e.g., IonFlow for ionomics analysis)
+  with documented functions and parameters, and you need to wrap it as a Galaxy tool
+  so end users can invoke the R workflow through Galaxy's web interface without command-line
+  expertise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -14,6 +17,7 @@ metadata:
   - Galaxy
   - IonFlow
   - planemo
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-021-01841-z
   title: IonFlow
@@ -43,6 +47,7 @@ attribution:
 
 # R Package Function Mapping to Galaxy Tool XML
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map R package functions and parameters to Galaxy tool XML wrapper definitions, enabling exposure of R-based analytical workflows as graphical Galaxy tools. This skill bridges R function signatures to Galaxy's input/output port bindings and command-line invocation patterns.

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-calibration-validation
-description: Use when after applying frequency domain calibration (Ledford, linear, or quadratic equation) to a raw FT-ICR mass spectrum, validate the calibration quality by measuring residual mass errors across the m/z range.
+description: Use when after applying frequency domain calibration (Ledford, linear,
+  or quadratic equation) to a raw FT-ICR mass spectrum, validate the calibration quality
+  by measuring residual mass errors across the m/z range.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +17,14 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -48,6 +52,7 @@ attribution:
 
 # mass-spectrum-calibration-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate calibrated mass spectra by comparing theoretical and measured m/z values across multiple calibration equations and assessing mass error distributions. This skill ensures that frequency-to-m/z domain transformations have been applied correctly before molecular formula assignment.

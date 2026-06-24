@@ -1,6 +1,7 @@
 ---
 name: metabolite-structural-network-construction
-description: Use when after MamsiStructSearch has completed structural clustering of statistically significant LC-MS features (p < 0.
+description: Use when after MamsiStructSearch has completed structural clustering
+  of statistically significant LC-MS features (p < 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -17,6 +18,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -27,7 +29,8 @@ evidence_spans:
 - 'Dependencies: pyvis'
 - 'Dependencies: matplotlib'
 - import pandas as pd
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +55,7 @@ attribution:
 
 # metabolite-structural-network-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Constructs an interactive or static network graph of mass spectrometry features organized into structural clusters by the MAMSI framework, where nodes represent features and edges encode isotopologue, adduct, and cross-assay relationships. This skill visualizes and curates the linkage structure among statistically significant LC-MS features identified from multi-assay metabolomics data.

@@ -1,6 +1,9 @@
 ---
 name: entrypoint-verification
-description: Use when when you have obtained a Python package from a repository (e.g., via git clone) and need to confirm that the documented Python version constraint and pinned dependency versions are sufficient to execute the package's main entry point (typically main.py or a console script).
+description: Use when when you have obtained a Python package from a repository (e.g.,
+  via git clone) and need to confirm that the documented Python version constraint
+  and pinned dependency versions are sufficient to execute the package's main entry
+  point (typically main.py or a console script).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -16,6 +19,7 @@ metadata:
   - venv
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

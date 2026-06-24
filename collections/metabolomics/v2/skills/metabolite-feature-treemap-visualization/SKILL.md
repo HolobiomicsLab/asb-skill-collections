@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-treemap-visualization
-description: Use when after applying mpactr's filter suite (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to a peak table, use this skill when you need to summarize the overall filtering outcome across all ion categories and present a compact, area-proportional view of which ions passed.
+description: Use when after applying mpactr's filter suite (filter_mispicked_ions,
+  filter_group, filter_cv, filter_insource_ions) to a peak table, use this skill when
+  you need to summarize the overall filtering outcome across all ion categories and
+  present a compact, area-proportional view of which ions passed.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -16,13 +19,15 @@ metadata:
   - plotly
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT
 evidence_spans:
 - To import these data into R, use the mpactr function
 - We will be using multiple libraries for data analysis and visualization
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

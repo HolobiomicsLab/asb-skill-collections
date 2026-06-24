@@ -1,6 +1,9 @@
 ---
 name: fingerprint-vector-loading-and-parsing
-description: Use when when you have deposited or archived biosynfoni fingerprint vectors (such as from Zenodo 10.5281/zenodo.14822624) and need to ingest them into a Python workflow to compute distributional statistics, bit-frequency profiles, sparsity metrics, or pairwise similarity coefficients.
+description: Use when when you have deposited or archived biosynfoni fingerprint vectors
+  (such as from Zenodo 10.5281/zenodo.14822624) and need to ingest them into a Python
+  workflow to compute distributional statistics, bit-frequency profiles, sparsity
+  metrics, or pairwise similarity coefficients.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +14,7 @@ metadata:
   - biosynfoni
   - pip
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # fingerprint-vector-loading-and-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse molecular fingerprint vectors from biosynfoni datasets (e.g., Zenodo deposits) into memory for downstream statistical and similarity analysis. This skill enables extraction of fingerprint bit patterns and metadata required for characterizing molecular representation properties.

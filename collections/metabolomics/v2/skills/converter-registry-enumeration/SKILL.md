@@ -1,6 +1,8 @@
 ---
 name: converter-registry-enumeration
-description: Use when you need to expose all supported metadata conversion options in a tool interface (e.g., Galaxy tool form, CLI argument parser, or API endpoint) and want to avoid hard-coding conversion paths.
+description: Use when you need to expose all supported metadata conversion options
+  in a tool interface (e.g., Galaxy tool form, CLI argument parser, or API endpoint)
+  and want to avoid hard-coding conversion paths.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,7 @@ metadata:
   - Python
   - pytest
   - Galaxy
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

@@ -1,6 +1,9 @@
 ---
 name: software-distribution-file-organization
-description: Use when you have edited one or more core algorithm scripts (Modular.r, genEIC.r, MS1Spectragen.r, or Stats.R) in a shared developer repository (e.g., Core-Match on GitHub) and need to integrate those changes into an already-installed LipidMatch-4.2 or FluoroMatch distribution on disk.
+description: Use when you have edited one or more core algorithm scripts (Modular.r,
+  genEIC.r, MS1Spectragen.r, or Stats.R) in a shared developer repository (e.g., Core-Match
+  on GitHub) and need to integrate those changes into an already-installed LipidMatch-4.2
+  or FluoroMatch distribution on disk.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - LipidMatch
   - FluoroMatch
   - Core-Match
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -41,6 +45,7 @@ attribution:
 
 # software-distribution-file-organization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organize edited algorithm scripts into version-specific directory structures within a downloaded LipidMatch or FluoroMatch distribution to integrate developer changes from a central repository into both Flow and Modular execution modes. This skill ensures that script modifications are placed in the correct target paths so the software framework can load and execute them without breaking either workflow variant.

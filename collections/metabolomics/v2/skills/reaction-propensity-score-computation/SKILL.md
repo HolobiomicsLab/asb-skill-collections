@@ -1,6 +1,9 @@
 ---
 name: reaction-propensity-score-computation
-description: Use when you have measured intracellular metabolite abundances (LC-MS or similar) across multiple cell lines or conditions and a stoichiometric metabolic model (with reaction-metabolite associations) to estimate how differences in substrate availability—independent of gene expression—translate into.
+description: Use when you have measured intracellular metabolite abundances (LC-MS
+  or similar) across multiple cell lines or conditions and a stoichiometric metabolic
+  model (with reaction-metabolite associations) to estimate how differences in substrate
+  availability—independent of gene expression—translate into.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -26,16 +29,22 @@ metadata:
   - Agilent 1290 Infinity UHPLC + Agilent 6550 iFunnel Q-TOF MS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36]
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in GX-FBA [26]
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA [38]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in GX-FBA [26]
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA [38]
 - raw reads were mapped with STAR aligner (v.2.6.1d) to human reference genome (hg38)
-- gene counts were calculated by HTSeq (v.0.6.1), using the hg38 Encode-Gencode GTF file (v28)
+- gene counts were calculated by HTSeq (v.0.6.1), using the hg38 Encode-Gencode GTF
+  file (v28)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -59,6 +68,7 @@ attribution:
 
 # Compute Reaction Propensity Scores (RPS) from intracellular metabolomics using mass action law formulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 RPS quantifies the expected relative metabolic flux changes across cell lines based purely on substrate availability using the mass action law: each reaction's propensity is the product of substrate concentrations each raised to their stoichiometric coefficients. This skill predicts metabolic regulation at the substrate-availability level, complementing transcriptomics-based approaches to discriminate whether flux changes originate from gene expression or metabolite availability.

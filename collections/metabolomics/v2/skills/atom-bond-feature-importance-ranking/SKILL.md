@@ -1,6 +1,8 @@
 ---
 name: atom-bond-feature-importance-ranking
-description: Use when you have a trained GNN model for molecular property prediction (such as CCS) and need to understand which atomic and bond features are most influential in driving predictions.
+description: Use when you have a trained GNN model for molecular property prediction
+  (such as CCS) and need to understand which atomic and bond features are most influential
+  in driving predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +16,7 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -42,6 +45,7 @@ attribution:
 
 # atom-bond-feature-importance-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Post-hoc attribution analysis of graph neural network predictions to identify and rank which molecular structural features (node and edge attributes) drive model predictions of collision cross section. This skill enables interpretation of GNN decision logic through ablation and gradient-based saliency scoring.

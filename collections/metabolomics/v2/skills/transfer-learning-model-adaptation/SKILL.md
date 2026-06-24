@@ -1,6 +1,7 @@
 ---
 name: transfer-learning-model-adaptation
-description: Use when you have a pre-trained ABCoRT model checkpoint and a new chromatography dataset (e.g., Eawag_XBridgeC18_364.
+description: Use when you have a pre-trained ABCoRT model checkpoint and a new chromatography
+  dataset (e.g., Eawag_XBridgeC18_364.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -28,6 +29,7 @@ metadata:
   - rdkit-pypi
   - torch_geometric
   - RT-Transformer
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
@@ -70,6 +72,7 @@ attribution:
 
 # transfer-learning-model-adaptation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fine-tune a pre-trained graph neural network model on a domain-specific chromatography dataset using PyTorch and PyG to adapt learned representations for improved retention time prediction on new chemical libraries. This skill enables rapid model customization without retraining from scratch.

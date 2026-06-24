@@ -1,6 +1,8 @@
 ---
 name: collision-cross-section-calibration-ccs
-description: Use when when you have acquired ion mobility–mass spectrometry data (drift time and m/z dimensions) and need to convert observed drift times into calibrated CCS values.
+description: Use when when you have acquired ion mobility–mass spectrometry data (drift
+  time and m/z dimensions) and need to convert observed drift times into calibrated
+  CCS values.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - Use conda to create a virtual environment with required dependencies.
 - 'Install DEIMoS using pip: pip install -e .'
@@ -49,6 +53,7 @@ attribution:
 
 # collision-cross-section-calibration-ccs
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate ion collision cross section (CCS) values from drift-time and m/z measurements using a polynomial model fitted to tune mix reference data. This skill establishes the quantitative m/z–drift-time–CCS relationship required to convert drift times into absolute CCS values for downstream feature characterization.

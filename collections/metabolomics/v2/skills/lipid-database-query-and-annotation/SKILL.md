@@ -1,6 +1,8 @@
 ---
 name: lipid-database-query-and-annotation
-description: Use when you have parsed MRM transition data (m/z values, retention times, transition parameters) from mass spectrometry experiments and need to map each detected transition to a known lipid identity.
+description: Use when you have parsed MRM transition data (m/z values, retention times,
+  transition parameters) from mass spectrometry experiments and need to map each detected
+  transition to a known lipid identity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -12,6 +14,7 @@ metadata:
   - CLAW-MRM lipid_database
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

@@ -1,6 +1,7 @@
 ---
 name: smiles-format-handling
-description: Use when when you have molecular structures in proprietary or non-standard formats (e.
+description: Use when when you have molecular structures in proprietary or non-standard
+  formats (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -10,6 +11,7 @@ metadata:
   tools:
   - rcdk
   - PubChem standardization
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

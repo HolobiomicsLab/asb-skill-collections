@@ -1,6 +1,8 @@
 ---
 name: domain-specific-spectrum-search-implementation
-description: Use when you have acquired one or more tandem MS/MS spectra and need to identify metabolites against a reference library filtered by biological domain (e.
+description: Use when you have acquired one or more tandem MS/MS spectra and need
+  to identify metabolites against a reference library filtered by biological domain
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -20,6 +22,7 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
@@ -49,6 +52,7 @@ attribution:
 
 # domain-specific-spectrum-search-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy a standalone web application that enables single-spectrum mass spectrometry searches against a curated, domain-specific reference database (e.g., microbial, plant, or tissue metabolomes). This skill bridges spectral acquisition to taxonomically or ecologically informed metabolite identification by integrating domain-specific indexing and search infrastructure.

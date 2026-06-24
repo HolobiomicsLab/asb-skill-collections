@@ -1,6 +1,9 @@
 ---
 name: git-repository-cloning
-description: Use when you need to obtain source code or computational workflows from a published repository, particularly when the article explicitly provides a GitHub URL and documents that the repository contains code required to regenerate published results (e.g., simulation outputs, figures, or tables).
+description: Use when you need to obtain source code or computational workflows from
+  a published repository, particularly when the article explicitly provides a GitHub
+  URL and documents that the repository contains code required to regenerate published
+  results (e.g., simulation outputs, figures, or tables).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -11,6 +14,7 @@ metadata:
   - Git
   - Python
   - Jupyter
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -38,6 +42,7 @@ attribution:
 
 # git-repository-cloning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Clone a remote Git repository to obtain source code, notebooks, and reproducible workflows for scientific analysis. This skill is essential for accessing published computational methods and ensuring reproducibility of research results.

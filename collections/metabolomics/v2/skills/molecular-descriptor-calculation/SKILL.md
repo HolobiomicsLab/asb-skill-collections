@@ -1,6 +1,7 @@
 ---
 name: molecular-descriptor-calculation
-description: Use when you have raw molecular structures in SMILES or SDF format and need to prepare them as input for BitterPredict.m or similar descriptor-based classifiers.
+description: Use when you have raw molecular structures in SMILES or SDF format and
+  need to prepare them as input for BitterPredict.m or similar descriptor-based classifiers.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -12,11 +13,13 @@ metadata:
   - BitterPredict
   - RDKit
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +43,7 @@ attribution:
 
 # molecular-descriptor-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw molecular structures (SMILES or SDF format) into computed chemical descriptor tables suitable for machine-learning classifiers like BitterPredict. This skill bridges raw chemical representations and descriptor-based prediction by parsing, validating, computing standardized molecular properties, and assembling them into tabular format.

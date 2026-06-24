@@ -1,6 +1,8 @@
 ---
 name: isotopic-peak-removal
-description: Use when after loading raw FT-ICR MS peak lists with assigned molecular formulas when you have detected peaks across multiple m/z values that correspond to isotopic variants of the same parent compound.
+description: Use when after loading raw FT-ICR MS peak lists with assigned molecular
+  formulas when you have detected peaks across multiple m/z values that correspond
+  to isotopic variants of the same parent compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,15 +15,20 @@ metadata:
   - Formularity
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - requires the Python dependencies NumPy [40], pandas [41, 42]
 - It requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
-- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24] which uses FT-ICR MS data in .xml format
-- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24]
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
+- it has been designed to work with the output file (in .csv format) generated directly
+  by Formularity [24] which uses FT-ICR MS data in .xml format
+- it has been designed to work with the output file (in .csv format) generated directly
+  by Formularity [24]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +52,7 @@ attribution:
 
 # isotopic-peak-removal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove isotopic peaks (primarily ¹³C) from FT-ICR MS peak-abundance matrices to eliminate redundant molecular signals and reduce noise before downstream analysis. This filtering step prevents overrepresentation of naturally occurring isotopic variants of the same compound.

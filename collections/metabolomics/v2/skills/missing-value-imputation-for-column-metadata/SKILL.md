@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-for-column-metadata
-description: Use when when preparing raw HPLC column parameter arrays for featurization into feature vectors for retention time prediction models. Specifically apply this skill when column metadata contains empty strings (indicating missing diameter or pH values) or non-standard string encodings (e.g., '2.
+description: Use when when preparing raw HPLC column parameter arrays for featurization
+  into feature vectors for retention time prediction models. Specifically apply this
+  skill when column metadata contains empty strings (indicating missing diameter or
+  pH values) or non-standard string encodings (e.g., '2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
@@ -41,6 +45,7 @@ attribution:
 
 # missing-value-imputation-for-column-metadata
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Handles missing or malformed values in HPLC column metadata prior to featurization by converting empty strings to numeric zeros and standardizing non-standard parameter encodings. This ensures complete, parseable feature vectors for downstream machine learning of retention times across different chromatographic methods.

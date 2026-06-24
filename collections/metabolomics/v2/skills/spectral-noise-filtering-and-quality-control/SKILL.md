@@ -1,6 +1,8 @@
 ---
 name: spectral-noise-filtering-and-quality-control
-description: Use when you have raw MS/MS spectra in multiple formats (.mgf, .msp, .mzML) that contain background noise, instrument artifacts, or low-abundance fragments that would degrade downstream LDA motif discovery.
+description: Use when you have raw MS/MS spectra in multiple formats (.mgf, .msp,
+  .mzML) that contain background noise, instrument artifacts, or low-abundance fragments
+  that would degrade downstream LDA motif discovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,12 +17,14 @@ metadata:
   - MS2LDA.Preprocessing.generate_corpus
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - from MS2LDA.Preprocessing import load_and_clean
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - These steps assume you have Conda installed

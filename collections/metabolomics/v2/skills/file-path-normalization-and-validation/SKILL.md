@@ -1,6 +1,8 @@
 ---
 name: file-path-normalization-and-validation
-description: Use when when preparing to read Thermo Fisher Scientific .raw files using rawrr functions (readFileHeader, readSpectrum, readChromatogram, readIndex), or when retrieving cached assembly paths for the wrapped RawFileReader dependency.
+description: Use when when preparing to read Thermo Fisher Scientific .raw files using
+  rawrr functions (readFileHeader, readSpectrum, readChromatogram, readIndex), or
+  when retrieving cached assembly paths for the wrapped RawFileReader dependency.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,14 +15,17 @@ metadata:
   - tartare
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # file-path-normalization-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and validate file paths to binary raw mass spectrometry files before passing them to external executables or APIs. This skill ensures consistent path representation across platforms and verifies file existence, preventing runtime failures when rawrr functions invoke the RawFileReader .NET assembly.

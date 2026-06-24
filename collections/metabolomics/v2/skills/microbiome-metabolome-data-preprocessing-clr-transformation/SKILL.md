@@ -1,6 +1,9 @@
 ---
 name: microbiome-metabolome-data-preprocessing-clr-transformation
-description: Use when you have paired microbiome and metabolomic abundance tables (samples × features) with relative abundance or raw count values, and you are preparing data for downstream regression or neural network modeling of microbe-metabolite relationships.
+description: Use when you have paired microbiome and metabolomic abundance tables
+  (samples × features) with relative abundance or raw count values, and you are preparing
+  data for downstream regression or neural network modeling of microbe-metabolite
+  relationships.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,12 +18,15 @@ metadata:
   - Pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome based on a microbiome
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- MiMeNet is an integrative MLPNN, which trains models to accurately predict the metabolome
+  based on a microbiome
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # microbiome-metabolome-data-preprocessing-clr-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply center log-ratio (CLR) transformation to microbiome relative abundance data and metabolomic abundance data to convert compositional count matrices into log-scale representations suitable for neural network training. This preprocessing step addresses the compositional nature of both data types and enables fair feature scaling before cross-validated model training.

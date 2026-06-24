@@ -1,6 +1,9 @@
 ---
 name: machine-learning-cross-validation-training
-description: Use when you have a labeled dataset (e.g., mass spectra with molecular structures, SIRIUS 6 fingerprint annotations) that you wish to train a supervised deep learning model on, and you need to estimate generalization performance and reduce variance from a single train–test split.
+description: Use when you have a labeled dataset (e.g., mass spectra with molecular
+  structures, SIRIUS 6 fingerprint annotations) that you wish to train a supervised
+  deep learning model on, and you need to estimate generalization performance and
+  reduce variance from a single train–test split.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -14,6 +17,7 @@ metadata:
   - Singularity
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

@@ -1,6 +1,9 @@
 ---
 name: massbank-record-validation
-description: Use when you have a collection of MassBank records (in plain-text or structured format) that need to be systematically validated for conformance to MassBank format specification—particularly in a continuous integration context where validation must run on every commit or pull request to maintain.
+description: Use when you have a collection of MassBank records (in plain-text or
+  structured format) that need to be systematically validated for conformance to MassBank
+  format specification—particularly in a continuous integration context where validation
+  must run on every commit or pull request to maintain.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -11,6 +14,7 @@ metadata:
   - MassBank-web
   - GitHub Actions
   - MassBank-data repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank
@@ -39,6 +43,7 @@ attribution:
 
 # massbank-record-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated validation of MassBank spectral records against standardized format and content rules using GitHub Actions and the MassBank-web Validator. This skill ensures all records in the MassBank-data repository conform to defined metadata and spectral data standards before publication.

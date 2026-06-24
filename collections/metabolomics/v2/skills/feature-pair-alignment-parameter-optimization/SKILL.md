@@ -1,6 +1,8 @@
 ---
 name: feature-pair-alignment-parameter-optimization
-description: Use when after anchor selection and retention-time spline mapping have produced a candidate list of feature pair alignments, but before final scoring and reduction of the combined table.
+description: Use when after anchor selection and retention-time spline mapping have
+  produced a candidate list of feature pair alignments, but before final scoring and
+  reduction of the combined table.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,12 +15,15 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # feature-pair-alignment-parameter-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically optimize the three-component weighted scoring function (retention time weight A, m/z weight B, similarity weight C) used to rank feature pair alignments in untargeted LC-MS metabolomics by grid search and validation against known shared metabolite identities. This skill is essential when combining disparately-acquired datasets where alignment quality directly determines downstream statistical power and metabolite identification accuracy.

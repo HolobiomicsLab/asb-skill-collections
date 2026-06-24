@@ -1,6 +1,9 @@
 ---
 name: outlier-detection-and-downweighting-in-regression
-description: Use when when fitting a nonlinear regression (GAM spline) through retention time anchor points derived from feature pair alignments in LC-MS metabolomics, and you suspect some anchor points are measurement errors or misaligned features that could bias the smooth curve.
+description: Use when when fitting a nonlinear regression (GAM spline) through retention
+  time anchor points derived from feature pair alignments in LC-MS metabolomics, and
+  you suspect some anchor points are measurement errors or misaligned features that
+  could bias the smooth curve.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,13 +16,16 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
 - a modified form of the `gam` function implemented in the *mgcv* R package
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +49,7 @@ attribution:
 
 # outlier-detection-and-downweighting-in-regression
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Iteratively identify and downweight anomalous observations in generalized additive model (GAM) fitting by flagging points whose absolute error exceeds a threshold multiple of the mean absolute model error, then assigning them zero weight to stabilize spline coefficient estimation. This technique is applied during nonlinear retention time mapping in LC-MS metabolomics to prevent outlier anchor points from distorting the fitted spline.

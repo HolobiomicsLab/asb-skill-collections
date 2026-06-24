@@ -1,6 +1,8 @@
 ---
 name: batch-vector-preparation
-description: Use when you have a metabolomics dataset with samples collected across multiple batches (e.g., different MS runs, sample preparation rounds, or instrument configurations) and need to apply batch-aware correction methods such as CordBat.
+description: Use when you have a metabolomics dataset with samples collected across
+  multiple batches (e.g., different MS runs, sample preparation rounds, or instrument
+  configurations) and need to apply batch-aware correction methods such as CordBat.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -10,11 +12,13 @@ metadata:
   tools:
   - CordBat
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
 evidence_spans:
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref", grouping = FALSE, print.detail = FALSE )
+- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
+  grouping = FALSE, print.detail = FALSE )
 - '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:
@@ -39,6 +43,7 @@ attribution:
 
 # batch-vector-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a categorical batch assignment vector from metabolomics sample metadata to label each observation with its batch provenance. This vector is a required input to concordance-based batch correction workflows and must align dimensionally with the metabolite matrix rows.

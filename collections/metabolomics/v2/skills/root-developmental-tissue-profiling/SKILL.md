@@ -1,6 +1,9 @@
 ---
 name: root-developmental-tissue-profiling
-description: Use when you have CDF-format mass spectrometry imaging files from plant roots with accompanying MATLAB workspace files (.mat), and your research goal is to reproduce linear-axis intensity profiles, feature distributions, and spatial metrics reported in a prior publication (e.g., Sama et al. 2025).
+description: Use when you have CDF-format mass spectrometry imaging files from plant
+  roots with accompanying MATLAB workspace files (.mat), and your research goal is
+  to reproduce linear-axis intensity profiles, feature distributions, and spatial
+  metrics reported in a prior publication (e.g., Sama et al. 2025).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -13,6 +16,7 @@ metadata:
   - batchcdfread
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
@@ -40,6 +44,7 @@ attribution:
 
 # root-developmental-tissue-profiling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reproduce and execute mass spectrometry imaging analysis of plant root developmental tissues along a linear axis using DIMPLE (Developmental Imaging Mass Spectrometry Pipeline for Linear Evaluation). This skill enables quantitative profiling of spatial metabolite and ion intensity distributions across root zones.

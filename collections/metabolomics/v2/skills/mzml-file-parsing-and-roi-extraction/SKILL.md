@@ -1,6 +1,9 @@
 ---
 name: mzml-file-parsing-and-roi-extraction
-description: Use when when you have a real mzML file from an untargeted metabolomics LC-MS/MS experiment and need to extract the chemical features it contains—either to simulate a data-dependent acquisition (DDA) strategy on those same compounds, to benchmark different fragmentation controllers, or to reproduce.
+description: Use when when you have a real mzML file from an untargeted metabolomics
+  LC-MS/MS experiment and need to extract the chemical features it contains—either
+  to simulate a data-dependent acquisition (DDA) strategy on those same compounds,
+  to benchmark different fragmentation controllers, or to reproduce.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,17 +18,21 @@ metadata:
   - Environment
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 - Existing mzML files can be converted into chemical lists using `ChemicalMixtureFromMZML`.
 - '`TopNController` – standard Top‑N data dependent acquisition.'
-- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or a real instrument.
+- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or
+  a real instrument.
 - Environment – orchestrates interaction between the mass spectrometer and the controller.
 claims: []
 provenance:
@@ -51,6 +58,7 @@ attribution:
 
 # mzML file parsing and ROI extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse a real LC-MS/MS mzML data file and extract regions of interest (ROIs) as chemical objects for simulation or analysis. This skill bridges raw mass spectrometry data and virtual fragmentation simulation by converting observed m/z and retention time features into UnknownChemical objects suitable for downstream mass spectrometer modeling.

@@ -1,6 +1,8 @@
 ---
 name: recursive-algorithm-implementation
-description: Use when after peak detection on LC/HRMS data (mzXML, mzML, netCDF formats) when m/z values require refinement for improved mass accuracy in untargeted metabolomics workflows.
+description: Use when after peak detection on LC/HRMS data (mzXML, mzML, netCDF formats)
+  when m/z values require refinement for improved mass accuracy in untargeted metabolomics
+  workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +16,14 @@ metadata:
   - IDSL.UFAx
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # Reconstruct the recursive mass correction stage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a recursive mass correction algorithm to refine m/z accuracy of LC/HRMS peaks after initial detection, using internal reference standards or lock masses to recalibrate mass coordinates across population-scale untargeted datasets.

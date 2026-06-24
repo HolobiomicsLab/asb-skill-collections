@@ -1,6 +1,9 @@
 ---
 name: floating-point-numerical-accuracy-assessment
-description: 'Use when when implementing or validating a lossy numeric codec for mass-spectrometry data (e.g., MSNumpressCoder in OpenMS). Specifically: after implementing both encoder and decoder, before shipping to production, or when comparing alternative compression schemes.'
+description: 'Use when when implementing or validating a lossy numeric codec for mass-spectrometry
+  data (e.g., MSNumpressCoder in OpenMS). Specifically: after implementing both encoder
+  and decoder, before shipping to production, or when comparing alternative compression
+  schemes.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3564
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -42,6 +46,7 @@ attribution:
 
 # floating-point-numerical-accuracy-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that lossy numeric compression and decompression algorithms (e.g., Numpress) preserve floating-point m/z and intensity values within machine precision tolerances. This skill assesses whether round-trip encoding–decoding cycles introduce unacceptable numerical drift in mass-spectrometry data arrays.

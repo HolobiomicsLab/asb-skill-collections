@@ -1,6 +1,8 @@
 ---
 name: quasi-molecular-adduct-filtering
-description: Use when after feature clustering has been applied to co-eluting LC-MS features and mass-to-charge ratio matching to KEGG has produced an annotated table with adduct assignments.
+description: Use when after feature clustering has been applied to co-eluting LC-MS
+  features and mass-to-charge ratio matching to KEGG has produced an annotated table
+  with adduct assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,14 +18,18 @@ metadata:
   - igraph
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 - we will now use the sample graph provided by FELLA R package
 claims: []
@@ -49,6 +55,7 @@ attribution:
 
 # quasi-molecular-adduct-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter LC-MS feature candidates to retain only quasi-molecular ion adducts (e.g., MH, MNa, MK) after feature clustering, removing in-source fragments and low-frequency adducts. This step reduces annotation candidate noise and improves specificity before diffusion-based prioritization.

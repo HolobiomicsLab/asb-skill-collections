@@ -1,6 +1,9 @@
 ---
 name: network-module-interaction-scoring
-description: Use when after biclustering a normalized microbe-metabolite feature attribution score matrix into distinct functional modules, use this skill to summarize pairwise module interactions by aggregating scores between all microbe-metabolite pairs from different modules.
+description: Use when after biclustering a normalized microbe-metabolite feature attribution
+  score matrix into distinct functional modules, use this skill to summarize pairwise
+  module interactions by aggregating scores between all microbe-metabolite pairs from
+  different modules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3463
@@ -20,12 +23,15 @@ metadata:
   - Consensus clustering
   - Wilcoxon rank-sum test
   - Python (Pandas, NumPy, SciPy)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- Weighted correlation network analysis (WGCNA) of microbial features was performed using the WGCNA library in R
-- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet to those identified by the Weighted Correlation Network Analysis (WGCNA)
+- Weighted correlation network analysis (WGCNA) of microbial features was performed
+  using the WGCNA library in R
+- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet
+  to those identified by the Weighted Correlation Network Analysis (WGCNA)
 - using Seaborn's clustermap function in Python
 - using Cytoscape
 - using Python's sci-kit-learn package
@@ -56,6 +62,7 @@ attribution:
 
 # Network Module Interaction Scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a module-based interaction network by aggregating microbe-metabolite feature attribution scores within and between biclustered functional modules. This skill quantifies the strength and direction of interactions across module boundaries, enabling visualization and interpretation of higher-order community structure.

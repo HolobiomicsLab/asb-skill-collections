@@ -1,6 +1,9 @@
 ---
 name: ei-spectral-library-parsing-and-merging
-description: Use when you need to build a comprehensive EI spectral reference library for GC-MS compound identification in MS-DIAL, starting from raw downloads of NIST, RIKEN, MoNA, or SWGDRUG libraries that have inconsistent metadata organization (SMILES in different fields or absent, RI values missing or.
+description: Use when you need to build a comprehensive EI spectral reference library
+  for GC-MS compound identification in MS-DIAL, starting from raw downloads of NIST,
+  RIKEN, MoNA, or SWGDRUG libraries that have inconsistent metadata organization (SMILES
+  in different fields or absent, RI values missing or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -19,6 +22,7 @@ metadata:
   - ChemineR
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -28,7 +32,8 @@ evidence_spans:
 - library(future)
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
-- The total number of spectra that your NIST library have can be checked in the *MS Search* program
+- The total number of spectra that your NIST library have can be checked in the *MS
+  Search* program
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +57,7 @@ attribution:
 
 # EI spectral library parsing and merging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse electron ionization (EI) mass spectral libraries from multiple heterogeneous sources (NIST, RIKEN, MoNA, SWGDRUG), standardize their metadata fields (SMILES, retention indices, molecular formulas), and merge them into a unified MS-DIAL-compatible MSP file. This skill addresses the challenge that public EI libraries use inconsistent field organization, missing structure annotations, and vary in retention index coverage.

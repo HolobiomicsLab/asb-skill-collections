@@ -1,6 +1,8 @@
 ---
 name: nmr-spectrum-preprocessing
-description: Use when you have raw or semi-processed 1D NMR spectra (¹H and/or ¹³C) from routine laboratory instruments and need to feed them into a CNN–transformer architecture for end-to-end structure elucidation.
+description: Use when you have raw or semi-processed 1D NMR spectra (¹H and/or ¹³C)
+  from routine laboratory instruments and need to feed them into a CNN–transformer
+  architecture for end-to-end structure elucidation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,11 +15,13 @@ metadata:
   - Transformer Architecture
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 evidence_spans:
-- Integrating this capability with a convolutional neural network, we build an end-to-end model
+- Integrating this capability with a convolutional neural network, we build an end-to-end
+  model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # nmr-spectrum-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and normalize 1D ¹H and/or ¹³C NMR spectra for machine learning-based molecular structure prediction by loading, validating, and encoding spectral data into a standardized format compatible with CNN feature extraction.

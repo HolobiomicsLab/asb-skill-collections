@@ -1,6 +1,8 @@
 ---
 name: qc-sample-batch-drift-correction
-description: Use when you have a QC-annotated feature table (samples × features with QC sample identifiers) from LC-MS untargeted metabolomic profiling and observe systematic signal drift across the run sequence or between batch blocks.
+description: Use when you have a QC-annotated feature table (samples × features with
+  QC sample identifiers) from LC-MS untargeted metabolomic profiling and observe systematic
+  signal drift across the run sequence or between batch blocks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

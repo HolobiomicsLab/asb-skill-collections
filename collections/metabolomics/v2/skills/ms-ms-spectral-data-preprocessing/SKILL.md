@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectral-data-preprocessing
-description: Use when when you have MS/MS spectral data (raw or intermediate format) that must be fed into the Mass2SMILES Docker container or similar deep learning models for MS/MS-to-structure inference.
+description: Use when when you have MS/MS spectral data (raw or intermediate format)
+  that must be fed into the Mass2SMILES Docker container or similar deep learning
+  models for MS/MS-to-structure inference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -14,6 +16,7 @@ metadata:
   - Docker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
@@ -45,6 +48,7 @@ attribution:
 
 # ms-ms-spectral-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and format tandem mass spectrometry (MS/MS) spectral data as GNPS-style MGF files for downstream deep learning-based structure prediction. This skill bridges raw or intermediate spectral formats into the standardized input required by Mass2SMILES and similar inference pipelines.

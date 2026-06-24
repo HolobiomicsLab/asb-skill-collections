@@ -1,6 +1,7 @@
 ---
 name: image-channel-masking-and-segmentation
-description: Use when when you have multi-channel LA-ICP-MS images and need to isolate specific elemental regions (e.
+description: Use when when you have multi-channel LA-ICP-MS images and need to isolate
+  specific elemental regions (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,14 +12,17 @@ metadata:
   - Calculator
   - pewpew
   - pewlib
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Calculator` can perform simple calculations on image data by entering the desired formula into the `Formula` text box
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Calculator` can perform simple calculations on image data by entering
+  the desired formula into the `Formula` text box
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -45,6 +49,7 @@ attribution:
 
 # Image Channel Masking and Segmentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply pixel-level masking and segmentation operations to LA-ICP-MS elemental image arrays to isolate regions of interest and create binary or labeled masks. This skill enables selective extraction of chemical data by threshold, user-defined masks, k-means clustering, or Otsu's method, producing new derived images for downstream colocalization and quantitative analysis.

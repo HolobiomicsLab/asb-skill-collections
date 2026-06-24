@@ -1,6 +1,9 @@
 ---
 name: domain-specific-masst-api-integration
-description: Use when your research involves searching MS/MS spectra against multiple curated taxonomic or domain-specific databases (microbial, plant, tissue, microbiome, or food origin) and you need to aggregate, compare, and visualize matching results across all domains in a single interface.
+description: Use when your research involves searching MS/MS spectra against multiple
+  curated taxonomic or domain-specific databases (microbial, plant, tissue, microbiome,
+  or food origin) and you need to aggregate, compare, and visualize matching results
+  across all domains in a single interface.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -19,11 +22,13 @@ metadata:
   - MZmine
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST
 evidence_spans:
-- The code for the different standalone web applications, which allow users to search one spectrum at a time, can be found in GNPS_MASST
+- The code for the different standalone web applications, which allow users to search
+  one spectrum at a time, can be found in GNPS_MASST
 - Aggregated search outputs can be generated and visualized using metadataMASST
 - microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST
 claims: []
@@ -49,6 +54,7 @@ attribution:
 
 # domain-specific-masst-api-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrating API endpoints from domain-specific MASST tools (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) into a unified aggregation layer to route heterogeneous MS/MS search results into metadataMASST for combined visualization and analysis. This skill enables batch processing of multiple spectra against all domain-specific MASSTs simultaneously rather than searching one spectrum at a time.

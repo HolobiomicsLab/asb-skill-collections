@@ -1,6 +1,8 @@
 ---
 name: feature-table-generation-from-aligned-spectra
-description: Use when after retention-time and m/z-based peak alignment has been completed across a cohort of LC-MS samples, and you need to create a unified quantitative matrix for statistical testing, multivariate analysis, or annotation workflows.
+description: Use when after retention-time and m/z-based peak alignment has been completed
+  across a cohort of LC-MS samples, and you need to create a unified quantitative
+  matrix for statistical testing, multivariate analysis, or annotation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -11,6 +13,7 @@ metadata:
   - MetaboAnalystR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr

@@ -1,6 +1,9 @@
 ---
 name: mzml-feature-table-parsing
-description: Use when you have raw LCMS data in mzML format and a feature table (CSV) from a peak detection pipeline (e.g., MZmine) and need to prepare these inputs for NeatMS preprocessing, batch creation, or peak classification. This skill is the mandatory entry point for any NeatMS workflow.
+description: Use when you have raw LCMS data in mzML format and a feature table (CSV)
+  from a peak detection pipeline (e.g., MZmine) and need to prepare these inputs for
+  NeatMS preprocessing, batch creation, or peak classification. This skill is the
+  mandatory entry point for any NeatMS workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,11 +17,13 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -47,6 +52,7 @@ attribution:
 
 # mzML-feature-table parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse raw LCMS data from mzML files and corresponding feature tables (CSV format) to instantiate a NeatMS Experiment object. This skill is essential for initializing the data pipeline before peak matrix generation and neural network-based peak filtering.

@@ -1,6 +1,8 @@
 ---
 name: distance-metric-computation
-description: Use when after obtaining CNN-predicted embeddings for query mass spectra and having loaded pre-computed embeddings from a reference database, you need to identify which reference molecules are most similar to each query.
+description: Use when after obtaining CNN-predicted embeddings for query mass spectra
+  and having loaded pre-computed embeddings from a reference database, you need to
+  identify which reference molecules are most similar to each query.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,6 +13,7 @@ metadata:
   tools:
   - Convolutional Neural Network (CNN)
   - cosine similarity / Euclidean distance
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -39,6 +42,7 @@ attribution:
 
 # distance-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise similarity or distance scores between query molecular embeddings and a reference database of embeddings to rank candidate molecules for metabolite identification. This skill bridges CNN predictions and candidate ranking by quantifying embedding proximity.

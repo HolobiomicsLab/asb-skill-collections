@@ -20,6 +20,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -49,6 +50,7 @@ attribution:
 
 # metabolite-identification-from-transformation-rules
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Predict the chemical structures of small-molecule metabolites by applying biotransformation rules from curated metabolic databases to an input compound structure. This skill enables identification of likely degradation products and metabolic intermediates in specific biological contexts (mammalian, gut microbial, or environmental).

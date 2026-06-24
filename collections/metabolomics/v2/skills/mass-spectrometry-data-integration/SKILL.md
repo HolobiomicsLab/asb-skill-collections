@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-integration
-description: Use when you have multiple mzML or HDF5 feature tables from the same study acquired on the same or similar instruments and need to align feature coordinates across samples to correct for systematic shifts in mass-to-charge, drift time, or retention time caused by instrumental drift, column aging.
+description: Use when you have multiple mzML or HDF5 feature tables from the same
+  study acquired on the same or similar instruments and need to align feature coordinates
+  across samples to correct for systematic shifts in mass-to-charge, drift time, or
+  retention time caused by instrumental drift, column aging.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,13 @@ metadata:
   - HDF5
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - is a Python application programming interface and command-line tool
 claims: []
@@ -44,6 +49,7 @@ attribution:
 
 # mass-spectrometry-data-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reference-based alignment in DEIMoS integrates multi-dimensional mass spectrometry data across samples by matching detected features in N-dimensional space (mass, drift time, retention time) and applying a fitted transform to harmonize feature coordinates. This skill is essential when instrument variation, retention time shifts, or drift time calibration differences create systematic offsets between datasets that must be corrected before joint analysis.

@@ -1,6 +1,8 @@
 ---
 name: deep-learning-architecture-design-for-sequence-data
-description: Use when when you have raw co-fractionation/mass-spectrometry elution profiles (normalized intensity vectors across fractions) paired with labeled protein interaction ground truth, and you want to avoid hand-crafted features (e.
+description: Use when when you have raw co-fractionation/mass-spectrometry elution
+  profiles (normalized intensity vectors across fractions) paired with labeled protein
+  interaction ground truth, and you want to avoid hand-crafted features (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -13,6 +15,7 @@ metadata:
   - EPIC
   - TensorFlow 1.13.1 / Keras 2.2.4
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbad229/7199559
   title: SPIFFED
@@ -40,6 +43,7 @@ attribution:
 
 # deep-learning-architecture-design-for-sequence-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a balanced end-to-end deep neural network architecture that processes raw sequential elution intensity data without manual feature extraction to predict protein–protein interactions from co-fractionation/mass-spectrometry profiles. This skill is essential when raw co-elution data must be directly fed into a learner with class imbalance handling.

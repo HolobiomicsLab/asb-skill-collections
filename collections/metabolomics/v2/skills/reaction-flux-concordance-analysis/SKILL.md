@@ -1,6 +1,9 @@
 ---
 name: reaction-flux-concordance-analysis
-description: Use when you have computed RAS (Reaction Activity Scores) from transcriptomics and GPR rules, RPS (Reaction Propensity Scores) from intracellular metabolomics via mass-action kinetics, and flux distribution differences (FFD) from constraint-based sampling across multiple biological samples.
+description: Use when you have computed RAS (Reaction Activity Scores) from transcriptomics
+  and GPR rules, RPS (Reaction Propensity Scores) from intracellular metabolomics
+  via mass-action kinetics, and flux distribution differences (FFD) from constraint-based
+  sampling across multiple biological samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -18,13 +21,17 @@ metadata:
   - concordanceAnalysis.py (INTEGRATE pipeline Step 10)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD distributions of each pair of the five cell lines
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD
+  distributions of each pair of the five cell lines
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +55,7 @@ attribution:
 
 # Reaction-Flux Concordance Analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify agreement between transcriptional (RAS) and metabolic (RPS) regulation signals for metabolic reactions using Cohen's kappa concordance across pairwise cell-line comparisons. This skill discriminates whether flux changes arise from gene expression differences, substrate availability differences, or both regulatory layers combined.

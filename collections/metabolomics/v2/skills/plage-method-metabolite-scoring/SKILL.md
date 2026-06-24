@@ -1,6 +1,9 @@
 ---
 name: plage-method-metabolite-scoring
-description: Use when use PLAGE when you have log2-transformed, standardized metabolite intensity data (rows = peak features, columns = samples) with compound annotations (peak ID → metabolite database ID mappings), and you want to rank metabolite groupings (pathways, GNPS Molecular Families, MS2LDA.
+description: Use when use PLAGE when you have log2-transformed, standardized metabolite
+  intensity data (rows = peak features, columns = samples) with compound annotations
+  (peak ID → metabolite database ID mappings), and you want to rank metabolite groupings
+  (pathways, GNPS Molecular Families, MS2LDA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,12 +16,15 @@ metadata:
   - GNPS
   - MS2LDA
   - Reactome
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways,
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways,
 - To access our interactive Web application PALS Viewer, please visit [https://pals.glasgowcompbio.org/app/]
 - Molecular Families from GNPS
 - This includes in particular *Molecular Families* from [GNPS](http://gnps.ucsd.edu/)

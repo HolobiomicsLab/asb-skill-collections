@@ -1,6 +1,8 @@
 ---
 name: robustness-analysis-under-perturbation
-description: Use when you have completed pathway analysis using multiple competing methods (e.g., PALS, ORA, GSEA) on a metabolomics peak intensity dataset and need to verify that ranking results remain stable when input data is intentionally corrupted.
+description: Use when you have completed pathway analysis using multiple competing
+  methods (e.g., PALS, ORA, GSEA) on a metabolomics peak intensity dataset and need
+  to verify that ranking results remain stable when input data is intentionally corrupted.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - PALS (Pathway Activity Level Scoring)
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -41,6 +44,7 @@ attribution:
 
 # Robustness Analysis Under Perturbation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate the stability of pathway activity scoring results under controlled degradation of input data (noise injection, missing peaks) to demonstrate comparative robustness across competing methods. This skill is essential for metabolomics pathway analysis where data artifacts are prevalent and method reliability must be quantified.

@@ -1,6 +1,7 @@
 ---
 name: trust-score-propagation-directed-graphs
-description: Use when you have (1) a directed edge list representing a global network (e.
+description: Use when you have (1) a directed edge list representing a global network
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -9,6 +10,7 @@ metadata:
   - http://edamontology.org/topic_2258
   tools:
   - FNICM
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04131
   title: FNICM

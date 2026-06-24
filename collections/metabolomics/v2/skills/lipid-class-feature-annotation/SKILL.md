@@ -1,6 +1,8 @@
 ---
 name: lipid-class-feature-annotation
-description: Use when when loading lipidomics data (from Skyline CSV, numerical matrix, or Metabolomics Workbench) and encountering parsing warnings or molecules with names that do not follow standard lipid nomenclature patterns (e.
+description: Use when when loading lipidomics data (from Skyline CSV, numerical matrix,
+  or Metabolomics Workbench) and encountering parsing warnings or molecules with names
+  that do not follow standard lipid nomenclature patterns (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,12 +14,15 @@ metadata:
   - R
   - Skyline
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # Lipid Class and Feature Annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic annotation and validation of lipid molecule names to ensure they follow supported naming patterns, enabling accurate parsing into lipid class, chain length, and unsaturation features for downstream enrichment analysis. This skill is essential for preparing raw lipidomics data for feature-level biological interpretation.

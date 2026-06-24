@@ -1,6 +1,9 @@
 ---
 name: metabolite-set-decomposition-plage
-description: Use when you have peak intensity data from metabolomics experiments with annotated metabolites assigned to known groupings (KEGG pathways, Reactome, GNPS Molecular Families, or MS2LDA Mass2Motifs) and need to identify which metabolite sets change significantly across experimental comparisons while.
+description: Use when you have peak intensity data from metabolomics experiments with
+  annotated metabolites assigned to known groupings (KEGG pathways, Reactome, GNPS
+  Molecular Families, or MS2LDA Mass2Motifs) and need to identify which metabolite
+  sets change significantly across experimental comparisons while.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +19,7 @@ metadata:
   - Reactome
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -48,6 +52,7 @@ attribution:
 
 # metabolite-set-decomposition-plage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the PLAGE (Pathway Level Analysis using Gene Expression) singular value decomposition method to compute activity scores for metabolite groupings (pathways, Molecular Families, Mass2Motifs) across experimental samples. This method decomposes metabolite set expression patterns into a single robust score per grouping and comparison, yielding results more robust to noise and missing peaks than ORA or GSEA.

@@ -1,6 +1,7 @@
 ---
 name: embedding-space-normalization-and-geometry
-description: Use when when designing a Siamese or multi-branch neural architecture where two or more embedding streams (e.
+description: Use when when designing a Siamese or multi-branch neural architecture
+  where two or more embedding streams (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +14,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -41,6 +43,7 @@ attribution:
 
 # embedding-space-normalization-and-geometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply L2 normalization to fixed-dimension neural network embeddings and use element-wise geometric operations (e.g., Hadamard product) to combine normalized embedding spaces for downstream prediction tasks. This ensures bounded embedding magnitudes and enables interpretable feature interactions in multi-modal architectures.

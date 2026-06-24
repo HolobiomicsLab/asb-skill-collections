@@ -1,6 +1,9 @@
 ---
 name: parameter-search-space-design
-description: Use when when beginning an untargeted LC-MS analysis and either (1) the dataset characteristics (sample complexity, instrument platform, or polarity) differ from previously optimized cohorts, (2) multiple peak-picking algorithms (Centwave, FeatureFinderMetabo, ADAP) are available and their relative.
+description: Use when when beginning an untargeted LC-MS analysis and either (1) the
+  dataset characteristics (sample complexity, instrument platform, or polarity) differ
+  from previously optimized cohorts, (2) multiple peak-picking algorithms (Centwave,
+  FeatureFinderMetabo, ADAP) are available and their relative.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,11 +17,13 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # Parameter Search Space Design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Defines the bounded ranges and candidate combinations of peak picking, alignment, and gap-filling parameters for automated optimization in untargeted LC-MS workflows. This skill establishes the feasible region within which parameter optimization algorithms will search to yield optimal LC-MS processing outcomes.

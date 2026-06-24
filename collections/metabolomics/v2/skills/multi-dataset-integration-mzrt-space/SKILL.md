@@ -1,6 +1,8 @@
 ---
 name: multi-dataset-integration-mzrt-space
-description: Use when you have multiple CSV feature tables from independent metabolomic experiments, each with RT and m/z annotations, and you need to produce a single consolidated feature matrix for comparative analysis across all samples.
+description: Use when you have multiple CSV feature tables from independent metabolomic
+  experiments, each with RT and m/z annotations, and you need to produce a single
+  consolidated feature matrix for comparative analysis across all samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -13,6 +15,7 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -42,6 +45,7 @@ attribution:
 
 # multi-dataset-integration-mzrt-space
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and combine multiple metabolomic feature tables from different analytical experiments into a unified feature matrix by matching features across retention time (RT) and mass-to-charge ratio (m/z) dimensions using tolerance thresholds. This skill is essential when analyzing datasets generated from separate LC-MS/MS runs that must be consolidated before downstream batch correction, marker identification, or annotation.

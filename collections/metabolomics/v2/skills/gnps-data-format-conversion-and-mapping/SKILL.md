@@ -1,6 +1,8 @@
 ---
 name: gnps-data-format-conversion-and-mapping
-description: Use when you have GNPS molecular networking output (from GNPS1 at https://gnps.ucsd.edu or GNPS2 at https://gnps2.org) that must be integrated with antiSMASH BGC data and MIBiG metadata for natural product mining.
+description: Use when you have GNPS molecular networking output (from GNPS1 at https://gnps.ucsd.edu
+  or GNPS2 at https://gnps2.org) that must be integrated with antiSMASH BGC data and
+  MIBiG metadata for natural product mining.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,6 +18,7 @@ metadata:
   - PODP (Paired Omics Data Platform)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -24,7 +27,8 @@ evidence_spans:
 - GNPSDownloader, GNPSExtractor
 - Python version ≥3.11
 - NPLinker requires GNPS molecular networking data as input
-- NPLinker requires GNPS molecular networking data as input. It currently accepts data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
+- NPLinker requires GNPS molecular networking data as input. It currently accepts
+  data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
 - mibig directory contains the MIBiG metadata
 claims: []
 provenance:

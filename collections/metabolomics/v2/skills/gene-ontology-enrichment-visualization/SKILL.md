@@ -1,6 +1,9 @@
 ---
 name: gene-ontology-enrichment-visualization
-description: Use when you have completed a GO enrichment analysis (e.g., via hypergeometric test or similar) and need to visualize the results as a dotplot. Input is a CSV table with columns for GO term identifiers, p-values or adjusted p-values, gene ratios (or counts), and gene count;
+description: Use when you have completed a GO enrichment analysis (e.g., via hypergeometric
+  test or similar) and need to visualize the results as a dotplot. Input is a CSV
+  table with columns for GO term identifiers, p-values or adjusted p-values, gene
+  ratios (or counts), and gene count;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3938
@@ -13,6 +16,7 @@ metadata:
   - ggplot2
   - plotly
   - GraphBio Docker image
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

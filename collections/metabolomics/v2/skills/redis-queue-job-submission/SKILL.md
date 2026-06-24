@@ -1,6 +1,9 @@
 ---
 name: redis-queue-job-submission
-description: 'Use when you have an OpenMS workflow ready to execute in online_deployment:true mode with Redis available, and you need to submit it as a queued job artifact rather than blocking the Streamlit thread. Trigger conditions: (1) online_deployment flag is true in settings;'
+description: 'Use when you have an OpenMS workflow ready to execute in online_deployment:true
+  mode with Redis available, and you need to submit it as a queued job artifact rather
+  than blocking the Streamlit thread. Trigger conditions: (1) online_deployment flag
+  is true in settings;'
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +13,7 @@ metadata:
   - Docker
   - Streamlit
   - QueueManager
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -41,6 +45,7 @@ attribution:
 
 # redis-queue-job-submission
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Submit a workflow execution job to Redis Queue (RQ) with lifecycle parameters (timeout, result TTL) and persist the job ID for asynchronous tracking and recovery in online Docker deployments. This skill enables non-blocking workflow dispatch from a Streamlit web app to background workers while maintaining job state durability.

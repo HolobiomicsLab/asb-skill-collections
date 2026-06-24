@@ -1,6 +1,8 @@
 ---
 name: consensus-clustering-algorithm-selection
-description: Use when when you have computed hierarchical clustering dendrograms on your feature matrix (microbes or metabolites) using Euclidean distance and complete linkage, and need to determine how many clusters to cut the dendrogram into.
+description: Use when when you have computed hierarchical clustering dendrograms on
+  your feature matrix (microbes or metabolites) using Euclidean distance and complete
+  linkage, and need to determine how many clusters to cut the dendrogram into.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,12 +16,15 @@ metadata:
   - Python scikit-learn
   - scikit-learn
   - SciPy
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- Weighted correlation network analysis (WGCNA) of microbial features was performed using the WGCNA library in R
-- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet to those identified by the Weighted Correlation Network Analysis (WGCNA)
+- Weighted correlation network analysis (WGCNA) of microbial features was performed
+  using the WGCNA library in R
+- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet
+  to those identified by the Weighted Correlation Network Analysis (WGCNA)
 - using Seaborn's clustermap function in Python
 - using Cytoscape
 - using Python's sci-kit-learn package
@@ -46,6 +51,7 @@ attribution:
 
 # Consensus-clustering algorithm selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selects the optimal number of clusters (k) in hierarchical consensus clustering by computing cumulative distribution function (CDF) area across a range of k values and identifying the largest k where the proportional change in area (Δk) exceeds a predefined threshold. This prevents overfitting and ensures stable, reproducible cluster assignments across multiple random initializations.

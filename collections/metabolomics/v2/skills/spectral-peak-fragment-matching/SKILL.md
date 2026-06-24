@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-fragment-matching
-description: Use when you have MS/MS spectral data (mzML, mzXML format) and a parent mass or molecular formula, and you need to identify the metabolite(s) responsible for the observed fragmentation pattern by scoring candidates against their theoretical fragmentation profiles.
+description: Use when you have MS/MS spectral data (mzML, mzXML format) and a parent
+  mass or molecular formula, and you need to identify the metabolite(s) responsible
+  for the observed fragmentation pattern by scoring candidates against their theoretical
+  fragmentation profiles.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +15,7 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -40,6 +44,7 @@ attribution:
 
 # spectral-peak-fragment-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A chemo-informatics method for annotating metabolites by comparing experimental MS/MS spectral peaks against in silico-generated fragment ion signatures. The skill ranks candidate metabolites by cosine similarity or peak-matching score to enable metabolite identification from mass spectrometry data.

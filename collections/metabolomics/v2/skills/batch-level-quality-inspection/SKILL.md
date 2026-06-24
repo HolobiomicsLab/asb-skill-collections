@@ -1,6 +1,8 @@
 ---
 name: batch-level-quality-inspection
-description: Use when after loading a raw metabolomics data matrix (samples × features in CSV format, log2-normalized with batch labels in the first column) and before selecting a batch correction model.
+description: Use when after loading a raw metabolomics data matrix (samples × features
+  in CSV format, log2-normalized with batch labels in the first column) and before
+  selecting a batch correction model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +13,7 @@ metadata:
   - dbnorm
   - R
   - sva
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -19,7 +22,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # batch-level-quality-inspection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect the structure and quality of metabolomics datasets at sample batch level and metabolic feature level to detect batch effects and technical heterogeneity before applying normalization. This diagnostic step uses advanced statistical tools and visualization to identify whether batch correction is needed and which statistical model best fits the data structure.

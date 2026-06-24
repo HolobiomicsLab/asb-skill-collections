@@ -1,6 +1,8 @@
 ---
 name: lipidomics-data-mining
-description: Use when when you have quantitative lipidomics data (either from Skyline CSV export or numerical matrix format) with sample annotations and a biological grouping variable (e.
+description: Use when when you have quantitative lipidomics data (either from Skyline
+  CSV export or numerical matrix format) with sample annotations and a biological
+  grouping variable (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3656
@@ -17,12 +19,15 @@ metadata:
   - Metabolomics Workbench API
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # lipidomics-data-mining
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 End-to-end mining and statistical analysis of lipidomics mass spectrometry datasets using lipidr in R, encompassing data import, quality control, multivariate and univariate analysis, and lipid set enrichment analysis to identify lipid classes and chain properties associated with biological conditions.

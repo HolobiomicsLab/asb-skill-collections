@@ -1,6 +1,9 @@
 ---
 name: bipartite-network-node-edge-assembly
-description: Use when after completing dereplication and cosine similarity clustering in the MolNotator workflow, when you have merged, dereplicated molecular and ion data (output from mode_merger and dereplicator steps) and need to assemble the final molecular network representation connecting predicted.
+description: Use when after completing dereplication and cosine similarity clustering
+  in the MolNotator workflow, when you have merged, dereplicated molecular and ion
+  data (output from mode_merger and dereplicator steps) and need to assemble the final
+  molecular network representation connecting predicted.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0365
@@ -14,6 +17,7 @@ metadata:
   - Python (matchms, pandas, networkx)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

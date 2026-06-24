@@ -1,6 +1,8 @@
 ---
 name: batch-corrected-feature-table-validation
-description: Use when after applying batch correction (e.g., ComBat, SVA) to a merged feature table from non-targeted LC-MS/MS metabolomics data and before proceeding to univariate or multivariate statistical analysis.
+description: Use when after applying batch correction (e.g., ComBat, SVA) to a merged
+  feature table from non-targeted LC-MS/MS metabolomics data and before proceeding
+  to univariate or multivariate statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - Google Colab
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

@@ -1,6 +1,9 @@
 ---
 name: python-workflow-scripting
-description: Use when you have raw mass spectrometry spectral data in common formats (MGF, MSP, mzML, mzXML, JSON) that requires standardized metadata cleaning, validation, and peak filtering before comparative analysis. Use this skill when you need to encode data quality constraints (e.
+description: Use when you have raw mass spectrometry spectral data in common formats
+  (MGF, MSP, mzML, mzXML, JSON) that requires standardized metadata cleaning, validation,
+  and peak filtering before comparative analysis. Use this skill when you need to
+  encode data quality constraints (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,12 +17,14 @@ metadata:
   - poetry
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
 - Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - Matchms is a versatile open-source Python package
 - make sure the existing tests still work by running ``pytest``
 claims: []

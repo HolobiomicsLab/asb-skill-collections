@@ -1,6 +1,8 @@
 ---
 name: compound-database-lookup-and-curation
-description: Use when after feature extraction from LC–MS raw data (via XCMS, MS-Dial, or equivalent) has yielded a feature intensity table (samples × features) and feature metadata table (m/z, retention time, feature ID).
+description: Use when after feature extraction from LC–MS raw data (via XCMS, MS-Dial,
+  or equivalent) has yielded a feature intensity table (samples × features) and feature
+  metadata table (m/z, retention time, feature ID).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +17,7 @@ metadata:
   - patRoon
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

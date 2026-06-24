@@ -1,6 +1,8 @@
 ---
 name: batch-preparation-class-imbalance-handling
-description: Use when when you have raw mzML files and a feature table (CSV from mzMine or XCMS) with labeled peaks of unequal class sizes (e.g., fewer false positives than true positives) and plan to train a CNN classifier on the LCMS data.
+description: Use when when you have raw mzML files and a feature table (CSV from mzMine
+  or XCMS) with labeled peaks of unequal class sizes (e.g., fewer false positives
+  than true positives) and plan to train a CNN classifier on the LCMS data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -18,15 +20,19 @@ metadata:
   - Jupyter Notebook
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
-- calling the training method (1000 by default). NeatMS does not currently provides callback functions to automatically stop the training. Calling the training method will simply resume the training
+- calling the training method (1000 by default). NeatMS does not currently provides
+  callback functions to automatically stop the training. Calling the training method
+  will simply resume the training
 - from keras.optimizers import SGD, Adam
 claims: []
 provenance:
@@ -51,6 +57,7 @@ attribution:
 
 # batch-preparation-class-imbalance-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare training, validation, and test batches from LCMS peak data while addressing class imbalance through normalization. This skill ensures balanced representation of true and false positive peaks during neural network training to prevent bias toward the majority class.

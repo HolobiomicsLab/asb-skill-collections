@@ -1,6 +1,8 @@
 ---
 name: mass-defect-filtering
-description: Use when after MS-Dial peak picking and feature table construction, when you observe a high proportion of features with anomalous m/z decimal values that are inconsistent with known metabolite ionization patterns.
+description: Use when after MS-Dial peak picking and feature table construction, when
+  you observe a high proportion of features with anomalous m/z decimal values that
+  are inconsistent with known metabolite ionization patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - notame
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -22,7 +25,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 claims: []
 provenance:
@@ -48,6 +53,7 @@ attribution:
 
 # mass-defect-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove spurious or artifact features from untargeted metabolomics data by filtering on the decimal portion of m/z values. This quality-control filter excludes features with m/z decimal values falling within specified ranges (commonly [4, 8]), retaining only features with biologically plausible mass-to-charge ratios for downstream metabolite identification.

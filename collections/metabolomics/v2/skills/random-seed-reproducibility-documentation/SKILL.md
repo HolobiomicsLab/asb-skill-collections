@@ -1,6 +1,7 @@
 ---
 name: random-seed-reproducibility-documentation
-description: Use when you have generated multiple random partitions (e.g., 10-fold cross-validation splits) of a test set and need to deposit them in a shareable repository.
+description: Use when you have generated multiple random partitions (e.g., 10-fold
+  cross-validation splits) of a test set and need to deposit them in a shareable repository.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +14,7 @@ metadata:
   - Python 3.12
   - figshare
   - GitHub (sword-nan/SpecEmbedding)
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -45,6 +47,7 @@ attribution:
 
 # random-seed-reproducibility-documentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document random seeds, split ratios, and partition metadata alongside dataset partitions to enable exact reproduction of cross-validation splits and statistical reporting. This skill ensures that evaluation results reported as mean and standard deviation across multiple folds can be independently reconstructed.

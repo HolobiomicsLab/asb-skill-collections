@@ -1,6 +1,9 @@
 ---
 name: scan-number-mapping-dictionary-construction
-description: Use when after performing LOWESS regression on landmark peak RT pairs between a sample and reference, you need to encode the learned RT transformation as a reusable, memory-efficient lookup table that can be applied during feature alignment without recomputing the regression for every sample.
+description: Use when after performing LOWESS regression on landmark peak RT pairs
+  between a sample and reference, you need to encode the learned RT transformation
+  as a reusable, memory-efficient lookup table that can be applied during feature
+  alignment without recomputing the regression for every sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,11 +19,13 @@ metadata:
   - asari (CompositeMap.calibrate_sample_RT)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - scipy.signal module for LOWESS fitting via the regression function
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # Construct scan-number mapping dictionary from LOWESS retention-time alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export a LOWESS regression function describing retention-time (RT) relationships between a sample and reference into a sparse scan-number mapping dictionary (rt_cal_dict) that records only differing values and constrains extrapolation within sample RT boundaries. This enables efficient, reproducible RT alignment across LC-MS samples.

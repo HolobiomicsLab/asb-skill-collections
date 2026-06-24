@@ -1,6 +1,8 @@
 ---
 name: ccs-prediction-model-design
-description: Use when you have a dataset of molecules with known or reference CCS values, and you need to construct a trainable model that learns the mapping from molecular structure (encoded as SMILES or feature vectors) to scalar CCS predictions.
+description: Use when you have a dataset of molecules with known or reference CCS
+  values, and you need to construct a trainable model that learns the mapping from
+  molecular structure (encoded as SMILES or feature vectors) to scalar CCS predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0331
@@ -14,6 +16,7 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03492
   title: HyperCCS

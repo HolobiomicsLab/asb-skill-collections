@@ -1,6 +1,8 @@
 ---
 name: machine-learning-model-training
-description: Use when you have a labeled dataset of DIA raw files (.raw, .d, .wiff) with known quality annotations and have extracted the 15 iDIA-QC metrics (raw file characteristics from timsTOF, TripleTOF, or Orbitrap instruments).
+description: Use when you have a labeled dataset of DIA raw files (.raw, .d, .wiff)
+  with known quality annotations and have extracted the 15 iDIA-QC metrics (raw file
+  characteristics from timsTOF, TripleTOF, or Orbitrap instruments).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC

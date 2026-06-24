@@ -1,6 +1,9 @@
 ---
 name: qcpool-sample-identification
-description: Use when you have Sciex Multiquant (≥v3.0.3) TXT export files containing metabolomics or lipidomics analytical sequences that include pooled QC samples, and you need to verify that QCpool samples were injected at the designed regular intervals and extract their positional metadata for quality.
+description: Use when you have Sciex Multiquant (≥v3.0.3) TXT export files containing
+  metabolomics or lipidomics analytical sequences that include pooled QC samples,
+  and you need to verify that QCpool samples were injected at the designed regular
+  intervals and extract their positional metadata for quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +14,7 @@ metadata:
   - ricoderks/QComics
   - Sciex Multiquant
   - QComics
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -39,6 +43,7 @@ attribution:
 
 # qcpool-sample-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and locates quality control pooled (QCpool) samples from Sciex Multiquant text export files to validate their injection at regular intervals across metabolomics or lipidomics sequences. This skill extracts injection metadata and validates temporal distribution for downstream quality assessment.

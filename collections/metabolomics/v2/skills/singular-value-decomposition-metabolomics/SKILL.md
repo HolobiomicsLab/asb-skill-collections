@@ -1,6 +1,8 @@
 ---
 name: singular-value-decomposition-metabolomics
-description: Use when when you have a log2-normalized, zero-mean, unit-variance intensity matrix (rows=metabolites, columns=samples) and a curated metabolite set database (e.
+description: Use when when you have a log2-normalized, zero-mean, unit-variance intensity
+  matrix (rows=metabolites, columns=samples) and a curated metabolite set database
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -17,6 +19,7 @@ metadata:
   - MS2LDA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -47,6 +50,7 @@ attribution:
 
 # singular-value-decomposition-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply singular value decomposition (SVD) to metabolite intensity subsets within defined pathways to extract the first principal component as a pathway activity score. This decomposition-based approach is more robust to noise and missing peaks than ORA and GSEA methods, making it well-suited for metabolomics data where such artifacts are prevalent.

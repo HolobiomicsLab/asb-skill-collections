@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -50,6 +51,7 @@ attribution:
 
 # chromatographic-peak-detection-gradient-descent
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Detects chromatographic peaks in LC-HRMS profile-mode data by applying smoothing followed by gradient-descent algorithms to identify local maxima, estimate peak borders and centers. This preprocesses data for reference matching or CNN model training in untargeted metabolomics workflows.

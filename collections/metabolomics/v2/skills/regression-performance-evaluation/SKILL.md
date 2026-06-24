@@ -1,6 +1,9 @@
 ---
 name: regression-performance-evaluation
-description: Use when after training or fine-tuning a retention time prediction model on a source chromatographic method (e.g., SMRT dataset) and you need to verify prediction accuracy on a held-out test set or on a target chromatographic method from a different dataset (e.g., PredRet).
+description: Use when after training or fine-tuning a retention time prediction model
+  on a source chromatographic method (e.g., SMRT dataset) and you need to verify prediction
+  accuracy on a held-out test set or on a target chromatographic method from a different
+  dataset (e.g., PredRet).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -16,6 +19,7 @@ metadata:
   - scikit-learn
   - tqdm
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -52,6 +56,7 @@ attribution:
 
 # regression-performance-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate retention time prediction models by computing regression metrics (MAE, RMSE) on held-out test sets and cross-method datasets to assess generalization and scalability across different chromatographic conditions. This skill ensures that transfer-learned or fine-tuned models are validated with appropriate metrics before deployment.

@@ -1,6 +1,8 @@
 ---
 name: modification-site-localization
-description: Use when you have a pair of MS/MS spectra—one from a known compound and one from a structurally related modified (unknown) compound—and need to identify which atom(s) in the structure carry the modification.
+description: Use when you have a pair of MS/MS spectra—one from a known compound and
+  one from a structurally related modified (unknown) compound—and need to identify
+  which atom(s) in the structure carry the modification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -25,7 +28,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +53,7 @@ attribution:
 
 # modification-site-localization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Localize structural modification sites on unknown compounds by aligning tandem mass spectra and fragmentation patterns between a known reference compound and its modified counterpart. ModiFinder computes per-atom modification site probabilities through cosine spectral alignment and fragment annotation, enabling investigators to pinpoint which atoms bear the chemical modification.

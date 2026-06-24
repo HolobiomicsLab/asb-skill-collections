@@ -1,6 +1,9 @@
 ---
 name: molecular-descriptor-generation
-description: Use when you have a collection of chemical structures (80,000+ molecules from sources like METLIN SMRT dataset) that need to be converted into numerical feature vectors for machine learning-based retention time (RT) prediction, or when you need to compare descriptor-only, fingerprint-only, and.
+description: Use when you have a collection of chemical structures (80,000+ molecules
+  from sources like METLIN SMRT dataset) that need to be converted into numerical
+  feature vectors for machine learning-based retention time (RT) prediction, or when
+  you need to compare descriptor-only, fingerprint-only, and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0250
@@ -12,11 +15,13 @@ metadata:
   - alvaDesc
   - RDKit
   - cmmrt/build_data.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # molecular-descriptor-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a comprehensive feature matrix of molecular descriptors and fingerprints from chemical structures using alvaDesc, enabling machine learning-based molecular property prediction. This skill is essential for converting raw chemical structure data (SMILES, SDF, mol files) into a tabular feature representation suitable for retention time prediction and metabolite annotation.

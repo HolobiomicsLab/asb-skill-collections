@@ -1,6 +1,8 @@
 ---
 name: baseline-and-noise-level-estimation-from-quartile-statistics
-description: Use when before peak detection on a composite or individual mass track when you need to filter out low-intensity noise and baseline drift without removing true signal.
+description: Use when before peak detection on a composite or individual mass track
+  when you need to filter out low-intensity noise and baseline drift without removing
+  true signal.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -16,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -45,6 +49,7 @@ attribution:
 
 # baseline-and-noise-level-estimation-from-quartile-statistics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate chromatographic baseline and noise level from the bottom intensity quartiles of a mass track to enable robust peak detection in LC-MS metabolomics. This approach isolates baseline drift and electronic noise without assuming specific distributions, making it applicable to diverse sample compositions and instrument configurations.

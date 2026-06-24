@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-preprocessing
-description: Use when you have raw MS/MS spectra in MGF format with variable peak quality, mixed charge states, or instrument artifacts that could confound clustering or similarity measures.
+description: Use when you have raw MS/MS spectra in MGF format with variable peak
+  quality, mixed charge states, or instrument artifacts that could confound clustering
+  or similarity measures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +14,7 @@ metadata:
   - HyperSpec (wh-xu/Hyper-Spec)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

@@ -1,6 +1,8 @@
 ---
 name: imputation-performance-metrics-calculation
-description: Use when when you have imputed a metabolomics dataset using multiple MNAR (missing not at random) imputation methods and possess the ground-truth values (from simulation or manual retrieval).
+description: Use when when you have imputed a metabolomics dataset using multiple
+  MNAR (missing not at random) imputation methods and possess the ground-truth values
+  (from simulation or manual retrieval).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - GSimp_evaluation.R
   - imputeLCMD (QRILC wrapper)
   - Trunc_KNN (kNN-TN implementation)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -41,6 +44,7 @@ attribution:
 
 # imputation-performance-metrics-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate quantitative performance metrics (RMSE, bias, and other quality measures) to compare multiple left-censored missing value imputation methods (GSimp, QRILC, kNN-TN) against known true values in metabolomics data. This skill enables objective evaluation of which imputation strategy best recovers artificially censored metabolite abundances.

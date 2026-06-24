@@ -1,6 +1,8 @@
 ---
 name: quality-control-sample-designation
-description: Use when when importing a new batch of centroided mzML or mzXML LC-MS files into MetCohort, before any data alignment or feature detection is performed. At least one file must be designated as QC to enable ROA detection and alignment;
+description: Use when when importing a new batch of centroided mzML or mzXML LC-MS
+  files into MetCohort, before any data alignment or feature detection is performed.
+  At least one file must be designated as QC to enable ROA detection and alignment;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,12 +13,15 @@ metadata:
   - MetCohort
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04906
   title: MetCohort
 evidence_spans:
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool for large-scale metabolomics and exposomics
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool for large-scale metabolomics and exposomics
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

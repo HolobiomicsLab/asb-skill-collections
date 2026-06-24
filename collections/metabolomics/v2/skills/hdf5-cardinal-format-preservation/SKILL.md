@@ -1,6 +1,8 @@
 ---
 name: hdf5-cardinal-format-preservation
-description: Use when after performing isotopic correction, quantitation, or other pixel-level transformations on a feature-by-pixel intensity matrix imported from an imzML file via Cardinal's HDF5 layout.
+description: Use when after performing isotopic correction, quantitation, or other
+  pixel-level transformations on a feature-by-pixel intensity matrix imported from
+  an imzML file via Cardinal's HDF5 layout.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,12 +14,14 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # HDF5 Cardinal Format Preservation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preserve the HDF5 structure, dimension scales, layout metadata, and data groups when writing corrected Mass Spectrometry Imaging intensity matrices back to disk. This ensures downstream Cardinal tools and analysis pipelines can read and process the modified data without re-importing or reformatting.

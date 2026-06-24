@@ -1,6 +1,8 @@
 ---
 name: open-format-mass-spectrometry-file-handling
-description: Use when you have raw mass spectrometry data in vendor-proprietary formats (e.g., .raw, .d, .ms) that you need to upload to MassIVE for public sharing or submit to GNPS for spectral library matching and chemical annotation.
+description: Use when you have raw mass spectrometry data in vendor-proprietary formats
+  (e.g., .raw, .d, .ms) that you need to upload to MassIVE for public sharing or submit
+  to GNPS for spectral library matching and chemical annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -13,6 +15,7 @@ metadata:
   - ReDU
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -45,6 +48,7 @@ attribution:
 
 # open-format-mass-spectrometry-file-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert vendor-specific mass spectrometry data formats to open-source formats (mzML or mzXML) required for deposition in public repositories and downstream analysis in GNPS and ReDU. This skill ensures data interoperability and enables spectral library matching workflows at repository scale.

@@ -1,6 +1,9 @@
 ---
 name: false-discovery-rate-control-in-spectral-matching
-description: Use when after performing spectral library matching (whether unmodified or open modification search) and ranking candidate matches by similarity score, apply FDR control when you need to report a curated set of identifications with quantified confidence.
+description: Use when after performing spectral library matching (whether unmodified
+  or open modification search) and ranking candidate matches by similarity score,
+  apply FDR control when you need to report a curated set of identifications with
+  quantified confidence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,11 +14,13 @@ metadata:
   - ANN-SoLo
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

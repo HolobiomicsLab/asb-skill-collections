@@ -1,6 +1,7 @@
 ---
 name: multi-class-performance-metric-computation
-description: Use when when evaluating a taxonomy classification model on held-out natural product data where multiple classes exist (e.
+description: Use when when evaluating a taxonomy classification model on held-out
+  natural product data where multiple classes exist (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,6 +12,7 @@ metadata:
   - inference.py
   - scikit-learn classification_report
   - train.py with --task finetune
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -38,6 +40,7 @@ attribution:
 
 # multi-class-performance-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute classification performance metrics (accuracy, precision, recall, F1-score) per taxonomy class to evaluate model performance on hierarchical natural product classification tasks. This skill enables comparative benchmarking across models by quantifying how well each class is predicted.

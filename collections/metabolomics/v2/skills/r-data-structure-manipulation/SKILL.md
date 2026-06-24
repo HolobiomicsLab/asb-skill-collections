@@ -1,6 +1,8 @@
 ---
 name: r-data-structure-manipulation
-description: Use when when xcms has produced misaligned feature groups and you need to extract raw LC-MS profiles from source files into a structured format acceptable by ncGTW's realignment functions.
+description: Use when when xcms has produced misaligned feature groups and you need
+  to extract raw LC-MS profiles from source files into a structured format acceptable
+  by ncGTW's realignment functions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -13,11 +15,13 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -46,6 +50,7 @@ attribution:
 
 # R data structure manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and validate structured R objects (e.g., ncGTWinputs lists) that organize raw LC-MS profile data by feature and sample identifiers for downstream alignment analysis. This skill bridges xcms-processed output and ncGTW's graph-based realignment workflow.

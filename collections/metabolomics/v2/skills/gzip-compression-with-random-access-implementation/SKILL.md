@@ -1,6 +1,9 @@
 ---
 name: gzip-compression-with-random-access-implementation
-description: Use when you have a large text or structured file (mzML, XML, plain text) that you want to compress while retaining the ability to retrieve specific logical blocks (chapters, spectra, records) by identifier without decompressing the entire file.
+description: Use when you have a large text or structured file (mzML, XML, plain text)
+  that you want to compress while retaining the ability to retrieve specific logical
+  blocks (chapters, spectra, records) by identifier without decompressing the entire
+  file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,6 +15,7 @@ metadata:
   - Python
   - sqlite3
   - black
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -40,6 +44,7 @@ attribution:
 
 # gzip-compression-with-random-access-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a Generalized Seekable Gzip Writer (GSGW) pattern to create indexed gzip archives that support both random access by key and sequential iteration, enabling compressed storage of blockwise-parsed data (e.g., mzML spectra or book chapters) with byte-offset indexing.

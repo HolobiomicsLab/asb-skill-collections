@@ -1,6 +1,9 @@
 ---
 name: fold-change-sign-determination-statistics
-description: Use when you have paired measurements (e.g., gene expression counts, protein abundance, or sampled flux distributions) from two cell lines or conditions and need to assign a directional sign to each reaction or gene for downstream concordance analysis.
+description: Use when you have paired measurements (e.g., gene expression counts,
+  protein abundance, or sampled flux distributions) from two cell lines or conditions
+  and need to assign a directional sign to each reaction or gene for downstream concordance
+  analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -16,6 +19,7 @@ metadata:
   - rasTtest.py
   - mannWhitneyUTest.py
   - createMetabolicDataset.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -43,6 +47,7 @@ attribution:
 
 # fold-change-sign-determination-statistics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine whether a metabolic reaction or gene shows significant up-regulation (+1), down-regulation (−1), or no change (0) between two biological conditions using statistical tests on fold-change measurements. This skill classifies directional changes in transcriptomics (RAS), proteomics (RPS), and flux distribution data (FFD) to enable concordance analysis across regulatory layers.

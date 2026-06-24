@@ -1,6 +1,8 @@
 ---
 name: targeted-metabolite-detection-parameter-optimization
-description: Use when when you have centroided .mzML LC–MS runs and a target list (compound ID, theoretical m/z, expected RT, polarity) but are uncertain whether your m/z and RT windows are wide enough to capture all targets without false positives.
+description: Use when when you have centroided .mzML LC–MS runs and a target list
+  (compound ID, theoretical m/z, expected RT, polarity) but are uncertain whether
+  your m/z and RT windows are wide enough to capture all targets without false positives.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -17,14 +19,17 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - knitr::include_graphics
 claims: []
 provenance:
@@ -49,6 +54,7 @@ attribution:
 
 # Targeted metabolite detection parameter optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic evaluation and refinement of m/z tolerance windows and retention time (RT) windows to maximize targeted compound visibility and peak detection sensitivity in LC–MS screening workflows. This skill validates detection parameters before committing computational resources to full-batch peak integration.

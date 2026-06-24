@@ -1,6 +1,8 @@
 ---
 name: flux-variability-analysis-for-scaling
-description: Use when you have a constraint-based metabolic model and need to establish per-reaction flux scaling factors derived from gene expression or other activity scores. Use FVA before integrating transcriptomics-derived constraints (e.
+description: Use when you have a constraint-based metabolic model and need to establish
+  per-reaction flux scaling factors derived from gene expression or other activity
+  scores. Use FVA before integrating transcriptomics-derived constraints (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -16,16 +18,22 @@ metadata:
   - optGpSampler
   - COBRApy
   - GLPK (GNU Linear Programming Kit)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
 - We used relative gene-expression values as in GX-FBA
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +57,7 @@ attribution:
 
 # Flux Variability Analysis for Scaling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 FVA determines the minimum and maximum steady-state flux through each internal reaction in a constraint-based metabolic model under specified nutrient and extracellular constraints, providing the reference flux bounds needed to scale reaction-specific activity scores into feasible flux boundaries for downstream sampling.

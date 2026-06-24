@@ -1,6 +1,9 @@
 ---
 name: spectra-data-representation-backends
-description: Use when you are creating a new backend to expose MS data (m/z, intensity, retention time, and other spectral properties) from a specific storage format or data source (e.g., mzML files, SQL databases, in-memory matrices, or spectral libraries) to Spectra objects.
+description: Use when you are creating a new backend to expose MS data (m/z, intensity,
+  retention time, and other spectral properties) from a specific storage format or
+  data source (e.g., mzML files, SQL databases, in-memory matrices, or spectral libraries)
+  to Spectra objects.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -17,15 +20,18 @@ metadata:
   - MsBackendMemory
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra
+- The *Spectra* package defines an efficient infrastructure for storing and handling
+  mass spectrometry spectra
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
 - DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 - library(Spectra) library(IRanges)
-- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package
+- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +55,7 @@ attribution:
 
 # spectra-data-representation-backends
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement MsBackend classes that provide mass spectrometry data to Spectra objects while avoiding circular dependencies between spectraData() and spectraVariables() methods. This skill bridges MS data storage (in-memory, on-disk, or database) with the Spectra analysis framework.

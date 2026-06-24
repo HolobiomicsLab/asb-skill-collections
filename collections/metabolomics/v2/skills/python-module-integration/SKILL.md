@@ -1,6 +1,7 @@
 ---
 name: python-module-integration
-description: Use when when you have developed or obtained a new Python package that encapsulates domain-specific computational logic (e.
+description: Use when when you have developed or obtained a new Python package that
+  encapsulates domain-specific computational logic (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -13,6 +14,7 @@ metadata:
   - pytest
   - black
   - biosynfoni
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni

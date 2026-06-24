@@ -1,6 +1,7 @@
 ---
 name: mahalanobis-distance-calculation
-description: Use when after data normalization (Box-Cox transformation) and before hypothesis testing in Step 9 of untargeted metabolomic workflows.
+description: Use when after data normalization (Box-Cox transformation) and before
+  hypothesis testing in Step 9 of untargeted metabolomic workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +14,7 @@ metadata:
   - OUKS (Omics Untargeted Key Script)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

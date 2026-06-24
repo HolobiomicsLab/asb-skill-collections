@@ -1,6 +1,9 @@
 ---
 name: metabolomics-missing-value-imputation
-description: Use when raw metabolomics data matrices contain zero values or NA entries representing undetected metabolic features. Imputation is required before batch effect correction models (ComBat, ber) can be reliably applied, as these models assume complete feature matrices.
+description: Use when raw metabolomics data matrices contain zero values or NA entries
+  representing undetected metabolic features. Imputation is required before batch
+  effect correction models (ComBat, ber) can be reliably applied, as these models
+  assume complete feature matrices.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3216
@@ -11,6 +14,7 @@ metadata:
   - dbnorm
   - R
   - impute
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -19,7 +23,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # metabolomics-missing-value-imputation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate and impute missing values (zeros and NAs) in metabolomics feature matrices prior to batch effect correction, using either global minimum or feature-wise minimum strategies. This is a foundational preprocessing step that standardizes sparse metabolomics datasets and prevents loss of samples during downstream normalization.

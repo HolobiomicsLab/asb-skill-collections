@@ -1,6 +1,8 @@
 ---
 name: ncbi-database-cross-referencing
-description: Use when you have a collection of sequence files (e.g., GenBank format files in a repository directory) and need to determine which ones lack corresponding entries in NCBI's GenBank or RefSeq databases.
+description: Use when you have a collection of sequence files (e.g., GenBank format
+  files in a repository directory) and need to determine which ones lack corresponding
+  entries in NCBI's GenBank or RefSeq databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +12,7 @@ metadata:
   tools:
   - NCBI E-utilities
   - BLAST
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -39,6 +42,7 @@ attribution:
 
 # ncbi-database-cross-referencing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cross-reference local sequence files against NCBI GenBank/RefSeq accession identifiers to determine which sequences are unavailable from public databases. This skill identifies locally-curated sequences not yet deposited in NCBI, critical for inventory management and data provenance tracking in sequence repositories.

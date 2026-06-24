@@ -1,6 +1,8 @@
 ---
 name: compound-class-prediction-from-spectra
-description: Use when you have an unknown mass spectrometry spectrum (acquired experimentally or computationally) and need to assign it to a known drug class or identify candidate structures.
+description: Use when you have an unknown mass spectrometry spectrum (acquired experimentally
+  or computationally) and need to assign it to a known drug class or identify candidate
+  structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,7 @@ metadata:
   - DeepEI
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
@@ -41,6 +44,7 @@ attribution:
 
 # compound-class-prediction-from-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict the chemical class or identity of an unknown compound from its mass spectrometry spectrum using a pre-trained deep learning model. This skill applies neural network inference to classify novel psychoactive substances and other compounds by comparing their spectral signatures against learned patterns.

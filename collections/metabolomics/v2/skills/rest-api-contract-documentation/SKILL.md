@@ -1,6 +1,9 @@
 ---
 name: rest-api-contract-documentation
-description: Use when a webservice component (like MAGMa's joblauncher) lacks formal API documentation but the source code is accessible, and downstream consumers (web applications, external services) need to understand available HTTP endpoints, parameter schemas, and response formats without manual.
+description: Use when a webservice component (like MAGMa's joblauncher) lacks formal
+  API documentation but the source code is accessible, and downstream consumers (web
+  applications, external services) need to understand available HTTP endpoints, parameter
+  schemas, and response formats without manual.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +13,7 @@ metadata:
   tools:
   - MAGMa
   - MAGMa joblauncher
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -39,6 +43,7 @@ attribution:
 
 # REST API Contract Documentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate machine-readable API specifications (OpenAPI 3.0) by systematically analyzing webservice source code to extract endpoints, HTTP methods, request/response schemas, and authentication mechanisms. This skill ensures API consumers have a complete, validated contract of available operations and data structures.

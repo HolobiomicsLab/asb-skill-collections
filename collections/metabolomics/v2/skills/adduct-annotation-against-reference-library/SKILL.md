@@ -1,6 +1,8 @@
 ---
 name: adduct-annotation-against-reference-library
-description: Use when after computing a histogram of all pairwise mass differences from an MSI dataset, use this skill when you have observed mass difference peaks that may correspond to known adducts (e.g., [M+H]+, [M+Na]+, [M−H2O]+).
+description: Use when after computing a histogram of all pairwise mass differences
+  from an MSI dataset, use this skill when you have observed mass difference peaks
+  that may correspond to known adducts (e.g., [M+H]+, [M+Na]+, [M−H2O]+).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - R
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # adduct-annotation-against-reference-library
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass differences from MS imaging data against a curated reference library of known chemical adducts (e.g., matrix or salt ion complexes) to identify and annotate probable molecular adduct ion pairs. This skill bridges untargeted mass difference detection with chemical interpretation by assigning biological or instrumental significance to specific pairwise mass shifts.

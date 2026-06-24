@@ -1,6 +1,7 @@
 ---
 name: level-4-annotation-assignment
-description: Use when after khipu has grouped LC-MS features into empirical compounds with inferred molecular formulas and adduct assignments.
+description: Use when after khipu has grouped LC-MS features into empirical compounds
+  with inferred molecular formulas and adduct assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3931
@@ -17,12 +18,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
 evidence_spans:
-- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using the `download extras` command
-- perform MS1 annotation using an authentic compound library, a public database (e.g. HMDB, LIPID MAP), or custom database
+- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using
+  the `download extras` command
+- perform MS1 annotation using an authentic compound library, a public database (e.g.
+  HMDB, LIPID MAP), or custom database
 - pre-annotation to group featues to empirical compounds (khipu)
 - Python-Centric Pipeline for Metabolomics
 claims: []
@@ -48,6 +52,7 @@ attribution:
 
 # Level 4 Annotation Assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Level 4 annotation maps empirical compounds (EmpCpds) to chemical formulas and structure candidates by querying JMS-compliant HMDB and LMSD reference databases using inferred molecular formulas. This annotation level assigns putative metabolite identities based on exact mass matching without requiring explicit m/z tolerance specification.

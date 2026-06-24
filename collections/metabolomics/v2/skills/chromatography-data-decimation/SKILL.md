@@ -1,6 +1,9 @@
 ---
 name: chromatography-data-decimation
-description: Use when working with large GCIMS matrices where computational speed or memory constraints are a concern, after filtering retention time (e.g., 0–1100 s) and drift time (e.g., 5–16 ms) ranges and applying Savitzky-Golay smoothing. Use it as a preprocessing step before alignment operations.
+description: Use when working with large GCIMS matrices where computational speed
+  or memory constraints are a concern, after filtering retention time (e.g., 0–1100
+  s) and drift time (e.g., 5–16 ms) ranges and applying Savitzky-Golay smoothing.
+  Use it as a preprocessing step before alignment operations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3565
@@ -12,6 +15,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -40,6 +44,7 @@ attribution:
 
 # chromatography-data-decimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reduce memory footprint and computational cost of Gas Chromatography–Ion Mobility Spectrometry (GCIMS) data by systematically subsampling the drift time and retention time dimensions. Decimation is applied after filtering and smoothing to enable faster downstream alignment and peak detection without losing essential spectral structure.

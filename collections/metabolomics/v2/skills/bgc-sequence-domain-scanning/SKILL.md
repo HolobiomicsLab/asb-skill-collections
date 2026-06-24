@@ -1,6 +1,8 @@
 ---
 name: bgc-sequence-domain-scanning
-description: Use when you have BGC sequences (in FASTA or GenBank format) from antiSMASH or other sources and need to extract biosynthetic domain composition as the primary signal for GCF (Gene Cluster Family) clustering or similarity queries.
+description: Use when you have BGC sequences (in FASTA or GenBank format) from antiSMASH
+  or other sources and need to extract biosynthetic domain composition as the primary
+  signal for GCF (Gene Cluster Family) clustering or similarity queries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3092
@@ -13,6 +15,7 @@ metadata:
   - BiG-SLiCE
   - PFAM 35.0
   - antiSMASH v7.0.0
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

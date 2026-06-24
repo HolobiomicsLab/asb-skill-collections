@@ -1,6 +1,9 @@
 ---
 name: dynamic-method-signature-introspection
-description: Use when when building an automated converter discovery and job enumeration system where converter classes are dynamically loaded from package directories and you need to extract and validate their internal conversion method signatures without prior knowledge of which converters will be available.
+description: Use when when building an automated converter discovery and job enumeration
+  system where converter classes are dynamically loaded from package directories and
+  you need to extract and validate their internal conversion method signatures without
+  prior knowledge of which converters will be available.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   - pytest
   - MSMetaEnhancer
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

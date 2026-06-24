@@ -1,6 +1,8 @@
 ---
 name: technical-heterogeneity-removal
-description: Use when your metabolomics matrix (log2-scaled, samples × features in .csv format) exhibits spatial or distributional separation by batch/analytical run, visible in PCA or RLA plots.
+description: Use when your metabolomics matrix (log2-scaled, samples × features in
+  .csv format) exhibits spatial or distributional separation by batch/analytical run,
+  visible in PCA or RLA plots.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - R
   - sva
   - ber
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -20,7 +23,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # Technical Heterogeneity Removal from Metabolomics Datasets
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill removes batch effects and drift across analytical runs in metabolomics datasets using statistical correction models (two-stage procedure, parametric/non-parametric ComBat, or bagging-based regression). It is essential when metabolomics data span multiple batches or time periods and technical variation threatens the validity of biological inference.

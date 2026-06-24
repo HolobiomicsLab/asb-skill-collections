@@ -1,6 +1,9 @@
 ---
 name: summarized-experiment-object-construction
-description: Use when when you have imported a tab-delimited metabolomics file (via readData or similar) containing columns for compound identifiers, sample/aliquot names, peak areas (primary assay), internal standard areas (secondary assay), and sample type classifications, and you need to organize these into.
+description: Use when when you have imported a tab-delimited metabolomics file (via
+  readData or similar) containing columns for compound identifiers, sample/aliquot
+  names, peak areas (primary assay), internal standard areas (secondary assay), and
+  sample type classifications, and you need to organize these into.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,6 +17,7 @@ metadata:
   - readData
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -44,6 +48,7 @@ attribution:
 
 # SummarizedExperiment Object Construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a tab-delimited metabolomics data frame into a SummarizedExperiment object by mapping user-specified columns to compound names, sample identifiers, and assay values (primary and secondary). The function automatically computes a compound/internal standard ratio assay, storing all data in a structured Bioconductor container suitable for downstream quality control analyses.

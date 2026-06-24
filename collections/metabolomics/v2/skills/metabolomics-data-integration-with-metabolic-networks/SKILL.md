@@ -1,6 +1,8 @@
 ---
 name: metabolomics-data-integration-with-metabolic-networks
-description: Use when you have measured intracellular metabolite concentrations (e.g., via LC–MS/MS) across multiple cell lines or samples and want to predict which metabolic reactions are substrate-limited versus transcriptionally regulated.
+description: Use when you have measured intracellular metabolite concentrations (e.g.,
+  via LC–MS/MS) across multiple cell lines or samples and want to predict which metabolic
+  reactions are substrate-limited versus transcriptionally regulated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3805
@@ -13,6 +15,7 @@ metadata:
   - INTEGRATE pipeline (qLSLab/integrate)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -41,6 +44,7 @@ attribution:
 
 # metabolomics-data-integration-with-metabolic-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate intracellular metabolomics abundance data with constraint-based stoichiometric metabolic network models to compute Reaction Propensity Scores (RPS) that quantify expected metabolic flux changes across biological samples based on substrate availability alone. This enables discrimination of metabolically-controlled from transcriptionally-controlled metabolic fluxes when intersected with transcriptomic predictions.

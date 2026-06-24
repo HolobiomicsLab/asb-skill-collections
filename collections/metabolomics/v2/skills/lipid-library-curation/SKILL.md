@@ -1,6 +1,9 @@
 ---
 name: lipid-library-curation
-description: Use when you have obtained MobiLipid or a similar IM-MS lipidomics package that bundles a CCS reference library for labeled lipids, and you need to verify library integrity, validate that all expected lipid species are present with plausible numeric CCS values, and prepare a canonical curated.
+description: Use when you have obtained MobiLipid or a similar IM-MS lipidomics package
+  that bundles a CCS reference library for labeled lipids, and you need to verify
+  library integrity, validate that all expected lipid species are present with plausible
+  numeric CCS values, and prepare a canonical curated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,12 +16,15 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
-- MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
+- MobiLipid aims to streamline lipidomics workflows by offering a fully automated
+  solution for assessing and correcting collision cross section (CCS) bias
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # Reconstruct and Validate Collision Cross Section Reference Library for Labeled Lipids
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Curate and validate a structured collision cross section (CCS) reference library for isotope-labeled lipids (e.g., U13C) by extracting, parsing, and quality-checking CCS values from a distributed package. This skill ensures the library meets physical and structural constraints required for downstream CCS bias assessment in ion mobility–mass spectrometry (IM-MS) lipidomics.

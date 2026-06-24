@@ -1,6 +1,7 @@
 ---
 name: r-list-object-serialization
-description: Use when after extracting structured metadata (e.g., instrument parameters, scan counts, time ranges) from Thermo Fisher Scientific .
+description: Use when after extracting structured metadata (e.g., instrument parameters,
+  scan counts, time ranges) from Thermo Fisher Scientific .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,14 +13,18 @@ metadata:
   - rjson
   - readFileHeader()
   - rawrr
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
 - rjson::toJSON
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # R List Object Serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert R list objects extracted from binary proteomics data files into JSON format for portability, validation, and downstream integration. This skill bridges in-memory R data structures with file-based interchange formats, enabling modular end-to-end analysis pipeline development.

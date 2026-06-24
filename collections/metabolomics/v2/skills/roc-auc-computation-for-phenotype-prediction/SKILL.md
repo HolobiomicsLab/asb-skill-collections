@@ -1,6 +1,9 @@
 ---
 name: roc-auc-computation-for-phenotype-prediction
-description: Use when you have constructed consensus-clustered microbe and metabolite modules from microbiome-metabolome interaction data and wish to test whether these module-level features have clinically predictive value for a binary phenotype (e.g., disease vs. healthy).
+description: Use when you have constructed consensus-clustered microbe and metabolite
+  modules from microbiome-metabolome interaction data and wish to test whether these
+  module-level features have clinically predictive value for a binary phenotype (e.g.,
+  disease vs. healthy).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3809
@@ -15,16 +18,24 @@ metadata:
   - scikit-learn
   - Seaborn
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +59,7 @@ attribution:
 
 # ROC-AUC computation for phenotype prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Trains binary neural network classifiers on derived microbe-metabolite module features to predict disease phenotype (IBD status), evaluating discriminative performance using area-under-ROC-curve (AUC) as the primary metric across multiple random iterations to assess robustness.

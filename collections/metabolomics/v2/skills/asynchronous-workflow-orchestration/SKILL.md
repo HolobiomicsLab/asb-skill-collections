@@ -1,6 +1,9 @@
 ---
 name: asynchronous-workflow-orchestration
-description: Use when when you have a Streamlit-based scientific application (e.g. OpenMS workflows) that must support both online Docker deployments with multiple worker processes and offline local deployments, and you need to prevent long-running analyses from blocking the web UI thread.
+description: Use when when you have a Streamlit-based scientific application (e.g.
+  OpenMS workflows) that must support both online Docker deployments with multiple
+  worker processes and offline local deployments, and you need to prevent long-running
+  analyses from blocking the web UI thread.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,6 +17,7 @@ metadata:
   - multiprocessing
   - Streamlit
   - Docker / docker-compose
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -43,6 +47,7 @@ attribution:
 
 # asynchronous-workflow-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Route scientific workflow execution between Redis Queue (online) and multiprocessing (offline) based on deployment mode, enabling non-blocking job submission in Streamlit web applications while maintaining identical execution logic across both paths. This skill decouples the web UI from long-running OpenMS analyses by selecting the appropriate task queue backend automatically.

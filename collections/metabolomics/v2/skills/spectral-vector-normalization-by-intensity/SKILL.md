@@ -1,6 +1,9 @@
 ---
 name: spectral-vector-normalization-by-intensity
-description: Use when when converting pre-processed MS/MS spectra into fixed-length vector representations using Word2Vec embeddings for Spec2Vec similarity scoring. Specifically, apply this skill after you have represented individual peaks and neutral losses as words ('[redacted-email]', 'loss@xxx.
+description: Use when when converting pre-processed MS/MS spectra into fixed-length
+  vector representations using Word2Vec embeddings for Spec2Vec similarity scoring.
+  Specifically, apply this skill after you have represented individual peaks and neutral
+  losses as words ('[redacted-email]', 'loss@xxx.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,16 +21,21 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
+  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +59,7 @@ attribution:
 
 # spectral-vector-normalization-by-intensity
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize fragment ion intensities in MS/MS spectra before converting them to document vectors for Word2Vec embedding. This intensity weighting ensures that the spectral embedding reflects the relative importance of fragment peaks and improves the fidelity of spectral similarity scoring based on learned structural relationships.

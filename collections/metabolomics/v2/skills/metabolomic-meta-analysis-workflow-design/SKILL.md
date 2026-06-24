@@ -1,6 +1,9 @@
 ---
 name: metabolomic-meta-analysis-workflow-design
-description: Use when you have multiple metabolomic studies with aggregate summary statistics (p-values, fold-change estimates) and need to perform meta-analysis while harmonizing compound nomenclature across datasets. Use this skill when the underlying R package (e.
+description: Use when you have multiple metabolomic studies with aggregate summary
+  statistics (p-values, fold-change estimates) and need to perform meta-analysis while
+  harmonizing compound nomenclature across datasets. Use this skill when the underlying
+  R package (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -15,6 +18,7 @@ metadata:
   - R package webchem
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida
@@ -43,6 +47,7 @@ attribution:
 
 # metabolomic-meta-analysis-workflow-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a Shiny-based web interface that wraps R metabolomic packages to enable harmonized meta-analysis of aggregate statistical data (p-values, fold-change) across multiple studies while ensuring compound name standardization. This skill bridges computational metabolomics with interactive web deployment to lower barriers to complex meta-analytic workflows.

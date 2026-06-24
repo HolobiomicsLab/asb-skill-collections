@@ -1,6 +1,8 @@
 ---
 name: metabolite-trend-classification
-description: Use when when you have compiled p-values and fold-changes from multiple metabolomics studies and need to assign a single trend label (up/down/none) to each metabolite for meta-analysis or cross-study comparison.
+description: Use when when you have compiled p-values and fold-changes from multiple
+  metabolomics studies and need to assign a single trend label (up/down/none) to each
+  metabolite for meta-analysis or cross-study comparison.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -14,14 +16,17 @@ metadata:
   - check_names
   - webchem
   - volcano_plot
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # metabolite-trend-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify metabolites as up-regulated, down-regulated, or no trend by combining statistical significance (p-value), effect direction (fold-change), and study size weights in a meta-analysis framework. This skill integrates quantitative signals across multiple studies to assign a single consensus trend per metabolite.

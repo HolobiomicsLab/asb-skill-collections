@@ -1,6 +1,7 @@
 ---
 name: structure-file-format-conversion
-description: Use when you have raw structure input from diverse external databases (e.
+description: Use when you have raw structure input from diverse external databases
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -14,6 +15,7 @@ metadata:
   - smiles.py
   - sanitizing.py
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -46,6 +48,7 @@ attribution:
 
 # Structure file format conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw molecular structure representations (SMILES strings, SDF files, mol blocks) into standardized canonical and dimensional coordinate formats (2D/3D SMILES, mol files) using RDKit-based parsing and serialization. This skill is essential during the curation stage to ensure consistent structure representation across heterogeneous source databases before downstream computational chemistry tasks.

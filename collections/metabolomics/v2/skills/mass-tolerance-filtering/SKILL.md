@@ -1,6 +1,7 @@
 ---
 name: mass-tolerance-filtering
-description: Use when when you have observed fragment peak m/z values from tandem mass spectra and need to assign chemical subformulae to them.
+description: Use when when you have observed fragment peak m/z values from tandem
+  mass spectra and need to assign chemical subformulae to them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -11,11 +12,13 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +42,7 @@ attribution:
 
 # mass-tolerance-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter candidate chemical subformulae for fragment peaks by accepting only those whose theoretical m/z values fall within a specified mass tolerance window of the observed peak m/z. This is a data-preprocessing step that constrains the chemical formula space before applying validity filters and scoring.

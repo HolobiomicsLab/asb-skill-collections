@@ -1,6 +1,9 @@
 ---
 name: bigscape-output-version-detection-and-compatibility
-description: 'Use when when preparing NPLinker input data and the BigScape directory exists but its format is unknown or mixed (e.g., migrated workflows, third-party data, or legacy archives). Specifically: if local mode and BigScape directory is missing, generate it;'
+description: 'Use when when preparing NPLinker input data and the BigScape directory
+  exists but its format is unknown or mixed (e.g., migrated workflows, third-party
+  data, or legacy archives). Specifically: if local mode and BigScape directory is
+  missing, generate it;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - MIBiG
   - NPLinker
   - Dynaconf
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

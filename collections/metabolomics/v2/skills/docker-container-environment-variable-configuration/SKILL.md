@@ -1,6 +1,8 @@
 ---
 name: docker-container-environment-variable-configuration
-description: Use when when deploying a Java application in a Docker container and you need to adjust JVM heap memory settings (maximum and initial heap size) without modifying the container image.
+description: Use when when deploying a Java application in a Docker container and
+  you need to adjust JVM heap memory settings (maximum and initial heap size) without
+  modifying the container image.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,6 +13,7 @@ metadata:
   - Java 21
   - jps / jcmd
   - ipbhalle/metfragweb
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -39,6 +42,7 @@ attribution:
 
 # docker-container-environment-variable-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure JVM memory heap settings in a Dockerized application by passing environment variables (JAVA_OPTS with -Xmx and -Xms parameters) at container launch time. This skill enables runtime tuning of memory allocation without rebuilding container images.

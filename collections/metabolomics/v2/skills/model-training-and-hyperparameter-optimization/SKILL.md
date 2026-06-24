@@ -1,6 +1,8 @@
 ---
 name: model-training-and-hyperparameter-optimization
-description: Use when you have raw co-elution profiles (27 fractions × 2+ proteins per pair) and a gold-standard PPI reference set, want to avoid manual feature engineering, and need to handle severe class imbalance (negative PPIs >> positive PPIs).
+description: Use when you have raw co-elution profiles (27 fractions × 2+ proteins
+  per pair) and a gold-standard PPI reference set, want to avoid manual feature engineering,
+  and need to handle severe class imbalance (negative PPIs >> positive PPIs).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +16,7 @@ metadata:
   - TensorFlow
   - Keras
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbad229/7199559
   title: SPIFFED
@@ -41,6 +44,7 @@ attribution:
 
 # model-training-and-hyperparameter-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a balanced end-to-end deep learning model (CNN or Label Spreading) on co-fractionation/mass-spectrometry elution profiles with class-balancing strategies and systematic hyperparameter tuning to predict protein–protein interactions without manual feature engineering.

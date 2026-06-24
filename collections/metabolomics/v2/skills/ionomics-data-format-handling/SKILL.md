@@ -1,6 +1,9 @@
 ---
 name: ionomics-data-format-handling
-description: Use when you have raw ICP-MS ion concentration measurements (e.g., Ca44, Cd111, Fe56, Zn66 in ppm) organized as a data frame with multiple replicates per sample and batch identifiers, and you need to prepare this for ionomics analysis in Galaxy or the IonFlow R package.
+description: Use when you have raw ICP-MS ion concentration measurements (e.g., Ca44,
+  Cd111, Fe56, Zn66 in ppm) organized as a data frame with multiple replicates per
+  sample and batch identifiers, and you need to prepare this for ionomics analysis
+  in Galaxy or the IonFlow R package.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +16,7 @@ metadata:
   - IonFlow R package
   - Galaxy
   - R (base, stats)
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-021-01841-z
   title: IonFlow
@@ -42,6 +46,7 @@ attribution:
 
 # ionomics-data-format-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw ICP-MS ionomics datasets (ion concentration tables with replicates and batch identifiers) into standardized tabular formats suitable for Galaxy tool ingestion and downstream statistical analysis. This skill ensures data integrity through outlier detection, batch effect correction, and format validation before exploratory and clustering workflows.

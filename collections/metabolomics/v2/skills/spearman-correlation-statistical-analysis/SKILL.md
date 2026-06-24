@@ -1,6 +1,7 @@
 ---
 name: spearman-correlation-statistical-analysis
-description: Use when you have paired predicted and observed metabolite abundance vectors from a predictive model (e.
+description: Use when you have paired predicted and observed metabolite abundance
+  vectors from a predictive model (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -14,14 +15,19 @@ metadata:
   - MiMeNet
   - MelonnPan
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - Canonical correlation analyses were implemented using CCA with 10, 20, and 40 components.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- these models can predict the entire set of metabolites at once, and all models were evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate Elastic Net, and Canonical
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- these models can predict the entire set of metabolites at once, and all models were
+  evaluated using 10 iterations of 10-fold cross-validation. Random Forest, multivariate
+  Elastic Net, and Canonical
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # Spearman-Correlation Statistical Analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Spearman rank correlation coefficients (SCC) between predicted and observed metabolite abundances to quantify prediction accuracy across cross-validated folds. This non-parametric correlation metric is essential for evaluating microbiome-metabolome prediction models when the underlying relationship may be monotonic but not necessarily linear.

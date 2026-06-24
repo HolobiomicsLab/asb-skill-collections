@@ -1,6 +1,8 @@
 ---
 name: migration-time-extraction
-description: Use when you have OnDiskMSnExp CE-MS objects with known marker compounds (e.g., Paracetamol EOF marker) and need to extract their migration time positions to establish a calibration reference.
+description: Use when you have OnDiskMSnExp CE-MS objects with known marker compounds
+  (e.g., Paracetamol EOF marker) and need to extract their migration time positions
+  to establish a calibration reference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,11 +20,13 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package
@@ -51,6 +55,7 @@ attribution:
 
 # migration-time-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract migration time (MT) coordinates of marker peaks (e.g., EOF markers) from CE-MS data files by generating Extracted Ion Electropherograms (EIE) and applying xcms peak detection with specified m/z and MT range constraints. This preprocessing step is essential for calibrating and normalizing migration time scales before effective mobility transformation.

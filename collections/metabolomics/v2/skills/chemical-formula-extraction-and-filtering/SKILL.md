@@ -1,6 +1,8 @@
 ---
 name: chemical-formula-extraction-and-filtering
-description: Use when when you have a loaded metabolite database (e.g., hmdb_compounds.p pickle file) and need to constrain the chemical space to a specific instrumental m/z range (e.
+description: Use when when you have a loaded metabolite database (e.g., hmdb_compounds.p
+  pickle file) and need to constrain the chemical space to a specific instrumental
+  m/z range (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,14 +15,17 @@ metadata:
   - Python pickle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # chemical-formula-extraction-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and filter chemical molecular formulas from a metabolite database (HMDB) by applying mass-to-charge ratio (m/z) range and MS level constraints, then deduplicate to obtain a curated set of unique formulas suitable for metabolomics simulation or sampling.

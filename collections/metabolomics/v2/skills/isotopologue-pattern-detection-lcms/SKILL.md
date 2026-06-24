@@ -1,6 +1,8 @@
 ---
 name: isotopologue-pattern-detection-lcms
-description: Use when after filtering LC-MS features by statistical significance (e.g., p-value < 0.01) and you wish to group features that represent the same metabolite at different isotopologue states.
+description: Use when after filtering LC-MS features by statistical significance (e.g.,
+  p-value < 0.01) and you wish to group features that represent the same metabolite
+  at different isotopologue states.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,13 +18,15 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
 evidence_spans:
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 - import pandas as pd
 - import numpy as np
 - 'Dependencies: scipy'
@@ -50,6 +54,7 @@ attribution:
 
 # Isotopologue Pattern Detection in LC-MS
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and groups isotopologue signatures in LC-MS features by identifying mass differences characteristic of stable isotope distributions (1.00335 Da between successive isotopologues). This skill enables structural annotation of metabolite features by recognizing the fingerprint of natural or introduced isotopic labeling within retention-time windows.

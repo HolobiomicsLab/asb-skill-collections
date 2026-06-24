@@ -1,6 +1,9 @@
 ---
 name: heteronuclear-homonuclear-correlation-extraction
-description: Use when you have 2D NMR spectral data from multiple samples (a large sample set) including both heteronuclear experiments (HSQC, HMBC) and homonuclear experiments (COSY), and your goal is to identify which structural features are conserved across samples, prioritize samples by scaffold similarity.
+description: Use when you have 2D NMR spectral data from multiple samples (a large
+  sample set) including both heteronuclear experiments (HSQC, HMBC) and homonuclear
+  experiments (COSY), and your goal is to identify which structural features are conserved
+  across samples, prioritize samples by scaffold similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -13,13 +16,16 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.0c01076
   title: MADByTE
 evidence_spans:
-- MADByTE stands for **M**etabolomics **A**nd **D**ereplication **By** **T**wo-dimensional **E**xperiments.
+- MADByTE stands for **M**etabolomics **A**nd **D**ereplication **By** **T**wo-dimensional
+  **E**xperiments.
 - conda env create -f environment.yml
-- If you have followed the installation guide and setup the MADByTE Python virtual environment
+- If you have followed the installation guide and setup the MADByTE Python virtual
+  environment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

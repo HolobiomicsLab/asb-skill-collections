@@ -1,6 +1,8 @@
 ---
 name: multi-generation-transformation-hierarchies
-description: Use when the analytical goal requires detection of downstream transformation products that are not direct metabolites of the parent but rather products of further metabolism or degradation (e.g., secondary metabolites, conjugates of phase I products).
+description: Use when the analytical goal requires detection of downstream transformation
+  products that are not direct metabolites of the parent but rather products of further
+  metabolism or degradation (e.g., secondary metabolites, conjugates of phase I products).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -15,6 +17,7 @@ metadata:
   - PubChem
   - CTS (Chemical Transformation Simulator)
   - PubChem/PubChemLite library
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

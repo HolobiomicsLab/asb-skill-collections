@@ -1,6 +1,7 @@
 ---
 name: variable-importance-ranking-and-interpretation
-description: Use when after fitting a random forest classifier to metabolomics count data with a binary or multiclass grouping variable (e.
+description: Use when after fitting a random forest classifier to metabolomics count
+  data with a binary or multiclass grouping variable (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2939
@@ -13,6 +14,7 @@ metadata:
   - randomForest
   - ggplot2
   - Omu
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -41,6 +43,7 @@ attribution:
 
 # variable-importance-ranking-and-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Ranks and visualizes metabolite importance in random forest classification models to identify which compounds discriminate between experimental groups. This skill extracts feature importance scores from a fitted random forest model and generates publication-ready plots, enabling interpretation of which metabolites drive group separation in metabolomics datasets.

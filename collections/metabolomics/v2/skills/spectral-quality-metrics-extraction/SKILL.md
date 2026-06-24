@@ -1,6 +1,9 @@
 ---
 name: spectral-quality-metrics-extraction
-description: Use when you have multi-sample MS1 data (from Agilent, Thermo, Bruker, or mzML formats) and need to quantify ion-level quality attributes—such as signal consistency, noise characteristics, or chromatographic stability—to either flag outlier samples or validate data fitness for downstream.
+description: Use when you have multi-sample MS1 data (from Agilent, Thermo, Bruker,
+  or mzML formats) and need to quantify ion-level quality attributes—such as signal
+  consistency, noise characteristics, or chromatographic stability—to either flag
+  outlier samples or validate data fitness for downstream.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3664
@@ -13,6 +16,7 @@ metadata:
   - Mirador
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

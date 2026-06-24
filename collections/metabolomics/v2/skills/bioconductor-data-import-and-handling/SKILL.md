@@ -1,6 +1,8 @@
 ---
 name: bioconductor-data-import-and-handling
-description: Use when you have CE-MS test files archived in the msdata Bioconductor package and need to load them into an in-memory or on-disk R representation to extract ion electropherograms, pick peaks, or compute effective mobility transformations.
+description: Use when you have CE-MS test files archived in the msdata Bioconductor
+  package and need to load them into an in-memory or on-disk R representation to extract
+  ion electropherograms, pick peaks, or compute effective mobility transformations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -17,11 +19,13 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package
@@ -50,6 +54,7 @@ attribution:
 
 # bioconductor-data-import-and-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Loading and structuring CE-MS experimental data from Bioconductor packages (msdata) into R objects (OnDiskMSnExp) suitable for downstream mass spectrometry processing and effective mobility transformation. This skill bridges raw mass spectrometry files and analytical workflows by leveraging standardized Bioconductor data containers.

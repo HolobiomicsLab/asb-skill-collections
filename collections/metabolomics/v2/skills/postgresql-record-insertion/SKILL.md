@@ -1,6 +1,8 @@
 ---
 name: postgresql-record-insertion
-description: Use when after successful gensim LDA inference has produced a JSON result file (e.g., myexp.ldaresult.json) and you need to make those topic assignments and model parameters queryable and accessible to a Django web application.
+description: Use when after successful gensim LDA inference has produced a JSON result
+  file (e.g., myexp.ldaresult.json) and you need to make those topic assignments and
+  model parameters queryable and accessible to a Django web application.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +15,7 @@ metadata:
   - Docker
   - gensim
   - Django
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

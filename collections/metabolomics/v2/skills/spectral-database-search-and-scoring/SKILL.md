@@ -1,6 +1,9 @@
 ---
 name: spectral-database-search-and-scoring
-description: Use when you have preprocessed mass spectrometry data (peak-picked, baseline-corrected) from DI-MS, ASAP-MS, or LDI-MS instruments and need to identify unknown samples by comparing their spectral fingerprints against a validated reference database of known species or compounds.
+description: Use when you have preprocessed mass spectrometry data (peak-picked, baseline-corrected)
+  from DI-MS, ASAP-MS, or LDI-MS instruments and need to identify unknown samples
+  by comparing their spectral fingerprints against a validated reference database
+  of known species or compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +17,7 @@ metadata:
   - LDI-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -44,6 +48,7 @@ attribution:
 
 # spectral-database-search-and-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply database search algorithms to score and classify unknown mass spectrometry samples against reference spectral libraries, enabling automated species authentication. This skill assigns taxonomic or chemical identity to unknowns by matching their MS peaks to curated reference databases.

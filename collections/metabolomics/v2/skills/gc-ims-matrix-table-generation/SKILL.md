@@ -1,6 +1,8 @@
 ---
 name: gc-ims-matrix-table-generation
-description: Use when after integratePeaks has been executed with a chosen integration method (e.g., fixed_size with RIP saturation threshold of 0.1) on a clustered, baseline-corrected GC-IMS dataset.
+description: Use when after integratePeaks has been executed with a chosen integration
+  method (e.g., fixed_size with RIP saturation threshold of 0.1) on a clustered, baseline-corrected
+  GC-IMS dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,6 +15,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,6 +44,7 @@ attribution:
 
 # gc-ims-matrix-table-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and format integrated peak intensities from Gas Chromatography–Ion Mobility Spectrometry samples into a peak_table_matrix where rows represent clusters and columns represent samples. This skill produces the quantitative feature table required for downstream statistical or multivariate analysis.

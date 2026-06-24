@@ -1,6 +1,9 @@
 ---
 name: graph-serialization-graphml
-description: Use when after constructing a network graph where nodes represent Mass2Motifs (or spectra) and edges encode pairwise spectral similarity scores, and you need to export the network for visualization, post-processing, or sharing with collaborators using standard graph software (e.
+description: Use when after constructing a network graph where nodes represent Mass2Motifs
+  (or spectra) and edges encode pairwise spectral similarity scores, and you need
+  to export the network for visualization, post-processing, or sharing with collaborators
+  using standard graph software (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -13,12 +16,14 @@ metadata:
   - Python
   - NetworkX
   - Cytoscape or Gephi
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 claims: []
 provenance:

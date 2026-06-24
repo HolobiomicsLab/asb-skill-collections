@@ -1,6 +1,8 @@
 ---
 name: spectrum-relevance-classification
-description: Use when you have a collection of MS/MS spectra from reference standards representing your compounds of interest (e.g., flavonoids, prenylated chalcones) and a set of MS/MS spectra from non-target or other compounds.
+description: Use when you have a collection of MS/MS spectra from reference standards
+  representing your compounds of interest (e.g., flavonoids, prenylated chalcones)
+  and a set of MS/MS spectra from non-target or other compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -11,6 +13,7 @@ metadata:
   - AnnoMe
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbag111
   title: AnnoMe

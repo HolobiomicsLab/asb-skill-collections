@@ -1,6 +1,9 @@
 ---
 name: mass-calibration-against-reference-standards
-description: Use when when processing raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d) that requires assignment of molecular formulas to experimental m/z peaks. Calibration is necessary before SearchMolecularFormulas because uncalibrated mass error will cause false formula rejections or incorrect assignments.
+description: Use when when processing raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d)
+  that requires assignment of molecular formulas to experimental m/z peaks. Calibration
+  is necessary before SearchMolecularFormulas because uncalibrated mass error will
+  cause false formula rejections or incorrect assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +18,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -48,6 +53,7 @@ attribution:
 
 # mass-calibration-against-reference-standards
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform m/z domain calibration of FT-ICR mass spectra using a reference standard file to correct instrumental mass deviations before molecular formula assignment. This calibration step is essential for achieving accurate mass error metrics and reliable formula annotation in high-resolution mass spectrometry workflows.

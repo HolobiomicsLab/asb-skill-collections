@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -50,6 +51,7 @@ attribution:
 
 # structural-identifier-completeness-checking
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 A filtering skill that removes mass spectra lacking complete chemical structure identifiers (SMILES, InChI, and InChIKey) from spectral datasets. This ensures that downstream analysis workflows receive only spectra with sufficient structural annotation to support reliable compound identification and cross-database mapping.

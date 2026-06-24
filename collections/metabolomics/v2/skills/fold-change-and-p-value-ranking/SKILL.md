@@ -1,6 +1,9 @@
 ---
 name: fold-change-and-p-value-ranking
-description: Use when after performing differential abundance testing (via limma or edgeR) on batch-corrected lipid abundance data, use this skill to rank and filter lipids when you need to prioritize results by both effect size and statistical confidence, especially in complex experimental designs with.
+description: Use when after performing differential abundance testing (via limma or
+  edgeR) on batch-corrected lipid abundance data, use this skill to rank and filter
+  lipids when you need to prioritize results by both effect size and statistical confidence,
+  especially in complex experimental designs with.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,13 +15,17 @@ metadata:
   - limma
   - edgeR
   - ComBat
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
 evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.
-- allows the identification of differentially abundant lipids in simple and complex experimental designs
+- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
+  per lipid and sample
+- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
+  of lipidomics data.
+- allows the identification of differentially abundant lipids in simple and complex
+  experimental designs
 - dealing with batch effect correction.
 claims: []
 provenance:

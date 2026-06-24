@@ -1,6 +1,7 @@
 ---
 name: covariance-matrix-computation
-description: Use when after normalization (Step 7) is complete and you have a clean feature matrix ready for multivariate statistical analysis.
+description: Use when after normalization (Step 7) is complete and you have a clean
+  feature matrix ready for multivariate statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +14,7 @@ metadata:
   - OUKS Step 9 Statistics.R
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

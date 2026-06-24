@@ -1,6 +1,9 @@
 ---
 name: command-line-invocation
-description: Use when after completing a BiG-SLiCE clustering analysis and needing to access the pre-calculated BGC and GCF cluster assignments in tabular format for spreadsheet analysis, statistical testing, or integration with other bioinformatics pipelines.
+description: Use when after completing a BiG-SLiCE clustering analysis and needing
+  to access the pre-calculated BGC and GCF cluster assignments in tabular format for
+  spreadsheet analysis, statistical testing, or integration with other bioinformatics
+  pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -10,6 +13,7 @@ metadata:
   tools:
   - BiG-SLiCE
   - pyHMMER
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

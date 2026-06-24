@@ -1,6 +1,9 @@
 ---
 name: feature-condition-comparative-analysis
-description: Use when when you have molecular structures, a regression target (e.g. retention time), and want to establish whether one class of molecular features (e.g., fingerprints) outperforms another (e.g., descriptors) or whether combining them yields marginal gains.
+description: Use when when you have molecular structures, a regression target (e.g.
+  retention time), and want to establish whether one class of molecular features (e.g.,
+  fingerprints) outperforms another (e.g., descriptors) or whether combining them
+  yields marginal gains.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,11 +14,13 @@ metadata:
   tools:
   - alvaDesc
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +44,7 @@ attribution:
 
 # feature-condition-comparative-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A comparative experimental workflow that trains machine learning models under multiple feature input conditions (e.g., descriptors-only, fingerprints-only, combined) on the same dataset and architecture to quantify the independent contribution of each feature type to prediction accuracy. This skill is applied when the research question hinges on determining which molecular representation—or combination thereof—yields superior generalization.

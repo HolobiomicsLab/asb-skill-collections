@@ -1,6 +1,8 @@
 ---
 name: data-normalization-in-mass-spectrometry
-description: Use when you have raw or partially processed metabolomics data (mzML/mzXML format) from LC-MS or GC-MS runs and need to apply standardized feature detection, alignment, and intensity normalization as part of a reproducible workflow.
+description: Use when you have raw or partially processed metabolomics data (mzML/mzXML
+  format) from LC-MS or GC-MS runs and need to apply standardized feature detection,
+  alignment, and intensity normalization as part of a reproducible workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +15,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST
@@ -40,6 +43,7 @@ attribution:
 
 # data-normalization-in-mass-spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and align metabolomics feature tables produced by mass spectrometry acquisition using batch processing parameters embedded in MZmine configuration files. This skill ensures consistent peak intensity scaling and retention time alignment across multiple samples before statistical or taxonomic analysis.

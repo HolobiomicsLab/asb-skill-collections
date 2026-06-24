@@ -1,6 +1,7 @@
 ---
 name: feature-importance-ranking
-description: Use when after training logistic regression, random forest, and/or XGBoost classifiers on metabolomics data (e.
+description: Use when after training logistic regression, random forest, and/or XGBoost
+  classifiers on metabolomics data (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,6 +12,7 @@ metadata:
   tools:
   - MeTEor
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -18,7 +20,8 @@ derived_from:
   title: ''
 evidence_spans:
 - library(MeTEor)
-- 'You can perform binary classification using three different algorithms: logistic regression (LR), random forest (RF), and XGBoost (XGB).'
+- 'You can perform binary classification using three different algorithms: logistic
+  regression (LR), random forest (RF), and XGBoost (XGB).'
 - library(tidyverse) library(VIM) library(laeken) library(MeTEor)
 claims: []
 provenance:
@@ -44,6 +47,7 @@ attribution:
 
 # feature-importance-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and rank the most important metabolite features identified by trained classification models (logistic regression, random forest, XGBoost) to understand which metabolites drive predictions in binary classification tasks on metabolomics data. This skill reveals which compounds are most discriminative for the outcome of interest.

@@ -1,6 +1,8 @@
 ---
 name: scoring-module-unit-testing
-description: Use when after implementing or modifying the scoring module that computes average InChIKey scores and neighbourhood scores for candidate matches, or when integrating new scoring logic into an existing MS2Query pipeline.
+description: Use when after implementing or modifying the scoring module that computes
+  average InChIKey scores and neighbourhood scores for candidate matches, or when
+  integrating new scoring logic into an existing MS2Query pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - setuptools
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

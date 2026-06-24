@@ -1,6 +1,8 @@
 ---
 name: candidate-spectrum-retrieval-and-ranking
-description: Use when when you have a large reference MS/MS spectral library (>10k spectra) and need to perform open modification searches on query spectra without exhaustively comparing against every library entry.
+description: Use when when you have a large reference MS/MS spectral library (>10k
+  spectra) and need to perform open modification searches on query spectra without
+  exhaustively comparing against every library entry.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -12,11 +14,13 @@ metadata:
   - Faiss
   techniques:
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

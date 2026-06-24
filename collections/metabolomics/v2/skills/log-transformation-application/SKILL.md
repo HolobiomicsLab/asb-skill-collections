@@ -1,6 +1,8 @@
 ---
 name: log-transformation-application
-description: Use when apply log-transformation immediately after loading a raw metabolomics featuredata matrix (metabolite peak intensities as rows=samples, columns=metabolites) and before normalization.
+description: Use when apply log-transformation immediately after loading a raw metabolomics
+  featuredata matrix (metabolite peak intensities as rows=samples, columns=metabolites)
+  and before normalization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,13 +16,16 @@ metadata:
   - MissingValues
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # log-transformation-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Log-transformation of metabolomics feature intensity matrices to stabilize variance and handle zeros before normalization. This pre-processing step converts raw peak intensities to a log scale, making downstream normalization methods more effective by reducing the impact of extreme values and improving homogeneity of variance.

@@ -1,6 +1,9 @@
 ---
 name: stochastic-weight-averaging-ensemble
-description: Use when training a heavily regularized deep neural network on molecular property prediction tasks (e.g., retention time prediction) where you observe signs of overfitting despite L1/L2 penalties, or when you need to reduce variance in predictions on held-out test sets.
+description: Use when training a heavily regularized deep neural network on molecular
+  property prediction tasks (e.g., retention time prediction) where you observe signs
+  of overfitting despite L1/L2 penalties, or when you need to reduce variance in predictions
+  on held-out test sets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -10,11 +13,13 @@ metadata:
   tools:
   - alvaDesc
   - PyTorch / TensorFlow
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +43,7 @@ attribution:
 
 # stochastic-weight-averaging-ensemble
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stochastic weight averaging (SWA) is a regularization and ensemble technique that improves deep neural network generalization by averaging model weights collected at regular intervals during training, particularly when combined with learning rate scheduling like cosine annealing warm restarts. It reduces overfitting and stabilizes predictions on retention time and similar regression tasks.

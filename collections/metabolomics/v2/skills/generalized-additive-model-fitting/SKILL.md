@@ -1,6 +1,8 @@
 ---
 name: generalized-additive-model-fitting
-description: Use when when a feature table from LC-MS metabolomic profiling contains QC (quality control) sample annotations and exhibits systematic signal drift correlated with run order or batch number.
+description: Use when when a feature table from LC-MS metabolomic profiling contains
+  QC (quality control) sample annotations and exhibits systematic signal drift correlated
+  with run order or batch number.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - OUKS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

@@ -1,6 +1,7 @@
 ---
 name: coverage-accuracy-metric-computation
-description: Use when you have two sets of lipid annotations—one from baseline spectral library matching and one from an enhanced method (e.
+description: Use when you have two sets of lipid annotations—one from baseline spectral
+  library matching and one from an enhanced method (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,12 +14,15 @@ metadata:
   - LipidIN Wide-spectrum Modeling Yield (WMY) network
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

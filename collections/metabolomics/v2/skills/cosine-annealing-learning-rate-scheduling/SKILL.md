@@ -1,6 +1,7 @@
 ---
 name: cosine-annealing-learning-rate-scheduling
-description: Use when when training a heavily regularized deep neural network on large molecular datasets (e.
+description: Use when when training a heavily regularized deep neural network on large
+  molecular datasets (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -10,11 +11,13 @@ metadata:
   tools:
   - alvaDesc
   - PyTorch / TensorFlow
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +41,7 @@ attribution:
 
 # cosine-annealing-learning-rate-scheduling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cosine annealing with warm restarts is a learning rate scheduling strategy that cyclically reduces the learning rate following a cosine curve and periodically restarts to higher values, enabling exploration of multiple local minima and improved generalization in deep neural networks for regression tasks.

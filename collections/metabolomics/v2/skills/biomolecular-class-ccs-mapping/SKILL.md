@@ -1,6 +1,9 @@
 ---
 name: biomolecular-class-ccs-mapping
-description: Use when after biomolecular class labels have been assigned to features in a TWIM-MS dataset and you have raw ion mobility arrival time measurements. Use it when you need to convert arrival times to standardized CCS values where calibration accuracy depends critically on the biomolecular class (e.
+description: Use when after biomolecular class labels have been assigned to features
+  in a TWIM-MS dataset and you have raw ion mobility arrival time measurements. Use
+  it when you need to convert arrival times to standardized CCS values where calibration
+  accuracy depends critically on the biomolecular class (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -13,6 +16,7 @@ metadata:
   - MOCCal
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -41,6 +45,7 @@ attribution:
 
 # biomolecular-class-ccs-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute class-specific collision cross section (CCS) values for ion mobility features by applying biomolecule-class-appropriate calibration models to arrival time measurements. This skill enables conversion of raw TWIM-MS arrival times to calibrated CCS using class-dependent linear or non-linear regression models fitted during the calibration phase.

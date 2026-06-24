@@ -1,6 +1,9 @@
 ---
 name: metabolite-concentration-stoichiometric-mapping
-description: Use when you have intracellular metabolomics abundance data (absolute or relative concentrations) for multiple cell lines or conditions, a constraint-based stoichiometric metabolic model with reaction-metabolite associations, and you need to disentangle how differences in substrate concentration.
+description: Use when you have intracellular metabolomics abundance data (absolute
+  or relative concentrations) for multiple cell lines or conditions, a constraint-based
+  stoichiometric metabolic model with reaction-metabolite associations, and you need
+  to disentangle how differences in substrate concentration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +16,7 @@ metadata:
   - INTEGRATE pipeline
   - constraint-based stoichiometric metabolic models (ENGRO2)
   - Python (v3.0+)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -41,6 +45,7 @@ attribution:
 
 # metabolite-concentration-stoichiometric-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map measured intracellular metabolite concentrations to stoichiometric coefficients in a constraint-based metabolic model to compute Reaction Propensity Scores (RPS) that quantify expected metabolic flux differences driven by substrate availability alone, independent of gene expression regulation.

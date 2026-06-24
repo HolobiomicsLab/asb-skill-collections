@@ -1,6 +1,8 @@
 ---
 name: cross-table-metadata-harmonization
-description: Use when when you have obtained raw metabolite abundance data in a format that separates the measurement matrix from sample-level metadata (e.g., run day, plate ID, cohort variables) and feature-level annotations (e.
+description: Use when when you have obtained raw metabolite abundance data in a format
+  that separates the measurement matrix from sample-level metadata (e.g., run day,
+  plate ID, cohort variables) and feature-level annotations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - metaboprep
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -38,6 +41,7 @@ attribution:
 
 # cross-table-metadata-harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconcile and integrate sample and feature metadata tables with a primary abundance data matrix into a unified object structure, ensuring consistent identifiers and annotations across all three components. This skill is essential when importing heterogeneous metabolomics data formats (Metabolon Excel, Nightingale, Olink, SomaLogic) that separate measurements, sample descriptors, and feature annotations into separate files or sheets.

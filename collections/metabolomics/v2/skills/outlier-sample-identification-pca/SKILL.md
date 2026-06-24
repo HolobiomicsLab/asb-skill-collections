@@ -1,6 +1,8 @@
 ---
 name: outlier-sample-identification-pca
-description: Use when after normalizing and log-transforming a LipidomicsExperiment object, when you need to detect samples with aberrant lipid profiles before differential expression or multivariate analysis.
+description: Use when after normalizing and log-transforming a LipidomicsExperiment
+  object, when you need to detect samples with aberrant lipid profiles before differential
+  expression or multivariate analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -10,12 +12,15 @@ metadata:
   tools:
   - lipidr
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -40,6 +45,7 @@ attribution:
 
 # outlier-sample-identification-pca
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify anomalous samples in lipidomics datasets by performing PCA on normalized and log-transformed lipid abundance data, then visually inspecting score plots for samples with large dispersion relative to the primary sample grouping (e.g., SampleType). Outlier samples are those with unusual PC scores that may warrant removal prior to downstream statistical analysis.

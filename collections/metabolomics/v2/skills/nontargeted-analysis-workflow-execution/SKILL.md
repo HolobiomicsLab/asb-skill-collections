@@ -1,6 +1,9 @@
 ---
 name: nontargeted-analysis-workflow-execution
-description: Use when you have UPLC-HRMS data from ThermoFisher, Agilent, or other vendor instruments (converted via MSConvert if needed), organized as batch-processed files ready for MSThunder input, and you need to identify unknown organic pollutants with deep learning-assisted structure prediction and.
+description: Use when you have UPLC-HRMS data from ThermoFisher, Agilent, or other
+  vendor instruments (converted via MSConvert if needed), organized as batch-processed
+  files ready for MSThunder input, and you need to identify unknown organic pollutants
+  with deep learning-assisted structure prediction and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,13 +18,15 @@ metadata:
   - Ubuntu 20.04 (Linux environment)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 - doi: 10.5281/zenodo.12602805
   title: ''
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - A case file named “Pesticides” can be run in the Windows environment
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # nontargeted-analysis-workflow-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a deep learning-based nontargeted analytical workflow in MSThunder to identify unknown organic pollutants in UPLC-HRMS data by matching precursor ions, retention times, and MS2 spectra against learned candidate structures and spectral libraries. Use this skill when you have batch-processed mass spectrometry data and need to rapidly assign compound identities with confidence scores to unknowns in water or similar matrices.

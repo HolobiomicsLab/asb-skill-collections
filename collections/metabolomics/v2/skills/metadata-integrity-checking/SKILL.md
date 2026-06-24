@@ -1,6 +1,7 @@
 ---
 name: metadata-integrity-checking
-description: Use when after processing LCMS feature data through Blueshift or Gravity but before finalizing results.
+description: Use when after processing LCMS feature data through Blueshift or Gravity
+  but before finalizing results.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,6 +14,7 @@ metadata:
   - Formation
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

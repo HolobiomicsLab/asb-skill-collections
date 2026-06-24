@@ -1,6 +1,8 @@
 ---
 name: tree-to-query-translation
-description: Use when you have a shallow decision tree trained on ChemEcho feature vectors (peak or neutral loss formulas) and need to deploy it as an executable query against tandem mass spectrometry data.
+description: Use when you have a shallow decision tree trained on ChemEcho feature
+  vectors (peak or neutral loss formulas) and need to deploy it as an executable query
+  against tandem mass spectrometry data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2945
@@ -12,13 +14,15 @@ metadata:
   - ChemEcho
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
 evidence_spans:
-- The Mass Query Language (MassQL) is a domain specific language used to describe fragmentation patterns
+- The Mass Query Language (MassQL) is a domain specific language used to describe
+  fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # tree-to-query-translation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a decision tree path trained on ChemEcho sparse feature vectors into a deployable MassQL query by mapping tree split conditions to fragmentation pattern constraints. This skill enables direct translation of interpretable tree-based models into executable domain-specific language queries for tandem mass spectrometry data.

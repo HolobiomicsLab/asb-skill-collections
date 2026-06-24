@@ -1,6 +1,8 @@
 ---
 name: spectral-intensity-normalization
-description: Use when after removing precursor and noise peaks from an MsmsSpectrum object when the spectrum contains peaks with highly variable intensities (e.g., one or two dominant peaks with many weaker fragments).
+description: Use when after removing precursor and noise peaks from an MsmsSpectrum
+  object when the spectrum contains peaks with highly variable intensities (e.g.,
+  one or two dominant peaks with many weaker fragments).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,15 +17,20 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 - import numpy as np
-- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and [Numba](http://numba.pydata.org/)
+- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and
+  [Numba](http://numba.pydata.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # spectral-intensity-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize peak intensities in tandem mass spectrometry spectra by applying scaling transformations (e.g., square-root scaling) to de-emphasize overly intense peaks and improve downstream spectral comparison and matching. This is a critical preprocessing step that follows noise removal and precedes spectral annotation or database matching.

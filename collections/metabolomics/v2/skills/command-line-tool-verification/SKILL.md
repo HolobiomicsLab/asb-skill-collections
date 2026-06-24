@@ -1,6 +1,8 @@
 ---
 name: command-line-tool-verification
-description: Use when after installing a command-line bioinformatics tool (e.g., via pip, conda, or package manager) and before attempting to use it on experimental data.
+description: Use when after installing a command-line bioinformatics tool (e.g., via
+  pip, conda, or package manager) and before attempting to use it on experimental
+  data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,11 +13,13 @@ metadata:
   - falcon
   - spectrum-utils
   - pip
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +43,7 @@ attribution:
 
 # command-line-tool-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a command-line scientific tool has been correctly installed and is executable by invoking it with diagnostic flags (help or version) and confirming successful output. This ensures the tool and its dependencies are properly configured before running analyses on real data.

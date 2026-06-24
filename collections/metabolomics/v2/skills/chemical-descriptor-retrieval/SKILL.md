@@ -1,6 +1,7 @@
 ---
 name: chemical-descriptor-retrieval
-description: Use when after harmonizing compound identifiers to PubChem IDs (e.g., via check_names function).
+description: Use when after harmonizing compound identifiers to PubChem IDs (e.g.,
+  via check_names function).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -13,15 +14,18 @@ metadata:
   - webchem
   - amanida
   - PubChem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
 - the package will retrieve the PubChem ID from the ID using `webchem`
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # Chemical Descriptor Retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve standardized chemical descriptors (molecular formula, molecular weight, SMILES, InChIKey, and cross-database identifiers) for metabolites from public chemical databases using canonical identifiers. This enriches harmonized compound records with physicochemical and structural properties needed for comparative metabolomics meta-analysis.

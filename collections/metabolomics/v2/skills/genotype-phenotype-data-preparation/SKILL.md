@@ -1,6 +1,8 @@
 ---
 name: genotype-phenotype-data-preparation
-description: Use when when you have raw genotype and phenotype data files (e.g., from a GWAS dataset or genetic study) and need to apply PaIRKAT or similar pathway-level association tests.
+description: Use when when you have raw genotype and phenotype data files (e.g., from
+  a GWAS dataset or genetic study) and need to apply PaIRKAT or similar pathway-level
+  association tests.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_3517
   tools:
   - PaIRKAT
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -37,6 +40,7 @@ attribution:
 
 # genotype-phenotype-data-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Format and structure raw genotype and phenotype files to match the input requirements of pathway-integrated kernel association test functions. This skill ensures data compatibility and proper variable alignment before statistical testing.

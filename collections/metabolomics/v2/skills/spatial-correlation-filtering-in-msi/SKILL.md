@@ -1,6 +1,8 @@
 ---
 name: spatial-correlation-filtering-in-msi
-description: Use when after identifying candidate parent–adduct mass-difference pairs (via massdiff, histogram binning, and adductMatch), apply this skill to discriminate true molecular adducts from coincidental mass matches.
+description: Use when after identifying candidate parent–adduct mass-difference pairs
+  (via massdiff, histogram binning, and adductMatch), apply this skill to discriminate
+  true molecular adducts from coincidental mass matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +17,13 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # spatial-correlation-filtering-in-msi
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Test spatial correlation between putative parent and adduct ion pairs in mass spectrometry imaging data to validate that candidate adduct assignments reflect true co-localization in tissue. This filters out spurious mass-difference matches by exploiting the spatial dimension of MSI, retaining only ion pairs whose abundance patterns are significantly correlated across pixels.

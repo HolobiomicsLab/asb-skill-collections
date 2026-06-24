@@ -1,6 +1,8 @@
 ---
 name: spectral-noise-filtering
-description: Use when immediately after extracting ion chromatograms (EICs) by binning mass spectral data across the full m/z range from raw LC/HRMS files (mzML, mzXML, or netCDF format).
+description: Use when immediately after extracting ion chromatograms (EICs) by binning
+  mass spectral data across the full m/z range from raw LC/HRMS files (mzML, mzXML,
+  or netCDF format).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,11 +17,14 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # spectral-noise-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter mass spectral noise from extracted ion chromatogram (EIC) candidates during the initial stage of untargeted LC/HRMS data processing. This skill removes low-intensity background signals and non-significant peaks to retain only genuine chemical signals for downstream peak detection.

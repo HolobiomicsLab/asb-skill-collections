@@ -1,6 +1,7 @@
 ---
 name: batch-effect-correction-reference-based
-description: Use when when you have log-transformed metabolite abundance data from multiple batches (e.
+description: Use when when you have log-transformed metabolite abundance data from
+  multiple batches (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,11 +15,13 @@ metadata:
   - dplyr
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
 evidence_spans:
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref", grouping = FALSE, print.detail = FALSE )
+- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
+  grouping = FALSE, print.detail = FALSE )
 - '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:
@@ -43,6 +46,7 @@ attribution:
 
 # batch-effect-correction-reference-based
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply concordance-based batch effect correction to log-transformed metabolomics data by designating a reference batch and disabling group-level stratification. This skill removes batch-driven signal drift while preserving biological group differences in large-scale metabolite matrices.

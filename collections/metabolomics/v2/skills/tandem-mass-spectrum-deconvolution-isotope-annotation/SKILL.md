@@ -1,6 +1,9 @@
 ---
 name: tandem-mass-spectrum-deconvolution-isotope-annotation
-description: 'Use when you have aligned features characterized across multiple dimensions (m/z, drift time, retention time) and need to: (1) resolve MS/MS spectra that may contain fragments from multiple co-eluting or co-mobilizing precursors; (2) identify and validate isotopic signatures (e.'
+description: 'Use when you have aligned features characterized across multiple dimensions
+  (m/z, drift time, retention time) and need to: (1) resolve MS/MS spectra that may
+  contain fragments from multiple co-eluting or co-mobilizing precursors; (2) identify
+  and validate isotopic signatures (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -18,11 +21,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - Use conda to create a virtual environment with required dependencies.
 - 'Install DEIMoS using pip: pip install -e .'
@@ -50,6 +55,7 @@ attribution:
 
 # tandem-mass-spectrum-deconvolution-isotope-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill resolves convolved tandem mass spectra (MS/MS) into individual component spectra and annotates detected features with their isotopic signatures, enabling accurate molecular characterization in high-dimensional mass spectrometry workflows. It is essential for disambiguating overlapping fragmentation patterns and linking isotopologue patterns to detected features in multidimensional datasets.

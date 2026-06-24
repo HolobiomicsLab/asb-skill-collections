@@ -1,6 +1,9 @@
 ---
 name: rest-api-query-and-response-parsing
-description: Use when you have deployed a TensorFlow Serving instance (via docker-compose or equivalent) and need to verify that the model's input layer names ('input_2048' and 'input_4096') and output layer name ('output') match the expected schema before integrating the model into a classification pipeline or.
+description: Use when you have deployed a TensorFlow Serving instance (via docker-compose
+  or equivalent) and need to verify that the model's input layer names ('input_2048'
+  and 'input_4096') and output layer name ('output') match the expected schema before
+  integrating the model into a classification pipeline or.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - docker-compose
   - TensorFlow Serving
   - docker
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -37,6 +41,7 @@ attribution:
 
 # REST API Query and Response Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query a deployed TensorFlow Serving metadata endpoint via HTTP GET and parse the JSON response to extract and validate model layer names. This skill is essential for verifying that a containerized model server exposes the correct input and output layer architecture before downstream classification or inference tasks.

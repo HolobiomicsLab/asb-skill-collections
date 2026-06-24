@@ -1,6 +1,9 @@
 ---
 name: mass-difference-adduct-matching
-description: Use when after correlation-based feature pairing has identified feature groups with matching temporal intensity profiles through direct-injection or plasma ionization mass spectrometry experiments. You have a set of putative feature-pair candidates and need to assign specific chemical identities (e.
+description: Use when after correlation-based feature pairing has identified feature
+  groups with matching temporal intensity profiles through direct-injection or plasma
+  ionization mass spectrometry experiments. You have a set of putative feature-pair
+  candidates and need to assign specific chemical identities (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -13,11 +16,13 @@ metadata:
   - matchms
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # Reconstruct the mass-difference open-search step to assign candidate adduct/fragment species
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill uses exact mass differences between correlated feature pairs to refine and disambiguate ion-species relationships in direct-injection mass spectrometry by matching observed m/z deltas against a user-defined reference table of in-source fragments and adducts. It serves as a second refinement layer after temporal correlation, annotating feature pairs with specific adduct or fragment identities and reporting mass accuracy.

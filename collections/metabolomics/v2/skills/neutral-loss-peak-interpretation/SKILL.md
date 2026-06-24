@@ -1,6 +1,7 @@
 ---
 name: neutral-loss-peak-interpretation
-description: Use when you have a tandem mass spectrum (MSMS) loaded via USI and wish to maximize the interpretability of observed peaks.
+description: Use when you have a tandem mass spectrum (MSMS) loaded via USI and wish
+  to maximize the interpretability of observed peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,6 +14,7 @@ metadata:
   - ProForma 2.0
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -42,6 +44,7 @@ attribution:
 
 # neutral-loss-peak-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enable neutral loss annotation in spectrum_utils.fragment_annotation to increase the fraction of observed tandem MS peaks that receive molecular ion interpretation via ProForma 2.0. This skill quantifies the improvement in peak coverage when neutral losses (e.g., NH₃, H₂O) are explicitly modeled alongside standard a/b/y fragment ions.

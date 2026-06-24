@@ -1,6 +1,8 @@
 ---
 name: targeted-peak-detection-and-integration
-description: Use when you have centroided LC–MS data in .mzML format, a validated table of target compounds with adjusted expected retention times (RT in minutes), and you need to extract peak areas and quality metrics across all sample runs.
+description: Use when you have centroided LC–MS data in .mzML format, a validated
+  table of target compounds with adjusted expected retention times (RT in minutes),
+  and you need to extract peak areas and quality metrics across all sample runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +19,7 @@ metadata:
   - MsExperiment
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -48,6 +51,7 @@ attribution:
 
 # Targeted Peak Detection and Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and integration of chromatographic peaks for known target compounds across multiple LC–MS runs, producing area-under-curve (AUC) and quality metrics (Max. Int., SNR, peak_cor, points_over_peak). This skill is applied after retention time adjustment to extract quantitative and qualitative peak characteristics across a batch of centroided .mzML files.

@@ -1,6 +1,8 @@
 ---
 name: random-forest-regression-tuning
-description: Use when your MetaboSet object contains missing values (marked as NA) in the expression matrix after quality flagging, but you need complete data for multivariate analysis.
+description: Use when your MetaboSet object contains missing values (marked as NA)
+  in the expression matrix after quality flagging, but you need complete data for
+  multivariate analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,6 +17,7 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -26,7 +29,8 @@ evidence_spans:
 - reads them to R, conducts additional preprocessing and statistical analyses
 - The implementation we use (from the missForest package) can be parallelized
 - Load the libraries (doParallel is used for parallel processing)
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +55,7 @@ attribution:
 
 # Random Forest Regression Tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and apply random forest regression to impute missing values in LC-MS metabolomics data, using observed features and samples as predictors to generate missing abundance estimates. This skill tunes the random forest algorithm via reproducibility seeds and feature quality filtering to balance imputation accuracy with computational efficiency.

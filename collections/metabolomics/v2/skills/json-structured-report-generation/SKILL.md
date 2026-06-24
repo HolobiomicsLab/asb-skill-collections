@@ -1,6 +1,9 @@
 ---
 name: json-structured-report-generation
-description: Use when after Mass2Motif annotation candidates have been ranked and filtered by similarity score (using Spec2Vec embeddings queried against MotifDB), you need to serialize the ranked results into a standardized, hierarchical format that preserves confidence metadata and enables programmatic access.
+description: Use when after Mass2Motif annotation candidates have been ranked and
+  filtered by similarity score (using Spec2Vec embeddings queried against MotifDB),
+  you need to serialize the ranked results into a standardized, hierarchical format
+  that preserves confidence metadata and enables programmatic access.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -14,11 +17,13 @@ metadata:
   - MAG (Automated Mass2Motif Annotation Guidance)
   - Spec2Vec
   - MotifDB
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - Automated annotation of **M2M** using **MAG**
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

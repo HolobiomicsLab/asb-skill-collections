@@ -1,6 +1,8 @@
 ---
 name: ion-chromatogram-mobilogram-visualization-and-interpretation
-description: Use when after loading raw diaPASEF or DIA mass spectrometry data (mzML format) and search results (DIA-NN, OpenSwath, or equivalent) to visually inspect extracted ion chromatograms and mobilograms for selected peptide precursors.
+description: Use when after loading raw diaPASEF or DIA mass spectrometry data (mzML
+  format) and search results (DIA-NN, OpenSwath, or equivalent) to visually inspect
+  extracted ion chromatograms and mobilograms for selected peptide precursors.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -18,11 +20,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 - MzMLDataLoader
 - InteractiveTwoDimensionPlotter

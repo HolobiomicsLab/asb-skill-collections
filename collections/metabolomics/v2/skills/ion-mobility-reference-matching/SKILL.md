@@ -1,6 +1,7 @@
 ---
 name: ion-mobility-reference-matching
-description: Use when you have raw arrival-time data from TWIM-MS and need to convert it to collision cross section (CCS) values for multi-omic analysis.
+description: Use when you have raw arrival-time data from TWIM-MS and need to convert
+  it to collision cross section (CCS) values for multi-omic analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +14,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -41,6 +43,7 @@ attribution:
 
 # ion-mobility-reference-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw arrival-time measurements from traveling-wave ion mobility mass spectrometry (TWIM-MS) into calibrated collision cross section (CCS) values by establishing a mapping function between reference compounds with known CCS values and their corresponding arrival times. This skill enables standardization of ion-mobility data across experiments and instruments without requiring prior feature identification.

@@ -1,6 +1,8 @@
 ---
 name: chemical-structure-validation-syntax
-description: Use when applied immediately after loading raw SMILES strings from external databases or user input during the 2_curating workflow stage, before attempting canonicalization or 2D/3D coordinate generation.
+description: Use when applied immediately after loading raw SMILES strings from external
+  databases or user input during the 2_curating workflow stage, before attempting
+  canonicalization or 2D/3D coordinate generation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3760
@@ -11,6 +13,7 @@ metadata:
   - Python 3
   - RDKit
   - smiles.py
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +46,7 @@ attribution:
 
 # Chemical Structure Validation & Syntax Checking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates raw SMILES strings for correct chemical syntax and parsability using RDKit before downstream processing. This skill ensures that only chemically valid structures enter the curation pipeline, preventing silent failures in canonicalization and coordinate generation.

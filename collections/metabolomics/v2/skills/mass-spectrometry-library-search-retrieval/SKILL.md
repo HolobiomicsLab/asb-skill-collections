@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-library-search-retrieval
-description: Use when when you have an unknown MSMS spectrum (precursor m/z and fragment ions) and need to discover structurally related compounds from a spectral library.
+description: Use when when you have an unknown MSMS spectrum (precursor m/z and fragment
+  ions) and need to discover structurally related compounds from a spectral library.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -12,6 +13,7 @@ metadata:
   - spectrum_utils
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity
@@ -42,6 +44,7 @@ attribution:
 
 # Mass Spectrometry Library Search Retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and retrieve structurally related molecules from mass spectral libraries using spectrum similarity measures (cosine, modified cosine, or neutral loss similarity). This skill enables identification of unknown compounds by comparing their MSMS spectra against a reference library ranked by spectral alignment quality.

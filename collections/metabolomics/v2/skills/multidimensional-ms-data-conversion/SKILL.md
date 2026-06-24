@@ -1,6 +1,9 @@
 ---
 name: multidimensional-ms-data-conversion
-description: 'Use when you have acquired untargeted MS data with orthogonal separations (LC, ion mobility) and/or data-independent acquisition (DIA) from Thermo, Agilent, or Bruker instruments, and you need to: (1) store multidimensional spectra in a vendor-neutral, platform-agnostic format;'
+description: 'Use when you have acquired untargeted MS data with orthogonal separations
+  (LC, ion mobility) and/or data-independent acquisition (DIA) from Thermo, Agilent,
+  or Bruker instruments, and you need to: (1) store multidimensional spectra in a
+  vendor-neutral, platform-agnostic format;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,11 +19,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 claims: []
 provenance:

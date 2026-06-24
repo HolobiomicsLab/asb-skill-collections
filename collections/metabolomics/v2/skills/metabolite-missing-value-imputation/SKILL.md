@@ -1,6 +1,8 @@
 ---
 name: metabolite-missing-value-imputation
-description: Use when metabolite assay tables contain missing values (NAs) that exceed detection or instrument runtime limits, AND you have retained metabolites with ≥60% non-missing data (i.e., ≤40% missingness).
+description: Use when metabolite assay tables contain missing values (NAs) that exceed
+  detection or instrument runtime limits, AND you have retained metabolites with ≥60%
+  non-missing data (i.e., ≤40% missingness).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -48,6 +51,7 @@ attribution:
 
 # metabolite-missing-value-imputation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Impute missing metabolite measurements using k-nearest neighbor (kNN) imputation to recover sparse data while minimizing distortion of variance and normality. This skill is essential after data quality assessment and before normalization to maximize the usable metabolite feature set for downstream differential and network analysis.

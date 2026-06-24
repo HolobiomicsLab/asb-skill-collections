@@ -1,6 +1,7 @@
 ---
 name: wpf-gui-compilation
-description: Use when when you have cloned the MsdialWorkbench repository and need to produce an executable WPF GUI application (MsdialGuiApp) for Windows.
+description: Use when when you have cloned the MsdialWorkbench repository and need
+  to produce an executable WPF GUI application (MsdialGuiApp) for Windows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -17,12 +18,14 @@ metadata:
   - NuGet Package Manager
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
 - utilizing packages such as ReactiveExtensions and ReactiveProperty
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +49,7 @@ attribution:
 
 # wpf-gui-compilation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile a Windows Presentation Foundation (WPF) graphical user interface from .NET source code using Visual Studio, targeting .NET Framework 4.7.2 with ReactiveExtensions and ReactiveProperty dependency management. This skill is essential when building desktop mass spectrometry analysis software from source that requires UI-driven interaction.

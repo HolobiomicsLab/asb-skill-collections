@@ -1,6 +1,9 @@
 ---
 name: generalized-additive-model-hyperparameter-optimization
-description: Use when when fitting a nonlinear retention time (RT) mapping spline to anchor feature pairs (m/z and RT values) from two LC-MS datasets acquired under different conditions, you need to determine both the optimal B-spline basis dimension and identify which anchor points are outliers.
+description: Use when when fitting a nonlinear retention time (RT) mapping spline
+  to anchor feature pairs (m/z and RT values) from two LC-MS datasets acquired under
+  different conditions, you need to determine both the optimal B-spline basis dimension
+  and identify which anchor points are outliers.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,13 +16,16 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
 - a modified form of the `gam` function implemented in the *mgcv* R package
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +49,7 @@ attribution:
 
 # generalized-additive-model-hyperparameter-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize the basis dimension (k) and outlier detection parameters of a GAM spline fitted to retention time anchor points in LC-MS metabolomics. This skill selects the best model complexity through cross-validation while iteratively downweighting high-error points, balancing fit quality against overfitting.

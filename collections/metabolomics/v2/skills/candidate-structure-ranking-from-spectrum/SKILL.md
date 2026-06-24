@@ -1,6 +1,9 @@
 ---
 name: candidate-structure-ranking-from-spectrum
-description: Use when you have an experimental tandem mass spectrum (m/z and intensity pairs) and a known or suspected chemical formula, and you need to narrow down the identity of an unknown compound from a large candidate pool (e.g., all PubChem entries matching that formula).
+description: Use when you have an experimental tandem mass spectrum (m/z and intensity
+  pairs) and a known or suspected chemical formula, and you need to narrow down the
+  identity of an unknown compound from a large candidate pool (e.g., all PubChem entries
+  matching that formula).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -14,12 +17,14 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 evidence_spans:
 - You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:

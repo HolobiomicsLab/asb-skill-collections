@@ -1,6 +1,8 @@
 ---
 name: structural-similarity-calculation-fingerprint-based
-description: Use when you have a set of compounds (e.g., novel NPS analogues in an evaluation dataset) and need to classify them as structurally similar to or divergent from a reference set (e.g., training compounds).
+description: Use when you have a set of compounds (e.g., novel NPS analogues in an
+  evaluation dataset) and need to classify them as structurally similar to or divergent
+  from a reference set (e.g., training compounds).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3672
@@ -15,6 +17,7 @@ metadata:
   - Pandas
   - Matplotlib or Seaborn
   - PyTorch or TensorFlow
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
@@ -44,6 +47,7 @@ attribution:
 
 # Structural Similarity Calculation (Fingerprint-Based)
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise structural similarity between compounds using molecular fingerprints (e.g., ECFP, Tanimoto) to stratify evaluation sets by novelty relative to training data. This skill is essential for assessing whether a deep learning model's confidence varies predictably with structural distance from known compounds.

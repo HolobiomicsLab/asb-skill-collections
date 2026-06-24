@@ -1,6 +1,8 @@
 ---
 name: compiled-module-import-verification
-description: Use when after compiling nanobind-based C++ bindings into a Python extension module (e.g., pyOpenMS), or when integrating a newly built native module into a Python environment. Apply this skill to confirm that the generated .so/.pyd/.
+description: Use when after compiling nanobind-based C++ bindings into a Python extension
+  module (e.g., pyOpenMS), or when integrating a newly built native module into a
+  Python environment. Apply this skill to confirm that the generated .so/.pyd/.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +10,7 @@ metadata:
   - nanobind
   - CMake
   - Python interpreter
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -35,6 +38,7 @@ attribution:
 
 # compiled-module-import-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a compiled Python extension module (generated from C++ bindings via nanobind) loads without errors and exposes the expected API surface. This skill ensures binding completeness and runtime correctness before deployment.

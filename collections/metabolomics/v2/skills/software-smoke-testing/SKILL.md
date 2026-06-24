@@ -1,6 +1,8 @@
 ---
 name: software-smoke-testing
-description: Use when after successful compilation or artifact generation (e.g., after `mvn clean package`, `make`, or `python setup.py build`) and before promoting the artifact to testing, distribution, or end-user deployment.
+description: Use when after successful compilation or artifact generation (e.g., after
+  `mvn clean package`, `make`, or `python setup.py build`) and before promoting the
+  artifact to testing, distribution, or end-user deployment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -10,6 +12,7 @@ metadata:
   - LipidSpace
   - Qt6
   - cppGoslin
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

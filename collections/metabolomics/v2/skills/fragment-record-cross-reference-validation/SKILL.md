@@ -1,6 +1,9 @@
 ---
 name: fragment-record-cross-reference-validation
-description: Use when you have downloaded fragment records from separate experimental and predicted fragment databases and need to verify that every fragment can be traced back to a valid compound entry in the reference SDF-format compound database, particularly when integrating multiple database sources into a.
+description: Use when you have downloaded fragment records from separate experimental
+  and predicted fragment databases and need to verify that every fragment can be traced
+  back to a valid compound entry in the reference SDF-format compound database, particularly
+  when integrating multiple database sources into a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - SDF file parser / molecular structure library
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -36,6 +40,7 @@ attribution:
 
 # fragment-record-cross-reference-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that all fragment records from experimental and predicted fragment databases can be successfully matched to their parent compound entries in a reference compound database. This skill ensures data integrity and completeness of DNA adductomics database resources by detecting orphaned fragments lacking parent compound records.

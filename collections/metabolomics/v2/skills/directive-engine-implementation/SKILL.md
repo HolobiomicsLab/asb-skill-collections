@@ -1,6 +1,9 @@
 ---
 name: directive-engine-implementation
-description: Use when when you have intermediate JSON data that must be selectively transformed or enriched according to declarative conversion rules—for example, when extracting experimental metadata from tabular spreadsheets, you need to map certain fields to computed or filtered values, apply conditional.
+description: Use when when you have intermediate JSON data that must be selectively
+  transformed or enriched according to declarative conversion rules—for example, when
+  extracting experimental metadata from tabular spreadsheets, you need to map certain
+  fields to computed or filtered values, apply conditional.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # directive-engine-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a conversion directive engine that resolves str-type directives from JSON specification files by parsing override, code, record_id, for_each, test, sort_by, sort_order, delimiter, and fields parameters to transform tabular or JSON input data into structured JSONized output. This skill is essential for automating complex metadata extraction and format conversion workflows in data curation pipelines.

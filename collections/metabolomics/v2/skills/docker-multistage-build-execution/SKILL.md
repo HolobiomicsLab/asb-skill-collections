@@ -1,6 +1,7 @@
 ---
 name: docker-multistage-build-execution
-description: Use when you need to containerize a C#-based Windows application (like AirdPro CLI) for Linux deployment, require Wine and .NET Framework 4.
+description: Use when you need to containerize a C#-based Windows application (like
+  AirdPro CLI) for Linux deployment, require Wine and .NET Framework 4.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3786
@@ -15,6 +16,7 @@ metadata:
   - ProteoWizard
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -45,6 +47,7 @@ attribution:
 
 # docker-multistage-build-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a Docker multi-stage build pipeline to create containerized runtime images (e.g., airdpro:cli) that bundle compiled C# applications with Wine and .NET Framework dependencies on a Linux base. This skill is essential when deploying Windows-native tools into Linux container environments and needing to verify successful image creation and functionality.

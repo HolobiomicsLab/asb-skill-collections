@@ -1,6 +1,8 @@
 ---
 name: bayesian-meta-learning-projection
-description: Use when you need to transfer retention time predictions from one chromatographic method to another, but have access to only a small number (≥10) of molecules with known retention times in both methods.
+description: Use when you need to transfer retention time predictions from one chromatographic
+  method to another, but have access to only a small number (≥10) of molecules with
+  known retention times in both methods.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -10,11 +12,13 @@ metadata:
   tools:
   - alvaDesc
   - cmmrt
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +42,7 @@ attribution:
 
 # Bayesian Meta-Learning Projection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A Bayesian meta-learning approach that projects retention times across different chromatographic methods using minimal calibration data (as few as 10 molecules), enabling probabilistic annotation scoring without extensive method-specific retraining. This skill integrates uncertainty quantification via Gaussian Process priors trained on small calibration sets to map predicted retention times from a reference chromatographic method to a target method.

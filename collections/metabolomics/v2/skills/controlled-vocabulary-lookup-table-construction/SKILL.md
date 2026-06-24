@@ -1,6 +1,9 @@
 ---
 name: controlled-vocabulary-lookup-table-construction
-description: 'Use when after ingesting and parsing multiple external databases with diverse identifier schemes and nomenclatures. Trigger conditions: (1) you have interim standardized tables with local identifiers (structure_id, organism_name, reference_doi) that lack semantic normalization;'
+description: 'Use when after ingesting and parsing multiple external databases with
+  diverse identifier schemes and nomenclatures. Trigger conditions: (1) you have interim
+  standardized tables with local identifiers (structure_id, organism_name, reference_doi)
+  that lack semantic normalization;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -14,6 +17,7 @@ metadata:
   - Make
   - common.R
   - tcm.R
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -49,6 +53,7 @@ attribution:
 
 # controlled-vocabulary-lookup-table-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build standardized lookup tables that map local identifiers (structure IDs, organism names, reference DOIs) to controlled vocabularies (InChI, SMILES, taxonomic ranks) and domain ontologies (e.g., Traditional Chinese Medicine). This skill is essential for harmonizing heterogeneous source data into a unified semantic space before integration and validation.

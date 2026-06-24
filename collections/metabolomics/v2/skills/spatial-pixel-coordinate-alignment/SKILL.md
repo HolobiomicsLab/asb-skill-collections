@@ -1,6 +1,7 @@
 ---
 name: spatial-pixel-coordinate-alignment
-description: Use when you have mzML files from a mass spectrometry imaging (MSI) experiment and need to convert them to imzML format with correctly positioned pixel coordinates.
+description: Use when you have mzML files from a mass spectrometry imaging (MSI) experiment
+  and need to convert them to imzML format with correctly positioned pixel coordinates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,6 +15,7 @@ metadata:
   - msconvert
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer

@@ -1,6 +1,7 @@
 ---
 name: ceramide-name-standardization-with-regex
-description: Use when when downloading a lipidomics dataset from Metabolomics Workbench (e.
+description: Use when when downloading a lipidomics dataset from Metabolomics Workbench
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,12 +13,15 @@ metadata:
   - R
   - Metabolomics Workbench API
   - R (base regex functions)
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # ceramide-name-standardization-with-regex
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recover and standardize unparsed Ceramide lipid names from public lipidomics studies by applying regular expression pattern matching to rename full chemical names into the supported 'Cer (' naming convention, enabling successful parsing into LipidomicsExperiment objects.

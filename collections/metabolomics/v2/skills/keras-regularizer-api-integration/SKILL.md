@@ -1,6 +1,8 @@
 ---
 name: keras-regularizer-api-integration
-description: Use when when extending an existing neural network class (e.g., SiameseModel) that lacks user-configurable regularization, and you need to prevent overfitting on moderate-sized training datasets (e.
+description: Use when when extending an existing neural network class (e.g., SiameseModel)
+  that lacks user-configurable regularization, and you need to prevent overfitting
+  on moderate-sized training datasets (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -14,11 +16,13 @@ metadata:
   - Python unittest
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 - use the search functionality [here](https://github.com/matchms/ms2deepscore/issues)
 claims: []
 provenance:

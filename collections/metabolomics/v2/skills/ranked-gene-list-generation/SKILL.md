@@ -1,6 +1,8 @@
 ---
 name: ranked-gene-list-generation
-description: Use when you have identified significant differential metabolites (DAMs) from metabolomic profiling, mapped them to genes via enrichment (e.g., MSEA), and possess a gene/protein interaction network (e.g., STRING).
+description: Use when you have identified significant differential metabolites (DAMs)
+  from metabolomic profiling, mapped them to genes via enrichment (e.g., MSEA), and
+  possess a gene/protein interaction network (e.g., STRING).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -12,6 +14,7 @@ metadata:
   - metPropagate
   - label_propagation module (adapted from Yuto Yamaguchi)
   - STRING database
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41525-020-0132-5
   title: metPropagate
@@ -39,6 +42,7 @@ attribution:
 
 # ranked-gene-list-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a prioritized ranked list of candidate genes by propagating metabolomic-derived seed labels across a gene/protein interaction network using label propagation, producing scored genes ordered by network proximity and propagation confidence to metabolomic hits.

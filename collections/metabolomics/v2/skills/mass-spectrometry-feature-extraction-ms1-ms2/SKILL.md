@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-feature-extraction-ms1-ms2
-description: Use when when you have raw mzML files from LC-MS/MS metabolomics experiments and need to convert them into a structured feature table with accurate mass, retention time, and MS2 spectral data linked to a reference compound list.
+description: Use when when you have raw mzML files from LC-MS/MS metabolomics experiments
+  and need to convert them into a structured feature table with accurate mass, retention
+  time, and MS2 spectral data linked to a reference compound list.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -15,11 +17,13 @@ metadata:
   - Docker
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-025-01044-x
   title: Shinyscreen
 evidence_spans:
-- Shinyscreen is a Shiny application for visualizing and analyzing high resolution mass spectrometry data.
+- Shinyscreen is a Shiny application for visualizing and analyzing high resolution
+  mass spectrometry data.
 - Shinyscreen can be installed in R via `devtools`
 - docker run -p 3838:3838 \ -v C:/your/path/project:/home/ssuser/projects
 - docker pull registry.gitlab.com/uniluxembourg/lcsb/eci/shinyscreen:master

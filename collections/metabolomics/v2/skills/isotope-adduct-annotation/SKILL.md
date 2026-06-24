@@ -1,6 +1,8 @@
 ---
 name: isotope-adduct-annotation
-description: Use when after completing peak picking, sample alignment, and before final MS2 spectrum extraction, when you have identified individual ion peaks across samples and need to link isotopic variants (e.
+description: Use when after completing peak picking, sample alignment, and before
+  final MS2 spectrum extraction, when you have identified individual ion peaks across
+  samples and need to link isotopic variants (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -14,11 +16,14 @@ metadata:
   - ADAP
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- Complete processing including peak picking, sample alignment, pick picking, grouping of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated MS2 spectra and isotopic
+- Complete processing including peak picking, sample alignment, pick picking, grouping
+  of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated
+  MS2 spectra and isotopic
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # isotope-adduct-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic grouping and annotation of isotopologue and adduct ions derived from the same precursor molecule, consolidating MS2 spectra and isotopic metadata after peak picking and sample alignment. This skill ensures that multiple ionic forms of a single compound are recognized as a single feature and annotated with their chemical relationships.

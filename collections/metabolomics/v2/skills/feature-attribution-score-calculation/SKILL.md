@@ -1,6 +1,9 @@
 ---
 name: feature-attribution-score-calculation
-description: Use when after training a multi-layer perceptron neural network to predict metabolomic features from microbiome features using cross-validated evaluation, extract attribution scores to interpret which microbe-metabolite pairs have learned predictive relationships.
+description: Use when after training a multi-layer perceptron neural network to predict
+  metabolomic features from microbiome features using cross-validated evaluation,
+  extract attribution scores to interpret which microbe-metabolite pairs have learned
+  predictive relationships.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,16 +19,24 @@ metadata:
   - Seaborn
   - Python
   - NumPy
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +60,7 @@ attribution:
 
 # feature-attribution-score-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate neural network feature attribution scores (weights) between microbes and metabolites using Olden's method to quantify the strength and direction of learned interactions. These scores reveal which microbes most strongly influence metabolite predictions and form the basis for clustering microbes and metabolites into functional modules.

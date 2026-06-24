@@ -1,6 +1,9 @@
 ---
 name: test-suite-pass-fail-reporting
-description: Use when when you need to verify that a research software package (e.g., MassQL) maintains functional correctness over time, assess the reliability of a tool before integration into a workflow, or document test coverage and failure modes for reproducibility.
+description: Use when when you need to verify that a research software package (e.g.,
+  MassQL) maintains functional correctness over time, assess the reliability of a
+  tool before integration into a workflow, or document test coverage and failure modes
+  for reproducibility.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3674
@@ -11,11 +14,13 @@ metadata:
   - MassQL
   - GitHub Actions
   - pytest (inferred)
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
 evidence_spans:
-- The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.
+- The Mass Spec Query Language (MassQL) is a domain specific language meant to be
+  a succinct way to express a query in a mass spectrometry centric fashion.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

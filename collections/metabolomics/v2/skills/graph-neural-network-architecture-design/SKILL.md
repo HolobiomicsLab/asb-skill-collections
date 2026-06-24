@@ -1,6 +1,9 @@
 ---
 name: graph-neural-network-architecture-design
-description: Use when you have molecular structures that need to be represented as both fingerprint vectors (fixed-length chemical descriptors) and graph-structured data, and you need a model that can learn from both representations simultaneously to predict a continuous molecular property (e.
+description: Use when you have molecular structures that need to be represented as
+  both fingerprint vectors (fixed-length chemical descriptors) and graph-structured
+  data, and you need a model that can learn from both representations simultaneously
+  to predict a continuous molecular property (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -25,6 +28,7 @@ metadata:
   - STAGATE
   - pandas
   - h5py
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -73,6 +77,7 @@ attribution:
 
 # Graph Neural Network Architecture Design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and instantiate a dual-branch graph neural network architecture that processes molecular graph representations (constructed as torch_geometric Graph objects) alongside molecular fingerprints to produce molecular property predictions. This skill integrates graph convolution layers with fingerprint embeddings via a fusion layer for joint feature learning.

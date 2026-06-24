@@ -1,6 +1,9 @@
 ---
 name: metadata-field-extraction-and-restructuring
-description: Use when reading mass spectral library files (particularly MoNA EI or MS2 libraries) where structural metadata like SMILES information is embedded in general-purpose fields (e.g., Comment field) rather than in the dedicated SMILES field expected by mspcompiler's downstream processing steps.
+description: Use when reading mass spectral library files (particularly MoNA EI or
+  MS2 libraries) where structural metadata like SMILES information is embedded in
+  general-purpose fields (e.g., Comment field) rather than in the dedicated SMILES
+  field expected by mspcompiler's downstream processing steps.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -43,6 +47,7 @@ attribution:
 
 # metadata-field-extraction-and-restructuring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and restructure embedded metadata fields from mass spectral library records into standardized fields required by downstream pipeline steps. This skill is essential when source library formats embed critical information (such as SMILES strings) in unstructured or non-standard fields (such as Comment fields) that must be isolated and placed into the expected schema before compilation and use in MS-DIAL.

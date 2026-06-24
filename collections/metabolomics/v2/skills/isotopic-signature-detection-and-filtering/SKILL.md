@@ -1,6 +1,7 @@
 ---
 name: isotopic-signature-detection-and-filtering
-description: Use when after DEIMoS isotope detection has assigned potential isotopic signatures to detected features in aligned MS1 data.
+description: Use when after DEIMoS isotope detection has assigned potential isotopic
+  signatures to detected features in aligned MS1 data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,15 +17,18 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment with required dependencies.
+- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment
+  with required dependencies.
 - 'Install DEIMoS using `pip <https://pypi.org/project/pip/>`_: ``pip install -e .``'
 claims: []
 provenance:
@@ -49,6 +53,7 @@ attribution:
 
 # isotopic-signature-detection-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detection and filtering of isotopic signatures in high-dimensional mass spectrometry data to retain only robust, multi-member isotope patterns. This skill refines feature characterization by eliminating spurious or under-represented isotopic assignments that lack sufficient member count to be considered reliable molecular identity evidence.

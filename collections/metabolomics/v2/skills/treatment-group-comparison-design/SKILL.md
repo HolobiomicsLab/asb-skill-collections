@@ -1,6 +1,9 @@
 ---
 name: treatment-group-comparison-design
-description: Use when you have paired metabolomics count data and metadata with at least two treatment groups (e.g., Strep vs Mock), a clear Factor column identifying group membership, and a research question about which metabolites differ significantly in abundance between treatments.
+description: Use when you have paired metabolomics count data and metadata with at
+  least two treatment groups (e.g., Strep vs Mock), a clear Factor column identifying
+  group membership, and a research question about which metabolites differ significantly
+  in abundance between treatments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,13 +17,16 @@ metadata:
   - omu_summary
   - read.metabo
   - omu_anova
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
 evidence_spans:
 - Omu is an R package that enables rapid analysis of Metabolomics data sets
-- Omu supports two univariate statistical models, t test and anova, using the functions ```omu_summary``` and ```anova_function``` respectively
-- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
+- Omu supports two univariate statistical models, t test and anova, using the functions
+  ```omu_summary``` and ```anova_function``` respectively
+- To assign hierarchical class data, use the ```assign_hierarchy``` function and pick
+  the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # treatment-group-comparison-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and execute univariate statistical comparisons between treatment groups in metabolomics count data using the omu package. This skill applies t-tests or Welch's test to identify metabolites with significant abundance differences across experimental conditions.

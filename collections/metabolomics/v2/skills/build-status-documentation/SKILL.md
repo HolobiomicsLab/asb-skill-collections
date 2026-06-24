@@ -1,6 +1,8 @@
 ---
 name: build-status-documentation
-description: Use when when you need to validate that a development build release workflow (such as dev_build_release.yml for a mass spectrometry data processing project) executes without failure and generates artifacts for downstream testing or distribution.
+description: Use when when you need to validate that a development build release workflow
+  (such as dev_build_release.yml for a mass spectrometry data processing project)
+  executes without failure and generates artifacts for downstream testing or distribution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -14,6 +16,7 @@ metadata:
   - GitHub Actions
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -44,6 +47,7 @@ attribution:
 
 # build-status-documentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically access, retrieve, and document the execution status and artifacts of a GitHub Actions workflow to establish reproducibility and traceability of automated build pipelines. This skill verifies that continuous integration workflows complete successfully and produce expected outputs.

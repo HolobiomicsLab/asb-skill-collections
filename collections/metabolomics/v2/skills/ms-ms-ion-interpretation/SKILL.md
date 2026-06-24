@@ -1,6 +1,9 @@
 ---
 name: ms-ms-ion-interpretation
-description: Use when when you have two MS/MS spectra (each with a precursor m/z and a list of fragment ion m/z values) and need to identify which fragment ions correspond between them, especially when structural differences make simple monotonic alignment unreliable.
+description: Use when when you have two MS/MS spectra (each with a precursor m/z and
+  a list of fragment ion m/z values) and need to identify which fragment ions correspond
+  between them, especially when structural differences make simple monotonic alignment
+  unreliable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3938
@@ -15,11 +18,13 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # MS/MS Ion Interpretation via Maximum Weight Matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns fragment ions between two tandem mass spectra by computing mass difference frequencies and applying maximum weight matching to identify the optimal set of non-overlapping ion pair alignments that maximize statistical significance. This replaces monotonic alignment with a graph-based approach that captures both direct mass similarities and indirect relationships through ancestor/descendant fragment ions.

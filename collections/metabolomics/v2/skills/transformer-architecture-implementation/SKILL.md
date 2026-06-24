@@ -1,6 +1,8 @@
 ---
 name: transformer-architecture-implementation
-description: Use when when building a neural network to map between mass spectrometry spectra and molecular properties (e.g., fingerprints, SMILES, or fragment ions) where sequential or spectral feature dependencies must be captured.
+description: Use when when building a neural network to map between mass spectrometry
+  spectra and molecular properties (e.g., fingerprints, SMILES, or fragment ions)
+  where sequential or spectral feature dependencies must be captured.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +16,7 @@ metadata:
   - IDSL_MINT
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint
@@ -46,6 +49,7 @@ attribution:
 
 # transformer-architecture-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a multi-head self-attention transformer encoder architecture following the 'Attention is All You Need' paradigm to process mass spectrometry data. This skill involves constructing positional encodings, stacking transformer blocks in PyTorch, and validating numerical stability for MS/MS spectrum interpretation.

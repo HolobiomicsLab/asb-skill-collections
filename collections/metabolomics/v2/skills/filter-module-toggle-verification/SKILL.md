@@ -1,6 +1,8 @@
 ---
 name: filter-module-toggle-verification
-description: Use when you need to confirm that a software API or tool correctly implements a boolean control over an optional filter module, particularly in contexts where filter activation state directly affects the set of predicted metabolites.
+description: Use when you need to confirm that a software API or tool correctly implements
+  a boolean control over an optional filter module, particularly in contexts where
+  filter activation state directly affects the set of predicted metabolites.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -9,6 +11,7 @@ metadata:
   - BioTransformerAPI
   - CyProduct
   - Java
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -38,6 +41,7 @@ attribution:
 
 # filter-module-toggle-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a computational filter module (CypReact) in metabolite prediction can be toggled on and off via a boolean parameter, and confirm the toggle controls filter activation state by comparing prediction outputs. This skill is essential when validating API behavior for optional filtering in drug metabolism workflows.

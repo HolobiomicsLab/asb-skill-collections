@@ -1,6 +1,8 @@
 ---
 name: r-dependency-package-compatibility-auditing
-description: Use when a Shiny application or R-based tool is known to run on only one operating system (e.g., Windows-only), and you need to identify the root causes preventing execution on Linux or macOS before undertaking cross-platform porting.
+description: Use when a Shiny application or R-based tool is known to run on only
+  one operating system (e.g., Windows-only), and you need to identify the root causes
+  preventing execution on Linux or macOS before undertaking cross-platform porting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -12,6 +14,7 @@ metadata:
   - R
   - RTools
   - Apptainer
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -39,6 +42,7 @@ attribution:
 
 # R Dependency and Package Compatibility Auditing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically identify and document platform-specific R package dependencies, system library requirements, and conditional code branches that prevent cross-platform execution of Shiny applications. This skill produces a compatibility matrix and concrete remediation steps needed to enable deployment on alternative operating systems.

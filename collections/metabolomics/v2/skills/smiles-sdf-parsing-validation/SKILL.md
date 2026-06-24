@@ -1,6 +1,7 @@
 ---
 name: smiles-sdf-parsing-validation
-description: Use when you have raw molecular structures in SMILES or SDF format that will feed into BitterPredict.m or other structure-based classifiers.
+description: Use when you have raw molecular structures in SMILES or SDF format that
+  will feed into BitterPredict.m or other structure-based classifiers.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -10,11 +11,13 @@ metadata:
   tools:
   - BitterPredict
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict is a classifier which predicts whether a compound is bitter or not, based on its chemical structure.
+- BitterPredict is a classifier which predicts whether a compound is bitter or not,
+  based on its chemical structure.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +41,7 @@ attribution:
 
 # SMILES/SDF parsing and validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate molecular structure syntax from raw SMILES or SDF format files using a cheminformatics parser (e.g., RDKit) to ensure structural integrity before descriptor calculation. This skill is essential to detect malformed or invalid molecular representations that would fail downstream descriptor computation or classification.

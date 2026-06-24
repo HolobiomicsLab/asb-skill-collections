@@ -1,6 +1,9 @@
 ---
 name: computational-efficiency-single-pass-vs-repeated-detection
-description: 'Use when when processing aligned LC-MS data across multiple samples where the computational bottleneck is repeated peak-detection algorithm calls (one per sample per m/z value). Typical scenario: >10 samples with >1000 m/z values each, where N individual find_peaks invocations dominate runtime.'
+description: 'Use when when processing aligned LC-MS data across multiple samples
+  where the computational bottleneck is repeated peak-detection algorithm calls (one
+  per sample per m/z value). Typical scenario: >10 samples with >1000 m/z values each,
+  where N individual find_peaks invocations dominate runtime.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -19,11 +22,13 @@ metadata:
   - asari.chromatograms.rt_lowess_calibration
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -48,6 +53,7 @@ attribution:
 
 # computational-efficiency-single-pass-vs-repeated-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace per-sample peak detection with single-pass detection on a composite mass track (summed intensities across all samples) to reduce scipy.signal.find_peaks invocations from N to 1, dramatically improving computational scalability in untargeted LC-MS metabolomics without sacrificing peak quality metrics.

@@ -1,6 +1,9 @@
 ---
 name: reference-prediction-comparison-evaluation
-description: Use when you have executed a structure annotation pipeline (like BAM) on a validation dataset for which ground-truth molecular structure annotations exist, and you need to assess whether the pipeline's predictions match the reference annotations at the required sensitivity and specificity.
+description: Use when you have executed a structure annotation pipeline (like BAM)
+  on a validation dataset for which ground-truth molecular structure annotations exist,
+  and you need to assess whether the pipeline's predictions match the reference annotations
+  at the required sensitivity and specificity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +16,7 @@ metadata:
   - GNN-SOM
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -41,6 +45,7 @@ attribution:
 
 # reference-prediction-comparison-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare pipeline predictions against reference annotations to compute validation metrics (accuracy, coverage) for molecular structure discovery. This skill quantifies how well a method reproduces known molecular structures in a benchmark dataset.

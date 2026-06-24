@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-scan-indexing
-description: Use when you have a Thermo Fisher Scientific .raw file and need to (1) enumerate all scans and their metadata, (2) identify which scans are MS1 vs. MSn to enable level-specific filtering, (3) retrieve scan ranges or specific scan numbers for targeted spectral extraction, or (4) plan.
+description: Use when you have a Thermo Fisher Scientific .raw file and need to (1)
+  enumerate all scans and their metadata, (2) identify which scans are MS1 vs. MSn
+  to enable level-specific filtering, (3) retrieve scan ranges or specific scan numbers
+  for targeted spectral extraction, or (4) plan.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,6 +18,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -22,9 +26,12 @@ derived_from:
   title: ''
 evidence_spans:
 - The `rawrr` executable will run out of the box
-- '`R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods'
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- '`R` functions requesting access to data stored in binary raw files (reader family
+  functions listed in Table 1) invoke compiled `C#` wrapper methods'
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +56,7 @@ attribution:
 
 # mass-spectrometry-scan-indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a tabular index of all scans in a Thermo Fisher Scientific raw file, enabling programmatic filtering and selective extraction of spectral data by MS level, scan type, or scan number. This foundational operation bridges raw binary data and downstream analysis by providing scan metadata (retention time, MS level, scan type) without loading all spectral arrays into memory.

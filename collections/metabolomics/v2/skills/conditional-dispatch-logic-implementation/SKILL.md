@@ -1,6 +1,9 @@
 ---
 name: conditional-dispatch-logic-implementation
-description: Use when when accepting a file path as input in an MSI data processing pipeline and you need to determine which data reader module to instantiate before calling get_image_data() or load_pixels(). This arises when building a multi-vendor instrument workflow (e.
+description: Use when when accepting a file path as input in an MSI data processing
+  pipeline and you need to determine which data reader module to instantiate before
+  calling get_image_data() or load_pixels(). This arises when building a multi-vendor
+  instrument workflow (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,14 +16,17 @@ metadata:
   - pyBaf2Sql
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
-- If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
+- If you are planning on using Bruker .d data in the .baf format, you will also need
+  to install pyBaf2Sql from GitHub
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

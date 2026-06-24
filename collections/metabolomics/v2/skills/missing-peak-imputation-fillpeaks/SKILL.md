@@ -1,6 +1,8 @@
 ---
 name: missing-peak-imputation-fillpeaks
-description: Use when apply fillPeaks after retention time alignment (whether XCMS or ncGTW) when feature matrices contain missing peaks across samples due to alignment gaps or detection failures.
+description: Use when apply fillPeaks after retention time alignment (whether XCMS
+  or ncGTW) when feature matrices contain missing peaks across samples due to alignment
+  gaps or detection failures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,11 +16,13 @@ metadata:
   - compCV
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
 evidence_spans:
-- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an alignment algorithm
+- Neighbor-wise Compound-specific Graphical Time Warping (ncGTW) [@ncgtw19] is an
+  alignment algorithm
 - '`ncGTW` is an R package developed as a plug-in of `xcms`'
 - ncGTW is an R package developed as a plug-in of xcms
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # Missing-peak imputation (fillPeaks)
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 fillPeaks is a peak-filling operation that imputes missing intensity values for aligned features across samples in LC-MS data, enabling coefficient-of-variation reduction after retention time warping. It is essential for completing feature matrices before statistical comparison of alignment quality.

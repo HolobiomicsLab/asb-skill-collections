@@ -1,6 +1,8 @@
 ---
 name: source-code-inspection-for-preprocessing-steps
-description: Use when when you need to verify that a specific data transformation (e.g., precursor m/z zeroing, feature scaling, or field masking) is applied consistently across multiple execution workflows (training, evaluation, inference) in a codebase.
+description: Use when when you need to verify that a specific data transformation
+  (e.g., precursor m/z zeroing, feature scaling, or field masking) is applied consistently
+  across multiple execution workflows (training, evaluation, inference) in a codebase.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,6 +14,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +43,7 @@ attribution:
 
 # Source code inspection for preprocessing steps
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically inspect and trace preprocessing operations (e.g., feature normalization, array zeroing, format conversions) across multiple execution scripts to verify consistency and document the exact locations and timing of data transformations before model input. This skill is essential for validating that prior learning biases are prevented and that preprocessing is reproducibly applied.

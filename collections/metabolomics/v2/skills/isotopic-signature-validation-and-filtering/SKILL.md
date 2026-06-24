@@ -1,6 +1,9 @@
 ---
 name: isotopic-signature-validation-and-filtering
-description: Use when after isotope detection has enumerated C13 isotopologue patterns across m/z, drift time, and retention time dimensions, and you need to reduce false positives by retaining only well-populated isotopic signature clusters before annotation or export.
+description: Use when after isotope detection has enumerated C13 isotopologue patterns
+  across m/z, drift time, and retention time dimensions, and you need to reduce false
+  positives by retaining only well-populated isotopic signature clusters before annotation
+  or export.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -41,6 +45,7 @@ attribution:
 
 # isotopic-signature-validation-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and validate detected isotopologue signatures in multidimensional mass spectrometry feature tables by applying membership thresholds and annotating monoisotopic designations. This ensures only reliable isotopic patterns are retained for downstream analysis.

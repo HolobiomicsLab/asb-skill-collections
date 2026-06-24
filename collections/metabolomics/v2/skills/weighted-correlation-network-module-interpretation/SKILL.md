@@ -1,6 +1,9 @@
 ---
 name: weighted-correlation-network-module-interpretation
-description: Use when after WGCNA has identified and named metabolic correlation modules from preprocessed, normalized, and imputed metabolomic data, and you need to test whether specific modules show statistically significant association with a known sample grouping (e.
+description: Use when after WGCNA has identified and named metabolic correlation modules
+  from preprocessed, normalized, and imputed metabolomic data, and you need to test
+  whether specific modules show statistically significant association with a known
+  sample grouping (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - R
   - WGCNA
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -23,7 +27,8 @@ evidence_spans:
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # Weighted-Correlation-Network Module Interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret metabolic correlation network modules by associating co-regulated metabolite clusters with sample phenotypes (e.g., tumor vs. normal) using module significance (MS) statistics. This skill enables discovery of functionally coherent metabolic signatures linked to disease state or experimental conditions.

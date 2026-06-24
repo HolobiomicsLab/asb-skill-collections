@@ -1,6 +1,8 @@
 ---
 name: chemical-valence-constraint-validation
-description: Use when when you have enumerated a large pool of candidate chemical subformulae for observed fragment peaks (m/z values) within a mass tolerance window and need to eliminate chemically invalid candidates before ranking.
+description: Use when when you have enumerated a large pool of candidate chemical
+  subformulae for observed fragment peaks (m/z values) within a mass tolerance window
+  and need to eliminate chemically invalid candidates before ranking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,11 +14,13 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # chemical-valence-constraint-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter candidate chemical subformulae by applying chemical validity constraints (valence rules and atom count limits) to eliminate chemically implausible fragment assignments. This is a critical preprocessing step in de novo chemical formula inference from tandem mass spectra that reduces the search space before energy-based ranking.

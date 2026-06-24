@@ -1,6 +1,8 @@
 ---
 name: chemical-structure-to-taste-prediction
-description: Use when you have a CSV or EXCEL file containing molecular descriptors (pre-computed structural features) for one or more chemical compounds, and you need binary bitterness predictions (bitter vs. non-bitter) for each molecule.
+description: Use when you have a CSV or EXCEL file containing molecular descriptors
+  (pre-computed structural features) for one or more chemical compounds, and you need
+  binary bitterness predictions (bitter vs. non-bitter) for each molecule.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -9,11 +11,13 @@ metadata:
   - http://edamontology.org/topic_3314
   tools:
   - BitterPredict.m
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
 evidence_spans:
-- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules, and calucautes a predictions if each molecule is bitter or not
+- BitterPredict.m gets as input CSV or EXCEL files with required descriptors of molecules,
+  and calucautes a predictions if each molecule is bitter or not
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -37,6 +41,7 @@ attribution:
 
 # chemical-structure-to-taste-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 BitterPredict is a binary classification skill that predicts whether a chemical compound will taste bitter based on its molecular structure, encoded as a set of computed molecular descriptors. Use this skill to rapidly screen chemical libraries or predict bitterness of novel compounds without requiring direct sensory evaluation.

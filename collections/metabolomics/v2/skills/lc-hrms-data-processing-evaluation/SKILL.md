@@ -1,6 +1,8 @@
 ---
 name: lc-hrms-data-processing-evaluation
-description: Use when you have processed the same set of untargeted LC/HRMS files (mzXML, mzML, or netCDF format) with two or more peak-picking tools and need to validate which tool produces higher-quality peaklists for organic small molecules.
+description: Use when you have processed the same set of untargeted LC/HRMS files
+  (mzXML, mzML, or netCDF format) with two or more peak-picking tools and need to
+  validate which tool produces higher-quality peaklists for organic small molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -16,11 +18,14 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2, *xcms
 - similar peak picking tools such as MZmine 2, *xcms
@@ -48,6 +53,7 @@ attribution:
 
 # lc-hrms-data-processing-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and benchmark peak-picking performance for untargeted LC/HRMS data by comparing tool outputs on sensitivity, specificity, and runtime metrics. This skill applies structured comparison workflows to assess whether a peak-extraction tool (e.g., IDSL.IPA, MZmine 2, xcms) meets quality thresholds for population-scale metabolomics studies.

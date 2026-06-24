@@ -1,6 +1,9 @@
 ---
 name: deployment-mode-detection-and-fallback-logic
-description: Use when building a Streamlit application that must support both cloud deployments (with Redis task queuing) and local/offline execution (with multiprocessing), and you need to automatically select the execution path without requiring separate code paths or manual configuration switches at runtime.
+description: Use when building a Streamlit application that must support both cloud
+  deployments (with Redis task queuing) and local/offline execution (with multiprocessing),
+  and you need to automatically select the execution path without requiring separate
+  code paths or manual configuration switches at runtime.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +13,7 @@ metadata:
   - RQ (Redis Queue)
   - multiprocessing
   - Streamlit
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -39,6 +43,7 @@ attribution:
 
 # deployment-mode-detection-and-fallback-logic
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect the active deployment mode (online vs. offline) from configuration and conditionally route workflow execution to either a Redis Queue for distributed execution or local multiprocessing, with transparent fallback if Redis becomes unavailable. This ensures a single codebase supports both cloud-deployed and local execution without code branching.

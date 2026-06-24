@@ -1,6 +1,7 @@
 ---
 name: mass-fragment-pattern-querying
-description: Use when after LDA modeling has produced an inferred motifset (JSON format) containing Mass2Motifs with fragment and neutral-loss patterns.
+description: Use when after LDA modeling has produced an inferred motifset (JSON format)
+  containing Mass2Motifs with fragment and neutral-loss patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3088
@@ -15,6 +16,7 @@ metadata:
   - Spec2Vec
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -22,7 +24,8 @@ evidence_spans:
 - Integration with MassQL-searchable MotifDB
 - Compare motifs to known entries in MotifDB
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: multi-omic-data-integration
-description: Use when you have raw or processed TWIM-MS data with arrival time and m/z dimensions, and you need to assign biomolecular class labels and compute class-specific CCS values across multiple compound classes simultaneously, particularly when you lack pre-identified feature peaks or want to bypass.
+description: Use when you have raw or processed TWIM-MS data with arrival time and
+  m/z dimensions, and you need to assign biomolecular class labels and compute class-specific
+  CCS values across multiple compound classes simultaneously, particularly when you
+  lack pre-identified feature peaks or want to bypass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -14,12 +17,14 @@ metadata:
   - DEIMoS (Data-Extraction for Integrated Multiomic Sources)
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
 evidence_spans:
 - MOCCal, or Multi-Omic CCS Calibrator, is a Python application
-- Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations
+- Functionality includes collision cross section (CCS) calibration, experimental data
+  biomolecular class assignment, and experimental class-specific CCS calculations
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # multi-omic-data-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate and calibrate collision cross section (CCS) values across multiple biomolecular classes from traveling-wave ion mobility mass spectrometry (TWIM-MS) data without requiring prior feature identification. This skill enables unified CCS calibration and class-specific calculations across lipids, peptides, carbohydrates, and other biomolecular species in a single workflow.

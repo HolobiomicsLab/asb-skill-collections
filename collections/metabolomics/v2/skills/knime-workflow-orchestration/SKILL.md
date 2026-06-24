@@ -1,6 +1,9 @@
 ---
 name: knime-workflow-orchestration
-description: Use when you have raw LC-MS data (mzML, NetCDF) from multiple runs that require sequential feature detection, alignment, quantification, and optional filtering (e.g., blank exclusion, QC reproducibility, retention-time outlier removal) before spatial mapping or annotation.
+description: Use when you have raw LC-MS data (mzML, NetCDF) from multiple runs that
+  require sequential feature detection, alignment, quantification, and optional filtering
+  (e.g., blank exclusion, QC reproducibility, retention-time outlier removal) before
+  spatial mapping or annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,6 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/nprot.2017.122
   title: 3D molecular cartography (Optimus / 'ili)

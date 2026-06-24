@@ -1,6 +1,9 @@
 ---
 name: r-cmd-check-validation
-description: Use when after installing an R package from a non-CRAN repository (such as r-universe) to confirm the package build is sound, dependencies resolve correctly, and no warnings or errors are introduced. Use it as a gate before relying on the package for downstream analysis or distribution.
+description: Use when after installing an R package from a non-CRAN repository (such
+  as r-universe) to confirm the package build is sound, dependencies resolve correctly,
+  and no warnings or errors are introduced. Use it as a gate before relying on the
+  package for downstream analysis or distribution.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -13,6 +16,7 @@ metadata:
   - r-universe
   - install.packages()
   - library()
+  license_tier: open
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

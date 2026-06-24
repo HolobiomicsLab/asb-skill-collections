@@ -1,6 +1,9 @@
 ---
 name: aggregate-statistics-computation
-description: 'Use when you have a validated or curated dataset (e.g., a TSV or gzip-compressed tabular file) and need to produce summary counts: unique curated structures (separately for 3D and 2D representations), unique organisms, and unique structure-organism pair combinations.'
+description: 'Use when you have a validated or curated dataset (e.g., a TSV or gzip-compressed
+  tabular file) and need to produce summary counts: unique curated structures (separately
+  for 3D and 2D representations), unique organisms, and unique structure-organism
+  pair combinations.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +14,7 @@ metadata:
   - R
   - Python 3
   - lotus-processor
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -45,6 +49,7 @@ attribution:
 
 # aggregate-statistics-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute summary statistics (counts of unique entities and their combinations) over a deduplicated dataset to produce structured aggregate metrics. This skill is essential for validating data completeness and generating high-level summaries of large curated collections.

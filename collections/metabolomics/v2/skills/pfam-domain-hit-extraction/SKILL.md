@@ -1,6 +1,8 @@
 ---
 name: pfam-domain-hit-extraction
-description: Use when you have BGC sequences (in FASTA or GenBank format) and need to identify conserved biosynthetic domains to build a feature vector for BGC similarity clustering or to annotate gene functions.
+description: Use when you have BGC sequences (in FASTA or GenBank format) and need
+  to identify conserved biosynthetic domains to build a feature vector for BGC similarity
+  clustering or to annotate gene functions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3092
@@ -12,6 +14,7 @@ metadata:
   - PFAM
   - BiG-SLiCE
   - PFAM 35.0
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

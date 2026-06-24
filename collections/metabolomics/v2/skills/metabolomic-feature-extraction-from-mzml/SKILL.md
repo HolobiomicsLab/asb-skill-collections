@@ -1,6 +1,9 @@
 ---
 name: metabolomic-feature-extraction-from-mzml
-description: Use when you have centroid mzML files from LC-MS acquisitions and need to detect, group, and quantify metabolomic features for a PCPFM experiment. Use it as the first feature-level processing step after file format conversion from raw instrument files (e.g., .raw to mzML via ThermoRawFileParser).
+description: Use when you have centroid mzML files from LC-MS acquisitions and need
+  to detect, group, and quantify metabolomic features for a PCPFM experiment. Use
+  it as the first feature-level processing step after file format conversion from
+  raw instrument files (e.g., .raw to mzML via ThermoRawFileParser).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -15,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -44,6 +48,7 @@ attribution:
 
 # metabolomic-feature-extraction-from-mzml
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and table metabolomic features from centroid mzML files using Asari, producing both a complete feature table and a quality-filtered preferred table suitable for downstream analysis. This skill converts raw mass spectrometry acquisition data into quantified, grouped features with m/z and retention time identifiers.

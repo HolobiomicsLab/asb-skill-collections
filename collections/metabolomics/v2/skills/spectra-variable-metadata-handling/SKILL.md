@@ -1,6 +1,7 @@
 ---
 name: spectra-variable-metadata-handling
-description: Use when when designing a new MsBackend subclass or extending an existing backend to support mass spectrometry data import or representation.
+description: Use when when designing a new MsBackend subclass or extending an existing
+  backend to support mass spectrometry data import or representation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,11 +15,13 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- The *Spectra* package defines an efficient infrastructure for storing and handling mass spectrometry spectra
+- The *Spectra* package defines an efficient infrastructure for storing and handling
+  mass spectrometry spectra
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
 - DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
 - library(Spectra) library(IRanges)
@@ -45,6 +48,7 @@ attribution:
 
 # spectra-variable-metadata-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement and manage spectra variables—core and custom metadata properties of individual mass spectrometry spectra—within MsBackend subclasses to enable consistent representation, validation, and access of spectral properties across different data storage backends. This skill is essential for ensuring that all spectra within a Spectra object expose a uniform API regardless of underlying data source (in-memory, on-disk, database, or streamed).

@@ -1,6 +1,8 @@
 ---
 name: candidate-metadata-record-serialization
-description: Use when after computing InChIKey and neighbourhood scores for library match candidates, you need to write results to a persistent format (CSV, JSON, or database) for storage, sharing, and interpretation.
+description: Use when after computing InChIKey and neighbourhood scores for library
+  match candidates, you need to write results to a persistent format (CSV, JSON, or
+  database) for storage, sharing, and interpretation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -13,6 +15,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

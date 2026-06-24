@@ -1,6 +1,8 @@
 ---
 name: lipid-fingerprint-regeneration-neural-networks
-description: Use when you have MS/MS spectra with initial lipid annotations from spectral library matching (e.g., from XCMS + CAMERA or LipidIN's Expeditious Querying module) and seek to improve recall, precision, and annotation coverage.
+description: Use when you have MS/MS spectra with initial lipid annotations from spectral
+  library matching (e.g., from XCMS + CAMERA or LipidIN's Expeditious Querying module)
+  and seek to improve recall, precision, and annotation coverage.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,12 +18,15 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

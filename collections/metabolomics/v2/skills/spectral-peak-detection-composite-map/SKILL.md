@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-detection-composite-map
-description: Use when when you have aligned mass tracks (extracted ion chromatograms) across multiple LC-MS samples consolidated into a composite map and need to detect reproducible elution peaks (features) that will be tracked back to individual samples.
+description: Use when when you have aligned mass tracks (extracted ion chromatograms)
+  across multiple LC-MS samples consolidated into a composite map and need to detect
+  reproducible elution peaks (features) that will be tracked back to individual samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,11 +20,13 @@ metadata:
   - asari peaks.evaluate_gaussian_peak_on_intensity_list
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -47,6 +51,7 @@ attribution:
 
 # spectral-peak-detection-composite-map
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Statistics-guided elution peak detection on a composite mass track using local maxima, prominence control, selective smoothing, and baseline filtering. This approach detects features across all samples simultaneously rather than repeated on individual samples, leveraging high mass resolution to improve sensitivity and reproducibility.

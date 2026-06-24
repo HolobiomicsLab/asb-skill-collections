@@ -1,6 +1,8 @@
 ---
 name: transformer-based-fragment-assembly
-description: Use when when you have CNN-encoded spectral features (¹H and/or ¹³C NMR) and a set of predicted or candidate molecular fragments, and you need to determine which fragments are present and how they connect to form a valid molecular structure.
+description: Use when when you have CNN-encoded spectral features (¹H and/or ¹³C NMR)
+  and a set of predicted or candidate molecular fragments, and you need to determine
+  which fragments are present and how they connect to form a valid molecular structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,12 +14,15 @@ metadata:
   - Transformer
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 evidence_spans:
-- Integrating this capability with a convolutional neural network, we build an end-to-end model
-- a transformer architecture can be constructed to efficiently solve the task, traditionally performed by chemists, of assembling large numbers of molecular fragments into molecular
+- Integrating this capability with a convolutional neural network, we build an end-to-end
+  model
+- a transformer architecture can be constructed to efficiently solve the task, traditionally
+  performed by chemists, of assembling large numbers of molecular fragments into molecular
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # transformer-based-fragment-assembly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a transformer architecture to assemble predicted molecular fragments into complete molecular structures (formula and connectivity) from spectral feature encodings. This skill is essential when the input space (trillions of possible structures up to 19 heavy atoms) requires efficient sequential reasoning over fragment dependencies rather than brute-force enumeration.

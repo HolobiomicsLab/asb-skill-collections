@@ -1,6 +1,9 @@
 ---
 name: diffusion-score-normalization-with-graph-topology
-description: Use when after propagating diffusion scores through the FELLA metabolite network using set.diffusion, when raw diffusion scores would otherwise favor candidates in high-degree regions or penalize those in sparse regions. Use this normalization when building the final ranked annotation table (Ranked.
+description: Use when after propagating diffusion scores through the FELLA metabolite
+  network using set.diffusion, when raw diffusion scores would otherwise favor candidates
+  in high-degree regions or penalize those in sparse regions. Use this normalization
+  when building the final ranked annotation table (Ranked.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,11 +15,13 @@ metadata:
   - R
   - FELLA
   - igraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 - we will now use the sample graph provided by FELLA R package
 - g.metab <- igraph::as.undirected(sample.graph)
@@ -43,6 +48,7 @@ attribution:
 
 # diffusion-score-normalization-with-graph-topology
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply z-score normalization to diffusion scores computed over a metabolite network (FELLA graph) to account for local and global network topology effects, ensuring fair ranking of candidates across regions of varying network density. This prevents bias toward highly connected metabolites or sparse subgraphs when prioritizing annotation candidates.

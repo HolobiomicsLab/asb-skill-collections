@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-intensity-normalization
-description: Use when after loading raw m/z peak data (in MetaboAnalyst, MetaboShiny native, or Metabolights format) and merging it with sample metadata (batch IDs, concentration values, experimental group labels).
+description: Use when after loading raw m/z peak data (in MetaboAnalyst, MetaboShiny
+  native, or Metabolights format) and merging it with sample metadata (batch IDs,
+  concentration values, experimental group labels).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +16,7 @@ metadata:
   - Docker
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

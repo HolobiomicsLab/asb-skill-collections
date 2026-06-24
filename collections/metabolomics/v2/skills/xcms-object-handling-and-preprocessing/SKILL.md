@@ -1,6 +1,9 @@
 ---
 name: xcms-object-handling-and-preprocessing
-description: Use when you have raw gas or liquid chromatography–mass spectrometry data (in NetCDF or mzML format) and need to detect features, align them across samples by retention time and mass-to-charge ratio, correct for retention time drift, and fill missing values before downstream metabolite clustering.
+description: Use when you have raw gas or liquid chromatography–mass spectrometry
+  data (in NetCDF or mzML format) and need to detect features, align them across samples
+  by retention time and mass-to-charge ratio, correct for retention time drift, and
+  fill missing values before downstream metabolite clustering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,15 +18,18 @@ metadata:
   - InterpretMSSpectrum
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
-- XCMS is a commonly used tool to detect all the signals from a metabolomics dataset, generating aligned features
+- XCMS is a commonly used tool to detect all the signals from a metabolomics dataset,
+  generating aligned features
 - XCMS is a commonly used tool to detect all the signals from a metabolomics dataset
 claims: []
 provenance:
@@ -48,6 +54,7 @@ attribution:
 
 # xcms-object-handling-and-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare raw mass spectrometry data for downstream metabolomics analysis by applying XCMS feature detection, alignment, retention time correction, and missing value imputation. This preprocessing pipeline transforms raw NetCDF/mzML files into a grouped feature matrix suitable for clustering and annotation.

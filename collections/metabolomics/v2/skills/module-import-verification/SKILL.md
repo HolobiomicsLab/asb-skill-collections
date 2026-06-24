@@ -1,6 +1,7 @@
 ---
 name: module-import-verification
-description: 'Use when after installing a Python package (especially one with optional dependencies) to confirm that: (1) core modules are accessible and importable;'
+description: 'Use when after installing a Python package (especially one with optional
+  dependencies) to confirm that: (1) core modules are accessible and importable;'
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -13,6 +14,7 @@ metadata:
   - psims
   - conda
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -46,6 +48,7 @@ attribution:
 
 # module-import-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that installed Python packages and their optional-dependency modules can be successfully imported without errors, confirming installation completeness and functional availability. This skill validates both core and conditionally-dependent submodules across different installation methods (pip, conda).

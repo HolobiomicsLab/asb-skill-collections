@@ -1,6 +1,8 @@
 ---
 name: chromatographic-peak-detection-with-prominence-control
-description: Use when after constructing baseline-corrected mass tracks (either composite across samples or per-sample) when you need to identify individual chromatographic peaks for feature extraction in LC-MS or GC-MS metabolomics workflows.
+description: Use when after constructing baseline-corrected mass tracks (either composite
+  across samples or per-sample) when you need to identify individual chromatographic
+  peaks for feature extraction in LC-MS or GC-MS metabolomics workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -19,11 +21,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:
@@ -48,6 +52,7 @@ attribution:
 
 # chromatographic-peak-detection-with-prominence-control
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect chromatographic peaks in mass-spectrometry intensity arrays using local maxima and dynamic prominence thresholds, applied to composite or individual mass tracks after baseline/noise removal and optional smoothing. This approach prioritizes signal selectivity and reduces false positives by tuning prominence relative to noise level and peak height.

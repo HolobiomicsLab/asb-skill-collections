@@ -1,6 +1,8 @@
 ---
 name: fold-change-calculation
-description: Use when after completing statistical tests (t-test, Mann–Whitney U, or ANOVA) on matched lipid abundances grouped by experimental condition or sample category, and before compiling final results tables.
+description: Use when after completing statistical tests (t-test, Mann–Whitney U,
+  or ANOVA) on matched lipid abundances grouped by experimental condition or sample
+  category, and before compiling final results tables.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3223
@@ -15,6 +17,7 @@ metadata:
   - SciPy
   - R base stats / tidyverse
   - edgeR.R
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

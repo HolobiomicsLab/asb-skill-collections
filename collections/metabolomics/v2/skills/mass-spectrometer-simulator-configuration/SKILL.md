@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometer-simulator-configuration
-description: Use when when you have a list of chemical compounds (with m/z values, retention times, and intensities) and need to simulate their acquisition behavior under a specific ionization polarity and mass spectrometer configuration.
+description: Use when when you have a list of chemical compounds (with m/z values,
+  retention times, and intensities) and need to simulate their acquisition behavior
+  under a specific ionization polarity and mass spectrometer configuration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -13,6 +15,7 @@ metadata:
   - ViMMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -20,7 +23,8 @@ derived_from:
   title: ''
 evidence_spans:
 - ViMMS is compatible with Python 3+
-- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation
+  coverage using OpenMS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # Mass Spectrometer Simulator Configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure a virtual mass spectrometer instance within the ViMMS framework to simulate tandem MS/MS acquisition on a chemical mixture with specified polarity, ionization mode, and detector parameters. This skill enables prototyping of fragmentation strategies before real instrument deployment.

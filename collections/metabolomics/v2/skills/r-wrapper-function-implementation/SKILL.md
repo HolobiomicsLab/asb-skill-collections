@@ -1,6 +1,9 @@
 ---
 name: r-wrapper-function-implementation
-description: Use when when you have multiple imputation methods with different function signatures and parameter conventions that need to be applied to the same input data matrix, and you want to allow users or downstream code to switch between methods via a single method argument without rewriting calling code.
+description: Use when when you have multiple imputation methods with different function
+  signatures and parameter conventions that need to be applied to the same input data
+  matrix, and you want to allow users or downstream code to switch between methods
+  via a single method argument without rewriting calling code.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - Impute_wrapper.R
   - imputeLCMD R package
   - Trunc_KNN
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -42,6 +46,7 @@ attribution:
 
 # R wrapper function implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement R wrapper functions that encapsulate method-specific imputation logic (GSimp, QRILC, kNN-TN) behind a uniform interface, enabling method dispatch, parameter binding, and standardized output formatting for left-censored missing value imputation in metabolomics data.

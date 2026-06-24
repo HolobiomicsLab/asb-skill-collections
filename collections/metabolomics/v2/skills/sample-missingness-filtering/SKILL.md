@@ -1,6 +1,9 @@
 ---
 name: sample-missingness-filtering
-description: Use when when you have loaded (un)targeted metabolite data into a Metaboprep object and need to exclude samples with excessive missing values before quality control or statistical analysis. This is typically applied early in the QC pipeline when sample-level data completeness is a concern (e.
+description: Use when when you have loaded (un)targeted metabolite data into a Metaboprep
+  object and need to exclude samples with excessive missing values before quality
+  control or statistical analysis. This is typically applied early in the QC pipeline
+  when sample-level data completeness is a concern (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - metaboprep
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -40,6 +44,7 @@ attribution:
 
 # sample-missingness-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomics samples from a Metaboprep object based on user-defined thresholds for missing data proportion. This step removes samples exceeding a missingness cutoff (e.g., ≥20%) to ensure adequate feature coverage before downstream analysis.

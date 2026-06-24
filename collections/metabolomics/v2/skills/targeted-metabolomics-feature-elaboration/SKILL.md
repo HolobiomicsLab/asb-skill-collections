@@ -1,6 +1,9 @@
 ---
 name: targeted-metabolomics-feature-elaboration
-description: Use when you have targeted metabolomics data with peak area intensities organized in rows (samples) × columns (compounds), accompanying sample metadata indicating which samples are blanks, calibration curve points, or QC samples with known concentration values, and a compound legend assigning.
+description: Use when you have targeted metabolomics data with peak area intensities
+  organized in rows (samples) × columns (compounds), accompanying sample metadata
+  indicating which samples are blanks, calibration curve points, or QC samples with
+  known concentration values, and a compound legend assigning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3663
@@ -14,14 +17,17 @@ metadata:
   - AER
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
-- linear models with mixed effects (random and fixed), using the _lmer_ function from the lme4 package
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
+- linear models with mixed effects (random and fixed), using the _lmer_ function from
+  the lme4 package
 - TOBIT linear models, using the _tobit_ function of the AER package
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: nmr-metabolomic-quality-control-reporting
-description: Use when you have uploaded a pre-analytical data table containing sample metadata, processing delay timestamps (pre- and post-centrifugation), and NMR metabolomic measurements for a cohort of plasma or serum samples, and you need to assess how processing delays affect metabolite concentrations and.
+description: Use when you have uploaded a pre-analytical data table containing sample
+  metadata, processing delay timestamps (pre- and post-centrifugation), and NMR metabolomic
+  measurements for a cohort of plasma or serum samples, and you need to assess how
+  processing delays affect metabolite concentrations and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel
@@ -43,6 +47,7 @@ attribution:
 
 # nmr-metabolomic-quality-control-reporting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate interactive performance reports for NMR-based metabolomic sample cohorts by quantifying the effect of processing delays on metabolic parameter stability. This skill produces delay-stratified metabolite change tables and data quality indicators suitable for pre-analytical quality control assessment in peripheral blood samples.

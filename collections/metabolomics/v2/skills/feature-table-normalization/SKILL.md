@@ -1,6 +1,8 @@
 ---
 name: feature-table-normalization
-description: Use when you have peak/feature tables from one or more peak picking tools (MZmine, XCMS, MS-DIAL, Compound Discoverer) and need to ingest them into LipidMatch or combine results from multiple tools in a single lipidomics workflow.
+description: Use when you have peak/feature tables from one or more peak picking tools
+  (MZmine, XCMS, MS-DIAL, Compound Discoverer) and need to ingest them into LipidMatch
+  or combine results from multiple tools in a single lipidomics workflow.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,13 +17,16 @@ metadata:
   - LipidMatch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

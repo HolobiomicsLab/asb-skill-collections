@@ -1,6 +1,7 @@
 ---
 name: converter-specification-validation
-description: Use when adding a new converter class to MSMetaEnhancer or when modifying an existing converter's __init__ method to add/remove conversions.
+description: Use when adding a new converter class to MSMetaEnhancer or when modifying
+  an existing converter's __init__ method to add/remove conversions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2422
@@ -10,6 +11,7 @@ metadata:
   - pytest
   - MSMetaEnhancer
   - Python
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

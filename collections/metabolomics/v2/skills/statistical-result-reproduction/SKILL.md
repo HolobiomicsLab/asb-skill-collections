@@ -1,6 +1,7 @@
 ---
 name: statistical-result-reproduction
-description: Use when you have downloaded a Jupyter notebook from a published metabolomics workflow repository (e.
+description: Use when you have downloaded a Jupyter notebook from a published metabolomics
+  workflow repository (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +16,7 @@ metadata:
   - Google Colab
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

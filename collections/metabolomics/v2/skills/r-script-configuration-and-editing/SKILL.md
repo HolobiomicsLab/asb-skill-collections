@@ -1,6 +1,8 @@
 ---
 name: r-script-configuration-and-editing
-description: Use when you need to switch between Modular and Flow execution modes in LipidMatch/FluoroMatch, or when you need to change the analysis application type (PFAS analysis, Lipid analysis, or TWeen_pos analysis).
+description: Use when you need to switch between Modular and Flow execution modes
+  in LipidMatch/FluoroMatch, or when you need to change the analysis application type
+  (PFAS analysis, Lipid analysis, or TWeen_pos analysis).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -11,6 +13,7 @@ metadata:
   - LipidMatch
   - FluoroMatch
   - PolyMatch
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -39,6 +42,7 @@ attribution:
 
 # R Script Configuration and Editing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and edit R scripts (particularly Modular.r) to toggle between execution modes (Modular vs. Flow) and analysis application types (PFAS, Lipid, or TWeen_pos) by setting boolean flags and integrating modified code into the correct software distribution directories. This skill is essential when adapting LipidMatch, FluoroMatch, or PolyMatch workflows to specific analytical goals and execution paradigms.

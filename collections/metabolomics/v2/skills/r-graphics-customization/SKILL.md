@@ -1,6 +1,7 @@
 ---
 name: r-graphics-customization
-description: Use when when you have completed a comprehensive ranking of preprocessing workflows (e.
+description: Use when when you have completed a comprehensive ranking of preprocessing
+  workflows (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -12,6 +13,7 @@ metadata:
   - norvisualization
   - R graphics functions
   - ggord
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

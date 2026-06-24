@@ -1,6 +1,9 @@
 ---
 name: mass-spec-tolerance-parameter-application
-description: Use when when you have a feature table from Orbitrap LC-MS containing m/z, retention time, and intensity columns, and you need to group individual mass features into putative metabolites that represent the same chemical entity across different ionization states and isotopic compositions.
+description: Use when when you have a feature table from Orbitrap LC-MS containing
+  m/z, retention time, and intensity columns, and you need to group individual mass
+  features into putative metabolites that represent the same chemical entity across
+  different ionization states and isotopic compositions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -14,6 +17,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -43,6 +47,7 @@ attribution:
 
 # mass-spec-tolerance-parameter-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Application of mass-to-charge (m/z) and retention time (RT) tolerances to group co-eluting isotopologues and adducts into empirical compounds during LC-MS feature pre-annotation. This skill operationalizes instrument-specific calibration and chromatographic resolution into concrete tolerance thresholds for metabolite grouping.

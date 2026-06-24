@@ -1,6 +1,9 @@
 ---
 name: mass-spectrum-peak-detection
-description: Use when you have raw or processed MS spectrum data (mz/intensity pairs) from direct infusion MS (DI-MS), ASAP-MS, or other high-throughput ambient ionization methods, and need to identify which m/z signals represent true peaks of interest rather than noise or baseline drift.
+description: Use when you have raw or processed MS spectrum data (mz/intensity pairs)
+  from direct infusion MS (DI-MS), ASAP-MS, or other high-throughput ambient ionization
+  methods, and need to identify which m/z signals represent true peaks of interest
+  rather than noise or baseline drift.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +16,7 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -43,6 +47,7 @@ attribution:
 
 # mass-spectrum-peak-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatic identification of peaks of interest from raw or processed mass spectrometry spectra via algorithmic detection and intensity-based ranking. This skill extracts structured peak annotations (m/z, intensity, confidence scores) from unprocessed spectral data to enable downstream species authentication and sample classification.

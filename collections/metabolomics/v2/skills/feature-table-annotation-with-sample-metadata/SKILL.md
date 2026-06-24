@@ -1,6 +1,9 @@
 ---
 name: feature-table-annotation-with-sample-metadata
-description: Use when your input is a feature intensity table (CSV or R data frame) with features as columns and samples as rows, and you have accompanying sample metadata (batch identifiers, QC/study sample labels, run order, sample phenotypes, collection dates).
+description: Use when your input is a feature intensity table (CSV or R data frame)
+  with features as columns and samples as rows, and you have accompanying sample metadata
+  (batch identifiers, QC/study sample labels, run order, sample phenotypes, collection
+  dates).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3336
@@ -14,6 +17,7 @@ metadata:
   - MetCorR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

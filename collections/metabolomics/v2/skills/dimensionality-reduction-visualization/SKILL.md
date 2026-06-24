@@ -1,6 +1,8 @@
 ---
 name: dimensionality-reduction-visualization
-description: Use when after generating large feasible flux distributions (e.g., 1 million sampled solutions per cell line) from constrained metabolic models, apply t-SNE when you need to assess whether distinct biological samples (e.
+description: Use when after generating large feasible flux distributions (e.g., 1
+  million sampled solutions per cell line) from constrained metabolic models, apply
+  t-SNE when you need to assess whether distinct biological samples (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -31,18 +33,24 @@ metadata:
   - scikit-learn (t-SNE/UMAP)
   - Matplotlib
   - MSBERT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 - doi: 10.1021/acs.analchem.4c02426
   title: ''
 evidence_spans:
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36]
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in GX-FBA [26]
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA [38]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in GX-FBA [26]
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA [38]
 - raw reads were mapped with STAR aligner (v.2.6.1d) to human reference genome (hg38)
-- gene counts were calculated by HTSeq (v.0.6.1), using the hg38 Encode-Gencode GTF file (v28)
+- gene counts were calculated by HTSeq (v.0.6.1), using the hg38 Encode-Gencode GTF
+  file (v28)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -70,6 +78,7 @@ attribution:
 
 # dimensionality-reduction-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply t-distributed Stochastic Neighbor Embedding (t-SNE) to high-dimensional feasible flux distributions (FFD) sampled from constraint-based metabolic models to visualize and segregate metabolic phenotypes across biological samples in two-dimensional space. This skill enables visual discrimination of metabolic differences driven by transcriptional vs. metabolic regulation.

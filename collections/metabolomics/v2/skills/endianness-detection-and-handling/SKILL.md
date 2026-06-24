@@ -1,6 +1,8 @@
 ---
 name: endianness-detection-and-handling
-description: Use when when reading a binary file format with a magic integer or fixed checksum field at a known offset, and endianness is not explicitly declared in file metadata or header comments.
+description: Use when when reading a binary file format with a magic integer or fixed
+  checksum field at a known offset, and endianness is not explicitly declared in file
+  metadata or header comments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +13,7 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -40,6 +43,7 @@ attribution:
 
 # endianness-detection-and-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and handle byte-order encoding (big-endian vs. little-endian) in binary file formats by validating magic integers and adjusting parsing logic accordingly. This skill is essential when parsing NMR data files (e.g., NV format) where endianness is not declared in metadata and must be inferred from known fixed-value fields.

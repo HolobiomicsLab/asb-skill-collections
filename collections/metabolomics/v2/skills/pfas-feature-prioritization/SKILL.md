@@ -1,6 +1,8 @@
 ---
 name: pfas-feature-prioritization
-description: Use when you have detected features in LC- or GC-HRMS data (via pyOpenMS or custom feature tables) and need to systematically rank them for likelihood of being PFAS compounds.
+description: Use when you have detected features in LC- or GC-HRMS data (via pyOpenMS
+  or custom feature tables) and need to systematically rank them for likelihood of
+  being PFAS compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +16,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -42,6 +45,7 @@ attribution:
 
 # PFAS Feature Prioritization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A multi-criteria approach to rank potential per- and polyfluoroalkyl substance (PFAS) features from non-target HRMS data by combining mass defect analysis (MD/C-m/C), Kendrick mass defect (KMD), and MS2 fragment diagnostics. This skill identifies candidate PFAS structures in complex LC- or GC-HRMS datasets where PFAS presence is suspected but not confirmed a priori.

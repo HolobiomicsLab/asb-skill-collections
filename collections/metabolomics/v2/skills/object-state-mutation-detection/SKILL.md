@@ -1,6 +1,8 @@
 ---
 name: object-state-mutation-detection
-description: Use when when calling filter functions (e.g., filter_mispicked_ions(), filter_group(), filter_cv()) on R6-based metabolomics data objects in the mpactr package and you need to verify whether the original object's state is preserved.
+description: Use when when calling filter functions (e.g., filter_mispicked_ions(),
+  filter_group(), filter_cv()) on R6-based metabolomics data objects in the mpactr
+  package and you need to verify whether the original object's state is preserved.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -12,6 +14,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -43,6 +46,7 @@ attribution:
 
 # object-state-mutation-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A technique to determine whether function calls operating on R6 reference objects modify the original data in-place or create independent deep copies. This is critical for metabolomics workflows where unintended mutation of peak tables can silently corrupt downstream analyses.

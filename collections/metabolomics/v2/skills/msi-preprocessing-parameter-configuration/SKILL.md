@@ -1,6 +1,8 @@
 ---
 name: msi-preprocessing-parameter-configuration
-description: Use when you have raw line-scan MSI data (from Bruker .d/.baf, converted to .mzML, or other supported formats) and need to configure MSIGen before calling msigen() to generate image arrays.
+description: Use when you have raw line-scan MSI data (from Bruker .d/.baf, converted
+  to .mzML, or other supported formats) and need to configure MSIGen before calling
+  msigen() to generate image arrays.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -19,14 +21,18 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
-- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
+- If you are planning on using Bruker .d data in the .baf format, you will also need
+  to install pyBaf2Sql from GitHub
+- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert
+  tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
 - You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html.
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
 claims: []

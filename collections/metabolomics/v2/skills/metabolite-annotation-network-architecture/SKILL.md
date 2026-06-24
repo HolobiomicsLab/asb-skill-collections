@@ -1,6 +1,9 @@
 ---
 name: metabolite-annotation-network-architecture
-description: Use when when annotating large-scale untargeted metabolomics datasets where reference library coverage is incomplete and you need to infer metabolite identities for unannotated compounds by propagating annotations from seed metabolites (database matches or prior curation) across both.
+description: Use when when annotating large-scale untargeted metabolomics datasets
+  where reference library coverage is incomplete and you need to infer metabolite
+  identities for unannotated compounds by propagating annotations from seed metabolites
+  (database matches or prior curation) across both.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -14,11 +17,13 @@ metadata:
   - MetDNA3
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # metabolite-annotation-network-architecture
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a fixed two-layer interactive networking topology that bridges knowledge-driven (biochemical ontologies, metabolic reaction networks) and data-driven (MS2 spectral similarity, co-occurrence patterns) layers to enable recursive annotation propagation across metabolite networks. This architecture supports accurate large-scale metabolite annotation in untargeted metabolomics by leveraging both curated biochemical relationships and experimental mass spectrometry evidence simultaneously.

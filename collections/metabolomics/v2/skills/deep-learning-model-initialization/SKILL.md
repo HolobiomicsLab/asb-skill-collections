@@ -1,6 +1,7 @@
 ---
 name: deep-learning-model-initialization
-description: Use when you have downloaded the LC-MS spectral peak dataset (DOI 10.25345/C5FD2F) and need to train a DNN model from scratch rather than using a pre-trained checkpoint.
+description: Use when you have downloaded the LC-MS spectral peak dataset (DOI 10.25345/C5FD2F)
+  and need to train a DNN model from scratch rather than using a pre-trained checkpoint.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -13,6 +14,7 @@ metadata:
   - EDML_deep_learning2.py
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier
@@ -44,6 +46,7 @@ attribution:
 
 # deep-learning-model-initialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize and train a deep neural network classifier from scratch on LC-MS spectral peak data using the EDML_deep_learning2.py script. This skill prepares the model architecture and parameters for binary classification of real versus noise peaks in liquid chromatography–mass spectrometry data.

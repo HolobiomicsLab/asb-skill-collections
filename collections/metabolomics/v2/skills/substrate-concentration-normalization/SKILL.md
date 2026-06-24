@@ -1,6 +1,8 @@
 ---
 name: substrate-concentration-normalization
-description: Use when you have LC-MS normalized intracellular metabolite abundance data from multiple cell lines (or samples) and need to compute reaction-level propensity scores that account for substrate availability as a predictor of metabolic flux.
+description: Use when you have LC-MS normalized intracellular metabolite abundance
+  data from multiple cell lines (or samples) and need to compute reaction-level propensity
+  scores that account for substrate availability as a predictor of metabolic flux.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,11 +18,13 @@ metadata:
   - INTEGRATE pipeline (qLSLab/integrate)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # Substrate Concentration Normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize intracellular metabolite abundances from LC-MS measurements to enable stoichiometry-aware computation of Reaction Propensity Scores (RPS) across multiple cell lines. This skill ensures that substrate concentrations are comparable and correctly weighted by their stoichiometric coefficients in mass action law calculations.

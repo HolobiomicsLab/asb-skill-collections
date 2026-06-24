@@ -1,6 +1,9 @@
 ---
 name: module-trait-association-visualization
-description: Use when after identifying and naming metabolic correlation modules from WGCNA on normalized, imputed metabolomic data, and you need to assess whether specific modules associate significantly with a binary or categorical sample trait (e.g., disease status, treatment group).
+description: Use when after identifying and naming metabolic correlation modules from
+  WGCNA on normalized, imputed metabolomic data, and you need to assess whether specific
+  modules associate significantly with a binary or categorical sample trait (e.g.,
+  disease status, treatment group).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - R
   - WGCNA
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -24,7 +28,8 @@ evidence_spans:
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # module-trait-association-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualizes statistical associations between metabolic correlation modules and sample groupings (e.g., tumor vs. normal) using module significance (MS) metrics. This skill enables identification of which metabolic modules show significant trait-dependent abundance patterns, facilitating biological interpretation of network-derived modules.

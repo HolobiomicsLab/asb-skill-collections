@@ -1,6 +1,8 @@
 ---
 name: s4-class-object-memory-profiling
-description: Use when when designing or optimizing S4-based data backends (such as MsBackend subclasses) and you need to decide whether to pre-populate all slots with complete data structures or defer initialization until data access.
+description: Use when when designing or optimizing S4-based data backends (such as
+  MsBackend subclasses) and you need to decide whether to pre-populate all slots with
+  complete data structures or defer initialization until data access.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -13,13 +15,15 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # S4-class object memory profiling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A technique for measuring and comparing the in-memory footprint of S4 objects under different initialization strategies, revealing tradeoffs between eager pre-population and lazy on-demand data loading. This is essential for optimizing backend design in large-scale mass spectrometry data infrastructure.

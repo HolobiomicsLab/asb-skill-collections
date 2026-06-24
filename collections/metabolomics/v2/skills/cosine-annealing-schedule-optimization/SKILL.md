@@ -1,6 +1,9 @@
 ---
 name: cosine-annealing-schedule-optimization
-description: Use when when training a regularized deep neural network for molecular property regression (e.g., retention time prediction on the METLIN SMRT dataset with 80,038+ samples), use cosine annealing warm restarts to escape plateaus and improve convergence.
+description: Use when when training a regularized deep neural network for molecular
+  property regression (e.g., retention time prediction on the METLIN SMRT dataset
+  with 80,038+ samples), use cosine annealing warm restarts to escape plateaus and
+  improve convergence.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +15,13 @@ metadata:
   - alvaDesc
   - PyTorch / TensorFlow
   - cmmrt
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # Cosine-Annealing Schedule Optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cosine annealing with warm restarts is a learning rate scheduling strategy that cyclically reduces the learning rate following a cosine curve, periodically restarting to higher values to escape local minima. In retention time prediction for small molecules, this scheduling approach combined with stochastic weight averaging significantly improves deep neural network generalization.

@@ -1,6 +1,8 @@
 ---
 name: precursor-mass-neutral-loss-calculation
-description: Use when when analyzing tandem mass spectra (MS/MS data) and you want to incorporate neutral loss patterns—characteristic mass losses from molecular precursors—into your spectral similarity or feature representation.
+description: Use when when analyzing tandem mass spectra (MS/MS data) and you want
+  to incorporate neutral loss patterns—characteristic mass losses from molecular precursors—into
+  your spectral similarity or feature representation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,11 +14,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # precursor-mass-neutral-loss-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate neutral loss mass differences by subtracting each fragment ion m/z from the precursor mass, then aggregate these differences across all fragment pairs to generate a neutral loss difference count table. This enriches spectral feature representation beyond MZ difference counts alone, enabling improved fragmentation pattern recognition in tandem mass spectrometry.

@@ -1,6 +1,8 @@
 ---
 name: python-binding-generation-with-nanobind
-description: Use when when you have a C++ library (such as OpenMS) with nanobind binding specifications in a designated bindings directory and need to create a Python module that exposes C++ classes, functions, and data types to Python code.
+description: Use when when you have a C++ library (such as OpenMS) with nanobind binding
+  specifications in a designated bindings directory and need to create a Python module
+  that exposes C++ classes, functions, and data types to Python code.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -13,6 +15,7 @@ metadata:
   - OpenMS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -41,6 +44,7 @@ attribution:
 
 # python-binding-generation-with-nanobind
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate importable Python modules from C++ source code using nanobind binding specifications and CMake compilation. This skill bridges OpenMS C++ API functionality into Python environments by converting binding declarations into compiled extension modules.

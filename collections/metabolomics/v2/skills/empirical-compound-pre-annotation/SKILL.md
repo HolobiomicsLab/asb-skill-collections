@@ -1,6 +1,8 @@
 ---
 name: empirical-compound-pre-annotation
-description: Use when after feature detection from mzML files (e.g., via Asari) when you have a feature table with m/z, retention time, and intensity columns, and before MS1 or MS2 annotation.
+description: Use when after feature detection from mzML files (e.g., via Asari) when
+  you have a feature table with m/z, retention time, and intensity columns, and before
+  MS1 or MS2 annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -45,6 +48,7 @@ attribution:
 
 # empirical-compound-pre-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group co-eluting LC-MS features into empirical compounds by detecting isotopologues and adducts using mass tolerance and retention time clustering. This pre-annotation step transforms raw feature tables into higher-level metabolite representations suitable for MS1/MS2 annotation.

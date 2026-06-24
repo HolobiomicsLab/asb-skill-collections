@@ -1,6 +1,7 @@
 ---
 name: smiles-tokenization-and-canonical-representation
-description: Use when when preparing SMILES strings as training targets for a sequence-to-sequence decoder that reconstructs molecular structures from embeddings.
+description: Use when when preparing SMILES strings as training targets for a sequence-to-sequence
+  decoder that reconstructs molecular structures from embeddings.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -10,11 +11,13 @@ metadata:
   tools:
   - RDKit
   - PyTorch
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
 evidence_spans:
-- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/) software.
+- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/)
+  software.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

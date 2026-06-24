@@ -1,6 +1,9 @@
 ---
 name: inchikey-structural-similarity-scoring
-description: Use when you have candidate library matches from MS2Deepscore ranking (top 2000 spectra per query) with InChIKey annotations, and need to quantify structural similarity between query and candidate compounds to inform downstream match ranking and filtering by MS2Query's random forest model.
+description: Use when you have candidate library matches from MS2Deepscore ranking
+  (top 2000 spectra per query) with InChIKey annotations, and need to quantify structural
+  similarity between query and candidate compounds to inform downstream match ranking
+  and filtering by MS2Query's random forest model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -14,6 +17,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-metadata-interpretation
-description: Use when when integrating LC-MS/MS data from diverse sources (e.g., public repositories like MSV000080102, instrument outputs, or precomputed workflows) into NPDtools pipelines.
+description: Use when when integrating LC-MS/MS data from diverse sources (e.g., public
+  repositories like MSV000080102, instrument outputs, or precomputed workflows) into
+  NPDtools pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -23,6 +25,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -31,12 +34,18 @@ derived_from:
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib`
+  and `networkx` Python libraries
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -65,6 +74,7 @@ attribution:
 
 # mass-spectrometry-metadata-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and validate mass spectrometry file formats, centroiding status, and metadata to ensure compatibility with natural product discovery pipelines. This skill bridges raw instrument output and downstream metabologenomic analysis by verifying spectral data readiness and extracting critical acquisition parameters.

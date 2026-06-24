@@ -1,6 +1,8 @@
 ---
 name: spectrum-peak-matching
-description: Use when you have an experimental tandem mass spectrum (peaks with m/z values and intensities), a chemical formula, and a set of candidate molecular structures retrieved from a database like PubChem.
+description: Use when you have an experimental tandem mass spectrum (peaks with m/z
+  values and intensities), a chemical formula, and a set of candidate molecular structures
+  retrieved from a database like PubChem.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,6 +15,7 @@ metadata:
   - ICEBERG-WebUI
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

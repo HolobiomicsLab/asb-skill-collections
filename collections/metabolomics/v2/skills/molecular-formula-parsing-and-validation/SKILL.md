@@ -1,6 +1,9 @@
 ---
 name: molecular-formula-parsing-and-validation
-description: Use when you have received a formula-assigned FT-ICR MS dataset (CSV or tab-delimited table containing molecular formulas and mass values) and need to convert those formula strings into quantified elemental compositions before computing molecular descriptors, diversity indices, or transformation.
+description: Use when you have received a formula-assigned FT-ICR MS dataset (CSV
+  or tab-delimited table containing molecular formulas and mass values) and need to
+  convert those formula strings into quantified elemental compositions before computing
+  molecular descriptors, diversity indices, or transformation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3727
@@ -11,11 +14,13 @@ metadata:
   - MoleTrans
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans
 evidence_spans:
-- MoleTrans is a webtool for post analysis and data mining on the formula assigned datasets from FT-ICR MS
+- MoleTrans is a webtool for post analysis and data mining on the formula assigned
+  datasets from FT-ICR MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: inference-model-cpu-thread-configuration
-description: Use when when running Mass2SMILES inference on a TensorFlow-CPU build (e.g., delser292/mass2smiles:final container) and you need to optimize inference speed by controlling CPU core allocation.
+description: Use when when running Mass2SMILES inference on a TensorFlow-CPU build
+  (e.g., delser292/mass2smiles:final container) and you need to optimize inference
+  speed by controlling CPU core allocation.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -11,6 +13,7 @@ metadata:
   - TensorFlow (CPU build)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
@@ -39,6 +42,7 @@ attribution:
 
 # InferenceModel CPU-thread configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure the number of CPU cores allocated to TensorFlow-CPU inference in Mass2SMILES by setting the cpu_threads parameter on the InferenceModel class. This skill enables performance tuning on CPU-bound inference runs without GPU acceleration.

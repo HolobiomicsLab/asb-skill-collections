@@ -1,6 +1,9 @@
 ---
 name: batch-effect-correction-application
-description: Use when you have a SummarizedExperiment object containing metabolomics assay data (compound areas, internal standard areas) organized by batch and sample type (including pooled SQC samples), and you need to correct systematic variation across batches before calculating Relative Standard Deviation.
+description: Use when you have a SummarizedExperiment object containing metabolomics
+  assay data (compound areas, internal standard areas) organized by batch and sample
+  type (including pooled SQC samples), and you need to correct systematic variation
+  across batches before calculating Relative Standard Deviation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,7 @@ metadata:
   - SummarizedExperiment
   - SummarizedExperiment (Bioconductor)
   - mzQualityDashboard
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -21,8 +25,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # batch-effect-correction-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply batch correction to metabolomics compound–internal standard ratios using pooled study quality control (SQC) samples as the correction reference. This removes systematic batch effects that inflate compound variability estimates, enabling more reliable internal standard selection and concentration calculations.

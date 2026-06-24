@@ -1,6 +1,8 @@
 ---
 name: usi-string-parsing-and-resolution
-description: Use when you have a USI string referencing a spectrum in an online public repository (PRIDE, MassIVE, etc.) and need to load its raw spectral data without downloading the entire dataset file.
+description: Use when you have a USI string referencing a spectrum in an online public
+  repository (PRIDE, MassIVE, etc.) and need to load its raw spectral data without
+  downloading the entire dataset file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,12 +14,15 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # usi-string-parsing-and-resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and resolve Universal Spectrum Identifier (USI) strings to retrieve raw MS/MS spectrum data (m/z array, intensity array, precursor m/z, charge state, retention time) from online proteomics and metabolomics repositories (PRIDE, MassIVE). This skill bridges USI string syntax to live spectrum objects suitable for downstream processing and annotation.

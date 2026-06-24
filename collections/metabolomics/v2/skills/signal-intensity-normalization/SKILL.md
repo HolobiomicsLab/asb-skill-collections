@@ -1,6 +1,8 @@
 ---
 name: signal-intensity-normalization
-description: Use when after loading raw LC-MS data from multiple disease groups when you need to compute correlations between metabolite signals and disease classes, or before training a deep learning model on metabolomics profiles.
+description: Use when after loading raw LC-MS data from multiple disease groups when
+  you need to compute correlations between metabolite signals and disease classes,
+  or before training a deep learning model on metabolomics profiles.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - TensorFlow / Keras
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -40,6 +43,7 @@ attribution:
 
 # signal-intensity-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize LC-MS metabolite signal intensities across samples to enable fair correlation analysis and disease classification. This preprocessing step removes batch effects and technical variation that would otherwise confound the relationship between metabolite abundance and disease phenotype.

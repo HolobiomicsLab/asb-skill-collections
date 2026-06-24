@@ -1,6 +1,8 @@
 ---
 name: metabolite-peak-assignment-from-nmr
-description: Use when you have a 1D ¹H NMR spectrum (as chemical shift vs. intensity) and a corresponding peak list (chemical shift values), and you need to identify which metabolites are responsible for each detected peak.
+description: Use when you have a 1D ¹H NMR spectrum (as chemical shift vs. intensity)
+  and a corresponding peak list (chemical shift values), and you need to identify
+  which metabolites are responsible for each detected peak.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -15,6 +17,7 @@ metadata:
   - NMRformer
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05632
   title: NMRformer

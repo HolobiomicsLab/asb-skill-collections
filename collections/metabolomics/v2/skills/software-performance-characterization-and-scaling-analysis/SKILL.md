@@ -1,6 +1,9 @@
 ---
 name: software-performance-characterization-and-scaling-analysis
-description: Use when when a tool claims to be 'scalable' or 'performance-conscious' but lacks published performance benchmarks, or when you need to confirm that runtime and memory scale linearly (or predictably) with sample count before deploying the tool on large LC-MS datasets (e.g., >100 samples).
+description: Use when when a tool claims to be 'scalable' or 'performance-conscious'
+  but lacks published performance benchmarks, or when you need to confirm that runtime
+  and memory scale linearly (or predictably) with sample count before deploying the
+  tool on large LC-MS datasets (e.g., >100 samples).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -15,11 +18,13 @@ metadata:
   - Unix time command
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # Software Performance Characterization and Scaling Analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Empirically measure and verify how a computational tool (wall-clock time, peak resident memory) scales with increasing input size, validating performance claims and identifying bottlenecks. Essential for confirming scalability assertions in software designed for high-throughput metabolomics data processing.

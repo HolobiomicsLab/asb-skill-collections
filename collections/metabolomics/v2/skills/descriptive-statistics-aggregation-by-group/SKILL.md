@@ -1,6 +1,8 @@
 ---
 name: descriptive-statistics-aggregation-by-group
-description: Use when after lipid matching is complete and you have a table of matched lipid abundances with sample annotations (e.g., experimental condition, disease state, or treatment group).
+description: Use when after lipid matching is complete and you have a table of matched
+  lipid abundances with sample annotations (e.g., experimental condition, disease
+  state, or treatment group).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - NumPy
   - R base stats / tidyverse
   - Lipid_MRM_parser.ipynb
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

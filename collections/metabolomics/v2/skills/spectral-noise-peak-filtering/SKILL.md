@@ -1,6 +1,7 @@
 ---
 name: spectral-noise-peak-filtering
-description: Use when when working with raw or partially processed tandem mass spectrometry (MS/MS) spectra that contain low-intensity background noise peaks.
+description: Use when when working with raw or partially processed tandem mass spectrometry
+  (MS/MS) spectra that contain low-intensity background noise peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,15 +15,20 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 - import numpy as np
-- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and [Numba](http://numba.pydata.org/)
+- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and
+  [Numba](http://numba.pydata.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # spectral-noise-peak-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove low-intensity noise peaks from mass spectrometry spectra by filtering based on intensity thresholds relative to the base peak and limiting the total number of peaks retained. This preprocessing step enhances signal-to-noise ratio and prepares spectra for downstream peptide fragment annotation and database matching.

@@ -1,6 +1,8 @@
 ---
 name: statistical-enrichment-analysis
-description: Use when you have ranked GCF-MF (Gene Cluster Family–Molecular Family) links using two or more independent scoring functions and a set of experimentally validated links.
+description: Use when you have ranked GCF-MF (Gene Cluster Family–Molecular Family)
+  links using two or more independent scoring functions and a set of experimentally
+  validated links.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,18 +18,23 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic data
-- After downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
+- Finally, we present NPLinker, a software framework to link genomic and metabolomic
+  data
+- After downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
-- antiSMASH to score the correspondence between the MIBiG entries and the detected BGCs
+- antiSMASH to score the correspondence between the MIBiG entries and the detected
+  BGCs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +59,7 @@ attribution:
 
 # statistical-enrichment-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify whether a subset of genomic-metabolomic links scoring above defined percentile thresholds on complementary scoring functions (strain correlation, IOKR) shows significantly higher validation rates than links exceeding only individual scores. This determines whether multiple scoring approaches are genuinely complementary for prioritizing true links.

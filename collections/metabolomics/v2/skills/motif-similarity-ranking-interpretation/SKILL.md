@@ -1,6 +1,9 @@
 ---
 name: motif-similarity-ranking-interpretation
-description: Use when after executing MassQL queries against a MotifDB reference database and retrieving ranked motif matches, when you need to determine which database entries represent true structural correspondence versus spurious matches, and to decide whether a motif's top-ranking hit is sufficiently.
+description: Use when after executing MassQL queries against a MotifDB reference database
+  and retrieving ranked motif matches, when you need to determine which database entries
+  represent true structural correspondence versus spurious matches, and to decide
+  whether a motif's top-ranking hit is sufficiently.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -14,6 +17,7 @@ metadata:
   - Spec2Vec
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -21,7 +25,8 @@ evidence_spans:
 - Integration with MassQL-searchable MotifDB
 - Compare motifs to known entries in MotifDB
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

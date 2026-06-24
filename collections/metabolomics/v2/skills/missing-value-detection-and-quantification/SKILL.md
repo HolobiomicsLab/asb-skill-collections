@@ -1,6 +1,7 @@
 ---
 name: missing-value-detection-and-quantification
-description: Use when you have a raw abundance matrix (e.g., metabolite or gene features × samples) and need to decide which features to retain before downstream analysis.
+description: Use when you have a raw abundance matrix (e.g., metabolite or gene features
+  × samples) and need to decide which features to retain before downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +13,7 @@ metadata:
   - MSPrep
   - Bioconductor
   - marr
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -20,7 +22,8 @@ derived_from:
 evidence_spans:
 - 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
 - The R-package **marr** can be installed from GitHub using the R package [devtools]
-- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep software
+- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep
+  software
 - '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:
@@ -46,6 +49,7 @@ attribution:
 
 # missing-value-detection-and-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically identify and quantify missing values (NA or zero) across features in high-dimensional replicate experiments to inform feature filtering decisions. This skill enables practitioners to characterize missingness patterns and apply data-driven retention thresholds.

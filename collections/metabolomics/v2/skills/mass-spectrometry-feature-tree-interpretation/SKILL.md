@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-feature-tree-interpretation
-description: Use when after running qiime qemistree make-hierarchy and obtaining a tree artifact (qemistree.
+description: Use when after running qiime qemistree make-hierarchy and obtaining a
+  tree artifact (qemistree.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0566
@@ -13,11 +14,13 @@ metadata:
   - SIRIUS / CSI:FingerID
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +44,7 @@ attribution:
 
 # mass-spectrometry-feature-tree-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect, validate, and characterize the structural properties of a Chemical Feature Tree artifact produced by q2-qemistree to understand the hierarchy and connectivity of mass-spectrometry features for downstream chemically-informed metabolomic analysis. This skill confirms tree integrity before using it for alpha/beta-diversity calculations or feature interpretation.

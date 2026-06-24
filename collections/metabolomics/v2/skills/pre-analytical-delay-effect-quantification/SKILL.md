@@ -1,6 +1,9 @@
 ---
 name: pre-analytical-delay-effect-quantification
-description: Use when you have uploaded a pre-analytical data table containing sample metadata, processing delay annotations (pre- and post-centrifugation timestamps or duration), and paired NMR metabolomic measurements for a sample cohort, and you need to quantify how delays at different time-points affect.
+description: Use when you have uploaded a pre-analytical data table containing sample
+  metadata, processing delay annotations (pre- and post-centrifugation timestamps
+  or duration), and paired NMR metabolomic measurements for a sample cohort, and you
+  need to quantify how delays at different time-points affect.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,6 +15,7 @@ metadata:
   - QC-Tool
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel
@@ -40,6 +44,7 @@ attribution:
 
 # pre-analytical-delay-effect-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the effect of processing delays (pre- and post-centrifugation) on metabolic parameters in peripheral blood samples by calculating delay-stratified metabolite concentration shifts and data quality degradation metrics. This skill enables cohort-level assessment of pre-analytical stability to inform sample handling protocols and data interpretation.

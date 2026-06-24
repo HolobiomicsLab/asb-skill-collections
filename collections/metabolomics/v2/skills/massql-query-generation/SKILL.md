@@ -1,6 +1,8 @@
 ---
 name: massql-query-generation
-description: Use when you have trained a shallow decision tree on ChemEcho feature vectors (representing unique peak or neutral loss formulas from tandem MS spectra) and need to deploy the learned splitting logic as a queryable, inspectable artifact.
+description: Use when you have trained a shallow decision tree on ChemEcho feature
+  vectors (representing unique peak or neutral loss formulas from tandem MS spectra)
+  and need to deploy the learned splitting logic as a queryable, inspectable artifact.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,13 +15,15 @@ metadata:
   - scikit-learn (or equivalent tree library)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
 evidence_spans:
-- The Mass Query Language (MassQL) is a domain specific language used to describe fragmentation patterns
+- The Mass Query Language (MassQL) is a domain specific language used to describe
+  fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # Convert decision tree paths to MassQL queries for mass spectrometry deployment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill translates decision tree splitting rules trained on ChemEcho sparse feature vectors (peak and neutral loss formulas) into executable Mass Query Language (MassQL) queries for direct deployment against tandem mass spectrometry datasets. It bridges interpretable machine learning and domain-specific query languages, enabling reproducible, explainable fragmentation pattern detection without black-box latent representations.

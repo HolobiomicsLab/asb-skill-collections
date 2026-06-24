@@ -1,6 +1,9 @@
 ---
 name: chromatogram-extraction-and-visualization
-description: Use when you have sqMass files containing pre-extracted transition group chromatograms from DIA-MS experiments and need to interactively visualize individual peptide precursor chromatograms, inspect peak quality via Q-values (typically 1% FDR cutoff), and overlay peak boundaries or apply on-the-fly.
+description: Use when you have sqMass files containing pre-extracted transition group
+  chromatograms from DIA-MS experiments and need to interactively visualize individual
+  peptide precursor chromatograms, inspect peak quality via Q-values (typically 1%
+  FDR cutoff), and overlay peak boundaries or apply on-the-fly.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -19,11 +22,14 @@ metadata:
   - pyMRMTransitionGroupPicker
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading however since extraction has already been performed by the upstream analysis tool. This includes SqMassLoader'
+- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading
+  however since extraction has already been performed by the upstream analysis tool.
+  This includes SqMassLoader'
 - InteractivePlotter
 - MRMTransitionGroupPicker
 - pyMRMTransitionGroupPicker

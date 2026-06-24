@@ -1,6 +1,9 @@
 ---
 name: metadata-transformation-verification
-description: Use when you have extracted raw tabular metadata into JSON form using the MESSES extract command and need to confirm the extraction is accurate before conversion to a repository-specific format. Specifically, use it when the conversion target format has strict schema requirements (e.
+description: Use when you have extracted raw tabular metadata into JSON form using
+  the MESSES extract command and need to confirm the extraction is accurate before
+  conversion to a repository-specific format. Specifically, use it when the conversion
+  target format has strict schema requirements (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +14,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -42,6 +46,7 @@ attribution:
 
 # metadata-transformation-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that tabular experimental metadata has been correctly extracted into an intermediate JSON representation and transformed to a target format (e.g., mwTab) by validating against schema constraints and comparing output against expected canonical results. This skill ensures data integrity across the extract–validate–convert pipeline used in metabolomics data deposition workflows.

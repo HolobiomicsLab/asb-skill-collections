@@ -1,6 +1,9 @@
 ---
 name: structural-similarity-ground-truth-validation
-description: Use when you have a spectral library with structural ground truth (InChIKey or SMILES annotations for ≥50% of spectra) and want to benchmark whether a new or existing spectral similarity scorer ranks structurally related compounds higher than unrelated ones.
+description: Use when you have a spectral library with structural ground truth (InChIKey
+  or SMILES annotations for ≥50% of spectra) and want to benchmark whether a new or
+  existing spectral similarity scorer ranks structurally related compounds higher
+  than unrelated ones.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -19,16 +22,21 @@ metadata:
   - Pandas / NumPy
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
+  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +60,7 @@ attribution:
 
 # structural-similarity-ground-truth-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate spectral similarity scoring methods by comparing their rankings against ground-truth structural annotations (InChIKeys) and computing receiver-operator-characteristic curves to measure true-positive and false-positive rates. This skill establishes whether a similarity metric (cosine, modified cosine, Spec2Vec, etc.) correlates with actual chemical structure similarity.

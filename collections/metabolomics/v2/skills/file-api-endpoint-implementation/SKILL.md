@@ -1,6 +1,8 @@
 ---
 name: file-api-endpoint-implementation
-description: Use when when you need to construct a POST endpoint that ingests raw spectral data files from multiple vendor formats (jcamp, RAW, mzML) and must standardize them for downstream processing.
+description: Use when when you need to construct a POST endpoint that ingests raw
+  spectral data files from multiple vendor formats (jcamp, RAW, mzML) and must standardize
+  them for downstream processing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -15,15 +17,18 @@ metadata:
   - gunicorn
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
 evidence_spans:
 - Use the file pyproject.toml to determine the version of Python required.
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
-- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
+- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data
+  proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

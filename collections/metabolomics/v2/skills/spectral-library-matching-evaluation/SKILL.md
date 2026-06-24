@@ -1,6 +1,8 @@
 ---
 name: spectral-library-matching-evaluation
-description: Use when you have a trained spectral embedding model (e.g., MSBERT, Spec2Vec) and need to benchmark its library matching accuracy against reference spectra on a test dataset.
+description: Use when you have a trained spectral embedding model (e.g., MSBERT, Spec2Vec)
+  and need to benchmark its library matching accuracy against reference spectra on
+  a test dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,6 +20,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

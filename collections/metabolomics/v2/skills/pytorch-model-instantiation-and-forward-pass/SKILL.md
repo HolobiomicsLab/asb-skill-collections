@@ -17,6 +17,7 @@ metadata:
   - torch_geometric
   - rdkit-pypi
   - torch-scatter, torch-sparse, torch-cluster
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -58,6 +59,7 @@ attribution:
 
 # PyTorch Model Instantiation and Forward Pass
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate a PyTorch neural network model (with multiple branches and custom fusion logic) and execute a forward pass on a batch of mixed-modality inputs to verify correct tensor flow, output shape, and numeric validity. This skill is essential for validating that a dual-branch architecture correctly processes fingerprint and graph data before training or inference.

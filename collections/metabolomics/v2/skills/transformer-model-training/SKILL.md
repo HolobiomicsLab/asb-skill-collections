@@ -1,6 +1,8 @@
 ---
 name: transformer-model-training
-description: Use when you have a dataset of augmented simulated overlapped GC-MS peaks and need to train a Transformer model to automatically deconvolve them into pure component mass spectra.
+description: Use when you have a dataset of augmented simulated overlapped GC-MS peaks
+  and need to train a Transformer model to automatically deconvolve them into pure
+  component mass spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -17,6 +19,7 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

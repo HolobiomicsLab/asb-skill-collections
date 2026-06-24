@@ -1,6 +1,9 @@
 ---
 name: metabolite-change-direction-categorization
-description: Use when when you have omu_summary output containing log2FoldChange values and adjusted p-values (padj) for metabolites, and you need to stratify them by direction of change within a specific compound class (e.g., organic acids, amino acids) at a defined significance threshold (typically padj ≤ 0.
+description: Use when when you have omu_summary output containing log2FoldChange values
+  and adjusted p-values (padj) for metabolites, and you need to stratify them by direction
+  of change within a specific compound class (e.g., organic acids, amino acids) at
+  a defined significance threshold (typically padj ≤ 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - omu_summary
   - pie_chart
   - ggplot2
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -42,6 +46,7 @@ attribution:
 
 # metabolite-change-direction-categorization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Categorize significantly altered metabolites by direction of change (increased vs. decreased) and count their frequencies within compound classes. This skill enables visualization and quantification of metabolite response patterns in metabolomics experiments filtered by statistical significance thresholds.

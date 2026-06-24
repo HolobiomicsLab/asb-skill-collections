@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-quality-assessment
-description: Use when when raw mass spectrometry spectral data has been imported into matchms from common file formats (mzML, mzXML, msp, MGF, JSON) and you need to assess whether metadata fields are correctly normalized, validated against schema requirements, and peaks are appropriately filtered before.
+description: Use when when raw mass spectrometry spectral data has been imported into
+  matchms from common file formats (mzML, mzXML, msp, MGF, JSON) and you need to assess
+  whether metadata fields are correctly normalized, validated against schema requirements,
+  and peaks are appropriately filtered before.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,13 +19,15 @@ metadata:
   - XCMS CentWave
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 - doi: 10.1021/acs.analchem.1c04758
   title: ''
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - matchms is a versatile open-source Python package
 - make sure the existing tests still work by running ``pytest``
 - github.com/HuanLab/Paramounter

@@ -1,6 +1,8 @@
 ---
 name: regression-accuracy-assessment
-description: Use when after fitting linear regression models to relate peak area intensities to known concentrations in targeted metabolomics curves (standard samples and quality control replicates).
+description: Use when after fitting linear regression models to relate peak area intensities
+  to known concentrations in targeted metabolomics curves (standard samples and quality
+  control replicates).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,14 +15,17 @@ metadata:
   - lme4
   - AER
   - R (base stats)
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
-- linear models with mixed effects (random and fixed), using the _lmer_ function from the lme4 package
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
+- linear models with mixed effects (random and fixed), using the _lmer_ function from
+  the lme4 package
 - TOBIT linear models, using the _tobit_ function of the AER package
 claims: []
 provenance:

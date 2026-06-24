@@ -1,6 +1,8 @@
 ---
 name: latent-group-discovery-from-omics-data
-description: Use when you have a preprocessed metabolomics feature matrix and sample metadata but suspect hidden substructures or unknown groupings that are not explained by known experimental conditions.
+description: Use when you have a preprocessed metabolomics feature matrix and sample
+  metadata but suspect hidden substructures or unknown groupings that are not explained
+  by known experimental conditions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3929
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - SMART
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

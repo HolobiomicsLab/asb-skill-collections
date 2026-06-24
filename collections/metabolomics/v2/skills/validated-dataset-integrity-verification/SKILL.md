@@ -10,6 +10,7 @@ metadata:
   tools:
   - R
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +45,7 @@ attribution:
 
 # validated-dataset-integrity-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify the structural and semantic integrity of a validated dataset by independently reproducing key aggregation metrics (unique entities, deduplicated pairs) and confirming they match reported values. This skill ensures that downstream analyses rely on accurate, consistently counted data.

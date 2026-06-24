@@ -1,6 +1,9 @@
 ---
 name: metabolite-cv-ratio-calculation
-description: Use when after normalizing a metabolomic feature matrix when you have both non-QC (study) samples and QC (quality-control) replicates in the same experiment. Use it to remove features that are poorly reproducible or show inconsistent signal across samples relative to instrument/technical variation.
+description: Use when after normalizing a metabolomic feature matrix when you have
+  both non-QC (study) samples and QC (quality-control) replicates in the same experiment.
+  Use it to remove features that are poorly reproducible or show inconsistent signal
+  across samples relative to instrument/technical variation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - notame
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -21,7 +25,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # metabolite-cv-ratio-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and apply coefficient-of-variation (CV) ratios between sample and QC groups to filter metabolomic features by reproducibility. This skill identifies features with elevated variability in real samples relative to quality-control replicates, retaining only those exceeding a ratio threshold (typically CV_non-QC / CV_QC > 1.0).

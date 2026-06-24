@@ -1,6 +1,9 @@
 ---
 name: intensity-threshold-filtering-ms-data
-description: Use when when you have loaded aligned peak data (from a preceding molecular networking alignment task) as a structured table with peak intensity, m/z, retention time, and alignment quality metrics, and you need to reduce false positives, remove noise, or focus analysis on peaks above a.
+description: Use when when you have loaded aligned peak data (from a preceding molecular
+  networking alignment task) as a structured table with peak intensity, m/z, retention
+  time, and alignment quality metrics, and you need to reduce false positives, remove
+  noise, or focus analysis on peaks above a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - Dash
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA
@@ -43,6 +47,7 @@ attribution:
 
 # Intensity-Threshold Filtering of Mass Spectrometry Data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter aligned mass spectrometry peaks by intensity threshold and alignment-quality metrics to retain only peaks meeting user-defined criteria. This skill removes low-intensity noise and poor-quality alignments, enabling focused downstream analysis of high-confidence molecular networking peak sets.

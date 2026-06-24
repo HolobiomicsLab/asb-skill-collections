@@ -1,6 +1,7 @@
 ---
 name: configuration-file-modification
-description: Use when when you need to expand or contract a mass spectrometry dataset by adding or removing allowed instrument types (e.
+description: Use when when you need to expand or contract a mass spectrometry dataset
+  by adding or removing allowed instrument types (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +13,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -40,6 +42,7 @@ attribution:
 
 # configuration-file-modification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Modify YAML configuration files to alter instrument allowlists and dataset filtering parameters in FIDDLE preprocessing pipelines, enabling expansion or refinement of training and test compound pools for mass spectrometry molecular formula prediction.

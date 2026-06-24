@@ -1,6 +1,8 @@
 ---
 name: isotopic-enrichment-simulation
-description: Use when you have a peptide sequence and need to predict its theoretical m/z values under partial or complete isotopic enrichment (e.g., 1% natural 13C abundance, 50% 13C labeling, or other SIP conditions).
+description: Use when you have a peptide sequence and need to predict its theoretical
+  m/z values under partial or complete isotopic enrichment (e.g., 1% natural 13C abundance,
+  50% 13C labeling, or other SIP conditions).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,12 +19,15 @@ metadata:
   - Sipros
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 claims: []
 provenance:

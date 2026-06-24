@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-integrity-verification
-description: Use when you have received or downloaded an SDF-formatted compound database file and need to confirm it is not corrupted, contains the expected number of molecular records, and that each record is structurally valid before using it in compound identification, library matching, or database.
+description: Use when you have received or downloaded an SDF-formatted compound database
+  file and need to confirm it is not corrupted, contains the expected number of molecular
+  records, and that each record is structurally valid before using it in compound
+  identification, library matching, or database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3433
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - RDKit
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -37,6 +41,7 @@ attribution:
 
 # chemical-structure-integrity-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates the structural integrity and parseable format of a chemical compound database file (SDF) by parsing molecular records and confirming each entry represents a single, chemically valid compound. This skill ensures data quality before downstream analysis or integration into metabolomics or adductomics workflows.

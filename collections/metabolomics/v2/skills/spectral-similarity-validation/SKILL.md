@@ -1,6 +1,9 @@
 ---
 name: spectral-similarity-validation
-description: Use when after training a Word2vec model on tokenized mass spectra and converting reference spectra into fixed-length embedding vectors, use this skill to confirm that the embedding space preserves spectral similarity before deploying it for spectrum matching.
+description: Use when after training a Word2vec model on tokenized mass spectra and
+  converting reference spectra into fixed-length embedding vectors, use this skill
+  to confirm that the embedding space preserves spectral similarity before deploying
+  it for spectrum matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +14,7 @@ metadata:
   - gensim
   - Python
   - scikit-learn or scipy
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

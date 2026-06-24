@@ -1,6 +1,8 @@
 ---
 name: structure-validation-and-canonicalization
-description: Use when ingesting heterogeneous raw chemical structures from external datasets, publications, or user submissions into a retention time or molecular property prediction pipeline.
+description: Use when ingesting heterogeneous raw chemical structures from external
+  datasets, publications, or user submissions into a retention time or molecular property
+  prediction pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3966
@@ -10,6 +12,7 @@ metadata:
   tools:
   - PubChem standardization
   - rcdk
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

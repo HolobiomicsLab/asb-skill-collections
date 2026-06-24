@@ -1,6 +1,9 @@
 ---
 name: spectral-library-candidate-ranking
-description: Use when after MS2Deepscore has selected the top 2000 candidate spectra from a library based on spectral similarity, and you need to re-rank these candidates to surface the single match (either exact or analogue) rather than rely on raw spectral similarity alone.
+description: Use when after MS2Deepscore has selected the top 2000 candidate spectra
+  from a library based on spectral similarity, and you need to re-rank these candidates
+  to surface the single match (either exact or analogue) rather than rely on raw spectral
+  similarity alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - Python (pytest, setuptools)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

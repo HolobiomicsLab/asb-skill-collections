@@ -1,6 +1,7 @@
 ---
 name: mnar-data-quality-assessment
-description: Use when when you have applied multiple left-censored missing value imputation methods to metabolomics data and need to compare their performance quantitatively.
+description: Use when when you have applied multiple left-censored missing value imputation
+  methods to metabolomics data and need to compare their performance quantitatively.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,7 @@ metadata:
   - imputeLCMD R package (QRILC)
   - Trunc_KNN (kNN-TN)
   - R (with magrittr, reshape2, ggplot2)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -43,6 +45,7 @@ attribution:
 
 # MNAR Data Quality Assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the quality and recovery accuracy of left-censored missing value imputation methods (GSimp, QRILC, kNN-TN) in metabolomics data by comparing imputed values against known true values using standardized performance metrics.

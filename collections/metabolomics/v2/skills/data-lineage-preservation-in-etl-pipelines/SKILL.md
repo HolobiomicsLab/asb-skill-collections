@@ -1,6 +1,8 @@
 ---
 name: data-lineage-preservation-in-etl-pipelines
-description: Use when when consolidating entries from multiple heterogeneous source databases into a unified table, and you need to maintain auditable connections between final curated records and their original source entries.
+description: Use when when consolidating entries from multiple heterogeneous source
+  databases into a unified table, and you need to maintain auditable connections between
+  final curated records and their original source entries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - data.table
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -42,6 +45,7 @@ attribution:
 
 # data-lineage-preservation-in-etl-pipelines
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preserve and track the origin, transformations, and identifiers of data records as they flow through multi-stage extraction, transformation, and curation pipelines. This skill ensures that denormalized final tables maintain explicit links to original source records, enabling reproducibility and traceability of derived data.

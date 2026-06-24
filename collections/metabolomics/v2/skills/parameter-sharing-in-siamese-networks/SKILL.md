@@ -1,6 +1,8 @@
 ---
 name: parameter-sharing-in-siamese-networks
-description: Use when when processing paired augmented versions of the same input (e.g., two augmented ion images in COL or ISO mode) and you need to learn meaningful low-dimensional representations via contrastive loss.
+description: Use when when processing paired augmented versions of the same input
+  (e.g., two augmented ion images in COL or ISO mode) and you need to learn meaningful
+  low-dimensional representations via contrastive loss.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,12 +15,14 @@ metadata:
   - Contrastive loss function
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # parameter-sharing-in-siamese-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a Siamese encoder architecture where two parallel branches share identical weights to process paired augmented inputs and generate matched-dimensional representation vectors. This approach enforces consistent feature extraction across both branches, enabling contrastive learning on augmented ion images in mass spectrometry imaging.

@@ -1,6 +1,8 @@
 ---
 name: experiment-design-specification-for-clustering
-description: Use when you have a CSV feature table from XCMS or other MS feature detection tools and are about to run RAMClustR clustering, but need to encode which samples are QC replicates, which batch they belong to, and their run order.
+description: Use when you have a CSV feature table from XCMS or other MS feature detection
+  tools and are about to run RAMClustR clustering, but need to encode which samples
+  are QC replicates, which batch they belong to, and their run order.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,13 +14,15 @@ metadata:
   - R
   - dynamicTreeCut
   - XCMS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # experiment-design-specification-for-clustering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define and encode the experimental design metadata (sample groupings, batch information, QC tags, run order) required by RAMClustR to properly normalize feature intensities and perform unsupervised clustering of metabolomics features. This specification bridges raw feature tables and clustering by capturing which samples belong to which experimental conditions, batches, and quality control cohorts.

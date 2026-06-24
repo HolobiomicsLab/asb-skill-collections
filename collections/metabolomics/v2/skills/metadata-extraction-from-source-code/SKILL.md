@@ -1,6 +1,9 @@
 ---
 name: metadata-extraction-from-source-code
-description: Use when you need to reverse-engineer or document the architecture of a multi-component research software system where design information is embedded in repository structure, README declarations, setup files, or module docstrings rather than in a separate design document.
+description: Use when you need to reverse-engineer or document the architecture of
+  a multi-component research software system where design information is embedded
+  in repository structure, README declarations, setup files, or module docstrings
+  rather than in a separate design document.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -8,6 +11,7 @@ metadata:
   tools:
   - MAGMa
   - GitHub
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -37,6 +41,7 @@ attribution:
 
 # metadata-extraction-from-source-code
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract architectural metadata (component names, roles, interdependencies, and functional descriptions) from source code repositories, README files, and configuration artifacts to reconstruct system design and workflow dependencies. This skill is essential when documentation is sparse or distributed across multiple files and you need to understand how discrete subproject components interact.

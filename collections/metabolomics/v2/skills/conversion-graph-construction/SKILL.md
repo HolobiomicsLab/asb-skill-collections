@@ -1,6 +1,8 @@
 ---
 name: conversion-graph-construction
-description: Use when when integrating MSMetaEnhancer into Galaxy or another workflow platform and you need to dynamically populate conversion option menus without hardcoding service-specific logic.
+description: Use when when integrating MSMetaEnhancer into Galaxy or another workflow
+  platform and you need to dynamically populate conversion option menus without hardcoding
+  service-specific logic.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3429
@@ -19,6 +21,7 @@ metadata:
   - IDSM
   - BridgeDb
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

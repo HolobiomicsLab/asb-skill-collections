@@ -1,6 +1,9 @@
 ---
 name: r-python-interoperability-bridging
-description: Use when when your analysis requires functionality from both R (statistical modeling, ROC analysis, caret machine learning) and Python (keras deep learning backend, numpy arrays) within a single R session, particularly for cross-language machine learning workflows like SERDA normalization that.
+description: Use when when your analysis requires functionality from both R (statistical
+  modeling, ROC analysis, caret machine learning) and Python (keras deep learning
+  backend, numpy arrays) within a single R session, particularly for cross-language
+  machine learning workflows like SERDA normalization that.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3677
@@ -16,6 +19,7 @@ metadata:
   - Python
   - numpy
   - r-miniconda
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
@@ -49,6 +53,7 @@ attribution:
 
 # R-Python Interoperability Bridging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Establish bidirectional R–Python interoperability using the reticulate package to enable deep learning and statistical workflows that span both ecosystems. This skill is essential when a data normalization or machine learning pipeline requires both R's statistical packages (e.g., caret, pROC) and Python's deep learning frameworks (e.g., keras) in a single reproducible environment.

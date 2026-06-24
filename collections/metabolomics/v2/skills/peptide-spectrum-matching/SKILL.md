@@ -1,6 +1,8 @@
 ---
 name: peptide-spectrum-matching
-description: Use when when you have high-resolution tandem mass spectrometry data (in mzML or mzXML format) and a spectral library, and need to identify peptides including those with post-translational modifications.
+description: Use when when you have high-resolution tandem mass spectrometry data
+  (in mzML or mzXML format) and a spectral library, and need to identify peptides
+  including those with post-translational modifications.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,12 +15,15 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is
+  a spectral library search engine
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

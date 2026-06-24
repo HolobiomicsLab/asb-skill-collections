@@ -1,6 +1,8 @@
 ---
 name: m-z-value-clustering-mass-spectrometry
-description: Use when processing extracted peak lists from MSI data and you need to annotate matrix-related signals but suspect that multiple ions with the same or very similar m/z values (isobaric ions) are present.
+description: Use when processing extracted peak lists from MSI data and you need to
+  annotate matrix-related signals but suspect that multiple ions with the same or
+  very similar m/z values (isobaric ions) are present.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,11 +16,13 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - rMSIcleanup is an open-source R package
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # m/z-value clustering in mass spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and flag mass-to-charge ratio (m/z) peaks with identical or near-identical values (isobaric ions) to prevent their misclassification during matrix-related signal annotation in mass spectrometry imaging (MSI) data. This skill uses spatial distribution and chemical formula context to distinguish overlapping or isobaric peaks that would otherwise confound downstream annotation.

@@ -1,6 +1,7 @@
 ---
 name: reference-peak-matching-and-alignment
-description: Use when when you have a processed mass spectrum object (e.g., from Bruker FT-ICR acquisition) and a reference peak list (e.g., SRFA.
+description: Use when when you have a processed mass spectrum object (e.g., from Bruker
+  FT-ICR acquisition) and a reference peak list (e.g., SRFA.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +15,14 @@ metadata:
   - Bruker Solarix
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - import pandas as pd
 claims: []
@@ -45,6 +48,7 @@ attribution:
 
 # reference-peak-matching-and-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match and align observed mass spectrum peaks against a reference peak list to establish calibration points, enabling mass recalibration via polynomial fitting. This skill is essential for high-resolution FT-ICR-MS where precise m/z assignment depends on matching experimental peaks to known standards within specified mass error tolerances.

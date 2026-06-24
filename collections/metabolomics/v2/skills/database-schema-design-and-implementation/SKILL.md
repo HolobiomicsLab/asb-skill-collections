@@ -1,6 +1,8 @@
 ---
 name: database-schema-design-and-implementation
-description: Use when when you have an mzML file that you want to store persistently in a queryable format for repeated access, or when memory constraints prevent loading entire mzML files into memory;
+description: Use when when you have an mzML file that you want to store persistently
+  in a queryable format for repeated access, or when memory constraints prevent loading
+  entire mzML files into memory;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   - Black
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,6 +46,7 @@ attribution:
 
 # database-schema-design-and-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a SQLite database schema to store mass spectrometry spectrum data indexed by spectrum ID, then integrate it with pymzML's FileInterface to enable random-access and sequential retrieval of Spectrum objects. This skill bridges in-memory mzML parsing with persistent, queryable storage for large MS datasets.

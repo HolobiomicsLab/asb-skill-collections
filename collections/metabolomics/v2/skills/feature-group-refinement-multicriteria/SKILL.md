@@ -1,6 +1,9 @@
 ---
 name: feature-group-refinement-multicriteria
-description: 'Use when after initial retention-time-based feature grouping (e.g., ±20 s window) when you need to separate co-eluting features that are chemically distinct. Triggers include: (1) large feature groups (>2–3 members) suspected to contain multiple compounds;'
+description: 'Use when after initial retention-time-based feature grouping (e.g.,
+  ±20 s window) when you need to separate co-eluting features that are chemically
+  distinct. Triggers include: (1) large feature groups (>2–3 members) suspected to
+  contain multiple compounds;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -14,11 +17,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

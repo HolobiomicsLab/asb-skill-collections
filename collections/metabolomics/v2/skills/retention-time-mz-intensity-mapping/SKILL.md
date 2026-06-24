@@ -1,6 +1,9 @@
 ---
 name: retention-time-mz-intensity-mapping
-description: Use when you have processed LC-MS run data (feature table or peak detection output) containing internal standard identifications with retention times, m/z values, and intensity measurements across multiple samples, and you need to rapidly detect instrumental drift, retention time shifts, or.
+description: Use when you have processed LC-MS run data (feature table or peak detection
+  output) containing internal standard identifications with retention times, m/z values,
+  and intensity measurements across multiple samples, and you need to rapidly detect
+  instrumental drift, retention time shifts, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -13,6 +16,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

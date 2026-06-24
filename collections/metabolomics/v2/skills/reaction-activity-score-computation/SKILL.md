@@ -1,6 +1,9 @@
 ---
 name: reaction-activity-score-computation
-description: Use when you have RNA-seq read count data and a metabolic model with GPR rules, and you need to assess how differential gene expression translates into differential metabolic reaction capacity across multiple biological conditions or cell lines.
+description: Use when you have RNA-seq read count data and a metabolic model with
+  GPR rules, and you need to assess how differential gene expression translates into
+  differential metabolic reaction capacity across multiple biological conditions or
+  cell lines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,13 +16,17 @@ metadata:
   - optGpSampler
   - Mann-Whitney U test
   - INTEGRATE pipeline
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD distributions of each pair of the five cell lines
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- we first performed the Mann-Whitney U test [73] (p-value < 0.05) between the FFD
+  distributions of each pair of the five cell lines
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +50,7 @@ attribution:
 
 # Reaction Activity Score (RAS) Computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes Reaction Activity Scores (RAS) from RNA-seq read counts and Gene-Protein-Reaction (GPR) associations to quantify the transcriptional regulation of metabolic reactions across biological samples. RAS serves as a proxy for differential enzyme abundance and enables discrimination of transcriptionally-controlled from metabolically-controlled metabolic fluxes.

@@ -1,6 +1,9 @@
 ---
 name: spectral-metadata-standardization
-description: Use when you have mass spectrometry spectra stored across multiple, disparate metabolomics repositories (GNPS, MassBank, MetaboLights, Metabolomics Workbench, ProteoXchange, MS2LDA) and need to retrieve them using a single identifier scheme, or you are publishing spectrum figures and need.
+description: Use when you have mass spectrometry spectra stored across multiple, disparate
+  metabolomics repositories (GNPS, MassBank, MetaboLights, Metabolomics Workbench,
+  ProteoXchange, MS2LDA) and need to retrieve them using a single identifier scheme,
+  or you are publishing spectrum figures and need.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -21,6 +24,7 @@ metadata:
   - MetaQC
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

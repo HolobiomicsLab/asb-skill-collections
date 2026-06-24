@@ -1,6 +1,9 @@
 ---
 name: vendor-format-routing-dispatch
-description: Use when you have a collection of raw mass spectrometry data files from multiple instrument vendors (Agilent, Bruker, Thermo) and/or mzML exports that need to be converted to a standardized, cross-platform format for downstream software development, AI research, or multi-vendor meta-analysis.
+description: Use when you have a collection of raw mass spectrometry data files from
+  multiple instrument vendors (Agilent, Bruker, Thermo) and/or mzML exports that need
+  to be converted to a standardized, cross-platform format for downstream software
+  development, AI research, or multi-vendor meta-analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,11 +17,13 @@ metadata:
   - rhdf5
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: metabolic-function-classification
-description: Use when when you have reconstructed metabolic networks from two or more organisms in KEGG and need to compare them not only in terms of reaction topology but also in terms of which metabolic functions (e.g., glycolysis, citric acid cycle) are present and how they differ.
+description: Use when when you have reconstructed metabolic networks from two or more
+  organisms in KEGG and need to compare them not only in terms of reaction topology
+  but also in terms of which metabolic functions (e.g., glycolysis, citric acid cycle)
+  are present and how they differ.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -11,12 +14,15 @@ metadata:
   - MetNet
   - Java
   - KEGG
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
 evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network of two organisms selected in KEGG
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network
 - MetNet is a Java tool
 claims: []
 provenance:

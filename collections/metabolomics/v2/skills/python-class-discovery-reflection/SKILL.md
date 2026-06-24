@@ -1,6 +1,9 @@
 ---
 name: python-class-discovery-reflection
-description: Use when when building an extensible converter framework where new converter implementations (e.g., WebConverters or ComputeConverters for external chemical services) should be automatically discovered and registered without modifying a central registry.
+description: Use when when building an extensible converter framework where new converter
+  implementations (e.g., WebConverters or ComputeConverters for external chemical
+  services) should be automatically discovered and registered without modifying a
+  central registry.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,13 +11,15 @@ metadata:
   - pytest
   - Python
   - MSMetaEnhancer
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer
 evidence_spans:
 - make sure the existing tests still work by running ``pytest``
 - A Python package for mass spectra metadata annotation
-- Create a new Python file in `MSMetaEnhancer/libs/converters/web/` named after your service
+- Create a new Python file in `MSMetaEnhancer/libs/converters/web/` named after your
+  service
 - MSMetaEnhancer is a tool used for `.msp` files annotation
 - 'Converter Builder: Automatically discovers and instantiates available converters'
 claims: []

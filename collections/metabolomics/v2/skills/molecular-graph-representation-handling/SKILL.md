@@ -1,6 +1,9 @@
 ---
 name: molecular-graph-representation-handling
-description: Use when when you have molecular structure data (SMILES or molecular IDs) from chemistry databases (e.g., PubChem, HMDB) and need to feed it into a neural network architecture like TransG-Net that expects multimodal inputs combining graph-structured molecular topology with learned embeddings.
+description: Use when when you have molecular structure data (SMILES or molecular
+  IDs) from chemistry databases (e.g., PubChem, HMDB) and need to feed it into a neural
+  network architecture like TransG-Net that expects multimodal inputs combining graph-structured
+  molecular topology with learned embeddings.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -19,6 +22,7 @@ metadata:
   - PyTorch (torch >= 1.4.0)
   - data_prep.py
   - TransGNet.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -52,6 +56,7 @@ attribution:
 
 # molecular-graph-representation-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract, construct, and validate molecular graph representations (vertices, edges, atomic features) as inputs to neural network models that process multimodal molecular data. This skill bridges molecular chemistry (RDKit) and deep learning (PyTorch) by converting chemical structure files into tensor-compatible graph formats.

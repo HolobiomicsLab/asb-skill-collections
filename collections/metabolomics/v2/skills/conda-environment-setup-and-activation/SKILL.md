@@ -1,6 +1,8 @@
 ---
 name: conda-environment-setup-and-activation
-description: Use when preparing a fresh system or user account to run MSIGen for mass spectrometry imaging data processing, or when you need to isolate MSIGen installation from other Python projects to avoid dependency conflicts.
+description: Use when preparing a fresh system or user account to run MSIGen for mass
+  spectrometry imaging data processing, or when you need to isolate MSIGen installation
+  from other Python projects to avoid dependency conflicts.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -14,14 +16,18 @@ metadata:
   - Git
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
-- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
+- If you are planning on using Bruker .d data in the .baf format, you will also need
+  to install pyBaf2Sql from GitHub
+- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert
+  tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
 - You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html.
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
 claims: []

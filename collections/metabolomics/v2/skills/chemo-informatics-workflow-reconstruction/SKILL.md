@@ -1,6 +1,7 @@
 ---
 name: chemo-informatics-workflow-reconstruction
-description: Use when when you have access to the source code of a chemo-informatics tool (e.
+description: Use when when you have access to the source code of a chemo-informatics
+  tool (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -11,6 +12,7 @@ metadata:
   tools:
   - MAGMa
   - PubChem
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -40,6 +42,7 @@ attribution:
 
 # chemo-informatics-workflow-reconstruction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstructs the algorithmic pipeline and computational logic of a chemo-informatics tool (MAGMa) by performing static code analysis on source modules to extract fragmentation rules, molecular property filters, and in silico metabolite enumeration steps. This skill is essential when you need to understand, document, or reproduce the internal chemical transformation logic of a closed or insufficiently documented metabolite generation system.

@@ -1,6 +1,8 @@
 ---
 name: metabolomic-feature-filtering-threshold-application
-description: Use when after running the Marr() function on preprocessed metabolomic data (with missing value imputation and normalization already complete) when you need to distinguish reproducible from non-reproducible features and sample pairs.
+description: Use when after running the Marr() function on preprocessed metabolomic
+  data (with missing value imputation and normalization already complete) when you
+  need to distinguish reproducible from non-reproducible features and sample pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - Bioconductor
   - marr
   - MSPrep
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -47,6 +50,7 @@ attribution:
 
 # metabolomic-feature-filtering-threshold-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply reproducibility-based thresholds to filter metabolomic features and sample pairs in high-dimensional replicate experiments, identifying which features and sample pairs meet minimum reproducibility standards. This skill uses the marr (Maximum Rank Reproducibility) method to assign reproducibility status based on the percentage of reproducible signals across pairwise replicate combinations.

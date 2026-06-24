@@ -1,6 +1,8 @@
 ---
 name: amino-acid-level-accuracy-evaluation
-description: Use when you have predicted peptide sequences from a de novo sequencing tool (e.g., Casanovo) and want to understand the fine-grained accuracy of the predictions beyond exact-match peptide-level scoring.
+description: Use when you have predicted peptide sequences from a de novo sequencing
+  tool (e.g., Casanovo) and want to understand the fine-grained accuracy of the predictions
+  beyond exact-match peptide-level scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,14 +17,17 @@ metadata:
   - limelight-import-casanovo
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 claims: []
@@ -49,6 +54,7 @@ attribution:
 
 # Amino-acid-level accuracy evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate peptide sequence predictions at the individual amino acid level by comparing predicted sequences against ground truth annotations, computing residue-wise precision, recall, and F1 scores. This skill is essential for assessing whether decoding strategies (e.g., greedy vs. beam search) or different de novo sequencing tools produce higher-quality predictions even when full-length peptide sequences differ.

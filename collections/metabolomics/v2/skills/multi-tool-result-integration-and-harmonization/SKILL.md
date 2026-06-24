@@ -1,6 +1,8 @@
 ---
 name: multi-tool-result-integration-and-harmonization
-description: Use when when you have completed parallel or sequential tool runs (e.g., CPAT, signalP, Pfam, fimo) on the same set of sequences and need to create a unified functional annotation table, summary statistics, or cross-tool comparison report.
+description: Use when when you have completed parallel or sequential tool runs (e.g.,
+  CPAT, signalP, Pfam, fimo) on the same set of sequences and need to create a unified
+  functional annotation table, summary statistics, or cross-tool comparison report.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -16,6 +18,7 @@ metadata:
   - IsoformSwitchAnalyzer
   - Pfam
   - R packages (edger, limma, ComplexHeatmap, ggplot2)
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator

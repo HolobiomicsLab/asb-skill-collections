@@ -1,6 +1,9 @@
 ---
 name: consensus-classification-reconciliation
-description: Use when you have spectral features annotated by both in silico structural prediction tools (e.g., SIRIUS/CANOPUS) and spectral library matching (GNPS), and you need a single authoritative chemical classification per feature rather than a list of competing candidates.
+description: Use when you have spectral features annotated by both in silico structural
+  prediction tools (e.g., SIRIUS/CANOPUS) and spectral library matching (GNPS), and
+  you need a single authoritative chemical classification per feature rather than
+  a list of competing candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -15,14 +18,17 @@ metadata:
   - ConCISE
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

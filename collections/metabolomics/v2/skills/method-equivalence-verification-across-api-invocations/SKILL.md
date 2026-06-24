@@ -1,6 +1,9 @@
 ---
 name: method-equivalence-verification-across-api-invocations
-description: Use when when a tool like TARDIS extends its API to accept multiple input types (e.g., both file paths and MsExperiment objects), and you need to confirm that screening-mode diagnostic outputs (e.g., EIC plots, peak detection metrics) are identical regardless of which invocation pattern is used.
+description: Use when when a tool like TARDIS extends its API to accept multiple input
+  types (e.g., both file paths and MsExperiment objects), and you need to confirm
+  that screening-mode diagnostic outputs (e.g., EIC plots, peak detection metrics)
+  are identical regardless of which invocation pattern is used.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,13 +19,16 @@ metadata:
   - knitr
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 claims: []
@@ -48,6 +54,7 @@ attribution:
 
 # method-equivalence-verification-across-api-invocations
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that two distinct API invocation patterns (file-path-based vs. object-based) of the same analytical method produce functionally identical outputs on the same input data. This skill is critical when a tool's API is refactored or extended to support alternative input types, and reproducibility must be guaranteed across both calling conventions.

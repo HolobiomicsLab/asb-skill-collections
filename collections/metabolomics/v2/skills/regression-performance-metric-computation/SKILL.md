@@ -1,6 +1,9 @@
 ---
 name: regression-performance-metric-computation
-description: Use when after generating collision cross section predictions on a validation or test set using a trained graph neural network model, and you need to quantify prediction accuracy and compare against reported performance metrics in the literature or prior experimental runs.
+description: Use when after generating collision cross section predictions on a validation
+  or test set using a trained graph neural network model, and you need to quantify
+  prediction accuracy and compare against reported performance metrics in the literature
+  or prior experimental runs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,7 @@ metadata:
   - reproduce_figures notebooks
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -46,6 +50,7 @@ attribution:
 
 # regression-performance-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute standard regression performance metrics (mean absolute error, R², and other statistics) on model predictions against ground-truth labels to quantify generalizability of graph neural network collision cross section predictions. This skill validates whether a trained model reproduces reported performance benchmarks.

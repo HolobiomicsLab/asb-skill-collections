@@ -1,6 +1,8 @@
 ---
 name: spectral-similarity-matching-and-comparison
-description: Use when after extracting and optionally combining MS2 spectra from a chromatographic peak (e.g., at a known m/z value like 304.1131), you need to determine which compound(s) in a reference library match the experimental spectrum.
+description: Use when after extracting and optionally combining MS2 spectra from a
+  chromatographic peak (e.g., at a known m/z value like 304.1131), you need to determine
+  which compound(s) in a reference library match the experimental spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -18,11 +20,13 @@ metadata:
   - GC-MS
   - CE-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 - library(Spectra)
 - library(MsBackendMgf)
 - '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'

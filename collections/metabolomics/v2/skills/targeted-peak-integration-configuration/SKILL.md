@@ -1,6 +1,8 @@
 ---
 name: targeted-peak-integration-configuration
-description: Use when when performing targeted quantification of known compounds in LC-MS data using TARDIS, especially when the instrument acquired data with multiple overlapping m/z scan windows.
+description: Use when when performing targeted quantification of known compounds in
+  LC-MS data using TARDIS, especially when the instrument acquired data with multiple
+  overlapping m/z scan windows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,11 +19,13 @@ metadata:
   - knitr / kableExtra
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
@@ -48,6 +52,7 @@ attribution:
 
 # targeted-peak-integration-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and validate input parameters for targeted peak detection and integration in LC-MS data, including proper m/z window segregation, target list definition, and screening to ensure artifact-free extraction of ion chromatograms. This skill prevents sawtooth artefacts and ensures correct peak profiling by routing scan windows through accurate mass_range separation.

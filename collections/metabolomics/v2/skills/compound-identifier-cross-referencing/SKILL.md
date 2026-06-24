@@ -1,6 +1,9 @@
 ---
 name: compound-identifier-cross-referencing
-description: 'Use when when you have prepared raw mass spectrometry transition data (precursor m/z, product m/z, intensity, retention time, compound identifiers) and need to verify it conforms to EISA-EXPOSOME''s required schema before database import. Specifically: you are building or validating a custom .xlsx/.'
+description: 'Use when when you have prepared raw mass spectrometry transition data
+  (precursor m/z, product m/z, intensity, retention time, compound identifiers) and
+  need to verify it conforms to EISA-EXPOSOME''s required schema before database import.
+  Specifically: you are building or validating a custom .xlsx/.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,12 +15,14 @@ metadata:
   - T3DB compiled database
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME
 evidence_spans:
 - We provide a Rshiny program for EISA-EXPOSOME
-- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown below
+- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown
+  below
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

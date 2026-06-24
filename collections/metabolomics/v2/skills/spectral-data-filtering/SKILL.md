@@ -1,6 +1,8 @@
 ---
 name: spectral-data-filtering
-description: Use when you have loaded a full set of MS scans (e.g., all MS1 scans from readAllScanMS1 in Aerith) and need to restrict analysis to a specific retention-time window (e.g., 9–10 min with 0.
+description: Use when you have loaded a full set of MS scans (e.g., all MS1 scans
+  from readAllScanMS1 in Aerith) and need to restrict analysis to a specific retention-time
+  window (e.g., 9–10 min with 0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,12 +17,15 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 claims: []
 provenance:

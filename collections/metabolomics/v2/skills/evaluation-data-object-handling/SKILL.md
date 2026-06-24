@@ -1,6 +1,9 @@
 ---
 name: evaluation-data-object-handling
-description: Use when after completing an Environment simulation run with save_eval flag enabled, when you need to preserve the EvaluationData object containing scan provenance, chemical source definitions, and fragmentation events for later inspection, validation, or reanalysis without re-running the full.
+description: Use when after completing an Environment simulation run with save_eval
+  flag enabled, when you need to preserve the EvaluationData object containing scan
+  provenance, chemical source definitions, and fragmentation events for later inspection,
+  validation, or reanalysis without re-running the full.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,14 +15,17 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # Evaluation-Data Object Handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize and persist ViMMS in-memory evaluation data (chemicals, generated scans, fragmentation events) alongside simulated mzML output using Python pickle files, enabling reproducible linkage between scan metadata and source chemical definitions for downstream analysis.

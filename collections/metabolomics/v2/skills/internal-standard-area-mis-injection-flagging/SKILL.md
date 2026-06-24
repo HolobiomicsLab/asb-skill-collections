@@ -1,6 +1,9 @@
 ---
 name: internal-standard-area-mis-injection-flagging
-description: Use when after building a SummarizedExperiment object containing LC-MS peak areas and internal standard assignments, when you need to identify study samples with anomalous Internal Standard signal (indicating syringe failure, capillary clogging, or injection system malfunction) before applying.
+description: Use when after building a SummarizedExperiment object containing LC-MS
+  peak areas and internal standard assignments, when you need to identify study samples
+  with anomalous Internal Standard signal (indicating syringe failure, capillary clogging,
+  or injection system malfunction) before applying.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -14,6 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -44,6 +48,7 @@ attribution:
 
 # internal-standard-area-mis-injection-flagging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and flag mis-injected study samples in metabolomics LC-MS data by testing whether Internal Standard peak areas fall outside expected ranges, identifying technical failures that compromise quantitation reliability.

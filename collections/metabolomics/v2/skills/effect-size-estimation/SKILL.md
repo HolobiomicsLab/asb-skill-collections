@@ -1,6 +1,9 @@
 ---
 name: effect-size-estimation
-description: Use when after performing statistical tests (t-test, Mann–Whitney U, ANOVA) on matched lipid abundance data grouped by experimental condition, to report not only whether differences are statistically significant but also the magnitude and direction of change.
+description: Use when after performing statistical tests (t-test, Mann–Whitney U,
+  ANOVA) on matched lipid abundance data grouped by experimental condition, to report
+  not only whether differences are statistically significant but also the magnitude
+  and direction of change.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - pandas
   - NumPy
   - R base stats / tidyverse
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

@@ -1,6 +1,9 @@
 ---
 name: molecular-formula-inference-from-adducts
-description: Use when when you have grouped features consolidated into empirical compounds (EmpCpds) with inferred adduct assignments from khipu, and need to perform MS1-level annotation by matching neutral formulas against JMS-compliant reference libraries (HMDB, LMSD).
+description: Use when when you have grouped features consolidated into empirical compounds
+  (EmpCpds) with inferred adduct assignments from khipu, and need to perform MS1-level
+  annotation by matching neutral formulas against JMS-compliant reference libraries
+  (HMDB, LMSD).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,12 +19,15 @@ metadata:
   - JMS (Json's Metabolite Services)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
 evidence_spans:
-- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using the `download extras` command
-- perform MS1 annotation using an authentic compound library, a public database (e.g. HMDB, LIPID MAP), or custom database
+- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using
+  the `download extras` command
+- perform MS1 annotation using an authentic compound library, a public database (e.g.
+  HMDB, LIPID MAP), or custom database
 - pre-annotation to group featues to empirical compounds (khipu)
 - Python-Centric Pipeline for Metabolomics
 claims: []
@@ -47,6 +53,7 @@ attribution:
 
 # molecular-formula-inference-from-adducts
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer neutral molecular formulas from empirical compound (EmpCpd) parameters—including observed m/z, charge state, and ionization mode—to enable Level 4 MS1 annotation against reference databases. This skill is essential for bridging feature-level mass spectrometry data to chemical structure identity without requiring explicit mass tolerance specification.

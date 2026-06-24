@@ -1,6 +1,9 @@
 ---
 name: wasserstein-distance-computation
-description: Use when when you have both an observed NMR mixture spectrum and a candidate reconstructed spectrum (each represented as intensity distributions across chemical shift bins), and you need a scalar similarity metric to evaluate how closely the reconstruction matches the observed data.
+description: Use when when you have both an observed NMR mixture spectrum and a candidate
+  reconstructed spectrum (each represented as intensity distributions across chemical
+  shift bins), and you need a scalar similarity metric to evaluate how closely the
+  reconstruction matches the observed data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -8,11 +11,13 @@ metadata:
   - http://edamontology.org/topic_3172
   - http://edamontology.org/topic_0218
   tools:
-  - SciPy (scipy.stats.wasserstein_distance or scipy.optimize.linprog for optimal transport)
+  - SciPy (scipy.stats.wasserstein_distance or scipy.optimize.linprog for optimal
+    transport)
   - SciPy
   - mcfNMR
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

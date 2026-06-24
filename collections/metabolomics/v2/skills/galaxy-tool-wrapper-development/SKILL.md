@@ -1,6 +1,7 @@
 ---
 name: galaxy-tool-wrapper-development
-description: Use when you have a working R package that performs established preprocessing, analysis, or statistical workflows on formatted tabular data (e.
+description: Use when you have a working R package that performs established preprocessing,
+  analysis, or statistical workflows on formatted tabular data (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +14,7 @@ metadata:
   - ionflow
   - ionflow (IonFlow R package)
   - planemo
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-021-01841-z
   title: IonFlow
@@ -43,6 +45,7 @@ attribution:
 
 # galaxy-tool-wrapper-development
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Wrapping a specialized R package as a Galaxy tool exposes domain-specific analysis functionality (e.g., ionomics data processing) to Galaxy's workflow and interface layer, enabling reproducible, parameterized execution within a standardized bioinformatics platform.

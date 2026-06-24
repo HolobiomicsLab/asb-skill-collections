@@ -1,6 +1,8 @@
 ---
 name: spectral-fragment-ion-annotation
-description: Use when you have an MS/MS spectrum (m/z and intensity arrays) and a known or hypothesized peptide sequence (optionally with post-translational modifications in ProForma 2.
+description: Use when you have an MS/MS spectrum (m/z and intensity arrays) and a
+  known or hypothesized peptide sequence (optionally with post-translational modifications
+  in ProForma 2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +17,15 @@ metadata:
   - Numba
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # spectral-fragment-ion-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate observed MS/MS spectrum peaks against theoretical fragment ions (a, b, y, and other ion types) derived from a ProForma 2.0 peptidoform specification, using tolerance-based matching to link experimental m/z values to predicted fragment masses and charge states. This enables identification and visualization of peptide fragmentation patterns in tandem mass spectrometry data.

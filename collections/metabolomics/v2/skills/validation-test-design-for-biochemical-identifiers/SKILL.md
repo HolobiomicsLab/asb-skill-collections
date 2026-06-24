@@ -1,6 +1,7 @@
 ---
 name: validation-test-design-for-biochemical-identifiers
-description: Use when you have implemented or integrated a biochemical identifier converter (e.
+description: Use when you have implemented or integrated a biochemical identifier
+  converter (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,12 +13,14 @@ metadata:
   - Black
   - Visual Studio Code
   - PyCharm
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.04.09.033894
   title: LipidLynxX
 evidence_spans:
 - The LipidLynxX project is aimed to provide a unified identifier for major lipids
-- LipidLynxX source code use [code style Black](https://github.com/psf/black) for all python codes
+- LipidLynxX source code use [code style Black](https://github.com/psf/black) for
+  all python codes
 - JSON configurations are formatted by Visual Studio Code / PyCharm editor
 claims: []
 provenance:

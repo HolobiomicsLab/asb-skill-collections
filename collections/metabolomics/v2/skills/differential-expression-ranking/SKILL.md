@@ -1,6 +1,7 @@
 ---
 name: differential-expression-ranking
-description: Use when you have completed a two-group or multi-group differential expression analysis with computed logFC values (e.
+description: Use when you have completed a two-group or multi-group differential expression
+  analysis with computed logFC values (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3463
@@ -11,12 +12,15 @@ metadata:
   - lipidr
   - R
   - limma
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # differential-expression-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank lipid molecules by log fold-change from differential expression analysis to identify and visualize significantly enriched or depleted lipid classes and chain properties. This skill uses lipid set enrichment analysis (LSEA) to detect preferential regulation patterns across predefined lipid sets.

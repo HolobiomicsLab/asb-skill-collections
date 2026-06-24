@@ -1,6 +1,9 @@
 ---
 name: fatty-acyl-chain-variant-identification
-description: Use when when a metabolite feature has been assigned a top-rank lipid annotation (e.g., LPC(14:0)) but you need to assess whether related lipid species containing the same fatty acyl chain(s) (e.g., PC fragments with 14:0 acyl chains) also match the observed spectrum with lower scores.
+description: Use when when a metabolite feature has been assigned a top-rank lipid
+  annotation (e.g., LPC(14:0)) but you need to assess whether related lipid species
+  containing the same fatty acyl chain(s) (e.g., PC fragments with 14:0 acyl chains)
+  also match the observed spectrum with lower scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # fatty-acyl-chain-variant-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank alternative lipid annotations for a mass feature by extracting ranked candidate lists from MetaboAnnotatoR results and comparing scores of lipid species that share the same fatty acyl chain composition. This skill enables discovery of structural variants (e.g., PC fragments vs. intact LPC) that may annotate the same m/z feature with differing confidence.

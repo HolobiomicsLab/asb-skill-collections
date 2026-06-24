@@ -1,6 +1,9 @@
 ---
 name: multi-service-dependency-management
-description: Use when your research software comprises multiple independent subprojects or microservices (calculation engines, web services, data processors, websites) that must be deployed and initialized in a coordinated sequence, with explicit dependency declarations and network communication paths between.
+description: Use when your research software comprises multiple independent subprojects
+  or microservices (calculation engines, web services, data processors, websites)
+  that must be deployed and initialized in a coordinated sequence, with explicit dependency
+  declarations and network communication paths between.
 license: CC-BY-4.0
 metadata:
   edam_topics:
@@ -9,6 +12,7 @@ metadata:
   - MAGMa
   - Docker Compose
   - Docker
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -38,6 +42,7 @@ attribution:
 
 # multi-service-dependency-management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate and manage interdependencies among multiple containerized microservices by defining service topology, inter-service networking, health checks, and startup ordering. This skill is essential when deploying a multi-component research system (e.g., MAGMa's four subprojects) as Docker services with explicit dependency chains.

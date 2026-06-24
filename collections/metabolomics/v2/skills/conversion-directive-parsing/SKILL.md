@@ -1,6 +1,8 @@
 ---
 name: conversion-directive-parsing
-description: Use when you have validated intermediate JSON data (conforming to the Experiment Description Specification) and need to configure how it should be converted to a supported output format (e.g., mwTab for Metabolomics Workbench submission).
+description: Use when you have validated intermediate JSON data (conforming to the
+  Experiment Description Specification) and need to configure how it should be converted
+  to a supported output format (e.g., mwTab for Metabolomics Workbench submission).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -19,8 +22,10 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +53,7 @@ attribution:
 
 # conversion-directive-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and extract configuration from MESSES conversion directives files to enable structured transformation of intermediate JSON data into target formats. This skill is essential for setting up the conversion pipeline that translates validated experimental metadata from the intermediate JSON representation into format-specific outputs like mwTab.

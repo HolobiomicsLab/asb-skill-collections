@@ -1,6 +1,8 @@
 ---
 name: adduct-mass-calculation-from-smiles
-description: Use when when you have a metabolite SMILES structure and need to predict which adduct ions will appear in a mass spectrum acquired with a chemical derivatizing matrix.
+description: Use when when you have a metabolite SMILES structure and need to predict
+  which adduct ions will appear in a mass spectrum acquired with a chemical derivatizing
+  matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,6 +14,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -40,6 +43,7 @@ attribution:
 
 # adduct-mass-calculation-from-smiles
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute expected m/z values for metabolite adduct ions given a SMILES string and a derivatizing matrix profile (e.g., FMP-10). This skill automates the prediction of non-standard ionization products beyond [M+H]+ and [M-H]−, enabling high-throughput metabolite identification in mass spectrometry imaging.

@@ -1,6 +1,9 @@
 ---
 name: reaction-filtering-by-substrate-completeness
-description: Use when you have loaded intracellular metabolomics data (LC-MS normalized abundances) and a stoichiometric metabolic model with multiple reactions, and you plan to compute reaction propensity scores or other flux-related metrics that depend on substrate concentrations.
+description: Use when you have loaded intracellular metabolomics data (LC-MS normalized
+  abundances) and a stoichiometric metabolic model with multiple reactions, and you
+  plan to compute reaction propensity scores or other flux-related metrics that depend
+  on substrate concentrations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,11 +17,13 @@ metadata:
   - concordanceAnalysis.py
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # reaction-filtering-by-substrate-completeness
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolic reactions to retain only those with complete quantification of all substrate abundances in a metabolomics dataset, enabling reliable downstream computation of Reaction Propensity Scores (RPS) and concordance analysis. This is a quality-control step that prevents NaN/undefined computations when applying mass action law formulations.

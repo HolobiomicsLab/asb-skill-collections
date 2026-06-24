@@ -1,6 +1,8 @@
 ---
 name: orthogonal-projection-deconvolution
-description: Use when you have overlapped peak regions in GC-MS chromatography data (multiple components eluting within the same retention time window) and need to recover the pure mass spectra of each component and their relative concentrations.
+description: Use when you have overlapped peak regions in GC-MS chromatography data
+  (multiple components eluting within the same retention time window) and need to
+  recover the pure mass spectra of each component and their relative concentrations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -14,6 +16,7 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

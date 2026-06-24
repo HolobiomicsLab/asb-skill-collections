@@ -1,6 +1,8 @@
 ---
 name: lcms-workflow-orchestration
-description: Use when starting from raw LC-MS spectral files (mzML or mzXML format) in a global metabolomics study and you need to produce a complete, validated feature table with m/z, retention time, and intensity values across all samples.
+description: Use when starting from raw LC-MS spectral files (mzML or mzXML format)
+  in a global metabolomics study and you need to produce a complete, validated feature
+  table with m/z, retention time, and intensity values across all samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -11,6 +13,7 @@ metadata:
   - MetaboAnalystR
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr

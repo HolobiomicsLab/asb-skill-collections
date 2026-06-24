@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-for-omics
-description: Use when your metabolomic peak table contains missing values (e.g., undetected metabolites below instrument sensitivity or sparse measurements) and you are preparing multi-class or time-course data for statistical analysis, differential profiling, or biomarker discovery.
+description: Use when your metabolomic peak table contains missing values (e.g., undetected
+  metabolites below instrument sensitivity or sparse measurements) and you are preparing
+  multi-class or time-course data for statistical analysis, differential profiling,
+  or biomarker discovery.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - limma
   - pcaMethods
   - Biobase
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

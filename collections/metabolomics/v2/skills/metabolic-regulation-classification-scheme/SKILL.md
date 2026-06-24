@@ -1,6 +1,9 @@
 ---
 name: metabolic-regulation-classification-scheme
-description: Use when when you have computed Reaction Activity Scores (RAS) from transcriptomics and GPR rules, Reaction Presence Scores (RPS) from RAS normalized flux predictions, and Flux Fold-change Distributions (FFD) from metabolomic data and mass-action constraints across multiple sample pairs, and you.
+description: Use when when you have computed Reaction Activity Scores (RAS) from transcriptomics
+  and GPR rules, Reaction Presence Scores (RPS) from RAS normalized flux predictions,
+  and Flux Fold-change Distributions (FFD) from metabolomic data and mass-action constraints
+  across multiple sample pairs, and you.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,6 +17,7 @@ metadata:
   - mannWhitneyUTest.py
   - rasTtest.py
   - concordanceAnalysis.py
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -42,6 +46,7 @@ attribution:
 
 # metabolic-regulation-classification-scheme
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A concordance-based classification method that assigns metabolic reactions into four regulatory categories (combined transcriptional and metabolic, metabolic-only, transcriptional-only, or unclassified) by measuring Cohen's kappa agreement between RAS-vs-FFD and RPS-vs-FFD variation signs across pairwise cell-line comparisons. This skill discriminates whether differences in metabolic flux originate from transcriptional control of enzyme abundance or from metabolic control via substrate availability.

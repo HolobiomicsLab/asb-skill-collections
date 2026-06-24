@@ -1,6 +1,8 @@
 ---
 name: conda-environment-reproducibility
-description: Use when you have received a conda/pip requirements file (e.g., jestr_requirements.txt) and need to run code that was trained and tested on a specific GPU setup (e.g., NVIDIA A100 with CUDA 11.8).
+description: Use when you have received a conda/pip requirements file (e.g., jestr_requirements.txt)
+  and need to run code that was trained and tested on a specific GPU setup (e.g.,
+  NVIDIA A100 with CUDA 11.8).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -13,6 +15,7 @@ metadata:
   - PyTorch
   - CUDA 11.8
   - NVIDIA GPU drivers
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR

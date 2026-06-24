@@ -1,6 +1,8 @@
 ---
 name: feature-table-annotation-standardization
-description: Use when after Blueshift or Gravity processing has produced a feature abundance table with annotations, but before final reporting or integration with sample/injection metadata.
+description: Use when after Blueshift or Gravity processing has produced a feature
+  abundance table with annotations, but before final reporting or integration with
+  sample/injection metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +18,7 @@ metadata:
   - bmxp (Python package)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

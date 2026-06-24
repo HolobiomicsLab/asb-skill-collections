@@ -1,6 +1,8 @@
 ---
 name: corrected-uncorrected-data-comparison-visualization
-description: Use when after preprocessing and log-transformation of metabolomics feature abundance matrices (samples as rows, metabolic features as columns), when you have multiple candidate batch-correction models (e.
+description: Use when after preprocessing and log-transformation of metabolomics feature
+  abundance matrices (samples as rows, metabolic features as columns), when you have
+  multiple candidate batch-correction models (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -12,6 +14,7 @@ metadata:
   - R
   - sva (ComBat parametric and non-parametric models)
   - R graphics (ggplot2, lattice, base R)
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -20,7 +23,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # corrected-uncorrected-data-comparison-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate side-by-side diagnostic visualizations comparing raw and batch-effect-corrected metabolomics data to assess which statistical correction model (parametric vs. non-parametric ComBat, or two-stage ber procedure) best fits the dataset structure. This skill enables quantitative model selection by revealing how effectively each correction method removes technical heterogeneity while preserving biological signal.

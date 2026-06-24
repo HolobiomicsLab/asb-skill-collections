@@ -1,6 +1,8 @@
 ---
 name: dataframe-and-numericlist-manipulation
-description: Use when you are implementing a new MsBackend subclass and need to store spectra metadata (sample names, retention times, precursor m/z, etc.) separately from peak data (m/z and intensity pairs) while maintaining row-wise alignment.
+description: Use when you are implementing a new MsBackend subclass and need to store
+  spectra metadata (sample names, retention times, precursor m/z, etc.) separately
+  from peak data (m/z and intensity pairs) while maintaining row-wise alignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3365
@@ -14,11 +16,13 @@ metadata:
   - IRanges
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # dataframe-and-numericlist-manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and manipulate parallel data structures (data.frame for spectra metadata, NumericList for peak m/z and intensity values) to implement custom MsBackend classes that integrate with the Spectra package infrastructure. This skill enables creation of new mass spectrometry data backends by coordinating tabular and list-based storage to meet the MsBackend API contract.

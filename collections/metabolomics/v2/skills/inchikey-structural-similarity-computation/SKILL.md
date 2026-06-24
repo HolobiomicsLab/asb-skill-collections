@@ -1,6 +1,8 @@
 ---
 name: inchikey-structural-similarity-computation
-description: Use when you have a ranked list of library candidates (top 2000 by MS2Deepscore) from MS/MS spectral matching and need to re-rank them using structural metadata to distinguish true analogues and exact matches from false positives.
+description: Use when you have a ranked list of library candidates (top 2000 by MS2Deepscore)
+  from MS/MS spectral matching and need to re-rank them using structural metadata
+  to distinguish true analogues and exact matches from false positives.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -16,13 +18,15 @@ metadata:
   - Random forest (scikit-learn or equivalent)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
 - you want to make some kind of change to the code base
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:

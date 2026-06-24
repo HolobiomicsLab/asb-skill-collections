@@ -1,6 +1,9 @@
 ---
 name: distance-matrix-computation-for-samples
-description: Use when after batch effect removal and data integration, when you have a feature-by-sample matrix (finalData) and wish to separate and visualize sample groups by their metabolomic profiles using clustering methods such as hierarchical clustering analysis (HCA).
+description: Use when after batch effect removal and data integration, when you have
+  a feature-by-sample matrix (finalData) and wish to separate and visualize sample
+  groups by their metabolomic profiles using clustering methods such as hierarchical
+  clustering analysis (HCA).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,13 +16,16 @@ metadata:
   - ggplot2
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
 - install_github("LargeMetabo/LargeMetabo", force = TRUE, build_vignettes = TRUE)
-- several R packages are utilized in the background processes, including factoextra, FSelector, genefilter
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
+- several R packages are utilized in the background processes, including factoextra,
+  FSelector, genefilter
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +49,7 @@ attribution:
 
 # distance-matrix-computation-for-samples
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise distance matrices between metabolomic samples to quantify dissimilarity and enable downstream clustering and visualization. This is a foundational step in sample separation workflows where hierarchical or other clustering methods require inter-sample distances as input.

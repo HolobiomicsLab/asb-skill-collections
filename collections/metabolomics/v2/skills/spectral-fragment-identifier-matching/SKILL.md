@@ -1,6 +1,9 @@
 ---
 name: spectral-fragment-identifier-matching
-description: Use when when you have downloaded fragment records from separate experimental and predicted online databases and need to verify that each fragment can be traced back to a valid compound entry in a reference compound database (e.g., SDF-format DNA adduct compound collection).
+description: Use when when you have downloaded fragment records from separate experimental
+  and predicted online databases and need to verify that each fragment can be traced
+  back to a valid compound entry in a reference compound database (e.g., SDF-format
+  DNA adduct compound collection).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -11,6 +14,7 @@ metadata:
   - SDF file parser / molecular structure library
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -38,6 +42,7 @@ attribution:
 
 # spectral-fragment-identifier-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cross-reference fragment records from experimental and predicted mass spectrometry databases against a reference compound database to validate data integrity and identify orphaned fragments. This skill ensures that all fragment entries in DNA adductomics databases have corresponding parent compound entries in standardized SDF format.

@@ -1,6 +1,9 @@
 ---
 name: chemical-identifier-mapping-across-services
-description: Use when when you have .msp files with sparse or incomplete chemical metadata (e.g., only compound names) and need to populate missing identifiers (SMILES, InChI, InChI keys, CAS numbers, IUPAC names, formulas) by querying multiple external chemical databases.
+description: Use when when you have .msp files with sparse or incomplete chemical
+  metadata (e.g., only compound names) and need to populate missing identifiers (SMILES,
+  InChI, InChI keys, CAS numbers, IUPAC names, formulas) by querying multiple external
+  chemical databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -17,6 +20,7 @@ metadata:
   - RDKit
   - Python
   - pytest
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

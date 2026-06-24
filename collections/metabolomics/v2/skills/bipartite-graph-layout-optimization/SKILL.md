@@ -1,6 +1,8 @@
 ---
 name: bipartite-graph-layout-optimization
-description: Use when after constructing a bipartite network graph with metabolites and proteins as nodes weighted by association strength and disease class, when you need to render the network visually for interpretation and publication.
+description: Use when after constructing a bipartite network graph with metabolites
+  and proteins as nodes weighted by association strength and disease class, when you
+  need to render the network visually for interpretation and publication.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -11,6 +13,7 @@ metadata:
   tools:
   - Python
   - DeepMSProfiler
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -38,6 +41,7 @@ attribution:
 
 # bipartite-graph-layout-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply force-directed or hierarchical layout algorithms to position metabolite and protein nodes in a bipartite network graph for interpretable visualization of disease-associated associations. This skill transforms an abstract weighted bipartite graph into a spatially arranged network suitable for publication.

@@ -1,6 +1,9 @@
 ---
 name: abstract-syntax-tree-construction
-description: Use when you have a tokenized sequence of domain-specific language tokens and need to construct a hierarchical, unambiguous representation that can be validated against language design principles (expressiveness, precision, scalability, readability) and passed to downstream execution engines.
+description: Use when you have a tokenized sequence of domain-specific language tokens
+  and need to construct a hierarchical, unambiguous representation that can be validated
+  against language design principles (expressiveness, precision, scalability, readability)
+  and passed to downstream execution engines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -14,6 +17,7 @@ metadata:
   - MassQL reference implementation
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

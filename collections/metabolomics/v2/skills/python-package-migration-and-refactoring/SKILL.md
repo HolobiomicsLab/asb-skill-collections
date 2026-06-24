@@ -1,6 +1,7 @@
 ---
 name: python-package-migration-and-refactoring
-description: Use when you have a mature Python package (e.g., Mummichog 2.x) that needs to be relocated to a new GitHub organization (e.
+description: Use when you have a mature Python package (e.g., Mummichog 2.x) that
+  needs to be relocated to a new GitHub organization (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,11 +14,13 @@ metadata:
   - pytest or equivalent test framework
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
 evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics
+- Mummichog is a Python program for analyzing data from high throughput, untargeted
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +44,7 @@ attribution:
 
 # Python package migration and refactoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Migrate a Python package to a new GitHub organization while conforming to organizational standards, verifying installation and functionality in the new location. This skill ensures that relocated packages maintain code integrity, dependency correctness, and runtime behavior after structural and configuration changes.

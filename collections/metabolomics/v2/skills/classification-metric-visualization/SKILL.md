@@ -1,6 +1,8 @@
 ---
 name: classification-metric-visualization
-description: Use when after training or evaluating a classification model (e.g., a Siamese neural network for spectrum similarity prediction) and obtaining a prediction array and corresponding ground-truth label array.
+description: Use when after training or evaluating a classification model (e.g., a
+  Siamese neural network for spectrum similarity prediction) and obtaining a prediction
+  array and corresponding ground-truth label array.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,11 +16,13 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 - use the search functionality [here](https://github.com/matchms/ms2deepscore/issues)
 claims: []
 provenance:

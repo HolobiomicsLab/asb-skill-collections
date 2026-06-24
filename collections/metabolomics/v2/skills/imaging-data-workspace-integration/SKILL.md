@@ -1,6 +1,9 @@
 ---
 name: imaging-data-workspace-integration
-description: Use when you have paired cdf files (raw mass spectrometry imaging data) and Matlab workspace (.mat) files for the same root sample, and you need to reproduce published linear-axis imaging analysis results (e.g., per-root mass spectrometry imaging metrics along a developmental or spatial axis).
+description: Use when you have paired cdf files (raw mass spectrometry imaging data)
+  and Matlab workspace (.mat) files for the same root sample, and you need to reproduce
+  published linear-axis imaging analysis results (e.g., per-root mass spectrometry
+  imaging metrics along a developmental or spatial axis).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +16,7 @@ metadata:
   - batchcdfread function
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
@@ -40,6 +44,7 @@ attribution:
 
 # imaging-data-workspace-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and integrate mass spectrometry imaging (MSI) data from NetCDF files with their corresponding Matlab workspaces to enable reproducible linear-axis analysis in the DIMPLE computational pipeline. This skill bridges raw instrument output (cdf) with pre-computed analysis metadata (Matlab workspace variables) to ensure consistent per-root metric computation.

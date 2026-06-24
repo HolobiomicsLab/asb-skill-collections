@@ -1,6 +1,7 @@
 ---
 name: unknown-chemical-identification-in-complex-mixtures
-description: Use when you have experimental LC–QTOF mass spectra from complex environmental samples (e.
+description: Use when you have experimental LC–QTOF mass spectra from complex environmental
+  samples (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -16,6 +17,7 @@ metadata:
   - cfmid
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

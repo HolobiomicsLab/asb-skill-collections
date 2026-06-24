@@ -1,6 +1,8 @@
 ---
 name: python-job-metadata-serialization
-description: Use when implementing online task queue deployments (RQ + Redis) where job execution may outlive the originating web session, or where workers may restart unexpectedly.
+description: Use when implementing online task queue deployments (RQ + Redis) where
+  job execution may outlive the originating web session, or where workers may restart
+  unexpectedly.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,6 +12,7 @@ metadata:
   - Redis
   - QueueManager
   - Streamlit
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -39,6 +42,7 @@ attribution:
 
 # Serialize and recover job metadata in Python task queue workflows
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Persist and retrieve job identifiers and metadata (job_id, status, submission timestamp) from the filesystem to enable job recovery and status tracking in distributed RQ (Redis Queue) task execution pipelines. This skill is essential for maintaining job state across worker process restarts and providing users with queryable job history.

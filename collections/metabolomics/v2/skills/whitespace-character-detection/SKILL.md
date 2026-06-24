@@ -1,6 +1,9 @@
 ---
 name: whitespace-character-detection
-description: Use when validating project JSON documents against the platform's schema (app/public/schema.json) and you need to ensure all URL-type fields conform to URL syntax rules. Specifically, use it when the schema designates certain fields as URL type (e.
+description: Use when validating project JSON documents against the platform's schema
+  (app/public/schema.json) and you need to ensure all URL-type fields conform to URL
+  syntax rules. Specifically, use it when the schema designates certain fields as
+  URL type (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -9,11 +12,13 @@ metadata:
   - http://edamontology.org/topic_3473
   tools:
   - npm
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: table-consolidation-and-denormalization
-description: Use when when you have cleaned, normalized organism, structure, and reference tables from separate cleaning pipelines (e.g., after 2_curating stage) and must integrate them into a single queryable table while maintaining referential integrity and generating lookup dictionaries.
+description: Use when when you have cleaned, normalized organism, structure, and reference
+  tables from separate cleaning pipelines (e.g., after 2_curating stage) and must
+  integrate them into a single queryable table while maintaining referential integrity
+  and generating lookup dictionaries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -11,6 +14,7 @@ metadata:
   - R
   - data.table
   - gzip/compression utilities
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -43,6 +47,7 @@ attribution:
 
 # table-consolidation-and-denormalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Consolidate normalized organism, structure, and reference tables into a single denormalized curated table by performing sequential left-join operations and appending external annotations (e.g., NP-classifier), while preserving all original rows and generating derived dictionaries for each entity type. This skill is essential when integrating multi-source biological and chemical data into a unified structure-organism-reference knowledgebase.

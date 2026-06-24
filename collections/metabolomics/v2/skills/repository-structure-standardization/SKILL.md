@@ -1,6 +1,8 @@
 ---
 name: repository-structure-standardization
-description: Use when a scientific Python package is being moved to a new GitHub organization with different structural conventions (e.g., from a personal lab account to a community-led organization like metabolomics-cloud or scverse).
+description: Use when a scientific Python package is being moved to a new GitHub organization
+  with different structural conventions (e.g., from a personal lab account to a community-led
+  organization like metabolomics-cloud or scverse).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -12,6 +14,7 @@ metadata:
   - pip
   - GitHub Actions
   - pytest or unittest
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
@@ -39,6 +42,7 @@ attribution:
 
 # Repository Structure Standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Audit and refactor a scientific Python package to conform to organizational standards (configuration files, module naming, CI/CD workflows, metadata) and verify correct installation and functionality in its new location. This skill ensures reproducibility and maintainability when relocating codebases across GitHub organizations.

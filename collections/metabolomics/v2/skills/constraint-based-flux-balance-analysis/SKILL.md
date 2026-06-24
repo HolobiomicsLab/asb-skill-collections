@@ -1,6 +1,9 @@
 ---
 name: constraint-based-flux-balance-analysis
-description: Use when you have a generic genome-scale metabolic model (SBML format) and cross-sectional omics data (RNA-seq, intracellular metabolomics, extracellular flux measurements from bioanalyzer or similar) from multiple biological samples (cell lines, conditions).
+description: Use when you have a generic genome-scale metabolic model (SBML format)
+  and cross-sectional omics data (RNA-seq, intracellular metabolomics, extracellular
+  flux measurements from bioanalyzer or similar) from multiple biological samples
+  (cell lines, conditions).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -26,15 +29,20 @@ metadata:
   - eFlux, TRFBA, GX-FBA, scFBA
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
 - using constraint-based stoichiometric metabolic models as a scaffold
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36]
-- we set flux boundaries as a function of gene expression as done, among others, by eFlux [36] and TRFBA
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in GX-FBA [26]
-- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability Analysis, as in scFBA [38]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36]
+- we set flux boundaries as a function of gene expression as done, among others, by
+  eFlux [36] and TRFBA
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in GX-FBA [26]
+- We scaled metabolic fluxes relative to the maximum flux identified using Flux Variability
+  Analysis, as in scFBA [38]
 - raw reads were mapped with STAR aligner (v.2.6.1d) to human reference genome (hg38)
 claims: []
 provenance:
@@ -59,6 +67,7 @@ attribution:
 
 # constraint-based-flux-balance-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply constraint-based stoichiometric metabolic models to integrate multi-omics data (transcriptomics, metabolomics, extracellular flux measurements) and predict metabolic flux distributions under biological constraints. This skill discriminates whether metabolic differences arise from gene expression regulation, substrate availability regulation, or both.

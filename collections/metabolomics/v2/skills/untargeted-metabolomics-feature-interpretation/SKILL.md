@@ -1,6 +1,8 @@
 ---
 name: untargeted-metabolomics-feature-interpretation
-description: Use when you have an untargeted metabolomics feature table (m/z values, retention times, p-values from statistical testing) and need to infer which metabolic pathways are active without performing metabolite identification.
+description: Use when you have an untargeted metabolomics feature table (m/z values,
+  retention times, p-values from statistical testing) and need to infer which metabolic
+  pathways are active without performing metabolite identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,11 +18,13 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
 evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics
+- Mummichog is a Python program for analyzing data from high throughput, untargeted
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # Reconstruct metabolic-network-based functional activity prediction from a feature table
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill predicts functional pathway activity directly from untargeted metabolomics feature tables (m/z, retention time, intensity) by mapping features to a metabolic network and propagating activity signals through biochemical pathways, without requiring prior metabolite identification. It enables rapid functional interpretation of mass spectrometry data via network-based inference.

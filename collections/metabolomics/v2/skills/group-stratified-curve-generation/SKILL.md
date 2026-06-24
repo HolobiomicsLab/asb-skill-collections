@@ -1,6 +1,8 @@
 ---
 name: group-stratified-curve-generation
-description: Use when you have omics data with group labels (e.g., treatment vs. control, disease vs. healthy) and need to visualize how the cumulative distribution of a continuous variable (e.g., gene expression, abundance) differs between groups.
+description: Use when you have omics data with group labels (e.g., treatment vs. control,
+  disease vs. healthy) and need to visualize how the cumulative distribution of a
+  continuous variable (e.g., gene expression, abundance) differs between groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - R Shiny
   - GraphBio
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

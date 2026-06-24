@@ -1,6 +1,9 @@
 ---
 name: conda-environment-file-generation
-description: Use when when you have identified all software dependencies and their exact pinned versions from project documentation (README, setup files, or supplementary materials) and need to create portable environment specifications for a scientific implementation.
+description: Use when when you have identified all software dependencies and their
+  exact pinned versions from project documentation (README, setup files, or supplementary
+  materials) and need to create portable environment specifications for a scientific
+  implementation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3813
@@ -22,6 +25,7 @@ metadata:
   - h5py
   - Conda
   - pip
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac032/6510930
   title: massNet
@@ -55,6 +59,7 @@ attribution:
 
 # conda-environment-file-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate reproducible Conda environment specifications (environment.yml and requirements.txt) from documented software dependencies and pinned package versions. This skill ensures that scientific implementations can be reliably reconstructed across different computing platforms by capturing exact dependency versions and their compatibility constraints.

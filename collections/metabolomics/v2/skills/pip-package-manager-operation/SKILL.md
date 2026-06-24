@@ -1,6 +1,8 @@
 ---
 name: pip-package-manager-operation
-description: Use when when you have cloned or downloaded a Python project repository and need to install all declared dependencies to make the package importable and functional. Use this skill at the start of any local setup workflow when a requirements.
+description: Use when when you have cloned or downloaded a Python project repository
+  and need to install all declared dependencies to make the package importable and
+  functional. Use this skill at the start of any local setup workflow when a requirements.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0224
@@ -10,6 +12,7 @@ metadata:
   tools:
   - pip
   - conda
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-025-02663-3
   title: DreaMS

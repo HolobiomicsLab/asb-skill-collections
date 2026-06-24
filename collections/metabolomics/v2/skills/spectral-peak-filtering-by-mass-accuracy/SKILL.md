@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-filtering-by-mass-accuracy
-description: Use when after molecular formula assignment has been performed on FT-ICR MS peaks (e.g., by Formularity or CoreMS), and before calculating thermodynamic indices, compound class assignments, or statistical analysis.
+description: Use when after molecular formula assignment has been performed on FT-ICR
+  MS peaks (e.g., by Formularity or CoreMS), and before calculating thermodynamic
+  indices, compound class assignments, or statistical analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,15 +17,20 @@ metadata:
   - MetaboDirect
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - requires the Python dependencies NumPy [40], pandas [41, 42]
 - It requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
-- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24] which uses FT-ICR MS data in .xml format
-- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24]
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
+- it has been designed to work with the output file (in .csv format) generated directly
+  by Formularity [24] which uses FT-ICR MS data in .xml format
+- it has been designed to work with the output file (in .csv format) generated directly
+  by Formularity [24]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # spectral-peak-filtering-by-mass-accuracy
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter FT-ICR MS peaks by rejecting those with formula assignment errors exceeding a mass accuracy threshold (typically 0.5 ppm), ensuring only high-confidence molecular formula assignments are retained for downstream analysis. This step removes ambiguous or spurious peaks that would compromise metabolomic interpretation.

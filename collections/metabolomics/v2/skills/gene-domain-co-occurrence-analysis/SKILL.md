@@ -1,6 +1,9 @@
 ---
 name: gene-domain-co-occurrence-analysis
-description: Use when you have a collection of BGCs tokenised as Pfam domain / subPfam combinations, have filtered them for redundancy using domain-based similarity networks, and need to discover latent gene sub-clusters that group together genes with correlated domain compositions.
+description: Use when you have a collection of BGCs tokenised as Pfam domain / subPfam
+  combinations, have filtered them for redundancy using domain-based similarity networks,
+  and need to discover latent gene sub-clusters that group together genes with correlated
+  domain compositions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2495
@@ -9,11 +12,13 @@ metadata:
   - http://edamontology.org/topic_0203
   tools:
   - iPRESTO
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

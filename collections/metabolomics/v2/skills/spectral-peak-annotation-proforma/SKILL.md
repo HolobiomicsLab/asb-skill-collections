@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-annotation-proforma
-description: Use when you have an annotated or raw tandem mass spectrometry spectrum and need to identify which observed peaks correspond to expected peptide fragment ions from a known or predicted peptidoform. Use it before spectrum visualization if you want highlighted, labeled fragment matches;
+description: Use when you have an annotated or raw tandem mass spectrometry spectrum
+  and need to identify which observed peaks correspond to expected peptide fragment
+  ions from a known or predicted peptidoform. Use it before spectrum visualization
+  if you want highlighted, labeled fragment matches;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -13,12 +16,15 @@ metadata:
   - HUPO-PSI PSI-MOD CV
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # Spectral Peak Annotation via ProForma 2.0
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate observed m/z peaks in tandem mass spectrometry spectra by matching them against theoretical fragment ions generated from a ProForma 2.0 peptide sequence specification. This enables identification and labeling of fragment types (e.g., a, b, y ions) and their corresponding neutral losses for publication-quality spectrum visualization.

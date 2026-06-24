@@ -1,6 +1,9 @@
 ---
 name: sample-type-stratified-feature-masking
-description: Use when after feature detection but before statistical analysis, when your study includes blank samples (e.g., solvent or extraction blanks) and you want to remove features that fail to show meaningful enrichment in actual study samples relative to blank contamination.
+description: Use when after feature detection but before statistical analysis, when
+  your study includes blank samples (e.g., solvent or extraction blanks) and you want
+  to remove features that fail to show meaningful enrichment in actual study samples
+  relative to blank contamination.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - Asari
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -44,6 +48,7 @@ attribution:
 
 # sample-type-stratified-feature-masking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove features from a metabolomics feature table whose intensity in study (unknown) samples is not sufficiently elevated above blank samples, using a configurable intensity ratio threshold. This quality-control step eliminates likely contaminants and noise that appear equally in blanks and unknowns.

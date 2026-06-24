@@ -1,6 +1,9 @@
 ---
 name: network-layout-algorithm-selection
-description: Use when you have a network object (nodes and edges) loaded in MetaNet and need to compute 2D or 3D spatial coordinates for visualization. This skill is necessary before any network plotting step. Choose this when your network structure (e.
+description: Use when you have a network object (nodes and edges) loaded in MetaNet
+  and need to compute 2D or 3D spatial coordinates for visualization. This skill is
+  necessary before any network plotting step. Choose this when your network structure
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,14 +19,17 @@ metadata:
   - spatstat
   - MInfer
   - tidygraph
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 - doi: 10.1016/j.cmpb.2025.108672
   title: ''
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 - MInfer is an R package
 - MInfer is an R package designed for analyzing metabolomics data
@@ -54,6 +60,7 @@ attribution:
 
 # network-layout-algorithm-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an appropriate layout algorithm from MetaNet's 40+ options to assign spatial coordinates to network nodes for static or interactive visualization. The choice of algorithm affects how node relationships are spatially represented and the interpretability of the resulting visualization.

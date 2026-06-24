@@ -1,6 +1,8 @@
 ---
 name: rare-variant-integration-analysis
-description: Use when when analyzing rare-variant associations where sample sizes are modest, individual-variant tests lack power, or you need to aggregate signal across multiple rare variants within a biological pathway.
+description: Use when when analyzing rare-variant associations where sample sizes
+  are modest, individual-variant tests lack power, or you need to aggregate signal
+  across multiple rare variants within a biological pathway.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3197
@@ -10,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_0625
   tools:
   - PaIRKAT
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -38,6 +41,7 @@ attribution:
 
 # rare-variant-integration-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply pathway-integrated kernel association testing (PaIRKAT) to detect rare-variant effects by integrating genotype and phenotype data into a kernel-based statistical framework. This skill enables pathway-level rare-variant association detection when individual-variant signals are weak or sparse.

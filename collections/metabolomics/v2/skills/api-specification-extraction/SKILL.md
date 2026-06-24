@@ -1,6 +1,8 @@
 ---
 name: api-specification-extraction
-description: Use when you have access to the source code of a webservice component (Python, configuration files, route definitions) and need to produce machine-readable API documentation (OpenAPI 3.
+description: Use when you have access to the source code of a webservice component
+  (Python, configuration files, route definitions) and need to produce machine-readable
+  API documentation (OpenAPI 3.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +12,7 @@ metadata:
   tools:
   - MAGMa
   - joblauncher
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -39,6 +42,7 @@ attribution:
 
 # api-specification-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract HTTP endpoint definitions, request/response schemas, and authentication mechanisms from webservice source code and map them into a formal API specification (OpenAPI 3.0). This skill is essential when integrating or documenting webservice components whose interfaces are defined in code rather than published specifications.

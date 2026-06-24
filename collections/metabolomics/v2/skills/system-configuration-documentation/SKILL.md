@@ -1,6 +1,9 @@
 ---
 name: system-configuration-documentation
-description: Use when after successfully installing and validating all components of a complex multi-tool workflow (such as ENPKG), when you have confirmed that all dependencies resolve, external tools (e.g., Sirius, MZmine) are accessible at their expected paths, and test commands execute without error.
+description: Use when after successfully installing and validating all components
+  of a complex multi-tool workflow (such as ENPKG), when you have confirmed that all
+  dependencies resolve, external tools (e.g., Sirius, MZmine) are accessible at their
+  expected paths, and test commands execute without error.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -12,6 +15,7 @@ metadata:
   - Sirius
   - GraphDB
   - enpkg_full
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

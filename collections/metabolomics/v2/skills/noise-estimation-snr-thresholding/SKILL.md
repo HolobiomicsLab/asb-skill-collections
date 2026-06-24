@@ -1,6 +1,8 @@
 ---
 name: noise-estimation-snr-thresholding
-description: Use when after normalizing, smoothing, and baseline-reducing mass spectra via normalize(), smooth(), and reduceBaseline(), when you need to distinguish true peaks from noise-induced artifacts.
+description: Use when after normalizing, smoothing, and baseline-reducing mass spectra
+  via normalize(), smooth(), and reduceBaseline(), when you need to distinguish true
+  peaks from noise-induced artifacts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,14 +16,18 @@ metadata:
   - matter
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods and any statistical analysis methods with a `BPPARAM` option
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods and any statistical analysis methods with a `BPPARAM` option
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:

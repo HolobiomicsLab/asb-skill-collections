@@ -1,6 +1,9 @@
 ---
 name: baseline-correction-algorithm-selection
-description: Use when when you have imported a raw GCxGC-MS chromatogram as a 2D-TIC (2D Total Intensity Chromatogram) object from a NetCDF file and observe steady or increasing baseline intensity caused by instrumental contamination, column bleeding, or thermal drift.
+description: Use when when you have imported a raw GCxGC-MS chromatogram as a 2D-TIC
+  (2D Total Intensity Chromatogram) object from a NetCDF file and observe steady or
+  increasing baseline intensity caused by instrumental contamination, column bleeding,
+  or thermal drift.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,13 +15,15 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # Baseline Correction Algorithm Selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selecting and applying an appropriate baseline correction algorithm to remove instrumental drift, column bleeding, and chemical noise from raw GCxGC-MS chromatographic signals. This skill determines which baseline correction approach (e.g., asymmetric least squares) best suits the noise characteristics and intensity profile of the 2D-TIC chromatogram before downstream preprocessing and multivariate analysis.

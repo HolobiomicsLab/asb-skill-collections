@@ -1,6 +1,8 @@
 ---
 name: documentation-and-metadata-modernization
-description: Use when a mature scientific package (e.g., Mummichog 3) is being migrated to a new GitHub organization that enforces standardized project structure, and the current setup.py, pyproject.toml, requirements.txt, .
+description: Use when a mature scientific package (e.g., Mummichog 3) is being migrated
+  to a new GitHub organization that enforces standardized project structure, and the
+  current setup.py, pyproject.toml, requirements.txt, .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -12,6 +14,7 @@ metadata:
   - GitHub Actions / .github/workflows
   - virtualenv
   - scverse.org project structure
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
@@ -39,6 +42,7 @@ attribution:
 
 # documentation-and-metadata-modernization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Audit and adapt a scientific Python package's metadata, configuration files, and documentation to conform to organizational standards (e.g., metabolomics-cloud conventions) when relocating to a new GitHub organization. This ensures consistent project structure, CI/CD workflows, and installation behavior across a federated codebase.

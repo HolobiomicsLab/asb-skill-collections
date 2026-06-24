@@ -1,6 +1,9 @@
 ---
 name: simulation-evaluation-data-capture
-description: Use when when you have simulated DDA (data-dependent acquisition) scans from a ViMMS Environment and need to (1) quantify how well the simulated acquisition matched real or reference data (via evaluation metrics), and (2) export the results as standards-compliant mzML files for comparison with.
+description: Use when when you have simulated DDA (data-dependent acquisition) scans
+  from a ViMMS Environment and need to (1) quantify how well the simulated acquisition
+  matched real or reference data (via evaluation metrics), and (2) export the results
+  as standards-compliant mzML files for comparison with.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,17 +18,21 @@ metadata:
   - Environment
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 - Existing mzML files can be converted into chemical lists using `ChemicalMixtureFromMZML`.
 - '`TopNController` – standard Top‑N data dependent acquisition.'
-- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or a real instrument.
+- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or
+  a real instrument.
 - Environment – orchestrates interaction between the mass spectrometer and the controller.
 claims: []
 provenance:
@@ -51,6 +58,7 @@ attribution:
 
 # simulation-evaluation-data-capture
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Capture evaluation metrics and write simulated MS/MS scans to mzML format during a virtual mass spectrometry acquisition loop. This skill bridges in-silico fragmentation strategy prototyping with downstream comparative analysis by preserving both scan results and performance metadata.

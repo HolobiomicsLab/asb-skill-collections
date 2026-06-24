@@ -1,6 +1,8 @@
 ---
 name: r-package-integration
-description: Use when when you have a functional R package with core statistical or computational logic that needs to be made accessible to non-R users, or when you want to streamline a multi-step analytical workflow (e.
+description: Use when when you have a functional R package with core statistical or
+  computational logic that needs to be made accessible to non-R users, or when you
+  want to streamline a multi-step analytical workflow (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -14,6 +16,7 @@ metadata:
   - Amanida R package
   - webchem R package
   - Shiny Server / shinyapps.io
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida
@@ -43,6 +46,7 @@ attribution:
 
 # R Package Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Wrapping an existing R package (e.g., Amanida for metabolomic meta-analysis) into an interactive web application using Shiny, exposing its statistical and data-processing functions through a user-friendly browser interface with reactive input controls and downloadable outputs.

@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -50,6 +51,7 @@ attribution:
 
 # spectral-metadata-grouping
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Group mass spectra by identical SPLASH keys to identify and remove duplicate spectral records in standardized spectral datasets. This skill enables systematic deduplication of mass spectrometry libraries by leveraging the SPLASH (SPectraL hASH) identifier—a database-independent, unambiguous spectral hash that serves as a unique fingerprint for each spectrum.

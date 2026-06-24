@@ -1,6 +1,9 @@
 ---
 name: chromatogram-plot-generation-retention-time
-description: Use when you have mass spectrometry data loaded as a Pandas DataFrame with retention time and intensity columns, and you need to visualize the overall or mass-trace-specific signal intensity distribution across the chromatographic separation.
+description: Use when you have mass spectrometry data loaded as a Pandas DataFrame
+  with retention time and intensity columns, and you need to visualize the overall
+  or mass-trace-specific signal intensity distribution across the chromatographic
+  separation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -19,6 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -48,6 +52,7 @@ attribution:
 
 # chromatogram-plot-generation-retention-time
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate static or interactive chromatogram plots from mass spectrometry data using retention time (x-axis) and intensity (y-axis) columns in a Pandas DataFrame. This skill enables visualization of LC-MS signal intensity patterns across the chromatographic separation dimension, with support for multiple plotting backends (matplotlib, Bokeh, Plotly) and optional mass trace separation.

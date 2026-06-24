@@ -1,6 +1,9 @@
 ---
 name: fragmentation-database-construction
-description: Use when when you have completed ORCA single-point energy calculations on interpolated reaction pathway geometries and need to convert quantum mechanical fragment energies and molecular properties into a structured fragmentation channel database suitable for automated EI mass spectrum simulation.
+description: Use when when you have completed ORCA single-point energy calculations
+  on interpolated reaction pathway geometries and need to convert quantum mechanical
+  fragment energies and molecular properties into a structured fragmentation channel
+  database suitable for automated EI mass spectrum simulation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3456
@@ -16,11 +19,13 @@ metadata:
   - geodesic_interpolate
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**orca** (version >= 6.0.0)'
 - '**molbar** (version >= 1.1.3)'

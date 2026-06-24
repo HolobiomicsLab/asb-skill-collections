@@ -1,6 +1,8 @@
 ---
 name: r-package-api-usage
-description: Use when when you have metabolomics data (tab-delimited text or SummarizedExperiment object) and need to apply batch correction, outlier detection, internal standard recommendation, and quality filtering at scale or in non-interactive workflows.
+description: Use when when you have metabolomics data (tab-delimited text or SummarizedExperiment
+  object) and need to apply batch correction, outlier detection, internal standard
+  recommendation, and quality filtering at scale or in non-interactive workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -23,8 +26,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +56,7 @@ attribution:
 
 # R Package API Usage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Programmatically invoke R package functions to perform metabolomics quality control analyses and generate standardized reports. This skill encompasses reading data, building experiment objects, executing analysis pipelines, and exporting results through mzQuality's documented API.

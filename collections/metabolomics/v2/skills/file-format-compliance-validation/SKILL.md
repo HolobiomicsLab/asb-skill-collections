@@ -1,6 +1,9 @@
 ---
 name: file-format-compliance-validation
-description: Use when you have generated or received mzPeak files from a Rust, Python, R, or other implementation and need to verify they comply with the published HUPO-PSI specification before integration into a production workflow, data repository, or downstream analysis pipeline.
+description: Use when you have generated or received mzPeak files from a Rust, Python,
+  R, or other implementation and need to verify they comply with the published HUPO-PSI
+  specification before integration into a production workflow, data repository, or
+  downstream analysis pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -14,6 +17,7 @@ metadata:
   - arrow (R package)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -41,6 +45,7 @@ attribution:
 
 # file-format-compliance-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that prototype implementations of a mass spectrometry data format produce files conforming to all mandatory fields and structural elements defined in a published specification. This skill ensures interoperability and correctness by systematically comparing generated files against a normative specification document.

@@ -1,6 +1,9 @@
 ---
 name: compound-identification-scoring
-description: Use when you have preprocessed MS/MS spectra (noise-filtered, normalized) and need to compute pairwise similarity or distance scores for compound library matching, when your goal is to rank candidate compounds by spectral match quality and maximize correct identification rate above dot-product.
+description: Use when you have preprocessed MS/MS spectra (noise-filtered, normalized)
+  and need to compute pairwise similarity or distance scores for compound library
+  matching, when your goal is to rank candidate compounds by spectral match quality
+  and maximize correct identification rate above dot-product.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2929
@@ -15,6 +18,7 @@ metadata:
   - Entropy Search GUI
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

@@ -1,6 +1,8 @@
 ---
 name: ci-status-badge-deployment
-description: Use when you have configured a GitHub Actions workflow that executes build, test, and quality checks, and you want to embed a machine-readable, auto-updating badge in your repository README to signal pipeline status at a glance.
+description: Use when you have configured a GitHub Actions workflow that executes
+  build, test, and quality checks, and you want to embed a machine-readable, auto-updating
+  badge in your repository README to signal pipeline status at a glance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -11,6 +13,7 @@ metadata:
   - GitHub Actions
   - Sonarcloud
   - shields.io
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

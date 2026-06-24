@@ -1,6 +1,8 @@
 ---
 name: diffusion-model-inference
-description: Use when when you have multi-modal spectroscopic data (IR, Raman, UV-Vis, mass spectra, or NMR) and need to recover the underlying molecular structure without relying on finite spectral libraries or autoregressive SMILES generation.
+description: Use when when you have multi-modal spectroscopic data (IR, Raman, UV-Vis,
+  mass spectra, or NMR) and need to recover the underlying molecular structure without
+  relying on finite spectral libraries or autoregressive SMILES generation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -13,6 +15,7 @@ metadata:
   - Model Checkpoints
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra

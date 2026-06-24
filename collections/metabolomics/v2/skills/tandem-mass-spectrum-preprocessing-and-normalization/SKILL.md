@@ -1,6 +1,8 @@
 ---
 name: tandem-mass-spectrum-preprocessing-and-normalization
-description: Use when you have acquired raw MS/MS spectra (in MGF or mzML format) from a mass spectrometry instrument or public repository (e.g., MassIVE, MetaboLights, GNPS) that will be used for de novo chemical formula ranking or adduct assignment.
+description: Use when you have acquired raw MS/MS spectra (in MGF or mzML format)
+  from a mass spectrometry instrument or public repository (e.g., MassIVE, MetaboLights,
+  GNPS) that will be used for de novo chemical formula ranking or adduct assignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,6 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -43,6 +46,7 @@ attribution:
 
 # tandem-mass-spectrum-preprocessing-and-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare raw tandem MS/MS spectra for downstream formula inference by normalizing peak intensities and removing low-intensity noise. This skill is essential before feeding spectra into neural network-based chemical formula ranking models like MIST-CF.

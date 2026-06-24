@@ -1,6 +1,9 @@
 ---
 name: spectral-feature-standardization
-description: Use when after peak-picking stage completes on centroided mzML or netCDF raw LC-MS data via any of the three wrapped algorithms (Centwave, FeatureFinderMetabo, ADAP), when you need to pass the detected features to downstream SLAW stages (alignment, isotope/adduct grouping, gap-filling, MS2.
+description: Use when after peak-picking stage completes on centroided mzML or netCDF
+  raw LC-MS data via any of the three wrapped algorithms (Centwave, FeatureFinderMetabo,
+  ADAP), when you need to pass the detected features to downstream SLAW stages (alignment,
+  isotope/adduct grouping, gap-filling, MS2.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -14,11 +17,13 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +47,7 @@ attribution:
 
 # Spectral Feature Standardization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert peak-picking output from heterogeneous algorithms (Centwave, FeatureFinderMetabo, ADAP) into a unified internal feature matrix representation with consistent m/z, retention time, and intensity columns. This standardization enables seamless downstream integration of algorithm-specific results into common alignment, grouping, and gap-filling workflows.

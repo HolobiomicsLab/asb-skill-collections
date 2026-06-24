@@ -1,6 +1,9 @@
 ---
 name: metabolomic-feature-matching
-description: Use when you have two LC-MS feature tables (each with m/z, retention time, and intensity columns) from separate metabolomic experiments or replicates, and you need to establish which features in dataset A correspond to which features in dataset B to enable comparative or longitudinal analysis.
+description: Use when you have two LC-MS feature tables (each with m/z, retention
+  time, and intensity columns) from separate metabolomic experiments or replicates,
+  and you need to establish which features in dataset A correspond to which features
+  in dataset B to enable comparative or longitudinal analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,6 +15,7 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -40,6 +44,7 @@ attribution:
 
 # metabolomic-feature-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 M2S is a Matlab package that matches untargeted metabolomic features across two LC-MS datasets by computing similarity scores on m/z and retention time dimensions and resolving one-to-one feature correspondences. Use this skill when you have two independent LC-MS metabolomic experiments and need to establish which detected features represent the same underlying metabolite across datasets.

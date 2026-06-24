@@ -1,6 +1,9 @@
 ---
 name: integrative-omics-pathway-enrichment
-description: Use when you have a preprocessed peak table with statistically significant or differentially abundant metabolites (e.g., from ANCOVA or PLS/PLS-DA), and you want to move beyond individual peak-level interpretation to understand which biological pathways or metabolic networks are perturbed.
+description: Use when you have a preprocessed peak table with statistically significant
+  or differentially abundant metabolites (e.g., from ANCOVA or PLS/PLS-DA), and you
+  want to move beyond individual peak-level interpretation to understand which biological
+  pathways or metabolic networks are perturbed.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -13,6 +16,7 @@ metadata:
   - SMART
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

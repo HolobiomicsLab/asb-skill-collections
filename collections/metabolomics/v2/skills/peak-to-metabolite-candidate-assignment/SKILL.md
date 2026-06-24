@@ -1,6 +1,8 @@
 ---
 name: peak-to-metabolite-candidate-assignment
-description: Use when you have a raw peak-intensity matrix from untargeted LC-MS data (organized as rows=peaks, columns=samples) and need to generate initial candidate metabolite assignments.
+description: Use when you have a raw peak-intensity matrix from untargeted LC-MS data
+  (organized as rows=peaks, columns=samples) and need to generate initial candidate
+  metabolite assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -15,14 +17,18 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # peak-to-metabolite-candidate-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate observed LC-MS peaks (m/z values) to KEGG database metabolites by matching peak mass-to-charge ratios against a precomputed table of KEGG compounds with their known adducts and in-source fragments. This is the first step in mWISE's three-stage untargeted metabolomics annotation pipeline, designed to overcome the bottleneck of assigning chemical identities to detected peaks.

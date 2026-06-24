@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-organization
-description: Use when you have raw imzML and ibd (ion binary data) files from spatial mass spectrometry imaging and need to convert them into a standardized AnnData representation where m/z values are features (columns), spatial spots are observations (rows), and intensities form the feature matrix.
+description: Use when you have raw imzML and ibd (ion binary data) files from spatial
+  mass spectrometry imaging and need to convert them into a standardized AnnData representation
+  where m/z values are features (columns), spatial spots are observations (rows),
+  and intensities form the feature matrix.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,6 +14,7 @@ metadata:
   - spatialMETA
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

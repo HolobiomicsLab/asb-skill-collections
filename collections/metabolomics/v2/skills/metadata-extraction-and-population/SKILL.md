@@ -1,6 +1,9 @@
 ---
 name: metadata-extraction-and-population
-description: Use when when importing raw mass spectrometry data from files in supported formats (mzML, mzXML, msp, MGF, JSON, metabolomics-USI) and you need to extract and standardize metadata fields so that spectra are ready for metadata cleaning, validation, and comparative analysis.
+description: Use when when importing raw mass spectrometry data from files in supported
+  formats (mzML, mzXML, msp, MGF, JSON, metabolomics-USI) and you need to extract
+  and standardize metadata fields so that spectra are ready for metadata cleaning,
+  validation, and comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,11 +16,13 @@ metadata:
   - matchms
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - matchms is a versatile open-source Python package
 - make sure the existing tests still work by running ``pytest``
 claims: []

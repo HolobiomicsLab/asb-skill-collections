@@ -20,6 +20,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab).
     url: https://bitbucket.org/wishartlab/classyfire_api.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
@@ -48,6 +49,7 @@ attribution:
 
 # query-string-parsing-and-tokenization
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Parse and tokenize chemical structure query strings to extract optional compound identifiers and structural representations, then classify the representation type (SMILES, InChI, IUPAC name, or FASTA) for routing to the appropriate ClassyFire API endpoint. This skill enables flexible input handling for automated chemical compound classification.

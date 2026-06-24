@@ -13,6 +13,7 @@ metadata:
   - matplotlib
   - Bokeh
   - Plotly
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -40,6 +41,7 @@ attribution:
 
 # computational-execution-table-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically execute a suite of computational scripts across multiple software backends, measure wall-clock execution time and resource consumption for each script, and aggregate results into a tabular format for performance comparison and reproducibility verification.

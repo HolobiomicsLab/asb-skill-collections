@@ -1,6 +1,9 @@
 ---
 name: tensorflow-cpu-runtime-parameter-tuning
-description: Use when deploying Mass2SMILES on a TensorFlow-CPU build and you need to optimize inference throughput on multi-core systems. This is particularly necessary when GPU inference is unavailable due to CUDA driver incompatibility, or when inference hardware has variable core counts (e.
+description: Use when deploying Mass2SMILES on a TensorFlow-CPU build and you need
+  to optimize inference throughput on multi-core systems. This is particularly necessary
+  when GPU inference is unavailable due to CUDA driver incompatibility, or when inference
+  hardware has variable core counts (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -15,13 +18,16 @@ metadata:
   - Docker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
 evidence_spans:
 - open-source Python based deep learning approach
-- cddd does not seem to work on newer cuda drivers, therefore it is build using tensorflow cpu
-- this Mass2SMILES model container is using GPU, the cddd does not seem to work on newer cuda drivers, therefore it is build using tensorflow cpu
+- cddd does not seem to work on newer cuda drivers, therefore it is build using tensorflow
+  cpu
+- this Mass2SMILES model container is using GPU, the cddd does not seem to work on
+  newer cuda drivers, therefore it is build using tensorflow cpu
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +51,7 @@ attribution:
 
 # tensorflow-cpu-runtime-parameter-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Tune TensorFlow-CPU inference performance in Mass2SMILES by configuring the cpu_threads parameter to control the number of CPU cores allocated during model execution. This skill is essential when deploying the model on systems where GPU acceleration is unavailable or incompatible (e.g., newer CUDA driver conflicts) and CPU-bound inference speed must be optimized.

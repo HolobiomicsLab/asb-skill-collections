@@ -1,6 +1,8 @@
 ---
 name: mzml-spectral-format-parsing
-description: Use when you have mzML-format raw data files (from any mass spectrometry vendor or conversion tool) and need to ingest them into MS-DIAL version 5 or later for untargeted metabolomics or lipidomics analysis.
+description: Use when you have mzML-format raw data files (from any mass spectrometry
+  vendor or conversion tool) and need to ingest them into MS-DIAL version 5 or later
+  for untargeted metabolomics or lipidomics analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,12 +18,15 @@ metadata:
   - MS-DIAL MsdialWorkbench
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
-- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and
+  .NET 6
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 - To conduct tests, please refer to section `test:` of GitHub Actions
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # mzml-spectral-format-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse mzML-format raw mass spectrometry data files into internal data structures compatible with MS-DIAL's metabolomics workflow. This skill is essential when working with open-source or vendor-agnostic MS-DIAL builds that depend exclusively on mzML as the supported raw data input format.

@@ -1,6 +1,9 @@
 ---
 name: hit-score-consolidation-across-domains
-description: Use when you have executed batch spectral searches against two or more domain-specific MASSTs (via the Fast Search API or individual MASST tools) and need to combine the resulting hit lists, match scores, and taxonomic/metadata annotations into a single ranked table for downstream analysis.
+description: Use when you have executed batch spectral searches against two or more
+  domain-specific MASSTs (via the Fast Search API or individual MASST tools) and need
+  to combine the resulting hit lists, match scores, and taxonomic/metadata annotations
+  into a single ranked table for downstream analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -19,6 +22,7 @@ metadata:
   - GNPS_MASST
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

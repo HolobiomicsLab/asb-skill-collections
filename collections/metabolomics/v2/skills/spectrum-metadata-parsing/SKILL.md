@@ -1,6 +1,9 @@
 ---
 name: spectrum-metadata-parsing
-description: Use when a user submits one or more MS/MS spectra (via .mgf file, USI list, or direct upload) and the downstream analysis requires dispatching to a specific domain-specific MASST tool (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, or metadataMASST).
+description: Use when a user submits one or more MS/MS spectra (via .mgf file, USI
+  list, or direct upload) and the downstream analysis requires dispatching to a specific
+  domain-specific MASST tool (microbeMASST, plantMASST, tissueMASST, microbiomeMASST,
+  foodMASST, or metadataMASST).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -20,6 +23,7 @@ metadata:
   - jobs.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

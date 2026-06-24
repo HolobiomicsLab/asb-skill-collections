@@ -1,6 +1,9 @@
 ---
 name: isobaric-ion-misclassification-documentation
-description: Use when after matrix annotation has been performed on mass spectrometry imaging (MSI) data when you need to identify and document ions whose m/z values overlap with or are isobaric to other peaks, creating risk of false positive or false negative matrix assignments.
+description: Use when after matrix annotation has been performed on mass spectrometry
+  imaging (MSI) data when you need to identify and document ions whose m/z values
+  overlap with or are isobaric to other peaks, creating risk of false positive or
+  false negative matrix assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,11 +17,13 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - rMSIcleanup is an open-source R package
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 claims: []
@@ -44,6 +49,7 @@ attribution:
 
 # isobaric-ion-misclassification-documentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document and visualize potential misclassification risks arising from overlapping or isobaric peaks in matrix-related ion annotation workflows. This skill generates transparent, per-annotation reports that justify classification decisions by flagging peak overlap status and spatial distribution patterns.

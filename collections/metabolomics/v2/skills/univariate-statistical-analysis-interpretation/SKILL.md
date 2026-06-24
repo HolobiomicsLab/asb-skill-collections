@@ -1,6 +1,9 @@
 ---
 name: univariate-statistical-analysis-interpretation
-description: Use when you have a preprocessed feature table from non-targeted LC-MS/MS metabolomics data (after data merging, cleanup, blank removal, and batch correction) and need to test whether individual metabolomic features show statistically significant differences between experimental groups or.
+description: Use when you have a preprocessed feature table from non-targeted LC-MS/MS
+  metabolomics data (after data merging, cleanup, blank removal, and batch correction)
+  and need to test whether individual metabolomic features show statistically significant
+  differences between experimental groups or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,6 +19,7 @@ metadata:
   - Streamlit App
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

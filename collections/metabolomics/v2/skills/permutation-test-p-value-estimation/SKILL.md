@@ -1,6 +1,9 @@
 ---
 name: permutation-test-p-value-estimation
-description: Use when after computing Multi-Block Variable Importance in Projection (MB-VIP) scores on a fitted MB-PLS discriminant model, when you need to distinguish signal features from noise by establishing empirical significance thresholds rather than relying on parametric assumptions.
+description: Use when after computing Multi-Block Variable Importance in Projection
+  (MB-VIP) scores on a fitted MB-PLS discriminant model, when you need to distinguish
+  signal features from noise by establishing empirical significance thresholds rather
+  than relying on parametric assumptions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -18,6 +21,7 @@ metadata:
   - joblib
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -25,7 +29,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
+  prediction modeling for Python.'
 - import pandas as pd
 - import numpy as np
 - from sklearn.model_selection import train_test_split
@@ -54,6 +59,7 @@ attribution:
 
 # permutation-test-p-value-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Empirical permutation testing on shuffled response labels to generate null distributions and compute feature-level p-values for multi-block variable importance scores in discriminant LC-MS metabolomics models. This approach corrects for multiple testing and identifies statistically significant features after feature selection.

@@ -1,6 +1,7 @@
 ---
 name: checkpoint-serialization-and-model-persistence
-description: Use when after completing a full training loop on preprocessed molecular graph data and validating model performance on a held-out validation set.
+description: Use when after completing a full training loop on preprocessed molecular
+  graph data and validating model performance on a held-out validation set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +14,7 @@ metadata:
   - PyTorch
   - Train.py
   - Transferlearning.py
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

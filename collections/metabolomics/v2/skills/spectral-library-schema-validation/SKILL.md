@@ -1,6 +1,9 @@
 ---
 name: spectral-library-schema-validation
-description: Use when after harmonizing MS/MS spectra and metadata fields (compound identifiers, adduct annotations, collision energies, instrument types) to a common schema, and before exporting the spectral library to standardized formats (mzML, mzTab, or repository-native format).
+description: Use when after harmonizing MS/MS spectra and metadata fields (compound
+  identifiers, adduct annotations, collision energies, instrument types) to a common
+  schema, and before exporting the spectral library to standardized formats (mzML,
+  mzTab, or repository-native format).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -13,6 +16,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse

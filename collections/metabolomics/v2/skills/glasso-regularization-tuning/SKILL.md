@@ -1,6 +1,7 @@
 ---
 name: glasso-regularization-tuning
-description: Use when when estimating a sparse network graph from a feature matrix using GLASSO and you need to determine the regularization strength.
+description: Use when when estimating a sparse network graph from a feature matrix
+  using GLASSO and you need to determine the regularization strength.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -10,6 +11,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -38,6 +40,7 @@ attribution:
 
 # glasso-regularization-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Tune the sparsity regularization parameter (lambda) in the graphical lasso (GLASSO) algorithm to control the density and interpretability of estimated sparse inverse covariance matrices. Proper lambda selection balances network sparsity with statistical fidelity to the observed feature correlations.

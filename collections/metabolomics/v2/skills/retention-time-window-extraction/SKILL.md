@@ -1,6 +1,9 @@
 ---
 name: retention-time-window-extraction
-description: Use when you have loaded sqMass files containing pre-extracted transition group chromatograms and need to isolate chromatographic traces within a specific retention time interval—either defined by OpenSwath feature metadata (apex retention time ± margin) or by manual user selection.
+description: Use when you have loaded sqMass files containing pre-extracted transition
+  group chromatograms and need to isolate chromatographic traces within a specific
+  retention time interval—either defined by OpenSwath feature metadata (apex retention
+  time ± margin) or by manual user selection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -17,11 +20,14 @@ metadata:
   - Bokeh
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading however since extraction has already been performed by the upstream analysis tool. This includes SqMassLoader'
+- 'Chromatogram Loaders: Raw data stores chromatograms, this allows for faster loading
+  however since extraction has already been performed by the upstream analysis tool.
+  This includes SqMassLoader'
 - InteractivePlotter
 - MRMTransitionGroupPicker
 - pyMRMTransitionGroupPicker

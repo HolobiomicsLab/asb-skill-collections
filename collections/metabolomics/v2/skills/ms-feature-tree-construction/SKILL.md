@@ -1,6 +1,8 @@
 ---
 name: ms-feature-tree-construction
-description: Use when you have untargeted LC-MS/MS metabolomic data (peak-detected .mzXML/.mzML/.mzDATA files processed through MZmine2) and need to relate MS1 features by chemical similarity rather than sequence homology.
+description: Use when you have untargeted LC-MS/MS metabolomic data (peak-detected
+  .mzXML/.mzML/.mzDATA files processed through MZmine2) and need to relate MS1 features
+  by chemical similarity rather than sequence homology.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,11 +16,13 @@ metadata:
   - Classyfire
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # ms-feature-tree-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a phylogenetic tree relating mass-spectrometry (LC-MS/MS) features based on predicted molecular substructures to enable chemically-informed comparative metabolomic analysis. This skill integrates fragmentation tree generation, molecular formula ranking, fingerprint prediction, and hierarchical clustering into a unified workflow for untargeted metabolomic profiling.

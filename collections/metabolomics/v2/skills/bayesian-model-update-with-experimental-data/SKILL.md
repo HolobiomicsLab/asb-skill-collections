@@ -1,6 +1,9 @@
 ---
 name: bayesian-model-update-with-experimental-data
-description: Use when you have completed one or more LC-MS gradient runs, extracted separation efficiency metrics from the resulting MS1 and MS2 spectra, and need to incorporate those real experimental observations into your Gaussian process model to improve the next gradient proposal.
+description: Use when you have completed one or more LC-MS gradient runs, extracted
+  separation efficiency metrics from the resulting MS1 and MS2 spectra, and need to
+  incorporate those real experimental observations into your Gaussian process model
+  to improve the next gradient proposal.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,13 +19,15 @@ metadata:
   - bago
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
 evidence_spans:
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
@@ -52,6 +57,7 @@ attribution:
 
 # bayesian-model-update-with-experimental-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Iteratively update a Gaussian process regression model with newly acquired LC-MS experimental data to refine predictions of separation efficiency and identify optimal gradient parameters. This skill enables closed-loop optimization where each new gradient trial yields MS1/MS2 spectra, separation metrics, and model retraining until convergence or a predefined stopping criterion is reached.

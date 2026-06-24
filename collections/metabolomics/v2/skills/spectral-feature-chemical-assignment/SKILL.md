@@ -1,6 +1,7 @@
 ---
 name: spectral-feature-chemical-assignment
-description: Use when you have spectral feature data annotated by both in silico structural tools (e.
+description: Use when you have spectral feature data annotated by both in silico structural
+  tools (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,14 +16,17 @@ metadata:
   - ConCISE
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: apache-arrow-columnar-format-parsing
-description: Use when you have mzPeak files stored as Parquet tables within a ZIP archive and need to load spectrum metadata, chromatogram metadata, signal data (profile or centroid), or peaks into memory for analysis in R, Python, or another Arrow-supported language.
+description: Use when you have mzPeak files stored as Parquet tables within a ZIP
+  archive and need to load spectrum metadata, chromatogram metadata, signal data (profile
+  or centroid), or peaks into memory for analysis in R, Python, or another Arrow-supported
+  language.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,11 +19,13 @@ metadata:
   - mzPeak Rust implementation
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
 evidence_spans:
-- R implementation in `R/`, which is also a complete re-implementation using the [`arrow`](https://arrow.apache.org/docs/r/) for _reading_ only
+- R implementation in `R/`, which is also a complete re-implementation using the [`arrow`](https://arrow.apache.org/docs/r/)
+  for _reading_ only
 - There is also an R implementation in `R/`
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # Apache Arrow Columnar Format Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and decode Apache Arrow columnar data files (such as Parquet archives) to extract structured mass spectrometry metadata and signal arrays for downstream analysis. This skill enables read-only access to mzPeak files through language-specific Arrow bindings that handle the columnar schema, packed parallel table groups, and optional data transformations like zero run stripping and null marking.

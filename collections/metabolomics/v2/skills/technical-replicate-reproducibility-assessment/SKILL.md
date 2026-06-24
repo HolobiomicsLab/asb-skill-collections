@@ -1,6 +1,7 @@
 ---
 name: technical-replicate-reproducibility-assessment
-description: Use when you have tandem MS data with technical replicates and need to remove features showing high variability between replicates.
+description: Use when you have tandem MS data with technical replicates and need to
+  remove features showing high variability between replicates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +14,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -44,6 +46,7 @@ attribution:
 
 # technical-replicate-reproducibility-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess the reproducibility of metabolomic features across technical replicates by filtering out non-reproducible compounds using coefficient of variation (CV) thresholds. This skill identifies high-quality, consistent MS1 features that warrant downstream analysis.

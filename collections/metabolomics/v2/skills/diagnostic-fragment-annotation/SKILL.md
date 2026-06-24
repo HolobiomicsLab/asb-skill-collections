@@ -1,6 +1,9 @@
 ---
 name: diagnostic-fragment-annotation
-description: Use when when you have centroided, data-dependent acquisition (ddMS2) spectra in mzML format with extracted precursor m/z values and associated fragment ion lists, and you need to discriminate PFAS features from background signals using characteristic fragmentation patterns.
+description: Use when when you have centroided, data-dependent acquisition (ddMS2)
+  spectra in mzML format with extracted precursor m/z values and associated fragment
+  ion lists, and you need to discriminate PFAS features from background signals using
+  characteristic fragmentation patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3663
@@ -14,11 +17,13 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # diagnostic-fragment-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate MS2 fragment ions with diagnostic mass differences and characteristic loss patterns to prioritize putative PFAS features in non-target HRMS data. This skill identifies perfluoroalkyl chain fragments and neutral losses (e.g., CF₂ units) by computing precursor–fragment mass differences, enabling rapid triage of candidate compounds in large feature sets.

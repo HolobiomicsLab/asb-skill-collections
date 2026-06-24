@@ -1,6 +1,9 @@
 ---
 name: proteomics-data-format-conversion
-description: Use when you have vendor raw files (e.g., .raw from Thermo, .d from Agilent, .wiff2 from Sciex) that need to be converted to a standard format for analysis pipelines, data sharing, or when you require the high compression rates and fast decoding provided by Aird format.
+description: Use when you have vendor raw files (e.g., .raw from Thermo, .d from Agilent,
+  .wiff2 from Sciex) that need to be converted to a standard format for analysis pipelines,
+  data sharing, or when you require the high compression rates and fast decoding provided
+  by Aird format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -18,6 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -49,6 +53,7 @@ attribution:
 
 # proteomics-data-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert vendor-specific mass spectrometry raw files to open, computation-oriented formats (mzML or Aird) using ProteoWizard bindings, enabling downstream analysis and data sharing. This skill is essential when working with proprietary instrument outputs that require standardization for cross-platform analysis or compression-optimized storage.

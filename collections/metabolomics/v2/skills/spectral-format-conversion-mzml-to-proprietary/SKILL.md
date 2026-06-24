@@ -1,6 +1,8 @@
 ---
 name: spectral-format-conversion-mzml-to-proprietary
-description: Use when after clustering features with RAMClustR and inferring molecular weights via do.findmain, when you need to perform structure elucidation or molecular formula prediction using MSFinder (for .mat format) or Sirius (for .ms format).
+description: Use when after clustering features with RAMClustR and inferring molecular
+  weights via do.findmain, when you need to perform structure elucidation or molecular
+  formula prediction using MSFinder (for .mat format) or Sirius (for .ms format).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3650
@@ -15,6 +17,7 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -48,6 +51,7 @@ attribution:
 
 # spectral-format-conversion-mzml-to-proprietary
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert clustered mass spectrometry spectral data from RAMClustR-processed objects into vendor-specific formats (.mat for MSFinder, .ms for Sirius) to enable downstream structural annotation and molecular weight inference in specialized software environments.

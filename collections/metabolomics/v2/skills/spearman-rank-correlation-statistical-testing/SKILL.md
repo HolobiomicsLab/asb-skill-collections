@@ -1,6 +1,7 @@
 ---
 name: spearman-rank-correlation-statistical-testing
-description: Use when you have paired in silico and experimental measurements from multiple biological samples (e.
+description: Use when you have paired in silico and experimental measurements from
+  multiple biological samples (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -12,11 +13,13 @@ metadata:
   - COBRApy
   - scipy.stats.spearmanr
   - matplotlib/seaborn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions of the ENGRO2 model
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions of the ENGRO2 model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +43,7 @@ attribution:
 
 # spearman-rank-correlation-statistical-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Spearman rank correlation coefficient and two-tailed p-value to quantify monotonic association between two ranked variables (e.g., predicted vs. experimental phenotypes). Used to validate whether constraint-based model predictions discriminate biological samples and correlate with experimental measurements.

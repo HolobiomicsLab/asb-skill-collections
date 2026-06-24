@@ -1,6 +1,9 @@
 ---
 name: publication-figure-formatting-and-export
-description: Use when after generating initial visualizations (volcano plots, heatmaps, box plots, or bar plots) of lipid expression data, apply this skill when figures must be submitted to journals, supplementary materials, or presentations and must meet publication-quality standards for axes labels, legends.
+description: Use when after generating initial visualizations (volcano plots, heatmaps,
+  box plots, or bar plots) of lipid expression data, apply this skill when figures
+  must be submitted to journals, supplementary materials, or presentations and must
+  meet publication-quality standards for axes labels, legends.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,11 +14,13 @@ metadata:
   - matplotlib
   - seaborn
   - pandas
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 - _No usage/docs found._
 claims: []
 provenance:

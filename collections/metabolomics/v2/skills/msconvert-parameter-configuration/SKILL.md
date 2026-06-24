@@ -1,6 +1,8 @@
 ---
 name: msconvert-parameter-configuration
-description: Use when you have acquired raw mass spectrometry data from ThermoFisher, Agilent, or compatible vendors in their native formats (.raw, .d, or equivalent) and need to prepare it for nontargeted analysis using MSThunder on a Linux system.
+description: Use when you have acquired raw mass spectrometry data from ThermoFisher,
+  Agilent, or compatible vendors in their native formats (.raw, .d, or equivalent)
+  and need to prepare it for nontargeted analysis using MSThunder on a Linux system.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,13 +16,16 @@ metadata:
   - Ubuntu 20.04
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - other vendors whose raw data can be converted via MSConvert
-- The current version is compatible with ThermoFisher, Agilent, and other vendors whose raw data can be converted via MSConvert.
+- The current version is compatible with ThermoFisher, Agilent, and other vendors
+  whose raw data can be converted via MSConvert.
 - available through our experiments conducted on an Ubuntu 20.04 environment
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # msconvert-parameter-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute MSConvert command-line conversion of vendor-specific raw mass spectrometry data (ThermoFisher .raw, Agilent .d) into MSThunder-compatible formats on a Linux system. This skill bridges proprietary vendor formats and open analytical frameworks by applying appropriate output format parameters and validating file integrity post-conversion.

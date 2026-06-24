@@ -1,6 +1,9 @@
 ---
 name: shiny-app-initialization
-description: Use when you have developed an R-based workflow (e.g., data processing, peak detection, quality review) that is complex enough to warrant interactive parameter tuning and visual feedback, and you need to distribute it to collaborators or end-users who prefer a graphical interface over scripting.
+description: Use when you have developed an R-based workflow (e.g., data processing,
+  peak detection, quality review) that is complex enough to warrant interactive parameter
+  tuning and visual feedback, and you need to distribute it to collaborators or end-users
+  who prefer a graphical interface over scripting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,14 +17,17 @@ metadata:
   - roxygen2
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR
 evidence_spans:
-- The process is implemented in a Shiny app, which can be launched using a function exported by this package
+- The process is implemented in a Shiny app, which can be launched using a function
+  exported by this package
 - This package... can be launched using a function exported by this package
 - can be launched using a function exported by this package
-- This package provides an automated workflow for processing in-house metabolite library standards data
+- This package provides an automated workflow for processing in-house metabolite library
+  standards data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

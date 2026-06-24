@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-metadata-validation
-description: Use when after importing raw LC-MS/MS data files into the SIRIUS Java framework, before constructing indexed spectrum objects or submitting data to CSI:FingerID, CANOPUS, or MSNovelist web services.
+description: Use when after importing raw LC-MS/MS data files into the SIRIUS Java
+  framework, before constructing indexed spectrum objects or submitting data to CSI:FingerID,
+  CANOPUS, or MSNovelist web services.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +15,7 @@ metadata:
   - CANOPUS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

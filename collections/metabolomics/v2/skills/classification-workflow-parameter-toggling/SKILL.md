@@ -1,6 +1,8 @@
 ---
 name: classification-workflow-parameter-toggling
-description: Use when gNPS has stopped supplying ClassyFire ontology information for your spectral library matches, or when ClassyFire data is missing for in silico structural annotations.
+description: Use when gNPS has stopped supplying ClassyFire ontology information for
+  your spectral library matches, or when ClassyFire data is missing for in silico
+  structural annotations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -15,14 +17,17 @@ metadata:
   - ConCISE
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: spectrum-similarity-nearest-neighbor-indexing
-description: Use when when you have thousands to millions of high-resolution tandem MS/MS spectra (in mzML, mzXML, or MGF format) that need to be clustered or compared, and exhaustive pairwise distance computation is computationally prohibitive.
+description: Use when when you have thousands to millions of high-resolution tandem
+  MS/MS spectra (in mzML, mzXML, or MGF format) that need to be clustered or compared,
+  and exhaustive pairwise distance computation is computationally prohibitive.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +15,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 - pip install falcon-ms spectrum-utils==0.3.5
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # spectrum-similarity-nearest-neighbor-indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct nearest neighbor indexes on low-dimensional spectrum vectors to enable fast, sparse pairwise similarity searching without exhaustive comparisons. This skill accelerates large-scale MS/MS spectrum clustering by trading full pairwise distance computation for efficient approximate nearest neighbor retrieval.

@@ -1,6 +1,9 @@
 ---
 name: contrastive-learning-objective-formulation
-description: Use when when pre-training a graph neural network on a domain-specific molecular corpus (natural products vs. synthetic molecules) where you need to capture both evolutionary relationships encoded in molecular scaffolds and diverse structural variations in side-chains, and when supervised learning.
+description: Use when when pre-training a graph neural network on a domain-specific
+  molecular corpus (natural products vs. synthetic molecules) where you need to capture
+  both evolutionary relationships encoded in molecular scaffolds and diverse structural
+  variations in side-chains, and when supervised learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -10,11 +13,13 @@ metadata:
   - http://edamontology.org/topic_3379
   tools:
   - Git
-  - PyTorch or equivalent deep learning framework (inferred from GNN/contrastive learning context)
+  - PyTorch or equivalent deep learning framework (inferred from GNN/contrastive learning
+    context)
   - PyTorch
   - PyTorch Lightning
   - PyTorch Geometric (PyG)
   - NaFM (github.com/TomAIDD/NaFM-Official)
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -44,6 +49,7 @@ attribution:
 
 # contrastive-learning-objective-formulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Formulate and integrate contrastive learning objectives into a foundation model's pre-training pipeline to encode scaffold-derived evolutionary patterns and structural diversity in natural product molecules. This skill involves specifying the contrastive loss function, defining positive/negative pair sampling strategies, and unifying the contrastive objective with complementary pre-training tasks like masked graph modeling.

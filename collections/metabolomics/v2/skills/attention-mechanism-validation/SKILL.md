@@ -1,6 +1,8 @@
 ---
 name: attention-mechanism-validation
-description: Use when after instantiating a transformer encoder module for mass spectrometry data processing (e.g., in IDSL_MINT), before training on large MS/MS datasets or running inference on test spectra.
+description: Use when after instantiating a transformer encoder module for mass spectrometry
+  data processing (e.g., in IDSL_MINT), before training on large MS/MS datasets or
+  running inference on test spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3465
@@ -13,6 +15,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint
@@ -42,6 +45,7 @@ attribution:
 
 # attention-mechanism-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that a transformer-based encoder with multi-head self-attention and positional encoding processes mass spectrometry input tensors correctly without numerical instability. This skill ensures the core attention mechanism operates as specified before downstream inference or training on MS/MS spectra.

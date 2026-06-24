@@ -1,6 +1,8 @@
 ---
 name: metabolomic-data-structure-formatting
-description: Use when after peak detection in MZmine2 has produced an MGF file (containing MS1 and MS2 spectra) and a feature abundance table (CSV or BIOM), but before running q2-qemistree tree construction or any QIIME 2-based metabolomic analysis.
+description: Use when after peak detection in MZmine2 has produced an MGF file (containing
+  MS1 and MS2 spectra) and a feature abundance table (CSV or BIOM), but before running
+  q2-qemistree tree construction or any QIIME 2-based metabolomic analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,11 +15,13 @@ metadata:
   - QIIME 2
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # metabolomic-data-structure-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw mass-spectrometry metabolomic data into standardized QIIME 2 artifact formats (FeatureTable[Frequency] and MassSpectrometryFeatures) to enable downstream chemical tree construction and phylogenetic diversity analysis. This skill bridges peak-detection pipelines (MZmine2) and chemically-informed feature comparison.

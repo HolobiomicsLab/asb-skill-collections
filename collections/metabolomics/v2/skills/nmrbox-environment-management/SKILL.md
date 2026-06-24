@@ -1,6 +1,7 @@
 ---
 name: nmrbox-environment-management
-description: Use when when you need to deploy SAND for 1D NMR spectrum deconvolution on a new machine or cluster, or when testing code changes before merging into production.
+description: Use when when you need to deploy SAND for 1D NMR spectrum deconvolution
+  on a new machine or cluster, or when testing code changes before merging into production.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -12,12 +13,14 @@ metadata:
   - GACRC
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03078
   title: SAND
 evidence_spans:
 - latest interface to NMRBox (SAND_V7)
-- Any user is welcome to make new modificaitons on the SAND code, particularly its version for NMRBox
+- Any user is welcome to make new modificaitons on the SAND code, particularly its
+  version for NMRBox
 - interface to NMRPipe (pipe_scripts/)
 claims: []
 provenance:

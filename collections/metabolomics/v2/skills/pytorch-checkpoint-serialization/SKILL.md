@@ -1,6 +1,9 @@
 ---
 name: pytorch-checkpoint-serialization
-description: Use when a PyTorch-based model (such as a graph neural network trained on molecular retention-time data) has completed training or reached convergence, and you need to preserve the model state for later inference, evaluation, or transfer learning on new datasets.
+description: Use when a PyTorch-based model (such as a graph neural network trained
+  on molecular retention-time data) has completed training or reached convergence,
+  and you need to preserve the model state for later inference, evaluation, or transfer
+  learning on new datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -19,6 +22,7 @@ metadata:
   - torch-cluster
   - PyG (PyTorch Geometric)
   - TorchMetrics
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT
@@ -52,6 +56,7 @@ attribution:
 
 # pytorch-checkpoint-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Save and persist trained PyTorch graph neural network model states to disk after convergence or completion of training epochs. This skill ensures reproducibility and enables downstream transfer learning by capturing the learned weights, architecture parameters, and optimizer state.

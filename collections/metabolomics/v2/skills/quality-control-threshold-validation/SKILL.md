@@ -1,6 +1,7 @@
 ---
 name: quality-control-threshold-validation
-description: Use when after executing Formation formatting on processed feature tables (output from Blueshift or Gravity modules).
+description: Use when after executing Formation formatting on processed feature tables
+  (output from Blueshift or Gravity modules).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -15,6 +16,7 @@ metadata:
   - Gravity
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

@@ -1,6 +1,9 @@
 ---
 name: metabolite-set-annotation-mapping
-description: Use when you have a metabolomics peak intensity matrix with feature IDs (m/z, retention time, or arbitrary peak identifiers) and need to assign these peaks to standardized metabolite databases or spectral groupings (KEGG compounds, ChEBI IDs, GNPS Molecular Families, or MS2LDA Mass2Motifs) before.
+description: Use when you have a metabolomics peak intensity matrix with feature IDs
+  (m/z, retention time, or arbitrary peak identifiers) and need to assign these peaks
+  to standardized metabolite databases or spectral groupings (KEGG compounds, ChEBI
+  IDs, GNPS Molecular Families, or MS2LDA Mass2Motifs) before.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -16,6 +19,7 @@ metadata:
   - GNPS (Global Natural Products Social Molecular Networking)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

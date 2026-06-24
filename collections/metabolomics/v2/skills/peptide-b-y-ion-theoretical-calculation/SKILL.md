@@ -1,6 +1,8 @@
 ---
 name: peptide-b-y-ion-theoretical-calculation
-description: Use when when you have a peptide sequence and need to predict which fragment ions (B and Y series) should appear in an MS2 spectrum at a known isotopic abundance (e.g., natural 13C at 1.07%, or stable isotope labeling at 50% enrichment).
+description: Use when when you have a peptide sequence and need to predict which fragment
+  ions (B and Y series) should appear in an MS2 spectrum at a known isotopic abundance
+  (e.g., natural 13C at 1.07%, or stable isotope labeling at 50% enrichment).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,12 +16,15 @@ metadata:
   - Rcpp
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 - Extract visualization information from `.FT2` files
 claims: []

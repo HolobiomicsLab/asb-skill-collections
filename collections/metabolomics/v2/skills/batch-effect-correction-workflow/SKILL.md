@@ -1,6 +1,8 @@
 ---
 name: batch-effect-correction-workflow
-description: Use when you have a feature table generated from LC-MS/MS non-targeted metabolomics data that spans multiple sample preparation batches, instrumental runs, or experimental conditions.
+description: Use when you have a feature table generated from LC-MS/MS non-targeted
+  metabolomics data that spans multiple sample preparation batches, instrumental runs,
+  or experimental conditions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - FBMN-STATS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

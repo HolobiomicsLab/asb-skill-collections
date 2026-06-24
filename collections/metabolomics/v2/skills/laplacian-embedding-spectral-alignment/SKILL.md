@@ -1,6 +1,8 @@
 ---
 name: laplacian-embedding-spectral-alignment
-description: Use when you have two or more MS/MS fragmentation spectra (with precursor m/z, fragment m/z values, and intensities) and need to identify which fragment ions match across spectra while quantifying the statistical confidence of those matches.
+description: Use when you have two or more MS/MS fragmentation spectra (with precursor
+  m/z, fragment m/z values, and intensities) and need to identify which fragment ions
+  match across spectra while quantifying the statistical confidence of those matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -12,11 +14,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # laplacian-embedding-spectral-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Laplacian embedding to compute fragment ion similarity and statistical significance when aligning pairs of MS/MS fragmentation spectra. This skill captures both local mass difference patterns (shortest-path distance) and global spectral graph structure (average commute time) to enable robust matching across chemical structure variants.

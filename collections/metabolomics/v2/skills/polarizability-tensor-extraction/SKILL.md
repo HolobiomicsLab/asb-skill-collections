@@ -1,6 +1,7 @@
 ---
 name: polarizability-tensor-extraction
-description: Use when after ASE-ANI has filtered conformers to remove high-energy geometries, and you need to compute electronic properties required for CCS prediction.
+description: Use when after ASE-ANI has filtered conformers to remove high-energy
+  geometries, and you need to compute electronic properties required for CCS prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2423
@@ -13,13 +14,15 @@ metadata:
   - ASE-ANI
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - 'QUICK: For quantum calculations'
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +46,7 @@ attribution:
 
 # polarizability-tensor-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract electronic polarizability tensor components and dipole moments from quantum calculation output logs (QUICK) applied to filtered molecular conformers. These properties are essential inputs for computing collision cross sections (CCS) via trajectory methods in metabolite annotation workflows.

@@ -1,6 +1,8 @@
 ---
 name: feature-matrix-preparation-mass-spectrometry
-description: Use when when you have raw mass spectrometry spectral data (peak intensities across m/z values) and need to feed it into MLP or GNN models for metabolite annotation, or when you need to generate LDA topic labels as auxiliary multi-task learning targets.
+description: Use when when you have raw mass spectrometry spectral data (peak intensities
+  across m/z values) and need to feed it into MLP or GNN models for metabolite annotation,
+  or when you need to generate LDA topic labels as auxiliary multi-task learning targets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -14,6 +16,7 @@ metadata:
   - RDKit
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

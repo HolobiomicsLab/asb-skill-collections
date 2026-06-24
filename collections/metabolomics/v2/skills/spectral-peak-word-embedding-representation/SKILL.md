@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-word-embedding-representation
-description: Use when when you have MS/MS spectra (LC-MS or equivalent positive ionization mode data) that you intend to embed using Word2Vec or similar distributional semantic models, or when you need to prepare spectral data for training similarity models that learn peak co-occurrence patterns rather than.
+description: Use when when you have MS/MS spectra (LC-MS or equivalent positive ionization
+  mode data) that you intend to embed using Word2Vec or similar distributional semantic
+  models, or when you need to prepare spectral data for training similarity models
+  that learn peak co-occurrence patterns rather than.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -19,15 +22,20 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
-- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available
+  and can be installed via conda
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - Spec2Vec was optimised by making extensive use of Numpy [24]
 claims: []
 provenance:
@@ -52,6 +60,7 @@ attribution:
 
 # spectral-peak-word-embedding-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry fragment peaks and neutral losses into word tokens suitable for Word2Vec embedding, enabling learned representation of fragmental relationships. This representation bridges spectral data and natural language processing to capture structural similarity patterns in MS/MS spectra.

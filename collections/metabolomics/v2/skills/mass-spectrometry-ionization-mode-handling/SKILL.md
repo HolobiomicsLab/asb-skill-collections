@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-ionization-mode-handling
-description: Use when when you have a feature table from LC-MS preprocessed data (e.g. from asari v1.9.2) and need to annotate ions and infer neutral mass.
+description: Use when when you have a feature table from LC-MS preprocessed data (e.g.
+  from asari v1.9.2) and need to annotate ions and infer neutral mass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -16,6 +17,7 @@ metadata:
   - treelib
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -45,6 +47,7 @@ attribution:
 
 # mass-spectrometry-ionization-mode-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Specify and apply ionization mode (positive or negative) as a parameter to khipu's pre-annotation workflow, which determines which adduct patterns and isotope patterns are searched against the LC-MS feature list and inferred in the resulting empirical compounds. This is essential for correctly interpreting degenerate ions and neutral mass inference in untargeted metabolomics data.

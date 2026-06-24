@@ -1,6 +1,7 @@
 ---
 name: internal-standard-area-aberrancy-flagging
-description: Use when after building a SummarizedExperiment from metabolomics data but before quantitative analysis.
+description: Use when after building a SummarizedExperiment from metabolomics data
+  but before quantitative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -11,6 +12,7 @@ metadata:
   - mzQuality
   - R
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -19,8 +21,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # internal-standard-area-aberrancy-flagging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detection and flagging of mis-injected or otherwise compromised study samples by identifying anomalies in internal standard peak areas within a metabolomics SummarizedExperiment object. This skill isolates samples with aberrant internal standard signals that indicate technical failure and should be excluded from downstream analysis.

@@ -1,6 +1,9 @@
 ---
 name: python-environment-pinning
-description: 'Use when when you have access to a research repository or README documenting a machine learning implementation (e.g., Keras/TensorFlow-based deep learning model) and need to reproduce the computational environment exactly. Triggers include: (1) README explicitly lists pinned versions (e.'
+description: 'Use when when you have access to a research repository or README documenting
+  a machine learning implementation (e.g., Keras/TensorFlow-based deep learning model)
+  and need to reproduce the computational environment exactly. Triggers include: (1)
+  README explicitly lists pinned versions (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -26,6 +29,7 @@ metadata:
   - Conda
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac032/6510930
   title: massNet
@@ -59,6 +63,7 @@ attribution:
 
 # python-environment-pinning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract exact software dependency versions from project documentation and generate reproducible environment specifications (requirements.txt and environment.yml) to enable consistent reimplementation across platforms. This skill is essential when legacy implementations require specific version constraints to avoid API incompatibilities.

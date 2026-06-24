@@ -1,6 +1,8 @@
 ---
 name: community-dependent-reaction-inference
-description: Use when you have consensus metabolic reconstructions for multiple community members (e.g., plant-associated microbes or plant-microbial consortia) and those individual models contain incomplete or disconnected metabolic pathways.
+description: Use when you have consensus metabolic reconstructions for multiple community
+  members (e.g., plant-associated microbes or plant-microbial consortia) and those
+  individual models contain incomplete or disconnected metabolic pathways.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -9,13 +11,15 @@ metadata:
   - http://edamontology.org/topic_3697
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
 - doi: 10.5281/zenodo.363932874
   title: ''
 evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana
+- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis
+  thaliana
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # community-dependent-reaction-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer and fill metabolic gaps in individual organism models by leveraging shared metabolic context and dependencies across community members. This skill applies constraint-based reasoning to propose reactions that bridge gaps in consensus reconstructions using multi-organism metabolic overlap.

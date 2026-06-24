@@ -1,6 +1,9 @@
 ---
 name: volcano-plot-construction-from-fold-change-and-pvalue
-description: Use when you have omu_summary output containing log2FoldChange and adjusted p-values (e.g., BH-corrected) for a pairwise contrast (e.g., Strep vs Mock treatment), and you want to visualize metabolite significance and magnitude simultaneously while stratifying points by hierarchical class (e.
+description: Use when you have omu_summary output containing log2FoldChange and adjusted
+  p-values (e.g., BH-corrected) for a pairwise contrast (e.g., Strep vs Mock treatment),
+  and you want to visualize metabolite significance and magnitude simultaneously while
+  stratifying points by hierarchical class (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3694
@@ -13,6 +16,7 @@ metadata:
   - assign_hierarchy
   - ggplot2
   - plot_volcano
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -41,6 +45,7 @@ attribution:
 
 # volcano-plot-construction-from-fold-change-and-pvalue
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a publication-ready volcano plot from metabolomics differential abundance results (log2 fold-change and adjusted p-values) using ggplot2. This skill enables visual identification of significantly altered metabolites across treatment contrasts with customizable aesthetic parameters (color, fill, shape, alpha) mapped to hierarchical metabolite classes.

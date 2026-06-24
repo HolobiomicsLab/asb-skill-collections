@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-similarity-matching
-description: Use when you have a set of query chemical compounds (as SMILES, names, or ChemMine objects) and a reference library organized into type groups (e.g., Type A–E chemical sets), and you need to assign each query compound to its -matching type based on structural similarity.
+description: Use when you have a set of query chemical compounds (as SMILES, names,
+  or ChemMine objects) and a reference library organized into type groups (e.g., Type
+  A–E chemical sets), and you need to assign each query compound to its -matching
+  type based on structural similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,13 +17,17 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- To perform the chemical structure matches and summarize atomic features, uafR taps into an amazing set of cheminformatics packages -- [ChemmineR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR]
-- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html), [fmcsR](https://bioconductor.org/packages/release/bioc
+- To perform the chemical structure matches and summarize atomic features, uafR taps
+  into an amazing set of cheminformatics packages -- [ChemmineR]
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR]
+- uafR taps into an amazing set of cheminformatics packages -- [ChemmineR](https://www.bioconductor.org/packages/release/bioc/html/ChemmineR.html),
+  [fmcsR](https://bioconductor.org/packages/release/bioc
 - '[fmcsR](https://bioconductor.org/packages/release/bioc/html/fmcsR.html), [webchem](https://cran.r-project.org/web/packages/webchem/index.html)'
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
@@ -50,6 +57,7 @@ attribution:
 
 # chemical-structure-similarity-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match query chemical compounds to reference compound type categories using structural similarity scoring via flexmatch common substructure (FMCS) algorithms. This skill identifies best-matching compound classifications when a query set is compared against a restricted type library, returning match scores and compound identifiers for downstream chemical categorization workflows.

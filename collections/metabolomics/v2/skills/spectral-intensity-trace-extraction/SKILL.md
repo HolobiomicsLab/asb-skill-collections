@@ -1,6 +1,9 @@
 ---
 name: spectral-intensity-trace-extraction
-description: Use when you have a Thermo Fisher Orbitrap .raw file and need to recover the intensity profile of a specific m/z value or peptide across the LC separation dimension (chromatogram), particularly when calibrating retention times against internal standards (iRT peptides), performing quality control.
+description: Use when you have a Thermo Fisher Orbitrap .raw file and need to recover
+  the intensity profile of a specific m/z value or peptide across the LC separation
+  dimension (chromatogram), particularly when calibrating retention times against
+  internal standards (iRT peptides), performing quality control.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,14 +18,18 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # spectral-intensity-trace-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract intensity traces (extracted ion chromatograms or full chromatograms) from Thermo Fisher Scientific Orbitrap .raw files to recover time-resolved signal profiles for targeted peptides or compounds. This skill bridges direct binary raw file access to quantitative time-series data used in quality control, retention time calibration, and peak detection workflows.

@@ -1,6 +1,8 @@
 ---
 name: unmatched-peak-detection-and-penalization
-description: Use when when annotating MS/MS spectra against spectral libraries and chimeric spectra (spectra containing fragments from multiple precursor ions) are suspected or known to be present in your dataset.
+description: Use when when annotating MS/MS spectra against spectral libraries and
+  chimeric spectra (spectra containing fragments from multiple precursor ions) are
+  suspected or known to be present in your dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -14,6 +16,7 @@ metadata:
   - reverse_search
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c02047
   title: Reverse Spectral Search

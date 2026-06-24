@@ -1,6 +1,9 @@
 ---
 name: isotopologue-adduct-cross-assay-link-encoding
-description: Use when after structural cluster assignment and correlation clustering are complete, and you need to represent the full set of structural relationships (isotopologues, adducts, cross-assay links, and correlation co-membership) in a single unified graph for interactive visualization, network.
+description: Use when after structural cluster assignment and correlation clustering
+  are complete, and you need to represent the full set of structural relationships
+  (isotopologues, adducts, cross-assay links, and correlation co-membership) in a
+  single unified graph for interactive visualization, network.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0360
@@ -17,6 +20,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -51,6 +55,7 @@ attribution:
 
 # Isotopologue, Adduct, and Cross-Assay Link Encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill encodes structural relationships between LC-MS features as weighted edges in a NetworkX graph, where edge weights (1–15) represent the type and specificity of structural link: isotopologue (weight 1), adduct (weight 5), cross-assay (weight 10), and correlation cluster co-membership (weight 15). It converts raw structural cluster assignments into a machine-readable and visualizable network representation suitable for downstream curation and analysis.

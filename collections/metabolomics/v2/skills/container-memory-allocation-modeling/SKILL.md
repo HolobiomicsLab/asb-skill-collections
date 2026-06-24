@@ -1,6 +1,9 @@
 ---
 name: container-memory-allocation-modeling
-description: Use when when configuring a multi-worker online deployment of a containerized Streamlit application (e.g., OpenMS workflows using RQ workers), you need to determine how many RQ worker processes can safely run in a single container given available RAM.
+description: Use when when configuring a multi-worker online deployment of a containerized
+  Streamlit application (e.g., OpenMS workflows using RQ workers), you need to determine
+  how many RQ worker processes can safely run in a single container given available
+  RAM.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - Redis
   - Docker
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -36,6 +40,7 @@ attribution:
 
 # container-memory-allocation-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Model and validate the maximum worker count for parallel task execution in a containerized application by applying a documented memory-sizing formula and verifying it against known test cases. This skill is essential for tuning online (Redis/RQ-based) deployments to avoid memory exhaustion while maximizing throughput.

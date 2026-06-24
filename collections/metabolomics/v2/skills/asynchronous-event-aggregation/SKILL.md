@@ -1,6 +1,9 @@
 ---
 name: asynchronous-event-aggregation
-description: Use when your workflow fetches data from multiple external web services (e.g., CIR, CTS, PubChem, IDSM, BridgeDb) asynchronously and you need to track which services are available, how often they fail, and their response latencies during a long-running annotation job.
+description: Use when your workflow fetches data from multiple external web services
+  (e.g., CIR, CTS, PubChem, IDSM, BridgeDb) asynchronously and you need to track which
+  services are available, how often they fail, and their response latencies during
+  a long-running annotation job.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,7 @@ metadata:
   - BridgeDb
   - pytest
   - Python asyncio
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

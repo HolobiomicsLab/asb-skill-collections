@@ -1,6 +1,9 @@
 ---
 name: prominence-controlled-peak-selection
-description: Use when after initial peak detection on composite mass tracks via local maxima and smoothing, when you have unfiltered peak lists (JSON or structured format) containing prominence values and need to reduce the number of detected features while maintaining signal quality.
+description: Use when after initial peak detection on composite mass tracks via local
+  maxima and smoothing, when you have unfiltered peak lists (JSON or structured format)
+  containing prominence values and need to reduce the number of detected features
+  while maintaining signal quality.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,13 +19,16 @@ metadata:
   - asari peaks.evaluate_gaussian_peak_on_intensity_list
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list), [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
+- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list),
+  [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # prominence-controlled-peak-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply prominence thresholds to peaks detected on composite mass chromatograms to retain only elution features with sufficient signal prominence relative to their local baseline. This is a key filtering step in asari's statistics-guided peak detection that reduces false positives while preserving genuine metabolite signals.

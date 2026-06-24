@@ -1,6 +1,9 @@
 ---
 name: hypergeometric-distribution-calculation
-description: Use when when you have raw strain correlation scores (or similar overlap-based metrics) computed across genomic cluster family (GCF) and molecular family (MF) pairs of varying sizes, and you need to make those scores comparable across links with different GCF sizes (#G), MF sizes (#m), and.
+description: Use when when you have raw strain correlation scores (or similar overlap-based
+  metrics) computed across genomic cluster family (GCF) and molecular family (MF)
+  pairs of varying sizes, and you need to make those scores comparable across links
+  with different GCF sizes (#G), MF sizes (#m), and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,18 +16,22 @@ metadata:
   - GNPS
   - MIBiG
   - NPLinker
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
+- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +56,7 @@ attribution:
 
 # Hypergeometric Distribution Calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute expected value and variance of strain correlation scores under a hypergeometric null model to standardize raw scores across GCF–MF links of different sizes. This enables fair comparison of genomic–metabolomic associations independent of set cardinalities.

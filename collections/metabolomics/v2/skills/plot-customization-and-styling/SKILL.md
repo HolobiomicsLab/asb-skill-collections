@@ -1,6 +1,9 @@
 ---
 name: plot-customization-and-styling
-description: Use when after generating a numerical visualization (e.g., confusion matrix, heatmap, or similarity array) using matplotlib, when you need to add axis labels, class names, colormaps, normalization annotations, colorbars, titles, and export the figure in a publication-ready format (PNG or PDF).
+description: Use when after generating a numerical visualization (e.g., confusion
+  matrix, heatmap, or similarity array) using matplotlib, when you need to add axis
+  labels, class names, colormaps, normalization annotations, colorbars, titles, and
+  export the figure in a publication-ready format (PNG or PDF).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -15,11 +18,13 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 - use the search functionality [here](https://github.com/matchms/ms2deepscore/issues)
 claims: []
 provenance:

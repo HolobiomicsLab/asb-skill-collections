@@ -1,6 +1,9 @@
 ---
 name: topn-acquisition-parameter-tuning
-description: Use when when you have real LC-MS/MS data (mzML format) from an untargeted metabolomics experiment and want to test how variations in TopN DDA parameters affect which precursor ions are selected and fragmented, before deploying the optimized strategy on physical instruments.
+description: Use when when you have real LC-MS/MS data (mzML format) from an untargeted
+  metabolomics experiment and want to test how variations in TopN DDA parameters affect
+  which precursor ions are selected and fragmented, before deploying the optimized
+  strategy on physical instruments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -17,17 +20,21 @@ metadata:
   - PeakPicking (MZMine parameters)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 - Existing mzML files can be converted into chemical lists using `ChemicalMixtureFromMZML`.
 - '`TopNController` – standard Top‑N data dependent acquisition.'
-- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or a real instrument.
+- Mass Spectrometer – either an in silico model (`IndependentMassSpectrometer`) or
+  a real instrument.
 - Environment – orchestrates interaction between the mass spectrometer and the controller.
 claims: []
 provenance:
@@ -53,6 +60,7 @@ attribution:
 
 # TopN Acquisition Parameter Tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize data-dependent acquisition (DDA) fragmentation strategies by systematically configuring TopN controller parameters (N value, isolation window width, m/z tolerance, retention time tolerance, and MS1 intensity threshold) and evaluating their effects on simulated acquisition patterns using real metabolomics data.

@@ -1,6 +1,9 @@
 ---
 name: msbackend-api-implementation
-description: Use when you need to create a new backend to integrate MS data from a novel file format, database, or in-memory storage system into the Spectra ecosystem. Use this skill when existing backends (MsBackendMemory, MsBackendMzR, MsBackendSql, etc.) do not support your data source or storage paradigm.
+description: Use when you need to create a new backend to integrate MS data from a
+  novel file format, database, or in-memory storage system into the Spectra ecosystem.
+  Use this skill when existing backends (MsBackendMemory, MsBackendMzR, MsBackendSql,
+  etc.) do not support your data source or storage paradigm.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -22,7 +26,8 @@ evidence_spans:
 - library(Spectra) library(IRanges)
 - '`DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)'
 - DataFrame` object (defined in the `r Biocpkg("S4Vectors")` package)
-- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package
+- extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +51,7 @@ attribution:
 
 # msbackend-api-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom MsBackend subclass that extends the virtual MsBackend API to store and provide mass spectrometry spectral data (m/z, intensity, and metadata) to Spectra objects. This skill involves designing S4 class slots, enforcing data consistency through validity methods, and implementing core accessor and data-manipulation methods.

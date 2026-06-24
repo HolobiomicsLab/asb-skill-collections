@@ -1,6 +1,9 @@
 ---
 name: lcims-msms-data-preprocessing-peak-detection
-description: Use when you have loaded mzML.gz or HDF5-formatted raw LC-IMS-MS/MS data and need to identify discrete peaks before feature alignment. Use it if your goal is to reduce noise, increase signal-to-noise ratio, and prepare multi-dimensional data for cross-sample feature matching and CCS calibration.
+description: Use when you have loaded mzML.gz or HDF5-formatted raw LC-IMS-MS/MS data
+  and need to identify discrete peaks before feature alignment. Use it if your goal
+  is to reduce noise, increase signal-to-noise ratio, and prepare multi-dimensional
+  data for cross-sample feature matching and CCS calibration.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -17,11 +20,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - Use conda to create a virtual environment with required dependencies.
 - 'Install DEIMoS using pip: pip install -e .'
@@ -49,6 +54,7 @@ attribution:
 
 # LC-IMS-MS/MS Data Preprocessing and Peak Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and characterize peaks in high-dimensional mass spectrometry data by applying intensity thresholding and leveraging simultaneous utilization of all acquisition dimensions (m/z, drift time, retention time) to improve detection sensitivity and separation between features. This preprocessing step converts raw or loaded spectral data into a peaked feature table suitable for downstream alignment and characterization.

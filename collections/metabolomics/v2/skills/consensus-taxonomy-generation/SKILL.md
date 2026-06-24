@@ -1,6 +1,8 @@
 ---
 name: consensus-taxonomy-generation
-description: Use when when you have structural annotations from multiple sources (in silico predictions via SIRIUS/CANOPUS and GNPS spectral library matches) for the same molecular features and need a single authoritative taxonomy assignment.
+description: Use when when you have structural annotations from multiple sources (in
+  silico predictions via SIRIUS/CANOPUS and GNPS spectral library matches) for the
+  same molecular features and need a single authoritative taxonomy assignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -17,14 +19,17 @@ metadata:
   - Fiehn Labs ClassyFire Batch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

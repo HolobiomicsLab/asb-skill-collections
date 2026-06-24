@@ -1,6 +1,8 @@
 ---
 name: library-import-validation
-description: Use when you have raw .msp spectral library files (e.g., from MassBank or custom sources) and need to convert them into a structured CSV library format for use in metabolite annotation.
+description: Use when you have raw .msp spectral library files (e.g., from MassBank
+  or custom sources) and need to convert them into a structured CSV library format
+  for use in metabolite annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +15,13 @@ metadata:
   - BiocManager
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # Library Import and Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that MS/MS spectral libraries imported from .msp files or other sources are correctly converted into appropriately formatted and annotated CSV library entries with proper ionisation mode designation and peak-picking thresholds applied. This skill ensures spectral databases are ready for metabolite annotation workflows.

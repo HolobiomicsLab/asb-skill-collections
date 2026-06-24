@@ -1,6 +1,8 @@
 ---
 name: spectral-peak-detection-local-maxima
-description: Use when you have a 1D intensity array (e.g., a single MS1 or MS2 spectrum extracted from an MZA HDF5 file) and need to identify prominent peaks with their m/z indices and heights.
+description: Use when you have a 1D intensity array (e.g., a single MS1 or MS2 spectrum
+  extracted from an MZA HDF5 file) and need to identify prominent peaks with their
+  m/z indices and heights.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -15,6 +17,7 @@ metadata:
   - mzapy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

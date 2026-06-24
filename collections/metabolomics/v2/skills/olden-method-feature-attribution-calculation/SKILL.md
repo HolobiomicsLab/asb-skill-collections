@@ -1,6 +1,9 @@
 ---
 name: olden-method-feature-attribution-calculation
-description: Use when after training multiple MLPNN models (via cross-validation) on paired microbiome and metabolome data when you need to extract interpretable feature importance scores from network weights to identify which microbes drive metabolite predictions and group them into co-functional modules.
+description: Use when after training multiple MLPNN models (via cross-validation)
+  on paired microbiome and metabolome data when you need to extract interpretable
+  feature importance scores from network weights to identify which microbes drive
+  metabolite predictions and group them into co-functional modules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,12 +19,15 @@ metadata:
   - TensorFlow
   - scikit-learn
   - MiMeNet
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- Weighted correlation network analysis (WGCNA) of microbial features was performed using the WGCNA library in R
-- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet to those identified by the Weighted Correlation Network Analysis (WGCNA)
+- Weighted correlation network analysis (WGCNA) of microbial features was performed
+  using the WGCNA library in R
+- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet
+  to those identified by the Weighted Correlation Network Analysis (WGCNA)
 - using Seaborn's clustermap function in Python
 - using Cytoscape
 - using Python's sci-kit-learn package
@@ -48,6 +54,7 @@ attribution:
 
 # Olden's Method Feature Attribution Calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Olden's method derives microbe-metabolite feature attribution scores from trained multilayer perceptron neural network weights by multiplying weight matrices across all hidden layers, producing signed scores that quantify how strongly each microbe contributes to predicting metabolite abundance. These scores are subsequently normalized and thresholded to identify significant microbe-metabolite relationships for downstream functional module construction.

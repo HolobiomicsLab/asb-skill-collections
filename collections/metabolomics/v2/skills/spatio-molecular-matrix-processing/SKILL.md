@@ -14,6 +14,7 @@ metadata:
   - SpaceM GitHub repository
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM

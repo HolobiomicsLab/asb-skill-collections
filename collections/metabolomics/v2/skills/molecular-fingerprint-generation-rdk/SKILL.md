@@ -1,6 +1,8 @@
 ---
 name: molecular-fingerprint-generation-rdk
-description: Use when you have a set of chemical compounds represented as InChI or SMILES strings and need to extract molecular features for input into a neural network or traditional ML model.
+description: Use when you have a set of chemical compounds represented as InChI or
+  SMILES strings and need to extract molecular features for input into a neural network
+  or traditional ML model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0292
@@ -17,6 +19,7 @@ metadata:
   - rdkit-pypi
   - Python 3.9
   - pandas
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -52,6 +55,7 @@ attribution:
 
 # molecular-fingerprint-generation-rdk
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate fixed-length binary or count-based molecular fingerprints from chemical structures (InChI or SMILES) using RDKit, suitable as input features for machine learning models predicting molecular properties such as retention time. This skill encodes chemical structure topology and atom properties into a dense vector representation.

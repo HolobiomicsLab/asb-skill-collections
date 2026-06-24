@@ -1,6 +1,9 @@
 ---
 name: cytoscape-network-format-export
-description: Use when after constructing or filtering a metabolomic network in MetaMapR (e.g., after applying the unique-edges hierarchy filter to resolve multiple edge types between node pairs), and you need to visualize, share, or further analyze the network using cytoscape.js or compatible tools.
+description: Use when after constructing or filtering a metabolomic network in MetaMapR
+  (e.g., after applying the unique-edges hierarchy filter to resolve multiple edge
+  types between node pairs), and you need to visualize, share, or further analyze
+  the network using cytoscape.js or compatible tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -11,6 +14,7 @@ metadata:
   tools:
   - MetaMapR
   - cytoscape.js
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv194
   title: MetaMapR

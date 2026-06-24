@@ -1,6 +1,9 @@
 ---
 name: mass-action-kinetics-formulation
-description: Use when you have intracellular metabolomics concentration measurements across multiple cell lines or conditions, a stoichiometric metabolic network model with reaction-metabolite associations, and you need to predict how differences in substrate availability (independent of enzyme expression).
+description: Use when you have intracellular metabolomics concentration measurements
+  across multiple cell lines or conditions, a stoichiometric metabolic network model
+  with reaction-metabolite associations, and you need to predict how differences in
+  substrate availability (independent of enzyme expression).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +16,7 @@ metadata:
   - createMetabolicDataset.py
   - concordanceAnalysis.py
   - constraint-based stoichiometric metabolic models
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -40,6 +44,7 @@ attribution:
 
 # mass-action-kinetics-formulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes Reaction Propensity Scores (RPS) from intracellular metabolomics abundance data using mass action law formulation, quantifying the expected relative metabolic flux changes across cell lines based on substrate availability alone. This provides a metabolic-regulation baseline independent of gene expression effects.

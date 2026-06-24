@@ -1,6 +1,8 @@
 ---
 name: nmr-spectrum-peak-detection
-description: Use when you have a loaded INADEQUATE NMR spectrum file (after referencing via basic shifting) and need to identify individual peak positions and intensities as input to downstream peak network clustering or metabolite matching.
+description: Use when you have a loaded INADEQUATE NMR spectrum file (after referencing
+  via basic shifting) and need to identify individual peak positions and intensities
+  as input to downstream peak network clustering or metabolite matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -12,6 +14,7 @@ metadata:
   - PyINETA
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

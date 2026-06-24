@@ -1,6 +1,8 @@
 ---
 name: spectral-similarity-matrix-computation
-description: Use when after preprocessing and filtering mass spectra (peak filtering, metadata cleaning) when you need to compare all spectrum pairs within a dataset or between a query set and a reference library to identify similar or related spectra.
+description: Use when after preprocessing and filtering mass spectra (peak filtering,
+  metadata cleaning) when you need to compare all spectrum pairs within a dataset
+  or between a query set and a reference library to identify similar or related spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -15,12 +17,14 @@ metadata:
   - MS2DeepScore
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
 - Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

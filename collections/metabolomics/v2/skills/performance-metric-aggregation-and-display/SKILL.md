@@ -1,6 +1,9 @@
 ---
 name: performance-metric-aggregation-and-display
-description: Use when after running NOREVA's assessment functions (normulticlassqcall, normulticlassnoall, normulticlassisall, nortimecourseqcall, nortimecoursenoall) on preprocessing workflows, use this skill to synthesize performance results across all five criteria into a single ranked output and create a.
+description: Use when after running NOREVA's assessment functions (normulticlassqcall,
+  normulticlassnoall, normulticlassisall, nortimecourseqcall, nortimecoursenoall)
+  on preprocessing workflows, use this skill to synthesize performance results across
+  all five criteria into a single ranked output and create a.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -10,7 +13,9 @@ metadata:
   tools:
   - R
   - norvisualization
-  - normulticlassqcall / normulticlassnoall / normulticlassisall / nortimecourseqcall / nortimecoursenoall
+  - normulticlassqcall / normulticlassnoall / normulticlassisall / nortimecourseqcall
+    / nortimecoursenoall
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

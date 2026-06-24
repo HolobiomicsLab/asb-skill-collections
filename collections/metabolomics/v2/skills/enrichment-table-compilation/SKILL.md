@@ -1,6 +1,7 @@
 ---
 name: enrichment-table-compilation
-description: Use when you have completed Fisher's exact test enrichment analysis on a set of metabolites or lipids against a pathway/ontology reference (e.
+description: Use when you have completed Fisher's exact test enrichment analysis on
+  a set of metabolites or lipids against a pathway/ontology reference (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +14,13 @@ metadata:
   - readr
   - enrichmet
   - Fisher's exact test
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - library(readr)
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: count-matrix-preprocessing
-description: 'Use when after count matrix quantification (e.g., from Salmon) and before differential expression analysis, when you have: (1) a raw or unfiltered count matrix with potentially low-abundance features; (2) known batch effects or technical covariates documented in sample metadata;'
+description: 'Use when after count matrix quantification (e.g., from Salmon) and before
+  differential expression analysis, when you have: (1) a raw or unfiltered count matrix
+  with potentially low-abundance features; (2) known batch effects or technical covariates
+  documented in sample metadata;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3218
@@ -16,12 +19,15 @@ metadata:
   - edgeR
   - Salmon
   - Nextflow
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

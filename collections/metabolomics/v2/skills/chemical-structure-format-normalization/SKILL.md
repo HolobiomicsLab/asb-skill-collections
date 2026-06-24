@@ -1,6 +1,7 @@
 ---
 name: chemical-structure-format-normalization
-description: Use when when integrating chemical structure data from multiple source databases that represent the same compound in different notations (e.
+description: Use when when integrating chemical structure data from multiple source
+  databases that represent the same compound in different notations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,6 +13,7 @@ metadata:
   - R
   - Python 3
   - Make
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -46,6 +48,7 @@ attribution:
 
 # chemical-structure-format-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert and standardize chemical structure representations (SMILES, InChI, nominal identifiers) into consistent, deduplicated formats to enable accurate counting and matching of unique curated structures across 3D and 2D representations in natural products databases.

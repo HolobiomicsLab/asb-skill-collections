@@ -19,6 +19,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -51,6 +52,7 @@ attribution:
 
 # feature-group-adduct-detection
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and grouping of LC-MS features related by common adduct mass shifts (e.g., +H, +Na, +NH4, +K, –H) to consolidate redundant ion species into coherent feature groups. This skill is essential in nontargeted metabolomics to reduce false feature inflation and improve annotation confidence.

@@ -1,6 +1,9 @@
 ---
 name: test-suite-validation
-description: Use when after rewriting, refactoring, or updating a core computational module (e.g., calculate_feature_overlap.py in FERMO 0.8.7) to confirm that all existing unit tests pass with zero failures and that the rewritten code does not introduce regressions or break existing contracts.
+description: Use when after rewriting, refactoring, or updating a core computational
+  module (e.g., calculate_feature_overlap.py in FERMO 0.8.7) to confirm that all existing
+  unit tests pass with zero failures and that the rewritten code does not introduce
+  regressions or break existing contracts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -9,6 +12,7 @@ metadata:
   tools:
   - pytest
   - FERMO
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO

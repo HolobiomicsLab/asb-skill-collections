@@ -1,6 +1,9 @@
 ---
 name: r-environment-dependency-specification
-description: Use when when developing or reproducing an R-based analysis that integrates Python dependencies (e.g., via reticulate), particularly in contexts where deep learning (keras) or complex machine-learning frameworks (caret) depend on specific numpy versions or Python minor releases.
+description: Use when when developing or reproducing an R-based analysis that integrates
+  Python dependencies (e.g., via reticulate), particularly in contexts where deep
+  learning (keras) or complex machine-learning frameworks (caret) depend on specific
+  numpy versions or Python minor releases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3577
@@ -16,6 +19,7 @@ metadata:
   - numpy
   - renv
   - conda / r-miniconda
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
@@ -49,6 +53,7 @@ attribution:
 
 # R environment dependency specification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document and pin exact versions of R, Python, and interdependent packages (especially those bridging R–Python interoperability) to ensure reproducible execution of cross-language scientific workflows. This skill is critical when R code calls Python libraries through reticulate, as version mismatches between R packages, Python interpreters, and compiled dependencies can silently break normalization or machine-learning pipelines.

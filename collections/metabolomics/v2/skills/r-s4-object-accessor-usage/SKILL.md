@@ -1,6 +1,8 @@
 ---
 name: r-s4-object-accessor-usage
-description: Use when you have constructed or received a SummarizedExperiment object (or similar S4 class) containing MS feature tables, counts matrices, or sample-level metadata, and need to retrieve specific slots (e.
+description: Use when you have constructed or received a SummarizedExperiment object
+  (or similar S4 class) containing MS feature tables, counts matrices, or sample-level
+  metadata, and need to retrieve specific slots (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -13,12 +15,15 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
-- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps the simulation in a `SummarizedExperiment`
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
+- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps
+  the simulation in a `SummarizedExperiment`
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # R S4 Object Accessor Usage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Access and extract data from S4 objects (particularly SummarizedExperiment) using standard Bioconductor accessor functions like assay() and colData(). This skill enables standardized, type-safe retrieval of counts matrices, sample metadata, and assay annotations from complex biological data structures.

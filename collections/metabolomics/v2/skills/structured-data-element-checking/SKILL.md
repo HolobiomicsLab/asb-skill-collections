@@ -1,6 +1,9 @@
 ---
 name: structured-data-element-checking
-description: Use when you have generated or received a mass spectrometry data file in a structured format (e.g., mzPeak, Parquet-based archive) and need to verify it conforms to the published specification before use in analysis pipelines, sharing with collaborators, or publishing.
+description: Use when you have generated or received a mass spectrometry data file
+  in a structured format (e.g., mzPeak, Parquet-based archive) and need to verify
+  it conforms to the published specification before use in analysis pipelines, sharing
+  with collaborators, or publishing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +18,7 @@ metadata:
   - mzPeak specification (living document)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -42,6 +46,7 @@ attribution:
 
 # Structured Data Element Checking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a structured data file (e.g., mzPeak archive or Parquet table) contains all mandatory fields and structural elements required by a published specification. This ensures compliance before downstream processing or publication.

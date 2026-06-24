@@ -1,6 +1,9 @@
 ---
 name: figure-table-interpretation
-description: Use when after running a 3DMolMS model (or similar MS/MS prediction pipeline) that outputs predictions in MGF, CSV, or PKL format, use this skill to verify prediction quality by examining peak intensities, m/z values, precursor ions, and similarity metrics against ground truth or reference spectra.
+description: Use when after running a 3DMolMS model (or similar MS/MS prediction pipeline)
+  that outputs predictions in MGF, CSV, or PKL format, use this skill to verify prediction
+  quality by examining peak intensities, m/z values, precursor ions, and similarity
+  metrics against ground truth or reference spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3630
@@ -280,6 +283,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -469,9 +473,11 @@ evidence_spans:
 - PyTorch must be installed separately. Check the `official PyTorch website
 - '3DMolMS has the following dependencies: * Python 3.8+ * PyTorch * RDKit'
 - 'Source: github:gitlab.gwdg.de__joerg.buescher__automrm'
-- These are generated using RDKit... We extensively use the ChEMBL structure curation pipeline developed with RDKit to clean the data and curate the database.
+- These are generated using RDKit... We extensively use the ChEMBL structure curation
+  pipeline developed with RDKit to clean the data and curate the database.
 - snakemake --configfile config/config_fast.yaml --jobs 1 --dry-run -p
-- This entails conversion to molecules using `rdkit`, removing light fragments, neutralizing charges, filtering for valid elements
+- This entails conversion to molecules using `rdkit`, removing light fragments, neutralizing
+  charges, filtering for valid elements
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -883,6 +889,7 @@ attribution:
 
 # figure_table_interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and interpret numerical results, model predictions, and quantitative comparisons from figures, tables, and structured output (MGF, CSV, PKL formats) produced by mass spectrometry prediction workflows. This skill validates that predictions match expected ranges, statistical distributions, and domain constraints (e.g., precursor types, atom counts).

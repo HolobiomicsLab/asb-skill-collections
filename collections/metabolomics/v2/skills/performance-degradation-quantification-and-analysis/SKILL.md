@@ -1,6 +1,9 @@
 ---
 name: performance-degradation-quantification-and-analysis
-description: Use when you have a pretrained model with documented performance on a bounded input domain (e.g., molecules ≤19 heavy atoms, sequences <1000 bp) and you need to establish whether and how much accuracy drops on held-out test cases outside that domain boundary.
+description: Use when you have a pretrained model with documented performance on a
+  bounded input domain (e.g., molecules ≤19 heavy atoms, sequences <1000 bp) and you
+  need to establish whether and how much accuracy drops on held-out test cases outside
+  that domain boundary.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -12,6 +15,7 @@ metadata:
   - PubChem or equivalent chemical database
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -39,6 +43,7 @@ attribution:
 
 # performance-degradation-quantification-and-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies and characterizes how a trained machine learning model's accuracy degrades when applied to data beyond its original training scope. This skill measures the gap between in-scope and out-of-scope performance, documents failure modes, and establishes known performance boundaries.

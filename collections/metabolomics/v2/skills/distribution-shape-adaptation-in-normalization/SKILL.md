@@ -1,6 +1,7 @@
 ---
 name: distribution-shape-adaptation-in-normalization
-description: Use when after imputation and correction, when metabolomic feature intensities exhibit heteroscedastic variance or non-normal distributions across samples.
+description: Use when after imputation and correction, when metabolomic feature intensities
+  exhibit heteroscedastic variance or non-normal distributions across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +14,7 @@ metadata:
   - OUKS (Omics Untargeted Key Script)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

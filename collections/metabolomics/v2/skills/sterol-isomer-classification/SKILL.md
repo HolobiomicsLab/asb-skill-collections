@@ -1,6 +1,8 @@
 ---
 name: sterol-isomer-classification
-description: Use when you have LC-IM-MS/MS raw data from sterol-containing tissue samples and need to assign detected peaks to specific structural isomers (e.g., distinct double bond positions or saturation patterns in C27–C29 sterols).
+description: Use when you have LC-IM-MS/MS raw data from sterol-containing tissue
+  samples and need to assign detected peaks to specific structural isomers (e.g.,
+  distinct double bond positions or saturation patterns in C27–C29 sterols).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -18,6 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA
@@ -47,6 +50,7 @@ attribution:
 
 # sterol-isomer-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify and identify structural isomers of N-Me derived unsaturated sterols using LC-IM-MS/MS 4D data (retention time, m/z, drift time, MS/MS fragments) combined with quantum chemistry-predicted CCS values and machine-learned retention time models. This skill enables tissue-specific sterol distribution analysis at the isomer level by matching experimental 4D signatures to predicted physicochemical properties.

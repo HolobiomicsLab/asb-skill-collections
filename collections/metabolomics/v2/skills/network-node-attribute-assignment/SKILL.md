@@ -1,6 +1,9 @@
 ---
 name: network-node-attribute-assignment
-description: Use when you have constructed a NetworkX graph with LC-MS features as nodes and need to annotate each node with metadata derived from the MamsiStructSearch output (assay source, isotopologue group, adduct group, structural cluster ID, correlation cluster ID, and optional compound annotation).
+description: Use when you have constructed a NetworkX graph with LC-MS features as
+  nodes and need to annotate each node with metadata derived from the MamsiStructSearch
+  output (assay source, isotopologue group, adduct group, structural cluster ID, correlation
+  cluster ID, and optional compound annotation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3359
@@ -16,6 +19,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -26,7 +30,8 @@ evidence_spans:
 - 'Dependencies: pyvis'
 - 'Dependencies: matplotlib'
 - import pandas as pd
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +56,7 @@ attribution:
 
 # network-node-attribute-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign node attributes (assay membership, structural cluster identity, correlation cluster membership, and compound name) to feature nodes in a NetworkX graph constructed from multi-assay LC-MS data. This enrichment enables downstream filtering, visualization, and structural interpretation of feature relationships.

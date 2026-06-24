@@ -1,6 +1,9 @@
 ---
 name: cross-organism-network-comparison
-description: Use when you have selected two organisms whose metabolic networks are available in KEGG and you need to quantitatively assess their structural and functional similarity to identify shared or divergent metabolic capabilities for comparative systems biology, drug target discovery, or evolutionary.
+description: Use when you have selected two organisms whose metabolic networks are
+  available in KEGG and you need to quantitatively assess their structural and functional
+  similarity to identify shared or divergent metabolic capabilities for comparative
+  systems biology, drug target discovery, or evolutionary.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -12,12 +15,15 @@ metadata:
   - MetNet
   - Java
   - KEGG
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
 evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network of two organisms selected in KEGG
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network
 - MetNet is a Java tool
 claims: []
 provenance:

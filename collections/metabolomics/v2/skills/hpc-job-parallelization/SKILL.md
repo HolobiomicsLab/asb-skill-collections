@@ -1,6 +1,9 @@
 ---
 name: hpc-job-parallelization
-description: Use when you have a filtered set of conformers (100s–1000s) from ASE-ANI that each require independent quantum calculations via QUICK, and you have access to HPC resources with multiple cores or nodes. Parallelization is necessary when serial execution would exceed practical time budgets (e.
+description: Use when you have a filtered set of conformers (100s–1000s) from ASE-ANI
+  that each require independent quantum calculations via QUICK, and you have access
+  to HPC resources with multiple cores or nodes. Parallelization is necessary when
+  serial execution would exceed practical time budgets (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,13 +16,15 @@ metadata:
   - ASE-ANI
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - 'QUICK: For quantum calculations'
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # HPC Job Parallelization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Distribute independent conformer quantum calculations across HPC cores using a workflow manager to execute multiple QUICK jobs in parallel, reducing wall-clock time for large-scale CCS prediction pipelines. This skill coordinates job submission, resource allocation, and result aggregation on distributed compute infrastructure.

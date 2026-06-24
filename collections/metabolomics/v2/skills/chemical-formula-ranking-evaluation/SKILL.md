@@ -1,6 +1,9 @@
 ---
 name: chemical-formula-ranking-evaluation
-description: Use when after running formula inference on a benchmark dataset with known formula and adduct ground truth (e.g., NPLIB1, NIST20, or CASMI 2022). Apply this skill when you need to quantify ranking performance, isolate the contribution of specific model features (e.
+description: Use when after running formula inference on a benchmark dataset with
+  known formula and adduct ground truth (e.g., NPLIB1, NIST20, or CASMI 2022). Apply
+  this skill when you need to quantify ranking performance, isolate the contribution
+  of specific model features (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -16,13 +19,16 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
@@ -50,6 +56,7 @@ attribution:
 
 # chemical-formula-ranking-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the ranking accuracy of predicted chemical formula and adduct assignments against ground truth annotations by computing top-k metrics and comparing performance across different model architectures or inference modes. This skill determines whether a formula prediction system correctly identifies the true molecular formula among candidates.

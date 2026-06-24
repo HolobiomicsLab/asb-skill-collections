@@ -1,6 +1,9 @@
 ---
 name: qc-coefficient-of-variation-calculation
-description: Use when after extracting NMR spectra and designating replicate QC samples (typically 10 samples run throughout the study), calculate CV for each metabolite feature to assess which signals are reproducible enough for downstream metabolite-phenotype association testing.
+description: Use when after extracting NMR spectra and designating replicate QC samples
+  (typically 10 samples run throughout the study), calculate CV for each metabolite
+  feature to assess which signals are reproducible enough for downstream metabolite-phenotype
+  association testing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3565
@@ -13,13 +16,15 @@ metadata:
   - MWASTools
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # QC Coefficient-of-Variation Calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute the coefficient of variation (CV = sd/mean) for each metabolic feature across quality control (QC) samples to quantify signal reproducibility in NMR metabolomics data. This metric identifies features with poor instrumental stability and guides feature filtering before association analysis.

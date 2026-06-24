@@ -1,6 +1,8 @@
 ---
 name: data-type-classification-schema-design
-description: Use when building or auditing a multi-instrument MS data processing system that must route different chromatography modes (LC, GC), ion mobility, or imaging modalities (MALDI) to distinct processing workflows.
+description: Use when building or auditing a multi-instrument MS data processing system
+  that must route different chromatography modes (LC, GC), ion mobility, or imaging
+  modalities (MALDI) to distinct processing workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -15,6 +17,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

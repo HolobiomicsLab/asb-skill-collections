@@ -1,6 +1,9 @@
 ---
 name: isf-relationship-tree-construction
-description: Use when after completing ISFrag Part 4 (Identification of ISF Features) when you have a validated feature table with identified ISF features and need to visualize or export the hierarchical fragmentation structure linking parent ions to their in-source fragments.
+description: Use when after completing ISFrag Part 4 (Identification of ISF Features)
+  when you have a validated feature table with identified ISF features and need to
+  visualize or export the hierarchical fragmentation structure linking parent ions
+  to their in-source fragments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -13,12 +16,15 @@ metadata:
   - RStudio
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - To install ISFrag package R version 4.0.0 or above is required
 - we recommend using RStudio to complete the installation and usage of ISFrag
 claims: []

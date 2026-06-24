@@ -1,6 +1,8 @@
 ---
 name: candidate-neighbourhood-analysis-for-spectral-matching
-description: Use when you have a query MS/MS spectrum matched against a library and need to re-rank the top 2000 candidate spectra by combining spectral similarity (MS2Deepscore) with structural neighbourhood information.
+description: Use when you have a query MS/MS spectrum matched against a library and
+  need to re-rank the top 2000 candidate spectra by combining spectral similarity
+  (MS2Deepscore) with structural neighbourhood information.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,13 +17,15 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
 - you want to make some kind of change to the code base
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:

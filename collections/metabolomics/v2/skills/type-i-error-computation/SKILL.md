@@ -1,6 +1,9 @@
 ---
 name: type-i-error-computation
-description: Use when when you need to verify that reported Type I error rates from a statistical method (here, PaIRKAT) can be independently reproduced, or when you require baseline false positive rate estimates across multiple simulation conditions (sample sizes, effect configurations, significance.
+description: Use when when you need to verify that reported Type I error rates from
+  a statistical method (here, PaIRKAT) can be independently reproduced, or when you
+  require baseline false positive rate estimates across multiple simulation conditions
+  (sample sizes, effect configurations, significance.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +14,7 @@ metadata:
   - R (or language used by PaIRKAT scripts)
   - PaIRKAT
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -39,6 +43,7 @@ attribution:
 
 # type-i-error-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute Type I error simulation scripts from the PaIRKAT repository to compute false positive rates and generate summary statistics across tested statistical scenarios. This skill validates the reproducibility of reported Type I error rates by regenerating simulation outputs.

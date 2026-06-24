@@ -1,6 +1,7 @@
 ---
 name: docker-container-deployment
-description: Use when you need to launch a pre-built Docker image of a scientific tool (e.
+description: Use when you need to launch a pre-built Docker image of a scientific
+  tool (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,6 +13,7 @@ metadata:
   - Tomcat
   - Java 21
   - ipbhalle/metfragweb
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -41,6 +43,7 @@ attribution:
 
 # docker-container-deployment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy a containerized scientific application (MetFrag webapp) using Docker, with configurable runtime parameters (JVM memory, URL prefix, settings files) and verify accessibility via HTTP status checks. This skill enables reproducible, isolated execution of complex software stacks without manual dependency installation.

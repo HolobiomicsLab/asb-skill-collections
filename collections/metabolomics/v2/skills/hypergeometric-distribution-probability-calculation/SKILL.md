@@ -1,6 +1,8 @@
 ---
 name: hypergeometric-distribution-probability-calculation
-description: Use when when you have raw strain correlation scores computed across GCF–MF pairs of varying sizes (different numbers of strains in each set) and need to make those scores comparable.
+description: Use when when you have raw strain correlation scores computed across
+  GCF–MF pairs of varying sizes (different numbers of strains in each set) and need
+  to make those scores comparable.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,6 +14,7 @@ metadata:
   - NumPy or SciPy
   - Python
   - NPLinker
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -19,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - follows the hypergeometric distribution as previously stated
-- NPLinker, a Python module to accelerate and support the process of automatically linking GCFs
+- NPLinker, a Python module to accelerate and support the process of automatically
+  linking GCFs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # hypergeometric-distribution-probability-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the hypergeometric probability distribution and derived statistics (expected value and variance) to establish a null model for strain overlap between genomic and metabolomic feature sets. This enables standardization of raw correlation scores to make them comparable across GCF–MF links of different sizes.

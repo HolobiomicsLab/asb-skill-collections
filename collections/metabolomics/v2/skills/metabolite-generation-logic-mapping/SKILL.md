@@ -1,6 +1,7 @@
 ---
 name: metabolite-generation-logic-mapping
-description: Use when when you have access to the MAGMa source code and need to understand or audit how in silico metabolite candidates are enumerated from parent structures.
+description: Use when when you have access to the MAGMa source code and need to understand
+  or audit how in silico metabolite candidates are enumerated from parent structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -11,6 +12,7 @@ metadata:
   tools:
   - MAGMa
   - job subproject (NLeSC/MAGMa)
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -40,6 +42,7 @@ attribution:
 
 # metabolite-generation-logic-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reverse-engineer and document the algorithmic workflow by which MAGMa generates candidate metabolites in silico, mapping chemical structure fragmentation rules, molecular property filters, and isomer enumeration into an executable flowchart or directed acyclic graph. This skill is essential for understanding, validating, and extending the chemo-informatics pipeline that underpins metabolite annotation.

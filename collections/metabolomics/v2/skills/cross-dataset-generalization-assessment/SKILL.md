@@ -1,6 +1,8 @@
 ---
 name: cross-dataset-generalization-assessment
-description: Use when you have a pre-trained MS/MS spectral embedding model evaluated on one or more source datasets (GNPS, MoNA, MTBLS1572) and need to verify that it performs well on independent, high-quality curated spectral libraries to claim robustness.
+description: Use when you have a pre-trained MS/MS spectral embedding model evaluated
+  on one or more source datasets (GNPS, MoNA, MTBLS1572) and need to verify that it
+  performs well on independent, high-quality curated spectral libraries to claim robustness.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -22,6 +24,7 @@ metadata:
   - CUDA 12.4
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -52,6 +55,7 @@ attribution:
 
 # cross-dataset-generalization-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate whether a trained spectral embedding model maintains strong retrieval performance when applied to curated external spectral libraries (MassBank, MassSpecGym) that differ in data provenance and quality from the training set. This assesses model robustness and generalizability beyond the primary training cohort.

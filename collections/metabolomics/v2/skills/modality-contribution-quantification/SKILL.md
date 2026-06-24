@@ -1,6 +1,9 @@
 ---
 name: modality-contribution-quantification
-description: Use when when you have a trained multitask model that accepts multiple input modalities (e.g., 1D NMR spectra in different nuclei or complementary analytical techniques) and you need to understand their relative importance for the downstream prediction task (e.g., molecular structure elucidation).
+description: Use when when you have a trained multitask model that accepts multiple
+  input modalities (e.g., 1D NMR spectra in different nuclei or complementary analytical
+  techniques) and you need to understand their relative importance for the downstream
+  prediction task (e.g., molecular structure elucidation).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -12,6 +15,7 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -39,6 +43,7 @@ attribution:
 
 # modality-contribution-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the independent and joint contributions of individual input modalities (e.g., ¹H NMR, ¹³C NMR) to machine learning model performance by running inference under controlled modality conditions and comparing accuracy metrics. This skill reveals which spectroscopic inputs drive predictions and whether synergy exists between combined modalities.

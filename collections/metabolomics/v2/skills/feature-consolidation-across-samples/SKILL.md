@@ -1,6 +1,9 @@
 ---
 name: feature-consolidation-across-samples
-description: Use when you have extracted multiple per-sample feature tables (in CSV format, each with feature ID, m/z, intensity, and retention time columns) and need to identify which features are the same compound detected across different breath samples.
+description: Use when you have extracted multiple per-sample feature tables (in CSV
+  format, each with feature ID, m/z, intensity, and retention time columns) and need
+  to identify which features are the same compound detected across different breath
+  samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -13,6 +16,7 @@ metadata:
   - Python pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

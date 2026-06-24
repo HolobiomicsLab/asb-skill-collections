@@ -1,6 +1,7 @@
 ---
 name: quality-overview-visualization
-description: Use when you have sequential QCpool (pooled quality control) samples analyzed with Sciex Multiquant (≥v3.0.
+description: Use when you have sequential QCpool (pooled quality control) samples
+  analyzed with Sciex Multiquant (≥v3.0.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -10,11 +11,13 @@ metadata:
   tools:
   - QComics
   - Sciex Multiquant
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
 evidence_spans:
-- The goal of the `QComics` package is to have a quick overview of the quality of a metabolomics or lipidomics study
+- The goal of the `QComics` package is to have a quick overview of the quality of
+  a metabolomics or lipidomics study
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -38,6 +41,7 @@ attribution:
 
 # quality-overview-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a rapid visual and tabular assessment of metabolomics or lipidomics study quality by computing per-compound coefficient of variation (CV) and signal-trend metrics from QCpool injection sequences. This skill enables quick identification of compounds and instrumental phases with acceptable versus poor reproducibility and drift characteristics.

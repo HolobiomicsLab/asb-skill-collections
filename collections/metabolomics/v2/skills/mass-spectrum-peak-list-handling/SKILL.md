@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-peak-list-handling
-description: Use when you have raw or preprocessed electron ionization (EI) mass spectral data that must be stored in, retrieved from, or validated against the MSP file format (used by NIST MS Search and similar spectral library tools).
+description: Use when you have raw or preprocessed electron ionization (EI) mass spectral
+  data that must be stored in, retrieved from, or validated against the MSP file format
+  (used by NIST MS Search and similar spectral library tools).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,12 +14,16 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:
@@ -42,6 +48,7 @@ attribution:
 
 # mass-spectrum-peak-list-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse, validate, and write mass spectral peak lists in MSP (NIST MS Search) format, ensuring compliance with MSP specification conventions for precursor m/z, peak intensities, metadata annotations, and delimiter formatting. This skill enables reproducible round-trip I/O of spectral databases for downstream library search and comparison workflows.

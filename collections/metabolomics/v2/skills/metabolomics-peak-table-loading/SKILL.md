@@ -1,6 +1,9 @@
 ---
 name: metabolomics-peak-table-loading
-description: Use when you have raw peak tables exported from a tandem mass spectrometry preprocessing tool (e.g. Progenesis, MS-DIAL, or Bruker Metaboscape) and need to integrate them with sample metadata for reproducibility filtering, mispicked-ion removal, or group-based feature exclusion.
+description: Use when you have raw peak tables exported from a tandem mass spectrometry
+  preprocessing tool (e.g. Progenesis, MS-DIAL, or Bruker Metaboscape) and need to
+  integrate them with sample metadata for reproducibility filtering, mispicked-ion
+  removal, or group-based feature exclusion.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,6 +16,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -45,6 +49,7 @@ attribution:
 
 # metabolomics-peak-table-loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load preprocessed metabolomics peak tables and associated sample metadata from vendor-specific formats (e.g. Progenesis) into an R data object suitable for downstream filtering and statistical analysis. This is the foundational step that ingests MS1 feature abundance matrices and sample annotations before quality-control filtering.

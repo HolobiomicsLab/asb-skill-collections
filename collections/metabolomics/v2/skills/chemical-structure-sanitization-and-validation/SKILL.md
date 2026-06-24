@@ -1,6 +1,8 @@
 ---
 name: chemical-structure-sanitization-and-validation
-description: Use when you have translated or raw SMILES strings from a chemical structure curation pipeline and need to remove invalid chemical structures, resolve sanitization errors (e.
+description: Use when you have translated or raw SMILES strings from a chemical structure
+  curation pipeline and need to remove invalid chemical structures, resolve sanitization
+  errors (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0338
@@ -13,6 +15,7 @@ metadata:
   - sanitizing.py
   - RDKit
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -46,6 +49,7 @@ attribution:
 
 # chemical-structure-sanitization-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and standardize chemical structures represented as SMILES strings by removing invalid entries, correcting structural defects, and deduplicating to produce a curated set of chemically sound unique identifiers. This step is critical in natural products databases to ensure that downstream computational analysis (docking, molecular property prediction, organism-chemistry association) operates on reliable chemical representations.

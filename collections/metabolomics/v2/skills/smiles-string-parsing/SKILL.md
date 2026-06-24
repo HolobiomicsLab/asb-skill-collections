@@ -1,6 +1,8 @@
 ---
 name: smiles-string-parsing
-description: Use when when you have a raw list of SMILES strings in a file and need to prepare them as input for CFM-ID in silico spectrum generation to create pseudo SMILES-spectrum training pairs.
+description: Use when when you have a raw list of SMILES strings in a file and need
+  to prepare them as input for CFM-ID in silico spectrum generation to create pseudo
+  SMILES-spectrum training pairs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -10,6 +12,7 @@ metadata:
   tools:
   - Python 3.7
   - CFM-ID
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

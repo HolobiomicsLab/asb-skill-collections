@@ -1,6 +1,9 @@
 ---
 name: lda-convergence-monitoring-and-iteration
-description: Use when after configuring LDA hyperparameters (alpha, beta, number of topics, iteration budget) and loading a preprocessed bag-of-fragments corpus with neutral losses extracted and noise filtered, initiate LDA training and apply convergence monitoring to determine when topic-fragment probability.
+description: Use when after configuring LDA hyperparameters (alpha, beta, number of
+  topics, iteration budget) and loading a preprocessed bag-of-fragments corpus with
+  neutral losses extracted and noise filtered, initiate LDA training and apply convergence
+  monitoring to determine when topic-fragment probability.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -13,11 +16,13 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

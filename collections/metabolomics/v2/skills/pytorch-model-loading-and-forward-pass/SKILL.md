@@ -1,6 +1,9 @@
 ---
 name: pytorch-model-loading-and-forward-pass
-description: Use when when you have a pre-trained PyTorch model checkpoint (e.g., a MWFormer transformer) and structured input data (e.g., electron ionization mass spectrum m/z and intensity pairs) that must be converted to tensor format and passed through the model to produce a direct numerical output (e.
+description: Use when when you have a pre-trained PyTorch model checkpoint (e.g.,
+  a MWFormer transformer) and structured input data (e.g., electron ionization mass
+  spectrum m/z and intensity pairs) that must be converted to tensor format and passed
+  through the model to produce a direct numerical output (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -16,6 +19,7 @@ metadata:
   - MWFormer
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03781
   title: MWFormer

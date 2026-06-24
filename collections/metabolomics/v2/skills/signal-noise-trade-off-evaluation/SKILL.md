@@ -1,6 +1,9 @@
 ---
 name: signal-noise-trade-off-evaluation
-description: 'Use when after generating consensus spectra with fragment recurrence frequencies, when you have replicate MS/MS spectra for features and need to choose a single frequency cutoff for denoising. Triggers include: (1) uncertainty about which frequency threshold to apply across all features;'
+description: 'Use when after generating consensus spectra with fragment recurrence
+  frequencies, when you have replicate MS/MS spectra for features and need to choose
+  a single frequency cutoff for denoising. Triggers include: (1) uncertainty about
+  which frequency threshold to apply across all features;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,13 +21,18 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -48,6 +56,7 @@ attribution:
 
 # signal-noise-trade-off-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic evaluation of frequency thresholds for MS/MS spectrum denoising using Pareto front analysis to identify optimal trade-offs between signal retention (matched fragments preserved) and noise reduction (unmatched fragments removed). Applied after consensus spectrum generation to select a single frequency threshold that maximizes annotation quality without excessive signal loss.

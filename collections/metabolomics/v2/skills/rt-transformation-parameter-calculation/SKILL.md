@@ -1,6 +1,9 @@
 ---
 name: rt-transformation-parameter-calculation
-description: Use when you have centroided mzML or mzXML LC-MS files from a single batch run that exhibit systematic retention-time drift between samples, one or more designated QC reference file(s), and you need to harmonize RT coordinates across all samples before feature detection to reduce false positive and.
+description: Use when you have centroided mzML or mzXML LC-MS files from a single
+  batch run that exhibit systematic retention-time drift between samples, one or more
+  designated QC reference file(s), and you need to harmonize RT coordinates across
+  all samples before feature detection to reduce false positive and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,12 +14,15 @@ metadata:
   - MetCohort
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04906
   title: MetCohort
 evidence_spans:
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool for large-scale metabolomics and exposomics
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool for large-scale metabolomics and exposomics
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

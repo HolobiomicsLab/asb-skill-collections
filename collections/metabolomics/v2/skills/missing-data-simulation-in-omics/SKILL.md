@@ -1,6 +1,9 @@
 ---
 name: missing-data-simulation-in-omics
-description: Use when when comparing the robustness of multiple pathway ranking methods (e.g., PLAGE, ORA, GSEA) on metabolomics or other omics data, and you need to establish which method is least sensitive to peak dropout, instrumental noise, or annotation uncertainty.
+description: Use when when comparing the robustness of multiple pathway ranking methods
+  (e.g., PLAGE, ORA, GSEA) on metabolomics or other omics data, and you need to establish
+  which method is least sensitive to peak dropout, instrumental noise, or annotation
+  uncertainty.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -13,6 +16,7 @@ metadata:
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
   - PALS Viewer
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -43,6 +47,7 @@ attribution:
 
 # Missing-Data Simulation in Omics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically introduce controlled levels of missing peaks and noise artifacts into omics intensity matrices to assess method robustness and generalization. This skill validates whether pathway analysis methods maintain ranking stability and effect size preservation under realistic data degradation scenarios common in metabolomics.

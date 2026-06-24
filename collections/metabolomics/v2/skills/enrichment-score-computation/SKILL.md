@@ -1,6 +1,9 @@
 ---
 name: enrichment-score-computation
-description: Use when after you have normalized metabolite abundances across samples and mapped metabolites to pathway or ontology identifiers. Use it when your goal is to identify statistically significant metabolite pathways or classes rather than analyze individual metabolite abundance changes.
+description: Use when after you have normalized metabolite abundances across samples
+  and mapped metabolites to pathway or ontology identifiers. Use it when your goal
+  is to identify statistically significant metabolite pathways or classes rather than
+  analyze individual metabolite abundance changes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -14,6 +17,7 @@ metadata:
   - KEGGREST
   - pathview
   - SciPy (scipy.stats)
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.11.20.391912
   title: MetENP

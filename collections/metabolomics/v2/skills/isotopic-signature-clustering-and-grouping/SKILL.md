@@ -1,6 +1,9 @@
 ---
 name: isotopic-signature-clustering-and-grouping
-description: Use when you have a feature table (m/z, drift_time, retention_time, intensity) from LC-IMS-MS or similar multi-dimensional MS acquisition and need to (1) link isotopic variants to their monoisotopic parent features, (2) disambiguate true chemical features from noise or instrumental artifacts, or.
+description: Use when you have a feature table (m/z, drift_time, retention_time, intensity)
+  from LC-IMS-MS or similar multi-dimensional MS acquisition and need to (1) link
+  isotopic variants to their monoisotopic parent features, (2) disambiguate true chemical
+  features from noise or instrumental artifacts, or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -15,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
@@ -47,6 +52,7 @@ attribution:
 
 # isotopic-signature-clustering-and-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups detected mass spectrometry features into isotopic clusters by enumerating m/z offsets corresponding to stable isotope substitutions (e.g., C13) and filtering by mass, drift time, and retention time tolerances. This skill enables annotation of monoisotopic and isotopologue features, improving feature characterization and reducing false positive identifications in high-dimensional MS workflows.

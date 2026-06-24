@@ -1,6 +1,9 @@
 ---
 name: dynamic-branch-cutting-module-detection
-description: Use when after constructing a hierarchical dendrogram from a biweight midcorrelation dissimilarity matrix of metabolite measurements, when your dendrogram exhibits complicated structure (multiple scales, varying branch heights) that would be poorly captured by a single fixed-height cutoff, and you.
+description: Use when after constructing a hierarchical dendrogram from a biweight
+  midcorrelation dissimilarity matrix of metabolite measurements, when your dendrogram
+  exhibits complicated structure (multiple scales, varying branch heights) that would
+  be poorly captured by a single fixed-height cutoff, and you.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +15,7 @@ metadata:
   - WGCNA
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -21,7 +25,8 @@ evidence_spans:
 - '`MetaboDiff` is available for all operating systems and can be installed via Github'
 - met = knn_impute(met,cutoff=0.4)
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 claims: []
@@ -48,6 +53,7 @@ attribution:
 
 # Dynamic Branch-Cutting Module Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify metabolic co-expression modules from hierarchical dendrograms using adaptive branch-cutting thresholds rather than fixed height cutoffs, enabling robust detection of metabolite clusters even on complex dendrograms. This skill partitions normalized metabolite abundance data into functionally coherent modules annotated by pathway membership.

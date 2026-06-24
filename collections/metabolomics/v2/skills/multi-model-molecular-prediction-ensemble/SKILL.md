@@ -1,6 +1,9 @@
 ---
 name: multi-model-molecular-prediction-ensemble
-description: Use when you have a set of molecular structures (as .sdf or .csv with SMILES) and need to predict metabolic susceptibility across multiple CYP isoforms (e.g., 1A2, 2A6, 2B6) to prioritize drug candidates or screen for potential metabolic liabilities across the major human CYP enzyme portfolio.
+description: Use when you have a set of molecular structures (as .sdf or .csv with
+  SMILES) and need to predict metabolic susceptibility across multiple CYP isoforms
+  (e.g., 1A2, 2A6, 2B6) to prioritize drug candidates or screen for potential metabolic
+  liabilities across the major human CYP enzyme portfolio.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_2258
   tools:
   - CypReact
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -36,6 +40,7 @@ attribution:
 
 # multi-model-molecular-prediction-ensemble
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill enables parallel prediction of molecular metabolism across multiple cytochrome P450 (CYP) isoforms in a single CypReact invocation, consolidating per-isoform predictions into a unified result set. Use it when you need to assess how a compound is metabolized by multiple CYP isoforms simultaneously rather than running separate analyses.

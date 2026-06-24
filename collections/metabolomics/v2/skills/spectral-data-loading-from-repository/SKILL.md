@@ -1,6 +1,9 @@
 ---
 name: spectral-data-loading-from-repository
-description: Use when when you need to retrieve a specific MS/MS spectrum from a public proteomics repository (PRIDE, MassIVE, PeptideAtlas) by its USI string for annotation, visualization, or comparative analysis, rather than working with locally stored mzML/mzXML files or already-loaded spectrum objects.
+description: Use when when you need to retrieve a specific MS/MS spectrum from a public
+  proteomics repository (PRIDE, MassIVE, PeptideAtlas) by its USI string for annotation,
+  visualization, or comparative analysis, rather than working with locally stored
+  mzML/mzXML files or already-loaded spectrum objects.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,12 +16,15 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # spectral-data-loading-from-repository
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load tandem mass spectrometry (MS/MS) spectra from online proteomics and metabolomics repositories using Universal Spectrum Identifier (USI) strings, resolving repository accessions, file identifiers, and scan numbers to retrieve raw spectral data (m/z, intensity, precursor m/z, charge state, retention time) and instantiate MsmsSpectrum objects for downstream processing.

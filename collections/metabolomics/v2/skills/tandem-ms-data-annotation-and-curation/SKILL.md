@@ -1,6 +1,9 @@
 ---
 name: tandem-ms-data-annotation-and-curation
-description: Use when you have an unknown tandem MS/MS spectrum (precursor m/z and fragment peaks) and need to infer the molecular formula and ionization mode (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) in a de novo setting without access to spectral libraries.
+description: Use when you have an unknown tandem MS/MS spectrum (precursor m/z and
+  fragment peaks) and need to infer the molecular formula and ionization mode (e.g.,
+  [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) in a de novo setting without access to spectral
+  libraries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +15,13 @@ metadata:
   - MIST-CF model
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # tandem-ms-data-annotation-and-curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign chemical formulas and ionization adducts to tandem mass spectra (MS/MS) using energy-based neural network scoring without spectrum database reference. This skill ranks candidate formula–adduct pairs for unknown precursor masses by learning from fragmentation patterns in an end-to-end fashion.

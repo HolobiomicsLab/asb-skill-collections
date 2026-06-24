@@ -1,6 +1,9 @@
 ---
 name: least-squares-optimization-1d
-description: Use when when you have a 1D signal array (e.g., extracted ion chromatogram, arrival time distribution, or MS1 spectrum intensity profile) and need to identify and quantify overlapping or adjacent peaks with precise position, height, and width estimates.
+description: Use when when you have a 1D signal array (e.g., extracted ion chromatogram,
+  arrival time distribution, or MS1 spectrum intensity profile) and need to identify
+  and quantify overlapping or adjacent peaks with precise position, height, and width
+  estimates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +19,7 @@ metadata:
   - mzapy.peaks.calc_peak_area
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

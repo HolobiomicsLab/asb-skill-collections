@@ -1,6 +1,9 @@
 ---
 name: confidence-score-assignment-and-filtering
-description: Use when after matching MRM transitions against a lipid reference database, when you have candidate lipid identities for each transition and need to rank them by quality and select a single match per transition for export to the labelled lipid-identity table.
+description: Use when after matching MRM transitions against a lipid reference database,
+  when you have candidate lipid identities for each transition and need to rank them
+  by quality and select a single match per transition for export to the labelled lipid-identity
+  table.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3766
@@ -12,6 +15,7 @@ metadata:
   - CLAW-MRM
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM

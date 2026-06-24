@@ -1,6 +1,9 @@
 ---
 name: time-resolved-dbdi-data-interpretation
-description: Use when you have time-resolved DBDI-MS data (intensity matrix with m/z features as rows and scan timepoints as columns) from direct injection analysis where chromatographic separation is unavailable and you need to identify which features represent fragments or adducts of the same parent compound.
+description: Use when you have time-resolved DBDI-MS data (intensity matrix with m/z
+  features as rows and scan timepoints as columns) from direct injection analysis
+  where chromatographic separation is unavailable and you need to identify which features
+  represent fragments or adducts of the same parent compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -15,11 +18,13 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # time-resolved-dbdi-data-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify in-source fragments and adducts in direct-injection dielectric barrier discharge ionisation (DBDI) mass spectrometry by combining pointwise correlation of temporal intensity profiles with exact mass difference refinement. This skill enables putative annotation of multiple ion species arising from single analytes in time-resolved plasma ionization datasets where chromatographic separation is absent.

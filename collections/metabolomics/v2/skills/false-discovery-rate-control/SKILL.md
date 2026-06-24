@@ -1,6 +1,9 @@
 ---
 name: false-discovery-rate-control
-description: Use when you have generated candidate peptide-spectrum matches from a spectral library search (especially open modification searches using cascade strategies) and need to assign statistical confidence to those matches. Use it whenever the scoring metric (e.
+description: Use when you have generated candidate peptide-spectrum matches from a
+  spectral library search (especially open modification searches using cascade strategies)
+  and need to assign statistical confidence to those matches. Use it whenever the
+  scoring metric (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,12 +14,15 @@ metadata:
   - ANN-SoLo
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is
+  a spectral library search engine
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

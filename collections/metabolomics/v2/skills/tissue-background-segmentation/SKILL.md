@@ -1,6 +1,7 @@
 ---
 name: tissue-background-segmentation
-description: Use when you have loaded a laser ablation ICP-MS image into pew² and need to distinguish tissue signal from instrument background or non-ablated substrate.
+description: Use when you have loaded a laser ablation ICP-MS image into pew² and
+  need to distinguish tissue signal from instrument background or non-ablated substrate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,13 +12,15 @@ metadata:
   - pewpew
   - pewlib
   - pew²
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -44,6 +47,7 @@ attribution:
 
 # Threshold-Based Tissue–Background Segmentation in LA-ICP-MS Images
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Separates tissue pixels from background in laser ablation ICP-MS images using threshold-based methods (e.g., Otsu's method) applied through pew²'s Selection Dialog. This is essential for isolating regions of analytical interest before quantification or spatial analysis.

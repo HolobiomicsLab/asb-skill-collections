@@ -1,6 +1,8 @@
 ---
 name: numeric-list-slot-management
-description: Use when when extending the MsBackend virtual class to create a custom backend for mass spectrometry data, and you need to store peak m/z and intensity values as variable-length numeric vectors indexed by spectrum.
+description: Use when when extending the MsBackend virtual class to create a custom
+  backend for mass spectrometry data, and you need to store peak m/z and intensity
+  values as variable-length numeric vectors indexed by spectrum.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +15,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -43,6 +46,7 @@ attribution:
 
 # numeric-list-slot-management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement S4 class slots using NumericList containers to store peak data (m/z and intensity values) in MsBackend subclasses, ensuring consistency between spectra metadata and peak vectors through validity constraints. This skill is essential for building custom mass spectrometry backends that efficiently represent multiple spectra with varying numbers of peaks.

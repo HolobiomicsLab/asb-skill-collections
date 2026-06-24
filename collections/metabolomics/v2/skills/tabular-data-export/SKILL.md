@@ -1,6 +1,8 @@
 ---
 name: tabular-data-export
-description: Use when you have extracted MS1 or MS2 peak lists and scan headers from Thermo Fisher RAW files using MetaXtract and need to load them into pandas, NumPy, or external analysis tools.
+description: Use when you have extracted MS1 or MS2 peak lists and scan headers from
+  Thermo Fisher RAW files using MetaXtract and need to load them into pandas, NumPy,
+  or external analysis tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -13,11 +15,13 @@ metadata:
   - Python (pandas, NumPy, PyArrow)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.11.12.687968v1
   title: MetaXtract
 evidence_spans:
-- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from **Thermo Fisher RAW** mass spectrometry files.
+- MetaXtract is a hybrid tool for extracting, analysing, and visualising data from
+  **Thermo Fisher RAW** mass spectrometry files.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

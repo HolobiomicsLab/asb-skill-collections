@@ -1,6 +1,7 @@
 ---
 name: metabolic-model-curation
-description: Use when you have generated consensus metabolic reconstructions for multiple members of a microbial community (e.
+description: Use when you have generated consensus metabolic reconstructions for multiple
+  members of a microbial community (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3837
@@ -9,11 +10,13 @@ metadata:
   - http://edamontology.org/topic_2259
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
 evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana
+- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis
+  thaliana
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -37,6 +40,7 @@ attribution:
 
 # metabolic-model-curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Curate and complete consensus metabolic reconstructions for microbial community members by leveraging community-dependent metabolic context to identify and fill gaps in individual models. This skill reconciles metabolic gaps across a community using shared biochemical dependencies and exchange requirements.

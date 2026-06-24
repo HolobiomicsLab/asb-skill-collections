@@ -19,6 +19,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -48,6 +49,7 @@ attribution:
 
 # chemical-structure-annotation-and-export
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Export predicted metabolite structures and their associated biotransformation annotations from BioTransformer's environmental microbial degradation module into a structured output file. This skill enables systematic capture and organization of metabolism prediction results for downstream metabolite identification and pathway analysis.

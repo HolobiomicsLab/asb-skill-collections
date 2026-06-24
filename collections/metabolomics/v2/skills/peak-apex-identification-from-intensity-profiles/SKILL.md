@@ -1,6 +1,8 @@
 ---
 name: peak-apex-identification-from-intensity-profiles
-description: Use when after EIC candidate generation and peak detection have been completed on LC/HRMS data, when you need to extract the retention time and intensity values at peak maxima for each detected peak.
+description: Use when after EIC candidate generation and peak detection have been
+  completed on LC/HRMS data, when you need to extract the retention time and intensity
+  values at peak maxima for each detected peak.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,11 +16,14 @@ metadata:
   - xcms
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # peak-apex-identification-from-intensity-profiles
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify the apex (maximum intensity point) and associated properties of chromatographic peaks within EIC candidate signal intensity profiles from LC/HRMS data. This skill is essential for quantification and peak characterization in untargeted metabolomics workflows.

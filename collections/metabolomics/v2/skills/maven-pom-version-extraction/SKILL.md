@@ -1,11 +1,13 @@
 ---
 name: maven-pom-version-extraction
-description: Use when preparing a software release and you need to verify that all Maven modules declare identical version numbers before creating a release branch.
+description: Use when preparing a software release and you need to verify that all
+  Maven modules declare identical version numbers before creating a release branch.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - NMRFx
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -35,6 +37,7 @@ attribution:
 
 # maven-pom-version-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate version strings from all pom.xml files in a Maven-based repository to ensure version synchronization across the project tree. This skill is essential for release preparation workflows where consistent versioning across all modules is a prerequisite for safe branch creation and artifact publishing.

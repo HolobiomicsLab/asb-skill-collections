@@ -1,6 +1,8 @@
 ---
 name: cross-domain-masst-output-parsing
-description: Use when you have executed batch searches against one or more domain-specific MASST tools and received multiple output files (_microbe.html, _plant.html, _tissue.html, _microbiome.html, _food.html, _matches.tsv, _library.tsv, _datasets.tsv, _count_*.
+description: Use when you have executed batch searches against one or more domain-specific
+  MASST tools and received multiple output files (_microbe.html, _plant.html, _tissue.html,
+  _microbiome.html, _food.html, _matches.tsv, _library.tsv, _datasets.tsv, _count_*.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +18,7 @@ metadata:
   - foodMASST
   - jobs.py
   - GNPS_MASST
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

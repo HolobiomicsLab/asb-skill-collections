@@ -1,6 +1,9 @@
 ---
 name: file-system-audit-and-validation
-description: Use when after invoking the saveAnnotations function on a MetaboAnnotatoR annotations object to confirm that all four expected output file types (global results file, ranked results file, per-feature ranked spectra PDFs, and pseudo-MS/MS MGF file) have been written to the output directory without.
+description: Use when after invoking the saveAnnotations function on a MetaboAnnotatoR
+  annotations object to confirm that all four expected output file types (global results
+  file, ranked results file, per-feature ranked spectra PDFs, and pseudo-MS/MS MGF
+  file) have been written to the output directory without.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,11 +15,13 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # file-system-audit-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a metabolomics annotation pipeline has successfully written all expected output file types to a specified directory, and that each file is non-empty and complete. This skill ensures data integrity and traceability by enumerating and validating the presence, format, and size of annotation results including global results tables, ranked candidate matches, ranked spectra PDFs, and pseudo-MS/MS MGF files.

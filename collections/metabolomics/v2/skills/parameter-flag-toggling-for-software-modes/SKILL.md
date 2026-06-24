@@ -1,6 +1,8 @@
 ---
 name: parameter-flag-toggling-for-software-modes
-description: Use when when integrating edited Modular.r scripts into the LipidMatch-4.2 distribution and you need to switch between Modular mode (standalone R execution with manual or CSV inputs) and Flow mode (integrated pipeline execution).
+description: Use when when integrating edited Modular.r scripts into the LipidMatch-4.2
+  distribution and you need to switch between Modular mode (standalone R execution
+  with manual or CSV inputs) and Flow mode (integrated pipeline execution).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0331
@@ -12,6 +14,7 @@ metadata:
   - LipidMatch
   - FluoroMatch
   - Core-Match repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0
@@ -40,6 +43,7 @@ attribution:
 
 # Parameter Flag Toggling for Software Modes
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure execution mode (Modular vs. Flow) in LipidMatch/FluoroMatch by toggling boolean flags in Modular.r to control data input handling, processing pipeline, and analysis type. This skill ensures the correct algorithmic pathway and dependency chain is activated for the intended workflow.

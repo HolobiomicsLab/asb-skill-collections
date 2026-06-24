@@ -1,6 +1,7 @@
 ---
 name: isotopic-pattern-matching
-description: Use when after feature detection has produced candidate formula–adduct pairs and their corresponding m/z values, but before final compound identification.
+description: Use when after feature detection has produced candidate formula–adduct
+  pairs and their corresponding m/z values, but before final compound identification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +16,7 @@ metadata:
   - Scannotation
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny
@@ -24,7 +26,8 @@ evidence_spans:
 - Welcome to the info page on MetaboShiny
 - Welcome to the info page on MetaboShiny! We are currently on BioRXiv
 - Through R
-- Scannotation is an automated and user-friendly suspect screening tool for the rapid pre-annotation of LC-HRMS datasets.
+- Scannotation is an automated and user-friendly suspect screening tool for the rapid
+  pre-annotation of LC-HRMS datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

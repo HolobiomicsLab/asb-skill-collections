@@ -1,6 +1,9 @@
 ---
 name: nested-json-path-resolution
-description: Use when when applying str directives during JSON-to-JSON conversion and the source value is not a direct field but is nested within a table structure—specifically when you need to reference a specific record by record_id, or traverse a sequence of field names (table → fields → nested value) to.
+description: Use when when applying str directives during JSON-to-JSON conversion
+  and the source value is not a direct field but is nested within a table structure—specifically
+  when you need to reference a specific record by record_id, or traverse a sequence
+  of field names (table → fields → nested value) to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES convert command
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # nested-json-path-resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve nested JSON paths using table/fields/record_id directives to extract values from deeply nested structures in intermediate JSON representations. This skill is essential when converting tabular experimental metadata into standardized formats like mwTab, where source values may be embedded within complex hierarchical JSON records.

@@ -1,6 +1,8 @@
 ---
 name: molecular-fingerprint-calculation
-description: Use when you have a collection of small molecules in standardized format (SMILES or SDF) that require quantitative chemical feature representation for machine learning or comparative analysis.
+description: Use when you have a collection of small molecules in standardized format
+  (SMILES or SDF) that require quantitative chemical feature representation for machine
+  learning or comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -10,6 +12,7 @@ metadata:
   tools:
   - rcdk
   - PubChem standardization
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)

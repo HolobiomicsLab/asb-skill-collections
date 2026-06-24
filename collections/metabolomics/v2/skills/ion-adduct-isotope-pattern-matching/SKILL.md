@@ -1,6 +1,7 @@
 ---
 name: ion-adduct-isotope-pattern-matching
-description: Use when you have a preprocessed feature table (m/z, retention time, intensities) from LC-MS and need to group features into empirical compounds.
+description: Use when you have a preprocessed feature table (m/z, retention time,
+  intensities) from LC-MS and need to group features into empirical compounds.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -16,6 +17,7 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -48,6 +50,7 @@ attribution:
 
 # ion-adduct-isotope-pattern-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically search a feature table against a library of known isotope and adduct mass offsets to identify all feature pairs that match expected ion relationships. This foundational step populates a feature network that is later partitioned into empirical compounds, enabling neutral mass inference and degenerate ion annotation in untargeted LC-MS metabolomics.

@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-dataset-curation
-description: Use when you have a collection of molecular structures (with SMILES strings, InChI, or similar identifiers) and corresponding experimentally determined or reference CCS values, and you need to format and validate them as input to a machine learning CCS prediction model.
+description: Use when you have a collection of molecular structures (with SMILES strings,
+  InChI, or similar identifiers) and corresponding experimentally determined or reference
+  CCS values, and you need to format and validate them as input to a machine learning
+  CCS prediction model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +18,7 @@ metadata:
   - CCSP 2.0
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0
@@ -46,6 +50,7 @@ attribution:
 
 # molecular-structure-dataset-curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preparation and validation of molecular structure datasets paired with known collision cross section (CCS) values for training machine learning models in ion-mobility metabolomics workflows. This skill ensures that training data meet quality and format requirements before use in CCSP 2.0 or similar predictive models.

@@ -1,6 +1,9 @@
 ---
 name: metabolite-spectral-data-merging
-description: Use when you have two or more mass spectral libraries in different formats (NIST binary exports converted to MSP, MoNA downloads, RIKEN public databases, GNPS MGF, or batches of in-house standards in separate MSP files) and need to combine them with consistent metadata (SMILES, InChIKey, molecular.
+description: Use when you have two or more mass spectral libraries in different formats
+  (NIST binary exports converted to MSP, MoNA downloads, RIKEN public databases, GNPS
+  MGF, or batches of in-house standards in separate MSP files) and need to combine
+  them with consistent metadata (SMILES, InChIKey, molecular.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -18,6 +21,7 @@ metadata:
   - MS-DIAL
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -48,6 +52,7 @@ attribution:
 
 # metabolite-spectral-data-merging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge multiple mass spectral libraries (EI or MS/MS) from heterogeneous public sources (NIST, MoNA, RIKEN, GNPS) and in-house standards into a single unified MSP file with harmonized structure, SMILES, and retention index (RI) annotations for downstream use in MS-DIAL or other metabolite identification pipelines.

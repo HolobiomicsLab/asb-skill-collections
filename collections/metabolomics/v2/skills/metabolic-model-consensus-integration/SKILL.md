@@ -1,6 +1,7 @@
 ---
 name: metabolic-model-consensus-integration
-description: Use when you have draft metabolic reconstructions in SBML or standard format for multiple organisms in a microbial community (e.
+description: Use when you have draft metabolic reconstructions in SBML or standard
+  format for multiple organisms in a microbial community (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3837
@@ -10,13 +11,15 @@ metadata:
   - http://edamontology.org/topic_3174
   tools:
   - COMMIT
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
 - doi: 10.5281/zenodo.363932874
   title: ''
 evidence_spans:
-- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis thaliana
+- community-dependent gap-filling using COMMIT for communites sampled from Arabidopsis
+  thaliana
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +44,7 @@ attribution:
 
 # metabolic-model-consensus-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrates multiple draft metabolic reconstructions from community member organisms into a single consensus model by identifying conserved metabolic reactions across all input reconstructions. This skill is essential when studying microbial communities where individual organism models exist but must be unified for community-level metabolic analysis.

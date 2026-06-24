@@ -1,6 +1,8 @@
 ---
 name: metabolite-missingness-threshold-filtering
-description: Use when when you have a metabolite measurement matrix with missing values across samples and need to decide which metabolites to retain before applying k-nearest neighbor imputation.
+description: Use when when you have a metabolite measurement matrix with missing values
+  across samples and need to decide which metabolites to retain before applying k-nearest
+  neighbor imputation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - R
   - MetaboDiff
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +48,7 @@ attribution:
 
 # metabolite-missingness-threshold-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a missingness cutoff threshold to filter out metabolites with excessive missing values before imputation, retaining only metabolites measured in a sufficient fraction of samples. This ensures that imputation algorithms operate on data with acceptable completeness and minimizes bias from over-imputation.

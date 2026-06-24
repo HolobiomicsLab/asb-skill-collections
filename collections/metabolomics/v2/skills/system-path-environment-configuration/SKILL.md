@@ -1,6 +1,9 @@
 ---
 name: system-path-environment-configuration
-description: 'Use when when setting up imzML Writer for the first time on a new machine, or when raw vendor mass spectrometry file conversion fails with ''msconvert not found'' or Docker image unavailable errors. Specifically: on Windows/PC systems before invoking RAW_to_mzML conversion;'
+description: 'Use when when setting up imzML Writer for the first time on a new machine,
+  or when raw vendor mass spectrometry file conversion fails with ''msconvert not
+  found'' or Docker image unavailable errors. Specifically: on Windows/PC systems
+  before invoking RAW_to_mzML conversion;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0226
@@ -16,6 +19,7 @@ metadata:
   - imzML Writer
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer

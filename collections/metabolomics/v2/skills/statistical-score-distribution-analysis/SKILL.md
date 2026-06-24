@@ -1,6 +1,7 @@
 ---
 name: statistical-score-distribution-analysis
-description: Use when when you have run the same mass spectrum through molecular formula assignment under different parameter settings (e.
+description: Use when when you have run the same mass spectrum through molecular formula
+  assignment under different parameter settings (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2238
@@ -13,12 +14,14 @@ metadata:
   - pandas
   - numpy
   - matplotlib
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -46,6 +49,7 @@ attribution:
 
 # statistical-score-distribution-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and compare statistical properties (mean, median, standard deviation, min, max) of molecular formula assignment scores across different parameterization modes to assess how algorithmic choices affect annotation behavior and confidence distributions.

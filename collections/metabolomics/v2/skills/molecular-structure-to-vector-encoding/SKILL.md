@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-to-vector-encoding
-description: Use when when you have a collection of molecular structures (SMILES, InChI, or SDF format) and need to train or compare neural network-based spectrum predictors (such as NEIMS, MassFormer, or ICEBERG variants) on the same benchmark dataset.
+description: Use when when you have a collection of molecular structures (SMILES,
+  InChI, or SDF format) and need to train or compare neural network-based spectrum
+  predictors (such as NEIMS, MassFormer, or ICEBERG variants) on the same benchmark
+  dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -14,12 +17,14 @@ metadata:
   - PyTorch / TensorFlow
   - ms-pred
   - MAGMa / RDKit
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 evidence_spans:
 - _No usage/docs found._
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:

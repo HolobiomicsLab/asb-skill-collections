@@ -19,6 +19,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
@@ -48,6 +49,7 @@ attribution:
 
 # environmental-degradation-pathway-analysis
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Predict biotransformation products and degradation pathways for chemical compounds under environmental microbial conditions using BioTransformer's EAWAG-BBD-derived module. This skill reconstructs the sequence and types of reactions likely to occur when a pollutant or xenobiotic encounters soil, aquatic, or engineered microbial communities.

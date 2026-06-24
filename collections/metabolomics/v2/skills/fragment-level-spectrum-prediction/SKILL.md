@@ -1,6 +1,8 @@
 ---
 name: fragment-level-spectrum-prediction
-description: Use when when you have a molecular structure (SMILES, InChI, or chemical formula) and need to predict its tandem mass spectrum for structural elucidation or mass spectrometry validation.
+description: Use when when you have a molecular structure (SMILES, InChI, or chemical
+  formula) and need to predict its tandem mass spectrum for structural elucidation
+  or mass spectrometry validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -16,6 +18,7 @@ metadata:
   - MAGMa algorithm
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

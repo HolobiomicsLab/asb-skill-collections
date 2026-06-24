@@ -1,6 +1,9 @@
 ---
 name: high-resolution-mass-spectrometry-data-processing
-description: Use when you have uploaded a delimited data file (CSV, TSV, or semicolon-separated) containing at least m/z values and intensity columns from HRMS analysis of a complex sample, and you need to (1) verify that column keywords are correctly recognized, (2) compute derived metrics such as Normalized.
+description: Use when you have uploaded a delimited data file (CSV, TSV, or semicolon-separated)
+  containing at least m/z values and intensity columns from HRMS analysis of a complex
+  sample, and you need to (1) verify that column keywords are correctly recognized,
+  (2) compute derived metrics such as Normalized.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -13,12 +16,15 @@ metadata:
   - PCA-JS
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data
 evidence_spans:
-- Punc'data is an interactive attribution and vizualization tool made for high resolution mass spectrometry results.
-- Punc'data is an interactive attribution and vizualization tool made for high resolution mass spectrometry results
+- Punc'data is an interactive attribution and vizualization tool made for high resolution
+  mass spectrometry results.
+- Punc'data is an interactive attribution and vizualization tool made for high resolution
+  mass spectrometry results
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

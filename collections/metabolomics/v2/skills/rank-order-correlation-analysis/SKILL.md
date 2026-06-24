@@ -1,6 +1,9 @@
 ---
 name: rank-order-correlation-analysis
-description: Use when when you have run a pathway ranking method (such as PALS/PLAGE) on clean metabolomics data and wish to assess how sensitive the resulting pathway activity rankings are to realistic data quality issues—specifically Gaussian noise and random peak dropout—which are prevalent in untargeted.
+description: Use when when you have run a pathway ranking method (such as PALS/PLAGE)
+  on clean metabolomics data and wish to assess how sensitive the resulting pathway
+  activity rankings are to realistic data quality issues—specifically Gaussian noise
+  and random peak dropout—which are prevalent in untargeted.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2939
@@ -11,6 +14,7 @@ metadata:
   - PALS (Pathway Activity Level Scoring)
   - PALS Viewer
   - ORA and GSEA (included in PALS)
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
@@ -41,6 +45,7 @@ attribution:
 
 # rank-order-correlation-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the stability of pathway activity rankings under perturbation (noise and missing peaks) by computing rank-order correlations (Spearman's rho or Kendall's tau) between baseline and perturbed pathway scores. This skill validates the robustness of pathway ranking methods in metabolomics by measuring how ranking order degrades as data quality decreases.

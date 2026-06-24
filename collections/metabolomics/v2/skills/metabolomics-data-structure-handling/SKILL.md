@@ -1,6 +1,9 @@
 ---
 name: metabolomics-data-structure-handling
-description: Use when you have metabolomics data already formatted as a SummarizedExperiment object containing multiple assays (raw counts, log-transformed, imputed, or normalized versions) and need to access specific assay layers alongside batch annotation metadata to perform comparisons (e.
+description: Use when you have metabolomics data already formatted as a SummarizedExperiment
+  object containing multiple assays (raw counts, log-transformed, imputed, or normalized
+  versions) and need to access specific assay layers alongside batch annotation metadata
+  to perform comparisons (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -18,6 +21,7 @@ metadata:
   - MsExperiment
   - Spectra
   - MSnbase
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
@@ -25,10 +29,13 @@ derived_from:
   title: ''
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
 - Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- we will load the hRUV package and other packages required for the demonstration...
+  library(dplyr)
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

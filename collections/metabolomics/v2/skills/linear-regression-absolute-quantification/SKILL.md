@@ -1,6 +1,9 @@
 ---
 name: linear-regression-absolute-quantification
-description: Use when you have a set of calibration samples (spiked compounds) with known concentrations, measured compound and internal-standard peak areas, and you need to convert compound/internal-standard ratios from study samples into absolute concentrations.
+description: Use when you have a set of calibration samples (spiked compounds) with
+  known concentrations, measured compound and internal-standard peak areas, and you
+  need to convert compound/internal-standard ratios from study samples into absolute
+  concentrations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3662
@@ -13,6 +16,7 @@ metadata:
   - SummarizedExperiment
   - R lm/weighted.lm
   - mzQualityDashboard
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -21,8 +25,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # linear-regression-absolute-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a weighted linear regression model to calibration-line samples with known concentrations, then use the fitted model to predict absolute concentrations for study samples from their measured compound/internal-standard ratios. This enables absolute quantification of metabolites in untargeted metabolomics workflows.

@@ -1,6 +1,9 @@
 ---
 name: multiprocessing-process-spawning-and-pid-management
-description: 'Use when when deploying a Streamlit workflow app in offline mode (online_deployment: false) or when Redis is unavailable in online mode, and you need to launch workflows as independent background processes while maintaining the ability to track, recover, or cancel them later by their PID.'
+description: 'Use when when deploying a Streamlit workflow app in offline mode (online_deployment:
+  false) or when Redis is unavailable in online mode, and you need to launch workflows
+  as independent background processes while maintaining the ability to track, recover,
+  or cancel them later by their PID.'
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - Docker
   - Redis / RQ (Redis Queue)
   - Streamlit
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -39,6 +43,7 @@ attribution:
 
 # multiprocessing-process-spawning-and-pid-management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Spawn detached local workflow processes using Python's multiprocessing.Process and persist their process IDs (PIDs) to a file-based registry for later recovery and monitoring. This skill enables offline/local execution of long-running workflows without blocking the Streamlit main thread or requiring external queue infrastructure.

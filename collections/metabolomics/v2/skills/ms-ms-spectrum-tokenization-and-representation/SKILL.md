@@ -1,6 +1,9 @@
 ---
 name: ms-ms-spectrum-tokenization-and-representation
-description: Use when when you have raw MS/MS spectra in MSP format (or similar) with m/z–intensity peak pairs and need to prepare them for neural embedding models that require fixed-size discrete token inputs. Applies before generating dense spectral embeddings for retrieval or similarity scoring tasks.
+description: Use when when you have raw MS/MS spectra in MSP format (or similar) with
+  m/z–intensity peak pairs and need to prepare them for neural embedding models that
+  require fixed-size discrete token inputs. Applies before generating dense spectral
+  embeddings for retrieval or similarity scoring tasks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -17,6 +20,7 @@ metadata:
   - SiameseModel
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -47,6 +51,7 @@ attribution:
 
 # MS/MS Spectrum Tokenization and Representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert MS/MS spectral peak data into discrete token sequences suitable for deep learning models by mapping m/z and intensity values to vocabulary indices. This tokenization step enables supervised contrastive learning and spectral embedding generation for similarity-based compound identification.

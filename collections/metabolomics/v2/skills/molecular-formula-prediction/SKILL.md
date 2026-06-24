@@ -1,6 +1,9 @@
 ---
 name: molecular-formula-prediction
-description: Use when you have 1D ¹H or ¹³C NMR spectra from an unknown organic compound and need to predict its molecular formula (e.g., C₆H₁₂O₂). The compound must contain ≤19 heavy (non-hydrogen) atoms. Use this as the first stage of a structure elucidation pipeline before predicting molecular connectivity.
+description: Use when you have 1D ¹H or ¹³C NMR spectra from an unknown organic compound
+  and need to predict its molecular formula (e.g., C₆H₁₂O₂). The compound must contain
+  ≤19 heavy (non-hydrogen) atoms. Use this as the first stage of a structure elucidation
+  pipeline before predicting molecular connectivity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +16,7 @@ metadata:
   - Transformer (encoder-decoder architecture)
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -41,6 +45,7 @@ attribution:
 
 # Molecular Formula Prediction from NMR Spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict the molecular formula (elemental composition) of an unknown compound from 1D ¹H and/or ¹³C NMR spectra using a multitask transformer-based machine learning model. This skill enables rapid structure elucidation traditionally performed by manual spectroscopic interpretation.

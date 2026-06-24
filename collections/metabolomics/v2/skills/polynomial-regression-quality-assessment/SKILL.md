@@ -1,6 +1,8 @@
 ---
 name: polynomial-regression-quality-assessment
-description: Use when after fitting a polynomial calibration model to tunemix reference data in DEIMoS, assess whether the model explains sufficient variance in the m/z–drift-time–CCS relationship.
+description: Use when after fitting a polynomial calibration model to tunemix reference
+  data in DEIMoS, assess whether the model explains sufficient variance in the m/z–drift-time–CCS
+  relationship.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,11 +16,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - is a Python application programming interface and command-line tool
 - import numpy as np
@@ -45,6 +49,7 @@ attribution:
 
 # polynomial-regression-quality-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the goodness-of-fit of a polynomial calibration model by computing and validating the coefficient of determination (R²) against a predefined threshold, ensuring that the m/z–drift-time–CCS relationship meets required accuracy standards for collision cross section calibration.

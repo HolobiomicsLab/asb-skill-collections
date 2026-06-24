@@ -1,6 +1,8 @@
 ---
 name: simulation-result-reproduction
-description: Use when when you have access to a study's source repository containing executable simulation code in a Jupyter notebook, and you need to validate that the reported ORA results can be regenerated from the provided Python implementation.
+description: Use when when you have access to a study's source repository containing
+  executable simulation code in a Jupyter notebook, and you need to validate that
+  the reported ORA results can be regenerated from the provided Python implementation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3562
@@ -12,6 +14,7 @@ metadata:
   - Python
   - Jupyter
   - metabolomics-ORA repository
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -39,6 +42,7 @@ attribution:
 
 # simulation-result-reproduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a published Jupyter notebook containing Over-representation Analysis (ORA) simulations to regenerate pathway analysis results and validate computational reproducibility. This skill verifies that simulation code runs end-to-end and produces the intermediate and final artifacts reported in the study.

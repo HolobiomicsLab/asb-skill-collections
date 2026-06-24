@@ -1,6 +1,9 @@
 ---
 name: r-package-version-detection
-description: Use when before launching the DaDIA metabolomics pipeline or any analysis that requires specific R package versions. Apply this skill when you have access to an R environment and need to verify that R ≥4.0, XCMS ≥3.11.4, and metaMS ≥1.25.1 are installed and compatible.
+description: Use when before launching the DaDIA metabolomics pipeline or any analysis
+  that requires specific R package versions. Apply this skill when you have access
+  to an R environment and need to verify that R ≥4.0, XCMS ≥3.11.4, and metaMS ≥1.25.1
+  are installed and compatible.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -9,6 +12,7 @@ metadata:
   - XCMS
   - metaMS
   - DaDIA
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA
@@ -39,6 +43,7 @@ attribution:
 
 # r-package-version-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Programmatically detect and validate the installed versions of R and critical R packages (XCMS, metaMS) against minimum version thresholds before executing a dependent analysis pipeline. This skill ensures pipeline readiness by preventing execution when dependencies are unmet.

@@ -1,6 +1,9 @@
 ---
 name: asynchronous-converter-instantiation
-description: Use when building a metadata enrichment system that must support multiple pluggable converter backends and you need to automatically discover all available converters at runtime, extract their conversion specifications, and generate Job tuples that can be dispatched to an async annotation engine.
+description: Use when building a metadata enrichment system that must support multiple
+  pluggable converter backends and you need to automatically discover all available
+  converters at runtime, extract their conversion specifications, and generate Job
+  tuples that can be dispatched to an async annotation engine.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -16,6 +19,7 @@ metadata:
   - IDSM
   - BridgeDb
   - RDKit
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

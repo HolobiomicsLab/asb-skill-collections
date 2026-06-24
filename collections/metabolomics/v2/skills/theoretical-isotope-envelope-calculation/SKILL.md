@@ -1,6 +1,9 @@
 ---
 name: theoretical-isotope-envelope-calculation
-description: Use when when processing mass spectrometry data from stable isotope probing (SIP) experiments where peptides contain known levels of heavy isotope incorporation (13C, 15N, 2H, 18O), and you need to annotate observed MS2 peaks by matching them to theoretical B and Y ion fragments.
+description: Use when when processing mass spectrometry data from stable isotope probing
+  (SIP) experiments where peptides contain known levels of heavy isotope incorporation
+  (13C, 15N, 2H, 18O), and you need to annotate observed MS2 peaks by matching them
+  to theoretical B and Y ion fragments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,12 +20,15 @@ metadata:
   - MSnbase
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

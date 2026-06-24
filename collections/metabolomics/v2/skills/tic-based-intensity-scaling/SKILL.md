@@ -1,6 +1,9 @@
 ---
 name: tic-based-intensity-scaling
-description: Use when after feature detection when you have a metabolomics feature table with intensity values across multiple samples and observe evidence of inter-sample intensity bias (e.g., batch effects, variable ionization efficiency, or instrument drift).
+description: Use when after feature detection when you have a metabolomics feature
+  table with intensity values across multiple samples and observe evidence of inter-sample
+  intensity bias (e.g., batch effects, variable ionization efficiency, or instrument
+  drift).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,6 +17,7 @@ metadata:
   - pycombat
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -42,6 +46,7 @@ attribution:
 
 # TIC-based intensity scaling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize LC-MS metabolomics feature tables by correcting inter-sample intensity biases using total ion current (TIC) computed from high-frequency features. This addresses systematic variation in ionization efficiency and instrument response across samples, ensuring fair downstream statistical comparison.

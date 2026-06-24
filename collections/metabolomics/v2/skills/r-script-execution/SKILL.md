@@ -1,6 +1,9 @@
 ---
 name: r-script-execution
-description: Use when you have located example R scripts in a version-controlled repository (e.g., Codes-Explained folder), a Read-Me.txt file documents the purpose and parameters of each script, and you need to reconstruct or validate a simulation procedure for a specific data sub-sample scenario.
+description: Use when you have located example R scripts in a version-controlled repository
+  (e.g., Codes-Explained folder), a Read-Me.txt file documents the purpose and parameters
+  of each script, and you need to reconstruct or validate a simulation procedure for
+  a specific data sub-sample scenario.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -9,6 +12,7 @@ metadata:
   tools:
   - R
   - DisCoPad
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo15010028
   title: DisCo P-ad
@@ -37,6 +41,7 @@ attribution:
 
 # r-script-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute R scripts in sequence from a documented simulation workflow, monitoring console output and intermediate file writes to verify correctness. This skill is essential for reproducing computational analyses where R code implements critical steps in a multi-language (R + MATLAB) pipeline.

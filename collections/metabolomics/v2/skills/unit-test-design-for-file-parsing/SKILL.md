@@ -1,6 +1,9 @@
 ---
 name: unit-test-design-for-file-parsing
-description: Use when when implementing or extending file format parsers in a spectral data pipeline, you need unit tests to ensure that format-specific parsers correctly instantiate spectrum objects with expected m/z arrays, intensity arrays, and metadata attributes before releasing to users or integrating.
+description: Use when when implementing or extending file format parsers in a spectral
+  data pipeline, you need unit tests to ensure that format-specific parsers correctly
+  instantiate spectrum objects with expected m/z arrays, intensity arrays, and metadata
+  attributes before releasing to users or integrating.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,11 +16,13 @@ metadata:
   - matchms
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - matchms is a versatile open-source Python package
 - make sure the existing tests still work by running ``pytest``
 claims: []

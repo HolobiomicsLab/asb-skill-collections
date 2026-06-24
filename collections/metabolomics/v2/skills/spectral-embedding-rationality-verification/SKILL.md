@@ -1,6 +1,7 @@
 ---
 name: spectral-embedding-rationality-verification
-description: Use when after training a transformer-encoder-based mass spectrometry embedding model (e.
+description: Use when after training a transformer-encoder-based mass spectrometry
+  embedding model (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -19,6 +20,7 @@ metadata:
   - MSBERT
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

@@ -1,6 +1,9 @@
 ---
 name: retention-time-prediction
-description: Use when you have MS1-formatted mass spectrometry files from a liquid chromatography–mass spectrometry (LC-MS) experiment and need to predict the retention time of peptide ions without relying on spectral libraries, empirical models, or manual feature engineering.
+description: Use when you have MS1-formatted mass spectrometry files from a liquid
+  chromatography–mass spectrometry (LC-MS) experiment and need to predict the retention
+  time of peptide ions without relying on spectral libraries, empirical models, or
+  manual feature engineering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +18,7 @@ metadata:
   - Scannotation
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion
@@ -22,7 +26,8 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__xfcui__IsoFusion
-- Scannotation is an automated and user-friendly suspect screening tool for the rapid pre-annotation of LC-HRMS datasets.
+- Scannotation is an automated and user-friendly suspect screening tool for the rapid
+  pre-annotation of LC-HRMS datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

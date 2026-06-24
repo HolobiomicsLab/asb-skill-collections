@@ -1,6 +1,8 @@
 ---
 name: linear-model-design-matrix-specification
-description: Use when when preparing to perform differential abundance analysis on batch-corrected lipid abundance matrices in designs with multiple factors (e.g., treatment × time, multi-group comparisons), repeated measures, or blocking structures.
+description: Use when when preparing to perform differential abundance analysis on
+  batch-corrected lipid abundance matrices in designs with multiple factors (e.g.,
+  treatment × time, multi-group comparisons), repeated measures, or blocking structures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3672
@@ -13,13 +15,17 @@ metadata:
   - limma
   - edgeR
   - ComBat
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
 evidence_spans:
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.
-- allows the identification of differentially abundant lipids in simple and complex experimental designs
+- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
+  per lipid and sample
+- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
+  of lipidomics data.
+- allows the identification of differentially abundant lipids in simple and complex
+  experimental designs
 - dealing with batch effect correction.
 claims: []
 provenance:

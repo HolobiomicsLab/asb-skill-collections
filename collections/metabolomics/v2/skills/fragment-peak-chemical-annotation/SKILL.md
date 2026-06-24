@@ -1,6 +1,9 @@
 ---
 name: fragment-peak-chemical-annotation
-description: Use when you have MS/MS spectra with assigned precursor formulas and need to annotate the chemical composition of individual fragment peaks for metabolite structure elucidation or fragmentation pathway analysis. Apply this skill when you want to avoid external fragmentation tree computation (e.
+description: Use when you have MS/MS spectra with assigned precursor formulas and
+  need to annotate the chemical composition of individual fragment peaks for metabolite
+  structure elucidation or fragmentation pathway analysis. Apply this skill when you
+  want to avoid external fragmentation tree computation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -15,12 +18,14 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # fragment-peak-chemical-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign chemical subformulas to individual MS/MS fragment peaks using a neural network-based formula transformer that ranks candidate subformulas conditioned on the precursor formula and observed m/z value, without computing fragmentation trees. This enables per-peak chemical annotation in a data-dependent fashion for tandem mass spectra.

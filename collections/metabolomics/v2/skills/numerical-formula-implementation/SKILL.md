@@ -1,6 +1,9 @@
 ---
 name: numerical-formula-implementation
-description: Use when a formula is documented in a system or article (e.g., resource allocation, sizing, or tuning guidance) but lacks executable validation, or you need to confirm the formula produces the documented expected output (e.g., an 8GB system should yield exactly 4 workers).
+description: Use when a formula is documented in a system or article (e.g., resource
+  allocation, sizing, or tuning guidance) but lacks executable validation, or you
+  need to confirm the formula produces the documented expected output (e.g., an 8GB
+  system should yield exactly 4 workers).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -8,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_2269
   tools:
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -35,6 +39,7 @@ attribution:
 
 # numerical-formula-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement and validate a numerical formula by translating documented mathematical expressions into executable code, then verify correctness against worked examples and edge cases. This skill bridges formula documentation and operational deployment, ensuring computational correctness before production use.

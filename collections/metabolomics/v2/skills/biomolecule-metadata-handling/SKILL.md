@@ -1,6 +1,9 @@
 ---
 name: biomolecule-metadata-handling
-description: 'Use when initiating a proteomics or panomics analysis with peptide- or protein-level expression data. The trigger is the simultaneous availability of: (1) a quantification matrix (rows = biomolecules, columns = samples), (2) sample metadata (e.'
+description: 'Use when initiating a proteomics or panomics analysis with peptide-
+  or protein-level expression data. The trigger is the simultaneous availability of:
+  (1) a quantification matrix (rows = biomolecules, columns = samples), (2) sample
+  metadata (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,13 +14,15 @@ metadata:
   - pmartR
   - R
   - PMart ShinyApp (Shiny GUI)
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart
 evidence_spans:
 - Shiny GUI implementation of the pmartR R package.
 - Shiny GUI implementation of the pmartR R package
-- the bulk of the functionality of the package to be available to the user without the need for familiarity with R or the package itself
+- the bulk of the functionality of the package to be available to the user without
+  the need for familiarity with R or the package itself
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

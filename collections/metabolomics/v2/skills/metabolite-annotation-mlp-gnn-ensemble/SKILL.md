@@ -1,6 +1,8 @@
 ---
 name: metabolite-annotation-mlp-gnn-ensemble
-description: Use when you have ESI/LC-MS test spectra requiring metabolite annotation and need to compare ensemble-based neural network predictions (ESP) against a baseline MLP model to quantify performance gains.
+description: Use when you have ESI/LC-MS test spectra requiring metabolite annotation
+  and need to compare ensemble-based neural network predictions (ESP) against a baseline
+  MLP model to quantify performance gains.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -16,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

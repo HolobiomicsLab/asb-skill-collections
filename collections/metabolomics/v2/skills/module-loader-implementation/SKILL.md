@@ -1,6 +1,9 @@
 ---
 name: module-loader-implementation
-description: Use when you have mass spectrometry imaging data in multiple vendor or open-source formats and need to programmatically route each file to its correct processing handler based on file extension, avoiding hardcoded conditional chains and enabling extensible format support.
+description: Use when you have mass spectrometry imaging data in multiple vendor or
+  open-source formats and need to programmatically route each file to its correct
+  processing handler based on file extension, avoiding hardcoded conditional chains
+  and enabling extensible format support.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,14 +16,17 @@ metadata:
   - pyBaf2Sql
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
-- If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
+- If you are planning on using Bruker .d data in the .baf format, you will also need
+  to install pyBaf2Sql from GitHub
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

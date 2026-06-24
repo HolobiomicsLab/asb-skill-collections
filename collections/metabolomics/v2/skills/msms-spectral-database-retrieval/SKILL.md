@@ -1,6 +1,9 @@
 ---
 name: msms-spectral-database-retrieval
-description: Use when when you have a target compound (modified or unmodified) and need to obtain its experimental MS/MS spectrum and metadata to serve as a known reference for ModiFinder analysis, or when benchmarking evaluation methods like average_distance scoring.
+description: Use when when you have a target compound (modified or unmodified) and
+  need to obtain its experimental MS/MS spectrum and metadata to serve as a known
+  reference for ModiFinder analysis, or when benchmarking evaluation methods like
+  average_distance scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -14,6 +17,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -47,6 +51,7 @@ attribution:
 
 # msms-spectral-database-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve experimental tandem mass spectra and metadata for known compounds from public MS/MS databases (e.g., GNPS-LIBRARY) to establish reference spectra for structural modification site localization and comparative spectral analysis.

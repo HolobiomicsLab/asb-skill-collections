@@ -1,6 +1,9 @@
 ---
 name: msi-peak-intensity-extraction
-description: Use when you have MSI intensity data exported from commercial software (MSiReader, SCiLS) or Cardinal processing pipelines as plain-text CSV files or Cardinal MSProcessedImagingExperiment/MSContinuousImagingExperiment objects, and you need to prepare it for mass-difference tabulation and adduct.
+description: Use when you have MSI intensity data exported from commercial software
+  (MSiReader, SCiLS) or Cardinal processing pipelines as plain-text CSV files or Cardinal
+  MSProcessedImagingExperiment/MSContinuousImagingExperiment objects, and you need
+  to prepare it for mass-difference tabulation and adduct.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3439
@@ -16,13 +19,16 @@ metadata:
   - msimunging.pl
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:
@@ -47,6 +53,7 @@ attribution:
 
 # MSI Peak Intensity Extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and import mass spectrometry imaging (MSI) intensity matrices from vendor software exports or third-party formats into a standardized msimat object for downstream adduct analysis. This skill converts raw MSI data into a uniform computational representation suitable for pairwise mass-difference calculations and spatial correlation testing.

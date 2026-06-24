@@ -1,6 +1,9 @@
 ---
 name: compound-isotope-and-adduct-grouping
-description: Use when after XCMS feature detection, retention time correction, regrouping, and missing value imputation have produced an aligned feature table with multiple signals per compound. Use it when your data contains isotopic peaks (e.g., ¹³C variants) and multiple ionization products (e.
+description: Use when after XCMS feature detection, retention time correction, regrouping,
+  and missing value imputation have produced an aligned feature table with multiple
+  signals per compound. Use it when your data contains isotopic peaks (e.g., ¹³C variants)
+  and multiple ionization products (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -18,13 +21,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []
@@ -50,6 +55,7 @@ attribution:
 
 # compound-isotope-and-adduct-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group mass spectrometry features derived from the same compound by clustering features that share similar retention time and quantitative trends across samples, thereby collapsing isotopic peaks and adduct variants into single compound representations. This skill is essential for reducing feature redundancy and improving metabolite annotation confidence in untargeted LC-MS/GC-MS metabolomics.

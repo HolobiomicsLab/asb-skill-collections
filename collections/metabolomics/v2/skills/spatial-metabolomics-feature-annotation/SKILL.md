@@ -1,6 +1,9 @@
 ---
 name: spatial-metabolomics-feature-annotation
-description: Use when your spatial metabolomics dataset contains raw m/z features (e.g., from MALDI-MS imaging or LC-MS/MS) without metabolite annotations, and you have selected a reference database and adduct type appropriate for your ionization mode and biological sample.
+description: Use when your spatial metabolomics dataset contains raw m/z features
+  (e.g., from MALDI-MS imaging or LC-MS/MS) without metabolite annotations, and you
+  have selected a reference database and adduct type appropriate for your ionization
+  mode and biological sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3755
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -49,6 +53,7 @@ attribution:
 
 # Spatial Metabolomics Feature Annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign metabolite identities to mass-to-charge (m/z) features in spatial metabolomics datasets by matching observed m/z values against a reference database (e.g., LipidMaps, HMDB) within a specified mass error tolerance and adduct assumption. This skill enables interpretation of spatial MS imaging data by linking ion signals to known chemical structures.

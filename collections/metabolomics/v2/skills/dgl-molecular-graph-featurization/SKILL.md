@@ -1,6 +1,8 @@
 ---
 name: dgl-molecular-graph-featurization
-description: Use when you have a set of SMILES or molecular structures and need to represent them as graph tensors for a Graphormer or other graph neural network model that predicts molecular properties (e.g., retention time, spectroscopic features).
+description: Use when you have a set of SMILES or molecular structures and need to
+  represent them as graph tensors for a Graphormer or other graph neural network model
+  that predicts molecular properties (e.g., retention time, spectroscopic features).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -13,11 +15,13 @@ metadata:
   - DGL
   - RDKit
   - PyTorch
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
 evidence_spans:
-- Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
+- Graphormer-RT is an extension to the Graphormer package, with documentation, and
+  the original code on Github
 - import dgl
 claims: []
 provenance:
@@ -42,6 +46,7 @@ attribution:
 
 # DGL Molecular Graph Featurization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode small molecules as heterogeneous directed graphs with node and edge attributes (atom types, bond orders, chirality) using DGL, suitable for input to Graph Transformer backbones in retention-time prediction and other molecular property tasks.

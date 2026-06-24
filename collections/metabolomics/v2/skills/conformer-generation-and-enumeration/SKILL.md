@@ -1,6 +1,8 @@
 ---
 name: conformer-generation-and-enumeration
-description: Use when you have SMILES strings of molecules at specific ionization states (e.g., protonated or deprotonated adducts) and need to predict collision cross section values for mass spectrometry-based metabolite annotation.
+description: Use when you have SMILES strings of molecules at specific ionization
+  states (e.g., protonated or deprotonated adducts) and need to predict collision
+  cross section values for mass spectrometry-based metabolite annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0488
@@ -15,12 +17,14 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 - 'Dimorphite-DL: For ionization state determination'
 - 'ASE-ANI: For conformation filtering'
 - 'QUICK: For quantum calculations'
@@ -47,6 +51,7 @@ attribution:
 
 # conformer-generation-and-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and enumerate three-dimensional conformations for ionized molecular species to prepare for quantum mechanical property prediction. This skill creates multiple low-energy structural variants needed for accurate collisional cross section (CCS) calculations in metabolite annotation workflows.

@@ -1,6 +1,9 @@
 ---
 name: multistage-neural-architecture-training
-description: 'Use when you have paired mass spectra and molecular structure datasets and need to train a model that jointly understands both modalities for tasks like structure elucidation. Specifically, use it when: (1) you have large unlabeled or weakly-labeled pretraining data with both spectra and molecules;'
+description: 'Use when you have paired mass spectra and molecular structure datasets
+  and need to train a model that jointly understands both modalities for tasks like
+  structure elucidation. Specifically, use it when: (1) you have large unlabeled or
+  weakly-labeled pretraining data with both spectra and molecules;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0417
@@ -14,6 +17,7 @@ metadata:
   - MS-BART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
@@ -42,6 +46,7 @@ attribution:
 
 # multistage-neural-architecture-training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A three-stage training pipeline (pretraining, fine-tuning, alignment) that progressively specializes a unified sequence-to-sequence model for joint mass spectra and molecular structure modeling. This skill enables models to learn general spectral-molecular patterns before task-specific adaptation and cross-modal representation alignment.

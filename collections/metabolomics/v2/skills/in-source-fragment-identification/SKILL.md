@@ -1,6 +1,9 @@
 ---
 name: in-source-fragment-identification
-description: Use when you have an LCMS feature table (from XCMS, MS-DIAL, MZmine2, or other feature extraction software) with m/z, retention time, and intensity columns, plus MS2 spectral annotations from DDA data, and you need to identify which features are in-source fragments rather than distinct metabolites.
+description: Use when you have an LCMS feature table (from XCMS, MS-DIAL, MZmine2,
+  or other feature extraction software) with m/z, retention time, and intensity columns,
+  plus MS2 spectral annotations from DDA data, and you need to identify which features
+  are in-source fragments rather than distinct metabolites.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -16,12 +19,15 @@ metadata:
   - devtools
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - To install ISFrag package R version 4.0.0 or above is required
 - we recommend using RStudio to complete the installation and usage of ISFrag
 claims: []

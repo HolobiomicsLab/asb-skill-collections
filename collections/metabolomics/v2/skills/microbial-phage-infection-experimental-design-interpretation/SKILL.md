@@ -1,6 +1,9 @@
 ---
 name: microbial-phage-infection-experimental-design-interpretation
-description: Use when you have a bacterium-phage infection study with normalized peak intensities from FT-ICR MS across multiple phage treatment groups (minimum 2–3 conditions such as HP1, HS2, control) and sample replicates (n ≥ 6–8 per group), and you need to test whether phage-type factor explains.
+description: Use when you have a bacterium-phage infection study with normalized peak
+  intensities from FT-ICR MS across multiple phage treatment groups (minimum 2–3 conditions
+  such as HP1, HS2, control) and sample replicates (n ≥ 6–8 per group), and you need
+  to test whether phage-type factor explains.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,13 +18,17 @@ metadata:
   - R 4.0.2
   - R
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
-- distances (depending on the selected normalization method) using the "vegdist" function for the vegan package and then used to perform a permutational analysis of variance (PERMANOVA)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
+- distances (depending on the selected normalization method) using the "vegdist" function
+  for the vegan package and then used to perform a permutational analysis of variance
+  (PERMANOVA)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 claims: []
@@ -47,6 +54,7 @@ attribution:
 
 # microbial-phage-infection-experimental-design-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret metabolomic responses of marine bacteria to infection by different phage types (HP1, HS2, control) using multivariate statistical analysis (PERMANOVA) on FT-ICR MS peak intensity data. This skill determines whether phage type produces statistically significant differences in exometabolome composition.

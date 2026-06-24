@@ -1,6 +1,7 @@
 ---
 name: peak-selectivity-metric-evaluation
-description: Use when when identifying landmark peaks for retention time alignment in multi-sample LC-MS metabolomics workflows.
+description: Use when when identifying landmark peaks for retention time alignment
+  in multi-sample LC-MS metabolomics workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,11 +17,13 @@ metadata:
   - asari (constructors.set_RT_reference)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - scipy.signal module for LOWESS fitting via the regression function
 claims: []
@@ -46,6 +49,7 @@ attribution:
 
 # peak-selectivity-metric-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and filter LC-MS peaks based on selectivity metrics to identify high-confidence landmark peaks suitable for retention time (RT) alignment and mass calibration. Peak selectivity (threshold m/z selectivity > 0.99) prioritizes peaks with minimal mass overlap across samples, enabling robust alignment functions.

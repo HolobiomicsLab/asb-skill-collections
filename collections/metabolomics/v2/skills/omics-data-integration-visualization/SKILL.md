@@ -1,6 +1,8 @@
 ---
 name: omics-data-integration-visualization
-description: Use when you have completed statistical analysis of omics data (proteomics, metabolomics, transcriptomics, or multi-omic) and possess both abundance/expression measurements and computed statistical metrics (p-values, effect sizes, fold-changes).
+description: Use when you have completed statistical analysis of omics data (proteomics,
+  metabolomics, transcriptomics, or multi-omic) and possess both abundance/expression
+  measurements and computed statistical metrics (p-values, effect sizes, fold-changes).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -11,6 +13,7 @@ metadata:
   tools:
   - MODE ShinyApp
   - trelliscope
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00650
   title: MODE

@@ -1,6 +1,9 @@
 ---
 name: cross-validation-performance-evaluation
-description: Use when when you have paired microbiome and metabolome count data and need to estimate how well a neural network or regression model can predict metabolite abundances from microbial features without overfitting to a single held-out test set.
+description: Use when when you have paired microbiome and metabolome count data and
+  need to estimate how well a neural network or regression model can predict metabolite
+  abundances from microbial features without overfitting to a single held-out test
+  set.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,16 +20,24 @@ metadata:
   - scikit-learn MLPRegressor
   - SciPy Spearman correlation
   - MelonnPan
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- An MLPNN model is composed of multiple fully connected hidden layers composed of perceptrons
-- Canonical correlation analysis models were implemented using Python's scikit-learn package.
-- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss function.
-- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation function since previous studies have shown that it is resilient to the problems of exploding and vanishing
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- An MLPNN model is composed of multiple fully connected hidden layers composed of
+  perceptrons
+- Canonical correlation analysis models were implemented using Python's scikit-learn
+  package.
+- MiMeNet was trained using the ADAM optimizer and the mean squared error (MSE) loss
+  function.
+- In MiMeNet, φ is set as the rectified linear unit (ReLU). We selected this activation
+  function since previous studies have shown that it is resilient to the problems
+  of exploding and vanishing
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +61,7 @@ attribution:
 
 # cross-validation-performance-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically partition paired microbiome-metabolome datasets into multiple train/validation/test folds across multiple iterations to measure prediction accuracy using Spearman correlation coefficients, producing a distribution of per-metabolite performance metrics that distinguishes signal from chance.

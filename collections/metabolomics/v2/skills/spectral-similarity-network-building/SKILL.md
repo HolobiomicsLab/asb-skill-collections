@@ -1,6 +1,8 @@
 ---
 name: spectral-similarity-network-building
-description: Use when when you have detected LC-MS/MS features (MS1 peaks with MS2 fragmentation spectra) from untargeted metabolomics experiments and seek to organize them into a chemical hierarchy for comparative metabolomic analysis.
+description: Use when when you have detected LC-MS/MS features (MS1 peaks with MS2
+  fragmentation spectra) from untargeted metabolomics experiments and seek to organize
+  them into a chemical hierarchy for comparative metabolomic analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3945
@@ -18,11 +20,13 @@ metadata:
   - ClassyFire
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # spectral-similarity-network-building
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a tree of mass-spectrometry (LC-MS/MS) features by leveraging predicted molecular substructures and spectral similarity relationships to enable chemically-informed comparison of untargeted metabolomic profiles across samples.

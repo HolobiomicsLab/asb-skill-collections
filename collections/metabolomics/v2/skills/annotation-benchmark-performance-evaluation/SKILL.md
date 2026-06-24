@@ -1,6 +1,9 @@
 ---
 name: annotation-benchmark-performance-evaluation
-description: Use when after running an end-to-end annotation workflow (matching, clustering, filtering, and prioritization) on untargeted LC-MS peak tables, when you have access to a curated reference dataset (df.Ref) containing validated peak assignments for the same biological sample.
+description: Use when after running an end-to-end annotation workflow (matching, clustering,
+  filtering, and prioritization) on untargeted LC-MS peak tables, when you have access
+  to a curated reference dataset (df.Ref) containing validated peak assignments for
+  the same biological sample.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,14 +19,18 @@ metadata:
   - igraph
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 - we will now use the sample graph provided by FELLA R package
 claims: []
@@ -49,6 +56,7 @@ attribution:
 
 # annotation-benchmark-performance-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the quality of untargeted LC-MS metabolite annotation workflows by computing precision, recall, and F1-score against curated reference peak benchmarks. This skill applies when you have both annotated peak predictions and a validated reference dataset, and need to assess whether the annotation pipeline recovers true metabolites and avoids false assignments.

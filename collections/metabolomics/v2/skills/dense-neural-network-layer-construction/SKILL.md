@@ -1,6 +1,8 @@
 ---
 name: dense-neural-network-layer-construction
-description: Use when when you have a binned MS/MS spectrum vector (e.g., 9948-dimensional input from 10,000 equally-spaced m/z bins in the 10–1000 Da range) and need to compress it into a learned latent representation (e.
+description: Use when when you have a binned MS/MS spectrum vector (e.g., 9948-dimensional
+  input from 10,000 equally-spaced m/z bins in the 10–1000 Da range) and need to compress
+  it into a learned latent representation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,11 +16,13 @@ metadata:
   - Adam optimizer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # dense-neural-network-layer-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct sequential dense layers with regularization, batch normalization, and dropout to build a neural network base encoder that transforms high-dimensional binned MS/MS spectra into lower-dimensional embeddings. This skill is essential for building the embedding pipeline of Siamese networks in spectral similarity learning.

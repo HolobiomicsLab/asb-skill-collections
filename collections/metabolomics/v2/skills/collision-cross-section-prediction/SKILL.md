@@ -1,6 +1,9 @@
 ---
 name: collision-cross-section-prediction
-description: Use when you have molecular structures (SMILES or SDF format) and need to predict their collision cross sections for ion mobility mass spectrometry workflows, particularly when generating large-scale searchable CCS databases for compound identification and characterization.
+description: Use when you have molecular structures (SMILES or SDF format) and need
+  to predict their collision cross sections for ion mobility mass spectrometry workflows,
+  particularly when generating large-scale searchable CCS databases for compound identification
+  and characterization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0362
@@ -21,6 +24,7 @@ metadata:
   - PACCS (github.com/yuxuanliao/PACCS)
   techniques:
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

@@ -1,6 +1,7 @@
 ---
 name: ggplot2-geom-treemap-rendering
-description: Use when after running qc_summary() on a filtered mpactr object and aggregating ion counts by filter status category (passed/failed).
+description: Use when after running qc_summary() on a filtered mpactr object and aggregating
+  ion counts by filter status category (passed/failed).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -17,6 +18,7 @@ metadata:
   - scale_fill_brewer()
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -24,7 +26,8 @@ derived_from:
   title: ''
 evidence_spans:
 - This table can be used for a variety of analyses that can be conducted in R
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +52,7 @@ attribution:
 
 # ggplot2-geom-treemap-rendering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Render hierarchical ion filtering results as a treemap visualization using ggplot2's geom_treemap() and geom_treemap_text() layers, scaled by ion counts and annotated with filter status labels and percentages. This skill transforms aggregated qc_summary() data into a publication-ready treemap that communicates the distribution and relative abundance of ions across filter outcome categories.

@@ -1,6 +1,7 @@
 ---
 name: volcano-plot-generation
-description: Use when you have CSV files containing fold-change estimates and statistical p-values from a differential expression analysis (e.
+description: Use when you have CSV files containing fold-change estimates and statistical
+  p-values from a differential expression analysis (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -10,6 +11,7 @@ metadata:
   tools:
   - R Shiny
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

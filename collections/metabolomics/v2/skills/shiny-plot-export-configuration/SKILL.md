@@ -1,6 +1,9 @@
 ---
 name: shiny-plot-export-configuration
-description: Use when when building or maintaining a Shiny GUI for omics data analysis that must support interactive visualization download in multiple raster and vector formats, and when the current plot export backend (orca) is deprecated, unmaintained, or incompatible with your deployment environment (e.
+description: Use when when building or maintaining a Shiny GUI for omics data analysis
+  that must support interactive visualization download in multiple raster and vector
+  formats, and when the current plot export backend (orca) is deprecated, unmaintained,
+  or incompatible with your deployment environment (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,6 +18,7 @@ metadata:
   - Docker
   - Kaleido
   - plotly
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart
@@ -22,7 +26,8 @@ evidence_spans:
 - Shiny GUI implementation of the pmartR R package.
 - Shiny GUI implementation of the pmartR R package
 - Remove orca in favor of Kaleido
-- the bulk of the functionality of the package to be available to the user without the need for familiarity with R or the package itself
+- the bulk of the functionality of the package to be available to the user without
+  the need for familiarity with R or the package itself
 - '#### Docker Containers'
 claims: []
 provenance:

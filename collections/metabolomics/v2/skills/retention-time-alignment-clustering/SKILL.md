@@ -1,6 +1,8 @@
 ---
 name: retention-time-alignment-clustering
-description: Use when you have two or more nontargeted LCMS feature tables from the same analytical method and need to establish matched feature correspondences across datasets, then consolidate redundant features.
+description: Use when you have two or more nontargeted LCMS feature tables from the
+  same analytical method and need to establish matched feature correspondences across
+  datasets, then consolidate redundant features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -14,6 +16,7 @@ metadata:
   - Gravity
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf290/8128335
   title: Eclipse

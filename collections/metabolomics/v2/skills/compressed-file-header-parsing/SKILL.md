@@ -1,6 +1,8 @@
 ---
 name: compressed-file-header-parsing
-description: Use when you have a large indexed gzip file (igz format) with metadata encoded in the gzip header comment field, and you need to retrieve specific blocks or spectra by integer index without decompressing the entire file.
+description: Use when you have a large indexed gzip file (igz format) with metadata
+  encoded in the gzip header comment field, and you need to retrieve specific blocks
+  or spectra by integer index without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3546
@@ -13,6 +15,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,6 +44,7 @@ attribution:
 
 # compressed-file-header-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse binary metadata embedded in gzip file headers to construct an index-to-offset mapping that enables random-access retrieval of compressed data blocks without full decompression. This skill is essential for handling large indexed gzip files (igz format) where seek-by-index performance is critical.

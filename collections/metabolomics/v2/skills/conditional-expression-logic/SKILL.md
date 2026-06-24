@@ -1,6 +1,9 @@
 ---
 name: conditional-expression-logic
-description: 'Use when you need to create a derived image array where the output value at each pixel depends conditionally on the values of one or more element channels at that pixel. Common triggers include: (1) you want to mask or zero out pixels where an element concentration falls below a detection limit;'
+description: 'Use when you need to create a derived image array where the output value
+  at each pixel depends conditionally on the values of one or more element channels
+  at that pixel. Common triggers include: (1) you want to mask or zero out pixels
+  where an element concentration falls below a detection limit;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,14 +14,17 @@ metadata:
   - Calculator
   - pewpew
   - pewlib
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Calculator` can perform simple calculations on image data by entering the desired formula into the `Formula` text box
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Calculator` can perform simple calculations on image data by entering
+  the desired formula into the `Formula` text box
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []
@@ -45,6 +51,7 @@ attribution:
 
 # Conditional Expression Logic in Per-Pixel Elemental Calculations
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill enables users to embed conditional branching (if/then/else or ternary operators) directly into per-pixel mathematical expressions over LA-ICP-MS elemental channels, allowing dynamic filtering and selective computation based on pixel-level thresholds. It is essential when deriving new image arrays that depend on element ratios, abundance thresholds, or logical gates applied element-wise across hyperspectral data.

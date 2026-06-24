@@ -1,6 +1,8 @@
 ---
 name: metabolite-spectral-matching
-description: Use when you have an experimental mass spectrum (or a set of spectra from LC-MS/MS data) and need to identify the underlying metabolite(s) by comparing against known reference spectra in GNPS or a local indexed repository.
+description: Use when you have an experimental mass spectrum (or a set of spectra
+  from LC-MS/MS data) and need to identify the underlying metabolite(s) by comparing
+  against known reference spectra in GNPS or a local indexed repository.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -15,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST
@@ -44,6 +47,7 @@ attribution:
 
 # metabolite-spectral-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query unknown mass spectra against large-scale reference spectral libraries to identify metabolites by computing spectral similarity scores. This skill enables rapid dereplication and metabolite annotation in metabolomics workflows, particularly when working with billion-scale spectral databases.

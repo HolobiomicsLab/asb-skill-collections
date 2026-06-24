@@ -1,6 +1,9 @@
 ---
 name: chemical-phylogenetic-comparison
-description: Use when you have LC-MS/MS data preprocessed with MZmine2 into an MGF file (containing MS1 and MS2 spectra) and a feature table (peak areas per sample), and you want to relate MS1 features to each other based on predicted molecular substructures and chemical properties rather than arbitrary.
+description: Use when you have LC-MS/MS data preprocessed with MZmine2 into an MGF
+  file (containing MS1 and MS2 spectra) and a feature table (peak areas per sample),
+  and you want to relate MS1 features to each other based on predicted molecular substructures
+  and chemical properties rather than arbitrary.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3324
@@ -15,11 +18,13 @@ metadata:
   - Classyfire
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # chemical-phylogenetic-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a phylogenetic tree of mass-spectrometry features based on predicted molecular substructures to enable chemically-informed, tree-based comparison of untargeted metabolomic profiles across samples and datasets. This skill bridges mass-spectrometry feature detection with chemical taxonomy to support alpha- and beta-diversity analyses rooted in molecular similarity rather than sequence homology.

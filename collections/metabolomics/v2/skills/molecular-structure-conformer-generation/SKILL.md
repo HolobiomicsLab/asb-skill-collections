@@ -1,6 +1,9 @@
 ---
 name: molecular-structure-conformer-generation
-description: Use when you have 2D molecular structures (SMILES or SDF format) and need to create 3D conformer geometries as input to subsequent computational chemistry workflows, such as CCS prediction, molecular graph construction, or voxel-based property calculations.
+description: Use when you have 2D molecular structures (SMILES or SDF format) and
+  need to create 3D conformer geometries as input to subsequent computational chemistry
+  workflows, such as CCS prediction, molecular graph construction, or voxel-based
+  property calculations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -23,6 +26,7 @@ metadata:
   techniques:
   - ion-mobility-MS
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

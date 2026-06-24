@@ -1,6 +1,9 @@
 ---
 name: statistical-result-mapping-to-display
-description: Use when you have omics abundance or expression measurements paired with corresponding statistical results (p-values, effect sizes, fold-changes) and need to create an interactive, exploratory display where each omics feature (protein, metabolite, gene) occupies its own panel and can be filtered or.
+description: Use when you have omics abundance or expression measurements paired with
+  corresponding statistical results (p-values, effect sizes, fold-changes) and need
+  to create an interactive, exploratory display where each omics feature (protein,
+  metabolite, gene) occupies its own panel and can be filtered or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0531
@@ -11,6 +14,7 @@ metadata:
   tools:
   - MODE ShinyApp
   - trelliscope
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00650
   title: MODE

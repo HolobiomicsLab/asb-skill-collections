@@ -1,6 +1,9 @@
 ---
 name: metabolite-annotation-by-chromatographic-behavior
-description: Use when when you have an untargeted metabolomics dataset from HPLC–MS (e.g., mzML, NetCDF) with detected peaks of unknown identity, and you need to disambiguate or validate tentative compound annotations by comparing observed retention time against machine-learning predicted retention time.
+description: Use when when you have an untargeted metabolomics dataset from HPLC–MS
+  (e.g., mzML, NetCDF) with detected peaks of unknown identity, and you need to disambiguate
+  or validate tentative compound annotations by comparing observed retention time
+  against machine-learning predicted retention time.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3903
@@ -14,6 +17,7 @@ metadata:
   - Retip app
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b05765
   title: Retip
@@ -42,6 +46,7 @@ attribution:
 
 # metabolite-annotation-by-chromatographic-behavior
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict retention times for small molecules in HPLC–MS analysis using machine learning models trained on molecular descriptors, enabling compound annotation and false positive removal in untargeted metabolomics workflows. Retip accepts fingerprints and physicochemical properties as input and outputs predicted retention times (in minutes or normalized units) for comparison against observed chromatographic behavior.

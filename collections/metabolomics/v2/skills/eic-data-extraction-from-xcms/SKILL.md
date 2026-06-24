@@ -1,6 +1,9 @@
 ---
 name: eic-data-extraction-from-xcms
-description: Use when after running XCMS getEIC() to generate xcmsEIC objects and fillPeaks() to produce a filled xcmsSet object, before computing the 12 peak-quality metrics (Apex Max-Boundary Ratio, Elution Shift, FWHM2Base, Jaggedness, Modality, Symmetry, Sharpness, Gaussian Similarity, Retention-Time.
+description: Use when after running XCMS getEIC() to generate xcmsEIC objects and
+  fillPeaks() to produce a filled xcmsSet object, before computing the 12 peak-quality
+  metrics (Apex Max-Boundary Ratio, Elution Shift, FWHM2Base, Jaggedness, Modality,
+  Symmetry, Sharpness, Gaussian Similarity, Retention-Time.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3185
@@ -13,17 +16,22 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- The package is designed for use with the preprocessing package XCMS and can be easily integrated into existing untargeted metabolomics pipelines.
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- The package is designed for use with the preprocessing package XCMS and can be easily
+  integrated into existing untargeted metabolomics pipelines.
 - A peak table (like that returned by xcms::peakTable())
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 claims: []
 provenance:
@@ -49,6 +57,7 @@ attribution:
 
 # EIC Data Extraction from XCMS
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract retention time, intensity, and peak characteristic data from XCMS-derived EIC and filled peak objects into a structured evalObj for downstream peak-quality metric computation. This skill bridges XCMS preprocessing output and quality assessment in untargeted LC-MS metabolomics workflows.

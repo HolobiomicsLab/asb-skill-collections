@@ -1,6 +1,9 @@
 ---
 name: ancova-peak-association-analysis
-description: Use when when you have preprocessed metabolomics peak tables (feature matrix with samples × peaks) and sample metadata (phenotype/grouping information and optional continuous covariates), and your research question is to identify which peaks differ significantly between groups while accounting for.
+description: Use when when you have preprocessed metabolomics peak tables (feature
+  matrix with samples × peaks) and sample metadata (phenotype/grouping information
+  and optional continuous covariates), and your research question is to identify which
+  peaks differ significantly between groups while accounting for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -11,6 +14,7 @@ metadata:
   - R
   - SMART
   - R GUI
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0

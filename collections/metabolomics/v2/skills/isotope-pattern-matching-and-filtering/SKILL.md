@@ -1,6 +1,9 @@
 ---
 name: isotope-pattern-matching-and-filtering
-description: Use when you have high-resolution centroided mzML files from Orbitrap or similar instruments, a target compound list with known formulas and monoisotopic m/z values, and need to quantify isotopologue abundances (M+0, M+1, M+2, etc.) for stable isotope labeling experiments.
+description: Use when you have high-resolution centroided mzML files from Orbitrap
+  or similar instruments, a target compound list with known formulas and monoisotopic
+  m/z values, and need to quantify isotopologue abundances (M+0, M+1, M+2, etc.) for
+  stable isotope labeling experiments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -16,12 +19,14 @@ metadata:
   - Proteowizard MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
 evidence_spans:
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - isoSCAN uses `mzR` package in order to read MS files

@@ -1,6 +1,9 @@
 ---
 name: lexical-analysis-tokenization
-description: Use when you have a mass-spectrometry query string written in MassQL (or similar domain-specific SQL-inspired syntax) that must be converted into structured form for execution. The input is raw, unparsed text containing SQL keywords, MS-specific operators (e.
+description: Use when you have a mass-spectrometry query string written in MassQL
+  (or similar domain-specific SQL-inspired syntax) that must be converted into structured
+  form for execution. The input is raw, unparsed text containing SQL keywords, MS-specific
+  operators (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2409
@@ -11,11 +14,13 @@ metadata:
   - MassQL
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL
 evidence_spans:
-- The Mass Spec Query Language (MassQL) is a domain specific language meant to be a succinct way to express a query in a mass spectrometry centric fashion.
+- The Mass Spec Query Language (MassQL) is a domain specific language meant to be
+  a succinct way to express a query in a mass spectrometry centric fashion.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

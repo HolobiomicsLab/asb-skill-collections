@@ -1,6 +1,7 @@
 ---
 name: molecular-duplicate-detection-and-deduplication
-description: Use when after SMILES standardization when you have a table of translated SMILES strings (e.g., interim/tables/1_translated/structure/smiles.tsv.
+description: Use when after SMILES standardization when you have a table of translated
+  SMILES strings (e.g., interim/tables/1_translated/structure/smiles.tsv.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -13,6 +14,7 @@ metadata:
   - sanitizing.py
   - Python 3
   - smiles.py
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -46,6 +48,7 @@ attribution:
 
 # molecular-duplicate-detection-and-deduplication
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and removes duplicate chemical structures from a translated SMILES table by validating structural integrity and consolidating redundant entries into a unique structure registry. This step is essential in natural products databases to ensure each distinct molecular entity is represented only once, even when sourced from multiple databases or represented in multiple formats.

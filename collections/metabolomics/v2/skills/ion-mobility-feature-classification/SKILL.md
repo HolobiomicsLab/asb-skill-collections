@@ -1,6 +1,9 @@
 ---
 name: ion-mobility-feature-classification
-description: Use when you have high-dimensional TWIM-MS data (arrival time and m/z dimensions) from a multi-omic sample and need to associate experimental features with biomolecular classes *before* running peak detection or feature identification pipelines.
+description: Use when you have high-dimensional TWIM-MS data (arrival time and m/z
+  dimensions) from a multi-omic sample and need to associate experimental features
+  with biomolecular classes *before* running peak detection or feature identification
+  pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,12 +16,14 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
 evidence_spans:
 - MOCCal, or Multi-Omic CCS Calibrator, is a Python application
-- Functionality includes collision cross section (CCS) calibration, experimental data biomolecular class assignment, and experimental class-specific CCS calculations
+- Functionality includes collision cross section (CCS) calibration, experimental data
+  biomolecular class assignment, and experimental class-specific CCS calculations
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # ion-mobility-feature-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns biomolecular class labels (lipid, peptide, carbohydrate, etc.) to experimental features directly from TWIM-MS arrival time and m/z dimensions without requiring prior feature identification. This enables class-specific collision cross section (CCS) calibration and downstream multi-omic analysis on raw or minimally processed ion mobility data.

@@ -1,6 +1,9 @@
 ---
 name: software-plugin-development
-description: Use when when you have a scientific software tool (e.g., Met-ID) that is architected to support plugins or configuration-driven modules, and you need to register and apply a novel reagent, derivatizing matrix, or analytical method (e.
+description: Use when when you have a scientific software tool (e.g., Met-ID) that
+  is architected to support plugins or configuration-driven modules, and you need
+  to register and apply a novel reagent, derivatizing matrix, or analytical method
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -40,6 +44,7 @@ attribution:
 
 # software-plugin-development
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extend a scientific software tool by creating and registering new plugin modules or configuration files that add support for novel reagents, matrices, or analysis parameters without modifying the core codebase. This skill is essential when a tool is designed with extensibility in mind but needs to support user-defined or newly documented derivatizing matrices, ionization behaviors, or similar domain-specific extensions.

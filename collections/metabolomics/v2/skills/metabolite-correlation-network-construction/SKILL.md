@@ -1,6 +1,9 @@
 ---
 name: metabolite-correlation-network-construction
-description: Use when after variance-stabilizing normalization and imputation of metabolomic data when you have a MultiAssayExperiment object containing normalized metabolite abundances and wish to identify groups of co-abundant metabolites that may share biochemical pathways or regulatory mechanisms.
+description: Use when after variance-stabilizing normalization and imputation of metabolomic
+  data when you have a MultiAssayExperiment object containing normalized metabolite
+  abundances and wish to identify groups of co-abundant metabolites that may share
+  biochemical pathways or regulatory mechanisms.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +15,7 @@ metadata:
   - WGCNA
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -21,7 +25,8 @@ evidence_spans:
 - '`MetaboDiff` is available for all operating systems and can be installed via Github'
 - met = knn_impute(met,cutoff=0.4)
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 claims: []
@@ -48,6 +53,7 @@ attribution:
 
 # Reconstruct the metabolic correlation network and module identification with WGCNA + Dynamic Tree Cut
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a weighted metabolic correlation network from normalized metabolite abundance data, then partition it into co-expression modules using hierarchical clustering and dynamic branch cutting. This skill enables discovery of functionally coherent metabolite groups and identification of sample trait associations within metabolic modules.

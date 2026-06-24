@@ -1,6 +1,9 @@
 ---
 name: chemical-annotation-matrix-construction
-description: Use when you have selected a subset of public tandem MS files from ReDU/MassIVE that have been processed through GNPS spectral library matching, and you need to organize their chemical annotations into a matrix (rows = files, columns = annotated features) before performing PCA or other multivariate.
+description: Use when you have selected a subset of public tandem MS files from ReDU/MassIVE
+  that have been processed through GNPS spectral library matching, and you need to
+  organize their chemical annotations into a matrix (rows = files, columns = annotated
+  features) before performing PCA or other multivariate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -14,6 +17,7 @@ metadata:
   - scikit-learn
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -47,6 +51,7 @@ attribution:
 
 # chemical-annotation-matrix-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a feature-by-sample matrix from GNPS chemical annotations (m/z, retention time, spectral library matches) retrieved from a subset of ReDU/MassIVE files, handling missing values by imputation or removal to prepare data for unsupervised dimensionality reduction and visualization.

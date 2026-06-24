@@ -1,6 +1,9 @@
 ---
 name: model-metadata-validation
-description: Use when after deploying a TensorFlow Serving container (especially within a Dockerized stack like NP-Classifier), before running classification or inference pipelines, to confirm that input layers are named 'input_2048' and 'input_4096' and output layer is named 'output'.
+description: Use when after deploying a TensorFlow Serving container (especially within
+  a Dockerized stack like NP-Classifier), before running classification or inference
+  pipelines, to confirm that input layers are named 'input_2048' and 'input_4096'
+  and output layer is named 'output'.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +13,7 @@ metadata:
   - docker
   - docker-compose
   - TensorFlow Serving
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -37,6 +41,7 @@ attribution:
 
 # Model Metadata Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a TensorFlow Serving endpoint correctly exposes model metadata including input and output layer names. This skill confirms that a deployed neural network model's schema matches expected specifications before downstream inference.

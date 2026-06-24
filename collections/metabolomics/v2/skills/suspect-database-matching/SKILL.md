@@ -1,6 +1,9 @@
 ---
 name: suspect-database-matching
-description: Use when you have LC-MS peak/feature data, a curated suspect compound database with known m/z, retention time, and fragment ion coordinates, and you observe that traditional peak extraction algorithms have failed to detect ions corresponding to suspected contaminants or chemicals of interest.
+description: Use when you have LC-MS peak/feature data, a curated suspect compound
+  database with known m/z, retention time, and fragment ion coordinates, and you observe
+  that traditional peak extraction algorithms have failed to detect ions corresponding
+  to suspected contaminants or chemicals of interest.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3628
@@ -14,12 +17,14 @@ metadata:
   - T3DB
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME
 evidence_spans:
 - We provide a Rshiny program for EISA-EXPOSOME
-- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown below
+- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown
+  below
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

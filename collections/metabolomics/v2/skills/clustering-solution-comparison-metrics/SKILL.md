@@ -1,6 +1,9 @@
 ---
 name: clustering-solution-comparison-metrics
-description: Use when you have applied two different clustering or dendrogram-flattening methods (e.g., constant-threshold vs. silhouette-score optimization) to the same feature set and need to assess whether the two solutions assign features to clusters consistently.
+description: Use when you have applied two different clustering or dendrogram-flattening
+  methods (e.g., constant-threshold vs. silhouette-score optimization) to the same
+  feature set and need to assess whether the two solutions assign features to clusters
+  consistently.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -17,6 +20,7 @@ metadata:
   - MAMSI (MamsiStructSearch.get_correlation_clusters())
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -53,6 +57,7 @@ attribution:
 
 # clustering-solution-comparison-metrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare two hierarchical clustering solutions (e.g., from different flattening methods) using agreement metrics such as adjusted Rand index and normalized mutual information to quantify structural consistency and validate clustering robustness in LC-MS metabolomics feature grouping.

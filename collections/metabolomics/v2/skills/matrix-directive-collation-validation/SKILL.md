@@ -1,6 +1,9 @@
 ---
 name: matrix-directive-collation-validation
-description: Use when you have IC-FTMS measurement records in JSON format with multiple samples per metabolite assignment and you need to verify that a matrix directive with collate='assignment' correctly groups records by assignment identifier and merges sample intensity values into a single dictionary per.
+description: Use when you have IC-FTMS measurement records in JSON format with multiple
+  samples per metabolite assignment and you need to verify that a matrix directive
+  with collate='assignment' correctly groups records by assignment identifier and
+  merges sample intensity values into a single dictionary per.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -11,6 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +22,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema
+  <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # matrix-directive-collation-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a matrix conversion directive with collate='assignment' to group IC-FTMS measurement records by metabolite assignment and merge their sample intensity data into unified dictionaries. This skill validates that the directive correctly consolidates multiple records sharing the same metabolite assignment into single output objects.

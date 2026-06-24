@@ -1,6 +1,9 @@
 ---
 name: tabular-record-filtering-and-sorting
-description: Use when you have extracted tabular data (e.g., protocol descriptions, sample preparation steps) into an intermediate JSON representation and need to subset records by type or property (e.g., test='type=sample_prep'), then order them consistently (e.
+description: Use when you have extracted tabular data (e.g., protocol descriptions,
+  sample preparation steps) into an intermediate JSON representation and need to subset
+  records by type or property (e.g., test='type=sample_prep'), then order them consistently
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +14,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -42,6 +46,7 @@ attribution:
 
 # tabular-record-filtering-and-sorting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply filtering and sorting operations to tabular records using directive engines to select and order subsets of data by field values and comparison criteria. This skill is essential when extracting structured metadata from experimental tables into JSON, particularly for concatenating or selecting protocol-dependent records that meet specific type or content criteria.

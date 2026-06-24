@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-imaging-vendor-format-support
-description: Use when your input mass spectrometry imaging data is in a proprietary vendor format (Bruker .d/.baf, or other binary formats not natively supported by MSIGen) and you need to convert it to an open, readable format (mzML or processed binary) compatible with MSIGen's msigen() function.
+description: Use when your input mass spectrometry imaging data is in a proprietary
+  vendor format (Bruker .d/.baf, or other binary formats not natively supported by
+  MSIGen) and you need to convert it to an open, readable format (mzML or processed
+  binary) compatible with MSIGen's msigen() function.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -19,14 +22,18 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- If you are planning on using Bruker .d data in the .baf format, you will also need to install pyBaf2Sql from GitHub
-- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
+- If you are planning on using Bruker .d data in the .baf format, you will also need
+  to install pyBaf2Sql from GitHub
+- you can convert it to the open-source .mzML format using ProteoWizard's MSConvert
+  tool. You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html
 - You can download ProteoWizard from https://proteowizard.sourceforge.io/download.html.
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
 claims: []

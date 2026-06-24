@@ -1,6 +1,8 @@
 ---
 name: drift-correction-across-batches
-description: Use when your preprocessed metabolomics matrix (log2-scaled, with rows as features and columns as samples) exhibits batch-dependent signal drift or technical variation across multiple analytical runs or instrument sessions.
+description: Use when your preprocessed metabolomics matrix (log2-scaled, with rows
+  as features and columns as samples) exhibits batch-dependent signal drift or technical
+  variation across multiple analytical runs or instrument sessions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +14,7 @@ metadata:
   - sva
   - R
   - ber
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -21,7 +24,8 @@ evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - ComBat(parametric and non-parametric)-model [PMID:16632515] from sva package [PMID:22257669]
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # drift-correction-across-batches
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Correct systematic signal drift and batch effects in preprocessed metabolomics datasets using statistical models (ComBat parametric/non-parametric or ber function) implemented in dbnorm. Apply this skill when metabolomics features show technical heterogeneity or signal shifts across analytical batches that obscure biological variation.

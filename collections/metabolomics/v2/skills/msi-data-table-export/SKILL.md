@@ -1,6 +1,9 @@
 ---
 name: msi-data-table-export
-description: Use when after calculating mean intensity values across all spectra in an MSI dataset (or within a manually selected ROI), and you need to store the resulting m/z–intensity table in a portable format for downstream ROI analysis, database annotation, or external statistical pipelines.
+description: Use when after calculating mean intensity values across all spectra in
+  an MSI dataset (or within a manually selected ROI), and you need to store the resulting
+  m/z–intensity table in a portable format for downstream ROI analysis, database annotation,
+  or external statistical pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3750
@@ -13,11 +16,13 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:

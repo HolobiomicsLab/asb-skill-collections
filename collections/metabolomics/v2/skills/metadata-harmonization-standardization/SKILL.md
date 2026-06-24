@@ -1,6 +1,9 @@
 ---
 name: metadata-harmonization-standardization
-description: Use when when you have preprocessed MS/MS spectra from multiple source repositories or instruments with inconsistent metadata field naming, formats, or values (e.g., mixed adduct notations like '[M+H]+' vs '[M+H]⁺', variable instrument type strings, or non-standard collision energy units).
+description: Use when when you have preprocessed MS/MS spectra from multiple source
+  repositories or instruments with inconsistent metadata field naming, formats, or
+  values (e.g., mixed adduct notations like '[M+H]+' vs '[M+H]⁺', variable instrument
+  type strings, or non-standard collision energy units).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +17,7 @@ metadata:
   - spectraverse-analysis pipeline scripts
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse

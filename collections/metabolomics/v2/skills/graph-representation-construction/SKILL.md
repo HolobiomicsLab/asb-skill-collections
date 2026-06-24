@@ -1,6 +1,9 @@
 ---
 name: graph-representation-construction
-description: Use when you have KEGG metabolic data for one or more organisms and need to simultaneously analyze network topology and functional pathway organization—for example, when comparing metabolic capabilities between species for drug target discovery or when you need to expose both structural rewiring.
+description: Use when you have KEGG metabolic data for one or more organisms and need
+  to simultaneously analyze network topology and functional pathway organization—for
+  example, when comparing metabolic capabilities between species for drug target discovery
+  or when you need to expose both structural rewiring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -13,12 +16,15 @@ metadata:
   - Java
   - KEGG
   - Java (GraphStream, Guava, Apache POI libraries)
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
 evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network of two organisms selected in KEGG
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network
 - MetNet is a Java tool
 claims: []
 provenance:

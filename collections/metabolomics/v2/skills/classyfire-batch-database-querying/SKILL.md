@@ -1,6 +1,9 @@
 ---
 name: classyfire-batch-database-querying
-description: Use when you have a GNPS DBResult file with InChIKey identifiers but lack corresponding ClassyFire superclass, class, and subclass taxonomy annotations—particularly when GNPS spectral library matches no longer include this ontology information by default.
+description: Use when you have a GNPS DBResult file with InChIKey identifiers but
+  lack corresponding ClassyFire superclass, class, and subclass taxonomy annotations—particularly
+  when GNPS spectral library matches no longer include this ontology information by
+  default.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -14,14 +17,18 @@ metadata:
   - ConCISE
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12121275
   title: ConCISE
 evidence_spans:
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
-- You can copy the InChiKey's from the GNPS DBResult file into the Fiehn Labs' classyfire Batch identifier
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches
-- Currently GNPS has stopped supplying classyfire ontology information for spectral library matches.
+- You can copy the InChiKey's from the GNPS DBResult file into the Fiehn Labs' classyfire
+  Batch identifier
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches
+- Currently GNPS has stopped supplying classyfire ontology information for spectral
+  library matches.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

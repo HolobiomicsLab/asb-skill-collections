@@ -1,6 +1,9 @@
 ---
 name: python-package-installation-and-management
-description: Use when when you need to validate that a Python package (or update to it) is accessible to end users through official distribution channels, or when you are preparing a release and need to confirm that installation from PyPI and/or Bioconda does not introduce import failures or missing.
+description: Use when when you need to validate that a Python package (or update to
+  it) is accessible to end users through official distribution channels, or when you
+  are preparing a release and need to confirm that installation from PyPI and/or Bioconda
+  does not introduce import failures or missing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -13,12 +16,14 @@ metadata:
   - conda
   - bioconda-recipes
   - poetry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
 - Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - Matchms is a versatile open-source Python package
 - Verify new release is on [PyPi](https://pypi.org/project/matchms/#history)
 - Wait until new release is also on Bioconda (https://anaconda.org/bioconda/matchms)

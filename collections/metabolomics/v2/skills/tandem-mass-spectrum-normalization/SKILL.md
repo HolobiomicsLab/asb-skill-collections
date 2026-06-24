@@ -1,6 +1,9 @@
 ---
 name: tandem-mass-spectrum-normalization
-description: Use when preparing tandem MS/MS datasets for cross-dataset similarity analysis or spectral matching, particularly when datasets originate from different instruments, acquisition dates, or sample preparation protocols that may introduce systematic variations in peak intensities.
+description: Use when preparing tandem MS/MS datasets for cross-dataset similarity
+  analysis or spectral matching, particularly when datasets originate from different
+  instruments, acquisition dates, or sample preparation protocols that may introduce
+  systematic variations in peak intensities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -11,6 +14,7 @@ metadata:
   - compareMS2
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00457
   title: compareMS2 2.0

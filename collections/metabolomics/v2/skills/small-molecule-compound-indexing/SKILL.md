@@ -1,6 +1,9 @@
 ---
 name: small-molecule-compound-indexing
-description: Use when when you have retention order predictions from multiple ensemble members (e.g., ROASMI_1 through ROASMI_5) for a set of candidate compounds and need to assign a per-compound uncertainty score that reflects how consistently the ensemble members rank that compound relative to others.
+description: Use when when you have retention order predictions from multiple ensemble
+  members (e.g., ROASMI_1 through ROASMI_5) for a set of candidate compounds and need
+  to assign a per-compound uncertainty score that reflects how consistently the ensemble
+  members rank that compound relative to others.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -13,6 +16,7 @@ metadata:
   - ROASMI ensemble models (ROASMI_1 – ROASMI_5)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI

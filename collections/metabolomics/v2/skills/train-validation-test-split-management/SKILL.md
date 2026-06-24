@@ -1,6 +1,9 @@
 ---
 name: train-validation-test-split-management
-description: Use when when you have a complete dataset of labeled examples (e.g., 100,000 augmented spectra, chromatograms, or synthetic samples) and need to train a supervised model (such as a Transformer) while preserving a held-out test set to measure generalization performance without bias.
+description: Use when when you have a complete dataset of labeled examples (e.g.,
+  100,000 augmented spectra, chromatograms, or synthetic samples) and need to train
+  a supervised model (such as a Transformer) while preserving a held-out test set
+  to measure generalization performance without bias.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3437
@@ -16,6 +19,7 @@ metadata:
   - train_model function (GCMSformer.py)
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

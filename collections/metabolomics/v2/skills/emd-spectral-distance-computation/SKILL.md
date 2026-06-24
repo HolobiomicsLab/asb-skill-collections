@@ -1,6 +1,8 @@
 ---
 name: emd-spectral-distance-computation
-description: Use when you have an NMR mixture spectrum and a library of single-compound reference spectra, and you need to identify which compounds are present in the mixture and their abundances.
+description: Use when you have an NMR mixture spectrum and a library of single-compound
+  reference spectra, and you need to identify which compounds are present in the mixture
+  and their abundances.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -11,6 +13,7 @@ metadata:
   - mcfNMR
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

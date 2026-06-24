@@ -1,6 +1,8 @@
 ---
 name: rust-library-compilation-and-testing
-description: Use when when you have access to Rust source code in a repository with a Cargo manifest (Cargo.toml) and need to verify that a library's read and write APIs produce byte-equivalent or structurally equivalent output.
+description: Use when when you have access to Rust source code in a repository with
+  a Cargo manifest (Cargo.toml) and need to verify that a library's read and write
+  APIs produce byte-equivalent or structurally equivalent output.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +15,7 @@ metadata:
   - mzPeak Rust library
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -41,6 +44,7 @@ attribution:
 
 # Rust Library Compilation and Testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile a Rust library from source using Cargo and validate its round-trip read/write functionality by loading, serializing, and comparing data structures. This skill is essential for verifying that a Rust-based file format implementation (e.g., mzPeak reader/writer) correctly preserves data integrity across serialization cycles.

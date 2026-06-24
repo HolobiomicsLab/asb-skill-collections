@@ -1,6 +1,8 @@
 ---
 name: software-tool-enumeration
-description: Use when a software package claims to bundle or install a specific number of tools (documented or approximate) but the tool names, versions, and sources are not enumerated in the primary README or documentation.
+description: Use when a software package claims to bundle or install a specific number
+  of tools (documented or approximate) but the tool names, versions, and sources are
+  not enumerated in the primary README or documentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +14,7 @@ metadata:
   - MetumpX-bin repository
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btz765
   title: MetumpX untargeted MS support package

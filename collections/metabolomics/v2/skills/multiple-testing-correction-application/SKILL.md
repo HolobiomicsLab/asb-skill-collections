@@ -1,6 +1,8 @@
 ---
 name: multiple-testing-correction-application
-description: Use when when performing statistical tests (e.g., t-tests, ANOVA) across many metabolites in a MultiAssayExperiment object to identify differentially abundant metabolites between sample groups.
+description: Use when when performing statistical tests (e.g., t-tests, ANOVA) across
+  many metabolites in a MultiAssayExperiment object to identify differentially abundant
+  metabolites between sample groups.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,6 +14,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -46,6 +49,7 @@ attribution:
 
 # multiple-testing-correction-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Application of Benjamini-Hochberg false discovery rate correction to p-values from differential metabolite abundance tests to control for multiple comparisons across many metabolites. This skill ensures that significance claims in metabolomic differential abundance remain valid when testing hundreds of metabolites simultaneously.

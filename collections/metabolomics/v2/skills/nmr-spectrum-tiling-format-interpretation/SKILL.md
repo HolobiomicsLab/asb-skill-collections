@@ -1,6 +1,9 @@
 ---
 name: nmr-spectrum-tiling-format-interpretation
-description: 'Use when when loading or creating an NMR spectral dataset (Dataset.createDataFile) and the system must decide between multiple storage backends (SubMatrixFile, BigMappedMatrixFile, MappedSubMatrixFile, MappedMatrixFile). Triggers include: (1) dataset metadata specifies a cache-file flag;'
+description: 'Use when when loading or creating an NMR spectral dataset (Dataset.createDataFile)
+  and the system must decide between multiple storage backends (SubMatrixFile, BigMappedMatrixFile,
+  MappedSubMatrixFile, MappedMatrixFile). Triggers include: (1) dataset metadata specifies
+  a cache-file flag;'
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +11,7 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -37,6 +41,7 @@ attribution:
 
 # nmr-spectrum-tiling-format-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and select appropriate storage backends for NMR spectral datasets based on tiling layout, cache configuration, and memory constraints. This skill ensures efficient memory-mapped file access by matching dataset characteristics to the optimal DatasetStorageInterface implementation.

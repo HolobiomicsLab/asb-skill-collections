@@ -1,6 +1,9 @@
 ---
 name: spectral-data-preprocessing-normalization
-description: Use when you have raw MS/MS spectral data in MGF format from multiple sources or instruments with inconsistent metadata fields, varying intensity scales, and potential low-quality spectra that need standardization before metadata harmonization or spectral library compilation.
+description: Use when you have raw MS/MS spectral data in MGF format from multiple
+  sources or instruments with inconsistent metadata fields, varying intensity scales,
+  and potential low-quality spectra that need standardization before metadata harmonization
+  or spectral library compilation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3643
@@ -15,6 +18,7 @@ metadata:
   - SpectralEntropy
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse

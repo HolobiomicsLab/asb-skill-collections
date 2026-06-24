@@ -1,6 +1,7 @@
 ---
 name: ms2-spectral-feature-extraction
-description: Use when you have LC-MS/MS metabolomics data in MGF format and need to prepare it for Latent Dirichlet Allocation (LDA) topic modeling.
+description: Use when you have LC-MS/MS metabolomics data in MGF format and need to
+  prepare it for Latent Dirichlet Allocation (LDA) topic modeling.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +14,7 @@ metadata:
   - run_gensim.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

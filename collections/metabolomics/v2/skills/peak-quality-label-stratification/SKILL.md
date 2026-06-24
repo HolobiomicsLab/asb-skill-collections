@@ -1,6 +1,8 @@
 ---
 name: peak-quality-label-stratification
-description: Use when when you have manually labeled LC-MS peaks as 'High quality' or 'Low quality' using NeatMS's annotation tool and need to create training/validation/test batches.
+description: Use when when you have manually labeled LC-MS peaks as 'High quality'
+  or 'Low quality' using NeatMS's annotation tool and need to create training/validation/test
+  batches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -14,11 +16,13 @@ metadata:
   - Keras / TensorFlow
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
@@ -45,6 +49,7 @@ attribution:
 
 # peak-quality-label-stratification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill involves stratifying MS1 peaks by quality labels (High/Low quality) during batch creation for neural network training, ensuring balanced or representative class distributions to avoid bias in model training. It is essential when preparing labeled LC-MS datasets for supervised learning where peak quality classification affects model generalization.

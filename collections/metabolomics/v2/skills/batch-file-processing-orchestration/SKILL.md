@@ -1,6 +1,9 @@
 ---
 name: batch-file-processing-orchestration
-description: Use when when you have multiple CDF imaging files (e.g., from mass spectrometry imaging scans of biological samples) that need to be read into a single Matlab workspace with consistent structure and metadata (spectral intensity, m/z arrays, spatial coordinates).
+description: Use when when you have multiple CDF imaging files (e.g., from mass spectrometry
+  imaging scans of biological samples) that need to be read into a single Matlab workspace
+  with consistent structure and metadata (spectral intensity, m/z arrays, spatial
+  coordinates).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +16,7 @@ metadata:
   - DIMPLE pipeline
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
@@ -40,6 +44,7 @@ attribution:
 
 # batch-file-processing-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate batch ingestion of multiple CDF (NetCDF) imaging files into a structured Matlab workspace, aggregating spectral data, m/z values, and spatial coordinates for downstream mass spectrometry analysis. This skill enables efficient parallel or sequential processing of large imaging datasets typical in developmental mass spectrometry imaging workflows.

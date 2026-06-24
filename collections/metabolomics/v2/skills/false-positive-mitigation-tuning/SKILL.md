@@ -1,6 +1,9 @@
 ---
 name: false-positive-mitigation-tuning
-description: Use when after running Paramounter's peak-height optimization on XCMS CentWave-extracted metabolomic features, if the downstream analysis or feature validation reveals an unacceptable rate of false positives, or if the extraction workflow is experiencing software crashes or timeout failures due to.
+description: Use when after running Paramounter's peak-height optimization on XCMS
+  CentWave-extracted metabolomic features, if the downstream analysis or feature validation
+  reveals an unacceptable rate of false positives, or if the extraction workflow is
+  experiencing software crashes or timeout failures due to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -12,6 +15,7 @@ metadata:
   - XCMS CentWave
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c04758
   title: Paramounter

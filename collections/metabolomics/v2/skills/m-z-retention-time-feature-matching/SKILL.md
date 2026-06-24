@@ -1,6 +1,9 @@
 ---
 name: m-z-retention-time-feature-matching
-description: Use when after extracting a feature table from XCMS, MS-Dial, or similar tools, when you possess a reference compound database with known m/z, retention time, and metadata, and you need to assign high-confidence (AnnoLevel 1) compound identities.
+description: Use when after extracting a feature table from XCMS, MS-Dial, or similar
+  tools, when you possess a reference compound database with known m/z, retention
+  time, and metadata, and you need to assign high-confidence (AnnoLevel 1) compound
+  identities.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -14,6 +17,7 @@ metadata:
   - GetFeatistics
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

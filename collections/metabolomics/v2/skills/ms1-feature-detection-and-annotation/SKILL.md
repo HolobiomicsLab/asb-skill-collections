@@ -1,6 +1,7 @@
 ---
 name: ms1-feature-detection-and-annotation
-description: Use when you have FIA-MS, LC-MS, or GC-MS full-scan data in mzML format and need to identify unknown molecular features by accurate mass.
+description: Use when you have FIA-MS, LC-MS, or GC-MS full-scan data in mzML format
+  and need to identify unknown molecular features by accurate mass.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3637
@@ -18,6 +19,7 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
@@ -25,7 +27,8 @@ evidence_spans:
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

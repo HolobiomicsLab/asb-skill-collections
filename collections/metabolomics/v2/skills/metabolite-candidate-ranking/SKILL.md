@@ -1,6 +1,8 @@
 ---
 name: metabolite-candidate-ranking
-description: Use when you have an untargeted mass spectrometry spectrum (MS/MS data) and a set of candidate molecules from PubChem or similar databases, and you need to rank candidates by likelihood of being the true molecular annotation.
+description: Use when you have an untargeted mass spectrometry spectrum (MS/MS data)
+  and a set of candidate molecules from PubChem or similar databases, and you need
+  to rank candidates by likelihood of being the true molecular annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3258
@@ -17,6 +19,7 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaf354
   title: JESTR

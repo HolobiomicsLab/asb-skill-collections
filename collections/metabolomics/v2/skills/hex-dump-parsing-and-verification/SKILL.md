@@ -1,12 +1,14 @@
 ---
 name: hex-dump-parsing-and-verification
-description: Use when when implementing or reverse-engineering a custom binary file format (e.
+description: Use when when implementing or reverse-engineering a custom binary file
+  format (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - pymzML
   - Python struct module
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -34,6 +36,7 @@ attribution:
 
 # hex-dump-parsing-and-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse binary file format specifications from hexadecimal dumps and verify correctness of encoded structures by byte-for-byte comparison against reference documentation. This skill is essential when implementing custom binary formats (such as indexed gzip headers) where exact byte layout and field encoding must be validated.

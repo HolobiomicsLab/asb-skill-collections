@@ -1,6 +1,9 @@
 ---
 name: image-visualization-formatting
-description: Use when you have loaded a normalized or raw pixel array (NumPy format) with associated metadata from MSI line-scan data, and need to generate publication-quality ion images with controlled intensity scaling, smoothing, and optional ratio or fractional abundance comparisons across multiple m/z.
+description: Use when you have loaded a normalized or raw pixel array (NumPy format)
+  with associated metadata from MSI line-scan data, and need to generate publication-quality
+  ion images with controlled intensity scaling, smoothing, and optional ratio or fractional
+  abundance comparisons across multiple m/z.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,14 +16,17 @@ metadata:
   - Jupyter Notebook
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen
 evidence_spans:
-- MSIGen provides tools for processing mass spectrometry imaging data acquired in line-scan mode into images and figures.
+- MSIGen provides tools for processing mass spectrometry imaging data acquired in
+  line-scan mode into images and figures.
 - from MSIGen import msigen
 - Using an environment with python version >=3.9 and <=3.11
-- If you want to use MSIGen in a Jupyter notebook, you may also need to install jupyter notebook
+- If you want to use MSIGen in a Jupyter notebook, you may also need to install jupyter
+  notebook
 - MSIGen is most easily used through Jupyter Notebooks or through the GUI.
 claims: []
 provenance:

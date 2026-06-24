@@ -1,6 +1,9 @@
 ---
 name: microbe-metabolite-prediction-neural-network
-description: 'Use when you have paired microbiome (16S or metagenomic taxonomy/functions at genus or finer level) and metabolome (LC-MS or similar profiled metabolites) data from the same samples and want to: (1) predict unobserved metabolite abundances from microbiome composition;'
+description: 'Use when you have paired microbiome (16S or metagenomic taxonomy/functions
+  at genus or finer level) and metabolome (LC-MS or similar profiled metabolites)
+  data from the same samples and want to: (1) predict unobserved metabolite abundances
+  from microbiome composition;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -19,16 +22,23 @@ metadata:
   - NED (Non-negative Embedding)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- we first compared MiMeNet to MelonnPan, a recent model that uses Elastic Net linear regression
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- we first compared MiMeNet to MelonnPan, a recent model that uses Elastic Net linear
+  regression
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - The NED model was trained using code downloaded from https://github.com/vuongle2/BiomeNED
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +62,7 @@ attribution:
 
 # microbe-metabolite-prediction-neural-network
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a multilayer perceptron neural network to predict metabolomic profiles from microbiome taxonomic or functional abundance data, leveraging shared information across metabolomic features to improve prediction accuracy over independent linear regression methods. This skill identifies well-predicted metabolites and extracts feature attribution scores to illuminate microbe-metabolite interaction networks.

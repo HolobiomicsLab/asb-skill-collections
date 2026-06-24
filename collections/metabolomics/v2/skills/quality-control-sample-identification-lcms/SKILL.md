@@ -1,6 +1,9 @@
 ---
 name: quality-control-sample-identification-lcms
-description: Use when when you have XCMS-preprocessed LC-MS metabolomics data with a peak table and an accompanying covariate/metadata file that contains a 'SampleType' column, and you plan to apply QC-based quality filters (such as RSD filtering) or train classifiers for peak quality assessment.
+description: Use when when you have XCMS-preprocessed LC-MS metabolomics data with
+  a peak table and an accompanying covariate/metadata file that contains a 'SampleType'
+  column, and you plan to apply QC-based quality filters (such as RSD filtering) or
+  train classifiers for peak quality assessment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,16 +16,20 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # quality-control-sample-identification-lcms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and extract quality control (QC) sample column names from a metabolomics covariate file to enable downstream QC-based filtering and peak quality metric calculation in LC-MS workflows. This is a prerequisite step for optional RSD-based filtering and classifier training in MetaClean.

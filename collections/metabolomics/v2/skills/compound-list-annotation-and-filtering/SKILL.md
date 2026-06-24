@@ -1,6 +1,8 @@
 ---
 name: compound-list-annotation-and-filtering
-description: Use when after marker identification or feature selection has produced a list of discriminatory m/z features, and before pathway enrichment analysis (e.g., KEGG).
+description: Use when after marker identification or feature selection has produced
+  a list of discriminatory m/z features, and before pathway enrichment analysis (e.g.,
+  KEGG).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -16,12 +18,15 @@ metadata:
   - R (>= 3.5.0)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
-- several R packages are utilized in the background processes, including ggplot2, igraph, MASS
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
+- several R packages are utilized in the background processes, including ggplot2,
+  igraph, MASS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # compound-list-annotation-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate a compound list (m/z-based identifiers) against metabolite databases and filter results by mass tolerance and database match criteria to prepare compounds for downstream enrichment or pathway analysis. This skill bridges mass spectrometry feature detection and functional interpretation.

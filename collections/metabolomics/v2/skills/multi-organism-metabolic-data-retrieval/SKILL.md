@@ -1,6 +1,9 @@
 ---
 name: multi-organism-metabolic-data-retrieval
-description: Use when when you have identifiers for two organisms available in KEGG and need to compare their metabolic networks quantitatively and visually at both structural (node–edge topology) and functional (pathway role) levels for applications in drug engineering, medical science, or systems biology.
+description: Use when when you have identifiers for two organisms available in KEGG
+  and need to compare their metabolic networks quantitatively and visually at both
+  structural (node–edge topology) and functional (pathway role) levels for applications
+  in drug engineering, medical science, or systems biology.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -12,12 +15,15 @@ metadata:
   - MetNet
   - Java
   - KEGG
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
 evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network of two organisms selected in KEGG
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network
 - MetNet is a Java tool
 claims: []
 provenance:

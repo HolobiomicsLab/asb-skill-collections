@@ -1,6 +1,8 @@
 ---
 name: interference-profile-identification
-description: Use when after running saturation repair or multidimensional smoothing on IM-MS data when you need to validate whether corrected peaks are reliable or whether overlapping coeluting/comobiling ions may have caused incorrect signal reconstruction.
+description: Use when after running saturation repair or multidimensional smoothing
+  on IM-MS data when you need to validate whether corrected peaks are reliable or
+  whether overlapping coeluting/comobiling ions may have caused incorrect signal reconstruction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,14 +16,18 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -48,6 +54,7 @@ attribution:
 
 # interference-profile-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and diagnose highly convoluted elution and ion mobility profiles caused by spectral interferences in IM-MS data, which may compromise the accuracy of downstream signal reconstruction algorithms like saturation repair. This skill is essential for quality control of preprocessed IM-MS data to flag problematic ion signals before accepting computational corrections.

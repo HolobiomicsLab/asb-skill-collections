@@ -1,6 +1,8 @@
 ---
 name: high-dimensional-data-indexing
-description: Use when when you have millions of high-dimensional objects (e.g., MS/MS spectra converted to feature-hashed vectors) and need to compute pairwise similarities or retrieve nearest neighbors efficiently.
+description: Use when when you have millions of high-dimensional objects (e.g., MS/MS
+  spectra converted to feature-hashed vectors) and need to compute pairwise similarities
+  or retrieve nearest neighbors efficiently.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,11 +14,13 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # high-dimensional-data-indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct nearest neighbor indexes from low-dimensional vector representations to enable efficient similarity searching and sparse pairwise distance computation without exhaustive comparisons. Essential for scaling clustering and retrieval tasks to millions of high-dimensional spectra.

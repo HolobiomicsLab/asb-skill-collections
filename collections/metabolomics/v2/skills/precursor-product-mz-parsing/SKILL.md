@@ -1,6 +1,9 @@
 ---
 name: precursor-product-mz-parsing
-description: Use when you have raw MRM sample files from a LC-MS/MS instrument and need to systematically recover all precursor m/z and product m/z pairs for each transition. Use this as an initial parsing step before quantitation, method optimization, or transition verification workflows.
+description: Use when you have raw MRM sample files from a LC-MS/MS instrument and
+  need to systematically recover all precursor m/z and product m/z pairs for each
+  transition. Use this as an initial parsing step before quantitation, method optimization,
+  or transition verification workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,11 +15,13 @@ metadata:
   - MRMQuant
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c02462
   title: MRMQuant
 evidence_spans:
-- Users can install get_PrecMZ_ProdMZ in the "program/associated programs" folder to acquire precursor and product m/z values in an MRM sample file.
+- Users can install get_PrecMZ_ProdMZ in the "program/associated programs" folder
+  to acquire precursor and product m/z values in an MRM sample file.
 - Be sure to use the latest version (currently MRMQuant v2.7).
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # precursor-product-mz-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract precursor and product m/z value pairs from MRM (multiple reaction monitoring) LC-MS/MS raw data files using the get_PrecMZ_ProdMZ utility. This skill enables automated identification and tabulation of all MRM transitions' mass-to-charge ratios, essential for method validation and quantitation workflow setup.

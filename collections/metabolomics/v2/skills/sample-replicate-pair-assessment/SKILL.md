@@ -1,6 +1,8 @@
 ---
 name: sample-replicate-pair-assessment
-description: Use when you have high-throughput replicate measurements (e.g., mass spectrometry metabolomics) on biological replicates and need to identify which sample pairs exhibit reproducible feature signals across a threshold (typically 75% reproducibility).
+description: Use when you have high-throughput replicate measurements (e.g., mass
+  spectrometry metabolomics) on biological replicates and need to identify which sample
+  pairs exhibit reproducible feature signals across a threshold (typically 75% reproducibility).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +17,7 @@ metadata:
   - MarrPlotSamplepairs()
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -48,6 +51,7 @@ attribution:
 
 # sample-replicate-pair-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess reproducibility of sample pairs in high-dimensional replicate experiments by computing the percentage of reproducible features per sample pair and ranking sample pairs by reproducibility rank. This skill measures technical and biological consistency across replicate measurements using the Maximum Rank Reproducibility (marr) approach.

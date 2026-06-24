@@ -1,6 +1,8 @@
 ---
 name: converter-job-enumeration-and-mapping
-description: Use when building a multi-source metadata annotation pipeline where converters are organized as dynamically discoverable subclasses in separate packages (e.g., MSMetaEnhancer.libs.converters.web and MSMetaEnhancer.libs.converters.
+description: Use when building a multi-source metadata annotation pipeline where converters
+  are organized as dynamically discoverable subclasses in separate packages (e.g.,
+  MSMetaEnhancer.libs.converters.web and MSMetaEnhancer.libs.converters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   - MSMetaEnhancer.libs.converters.web
   - MSMetaEnhancer.libs.converters.compute
   - ConverterBuilder
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

@@ -1,6 +1,9 @@
 ---
 name: sparse-inverse-covariance-estimation
-description: Use when when you have a feature matrix (samples × features) and need to infer sparse conditional dependencies among features—particularly when the number of features is comparable to or exceeds sample size, and you want to identify which features are directly related after accounting for all.
+description: Use when when you have a feature matrix (samples × features) and need
+  to infer sparse conditional dependencies among features—particularly when the number
+  of features is comparable to or exceeds sample size, and you want to identify which
+  features are directly related after accounting for all.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -10,6 +13,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -38,6 +42,7 @@ attribution:
 
 # sparse-inverse-covariance-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate a sparse precision matrix (inverse covariance) from a feature matrix using graphical lasso (GLASSO), with sparsity controlled by regularization. This produces a network graph where edges represent conditional dependencies between features.

@@ -1,6 +1,9 @@
 ---
 name: deep-learning-module-instantiation-and-validation
-description: Use when you have cloned or loaded a deep-learning architecture extension (e.g., chemprop-IR) and need to verify that its feature extraction component can be instantiated and produces correctly shaped feature tensors before integrating it into a larger pipeline or training loop.
+description: Use when you have cloned or loaded a deep-learning architecture extension
+  (e.g., chemprop-IR) and need to verify that its feature extraction component can
+  be instantiated and produces correctly shaped feature tensors before integrating
+  it into a larger pipeline or training loop.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,11 +13,13 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 evidence_spans:
-- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations for Property Prediction]
+- extension of `chemprop` described in the paper [Analyzing Learned Molecular Representations
+  for Property Prediction]
 - The `chemprop-IR` architecture is an extension of `chemprop`
 claims: []
 provenance:
@@ -39,6 +44,7 @@ attribution:
 
 # deep-learning-module-instantiation-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate and validate a deep-learning feature extraction module (such as spectral feature extractors in chemprop-IR) by loading its implementation, configuring it with molecular inputs, and verifying that output tensors match expected dimensionality, data types, and architectural constraints.

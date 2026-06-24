@@ -1,6 +1,8 @@
 ---
 name: annotation-candidate-comparative-scoring
-description: Use when you have pseudo-MS/MS spectra from LC-MS all-ion fragmentation (AIF) data that have been matched against one or more ion fragment databases (e.g., LipidPos, MassBank), generating multiple candidate annotations per feature.
+description: Use when you have pseudo-MS/MS spectra from LC-MS all-ion fragmentation
+  (AIF) data that have been matched against one or more ion fragment databases (e.g.,
+  LipidPos, MassBank), generating multiple candidate annotations per feature.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +16,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # annotation-candidate-comparative-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and compare metabolite annotation candidates for LC-MS features by matching fragment ion patterns against libraries and scoring candidate matches to identify the most plausible metabolite identity. This skill is essential when a single LC-MS feature generates multiple candidate annotations and you need to determine which is most likely correct based on fragment ion agreement.

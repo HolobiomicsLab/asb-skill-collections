@@ -1,6 +1,9 @@
 ---
 name: hierarchical-clustering-dendrogram-cutting
-description: Use when after XCMS feature detection, grouping, retention time correction, and missing value filling have produced an aligned feature matrix, when you need to group features (m/z, retention time pairs) that likely originate from the same metabolite.
+description: Use when after XCMS feature detection, grouping, retention time correction,
+  and missing value filling have produced an aligned feature matrix, when you need
+  to group features (m/z, retention time pairs) that likely originate from the same
+  metabolite.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -17,13 +20,15 @@ metadata:
   - Sirius
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []
@@ -49,6 +54,7 @@ attribution:
 
 # hierarchical-clustering-dendrogram-cutting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group mass spectrometry features derived from the same compound by hierarchical clustering on retention time and intensity correlation similarity scores, then partition the resulting dendrogram using dynamic tree cutting to yield feature clusters. This skill is applied to metabolomics feature tables after XCMS alignment to collapse isotopic peaks, adducts, and fragments into compound-level clusters.

@@ -1,6 +1,9 @@
 ---
 name: spectral-fingerprint-vectorization
-description: Use when you have MS2 fragmentation spectra from multiple metabolomics samples and need to compare them in a retention time-agnostic manner, especially when samples are chemically diverse, acquired with different LC methods or mass spectrometer technologies (e.
+description: Use when you have MS2 fragmentation spectra from multiple metabolomics
+  samples and need to compare them in a retention time-agnostic manner, especially
+  when samples are chemically diverse, acquired with different LC methods or mass
+  spectrometer technologies (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,11 +19,13 @@ metadata:
   - Python 3.8+
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 claims: []

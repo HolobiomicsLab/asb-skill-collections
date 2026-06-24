@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -48,6 +49,7 @@ attribution:
 
 # spectral-adduct-ionmode-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validates and filters mass spectra by ensuring adduct annotations are consistent with ionization mode polarity (positive adducts only in positive-mode spectra, negative adducts only in negative-mode spectra), and removes spectra with missing or malformed adduct fields. This quality control step prevents downstream analysis errors from mismatched ionization chemistry.

@@ -1,6 +1,9 @@
 ---
 name: spectral-peak-alignment-across-pixels
-description: Use when after peak picking across individual spectra in an MSImagingExperiment, when you need to harmonize peak m/z positions across pixels to account for small shifts in peak location due to instrumental drift, calibration differences, or natural variation.
+description: Use when after peak picking across individual spectra in an MSImagingExperiment,
+  when you need to harmonize peak m/z positions across pixels to account for small
+  shifts in peak location due to instrumental drift, calibration differences, or natural
+  variation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -14,12 +17,14 @@ metadata:
   - BiocParallel
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:

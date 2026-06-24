@@ -1,6 +1,9 @@
 ---
 name: multidimensional-coordinate-alignment
-description: Use when you have detected feature tables from two or more LC-IMS-MS/MS samples (each containing m/z, drift_time, retention_time, and intensity measurements) and need to identify which features correspond to the same chemical compound across samples.
+description: Use when you have detected feature tables from two or more LC-IMS-MS/MS
+  samples (each containing m/z, drift_time, retention_time, and intensity measurements)
+  and need to identify which features correspond to the same chemical compound across
+  samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,13 +18,15 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []
@@ -47,6 +52,7 @@ attribution:
 
 # multidimensional-coordinate-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns detected features across multiple LC-IMS-MS/MS samples by clustering them in N-dimensional space (m/z, drift time, retention time) using configurable tolerances, producing consensus coordinates and sample-membership vectors. This skill is essential when matching corresponding chemical features across datasets to account for instrument drift, calibration variation, and nonlinear retention-time shifts.

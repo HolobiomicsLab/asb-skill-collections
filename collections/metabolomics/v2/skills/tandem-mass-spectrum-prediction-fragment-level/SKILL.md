@@ -1,6 +1,9 @@
 ---
 name: tandem-mass-spectrum-prediction-fragment-level
-description: Use when you have a molecular structure (SMILES, InChI, or chemical formula) and need to predict its collision-induced dissociation (CID) tandem mass spectrum with fragment-level resolution. Use this when chemical-formula-level predictions (e.
+description: Use when you have a molecular structure (SMILES, InChI, or chemical formula)
+  and need to predict its collision-induced dissociation (CID) tandem mass spectrum
+  with fragment-level resolution. Use this when chemical-formula-level predictions
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3634
@@ -16,13 +19,15 @@ metadata:
   - NIST'20 dataset
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 evidence_spans:
 - github.com__samgoldman97__ms-pred
 - You can run ICEBERG structural elucidation easily at http://iceberg-ms.mit.edu/
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:

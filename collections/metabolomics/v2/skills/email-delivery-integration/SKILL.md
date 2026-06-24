@@ -1,6 +1,9 @@
 ---
 name: email-delivery-integration
-description: Use when when a QC check fails during an active LC-MS run and configured email notification targets exist in the system. Use this skill to ensure that QC failures are communicated to stakeholders immediately, complementing Slack-based alerts for users who prefer or require email notification.
+description: Use when when a QC check fails during an active LC-MS run and configured
+  email notification targets exist in the system. Use this skill to ensure that QC
+  failures are communicated to stakeholders immediately, complementing Slack-based
+  alerts for users who prefer or require email notification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,6 +14,7 @@ metadata:
   - Slack API
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

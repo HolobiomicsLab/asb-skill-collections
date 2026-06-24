@@ -1,6 +1,9 @@
 ---
 name: metabolomic-peak-matrix-preprocessing
-description: Use when you have a raw or minimally processed metabolomic peak matrix (in standardized or tool-generated format) from multi-class samples with optional quality control (QC) samples and/or internal standards (IS), and you need to generate a single normalized peak table suitable for statistical.
+description: Use when you have a raw or minimally processed metabolomic peak matrix
+  (in standardized or tool-generated format) from multi-class samples with optional
+  quality control (QC) samples and/or internal standards (IS), and you need to generate
+  a single normalized peak table suitable for statistical.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,6 +18,7 @@ metadata:
   - limma
   - pcaMethods
   - Biobase
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

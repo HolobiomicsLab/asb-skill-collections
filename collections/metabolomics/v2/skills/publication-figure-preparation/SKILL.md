@@ -1,6 +1,8 @@
 ---
 name: publication-figure-preparation
-description: Use when you have a mass spectrometry spectrum from a supported repository (GNPS, MassBank, MetaboLights, Metabolomics Workbench, ProteoXchange, MS2LDA, or MassIVE) and need to include it in a publication or supplementary material.
+description: Use when you have a mass spectrometry spectrum from a supported repository
+  (GNPS, MassBank, MetaboLights, Metabolomics Workbench, ProteoXchange, MS2LDA, or
+  MassIVE) and need to include it in a publication or supplementary material.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3441
@@ -16,6 +18,7 @@ metadata:
   - MetabolomicsSpectrumResolver
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

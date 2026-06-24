@@ -1,6 +1,9 @@
 ---
 name: molecular-fingerprint-computation
-description: Use when you have natural product molecules (or compounds from natural product-like databases such as COCONUT or ZINC) in structural format (SMILES, InChI, or SDF file) and need a fingerprint representation optimized for biosynthetic-class prediction, structural clustering, or bioinformatic feature.
+description: Use when you have natural product molecules (or compounds from natural
+  product-like databases such as COCONUT or ZINC) in structural format (SMILES, InChI,
+  or SDF file) and need a fingerprint representation optimized for biosynthetic-class
+  prediction, structural clustering, or bioinformatic feature.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0564
@@ -20,6 +23,7 @@ metadata:
   - Python
   - SIRIUS
   - MetFrag
+  license_tier: restricted
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -29,7 +33,8 @@ derived_from:
   title: ''
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 - Final candidate selection is done in Python using RDKit and PubChemPy
 claims: []
@@ -63,6 +68,7 @@ attribution:
 
 # molecular-fingerprint-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute biosynfoni fingerprints—a biosynformatic molecular representation tailored for natural product chemistry—from molecular structures (SMILES, InChI, or SDF) to generate bit-vector or count fingerprints suitable for downstream bioinformatic analysis and biosynthetic class prediction.

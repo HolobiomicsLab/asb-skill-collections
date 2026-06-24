@@ -1,6 +1,7 @@
 ---
 name: nearest-neighbor-clustering-by-mass-difference
-description: Use when processing LC-MS metabolomics studies with >10 samples where sample count and memory constraints make pairwise mass alignment infeasible.
+description: Use when processing LC-MS metabolomics studies with >10 samples where
+  sample count and memory constraints make pairwise mass alignment infeasible.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3198
@@ -15,13 +16,16 @@ metadata:
   - asari chromatograms.get_thousandth_bins
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- a nearest neighbor (NN) clustering is performed to establish the number of mass tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).
+- a nearest neighbor (NN) clustering is performed to establish the number of mass
+  tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # nearest-neighbor-clustering-by-mass-difference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups mass tracks across LC-MS samples by clustering m/z values using nearest-neighbor methods seeded by histogram-based m/z detection, enabling scalable mass alignment for large studies (>10 samples) without pairwise computation. This approach trades exhaustive pairwise alignment for memory- and CPU-efficient binning that preserves high-resolution mass separation.

@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-noise-threshold-parameter-selection
-description: Use when when processing raw or centroid mass spectra (e.g., ESI-MS or FT-ICR data from Bruker .d or Thermo .raw formats) and you need to remove instrument noise and low-abundance peaks before peak picking or molecular formula assignment.
+description: Use when when processing raw or centroid mass spectra (e.g., ESI-MS or
+  FT-ICR data from Bruker .d or Thermo .raw formats) and you need to remove instrument
+  noise and low-abundance peaks before peak picking or molecular formula assignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,12 +16,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +51,7 @@ attribution:
 
 # mass-spectrum-noise-threshold-parameter-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selection and application of one of three mutually exclusive noise-threshold filtering methods in CoreMS (relative_abundance, signal_noise, or log mode) to remove low-intensity peaks and retain spectrum peaks above a user-defined threshold. Each method filters peaks using different criteria and produces different peak retention counts from the same input spectrum.

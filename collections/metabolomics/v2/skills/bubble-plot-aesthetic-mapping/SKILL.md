@@ -1,6 +1,8 @@
 ---
 name: bubble-plot-aesthetic-mapping
-description: Use when you have parsed GO enrichment results (GO term identifiers, p-values or adjusted p-values, gene ratios, gene counts) into CSV format and need to render them as interactive bubble plots.
+description: Use when you have parsed GO enrichment results (GO term identifiers,
+  p-values or adjusted p-values, gene ratios, gene counts) into CSV format and need
+  to render them as interactive bubble plots.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0571
@@ -13,6 +15,7 @@ metadata:
   - ggplot2
   - plotly
   - GraphBio
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

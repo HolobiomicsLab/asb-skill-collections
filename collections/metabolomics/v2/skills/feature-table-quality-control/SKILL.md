@@ -1,6 +1,9 @@
 ---
 name: feature-table-quality-control
-description: Use when when you have a feature intensity matrix (samples × compounds) from untargeted LC–MS/MS or GC–MS analysis and accompanying sample-type metadata (blank, curve, QC, unknown classifications), and you need to remove features with high measurement variability, low QC detection rates, high blank.
+description: Use when when you have a feature intensity matrix (samples × compounds)
+  from untargeted LC–MS/MS or GC–MS analysis and accompanying sample-type metadata
+  (blank, curve, QC, unknown classifications), and you need to remove features with
+  high measurement variability, low QC detection rates, high blank.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,13 +18,15 @@ metadata:
   - MS-Dial
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

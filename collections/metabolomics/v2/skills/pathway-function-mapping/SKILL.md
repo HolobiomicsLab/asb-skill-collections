@@ -1,6 +1,7 @@
 ---
 name: pathway-function-mapping
-description: Use when when you have reconstructed metabolic networks for two or more organisms from KEGG and need to compare them both topologically and functionally.
+description: Use when when you have reconstructed metabolic networks for two or more
+  organisms from KEGG and need to compare them both topologically and functionally.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3083
@@ -12,12 +13,15 @@ metadata:
   - MetNet
   - Java
   - KEGG
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet
 evidence_spans:
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network of two organisms selected in KEGG
-- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic network
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network of two organisms selected in KEGG
+- MetNet is a Java tool that makes it possible to automatically reconstruct the metabolic
+  network
 - MetNet is a Java tool
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: spectrum-peak-counting-and-reporting
-description: Use when when you need to quantify and compare the filtering efficacy of mutually exclusive noise-threshold methods on the same input mass spectrum, or when validating that a selected noise-filtering strategy retains an expected number of peaks for downstream molecular formula assignment.
+description: Use when when you need to quantify and compare the filtering efficacy
+  of mutually exclusive noise-threshold methods on the same input mass spectrum, or
+  when validating that a selected noise-filtering strategy retains an expected number
+  of peaks for downstream molecular formula assignment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -16,12 +19,14 @@ metadata:
   - LC-MS
   - GC-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -49,6 +54,7 @@ attribution:
 
 # spectrum-peak-counting-and-reporting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Count and report the number of peaks retained in a mass spectrum after applying a selected noise-threshold method (relative_abundance, signal_noise, or log mode), producing structured records of method identifier and peak counts per ionization mode for comparative evaluation.

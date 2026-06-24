@@ -1,6 +1,8 @@
 ---
 name: sample-group-metadata-association
-description: Use when you have a preprocessed count matrix (genes, miRNAs, isoforms, proteins, or lipids) and need to prepare it for differential expression analysis by linking sample identifiers to their experimental group assignments.
+description: Use when you have a preprocessed count matrix (genes, miRNAs, isoforms,
+  proteins, or lipids) and need to prepare it for differential expression analysis
+  by linking sample identifiers to their experimental group assignments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3465
@@ -14,13 +16,15 @@ metadata:
   - ComplexHeatmap
   - edgeR
   - R base (data.frame merge/join operations)
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator
 evidence_spans:
 - 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
 - '### DESeq2 [deseq](../modules/local/deseq2)'
-- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva, ggplot2, ComplexHeatmap'
+- 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger,
+  limma, sva, ggplot2, ComplexHeatmap'
 - 'R packages: DESeq2, edger, RankProd, ggplot2 ComplexHeatmap'
 claims: []
 provenance:

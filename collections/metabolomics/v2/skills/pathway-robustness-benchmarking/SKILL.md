@@ -1,6 +1,8 @@
 ---
 name: pathway-robustness-benchmarking
-description: Use when when selecting a pathway analysis method for metabolomics peak data where noise and missing peaks are prevalent, or when validating that a chosen method performs consistently across realistic data quality variations.
+description: Use when when selecting a pathway analysis method for metabolomics peak
+  data where noise and missing peaks are prevalent, or when validating that a chosen
+  method performs consistently across realistic data quality variations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -15,12 +17,15 @@ metadata:
   - PALS Viewer
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways,
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

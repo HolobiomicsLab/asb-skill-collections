@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-transformation-documentation
-description: Use when when you have access to source code or algorithmic documentation of a metabolite generation pipeline (such as MAGMa's job subproject) and need to understand, validate, or reconstruct the transformations that convert a parent compound into enumerated metabolite candidates.
+description: Use when when you have access to source code or algorithmic documentation
+  of a metabolite generation pipeline (such as MAGMa's job subproject) and need to
+  understand, validate, or reconstruct the transformations that convert a parent compound
+  into enumerated metabolite candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0225
@@ -13,6 +16,7 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -42,6 +46,7 @@ attribution:
 
 # chemical-structure-transformation-documentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document the algorithmic rules, fragmentation logic, and transformation workflows that convert parent chemical structures into candidate metabolites in silico. This skill extracts and systematizes the chemo-informatics transformations embedded in metabolite generation pipelines so they can be audited, reproduced, and transferred across tools.

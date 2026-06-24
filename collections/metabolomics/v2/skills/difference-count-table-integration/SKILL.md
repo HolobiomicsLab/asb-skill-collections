@@ -1,6 +1,8 @@
 ---
 name: difference-count-table-integration
-description: Use when when analyzing tandem MS/MS spectra with SIMILE V2 and you want to leverage both fragment ion mass differences and neutral loss patterns to improve spectral similarity scoring.
+description: Use when when analyzing tandem MS/MS spectra with SIMILE V2 and you want
+  to leverage both fragment ion mass differences and neutral loss patterns to improve
+  spectral similarity scoring.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,13 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:
@@ -41,6 +45,7 @@ attribution:
 
 # Difference-Count Table Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine multiple mass difference counting methods (MZ difference counts and precursor-based neutral loss difference counts) into a unified, indexed difference-count table for use in SIMILE V2 spectral alignment. This integration enables richer feature representation of fragmentation patterns by capturing both direct fragment-to-fragment mass relationships and neutral loss signatures.

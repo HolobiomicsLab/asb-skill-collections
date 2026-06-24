@@ -1,6 +1,9 @@
 ---
 name: mixed-effects-model-interpretation
-description: Use when your metabolomics dataset contains hierarchical or repeated structure (e.g., multiple samples per batch, multiple compounds per internal standard group, or QC replicates measured across runs) and you need to model the relationship between a continuous outcome (e.
+description: Use when your metabolomics dataset contains hierarchical or repeated
+  structure (e.g., multiple samples per batch, multiple compounds per internal standard
+  group, or QC replicates measured across runs) and you need to model the relationship
+  between a continuous outcome (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,14 +16,17 @@ metadata:
   - GetFeatistics
   - lme4
   - AER
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
-- linear models with mixed effects (random and fixed), using the _lmer_ function from the lme4 package
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
+- linear models with mixed effects (random and fixed), using the _lmer_ function from
+  the lme4 package
 - TOBIT linear models, using the _tobit_ function of the AER package
 claims: []
 provenance:

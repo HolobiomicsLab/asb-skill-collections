@@ -1,6 +1,9 @@
 ---
 name: http-file-upload-implementation
-description: Use when you are building the initial data ingestion step of a high-throughput MS platform and need to accept raw MS files from users or instruments via a web interface. Use this skill when you require automated validation of vendor-specific formats (Thermo .
+description: Use when you are building the initial data ingestion step of a high-throughput
+  MS platform and need to accept raw MS files from users or instruments via a web
+  interface. Use this skill when you require automated validation of vendor-specific
+  formats (Thermo .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -17,6 +20,7 @@ metadata:
   - MSConnect
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

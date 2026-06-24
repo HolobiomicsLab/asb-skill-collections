@@ -1,6 +1,8 @@
 ---
 name: raw-chromatography-data-parsing
-description: Use when you have raw GC-MS output files (vendor formats or netCDF) from a chromatography instrument and need to prepare them for automated peak deconvolution and spectral analysis.
+description: Use when you have raw GC-MS output files (vendor formats or netCDF) from
+  a chromatography instrument and need to prepare them for automated peak deconvolution
+  and spectral analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -12,12 +14,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
 evidence_spans:
 - MSHub auto-deconvolution
-- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry
+  data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: metabolite-candidate-ranking-likelihood-scoring
-description: Use when you have a query mass spectrum matched to multiple candidate metabolites (by accurate mass, database lookup, or spectral similarity), and you possess or can train a DNN model for retention time prediction on your target chromatographic method.
+description: Use when you have a query mass spectrum matched to multiple candidate
+  metabolites (by accurate mass, database lookup, or spectral similarity), and you
+  possess or can train a DNN model for retention time prediction on your target chromatographic
+  method.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -13,11 +16,13 @@ metadata:
   - cmmrt
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # metabolite-candidate-ranking-likelihood-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert predicted retention times and their uncertainties into probabilistic likelihood scores to rank candidate metabolite annotations in descending order of plausibility. This skill integrates deep neural network RT predictions with Bayesian meta-learned chromatographic projections to generate normalized probability densities that reflect both point estimates and prediction confidence.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-workflow-orchestration
-description: Use when you have a collection of mzML or mzML.gz files from LC-IMS-MS/MS experiments and need to apply a consistent, reproducible sequence of feature detection, alignment, CCS calibration, isotope detection, and MS/MS deconvolution operations across multiple samples.
+description: Use when you have a collection of mzML or mzML.gz files from LC-IMS-MS/MS
+  experiments and need to apply a consistent, reproducible sequence of feature detection,
+  alignment, CCS calibration, isotope detection, and MS/MS deconvolution operations
+  across multiple samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,15 +21,18 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment with required dependencies.
+- Use `conda <https://www.anaconda.com/download/>`_ to create a virtual environment
+  with required dependencies.
 - 'Install DEIMoS using `pip <https://pypi.org/project/pip/>`_: ``pip install -e .``'
 claims: []
 provenance:
@@ -51,6 +57,7 @@ attribution:
 
 # mass-spectrometry-workflow-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate multi-stage LC-IMS-MS/MS data processing pipelines using Snakemake DAGs to automate mzML ingestion, peak detection, feature alignment, and spectral deconvolution. This skill ensures reproducible, scalable execution of DEIMoS analysis across batches of samples with parameterized algorithm configuration.

@@ -1,6 +1,7 @@
 ---
 name: inadequate-spectral-processing
-description: Use when you have raw INADEQUATE NMR spectrum files (e.g., in standard NMR formats) that require initial processing before metabolite annotation.
+description: Use when you have raw INADEQUATE NMR spectrum files (e.g., in standard
+  NMR formats) that require initial processing before metabolite annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -12,6 +13,7 @@ metadata:
   - PyINETA
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

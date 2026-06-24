@@ -1,6 +1,9 @@
 ---
 name: feature-table-subsetting
-description: 'Use when after loading an MS-DIAL feature table when you need to separate features into two disjoint groups: one meeting a quantitative threshold (e.g., m/z decimal values outside [4, 8], coefficient of variation below a cutoff, or mass defects within acceptable bounds) and one not meeting it.'
+description: 'Use when after loading an MS-DIAL feature table when you need to separate
+  features into two disjoint groups: one meeting a quantitative threshold (e.g., m/z
+  decimal values outside [4, 8], coefficient of variation below a cutoff, or mass
+  defects within acceptable bounds) and one not meeting it.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +18,7 @@ metadata:
   - OUKS
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -25,7 +29,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - R based open-source collection of scripts called :red_circle:*OUKS*
 - R ≥4.1.2
@@ -57,6 +63,7 @@ attribution:
 
 # feature-table-subsetting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition a feature table into two complementary subsets based on a filtering criterion (e.g., m/z decimal values, mass defects, or coefficient of variation), retaining both the filtered-out and retained features for separate downstream analysis. This skill is essential in untargeted metabolomics to isolate features meeting quality or chemical criteria while preserving rejected features for audit trails and alternative interpretations.

@@ -1,6 +1,8 @@
 ---
 name: machine-learning-based-conformation-filtering
-description: Use when when you have generated multiple 3D conformations for a molecule or set of ionized adducts (e.g., via RDKit) and need to retain only the most energetically favorable structures before expensive quantum calculations.
+description: Use when when you have generated multiple 3D conformations for a molecule
+  or set of ionized adducts (e.g., via RDKit) and need to retain only the most energetically
+  favorable structures before expensive quantum calculations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -15,12 +17,14 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 - 'Dimorphite-DL: For ionization state determination'
 - 'ASE-ANI: For conformation filtering'
 - 'QUICK: For quantum calculations'
@@ -47,6 +51,7 @@ attribution:
 
 # machine-learning-based-conformation-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter low-energy molecular conformations from an ensemble using neural network potentials (ANI) trained on quantum chemical data. This reduces the computational burden of subsequent quantum mechanical calculations for predicting molecular properties like collision cross sections.

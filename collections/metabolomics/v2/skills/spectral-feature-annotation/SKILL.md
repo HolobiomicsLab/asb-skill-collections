@@ -1,6 +1,7 @@
 ---
 name: spectral-feature-annotation
-description: Use when after auto-deconvolution has resolved co-eluting GC-MS peaks into individual component spectra.
+description: Use when after auto-deconvolution has resolved co-eluting GC-MS peaks
+  into individual component spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3647
@@ -12,6 +13,7 @@ metadata:
   - GNPS (Global Natural Products Social Molecular Networking)
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

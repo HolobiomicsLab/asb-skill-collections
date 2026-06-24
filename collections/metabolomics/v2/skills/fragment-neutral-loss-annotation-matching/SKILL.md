@@ -1,6 +1,8 @@
 ---
 name: fragment-neutral-loss-annotation-matching
-description: Use when after generateComponents with algorithm='tp' has tentatively paired parent features with TP candidates based on retention time and spectrum similarity, and when formula annotations are available for both parents and candidates.
+description: Use when after generateComponents with algorithm='tp' has tentatively
+  paired parent features with TP candidates based on retention time and spectrum similarity,
+  and when formula annotations are available for both parents and candidates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,6 +15,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

@@ -1,6 +1,9 @@
 ---
 name: structure-organism-pair-deduplication
-description: Use when you have a curated natural products dataset (e.g., LOTUS platinum validation dataset in TSV format) and need to establish ground-truth counts of unique chemical structures, unique organisms, and unique referenced structure-organism associations.
+description: Use when you have a curated natural products dataset (e.g., LOTUS platinum
+  validation dataset in TSV format) and need to establish ground-truth counts of unique
+  chemical structures, unique organisms, and unique referenced structure-organism
+  associations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,6 +13,7 @@ metadata:
   tools:
   - R
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -44,6 +48,7 @@ attribution:
 
 # structure-organism-pair-deduplication
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deduplicate and count unique structure-organism pairs and their constituent entities (structures, organisms) in a curated natural products dataset, stratified by molecular representation format (2D/3D). This skill validates dataset completeness and integrity by confirming expected aggregate counts across multiple deduplication dimensions.

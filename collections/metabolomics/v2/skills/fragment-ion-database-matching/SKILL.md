@@ -1,6 +1,8 @@
 ---
 name: fragment-ion-database-matching
-description: Use when you have centroid-mode LC-MS AIF chromatograms processed through xcms and RAMClustR, a feature table with target m/z and retention time values, and access to fragment libraries (e.g., LipidPos for lipids).
+description: Use when you have centroid-mode LC-MS AIF chromatograms processed through
+  xcms and RAMClustR, a feature table with target m/z and retention time values, and
+  access to fragment libraries (e.g., LipidPos for lipids).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -15,11 +17,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # fragment-ion-database-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match experimental fragment ions from LC-MS All-ion fragmentation (AIF) spectra against curated ion fragment databases to identify and rank candidate metabolite annotations. This skill converts pseudo-MS/MS spectra from xcms and RAMClustR objects into scored metabolite assignments using the MetaboAnnotatoR annotateRC function.

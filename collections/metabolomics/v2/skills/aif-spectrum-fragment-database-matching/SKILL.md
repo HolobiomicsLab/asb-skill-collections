@@ -1,6 +1,9 @@
 ---
 name: aif-spectrum-fragment-database-matching
-description: Use when you have a feature table from untargeted LC–MS all-ion fragmentation (AIF) chromatograms processed by xcms and RamClustR, and you want to assign metabolite annotations to individual features by comparing their experimental MS/MS spectra against curated fragment libraries (e.
+description: Use when you have a feature table from untargeted LC–MS all-ion fragmentation
+  (AIF) chromatograms processed by xcms and RamClustR, and you want to assign metabolite
+  annotations to individual features by comparing their experimental MS/MS spectra
+  against curated fragment libraries (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -15,11 +18,13 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - start R (version "4.5.0" or higher)
 claims: []
 provenance:
@@ -44,6 +49,7 @@ attribution:
 
 # AIF Spectrum Fragment Database Matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match experimental MS/MS spectra from all-ion fragmentation LC–MS data against ion fragment libraries to assign metabolite identities to detected features. This skill bridges processed feature tables (from xcms/RamClustR) with ranked lipid or metabolite annotations by comparing fragmentation patterns.

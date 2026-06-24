@@ -1,6 +1,9 @@
 ---
 name: ce-ms-migration-time-to-mobility-transformation
-description: Use when your CE-MS dataset exhibits migration time drift between runs due to electroosmotic flow (EOF) variation, and you have identified two internal mobility markers (e.g., Paracetamol and Procaine) with known charges whose migration times can be measured in the raw data.
+description: Use when your CE-MS dataset exhibits migration time drift between runs
+  due to electroosmotic flow (EOF) variation, and you have identified two internal
+  mobility markers (e.g., Paracetamol and Procaine) with known charges whose migration
+  times can be measured in the raw data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -16,11 +19,13 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MSnbase")`
@@ -49,6 +54,7 @@ attribution:
 
 # ce-ms-migration-time-to-mobility-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform capillary electrophoresis–mass spectrometry (CE-MS) data from migration time scale to effective mobility scale using two-marker calibration, enabling reproducible peak alignment across runs despite electroosmotic flow variations. This skill applies the mobilityTransform function to OnDiskMSnExp objects and outputs unified .mzML files containing both positive and negative effective mobilities.

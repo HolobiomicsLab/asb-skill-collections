@@ -21,12 +21,14 @@ metadata:
   - Cytoscape FileTransfer
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 - It requires the Python dependencies NumPy
@@ -54,6 +56,7 @@ attribution:
 
 # ft-icr-ms-data-preprocessing-and-quality-control
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated preprocessing and quality control of direct injection FT-ICR MS data prior to downstream analysis, involving peak detection filtering, isotope removal, mass accuracy validation, and intensity normalization to produce analysis-ready molecular abundance matrices.

@@ -1,6 +1,9 @@
 ---
 name: non-targeted-preprocessing-tool-comparison
-description: Use when you have LC-HRMS mzML data processed by at least one non-targeted pre-processing tool (XCMS, MZmine 2, MZmine 3, MS-DIAL, OpenMS, El-MAVEN, or similar), you have access to curated retention time boundaries and molecular formulas for a set of known target compounds (ideally 30+ molecules.
+description: Use when you have LC-HRMS mzML data processed by at least one non-targeted
+  pre-processing tool (XCMS, MZmine 2, MZmine 3, MS-DIAL, OpenMS, El-MAVEN, or similar),
+  you have access to curated retention time boundaries and molecular formulas for
+  a set of known target compounds (ideally 30+ molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3635
@@ -18,12 +21,14 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - Below we provided one more example for MZmine2
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)

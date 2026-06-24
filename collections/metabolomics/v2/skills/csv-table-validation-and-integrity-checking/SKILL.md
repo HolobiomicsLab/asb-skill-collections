@@ -1,6 +1,9 @@
 ---
 name: csv-table-validation-and-integrity-checking
-description: Use when you have received a raw peak table CSV (in either standardized format or output from metabolomic software tools like XCMS, MZmine, etc.) and a corresponding label file, and you need to confirm both files are well-formed and mutually consistent before passing them to NOREVA preprocessing.
+description: Use when you have received a raw peak table CSV (in either standardized
+  format or output from metabolomic software tools like XCMS, MZmine, etc.) and a
+  corresponding label file, and you need to confirm both files are well-formed and
+  mutually consistent before passing them to NOREVA preprocessing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,6 +15,7 @@ metadata:
   - devtools
   - readr
   - Biobase
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

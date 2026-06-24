@@ -1,6 +1,9 @@
 ---
 name: deep-learning-model-implementation-in-pytorch-or-tensorflow
-description: Use when when you need to construct a dual-branch neural network encoder that processes two augmented versions of the same input (e.g., ion images in COL or ISO mode) and must enforce weight sharing between branches to reduce parameters while maintaining separate output representations.
+description: Use when when you need to construct a dual-branch neural network encoder
+  that processes two augmented versions of the same input (e.g., ion images in COL
+  or ISO mode) and must enforce weight sharing between branches to reduce parameters
+  while maintaining separate output representations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,12 +17,14 @@ metadata:
   - boly_pytorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # deep-learning-model-implementation-in-pytorch-or-tensorflow
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a ResNet18-based shared-weight encoder architecture in PyTorch to process pairs of augmented ion images and produce fixed-dimensional representation vectors suitable for contrastive learning. This skill is essential when building deep learning pipelines for mass spectrometry imaging that require parameter sharing across multiple input branches and consistent output dimensionality.

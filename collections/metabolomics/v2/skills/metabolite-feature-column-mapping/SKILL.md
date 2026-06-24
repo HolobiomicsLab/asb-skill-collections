@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-column-mapping
-description: Use when you have peak-picked LC-MS metabolomics data in a tabular format (R data frame) with columns for mass-to-charge ratio, retention time, feature identifiers, adduct annotations, and sample measurements, but the column names do not follow a standard naming convention.
+description: Use when you have peak-picked LC-MS metabolomics data in a tabular format
+  (R data frame) with columns for mass-to-charge ratio, retention time, feature identifiers,
+  adduct annotations, and sample measurements, but the column names do not follow
+  a standard naming convention.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +15,15 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +47,7 @@ attribution:
 
 # metabolite-feature-column-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map and validate required LC-MS metabolomics feature columns (m/z, retention time, feature ID, adduct annotation, samples) from heterogeneous input data frames into a standardized metabData object. This is the mandatory first step before filtering and alignment, ensuring that disparate data sources conform to a common schema.

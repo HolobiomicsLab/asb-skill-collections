@@ -1,6 +1,8 @@
 ---
 name: interactive-html-figure-generation-plotly
-description: Use when your mass spectrometry DataFrame contains m/z, retention time (or mobility), and intensity columns, and you need to generate an interactive HTML figure for exploration, web-based presentation, or interactive supplementary material.
+description: Use when your mass spectrometry DataFrame contains m/z, retention time
+  (or mobility), and intensity columns, and you need to generate an interactive HTML
+  figure for exploration, web-based presentation, or interactive supplementary material.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0570
@@ -17,11 +19,13 @@ metadata:
   - alphatims
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
-- integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)
+- integrates seamlessly with various plotting library backends (matpotlib, bokeh and
+  plotly)
 - 'Extension: PLOTLY'
 - pyopenms ... pymzml ... pyteomics
 claims: []
@@ -47,6 +51,7 @@ attribution:
 
 # interactive-html-figure-generation-plotly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate interactive HTML visualizations of mass spectrometry data using Plotly as the pyOpenMS-Viz plotting backend, enabling 2D and 3D peak-map rendering with client-side interactivity. Use this skill when you need to produce publication-ready, browser-viewable figures that preserve dimensionality (m/z, retention time, intensity) and support pan/zoom/hover inspection.

@@ -1,6 +1,7 @@
 ---
 name: molecular-geometry-file-parsing
-description: Use when when you have a molecular structure in XYZ or similar coordinate format and need to initialize QCxMS2 or related workflows for EI mass spectrum calculation.
+description: Use when when you have a molecular structure in XYZ or similar coordinate
+  format and need to initialize QCxMS2 or related workflows for EI mass spectrum calculation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2427
@@ -16,11 +17,13 @@ metadata:
   - CREST
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**orca** (version >= 6.0.0)'
 - '**molbar** (version >= 1.1.3)'

@@ -1,6 +1,8 @@
 ---
 name: gene-tokenization-representation
-description: Use when when you have GenBank-format BGC sequences with Pfam domain annotations and need to prepare them for sub-cluster detection, redundancy filtering, or natural product structure association.
+description: Use when when you have GenBank-format BGC sequences with Pfam domain
+  annotations and need to prepare them for sub-cluster detection, redundancy filtering,
+  or natural product structure association.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -9,11 +11,13 @@ metadata:
   - http://edamontology.org/topic_0160
   tools:
   - iPRESTO
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: msi-data-processing-speed-measurement
-description: Use when when you need to validate that MSI software (e.g., LipidQMap) achieves documented processing speeds on your target hardware, or when you need to establish a performance baseline before deploying the software for high-throughput imaging studies.
+description: Use when when you need to validate that MSI software (e.g., LipidQMap)
+  achieves documented processing speeds on your target hardware, or when you need
+  to establish a performance baseline before deploying the software for high-throughput
+  imaging studies.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -11,12 +14,14 @@ metadata:
   - LipidQMap
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # msi-data-processing-speed-measurement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure the end-to-end processing latency of mass spectrometry imaging (MSI) software when opening large imzML files and performing ion image import and quantification. This skill benchmarks real-world performance on target hardware to verify that processing speed meets documented specifications.

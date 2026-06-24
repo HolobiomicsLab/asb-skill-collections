@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-data-object-instantiation
-description: Use when when you have mass spectrometry data stored in non-standard formats (SQLite, HDF5, custom binary) that pymzML does not natively support, and you want to enable random-access and sequential parsing of spectra without converting to mzML first.
+description: Use when when you have mass spectrometry data stored in non-standard
+  formats (SQLite, HDF5, custom binary) that pymzML does not natively support, and
+  you want to enable random-access and sequential parsing of spectra without converting
+  to mzML first.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -14,6 +17,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,6 +47,7 @@ attribution:
 
 # mass-spectrometry-data-object-instantiation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom file handler class that wraps mass spectrometry data stored in alternative formats (e.g., SQLite databases) by implementing the `__getitem__()` and `read()` interface methods, then register it with pymzML's FileInterface to enable transparent spectrum/chromatogram object construction during parsing.

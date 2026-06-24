@@ -1,6 +1,7 @@
 ---
 name: annotation-confidence-assessment
-description: Use when after MS-FINDER in silico annotation has been executed on exported LC-MS features and multiple database matches (with HRR scores) have been returned.
+description: Use when after MS-FINDER in silico annotation has been executed on exported
+  LC-MS features and multiple database matches (with HRR scores) have been returned.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -14,6 +15,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -42,6 +44,7 @@ attribution:
 
 # annotation-confidence-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and rank in silico metabolite annotations from MS-FINDER by consolidating hydrogen rearrangement rules (HRR) scores across multiple database matches and prioritizing results according to user-defined criteria. This skill ensures only high-confidence compound identifications are retained in the final LC-MS feature annotation table.

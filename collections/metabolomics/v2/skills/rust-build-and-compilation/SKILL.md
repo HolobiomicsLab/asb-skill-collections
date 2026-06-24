@@ -1,6 +1,9 @@
 ---
 name: rust-build-and-compilation
-description: Use when when you have Rust source code (such as the mzPeak format implementation at the repository root) and need to generate executable binaries or libraries for converting mass-spectrometry file formats, validating output files, or reading/writing domain-specific formats like mzPeak.
+description: Use when when you have Rust source code (such as the mzPeak format implementation
+  at the repository root) and need to generate executable binaries or libraries for
+  converting mass-spectrometry file formats, validating output files, or reading/writing
+  domain-specific formats like mzPeak.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3565
@@ -11,6 +14,7 @@ metadata:
   - Rust
   - cargo
   - mzPeak
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -39,6 +43,7 @@ attribution:
 
 # Rust Build and Compilation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compiling Rust source code into executable binaries and libraries using cargo, the Rust package manager. This skill is essential for constructing command-line tools and libraries for scientific data format conversion and validation.

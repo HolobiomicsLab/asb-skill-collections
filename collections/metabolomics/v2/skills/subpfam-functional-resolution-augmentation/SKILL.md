@@ -1,6 +1,7 @@
 ---
 name: subpfam-functional-resolution-augmentation
-description: Use when you have annotated genes with Pfam domains but require higher functional specificity to detect natural product sub-clusters.
+description: Use when you have annotated genes with Pfam domains but require higher
+  functional specificity to detect natural product sub-clusters.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2431
@@ -10,11 +11,13 @@ metadata:
   tools:
   - iPRESTO
   - Pfam domain scanner
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
 evidence_spans:
-- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters Tool) is a command line tool for the detection of gene sub-clusters
+- iPRESTO (integrated Prediction and Rigorous Exploration of biosynthetic Sub-clusters
+  Tool) is a command line tool for the detection of gene sub-clusters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

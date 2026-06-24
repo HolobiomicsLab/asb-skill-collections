@@ -1,6 +1,9 @@
 ---
 name: spectral-data-export-and-format-conversion
-description: Use when after running RAMClustR clustering on XCMS-processed metabolomics data, export spectral data when you need to share clustered spectra with external annotation software (MSFinder, Sirius), perform spectrum matching against reference databases, or prepare results for collaborative analysis.
+description: Use when after running RAMClustR clustering on XCMS-processed metabolomics
+  data, export spectral data when you need to share clustered spectra with external
+  annotation software (MSFinder, Sirius), perform spectrum matching against reference
+  databases, or prepare results for collaborative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3790
@@ -16,13 +19,15 @@ metadata:
   - Sirius
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []
@@ -48,6 +53,7 @@ attribution:
 
 # spectral-data-export-and-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export clustered mass spectrometry spectral data from RAMClustR RC objects into standardized formats (.msp, .mat, .ms) suitable for downstream annotation and interpretation by external software. This enables seamless integration of metabolomics feature clustering results with spectrum matching and structure elucidation tools.

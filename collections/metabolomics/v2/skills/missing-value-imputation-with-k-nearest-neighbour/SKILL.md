@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-with-k-nearest-neighbour
-description: Use when you have log-transformed metabolomics data in SummarizedExperiment format organized as multiple batches, have already filtered metabolites with >50% missing values per batch and retained only those quantified across all batches via intersect method, and now need to impute remaining missing.
+description: Use when you have log-transformed metabolomics data in SummarizedExperiment
+  format organized as multiple batches, have already filtered metabolites with >50%
+  missing values per batch and retained only those quantified across all batches via
+  intersect method, and now need to impute remaining missing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,14 +16,17 @@ metadata:
   - dplyr
   - SummarizedExperiment
   - DMwR2
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
 - Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
+- we will load the hRUV package and other packages required for the demonstration...
+  library(dplyr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

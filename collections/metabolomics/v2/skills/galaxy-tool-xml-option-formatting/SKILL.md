@@ -1,6 +1,9 @@
 ---
 name: galaxy-tool-xml-option-formatting
-description: Use when when integrating a multi-backend metadata enrichment package (like MSMetaEnhancer) into Galaxy, and you need to expose all supported conversion options—such as SMILES, InChI, or CAS number conversions across multiple web services (CIR, CTS, PubChem, IDSM, BridgeDb) and compute backends.
+description: Use when when integrating a multi-backend metadata enrichment package
+  (like MSMetaEnhancer) into Galaxy, and you need to expose all supported conversion
+  options—such as SMILES, InChI, or CAS number conversions across multiple web services
+  (CIR, CTS, PubChem, IDSM, BridgeDb) and compute backends.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -19,6 +22,7 @@ metadata:
   - BridgeDb
   - RDKit
   - Galaxy
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

@@ -1,6 +1,9 @@
 ---
 name: m-z-database-matching-with-mass-tolerance
-description: Use when you have a set of observed m/z values extracted from a Cardinal MSImagingExperiment object, raw LC-MS data, or similar high-throughput MS dataset, and you need to assign them to known metabolites in a reference database (HMDB, Lipidmaps, etc.) with control over mass accuracy tolerance and.
+description: Use when you have a set of observed m/z values extracted from a Cardinal
+  MSImagingExperiment object, raw LC-MS data, or similar high-throughput MS dataset,
+  and you need to assign them to known metabolites in a reference database (HMDB,
+  Lipidmaps, etc.) with control over mass accuracy tolerance and.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -15,6 +18,7 @@ metadata:
   - Lipidmaps database
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -48,6 +52,7 @@ attribution:
 
 # m/z-database-matching-with-mass-tolerance
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass-to-charge (m/z) values from MS imaging or LC-MS experiments against a reference metabolite database using a user-specified parts-per-million (ppm) error tolerance and specified adduct types. This skill enables structural annotation of detected features by resolving which database metabolites plausibly correspond to observed ions.

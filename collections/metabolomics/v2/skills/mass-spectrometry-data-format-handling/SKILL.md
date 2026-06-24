@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-data-format-handling
-description: Use when you have raw MRM sample files from an LC-MS/MS instrument and need to programmatically identify and tabulate all precursor m/z and product m/z pairs for each MRM transition.
+description: Use when you have raw MRM sample files from an LC-MS/MS instrument and
+  need to programmatically identify and tabulate all precursor m/z and product m/z
+  pairs for each MRM transition.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,13 +18,15 @@ metadata:
   - pyOpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c02462
   title: MRMQuant
 - doi: 10.1038/nmeth.3959
   title: ''
 evidence_spans:
-- Users can install get_PrecMZ_ProdMZ in the "program/associated programs" folder to acquire precursor and product m/z values in an MRM sample file.
+- Users can install get_PrecMZ_ProdMZ in the "program/associated programs" folder
+  to acquire precursor and product m/z values in an MRM sample file.
 - Be sure to use the latest version (currently MRMQuant v2.7).
 - how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled)
 claims: []
@@ -52,6 +56,7 @@ attribution:
 
 # mass-spectrometry-data-format-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract precursor and product m/z values from LC-MS/MS MRM (multiple reaction monitoring) raw data files using specialized utility software. This skill transforms raw instrument output into structured m/z pair tables, which serve as the foundation for subsequent MRM transition quantification workflows.

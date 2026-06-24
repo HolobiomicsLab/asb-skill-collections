@@ -1,6 +1,8 @@
 ---
 name: mzml-to-mzpeak-binary-serialization
-description: Use when you have one or more mzML files (XML-based mass spectrometry data) and need to convert them into mzPeak format for downstream analysis, archival, or integration with tools that consume Parquet-based spectra.
+description: Use when you have one or more mzML files (XML-based mass spectrometry
+  data) and need to convert them into mzPeak format for downstream analysis, archival,
+  or integration with tools that consume Parquet-based spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -14,6 +16,7 @@ metadata:
   - Apache Arrow (R)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -41,6 +44,7 @@ attribution:
 
 # mzml-to-mzpeak-binary-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry data from mzML format into the mzPeak binary Parquet-based archive format using the Rust command-line converter tool. This skill enables transformation of vendor-neutral XML-based spectra into a scalable, interoperable columnar storage format optimized for random access and compression.

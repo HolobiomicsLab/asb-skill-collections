@@ -1,6 +1,8 @@
 ---
 name: chemodiversity-metric-calculation
-description: Use when when you have sum-normalized peak-abundance matrices from FT-ICR MS data with assigned molecular formulas and need to compare metabolite diversity between treatment groups (e.g., inoculated vs. control samples).
+description: Use when when you have sum-normalized peak-abundance matrices from FT-ICR
+  MS data with assigned molecular formulas and need to compare metabolite diversity
+  between treatment groups (e.g., inoculated vs. control samples).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +15,14 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - diversity metrics using functions from the R packages vegan [63]
 - diversity metrics using functions from the R packages vegan
 - diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
@@ -46,6 +50,7 @@ attribution:
 
 # chemodiversity-metric-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate abundance-based and functional-based diversity metrics on filtered FT-ICR MS peak matrices to quantify metabolite richness and functional trait diversity in environmental or experimental samples. This skill enables comparative assessment of how treatments (e.g., microbial inoculation) shift both the number of distinct metabolites and their decomposability, aromaticity, and elemental composition profiles.

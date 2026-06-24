@@ -1,6 +1,9 @@
 ---
 name: ms-vendor-documentation-extraction
-description: Use when you need to determine the complete set of validated instrument/vendor and acquisition mode combinations for a mass spectrometry analysis tool, when assessing whether your specific instrument platform (vendor, model, acquisition method) is supported before committing to a workflow, or when.
+description: Use when you need to determine the complete set of validated instrument/vendor
+  and acquisition mode combinations for a mass spectrometry analysis tool, when assessing
+  whether your specific instrument platform (vendor, model, acquisition method) is
+  supported before committing to a workflow, or when.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -16,6 +19,7 @@ metadata:
   - SCIEX Q-TOF UHPLC-HRMS/MS
   techniques:
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

@@ -1,6 +1,8 @@
 ---
 name: blank-sample-feature-filtering
-description: Use when you have a feature quantification table exported from MZmine3 processing of non-targeted LC-MS/MS data and your experimental design includes blank (negative control) samples.
+description: Use when you have a feature quantification table exported from MZmine3
+  processing of non-targeted LC-MS/MS data and your experimental design includes blank
+  (negative control) samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,7 @@ metadata:
   - FBMN-STATS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

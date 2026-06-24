@@ -1,6 +1,8 @@
 ---
 name: rust-build-system-execution
-description: Use when you have obtained a Rust source repository (e.g., mzpeak_prototyping) and need to compile it into a working command-line converter tool or library. Use this skill when the source includes a Cargo.
+description: Use when you have obtained a Rust source repository (e.g., mzpeak_prototyping)
+  and need to compile it into a working command-line converter tool or library. Use
+  this skill when the source includes a Cargo.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0004
@@ -14,6 +16,7 @@ metadata:
   - mzpeak_prototyping
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -42,6 +45,7 @@ attribution:
 
 # rust-build-system-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build and compile a Rust project using cargo to produce executable command-line tools or libraries. This skill is essential for preparing prototype bioinformatics software—such as mass spectrometry format converters—from source code into runnable binaries.

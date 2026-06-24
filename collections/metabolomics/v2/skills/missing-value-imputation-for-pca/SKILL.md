@@ -1,6 +1,9 @@
 ---
 name: missing-value-imputation-for-pca
-description: Use when your metabolomic dataset contains missing values (common in untargeted or targeted mass spectrometry data) and you need to perform PCA for outlier detection at multiple standard deviation thresholds (e.g., 3 SD, 4 SD, 5 SD) on principal component scores.
+description: Use when your metabolomic dataset contains missing values (common in
+  untargeted or targeted mass spectrometry data) and you need to perform PCA for outlier
+  detection at multiple standard deviation thresholds (e.g., 3 SD, 4 SD, 5 SD) on
+  principal component scores.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - metaboprep
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep
@@ -42,6 +46,7 @@ attribution:
 
 # missing-value-imputation-for-pca
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Impute missing values to the median prior to principal component analysis in metabolomic datasets to enable PCA-based outlier detection and dimensionality reduction. This preprocessing step is essential because PCA requires a complete data matrix and median imputation preserves the distributional properties needed for downstream SD-based outlier thresholding.

@@ -1,6 +1,9 @@
 ---
 name: directional-effect-assignment-across-studies
-description: Use when you have harmonized metabolite results from multiple independent studies, each with fold-change or trend classification data but no variance/standard deviation, and you need to produce a qualitative consensus on directionality for each compound.
+description: Use when you have harmonized metabolite results from multiple independent
+  studies, each with fold-change or trend classification data but no variance/standard
+  deviation, and you need to produce a qualitative consensus on directionality for
+  each compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,14 +18,17 @@ metadata:
   - check_names
   - vote_plot
   - explore_plot
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # directional-effect-assignment-across-studies
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns directional votes (+1 for up-regulation, −1 for down-regulation, 0 for no trend) to each metabolite compound within individual studies, then sums votes across all studies to produce a qualitative consensus measure. This vote-counting approach enables metabolomic meta-analysis when standard deviation or variance data are unavailable.

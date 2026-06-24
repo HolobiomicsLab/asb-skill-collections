@@ -1,6 +1,9 @@
 ---
 name: ms-data-format-identification
-description: 'Use when when receiving raw MS data files of unknown or mixed acquisition modalities and needing to route each to its corresponding analysis pipeline. Specifically, apply this skill when: (1) input files arrive without documented instrument type or chromatographic/mobility dimensionality;'
+description: 'Use when when receiving raw MS data files of unknown or mixed acquisition
+  modalities and needing to route each to its corresponding analysis pipeline. Specifically,
+  apply this skill when: (1) input files arrive without documented instrument type
+  or chromatographic/mobility dimensionality;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -15,6 +18,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -45,6 +49,7 @@ attribution:
 
 # ms-data-format-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and classify mass spectrometry data types (LC, GC, IMS, MS imaging) by scanning file headers, metadata, and instrument signatures to enable correct routing to specialized analysis modules. This skill is essential for automated MS data workflow dispatch in multi-modality platforms like mzmine.

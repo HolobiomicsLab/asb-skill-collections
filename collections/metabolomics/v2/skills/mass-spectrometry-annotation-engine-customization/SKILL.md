@@ -1,6 +1,7 @@
 ---
 name: mass-spectrometry-annotation-engine-customization
-description: Use when when you have baseline MS/MS peak annotations from a known compound but need to refine them using newly available structural information (e.
+description: Use when when you have baseline MS/MS peak annotations from a known compound
+  but need to refine them using newly available structural information (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,6 +18,7 @@ metadata:
   - MAGMaAnnotationEngine
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -26,7 +28,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +53,7 @@ attribution:
 
 # mass-spectrometry-annotation-engine-customization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Customize and refine MS/MS peak annotations by swapping or chaining annotation engines (e.g., CosineAlignmentEngine, MAGMaAnnotationEngine) and propagating structural constraints through peak-to-fragment mappings to improve modification site localization confidence. This skill is essential when baseline annotations are insufficient or when oracle (known structure) information becomes available mid-workflow.

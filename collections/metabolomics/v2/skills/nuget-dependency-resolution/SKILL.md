@@ -1,6 +1,9 @@
 ---
 name: nuget-dependency-resolution
-description: Use when you are preparing to build a .NET project (WPF, class library, or console application) and need to ensure all declared NuGet package dependencies are available in the build environment. This is particularly necessary when the project uses custom or private package sources (e.
+description: Use when you are preparing to build a .NET project (WPF, class library,
+  or console application) and need to ensure all declared NuGet package dependencies
+  are available in the build environment. This is particularly necessary when the
+  project uses custom or private package sources (e.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -10,12 +13,14 @@ metadata:
   - .NET Standard
   - NuGet Package Manager
   - Visual Studio
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
 - utilizing packages such as ReactiveExtensions and ReactiveProperty
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +44,7 @@ attribution:
 
 # NuGet Dependency Resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve and restore .NET NuGet package dependencies required to build a .NET project, including managing package sources and version specifications. This skill is essential when building .NET Framework or .NET Core projects to ensure all required libraries (e.g., ReactiveExtensions, ReactiveProperty) are available before compilation.

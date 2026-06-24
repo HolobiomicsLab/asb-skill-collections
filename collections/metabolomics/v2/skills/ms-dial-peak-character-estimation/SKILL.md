@@ -1,6 +1,9 @@
 ---
 name: ms-dial-peak-character-estimation
-description: Use when you have a filtered MS-DIAL peak list (post-generic filtering, containing m/z, retention time, and peak intensity metrics for each feature) and need to group features into clusters that represent true metabolite signals rather than instrumental or chemical artifacts.
+description: Use when you have a filtered MS-DIAL peak list (post-generic filtering,
+  containing m/z, retention time, and peak intensity metrics for each feature) and
+  need to group features into clusters that represent true metabolite signals rather
+  than instrumental or chemical artifacts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,12 +16,14 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
 evidence_spans:
 - Needs MS-DIAL (v4.00 or higher)
-- Needs MS-DIAL (v4.00 or higher) ... MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis (DDA) or data independent analysis (DIA)
+- Needs MS-DIAL (v4.00 or higher) ... MS-CleanR use as input MS-DIAL peak list processed
+  in data dependent analysis (DDA) or data independent analysis (DIA)
 - MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
 claims: []
 provenance:
@@ -43,6 +48,7 @@ attribution:
 
 # ms-dial-peak-character-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Applies the MS-DIAL peak character estimation algorithm to compute feature similarity based on peak shape and chromatographic properties, enabling network-based clustering of LC-MS features prior to parental signal extraction. This skill is essential for reducing feature redundancy in untargeted metabolomics workflows by grouping adducts, isotopes, and in-source fragments into coherent clusters.

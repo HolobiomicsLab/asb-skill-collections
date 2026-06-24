@@ -1,6 +1,8 @@
 ---
 name: field-exclusion-filtering
-description: Use when when transforming tabular data via the matrix directive and you need to copy most or all fields from input records into output dictionaries, but must explicitly exclude certain named fields (e.
+description: Use when when transforming tabular data via the matrix directive and
+  you need to copy most or all fields from input records into output dictionaries,
+  but must explicitly exclude certain named fields (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - Python
   - MESSES
   - messes convert command
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -42,6 +45,7 @@ attribution:
 
 # field-exclusion-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selectively remove specified fields from tabular records during matrix directive transformation, allowing practitioners to copy all fields from input records into output dictionaries while excluding unwanted columns by name. This is essential when converting intermediate JSON table data to final formats where certain fields must be omitted.

@@ -1,6 +1,8 @@
 ---
 name: motif-pseudo-spectra-optimization-filtering
-description: Use when after LDA has converged and inferred Mass2Motifs from preprocessed mass spectrometry spectral data, when the raw motif-fragment distributions contain noise or low-confidence associations that obscure the dominant fragmentation patterns.
+description: Use when after LDA has converged and inferred Mass2Motifs from preprocessed
+  mass spectrometry spectral data, when the raw motif-fragment distributions contain
+  noise or low-confidence associations that obscure the dominant fragmentation patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,11 +18,13 @@ metadata:
   - Spec2Vec
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

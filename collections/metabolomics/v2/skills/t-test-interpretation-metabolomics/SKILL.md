@@ -1,6 +1,8 @@
 ---
 name: t-test-interpretation-metabolomics
-description: Use when you have preprocessed, normalized, and imputed metabolite measurements organized in a MultiAssayExperiment object with two or more clearly defined sample groups (e.
+description: Use when you have preprocessed, normalized, and imputed metabolite measurements
+  organized in a MultiAssayExperiment object with two or more clearly defined sample
+  groups (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - MetaboDiff
   - R
   - MultiAssayExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -45,6 +48,7 @@ attribution:
 
 # t-test-interpretation-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Student's t-test with Benjamini-Hochberg multiple testing correction to identify differentially abundant metabolites between sample groups in a MultiAssayExperiment object, then extract and interpret p-values and effect sizes to detect statistically significant metabolic signatures.

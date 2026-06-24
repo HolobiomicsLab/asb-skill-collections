@@ -1,6 +1,8 @@
 ---
 name: spectral-library-metadata-reorganization
-description: Use when when ingesting mass spectral libraries (EI or MS2) where SMILES information is embedded in the Comment field rather than in a dedicated SMILES metadata field—particularly common in MoNA GC-MS and LC-MS/MS exports.
+description: Use when when ingesting mass spectral libraries (EI or MS2) where SMILES
+  information is embedded in the Comment field rather than in a dedicated SMILES metadata
+  field—particularly common in MoNA GC-MS and LC-MS/MS exports.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -43,6 +46,7 @@ attribution:
 
 # spectral-library-metadata-reorganization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reorganize embedded chemical metadata within mass spectral library records by extracting SMILES notation from unstructured comment fields and populating dedicated structured metadata slots. This ensures proper organization and downstream compatibility with spectral matching and analysis tools like MS-DIAL.

@@ -1,6 +1,7 @@
 ---
 name: pytorch-tensor-shape-validation
-description: Use when after implementing a transformer encoder backbone with masking mechanisms in PyTorch, before training on mass spectra data.
+description: Use when after implementing a transformer encoder backbone with masking
+  mechanisms in PyTorch, before training on mass spectra data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,6 +19,7 @@ metadata:
   - MSBERT
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

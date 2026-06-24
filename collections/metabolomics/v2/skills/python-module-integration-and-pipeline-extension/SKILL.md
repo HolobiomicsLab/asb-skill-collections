@@ -1,6 +1,9 @@
 ---
 name: python-module-integration-and-pipeline-extension
-description: Use when you have developed new scoring logic (e.g., average inchikey score, neighbourhood score) for an MS/MS spectral analogue search tool and need to embed these components into an existing production pipeline that uses a random forest to combine multiple features for candidate re-ranking.
+description: Use when you have developed new scoring logic (e.g., average inchikey
+  score, neighbourhood score) for an MS/MS spectral analogue search tool and need
+  to embed these components into an existing production pipeline that uses a random
+  forest to combine multiple features for candidate re-ranking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +16,7 @@ metadata:
   - GitHub
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
@@ -20,7 +24,8 @@ evidence_spans:
 - you want to make some kind of change to the code base
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
 - make sure the existing tests still work by running ``python setup.py test``
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:

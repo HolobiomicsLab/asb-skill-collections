@@ -1,6 +1,8 @@
 ---
 name: hierarchical-cluster-analysis-dendrogram-generation
-description: Use when you have a feature-by-sample matrix (finalData) of metabolomic intensities and sample group labels (finalLabel), and you want to visualize how samples cluster together based on their overall metabolomic similarity.
+description: Use when you have a feature-by-sample matrix (finalData) of metabolomic
+  intensities and sample group labels (finalLabel), and you want to visualize how
+  samples cluster together based on their overall metabolomic similarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -11,13 +13,16 @@ metadata:
   - LargeMetabo
   - factoextra
   - ggplot2
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
 - install_github("LargeMetabo/LargeMetabo", force = TRUE, build_vignettes = TRUE)
-- several R packages are utilized in the background processes, including factoextra, FSelector, genefilter
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
+- several R packages are utilized in the background processes, including factoextra,
+  FSelector, genefilter
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # hierarchical-cluster-analysis-dendrogram-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply hierarchical clustering analysis (HCA) to metabolomic feature matrices to produce dendrograms that visualize sample groupings and separation by metabolic profile. This skill is used when you need to discover and display unsupervised clustering structure in high-dimensional metabolomic data without requiring prior knowledge of sample group labels.

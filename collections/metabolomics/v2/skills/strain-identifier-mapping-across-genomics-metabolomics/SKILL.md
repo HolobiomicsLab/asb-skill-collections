@@ -1,6 +1,9 @@
 ---
 name: strain-identifier-mapping-across-genomics-metabolomics
-description: Use when when preparing multiomics datasets for NPLinker that combine GNPS metabolomics, AntiSMASH genomics, and MIBiG reference data, and you need to establish which strain IDs or sample identifiers appear in both genomic and metabolomic experiments.
+description: Use when when preparing multiomics datasets for NPLinker that combine
+  GNPS metabolomics, AntiSMASH genomics, and MIBiG reference data, and you need to
+  establish which strain IDs or sample identifiers appear in both genomic and metabolomic
+  experiments.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -18,6 +21,7 @@ metadata:
   - BigScape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

@@ -1,6 +1,8 @@
 ---
 name: chromatographic-peak-processing
-description: Use when after peak detection when you have a table of detected peaks with m/z values and retention times from LC/HRMS data, and you observe systematic m/z drift across a batch or population-scale study (n > 500 samples).
+description: Use when after peak detection when you have a table of detected peaks
+  with m/z values and retention times from LC/HRMS data, and you observe systematic
+  m/z drift across a batch or population-scale study (n > 500 samples).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +15,14 @@ metadata:
   - RnetCDF
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -42,6 +47,7 @@ attribution:
 
 # Reconstruct the recursive mass correction stage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recursive mass correction refines m/z accuracy of detected LC/HRMS peaks by recalibrating against internal reference standards or lock masses. This is a critical post-detection stage in untargeted metabolomics workflows that improves downstream peak alignment and annotation reliability.

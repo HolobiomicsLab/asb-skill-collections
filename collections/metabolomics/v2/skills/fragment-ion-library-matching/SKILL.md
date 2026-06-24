@@ -1,6 +1,9 @@
 ---
 name: fragment-ion-library-matching
-description: Use when you have peak-picked experimental MS/MS data (m/z, retention time, intensity) from UHPLC-HRMS/MS instruments (Orbitrap or Q-TOF from Agilent, Bruker, SCIEX, or similar vendors) and need to annotate detected features with specific lipid identifications using in-silico fragmentation.
+description: Use when you have peak-picked experimental MS/MS data (m/z, retention
+  time, intensity) from UHPLC-HRMS/MS instruments (Orbitrap or Q-TOF from Agilent,
+  Bruker, SCIEX, or similar vendors) and need to annotate detected features with specific
+  lipid identifications using in-silico fragmentation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -16,12 +19,15 @@ metadata:
   - Q-Exactive
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
 claims: []
 provenance:

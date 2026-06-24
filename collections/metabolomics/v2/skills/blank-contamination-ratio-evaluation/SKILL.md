@@ -1,6 +1,8 @@
 ---
 name: blank-contamination-ratio-evaluation
-description: Use when you have a feature intensity matrix with both blank and QC (quality control) samples and need to remove features whose background contamination is too high relative to their signal in QC samples.
+description: Use when you have a feature intensity matrix with both blank and QC (quality
+  control) samples and need to remove features whose background contamination is too
+  high relative to their signal in QC samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -12,13 +14,15 @@ metadata:
   - GetFeatistics
   - XCMS
   - MS-Dial
+  license_tier: open
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics
 evidence_spans:
 - R (version ≥ 4.3.1)
 - devtools::install_github("FrigerioGianfranco/GetFeatistics", dependencies = TRUE)
-- The **GetFeatistics** (GF) package provides several functions useful for the elaboration of metabolomics data
+- The **GetFeatistics** (GF) package provides several functions useful for the elaboration
+  of metabolomics data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

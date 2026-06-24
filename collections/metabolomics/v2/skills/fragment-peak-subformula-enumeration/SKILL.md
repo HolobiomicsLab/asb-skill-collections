@@ -1,6 +1,8 @@
 ---
 name: fragment-peak-subformula-enumeration
-description: Use when you have a list of fragment peak m/z values and intensities from tandem MS/MS data and need to assign chemical subformulae to each peak for downstream formula ranking or structure inference.
+description: Use when you have a list of fragment peak m/z values and intensities
+  from tandem MS/MS data and need to assign chemical subformulae to each peak for
+  downstream formula ranking or structure inference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,11 +15,13 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +45,7 @@ attribution:
 
 # fragment-peak-subformula-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate and rank all chemically valid molecular subformulae for each observed fragment peak in a tandem mass spectrum without relying on external fragmentation tree databases. This skill assigns chemical subformulae to fragment m/z values using energy-based scoring and chemical validity constraints, enabling de novo metabolite characterization.

@@ -1,6 +1,9 @@
 ---
 name: formula-based-network-construction
-description: Use when you have a formula-assigned dataset from FT-ICR MS (or other compound-annotated mass spectrometry) and you want to characterize molecular transformations and their co-occurrence patterns—particularly in studies of DOM reactivity, fermentation, or oxidative treatment of organic mixtures.
+description: Use when you have a formula-assigned dataset from FT-ICR MS (or other
+  compound-annotated mass spectrometry) and you want to characterize molecular transformations
+  and their co-occurrence patterns—particularly in studies of DOM reactivity, fermentation,
+  or oxidative treatment of organic mixtures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -11,11 +14,13 @@ metadata:
   - MoleTrans
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans
 evidence_spans:
-- MoleTrans is a webtool for post analysis and data mining on the formula assigned datasets from FT-ICR MS
+- MoleTrans is a webtool for post analysis and data mining on the formula assigned
+  datasets from FT-ICR MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

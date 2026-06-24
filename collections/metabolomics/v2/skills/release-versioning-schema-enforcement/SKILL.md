@@ -1,12 +1,16 @@
 ---
 name: release-versioning-schema-enforcement
-description: Use when when preparing a release branch for a Maven-based project (like NMRFx) and you need to verify that all pom.xml files in the repository tree declare identical version strings before applying release branch naming conventions (e.g., 'release/X.Y.Z').
+description: Use when when preparing a release branch for a Maven-based project (like
+  NMRFx) and you need to verify that all pom.xml files in the repository tree declare
+  identical version strings before applying release branch naming conventions (e.g.,
+  'release/X.Y.Z').
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - NMRFx
   - Git
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -36,6 +40,7 @@ attribution:
 
 # release-versioning-schema-enforcement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that all pom.xml version declarations across a multi-module Maven project are synchronized before release branch creation. This prevents version conflicts and ensures consistent artifact versioning during the release procedure.

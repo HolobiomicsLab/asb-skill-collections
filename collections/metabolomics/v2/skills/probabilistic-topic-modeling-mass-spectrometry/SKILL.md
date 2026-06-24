@@ -1,6 +1,9 @@
 ---
 name: probabilistic-topic-modeling-mass-spectrometry
-description: Use when you have preprocessed tandem mass spectrometry spectra converted into a bag-of-fragments representation (with fragments and neutral losses extracted and noise filtered) and your goal is to discover recurring fragmentation patterns or substructures across a large spectral dataset without.
+description: Use when you have preprocessed tandem mass spectrometry spectra converted
+  into a bag-of-fragments representation (with fragments and neutral losses extracted
+  and noise filtered) and your goal is to discover recurring fragmentation patterns
+  or substructures across a large spectral dataset without.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -14,12 +17,14 @@ metadata:
   - Spec2Vec
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - Apply LDA to the processed spectra
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 claims: []

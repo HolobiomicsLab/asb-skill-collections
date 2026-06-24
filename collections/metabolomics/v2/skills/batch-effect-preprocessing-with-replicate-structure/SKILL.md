@@ -1,6 +1,9 @@
 ---
 name: batch-effect-preprocessing-with-replicate-structure
-description: Use when you have metabolomics data from multiple experimental batches (≥2) with embedded replicate samples (identical samples run at different points within or across batches), log-transformed raw assays containing ≥50% missing values per batch, and a need to harmonise metabolite quantification.
+description: Use when you have metabolomics data from multiple experimental batches
+  (≥2) with embedded replicate samples (identical samples run at different points
+  within or across batches), log-transformed raw assays containing ≥50% missing values
+  per batch, and a need to harmonise metabolite quantification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,14 +18,17 @@ metadata:
   - SummarizedExperiment
   - RUV-III
   - DMwR2
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
-- '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
+- '`hRUV` is a package for normalisation of multiple batches of metabolomics data
+  in a hierarchical strategy'
 - Install the R package from GitHub using the `devtools` package
-- we will load the hRUV package and other packages required for the demonstration... library(dplyr)
+- we will load the hRUV package and other packages required for the demonstration...
+  library(dplyr)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

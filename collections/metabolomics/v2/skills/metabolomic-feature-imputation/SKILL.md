@@ -1,6 +1,9 @@
 ---
 name: metabolomic-feature-imputation
-description: Use when when a preprocessed metabolomic feature table (e.g., MS-Dial output) retains features and samples that passed filtering for missingness thresholds and m/z validity, but still contain scattered missing values (NA). This skill is appropriate after sample-level filtering (e.
+description: Use when when a preprocessed metabolomic feature table (e.g., MS-Dial
+  output) retains features and samples that passed filtering for missingness thresholds
+  and m/z validity, but still contain scattered missing values (NA). This skill is
+  appropriate after sample-level filtering (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3662
@@ -14,13 +17,16 @@ metadata:
   - MS-Dial
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
@@ -48,6 +54,7 @@ attribution:
 
 # metabolomic-feature-imputation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace missing values in metabolomic feature tables using a minimum-value-based random substitution strategy, after applying upstream feature and sample-level filtering. This skill is applied after excluding features with incorrect m/z values and samples/features with excessive missingness, to recover measurable but undetected metabolite signals without artificially amplifying noise.

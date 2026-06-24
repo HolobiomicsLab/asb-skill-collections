@@ -1,6 +1,7 @@
 ---
 name: java-maven-build-orchestration
-description: Use when when you have access to a Java project with a Maven pom.xml defining multiple interdependent modules (e.
+description: Use when when you have access to a Java project with a Maven pom.xml
+  defining multiple interdependent modules (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3434
@@ -13,6 +14,7 @@ metadata:
   - Java
   - Apache Maven
   - Tomcat
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
@@ -43,6 +45,7 @@ attribution:
 
 # java-maven-build-orchestration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate multi-module Maven builds for Java projects with explicit dependency resolution and selective compilation. This skill applies when you need to compile a modular Java project (like MetFragRelaunched) that exposes library, command-line, R, and web interface variants from a single source tree.

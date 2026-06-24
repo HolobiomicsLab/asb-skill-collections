@@ -1,6 +1,8 @@
 ---
 name: normalized-enrichment-score-computation
-description: Use when you have differential analysis results (p-values and log2 fold changes) from metabolomics data and need to assess whether predefined sets of metabolites (metabolic pathways) show coordinated enrichment patterns.
+description: Use when you have differential analysis results (p-values and log2 fold
+  changes) from metabolomics data and need to assess whether predefined sets of metabolites
+  (metabolic pathways) show coordinated enrichment patterns.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -15,11 +17,13 @@ metadata:
   - enrichmet
   - KEGGREST
   - readr / readxl
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 evidence_spans:
-- simplifies pathway enrichment analysis by allowing the complete workflow to be executed through a single R function call
+- simplifies pathway enrichment analysis by allowing the complete workflow to be executed
+  through a single R function call
 - enrichmet integrates fgsea for fast MetSEA
 - library(readr)
 - library(readxl)

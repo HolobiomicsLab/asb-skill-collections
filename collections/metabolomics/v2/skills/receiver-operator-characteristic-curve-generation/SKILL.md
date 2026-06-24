@@ -1,6 +1,9 @@
 ---
 name: receiver-operator-characteristic-curve-generation
-description: Use when when you have computed similarity scores (cosine, modified cosine, Spec2Vec, or other metrics) between a set of query spectra and a reference library with known structural annotations (InChIKey), and you need to evaluate how well each scoring method distinguishes true structural matches.
+description: Use when when you have computed similarity scores (cosine, modified cosine,
+  Spec2Vec, or other metrics) between a set of query spectra and a reference library
+  with known structural annotations (InChIKey), and you need to evaluate how well
+  each scoring method distinguishes true structural matches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -19,16 +22,21 @@ metadata:
   - scikit-learn or scipy.metrics
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
+  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -52,6 +60,7 @@ attribution:
 
 # receiver-operator-characteristic-curve-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct ROC curves by ranking query spectra against a reference library and classifying hits as true or false positives based on structural identity (InChIKey), then computing and plotting true-positive rate versus false-positive rate across similarity score thresholds. This enables quantitative comparison of spectral similarity methods' discriminative power.

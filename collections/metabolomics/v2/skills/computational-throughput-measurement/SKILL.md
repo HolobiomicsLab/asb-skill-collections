@@ -1,6 +1,9 @@
 ---
 name: computational-throughput-measurement
-description: Use when when you need to compare the computational efficiency of different mass spectrometry libraries on identical data and processing pipelines, or when you want to establish baseline throughput for a library version and validate claims of performance improvement.
+description: Use when when you need to compare the computational efficiency of different
+  mass spectrometry libraries on identical data and processing pipelines, or when
+  you want to establish baseline throughput for a library version and validate claims
+  of performance improvement.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -21,6 +24,7 @@ metadata:
   - NumPy, matplotlib, seaborn
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -54,6 +58,7 @@ attribution:
 
 # computational-throughput-measurement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the processing rate (spectra per second) of mass spectrometry data processing libraries by measuring wall-clock execution time on standardized datasets and filtering parameters. This skill enables fair performance comparison across tools like spectrum_utils, pymzML, and pyOpenMS.

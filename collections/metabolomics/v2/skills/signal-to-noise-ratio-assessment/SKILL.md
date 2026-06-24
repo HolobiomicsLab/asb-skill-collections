@@ -1,6 +1,8 @@
 ---
 name: signal-to-noise-ratio-assessment
-description: Use when when preparing a 1D 1H NMR spectral peak list for input to the NMRformer metabolite identification model, and you have access to peak intensity measurements and noise level estimates.
+description: Use when when preparing a 1D 1H NMR spectral peak list for input to the
+  NMRformer metabolite identification model, and you have access to peak intensity
+  measurements and noise level estimates.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -15,6 +17,7 @@ metadata:
   - NMRformer
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05632
   title: NMRformer

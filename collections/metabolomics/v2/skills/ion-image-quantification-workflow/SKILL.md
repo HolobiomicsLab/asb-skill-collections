@@ -1,6 +1,8 @@
 ---
 name: ion-image-quantification-workflow
-description: Use when when you have imzML mass spectrometry imaging data files and need to convert raw ion image intensities into quantitative lipid abundance (pmol/mm²) using known internal standards.
+description: Use when when you have imzML mass spectrometry imaging data files and
+  need to convert raw ion image intensities into quantitative lipid abundance (pmol/mm²)
+  using known internal standards.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -15,12 +17,14 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # ion-image-quantification-workflow
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A workflow for accurate quantitation of Mass Spectrometry Imaging (MSI) data by importing imzML files, applying isotopic correction, and quantifying lipid ion images against user-defined internal standards. This workflow enables conversion of raw ion intensities to quantitative lipid abundance measurements.

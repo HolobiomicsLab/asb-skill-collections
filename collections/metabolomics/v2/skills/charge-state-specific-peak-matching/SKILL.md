@@ -1,6 +1,8 @@
 ---
 name: charge-state-specific-peak-matching
-description: Use when you have peak-picked features with m/z, drift_time, retention_time, and intensity columns, and you need to identify monoisotopic peaks and their charge-state-specific isotopologue members (e.g., singly charged C13-substituted species).
+description: Use when you have peak-picked features with m/z, drift_time, retention_time,
+  and intensity columns, and you need to identify monoisotopic peaks and their charge-state-specific
+  isotopologue members (e.g., singly charged C13-substituted species).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3643
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -42,6 +45,7 @@ attribution:
 
 # charge-state-specific-peak-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and match isotopologue patterns within a single charge state by enumerating mass offsets (e.g., C13 substitutions) and applying multi-dimensional tolerances on m/z, drift time, and retention time. This skill ensures that isotopic signatures are correctly attributed to their charge state, improving feature annotation accuracy in high-dimensional mass spectrometry workflows.

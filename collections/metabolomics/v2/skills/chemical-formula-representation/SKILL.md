@@ -1,6 +1,8 @@
 ---
 name: chemical-formula-representation
-description: Use when you need to feed chemical formulas into a neural network-based formula scorer (such as MIST-CF) that must learn data-dependent representations of formula structure and composition.
+description: Use when you need to feed chemical formulas into a neural network-based
+  formula scorer (such as MIST-CF) that must learn data-dependent representations
+  of formula structure and composition.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,13 +16,15 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +48,7 @@ attribution:
 
 # Chemical Formula Representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode chemical formulas into learnable vector embeddings using sinusoidal positional encoding (SCARF embeddings) to enable neural network processing of formula structure. This technique is essential for formula transformer architectures that rank candidate chemical formulas against unknown mass spectra without referencing spectral databases.

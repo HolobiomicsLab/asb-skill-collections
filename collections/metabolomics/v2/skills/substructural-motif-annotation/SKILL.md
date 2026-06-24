@@ -1,6 +1,9 @@
 ---
 name: substructural-motif-annotation
-description: Use when you have created a GNPS molecular network (classical or feature-based workflow) and separately run an MS2LDA experiment on the corresponding MGF file, and you want to associate each network node with its constituent substructural motifs and visualize which motifs are shared between.
+description: Use when you have created a GNPS molecular network (classical or feature-based
+  workflow) and separately run an MS2LDA experiment on the corresponding MGF file,
+  and you want to associate each network node with its constituent substructural motifs
+  and visualize which motifs are shared between.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -16,11 +19,13 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

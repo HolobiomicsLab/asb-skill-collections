@@ -1,6 +1,7 @@
 ---
 name: unwanted-variation-removal
-description: Use when metabolomics featuredata exhibits unwanted variation from batch effects, matrix effects, or confounding factors;
+description: Use when metabolomics featuredata exhibits unwanted variation from batch
+  effects, matrix effects, or confounding factors;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,13 +16,16 @@ metadata:
   - MissingValues
   - NormQcmets
   - RlaPlots
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # unwanted-variation-removal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove unwanted batch effects, matrix effects, and confounding biological variation from metabolomics feature matrices using statistical normalization methods. This skill selects and applies normalization methods (internal standards, RUV-based approaches, or combined methods) to produce normalized metabolite intensity data suitable for downstream biomarker analysis.

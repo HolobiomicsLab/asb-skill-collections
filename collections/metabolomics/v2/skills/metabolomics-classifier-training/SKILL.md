@@ -1,6 +1,9 @@
 ---
 name: metabolomics-classifier-training
-description: Use when you have a preprocessed metabolomics feature matrix (expression matrix with metabolite abundances as columns and samples as rows) with corresponding binary or multi-class sample labels, and you need to train and compare classifier performance to select the -performing model for disease.
+description: Use when you have a preprocessed metabolomics feature matrix (expression
+  matrix with metabolite abundances as columns and samples as rows) with corresponding
+  binary or multi-class sample labels, and you need to train and compare classifier
+  performance to select the -performing model for disease.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,12 +17,15 @@ metadata:
   - h2o
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 - DL via h2o
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: sparsity-metric-computation
-description: Use when when you have loaded a dataset of molecular fingerprint vectors (such as biosynfoni fingerprints from a Zenodo deposit) and need to quantify how sparse the bit-representations are—that is, what fraction of bit positions are zero across the fingerprint collection.
+description: Use when when you have loaded a dataset of molecular fingerprint vectors
+  (such as biosynfoni fingerprints from a Zenodo deposit) and need to quantify how
+  sparse the bit-representations are—that is, what fraction of bit positions are zero
+  across the fingerprint collection.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3440
@@ -10,12 +13,14 @@ metadata:
   tools:
   - biosynfoni
   - pip
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
 evidence_spans:
 - biosynfoni
-- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
+- a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic
+  research
 - pip install -e .[dev]
 claims: []
 provenance:

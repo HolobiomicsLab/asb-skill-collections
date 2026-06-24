@@ -1,6 +1,9 @@
 ---
 name: spectra-object-instantiation-and-manipulation
-description: Use when you have mass spectrometry spectral data (m/z and intensity pairs, precursor m/z, MS level, and metadata) in R memory or in a file format (mzML, mzXML, CDF, MGF, MSP), and you need to organize it into a queryable, processable object before performing spectral similarity calculations.
+description: Use when you have mass spectrometry spectral data (m/z and intensity
+  pairs, precursor m/z, MS level, and metadata) in R memory or in a file format (mzML,
+  mzXML, CDF, MGF, MSP), and you need to organize it into a queryable, processable
+  object before performing spectral similarity calculations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3218
@@ -16,13 +19,17 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
-- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
+- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:
@@ -47,6 +54,7 @@ attribution:
 
 # Spectra-object-instantiation-and-manipulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create and manipulate Spectra objects in R to represent mass spectrometry data, enabling downstream MS analysis workflows. This skill bridges raw or tabular MS data into R's native Spectra infrastructure, which supports efficient backends, spectral processing, and cross-language integration.

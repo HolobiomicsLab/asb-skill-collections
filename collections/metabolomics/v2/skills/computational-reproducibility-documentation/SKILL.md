@@ -1,6 +1,8 @@
 ---
 name: computational-reproducibility-documentation
-description: Use when when releasing or archiving a computational workflow (e.g., an R or Python-based normalization pipeline) and you need to ensure that future users or reviewers can re-run the analysis in an identical computational environment.
+description: Use when when releasing or archiving a computational workflow (e.g.,
+  an R or Python-based normalization pipeline) and you need to ensure that future
+  users or reviewers can re-run the analysis in an identical computational environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -16,6 +18,7 @@ metadata:
   - numpy
   - Python
   - renv
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
@@ -49,6 +52,7 @@ attribution:
 
 # computational-reproducibility-documentation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document and lock all computational dependencies (R, Python, packages, versions) required to execute a scientific workflow, enabling future reproducibility across environments. This skill captures the exact software stack at a moment in time and exports it as machine-readable lock files or environment specifications.

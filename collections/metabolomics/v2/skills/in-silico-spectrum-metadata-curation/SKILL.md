@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -48,6 +49,7 @@ attribution:
 
 # in-silico-spectrum-metadata-curation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Automatic assignment and validation of ionization adducts ([M+H]+ or [M-H]-) to in-silico mass spectra when adduct metadata is missing or inconsistent. This skill ensures that in-silico spectra conform to chemical ionization polarity conventions before standardization and downstream analysis.

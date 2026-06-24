@@ -1,6 +1,9 @@
 ---
 name: z-score-normalization-for-cross-dataset-comparison
-description: Use when you have multiple scoring functions (e.g., strain correlation or spectral similarity scores) computed over heterogeneous GCF-MF or BGC-spectrum link sets where raw scores cannot be directly compared due to differences in set sizes (GCF size g, MF size m, overlap o) or null-model.
+description: Use when you have multiple scoring functions (e.g., strain correlation
+  or spectral similarity scores) computed over heterogeneous GCF-MF or BGC-spectrum
+  link sets where raw scores cannot be directly compared due to differences in set
+  sizes (GCF size g, MF size m, overlap o) or null-model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +16,7 @@ metadata:
   - NumPy
   - SciPy
   - NPLinker
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -20,7 +24,8 @@ derived_from:
   title: ''
 evidence_spans:
 - follows the hypergeometric distribution as previously stated
-- NPLinker, a Python module to accelerate and support the process of automatically linking GCFs
+- NPLinker, a Python module to accelerate and support the process of automatically
+  linking GCFs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +50,7 @@ attribution:
 
 # z-score-normalization-for-cross-dataset-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw scoring metrics (strain correlation, IOKR) into standardized z-scores by subtracting the null-model expected value and dividing by standard deviation, enabling direct comparison of link scores across GCF-MF pairs of different sizes and molecular families. This normalization resolves the inability of raw scores to distinguish validated links reliably when scores span different ranges.

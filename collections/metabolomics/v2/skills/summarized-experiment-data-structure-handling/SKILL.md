@@ -1,6 +1,7 @@
 ---
 name: summarized-experiment-data-structure-handling
-description: Use when you have high-dimensional metabolomics or genomics data stored as a SummarizedExperiment object (e.
+description: Use when you have high-dimensional metabolomics or genomics data stored
+  as a SummarizedExperiment object (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3209
@@ -12,6 +13,7 @@ metadata:
   - devtools
   - Bioconductor
   - marr
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -45,6 +47,7 @@ attribution:
 
 # Summarized Experiment Data Structure Handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, validate, and extract data from SummarizedExperiment objects—a Bioconductor container format for high-dimensional biological assays with row (feature) and column (sample) metadata. This skill enables reproducible analysis workflows in R by ensuring correct orientation, accessor patterns, and downstream compatibility with statistical functions.

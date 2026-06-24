@@ -1,6 +1,8 @@
 ---
 name: molecular-network-clustering-and-analysis
-description: Use when after generating candidate transformed structures from biotransformation rules and when you have MS/MS spectral feature data that you wish to organize into putative molecular families.
+description: Use when after generating candidate transformed structures from biotransformation
+  rules and when you have MS/MS spectral feature data that you wish to organize into
+  putative molecular families.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3925
@@ -14,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -42,6 +45,7 @@ attribution:
 
 # molecular-network-clustering-and-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill constructs spectral similarity networks from untargeted metabolomics MS/MS data, applies graph-based clustering to identify molecular families, and annotates network nodes with predicted structures from biotransformation rules. It is essential for discovering unknown metabolites by connecting structurally related compounds in high-dimensional spectral space.

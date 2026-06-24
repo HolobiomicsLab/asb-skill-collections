@@ -1,6 +1,7 @@
 ---
 name: statistical-simulation-execution
-description: Use when you have access to a published repository containing simulation scripts (e.
+description: Use when you have access to a published repository containing simulation
+  scripts (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,6 +12,7 @@ metadata:
   - R (or language used by PaIRKAT scripts)
   - R
   - PaIRKAT
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -39,6 +41,7 @@ attribution:
 
 # statistical-simulation-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute pre-built statistical simulation scripts to generate and validate Type I error rates and power estimates across tested scenarios. This skill reproduces computational results from a methodological repository by systematically running validated simulation code and collecting summary statistics.

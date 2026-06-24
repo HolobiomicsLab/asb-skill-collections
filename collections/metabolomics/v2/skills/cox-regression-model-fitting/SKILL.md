@@ -1,6 +1,9 @@
 ---
 name: cox-regression-model-fitting
-description: Use when you have expression or metabolomic feature matrices, paired with event indicators (e.g., disease recurrence, mortality) and follow-up times for a cohort of samples, and you need to derive risk scores or prognosis indices for survival prediction or patient stratification.
+description: Use when you have expression or metabolomic feature matrices, paired
+  with event indicators (e.g., disease recurrence, mortality) and follow-up times
+  for a cohort of samples, and you need to derive risk scores or prognosis indices
+  for survival prediction or patient stratification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3659
@@ -12,12 +15,15 @@ metadata:
   - R
   - Cox-nnet
   - Cox-PH
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 - the deep-learning based Cox-nnet model
 - prognosis prediction, implemented by Cox-PH model
 claims: []

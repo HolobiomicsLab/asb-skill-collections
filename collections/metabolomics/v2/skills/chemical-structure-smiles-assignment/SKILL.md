@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-smiles-assignment
-description: Use when you have a mass spectral library (EI or MS2 format) loaded into R via read_lib() and possess either MOL files (from Lib2NIST export) or an SDF file containing the corresponding chemical structures, but the library entries lack SMILES fields or have incomplete structure information.
+description: Use when you have a mass spectral library (EI or MS2 format) loaded into
+  R via read_lib() and possess either MOL files (from Lib2NIST export) or an SDF file
+  containing the corresponding chemical structures, but the library entries lack SMILES
+  fields or have incomplete structure information.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -22,6 +25,7 @@ metadata:
   - future / future.apply
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -55,6 +59,7 @@ attribution:
 
 # chemical-structure-smiles-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign SMILES (Simplified Molecular Input Line Entry System) chemical structure strings to mass spectral library entries using structure files derived from MOL or SDF files. This skill enables enrichment of MS libraries with standardized chemical structure notation needed for downstream metabolomics workflows like MS-DIAL.

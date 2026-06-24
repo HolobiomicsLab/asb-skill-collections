@@ -1,6 +1,8 @@
 ---
 name: ms2-spectra-parsing-and-loading
-description: Use when when beginning a MEMO analysis workflow with raw or unaligned MS2 spectra files and needing to extract fragmentation data and precursor information before counting MS2 peaks and neutral losses to generate sample fingerprints.
+description: Use when when beginning a MEMO analysis workflow with raw or unaligned
+  MS2 spectra files and needing to extract fragmentation data and precursor information
+  before counting MS2 peaks and neutral losses to generate sample fingerprints.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -16,11 +18,13 @@ metadata:
   - memo-ms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 - conda install -c conda-forge scikit-bio

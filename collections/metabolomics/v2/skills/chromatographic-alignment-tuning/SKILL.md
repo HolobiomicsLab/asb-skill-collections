@@ -1,6 +1,8 @@
 ---
 name: chromatographic-alignment-tuning
-description: Use when when processing a cohort of centroided mzML LC-MS files with high sample-to-sample retention time and m/z drift, and you need reproducible alignment of detected peaks across all samples before gap-filling and feature consolidation.
+description: Use when when processing a cohort of centroided mzML LC-MS files with
+  high sample-to-sample retention time and m/z drift, and you need reproducible alignment
+  of detected peaks across all samples before gap-filling and feature consolidation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -14,11 +16,13 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +46,7 @@ attribution:
 
 # chromatographic-alignment-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated optimization of retention time and m/z alignment parameters across LC-MS samples to establish consensus feature coordinates for untargeted metabolomics. This skill tunes alignment module parameters by iterating candidate combinations against quality metrics (feature reproducibility, detection counts, signal-to-noise) to select the parameter set that maximizes cross-sample peak alignment fidelity.

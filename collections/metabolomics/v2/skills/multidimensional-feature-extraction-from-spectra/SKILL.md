@@ -1,6 +1,9 @@
 ---
 name: multidimensional-feature-extraction-from-spectra
-description: Use when you have preprocessed MS/MS spectral data (normalized peak intensities and m/z values) and need to transform spectra into fixed-dimensional molecular embeddings for candidate matching against a reference database, especially when direct spectral comparison or classical fingerprinting.
+description: Use when you have preprocessed MS/MS spectral data (normalized peak intensities
+  and m/z values) and need to transform spectra into fixed-dimensional molecular embeddings
+  for candidate matching against a reference database, especially when direct spectral
+  comparison or classical fingerprinting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -14,6 +17,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -42,6 +46,7 @@ attribution:
 
 # multidimensional-feature-extraction-from-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract multidimensional molecular embedding vectors from mass spectrometry/MS spectral data using a pre-trained Convolutional Neural Network (CNN) model. The skill converts raw normalized peak intensities and m/z values into high-dimensional feature representations suitable for downstream metabolite identification and similarity matching.

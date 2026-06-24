@@ -1,6 +1,9 @@
 ---
 name: mrm-data-format-ingestion
-description: Use when you have raw MRM lipidomics export files in vendor-specific formats (e.g., TSV or CSV from a mass spectrometry instrument) and need to convert them into a standardized tabular format before performing lipid identification, statistical analysis, or visualization.
+description: Use when you have raw MRM lipidomics export files in vendor-specific
+  formats (e.g., TSV or CSV from a mass spectrometry instrument) and need to convert
+  them into a standardized tabular format before performing lipid identification,
+  statistical analysis, or visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,12 +15,14 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
 - _No usage/docs found._
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

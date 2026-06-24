@@ -1,6 +1,9 @@
 ---
 name: stable-isotope-labeling-quantification
-description: Use when you have centroided high-resolution Orbitrap mzML files from stable isotope labeling experiments and need to measure isotopologue abundances (M+0, M+1, M+2, etc.) for a defined list of target compounds with 13C or other isotopic labels.
+description: Use when you have centroided high-resolution Orbitrap mzML files from
+  stable isotope labeling experiments and need to measure isotopologue abundances
+  (M+0, M+1, M+2, etc.) for a defined list of target compounds with 13C or other isotopic
+  labels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -15,12 +18,14 @@ metadata:
   - Proteowizard MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
 evidence_spans:
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - isoSCAN uses `mzR` package in order to read MS files

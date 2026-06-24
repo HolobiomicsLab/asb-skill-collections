@@ -1,6 +1,9 @@
 ---
 name: spectral-library-matching-and-scoring
-description: Use when when you have extracted a mean or ROI spectrum from MSI data (via centroid or profile mode conversion) and need to identify the biochemical composition by comparing against curated reference libraries such as LIPID MAPS, HMDB, or a custom metabolite database.
+description: Use when when you have extracted a mean or ROI spectrum from MSI data
+  (via centroid or profile mode conversion) and need to identify the biochemical composition
+  by comparing against curated reference libraries such as LIPID MAPS, HMDB, or a
+  custom metabolite database.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -22,6 +25,7 @@ metadata:
   - tima R package
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
@@ -30,7 +34,8 @@ derived_from:
 - doi: 10.5281/zenodo.3378723
   title: ''
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 - The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>
 claims: []
@@ -61,6 +66,7 @@ attribution:
 
 # spectral-library-matching-and-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match mass spectra extracted from regions of interest (ROI) or mean intensity profiles against reference biochemical databases using m/z tolerance and spectral similarity scoring to generate ranked lists of putative metabolite identities. This skill enables targeted annotation of MSI data by linking detected m/z features to known molecules with confidence metrics.

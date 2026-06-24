@@ -1,6 +1,8 @@
 ---
 name: mass-spectrum-averaging-and-processing
-description: Use when you have loaded a Bruker Solarix transient file (.d format with .ser or .fid content) and need to generate a processed mass spectrum for peak picking and molecular formula annotation.
+description: Use when you have loaded a Bruker Solarix transient file (.d format with
+  .ser or .fid content) and need to generate a processed mass spectrum for peak picking
+  and molecular formula annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3627
@@ -13,12 +15,14 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import numpy as np
 - from matplotlib import pyplot
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # mass-spectrum-averaging-and-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply transient averaging and windowing functions (e.g., Hanning apodization) to Bruker FT-ICR raw transient data, followed by zero-filling and Fourier transformation, to produce a high-quality mass spectrum with reduced noise and improved peak definition. This skill is essential for converting raw time-domain transient data into interpretable frequency-domain mass spectra.

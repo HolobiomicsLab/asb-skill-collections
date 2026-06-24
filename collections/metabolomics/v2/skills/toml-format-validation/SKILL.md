@@ -1,6 +1,7 @@
 ---
 name: toml-format-validation
-description: Use when you are setting up a new LipoCLEAN analysis for MS-DIAL output and need to create a configuration file tailored to your MS-DIAL version (4 or 5).
+description: Use when you are setting up a new LipoCLEAN analysis for MS-DIAL output
+  and need to create a configuration file tailored to your MS-DIAL version (4 or 5).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +11,7 @@ metadata:
   tools:
   - LipoCLEAN
   - MS-DIAL
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -38,6 +40,7 @@ attribution:
 
 # Generate and validate TOML configuration files for MS-DIAL version-specific pipelines
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate default TOML-formatted options files for MS-DIAL 4 or 5 using LipoCLEAN's `--print` argument, then validate the file structure and content before editing for downstream lipid quality filtering. This ensures version-specific configuration keys and syntax are correct before customization.

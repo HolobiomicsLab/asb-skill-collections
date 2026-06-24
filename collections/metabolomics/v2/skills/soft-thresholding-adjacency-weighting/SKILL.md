@@ -1,6 +1,8 @@
 ---
 name: soft-thresholding-adjacency-weighting
-description: Use when after computing a biweight midcorrelation similarity matrix across normalized metabolite abundance data, and before hierarchical clustering on dissimilarity.
+description: Use when after computing a biweight midcorrelation similarity matrix
+  across normalized metabolite abundance data, and before hierarchical clustering
+  on dissimilarity.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3283
@@ -11,6 +13,7 @@ metadata:
   - MetaboDiff
   - WGCNA
   - R
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -20,7 +23,8 @@ evidence_spans:
 - '`MetaboDiff` is available for all operating systems and can be installed via Github'
 - met = knn_impute(met,cutoff=0.4)
 - install.packages("WGCNA")
-- The core concept of the so called "weighted" correlation analysis by Langfelder and Horvarth
+- The core concept of the so called "weighted" correlation analysis by Langfelder
+  and Horvarth
 - The `MetaboDiff` R package requires R version 4.0.2 or higher.
 - The `MetaboDiff` R package requires R version 4.0.2 or higher
 claims: []
@@ -47,6 +51,7 @@ attribution:
 
 # Soft-thresholding-adjacency-weighting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a biweight midcorrelation similarity matrix into a weighted adjacency matrix by applying soft thresholding with a power parameter, which preserves the continuous strength of metabolite relationships while suppressing weak correlations. This step bridges correlation measurement and network topology construction, enabling robust identification of metabolic co-expression modules.

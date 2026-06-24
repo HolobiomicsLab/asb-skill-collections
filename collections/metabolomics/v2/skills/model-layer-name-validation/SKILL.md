@@ -1,6 +1,9 @@
 ---
 name: model-layer-name-validation
-description: Use when when deploying a TensorFlow Serving instance for the NP Classifier or any model-agnostic service where client code hardcodes layer names; before running inference pipelines; after model updates or configuration changes to catch layer name drift early.
+description: Use when when deploying a TensorFlow Serving instance for the NP Classifier
+  or any model-agnostic service where client code hardcodes layer names; before running
+  inference pipelines; after model updates or configuration changes to catch layer
+  name drift early.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
@@ -8,6 +11,7 @@ metadata:
   - Python
   - TensorFlow Serving
   - docker-compose
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

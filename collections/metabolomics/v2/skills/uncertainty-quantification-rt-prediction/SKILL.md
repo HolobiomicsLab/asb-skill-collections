@@ -1,6 +1,9 @@
 ---
 name: uncertainty-quantification-rt-prediction
-description: 'Use when you have trained a DNN retention time predictor and need to rank candidate metabolites for an unknown compound: the DNN outputs both point estimates and uncertainty bounds for each candidate''s RT, and you need to convert these into probabilistic scores that reflect confidence in each.'
+description: 'Use when you have trained a DNN retention time predictor and need to
+  rank candidate metabolites for an unknown compound: the DNN outputs both point estimates
+  and uncertainty bounds for each candidate''s RT, and you need to convert these into
+  probabilistic scores that reflect confidence in each.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -13,11 +16,13 @@ metadata:
   - cmmrt
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # uncertainty-quantification-rt-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify prediction uncertainty in deep neural network retention time (RT) models and convert those uncertainty bounds into probabilistic likelihood scores for ranking metabolite candidates. This skill enables ranking of candidate annotations by RT-based probability density rather than point estimates alone, improving the reliability of metabolite identification in untargeted mass spectrometry workflows.

@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-reference-standard-alignment
-description: Use when you have positive- or negative-mode tunemix reference data (with known CCS values, m/z, and measured drift times) and need to establish a calibration model for converting observed drift times into CCS values for downstream feature annotation.
+description: Use when you have positive- or negative-mode tunemix reference data (with
+  known CCS values, m/z, and measured drift times) and need to establish a calibration
+  model for converting observed drift times into CCS values for downstream feature
+  annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -14,13 +17,15 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # mass-spectrometry-reference-standard-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align ion mobility spectrometry (IMS) data to reference standards using drift time and m/z calibration to compute collision cross section (CCS) calibration coefficients via the single-field method. This skill enables quantitative CCS determination and mass calibration accuracy assessment in LC-IMS-MS/MS workflows.

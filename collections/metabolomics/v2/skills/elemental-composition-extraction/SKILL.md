@@ -1,6 +1,9 @@
 ---
 name: elemental-composition-extraction
-description: Use when you have formula-assigned FT-ICR MS data (CSV or tab-delimited table with molecular formulas and mass values) and need to quantify elemental stoichiometry, compute diversity indices, or assess molecular complexity across environmental organic mixtures.
+description: Use when you have formula-assigned FT-ICR MS data (CSV or tab-delimited
+  table with molecular formulas and mass values) and need to quantify elemental stoichiometry,
+  compute diversity indices, or assess molecular complexity across environmental organic
+  mixtures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3094
@@ -9,11 +12,13 @@ metadata:
   - http://edamontology.org/topic_0621
   tools:
   - MoleTrans
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans
 evidence_spans:
-- MoleTrans is a webtool for post analysis and data mining on the formula assigned datasets from FT-ICR MS
+- MoleTrans is a webtool for post analysis and data mining on the formula assigned
+  datasets from FT-ICR MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

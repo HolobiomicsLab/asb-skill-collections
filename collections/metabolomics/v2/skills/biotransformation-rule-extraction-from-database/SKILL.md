@@ -19,6 +19,7 @@ metadata:
     ref: Academic use free; commercial use/redistribution by permission of the authors
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer.git
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -48,6 +49,7 @@ attribution:
 
 # biotransformation-rule-extraction-from-database
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Extract and normalize biotransformation rules from curated databases (e.g., EAWAG's Biodegradation and Biocatalysis Database) into structured, machine-actionable rule sets for predicting small molecule metabolism in environmental microbiota. This skill enables systematic capture of reaction types, enzyme families, substrate patterns, and product templates to populate rule-based metabolism prediction engines.

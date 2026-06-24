@@ -1,6 +1,9 @@
 ---
 name: compound-identifier-aggregation
-description: Use when you have metabolomics results from multiple studies with compound identifiers in heterogeneous formats (names, InChI strings, SMILES, ChEBI/KEGG/HMDB codes) and need to merge datasets for vote-counting or meta-analysis. Apply this skill before computing consensus measures (e.
+description: Use when you have metabolomics results from multiple studies with compound
+  identifiers in heterogeneous formats (names, InChI strings, SMILES, ChEBI/KEGG/HMDB
+  codes) and need to merge datasets for vote-counting or meta-analysis. Apply this
+  skill before computing consensus measures (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3280
@@ -12,14 +15,17 @@ metadata:
   - amanida
   - webchem
   - PubChem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +50,7 @@ attribution:
 
 # Compound Identifier Aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Harmonize and deduplicate metabolite compound identifiers across multiple studies by converting diverse ID formats (chemical name, InChI, InChIKey, SMILES) to a common standard (PubChem ID) and detecting duplicates. This enables meaningful meta-analysis by ensuring each metabolite is counted only once across study results.

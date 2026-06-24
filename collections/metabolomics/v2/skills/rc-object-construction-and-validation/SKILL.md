@@ -1,6 +1,8 @@
 ---
 name: rc-object-construction-and-validation
-description: Use when after feature detection and alignment (XCMS or equivalent), when you have a CSV feature table with m/z and retention time columns and need to group features derived from the same compound.
+description: Use when after feature detection and alignment (XCMS or equivalent),
+  when you have a CSV feature table with m/z and retention time columns and need to
+  group features derived from the same compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3933
@@ -17,13 +19,15 @@ metadata:
   - Sirius
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 claims: []
 provenance:
@@ -48,6 +52,7 @@ attribution:
 
 # rc-object-construction-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and validate RAMClustR (RC) objects by ingesting feature tables (MS-only or MS+idMS/MS) and experimental design metadata, then verify that clustered features group by retention time similarity and quantitative correlation. This skill bridges raw XCMS or CSV feature data into an RC object ready for downstream molecular weight inference and annotation.

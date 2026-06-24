@@ -1,6 +1,9 @@
 ---
 name: graph-node-edge-attribute-assignment
-description: Use when you have statistically significant LC-MS features grouped into structural clusters (isotopologue groups, adduct groups, cross-assay links) and correlation cluster assignments from upstream MamsiStructSearch, and you need to create an interactive graph representation suitable for Cytoscape.
+description: Use when you have statistically significant LC-MS features grouped into
+  structural clusters (isotopologue groups, adduct groups, cross-assay links) and
+  correlation cluster assignments from upstream MamsiStructSearch, and you need to
+  create an interactive graph representation suitable for Cytoscape.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -17,6 +20,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -51,6 +55,7 @@ attribution:
 
 # graph-node-edge-attribute-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a NetworkX graph representation of mass spectrometry feature relationships by assigning nodes for individual features and edges for structural links (isotopologue, adduct, cross-assay, correlation), with typed weights and metadata attributes. This enables interactive visualization and systematic network analysis of metabolomic structural associations.

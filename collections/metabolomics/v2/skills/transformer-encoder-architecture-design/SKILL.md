@@ -1,6 +1,8 @@
 ---
 name: transformer-encoder-architecture-design
-description: Use when when you need to learn chemical-rational embeddings of tandem MS/MS spectra for library matching or molecular property prediction, and you want to leverage self-supervised learning through masking.
+description: Use when when you need to learn chemical-rational embeddings of tandem
+  MS/MS spectra for library matching or molecular property prediction, and you want
+  to leverage self-supervised learning through masking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -16,6 +18,7 @@ metadata:
   - MSBERT (reference implementation)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

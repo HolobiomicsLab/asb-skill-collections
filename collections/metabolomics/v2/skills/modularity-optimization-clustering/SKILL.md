@@ -1,6 +1,9 @@
 ---
 name: modularity-optimization-clustering
-description: Use when after MS-DIAL peak character estimation has grouped LC-MS features into preliminary clusters based on peak shape and chromatographic similarity, and you need to select a single representative parental feature from each cluster to reduce redundancy before MS-FINDER annotation.
+description: Use when after MS-DIAL peak character estimation has grouped LC-MS features
+  into preliminary clusters based on peak shape and chromatographic similarity, and
+  you need to select a single representative parental feature from each cluster to
+  reduce redundancy before MS-FINDER annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -13,6 +16,7 @@ metadata:
   - MS-FINDER
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -41,6 +45,7 @@ attribution:
 
 # modularity-optimization-clustering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply multi-level optimization of modularity algorithm to cluster LC-MS features and extract parental (representative) signals from feature groups. This skill identifies the highest-modularity feature within each cluster to serve as the consensus representative for downstream annotation.

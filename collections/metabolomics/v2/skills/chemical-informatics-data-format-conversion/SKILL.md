@@ -1,6 +1,9 @@
 ---
 name: chemical-informatics-data-format-conversion
-description: Use when when you have raw SMILES strings collected from multiple external databases that require standardization and deduplication before integration into a unified chemical structure database. Specifically, apply this skill when you need to convert interim/tables/0_original/structure/smiles.tsv.
+description: Use when when you have raw SMILES strings collected from multiple external
+  databases that require standardization and deduplication before integration into
+  a unified chemical structure database. Specifically, apply this skill when you need
+  to convert interim/tables/0_original/structure/smiles.tsv.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3837
@@ -13,6 +16,7 @@ metadata:
   - smiles.py
   - sanitizing.py
   - Python 3
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -46,6 +50,7 @@ attribution:
 
 # chemical-informatics-data-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert and standardize raw chemical structure notations (SMILES strings) into validated, deduplicated structural identifiers (standardized SMILES and InChI) through sequential file-to-file transformations. This skill is essential in natural products curation pipelines where structure data from heterogeneous sources must be normalized and validated before downstream chemical analysis.

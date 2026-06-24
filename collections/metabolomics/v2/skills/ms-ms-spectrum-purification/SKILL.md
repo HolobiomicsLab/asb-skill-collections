@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectrum-purification
-description: Use when processing LC-MS/MS data acquired in DDA mode that contains chimeric (co-fragmented) MS/MS spectra—i.e., when a single MS/MS scan contains fragments from multiple precursor ions due to co-isolation.
+description: Use when processing LC-MS/MS data acquired in DDA mode that contains
+  chimeric (co-fragmented) MS/MS spectra—i.e., when a single MS/MS scan contains fragments
+  from multiple precursor ions due to co-isolation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -13,6 +15,7 @@ metadata:
   - DNMS2Purifier_model_generation.r
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
@@ -41,6 +44,7 @@ attribution:
 
 # ms-ms-spectrum-purification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 DNMS2Purifier purifies chimeric MS/MS spectra from LC-MS/MS untargeted metabolomics data acquired in Data-Dependent Acquisition (DDA) mode by detecting and removing co-isolated peptide or metabolite signals that contaminate individual MS/MS scans. This skill is essential for improving the quality and interpretability of downstream spectral matching and metabolite annotation.

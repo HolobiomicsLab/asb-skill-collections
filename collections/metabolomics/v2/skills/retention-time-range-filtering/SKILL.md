@@ -1,6 +1,9 @@
 ---
 name: retention-time-range-filtering
-description: Use when you have raw IM-MS data (Agilent MassHunter .d or UIMF format) and need to exclude early or late chromatographic regions—e.g., to skip dead volume, exclude blank runs, focus on a known analyte window, or reduce file size for faster processing.
+description: Use when you have raw IM-MS data (Agilent MassHunter .d or UIMF format)
+  and need to exclude early or late chromatographic regions—e.g., to skip dead volume,
+  exclude blank runs, focus on a known analyte window, or reduce file size for faster
+  processing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,14 +15,18 @@ metadata:
   - Agilent MassHunter
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []
@@ -49,6 +56,7 @@ attribution:
 
 # retention-time-range-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selectively isolate IM-MS data within a user-defined retention time window to focus downstream preprocessing on the relevant chromatographic region. This reduces computational overhead and concentrates analysis on regions of interest before compression, interpolation, and demultiplexing.

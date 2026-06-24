@@ -1,6 +1,9 @@
 ---
 name: metabolite-feature-correspondence-validation
-description: Use when after m/z grouping and pairwise alignment detection when you have a metabCombiner object containing candidate feature pair alignments and need to select a subset of mutually abundant, high-confidence anchors to anchor a nonlinear retention time mapping spline.
+description: Use when after m/z grouping and pairwise alignment detection when you
+  have a metabCombiner object containing candidate feature pair alignments and need
+  to select a subset of mutually abundant, high-confidence anchors to anchor a nonlinear
+  retention time mapping spline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,12 +16,15 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # metabolite-feature-correspondence-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill identifies high-confidence anchor feature pairs across two disparately-acquired LC-MS metabolomics datasets by applying retention time windows, m/z tolerance, and abundance thresholds to establish a validated correspondence basis for subsequent RT mapping and alignment scoring. It is essential for bridging non-identical instrumental and acquisition conditions in untargeted metabolomics.

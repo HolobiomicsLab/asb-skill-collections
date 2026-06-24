@@ -1,6 +1,9 @@
 ---
 name: metabolomics-quality-metric-interpretation
-description: Use when after batch correction of metabolomics data using pooled study quality control (SQC) samples and calculation of compound/internal standard ratios, when you need to decide which compounds are reliable for reporting and which internal standard minimizes technical variation (RSDQC) for each.
+description: Use when after batch correction of metabolomics data using pooled study
+  quality control (SQC) samples and calculation of compound/internal standard ratios,
+  when you need to decide which compounds are reliable for reporting and which internal
+  standard minimizes technical variation (RSDQC) for each.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - mzQuality
   - mzQualityDashboard
   - SummarizedExperiment
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -42,6 +46,7 @@ attribution:
 
 # metabolomics-quality-metric-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and apply quality control metrics (RSDQC, background signal percentage, matrix effect, presence in QC samples) to identify reliable compounds and internal standards in batch-corrected metabolomics data. This skill enables filtering of unreliable compounds and selection of optimal internal standards based on quantitative thresholds.

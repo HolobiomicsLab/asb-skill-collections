@@ -1,6 +1,8 @@
 ---
 name: peptide-spectrum-representation-learning
-description: Use when you have a collection of MS/MS spectra (in mzML or MGF format) and need to group or compare spectra from the same peptide without prior sequence annotation.
+description: Use when you have a collection of MS/MS spectra (in mzML or MGF format)
+  and need to group or compare spectra from the same peptide without prior sequence
+  annotation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,12 +16,14 @@ metadata:
   - CUDA-enabled GPU
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41592-022-01496-1
   title: GLEAMS
 evidence_spans:
 - GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
-- GLEAMS is a Learned Embedding for Annotating Mass Spectra. GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
+- GLEAMS is a Learned Embedding for Annotating Mass Spectra. GLEAMS encodes mass spectra
+  as vectors of features and feeds them to a neural network
 - GLEAMS requires Python 3.8, a Linux operating system, and a CUDA-enabled GPU
 - Create a Conda environment and install the necessary compiler tools and GPU runtime
 claims: []

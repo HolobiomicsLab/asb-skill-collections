@@ -1,6 +1,8 @@
 ---
 name: de-novo-precursor-mass-annotation
-description: Use when when you have unknown MS/MS spectra with observed precursor m/z values and want to infer the molecular formula and adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+) in a de novo setting without access to spectral libraries.
+description: Use when when you have unknown MS/MS spectra with observed precursor
+  m/z values and want to infer the molecular formula and adduct type (e.g., [M+H]+,
+  [M+Na]+, [M+K]+) in a de novo setting without access to spectral libraries.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -15,13 +17,16 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:
@@ -46,6 +51,7 @@ attribution:
 
 # de-novo-precursor-mass-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate MS1 precursor masses and rank chemical formula and adduct assignments from tandem MS/MS spectra without reference to spectrum databases, using an end-to-end energy-based neural network that scores agreement between candidate formulas and observed peaks.

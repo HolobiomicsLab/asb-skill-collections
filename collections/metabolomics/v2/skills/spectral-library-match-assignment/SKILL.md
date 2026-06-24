@@ -1,6 +1,7 @@
 ---
 name: spectral-library-match-assignment
-description: Use when you have a set of candidate molecular structures from in silico fragmentation (e.
+description: Use when you have a set of candidate molecular structures from in silico
+  fragmentation (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +16,7 @@ metadata:
   - ChemWalker
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad078/7067745
   title: ChemWalker

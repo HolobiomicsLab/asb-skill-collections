@@ -1,6 +1,9 @@
 ---
 name: molecular-ccs-prediction-model-training
-description: Use when you have a curated dataset of small molecules with SMILES, optional 3D coordinates, adduct information, and experimentally measured CCS values (in Ångströms or similar units), and you want to train a GNN model to predict CCS on held-out test molecules.
+description: Use when you have a curated dataset of small molecules with SMILES, optional
+  3D coordinates, adduct information, and experimentally measured CCS values (in Ångströms
+  or similar units), and you want to train a GNN model to predict CCS on held-out
+  test molecules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +17,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -42,6 +46,7 @@ attribution:
 
 # molecular-ccs-prediction-model-training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and evaluate graph neural network models to predict collision cross section (CCS) values for small molecules from SMILES strings and optional 3D coordinates. This skill enables comparative evaluation of different GNN architectures on standardized train/test splits from curated databases (METLIN-CCS, CCSBase).

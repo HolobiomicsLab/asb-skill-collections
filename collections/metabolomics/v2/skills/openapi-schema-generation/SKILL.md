@@ -1,6 +1,8 @@
 ---
 name: openapi-schema-generation
-description: Use when when you have a webservice codebase (Python, Java, etc.) with HTTP route definitions, parameter handling, and serialization logic, and you need to generate an OpenAPI 3.
+description: Use when when you have a webservice codebase (Python, Java, etc.) with
+  HTTP route definitions, parameter handling, and serialization logic, and you need
+  to generate an OpenAPI 3.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +12,7 @@ metadata:
   - MAGMa
   - MAGMa joblauncher
   - OpenAPI 3.0 specification standard
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -39,6 +42,7 @@ attribution:
 
 # openapi-schema-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract HTTP endpoint definitions, request/response schemas, and authentication mechanisms from a webservice codebase and map them into a machine-readable OpenAPI 3.0 specification. This skill is essential for documenting REST API contracts and enabling automated client generation or API validation.

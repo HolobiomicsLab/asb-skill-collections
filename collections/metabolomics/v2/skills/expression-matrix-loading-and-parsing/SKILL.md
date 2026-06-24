@@ -1,6 +1,9 @@
 ---
 name: expression-matrix-loading-and-parsing
-description: Use when you have raw omics expression data in CSV format (rows=genes/features, columns=samples) and a separate group annotation file (sample IDs mapped to experimental groups or phenotypes), and you need to prepare them for heatmap or other omics visualizations in an R Shiny environment.
+description: Use when you have raw omics expression data in CSV format (rows=genes/features,
+  columns=samples) and a separate group annotation file (sample IDs mapped to experimental
+  groups or phenotypes), and you need to prepare them for heatmap or other omics visualizations
+  in an R Shiny environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3761
@@ -9,6 +12,7 @@ metadata:
   - http://edamontology.org/topic_3673
   tools:
   - R Shiny
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

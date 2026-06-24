@@ -1,6 +1,8 @@
 ---
 name: ci-cd-pipeline-configuration-and-execution
-description: Use when when you have a multi-platform Qt5 C++ project (Windows, macOS, Linux) that requires automated compilation and executable packaging across different operating systems.
+description: Use when when you have a multi-platform Qt5 C++ project (Windows, macOS,
+  Linux) that requires automated compilation and executable packaging across different
+  operating systems.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3552
@@ -17,6 +19,7 @@ metadata:
   - pacman
   - Appveyor
   - Travis CI
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

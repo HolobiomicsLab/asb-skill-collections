@@ -1,6 +1,9 @@
 ---
 name: directed-edge-weight-encoding
-description: Use when after computing a Jacobian matrix from covariance data and extracting directed edges representing metabolite interactions, use this skill when you need to communicate the magnitude and direction of metabolite-to-metabolite influences in a single integrated visualization.
+description: Use when after computing a Jacobian matrix from covariance data and extracting
+  directed edges representing metabolite interactions, use this skill when you need
+  to communicate the magnitude and direction of metabolite-to-metabolite influences
+  in a single integrated visualization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -13,6 +16,7 @@ metadata:
   - MInfer
   - igraph
   - tidygraph
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer

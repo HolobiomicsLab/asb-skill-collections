@@ -1,6 +1,9 @@
 ---
 name: tandem-ms-output-interpretation
-description: Use when you have received spectrum predictions (fragment masses and intensities) from a neural model (ICEBERG, SCARF, or similar) and need to extract structural information, rank candidate molecules, or validate predictions against experimental spectra.
+description: Use when you have received spectrum predictions (fragment masses and
+  intensities) from a neural model (ICEBERG, SCARF, or similar) and need to extract
+  structural information, rank candidate molecules, or validate predictions against
+  experimental spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,6 +18,7 @@ metadata:
   - ICEBERG WebUI
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG

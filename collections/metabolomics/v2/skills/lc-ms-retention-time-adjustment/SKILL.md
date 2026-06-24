@@ -1,6 +1,9 @@
 ---
 name: lc-ms-retention-time-adjustment
-description: Use when you have centroided .mzML LC–MS data with multiple sample runs and a preliminary compound target table with theoretical or measured retention times, but you suspect the expected RT values may not align with actual retention windows in your dataset.
+description: Use when you have centroided .mzML LC–MS data with multiple sample runs
+  and a preliminary compound target table with theoretical or measured retention times,
+  but you suspect the expected RT values may not align with actual retention windows
+  in your dataset.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -45,6 +49,7 @@ attribution:
 
 # LC-MS Retention Time Adjustment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Refine expected retention times (RT) for targeted compounds by executing a screening run in TARDIS, then updating the compound table with corrected RT values before full peak detection. This skill ensures accurate peak detection across all sample runs by accounting for instrument drift and separation variability.

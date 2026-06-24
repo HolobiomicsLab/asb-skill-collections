@@ -1,6 +1,8 @@
 ---
 name: ms-ms-spectral-interpretation
-description: Use when you have acquired MS/MS spectral data (in mzML, mzXML, or equivalent format) for unknown compounds and need to identify the most probable metabolite structure.
+description: Use when you have acquired MS/MS spectral data (in mzML, mzXML, or equivalent
+  format) for unknown compounds and need to identify the most probable metabolite
+  structure.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +15,7 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -41,6 +44,7 @@ attribution:
 
 # ms-ms-spectral-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret tandem mass spectrometry (MS/MS) spectra by matching experimental fragment ion peaks against theoretical fragmentations of candidate metabolites, ranked by cosine similarity or peak-matching scoring. This skill is essential when you need to annotate unknown metabolites from high-resolution MS/MS data in metabolomics workflows.

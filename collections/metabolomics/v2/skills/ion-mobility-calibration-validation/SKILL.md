@@ -1,6 +1,9 @@
 ---
 name: ion-mobility-calibration-validation
-description: Use when when you have positive- or negative-mode ion mobility spectrometry data with tunemix reference standards (known m/z, drift times, and CCS values) and need to verify that the calibration model accurately captures the relationship between drift time, reference m/z, and collision cross.
+description: Use when when you have positive- or negative-mode ion mobility spectrometry
+  data with tunemix reference standards (known m/z, drift times, and CCS values) and
+  need to verify that the calibration model accurately captures the relationship between
+  drift time, reference m/z, and collision cross.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -15,13 +18,15 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []
@@ -47,6 +52,7 @@ attribution:
 
 # ion-mobility-calibration-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates collision cross section (CCS) calibration coefficients derived from ion mobility spectrometry data by applying the single-field calibration equation to reference standards and assessing model fit quality. This skill ensures that drift time and m/z reference measurements convert to reliable CCS calibration coefficients suitable for downstream ion characterization.

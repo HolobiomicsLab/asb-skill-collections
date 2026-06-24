@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-spectrum-quality-filtering
-description: Use when compiling or harmonizing MS/MS spectral libraries from multiple source repositories and you need to identify and remove spectra that fail quality thresholds (low resolution, precursor-fragment mass inconsistency, duplicate fragment patterns, noise-dominated, or missing critical metadata.
+description: Use when compiling or harmonizing MS/MS spectral libraries from multiple
+  source repositories and you need to identify and remove spectra that fail quality
+  thresholds (low resolution, precursor-fragment mass inconsistency, duplicate fragment
+  patterns, noise-dominated, or missing critical metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,7 @@ metadata:
   - spectraverse-analysis
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse

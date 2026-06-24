@@ -1,6 +1,9 @@
 ---
 name: metabolite-stoichiometry-computation
-description: Use when when you have quantified intracellular metabolite abundances (LC-MS normalized values) for multiple cell lines or samples, a metabolic network model with reaction stoichiometry, and you need to predict how substrate availability translates into metabolic flux differences.
+description: Use when when you have quantified intracellular metabolite abundances
+  (LC-MS normalized values) for multiple cell lines or samples, a metabolic network
+  model with reaction stoichiometry, and you need to predict how substrate availability
+  translates into metabolic flux differences.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,11 +16,13 @@ metadata:
   - constraint-based stoichiometric metabolic models
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # Reaction Propensity Score (RPS) computation from intracellular metabolomics via mass action law
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes a Reaction Propensity Score (RPS) for each metabolic reaction in a cell line by applying the mass action law to measured intracellular metabolite abundances, multiplying substrate concentrations each raised to their stoichiometric coefficients. This score estimates reaction rate potential based purely on substrate availability, excluding enzymatic activity.

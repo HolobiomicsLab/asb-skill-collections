@@ -1,6 +1,7 @@
 ---
 name: ms-ms-raw-data-loading
-description: Use when when you have raw LC-MS/MS instrument output files (e.g., .mzML, .
+description: Use when when you have raw LC-MS/MS instrument output files (e.g., .mzML,
+  .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -16,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

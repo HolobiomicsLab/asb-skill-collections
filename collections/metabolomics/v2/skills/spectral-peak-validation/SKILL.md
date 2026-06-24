@@ -1,6 +1,7 @@
 ---
 name: spectral-peak-validation
-description: Use when before feeding a peak list into the NMRformer model or other transformer-based spectral assignment frameworks.
+description: Use when before feeding a peak list into the NMRformer model or other
+  transformer-based spectral assignment frameworks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,7 @@ metadata:
   - NMRformer
   techniques:
   - NMR
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05632
   title: NMRformer

@@ -1,6 +1,9 @@
 ---
 name: tensorflow-serving-deployment
-description: 'Use when you have trained Keras models that need to be served as microservices for real-time inference. Specifically: (1) models have been converted to HDF5 TensorFlow 2.3.0 format with properly named input layers (''input_2048'', ''input_4096'') and output layer (''output'');'
+description: 'Use when you have trained Keras models that need to be served as microservices
+  for real-time inference. Specifically: (1) models have been converted to HDF5 TensorFlow
+  2.3.0 format with properly named input layers (''input_2048'', ''input_4096'') and
+  output layer (''output'');'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -16,6 +19,7 @@ metadata:
   - nginx
   - Python with TensorFlow 2.3.0 and Keras
   - NP Classifier
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

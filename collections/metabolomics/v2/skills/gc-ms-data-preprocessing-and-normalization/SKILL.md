@@ -1,6 +1,8 @@
 ---
 name: gc-ms-data-preprocessing-and-normalization
-description: Use when you have raw GC-MS data (aroma, breath, or other volatile analyte samples) in NetCDF or vendor-native format and need to identify multivariate chemo-/biomarker features without conventional peak picking.
+description: Use when you have raw GC-MS data (aroma, breath, or other volatile analyte
+  samples) in NetCDF or vendor-native format and need to identify multivariate chemo-/biomarker
+  features without conventional peak picking.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -13,6 +15,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -20,9 +23,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +53,7 @@ attribution:
 
 # gc-ms-data-preprocessing-and-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw GC-MS data into a two-dimensional m/z versus retention time map suitable for image processing and machine learning-based marker identification. This preprocessing step replaces conventional peak picking to avoid false peak detections and enables parts-per-billion level sensitivity in metabolomics workflows.

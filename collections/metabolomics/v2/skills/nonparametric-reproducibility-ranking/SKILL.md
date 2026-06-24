@@ -16,6 +16,7 @@ metadata:
   - SummarizedExperiment
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -49,6 +50,7 @@ attribution:
 
 # Nonparametric Reproducibility Ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the Maximum Rank Reproducibility (marr) method to quantify reproducibility of features (metabolites/genes) across replicate biological or technical samples, and of sample pairs across features. This nonparametric approach produces ranked reproducibility metrics and binary classifications (reproducible/non-reproducible) based on user-defined thresholds, without assuming a distributional form.

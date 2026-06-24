@@ -1,6 +1,8 @@
 ---
 name: database-repository-retrieval
-description: Use when when you need to obtain a specific curated database (e.g., DNA adduct compounds) that is published in a GitLab or GitHub repository and available in structured formats (SDF, Excel, Word).
+description: Use when when you need to obtain a specific curated database (e.g., DNA
+  adduct compounds) that is published in a GitLab or GitHub repository and available
+  in structured formats (SDF, Excel, Word).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2422
@@ -10,6 +12,7 @@ metadata:
   tools:
   - RDKit
   - Git / GitLab CLI
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -38,6 +41,7 @@ attribution:
 
 # database-repository-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Locate, access, and download curated scientific database files from version-controlled repositories in their native formats (SDF, Excel, online). This skill ensures reproducibility by establishing a traceable chain from authoritative repository source to local validated copy.

@@ -1,6 +1,8 @@
 ---
 name: trend-classification-from-fold-change
-description: Use when when you have harmonized metabolomics data with fold-change and p-value columns from multiple studies and need to assign trend categories prior to vote-counting meta-analysis.
+description: Use when when you have harmonized metabolomics data with fold-change
+  and p-value columns from multiple studies and need to assign trend categories prior
+  to vote-counting meta-analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,14 +13,17 @@ metadata:
   - R
   - amanida
   - webchem
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
 evidence_spans:
-- Amanida R package, which contains a collection of functions for computing a weighted meta-analysis in R
-- This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
+- Amanida R package, which contains a collection of functions for computing a weighted
+  meta-analysis in R
+- This vignette illustrates `Amanida` R package, which contains a collection of functions
+  for computing a weighted meta-analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +48,7 @@ attribution:
 
 # Trend classification from fold-change
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign directional trend labels (+1 for up-regulation, −1 for down-regulation, 0 for no trend) to metabolite compounds based on fold-change thresholds and statistical significance. This classification enables qualitative vote-counting meta-analysis in metabolomics studies where raw variance data are unavailable.

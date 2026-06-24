@@ -1,6 +1,9 @@
 ---
 name: molecular-networking-construction
-description: Use when you have LC-MS/MS DDA data from one or more samples and need to organize fragmentation spectra by similarity relationships to support compound annotation, enable cross-sample comparisons, and identify known and unknown metabolites sharing structural features.
+description: Use when you have LC-MS/MS DDA data from one or more samples and need
+  to organize fragmentation spectra by similarity relationships to support compound
+  annotation, enable cross-sample comparisons, and identify known and unknown metabolites
+  sharing structural features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -15,6 +18,7 @@ metadata:
   - MEMO
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: enpkg

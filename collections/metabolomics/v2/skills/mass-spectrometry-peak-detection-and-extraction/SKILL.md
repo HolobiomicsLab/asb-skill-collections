@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-peak-detection-and-extraction
-description: Use when you have raw high-resolution mass-spectrometry data in mzML or mzXML format from breath analysis and need to identify individual volatile organic compounds before sample-to-sample alignment or comparative analysis.
+description: Use when you have raw high-resolution mass-spectrometry data in mzML
+  or mzXML format from breath analysis and need to identify individual volatile organic
+  compounds before sample-to-sample alignment or comparative analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,6 +14,7 @@ metadata:
   - BreathXplorer
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

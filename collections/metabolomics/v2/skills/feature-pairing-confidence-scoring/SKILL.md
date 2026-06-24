@@ -1,6 +1,8 @@
 ---
 name: feature-pairing-confidence-scoring
-description: Use when you have two LC-MS feature tables (each with m/z, retention time, and intensity columns) and need to establish reliable correspondence between features across datasets.
+description: Use when you have two LC-MS feature tables (each with m/z, retention
+  time, and intensity columns) and need to establish reliable correspondence between
+  features across datasets.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,6 +14,7 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -40,6 +43,7 @@ attribution:
 
 # feature-pairing-confidence-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and assign confidence scores to candidate feature pairs from two LC-MS metabolomic datasets by evaluating similarity across m/z and retention time dimensions, then resolve one-to-one correspondences by selecting highest-confidence matches. This skill is essential for confidently aligning untargeted metabolomic features across replicate or comparative LC-MS runs.

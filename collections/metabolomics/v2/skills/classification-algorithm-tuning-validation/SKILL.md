@@ -1,6 +1,8 @@
 ---
 name: classification-algorithm-tuning-validation
-description: Use when you have labeled training data (e.g., pqm_development with 500 peaks and 89 samples) and need to select which of multiple classification algorithms (e.g., AdaBoost, Random Forest, SVM) and their hyperparameters (e.
+description: Use when you have labeled training data (e.g., pqm_development with 500
+  peaks and 89 samples) and need to select which of multiple classification algorithms
+  (e.g., AdaBoost, Random Forest, SVM) and their hyperparameters (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -14,15 +16,19 @@ metadata:
   - caret
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 - MetaClean provides 8 classification algorithms (implemented with the R package caret)
 claims: []
@@ -49,6 +55,7 @@ attribution:
 
 # classification-algorithm-tuning-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically tune and validate machine learning classifiers using k-fold cross-validation with repeated runs to identify optimal hyperparameter configurations and select the best-performing algorithm for peak-quality classification in LC-MS metabolomics data. This skill ensures reproducible model selection by comparing multiple algorithms and evaluation metrics across held-out folds.

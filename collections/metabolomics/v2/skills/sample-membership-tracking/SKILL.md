@@ -1,6 +1,9 @@
 ---
 name: sample-membership-tracking
-description: Use when when aligning detected features across multiple LC-IMS-MS/MS samples and you need to identify which input samples contributed to each consensus feature cluster, especially to filter out spurious or low-confidence alignments, validate clustering completeness, or perform sample-specific.
+description: Use when when aligning detected features across multiple LC-IMS-MS/MS
+  samples and you need to identify which input samples contributed to each consensus
+  feature cluster, especially to filter out spurious or low-confidence alignments,
+  validate clustering completeness, or perform sample-specific.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3938
@@ -15,13 +18,15 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []
@@ -47,6 +52,7 @@ attribution:
 
 # sample-membership-tracking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Track which samples contributed each aligned feature across multiple LC-IMS-MS/MS datasets by assigning cluster membership flags during N-dimensional feature alignment. This enables downstream filtering, validation, and cross-sample feature interpretation.

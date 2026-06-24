@@ -1,6 +1,7 @@
 ---
 name: permanova-statistical-testing-multivariate-groups
-description: Use when you have normalized peak intensities or abundance matrices from mass spectrometry (e.
+description: Use when you have normalized peak intensities or abundance matrices from
+  mass spectrometry (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -17,13 +18,17 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
-- distances (depending on the selected normalization method) using the "vegdist" function for the vegan package and then used to perform a permutational analysis of variance (PERMANOVA)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
+- distances (depending on the selected normalization method) using the "vegdist" function
+  for the vegan package and then used to perform a permutational analysis of variance
+  (PERMANOVA)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 claims: []
@@ -49,6 +54,7 @@ attribution:
 
 # permanova-statistical-testing-multivariate-groups
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Permutational multivariate analysis of variance (PERMANOVA) tests whether categorical grouping factors (e.g., treatment, phage type, environmental condition) produce statistically significant differences in multivariate metabolomic or compositional data. This skill is essential for hypothesis-driven metabolomics when you need to determine if a factor of interest significantly structures the overall metabolite abundance or molecular composition profiles.

@@ -1,6 +1,8 @@
 ---
 name: table-record-filtering-and-sorting
-description: Use when you have a table with multiple records (e.g., a protocol table with type, id, and description fields) and need to extract a subset of records matching a specific field criterion (e.
+description: Use when you have a table with multiple records (e.g., a protocol table
+  with type, id, and description fields) and need to extract a subset of records matching
+  a specific field criterion (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +13,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -18,7 +21,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package that facilitates the conversion of tabular data into other formats
+- MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
+  that facilitates the conversion of tabular data into other formats
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -43,6 +47,7 @@ attribution:
 
 # Table Record Filtering and Sorting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply field-based filtering and multi-field sorting to tabular records before aggregating or transforming them into derived values. This skill enables selective extraction and ordered traversal of protocol or experimental metadata tables when building concatenated strings, matrices, or other structured outputs.

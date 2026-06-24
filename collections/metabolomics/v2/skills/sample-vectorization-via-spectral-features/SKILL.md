@@ -1,6 +1,8 @@
 ---
 name: sample-vectorization-via-spectral-features
-description: Use when you have unaligned MS2 spectra from multiple metabolomics samples (in mzML, mzXML, or MGF format) and need to compare them without relying on retention time or aligned m/z features.
+description: Use when you have unaligned MS2 spectra from multiple metabolomics samples
+  (in mzML, mzXML, or MGF format) and need to compare them without relying on retention
+  time or aligned m/z features.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -17,11 +19,13 @@ metadata:
   - Python 3.8+
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
 - conda create --name memo python=3.8
 - pip install numpy
 - conda install -c conda-forge scikit-bio

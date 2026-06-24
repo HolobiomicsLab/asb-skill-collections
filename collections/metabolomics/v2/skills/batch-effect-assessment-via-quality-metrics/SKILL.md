@@ -1,6 +1,8 @@
 ---
 name: batch-effect-assessment-via-quality-metrics
-description: Use when when you have processed metabolomics LC-MS/MS data organized by batch and sample type (including pooled QC replicates), and you need to quantify whether batch-to-batch and matrix effects are acceptable for downstream reporting.
+description: Use when when you have processed metabolomics LC-MS/MS data organized
+  by batch and sample type (including pooled QC replicates), and you need to quantify
+  whether batch-to-batch and matrix effects are acceptable for downstream reporting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +16,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -44,6 +47,7 @@ attribution:
 
 # batch-effect-assessment-via-quality-metrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess batch effects in metabolomics mass spectrometry data by calculating quality metrics (RSDQC, background signal percentage, matrix effect, presence in QC samples) on pooled study quality control (SQC) samples and applying configurable thresholds to flag unreliable compounds and samples. This skill identifies which analytes and injections are affected by systematic variation and aids in selecting reportable results.

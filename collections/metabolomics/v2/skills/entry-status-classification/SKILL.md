@@ -1,6 +1,9 @@
 ---
 name: entry-status-classification
-description: Use when you need to assess the overall curation coverage and quality of a MIBiG repository snapshot, identify which entries require further review, or track how entry validation status changes over time. Specifically use it when the `data` directory contains JSON files with `cluster.
+description: Use when you need to assess the overall curation coverage and quality
+  of a MIBiG repository snapshot, identify which entries require further review, or
+  track how entry validation status changes over time. Specifically use it when the
+  `data` directory contains JSON files with `cluster.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -10,6 +13,7 @@ metadata:
   tools:
   - mibig-json repository
   - MIBiG web interface
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkz882
   title: MIBiG 2.0
@@ -37,6 +41,7 @@ attribution:
 
 # entry-status-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and aggregate entry status values from MIBiG JSON curation records to build a searchable index of data quality and curation state across the repository. This skill is essential for understanding the completeness and validation stage of secondary metabolite biosynthetic gene cluster annotations.

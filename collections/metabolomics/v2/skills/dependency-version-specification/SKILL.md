@@ -1,6 +1,8 @@
 ---
 name: dependency-version-specification
-description: Use when you encounter a scientific implementation (particularly deep learning or complex data processing pipelines) where the original authors have documented specific software versions, and you need to reproduce the exact computational environment.
+description: Use when you encounter a scientific implementation (particularly deep
+  learning or complex data processing pipelines) where the original authors have documented
+  specific software versions, and you need to reproduce the exact computational environment.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -19,6 +21,7 @@ metadata:
   - numpy, scikit-learn, scipy, seaborn, Pandas, h5py
   - pip (requirements.txt)
   - Conda (environment.yml)
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac032/6510930
   title: massNet
@@ -52,6 +55,7 @@ attribution:
 
 # dependency-version-specification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and document exact software dependency versions and their pinning requirements from project documentation to enable reproducible computational environments. This skill is essential when reconstructing legacy or specialized scientific software stacks where version compatibility is critical to replicating results.

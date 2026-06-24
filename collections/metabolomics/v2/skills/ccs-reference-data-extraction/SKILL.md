@@ -1,6 +1,9 @@
 ---
 name: ccs-reference-data-extraction
-description: Use when you have obtained or need to prepare a DTCCS_N2 reference library for U13C-labeled lipids (typically provided as part of a lipidomics tool distribution) and need to extract, validate, and normalize its contents into a machine-readable table format before using it for CCS bias calculation.
+description: Use when you have obtained or need to prepare a DTCCS_N2 reference library
+  for U13C-labeled lipids (typically provided as part of a lipidomics tool distribution)
+  and need to extract, validate, and normalize its contents into a machine-readable
+  table format before using it for CCS bias calculation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -12,12 +15,15 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
-- MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
+- MobiLipid aims to streamline lipidomics workflows by offering a fully automated
+  solution for assessing and correcting collision cross section (CCS) bias
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +47,7 @@ attribution:
 
 # ccs-reference-data-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate collision cross section (CCS) reference values for labeled lipids from a structured library file, converting them into a curated reference table for use in ion mobility–mass spectrometry quality control workflows. This skill ensures that CCS bias assessment and correction algorithms have access to canonicalized, numerically validated reference data.

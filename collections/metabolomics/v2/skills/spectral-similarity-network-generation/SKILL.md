@@ -1,6 +1,9 @@
 ---
 name: spectral-similarity-network-generation
-description: Use when after feature detection and alignment across LC-MS/MS runs (via MZmine2 or Optimus) have produced a feature quantification table and MGF file with MS/MS spectra, and you need to discover molecular relationships and detect unknown compounds through spectral clustering and library matching.
+description: Use when after feature detection and alignment across LC-MS/MS runs (via
+  MZmine2 or Optimus) have produced a feature quantification table and MGF file with
+  MS/MS spectra, and you need to discover molecular relationships and detect unknown
+  compounds through spectral clustering and library matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -14,6 +17,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

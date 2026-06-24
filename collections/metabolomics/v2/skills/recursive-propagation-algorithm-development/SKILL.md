@@ -1,6 +1,8 @@
 ---
 name: recursive-propagation-algorithm-development
-description: Use when when you have constructed a two-layer metabolite annotation network (knowledge-driven and data-driven) and need to propagate initial seed annotations (e.
+description: Use when when you have constructed a two-layer metabolite annotation
+  network (knowledge-driven and data-driven) and need to propagate initial seed annotations
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -11,11 +13,13 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - CE-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +43,7 @@ attribution:
 
 # recursive-propagation-algorithm-development
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a recursive annotation propagation algorithm that iteratively refines metabolite identities by leveraging confidence scores and relationships across both knowledge-driven (biochemical ontology) and data-driven (MS2 similarity) network layers. This skill combines topology-based traversal with confidence-weighted evidence aggregation to enhance metabolite annotation coverage and accuracy in untargeted metabolomics.

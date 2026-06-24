@@ -1,6 +1,9 @@
 ---
 name: in-source-fragment-adduct-candidate-flagging
-description: Use when you have aligned, imputed time-resolved mass spectrometric data from direct-injection plasma ionization (e.g., DBDI, DESI) without chromatographic separation, and you suspect multiple m/z features belong to the same neutral analyte as in-source fragments or oxygen-bound adducts.
+description: Use when you have aligned, imputed time-resolved mass spectrometric data
+  from direct-injection plasma ionization (e.g., DBDI, DESI) without chromatographic
+  separation, and you suspect multiple m/z features belong to the same neutral analyte
+  as in-source fragments or oxygen-bound adducts.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3680
@@ -16,11 +19,13 @@ metadata:
   - matchms
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -45,6 +50,7 @@ attribution:
 
 # in-source-fragment-adduct-candidate-flagging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies co-eluting ion pairs arising from in-source fragmentation or adduct formation in time-resolved plasma ionization mass spectrometry by computing pointwise correlation of extracted ion chromatograms (XIC) and filtering on correlation threshold and exact mass difference. This is the first step in DBDIpy's three-step putative identification workflow for direct-injection MS datasets.

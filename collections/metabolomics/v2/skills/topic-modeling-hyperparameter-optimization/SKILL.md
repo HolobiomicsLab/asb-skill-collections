@@ -1,6 +1,7 @@
 ---
 name: topic-modeling-hyperparameter-optimization
-description: Use when when preparing to apply LDA to a new MS/MS spectral dataset in bag-of-fragments format, before running the full modeling pipeline.
+description: Use when when preparing to apply LDA to a new MS/MS spectral dataset
+  in bag-of-fragments format, before running the full modeling pipeline.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -14,11 +15,13 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - ms2lda_runfull.py
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

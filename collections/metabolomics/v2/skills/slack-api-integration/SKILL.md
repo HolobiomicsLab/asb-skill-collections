@@ -1,6 +1,8 @@
 ---
 name: slack-api-integration
-description: Use when rapid QC-MS detects a QC failure (e.g., internal standard retention time drift, m/z deviation, or intensity anomaly) during an active LC-MS instrument run and users have configured Slack as a notification target.
+description: Use when rapid QC-MS detects a QC failure (e.g., internal standard retention
+  time drift, m/z deviation, or intensity anomaly) during an active LC-MS instrument
+  run and users have configured Slack as a notification target.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,6 +14,7 @@ metadata:
   - Email service
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

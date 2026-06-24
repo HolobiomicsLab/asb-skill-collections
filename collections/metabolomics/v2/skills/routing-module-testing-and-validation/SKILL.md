@@ -1,6 +1,8 @@
 ---
 name: routing-module-testing-and-validation
-description: Use when when you have implemented conditional routing logic in the GNPS_MASST codebase and need to verify that spectrum submissions with explicit domain-context selections (e.
+description: Use when when you have implemented conditional routing logic in the GNPS_MASST
+  codebase and need to verify that spectrum submissions with explicit domain-context
+  selections (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -18,6 +20,7 @@ metadata:
   - jobs.py
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

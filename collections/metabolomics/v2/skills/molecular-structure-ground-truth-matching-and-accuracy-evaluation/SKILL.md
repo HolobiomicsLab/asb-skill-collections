@@ -1,6 +1,7 @@
 ---
 name: molecular-structure-ground-truth-matching-and-accuracy-evaluation
-description: Use when after an end-to-end neural model (CNN + transformer) has generated predicted molecular structures (formula and connectivity) from 1D NMR spectra.
+description: Use when after an end-to-end neural model (CNN + transformer) has generated
+  predicted molecular structures (formula and connectivity) from 1D NMR spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -13,6 +14,7 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -40,6 +42,7 @@ attribution:
 
 # molecular-structure-ground-truth-matching-and-accuracy-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compares predicted molecular structures (formula and connectivity) against experimentally known ground-truth structures to compute exact recovery rates and other fidelity metrics. This skill is essential for validating end-to-end NMR-to-structure models on molecules up to 19 heavy atoms.

@@ -1,6 +1,8 @@
 ---
 name: chemical-shift-annotation
-description: Use when when you have preprocessed 1H NMR spectral data with unidentified peaks and need to determine metabolite identity by exploiting the correlation structure of NMR signals.
+description: Use when when you have preprocessed 1H NMR spectral data with unidentified
+  peaks and need to determine metabolite identity by exploiting the correlation structure
+  of NMR signals.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -15,13 +17,15 @@ metadata:
   - TopSpin 3.2
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -45,6 +49,7 @@ attribution:
 
 # chemical-shift-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use Statistical Total Correlation Spectroscopy (STOCSY) to assign chemical identity to unknown NMR signals by analyzing their covariance and correlation patterns across a reference spectrum. This workflow converts ambiguous δ shifts into metabolite assignments by identifying characteristic multiplet patterns.

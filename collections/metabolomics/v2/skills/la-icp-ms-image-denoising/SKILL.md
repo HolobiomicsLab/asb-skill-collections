@@ -1,6 +1,8 @@
 ---
 name: la-icp-ms-image-denoising
-description: Use when raw LA-ICP-MS images contain isolated spike pixels (hot spots or cold spots) caused by instrumental noise, transient ablation artifacts, or detector glitches.
+description: Use when raw LA-ICP-MS images contain isolated spike pixels (hot spots
+  or cold spots) caused by instrumental noise, transient ablation artifacts, or detector
+  glitches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,13 +13,15 @@ metadata:
   - pewpew
   - pewlib
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 - python library [pewlib]
@@ -46,6 +50,7 @@ attribution:
 
 # LA-ICP-MS Image Denoising via Rolling Median or Rolling Mean Filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove spike outliers from LA-ICP-MS ablation images by comparing each pixel against a local rolling-window statistic (median or mean) and replacing outliers that exceed a user-defined threshold. This skill restores data quality before downstream quantification or image alignment.

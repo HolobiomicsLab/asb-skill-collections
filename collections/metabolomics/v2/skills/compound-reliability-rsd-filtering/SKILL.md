@@ -1,6 +1,9 @@
 ---
 name: compound-reliability-rsd-filtering
-description: Use when after batch correction and internal standard ratio calculation when you have pooled study quality control (SQC) or pooled quality control (QC) samples and need to determine which compounds are sufficiently reliable for downstream reporting.
+description: Use when after batch correction and internal standard ratio calculation
+  when you have pooled study quality control (SQC) or pooled quality control (QC)
+  samples and need to determine which compounds are sufficiently reliable for downstream
+  reporting.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,6 +16,7 @@ metadata:
   - SummarizedExperiment
   - mzQualityDashboard
   - xcms
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -21,8 +25,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +52,7 @@ attribution:
 
 # compound-reliability-rsd-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomics compounds for reportability based on relative standard deviation (RSD) of quality control samples, background signal percentage, and compound presence thresholds. This skill identifies and removes unreliable compounds that fail to meet reproducibility and signal quality criteria across pooled QC samples.

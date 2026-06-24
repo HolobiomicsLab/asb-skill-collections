@@ -1,6 +1,9 @@
 ---
 name: ms-ms-spectrum-parsing
-description: Use when you have raw or preprocessed MS/MS spectra in one of the supported formats (MGF, mzML, mzXML, JSON, MSP, mzXML, pickled matchms objects, or USI) and need to extract peak lists (m/z and intensity pairs) along with metadata (precursor m/z, charge, ionization mode) to feed into MS2Query or.
+description: Use when you have raw or preprocessed MS/MS spectra in one of the supported
+  formats (MGF, mzML, mzXML, JSON, MSP, mzXML, pickled matchms objects, or USI) and
+  need to extract peak lists (m/z and intensity pairs) along with metadata (precursor
+  m/z, charge, ionization mode) to feed into MS2Query or.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

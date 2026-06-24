@@ -1,6 +1,9 @@
 ---
 name: metadata-coldata-integration
-description: Use when when you have generated a feature abundance matrix from mzrtsim() peak list simulation with known sample-level attributes (condition assignments, batch labels, sample identifiers) and need to package this into a SummarizedExperiment object for Bioconductor-compatible analysis pipelines.
+description: Use when when you have generated a feature abundance matrix from mzrtsim()
+  peak list simulation with known sample-level attributes (condition assignments,
+  batch labels, sample identifiers) and need to package this into a SummarizedExperiment
+  object for Bioconductor-compatible analysis pipelines.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -13,12 +16,15 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
-- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps the simulation in a `SummarizedExperiment`
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
+- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps
+  the simulation in a `SummarizedExperiment`
 - github.com__yufree__mzrtsim
 claims: []
 provenance:
@@ -43,6 +49,7 @@ attribution:
 
 # metadata-coldata-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and integrate sample-level metadata (colData) into a SummarizedExperiment object to expose simulated LC/GC-MS feature tables through standard Bioconductor accessors. This skill bridges peak list simulation output with the SummarizedExperiment data structure, enabling downstream batch correction and normalization workflows.

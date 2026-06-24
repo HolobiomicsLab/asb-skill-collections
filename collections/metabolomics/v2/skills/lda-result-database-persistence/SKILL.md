@@ -1,6 +1,9 @@
 ---
 name: lda-result-database-persistence
-description: Use when after running gensim LDA on a corpus of MS2 fragmentation features, when you need to store the LDA results (topics, document-topic assignments, term-topic distributions) in a PostgreSQL database so they can be queried and visualized by a Django web application or other downstream consumers.
+description: Use when after running gensim LDA on a corpus of MS2 fragmentation features,
+  when you need to store the LDA results (topics, document-topic assignments, term-topic
+  distributions) in a PostgreSQL database so they can be queried and visualized by
+  a Django web application or other downstream consumers.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,6 +18,7 @@ metadata:
   - Django
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

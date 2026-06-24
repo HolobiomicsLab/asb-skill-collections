@@ -1,6 +1,7 @@
 ---
 name: nmr-spectrum-object-construction
-description: Use when you have Bruker NMR spectral files (raw instrumental output) and need to prepare them for automated metabolite identification and quantification.
+description: Use when you have Bruker NMR spectral files (raw instrumental output)
+  and need to prepare them for automated metabolite identification and quantification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,13 +13,15 @@ metadata:
   - R
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c04232
   title: ASICS
 - doi: 10.1007/s11306-017-1244-5
   title: ''
 evidence_spans:
-- The **R** package `ASICS` is a fully automated procedure to identify and quantify metabolites in $^1$H 1D-NMR spectra
+- The **R** package `ASICS` is a fully automated procedure to identify and quantify
+  metabolites in $^1$H 1D-NMR spectra
 - The **R** package `ASICS`
 claims: []
 provenance:
@@ -44,6 +47,7 @@ attribution:
 
 # NMR Spectrum Object Construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw Bruker NMR spectral data files into a structured Spectra object, a required intermediate representation that enables downstream metabolite identification and quantification in the ASICS pipeline. This skill bridges raw instrumental output and quantitative analysis.

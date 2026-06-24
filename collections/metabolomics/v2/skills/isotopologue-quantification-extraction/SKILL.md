@@ -1,6 +1,9 @@
 ---
 name: isotopologue-quantification-extraction
-description: Use when you have GC-CI-MS or LC-MS data in mzML format targeting a defined set of compounds with known monoisotopic mass, retention time, and chemical formula, and you need per-isotopologue (M+0, M+1, M+2, etc.) quantification metrics (area, maxo intensity, abundance).
+description: Use when you have GC-CI-MS or LC-MS data in mzML format targeting a defined
+  set of compounds with known monoisotopic mass, retention time, and chemical formula,
+  and you need per-isotopologue (M+0, M+1, M+2, etc.) quantification metrics (area,
+  maxo intensity, abundance).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,12 +18,14 @@ metadata:
   - Proteowizard MSconvert
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
 evidence_spans:
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - isoSCAN uses `mzR` package in order to read MS files

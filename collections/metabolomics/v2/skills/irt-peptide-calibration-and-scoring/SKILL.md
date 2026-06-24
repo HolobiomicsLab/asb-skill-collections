@@ -1,6 +1,8 @@
 ---
 name: irt-peptide-calibration-and-scoring
-description: Use when when you need to assess whether retention times measured on a given LC-MS run follow the expected linear relationship defined by iRT peptide standards (e.g., Pierce or Biognosys iRT peptides).
+description: Use when when you need to assess whether retention times measured on
+  a given LC-MS run follow the expected linear relationship defined by iRT peptide
+  standards (e.g., Pierce or Biognosys iRT peptides).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +15,7 @@ metadata:
   - R base (stats::lm)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -20,8 +23,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:
@@ -47,6 +52,7 @@ attribution:
 
 # iRT-peptide-calibration-and-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates retention time (RT) linearity and instrument calibration by fitting a linear regression model to extracted ion chromatograms (XICs) of known iRT peptide standards, using their annotated iRT scores as the independent variable. The R-squared value (target ≥0.99) quantifies the degree of linear RT behavior across the peptide set.

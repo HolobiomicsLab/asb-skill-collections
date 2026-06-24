@@ -1,6 +1,8 @@
 ---
 name: ggplot2-multivariate-scatter-visualization
-description: Use when after performing PCA (or other dimensionality reduction) on a metabolite matrix, when you need to visualize whether batch effects are present in uncorrected data, or whether a batch correction method (e.
+description: Use when after performing PCA (or other dimensionality reduction) on
+  a metabolite matrix, when you need to visualize whether batch effects are present
+  in uncorrected data, or whether a batch correction method (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_2501
@@ -13,13 +15,15 @@ metadata:
   - CordBat
   - R
   - dplyr
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
 evidence_spans:
 - pca_res <- prcomp(cordbat_example[, metabolite_cols], scale. = TRUE)
 - library(ggplot2)
-- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref", grouping = FALSE, print.detail = FALSE )
+- fit <- CordBat( X = X_mat, batch = batch_vec, group = group_vec, ref.batch = "Ref",
+  grouping = FALSE, print.detail = FALSE )
 - '%\VignetteEngine{knitr::rmarkdown}'
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # ggplot2-multivariate-scatter-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create publication-ready 2D scatter plots of multivariate data (e.g., PCA scores) colored by categorical metadata (batch, group) to visually assess sample clustering and batch correction efficacy. This skill enables side-by-side comparison of uncorrected vs. corrected metabolomics data in reduced dimensionality space.

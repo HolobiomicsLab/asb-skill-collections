@@ -1,6 +1,8 @@
 ---
 name: execution-time-aggregation-by-category
-description: 'Use when you have measured execution times from multiple scripts that exercise different combinations of categorical variables (e.g., plot types: chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum, subplots;'
+description: 'Use when you have measured execution times from multiple scripts that
+  exercise different combinations of categorical variables (e.g., plot types: chromatogram,
+  mobilogram, peakmap, peakmap-marginals, spectrum, subplots;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -11,6 +13,7 @@ metadata:
   - pandas
   - matplotlib
   - Python
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -38,6 +41,7 @@ attribution:
 
 # execution-time-aggregation-by-category
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate execution times from gallery scripts into median, min, and max metrics grouped by categorical features (plot type and backend), then rank backends within each category to enable comparative performance analysis. This skill transforms raw timing measurements into structured summaries suitable for visualization and performance benchmarking across software implementations.

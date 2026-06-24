@@ -1,6 +1,8 @@
 ---
 name: lipid-expression-pattern-visualization
-description: Use when after statistical analysis of lipid abundance data has produced a table of lipid identities, expression measurements, p-values, fold-changes, and condition labels.
+description: Use when after statistical analysis of lipid abundance data has produced
+  a table of lipid identities, expression measurements, p-values, fold-changes, and
+  condition labels.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -14,11 +16,13 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c05039
   title: CLAW-MRM
 evidence_spans:
-- streamline various tasks such as data parsing, matching, statistical analysis, and visualization
+- streamline various tasks such as data parsing, matching, statistical analysis, and
+  visualization
 - _No usage/docs found._
 claims: []
 provenance:

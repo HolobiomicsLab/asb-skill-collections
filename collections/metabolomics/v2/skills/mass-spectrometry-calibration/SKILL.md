@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-calibration
-description: Use when after peak detection when you have a detected peaks table with m/z values and need to correct systematic mass drift or inaccuracy before peak alignment across multiple batches.
+description: Use when after peak detection when you have a detected peaks table with
+  m/z values and need to correct systematic mass drift or inaccuracy before peak alignment
+  across multiple batches.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,11 +14,14 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -41,6 +46,7 @@ attribution:
 
 # mass-spectrometry-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recursive mass correction refines m/z accuracy of detected peaks in untargeted LC/HRMS data by recalibrating mass coordinates using internal reference standards or lock masses. This skill is essential for multi-batch population-scale studies where consistent mass accuracy across samples directly impacts peak alignment, annotation reliability, and downstream compound identification.

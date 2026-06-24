@@ -1,6 +1,9 @@
 ---
 name: chromatographic-peak-detection-and-integration
-description: 'Use when after loading centroided .mzML LC-MS data and defining a target list (compound ID, name, m/z, RT, polarity) when you need to: (1) automatically locate and integrate peaks for known compounds across multiple runs; (2) generate per-target and per-run quantitative metrics;'
+description: 'Use when after loading centroided .mzML LC-MS data and defining a target
+  list (compound ID, name, m/z, RT, polarity) when you need to: (1) automatically
+  locate and integrate peaks for known compounds across multiple runs; (2) generate
+  per-target and per-run quantitative metrics;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,12 +20,14 @@ metadata:
   - MsExperiment
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 - kableExtra::kable
@@ -49,6 +54,7 @@ attribution:
 
 # chromatographic-peak-detection-and-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and integration of chromatographic peaks in LC-MS data using TARDIS to generate targeted quantitative metrics (AUC, max intensity, SNR, peak_cor) and QC feature tables. This skill is essential for high-throughput metabolomics and lipidomics workflows where multiple compounds must be consistently quantified across sample runs.

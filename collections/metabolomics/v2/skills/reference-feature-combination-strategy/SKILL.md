@@ -23,6 +23,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: christophuv/PeakBot
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -51,6 +52,7 @@ attribution:
 
 # reference-feature-combination-strategy
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Iteratively combine matched reference features (peaks with estimated borders, centers, and assigned identities from reference chromatograms) in various proportions and spatial arrangements to generate a large, labelled synthetic training dataset for CNN model training on LC-HRMS data. This augmentation strategy increases training instance diversity while maintaining ground-truth annotation.

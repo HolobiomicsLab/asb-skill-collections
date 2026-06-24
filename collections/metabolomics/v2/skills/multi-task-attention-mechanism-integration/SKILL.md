@@ -1,6 +1,9 @@
 ---
 name: multi-task-attention-mechanism-integration
-description: Use when when baseline MLP or GNN models for spectral prediction show limited performance on metabolite annotation tasks, and you have access to auxiliary spectral topic labels (e.g., via LDA on spectral features) that could provide regularization signal.
+description: Use when when baseline MLP or GNN models for spectral prediction show
+  limited performance on metabolite annotation tasks, and you have access to auxiliary
+  spectral topic labels (e.g., via LDA on spectral features) that could provide regularization
+  signal.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -14,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

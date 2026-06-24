@@ -1,11 +1,15 @@
 ---
 name: git-branch-workflow-validation
-description: Use when when preparing to create a release branch in a Maven-based multi-module project (e.g., NMRFx), use this skill to verify that all pom.xml files in the repository tree declare identical version strings. This is a prerequisite for safe release-branch naming (e.g., release/X.Y.
+description: Use when when preparing to create a release branch in a Maven-based multi-module
+  project (e.g., NMRFx), use this skill to verify that all pom.xml files in the repository
+  tree declare identical version strings. This is a prerequisite for safe release-branch
+  naming (e.g., release/X.Y.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - NMRFx
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx
@@ -35,6 +39,7 @@ attribution:
 
 # git-branch-workflow-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that a multi-module software project (e.g., NMRFx) maintains synchronized version strings across all pom.xml files before creating a release branch, ensuring version consistency across the entire repository tree.

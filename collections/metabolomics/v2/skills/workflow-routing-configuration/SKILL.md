@@ -1,6 +1,8 @@
 ---
 name: workflow-routing-configuration
-description: Use when when you have raw mass spectrometry data files from multiple acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically route each to the correct downstream analysis module without manual intervention.
+description: Use when when you have raw mass spectrometry data files from multiple
+  acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically
+  route each to the correct downstream analysis module without manual intervention.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3937
@@ -15,6 +17,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -45,6 +48,7 @@ attribution:
 
 # workflow-routing-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and classify mass spectrometry input data types (LC, GC, IMS, MS imaging) from file headers and metadata, then generate a routing configuration that maps each classified input to its corresponding mzmine analysis module. This enables flexible dispatch of heterogeneous MS data to specialized processing pipelines.

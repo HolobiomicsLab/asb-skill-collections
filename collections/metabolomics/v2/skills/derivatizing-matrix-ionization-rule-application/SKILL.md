@@ -1,6 +1,7 @@
 ---
 name: derivatizing-matrix-ionization-rule-application
-description: Use when when working with mass spectrometry imaging data from metabolites treated with derivatizing matrices (e.
+description: Use when when working with mass spectrometry imaging data from metabolites
+  treated with derivatizing matrices (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3800
@@ -12,6 +13,7 @@ metadata:
   - RDKit
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -40,6 +42,7 @@ attribution:
 
 # derivatizing-matrix-ionization-rule-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply matrix-specific adduct ionization rulesets to predict non-standard ion forms (beyond [M+H]+ and [M-H]-) that arise from derivatizing matrices like FMP-10 in mass spectrometry metabolite identification. This skill is essential for correctly identifying metabolites when chemical derivatization alters the ionization behavior in MSI experiments.

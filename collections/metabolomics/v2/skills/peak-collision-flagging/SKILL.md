@@ -1,6 +1,8 @@
 ---
 name: peak-collision-flagging
-description: Use when you have extracted a peak list from MSI data and need to annotate matrix-related signals, but overlapping peaks or isobaric ions (ions with identical or near-identical m/z values) risk being misclassified.
+description: Use when you have extracted a peak list from MSI data and need to annotate
+  matrix-related signals, but overlapping peaks or isobaric ions (ions with identical
+  or near-identical m/z values) risk being misclassified.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3644
@@ -14,11 +16,13 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - rMSIcleanup is an open-source R package
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # peak-collision-flagging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and flag overlapped or isobaric ions in mass spectrometry imaging data to prevent their misclassification during matrix-related signal annotation. This skill uses m/z matching and spatial distribution analysis to generate binary overlap flags for each candidate peak.

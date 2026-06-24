@@ -1,11 +1,14 @@
 ---
 name: github-release-metadata-comparison
-description: Use when you have reproduced a release artifact locally (e.g., via Semantic Release or a build tool) and need to verify it matches the official GitHub release record.
+description: Use when you have reproduced a release artifact locally (e.g., via Semantic
+  Release or a build tool) and need to verify it matches the official GitHub release
+  record.
 license: CC-BY-4.0
 metadata:
   edam_topics: []
   tools:
   - Semantic Release
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
@@ -34,6 +37,7 @@ attribution:
 
 # github-release-metadata-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a locally reproduced software release artifact matches the reference metadata (version number, file contents, checksums) published on GitHub. This skill ensures reproducibility and integrity of versioned releases in scientific software workflows.

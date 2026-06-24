@@ -1,6 +1,9 @@
 ---
 name: sequence-file-inventory-enumeration
-description: Use when when you maintain a repository with local sequence files and need to determine which sequences are not publicly available in NCBI GenBank/RefSeq databases—for example, to distinguish proprietary or supplementary sequence data from publicly registered entries, or to create an inventory.
+description: Use when when you maintain a repository with local sequence files and
+  need to determine which sequences are not publicly available in NCBI GenBank/RefSeq
+  databases—for example, to distinguish proprietary or supplementary sequence data
+  from publicly registered entries, or to create an inventory.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,7 @@ metadata:
   tools:
   - BLAST
   - NCBI E-utilities
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -38,6 +42,7 @@ attribution:
 
 # sequence-file-inventory-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically enumerate and cross-reference sequence files in a local repository (MIBiG's genbanks directory) against NCBI GenBank/RefSeq to identify sequences that are unavailable in public databases. This skill is essential for curating and documenting unique or restricted sequence assets.

@@ -1,6 +1,8 @@
 ---
 name: matlab-package-execution
-description: Use when you have two separate LC-MS untargeted metabolomic feature datasets (each with retention time and m/z values) and need to establish feature-to-feature correspondence between them.
+description: Use when you have two separate LC-MS untargeted metabolomic feature datasets
+  (each with retention time and m/z values) and need to establish feature-to-feature
+  correspondence between them.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +14,7 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -40,6 +43,7 @@ attribution:
 
 # matlab-package-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a Matlab package to algorithmically match untargeted metabolomic features across two LC-MS datasets based on retention time and mass-to-charge ratio similarity. This skill is essential when you have two independent LC-MS feature tables and need to identify corresponding features to enable cross-dataset metabolomic analysis.

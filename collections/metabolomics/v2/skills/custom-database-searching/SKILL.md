@@ -1,6 +1,9 @@
 ---
 name: custom-database-searching
-description: Use when when you have LC-MS/MS data in Mascot Generic Format (mgf) files and need to identify compounds against a curated custom database (e.g., prepared using CFM-id for a specific metabolite class or organism) rather than relying on in-built commercial spectral libraries alone.
+description: Use when when you have LC-MS/MS data in Mascot Generic Format (mgf) files
+  and need to identify compounds against a curated custom database (e.g., prepared
+  using CFM-id for a specific metabolite class or organism) rather than relying on
+  in-built commercial spectral libraries alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3646
@@ -12,13 +15,17 @@ metadata:
   - CFM-id
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1089/omi.2021.0051
   title: MS2Compound
 evidence_spans:
-- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification of the compounds from LC-MS and MS/MS metabolomics data
-- compatible with the customized database prepared using CFM-id, the fragment prediction tool
-- The current version of MS2Compound is compatible with the customized database prepared using CFM-id, the fragment prediction tool.
+- MS2Compound (v1.0.2) is a user friendly Graphical User Interface (GUI) for the identification
+  of the compounds from LC-MS and MS/MS metabolomics data
+- compatible with the customized database prepared using CFM-id, the fragment prediction
+  tool
+- The current version of MS2Compound is compatible with the customized database prepared
+  using CFM-id, the fragment prediction tool.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

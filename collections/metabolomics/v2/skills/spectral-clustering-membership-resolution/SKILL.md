@@ -1,6 +1,8 @@
 ---
 name: spectral-clustering-membership-resolution
-description: Use when you have predicted BGC-spectrum link scores (e.g., IOKR or correlation values) for individual pairs and need to rank GCF-MF associations where each GCF contains multiple BGCs and each MF contains multiple spectra.
+description: Use when you have predicted BGC-spectrum link scores (e.g., IOKR or correlation
+  values) for individual pairs and need to rank GCF-MF associations where each GCF
+  contains multiple BGCs and each MF contains multiple spectra.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -11,14 +13,17 @@ metadata:
   - NPLinker
   - BiG-SCAPE
   - IOKR
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
-- Finally, we present NPLinker, a software framework to link genomic and metabolomic data
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
+- Finally, we present NPLinker, a software framework to link genomic and metabolomic
+  data
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
 claims: []
@@ -45,6 +50,7 @@ attribution:
 
 # Spectral Clustering Membership Resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate BGC-spectrum link scores from individual pairs to Gene Cluster Family (GCF) and Molecular Family (MF) level using maximum operator, enabling ranking and filtering of higher-order genomic–metabolomic associations. This skill resolves many-to-many relationships inherent in clustered data by computing a single representative score per GCF–MF pair.

@@ -1,6 +1,9 @@
 ---
 name: structural-distance-metric-computation
-description: 'Use when you have two or more lipid structures (in standardized lipid nomenclature or chemical format) and need to: (1) quantify structural dissimilarity for hierarchical clustering of lipidomes; (2) identify lipids responsible for shaping lipidome composition via distance-based feature selection;'
+description: 'Use when you have two or more lipid structures (in standardized lipid
+  nomenclature or chemical format) and need to: (1) quantify structural dissimilarity
+  for hierarchical clustering of lipidomes; (2) identify lipids responsible for shaping
+  lipidome composition via distance-based feature selection;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0360
@@ -10,6 +13,7 @@ metadata:
   tools:
   - LipidSpace
   - cppGoslin
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace

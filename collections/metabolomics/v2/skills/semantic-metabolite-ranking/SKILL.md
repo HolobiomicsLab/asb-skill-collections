@@ -1,6 +1,8 @@
 ---
 name: semantic-metabolite-ranking
-description: Use when you have an unknown metabolite with unknown mass spectrum and need to prioritize structural candidates from databases (PubChem, HMDB) by their likelihood of being the true compound.
+description: Use when you have an unknown metabolite with unknown mass spectrum and
+  need to prioritize structural candidates from databases (PubChem, HMDB) by their
+  likelihood of being the true compound.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -12,11 +14,13 @@ metadata:
   - DeepMASS2
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
 evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
+  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +44,7 @@ attribution:
 
 # semantic-metabolite-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate structures retrieved from molecular databases by leveraging deep-learning predictions of structurally related metabolites to reorder candidates based on chemical-space proximity. This skill uses semantic similarity analysis of mass spectral language to identify the potential location of unknown metabolites within structural candidate space.

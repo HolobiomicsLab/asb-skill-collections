@@ -1,6 +1,9 @@
 ---
 name: top-n-accuracy-and-auc-metric-calculation
-description: Use when you have a ranked candidate list (e.g., BGCs sorted by IOKR or strain-correlation score) for each test spectrum, a known ground-truth BGC for each spectrum, and you want to measure retrieval performance across multiple recall depths (top-1 through top-200) and overall discrimination.
+description: Use when you have a ranked candidate list (e.g., BGCs sorted by IOKR
+  or strain-correlation score) for each test spectrum, a known ground-truth BGC for
+  each spectrum, and you want to measure retrieval performance across multiple recall
+  depths (top-1 through top-200) and overall discrimination.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -15,18 +18,25 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
-- To assign one or more molecular structures to BGCs, according to how many high-scoring matches are found in MIBiG
-- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit
-- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
+- To assign one or more molecular structures to BGCs, according to how many high-scoring
+  matches are found in MIBiG
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit
+- Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit [29]
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -51,6 +61,7 @@ attribution:
 
 # top-n-accuracy-and-auc-metric-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute ranking-based accuracy metrics (top-1, top-5, top-10, etc.) and area-under-curve (AUC) to evaluate how often a correct BGC-spectrum match ranks within the top n candidates, and assess discriminative power against a randomized baseline. This skill is essential for ranking-based retrieval tasks where a single ground-truth target must be re-identified within a sorted candidate list.

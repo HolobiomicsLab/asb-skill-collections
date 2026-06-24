@@ -1,6 +1,7 @@
 ---
 name: molecular-structure-validation
-description: Use when ingesting SMILES strings from CSV or other bulk molecular input files before passing them to structure-based prediction tools.
+description: Use when ingesting SMILES strings from CSV or other bulk molecular input
+  files before passing them to structure-based prediction tools.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -11,6 +12,7 @@ metadata:
   - RDKit
   - pandas
   - CypReact
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact
@@ -38,6 +40,7 @@ attribution:
 
 # molecular-structure-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates syntactic correctness and structural integrity of SMILES strings prior to computational chemistry analysis. This skill ensures only well-formed molecular representations enter downstream processing pipelines like CypReact, preventing parsing errors and invalid predictions.

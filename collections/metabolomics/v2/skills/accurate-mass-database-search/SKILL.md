@@ -1,6 +1,9 @@
 ---
 name: accurate-mass-database-search
-description: Use when after peak detection and MS1 feature extraction from FIA-MS, GC-MS, LC-MS(/MS), or CE-MS data, when you need to identify unknown metabolites by matching observed m/z values to a reference database and want to recover HMDB identifiers, molecular formulas, and structural annotations for.
+description: Use when after peak detection and MS1 feature extraction from FIA-MS,
+  GC-MS, LC-MS(/MS), or CE-MS data, when you need to identify unknown metabolites
+  by matching observed m/z values to a reference database and want to recover HMDB
+  identifiers, molecular formulas, and structural annotations for.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3631
@@ -18,6 +21,7 @@ metadata:
   - CE-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03421
   title: SmartPeak
@@ -25,7 +29,8 @@ evidence_spans:
 - The software is based on the OpenMS toolkit
 - The software is based on the OpenMS toolkit.
 - SmartPeak automates targeted and quantitative metabolomics data processing
-- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
+- SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with
+  a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: pytorch-neural-network-training
-description: Use when you have a PyTorch model architecture (pretrained or freshly initialized), a dataset with molecular structures (as InChI strings or graph representations) and continuous target values (retention times in minutes), and you need to optimize model weights via supervised learning.
+description: Use when you have a PyTorch model architecture (pretrained or freshly
+  initialized), a dataset with molecular structures (as InChI strings or graph representations)
+  and continuous target values (retention times in minutes), and you need to optimize
+  model weights via supervised learning.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0337
@@ -18,6 +21,7 @@ metadata:
   - torch_geometric
   - rdkit-pypi
   - RT-Transformer
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer
@@ -54,6 +58,7 @@ attribution:
 
 # PyTorch Neural Network Training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train or fine-tune a PyTorch neural network on labeled molecular data using backpropagation with regression loss functions and validation monitoring. This skill is essential when adapting pretrained models (e.g., RT-Transformer) to new chromatographic datasets or retraining from scratch on retention time prediction tasks.

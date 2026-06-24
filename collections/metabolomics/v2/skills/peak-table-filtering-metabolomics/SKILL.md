@@ -1,6 +1,9 @@
 ---
 name: peak-table-filtering-metabolomics
-description: Use when after generating a peak table from XCMS peakTable() output in an untargeted LC-MS metabolomics workflow, if your experimental design includes quality control (QC) samples (SampleType='LQC') and you want to exclude noisy or unstable EICs before building a peak quality classifier.
+description: Use when after generating a peak table from XCMS peakTable() output in
+  an untargeted LC-MS metabolomics workflow, if your experimental design includes
+  quality control (QC) samples (SampleType='LQC') and you want to exclude noisy or
+  unstable EICs before building a peak quality classifier.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,16 +16,20 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -47,6 +54,7 @@ attribution:
 
 # peak-table-filtering-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter extracted ion chromatograms (EICs) from XCMS peak tables by relative standard deviation (RSD) in quality control samples prior to peak quality metric calculation and machine learning classifier training. This optional preprocessing step removes EICs with excessive variability in replicate QC injections, improving downstream peak quality assessment.

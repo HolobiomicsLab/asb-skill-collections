@@ -1,6 +1,8 @@
 ---
 name: multiple-testing-correction-metabolomics
-description: Use when you have computed raw p-values from partial Spearman correlations (or other univariate tests) between each metabolite in a SummarizedExperiment object and a phenotype of interest, adjusted for epidemiological confounders (e.
+description: Use when you have computed raw p-values from partial Spearman correlations
+  (or other univariate tests) between each metabolite in a SummarizedExperiment object
+  and a phenotype of interest, adjusted for epidemiological confounders (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,12 +15,14 @@ metadata:
   - Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 claims: []
 provenance:
@@ -43,6 +47,7 @@ attribution:
 
 # multiple-testing-correction-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply multiple-testing correction (Benjamini-Hochberg) to raw p-values from metabolome-wide association studies to control false discovery rate across thousands of metabolic features. This is essential when conducting univariate hypothesis testing on NMR or MS metabolomic data to distinguish true metabolite-phenotype associations from spurious correlations.

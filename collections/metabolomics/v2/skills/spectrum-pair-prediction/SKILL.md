@@ -1,6 +1,8 @@
 ---
 name: spectrum-pair-prediction
-description: Use when you have pairs of MS/MS spectra and need to estimate their structural similarity (Tanimoto score based on molecular fingerprints) as a proxy for compound relatedness.
+description: Use when you have pairs of MS/MS spectra and need to estimate their structural
+  similarity (Tanimoto score based on molecular fingerprints) as a proxy for compound
+  relatedness.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,15 +18,20 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
 - mean squared error (MSE) loss
 claims: []
 provenance:
@@ -49,6 +56,7 @@ attribution:
 
 # Spectrum-Pair Prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict structural similarity scores (Tanimoto) between pairs of tandem mass spectra using a Siamese neural network trained on MS/MS data. This skill generates high-dimensional spectral embeddings and compares them to estimate molecular structural relationships without computing fingerprints directly.

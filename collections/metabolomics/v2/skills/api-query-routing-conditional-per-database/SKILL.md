@@ -1,6 +1,9 @@
 ---
 name: api-query-routing-conditional-per-database
-description: Use when when you have a chemical structure query (as a SMILES string or molecular identifier) and need to search across multiple external chemical repositories simultaneously, but only some repositories are relevant for your specific compound class (e.
+description: Use when when you have a chemical structure query (as a SMILES string
+  or molecular identifier) and need to search across multiple external chemical repositories
+  simultaneously, but only some repositories are relevant for your specific compound
+  class (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -18,6 +21,7 @@ metadata:
   - COCONUT
   - SmilesDrawer
   - React/TypeScript
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks

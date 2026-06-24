@@ -1,6 +1,9 @@
 ---
 name: cross-language-data-format-interoperability
-description: Use when you have mass spectrometry data (LC–MS/MS, ion mobility, DIA) converted to MZA format and need to read or analyze it in multiple programming languages (Python and R), or share datasets with collaborators using different environments without requiring proprietary vendor libraries or format.
+description: Use when you have mass spectrometry data (LC–MS/MS, ion mobility, DIA)
+  converted to MZA format and need to read or analyze it in multiple programming languages
+  (Python and R), or share datasets with collaborators using different environments
+  without requiring proprietary vendor libraries or format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3957
@@ -15,11 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 claims: []
 provenance:

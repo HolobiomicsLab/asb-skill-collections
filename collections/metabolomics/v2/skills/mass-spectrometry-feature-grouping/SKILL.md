@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-feature-grouping
-description: Use when after raw data processing and feature extraction (e.g., via XCMS, OpenMS, or enviPick) when you have detected features across multiple LC-MS or GC-MS analyses and need to identify which features represent the same chemical across samples.
+description: Use when after raw data processing and feature extraction (e.g., via
+  XCMS, OpenMS, or enviPick) when you have detected features across multiple LC-MS
+  or GC-MS analyses and need to identify which features represent the same chemical
+  across samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3557
@@ -25,6 +28,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
@@ -36,7 +40,8 @@ evidence_spans:
 - The `generateTPs` function is used to obtain TPs for a particular set of parents.
 - componTP <- generateComponents(algorithm = "tp",
 - PFΔScreen is an open-source Python based non-target screening software tool
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:
@@ -69,6 +74,7 @@ attribution:
 
 # mass-spectrometry-feature-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Feature grouping aggregates detected mass spectrometry features across multiple analyses by retention time, mass-to-charge ratio, and chromatographic alignment to create a unified feature table. This is a foundational step in non-target analysis that enables downstream annotation, suspect screening, and transformation product detection.

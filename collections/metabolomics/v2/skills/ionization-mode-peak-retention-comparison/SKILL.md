@@ -14,12 +14,14 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np
@@ -47,6 +49,7 @@ attribution:
 
 # ionization-mode-peak-retention-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare peak retention counts across three mutually exclusive noise-threshold methods (relative_abundance, signal_noise, log) applied to the same mass spectrum, stratified by ionization mode. This skill reveals how method selection affects spectral feature yield and enables data-driven choice of noise filtering strategy.

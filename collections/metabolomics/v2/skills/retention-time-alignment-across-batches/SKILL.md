@@ -1,6 +1,9 @@
 ---
 name: retention-time-alignment-across-batches
-description: Use when you have extracted peaks from multiple LC/HRMS batches (n > 500 samples across different analytical runs or days) and observe systematic retention time drift or offset between batches, preventing reliable cross-batch peak matching on m/z and RT alone.
+description: Use when you have extracted peaks from multiple LC/HRMS batches (n >
+  500 samples across different analytical runs or days) and observe systematic retention
+  time drift or offset between batches, preventing reliable cross-batch peak matching
+  on m/z and RT alone.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -15,11 +18,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:
@@ -44,6 +50,7 @@ attribution:
 
 # retention-time-alignment-across-batches
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Harmonize retention time values across multiple LC/HRMS batches to align peaks with equivalent m/z and chromatographic profiles, enabling consistent peak-to-compound mapping in population-scale untargeted metabolomics studies. This is essential for multi-batch peak alignment and accurate metabolite quantification across large cohorts.

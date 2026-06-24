@@ -1,6 +1,9 @@
 ---
 name: cheminformatics-library-querying
-description: Use when you have a list of query chemicals (compound names or SMILES) and a reference library organized by chemical groups (e.g., Types A–E, GroupA/GroupB), and you need to assess which library compounds are structurally similar to your queries, retrieve their categorical annotations (e.
+description: Use when you have a list of query chemicals (compound names or SMILES)
+  and a reference library organized by chemical groups (e.g., Types A–E, GroupA/GroupB),
+  and you need to assess which library compounds are structurally similar to your
+  queries, retrieve their categorical annotations (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0346
@@ -15,12 +18,15 @@ metadata:
   - uafR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:
@@ -45,6 +51,7 @@ attribution:
 
 # cheminformatics-library-querying
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query a structured chemical library against a set of query compounds to retrieve categorical metadata, structural similarity scores, and database presence flags using cheminformatics packages. This skill enables systematic identification of compounds matching specific structural or property criteria across multiple external databases (PubChem, LOTUS, KEGG, FEMA, FDA/SPL).

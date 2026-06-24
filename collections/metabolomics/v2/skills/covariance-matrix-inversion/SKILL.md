@@ -1,6 +1,8 @@
 ---
 name: covariance-matrix-inversion
-description: Use when after generating a covariance matrix from normalized metabolite abundance data in MetaboAnalyst, and before performing network-level metabolomic inference or visualizing metabolite interaction networks.
+description: Use when after generating a covariance matrix from normalized metabolite
+  abundance data in MetaboAnalyst, and before performing network-level metabolomic
+  inference or visualizing metabolite interaction networks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -11,6 +13,7 @@ metadata:
   - R
   - MInfer
   - MetaboAnalyst
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.cmpb.2025.108672
   title: MInfer
@@ -18,7 +21,8 @@ evidence_spans:
 - MInfer is an R package
 - MInfer is an R package designed for analyzing metabolomics data
 - transition from MetaboAnalyst to Jacobian analysis
-- MInfer represents a novel computational framework that effectively facilitates the transition from MetaboAnalyst to Jacobian analysis
+- MInfer represents a novel computational framework that effectively facilitates the
+  transition from MetaboAnalyst to Jacobian analysis
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

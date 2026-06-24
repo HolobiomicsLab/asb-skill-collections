@@ -1,6 +1,9 @@
 ---
 name: machine-learning-model-evaluation-with-confusion-matrices
-description: Use when after fitting a random forest model to metabolomics count data with a categorical response variable (e.g., wild-type vs. knockout treatment groups), you need to quantify how accurately the model predicts group membership and identify which metabolites drive the classification.
+description: Use when after fitting a random forest model to metabolomics count data
+  with a categorical response variable (e.g., wild-type vs. knockout treatment groups),
+  you need to quantify how accurately the model predicts group membership and identify
+  which metabolites drive the classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -12,6 +15,7 @@ metadata:
   - randomForest
   - ggplot2
   - Omu
+  license_tier: restricted
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -40,6 +44,7 @@ attribution:
 
 # machine-learning-model-evaluation-with-confusion-matrices
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate a trained random forest classifier on metabolomics data by computing and visualizing a confusion matrix to assess prediction accuracy across treatment groups. This skill generates variable importance plots and model diagnostics essential for validating whether the classifier correctly distinguishes metabolite profiles between experimental conditions.

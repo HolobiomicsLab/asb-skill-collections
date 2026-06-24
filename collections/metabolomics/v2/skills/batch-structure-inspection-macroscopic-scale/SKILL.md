@@ -1,6 +1,8 @@
 ---
 name: batch-structure-inspection-macroscopic-scale
-description: Use when after loading log-transformed, pre-processed metabolomics feature abundance tables (samples × features, with batch identifiers in the first column) and prior to selecting a batch-effect correction model.
+description: Use when after loading log-transformed, pre-processed metabolomics feature
+  abundance tables (samples × features, with batch identifiers in the first column)
+  and prior to selecting a batch-effect correction model.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3935
@@ -13,6 +15,7 @@ metadata:
   - R
   - sva
   - R graphics libraries (ggplot2, lattice)
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -21,7 +24,8 @@ derived_from:
 evidence_spans:
 - dbnorm (V-0.2.2) A package for drift across batches normalization and visualization
 - dbnorm contains R functions which allow visualization and removal of technical heterogeneity
-- '*dbnorm* contains R functions which allow visualization and removal of technical heterogeneity'
+- '*dbnorm* contains R functions which allow visualization and removal of technical
+  heterogeneity'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +50,7 @@ attribution:
 
 # batch-structure-inspection-macroscopic-scale
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visually inspect the macroscopic structure of metabolomics datasets across analytical batches using unsupervised learning algorithms (PCA, hierarchical clustering) to identify spatial separation of sample sets and batch drift patterns before and after correction. This skill helps users evaluate whether batch effects are present and whether correction models have successfully removed technical heterogeneity.

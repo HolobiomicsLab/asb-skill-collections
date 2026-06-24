@@ -1,6 +1,9 @@
 ---
 name: ei-mass-spectrum-simulation
-description: Use when when you have a molecular structure (XYZ or equivalent format) and need to predict its EI mass spectrum including major fragment ions and their relative intensities, particularly for validation against experimental data or when experimental spectra are unavailable;
+description: Use when when you have a molecular structure (XYZ or equivalent format)
+  and need to predict its EI mass spectrum including major fragment ions and their
+  relative intensities, particularly for validation against experimental data or when
+  experimental spectra are unavailable;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3860
@@ -17,11 +20,13 @@ metadata:
   - CREST
   techniques:
   - GC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**orca** (version >= 6.0.0)'
 - '**molbar** (version >= 1.1.3)'

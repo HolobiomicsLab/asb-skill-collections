@@ -1,6 +1,8 @@
 ---
 name: quality-control-sample-selection-and-marking
-description: Use when your metabolomics dataset contains samples analyzed across multiple batches or runs, and you have sample-level metadata (sampledata) with a 'type' or classification field. You intend to apply QC-aware normalization methods (e.
+description: Use when your metabolomics dataset contains samples analyzed across multiple
+  batches or runs, and you have sample-level metadata (sampledata) with a 'type' or
+  classification field. You intend to apply QC-aware normalization methods (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -10,13 +12,16 @@ metadata:
   - R
   - NormalizeMets
   - RStudio
+  license_tier: restricted
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
 evidence_spans:
-- The R software environment can be downloaded for free from the Comprehensive R Archive Network (CRAN)
+- The R software environment can be downloaded for free from the Comprehensive R Archive
+  Network (CRAN)
 - 'Install the NormalizeMets package by using the following function: `install.packages("NormalizeMets")`'
-- The use of RStudio is also recommended. RStudio is an integrated development environment (IDE)
+- The use of RStudio is also recommended. RStudio is an integrated development environment
+  (IDE)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -40,6 +45,7 @@ attribution:
 
 # quality-control-sample-selection-and-marking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and designate quality-control (QC) samples within a metabolomics dataset by leveraging sample metadata annotations, enabling downstream normalization and batch-effect correction. This skill is essential for preparing data for RLSC and other QC-sample-dependent normalization methods.

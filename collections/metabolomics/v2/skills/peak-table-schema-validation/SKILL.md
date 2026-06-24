@@ -1,6 +1,9 @@
 ---
 name: peak-table-schema-validation
-description: Use when after converting peak-picker output (from MZmine, XCMS, MS-DIAL, or Compound Discoverer) into LipidMatch-compatible format. Use this skill when you need to verify that the converted file will be successfully read by LipidMatch before proceeding to lipid identification;
+description: Use when after converting peak-picker output (from MZmine, XCMS, MS-DIAL,
+  or Compound Discoverer) into LipidMatch-compatible format. Use this skill when you
+  need to verify that the converted file will be successfully read by LipidMatch before
+  proceeding to lipid identification;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3197
@@ -15,11 +18,13 @@ metadata:
   - LipidMatch
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

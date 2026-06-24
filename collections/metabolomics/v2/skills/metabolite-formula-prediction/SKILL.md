@@ -1,6 +1,8 @@
 ---
 name: metabolite-formula-prediction
-description: Use when when you have a known drug's chemical formula and need to generate a comprehensive list of predicted metabolite formulas to match against experimental mzML mass spectrometry data.
+description: Use when when you have a known drug's chemical formula and need to generate
+  a comprehensive list of predicted metabolite formulas to match against experimental
+  mzML mass spectrometry data.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3803
@@ -13,6 +15,7 @@ metadata:
   - MetApp
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR

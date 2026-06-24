@@ -1,6 +1,9 @@
 ---
 name: neutral-loss-prediction
-description: Use when you have LC-HRMS features with fragmentation data (observed m/z shifts, mass deficits, or tandem MS spectra) and a suspect compound database with known or predictable neutral loss fragments (e.g., H₂O, CO₂, CH₄, or structure-specific losses).
+description: Use when you have LC-HRMS features with fragmentation data (observed
+  m/z shifts, mass deficits, or tandem MS spectra) and a suspect compound database
+  with known or predictable neutral loss fragments (e.g., H₂O, CO₂, CH₄, or structure-specific
+  losses).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -11,11 +14,13 @@ metadata:
   - Scannotation
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.est.3c04764
   title: Scannotation
 evidence_spans:
-- Scannotation is an automated and user-friendly suspect screening tool for the rapid pre-annotation of LC-HRMS datasets.
+- Scannotation is an automated and user-friendly suspect screening tool for the rapid
+  pre-annotation of LC-HRMS datasets.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

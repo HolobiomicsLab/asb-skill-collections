@@ -1,6 +1,7 @@
 ---
 name: gaussian-process-uncertainty-quantification
-description: Use when after collecting observed separation efficiency scores at sampled gradient conditions and you need to propose the next gradient to evaluate.
+description: Use when after collecting observed separation efficiency scores at sampled
+  gradient conditions and you need to propose the next gradient to evaluate.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,6 +14,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
@@ -21,7 +23,8 @@ derived_from:
 evidence_spans:
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
 - a :class:`sklearn.gaussian_process.GaussianProcessRegressor` object
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - Download and install Python 3.8 or later from `python.org`
 - model.computeNextGradient()
@@ -49,6 +52,7 @@ attribution:
 
 # gaussian-process-uncertainty-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a Gaussian Process regression model to observed LC-MS gradient performance data and generate mean and variance predictions across a continuous search space to quantify prediction uncertainty. This uncertainty estimate directly enables acquisition function selection and drives the efficiency of Bayesian optimization for gradient discovery.

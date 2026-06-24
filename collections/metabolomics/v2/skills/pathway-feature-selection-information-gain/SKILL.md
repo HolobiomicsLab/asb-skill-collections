@@ -1,6 +1,9 @@
 ---
 name: pathway-feature-selection-information-gain
-description: Use when after computing a pathway dysregulation score matrix (PDSmatrix) from metabolite-to-pathway mappings, apply this skill when you need to reduce the dimensionality of pathway features and select only those pathways with sufficient information content to discriminate between phenotype classes.
+description: Use when after computing a pathway dysregulation score matrix (PDSmatrix)
+  from metabolite-to-pathway mappings, apply this skill when you need to reduce the
+  dimensionality of pathway features and select only those pathways with sufficient
+  information content to discriminate between phenotype classes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -10,12 +13,15 @@ metadata:
   tools:
   - Lilikoi v2.0
   - R
+  license_tier: open
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
 evidence_spans:
-- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
-- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis in R programming environment.
+- The new Lilikoi v2.0 R package has implemented a deep-learning method for classification,
+  in addition to popular machine learning methods.
+- Lilikoi v2.0 is a modern, comprehensive package to enable metabolomics analysis
+  in R programming environment.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

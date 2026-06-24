@@ -1,6 +1,9 @@
 ---
 name: conditional-dispatch-routing
-description: Use when you have received a peak/feature table from an unknown or variable upstream peak-picking tool and need to ingest it into LipidMatch or a similar unified workflow. The input file format, column naming, or metadata structure is tool-specific (e.
+description: Use when you have received a peak/feature table from an unknown or variable
+  upstream peak-picking tool and need to ingest it into LipidMatch or a similar unified
+  workflow. The input file format, column naming, or metadata structure is tool-specific
+  (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,13 +18,16 @@ metadata:
   - LipidMatch
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
 evidence_spans:
-- LipidMatch can be used with various peak picking software (for example MZmine, XCMS, MS-DIAL, and Compound Discoverer)
+- LipidMatch can be used with various peak picking software (for example MZmine, XCMS,
+  MS-DIAL, and Compound Discoverer)
 - for example MZmine, XCMS, MS-DIAL, and Compound Discoverer
-- LipidMatch identifications are obtained by matching experimental fragment m/z values with simulated library m/z values
+- LipidMatch identifications are obtained by matching experimental fragment m/z values
+  with simulated library m/z values
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: precision-matrix-network-inference
-description: Use when you have a feature matrix (rows=samples, columns=features) and need to infer conditional independence structure among features, particularly when the true network is believed to be sparse and you want to control the sparsity level via regularization.
+description: Use when you have a feature matrix (rows=samples, columns=features) and
+  need to infer conditional independence structure among features, particularly when
+  the true network is believed to be sparse and you want to control the sparsity level
+  via regularization.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -10,6 +13,7 @@ metadata:
   tools:
   - Python
   - pcaGLASSO
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO
@@ -38,6 +42,7 @@ attribution:
 
 # precision-matrix-network-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate a sparse network graph structure from a feature matrix by applying the graphical lasso (GLASSO) algorithm to compute a sparse inverse covariance (precision) matrix. This skill identifies feature relationships as edges in a network by detecting non-zero entries in the regularized precision matrix, enabling downstream network visualization and sub-network analysis.

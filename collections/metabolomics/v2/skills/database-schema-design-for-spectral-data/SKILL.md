@@ -1,6 +1,9 @@
 ---
 name: database-schema-design-for-spectral-data
-description: Use when you have MS/MS spectral library data currently stored in file-based formats (JSON, CSV, binary, MGF, MSP) and need to migrate to database-backed storage to support fast queries by metadata filters (precursor m/z, ion mode, retention time) and computed similarity scores against query.
+description: Use when you have MS/MS spectral library data currently stored in file-based
+  formats (JSON, CSV, binary, MGF, MSP) and need to migrate to database-backed storage
+  to support fast queries by metadata filters (precursor m/z, ion mode, retention
+  time) and computed similarity scores against query.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -15,13 +18,15 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
 - you want to make some kind of change to the code base
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:

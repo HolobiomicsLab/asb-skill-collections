@@ -1,6 +1,9 @@
 ---
 name: training-data-inventory-construction-from-spectral-libraries
-description: Use when you are preparing to apply Probability Product Kernel–based scoring to MS2 spectra for genomic–metabolomic linking, and you need to establish a reference set of ion peaks that represent robust spectral diversity without overfitting to any single study.
+description: Use when you are preparing to apply Probability Product Kernel–based
+  scoring to MS2 spectra for genomic–metabolomic linking, and you need to establish
+  a reference set of ion peaks that represent robust spectral diversity without overfitting
+  to any single study.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3801
@@ -13,15 +16,20 @@ metadata:
   - Chemistry Development Kit (CDK)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based on properties absent from an MS2 spectrum,
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
-- 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints: CDK Substructure,'
+- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based
+  on properties absent from an MS2 spectrum,
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
+- 'Molecular fingerprints are extracted from SMILES strings using the Chemistry Development
+  Kit [29]. The fingerprint vector is composed of three concatenated sets of fingerprints:
+  CDK Substructure,'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -46,6 +54,7 @@ attribution:
 
 # training-data-inventory-construction-from-spectral-libraries
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a curated peak inventory from public spectral libraries (e.g., GNPS) with structural annotations to serve as the reference set for MS2 spectrum filtering and Probability Product Kernel (PPK) denoising. This inventory enables downstream kernel-based scoring of BGC–metabolite links while leveraging community-validated spectral data.

@@ -1,6 +1,8 @@
 ---
 name: http-endpoint-connectivity-verification
-description: Use when after deploying a web service in a Docker container with port mapping (e.g., -p 8888:8080), verify that the application is running and responding to HTTP requests at the mapped endpoint.
+description: Use when after deploying a web service in a Docker container with port
+  mapping (e.g., -p 8888:8080), verify that the application is running and responding
+  to HTTP requests at the mapped endpoint.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3218
@@ -11,11 +13,13 @@ metadata:
   - Docker
   - Tomcat
   - curl or wget
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
 evidence_spans:
-- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched) webapp
+- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched)
+  webapp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -39,6 +43,7 @@ attribution:
 
 # HTTP endpoint connectivity verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a containerized web application (e.g., MetFrag webapp deployed in Docker) is accessible and responsive at its exposed HTTP endpoint. This skill confirms correct port mapping, service initialization, and endpoint availability before downstream use.

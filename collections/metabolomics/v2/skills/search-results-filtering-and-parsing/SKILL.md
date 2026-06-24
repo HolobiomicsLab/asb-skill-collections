@@ -1,6 +1,9 @@
 ---
 name: search-results-filtering-and-parsing
-description: Use when you have loaded DIA mass spectrometry search results containing feature identification data with associated Q-value scores, and you need to restrict the analytes available in selection drop-downs to those meeting a quality cutoff (typically 1% FDR equivalent) before visualization or manual.
+description: Use when you have loaded DIA mass spectrometry search results containing
+  feature identification data with associated Q-value scores, and you need to restrict
+  the analytes available in selection drop-downs to those meeting a quality cutoff
+  (typically 1% FDR equivalent) before visualization or manual.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +16,14 @@ metadata:
   - Streamlit
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
 - ResultsLoader
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 claims: []
 provenance:

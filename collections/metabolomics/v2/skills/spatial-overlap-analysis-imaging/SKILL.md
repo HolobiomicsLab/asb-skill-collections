@@ -1,6 +1,9 @@
 ---
 name: spatial-overlap-analysis-imaging
-description: Use when when annotating matrix-related peaks in MSI datasets where candidate peaks have identical or near-identical m/z values (isobaric ions), or when multiple peaks exhibit overlapping spatial distributions across the tissue image that could confound downstream annotation filtering.
+description: Use when when annotating matrix-related peaks in MSI datasets where candidate
+  peaks have identical or near-identical m/z values (isobaric ions), or when multiple
+  peaks exhibit overlapping spatial distributions across the tissue image that could
+  confound downstream annotation filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3645
@@ -16,11 +19,13 @@ metadata:
   techniques:
   - MS-imaging
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - rMSIcleanup is an open-source R package
 claims: []
@@ -46,6 +51,7 @@ attribution:
 
 # Spatial-overlap analysis for imaging mass spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and flags overlapping peaks and isobaric ions in mass spectrometry imaging (MSI) data by analyzing m/z coincidence and spatial distribution patterns across tissue. This prevents misclassification of chemically distinct ions during matrix-related signal annotation.

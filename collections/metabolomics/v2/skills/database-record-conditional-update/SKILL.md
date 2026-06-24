@@ -22,6 +22,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
@@ -50,6 +51,7 @@ attribution:
 
 # database-record-conditional-update
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Conditionally update database records based on field state and metadata consistency rules, such as auto-assigning adducts to spectra when missing. This skill ensures data completeness and consistency by applying ionization-mode-aware logic before writing records back to storage.

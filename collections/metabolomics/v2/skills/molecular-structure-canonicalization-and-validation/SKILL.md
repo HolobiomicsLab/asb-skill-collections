@@ -1,6 +1,7 @@
 ---
 name: molecular-structure-canonicalization-and-validation
-description: Use when immediately after generating candidate transformation products from biotransformation rules.
+description: Use when immediately after generating candidate transformation products
+  from biotransformation rules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -11,6 +12,7 @@ metadata:
   tools:
   - RDKit
   - PROXIMAL2
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam
@@ -39,6 +41,7 @@ attribution:
 
 # molecular-structure-canonicalization-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Canonicalize SMILES strings and validate molecular structures for chemical correctness after transformation or generation. This ensures that duplicate candidates are detected, invalid molecules are filtered, and structures are represented in a standardized form suitable for downstream comparison and storage.

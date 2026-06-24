@@ -1,6 +1,8 @@
 ---
 name: intensity-threshold-evaluation
-description: Use when you have processed LC-MS data (mzML or vendor format) and need to validate that internal standards and target analytes produce peak intensities within expected operational ranges.
+description: Use when you have processed LC-MS data (mzML or vendor format) and need
+  to validate that internal standards and target analytes produce peak intensities
+  within expected operational ranges.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3438
@@ -13,6 +15,7 @@ metadata:
   - Rapid QC-MS
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

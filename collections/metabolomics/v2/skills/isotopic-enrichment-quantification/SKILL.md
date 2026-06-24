@@ -1,6 +1,8 @@
 ---
 name: isotopic-enrichment-quantification
-description: Use when you have MS2 spectra from peptides with known stable isotope enrichment (e.g., 52% ¹³C incorporation), a target peptide sequence, and you need to determine which B and Y ion fragments carry how many isotope labels at each position.
+description: Use when you have MS2 spectra from peptides with known stable isotope
+  enrichment (e.g., 52% ¹³C incorporation), a target peptide sequence, and you need
+  to determine which B and Y ion fragments carry how many isotope labels at each position.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -18,12 +20,15 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

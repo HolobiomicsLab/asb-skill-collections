@@ -1,6 +1,9 @@
 ---
 name: cumulative-distribution-calculation
-description: Use when you have numeric distribution data (e.g., gene expression, abundance, or measurement values) in CSV format and need to compare cumulative empirical distributions either within a single cohort or across multiple sample groups (e.g., control vs. treatment, disease subtype vs. healthy).
+description: Use when you have numeric distribution data (e.g., gene expression, abundance,
+  or measurement values) in CSV format and need to compare cumulative empirical distributions
+  either within a single cohort or across multiple sample groups (e.g., control vs.
+  treatment, disease subtype vs. healthy).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3565
@@ -11,6 +14,7 @@ metadata:
   - R Shiny
   - GraphBio
   - Docker
+  license_tier: open
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

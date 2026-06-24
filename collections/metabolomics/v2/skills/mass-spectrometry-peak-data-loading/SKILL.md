@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-peak-data-loading
-description: Use when when you have raw or parsed MS spectra data (m/z values, intensity values, and spectral metadata) and need to integrate it into a Spectra object for downstream processing.
+description: Use when when you have raw or parsed MS spectra data (m/z values, intensity
+  values, and spectral metadata) and need to integrate it into a Spectra object for
+  downstream processing.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,6 +17,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -45,6 +48,7 @@ attribution:
 
 # mass-spectrometry-peak-data-loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a mass spectrometry backend by loading spectra variables, m/z, and intensity peak data into a structured NumericList representation. This skill implements the backendInitialize() method to populate MsBackend instances that mediate between raw MS data and the Spectra analysis framework.

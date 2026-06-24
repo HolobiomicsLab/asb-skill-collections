@@ -1,6 +1,9 @@
 ---
 name: retention-time-windowing
-description: Use when you have a complete TIC (total ion current) table indexed by retention time and need to visualize or analyze only a specific time interval—for example, when isolating a chromatographic peak region (9–10 min) before plotting or when a mass spectrometry run spans a time range wider than the.
+description: Use when you have a complete TIC (total ion current) table indexed by
+  retention time and need to visualize or analyze only a specific time interval—for
+  example, when isolating a chromatographic peak region (9–10 min) before plotting
+  or when a mass spectrometry run spans a time range wider than the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,12 +15,15 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 claims: []
 provenance:

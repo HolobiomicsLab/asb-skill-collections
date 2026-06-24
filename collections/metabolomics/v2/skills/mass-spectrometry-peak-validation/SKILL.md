@@ -1,6 +1,8 @@
 ---
 name: mass-spectrometry-peak-validation
-description: Use when after peak alignment across all spectra in an MSImagingExperiment using peakAlign(), when you need to reduce the feature set to high-confidence peaks by removing spurious or low-frequency detections.
+description: Use when after peak alignment across all spectra in an MSImagingExperiment
+  using peakAlign(), when you need to reduce the feature set to high-confidence peaks
+  by removing spurious or low-frequency detections.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -13,12 +15,14 @@ metadata:
   - Cardinal 3.6
   techniques:
   - MS-imaging
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:

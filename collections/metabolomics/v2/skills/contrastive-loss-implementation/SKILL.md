@@ -1,6 +1,9 @@
 ---
 name: contrastive-loss-implementation
-description: 'Use when training embeddings from MS/MS spectra and you need to simultaneously enforce: (1) discrimination between spectra with different structural properties via contrastive learning on peak information and metadata embeddings, and (2) accurate reconstruction of embeddings from peak features via.'
+description: 'Use when training embeddings from MS/MS spectra and you need to simultaneously
+  enforce: (1) discrimination between spectra with different structural properties
+  via contrastive learning on peak information and metadata embeddings, and (2) accurate
+  reconstruction of embeddings from peak features via.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,6 +18,7 @@ metadata:
   - CLERMS
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS
@@ -42,6 +46,7 @@ attribution:
 
 # contrastive-loss-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a composite loss function that combines InfoNCE contrastive loss and MSE reconstruction loss for training transformer-based embeddings from MS/MS spectra peak information and metadata. This skill is essential when learning discriminative representations from multi-modal spectral data where both contrastive discrimination and reconstruction fidelity are required.

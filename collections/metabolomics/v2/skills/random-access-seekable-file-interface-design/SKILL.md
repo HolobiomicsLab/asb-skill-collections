@@ -1,6 +1,8 @@
 ---
 name: random-access-seekable-file-interface-design
-description: Use when you have a large mzML file or text corpus (e.g., Moby Dick, proteomics run) stored in compressed or database format and need to retrieve specific spectra or chapters by ID without sequential iteration or full decompression.
+description: Use when you have a large mzML file or text corpus (e.g., Moby Dick,
+  proteomics run) stored in compressed or database format and need to retrieve specific
+  spectra or chapters by ID without sequential iteration or full decompression.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -15,6 +17,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -44,6 +47,7 @@ attribution:
 
 # random-access-seekable-file-interface-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a custom file wrapper class that enables random-access seeking into compressed or database-backed spectral data files by implementing indexed block structure with __getitem__, read(), and spectrum count methods. This skill is essential when standard mzML parsers must support chapter/spectrum-level random access on files too large for full decompression.

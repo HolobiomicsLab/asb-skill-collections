@@ -1,6 +1,8 @@
 ---
 name: metabolite-mass-to-charge-ratio-matching
-description: Use when you have a negative-mode or positive-mode LC-MS feature table with observed m/z values and peak intensities, and you need to identify which metabolites (by KEGG ID) are likely represented.
+description: Use when you have a negative-mode or positive-mode LC-MS feature table
+  with observed m/z values and peak intensities, and you need to identify which metabolites
+  (by KEGG ID) are likely represented.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -17,14 +19,18 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 - we will now use the sample graph provided by FELLA R package
 claims: []
@@ -50,6 +56,7 @@ attribution:
 
 # metabolite-mass-to-charge-ratio-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Matches observed mass-to-charge ratio (m/z) values from untargeted LC-MS feature tables to KEGG metabolite database entries, accounting for adducts and in-source fragments. This is the first stage of the mWISE annotation workflow and produces candidate KEGG identifiers ranked by mass accuracy.

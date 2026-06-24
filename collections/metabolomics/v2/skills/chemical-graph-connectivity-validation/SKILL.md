@@ -1,6 +1,9 @@
 ---
 name: chemical-graph-connectivity-validation
-description: Use when after a machine learning model has generated predicted molecular structures (connectivity graphs and molecular formulas) from 1D NMR spectra. Use it to quantify accuracy on a held-out test set, measure degradation when applying the model beyond its training scope (e.
+description: Use when after a machine learning model has generated predicted molecular
+  structures (connectivity graphs and molecular formulas) from 1D NMR spectra. Use
+  it to quantify accuracy on a held-out test set, measure degradation when applying
+  the model beyond its training scope (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -14,6 +17,7 @@ metadata:
   - NMR spectrum simulation or database retrieval tool
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -41,6 +45,7 @@ attribution:
 
 # chemical-graph-connectivity-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate predicted molecular connectivity graphs against ground-truth structures by comparing bond topology, atom composition, and structural invariants. This skill is essential when assessing whether a structure prediction model (such as NMR2Struct) has correctly recovered the connectivity of a molecule from spectroscopic data.

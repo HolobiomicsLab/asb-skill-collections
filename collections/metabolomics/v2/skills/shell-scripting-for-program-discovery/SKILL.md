@@ -1,6 +1,8 @@
 ---
 name: shell-scripting-for-program-discovery
-description: Use when a scientific application (such as QCxMS2) requires multiple external programs with specific version constraints and you need to programmatically verify their presence and compatibility before executing calculations.
+description: Use when a scientific application (such as QCxMS2) requires multiple
+  external programs with specific version constraints and you need to programmatically
+  verify their presence and compatibility before executing calculations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3363
@@ -15,11 +17,13 @@ metadata:
   - orca
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**molbar** (version >= 1.1.3)'
 - '**geodesic_interpolate** (version'

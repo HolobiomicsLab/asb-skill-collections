@@ -1,6 +1,9 @@
 ---
 name: dda-fragmentation-strategy-parameterization
-description: Use when you have a virtual chemical mixture (MS1 peaks) and need to prototype a new DDA acquisition strategy before testing on real instrumentation. Use this skill when you want to compare how different parameter combinations (e.g., TopN=3 vs TopN=5, isolation_width=0.5 Da vs 1.
+description: Use when you have a virtual chemical mixture (MS1 peaks) and need to
+  prototype a new DDA acquisition strategy before testing on real instrumentation.
+  Use this skill when you want to compare how different parameter combinations (e.g.,
+  TopN=3 vs TopN=5, isolation_width=0.5 Da vs 1.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,7 @@ metadata:
   - IAPI (Thermo Fisher Tribrid/Exactive)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -45,6 +49,7 @@ attribution:
 
 # dda-fragmentation-strategy-parameterization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and validate data-dependent acquisition (DDA) fragmentation strategies by setting isolation window, m/z tolerance, retention-time tolerance, intensity thresholds, and fragment count constraints, then execute the parameterized strategy in a virtual mass spectrometry environment to generate MS1/MS2 scan data.

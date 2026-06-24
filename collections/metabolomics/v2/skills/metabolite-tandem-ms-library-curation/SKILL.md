@@ -1,6 +1,9 @@
 ---
 name: metabolite-tandem-ms-library-curation
-description: Use when you have multiple tandem MS/MS libraries in different formats (msp, mgf) from different providers (NIST, RIKEN, MoNA, GNPS) with incomplete or inconsistent structural annotations (missing SMILES or molecular formula fields) and need to combine them into unified, polarity-specific msp files.
+description: Use when you have multiple tandem MS/MS libraries in different formats
+  (msp, mgf) from different providers (NIST, RIKEN, MoNA, GNPS) with incomplete or
+  inconsistent structural annotations (missing SMILES or molecular formula fields)
+  and need to combine them into unified, polarity-specific msp files.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3282
@@ -16,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -47,6 +51,7 @@ attribution:
 
 # Metabolite Tandem MS/MS Library Curation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile and organize tandem mass spectral libraries from multiple sources (NIST, RIKEN, MoNA, GNPS) into polarity-separated msp files compatible with MS-DIAL by reading, enriching with structural metadata (SMILES, molecular formula), and separating positive and negative ionization modes.

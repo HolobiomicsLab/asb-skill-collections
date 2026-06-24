@@ -1,6 +1,8 @@
 ---
 name: tabular-data-validation
-description: Use when after curating and integrating structure-organism pairs from multiple sources when you need to produce a high-confidence subset suitable for publication or computational validation.
+description: Use when after curating and integrating structure-organism pairs from
+  multiple sources when you need to produce a high-confidence subset suitable for
+  publication or computational validation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +12,7 @@ metadata:
   tools:
   - R
   - Make
+  license_tier: restricted
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus
@@ -42,6 +45,7 @@ attribution:
 
 # tabular-data-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cross-reference curated structure-organism pairs against reference dictionaries (organism, structure, reference) and validate metadata completeness to filter a curated collection down to high-confidence, platinum-tier pairs. This skill ensures that only pairs with verified dictionary entries, complete metadata, and no conflicting assertions advance to downstream analysis.

@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-annotation-preparation
-description: Use when you have acquired composite fragmentation spectra from DIA experiments (MS^E, AIF, or SWATH-MS) that have been deconvoluted by IDSL.CSA, and you need to export the resolved spectra in a format suitable for chemical structure identification against reference libraries or spectral databases.
+description: Use when you have acquired composite fragmentation spectra from DIA experiments
+  (MS^E, AIF, or SWATH-MS) that have been deconvoluted by IDSL.CSA, and you need to
+  export the resolved spectra in a format suitable for chemical structure identification
+  against reference libraries or spectral databases.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,11 +17,13 @@ metadata:
   - IDSL.IPA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
 claims: []
 provenance:

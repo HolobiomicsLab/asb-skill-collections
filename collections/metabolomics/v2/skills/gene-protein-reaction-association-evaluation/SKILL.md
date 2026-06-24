@@ -1,6 +1,8 @@
 ---
 name: gene-protein-reaction-association-evaluation
-description: Use when you have a constraint-based metabolic model with embedded GPR rules (AND/OR associations between genes and reactions), paired with quantified gene-expression data (RNA-seq FPKM or read counts per cell line).
+description: Use when you have a constraint-based metabolic model with embedded GPR
+  rules (AND/OR associations between genes and reactions), paired with quantified
+  gene-expression data (RNA-seq FPKM or read counts per cell line).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3436
@@ -13,6 +15,7 @@ metadata:
   - getRASscore.py
   - getNormalizedRAS.py
   - constraint-based stoichiometric metabolic models (SBML format, COBRApy library)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -40,6 +43,7 @@ attribution:
 
 # Gene-Protein-Reaction Association Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically extract and validate Gene-Protein-Reaction (GPR) rules from a metabolic model, then use those rules to compute Reaction Activity Scores (RAS) by integrating transcriptomics data via logical AND/OR resolution. This skill bridges gene-expression levels to reaction-level constraints, enabling discrimination of transcriptionally controlled metabolic reactions.

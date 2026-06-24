@@ -1,6 +1,9 @@
 ---
 name: spearman-correlation-computation-microbiome
-description: 'Use when you have cross-validated predictions of metabolite abundances from a microbiome-metabolome model and need to: (1) measure predictive accuracy at the individual metabolite level; (2) aggregate performance across all metabolites to report mean SCC;'
+description: 'Use when you have cross-validated predictions of metabolite abundances
+  from a microbiome-metabolome model and need to: (1) measure predictive accuracy
+  at the individual metabolite level; (2) aggregate performance across all metabolites
+  to report mean SCC;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -17,16 +20,23 @@ metadata:
   - Python
   - TensorFlow
   - scipy
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
 - MiMeNet (Microbiome-Metabolome Network), a multi-layer perceptron (MLPNN)
-- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome abundance features (green) are used to train a neural network to predict metabolite abundance features (blue).
-- we first compared MiMeNet to MelonnPan, a recent model that uses Elastic Net linear regression
-- we benchmarked MiMeNet against other general regression models, i.e., Random Forest (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
+- MiMeNet uses paired microbiome and metabolome data for model training. Microbiome
+  abundance features (green) are used to train a neural network to predict metabolite
+  abundance features (blue).
+- we first compared MiMeNet to MelonnPan, a recent model that uses Elastic Net linear
+  regression
+- we benchmarked MiMeNet against other general regression models, i.e., Random Forest
+  (RF), multivariate Elastic Net, and canonical correlation analysis (CCA) models
 - The NED model was trained using code downloaded from https://github.com/vuongle2/BiomeNED
-- MelonnPan and NED models were obtained from their respective GitHub repositories and executed using default parameters as according to their tutorials. Random Forest, multivariate Elastic Net, and
+- MelonnPan and NED models were obtained from their respective GitHub repositories
+  and executed using default parameters as according to their tutorials. Random Forest,
+  multivariate Elastic Net, and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -50,6 +60,7 @@ attribution:
 
 # Spearman Correlation Computation for Microbiome-Metabolome Prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Spearman correlation coefficients (SCCs) between predicted and observed metabolite abundances to quantify prediction accuracy in microbiome-metabolome models. This metric is used to identify well-predicted metabolites and compare the predictive performance of competing methods across paired microbiome and metabolomic datasets.

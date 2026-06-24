@@ -1,6 +1,8 @@
 ---
 name: s4-class-definition-and-slot-management
-description: 'Use when you are extending the MsBackend virtual class to create a new backend for storing MS spectra data and need to define the internal data structure. Specifically: when you have multiple types of spectra variables (e.'
+description: 'Use when you are extending the MsBackend virtual class to create a new
+  backend for storing MS spectra data and need to define the internal data structure.
+  Specifically: when you have multiple types of spectra variables (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3088
@@ -14,11 +16,13 @@ metadata:
   - R (S4 OOP system)
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []
@@ -44,6 +48,7 @@ attribution:
 
 # S4 Class Definition and Slot Management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement S4 classes with typed slots to store heterogeneous MS data structures (spectra variables, peak data, metadata) in a memory-efficient, type-safe manner. This skill is essential when building backend implementations that must enforce data consistency and support polymorphic method dispatch across different MS data representations.

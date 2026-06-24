@@ -1,6 +1,9 @@
 ---
 name: record-filtering-by-field-value
-description: Use when when you have a table of JSON records and need to select a subset matching a specific condition—for example, filtering records where 'status=active' before building a string value, or filtering 'experiment_type=MS' before constructing a matrix of dictionary objects.
+description: Use when when you have a table of JSON records and need to select a subset
+  matching a specific condition—for example, filtering records where 'status=active'
+  before building a string value, or filtering 'experiment_type=MS' before constructing
+  a matrix of dictionary objects.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -12,6 +15,7 @@ metadata:
   - MESSES
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -19,7 +23,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MESSES (Metadata from Experimental SpreadSheets Extraction System) is a Python package
-- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_ (`jsonschema <https://pypi.org/project/jsonschema/>`_)
+- This is done largely through utilizing `JSON Schema <https://json-schema.org/understanding-json-schema/>`_
+  (`jsonschema <https://pypi.org/project/jsonschema/>`_)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -44,6 +49,7 @@ attribution:
 
 # record-filtering-by-field-value
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter JSON records by matching a single field against a specified value before downstream processing (e.g., string construction or matrix transformation). This skill selects only records meeting a field=value condition, reducing the input set to those relevant for the target conversion directive.

@@ -1,6 +1,8 @@
 ---
 name: mass-track-extraction-and-binning
-description: 'Use when when you have centroid mzML files from LC-MS metabolomics acquisition and need to construct sample-level mass tracks before cross-sample alignment. Specifically: you are starting fresh with vendor-converted or pre-processed mzML input;'
+description: 'Use when when you have centroid mzML files from LC-MS metabolomics acquisition
+  and need to construct sample-level mass tracks before cross-sample alignment. Specifically:
+  you are starting fresh with vendor-converted or pre-processed mzML input;'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -18,14 +20,17 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
-- nearest neighbor (NN) clustering is performed to establish the number of mass tracks. The NN clustering assigns each data point to its nearest 'peak mz value'.
+- nearest neighbor (NN) clustering is performed to establish the number of mass tracks.
+  The NN clustering assigns each data point to its nearest 'peak mz value'.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -49,6 +54,7 @@ attribution:
 
 # mass-track-extraction-and-binning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and bin mass tracks (extracted ion chromatograms, EICs) from individual LC-MS samples by parsing mzML files, binning m/z values at high resolution (0.001 amu), and clustering overlapping m/z traces using nearest-neighbor methods. This foundational step produces raw mass tracks that serve as input to cross-sample alignment.

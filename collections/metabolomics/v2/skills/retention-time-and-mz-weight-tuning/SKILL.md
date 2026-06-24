@@ -1,6 +1,9 @@
 ---
 name: retention-time-and-mz-weight-tuning
-description: Use when after anchor selection and RT mapping spline construction, when you have a fitted metabCombiner object with pre-aligned feature pair candidates and need to tune the scoring metric that combines retention time, m/z, and cosine similarity components.
+description: Use when after anchor selection and RT mapping spline construction, when
+  you have a fitted metabCombiner object with pre-aligned feature pair candidates
+  and need to tune the scoring metric that combines retention time, m/z, and cosine
+  similarity components.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -13,12 +16,15 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -42,6 +48,7 @@ attribution:
 
 # retention-time-and-mz-weight-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize weighted scoring parameters (retention-time weight A, m/z weight B, and similarity-score weight C) for feature pair alignment in LC-MS metabolomics by systematic grid search and validation against known shared compound identities. This skill determines the parameter ranges that maximize correct identification of overlapping features between disparately-acquired datasets.

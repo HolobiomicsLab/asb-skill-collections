@@ -1,6 +1,8 @@
 ---
 name: runtime-performance-profiling
-description: 'Use when when you need to empirically validate that one mass spectrometry data processing library achieves higher throughput than competing alternatives. Specifically: you have multiple candidate libraries (e.'
+description: 'Use when when you need to empirically validate that one mass spectrometry
+  data processing library achieves higher throughput than competing alternatives.
+  Specifically: you have multiple candidate libraries (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3445
@@ -20,6 +22,7 @@ metadata:
   - matplotlib / seaborn
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -53,6 +56,7 @@ attribution:
 
 # runtime-performance-profiling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure and compare wall-clock processing time and throughput (spectra per second) across competing libraries on identical benchmark datasets and identical processing pipelines. This skill validates computational efficiency claims by quantifying median runtimes and deriving processing rates.

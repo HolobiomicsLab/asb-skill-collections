@@ -1,6 +1,8 @@
 ---
 name: ms2-data-preprocessing-pipeline
-description: Use when you have raw MS2 spectra files (mzML, mgf, msp, mzxml) that may contain multiple MS2 spectra per feature and require reduction or standardization before library matching.
+description: Use when you have raw MS2 spectra files (mzML, mgf, msp, mzxml) that
+  may contain multiple MS2 spectra per feature and require reduction or standardization
+  before library matching.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -13,6 +15,7 @@ metadata:
   - matchms
   techniques:
   - CE-MS
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

@@ -1,6 +1,8 @@
 ---
 name: r-package-function-integration
-description: Use when you have a published predictive model with known coefficients and feature requirements (e.g., MetaboAge from a peer-reviewed study), a target R package with an established data pipeline (e.
+description: Use when you have a published predictive model with known coefficients
+  and feature requirements (e.g., MetaboAge from a peer-reviewed study), a target
+  R package with an established data pipeline (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -14,6 +16,7 @@ metadata:
   - R (base and stats)
   techniques:
   - NMR
+  license_tier: restricted
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -45,6 +48,7 @@ attribution:
 
 # R Package Function Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate a predictive model (such as MetaboAge) as a validated R function into an existing package, ensuring compatibility with the package's input/output formats and maintaining reproducibility through pre-trained model coefficients. This skill is essential when extending a package like MiMIR to support new metabolic biomarkers or surrogate predictions.

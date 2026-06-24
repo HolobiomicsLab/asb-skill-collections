@@ -1,6 +1,8 @@
 ---
 name: conditional-threshold-logic-implementation
-description: 'Use when when visualizing numeric columns with unknown or highly variable ranges, and the visualization quality depends on parameter selection tied to data statistics. Specifically: after loading a numeric column (e.'
+description: 'Use when when visualizing numeric columns with unknown or highly variable
+  ranges, and the visualization quality depends on parameter selection tied to data
+  statistics. Specifically: after loading a numeric column (e.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3891
@@ -10,6 +12,7 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

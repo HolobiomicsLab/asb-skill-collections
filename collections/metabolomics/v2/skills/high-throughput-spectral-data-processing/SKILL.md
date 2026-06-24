@@ -1,6 +1,9 @@
 ---
 name: high-throughput-spectral-data-processing
-description: Use when when you have MGF-formatted mass spectrometry peak files (typically from proteomics experiments) numbering in the millions of spectra that require grouping into similar MS/MS clusters, and runtime must be kept under 15 minutes rather than hours.
+description: Use when when you have MGF-formatted mass spectrometry peak files (typically
+  from proteomics experiments) numbering in the millions of spectra that require grouping
+  into similar MS/MS clusters, and runtime must be kept under 15 minutes rather than
+  hours.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -13,6 +16,7 @@ metadata:
   - CUDA
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

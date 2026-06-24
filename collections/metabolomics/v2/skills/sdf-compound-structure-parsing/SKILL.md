@@ -1,6 +1,8 @@
 ---
 name: sdf-compound-structure-parsing
-description: Use when when you have fragment records (experimental or predicted) with compound identifiers or cross-reference fields that need to be validated against a reference compound database in SDF format.
+description: Use when when you have fragment records (experimental or predicted) with
+  compound identifiers or cross-reference fields that need to be validated against
+  a reference compound database in SDF format.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -9,6 +11,7 @@ metadata:
   - http://edamontology.org/topic_0625
   tools:
   - SDF file parser / molecular structure library
+  license_tier: restricted
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -37,6 +40,7 @@ attribution:
 
 # sdf-compound-structure-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and extract molecular structure and metadata from SDF-format compound databases to enable cross-referencing with fragment records and validation of compound identifiers. This skill is essential when working with DNA adduct reference databases where fragment entries must be matched to their parent compound records.

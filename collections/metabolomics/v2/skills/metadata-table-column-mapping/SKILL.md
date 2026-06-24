@@ -1,6 +1,9 @@
 ---
 name: metadata-table-column-mapping
-description: Use when you have a GNPS-format TSV metadata table with mandatory columns (ATTRIBUTE_Species, ATTRIBUTE_Organe, and optional genus/family columns) and need to prepare cleaned, standardized taxonomy strings for integration into the Literature Component or cross-referencing with external reference.
+description: Use when you have a GNPS-format TSV metadata table with mandatory columns
+  (ATTRIBUTE_Species, ATTRIBUTE_Organe, and optional genus/family columns) and need
+  to prepare cleaned, standardized taxonomy strings for integration into the Literature
+  Component or cross-referencing with external reference.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -11,13 +14,15 @@ metadata:
   tools:
   - Open Tree of Life
   - Inventa
+  license_tier: open
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa
 - doi: 10.1038/s41467-021-23953-9
   title: ''
 evidence_spans:
-- The taxonomy should be cleaned to uptoday recognized names, you can use the Open Tree of Life
+- The taxonomy should be cleaned to uptoday recognized names, you can use the Open
+  Tree of Life
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

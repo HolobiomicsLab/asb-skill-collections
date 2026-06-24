@@ -1,6 +1,9 @@
 ---
 name: component-candidate-prioritization-filtering
-description: Use when after generateComponents has assigned candidate TP features to parent features and computed similarity metrics (spectrum similarity, fragment matches, neutral loss matches, retention time differences), use this skill to narrow the candidate pool to high-confidence parent–TP pairs that.
+description: Use when after generateComponents has assigned candidate TP features
+  to parent features and computed similarity metrics (spectrum similarity, fragment
+  matches, neutral loss matches, retention time differences), use this skill to narrow
+  the candidate pool to high-confidence parent–TP pairs that.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -11,6 +14,7 @@ metadata:
   - patRoon
   techniques:
   - LC-MS
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

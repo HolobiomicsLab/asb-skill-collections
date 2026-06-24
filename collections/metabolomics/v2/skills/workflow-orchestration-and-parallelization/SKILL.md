@@ -1,6 +1,9 @@
 ---
 name: workflow-orchestration-and-parallelization
-description: Use when when you have a multi-step computational chemistry or molecular modeling pipeline (3+ sequential or parallel stages) that must process many molecules, each requiring repeated tool invocations with different parameters, and you need reproducibility, fault tolerance, and the ability to.
+description: Use when when you have a multi-step computational chemistry or molecular
+  modeling pipeline (3+ sequential or parallel stages) that must process many molecules,
+  each requiring repeated tool invocations with different parameters, and you need
+  reproducibility, fault tolerance, and the ability to.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3501
@@ -16,12 +19,14 @@ metadata:
   - hpccs
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 - 'Dimorphite-DL: For ionization state determination'
 - 'ASE-ANI: For conformation filtering'
 - 'QUICK: For quantum calculations'
@@ -48,6 +53,7 @@ attribution:
 
 # workflow-orchestration-and-parallelization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use Snakemake to orchestrate multi-stage computational chemistry pipelines with automatic parallelization across HPC nodes, enabling efficient end-to-end prediction of molecular properties (e.g., collisional cross sections) from SMILES input through ionization, conformation generation, filtering, and quantum calculations.

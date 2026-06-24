@@ -1,6 +1,9 @@
 ---
 name: mass-spectrometry-database-search
-description: Use when you have an unknown mass spectrum (or a representative metabolite spectrum from public data) and need to identify it by comparing it against a large reference library—particularly when the database contains billions of spectra and earlier tools like MASST are too slow or resource-intensive.
+description: Use when you have an unknown mass spectrum (or a representative metabolite
+  spectrum from public data) and need to identify it by comparing it against a large
+  reference library—particularly when the database contains billions of spectra and
+  earlier tools like MASST are too slow or resource-intensive.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -13,6 +16,7 @@ metadata:
   - GNPS Molecular Networking
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST
@@ -42,6 +46,7 @@ attribution:
 
 # mass-spectrometry-database-search
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query an unknown mass spectrum against billion-scale spectral databases to identify metabolites and related compounds through spectral similarity matching. This skill enables fast, error-tolerant search of metabolomics MS data at scales previously infeasible with earlier tools.

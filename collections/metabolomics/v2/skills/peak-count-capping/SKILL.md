@@ -1,6 +1,9 @@
 ---
 name: peak-count-capping
-description: Use when apply peak-count capping when preprocessing tandem mass spectrometry (MS/MS) spectra for peptide identification or spectral library matching, particularly when working with high-resolution spectra that may retain numerous low-intensity noise peaks after intensity filtering.
+description: Use when apply peak-count capping when preprocessing tandem mass spectrometry
+  (MS/MS) spectra for peptide identification or spectral library matching, particularly
+  when working with high-resolution spectra that may retain numerous low-intensity
+  noise peaks after intensity filtering.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -12,6 +15,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -41,6 +45,7 @@ attribution:
 
 # peak-count-capping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Peak-count capping limits the number of intensity peaks retained in a mass spectrum after noise filtering, improving computational efficiency while preserving the most intense fragment ions. This step is applied during spectrum preprocessing to prevent memory overhead and ensure reproducibility in downstream peptide identification or spectral matching.

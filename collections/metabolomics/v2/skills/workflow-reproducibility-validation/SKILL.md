@@ -1,6 +1,7 @@
 ---
 name: workflow-reproducibility-validation
-description: Use when after implementing or deploying a containerized Nextflow workflow that processes LC-HRMS metabolomics .
+description: Use when after implementing or deploying a containerized Nextflow workflow
+  that processes LC-HRMS metabolomics .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0552
@@ -15,6 +16,7 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -44,6 +46,7 @@ attribution:
 
 # Workflow Reproducibility Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a containerized bioinformatics workflow (specifically Nextflow-based LC-HRMS metabolomics pipelines) produces consistent, portable results across diverse compute environments by executing functional tests, comparing outputs against reference datasets, and verifying resource logs and execution traces.

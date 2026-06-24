@@ -1,6 +1,9 @@
 ---
 name: random-missing-value-masking
-description: Use when preparing ion image data for contrastive learning in mass spectrometry imaging (MSI), specifically when you need to augment single ion images into pairs of variants for encoder training in COL mode (co-localized ions) or as a base component of ISO mode (isotope ions).
+description: Use when preparing ion image data for contrastive learning in mass spectrometry
+  imaging (MSI), specifically when you need to augment single ion images into pairs
+  of variants for encoder training in COL mode (co-localized ions) or as a base component
+  of ISO mode (isotope ions).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,12 +15,14 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
@@ -41,6 +46,7 @@ attribution:
 
 # random-missing-value-masking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A data augmentation technique that randomly masks a fraction of pixel values in ion images as missing to simulate incomplete detection in mass spectrometry imaging. This augmentation is applied during contrastive learning in DeepION to generate diverse augmented variants that improve representation robustness.

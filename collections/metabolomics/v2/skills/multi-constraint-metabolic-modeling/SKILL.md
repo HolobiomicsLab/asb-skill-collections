@@ -1,6 +1,9 @@
 ---
 name: multi-constraint-metabolic-modeling
-description: Use when you have metabolic models for multiple biological samples and need to distinguish between samples based on their metabolic phenotype, but single constraints (e.g., gene expression alone or nutrient availability alone) fail to segregate them adequately.
+description: Use when you have metabolic models for multiple biological samples and
+  need to distinguish between samples based on their metabolic phenotype, but single
+  constraints (e.g., gene expression alone or nutrient availability alone) fail to
+  segregate them adequately.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3660
@@ -17,14 +20,18 @@ metadata:
   - Flux Variability Analysis (FVA)
   - GLPK solver
   - qLSLab/integrate (pipeline scripts)
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
 - using constraint-based stoichiometric metabolic models as a scaffold
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- In this work, we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions
-- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72]
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions
+- In this work, we exploited the implementation of optGpSampler algorithm [71] available
+  in COBRApy [72], and we sampled a million steady state solutions
+- We exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72]
 - the implementation of optGpSampler algorithm [71] available in COBRApy [72]
 claims: []
 provenance:
@@ -49,6 +56,7 @@ attribution:
 
 # multi-constraint-metabolic-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply simultaneous nutrient availability, extracellular flux ratio, and transcriptomics-derived constraints to constraint-based metabolic models to segregate cell line phenotypes and characterize multi-level metabolic regulation. This skill integrates three orthogonal regulatory layers—substrate availability, measured metabolic exchange ratios, and gene expression—to achieve superior discrimination of steady-state flux distributions compared to single or paired constraint applications.

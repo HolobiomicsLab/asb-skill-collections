@@ -1,6 +1,8 @@
 ---
 name: round-trip-data-integrity-verification
-description: Use when you have implemented or are validating a reader/writer library for a mass spectrometry file format (such as mzPeak, mzML, or similar), and need to confirm that data parsed from disk can be written back without loss of information.
+description: Use when you have implemented or are validating a reader/writer library
+  for a mass spectrometry file format (such as mzPeak, mzML, or similar), and need
+  to confirm that data parsed from disk can be written back without loss of information.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_0335
@@ -13,6 +15,7 @@ metadata:
   - ZIP utility
   techniques:
   - mass-spectrometry
+  license_tier: restricted
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -40,6 +43,7 @@ attribution:
 
 # round-trip-data-integrity-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that mass spectrometry data can be read from a file format, written back to disk, and compared for structural and data equivalence to confirm lossless serialization. This ensures that file format implementations correctly preserve all spectrum metadata, signal arrays, and instrument information through encode–decode cycles.

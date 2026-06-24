@@ -1,6 +1,9 @@
 ---
 name: microbe-metabolite-module-construction
-description: Use when when you have trained multi-layer perceptron neural network models on paired microbiome-metabolome data (from ≥10-fold cross-validation iterations) and need to identify functional modules—groups of microbes and metabolites with co-varying or synergistic relationships—for systems-level.
+description: Use when when you have trained multi-layer perceptron neural network
+  models on paired microbiome-metabolome data (from ≥10-fold cross-validation iterations)
+  and need to identify functional modules—groups of microbes and metabolites with
+  co-varying or synergistic relationships—for systems-level.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3432
@@ -15,12 +18,15 @@ metadata:
   - Python scikit-learn
   - TensorFlow
   - scikit-learn
+  license_tier: restricted
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
 evidence_spans:
-- Weighted correlation network analysis (WGCNA) of microbial features was performed using the WGCNA library in R
-- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet to those identified by the Weighted Correlation Network Analysis (WGCNA)
+- Weighted correlation network analysis (WGCNA) of microbial features was performed
+  using the WGCNA library in R
+- compared the microbial modules in the IBD (PRISM) dataset identified by MiMeNet
+  to those identified by the Weighted Correlation Network Analysis (WGCNA)
 - using Seaborn's clustermap function in Python
 - using Cytoscape
 - using Python's sci-kit-learn package
@@ -47,6 +53,7 @@ attribution:
 
 # Microbe-Metabolite Module Construction via Biclustering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Constructs functional modules of microbes and metabolites by biclustering normalized feature attribution scores derived from trained neural network weights, grouping organisms and compounds that share similar interaction patterns and metabolic roles.

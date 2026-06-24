@@ -1,6 +1,8 @@
 ---
 name: two-dimensional-correlation-optimized-warping-parameter-tuning
-description: Use when when you have a preprocessed sample chromatogram (smoothed and baseline-corrected) and a preprocessed reference chromatogram, and need to align them using 2D COW.
+description: Use when when you have a preprocessed sample chromatogram (smoothed and
+  baseline-corrected) and a preprocessed reference chromatogram, and need to align
+  them using 2D COW.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -12,13 +14,15 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: restricted
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:
@@ -44,6 +48,7 @@ attribution:
 
 # two-dimensional-correlation-optimized-warping-parameter-tuning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Tune segment and maximum warping parameters for the 2D correlation optimized warping (2D COW) algorithm to align preprocessed GCxGC-MS chromatograms. This skill addresses the critical decision of parameter selection that controls both the granularity of alignment segments and the allowed deformation in first and second dimensions, balancing alignment fidelity against overfitting.
