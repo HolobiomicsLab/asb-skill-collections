@@ -1,0 +1,25 @@
+# SPDX-or-name -> consumer license tier. Human doc: LICENSE_TIERS.md.
+version: 1
+tiers: [open, noncommercial, restricted]
+spdx:
+  MIT: open
+  Apache-2.0: open
+  BSD-2-Clause: open
+  BSD-3-Clause: open
+  MPL-2.0: open
+  CC-BY-4.0: open
+  CC-BY-3.0: open
+  CC0-1.0: open
+  GPL-2.0-only: open
+  GPL-3.0-only: open
+  GPL-3.0-or-later: open
+  AGPL-3.0-only: open
+  AGPL-3.0-or-later: open
+  LGPL-3.0-only: open
+  CC-BY-NC-4.0: noncommercial
+  CC-BY-NC-3.0: noncommercial
+  CC-BY-NC-SA-4.0: noncommercial
+  PolyForm-Noncommercial-1.0.0: noncommercial
+fallback:
+  noncommercial_keywords: [noncommercial, "non-commercial", "cc-by-nc", polyform-noncommercial]
+  default: restricted
