@@ -2,7 +2,7 @@ schema: license-clarification-deployments/1
 deployments:
 - repo: Chen-micslab/QCCAssisted4DSterol
   tool_names:
-  - NA
+  - QCCAssisted4DSterol
   doi: 10.1002/anie.202507483
   issue_url: https://github.com/Chen-micslab/QCCAssisted4DSterol/issues/1
   filed_on: '2026-06-24'
