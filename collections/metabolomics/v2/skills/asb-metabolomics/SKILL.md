@@ -18,9 +18,14 @@ specific skill.
 1. **Search** for a skill via `skills_index.json` (EDAM IRI / tool / keyword) or
    `tools_index.json`.
 2. **License-tier gate (governance).** Read the candidate skill's
-   `metadata.tool_license`. If `requires_ack: true` (tier `noncommercial` or
-   `restricted`), surface `tier` + `ref` + `url` to the user and obtain an explicit
-   acknowledgment that their use is a permitted purpose **before applying the skill**.
+   `metadata.tool_license`.
+   - If `requires_ack: true` (tier `noncommercial`): surface `tier` + `ref` + `url`
+     to the user and obtain an **explicit, blocking acknowledgment** that their use is
+     a permitted (noncommercial) purpose **before applying the skill**. Commercial
+     use is forbidden without a separate license.
+   - If tier is `restricted` (`requires_ack: false`): surface a **non-blocking soft
+     note** — "no clear license detected — verify before commercial use or
+     redistribution" — then continue without waiting for acknowledgment.
    Default discovery to `open`-tier skills; flag non-open results.
 3. **Apply** the selected skill.
 4. **Ground** against the source via the Perspicacité binder. Grounding for non-open

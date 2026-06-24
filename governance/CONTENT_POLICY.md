@@ -159,7 +159,7 @@ rule: [`LICENSE_TIERS.md`](LICENSE_TIERS.md).
 - **`restricted`** — no grant / proprietary / no license (all-rights-reserved or a
   non-OSI custom license that is not clearly noncommercial). Unknown → `restricted`.
 
-Two binding rules attach to non-open tiers:
+Three binding rules attach to non-open tiers:
 
 1. **Link-only grounding.** For `noncommercial` and `restricted` tiers a shipped
    grounding bundle MUST reference the source (DOI / repo URL + citation) and MUST
@@ -167,10 +167,18 @@ Two binding rules attach to non-open tiers:
    distributed bundle would exceed the redistribution/relicensing the tool's
    license grants. Assembling a *private, local* bundle is the consumer's own
    responsibility. (Enforced in the grounding binder; CI enforcement is Phase 2.)
-2. **Runtime use acknowledgment.** A skill grounded on a `noncommercial` /
-   `restricted` tool sets `requires_ack: true` and surfaces the tier + license to
-   the user, who must confirm a permitted (e.g. noncommercial) use **before** the
-   skill is applied. The `asb-metabolomics` meta-skill enforces this gate.
+2. **Runtime use acknowledgment (`noncommercial` only).** A skill grounded on a
+   `noncommercial` tool sets `requires_ack: true` and surfaces the tier + license
+   to the user, who must confirm a permitted (e.g. noncommercial) use **before**
+   the skill is applied. The `asb-metabolomics` meta-skill enforces this blocking
+   gate. Commercial use is forbidden without a separate license.
+3. **Non-blocking soft note (`restricted` only).** A skill grounded on a
+   `restricted` tool (no LICENSE file, all-rights-reserved, or non-OSI custom
+   license that is not clearly noncommercial) does **not** set `requires_ack: true`
+   and does NOT trigger a blocking interrupt. Instead the skill surfaces a soft
+   note: "no clear license detected — verify before commercial use or
+   redistribution." Absence of a license is an unknown, not an explicit
+   prohibition; the consumer bears responsibility for verifying permitted use.
 
 `license_tier` does **not** relicense the skill prose, which remains the
 collection's own work (CC-BY-4.0, per "Code & Synthesis Layer" above). A

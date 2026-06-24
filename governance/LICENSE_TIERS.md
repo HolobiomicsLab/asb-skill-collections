@@ -15,5 +15,12 @@ may use the tool commercially. Canonical SPDX→tier map: `governance/license_ti
 Fallback: unknown license → `restricted`, unless its text contains a noncommercial
 keyword → `noncommercial`.
 
-Non-open tiers are **link-only** in shipped grounding bundles (referenced, never
-embedded) and trigger a runtime acknowledgment when their skill is used.
+Both `noncommercial` and `restricted` tiers are **link-only** in shipped grounding
+bundles (referenced, never embedded). Beyond that, they differ:
+
+- **`noncommercial`** additionally triggers a **blocking runtime acknowledgment**
+  (commercial use is forbidden without a separate license; the consumer must
+  explicitly confirm a permitted purpose before the skill is applied).
+- **`restricted`** instead carries a **non-blocking soft note**: "no clear license
+  detected — verify before commercial use or redistribution." Absence of a license
+  is an unknown, not an explicit prohibition, so no blocking gate is required.

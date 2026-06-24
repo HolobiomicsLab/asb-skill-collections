@@ -27,7 +27,7 @@ def test_restricted_fallback():
 def test_ack_required():
     assert lt.ack_required("open") is False
     assert lt.ack_required("noncommercial") is True
-    assert lt.ack_required("restricted") is True
+    assert lt.ack_required("restricted") is False
 
 def test_github_legacy_spdx_ids_map_open():
     assert lt.tier_for_license("GPL-3.0") == "open"

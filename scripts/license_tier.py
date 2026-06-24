@@ -48,5 +48,6 @@ def tier_for_license(name: str, _map: dict | None = None) -> str:
 
 
 def ack_required(tier: str) -> bool:
-    """Non-open tiers require a runtime use acknowledgment."""
-    return tier != "open"
+    """Only the noncommercial tier triggers a blocking runtime use acknowledgment.
+    'restricted' is labeled + link-only with a soft note, but does not block."""
+    return tier == "noncommercial"
