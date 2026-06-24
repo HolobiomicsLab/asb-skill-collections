@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -45,7 +45,6 @@ attribution:
 
 # statistical-significance-estimation-mass-spectrometry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate statistical significance of fragment ion matches between tandem mass spectra using a null distribution generated from intraspectral comparisons. This skill enables confident identification of true spectral similarity by computing p-values that account for the stochastic properties of the fragmentation process.

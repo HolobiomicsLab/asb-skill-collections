@@ -18,7 +18,7 @@ metadata:
   - MSnbase
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -51,7 +51,6 @@ attribution:
 
 # spectra-variable-and-peak-data-storage
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement an S4 class extending MsBackend to store mass spectrometry spectral data, separating spectrum metadata (spectra variables) in a data.frame from peak data (m/z and intensity) in NumericList objects, with validity constraints ensuring consistency. This skill enables creation of custom backend implementations for the Spectra infrastructure.

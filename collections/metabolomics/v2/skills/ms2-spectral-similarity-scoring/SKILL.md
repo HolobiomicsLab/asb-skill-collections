@@ -15,7 +15,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -46,7 +46,6 @@ attribution:
 
 # MS2 spectral similarity scoring for ion-pair confirmation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute cosine similarity or related spectral matching scores between MS2 fragment ion profiles to confirm that candidate ion-species pairs originate from the same analyte compound. This is the final refinement step in a three-stage DBDIpy identification pipeline following temporal correlation and exact mass difference analysis.

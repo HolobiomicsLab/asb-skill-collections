@@ -17,7 +17,7 @@ metadata:
   - mzR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -53,7 +53,6 @@ attribution:
 
 # spectra-data-extraction-and-subsetting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction and subsetting of mass spectrometry spectral data from MsBackend objects using peaksData(), intensity(), mz() accessor methods and extractByIndex() to retrieve peak m/z and intensity values for specified spectra. This skill enables efficient retrieval of peak data in chunk-wise fashion, reducing memory footprint by loading only the required spectra into memory.

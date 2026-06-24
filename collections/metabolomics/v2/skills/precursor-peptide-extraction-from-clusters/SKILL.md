@@ -16,7 +16,7 @@ metadata:
   - antiSMASH
   - BOA
   - SPAdes / metaSPAdes
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -51,7 +51,6 @@ attribution:
 
 # precursor-peptide-extraction-from-clusters
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract precursor peptide sequences from identified biosynthetic gene clusters (BGCs) in genome assemblies, filtering by RiPP class (lantibiotic, lassopeptide, cyanobactin, etc.). This step bridges genomic mining and structure prediction by producing class-specific precursor sequences that serve as substrates for post-translational modification enumeration.

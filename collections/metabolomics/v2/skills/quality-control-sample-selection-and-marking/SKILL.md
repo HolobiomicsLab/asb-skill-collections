@@ -12,7 +12,7 @@ metadata:
   - R
   - NormalizeMets
   - RStudio
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -45,7 +45,6 @@ attribution:
 
 # quality-control-sample-selection-and-marking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and designate quality-control (QC) samples within a metabolomics dataset by leveraging sample metadata annotations, enabling downstream normalization and batch-effect correction. This skill is essential for preparing data for RLSC and other QC-sample-dependent normalization methods.

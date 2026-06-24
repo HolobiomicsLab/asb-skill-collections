@@ -23,7 +23,7 @@ metadata:
   - Dereplicator+
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -64,7 +64,6 @@ attribution:
 
 # RiPP peptide sequence database construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a post-translationally modified RiPP structure database from genome-derived precursor peptides and predicted biosynthetic modifications. This database serves as the search target for tandem mass spectra in natural product dereplication workflows.

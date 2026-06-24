@@ -15,7 +15,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -44,7 +44,6 @@ attribution:
 
 # feature-similarity-network-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a feature similarity network from LC-MS peak lists by computing pairwise similarities based on MS-DIAL peak character estimation (peak shape and chromatographic properties), then apply community detection to identify feature clusters prior to parental signal extraction. This skill bridges raw peak detection and downstream annotation by grouping related signals that likely derive from the same metabolite.

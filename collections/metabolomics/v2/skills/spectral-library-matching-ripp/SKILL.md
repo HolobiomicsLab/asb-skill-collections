@@ -21,7 +21,7 @@ metadata:
   - antiSMASH
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -62,7 +62,6 @@ attribution:
 
 # Spectral Library Matching for RiPPs
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match tandem mass spectra against a post-translationally modified ribosomally synthesized and post-translationally modified peptide (RiPP) structure database to identify known and novel RiPP compounds. This skill integrates genomic predictions of precursor peptides with mass spectrometry data to dereplicat and confirm RiPP identities.

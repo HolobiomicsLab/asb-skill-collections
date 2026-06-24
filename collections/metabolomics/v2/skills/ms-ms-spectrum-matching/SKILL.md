@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -47,7 +47,6 @@ attribution:
 
 # MS/MS spectrum matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export filtered LC-MS features to MS-FINDER for in silico annotation using hydrogen rearrangement rules (HRR) scoring and multi-database querying to assign compound identities to detected metabolites. This skill bridges MS-CleanR's feature curation with MS-FINDER's spectral library matching to produce annotated compound tables.

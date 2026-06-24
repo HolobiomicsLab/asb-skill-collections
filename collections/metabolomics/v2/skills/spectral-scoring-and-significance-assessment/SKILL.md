@@ -21,7 +21,7 @@ metadata:
   - Dereplicator+
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -62,7 +62,6 @@ attribution:
 
 # spectral-scoring-and-significance-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and compare database search results from natural product mass spectrometry pipelines by computing match scores, p-values, and false discovery rates (FDR) to distinguish true identifications from noise. This skill is essential for validating which database search pipeline (Dereplicator, VarQuest, Dereplicator+) provides reliable identifications and assessing the statistical confidence of spectrum-to-structure matches.

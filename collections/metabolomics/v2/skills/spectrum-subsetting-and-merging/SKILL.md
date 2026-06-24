@@ -16,7 +16,7 @@ metadata:
   - IRanges
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # spectrum-subsetting-and-merging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract subsets of mass spectrometry spectra from a backend by index range and merge multiple backend instances into a unified object for consolidated analysis. This skill enables efficient partitioning and recombination of spectral datasets within the Spectra framework.

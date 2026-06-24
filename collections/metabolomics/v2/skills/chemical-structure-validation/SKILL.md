@@ -18,7 +18,7 @@ metadata:
   - MetFrag
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -47,7 +47,6 @@ attribution:
 
 # chemical-structure-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate chemical structures and compute molecular properties for metabolite candidates using RDKit and PubChemPy after compound database dereplication. This skill filters and ranks candidates by chemical validity, descriptor ranges, and database match confidence to curate final annotations.

@@ -15,7 +15,7 @@ metadata:
   - MS-FINDER 3.30 or higher
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -44,7 +44,6 @@ attribution:
 
 # parental-signal-selection-from-clusters
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract representative parental features from LC-MS clustered data using multi-level optimization of modularity scoring. This skill ranks and selects the highest-modularity feature from each cluster to reduce redundancy and enable focused downstream annotation.

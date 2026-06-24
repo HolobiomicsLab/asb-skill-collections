@@ -20,7 +20,7 @@ metadata:
   - RStudio
   - RlaPlots
   - PcaPlots
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
@@ -63,7 +63,6 @@ attribution:
 
 # loess-smoothing-parameter-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply loess smoothing with optimized parameters (e.g., loessShort with k=5) to correct intra-batch signal drift in metabolomics assays. This non-linear smoothing technique removes unwanted variation within experimental batches while preserving true biological signal.

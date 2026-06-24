@@ -17,7 +17,7 @@ metadata:
   - DeepMSProfiler
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -45,7 +45,6 @@ attribution:
 
 # heatmap-visualization-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate color-encoded correlation heatmaps that depict relationships between metabolite signals and disease classes from deep learning model outputs. This visualization enables rapid identification of disease-associated metabolite signatures in mass spectrometry data.

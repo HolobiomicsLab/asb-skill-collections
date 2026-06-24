@@ -17,7 +17,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -45,7 +45,6 @@ attribution:
 
 # deep-learning-feature-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply deep learning models (e.g., DenseNet121) to extract disease-specific metabolic features from preprocessed LC-MS metabolomics data, producing interpretable heatmaps and feature importance maps that link individual m/z signals to disease phenotypes. This skill bridges raw spectra and actionable biomarker discovery.

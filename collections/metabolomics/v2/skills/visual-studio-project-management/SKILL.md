@@ -21,7 +21,7 @@ metadata:
   - MsdialWorkbench
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -55,7 +55,6 @@ attribution:
 
 # visual-studio-project-management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and build a .NET multi-framework WPF application in Visual Studio by managing solution-level NuGet dependencies, selecting appropriate build configurations, and verifying successful compilation and runtime execution. This skill is essential for developers who need to reconstruct complex open-source metabolomics software from source.

@@ -17,7 +17,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # spectral-peak-data-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract m/z and intensity peak data from mass spectrometry spectra stored in a MsBackend, returning them as a list of numerical matrices with one matrix per spectrum. This is a core operation for accessing and validating MS peak data before downstream analysis.

@@ -16,7 +16,7 @@ metadata:
   - R base
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # dataframe-lazy-loading-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A benchmarking approach to quantify the memory and performance tradeoff between eagerly pre-populating a backend's @spectraVars DataFrame with all core spectra variable columns versus lazily populating them on-the-fly during data access. This skill applies to backend implementations in the Spectra package where design choices about initialization timing directly affect object footprint and accessor latency.

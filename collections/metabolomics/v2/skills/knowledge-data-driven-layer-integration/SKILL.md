@@ -12,7 +12,12 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -42,7 +47,7 @@ attribution:
 
 # knowledge-data-driven-layer-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Integrate knowledge-driven (biochemical pathways, metabolic reaction networks) and data-driven (experimental MS2 similarity networks) layers into a unified two-layer network topology to enable recursive annotation propagation for comprehensive metabolite annotation in untargeted metabolomics. This skill underpins accurate, high-coverage metabolite identification in large-scale studies.

@@ -18,7 +18,7 @@ metadata:
   - mzR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -52,7 +52,6 @@ attribution:
 
 # chunk-wise-data-processing-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Split large MS datasets into memory-efficient chunks grouped by data source files, then process each chunk independently to reduce peak-data memory footprint while maintaining parallel processing capability. This skill applies the backendParallelFactor() method to enable lazy loading of m/z and intensity values on-the-fly rather than realizing all spectra into memory at once.

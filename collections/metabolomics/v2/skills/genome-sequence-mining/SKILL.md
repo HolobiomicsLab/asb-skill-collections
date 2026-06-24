@@ -22,7 +22,7 @@ metadata:
   - ProteoWizard msconvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -63,7 +63,6 @@ attribution:
 
 # genome-sequence-mining
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply metabologenomic mining to raw nucleotide sequences (FASTA format) or genome assembly output to identify biosynthetic gene clusters (BGCs) and predict novel ribosomally synthesized and post-translationally modified peptides (RiPPs) that can be matched against tandem mass spectrometry data. This skill bridges genomic and metabolomic data to discover natural products.

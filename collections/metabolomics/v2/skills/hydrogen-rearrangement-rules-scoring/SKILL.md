@@ -14,7 +14,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -43,7 +43,6 @@ attribution:
 
 # hydrogen-rearrangement-rules-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply hydrogen rearrangement rules (HRR) scoring system within MS-FINDER to rank and annotate in silico fragmentation predictions for LC-MS features exported from MS-CleanR. HRR scoring enables probabilistic matching of observed MS/MS spectra against theoretical fragment ion models across metabolite databases.

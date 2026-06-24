@@ -20,7 +20,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -55,7 +55,6 @@ attribution:
 
 # spectra-data-representation-backends
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement MsBackend classes that provide mass spectrometry data to Spectra objects while avoiding circular dependencies between spectraData() and spectraVariables() methods. This skill bridges MS data storage (in-memory, on-disk, or database) with the Spectra analysis framework.

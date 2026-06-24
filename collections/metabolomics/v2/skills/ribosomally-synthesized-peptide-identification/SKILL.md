@@ -21,7 +21,7 @@ metadata:
   - SPAdes
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -62,7 +62,6 @@ attribution:
 
 # ribosomally-synthesized-peptide-identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify ribosomally synthesized and post-translationally modified peptides (RiPPs) by integrating metabolomic tandem mass spectra with genomic sequence data using MetaMiner, a metabologenomic pipeline that constructs putative RiPP structure databases and matches them against experimental spectra.

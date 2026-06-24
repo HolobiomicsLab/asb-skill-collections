@@ -14,7 +14,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -43,7 +43,6 @@ attribution:
 
 # peak-intensity-chromatographic-property-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes feature similarity in LC-MS data by analyzing peak shape and chromatographic properties (m/z, retention time, peak intensity) using the MS-DIAL peak character estimation algorithm. This similarity metric is the foundation for grouping co-eluting or chemically related features into clusters prior to parental signal extraction.

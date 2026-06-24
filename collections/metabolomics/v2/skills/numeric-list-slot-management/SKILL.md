@@ -15,7 +15,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -46,7 +46,6 @@ attribution:
 
 # numeric-list-slot-management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement S4 class slots using NumericList containers to store peak data (m/z and intensity values) in MsBackend subclasses, ensuring consistency between spectra metadata and peak vectors through validity constraints. This skill is essential for building custom mass spectrometry backends that efficiently represent multiple spectra with varying numbers of peaks.

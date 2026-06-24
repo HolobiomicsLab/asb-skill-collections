@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -45,7 +45,6 @@ attribution:
 
 # maximum-weight-matching-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maximum weight matching identifies the optimal set of fragment ion pairs across two MS/MS spectra that maximizes alignment score while minimizing redundancy, replacing monotonic alignment methods with improved performance. This graph-theoretic approach forms the foundation for subsequent Laplacian embedding and statistical significance testing in spectral comparison.

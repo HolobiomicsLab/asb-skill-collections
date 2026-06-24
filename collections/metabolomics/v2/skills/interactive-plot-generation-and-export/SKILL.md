@@ -16,7 +16,7 @@ metadata:
   - RlaPlots
   - PcaPlots
   - HeatMap
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -49,7 +49,6 @@ attribution:
 
 # interactive-plot-generation-and-export
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate interactive and non-interactive diagnostic visualizations of normalized metabolomics data using RlaPlots or PcaPlots functions, with options to save outputs as HTML widgets or static image files. This skill enables assessment of normalization quality and batch effects through interactive Plotly-based plots that highlight outlier samples.

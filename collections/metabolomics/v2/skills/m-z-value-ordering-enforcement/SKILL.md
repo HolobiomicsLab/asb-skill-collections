@@ -16,7 +16,7 @@ metadata:
   - R base
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -47,7 +47,6 @@ attribution:
 
 # m-z-value-ordering-enforcement
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enforce that m/z values within each mass spectrometry spectrum are sorted in strictly increasing order and contain no missing values. This constraint is critical for data integrity in writable MsBackend implementations and is validated during peak data replacement operations.

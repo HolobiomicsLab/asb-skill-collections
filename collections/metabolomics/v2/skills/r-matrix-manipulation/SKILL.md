@@ -13,7 +13,7 @@ metadata:
   - R
   - NormalizeMets
   - RStudio
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -46,7 +46,6 @@ attribution:
 
 # R matrix manipulation for metabolomics feature data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Programmatically load, index, and transform metabolomics feature matrices in R using vectorized operations and conditional subsetting. This skill enables extraction of control metabolite indices, application of normalization workflows, and assembly of multi-component result objects from featuredata, sampledata, and metabolitedata inputs.

@@ -16,7 +16,7 @@ metadata:
   - LinearModelFit
   - RlaPlots
   - PcaPlots
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -47,7 +47,6 @@ attribution:
 
 # model-residual-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and analyze residuals from a fitted linear model to assess model assumptions, identify outliers, and evaluate the quality of biomarker identification in metabolomics data. Residual analysis validates whether the linear model adequately captures the relationship between metabolites and factors of interest after normalization.

@@ -17,7 +17,7 @@ metadata:
   - MetFrag
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -46,7 +46,6 @@ attribution:
 
 # compound-candidate-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and filter metabolite candidates from compound database dereplication (SIRIUS/MetFrag output) using molecular property validation, structural descriptors, and confidence scoring. This skill applies chemical validity checks and descriptor-based selection criteria to produce a curated, scored candidate list for metabolome annotation.

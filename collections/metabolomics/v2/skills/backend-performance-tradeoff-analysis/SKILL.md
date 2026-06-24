@@ -12,7 +12,7 @@ metadata:
   - S4Vectors
   - Spectra
   - R base
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -44,7 +44,6 @@ attribution:
 
 # Backend Performance Tradeoff Analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify memory consumption and access latency when choosing between eager pre-population versus lazy on-demand initialization of spectra variables in MsBackend implementations. This skill enables informed design decisions for MS data backends by empirically measuring the cost–benefit of storing all core spectra variables upfront versus populating them during spectraData() calls.

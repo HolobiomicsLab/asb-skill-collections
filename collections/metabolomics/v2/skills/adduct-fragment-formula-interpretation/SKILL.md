@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -47,7 +47,6 @@ attribution:
 
 # Reconstruct the mass-difference open-search step to assign candidate adduct/fragment species
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill uses exact mass differences between correlated ion features to disambiguate and annotate in-source adducts and fragments (e.g., [M-H₂O+H]⁺, [M+nO+H]⁺) in direct-injection plasma mass spectrometry data. It refines temporal-correlation-identified candidate pairs by matching observed m/z deltas against a user-defined reference table within a specified mass accuracy tolerance.

@@ -16,7 +16,7 @@ metadata:
   - Python (scipy, numpy, pandas)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -47,7 +47,6 @@ attribution:
 
 # Bipartite Graph Maximum Weight Matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply maximum weight matching algorithms (e.g., Hungarian algorithm) to a bipartite graph of fragment ions to identify the optimal set of non-overlapping ion pair alignments between two MS/MS spectra. This replaces monotonic alignment methods and maximizes total matching score based on mass delta and statistical significance.

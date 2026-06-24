@@ -15,7 +15,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -46,7 +46,6 @@ attribution:
 
 # fragment-ion-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align fragment ions between paired tandem mass spectra using maximum weight matching, computing mass deltas and statistical significance scores to identify structurally related compounds. This skill generates a structured report of matched ion pairs with confidence metrics suitable for spectral library annotation and compound relationship discovery.

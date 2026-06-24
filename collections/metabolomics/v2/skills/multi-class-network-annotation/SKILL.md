@@ -16,7 +16,7 @@ metadata:
   - Matplotlib / Plotly
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -44,7 +44,6 @@ attribution:
 
 # multi-class-network-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and render disease-associated metabolite-protein bipartite network graphs from deep learning predictions, annotating nodes by metabolite-protein association strength and disease class with disease-type color coding and node-size scaling. This skill transforms raw correlation and association data into interpretable, publication-ready network visualizations that reveal disease-specific metabolic signatures.

@@ -21,7 +21,7 @@ metadata:
   - ProteoWizard msconvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -62,7 +62,6 @@ attribution:
 
 # tandem-mass-spectra-peptide-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match centroided tandem mass spectra (MS/MS) against peptidic natural product (PNP) structure databases using Dereplicator, VarQuest, or Dereplicator+ to identify known or novel peptidic metabolites with quantified confidence scores and false discovery rates. This skill enables dereplication and variant detection across multiple search modes.

@@ -19,7 +19,7 @@ metadata:
   - ProteoWizard msconvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -60,7 +60,6 @@ attribution:
 
 # blind-search-mode-parameter-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A mode of natural product database search that relaxes structural constraints to identify peptides with arbitrary post-translational modifications (PTMs) without prior knowledge of modification types. This skill is essential when screening for novel RiPP variants that fall outside the scope of curated PTM databases.

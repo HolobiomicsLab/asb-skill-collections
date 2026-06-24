@@ -11,7 +11,7 @@ metadata:
   - Perl Prima
   - Gnuplot
   - Perl
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -39,7 +39,6 @@ attribution:
 
 # graphical-interface-error-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method for detecting missing critical runtime dependencies in a GUI application and communicating failures gracefully to the user through native dialog boxes rather than silent crashes. This skill ensures that Windows-based Perl GUI applications verify external library availability (e.g., Gnuplot) before attempting dataset operations.

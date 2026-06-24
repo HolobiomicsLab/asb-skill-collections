@@ -17,7 +17,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # S4 Class Extension Development
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Developing custom S4 classes that extend virtual base classes (like MsBackend) to implement domain-specific data structures and accessor/replacement methods. This skill ensures that new backend implementations properly inherit the virtual API contract, validate data integrity, and integrate with existing analysis infrastructure.

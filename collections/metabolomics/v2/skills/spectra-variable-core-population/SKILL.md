@@ -14,7 +14,7 @@ metadata:
   - S4Vectors
   - R
   - MsBackendMemory
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # spectra-variable-core-population
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Populate missing core spectra variables with NA values in a backend's spectraData() output to ensure complete metadata structure. This ensures all required MS spectra variables are present in DataFrame results even when user-supplied data contains only a subset.

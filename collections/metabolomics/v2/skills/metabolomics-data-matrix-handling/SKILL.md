@@ -14,7 +14,7 @@ metadata:
   - NormalizeMets
   - RStudio
   - Microsoft Excel
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -47,7 +47,6 @@ attribution:
 
 # metabolomics-data-matrix-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Structuring and preparing metabolomics feature data, sample metadata, and metabolite annotations into the standardized three-part input format required by the NormalizeMets package. This skill ensures data are correctly formatted before normalization, quality-control assessment, and biomarker analysis workflows.

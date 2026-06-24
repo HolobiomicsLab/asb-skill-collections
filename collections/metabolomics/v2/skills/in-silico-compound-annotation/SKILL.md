@@ -16,7 +16,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -45,7 +45,6 @@ attribution:
 
 # in-silico-compound-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Exports filtered and clustered LC-MS features to MS-FINDER for structure prediction and compound identification using hydrogen rearrangement rules (HRR) scoring across multiple chemical databases. This skill bridges feature detection and annotation, enabling prioritized structural assignment when experimental MS/MS spectra alone are insufficient.

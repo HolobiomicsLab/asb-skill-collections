@@ -12,7 +12,12 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -42,7 +47,7 @@ attribution:
 
 # mass-spectrometry-feature-similarity-modeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Build and leverage data-driven feature similarity networks from experimental mass spectrometry (MS2) data to enrich metabolite annotations by propagating identity confidence scores across co-occurring or spectrally similar metabolite nodes. This skill integrates MS2 similarity patterns as a complementary layer within a two-layer metabolite annotation topology.

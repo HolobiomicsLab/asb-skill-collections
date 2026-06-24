@@ -17,7 +17,7 @@ metadata:
   - IRanges
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -51,7 +51,6 @@ attribution:
 
 # s4-class-extension-for-backend-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a custom S4 class that extends the MsBackend virtual class to define a new backend representation for mass spectrometry data. This skill enables integration of alternative data storage strategies (e.g., on-disk, database, memory) into the Spectra ecosystem while decoupling data representation from analysis code.

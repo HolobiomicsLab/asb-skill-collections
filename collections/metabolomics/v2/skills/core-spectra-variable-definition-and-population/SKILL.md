@@ -17,7 +17,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -52,7 +52,6 @@ attribution:
 
 # core-spectra-variable-definition-and-population
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement spectraData() and spectraVariables() methods in MsBackend subclasses to safely expose mass spectrometry core variables (m/z, intensity, retention time, scan index) without cyclic function calls. This skill ensures that peak data and metadata are correctly merged into a single DataFrame while maintaining architectural separation between variable discovery and data retrieval.

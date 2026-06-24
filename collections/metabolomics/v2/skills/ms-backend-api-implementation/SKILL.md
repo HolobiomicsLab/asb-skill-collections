@@ -18,7 +18,7 @@ metadata:
   - MsBackendSql
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -50,7 +50,6 @@ attribution:
 
 # ms-backend-api-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom MsBackend subclass to integrate new mass spectrometry data representations into the Spectra framework. This skill enables seamless access to MS peaks and spectra variables from diverse sources (in-memory, on-disk, database) by conforming to the virtual MsBackend API.

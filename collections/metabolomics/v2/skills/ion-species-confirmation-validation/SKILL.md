@@ -15,7 +15,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -46,7 +46,6 @@ attribution:
 
 # ion-species-confirmation-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Confirm that candidate ion-species pairs originate from the same analyte compound by calculating MS2 spectral similarity scores as the final validation step in DBDIpy's three-step identification procedure. This skill validates putative adduct and fragment assignments after temporal correlation and mass difference refinement.

@@ -19,7 +19,7 @@ metadata:
   - NormalizeMets
   - RStudio
   - Plotly
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
@@ -63,7 +63,6 @@ attribution:
 
 # batch-effect-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize batch effects and signal drift in metabolomics data before and after normalisation using PCA and run-order plots. This skill enables rapid assessment of whether hierarchical RUV normalisation has successfully removed unwanted variation across experimental batches.

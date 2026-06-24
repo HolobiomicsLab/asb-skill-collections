@@ -16,7 +16,7 @@ metadata:
   - IRanges
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -53,7 +53,6 @@ attribution:
 
 # S4 Class Definition and Inheritance
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define custom S4 classes that extend virtual parent classes and implement required slots and methods to create domain-specific data structures. This skill is essential when building extensible bioinformatics infrastructure where multiple implementations need to conform to a common API contract.

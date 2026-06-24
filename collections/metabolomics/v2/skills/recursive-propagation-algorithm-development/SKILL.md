@@ -13,7 +13,12 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -43,7 +48,7 @@ attribution:
 
 # recursive-propagation-algorithm-development
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Implement a recursive annotation propagation algorithm that iteratively refines metabolite identities by leveraging confidence scores and relationships across both knowledge-driven (biochemical ontology) and data-driven (MS2 similarity) network layers. This skill combines topology-based traversal with confidence-weighted evidence aggregation to enhance metabolite annotation coverage and accuracy in untargeted metabolomics.

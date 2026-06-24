@@ -19,7 +19,7 @@ metadata:
   - MassBank
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -52,7 +52,6 @@ attribution:
 
 # MS2 spectral database dereplication
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and ranks matching spectra from MS2 .mzML input files against reference spectral libraries using the Spectra R package, producing a ranked table of spectral matches with similarity scores and metadata. This is the first step in untargeted metabolomics annotation that filters noise and establishes spectral identity before compound structure prediction.

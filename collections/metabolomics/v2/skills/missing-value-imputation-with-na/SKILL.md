@@ -16,7 +16,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # missing-value-imputation-with-na
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Populate missing core spectra variables in a mass spectrometry backend by filling them with NA values, ensuring that spectraData() returns a complete DataFrame with all expected columns even when only a subset of user-supplied variables are stored. This technique maintains API consistency across heterogeneous backend implementations while preserving data integrity.

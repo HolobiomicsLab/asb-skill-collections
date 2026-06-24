@@ -4,8 +4,11 @@ tiers: [open, noncommercial, restricted]
 spdx:
   MIT: open
   Apache-2.0: open
+  BSD: open
   BSD-2-Clause: open
   BSD-3-Clause: open
+  MulanPSL-1.0: open
+  MulanPSL-2.0: open
   MPL-2.0: open
   CC-BY-4.0: open
   CC-BY-3.0: open

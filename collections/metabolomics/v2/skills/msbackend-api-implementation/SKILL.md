@@ -18,7 +18,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -51,7 +51,6 @@ attribution:
 
 # msbackend-api-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom MsBackend subclass that extends the virtual MsBackend API to store and provide mass spectrometry spectral data (m/z, intensity, and metadata) to Spectra objects. This skill involves designing S4 class slots, enforcing data consistency through validity methods, and implementing core accessor and data-manipulation methods.

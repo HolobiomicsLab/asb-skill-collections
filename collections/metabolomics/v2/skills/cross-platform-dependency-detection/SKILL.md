@@ -12,7 +12,7 @@ metadata:
   - Perl Prima
   - Gnuplot
   - Perl
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -40,7 +40,6 @@ attribution:
 
 # cross-platform-dependency-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and verify the availability of required external libraries and tools on the host operating system before launching a scientific application. This skill prevents runtime failures by validating prerequisites (e.g., Gnuplot 5.4.2) at startup and providing actionable feedback to the user.

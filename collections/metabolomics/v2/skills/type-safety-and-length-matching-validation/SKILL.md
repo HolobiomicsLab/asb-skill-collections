@@ -14,7 +14,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -45,7 +45,6 @@ attribution:
 
 # Type-safety-and-length-matching-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enforce data integrity constraints in writable MS backends by validating that replacement values match expected types (NumericList for m/z and intensity, character for names) and vector lengths (equal to spectrum count or individual spectrum peak counts). This ensures that m/z values remain sorted, peak counts are preserved, and NA values are excluded from critical fields.

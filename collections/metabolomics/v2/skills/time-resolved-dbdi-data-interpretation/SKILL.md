@@ -18,7 +18,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -49,7 +49,6 @@ attribution:
 
 # time-resolved-dbdi-data-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify in-source fragments and adducts in direct-injection dielectric barrier discharge ionisation (DBDI) mass spectrometry by combining pointwise correlation of temporal intensity profiles with exact mass difference refinement. This skill enables putative annotation of multiple ion species arising from single analytes in time-resolved plasma ionization datasets where chromatographic separation is absent.

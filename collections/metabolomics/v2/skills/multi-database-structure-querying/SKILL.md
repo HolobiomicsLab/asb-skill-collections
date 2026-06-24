@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -47,7 +47,6 @@ attribution:
 
 # multi-database-structure-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query multiple metabolite structure databases simultaneously via MS-FINDER to annotate LC-MS features using hydrogen rearrangement rules (HRR) scoring. This skill enables parallel, database-agnostic compound identification from cleaned and clustered MS-DIAL peak lists, with consolidation of per-feature annotations into a unified table ranked by user-defined database priority.

@@ -23,7 +23,7 @@ metadata:
   - Python
   - SIRIUS
   - MetFrag
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -68,7 +68,6 @@ attribution:
 
 # molecular-fingerprint-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute biosynfoni fingerprints—a biosynformatic molecular representation tailored for natural product chemistry—from molecular structures (SMILES, InChI, or SDF) to generate bit-vector or count fingerprints suitable for downstream bioinformatic analysis and biosynthetic class prediction.

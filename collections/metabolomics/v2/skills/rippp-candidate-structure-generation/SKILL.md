@@ -18,7 +18,7 @@ metadata:
   - antiSMASH
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -53,7 +53,6 @@ attribution:
 
 # RiPP Candidate Structure Generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate putative post-translationally modified (PTM) variants of identified RiPP precursor peptides according to class-specific modification rules, producing a structured database of candidate structures for downstream spectral matching. This skill bridges genome-mined precursor sequences to mass spectrometry-queryable structure space.

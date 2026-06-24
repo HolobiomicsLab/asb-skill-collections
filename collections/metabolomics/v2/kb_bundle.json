@@ -1035,7 +1035,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "adduct-fragment-table-construction": {
       "dois": [
@@ -1941,7 +1941,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "annotation-confidence-scoring": {
       "dois": [
@@ -1956,7 +1956,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "annotation-coverage-statistics-computation": {
       "dois": [
@@ -2061,7 +2061,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "annotation-table-construction": {
       "dois": [
@@ -2880,7 +2880,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "asynchronous-api-orchestration": {
       "dois": [
@@ -3368,7 +3368,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "backend-performance-benchmarking": {
       "dois": [
@@ -3441,7 +3441,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "backend-routing-and-dispatch": {
       "dois": [
@@ -3672,7 +3672,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "background-reference-set-construction": {
       "dois": [
@@ -4495,7 +4495,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-effect-visualization-pca": {
       "dois": [
@@ -5211,7 +5211,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bgc-mf-link-scoring": {
       "dois": [
@@ -5834,7 +5834,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bioconductor-data-import-and-handling": {
       "dois": [
@@ -5971,7 +5971,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "biomolecular-class-annotation": {
       "dois": [
@@ -6195,7 +6195,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "biosynthetic-gene-cluster-tokenization": {
       "dois": [
@@ -6344,7 +6344,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bipartite-graph-maximum-weight-matching": {
       "dois": [
@@ -6362,7 +6362,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bipartite-network-node-edge-assembly": {
       "dois": [
@@ -6586,7 +6586,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "block-layout-analysis-for-io-optimization": {
       "dois": [
@@ -7569,7 +7569,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "candidate-ranking-by-score": {
       "dois": [
@@ -9994,7 +9994,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-structure-validation-syntax": {
       "dois": [
@@ -11417,7 +11417,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ci-cd-pipeline-configuration-and-execution": {
       "dois": [
@@ -11665,7 +11665,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "class-conditional-calibration-mapping": {
       "dois": [
@@ -11794,7 +11794,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "class-stratified-calibration-model-application": {
       "dois": [
@@ -13134,7 +13134,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/DasSusanta/snakemake_ccs"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "command-line-invocation": {
       "dois": [
@@ -13915,7 +13915,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-class-annotation-parsing": {
       "dois": [
@@ -14073,7 +14073,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-ground-truth-matching": {
       "dois": [
@@ -17061,7 +17061,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "corpus-bag-of-words-representation": {
       "dois": [
@@ -17273,7 +17273,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "correlation-matrix-heatmap-visualization": {
       "dois": [
@@ -18507,7 +18507,7 @@
       "repo_urls": [
         "https://github.com/matteogiulietti/LipidOne"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cross-platform-reproducibility-configuration": {
       "dois": [
@@ -18838,7 +18838,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cross-validated-model-performance-evaluation-10fold": {
       "dois": [
@@ -19651,7 +19651,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "data-format-compliance-checking": {
       "dois": [
@@ -19875,7 +19875,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "data-lineage-preservation-in-etl-pipelines": {
       "dois": [
@@ -20490,7 +20490,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dataframe-construction-and-column-merging": {
       "dois": [
@@ -20511,7 +20511,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dataframe-construction-from-backend-sources": {
       "dois": [
@@ -20530,7 +20530,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dataframe-lazy-loading-comparison": {
       "dois": [
@@ -20550,7 +20550,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dataframe-plotting-interface-design": {
       "dois": [
@@ -20729,7 +20729,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dda-acquisition-data-handling": {
       "dois": [
@@ -21003,7 +21003,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "decoy-psm-identification-and-tagging": {
       "dois": [
@@ -21072,7 +21072,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "deep-learning-layer-inspection": {
       "dois": [
@@ -21905,7 +21905,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "derivatization-chemistry-enumeration": {
       "dois": [
@@ -22386,7 +22386,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "differential-expression-analysis-algorithm-selection": {
       "dois": [
@@ -22830,7 +22830,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "disease-stratified-network-visualization": {
       "dois": [
@@ -22848,7 +22848,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "distance-clustering-in-high-dimensions": {
       "dois": [
@@ -24007,7 +24007,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dotnet-framework-installation-in-containers": {
       "dois": [
@@ -24054,7 +24054,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "double-bond-positional-isomer-generation": {
       "dois": [
@@ -25686,7 +25686,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/DasSusanta/snakemake_ccs"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "entry-status-classification": {
       "dois": [
@@ -25909,7 +25909,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "error-handling-for-unsupported-formats": {
       "dois": [
@@ -26856,7 +26856,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "exact-mass-database-matching": {
       "dois": [
@@ -28326,7 +28326,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "false-discovery-rate-interpretation": {
       "dois": [
@@ -28351,7 +28351,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "false-positive-annotation-filtering": {
       "dois": [
@@ -30114,7 +30114,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-pair-ranking": {
       "dois": [
@@ -30198,7 +30198,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-quality-assessment-metrics": {
       "dois": [
@@ -30360,7 +30360,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-specificity-calculation": {
       "dois": [
@@ -33536,7 +33536,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fragment-ion-library-matching": {
       "dois": [
@@ -33651,7 +33651,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fragment-ion-peak-annotation": {
       "dois": [
@@ -33730,7 +33730,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fragment-ion-theoretical-mass-calculation": {
       "dois": [
@@ -34179,7 +34179,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fragmentation-strategy-comparison-across-datasets": {
       "dois": [
@@ -35686,7 +35686,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "genome-cluster-family-scoring-computation": {
       "dois": [
@@ -35784,7 +35784,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "genomic-bgc-extraction-antismash": {
       "dois": [
@@ -36012,7 +36012,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "git-branch-workflow-validation": {
       "dois": [
@@ -36594,7 +36594,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gnuplot-library-availability-verification": {
       "dois": [
@@ -36611,7 +36611,7 @@
       "repo_urls": [
         "https://github.com/matteogiulietti/LipidOne"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gpu-accelerated-computation": {
       "dois": [
@@ -36944,7 +36944,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "graph-based-link-representation-visualization": {
       "dois": [
@@ -37580,7 +37580,7 @@
       "repo_urls": [
         "https://github.com/matteogiulietti/LipidOne"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "graphical-time-warping-parameter-tuning": {
       "dois": [
@@ -38192,7 +38192,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "heavy-isotope-labeling-interpretation": {
       "dois": [
@@ -39410,7 +39410,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hyperdimensional-computing-projection": {
       "dois": [
@@ -39933,7 +39933,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "imputation-performance-metrics-calculation": {
       "dois": [
@@ -39951,7 +39951,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "imputation-quality-validation": {
       "dois": [
@@ -40105,7 +40105,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "in-silico-fragment-m-z-calculation": {
       "dois": [
@@ -40237,7 +40237,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "in-source-fragment-identification": {
       "dois": [
@@ -40872,7 +40872,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "integrative-omics-pathway-enrichment": {
       "dois": [
@@ -41518,7 +41518,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "interactive-plot-rendering": {
       "dois": [
@@ -41798,7 +41798,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "internal-standard-optimization-selection": {
       "dois": [
@@ -42683,7 +42683,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ion-species-confirmation-validation": {
       "dois": [
@@ -42701,7 +42701,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ion-target-quality-monitoring": {
       "dois": [
@@ -42981,7 +42981,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ionization-mode-peak-retention-comparison": {
       "dois": [
@@ -45769,7 +45769,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "knowledge-graph-generation-and-validation": {
       "dois": [
@@ -45806,7 +45806,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "kovats-retention-index-extraction-and-assignment": {
       "dois": [
@@ -45937,7 +45937,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "laplacian-embedding-spectral-alignment": {
       "dois": [
@@ -45954,7 +45954,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "large-scale-all-pairs-similarity-benchmarking": {
       "dois": [
@@ -47371,7 +47371,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "left-censored-missingness-simulation": {
       "dois": [
@@ -47389,7 +47389,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "level-4-annotation-assignment": {
       "dois": [
@@ -47719,7 +47719,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "linear-regression-fitting-for-chromatography": {
       "dois": [
@@ -49073,7 +49073,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "log-fold-change-computation-and-interpretation": {
       "dois": [
@@ -49135,7 +49135,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "log-transformation-application": {
       "dois": [
@@ -49154,7 +49154,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "log-transformation-preprocessing": {
       "dois": [
@@ -49717,7 +49717,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "m-z-window-tolerance-application": {
       "dois": [
@@ -50447,7 +50447,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "mass-action-kinetics-formulation": {
       "dois": [
@@ -50667,7 +50667,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-delta-computation": {
       "dois": [
@@ -50684,7 +50684,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-difference-adduct-matching": {
       "dois": [
@@ -50702,7 +50702,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-difference-calculation-and-matching": {
       "dois": [
@@ -52158,7 +52158,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-coordinate-system-construction": {
       "dois": [
@@ -52883,7 +52883,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-serialization": {
       "dois": [
@@ -53506,7 +53506,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-feature-mapping": {
       "dois": [
@@ -53543,7 +53543,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-feature-similarity-modeling": {
       "dois": [
@@ -53558,7 +53558,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "mass-spectrometry-feature-table-construction": {
       "dois": [
@@ -54697,7 +54697,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-peak-detection-and-alignment": {
       "dois": [
@@ -57654,7 +57654,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "maven-pom-version-extraction": {
       "dois": [
@@ -57707,7 +57707,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mb-vip-feature-importance-ranking": {
       "dois": [
@@ -57894,7 +57894,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "message-passing-neural-network-architecture-design": {
       "dois": [
@@ -58604,7 +58604,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-abundance-stratification": {
       "dois": [
@@ -58834,7 +58834,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-annotation-result-export": {
       "dois": [
@@ -59493,7 +59493,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-database-embedding-lookup": {
       "dois": [
@@ -59676,7 +59676,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-distance-metric-calculation": {
       "dois": [
@@ -60126,7 +60126,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-feature-normalization": {
       "dois": [
@@ -60974,7 +60974,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-network-construction": {
       "dois": [
@@ -61353,7 +61353,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-pubchemcid-annotation-mapping": {
       "dois": [
@@ -62237,7 +62237,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-biomarker-pathway-association": {
       "dois": [
@@ -62929,7 +62929,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-batch-effect-correction": {
       "dois": [
@@ -63232,7 +63232,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-data-normalization": {
       "dois": [
@@ -63906,7 +63906,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolomics-intensity-normalization": {
       "dois": [
@@ -63942,7 +63942,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-library-generation-pipeline": {
       "dois": [
@@ -63979,7 +63979,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolomics-matrix-manipulation-r": {
       "dois": [
@@ -64996,7 +64996,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metadata-structure-standardization": {
       "dois": [
@@ -65681,7 +65681,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "missing-data-simulation-and-recovery": {
       "dois": [
@@ -65764,7 +65764,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "missing-peak-imputation-fillpeaks": {
       "dois": [
@@ -65986,7 +65986,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "missing-value-imputation-strategy": {
       "dois": [
@@ -66068,7 +66068,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "missing-value-replacement-by-feature-minimum": {
       "dois": [
@@ -66146,7 +66146,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "mnar-data-quality-assessment": {
       "dois": [
@@ -66166,7 +66166,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "mobility-dimension-interpolation-for-peak-resolution": {
       "dois": [
@@ -66664,7 +66664,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "model-serving-artifact-preparation": {
       "dois": [
@@ -66891,7 +66891,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "modulation-parameter-configuration": {
       "dois": [
@@ -67728,7 +67728,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-fingerprint-extraction-and-vectorization": {
       "dois": [
@@ -69982,7 +69982,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-data-constraint-enforcement": {
       "dois": [
@@ -70002,7 +70002,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-data-format-identification": {
       "dois": [
@@ -70150,7 +70150,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-dial-version-compatibility": {
       "dois": [
@@ -70200,7 +70200,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-instrument-data-preprocessing": {
       "dois": [
@@ -70313,7 +70313,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-ms-raw-data-loading": {
       "dois": [
@@ -70501,7 +70501,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-ms-spectrum-pairwise-comparison": {
       "dois": [
@@ -70644,7 +70644,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-ms-spectrum-tokenization-and-representation": {
       "dois": [
@@ -70684,7 +70684,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-peak-table-format-validation": {
       "dois": [
@@ -71218,7 +71218,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms2-diagnostic-fragment-matching": {
       "dois": [
@@ -71645,7 +71645,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms2-spectrum-collection-from-data-dependent-acquisition": {
       "dois": [
@@ -71883,7 +71883,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "msconvert-integration-and-invocation": {
       "dois": [
@@ -72890,7 +72890,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-class-network-annotation": {
       "dois": [
@@ -72909,7 +72909,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-class-performance-metric-computation": {
       "dois": [
@@ -73060,7 +73060,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-dataset-integration-mzrt-space": {
       "dois": [
@@ -74880,7 +74880,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "multiprocessing-process-spawning-and-pid-management": {
       "dois": [
@@ -75889,7 +75889,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-spectral-parsing": {
       "dois": [
@@ -75913,7 +75913,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-spectrum-chromatogram-object-construction": {
       "dois": [
@@ -77015,7 +77015,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "network-proximity-scoring": {
       "dois": [
@@ -79501,7 +79501,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "numeric-array-round-trip-validation": {
       "dois": [
@@ -79544,7 +79544,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "numeric-list-slot-management": {
       "dois": [
@@ -79563,7 +79563,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "numeric-variable-range-analysis": {
       "dois": [
@@ -81677,7 +81677,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/DasSusanta/snakemake_ccs"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "package-installation-verification-and-testing": {
       "dois": [
@@ -82193,7 +82193,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "parameter-conditional-execution": {
       "dois": [
@@ -82491,7 +82491,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pareto-front-multi-objective-optimization": {
       "dois": [
@@ -83459,7 +83459,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-data-integrity-checks": {
       "dois": [
@@ -83478,7 +83478,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-deconvolution-preprocessing": {
       "dois": [
@@ -83950,7 +83950,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-intensity-distribution-analysis": {
       "dois": [
@@ -86151,7 +86151,7 @@
       "repo_urls": [
         "https://github.com/matteogiulietti/LipidOne"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "permanova-effect-size-interpretation": {
       "dois": [
@@ -87249,7 +87249,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "post-translational-modification-pattern-recognition": {
       "dois": [
@@ -87273,7 +87273,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "posterior-parameter-estimation-for-metabolite-distributions": {
       "dois": [
@@ -87290,7 +87290,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "postgresql-record-insertion": {
       "dois": [
@@ -87752,7 +87752,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "precursor-list-formatting-for-dda": {
       "dois": [
@@ -87872,7 +87872,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "precursor-mass-tolerance-filtering": {
       "dois": [
@@ -87946,7 +87946,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "precursor-product-mass-pairing": {
       "dois": [
@@ -88178,7 +88178,7 @@
       "repo_urls": [
         "https://github.com/matteogiulietti/LipidOne"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "principal-component-analysis-for-metabolomics": {
       "dois": [
@@ -89122,7 +89122,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pubchem-structure-lookup-by-name": {
       "dois": [
@@ -90336,7 +90336,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "python-source-code-analysis": {
       "dois": [
@@ -91499,7 +91499,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "quality-control-metric-computation": {
       "dois": [
@@ -91575,7 +91575,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "quality-control-metric-threshold-configuration": {
       "dois": [
@@ -91785,7 +91785,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "quality-control-summary-generation": {
       "dois": [
@@ -92781,7 +92781,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-object-inspection-and-validation": {
       "dois": [
@@ -92818,7 +92818,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-object-slot-inspection": {
       "dois": [
@@ -93236,7 +93236,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "r-script-validation-and-execution": {
       "dois": [
@@ -93387,7 +93387,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "r6-class-object-mutation-testing": {
       "dois": [
@@ -94005,7 +94005,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "raw-ms-data-format-conversion": {
       "dois": [
@@ -94467,7 +94467,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "reactomics-annotation-and-clustering": {
       "dois": [
@@ -94725,7 +94725,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "redis-queue-job-submission": {
       "dois": [
@@ -95392,7 +95392,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "relative-mass-defect-window-filtering": {
       "dois": [
@@ -95409,7 +95409,7 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "relative-standard-deviation-calculation-qc-replicates": {
       "dois": [
@@ -98640,7 +98640,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "richness-index-computation": {
       "dois": [
@@ -98688,7 +98688,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ripp-peptide-sequence-database-construction": {
       "dois": [
@@ -98716,7 +98716,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "rippp-candidate-structure-generation": {
       "dois": [
@@ -98738,7 +98738,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "rippp-structure-database-matching": {
       "dois": [
@@ -98764,7 +98764,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "risk-stratification-and-prognosis-indexing": {
       "dois": [
@@ -99262,7 +99262,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "run-order-dependency-modeling": {
       "dois": [
@@ -99499,7 +99499,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "s4-class-definition-and-slot-management": {
       "dois": [
@@ -99519,7 +99519,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "s4-class-extension-development": {
       "dois": [
@@ -99540,7 +99540,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "s4-class-extension-for-backend-implementation": {
       "dois": [
@@ -99561,7 +99561,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "s4-class-method-inspection": {
       "dois": [
@@ -99580,7 +99580,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "s4-class-object-memory-profiling": {
       "dois": [
@@ -99599,7 +99599,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "s7-object-construction-and-validation": {
       "dois": [
@@ -102740,7 +102740,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "signal-noise-ratio-improvement-validation": {
       "dois": [
@@ -105672,7 +105672,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectra-data-representation-backends": {
       "dois": [
@@ -105695,7 +105695,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectra-mgf-format-loading": {
       "dois": [
@@ -105817,7 +105817,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectra-variable-core-population": {
       "dois": [
@@ -105837,7 +105837,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectra-variable-initialization-strategies": {
       "dois": [
@@ -105857,7 +105857,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectra-variable-metadata-handling": {
       "dois": [
@@ -105877,7 +105877,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-adduct-ionmode-validation": {
       "dois": [
@@ -105913,7 +105913,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-alignment-scoring": {
       "dois": [
@@ -106138,7 +106138,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-clustering-and-feature-grouping": {
       "dois": [
@@ -107023,7 +107023,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-database-output-normalization": {
       "dois": [
@@ -107643,7 +107643,7 @@
         "https://github.com/yjdeng9/DeepMSProfiler",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-feature-scrambling-permutation": {
       "dois": [
@@ -107664,7 +107664,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-feature-standardization": {
       "dois": [
@@ -108017,7 +108017,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-graph-interpretation": {
       "dois": [
@@ -108731,7 +108731,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-matching-validation": {
       "dois": [
@@ -109484,7 +109484,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-neutral-loss-transformation": {
       "dois": [
@@ -109928,7 +109928,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-peak-data-validation-and-parsing": {
       "dois": [
@@ -110907,7 +110907,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-search-logic-control-flow": {
       "dois": [
@@ -112877,7 +112877,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectrum-tokenization-for-nlp": {
       "dois": [
@@ -113415,7 +113415,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-model-ranking-and-selection": {
       "dois": [
@@ -113568,7 +113568,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-significance-filtering-q-value": {
       "dois": [
@@ -113996,7 +113996,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "strain-correlation-hypergeometric-adjustment": {
       "dois": [
@@ -115513,7 +115513,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "syntax-tree-construction-parsing": {
       "dois": [
@@ -116175,7 +116175,7 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tandem-mass-spectra-standardization": {
       "dois": [
@@ -116414,7 +116414,7 @@
         "https://github.com/biorack/simile",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tandem-mass-spectrum-prediction-fragment-level": {
       "dois": [
@@ -117425,7 +117425,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "temporal-signal-drift-detection-and-adjustment": {
       "dois": [
@@ -118472,7 +118472,7 @@
         "https://github.com/leopold-weidner/DBDIpy",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "time-series-intensity-normalization": {
       "dois": [
@@ -120042,7 +120042,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "trust-score-propagation-directed-graphs": {
       "dois": [
@@ -120318,7 +120318,7 @@
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "type-coercion-to-string": {
       "dois": [
@@ -120374,7 +120374,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "u13c-labeled-lipid-identification": {
       "dois": [
@@ -121404,7 +121404,7 @@
         "https://github.com/metabolomicstats/NormalizeMets",
         "https://github.com/Fraunhofer-ITMP/alister"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "upset-plot-generation": {
       "dois": [
@@ -121811,7 +121811,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "variable-importance-ranking-and-interpretation": {
       "dois": [
@@ -121902,7 +121902,7 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "vendor-data-standardization": {
       "dois": [
@@ -122330,7 +122330,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "visualization-comparative-performance-metrics": {
       "dois": [
@@ -122887,7 +122887,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "wine-environment-initialization-validation": {
       "dois": [
@@ -123789,7 +123789,7 @@
         "https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
         "https://github.com/SysMedOs/LipidLynxX"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "xcms-data-import-preprocessing": {
       "dois": [

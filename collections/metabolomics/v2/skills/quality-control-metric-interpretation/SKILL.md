@@ -17,7 +17,7 @@ metadata:
   - RlaPlots
   - PcaPlots
   - HeatMap
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -50,7 +50,6 @@ attribution:
 
 # quality-control-metric-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret relative log abundance (RLA) diagnostic plots and other normalization quality metrics to assess whether batch effects, unwanted variation, and normalization success have been adequately controlled in metabolomics data. This skill enables selection of appropriate normalization methods by evaluating how well samples cluster by expected group and identifying outlier metabolites or samples that deviate beyond acceptable thresholds.

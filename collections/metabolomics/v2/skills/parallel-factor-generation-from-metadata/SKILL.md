@@ -17,7 +17,7 @@ metadata:
   - mzR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -51,7 +51,6 @@ attribution:
 
 # parallel-factor-generation-from-metadata
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a grouping factor from MS backend metadata (typically dataStorage file paths) to enable chunk-wise parallel or serial processing of spectra without loading all peak data into memory simultaneously. This skill is essential when scaling MS data analysis to large datasets where memory-efficient batch processing is required.

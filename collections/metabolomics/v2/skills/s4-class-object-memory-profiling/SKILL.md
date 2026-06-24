@@ -15,7 +15,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -47,7 +47,6 @@ attribution:
 
 # S4-class object memory profiling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A technique for measuring and comparing the in-memory footprint of S4 objects under different initialization strategies, revealing tradeoffs between eager pre-population and lazy on-demand data loading. This is essential for optimizing backend design in large-scale mass spectrometry data infrastructure.

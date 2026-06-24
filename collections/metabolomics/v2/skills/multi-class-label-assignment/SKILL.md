@@ -15,7 +15,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -43,7 +43,6 @@ attribution:
 
 # multi-class-label-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign disease-type classification labels to LC-MS metabolomics samples using deep learning models trained on raw mass spectrometry data. This skill produces per-sample disease-type predictions (e.g., healthy, lung nodule, lung cancer) from complex metabolomics profiles.

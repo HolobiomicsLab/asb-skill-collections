@@ -17,7 +17,7 @@ metadata:
   - matplotlib / seaborn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -45,7 +45,6 @@ attribution:
 
 # correlation-matrix-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a matrix encoding correlation coefficients between metabolite signal intensities and disease class labels across all samples, forming the numerical foundation for metabolite-disease association heatmaps. This is essential for visualizing which metabolite features discriminate between disease phenotypes in LC-MS metabolomics data.

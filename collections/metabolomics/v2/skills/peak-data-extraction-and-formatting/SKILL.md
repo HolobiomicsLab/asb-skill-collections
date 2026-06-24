@@ -15,7 +15,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -47,7 +47,6 @@ attribution:
 
 # peak-data-extraction-and-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract m/z and intensity peak values from mass spectrometry backend objects and format them as NumericList or matrix structures for downstream analysis. This skill bridges MsBackend data storage and Spectra-based processing by implementing standardized accessor methods that present raw peak data in expected formats.

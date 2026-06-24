@@ -17,7 +17,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -51,7 +51,6 @@ attribution:
 
 # memory-profiling-and-benchmarking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A technique to quantify and compare memory consumption across alternative computational strategies (e.g., whole-load vs. chunk-wise processing) using profiling tools and controlled benchmarks. Applied to mass spectrometry backends, it validates that lazy-loading and factored processing reduce peak memory demand relative to in-memory approaches.

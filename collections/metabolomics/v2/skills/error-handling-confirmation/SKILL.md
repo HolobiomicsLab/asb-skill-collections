@@ -15,7 +15,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -47,7 +47,6 @@ attribution:
 
 # error-handling-confirmation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a replacement method for mass spectrometry backend data raises informative errors when input violates domain constraints, using efficient vectorised checks. This skill ensures that data integrity rules (e.g., m/z sorting) are enforced at assignment time through explicit error messages rather than silent failure.

@@ -14,7 +14,12 @@ metadata:
   techniques:
   - LC-MS
   - NMR
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -44,7 +49,7 @@ attribution:
 
 # annotation-confidence-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validate and score confidence in propagated metabolite annotations by checking consistency with spectral similarity scores and chemical class rules within each network layer. This ensures that recursive annotation propagation produces reliable, layer-specific metabolite labels suitable for downstream metabolomic analysis.

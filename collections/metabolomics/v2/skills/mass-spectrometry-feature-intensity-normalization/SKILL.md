@@ -17,7 +17,7 @@ metadata:
   - scipy.stats
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -48,7 +48,6 @@ attribution:
 
 # mass-spectrometry-feature-intensity-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize extracted ion chromatogram (XIC) intensity profiles across mass spectrometric features to remove absolute intensity differences before correlation analysis. This preprocessing step ensures that temporal dynamics rather than signal magnitude drive the identification of co-eluting adducts and in-source fragments in time-resolved DBDI-MS datasets.

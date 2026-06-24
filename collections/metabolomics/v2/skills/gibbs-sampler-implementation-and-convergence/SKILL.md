@@ -19,7 +19,12 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -49,7 +54,7 @@ attribution:
 
 # Gibbs sampler implementation and convergence
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Implement a Gibbs sampling algorithm to iteratively impute left-censored missing values in metabolomics datasets by alternating between sampling missing values from truncated normal distributions and updating posterior parameter estimates. Convergence is assessed via chain stabilization or maximum iteration count to ensure reliable imputation.

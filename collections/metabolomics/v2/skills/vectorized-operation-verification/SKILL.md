@@ -13,7 +13,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -45,7 +45,6 @@ attribution:
 
 # vectorized-operation-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that replacement methods for S4 objects use efficient vectorized operations (e.g., is.unsorted() on NumericList) rather than slower row-wise approaches (e.g., vapply), and that they enforce domain constraints (e.g., sorted m/z values) with informative error messages.

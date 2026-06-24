@@ -22,7 +22,7 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -59,7 +59,6 @@ attribution:
 
 # RiPP Structure Database Matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match tandem mass spectra against a constructed database of post-translationally modified RiPP structures to identify novel ribosomally synthesized and post-translationally modified peptides. This is a core step in the MetaMiner metabologenomic pipeline that bridges genomic predictions with mass spectrometry evidence.

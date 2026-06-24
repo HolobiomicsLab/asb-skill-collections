@@ -16,7 +16,7 @@ metadata:
   - MissingValues
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -49,7 +49,6 @@ attribution:
 
 # log-transformation-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Log-transformation of metabolomics feature intensity matrices to stabilize variance and handle zeros before normalization. This pre-processing step converts raw peak intensities to a log scale, making downstream normalization methods more effective by reducing the impact of extreme values and improving homogeneity of variance.

@@ -19,7 +19,7 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -59,7 +59,6 @@ attribution:
 
 # ripp-peptide-identification-from-spectra
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify ribosomally synthesized and post-translationally modified peptides (RiPPs) by matching tandem mass spectrometry data against a RiPP structure database constructed from genomic biosynthetic gene clusters. This skill integrates metabolomic (LC-MS/MS) and genomic data to enable discovery of novel RiPPs and their variants.

@@ -15,7 +15,7 @@ metadata:
   - NormalizeMets
   - RStudio
   - Plotly
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -48,7 +48,6 @@ attribution:
 
 # relative-log-abundance-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute relative log abundances (RLA) from normalized metabolomics feature matrices by centering each metabolite's intensities on the median within sample groups, enabling detection of normalization artifacts and outlier samples. This diagnostic visualization reveals batch effects and within-group heterogeneity that persist after normalization.

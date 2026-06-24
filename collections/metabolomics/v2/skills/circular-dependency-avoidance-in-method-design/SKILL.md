@@ -16,7 +16,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -49,7 +49,6 @@ attribution:
 
 # circular-dependency-avoidance-in-method-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A design pattern for implementing interdependent accessor methods in object-oriented backends that prevents infinite recursion by ensuring one method populates data without calling the other. This is essential when designing MsBackend subclasses where spectraData() and spectraVariables() must both be available but risk calling each other cyclically.

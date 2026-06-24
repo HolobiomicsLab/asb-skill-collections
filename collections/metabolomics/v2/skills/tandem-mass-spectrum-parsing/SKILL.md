@@ -15,7 +15,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -46,7 +46,6 @@ attribution:
 
 # tandem-mass-spectrum-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and extract structural information from tandem mass spectra (MS/MS data) to recover precursor mass, fragment ion m/z values, and intensity values in a format compatible with spectrum alignment and matching workflows. This is a prerequisite step for similarity computation and statistical significance testing in fragmentation spectrum analysis.

@@ -22,7 +22,7 @@ metadata:
   - antiSMASH
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -63,7 +63,6 @@ attribution:
 
 # lantibiotic-structure-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate lantibiotic structures in RiPP biosynthetic gene clusters by matching tandem mass spectra against computationally constructed post-translationally modified peptide databases using MetaMiner. This skill integrates genomic (FASTA nucleotide sequences) and metabolomic (centroided MS/MS spectra in MGF or mzML/mzData format) data to identify lanthipeptides with characteristic dehydrobutyrine and dehydroalanine modifications.

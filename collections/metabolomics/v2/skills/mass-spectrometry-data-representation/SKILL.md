@@ -18,7 +18,7 @@ metadata:
   - MsBackendSql
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -50,7 +50,6 @@ attribution:
 
 # mass-spectrometry-data-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement custom MsBackend subclasses to represent mass spectrometry spectral data in memory, on-disk, or from external sources, decoupling data storage from analysis workflows. This skill enables extension of the Spectra package ecosystem with new backend implementations for diverse MS data formats and storage strategies.

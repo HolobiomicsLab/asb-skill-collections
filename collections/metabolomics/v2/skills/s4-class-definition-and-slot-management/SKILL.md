@@ -16,7 +16,7 @@ metadata:
   - R (S4 OOP system)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # S4 Class Definition and Slot Management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement S4 classes with typed slots to store heterogeneous MS data structures (spectra variables, peak data, metadata) in a memory-efficient, type-safe manner. This skill is essential when building backend implementations that must enforce data consistency and support polymorphic method dispatch across different MS data representations.

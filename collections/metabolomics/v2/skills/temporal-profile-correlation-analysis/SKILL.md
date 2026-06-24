@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -49,7 +49,6 @@ attribution:
 
 # temporal-profile-correlation-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies co-eluting feature pairs in time-resolved mass spectrometric datasets by computing Pearson correlation coefficients across all feature temporal intensity profiles. This workflow detects in-source fragments and adducts that share matching dynamics through the experiment, a core step in DBDIpy's adduct and fragment identification pipeline for direct injection plasma ionization techniques.

@@ -19,7 +19,12 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -49,7 +54,7 @@ attribution:
 
 # metabolomics-imputation-method-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply Gibbs sampler-based or alternative imputation methods to recover left-censored missing values in metabolomics data matrices, where missingness is caused by detection limits below which metabolite concentrations cannot be quantified. This skill encompasses method selection, preprocessing, parameter tuning, and convergence assessment to produce complete imputed datasets suitable for downstream statistical analysis.

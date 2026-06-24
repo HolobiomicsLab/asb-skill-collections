@@ -14,7 +14,7 @@ metadata:
   - R base
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # spectra-variable-initialization-strategies
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and select between eager pre-population and lazy on-demand filling of core spectra variables (@spectraVars slot) in MsBackend objects to optimize the memory–speed tradeoff. This skill surfaces the design choice between initialization timing and its consequences for object footprint and data access latency.

@@ -19,7 +19,7 @@ metadata:
   - matchms
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -50,7 +50,6 @@ attribution:
 
 # in-source-fragment-adduct-candidate-flagging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies co-eluting ion pairs arising from in-source fragmentation or adduct formation in time-resolved plasma ionization mass spectrometry by computing pointwise correlation of extracted ion chromatograms (XIC) and filtering on correlation threshold and exact mass difference. This is the first step in DBDIpy's three-step putative identification workflow for direct-injection MS datasets.

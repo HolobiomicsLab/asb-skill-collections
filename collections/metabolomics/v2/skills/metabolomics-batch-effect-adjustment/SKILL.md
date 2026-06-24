@@ -19,7 +19,7 @@ metadata:
   - LogTransform
   - MissingValues
   - LinearModelFit
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -50,7 +50,6 @@ attribution:
 
 # metabolomics-batch-effect-adjustment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply statistical normalization methods to metabolomics feature matrices to remove unwanted variation from batch effects, matrix effects, and instrumental drift, enabling valid downstream biomarker discovery and classification. This skill selects and executes one or more normalization approaches (IS, NOMIS, CCMN, RUV2, RUVrand, RLSC) appropriate to the sources of variation in the dataset.

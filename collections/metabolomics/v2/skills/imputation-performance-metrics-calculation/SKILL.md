@@ -14,7 +14,12 @@ metadata:
   - GSimp_evaluation.R
   - imputeLCMD (QRILC wrapper)
   - Trunc_KNN (kNN-TN implementation)
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -44,7 +49,7 @@ attribution:
 
 # imputation-performance-metrics-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Calculate quantitative performance metrics (RMSE, bias, and other quality measures) to compare multiple left-censored missing value imputation methods (GSimp, QRILC, kNN-TN) against known true values in metabolomics data. This skill enables objective evaluation of which imputation strategy best recovers artificially censored metabolite abundances.

@@ -19,7 +19,7 @@ metadata:
   - NPDtools
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -59,7 +59,6 @@ attribution:
 
 # genome-annotation-format-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare the detection performance of metabologenomic pipelines (e.g. MetaMiner) across different genome annotation input formats (raw FASTA sequences vs. tool-specific outputs like antiSMASH .gbk files) to identify format-dependent detection failures and inform format selection for downstream analysis.

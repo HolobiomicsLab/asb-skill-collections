@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -45,7 +45,6 @@ attribution:
 
 # Reconstruct the maximum weight matching alignment of MS/MS spectra in SIMILE
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace monotonic alignment with maximum weight matching to optimally align fragment ion pairs between two tandem mass spectra, maximizing the total edge weight of matched ions and improving alignment performance. This skill applies graph-based optimization to MS/MS fragmentation data to identify the globally optimal set of non-overlapping ion pair correspondences.

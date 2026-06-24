@@ -13,7 +13,7 @@ metadata:
   - .NET Standard
   - NuGet Package Manager
   - Visual Studio
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -44,7 +44,6 @@ attribution:
 
 # NuGet Dependency Resolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve and restore .NET NuGet package dependencies required to build a .NET project, including managing package sources and version specifications. This skill is essential when building .NET Framework or .NET Core projects to ensure all required libraries (e.g., ReactiveExtensions, ReactiveProperty) are available before compilation.

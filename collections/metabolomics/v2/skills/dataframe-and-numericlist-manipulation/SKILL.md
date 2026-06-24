@@ -16,7 +16,7 @@ metadata:
   - IRanges
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # dataframe-and-numericlist-manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and manipulate parallel data structures (data.frame for spectra metadata, NumericList for peak m/z and intensity values) to implement custom MsBackend classes that integrate with the Spectra package infrastructure. This skill enables creation of new mass spectrometry data backends by coordinating tabular and list-based storage to meet the MsBackend API contract.

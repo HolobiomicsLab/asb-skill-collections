@@ -18,7 +18,7 @@ metadata:
   - BOA
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -53,7 +53,6 @@ attribution:
 
 # bgc-identification-from-genomic-sequence
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Scan genome assemblies in FASTA format using MetaMiner's BGC identifier module to locate putative biosynthetic gene clusters and extract corresponding precursor peptide sequences for a specified RiPP class (lantibiotic, lassopeptide, cyanobactin, or others). This is the first stage of the metabologenomic workflow to identify novel ribosomally synthesized and post-translationally modified peptides.

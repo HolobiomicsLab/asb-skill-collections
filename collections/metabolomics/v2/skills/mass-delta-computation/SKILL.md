@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -45,7 +45,6 @@ attribution:
 
 # mass-delta-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise mass differences (m/z deltas) between fragment ions across tandem mass spectra, using either direct fragment-to-fragment differences or precursor-based neutral loss differences. This foundational operation enables graph-based matching and significance estimation in spectrum alignment workflows.

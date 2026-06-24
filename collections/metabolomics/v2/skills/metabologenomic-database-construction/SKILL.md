@@ -20,7 +20,7 @@ metadata:
   - NPDtools
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -55,7 +55,6 @@ attribution:
 
 # metabologenomic-database-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a searchable RiPP structure database by identifying putative biosynthetic gene clusters (BGCs) and precursor peptides from genome assemblies, then enumerating post-translationally modified variants according to class-specific rules. This intermediate database enables downstream matching of tandem mass spectra against predicted peptide structures.

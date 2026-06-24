@@ -14,7 +14,7 @@ metadata:
   - Python (matplotlib, seaborn)
   - DeepMSProfiler
   - SciPy / NumPy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -42,7 +42,6 @@ attribution:
 
 # metabolite-disease-correlation-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute correlation coefficients between individual metabolite signal intensities and disease class labels across all samples, then construct and visualize a correlation matrix as a heatmap to reveal disease-associated metabolic signatures. This skill transforms raw model outputs into interpretable disease-metabolite associations.

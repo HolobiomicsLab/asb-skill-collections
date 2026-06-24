@@ -17,7 +17,7 @@ metadata:
   - MsdialWorkbench repository
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -50,7 +50,6 @@ attribution:
 
 # metadata-structure-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map raw data file metadata (instrument type, acquisition parameters) and spectral arrays (m/z, intensity values) from an external format (mzML) into a software's internal data structures. This skill is essential when ingesting vendor-neutral or open-standard mass spectrometry data into MS-DIAL or similar metabolomics platforms that require format deserialization before spectral processing.

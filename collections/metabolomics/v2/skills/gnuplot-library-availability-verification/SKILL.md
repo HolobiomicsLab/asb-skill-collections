@@ -12,7 +12,7 @@ metadata:
   - Gnuplot
   - Perl Prima
   - Perl
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -41,7 +41,6 @@ attribution:
 
 # gnuplot-library-availability-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that Gnuplot 5.4.2 is installed and accessible on the system PATH before initializing a Perl Prima GUI application for lipidomic analysis. This skill prevents runtime failures by detecting missing graphing library dependencies at application startup.

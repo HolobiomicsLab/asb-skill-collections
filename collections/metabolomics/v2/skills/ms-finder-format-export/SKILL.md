@@ -16,7 +16,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -47,7 +47,6 @@ attribution:
 
 # MS-FINDER Format Export
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert filtered and clustered LC-MS features from MS-CleanR into MS-FINDER-compatible input format (m/z, retention time, MS/MS spectra) to enable in silico compound annotation using hydrogen rearrangement rules scoring across multiple metabolite databases.

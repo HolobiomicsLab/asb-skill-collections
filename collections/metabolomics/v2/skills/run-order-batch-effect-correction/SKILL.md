@@ -14,7 +14,7 @@ metadata:
   - NormalizeMets
   - RStudio
   - Microsoft Excel
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -47,7 +47,6 @@ attribution:
 
 # run-order-batch-effect-correction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Corrects unwanted variation in metabolomics feature data caused by run-order-dependent batch effects using RLSC (reference linear-based signal correction) normalization applied to quality-control samples. This skill removes systematic drift and instrumental variation that accumulates across the analytical sequence.

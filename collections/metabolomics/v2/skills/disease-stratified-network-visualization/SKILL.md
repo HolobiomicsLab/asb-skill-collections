@@ -14,7 +14,7 @@ metadata:
   - DeepMSProfiler
   - NetworkX
   - Cytoscape
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -42,7 +42,6 @@ attribution:
 
 # disease-stratified-network-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and render bipartite metabolite-protein association networks stratified by disease class, with visual encoding of association strength, confidence, and disease type. This skill transforms disease-specific correlation and prediction data into publication-ready network plots for systems-level interpretation of metabolic dysregulation.

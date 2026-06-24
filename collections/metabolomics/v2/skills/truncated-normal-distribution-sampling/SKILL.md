@@ -14,7 +14,12 @@ metadata:
   - R
   - GSimp
   - R (imputeLCMD package, truncated distributions)
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -44,7 +49,7 @@ attribution:
 
 # Truncated-Normal-Distribution Sampling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Sample missing values from a truncated normal distribution conditioned on detection limits (lower and upper bounds) during iterative Gibbs sampling for left-censored missing value imputation in metabolomics data. This approach preserves the constraint that imputed values cannot fall below the instrument's detection limit.

@@ -15,7 +15,12 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -45,7 +50,7 @@ attribution:
 
 # network-node-label-spreading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Recursive annotation propagation over a two-layer network topology (knowledge-driven and data-driven) that spreads metabolite labels from seed annotated nodes to neighboring unannotated nodes, enhancing coverage and confidence in untargeted metabolomics. This method integrates biochemical pathway knowledge with experimental MS2 similarity networks to systematically annotate metabolites across interconnected layers.

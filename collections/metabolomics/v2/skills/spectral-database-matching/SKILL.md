@@ -20,7 +20,7 @@ metadata:
   - CE-MS
   - ion-mobility-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -51,7 +51,6 @@ attribution:
 
 # spectral-database-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Spectral database matching identifies and ranks MS2 spectra from untargeted metabolomics data by comparing them against reference spectral libraries using the Spectra R package. This dereplication step assigns confidence scores to potential metabolite identifications before downstream compound database searching.

@@ -18,7 +18,7 @@ metadata:
   - MetFrag
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -47,7 +47,6 @@ attribution:
 
 # dereplication-candidate-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and rank compound candidates from mass spectrometry dereplication results (SIRIUS or MetFrag output) using molecular property validation, structural descriptor computation, and PubChem database matching. This skill applies chemical validity checks and selection criteria to curate a final ranked candidate list from intermediate dereplication annotations.

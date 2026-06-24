@@ -18,7 +18,7 @@ metadata:
   - NuGet Package Manager
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -49,7 +49,6 @@ attribution:
 
 # wpf-gui-compilation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile a Windows Presentation Foundation (WPF) graphical user interface from .NET source code using Visual Studio, targeting .NET Framework 4.7.2 with ReactiveExtensions and ReactiveProperty dependency management. This skill is essential when building desktop mass spectrometry analysis software from source that requires UI-driven interaction.

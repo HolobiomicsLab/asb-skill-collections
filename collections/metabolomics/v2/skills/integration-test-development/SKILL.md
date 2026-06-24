@@ -18,7 +18,7 @@ metadata:
   - MS-DIAL MsdialWorkbench repository
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -51,7 +51,6 @@ attribution:
 
 # integration-test-development
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Develop and execute integration tests to validate that parsed mass spectrometry raw data files (mzML format) correctly map metadata, spectral arrays, and quantitative fields into a software's internal data structures. This skill ensures reproducibility and correctness of file format ingestion pipelines across build configurations and CI/CD environments.

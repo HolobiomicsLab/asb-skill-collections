@@ -21,7 +21,7 @@ metadata:
   - NPDtools
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -61,7 +61,6 @@ attribution:
 
 # biosynthetic-gene-cluster-mining-with-genomic-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 MetaMiner integrates tandem mass spectrometry data with genomic sequences to identify ribosomally synthesized and post-translationally modified peptides (RiPPs) by mining biosynthetic gene clusters (BGCs). This skill applies metabologenomics to discover novel natural products by matching MS/MS spectra against putative RiPP structure databases constructed from genome mining.

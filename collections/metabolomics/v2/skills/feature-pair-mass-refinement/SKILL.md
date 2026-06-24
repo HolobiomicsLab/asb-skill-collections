@@ -14,7 +14,7 @@ metadata:
   - matchms
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -45,7 +45,6 @@ attribution:
 
 # Reconstruct the mass-difference open-search step to assign candidate adduct/fragment species
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A refinement step that uses exact mass differences to disambiguate ion-species relationships identified through temporal correlation in direct-injection mass spectrometry. It matches observed m/z differences against a user-defined reference table of in-source fragments and adducts to assign chemical labels and assess mass accuracy.

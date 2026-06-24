@@ -16,7 +16,7 @@ metadata:
   - MS-FINDER
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -45,7 +45,6 @@ attribution:
 
 # relative-mass-defect-window-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter LC-MS features by removing those whose relative mass defect (RMD) values fall outside user-defined window bounds. This step removes spurious or chemically implausible features from MS-DIAL peak lists during untargeted metabolomics preprocessing.

@@ -12,7 +12,7 @@ metadata:
   - Perl Prima
   - Gnuplot
   - Perl
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -41,7 +41,6 @@ attribution:
 
 # prima-gui-initialization-windows
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a Perl Prima graphical user interface on Microsoft Windows with pre-launch verification of external dependencies (Gnuplot) before enabling application functionality. This skill ensures robust startup behavior and user feedback when critical runtime libraries are missing.

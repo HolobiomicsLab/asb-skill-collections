@@ -13,7 +13,7 @@ metadata:
   - Windows Presentation Foundation (WPF)
   - Visual Studio
   - Visual Studio Code
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -44,7 +44,6 @@ attribution:
 
 # reactive-pattern-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement reactive UI patterns in WPF-based desktop applications using ReactiveExtensions and ReactiveProperty packages to enable responsive, event-driven GUI behavior. This skill is essential for building maintainable Windows Presentation Foundation applications where UI state must automatically propagate in response to user interactions and data model changes.

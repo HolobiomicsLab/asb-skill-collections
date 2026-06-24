@@ -17,7 +17,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # mass-spectrometry-peak-data-loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a mass spectrometry backend by loading spectra variables, m/z, and intensity peak data into a structured NumericList representation. This skill implements the backendInitialize() method to populate MsBackend instances that mediate between raw MS data and the Spectra analysis framework.

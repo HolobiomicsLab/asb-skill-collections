@@ -19,7 +19,7 @@ metadata:
   - MissingValues
   - RlaPlots
   - PcaPlots
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -55,7 +55,6 @@ attribution:
 
 # internal-standard-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize metabolomics featuredata matrices using internal standard (IS) metabolites as reference anchors to correct for unwanted variation (batch effects, matrix effects) across samples. This skill applies the 'is' method within the NormQcmets function, which requires identification of internal standard metabolites and uses their relative intensities to scale all features within each sample.

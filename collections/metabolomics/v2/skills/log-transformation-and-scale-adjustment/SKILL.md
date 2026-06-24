@@ -13,7 +13,7 @@ metadata:
   - R
   - NormalizeMets
   - RStudio
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -46,7 +46,6 @@ attribution:
 
 # log-transformation-and-scale-adjustment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply logarithmic transformation and scaling normalization to metabolomics feature data to stabilize variance, reduce the impact of outliers, and correct for systematic differences in peak intensity across samples. This is a foundational preprocessing step in the NormalizeMets workflow for handling unwanted variation due to batch effects and matrix effects.

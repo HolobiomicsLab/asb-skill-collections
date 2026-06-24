@@ -12,7 +12,12 @@ metadata:
   - R
   - GSimp
   - R (base + imputeLCMD, doParallel)
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -42,7 +47,7 @@ attribution:
 
 # Posterior parameter estimation for metabolite distributions
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Estimate posterior mean and variance parameters of metabolite abundance distributions during iterative Gibbs sampling, conditioning on observed non-missing values and respecting left-censoring limits. This enables principled imputation of left-censored missing metabolites by sampling from truncated normal distributions informed by data-driven parameter estimates.

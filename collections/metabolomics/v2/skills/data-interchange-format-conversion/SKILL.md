@@ -14,7 +14,12 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMSLab/DecoMetDIA
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA
@@ -43,7 +48,7 @@ attribution:
 
 # Data Interchange Format Conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry raw data and processed spectra between vendor-native formats and open interchange standards (mzML, MGF, mzTab) to enable downstream analysis, deposition, and interoperability. This skill is essential in untargeted metabolomics pipelines where spectral deconvolution output must be exported in formats compatible with spectral databases and identification tools.

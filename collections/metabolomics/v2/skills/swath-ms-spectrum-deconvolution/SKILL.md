@@ -12,7 +12,12 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMSLab/DecoMetDIA
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA
@@ -41,7 +46,7 @@ attribution:
 
 # swath-ms-spectrum-deconvolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Deconvolutes overlapping MS/MS spectra from SWATH-MS (Sequential Window Acquisition of All Theoretical Mass Spectra) data to recover individual component spectra for each precursor ion, enabling accurate metabolite identification in untargeted metabolomics. This skill resolves the fundamental challenge that SWATH-MS acquires multiplexed spectra across broad isolation windows, making direct spectral matching impossible.

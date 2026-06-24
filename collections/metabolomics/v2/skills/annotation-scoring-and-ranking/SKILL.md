@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -49,7 +49,6 @@ attribution:
 
 # annotation-scoring-and-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank metabolite annotations by comparing experimental spectra against both reference and decoy compound databases, computing false discovery rates to assign statistical significance to each match. This skill enables large-scale untargeted metabolomics annotation with controlled error rates.

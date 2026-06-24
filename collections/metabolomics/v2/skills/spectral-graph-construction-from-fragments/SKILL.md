@@ -16,7 +16,7 @@ metadata:
   - numpy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -47,7 +47,6 @@ attribution:
 
 # spectral-graph-construction-from-fragments
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a Laplacian embedding graph from matched fragment ion pairs across MS/MS spectra to model spectral relationships and enable statistical significance testing. This graph representation captures both direct mass difference frequencies and ancestor–descendant similarity relationships among fragments.

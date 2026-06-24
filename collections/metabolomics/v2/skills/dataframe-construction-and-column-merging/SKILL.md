@@ -18,7 +18,7 @@ metadata:
   - IRanges
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -51,7 +51,6 @@ attribution:
 
 # dataframe-construction-and-column-merging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a unified DataFrame for mass spectrometry spectra by merging core spectra variables (m/z, intensity, retention time, scan index) with backend-specific columns, ensuring no circular dependencies between accessor methods. This skill is essential for implementing the spectraData() method in custom MsBackend subclasses.

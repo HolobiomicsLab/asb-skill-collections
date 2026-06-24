@@ -17,7 +17,7 @@ metadata:
   - MsBackendTest
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -49,7 +49,6 @@ attribution:
 
 # ms-data-constraint-enforcement
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and enforce critical constraints on mass spectrometry peak data (m/z and intensity values) within backend storage classes to ensure data integrity and conformance to expected physical properties. This skill detects violations early using efficient vectorised methods on NumericList objects, preventing downstream analysis errors.

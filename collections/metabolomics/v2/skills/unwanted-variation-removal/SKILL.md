@@ -16,7 +16,7 @@ metadata:
   - MissingValues
   - NormQcmets
   - RlaPlots
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -49,7 +49,6 @@ attribution:
 
 # unwanted-variation-removal
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove unwanted batch effects, matrix effects, and confounding biological variation from metabolomics feature matrices using statistical normalization methods. This skill selects and applies normalization methods (internal standards, RUV-based approaches, or combined methods) to produce normalized metabolite intensity data suitable for downstream biomarker analysis.

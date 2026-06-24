@@ -23,7 +23,7 @@ metadata:
   - BOA
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -64,7 +64,6 @@ attribution:
 
 # post-translational-modification-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and validates post-translational modifications (PTMs) on peptides by matching experimental tandem mass spectra against databases of putative modified RiPP structures, with class-specific modification rules applied during database construction. This skill bridges metabologenomic data (genome-predicted precursor peptides with enumerated PTM variants) and mass spectrometry evidence (fragmentation patterns).

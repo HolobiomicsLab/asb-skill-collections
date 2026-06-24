@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -45,7 +45,6 @@ attribution:
 
 # laplacian-embedding-spectral-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Laplacian embedding to compute fragment ion similarity and statistical significance when aligning pairs of MS/MS fragmentation spectra. This skill captures both local mass difference patterns (shortest-path distance) and global spectral graph structure (average commute time) to enable robust matching across chemical structure variants.

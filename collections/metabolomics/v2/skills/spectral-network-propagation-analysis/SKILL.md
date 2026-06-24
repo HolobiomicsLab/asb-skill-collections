@@ -21,7 +21,7 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -60,7 +60,6 @@ attribution:
 
 # spectral-network-propagation-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enlarge and visualize identified RiPP (ribosomally synthesized and post-translationally modified peptide) identifications by propagating spectral networking results through connected clusters of tandem mass spectra. This skill uses molecular networking to extend peptide discovery beyond direct database matches by leveraging spectral similarity relationships.

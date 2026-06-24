@@ -14,7 +14,7 @@ metadata:
   - DeepMSProfiler
   - Python (NumPy, scikit-learn)
   - NetworkX or graph visualization library (e.g., Cytoscape, Gephi)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -42,7 +42,6 @@ attribution:
 
 # association-strength-normalization-for-networks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and scale metabolite-protein association strengths to enable comparable node sizing and edge weighting in bipartite disease-associated networks. This ensures visual and quantitative consistency across heterogeneous association metrics derived from deep learning predictions.

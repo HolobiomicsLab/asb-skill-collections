@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -45,7 +45,6 @@ attribution:
 
 # Difference-Count Table Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine multiple mass difference counting methods (MZ difference counts and precursor-based neutral loss difference counts) into a unified, indexed difference-count table for use in SIMILE V2 spectral alignment. This integration enables richer feature representation of fragmentation patterns by capturing both direct fragment-to-fragment mass relationships and neutral loss signatures.

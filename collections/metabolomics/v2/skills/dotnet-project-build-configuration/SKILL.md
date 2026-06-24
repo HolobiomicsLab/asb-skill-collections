@@ -20,7 +20,7 @@ metadata:
   - NuGet Package Manager
   - WPF (Windows Presentation Foundation)
   - MsdialWorkbench GitHub Repository
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -51,7 +51,6 @@ attribution:
 
 # dotnet-project-build-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and build a .NET project targeting multiple framework versions (4.7.2, Core 3.1, .NET 6) with proper NuGet dependency resolution and WPF GUI compilation. This skill ensures reproducible desktop application builds from source across Windows development environments.

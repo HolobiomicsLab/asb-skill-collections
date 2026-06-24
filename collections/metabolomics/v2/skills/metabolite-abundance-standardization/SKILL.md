@@ -15,7 +15,7 @@ metadata:
   - NormalizeMets
   - RStudio
   - Microsoft Excel
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -48,7 +48,6 @@ attribution:
 
 # metabolite-abundance-standardization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize metabolite peak intensities or concentrations across a featuredata matrix using remove-unwanted-variation (RUV) normalization with clustering and negative control metabolites. This skill corrects for batch effects, matrix effects, and other systematic variation in metabolomics data before downstream biomarker analysis.

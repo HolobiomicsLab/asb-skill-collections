@@ -17,7 +17,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # storage-origin-metadata-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign dataStorage and dataOrigin spectra variables to each spectrum in an MsBackend instance to document where peak data is physically stored and from which source it was derived. This metadata is essential for backend initialization and enables Spectra objects to track data provenance and access patterns.

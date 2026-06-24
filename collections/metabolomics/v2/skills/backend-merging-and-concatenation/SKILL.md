@@ -17,7 +17,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # backend-merging-and-concatenation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine multiple MsBackend objects of the same type into a single instance while preserving all spectra and their peak data. This skill is essential for aggregating mass spectrometry data from multiple sources or processing stages into a unified backend representation.

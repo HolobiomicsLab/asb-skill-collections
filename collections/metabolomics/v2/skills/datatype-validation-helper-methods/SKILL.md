@@ -16,7 +16,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -47,7 +47,6 @@ attribution:
 
 # datatype-validation-helper-methods
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement helper functions that validate core spectra variable data types against MsBackend schema requirements during backend initialization. This ensures type consistency and prevents downstream errors in mass spectrometry data pipelines.

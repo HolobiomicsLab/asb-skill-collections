@@ -17,7 +17,7 @@ metadata:
   - LogTransform
   - MissingValues
   - NormQcmets
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -48,7 +48,6 @@ attribution:
 
 # linear-regression-design-matrix-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construction of a design matrix (factormat) that encodes biological factors of interest (e.g., gender, age, BMI) for use in linear regression analysis of normalized metabolomics feature data. This skill is essential for enabling downstream biomarker identification and statistical comparison of metabolite abundance across experimental groups.

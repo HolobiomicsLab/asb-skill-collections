@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -45,7 +45,6 @@ attribution:
 
 # Exact Mass Accuracy Calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and evaluate mass accuracy of observed m/z differences against reference adduct and fragment masses to refine ion-species candidate assignments in direct-injection mass spectrometry. This refinement step disambiguates correlations by matching measured mass differences to expected adduct/fragment patterns within user-specified ppm tolerance.

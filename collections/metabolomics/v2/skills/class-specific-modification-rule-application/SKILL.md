@@ -17,7 +17,7 @@ metadata:
   - Dereplicator
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -52,7 +52,6 @@ attribution:
 
 # class-specific-modification-rule-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate putative post-translationally modified (PTM) variants of RiPP precursor peptides by applying class-specific modification rules (e.g., lantibiotic, lassopeptide, cyanobactin) to generate candidate structure databases. This skill bridges genome mining and spectral matching by ensuring only chemically feasible modifications for a given RiPP class are included in the search space.

@@ -19,7 +19,7 @@ metadata:
   - ProteoWizard (msconvert)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -58,7 +58,6 @@ attribution:
 
 # GNPS workflow result processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate output files from GNPS Spectral Networking / Molecular Networking workflows (e.g. ProteoSAFe-METABOLOMICS-SNETS-V2) to enable downstream metabologenomic analysis. This skill ensures that precomputed spectral network archives are correctly unpacked and integrated into tools like MetaMiner for RiPP identification and visualization.

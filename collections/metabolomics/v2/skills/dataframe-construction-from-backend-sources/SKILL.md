@@ -11,7 +11,7 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -43,7 +43,6 @@ attribution:
 
 # dataframe-construction-from-backend-sources
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a DataFrame object containing complete spectra variables by implementing a spectraData() method that retrieves user-supplied variables from a backend storage slot and fills missing core spectra variables with NA values. This ensures uniform access to all expected spectra metadata across heterogeneous MsBackend implementations.

@@ -18,7 +18,7 @@ metadata:
   - MS-DIAL MsdialWorkbench
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -51,7 +51,6 @@ attribution:
 
 # mzml-spectral-format-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse mzML-format raw mass spectrometry data files into internal data structures compatible with MS-DIAL's metabolomics workflow. This skill is essential when working with open-source or vendor-agnostic MS-DIAL builds that depend exclusively on mzML as the supported raw data input format.

@@ -20,7 +20,7 @@ metadata:
   - Dereplicator+
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -61,7 +61,6 @@ attribution:
 
 # false-discovery-rate-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpretation of false discovery rates (FDR) from database search pipelines to distinguish genuine natural product identifications from spurious matches in mass spectrometry data. This skill involves extracting FDR values from pipeline outputs and using them as a quality filter to rank and validate spectral matches.

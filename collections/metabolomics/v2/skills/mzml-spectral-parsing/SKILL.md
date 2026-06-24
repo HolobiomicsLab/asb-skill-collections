@@ -16,7 +16,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -49,7 +49,6 @@ attribution:
 
 # mzML spectral parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse MS2 .mzML format mass spectrometry spectral data into memory using the Spectra R package, preparing it for downstream spectral database dereplication and compound annotation. This is the entry point for the MAW metabolomics annotation workflow.

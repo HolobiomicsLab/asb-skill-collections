@@ -14,7 +14,12 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -44,7 +49,7 @@ attribution:
 
 # data-driven-similarity-layer-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Construct and integrate a data-driven layer into a two-layer metabolite annotation topology by extracting feature similarity and co-occurrence patterns from mass spectrometry data. This layer complements knowledge-driven annotations and enables recursive propagation of metabolite identities across experimentally-derived networks.

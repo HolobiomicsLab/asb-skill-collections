@@ -22,7 +22,7 @@ metadata:
   - GitHub Actions (dotnet_test.yml)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -54,7 +54,6 @@ attribution:
 
 # windows-desktop-application-deployment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build and deploy a Windows desktop WPF application from source code using Visual Studio, targeting .NET Framework 4.7.2, with NuGet dependency management and verification on a Windows runtime environment. This skill is essential when reconstructing metabolomics software (MS-DIAL) from source for reproducible open-science workflows.

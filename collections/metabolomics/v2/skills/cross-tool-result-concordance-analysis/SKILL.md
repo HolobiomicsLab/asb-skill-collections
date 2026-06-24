@@ -22,7 +22,7 @@ metadata:
   - ProteoWizard msconvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -63,7 +63,6 @@ attribution:
 
 # cross-tool-result-concordance-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare hit patterns and detection sensitivity across multiple natural product database search pipelines (Dereplicator, VarQuest, Dereplicator+) on the same test spectra to identify tool-specific identifications, common detections, and mode-dependent performance differences. This skill is essential when validating which pipeline best suits a particular RiPP or natural product discovery workflow.

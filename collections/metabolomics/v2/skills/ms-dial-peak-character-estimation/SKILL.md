@@ -16,7 +16,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -48,7 +48,6 @@ attribution:
 
 # ms-dial-peak-character-estimation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Applies the MS-DIAL peak character estimation algorithm to compute feature similarity based on peak shape and chromatographic properties, enabling network-based clustering of LC-MS features prior to parental signal extraction. This skill is essential for reducing feature redundancy in untargeted metabolomics workflows by grouping adducts, isotopes, and in-source fragments into coherent clusters.

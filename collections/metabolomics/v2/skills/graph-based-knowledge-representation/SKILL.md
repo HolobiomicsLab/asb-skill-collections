@@ -15,7 +15,12 @@ metadata:
   - MetDNA3 webserver
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -45,7 +50,7 @@ attribution:
 
 # graph-based-knowledge-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Construct and integrate knowledge-driven and data-driven graph layers to represent metabolite relationships and enable recursive annotation propagation. This skill bridges biochemical ontologies and experimental similarity patterns into a unified interactive networking topology for metabolite annotation.

@@ -24,7 +24,12 @@ metadata:
   - Rapid QC-MS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -74,7 +79,7 @@ attribution:
 
 # mass-accuracy-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Verification that parsed mass spectrometry spectral data (m/z values and intensity arrays) extracted from mzML-format raw data files maintain expected mass accuracy when mapped to MS-DIAL's internal data structures. This skill ensures that deserialization and format conversion workflows preserve measurement fidelity prior to downstream metabolomics or lipidomics analysis.

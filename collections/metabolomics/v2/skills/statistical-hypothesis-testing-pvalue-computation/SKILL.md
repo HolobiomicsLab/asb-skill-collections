@@ -13,7 +13,7 @@ metadata:
   tools:
   - R
   - NormalizeMets
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -44,7 +44,6 @@ attribution:
 
 # statistical-hypothesis-testing-pvalue-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute p-values and regression coefficients by fitting linear models to normalized metabolomics feature data matrices in order to identify biomarkers associated with factors of interest (e.g., exposure, disease status, or demographic variables). This skill enables downstream statistical comparison and filtering of metabolites.

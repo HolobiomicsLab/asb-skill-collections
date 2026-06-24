@@ -17,7 +17,12 @@ metadata:
   - GSimp_evaluation.R
   - imputeLCMD R package
   - Trunc_KNN
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -47,7 +52,7 @@ attribution:
 
 # missing-value-imputation-method-dispatch
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Route a missing-value matrix to one of multiple left-censored imputation methods (GSimp, QRILC, kNN-TN) via a wrapper function that handles method selection, parameter passing, and output collection. This skill is essential when comparing or selecting the best imputation strategy for metabolomics data with left-censored missingness.

@@ -15,7 +15,7 @@ metadata:
   - TensorFlow / Keras
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -43,7 +43,6 @@ attribution:
 
 # signal-intensity-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize LC-MS metabolite signal intensities across samples to enable fair correlation analysis and disease classification. This preprocessing step removes batch effects and technical variation that would otherwise confound the relationship between metabolite abundance and disease phenotype.

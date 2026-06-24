@@ -18,7 +18,7 @@ metadata:
   - MetFrag
   - R
   - PubChem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW
@@ -52,7 +52,6 @@ attribution:
 
 # pubchem-metadata-retrieval
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve molecular properties and chemical validity metadata from PubChem for compound candidates using PubChemPy, enabling downstream filtering and ranking in metabolome annotation workflows. This skill bridges spectral/compound database dereplication results with structural validation by querying PubChem's chemical registry.

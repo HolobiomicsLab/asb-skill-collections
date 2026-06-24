@@ -18,7 +18,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -49,7 +49,6 @@ attribution:
 
 # MS/MS Ion Interpretation via Maximum Weight Matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns fragment ions between two tandem mass spectra by computing mass difference frequencies and applying maximum weight matching to identify the optimal set of non-overlapping ion pair alignments that maximize statistical significance. This replaces monotonic alignment with a graph-based approach that captures both direct mass similarities and indirect relationships through ancestor/descendant fragment ions.

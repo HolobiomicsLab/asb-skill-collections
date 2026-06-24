@@ -14,7 +14,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -43,7 +43,6 @@ attribution:
 
 # background-ion-drift-detection-and-removal
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and remove background ions that exhibit systematic signal intensity drift across an LC-MS analysis run, using retention time-based intensity profiles. This step eliminates spurious features arising from instrument contamination or carry-over that confound metabolite discovery in untargeted metabolomics.

@@ -16,7 +16,7 @@ metadata:
   - Passatutto
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # metabolite-database-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct reference and decoy compound databases for untargeted metabolomics annotation by applying spectral feature permutation and statistical property preservation. This enables false discovery rate estimation and significance control in large-scale metabolite matching workflows.

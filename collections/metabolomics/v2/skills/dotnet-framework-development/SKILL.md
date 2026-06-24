@@ -23,7 +23,7 @@ metadata:
   - ReactiveExtensions / ReactiveProperty
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -57,7 +57,6 @@ attribution:
 
 # dotnet-framework-development
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Set up and build .NET Framework / .NET Core / .NET 6 desktop applications using Visual Studio, manage NuGet dependencies, and configure solution build profiles for reproducible compiled binaries. Essential for contributing to or extending open-source .NET projects like MS-DIAL that support multiple .NET runtime targets.

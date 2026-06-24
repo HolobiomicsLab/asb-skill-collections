@@ -15,7 +15,12 @@ metadata:
   - imputeLCMD R package (QRILC)
   - Trunc_KNN (kNN-TN)
   - R (with magrittr, reshape2, ggplot2)
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -45,7 +50,7 @@ attribution:
 
 # MNAR Data Quality Assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the quality and recovery accuracy of left-censored missing value imputation methods (GSimp, QRILC, kNN-TN) in metabolomics data by comparing imputed values against known true values using standardized performance metrics.

@@ -13,7 +13,12 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -43,7 +48,7 @@ attribution:
 
 # two-layer-topology-traversal
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and traverse a two-layer interactive network topology (knowledge-driven biochemical pathways + data-driven MS2 similarity networks) to propagate metabolite annotations recursively across both layers. This skill enables accurate annotation coverage in untargeted metabolomics by leveraging both prior biological knowledge and experimental spectral similarity evidence.

@@ -15,7 +15,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
@@ -46,7 +46,6 @@ attribution:
 
 # Reconstruct maximum weight matching alignment of MS/MS spectra
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply maximum weight matching (e.g., Hungarian algorithm) to optimally align fragment ion pairs between two tandem MS/MS spectra by maximizing total edge weight in a bipartite graph. This replaces monotonic alignment methods to achieve improved matching performance while accounting for mass difference significance.

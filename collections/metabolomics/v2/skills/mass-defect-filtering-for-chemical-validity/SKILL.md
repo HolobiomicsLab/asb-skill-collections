@@ -14,7 +14,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -43,7 +43,6 @@ attribution:
 
 # mass-defect-filtering-for-chemical-validity
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter out features with mass defect values that fall outside the expected chemical range for organic compounds, removing artefacts and non-metabolite signals from LC-MS peak lists. This step improves feature quality by eliminating signals chemically inconsistent with typical metabolites before downstream annotation.

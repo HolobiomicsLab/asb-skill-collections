@@ -16,7 +16,7 @@ metadata:
   - MS-FINDER 3.30 or higher
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -45,7 +45,6 @@ attribution:
 
 # mass-spectrometry-feature-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract representative parental signals from clustered LC-MS features using multi-level modularity optimization. This skill identifies and ranks the most informative feature from each cluster to reduce redundancy while preserving biological signal for downstream annotation.

@@ -15,7 +15,7 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # spectra-variable-metadata-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement and manage spectra variables—core and custom metadata properties of individual mass spectrometry spectra—within MsBackend subclasses to enable consistent representation, validation, and access of spectral properties across different data storage backends. This skill is essential for ensuring that all spectra within a Spectra object expose a uniform API regardless of underlying data source (in-memory, on-disk, database, or streamed).

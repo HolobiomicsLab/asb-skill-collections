@@ -17,7 +17,7 @@ metadata:
   - IRanges
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # numeric-list-construction-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct NumericList objects from m/z and intensity vector pairs extracted from mass spectrometry data, and validate that m/z values are sorted increasingly with no missing values to ensure compliance with Spectra backend requirements. This skill is essential during backend initialization to prepare peak data for efficient storage and retrieval within the MsBackend infrastructure.

@@ -16,7 +16,7 @@ metadata:
   - Passatutto
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
@@ -48,7 +48,6 @@ attribution:
 
 # decoy-database-generation-for-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic decoy spectral databases in parallel with reference compound databases to enable false discovery rate estimation in untargeted metabolomics annotation. This skill addresses the critical need for significance control when annotating large numbers of metabolite matches against spectral databases.

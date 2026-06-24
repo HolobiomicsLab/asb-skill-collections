@@ -13,7 +13,7 @@ metadata:
   tools:
   - R
   - NormalizeMets
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -44,7 +44,6 @@ attribution:
 
 # biomarker-coefficient-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract coefficient and p-value matrices from a fitted linear model applied to normalized, log-transformed metabolomics feature data to identify biomarkers associated with factors of interest (e.g., gender, age, BMI). This skill produces quantitative association metrics and statistical significance estimates required for downstream biomarker validation and visualization.

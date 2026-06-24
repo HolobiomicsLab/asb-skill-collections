@@ -13,7 +13,7 @@ metadata:
   tools:
   - Python
   - DeepMSProfiler
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -41,7 +41,6 @@ attribution:
 
 # bipartite-graph-layout-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply force-directed or hierarchical layout algorithms to position metabolite and protein nodes in a bipartite network graph for interpretable visualization of disease-associated associations. This skill transforms an abstract weighted bipartite graph into a spatially arranged network suitable for publication.

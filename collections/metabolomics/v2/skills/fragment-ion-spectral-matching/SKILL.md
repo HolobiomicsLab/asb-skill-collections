@@ -15,7 +15,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btad088/7036334
   title: DBDIpy
@@ -46,7 +46,6 @@ attribution:
 
 # fragment-ion-spectral-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate MS2 spectral similarity scores between fragment ion profiles of candidate ion-species pairs to confirm they originate from the same analyte compound. This is the final confirmation step in DBDIpy's three-stage identification pipeline for direct-injection plasma ionization mass spectrometry.

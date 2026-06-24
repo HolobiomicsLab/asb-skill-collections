@@ -19,7 +19,7 @@ metadata:
   - networkx
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -58,7 +58,6 @@ attribution:
 
 # spectral-cluster-connectivity-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assessment and visualization of spectral cluster connectivity in molecular networking to identify related natural product identifications and propagate RiPP assignments across spectra in the same cluster or adjacent clusters. This skill evaluates how spectral networking enlarges the set of identified metabolites by linking related mass spectra and reporting cluster-level and inter-cluster relationships.

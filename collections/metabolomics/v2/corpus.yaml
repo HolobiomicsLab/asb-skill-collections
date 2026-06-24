@@ -92,9 +92,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-2-Clause
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: 'This is free software, licensed under: The (two-clause) FreeBSD
+    License'
 - name: GutUDB
   doi: 10.1002/imt2.195
   title: GutUDB
@@ -330,9 +332,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-or-later
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: 'License: GPL (>=2)'
 - name: TarMet
   doi: 10.1007/s11306-018-1363-7
   title: TarMet
@@ -834,9 +837,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: GPL-3
 - name: CorrDec
   doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -848,9 +852,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: LGPL-3.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: The source code is licensed under GNU LESSER GENERAL PUBLIC LICENSE
+    (LGPL) version 3.
 - name: MetIDfyR
   doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR
@@ -2444,9 +2450,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: This project is licensed under the MIT License - see the [LICENSE](LICENSE)
+    file for details.
 - name: Spectraverse
   doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse
@@ -2542,9 +2550,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-ND-4.0
+  license_tier: noncommercial
+  license_detection: readme-llm
+  license_evidence: This work is licensed under the Attribution-NonCommercial-NoDerivatives
+    4.0 International (CC BY-NC-ND 4.0)
 - name: DNN peak classifier
   doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier
@@ -3536,9 +3546,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: NPDtools version 2.5.0 was released under the Apache 2.0 License
+    on November 28, 2019
 - name: 10.1038/s41467-019-11311-9
   doi: 10.1038/s41467-019-11311-9
   title: 10.1038/s41467-019-11311-9
@@ -3620,9 +3632,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: '[Modified BSD](https://github.com/biorack/simile/blob/main/license.txt)'
 - name: tidyMass
   doi: 10.1038/s41467-022-32155-w
   title: tidyMass
@@ -3760,9 +3773,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
 - name: MS-DIAL 5
   doi: 10.1038/s41467-024-54137-w
   title: MS-DIAL 5
@@ -3774,9 +3788,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: LGPL-3.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: The source code is licensed under GNU LESSER GENERAL PUBLIC LICENSE
+    (LGPL) version 3.
 - name: iDIA-QC
   doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC
@@ -3830,9 +3846,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-ND-4.0
+  license_tier: noncommercial
+  license_detection: readme-llm
+  license_evidence: This work is licensed under the Attribution-NonCommercial-NoDerivatives
+    4.0 International (CC BY-NC-ND 4.0).
 - name: SpatialMETA
   doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA
@@ -4600,9 +4618,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: '[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)'
 - name: MetaMOPE
   doi: 10.1093/bioadv/vbad061/7172446
   title: MetaMOPE
@@ -4754,9 +4773,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: '[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)'
 - name: mspack
   doi: 10.1093/bioinformatics/btab636/6363791
   title: mspack
@@ -4922,9 +4942,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: '[![PyPi license](https://badgen.net/pypi/license/pip/)]([https://pypi.com/project/pip/](https://opensource.org/licenses/MIT/))'
 - name: 3DMolMS
   doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -5146,9 +5167,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: The code is released under permissive BSD type license.
 - name: MetaboDiff
   doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -6225,9 +6247,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MulanPSL-2.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: G-Aligner is an open-source tool, using [***Mulan Permissive Software
+    License，Version 2 (Mulan PSL v2)***](http://license.coscl.org.cn/MulanPSL2)
 - name: DNEA
   doi: 10.1186/s12859-024-05994-1
   title: DNEA
@@ -6339,9 +6363,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: COCONUT infrastructure code is licensed under the MIT license
+    - see the LICENSE.
 - name: ChemSpectra
   doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
@@ -6409,9 +6435,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: '[![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIt)'
 - name: UmetaFlow
   doi: 10.1186/s13321-023-00724-w
   title: UmetaFlow
@@ -6661,9 +6688,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-SA-4.0
+  license_tier: noncommercial
+  license_detection: readme-llm
+  license_evidence: All content of GSimp is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike
+    4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 - name: Spec2Vec
   doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -7263,9 +7292,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Artistic-2.0
+  license_tier: open
+  license_detection: readme-llm
+  license_evidence: '[![license](https://img.shields.io/badge/license-Artistic--2.0-brightgreen.svg)](https://opensource.org/licenses/Artistic-2.0)'
 - name: JPA
   doi: 10.3390/metabo12030212
   title: JPA
