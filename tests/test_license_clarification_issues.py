@@ -384,6 +384,42 @@ def test_display_name_py_falls_back_to_repo():
 
 
 # ---------------------------------------------------------------------------
+# Task 2 — candidates() excludes file-present-unclassified
+# ---------------------------------------------------------------------------
+
+def test_candidates_excludes_file_present_unclassified(tmp_path):
+    """Entry with license_detection='file-present-unclassified' must be excluded."""
+    from scripts.license_clarification_issues import candidates
+
+    corpus = {
+        "schema": "asb-corpus/1.0",
+        "papers": [
+            {
+                "name": "NoLic",
+                "doi": "10.1/a",
+                "repo_url": "https://github.com/a/nolic",
+                "license_tier": "restricted",
+                "license_detection": "none",
+                "access": {},
+            },
+            {
+                "name": "HasFile",
+                "doi": "10.1/b",
+                "repo_url": "https://github.com/b/hasfile",
+                "license_tier": "restricted",
+                "license_detection": "file-present-unclassified",
+                "access": {},
+            },
+        ],
+    }
+    path = _write_corpus(tmp_path, corpus)
+    result = candidates(path)
+
+    names = {c["repo"] for c in result}
+    assert "nolic" in names and "hasfile" not in names
+
+
+# ---------------------------------------------------------------------------
 # F4 — _default_list raises RuntimeError on non-zero returncode;
 #       run() catches it and marks action="skipped-error"
 # ---------------------------------------------------------------------------

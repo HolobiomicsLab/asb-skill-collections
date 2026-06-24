@@ -115,6 +115,7 @@ def candidates(corpus_path: str) -> list[dict]:
     - repo_url parses to a valid GitHub (owner, repo) via parse_repo
     - both owner and repo pass _VALID injection guard (F1)
     - (p.get("access") or {}).get("license") is falsy
+    - license_detection != "file-present-unclassified" (Task 2: skip if unclassified file exists)
 
     Deduplication: emits ONE entry per (owner, repo), collecting all tool_names (F2).
     """
@@ -141,6 +142,10 @@ def candidates(corpus_path: str) -> list[dict]:
             continue
 
         if (p.get("access") or {}).get("license"):
+            continue
+
+        # Task 2 — skip entries where a license file exists but couldn't be classified
+        if p.get("license_detection") == "file-present-unclassified":
             continue
 
         owner, repo = parsed
