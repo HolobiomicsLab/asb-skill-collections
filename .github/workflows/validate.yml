@@ -295,3 +295,7 @@ jobs:
               sys.exit(1)
           print(f"PASS: LinkML validation OK ({len(collection_files)} files)")
           EOF
+
+      # -- Gate: License-tier enforcement ------
+      - name: License-tier gate
+        run: python -m scripts.check_license_tiers collections/metabolomics/v2
