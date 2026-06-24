@@ -15,7 +15,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -45,7 +45,6 @@ attribution:
 
 # molecular-structure-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply chemical derivatization reactions to metabolite structures to enumerate non-standard adduct ions characteristic of specific derivatizing matrices (e.g., FMP-10). This skill transforms native SMILES/mol structures into derivatized products and predicts their mass-to-charge ratios for mass spectrometry metabolite identification.

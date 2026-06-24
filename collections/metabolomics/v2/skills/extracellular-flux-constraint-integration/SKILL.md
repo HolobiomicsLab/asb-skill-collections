@@ -25,7 +25,7 @@ metadata:
   - rasIntegration.py
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -63,7 +63,6 @@ attribution:
 
 # extracellular-flux-constraint-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate experimentally measured extracellular metabolite flux ratios (lactate/glucose, lactate/glutamine, glutamate/glutamine) as upper and lower bounds on exchange reactions in constraint-based metabolic models to improve prediction of cell-line-specific feasible flux distributions. This skill refines the flux prediction landscape by anchoring the model to observed substrate consumption and product secretion patterns.

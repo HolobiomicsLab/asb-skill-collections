@@ -20,7 +20,7 @@ metadata:
   - Matplotlib/Seaborn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -57,7 +57,6 @@ attribution:
 
 # Cohen's Kappa Agreement Analysis for Categorical Variation Signs
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Cohen's kappa coefficient to quantify concordance between two categorical classifiers (e.g., RAS and RPS directional changes) across multiple pairwise comparisons, accounting for chance agreement. Essential for validating whether two independent computational predictions of reaction flux direction agree better than random.

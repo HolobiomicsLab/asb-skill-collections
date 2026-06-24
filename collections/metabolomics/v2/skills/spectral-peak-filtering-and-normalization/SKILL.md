@@ -17,7 +17,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -62,7 +62,6 @@ attribution:
 
 # spectral-peak-filtering-and-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing pipeline that removes low-intensity peaks, normalizes peak intensities via square-root transformation, and bins peaks into fixed m/z ranges to prepare raw MS/MS spectra for machine learning. This standardization ensures consistent input representation across spectra of varying quality and intensity distributions.

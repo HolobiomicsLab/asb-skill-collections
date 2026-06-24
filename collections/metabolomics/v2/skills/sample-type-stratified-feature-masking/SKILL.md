@@ -17,7 +17,7 @@ metadata:
   - Asari
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -48,7 +48,6 @@ attribution:
 
 # sample-type-stratified-feature-masking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove features from a metabolomics feature table whose intensity in study (unknown) samples is not sufficiently elevated above blank samples, using a configurable intensity ratio threshold. This quality-control step eliminates likely contaminants and noise that appear equally in blanks and unknowns.

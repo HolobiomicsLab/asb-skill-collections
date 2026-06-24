@@ -20,7 +20,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -60,7 +60,6 @@ attribution:
 
 # comparative-machine-learning-benchmarking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic evaluation of a novel machine learning model (MiMeNet) against established baselines (MelonnPan, Random Forest, Elastic Net, NED) on paired microbiome-metabolome datasets using consistent train-test splits, cross-validation protocols, and correlation-based performance metrics. This skill enables assessment of whether a new predictive approach offers genuine improvements in metabolite prediction accuracy and discovery capacity.

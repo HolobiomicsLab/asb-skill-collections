@@ -24,7 +24,7 @@ metadata:
   - Jupyter
   - matplotlib / seaborn
   - pandas
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -62,7 +62,6 @@ attribution:
 
 # statistical-distribution-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and display distribution plots (histograms, density curves) for computed statistical metrics to characterize the shape, spread, and shape of a dataset's key properties. This skill is essential for exploratory analysis of fingerprint or molecular feature datasets where understanding distributional properties (bit-frequency distributions, sparsity, similarity scores) directly informs downstream model selection and data quality assessment.

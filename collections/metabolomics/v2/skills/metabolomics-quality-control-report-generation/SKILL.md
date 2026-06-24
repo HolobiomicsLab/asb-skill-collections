@@ -17,7 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -48,7 +48,6 @@ attribution:
 
 # metabolomics-quality-control-report-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate organized quality-control reports from mass spectrometry metabolomics data by creating structured directories containing publication-ready plots, tab-delimited tables, and Excel exports that categorize compounds and samples by confidence levels. This skill produces human-friendly and programmatic-access formats suitable for downstream analysis and stakeholder communication.

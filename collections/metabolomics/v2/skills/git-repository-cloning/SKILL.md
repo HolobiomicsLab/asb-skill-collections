@@ -14,7 +14,7 @@ metadata:
   - Git
   - Python
   - Jupyter
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -42,7 +42,6 @@ attribution:
 
 # git-repository-cloning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Clone a remote Git repository to obtain source code, notebooks, and reproducible workflows for scientific analysis. This skill is essential for accessing published computational methods and ensuring reproducibility of research results.

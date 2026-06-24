@@ -15,7 +15,7 @@ metadata:
   - PCPFM (PythonCentricPipelineForMetabolomics)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,7 +46,6 @@ attribution:
 
 # missing-value-replacement-by-feature-minimum
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace zero and missing values in a metabolomics feature table by calculating an imputation value as the interpolation_ratio parameter (default 0.5) multiplied by the minimum non-zero value observed for each feature. This strategy preserves the relative magnitude of features while avoiding artificial zeros that can distort downstream statistical analysis.

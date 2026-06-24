@@ -16,7 +16,7 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -50,7 +50,6 @@ attribution:
 
 # Filter: match mass differences to known adducts via adductMatch
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass differences from pairwise ion comparisons to a reference library of known chemical adducts by finding the closest-matching bin in a mass difference histogram. This enables annotation of MS peaks with their likely chemical identities (e.g., [M+Na]+, [M-H2O]+) and quantification of adduct prevalence in imaging datasets.

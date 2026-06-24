@@ -14,7 +14,7 @@ metadata:
   - docker-compose
   - TensorFlow Serving
   - curl / HTTP client library
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -42,7 +42,6 @@ attribution:
 
 # HTTP API Integration Testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a running service's HTTP API endpoints return correctly structured responses with expected field values and metadata. This skill is essential for confirming that API contracts (input/output layer names, response schemas) match implementation before downstream integration.

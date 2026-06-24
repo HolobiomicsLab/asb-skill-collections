@@ -18,7 +18,7 @@ metadata:
   - xcms (XCMS Online)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -48,7 +48,6 @@ attribution:
 
 # gap-filling-algorithm-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selection and optimization of gap-filling parameters within untargeted LC-MS workflows to recover missing feature intensities across samples. This skill ensures that features detected in some samples but absent in others are imputed or recovered, improving feature table completeness and reproducibility.

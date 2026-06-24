@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -48,7 +48,6 @@ attribution:
 
 # metabolomic-feature-extraction-from-mzml
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and table metabolomic features from centroid mzML files using Asari, producing both a complete feature table and a quality-filtered preferred table suitable for downstream analysis. This skill converts raw mass spectrometry acquisition data into quantified, grouped features with m/z and retention time identifiers.

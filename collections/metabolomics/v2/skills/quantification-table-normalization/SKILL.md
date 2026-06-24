@@ -20,7 +20,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST
@@ -57,7 +57,6 @@ attribution:
 
 # quantification-table-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform and normalize quantification tables (metabolite or feature abundance matrices) into the internal data format expected by msFeaST for downstream feature selection and statistical analysis. This preprocessing step ensures compatibility with the pipeline's statistical tests and interactive visualization.

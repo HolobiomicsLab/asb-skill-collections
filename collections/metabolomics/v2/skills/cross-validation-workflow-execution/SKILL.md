@@ -20,7 +20,7 @@ metadata:
   - SciPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -61,7 +61,6 @@ attribution:
 
 # cross-validation-workflow-execution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute multiple iterations of k-fold cross-validation on paired microbiome-metabolome datasets to obtain empirical performance distributions (Spearman correlation coefficients) and establish statistical thresholds for identifying well-predicted metabolites. This workflow trains neural network models repeatedly on held-out folds to measure predictive robustness and generate background distributions for significance testing.

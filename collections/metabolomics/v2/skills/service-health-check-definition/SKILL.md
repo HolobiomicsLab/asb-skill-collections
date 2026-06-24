@@ -12,7 +12,7 @@ metadata:
   tools:
   - MAGMa
   - Docker Compose
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -42,7 +42,6 @@ attribution:
 
 # service-health-check-definition
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define and configure health checks for containerized microservices in a Docker Compose orchestration to monitor service readiness and inter-service dependencies. Health checks enable the orchestrator to validate that dependent services are running correctly before allowing downstream services to start or retry communication.

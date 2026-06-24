@@ -15,7 +15,7 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -50,7 +50,6 @@ attribution:
 
 # functional-trait-diversity-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies functional diversity of molecular metabolites by integrating trait-based metrics (elemental composition, decomposability, aromaticity/unsaturation) into entropy calculations, revealing how microbial inoculation alters not just metabolite richness but the functional repertoire of decomposable and reactive species.

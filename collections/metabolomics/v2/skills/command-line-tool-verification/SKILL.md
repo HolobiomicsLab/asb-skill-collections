@@ -13,7 +13,7 @@ metadata:
   - falcon
   - spectrum-utils
   - pip
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -43,7 +43,6 @@ attribution:
 
 # command-line-tool-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a command-line scientific tool has been correctly installed and is executable by invoking it with diagnostic flags (help or version) and confirming successful output. This ensures the tool and its dependencies are properly configured before running analyses on real data.

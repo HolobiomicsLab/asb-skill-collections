@@ -16,7 +16,7 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -53,7 +53,6 @@ attribution:
 
 # Filter: rank annotated mass differences by occurrence with topAdducts
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank pairwise mass differences from MS imaging data by occurrence frequency and annotate matches to known molecular adducts (e.g., [M+Na]+, [M–H2O]+). This identifies the most abundant chemical transformations between detected ions, revealing matrix and salt adducts that form during MALDI ionization.

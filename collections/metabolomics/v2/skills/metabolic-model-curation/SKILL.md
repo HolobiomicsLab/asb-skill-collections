@@ -10,7 +10,7 @@ metadata:
   - http://edamontology.org/topic_2259
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -40,7 +40,6 @@ attribution:
 
 # metabolic-model-curation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Curate and complete consensus metabolic reconstructions for microbial community members by leveraging community-dependent metabolic context to identify and fill gaps in individual models. This skill reconciles metabolic gaps across a community using shared biochemical dependencies and exchange requirements.

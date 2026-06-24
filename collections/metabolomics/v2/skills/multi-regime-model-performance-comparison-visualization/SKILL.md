@@ -19,7 +19,7 @@ metadata:
   - scikit-learn
   - SciPy
   - matplotlib / seaborn
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -56,7 +56,6 @@ attribution:
 
 # multi-regime-model-performance-comparison-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare predictive performance of machine learning models trained under different data regimes (e.g., all features vs. subset-only) by computing correlation coefficients across independent cross-validation folds and visualizing per-outcome effect sizes. This reveals whether incorporating broader feature sets improves predictions for a target output class.

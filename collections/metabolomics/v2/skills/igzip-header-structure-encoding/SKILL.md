@@ -11,7 +11,7 @@ metadata:
   - Python struct module
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -39,7 +39,6 @@ attribution:
 
 # igzip-header-structure-encoding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and validate the binary header structure of indexed gzip (igzip) files, which encode custom metadata (version, index-offset mappings) in the gzip comment field to enable random-access seeking in compressed mass spectrometry data. This skill is essential for implementing or extending igzip parsers that need to read or write seekable gzip-compressed mzML files.

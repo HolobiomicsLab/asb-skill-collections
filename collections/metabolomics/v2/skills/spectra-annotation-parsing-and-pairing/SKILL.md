@@ -14,7 +14,7 @@ metadata:
   - FIDDLE (research codebase)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -43,7 +43,6 @@ attribution:
 
 # spectra-annotation-parsing-and-pairing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse MS/MS spectrum metadata (precursor m/z, adduct type, collision energy, formula annotations) from MGF files and pair spectra with their reference annotations to prepare data for model training, evaluation, and rescore augmentation. This step bridges raw spectral data and ground-truth labels required for supervised learning and benchmark evaluation.

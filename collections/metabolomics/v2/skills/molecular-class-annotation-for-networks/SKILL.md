@@ -19,7 +19,7 @@ metadata:
   - CoreMS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -57,7 +57,6 @@ attribution:
 
 # molecular-class-annotation-for-networks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign molecular class labels (e.g., lipids, proteins, carbohydrates, lignin) to detected masses in FT-ICR MS samples based on their elemental composition, enabling chemical interpretation of biochemical transformation networks. This annotation step bridges raw mass assignments to biologically meaningful compound categories within network nodes.

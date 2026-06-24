@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -52,7 +52,6 @@ attribution:
 
 # isotopic-signature-clustering-and-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups detected mass spectrometry features into isotopic clusters by enumerating m/z offsets corresponding to stable isotope substitutions (e.g., C13) and filtering by mass, drift time, and retention time tolerances. This skill enables annotation of monoisotopic and isotopologue features, improving feature characterization and reducing false positive identifications in high-dimensional MS workflows.

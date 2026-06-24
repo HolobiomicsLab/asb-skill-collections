@@ -18,7 +18,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -52,7 +52,6 @@ attribution:
 
 # Isotope-Pattern Annotation in Feature Detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction and validation of isotope pattern information (m/z, intensity, charge state) from high-resolution MS1 features during pyOpenMS-based feature detection in centroided DDA mzML data. This enriches feature tables with isotopic signatures necessary for elemental composition inference and PFAS suspect confirmation.

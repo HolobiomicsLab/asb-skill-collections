@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -46,7 +46,6 @@ attribution:
 
 # mass-spectrometry-target-list-preparation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preparation of a TARDIS-compatible target list by loading a compound spreadsheet, filtering by ionization polarity, and extracting required metadata columns (ID, name, m/z, RT) into a standardized data.frame. This is the prerequisite step that enables targeted peak detection and integration in LC–MS metabolomics workflows.

@@ -20,7 +20,7 @@ metadata:
   - DEIMoS (Data-Exploratory Ion Mobility MS)
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -56,7 +56,6 @@ attribution:
 
 # collision-cross-section-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw TWIM-MS arrival-time measurements into calibrated collision cross section (CCS) values using reference compound calibration curves. This skill enables quantitative ion-mobility characterization for high-dimensional multi-omic datasets without requiring prior feature identification.

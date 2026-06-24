@@ -12,7 +12,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -46,7 +46,6 @@ attribution:
 
 # json-schema-output-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate converted JSON data against the Experiment Description Specification and format-specific JSON schemas to ensure structural and semantic correctness before repository submission. This skill catches extraction, tagging, and conversion errors early in the MESSES workflow.

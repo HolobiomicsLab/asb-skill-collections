@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -42,7 +42,6 @@ attribution:
 
 # mzml-file-random-access-by-spectrum-id
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve a specific mass spectrometry spectrum from a compressed mzML file by its numeric identifier using bracket notation, enabling efficient random access without sequential file parsing. This skill leverages pymzML's indexed gzip support to achieve near-instantaneous lookups in large compressed datasets.

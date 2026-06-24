@@ -15,7 +15,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -44,7 +44,6 @@ attribution:
 
 # ion-mobility-class-stratification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition TWIM-MS ion populations by biomolecular class assignment, then apply class-specific CCS calibration to compute collision cross section values without requiring prior feature identification. This enables direct CCS computation on class-stratified ion subsets.

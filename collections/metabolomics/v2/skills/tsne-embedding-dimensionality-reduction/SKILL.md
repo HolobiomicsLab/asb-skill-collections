@@ -15,7 +15,7 @@ metadata:
   - Jupyter Notebooks
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -45,7 +45,6 @@ attribution:
 
 # tsne-embedding-dimensionality-reduction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Applies t-SNE algorithm to a precomputed mass spectral similarity matrix (e.g., from ms2deepscore) to reduce high-dimensional spectral relationships into 2-D coordinates for interactive visualization and overview representation of LC-MS/MS data.

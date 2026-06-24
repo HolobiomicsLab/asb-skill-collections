@@ -15,7 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # positive-negative-class-balancing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Balances training datasets by capping positive examples per class and downsampling negative examples to achieve a 1:1 positive-to-negative ratio, preventing model bias toward overrepresented classes in imbalanced molecular formula prediction tasks.

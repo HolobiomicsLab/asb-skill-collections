@@ -16,7 +16,7 @@ metadata:
   - Python scikit-learn
   - scikit-learn
   - SciPy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -51,7 +51,6 @@ attribution:
 
 # Consensus-clustering algorithm selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selects the optimal number of clusters (k) in hierarchical consensus clustering by computing cumulative distribution function (CDF) area across a range of k values and identifying the largest k where the proportional change in area (Δk) exceeds a predefined threshold. This prevents overfitting and ensures stable, reproducible cluster assignments across multiple random initializations.

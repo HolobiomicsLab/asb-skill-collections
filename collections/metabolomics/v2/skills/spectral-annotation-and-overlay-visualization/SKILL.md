@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -46,7 +46,6 @@ attribution:
 
 # Spectral Annotation and Overlay Visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate mass spectra with identified parent ions and adduct ions, then visualize them as overlaid scatter plots using contrasting colors and symbols to reveal spatial and spectral relationships. This skill enables discrimination of adduct-parent ion pairs in MALDI-MSI data through simultaneous visual inspection of their co-occurrence patterns.

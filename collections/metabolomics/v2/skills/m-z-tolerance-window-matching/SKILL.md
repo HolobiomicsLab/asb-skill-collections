@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -51,7 +51,6 @@ attribution:
 
 # m/z-tolerance-window-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies matching peaks within a specified m/z tolerance window to form isotopic clusters or align features across datasets. This skill is essential for grouping chemically related ions (e.g., isotopologues) and improving feature matching confidence in N-dimensional mass spectrometry workflows.

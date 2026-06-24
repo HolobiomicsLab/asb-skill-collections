@@ -13,7 +13,7 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -45,7 +45,6 @@ attribution:
 
 # mass-spectrum-peak-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organize formula-assigned mass spectrum peaks into heteroatom classes (CHO, CHON, CHOS, CHOP, etc.) and aggregate their counts and abundances for classification-based analysis and visualization. This skill transforms a peak-resolved mass spectrum into a summary table stratified by elemental composition.

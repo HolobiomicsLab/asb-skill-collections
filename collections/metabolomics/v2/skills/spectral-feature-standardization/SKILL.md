@@ -17,7 +17,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -47,7 +47,6 @@ attribution:
 
 # Spectral Feature Standardization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert peak-picking output from heterogeneous algorithms (Centwave, FeatureFinderMetabo, ADAP) into a unified internal feature matrix representation with consistent m/z, retention time, and intensity columns. This standardization enables seamless downstream integration of algorithm-specific results into common alignment, grouping, and gap-filling workflows.

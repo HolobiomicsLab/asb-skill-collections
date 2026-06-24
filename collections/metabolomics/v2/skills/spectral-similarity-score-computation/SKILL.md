@@ -20,7 +20,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -58,7 +58,6 @@ attribution:
 
 # spectral-similarity-score-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise structural similarity scores between tandem mass spectra by predicting Tanimoto coefficients from spectrum pairs using a deep learning Siamese network, enabling large-scale spectral library searching and compound retrieval. This skill predicts structural similarity without requiring explicit molecular fingerprint computation.

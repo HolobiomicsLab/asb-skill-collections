@@ -14,7 +14,7 @@ metadata:
   - Python
   - ElementTree
   - pymzML
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -45,7 +45,6 @@ attribution:
 
 # Python Bracket Notation Protocol Implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement the `__getitem__()` protocol in a custom Python class to enable random access to indexed data blocks (e.g., chapters in a compressed mzML file) using bracket notation. This allows seekable access to blockwise-indexed content without decompressing the entire file.

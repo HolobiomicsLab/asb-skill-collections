@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -57,7 +57,6 @@ attribution:
 
 # mass-spectrometry-spectrum-tokenization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert pre-processed MS/MS spectra into tokenized documents by representing each peak and neutral loss as discrete words, enabling downstream embedding and similarity computation. This is a prerequisite step for learning spectral relationships via Word2Vec-based models like Spec2Vec.

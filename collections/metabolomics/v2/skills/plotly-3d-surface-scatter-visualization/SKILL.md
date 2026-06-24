@@ -20,7 +20,7 @@ metadata:
   - alphatims
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -52,7 +52,6 @@ attribution:
 
 # plotly-3d-surface-scatter-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create interactive 3D peak-map visualizations of mass spectrometry data using the Plotly backend in pyOpenMS-Viz. This skill enables rendering of m/z, retention time, and intensity dimensions as an interactive 3D surface or scatter plot, suitable for exploratory analysis of complex MS datasets.

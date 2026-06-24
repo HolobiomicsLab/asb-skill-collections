@@ -16,7 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -48,7 +48,6 @@ attribution:
 
 # Chemical Formula Representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode chemical formulas into learnable vector embeddings using sinusoidal positional encoding (SCARF embeddings) to enable neural network processing of formula structure. This technique is essential for formula transformer architectures that rank candidate chemical formulas against unknown mass spectra without referencing spectral databases.

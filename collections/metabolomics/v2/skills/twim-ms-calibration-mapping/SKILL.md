@@ -15,7 +15,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -44,7 +44,6 @@ attribution:
 
 # TWIM-MS CCS Calibration Mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw arrival-time measurements from traveling-wave ion mobility mass spectrometry (TWIM-MS) into collision cross section (CCS) values by establishing and applying a calibration mapping function derived from reference compounds with known CCS values. This skill enables downstream multi-omic analysis without prior feature identification.

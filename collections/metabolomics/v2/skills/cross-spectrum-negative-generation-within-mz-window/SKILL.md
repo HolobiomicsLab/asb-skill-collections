@@ -13,7 +13,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -42,7 +42,6 @@ attribution:
 
 # cross-spectrum-negative-generation-within-mz-window
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate negative training examples for MS/MS rescore models by pairing spectra within a defined precursor m/z window, creating hard negatives that improve model discrimination between correct and incorrect molecular formula candidates.

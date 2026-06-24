@@ -24,7 +24,7 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -61,7 +61,6 @@ attribution:
 
 # computational-performance-benchmarking-and-timing-measurement
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically measure and document wall-clock execution times for a bioinformatics pipeline across datasets of varying sizes and analysis configurations to establish performance baselines and characterize scalability. This skill is essential for validating computational efficiency claims and enabling users to estimate runtime requirements for their own datasets.

@@ -16,7 +16,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -57,7 +57,6 @@ attribution:
 
 # InChIKey Normalization and Deduplication
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve and consolidate multiple chemical structure annotations (InChI/SMILES) assigned to the same 14-character InChIKey, selecting a canonical representative per unique key to enable consistent fingerprint generation and structural similarity computation. This preprocessing step is essential when curating MS/MS spectral libraries where duplicate or redundant structure records must be collapsed before computing machine learning training labels.

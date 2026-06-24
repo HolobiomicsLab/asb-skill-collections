@@ -16,7 +16,7 @@ metadata:
   - ADAM optimizer
   - scipy.stats.spearmanr (Python)
   - scikit-learn (Python)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -52,7 +52,6 @@ attribution:
 
 # Spearman Correlation Coefficient Calculation across Cross-Validation Folds
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Spearman correlation coefficients (SCC) between predicted and observed metabolite abundances across multiple cross-validation iterations and folds to assess prediction accuracy and identify well-predicted metabolites in microbiome-metabolome modeling. This skill quantifies how well a neural network model captures the rank-order relationship between predicted and observed metabolomic profiles.

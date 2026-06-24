@@ -17,7 +17,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -51,7 +51,6 @@ attribution:
 
 # retention-time-correction-and-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Correct systematic shifts in retention times across LC-MS runs using established algorithms (e.g., from xcms) to ensure accurate target matching and downstream peak detection. This step is essential before targeted peak integration when retention time variability between runs could cause targets to fall outside their expected RT windows.

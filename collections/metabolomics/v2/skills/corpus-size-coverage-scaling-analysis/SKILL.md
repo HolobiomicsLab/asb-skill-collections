@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -60,7 +60,6 @@ attribution:
 
 # corpus-size-coverage-scaling-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies how Word2Vec model coverage of spectral features (peaks and neutral losses) scales with increasing training corpus size, using the missing-fraction metric to assess the proportion of spectral peaks with learned embeddings. This skill evaluates whether large pre-trained models achieve sufficient feature coverage (e.g., 97%) to enable reliable Spec2Vec similarity scoring without additional retraining.

@@ -18,7 +18,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -52,7 +52,6 @@ attribution:
 
 # m/z and retention time window validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A screening-mode quality-assurance step that verifies targeted compounds are detectable within their specified mass-to-charge and retention-time windows before full peak integration. This skill catches off-target elution, m/z drift, and integration parameter misspecifications early, preventing wasted processing on misconfigured targets.

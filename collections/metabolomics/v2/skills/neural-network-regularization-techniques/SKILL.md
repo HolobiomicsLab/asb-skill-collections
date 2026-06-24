@@ -18,7 +18,7 @@ metadata:
   - ms2deepscore
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -50,7 +50,6 @@ attribution:
 
 # Neural Network Regularization Techniques
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Application of L1/L2 regularization, batch normalization, and dropout to constrain neural network learning and reduce overfitting when training deep embeddings on spectral data. These techniques improve generalization by penalizing large weights, normalizing activations, and stochastically masking units during training.

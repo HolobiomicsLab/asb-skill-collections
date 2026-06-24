@@ -19,7 +19,7 @@ metadata:
   - LC-MS
   - GC-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -54,7 +54,6 @@ attribution:
 
 # spectrum-peak-counting-and-reporting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Count and report the number of peaks retained in a mass spectrum after applying a selected noise-threshold method (relative_abundance, signal_noise, or log mode), producing structured records of method identifier and peak counts per ionization mode for comparative evaluation.

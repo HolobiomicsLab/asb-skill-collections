@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # high-resolution-mass-spectrometry-data-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform high-resolution tandem mass spectrometry (MS/MS) spectra from mzML, mzXML, or MGF format into low-dimensional hashed feature vectors suitable for fast nearest-neighbor indexing and clustering. This preprocessing step is essential for scaling spectrum similarity searching to millions of spectra without exhaustive pairwise comparisons.

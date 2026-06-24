@@ -15,7 +15,7 @@ metadata:
   - MassHunter ProFinder
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -43,7 +43,6 @@ attribution:
 
 # metabolite-abundance-threshold-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolites and reactions based on quantification completeness and statistical abundance thresholds to ensure robust concordance analysis between reaction flux predictions and substrate availability. This skill removes incomplete or low-confidence metabolomics data before computing concordance coefficients between reaction propensity scores and feasible flux distributions.

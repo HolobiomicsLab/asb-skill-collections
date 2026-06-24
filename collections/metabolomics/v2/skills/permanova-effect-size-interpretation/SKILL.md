@@ -19,7 +19,7 @@ metadata:
   - ggplot2 / seaborn
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -54,7 +54,6 @@ attribution:
 
 # permanova-effect-size-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret PERMANOVA effect sizes (R² and F-statistics) to distinguish between statistically significant and ecologically meaningful differences in multivariate metabolomic or compositional data. This skill addresses the gap between statistical significance and ordination visualization, where subtle but real differences may not be visually apparent in NMDS or PCA plots.

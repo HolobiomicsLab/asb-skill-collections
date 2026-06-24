@@ -16,7 +16,7 @@ metadata:
   - ADAP
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -47,7 +47,6 @@ attribution:
 
 # isotope-adduct-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic grouping and annotation of isotopologue and adduct ions derived from the same precursor molecule, consolidating MS2 spectra and isotopic metadata after peak picking and sample alignment. This skill ensures that multiple ionic forms of a single compound are recognized as a single feature and annotated with their chemical relationships.

@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -48,7 +48,6 @@ attribution:
 
 # singularity-container-deployment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy a Nextflow bioinformatics workflow under Singularity containerization for execution on high-performance computing (HPC) environments. This skill enables portable, reproducible LC-HRMS metabolomics data processing across HPC schedulers (e.g., Slurm) by configuring Singularity profiles, building or pulling container images, and validating end-to-end pipeline execution on HPC resource constraints.

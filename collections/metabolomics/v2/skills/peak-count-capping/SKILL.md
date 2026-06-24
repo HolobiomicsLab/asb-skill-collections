@@ -15,7 +15,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -45,7 +45,6 @@ attribution:
 
 # peak-count-capping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Peak-count capping limits the number of intensity peaks retained in a mass spectrum after noise filtering, improving computational efficiency while preserving the most intense fragment ions. This step is applied during spectrum preprocessing to prevent memory overhead and ensure reproducibility in downstream peptide identification or spectral matching.

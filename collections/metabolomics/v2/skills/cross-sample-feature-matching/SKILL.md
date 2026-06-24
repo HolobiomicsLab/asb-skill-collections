@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -52,7 +52,6 @@ attribution:
 
 # cross-sample-feature-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns detected features across multiple LC-IMS-MS/MS samples by clustering features in N-dimensional (mz, drift_time, retention_time) space within user-defined tolerances, producing a unified feature table with cluster IDs and sample-membership vectors. This skill is essential when analyzing multi-sample metabolomics or proteomics datasets where instrument drift and calibration variation must be compensated for to enable robust downstream comparative analysis.

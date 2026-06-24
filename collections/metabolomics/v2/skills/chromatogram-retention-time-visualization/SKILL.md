@@ -18,7 +18,7 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -49,7 +49,6 @@ attribution:
 
 # chromatogram-retention-time-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate static or interactive chromatogram plots from mass spectrometry data by mapping retention time (RT) to the x-axis and intensity to the y-axis using pyOpenMS-viz with a specified plotting backend. This skill enables publication-ready visualization of 1D chromatographic traces across multiple plotting backends (matplotlib, bokeh, plotly) while leveraging pandas DataFrames for flexible column mapping.

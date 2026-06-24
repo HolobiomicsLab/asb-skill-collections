@@ -15,7 +15,7 @@ metadata:
   - ProteoWizard msconvert
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -44,7 +44,6 @@ attribution:
 
 # Isotopologue Mass Offset Calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and enumerate C13 isotopologue patterns in multidimensional mass spectrometry data by computing mass deltas between monoisotopic and isotopically substituted peaks, constrained by m/z, drift time, and retention time tolerances. This skill enables annotation of feature tables with isotope membership, count, and offset mass for improved metabolite characterization.

@@ -16,7 +16,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -46,7 +46,6 @@ attribution:
 
 # singularity-container-backend-setup
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute a Nextflow workflow using Singularity as the container backend for reproducible LC-HRMS metabolomics data processing on high-performance computing environments. This skill enables portable, containerized execution of MS-DIAL and MSFLO tools across HPC systems without Docker.

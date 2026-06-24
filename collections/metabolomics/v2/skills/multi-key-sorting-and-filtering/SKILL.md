@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # multi-key-sorting-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply multi-field sorting and record-level filtering to extracted JSON tabular data using sort_by, sort_order, and test directives in the matrix directive handler. This skill enables selective organization and subset extraction of records based on custom Boolean conditions and field-based ordering.

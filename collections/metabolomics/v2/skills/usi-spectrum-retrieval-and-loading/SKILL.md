@@ -18,7 +18,7 @@ metadata:
   - ProteomeXchange (PXD datasets)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -54,7 +54,6 @@ attribution:
 
 # USI-based spectrum retrieval and loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load mass spectrometry spectra from public proteomics and metabolomics repositories using Universal Spectrum Identifiers (USI), enabling direct programmatic access to published data without manual download. This skill bridges online data discovery and local analysis by parsing USI accessions and instantiating spectrum objects ready for downstream processing and visualization.

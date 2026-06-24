@@ -17,7 +17,7 @@ metadata:
   - Bruker Solarix instrument
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -50,7 +50,6 @@ attribution:
 
 # Signal Apodization Configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and apply apodization window functions (e.g., Hanning) to FT-ICR transient data prior to magnitude-mode Fourier transformation to reduce spectral artifacts and improve mass peak definition. Apodization trades resolving power for dynamic range and baseline quality.

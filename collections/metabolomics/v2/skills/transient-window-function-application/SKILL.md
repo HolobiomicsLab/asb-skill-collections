@@ -15,7 +15,7 @@ metadata:
   - Bruker Solarix (instrument/software)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -48,7 +48,6 @@ attribution:
 
 # transient-window-function-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply frequency-domain apodization window functions (e.g., Hanning) to FT-ICR transient data before zero-filling and magnitude-mode Fourier transform to suppress spectral artifacts and improve mass peak quality. This preprocessing step is essential for controlling spectral resolution and dynamic range tradeoffs in high-resolution mass spectrometry.

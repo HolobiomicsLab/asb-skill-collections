@@ -19,7 +19,7 @@ metadata:
   - optGpSampler
   - COBRApy
   - MATLAB/libSBML
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -58,7 +58,6 @@ attribution:
 
 # Convert constraint-based metabolic model from reversible to irreversible format
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform a reversible constraint-based stoichiometric metabolic model into irreversible form by splitting each reversible reaction into distinct forward and backward variants. This conversion is necessary to enable uniform sampling of the feasible flux region using optGpSampler and other sampling algorithms that operate on irreversible model representations.

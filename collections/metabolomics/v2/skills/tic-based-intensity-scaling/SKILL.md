@@ -17,7 +17,7 @@ metadata:
   - pycombat
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,7 +46,6 @@ attribution:
 
 # TIC-based intensity scaling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize LC-MS metabolomics feature tables by correcting inter-sample intensity biases using total ion current (TIC) computed from high-frequency features. This addresses systematic variation in ionization efficiency and instrument response across samples, ensuring fair downstream statistical comparison.

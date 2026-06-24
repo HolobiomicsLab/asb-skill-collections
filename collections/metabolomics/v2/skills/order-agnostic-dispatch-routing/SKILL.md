@@ -16,7 +16,7 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -46,7 +46,6 @@ attribution:
 
 # Order-Agnostic Dispatch Routing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Route untargeted LC-MS data to a user-selected peak-picking algorithm (Centwave, FeatureFinderMetabo, or ADAP) via configuration, execute it, and standardize output to a common feature matrix format. This skill decouples algorithm selection from workflow execution, enabling transparent algorithm swapping without changing calling code.

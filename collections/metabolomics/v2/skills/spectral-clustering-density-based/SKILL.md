@@ -18,7 +18,7 @@ metadata:
   - DBSCAN (sklearn.cluster or equivalent)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -51,7 +51,6 @@ attribution:
 
 # Density-Based Clustering of MS/MS Spectra
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply DBSCAN or equivalent density-based clustering to a sparse pairwise distance matrix derived from nearest neighbor indexes to group MS/MS spectra into clusters. This final step in the falcon pipeline identifies spectra that are close to each other and form dense data subspaces, yielding cluster assignments suitable for downstream analysis.

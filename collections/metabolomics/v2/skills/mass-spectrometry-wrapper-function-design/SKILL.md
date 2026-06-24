@@ -18,7 +18,7 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -50,7 +50,6 @@ attribution:
 
 # Mass Spectrometry Wrapper Function Design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement R functions that wrap Python mass spectrometry library functionality to enable seamless cross-language integration of spectral analysis workflows. This skill enables reuse of specialized Python MS packages (e.g., matchms, spectrum_utils) within R-based Spectra objects without reimplementing algorithms.

@@ -19,7 +19,7 @@ metadata:
   - bokeh
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -54,7 +54,6 @@ attribution:
 
 # object-oriented-class-hierarchy-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a multi-level abstract class hierarchy with inheritance dispatch to enable concrete plot components to inherit common functionality while routing behavior based on plot kind and backend selection. This skill is essential when building extensible visualization frameworks that must support multiple data types (1D spectra, chromatograms, 2D peak maps) across multiple plotting backends (matplotlib, bokeh, plotly) without code duplication.

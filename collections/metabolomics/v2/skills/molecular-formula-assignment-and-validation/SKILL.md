@@ -17,7 +17,7 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -52,7 +52,6 @@ attribution:
 
 # Molecular Formula Assignment and Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies CoreMS SearchMolecularFormulas with elemental constraints (CHO) to assign molecular formulas to calibrated FT-ICR mass spectra, then validates assignments through mass error metrics and score distributions. It is essential for annotating natural organic matter and complex mixtures where multiple formula candidates exist per m/z.

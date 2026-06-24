@@ -15,7 +15,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,7 +44,6 @@ attribution:
 
 # mass-spectrum-de-novo-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate chemical formula and adduct assignments for unknown tandem mass spectra using a data-driven transformer neural network without relying on spectral databases or fragmentation tree computation. MIST-CF learns end-to-end energy-based rankings directly from MS/MS peak patterns to infer precursor molecular identity in de novo settings.

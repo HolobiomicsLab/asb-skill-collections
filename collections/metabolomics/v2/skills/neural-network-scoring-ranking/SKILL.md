@@ -14,7 +14,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -43,7 +43,6 @@ attribution:
 
 # Neural-network-scoring-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a learned neural network transformer architecture to score and rank candidate molecular assignments (formula–adduct pairs) for an unknown tandem mass spectrum without consulting reference spectral databases. This skill uses energy-based modeling on MS/MS fragment peaks to produce interpretable ranked lists suitable for chemical identification.

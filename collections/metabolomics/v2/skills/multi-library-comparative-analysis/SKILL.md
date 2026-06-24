@@ -22,7 +22,7 @@ metadata:
   - matplotlib / seaborn
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -56,7 +56,6 @@ attribution:
 
 # multi-library-comparative-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Benchmark competing mass spectrometry data processing libraries (spectrum_utils, pymzML, pyOpenMS) on identical datasets and filtering workflows to quantitatively compare throughput and processing efficiency. This skill isolates algorithmic and implementation differences by applying identical transformations across libraries and measuring wall-clock runtime per spectrum.

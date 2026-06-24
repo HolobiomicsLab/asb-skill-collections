@@ -16,7 +16,7 @@ metadata:
   - Singularity
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -45,7 +45,6 @@ attribution:
 
 # workflow-output-validation-and-qa
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify successful execution of containerized LC-HRMS metabolomics workflows by inspecting presence, format, and integrity of intermediate and final outputs (MS-DIAL .msdial → .tsv files and MSFLO results). This skill ensures reproducibility and detects failures before downstream analysis.

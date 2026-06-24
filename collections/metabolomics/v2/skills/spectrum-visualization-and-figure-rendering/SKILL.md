@@ -17,7 +17,7 @@ metadata:
   - ProForma 2.0
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -53,7 +53,6 @@ attribution:
 
 # Spectrum Visualization and Figure Rendering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create publication-quality mass spectrometry spectrum plots annotated with fragment ion assignments using spectrum_utils.plot and Matplotlib. This skill enables interactive and static visualization of tandem mass spectrometry data with customizable peak annotations, intensity scaling, and output formats suitable for peer-reviewed manuscripts.

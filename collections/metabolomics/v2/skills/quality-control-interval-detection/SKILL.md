@@ -13,7 +13,7 @@ metadata:
   - ricoderks/QComics
   - Sciex Multiquant
   - QComics
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -42,7 +42,6 @@ attribution:
 
 # quality-control-interval-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and validates regular injection intervals of pooled QC samples (QCpool) within metabolomics or lipidomics analytical sequences exported from Sciex Multiquant. This skill ensures quality control samples are distributed at expected intervals across one or more measurement runs for quality assessment.

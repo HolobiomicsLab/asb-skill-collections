@@ -17,7 +17,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -47,7 +47,6 @@ attribution:
 
 # sequential-and-random-access-file-interface-patterns
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement dual-mode file interface patterns that support both sequential iteration (via read()) and random access (via __getitem__()) for alternative mass spectrometry data storage backends. This skill enables pymzML to parse spectra from non-standard formats like SQLite databases by abstracting file handling through a polymorphic connector class pattern.

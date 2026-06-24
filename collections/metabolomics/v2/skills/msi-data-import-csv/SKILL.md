@@ -19,7 +19,7 @@ metadata:
   - msimunging.pl
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -53,7 +53,6 @@ attribution:
 
 # Import MSI intensity data from CSV into matrix format
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load mass spectrometry imaging (MSI) intensity data exported from MSiReader or SCiLS as plain-text CSV files into an R data.frame object using the msimat() function, preparing it for downstream adduct analysis. This is the essential entry point for all mass2adduct workflows.

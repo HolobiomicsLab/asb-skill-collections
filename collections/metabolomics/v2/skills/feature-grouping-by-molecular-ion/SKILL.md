@@ -15,7 +15,7 @@ metadata:
   - ADAP
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -44,7 +44,6 @@ attribution:
 
 # feature-grouping-by-molecular-ion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups detected LC-MS features into clusters sharing the same molecular ion, accounting for isotopic variants (e.g., C13, N15, D) and common adduct forms ([M+H]+, [M+Na]+, [M+NH4]+). This step consolidates redundant representations of the same molecule into single feature clusters, improving downstream quantification and annotation.

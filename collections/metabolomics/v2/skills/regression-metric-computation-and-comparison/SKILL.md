@@ -15,7 +15,7 @@ metadata:
   - train-test.py
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -44,7 +44,6 @@ attribution:
 
 # regression-metric-computation-and-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and compare regression performance metrics (RMSE, MAE, prediction accuracy) across alternative model architectures on held-out test sets to quantify predictive performance differences. This skill validates whether alternative GNN architectures improve or degrade collision cross section prediction accuracy relative to a baseline.

@@ -21,7 +21,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -57,7 +57,6 @@ attribution:
 
 # Python-R Data Structure Mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert between R Spectra objects and Python mass spectrometry data structures (matchms.Spectrum, spectrum_utils.MsmsSpectrum) to enable seamless execution of Python MS algorithms within R workflows. This skill bridges language barriers by serializing R objects, executing Python routines, and deserializing results back into R-compatible formats.

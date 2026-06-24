@@ -16,7 +16,7 @@ metadata:
   - ProteoWizard
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -46,7 +46,6 @@ attribution:
 
 # mass-spectrometry-tune-data-loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load collision cross section (CCS) calibration tune reference data from HDF5 files using DEIMoS, preparing standardized tune compounds for downstream calibration workflows. This skill is essential for establishing the m/z–CCS relationship required for accurate ion mobility spectrometry analysis.

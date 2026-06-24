@@ -16,7 +16,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # zero-value-handling-in-mass-spectrometry-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace zero and missing values in LC-MS metabolomics feature tables using minimum-value-based interpolation, where each feature's missing values are filled with a scaled fraction of that feature's minimum non-zero abundance. This addresses data sparsity introduced during feature detection and quantification without discarding features with sporadic low-abundance observations.

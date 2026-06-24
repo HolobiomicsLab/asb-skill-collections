@@ -13,7 +13,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -41,7 +41,6 @@ attribution:
 
 # MS Quantitative Analysis via External Calibration Standards
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method for converting raw mass spectrometry intensity measurements into quantified concentration values by fitting external calibration curves (linear or polynomial regression) against known concentration standards and applying the model to sample data. Essential for handling intensity drift in targeted MS workflows.

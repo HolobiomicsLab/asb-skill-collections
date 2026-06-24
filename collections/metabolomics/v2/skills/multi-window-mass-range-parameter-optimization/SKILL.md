@@ -19,7 +19,7 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -52,7 +52,6 @@ attribution:
 
 # multi-window-mass-range-parameter-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize the mass_range parameter in tardisPeaks() to properly segregate overlapping m/z scan windows and eliminate sawtooth artefacts in extracted ion chromatograms (EICs). This skill ensures that when LC-MS data contain multiple acquisition windows at different m/z ranges, the filtering logic correctly routes each target to its corresponding scan window, preventing spurious peak profile distortion caused by spectrum filtering.

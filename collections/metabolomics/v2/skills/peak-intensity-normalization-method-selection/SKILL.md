@@ -29,7 +29,7 @@ metadata:
   - pmartR (R package)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -67,7 +67,6 @@ attribution:
 
 # peak-intensity-normalization-method-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selection and application of appropriate peak-intensity normalization methods for FT-ICR MS datasets to correct for systematic bias and enable valid multivariate statistical comparison across samples. This skill ensures that downstream chemodiversity and ordination analyses reflect true biochemical differences rather than technical artifacts.

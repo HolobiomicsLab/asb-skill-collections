@@ -16,7 +16,7 @@ metadata:
   - cwieder/metabolomics-ORA
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -44,7 +44,6 @@ attribution:
 
 # pathway-database-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and structure metabolite-to-pathway mappings from a metabolomics pathway database to define the statistical background and pathway membership for Over-representation Analysis (ORA). This skill enables construction of unbiased background sets and accurate pathway coverage estimates required for valid ORA hypothesis testing.

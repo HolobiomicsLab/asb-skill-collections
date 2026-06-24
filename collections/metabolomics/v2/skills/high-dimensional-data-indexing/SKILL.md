@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # high-dimensional-data-indexing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct nearest neighbor indexes from low-dimensional vector representations to enable efficient similarity searching and sparse pairwise distance computation without exhaustive comparisons. Essential for scaling clustering and retrieval tasks to millions of high-dimensional spectra.

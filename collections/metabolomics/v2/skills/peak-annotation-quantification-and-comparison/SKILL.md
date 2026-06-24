@@ -16,7 +16,7 @@ metadata:
   - Unimod
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -46,7 +46,6 @@ attribution:
 
 # peak-annotation-quantification-and-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate observed tandem mass spectrometry peaks against a known peptide sequence using ProForma 2.0 specification, quantify the fraction of peaks receiving interpretation, and compare annotation coverage under different settings (e.g., with and without neutral loss annotation). This skill measures how fragment annotation parameters modulate the interpretability of observed spectra.

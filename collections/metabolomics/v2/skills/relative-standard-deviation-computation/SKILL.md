@@ -13,7 +13,7 @@ metadata:
   - mzQuality
   - R
   - SummarizedExperiment
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -49,7 +49,6 @@ attribution:
 
 # relative-standard-deviation-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute the Relative Standard Deviation (RSD) of batch-corrected compound-to-internal-standard ratios across QC samples to quantify measurement reproducibility and identify the most stable internal standard for each metabolite.

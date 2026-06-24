@@ -15,7 +15,7 @@ metadata:
   - Black
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -44,7 +44,6 @@ attribution:
 
 # sequential-and-random-access-dual-mode-support
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement dual-mode file access (sequential iteration and random indexing) for compressed mass spectrometry data formats by creating a wrapper class that bridges pymzML's FileInterface with custom storage backends, enabling both blockwise iteration and key-based random access to indexed gzip archives.

@@ -28,7 +28,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
@@ -74,7 +74,6 @@ attribution:
 
 # mass-spectrometry-feature-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Feature grouping aggregates detected mass spectrometry features across multiple analyses by retention time, mass-to-charge ratio, and chromatographic alignment to create a unified feature table. This is a foundational step in non-target analysis that enables downstream annotation, suspect screening, and transformation product detection.

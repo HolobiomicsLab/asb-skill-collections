@@ -17,7 +17,7 @@ metadata:
   - scikit-learn
   - pandas
   - scipy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -53,7 +53,6 @@ attribution:
 
 # data-transformation-centered-log-ratio-with-pseudocounts
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply centered log-ratio (CLR) transformation with a pseudocount to compositional microbiome and metabolomic count data, converting them to log-scale relative abundances suitable for downstream regression and neural network modeling. This transformation addresses the compositional nature of sequencing data and prevents log(0) errors.

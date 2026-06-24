@@ -17,7 +17,7 @@ metadata:
   - UMAP
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # mass-spectrum-embedding-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate fixed-dimensional vector embeddings from tandem mass spectrometry (MS/MS) spectra using a trained Siamese neural network, enabling downstream chemical similarity scoring and spectral clustering in continuous vector space.

@@ -12,7 +12,7 @@ metadata:
   tools:
   - QComics
   - Sciex Multiquant
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -42,7 +42,6 @@ attribution:
 
 # qcpool-cv-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate per-compound coefficient of variation (CV) from pooled quality control (QCpool) sample intensities measured at regular intervals during a metabolomics or lipidomics sequence. CV quantifies technical reproducibility and is a primary metric for assessing data quality before downstream analysis.

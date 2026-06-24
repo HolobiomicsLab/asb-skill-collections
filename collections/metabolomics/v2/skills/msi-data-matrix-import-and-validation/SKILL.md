@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # MSI Data Matrix Import and Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import mass spectrometry imaging (MSI) intensity data from CSV or Cardinal objects into R and validate the resulting matrix representation. This skill ensures data integrity and correct format conversion before downstream adduct detection and correlation analysis.

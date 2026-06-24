@@ -15,7 +15,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -44,7 +44,6 @@ attribution:
 
 # graph-neural-network-architecture-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement alternative graph neural network architectures (e.g., GAT, MPNN) for molecular property prediction tasks and compare their held-out test performance against a baseline GNN model using standardized regression metrics. This skill enables empirical evaluation of architectural choices in graph-based deep learning for chemistry applications.

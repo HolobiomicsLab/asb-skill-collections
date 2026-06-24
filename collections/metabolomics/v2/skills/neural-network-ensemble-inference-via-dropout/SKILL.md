@@ -19,7 +19,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -59,7 +59,6 @@ attribution:
 
 # neural-network-ensemble-inference-via-dropout
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate uncertainty-aware ensemble predictions from a trained neural network by enabling dropout during inference and aggregating multiple stochastic forward passes. This technique produces both point estimates and confidence intervals for each prediction without retraining.

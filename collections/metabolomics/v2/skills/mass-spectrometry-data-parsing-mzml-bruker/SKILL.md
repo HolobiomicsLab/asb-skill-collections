@@ -17,7 +17,7 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -46,7 +46,6 @@ attribution:
 
 # mass-spectrometry-data-parsing-mzml-bruker
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse mass spectrometry data from mzML and Bruker .d format files into pandas DataFrames with properly mapped columns (m/z, retention time, intensity). This is a prerequisite for downstream visualization and analysis of mass spectrometry datasets.

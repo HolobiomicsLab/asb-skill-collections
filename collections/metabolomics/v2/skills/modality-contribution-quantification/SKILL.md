@@ -15,7 +15,7 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -43,7 +43,6 @@ attribution:
 
 # modality-contribution-quantification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the independent and joint contributions of individual input modalities (e.g., ¹H NMR, ¹³C NMR) to machine learning model performance by running inference under controlled modality conditions and comparing accuracy metrics. This skill reveals which spectroscopic inputs drive predictions and whether synergy exists between combined modalities.

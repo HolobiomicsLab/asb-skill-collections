@@ -20,7 +20,7 @@ metadata:
   - Xformer
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -54,7 +54,6 @@ attribution:
 
 # Benchmarking and Comparative Performance Evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare a novel method (MIST-CF) against established baseline approaches (SIRIUS, FFN, Xformer) on standardized benchmark datasets using ranking accuracy metrics (top-1, top-3, top-k). This skill enables quantitative assessment of whether a new chemical formula inference model outperforms existing tools on retrospective and prospective MS/MS data.

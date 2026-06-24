@@ -21,7 +21,7 @@ metadata:
   - TensorFlow/Keras
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -58,7 +58,6 @@ attribution:
 
 # roc-curve-auc-metric-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute ROC curve and AUC score from classifier predictions to quantify the model's ability to discriminate true positive from false positive MS1 peaks across all classification thresholds. This is essential for evaluating NeatMS CNN model performance on untargeted LCMS data without bias toward any particular operating point.

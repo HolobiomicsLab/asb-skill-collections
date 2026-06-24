@@ -13,7 +13,7 @@ metadata:
   - Rust (cargo)
   - Python
   - npm/Node.js
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -43,7 +43,6 @@ attribution:
 
 # shell-environment-setup-and-dependency-management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Set up a local shell environment and install all dependencies required to execute a project's CI/CD pipeline locally, mirroring the configuration and test commands defined in the workflow file. This skill is essential for reproducing automated build status, debugging workflow failures, and validating that local execution matches CI badge-reported results.

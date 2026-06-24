@@ -17,7 +17,7 @@ metadata:
   - KEGG database
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -58,7 +58,6 @@ attribution:
 
 # biochemical-transformation-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass differences between FT-ICR MS peaks against a reference library of biochemical transformations to construct transformation networks ab initio. This skill enables automated identification of metabolic and abiotic chemical conversions encoded in mass-difference patterns, with classification by transformation type and biotic/abiotic origin.

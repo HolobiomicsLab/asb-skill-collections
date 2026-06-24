@@ -12,7 +12,7 @@ metadata:
   - Shiny
   - R (base)
   - RTools
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -40,7 +40,6 @@ attribution:
 
 # file-path-abstraction-and-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Abstracts platform-specific file path conventions (Windows backslashes vs. Unix forward slashes) and system calls to enable a codebase to run identically across Windows, Linux, and macOS. This skill ensures cross-platform portability by replacing hardcoded path separators with platform-agnostic functions and implementing conditional imports for OS-specific libraries.

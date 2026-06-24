@@ -16,7 +16,7 @@ metadata:
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -50,7 +50,6 @@ attribution:
 
 # metadata-structure-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform tabular experimental metadata (Excel/CSV) into clean, standardized JSONized intermediate format using a tagging system, then convert to repository-compliant output formats (e.g., mwTab for Metabolomics Workbench). This skill bridges raw data entry and repository submission by enforcing schema compliance and enabling format-agnostic validation.

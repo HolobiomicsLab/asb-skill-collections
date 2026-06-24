@@ -24,7 +24,7 @@ metadata:
   - NumPy, matplotlib, seaborn
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -58,7 +58,6 @@ attribution:
 
 # computational-throughput-measurement
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the processing rate (spectra per second) of mass spectrometry data processing libraries by measuring wall-clock execution time on standardized datasets and filtering parameters. This skill enables fair performance comparison across tools like spectrum_utils, pymzML, and pyOpenMS.

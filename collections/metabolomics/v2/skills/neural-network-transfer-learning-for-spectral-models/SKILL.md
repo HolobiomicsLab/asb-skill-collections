@@ -18,7 +18,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -48,7 +48,6 @@ attribution:
 
 # neural-network-transfer-learning-for-spectral-models
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Adapt a pre-trained formula transformer neural network (MIST-CF) to new ionisation modes or mass spectrometry platforms by fine-tuning on a held-out dataset of annotated MS/MS spectra, preserving learned sinusoidal formula embeddings while retraining the adduct tokenization and ranking layers. This skill is critical when extending spectral interpretation models to conditions (e.g., negative ionisation mode) not covered by the original training distribution.

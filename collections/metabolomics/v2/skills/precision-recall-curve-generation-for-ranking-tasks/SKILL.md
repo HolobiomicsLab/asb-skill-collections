@@ -18,7 +18,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -55,7 +55,6 @@ attribution:
 
 # precision-recall-curve-generation-for-ranking-tasks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate precision-recall curves to evaluate and visually compare the ranking performance of multiple similarity scoring methods across a range of decision thresholds. This skill is essential for assessing retrieval quality when the goal is to identify high-confidence pairs (e.g., structurally similar compounds) from scored candidate sets.

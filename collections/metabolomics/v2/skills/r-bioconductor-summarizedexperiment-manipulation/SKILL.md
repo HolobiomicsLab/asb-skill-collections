@@ -18,7 +18,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -53,7 +53,6 @@ attribution:
 
 # R Bioconductor SummarizedExperiment Manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create, populate, and modify Bioconductor SummarizedExperiment objects to store and organize multi-dimensional omics data (assays, row metadata, column metadata) for downstream quality control and statistical analysis. This skill is foundational for working with metabolomics and other -omics datasets in R pipelines.

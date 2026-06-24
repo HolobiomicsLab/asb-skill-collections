@@ -17,7 +17,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -51,7 +51,6 @@ attribution:
 
 # Diagnostic Quality Assessment of Chromatographic Peaks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use TARDIS to automatically calculate and inspect multiple quality metrics (area under peak, max intensity, signal-to-noise ratio, peak correlation, and points over peak) for targeted compounds in LC–MS data, enabling visual and quantitative confirmation that detected peaks meet analytical standards. This skill is essential when you need to validate whether peak detection and integration have succeeded before proceeding to statistical analysis.

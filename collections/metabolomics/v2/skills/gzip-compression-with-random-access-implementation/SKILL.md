@@ -15,7 +15,7 @@ metadata:
   - Python
   - sqlite3
   - black
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -44,7 +44,6 @@ attribution:
 
 # gzip-compression-with-random-access-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a Generalized Seekable Gzip Writer (GSGW) pattern to create indexed gzip archives that support both random access by key and sequential iteration, enabling compressed storage of blockwise-parsed data (e.g., mzML spectra or book chapters) with byte-offset indexing.

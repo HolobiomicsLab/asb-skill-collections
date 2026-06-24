@@ -17,7 +17,7 @@ metadata:
   - falcon
   - falcon-ms
   - spectrum-utils
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.26434/chemrxiv-2025-cwq74
   title: biosynfoni
@@ -57,7 +57,6 @@ attribution:
 
 # package-dependency-management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install and manage Python package dependencies in development mode, ensuring all required tooling and test infrastructure are available for reproducible builds and local validation. This skill is essential when setting up a scientific Python package for development, testing, or reproducible analysis.

@@ -18,7 +18,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -48,7 +48,6 @@ attribution:
 
 # LC-MS Feature Quality Assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate LC-MS feature detection outcomes using quality metrics such as feature reproducibility, total feature count, and signal-to-noise ratio to determine whether parameter combinations produce acceptable peak picking, alignment, and gap-filling results. This skill is essential for automating the selection of optimal processing parameters in untargeted metabolomics workflows.

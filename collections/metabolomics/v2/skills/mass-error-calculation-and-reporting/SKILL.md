@@ -18,7 +18,7 @@ metadata:
   - EnviroMS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -53,7 +53,6 @@ attribution:
 
 # mass-error-calculation-and-reporting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and report mass error metrics (ppm deviation, absolute mass difference) for assigned molecular formulas in FT-ICR and related high-resolution mass spectrometry workflows. Mass error quantification is essential for validating molecular formula assignments and assessing calibration quality.

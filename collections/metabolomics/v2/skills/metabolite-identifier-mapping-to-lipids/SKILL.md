@@ -19,7 +19,7 @@ metadata:
   - LipidPos
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -50,7 +50,6 @@ attribution:
 
 # metabolite-identifier-mapping-to-lipids
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate LC-MS All-ion fragmentation features to lipid identities by matching fragment ion patterns against LipidPos ion fragment libraries using the annotateRC function. This skill produces ranked candidate lipid annotations with matching scores, enabling confident assignment of lipid classes and chain compositions to detected m/z features.

@@ -16,7 +16,7 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -51,7 +51,6 @@ attribution:
 
 # mass-spectrum-noise-threshold-parameter-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selection and application of one of three mutually exclusive noise-threshold filtering methods in CoreMS (relative_abundance, signal_noise, or log mode) to remove low-intensity peaks and retain spectrum peaks above a user-defined threshold. Each method filters peaks using different criteria and produces different peak retention counts from the same input spectrum.

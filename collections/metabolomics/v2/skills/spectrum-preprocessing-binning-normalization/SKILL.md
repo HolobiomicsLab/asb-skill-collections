@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -53,7 +53,6 @@ attribution:
 
 # spectrum-preprocessing-binning-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocesses tandem mass spectra by removing low-intensity peaks, applying intensity transformations, and binning peak data into fixed m/z intervals to prepare inputs for deep learning similarity prediction. This standardization ensures consistent feature representation across spectra of varying quality and intensity distributions.

@@ -11,7 +11,7 @@ metadata:
   - pip
   - sqlalchemy
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -41,7 +41,6 @@ attribution:
 
 # conditional-dependency-resolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Python module correctly initializes and functions when its optional (conditional) dependencies are installed, ensuring the module gracefully handles both presence and absence of those dependencies. This skill is essential for validating library architecture in projects that support modular functionality.

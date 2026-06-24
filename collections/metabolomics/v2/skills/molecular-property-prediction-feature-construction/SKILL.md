@@ -13,7 +13,7 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -44,7 +44,6 @@ attribution:
 
 # molecular-property-prediction-feature-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and construct domain-specific molecular features (e.g., spectral features for infrared predictions) from molecular graph representations to serve as input to message passing neural networks. This skill bridges raw molecular input (SMILES/graphs) to learned molecular representations suitable for property prediction tasks.

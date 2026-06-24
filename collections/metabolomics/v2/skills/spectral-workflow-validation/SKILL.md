@@ -19,7 +19,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -52,7 +52,6 @@ attribution:
 
 # spectral-workflow-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that cross-language wrapped spectral analysis functions (Python MS libraries integrated into R via reticulate) execute correctly and return expected data structures when invoked from R Spectra workflows. This skill ensures type conversion, error handling, and data marshalling work as intended across R–Python process boundaries.

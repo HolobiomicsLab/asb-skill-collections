@@ -16,7 +16,7 @@ metadata:
   - Formularity
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -53,7 +53,6 @@ attribution:
 
 # thermodynamic-index-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate thermodynamic and molecular indices (DBE, GFE, AImod, NOSC) from assigned FT-ICR MS molecular formulas to characterize metabolite properties including saturation, lability, and oxidation state. These indices enable rapid assessment of compound degradability and structural complexity across large peak datasets.

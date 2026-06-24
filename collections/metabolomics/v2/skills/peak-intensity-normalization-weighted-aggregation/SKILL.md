@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -61,7 +61,6 @@ attribution:
 
 # peak-intensity-normalization-weighted-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize peak intensities to maximum = 1.0 per spectrum, then apply square-root weighting during spectral embedding aggregation to preserve intensity information while preventing high-intensity peaks from dominating fragment ion relationships in Word2Vec models. This technique is critical for learning balanced spectral embeddings that correlate structure and fragmentation patterns.

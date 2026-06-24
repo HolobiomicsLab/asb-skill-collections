@@ -16,7 +16,7 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -47,7 +47,6 @@ attribution:
 
 # Tandem Mass Spectra Interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank chemical formula and adduct assignments for unknown MS/MS spectra using energy-based neural network scoring, without relying on spectral databases. This skill applies a transformer architecture to learn fragment-formula relationships directly from data, supporting multiple adduct types in positive ionization mode.

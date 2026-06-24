@@ -15,7 +15,7 @@ metadata:
   - GNPS
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # GNPS spectral data processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, parse, and standardize tandem mass spectrometry (MS/MS) spectra from GNPS databases into a structured format suitable for molecular formula inference. This skill prepares raw spectral data with required metadata fields (precursor m/z, adduct type, collision energy) for downstream deep learning prediction.

@@ -19,7 +19,7 @@ metadata:
   - pubchempy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # tanimoto-fingerprint-ground-truth-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Tanimoto structural similarity scores from pairs of molecular fingerprints derived from chemical structure annotations (InChI/SMILES), producing ground-truth labels for training and evaluating mass spectra similarity models. This is essential when building supervised learning systems that predict structural similarity directly from MS/MS spectral data without explicit fingerprint computation.

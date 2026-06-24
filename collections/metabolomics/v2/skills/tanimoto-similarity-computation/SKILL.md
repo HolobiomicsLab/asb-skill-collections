@@ -18,7 +18,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # tanimoto-similarity-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Tanimoto structural similarity scores between pairs of mass spectra by converting predicted cosine similarities of learned 200-dimensional spectral embeddings into Tanimoto scores, benchmarked against reference RDKit Daylight fingerprint (2048 bits) similarities. This skill quantifies how well predicted structural similarities match ground-truth fingerprint-based chemical similarity.

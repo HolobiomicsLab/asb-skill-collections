@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -47,7 +47,6 @@ attribution:
 
 # spectral-peak-binning-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Discretize high-resolution MS/MS spectra by binning m/z and intensity dimensions into small mass bins, preparing them for dimensionality reduction via feature hashing. This preprocessing step conserves spectral information while enabling efficient vectorization for large-scale clustering.

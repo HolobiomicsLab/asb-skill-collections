@@ -13,7 +13,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -42,7 +42,6 @@ attribution:
 
 # checkpoint-selection-based-on-validation-metric
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and save model checkpoints during training only when a designated validation metric improves over the previous best observed value, ensuring that only the model state achieving superior generalization is retained. This skill is essential for preventing overfitting and ensuring reproducible model artifacts in deep learning workflows.

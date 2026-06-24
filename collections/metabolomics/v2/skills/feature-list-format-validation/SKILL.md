@@ -17,7 +17,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -48,7 +48,6 @@ attribution:
 
 # Feature-List Format Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and parse user-supplied custom feature lists (CSV/TSV/XLSX) into PFΔScreen-compatible feature objects before downstream PFAS prioritization. This skill ensures that custom feature inputs meet required schema (m/z, retention time, intensity columns) and are properly converted to internal data structures compatible with MD/C-m/C, KMD, and MS2 fragment analysis modules.

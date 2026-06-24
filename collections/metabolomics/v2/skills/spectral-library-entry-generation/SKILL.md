@@ -16,7 +16,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -47,7 +47,6 @@ attribution:
 
 # spectral-library-entry-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert an experimental MS/MS spectrum into a scored metabolite library entry by applying peak-picking thresholds, identifying marker fragments, and annotating fragment ions with match scores. This skill is essential for building custom fragment databases from experimental or public spectral data to support downstream metabolite annotation in untargeted LC–MS metabolomics workflows.

@@ -20,7 +20,7 @@ metadata:
   - .NET Framework 4.8
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -52,7 +52,6 @@ attribution:
 
 # dockerfile-multi-stage-build-architecture
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a multi-stage Docker build configuration that separates application compilation from runtime environment setup, enabling Windows-only .NET Framework applications (e.g., AirdPro) to execute on non-Windows hosts via Wine compatibility layer. This approach reduces final image size, isolates build dependencies, and supports multiple runtime targets (native Windows, Linux+Wine, CLI-only, development).

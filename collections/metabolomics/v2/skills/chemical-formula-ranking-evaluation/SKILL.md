@@ -19,7 +19,7 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -56,7 +56,6 @@ attribution:
 
 # chemical-formula-ranking-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the ranking accuracy of predicted chemical formula and adduct assignments against ground truth annotations by computing top-k metrics and comparing performance across different model architectures or inference modes. This skill determines whether a formula prediction system correctly identifies the true molecular formula among candidates.

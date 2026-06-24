@@ -16,7 +16,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -47,7 +47,6 @@ attribution:
 
 # MS2 Diagnostic Fragment Matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A mass spectrometry screening technique that identifies potential PFAS features by matching precursor–product ion pairs in MS2 spectra against a database of known PFAS diagnostic fragments and characteristic mass differences. This prioritization method flags features whose fragmentation patterns contain diagnostic signatures indicative of PFAS structure.

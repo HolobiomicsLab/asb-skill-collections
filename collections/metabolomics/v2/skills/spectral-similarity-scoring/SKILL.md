@@ -33,7 +33,7 @@ metadata:
   techniques:
   - GC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -101,7 +101,7 @@ attribution:
 
 # spectral-similarity-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Quantify the similarity between an experimental mass spectrum and library reference spectra using cosine similarity and retention-index proximity metrics. This skill is essential for automated compound identification in GC-MS workflows where multiple spectral candidates must be ranked and selected.

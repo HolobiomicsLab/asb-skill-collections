@@ -12,7 +12,7 @@ metadata:
   - Python time module
   - Pandas
   - matplotlib, Bokeh, Plotly
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -40,7 +40,6 @@ attribution:
 
 # script-execution-time-measurement
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure wall-clock execution time for a suite of scripts running against multiple backend implementations, aggregate per-script and total execution times, and compare measured values against reported benchmarks. This skill is essential for validating performance claims and detecting regressions across plotting backends.

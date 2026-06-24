@@ -13,7 +13,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -47,7 +47,6 @@ attribution:
 
 # Table Record Filtering and Sorting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply field-based filtering and multi-field sorting to tabular records before aggregating or transforming them into derived values. This skill enables selective extraction and ordered traversal of protocol or experimental metadata tables when building concatenated strings, matrices, or other structured outputs.

@@ -19,7 +19,7 @@ metadata:
   - WGCNA
   - Random Forest
   - Spearman correlation
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -59,7 +59,6 @@ attribution:
 
 # cross-dataset-model-generalization-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate whether a predictive model trained on one microbiome-metabolome dataset maintains prediction accuracy when applied to an independent held-out dataset from different cohorts or clinical sources. This skill assesses generalization capacity by comparing correlation metrics and well-predicted metabolite counts across datasets.

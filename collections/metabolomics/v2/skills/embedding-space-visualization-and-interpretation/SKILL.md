@@ -19,7 +19,7 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # embedding-space-visualization-and-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply dimensionality reduction (t-SNE) to high-dimensional spectral embeddings learned by deep neural networks to visualize chemical structure relationships in low-dimensional space and validate that embeddings encode chemically meaningful features. This skill confirms that learned embeddings cluster compounds of the same chemical superclass together, validating the representational capacity of the model.

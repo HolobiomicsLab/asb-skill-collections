@@ -21,7 +21,7 @@ metadata:
   - pyOpenMS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -53,7 +53,6 @@ attribution:
 
 # mass-spectrometry-data-visualization-pandas
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize mass spectrometry data (spectra, chromatograms, mobilograms, peak maps) directly from Pandas DataFrames using pyOpenMS-Viz with support for multiple plotting backends (matplotlib, Bokeh, Plotly). This skill enables rapid prototyping and publication-ready rendering of 1D and 2D MS data across static and interactive output formats.

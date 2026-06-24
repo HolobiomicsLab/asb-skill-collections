@@ -15,7 +15,7 @@ metadata:
   - pycombat
   - Python
   - pcpfm batch_correct
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # batch-effect-variance-quantification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify inter-batch intensity variance in metabolomics feature tables before and after batch correction to validate that correction preserves sample/feature dimensions while reducing batch effects. This skill measures the efficacy of batch correction by comparing median inter-batch variance metrics on shared features across batches.

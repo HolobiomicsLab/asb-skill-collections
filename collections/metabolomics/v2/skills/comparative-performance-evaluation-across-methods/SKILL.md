@@ -19,7 +19,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -57,7 +57,6 @@ attribution:
 
 # comparative-performance-evaluation-across-methods
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically benchmark a novel spectral similarity method against established baselines by computing precision-recall curves across a shared test set and structural similarity ground truth. This skill establishes whether a new method achieves superior retrieval performance for compounds of high structural similarity (Tanimoto > 0.6).

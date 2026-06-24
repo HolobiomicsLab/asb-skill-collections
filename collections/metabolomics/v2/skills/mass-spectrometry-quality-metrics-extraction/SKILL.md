@@ -17,7 +17,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -49,7 +49,6 @@ attribution:
 
 # mass-spectrometry-quality-metrics-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction of quantitative quality metrics (AUC, Max. Int., SNR, peak_cor, points_over_peak) for targeted chemical compounds from LC–MS data using TARDIS. This skill enables systematic assessment of peak detection reliability across multiple sample runs after retention time adjustment.

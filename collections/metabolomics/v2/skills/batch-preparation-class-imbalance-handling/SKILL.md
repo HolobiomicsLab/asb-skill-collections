@@ -20,7 +20,7 @@ metadata:
   - Jupyter Notebook
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -57,7 +57,6 @@ attribution:
 
 # batch-preparation-class-imbalance-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare training, validation, and test batches from LCMS peak data while addressing class imbalance through normalization. This skill ensures balanced representation of true and false positive peaks during neural network training to prevent bias toward the majority class.

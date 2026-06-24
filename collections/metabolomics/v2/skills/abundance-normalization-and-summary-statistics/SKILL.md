@@ -15,7 +15,7 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -47,7 +47,6 @@ attribution:
 
 # Abundance Normalization and Summary Statistics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes and aggregates peak abundance metrics (total, percent, and relative abundance) across heteroatom classes or other mass spectrum groupings to enable normalized, class-level comparison and visualization of molecular composition. This skill transforms individual peak abundances into interpretable summary tables suitable for downstream analysis and publication.

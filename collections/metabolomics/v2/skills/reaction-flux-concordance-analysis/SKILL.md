@@ -21,7 +21,7 @@ metadata:
   - concordanceAnalysis.py (INTEGRATE pipeline Step 10)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -55,7 +55,6 @@ attribution:
 
 # Reaction-Flux Concordance Analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify agreement between transcriptional (RAS) and metabolic (RPS) regulation signals for metabolic reactions using Cohen's kappa concordance across pairwise cell-line comparisons. This skill discriminates whether flux changes arise from gene expression differences, substrate availability differences, or both regulatory layers combined.

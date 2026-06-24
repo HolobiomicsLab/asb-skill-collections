@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -54,7 +54,6 @@ attribution:
 
 # FT-MS raw data loading and parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load vendor-specific Fourier Transform Mass Spectrometry raw transient files (Bruker .d, .ser, .fid; ThermoFisher .raw) and parse them into CoreMS hierarchical data structures with time-domain spectral data, calibration metadata, and instrument parameters intact. This is the essential entry point for any FT-ICR data processing workflow.

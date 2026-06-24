@@ -12,7 +12,7 @@ metadata:
   - Python
   - pymzML
   - Python struct module
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -41,7 +41,6 @@ attribution:
 
 # python-struct-packing-for-binary-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode and decode binary data structures in Python using the struct module to serialize index-to-offset mappings and other fixed-width fields into compact byte sequences. This skill is essential for implementing custom binary file formats like indexed gzip (igzip) where multiple heterogeneous fields must be packed into a contiguous byte stream with precise byte widths.

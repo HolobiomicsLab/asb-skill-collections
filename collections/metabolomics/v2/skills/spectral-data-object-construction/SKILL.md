@@ -18,7 +18,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -49,7 +49,6 @@ attribution:
 
 # spectral-data-object-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load centroided LC-MS data from mzML files into a Spectra or MsExperiment object and annotate sample metadata (run type, polarity, retention time windows) to enable downstream targeted peak integration and quality assessment workflows.

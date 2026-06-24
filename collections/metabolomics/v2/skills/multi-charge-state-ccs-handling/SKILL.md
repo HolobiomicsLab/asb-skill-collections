@@ -15,7 +15,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -44,7 +44,6 @@ attribution:
 
 # multi-charge-state-ccs-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate collision cross section (CCS) values for ions across multiple charge states in TWIM-MS data by establishing separate or unified calibration curves and applying charge-state-aware regression. This skill enables accurate CCS assignment for complex biomolecular mixtures where ions exist in multiple protonation or ionization states.

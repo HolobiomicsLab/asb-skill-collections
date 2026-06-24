@@ -16,7 +16,7 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -44,7 +44,6 @@ attribution:
 
 # fixed-architecture-layer-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verification that a specXplore dashboard session instance initializes correctly and becomes accessible after loading a saved session data object from disk. This skill ensures the dashboard–session architecture layer is functional and responsive before interactive exploration begins.

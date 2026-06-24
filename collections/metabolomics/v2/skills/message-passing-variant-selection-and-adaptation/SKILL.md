@@ -14,7 +14,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -43,7 +43,6 @@ attribution:
 
 # message-passing-variant-selection-and-adaptation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and implement alternative message-passing graph neural network architectures (e.g., Graph Attention Networks, Message-Passing Neural Networks) as drop-in replacements for a baseline GNN model, maintaining input/output dimensionality and training protocol to enable direct performance comparison on molecular property prediction tasks.

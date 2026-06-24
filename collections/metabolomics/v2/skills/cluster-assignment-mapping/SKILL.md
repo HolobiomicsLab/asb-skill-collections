@@ -14,7 +14,7 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # cluster-assignment-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map spectrum identifiers to their assigned cluster IDs after density-based clustering on a sparse pairwise distance matrix. This skill produces a machine-readable assignment table and summary statistics that document cluster composition and quality.

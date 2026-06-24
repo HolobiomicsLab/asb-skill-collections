@@ -11,7 +11,7 @@ metadata:
   - http://edamontology.org/topic_3174
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -40,7 +40,6 @@ attribution:
 
 # community-constraint-propagation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply metabolic constraints derived from community-level dependencies to identify and resolve gaps in individual member reconstructions within a multi-organism system. This skill enables gap-filling that respects cross-member metabolic interactions rather than treating organisms in isolation.

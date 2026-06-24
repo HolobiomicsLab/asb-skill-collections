@@ -17,7 +17,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -48,7 +48,6 @@ attribution:
 
 # ranked-result-extraction-and-display
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and display ranked candidate metabolite annotations for a specific LC–MS feature from the annotateRC results object, preserving annotation scores and rank order. This skill enables inspection of alternative candidate annotations beyond the top-ranked hit, critical for understanding annotation ambiguity and lipid isomer/isobar confusion in untargeted AIF metabolomics.

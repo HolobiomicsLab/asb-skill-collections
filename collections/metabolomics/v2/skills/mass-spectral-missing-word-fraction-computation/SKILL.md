@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -59,7 +59,6 @@ attribution:
 
 # mass-spectral-missing-word-fraction-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies the fraction of peak intensity in a mass spectrum that lacks corresponding word embeddings in a trained Word2Vec model, enabling assessment of model coverage and limiting high-uncertainty similarity scores. This metric is essential for understanding when Spec2Vec embeddings are reliable and when peaks fall outside the learned feature space.

@@ -12,7 +12,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -44,7 +44,6 @@ attribution:
 
 # record-identifier-mapping-to-json
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps tagged tabular columns with record identifiers (using #<table_name>.id export tags) to their corresponding nested JSON structures, enabling conversion of spreadsheet-based experimental metadata into hierarchical JSON representations. This skill bridges tabular data formats and JSON-based interchange, critical for submission-ready scientific data curation.

@@ -17,7 +17,7 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -52,7 +52,6 @@ attribution:
 
 # mass-spectrum-calibration-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate calibrated mass spectra by comparing theoretical and measured m/z values across multiple calibration equations and assessing mass error distributions. This skill ensures that frequency-to-m/z domain transformations have been applied correctly before molecular formula assignment.

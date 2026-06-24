@@ -23,7 +23,7 @@ metadata:
   - optGpSampler algorithm
   - t-SNE (t-distributed Stochastic Neighbor Embedding)
   - COBRApy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -62,7 +62,6 @@ attribution:
 
 # transcriptomics-reaction-activity-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Reaction Activity Scores (RAS) from RNA-seq read counts and Gene-Protein-Reaction (GPR) rules to quantify the transcriptional capacity of metabolic reactions. This bridges gene expression data to metabolic network models by assigning each reaction a normalized score that reflects the abundance of its encoding enzymes.

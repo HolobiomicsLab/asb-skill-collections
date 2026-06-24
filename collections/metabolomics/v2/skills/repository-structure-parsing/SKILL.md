@@ -15,7 +15,7 @@ metadata:
   - PubChem
   - MetumpX
   - MetumpX_setup_enUS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -51,7 +51,6 @@ attribution:
 
 # Repository Structure Parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically extract and document named subproject components, their functional roles, and interdependencies from a multi-component research software repository by analyzing README files, configuration files, and inline documentation. This skill enables reconstruction of system architecture and dependency graphs needed to understand integration points and deployment strategies.

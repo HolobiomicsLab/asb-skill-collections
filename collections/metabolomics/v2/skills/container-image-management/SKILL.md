@@ -18,7 +18,7 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -48,7 +48,6 @@ attribution:
 
 # container-image-management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy and manage containerized bioinformatics workflows using Docker or Singularity runtimes to ensure reproducible LC-HRMS metabolomics analysis across heterogeneous compute environments. This skill enables portable execution of MS-DIAL and MSFLO pipelines without dependency resolution or system-specific compilation.

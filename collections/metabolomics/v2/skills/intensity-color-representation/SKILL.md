@@ -18,7 +18,7 @@ metadata:
   - plotly
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -51,7 +51,6 @@ attribution:
 
 # intensity-color-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map mass spectrometry intensity values to a color scale in 2D peak map visualizations to enable intuitive perception of signal strength across m/z and retention time dimensions. This skill is essential for interactive and static peak map plots where color intensity conveys the third dimension (intensity/abundance) of the data.

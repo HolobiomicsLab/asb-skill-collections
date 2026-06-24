@@ -15,7 +15,7 @@ metadata:
   - TensorFlow Serving
   - Docker / docker-compose
   - NP Classifier models (Keras/HDF5)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -44,7 +44,6 @@ attribution:
 
 # in-memory-cache-implementation-for-repeated-queries
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement server-side in-memory caching to store and retrieve prior classification results for repeated SMILES queries, reducing computational latency and improving API response time for duplicate requests.

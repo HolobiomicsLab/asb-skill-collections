@@ -29,7 +29,7 @@ metadata:
   - eFlux, TRFBA, GX-FBA, scFBA
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -67,7 +67,6 @@ attribution:
 
 # constraint-based-flux-balance-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply constraint-based stoichiometric metabolic models to integrate multi-omics data (transcriptomics, metabolomics, extracellular flux measurements) and predict metabolic flux distributions under biological constraints. This skill discriminates whether metabolic differences arise from gene expression regulation, substrate availability regulation, or both.

@@ -12,7 +12,7 @@ metadata:
   - pymzML
   - Python
   - ElementTree
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,7 +43,6 @@ attribution:
 
 # pymzml-reader-initialization-with-custom-parameters
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a pymzML Reader object with custom parameters (particularly index_regex) to enable random-access retrieval of spectra from mzML files with non-standard index formats. This skill is essential when mzML files use custom identifier schemes that deviate from the standard spectrum index layout.

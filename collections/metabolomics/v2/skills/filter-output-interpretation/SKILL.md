@@ -14,7 +14,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -46,7 +46,6 @@ attribution:
 
 # filter-output-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and interpret the named list structure returned by filter_summary() to understand which ions passed or failed a specific filter (e.g., mispicked, group, cv, insource). This skill enables systematic review of filter results, conversion to tabular format, and export for downstream analysis.

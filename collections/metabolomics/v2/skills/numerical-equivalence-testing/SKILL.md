@@ -15,7 +15,7 @@ metadata:
   - SummarizedExperiment
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -46,7 +46,6 @@ attribution:
 
 # numerical-equivalence-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that two numerical assays or derived quantities are element-wise identical or functionally equivalent by comparing their values across all observations. This skill is essential when testing default parameter behaviors or validating that mathematical transformations (e.g., division by 1) leave data unchanged.

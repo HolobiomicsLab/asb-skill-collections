@@ -16,7 +16,7 @@ metadata:
   - Asari
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # background-ion-contaminant-removal
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove features from metabolomics feature tables that are likely background contamination or instrumental artifacts by filtering against blank sample intensities using an intensity ratio threshold. This quality control step eliminates low-abundance features present in blank samples before annotation and downstream statistical analysis.

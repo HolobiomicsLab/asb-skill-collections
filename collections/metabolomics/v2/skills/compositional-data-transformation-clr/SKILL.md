@@ -17,7 +17,7 @@ metadata:
   - MiMeNet
   - scikit-learn
   - TensorFlow / Keras
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -52,7 +52,6 @@ attribution:
 
 # Compositional Data Transformation (CLR)
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Center log-ratio (CLR) transformation converts compositional microbiome and metabolomic abundance data into a form suitable for neural network training by addressing the constant-sum constraint inherent in relative abundance data. This normalization is essential when modeling microbe-metabolite relationships to prevent spurious correlations and ensure the network learns true ecological associations rather than artifacts of compositional closure.

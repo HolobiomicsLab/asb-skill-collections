@@ -16,7 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -45,7 +45,6 @@ attribution:
 
 # TWIM instrument offset correction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert arrival times (detector arrival) recorded by TWIM-MS platforms into drift times (time spent in the mobility cell) by applying an instrument-specific time-of-flight offset, a prerequisite for accurate collision cross section (CCS) calibration.

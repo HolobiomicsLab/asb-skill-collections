@@ -17,7 +17,7 @@ metadata:
   - NumPy
   - TensorFlow or PyTorch
   - Pandas
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -57,7 +57,6 @@ attribution:
 
 # Reconstruct the Olden's-method feature attribution score matrix from trained MiMeNet networks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract weight matrices from trained neural network models and compute microbe-metabolite feature attribution scores using Olden's method (successive layer-wise weight matrix multiplication). This skill produces normalized, clipped interaction score matrices that identify which microbial features drive predictions of specific metabolomic features.

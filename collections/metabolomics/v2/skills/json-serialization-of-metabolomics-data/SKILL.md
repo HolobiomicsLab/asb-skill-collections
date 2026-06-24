@@ -16,7 +16,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,7 +46,6 @@ attribution:
 
 # JSON serialization of metabolomics data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize grouped empirical compounds (EmpCpd) and feature tables into JSON format for portable, standardized representation of metabolomics annotations and results. This enables interoperability between tools in the metabolomics processing pipeline and downstream statistical analysis.

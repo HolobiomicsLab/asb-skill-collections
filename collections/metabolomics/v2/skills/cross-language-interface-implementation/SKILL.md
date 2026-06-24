@@ -18,7 +18,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -50,7 +50,6 @@ attribution:
 
 # cross-language-interface-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a bidirectional wrapping layer that serializes domain objects between R and Python environments, allowing R-based workflows to call Python libraries and vice versa while preserving object structure and metadata. This skill enables seamless integration of specialized Python mass spectrometry packages (e.g., matchms, spectrum_utils) into R-centric Spectra-based analysis pipelines.

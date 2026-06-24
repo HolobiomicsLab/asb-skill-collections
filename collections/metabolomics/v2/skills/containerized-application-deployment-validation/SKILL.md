@@ -12,7 +12,7 @@ metadata:
   - Docker (docker build, docker inspect, docker system df)
   - Dockerfile (multi-stage build with --target flag)
   - AirdPro V5 / V6
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -41,7 +41,6 @@ attribution:
 
 # containerized-application-deployment-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate Docker container images across multiple build targets by measuring uncompressed and compressed image sizes and comparing against documented specification ranges. This skill ensures reproducibility and correctness of multi-stage Docker builds for complex scientific applications.

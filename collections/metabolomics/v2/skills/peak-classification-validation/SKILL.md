@@ -16,7 +16,7 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -51,7 +51,6 @@ attribution:
 
 # peak-classification-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate a trained neural network classifier's optimal decision threshold on a labelled peak dataset by computing true vs. false positive rates across probability thresholds and selecting the threshold that maximizes (TP − FP). This skill ensures the classifier is correctly tuned before deployment on unlabelled LCMS data.

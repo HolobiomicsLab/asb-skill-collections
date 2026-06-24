@@ -16,7 +16,7 @@ metadata:
   - conda
   - pip
   - HDF5
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -50,7 +50,6 @@ attribution:
 
 # multi-dimensional-feature-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align detected features across multiple samples by exploiting multi-dimensional similarity in mass, drift time, and retention time using reference-based coordinate transformation. This approach increases alignment confidence and reduces false feature matches compared to single-dimension methods.

@@ -16,7 +16,7 @@ metadata:
   - optGpSampler
   - Mann-Whitney U test
   - INTEGRATE pipeline
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -50,7 +50,6 @@ attribution:
 
 # Reaction Activity Score (RAS) Computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes Reaction Activity Scores (RAS) from RNA-seq read counts and Gene-Protein-Reaction (GPR) associations to quantify the transcriptional regulation of metabolic reactions across biological samples. RAS serves as a proxy for differential enzyme abundance and enables discrimination of transcriptionally-controlled from metabolically-controlled metabolic fluxes.

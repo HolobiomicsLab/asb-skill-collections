@@ -18,7 +18,7 @@ metadata:
   - Monte-Carlo Dropout
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -55,7 +55,6 @@ attribution:
 
 # Interquartile-range filtering for outlier rejection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter ensemble predictions by interquartile range (IQR) thresholds to identify and retain only high-confidence predictions, reducing model uncertainty and improving error metrics across prediction bins. This technique leverages multiple forward passes through a Monte-Carlo Dropout network to quantify prediction confidence and reject outliers.

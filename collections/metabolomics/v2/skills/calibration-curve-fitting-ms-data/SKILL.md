@@ -12,7 +12,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -40,7 +40,6 @@ attribution:
 
 # calibration-curve-fitting-ms-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit external calibration curves (linear or polynomial regression) to mass spectrometry intensity measurements using known concentration standards, then apply the fitted model to convert raw sample intensities into quantified concentration values. Essential when intensity drift occurs during measurement runs.

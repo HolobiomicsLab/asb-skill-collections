@@ -15,7 +15,7 @@ metadata:
   - TensorFlow 2.3.0
   - Keras
   - mwang87/NP-Classifier
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -44,7 +44,6 @@ attribution:
 
 # rest-api-endpoint-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a REST API endpoint that accepts structured chemical input (SMILES strings) and routes predictions through a containerized machine learning service, optionally with caching for repeated queries. This skill applies when you need to operationalize trained neural network models as web services with query parameter parsing and performance optimization.

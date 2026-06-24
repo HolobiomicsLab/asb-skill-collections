@@ -17,7 +17,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -48,7 +48,6 @@ attribution:
 
 # diagnostic-fragment-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate MS2 fragment ions with diagnostic mass differences and characteristic loss patterns to prioritize putative PFAS features in non-target HRMS data. This skill identifies perfluoroalkyl chain fragments and neutral losses (e.g., CF₂ units) by computing precursor–fragment mass differences, enabling rapid triage of candidate compounds in large feature sets.

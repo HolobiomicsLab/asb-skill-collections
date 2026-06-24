@@ -23,7 +23,7 @@ metadata:
   - Seaborn / Matplotlib
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -64,7 +64,6 @@ attribution:
 
 # transformation-method-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare predictive performance and metabolite recovery between alternative data transformations (e.g., centered log-ratio vs. relative abundance) on paired microbiome-metabolome datasets to assess whether transformation choice materially affects downstream model performance and biological findings.

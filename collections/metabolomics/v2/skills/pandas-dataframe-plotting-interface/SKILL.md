@@ -19,7 +19,7 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -52,7 +52,6 @@ attribution:
 
 # pandas-dataframe-plotting-interface
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use pyOpenMS-viz's Pandas plotting backend to generate static or interactive mass spectrometry visualizations (chromatograms, spectra, peak maps) directly from DataFrame objects with flexible backend selection (matplotlib, bokeh, plotly). This skill encapsulates the procedural interface for extending Pandas' native plotting API to handle multi-dimensional MS data without manual matplotlib figure construction.

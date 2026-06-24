@@ -15,7 +15,7 @@ metadata:
   - Convolutional neural network
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -43,7 +43,6 @@ attribution:
 
 # nmr-spectrum-to-structure-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a multitask transformer–CNN architecture to predict molecular structure (formula and connectivity) directly from 1D ¹H and/or ¹³C NMR spectra. This skill automates the chemist's task of assembling molecular fragments into complete structures, applicable to molecules with up to 19 heavy atoms.

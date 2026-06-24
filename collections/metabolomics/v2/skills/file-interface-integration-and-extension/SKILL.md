@@ -15,7 +15,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -44,7 +44,6 @@ attribution:
 
 # file-interface-integration-and-extension
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extend pymzML's FileInterface to support custom file formats (e.g., indexed gzip, databases) by implementing wrapper classes with __getitem__() for random access and read() for sequential iteration, then integrating them via conditional detection in FileInterface._open(). This skill enables rapid parser development for non-standard mzML storage backends.

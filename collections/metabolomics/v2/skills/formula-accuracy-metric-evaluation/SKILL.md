@@ -16,7 +16,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -45,7 +45,6 @@ attribution:
 
 # formula-accuracy-metric-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate molecular formula prediction models using formula_acc (with H) — a metric that measures the fraction of MS/MS spectra for which the predicted molecular formula exactly matches the ground-truth formula, including hydrogen count. This metric is central to monitoring rescore model training convergence and selecting best checkpoints in FIDDLE.

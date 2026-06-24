@@ -19,7 +19,7 @@ metadata:
   - pyproteolizard-algorithm
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -56,7 +56,6 @@ attribution:
 
 # mass-spectrometry-spectrum-vectorization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert high-resolution MS/MS spectra into low-dimensional dense or sparse vectors using binning and feature hashing, enabling efficient similarity searching and clustering of millions of spectra. This is the critical first step in the falcon spectrum clustering pipeline.

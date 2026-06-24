@@ -20,7 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -54,7 +54,6 @@ attribution:
 
 # LC-IMS-MS/MS Data Preprocessing and Peak Detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and characterize peaks in high-dimensional mass spectrometry data by applying intensity thresholding and leveraging simultaneous utilization of all acquisition dimensions (m/z, drift time, retention time) to improve detection sensitivity and separation between features. This preprocessing step converts raw or loaded spectral data into a peaked feature table suitable for downstream alignment and characterization.

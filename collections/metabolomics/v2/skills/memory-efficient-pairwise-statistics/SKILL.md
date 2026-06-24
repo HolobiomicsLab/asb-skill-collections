@@ -15,7 +15,7 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # memory-efficient-pairwise-statistics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Pearson correlation statistics across all pairs of mass spectrometry peaks without loading the entire pairwise matrix into memory. This skill splits large ion-pair datasets into sequential chunks, processes each in parallel, and returns correlation coefficients with Bonferroni-corrected significance flags.

@@ -15,7 +15,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -46,7 +46,6 @@ attribution:
 
 # qc-sample-variability-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Exhaustively calculate Relative Standard Deviation (RSDQC) of batch-corrected compound/internal-standard ratios across all internal standard candidates to identify which internal standard minimizes QC sample variability for each compound. This identifies the most reliable internal standard choice for normalizing each metabolite.

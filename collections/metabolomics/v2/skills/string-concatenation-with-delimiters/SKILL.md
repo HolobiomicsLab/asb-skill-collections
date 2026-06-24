@@ -12,7 +12,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -46,7 +46,6 @@ attribution:
 
 # String Concatenation with Delimiters
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply str directives with for_each iteration, optional filtering, and delimiter-based field concatenation to combine values from multiple records into a single summary string. Used in JSON-to-JSON conversion workflows to aggregate protocol descriptions, metadata fields, or enumerated values across filtered record sets.

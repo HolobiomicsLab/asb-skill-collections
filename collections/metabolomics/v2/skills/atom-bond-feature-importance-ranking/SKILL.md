@@ -16,7 +16,7 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -45,7 +45,6 @@ attribution:
 
 # atom-bond-feature-importance-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Post-hoc attribution analysis of graph neural network predictions to identify and rank which molecular structural features (node and edge attributes) drive model predictions of collision cross section. This skill enables interpretation of GNN decision logic through ablation and gradient-based saliency scoring.

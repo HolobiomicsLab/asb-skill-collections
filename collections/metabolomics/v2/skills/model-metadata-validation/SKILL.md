@@ -13,7 +13,7 @@ metadata:
   - docker
   - docker-compose
   - TensorFlow Serving
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -41,7 +41,6 @@ attribution:
 
 # Model Metadata Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a TensorFlow Serving endpoint correctly exposes model metadata including input and output layer names. This skill confirms that a deployed neural network model's schema matches expected specifications before downstream inference.

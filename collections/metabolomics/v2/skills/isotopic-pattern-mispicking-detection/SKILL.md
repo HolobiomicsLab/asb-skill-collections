@@ -17,7 +17,7 @@ metadata:
   - ggplot2 / plotly
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -49,7 +49,6 @@ attribution:
 
 # isotopic-pattern-mispicking-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and correct isotopic patterns that are incorrectly split into separate peaks during mass spectrometry preprocessing. This skill identifies mispicked ions—where a single compound's isotopic distribution has been fragmented into multiple spurious features—and optionally merges them back to recover the true ion signal.

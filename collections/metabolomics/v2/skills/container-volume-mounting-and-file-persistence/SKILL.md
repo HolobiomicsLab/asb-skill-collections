@@ -21,7 +21,7 @@ metadata:
   - run-cli.sh
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -52,7 +52,6 @@ attribution:
 
 # Container Volume Mounting and File Persistence
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Mount host directories into Docker containers to enable persistent input/output handling for file format conversion workflows. This skill ensures that vendor mass spectrometry raw files and converted output remain accessible across container restarts and first-run initialization sequences.

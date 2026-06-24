@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -46,7 +46,6 @@ attribution:
 
 # collision-cross-section-model-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate a collision cross section (CCS) calibration model by computing and verifying the goodness-of-fit metric (r-squared) against a known reference value. This skill ensures that the tunemix calibration function produces a single-field CCS model with sufficient accuracy for downstream ion mobility spectrometry analyses.

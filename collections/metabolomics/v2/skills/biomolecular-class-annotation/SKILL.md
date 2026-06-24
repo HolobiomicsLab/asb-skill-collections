@@ -15,7 +15,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -46,7 +46,6 @@ attribution:
 
 # biomolecular-class-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign biomolecular class labels (lipid, peptide, carbohydrate, etc.) directly to experimental features in TWIM-MS data without prior feature identification, enabling downstream class-specific CCS calculations. This skill bypasses the need for peak picking or feature deconvolution by operating on high-dimensional arrival time and m/z dimensions.

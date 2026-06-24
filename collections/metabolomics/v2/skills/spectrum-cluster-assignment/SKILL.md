@@ -16,7 +16,7 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -47,7 +47,6 @@ attribution:
 
 # Spectrum Cluster Assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply density-based clustering (DBSCAN) to a sparse pairwise distance matrix to assign each MS/MS spectrum a cluster label, grouping similar spectra based on local density and neighborhood connectivity. This is the final step in the falcon pipeline for large-scale spectrum clustering.

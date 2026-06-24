@@ -11,7 +11,7 @@ metadata:
   tools:
   - QComics
   - Sciex Multiquant
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -41,7 +41,6 @@ attribution:
 
 # quality-overview-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a rapid visual and tabular assessment of metabolomics or lipidomics study quality by computing per-compound coefficient of variation (CV) and signal-trend metrics from QCpool injection sequences. This skill enables quick identification of compounds and instrumental phases with acceptable versus poor reproducibility and drift characteristics.

@@ -18,7 +18,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -55,7 +55,6 @@ attribution:
 
 # Root-mean-squared-error computation by bin
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratifies predictions into equally-sized bins across a reference variable (e.g., Tanimoto score range) and computes RMSE independently for each bin to reveal performance variation across the prediction space. This enables detection of systematic error patterns in specific score ranges, which is essential for model validation and uncertainty-based filtering in deep learning similarity prediction.

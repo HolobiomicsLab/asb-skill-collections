@@ -12,7 +12,7 @@ metadata:
   tools:
   - Shiny
   - QuantyFey
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -42,7 +42,6 @@ attribution:
 
 # calibration-curve-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and optimize calibration models (linear or quadratic regression) fitted to standard compound MS intensity measurements before applying them to convert sample intensities into quantitative concentrations. This skill ensures that the selected model accurately relates measured intensities to known concentrations across the dynamic range of the assay.

@@ -15,7 +15,7 @@ metadata:
   - Formularity
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -52,7 +52,6 @@ attribution:
 
 # isotopic-peak-removal
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove isotopic peaks (primarily ¹³C) from FT-ICR MS peak-abundance matrices to eliminate redundant molecular signals and reduce noise before downstream analysis. This filtering step prevents overrepresentation of naturally occurring isotopic variants of the same compound.

@@ -13,7 +13,7 @@ metadata:
   tools:
   - SCARF
   - MIST-CF formula transformer
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -41,7 +41,6 @@ attribution:
 
 # Positional Encoding Implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement sinusoidal positional encodings to convert discrete chemical formula strings into fixed-length continuous embedding vectors for neural network input. This technique, developed in SCARF, enables transformer architectures to process chemical formulae by mapping element counts and positions to orthogonal sinusoidal basis functions.

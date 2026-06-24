@@ -26,7 +26,7 @@ metadata:
   - NumPy
   - TensorFlow or PyTorch
   - PyTorch
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -65,7 +65,6 @@ attribution:
 
 # neural-network-weight-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract weight matrices from trained multilayer perceptron neural networks across multiple cross-validation folds to compute microbe-metabolite feature attribution scores via Olden's method. This enables downstream biclustering and module discovery by quantifying how individual network weights contribute to metabolite abundance predictions.

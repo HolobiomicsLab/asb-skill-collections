@@ -14,7 +14,7 @@ metadata:
   - Sciex Multiquant
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -44,7 +44,6 @@ attribution:
 
 # instrumental-drift-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and quantify instrumental signal drift or degradation across sequential metabolomics/lipidomics QC injections by computing trend metrics (slope, drift index, stability) from pooled sample intensities. This skill enables rapid assessment of whether instrument performance remained stable throughout an analytical sequence, flagging compounds or time windows where signal loss or systematic bias would compromise data quality.

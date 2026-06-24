@@ -21,7 +21,7 @@ metadata:
   - TensorFlow/Keras
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -58,7 +58,6 @@ attribution:
 
 # deep-learning-training-convergence-monitoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Monitor and diagnose convergence behavior of CNN models during training by comparing training and validation accuracy curves to detect overfitting and determine when to halt training. This skill is essential for validating that a model learns generalizable patterns rather than memorizing training data.

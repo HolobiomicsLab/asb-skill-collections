@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -44,7 +44,6 @@ attribution:
 
 # random-access-and-sequential-iteration-pattern-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom file-handler class that enables both random-access (via __getitem__) and sequential iteration (via read) over structured data sources like SQLite databases, integrating seamlessly with pymzML's FileInterface to support transparent spectrum retrieval. This pattern decouples data storage backends from the parsing interface, allowing alternative representations (database, archive, remote) to be accessed through a uniform API.

@@ -22,7 +22,7 @@ metadata:
   - Canonical Correlation Analysis (CCA)
   - scikit-learn
   - TensorFlow
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -64,7 +64,6 @@ attribution:
 
 # Multivariate Regression Comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically benchmark a novel multivariate regression model (e.g., neural network) against established linear and ensemble baselines using identical cross-validation protocols, computing effect sizes (Spearman correlation coefficients) and counts of well-predicted features to quantify improvement. This skill is essential when claiming superiority of a new predictive method over prior work.

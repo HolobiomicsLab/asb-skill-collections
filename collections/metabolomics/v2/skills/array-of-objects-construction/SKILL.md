@@ -16,7 +16,7 @@ metadata:
   - messes
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -50,7 +50,6 @@ attribution:
 
 # array-of-objects-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a list of dictionaries (array of objects) from tabular JSON records by mapping columns to key–value pairs via headers specification, with optional filtering, sorting, and row-grouping (collation). This skill is essential when converting flat tabular experimental metadata into nested JSON structures suitable for REST API submission or format conversion.

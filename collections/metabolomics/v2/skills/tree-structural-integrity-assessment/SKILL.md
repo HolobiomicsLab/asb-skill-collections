@@ -13,7 +13,7 @@ metadata:
   tools:
   - q2-qemistree
   - QIIME 2 artifact inspection tools
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -43,7 +43,6 @@ attribution:
 
 # tree-structural-integrity-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the structural integrity of a Chemical Feature Tree artifact produced by q2-qemistree by inspecting file format, counting nodes, verifying connectivity, and confirming absence of malformed branches. This ensures the tree is suitable for downstream phylogenetic diversity analysis on metabolomic data.

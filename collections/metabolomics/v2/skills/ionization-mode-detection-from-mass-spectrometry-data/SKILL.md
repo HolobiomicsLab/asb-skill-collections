@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # ionization-mode-detection-from-mass-spectrometry-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer the ionization polarity (positive or negative) from mzML file headers prior to feature extraction, enabling correct parameterization of Asari processing. This is a prerequisite step that ensures downstream feature detection uses appropriate ion mass-to-charge calibration for the experimental acquisition mode.

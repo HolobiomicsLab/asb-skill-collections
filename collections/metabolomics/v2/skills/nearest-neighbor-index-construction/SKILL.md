@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # nearest-neighbor-index-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct spatial indexes (e.g., inverted index with Voronoi partitioning) over low-dimensional spectrum vectors to enable fast similarity searching and sparse pairwise distance computation without exhaustive all-vs-all comparison. This skill accelerates large-scale MS/MS spectrum clustering by trading off memory and preprocessing cost for query-time efficiency.

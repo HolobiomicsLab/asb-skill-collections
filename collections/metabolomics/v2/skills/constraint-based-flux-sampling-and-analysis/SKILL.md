@@ -21,7 +21,7 @@ metadata:
   - YSI bioanalyzer (YSI2950)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -59,7 +59,6 @@ attribution:
 
 # constraint-based-flux-sampling-and-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Sample steady-state flux distributions from the feasible metabolic space of constraint-based stoichiometric models under different regulatory scenarios (nutrient availability, extracellular flux ratios, transcriptomics-derived constraints), then apply dimensionality reduction and statistical tests to evaluate how constraint combinations segregate metabolic phenotypes across biological samples.

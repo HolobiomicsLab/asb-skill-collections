@@ -17,7 +17,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -52,7 +52,6 @@ attribution:
 
 # mzML-feature-table parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse raw LCMS data from mzML files and corresponding feature tables (CSV format) to instantiate a NeatMS Experiment object. This skill is essential for initializing the data pipeline before peak matrix generation and neural network-based peak filtering.

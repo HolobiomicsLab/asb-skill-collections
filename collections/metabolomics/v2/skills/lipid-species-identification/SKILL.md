@@ -19,7 +19,7 @@ metadata:
   - R (≥4.5.0)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -50,7 +50,6 @@ attribution:
 
 # Lipid Species Identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of individual lipid species (e.g., LPC(14:0)) from LC–MS All-Ion Fragmentation (AIF) features by matching experimental MS/MS fragment patterns against ion fragment databases using MetaboAnnotatoR. This skill enables rank-ordered candidate annotations with supporting ion-matching evidence, suitable for untargeted metabolomics workflows.

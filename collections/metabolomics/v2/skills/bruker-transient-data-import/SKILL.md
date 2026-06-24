@@ -17,7 +17,7 @@ metadata:
   - CoreMS ReadBrukerSolarix
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -50,7 +50,6 @@ attribution:
 
 # bruker-transient-data-import
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import and load raw Bruker Solarix FT-ICR transient data (ser and fid files) from .d directories into CoreMS mass spectrum objects for downstream signal processing and calibration. This is the first step in FT-MS workflows, converting vendor binary formats into a unified Python object model.

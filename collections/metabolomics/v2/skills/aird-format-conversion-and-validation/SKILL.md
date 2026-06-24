@@ -21,7 +21,7 @@ metadata:
   - Redis
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -52,7 +52,6 @@ attribution:
 
 # aird-format-conversion-and-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert vendor mass spectrometry raw files to the Aird format using AirdPro CLI or GUI, and validate the output by verifying file integrity, format compliance, and conversion completion. Aird is a computation-oriented format that enables higher compression ratios and faster decoding compared to standard formats like mzML.

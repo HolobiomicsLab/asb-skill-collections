@@ -18,7 +18,7 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -51,7 +51,6 @@ attribution:
 
 # FT-ICR Spectrum Recalibration Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates the quality and accuracy of mass calibration in recalibrated FT-ICR mass spectra by assessing mass error distributions, resolving power, and peak assignment consistency across a 12 T field-strength instrument. This skill ensures that downstream molecular formula assignment relies on reliable m/z measurements within acceptable ppm error tolerances.

@@ -14,7 +14,7 @@ metadata:
   - psims
   - conda
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -48,7 +48,6 @@ attribution:
 
 # module-import-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that installed Python packages and their optional-dependency modules can be successfully imported without errors, confirming installation completeness and functional availability. This skill validates both core and conditionally-dependent submodules across different installation methods (pip, conda).

@@ -18,7 +18,7 @@ metadata:
   - matplotlib
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -51,7 +51,6 @@ attribution:
 
 # retention-time-mz-coordinate-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map mass-spectrometry data onto a two-dimensional coordinate system using retention time (or ion mobility) as one axis and m/z as the other, enabling interactive or static visualization of peak maps. This skill is essential for visualizing the joint distribution of analytes across time and mass dimensions.

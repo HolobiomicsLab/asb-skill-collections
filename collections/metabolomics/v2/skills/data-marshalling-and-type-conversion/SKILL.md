@@ -19,7 +19,7 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -52,7 +52,6 @@ attribution:
 
 # data-marshalling-and-type-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry spectral objects between R Spectra::Spectra and Python matchms/spectrum_utils representations, marshalling data across language boundaries while preserving spectral metadata and peak m/z–intensity pairs. This enables seamless execution of Python-based MS algorithms within R workflows.

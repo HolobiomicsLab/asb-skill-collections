@@ -18,7 +18,7 @@ metadata:
   - Pandas
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -53,7 +53,6 @@ attribution:
 
 # interactive-plot-backend-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare rendering performance and feature support across interactive plotting backends (bokeh, plotly) for mass spectrometry visualizations. This skill identifies which backend best balances speed, interactivity, and plot-type coverage for a given visualization workload.

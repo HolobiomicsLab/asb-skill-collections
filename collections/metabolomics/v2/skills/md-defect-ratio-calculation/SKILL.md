@@ -16,7 +16,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -47,7 +47,6 @@ attribution:
 
 # MD/C-m/C Ratio Calculation for PFAS Feature Prioritization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the mass defect (MD) to molecular ion abundance ratio (C-m/C) for each detected feature to identify PFAS-like compounds with elevated mass defects characteristic of perfluorinated structures. This ratio-based filtering step prioritizes features most likely to be PFAS before more computationally intensive downstream analysis.

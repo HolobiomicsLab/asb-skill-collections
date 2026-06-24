@@ -18,7 +18,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -55,7 +55,6 @@ attribution:
 
 # Mass-spectral similarity binning and stratification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify MS/MS spectrum pairs into equal-width bins by reference Tanimoto structural similarity score to enable per-bin error analysis and detection of performance disparities across similarity ranges. This skill is essential for evaluating whether deep learning spectral similarity models exhibit systematic bias toward specific similarity ranges (e.g., low vs. high structural similarity).

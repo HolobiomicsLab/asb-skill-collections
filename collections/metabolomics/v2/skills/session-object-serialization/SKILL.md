@@ -16,7 +16,7 @@ metadata:
   - ms2deepscore
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -44,7 +44,6 @@ attribution:
 
 # session-object-serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize and persist a specXplore session data object (containing processed LC-MS/MS spectral embeddings, similarity scores, and metadata) to disk as a file artifact that can be loaded into the interactive dashboard for visual exploration. This step bridges the offline Jupyter preprocessing stage and the online dashboard visualization stage.

@@ -17,7 +17,7 @@ metadata:
   - SIRIUS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -49,7 +49,6 @@ attribution:
 
 # Sinusoidal Embedding Implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement sinusoidal formula embeddings to convert chemical formulas into fixed-dimensional continuous vector representations using trigonometric positional encoding. This technique, developed in SCARF and adopted in MIST-CF, enables neural network models to learn chemical structure patterns from mass spectrometry data.

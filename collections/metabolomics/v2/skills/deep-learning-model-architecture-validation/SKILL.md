@@ -12,7 +12,7 @@ metadata:
   - get_models.sh
   - Python
   - TensorFlow 2.3.0
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -42,7 +42,6 @@ attribution:
 
 # deep-learning-model-architecture-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a converted Keras deep learning model exposes the correct input and output layer names required by a downstream inference pipeline. This skill ensures structural compliance before deployment, preventing runtime failures due to layer naming mismatches.

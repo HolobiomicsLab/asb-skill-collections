@@ -17,7 +17,7 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -47,7 +47,6 @@ attribution:
 
 # spectral-similarity-distance-metric-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an appropriate distance metric for computing pairwise mass spectral similarities, which serves as the foundation for downstream dimensionality reduction and interactive visualization in LC-MS/MS data exploration. This skill determines how spectral similarity scores are calculated and influences the geometry of the resulting t-SNE embedding.

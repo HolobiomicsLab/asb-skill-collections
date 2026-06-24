@@ -22,7 +22,7 @@ metadata:
   - NED (Non-negative Embedding)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -62,7 +62,6 @@ attribution:
 
 # microbe-metabolite-prediction-neural-network
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a multilayer perceptron neural network to predict metabolomic profiles from microbiome taxonomic or functional abundance data, leveraging shared information across metabolomic features to improve prediction accuracy over independent linear regression methods. This skill identifies well-predicted metabolites and extracts feature attribution scores to illuminate microbe-metabolite interaction networks.

@@ -12,7 +12,7 @@ metadata:
   - chemprop
   - chemprop-IR
   - RDKit
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -42,7 +42,6 @@ attribution:
 
 # molecular-graph-feature-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and transform molecular structures into learned graph-based feature representations suitable for property prediction tasks. This skill bridges molecular chemistry (atoms, bonds, connectivity) and neural network inputs by converting SMILES or molecular graphs into featurized node and edge embeddings that capture chemical semantics for downstream message passing architectures.

@@ -19,7 +19,7 @@ metadata:
   - KEGG database
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -57,7 +57,6 @@ attribution:
 
 # transformation-network-topology-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and analyze biochemical transformation networks from FT-ICR MS data by identifying mass differences between detected peaks, then compute topological metrics (degree distribution, component count, hub identification) to characterize metabolic connectivity and transformation pathways in complex organic mixtures.

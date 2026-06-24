@@ -8,7 +8,7 @@ metadata:
   edam_topics: []
   tools:
   - MAGMa
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -38,7 +38,6 @@ attribution:
 
 # software-component-identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically identify and document named subproject components within a complex research software system by scanning repository structure, configuration files, and documentation. This skill extracts component names, directory paths, functional roles, and interdependencies to produce a structured manifest of the system architecture.

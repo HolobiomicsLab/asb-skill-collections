@@ -16,7 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -45,7 +45,6 @@ attribution:
 
 # class-stratified-calibration-model-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply class-specific calibration models to convert ion mobility arrival time measurements into collision cross section (CCS) values, using biomolecular class labels to select appropriate calibration parameters for each feature. This skill bridges class assignment and quantitative CCS computation in TWIM-MS workflows.

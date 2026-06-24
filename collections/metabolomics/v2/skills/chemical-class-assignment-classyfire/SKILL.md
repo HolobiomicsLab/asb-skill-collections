@@ -19,7 +19,7 @@ metadata:
   - ClassyFire
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # chemical-class-assignment-classyfire
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve or map ClassyFire chemical superclass and subclass annotations for molecular structures (via InChIKey) to enable chemically meaningful stratification and validation of spectral embeddings or clustering results. This skill verifies that learned representations capture true chemical structure relationships by confirming class-level coherence in dimensionality-reduced visualizations.

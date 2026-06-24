@@ -17,7 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -48,7 +48,6 @@ attribution:
 
 # internal-standard-area-mis-injection-flagging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and flag mis-injected study samples in metabolomics LC-MS data by testing whether Internal Standard peak areas fall outside expected ranges, identifying technical failures that compromise quantitation reliability.

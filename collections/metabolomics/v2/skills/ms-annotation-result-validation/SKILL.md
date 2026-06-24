@@ -18,7 +18,7 @@ metadata:
   - R (version 4.5.0 or higher)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -49,7 +49,6 @@ attribution:
 
 # MS annotation result validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify and inspect ranked candidate metabolite annotations from LC–MS All-ion fragmentation data by extracting top-ranked hits, confirming match quality metrics (annotation score, matched ion count), and visualizing experimental spectra against candidate fragmentation patterns. This ensures annotation reliability before downstream interpretation.

@@ -14,7 +14,7 @@ metadata:
   - Python
   - Jupyter
   - metabolomics-ORA
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -42,7 +42,6 @@ attribution:
 
 # metabolite-coverage-simulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate Over-representation Analysis (ORA) outcomes across varying fractions of detected metabolites to quantify how metabolite detection coverage affects p-value distributions and false-positive rates in pathway analysis. This skill reveals coverage-dependent statistical artifacts that can inflate false discovery.

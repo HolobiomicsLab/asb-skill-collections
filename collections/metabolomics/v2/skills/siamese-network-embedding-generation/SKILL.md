@@ -19,7 +19,7 @@ metadata:
   - TensorFlow/Keras or PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # Siamese Network Embedding Generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transforms a binned MS/MS spectrum into a fixed-dimensional spectral embedding vector using a trained Siamese neural network base network, enabling downstream similarity prediction and spectral clustering. This skill is essential for converting raw mass spectra into learned representations that capture structural and chemical properties.

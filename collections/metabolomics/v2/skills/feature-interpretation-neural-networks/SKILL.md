@@ -14,7 +14,7 @@ metadata:
   - NumPy
   - TensorFlow or PyTorch
   - Scikit-learn
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -54,7 +54,6 @@ attribution:
 
 # Reconstruct feature attribution score matrix from trained neural networks using Olden's method
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and interpret learned feature relationships from trained multilayer perceptron networks by computing element-wise products of weight matrices across all hidden layers, producing a normalized microbe-metabolite interaction score matrix where positive and negative values indicate predicted directional effects on metabolite abundance.

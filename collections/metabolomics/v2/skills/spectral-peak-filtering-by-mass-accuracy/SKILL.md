@@ -17,7 +17,7 @@ metadata:
   - MetaboDirect
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -54,7 +54,6 @@ attribution:
 
 # spectral-peak-filtering-by-mass-accuracy
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter FT-ICR MS peaks by rejecting those with formula assignment errors exceeding a mass accuracy threshold (typically 0.5 ppm), ensuring only high-confidence molecular formula assignments are retained for downstream analysis. This step removes ambiguous or spurious peaks that would compromise metabolomic interpretation.

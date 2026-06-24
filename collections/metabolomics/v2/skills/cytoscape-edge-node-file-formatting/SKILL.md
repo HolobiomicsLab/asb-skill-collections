@@ -15,7 +15,7 @@ metadata:
   - Cytoscape
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -48,7 +48,6 @@ attribution:
 
 # cytoscape-edge-node-file-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Format transformation network data (edges and nodes) from mass-difference network analysis into CSV files compatible with Cytoscape import for interactive visualization and network exploration. This skill bridges algorithmic metabolite transformation detection and graph-based visualization of biochemical networks.

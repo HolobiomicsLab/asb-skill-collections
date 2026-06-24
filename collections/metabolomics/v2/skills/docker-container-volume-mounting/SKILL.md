@@ -19,7 +19,7 @@ metadata:
   - AirdPro
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -53,7 +53,6 @@ attribution:
 
 # docker-container-volume-mounting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Mount host filesystem directories into Docker containers to enable input/output file exchange and persistent data storage. This skill is essential for containerized scientific workflows where raw data must be read from the host and results written back.

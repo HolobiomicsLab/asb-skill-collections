@@ -15,7 +15,7 @@ metadata:
   - matplotlib
   - Bokeh
   - Plotly
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -43,7 +43,6 @@ attribution:
 
 # batch-script-performance-profiling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically measure wall-clock execution time and resource consumption for multiple scripts across different software backends or configurations to establish performance baselines and detect regressions. This skill is essential when validating that library integrations maintain consistent performance across plotting backends (matplotlib, Bokeh, Plotly) or when benchmarking reproducibility of gallery examples.

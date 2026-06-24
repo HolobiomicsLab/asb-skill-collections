@@ -27,7 +27,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -70,7 +70,6 @@ attribution:
 
 # neural-network-architecture-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and instantiate a CNN architecture for automated LCMS false positive peak classification, tuned with specific hyperparameters to balance training convergence and validation generalization. This skill is essential when building a fresh neural network model for MS1 peak filtering tasks where domain-specific parameters (matrix size, margin, scan count thresholds) and optimizer settings directly impact classification performance.

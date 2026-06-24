@@ -18,7 +18,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # precision-recall-curve-generation-and-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct precision-recall curves by varying a similarity threshold across a full range (0 to 1.0) and computing precision (true positives / total predicted positives) and recall (true positives / all true positives) at each threshold, then compare curves to assess the trade-offs between different spectral similarity measures in retrieving structurally related compound pairs. This skill is essential for comparing multiple similarity algorithms' ability to retrieve high-similarity pairs (e.g., Tanimoto > 0.6) across the full decision boundary.

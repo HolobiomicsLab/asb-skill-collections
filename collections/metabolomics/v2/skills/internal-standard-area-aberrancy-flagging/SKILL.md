@@ -12,7 +12,7 @@ metadata:
   - mzQuality
   - R
   - SummarizedExperiment
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -48,7 +48,6 @@ attribution:
 
 # internal-standard-area-aberrancy-flagging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detection and flagging of mis-injected or otherwise compromised study samples by identifying anomalies in internal standard peak areas within a metabolomics SummarizedExperiment object. This skill isolates samples with aberrant internal standard signals that indicate technical failure and should be excluded from downstream analysis.

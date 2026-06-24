@@ -17,7 +17,7 @@ metadata:
   - pyOpenMS-Viz
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -45,7 +45,6 @@ attribution:
 
 # dataframe-plotting-interface-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a layered architecture that abstracts plotting logic across multiple backends (matplotlib, Bokeh, Plotly) while exposing a unified, backend-agnostic interface on Pandas DataFrames. This skill enables users to switch between static and interactive visualization libraries without changing application code.

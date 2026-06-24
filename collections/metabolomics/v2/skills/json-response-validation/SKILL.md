@@ -13,7 +13,7 @@ metadata:
   - Python
   - TensorFlow Serving
   - docker-compose
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -42,7 +42,6 @@ attribution:
 
 # json-response-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that API endpoints return well-formed JSON responses with expected fields, correct HTTP status codes, and proper schema structure. This skill ensures that downstream programmatic consumers of the API can reliably parse and use the returned data.

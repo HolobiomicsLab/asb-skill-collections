@@ -23,7 +23,7 @@ metadata:
   - pip / conda
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -57,7 +57,6 @@ attribution:
 
 # peptide-sequence-composition-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse peptide sequence strings into molecular compositions and calculate physico-chemical properties (mass, isotopic distribution, charge, pI) using Pyteomics. This skill enables rapid conversion of sequence data into quantitative molecular descriptors needed for proteomics analysis.

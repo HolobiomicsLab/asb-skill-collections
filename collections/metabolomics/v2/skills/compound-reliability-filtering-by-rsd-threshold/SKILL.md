@@ -17,7 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -48,7 +48,6 @@ attribution:
 
 # compound-reliability-filtering-by-rsd-threshold
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomics compounds based on Relative Standard Deviation (RSD) of pooled quality-control (QC) samples to exclude unreliable analytes before reporting. This is a core reliability gate in batch-corrected mass spectrometry data that removes compounds with excessive measurement variability in QC replicates.

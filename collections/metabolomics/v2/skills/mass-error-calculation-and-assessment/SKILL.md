@@ -16,7 +16,7 @@ metadata:
   - Bruker Solarix (ReadBrukerSolarix)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -49,7 +49,6 @@ attribution:
 
 # mass-error-calculation-and-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies the accuracy of molecular formula assignments by calculating the difference between theoretical m/z values and observed m/z values in FT-ICR mass spectra, expressed in ppm error. This assessment is essential for validating formula assignments and tuning calibration parameters on high-field instruments.

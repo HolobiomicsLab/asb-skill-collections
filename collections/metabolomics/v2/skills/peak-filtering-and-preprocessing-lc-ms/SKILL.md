@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -60,7 +60,6 @@ attribution:
 
 # peak-filtering-and-preprocessing-LC-MS
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardized preprocessing pipeline for liquid chromatography–tandem mass spectrometry (LC-MS/MS) spectra that removes low-quality peaks, filters spectra by fragment count and mass range, and normalizes peak intensities to enable fair similarity scoring and structural matching. This skill is essential before applying spectral similarity methods like Spec2Vec or cosine-based scoring, as preprocessing directly impacts true-positive rate and reduces false positives in library matching.

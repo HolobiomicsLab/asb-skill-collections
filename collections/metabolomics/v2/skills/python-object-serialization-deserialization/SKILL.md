@@ -16,7 +16,7 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -45,7 +45,6 @@ attribution:
 
 # Python Object Serialization and Deserialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load a serialized Python session data object from disk and instantiate it into an active dashboard session instance to enable interactive visualization. This skill bridges persistent storage and runtime exploration by reconstructing in-memory objects from saved state.

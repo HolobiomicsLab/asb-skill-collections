@@ -13,7 +13,7 @@ metadata:
   - MS-DIAL
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -42,7 +42,6 @@ attribution:
 
 # TOML Configuration File Preparation for LipoCLEAN
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare a TOML-formatted options file to configure LipoCLEAN's machine learning lipid filter with MS-DIAL export locations and version-specific parameters. This is a prerequisite step that translates MS-DIAL dataset locations and tool settings into a structured configuration consumable by the LipoCLEAN command-line interface.

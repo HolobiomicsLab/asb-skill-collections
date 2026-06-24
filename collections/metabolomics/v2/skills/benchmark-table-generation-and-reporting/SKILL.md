@@ -23,7 +23,7 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -60,7 +60,6 @@ attribution:
 
 # benchmark-table-generation-and-reporting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic execution and compilation of computational performance metrics (wall-clock time) across multiple datasets, sample sizes, and analysis configurations to generate a reproducible benchmark table. This skill ensures consistent measurement of pipeline performance across real and synthetic datasets and validates reported execution times against published benchmarks.

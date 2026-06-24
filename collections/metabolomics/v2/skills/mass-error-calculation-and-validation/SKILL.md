@@ -17,7 +17,7 @@ metadata:
   - ProForma 2.0
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -48,7 +48,6 @@ attribution:
 
 # mass-error-calculation-and-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and validate the mass deviation (Δm/z) between theoretical fragment ion m/z values and observed spectrum peaks to assess annotation accuracy and fragment ion assignment correctness. This skill ensures that annotated ions fall within specified mass tolerance thresholds, a prerequisite for reliable peptidoform identification.

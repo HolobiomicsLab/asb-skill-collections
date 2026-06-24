@@ -22,7 +22,7 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -59,7 +59,6 @@ attribution:
 
 # spectrum-processing-throughput-benchmarking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure and compare the per-spectrum processing throughput (spectra per second) of different mass spectrometry data processing libraries under identical filtering and scaling operations. This skill establishes whether one library outperforms alternatives for production workflows.

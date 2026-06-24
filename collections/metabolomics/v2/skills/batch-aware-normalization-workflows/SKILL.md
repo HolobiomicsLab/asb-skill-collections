@@ -15,7 +15,7 @@ metadata:
   - Asari
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -44,7 +44,6 @@ attribution:
 
 # batch-aware-normalization-workflows
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A normalization strategy for LC-MS metabolomics feature tables that corrects inter-sample intensity biases while accounting for batch structure, computing per-sample normalization factors independently within each batch before applying inter-batch normalization. This prevents batch effects from inflating or deflating normalization factors across the entire dataset.

@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # record-field-transformation-and-collation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform and collate tabular records into structured dictionaries by mapping source fields to output headers, filtering, grouping, and optionally applying custom Python code. This skill is essential when converting raw experimental metadata from spreadsheets into clean, schema-compliant JSON-intermediate representations suitable for validation and format conversion.

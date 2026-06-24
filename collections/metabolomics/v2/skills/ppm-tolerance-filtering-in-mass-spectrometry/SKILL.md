@@ -18,7 +18,7 @@ metadata:
   - KEGG database
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -56,7 +56,6 @@ attribution:
 
 # ppm-tolerance-filtering-in-mass-spectrometry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply mass accuracy thresholds (parts per million tolerance) to validate molecular formula assignments and biochemical transformation matches in FT-ICR MS data. This skill filters spurious identifications and retains only high-confidence chemical entities and transformations based on ultra-high mass accuracy.

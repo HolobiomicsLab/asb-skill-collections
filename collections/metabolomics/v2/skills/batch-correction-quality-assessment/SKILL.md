@@ -17,7 +17,7 @@ metadata:
   - pcpfm
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -49,7 +49,6 @@ attribution:
 
 # Batch-Correction Quality Assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that batch correction via pycombat preserves the structural integrity of multi-batch metabolomics feature tables while demonstrating systematic reduction in inter-batch variance. This skill ensures corrected tables retain identical sample and feature dimensions and exhibit lower inter-batch intensity variance for shared features.

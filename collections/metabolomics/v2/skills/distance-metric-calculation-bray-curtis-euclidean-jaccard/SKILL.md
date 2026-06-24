@@ -18,7 +18,7 @@ metadata:
   - R (version 4.0.2 or above)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -54,7 +54,6 @@ attribution:
 
 # distance-metric-calculation-bray-curtis-euclidean-jaccard
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate pairwise dissimilarity distances among samples in a normalized metabolomics peak intensity matrix using Bray-Curtis, Euclidean, or Jaccard metrics. These distances serve as input to ordination and statistical tests (PERMANOVA, NMDS) to evaluate whether grouping factors produce significant differences in metabolite composition.

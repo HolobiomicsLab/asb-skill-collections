@@ -16,7 +16,7 @@ metadata:
   - Python 3.8+
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -47,7 +47,6 @@ attribution:
 
 # tandem-mass-spectrum-clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster millions of MS/MS spectra by converting high-resolution peaks to low-dimensional vectors via feature hashing, constructing nearest neighbor indexes for fast similarity searching, and applying density-based clustering to group similar spectra. This workflow enables efficient large-scale spectral organization without exhaustive pairwise comparisons.

@@ -27,7 +27,7 @@ metadata:
   - py4cytoscape
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -64,7 +64,6 @@ attribution:
 
 # software-dependency-management-and-environment-setup
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install and configure MetaboDirect and its runtime dependencies (Python, R, Cytoscape with specific libraries) to ensure a reproducible computational environment for FT-ICR MS data analysis. This skill is essential because MetaboDirect's pipeline integrates multiple languages and external tools, and version mismatches or missing libraries cause silent failures or incomplete output.

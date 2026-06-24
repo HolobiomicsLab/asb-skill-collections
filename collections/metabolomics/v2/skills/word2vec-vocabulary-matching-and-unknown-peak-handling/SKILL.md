@@ -20,7 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -57,7 +57,6 @@ attribution:
 
 # Word2Vec Vocabulary Matching and Unknown Peak Handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill detects and quantifies spectral peaks and neutral losses that fall outside a trained Word2Vec model's vocabulary, then filters spectra to exclude those with excessive unknown features. By computing a 'missing fraction' (the proportion of total spectral intensity from unmapped peaks/losses), this approach ensures that only spectra with sufficient feature overlap are scored, avoiding unreliable Spec2Vec similarity estimates on out-of-distribution data.

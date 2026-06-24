@@ -15,7 +15,7 @@ metadata:
   - psims
   - pyteomics.proforma
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -45,7 +45,6 @@ attribution:
 
 # proforma-notation-parsing-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate ProForma notation strings representing modified peptide sequences using the pyteomics.proforma module. This skill enables robust handling of standardized proteomics sequence representations with chemical modifications.

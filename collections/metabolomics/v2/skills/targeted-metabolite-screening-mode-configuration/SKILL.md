@@ -18,7 +18,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -52,7 +52,6 @@ attribution:
 
 # targeted-metabolite-screening-mode-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A diagnostic workflow to visually validate that targeted metabolite compounds are correctly detected and integrated within their expected m/z and retention time windows before full-scale LC–MS peak detection. This skill uses TARDIS screening mode to generate EIC plots that confirm target visibility and localization, ensuring parameter windows are appropriately set for downstream processing.

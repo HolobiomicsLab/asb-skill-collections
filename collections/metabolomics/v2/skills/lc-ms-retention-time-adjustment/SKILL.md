@@ -17,7 +17,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -49,7 +49,6 @@ attribution:
 
 # LC-MS Retention Time Adjustment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Refine expected retention times (RT) for targeted compounds by executing a screening run in TARDIS, then updating the compound table with corrected RT values before full peak detection. This skill ensures accurate peak detection across all sample runs by accounting for instrument drift and separation variability.

@@ -14,7 +14,7 @@ metadata:
   - Bioconda
   - pip
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -43,7 +43,6 @@ attribution:
 
 # installation-validation-and-diagnostics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Python package (here, Pyteomics) has been successfully installed through a package manager and that its core modules load without import errors. This skill confirms both package availability in a distribution channel and functional integrity of the installed codebase.

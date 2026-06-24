@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -53,7 +53,6 @@ attribution:
 
 # drift-time-to-ccs-correlation-modeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a calibration model that converts ion mobility drift times and reference m/z values into collision cross section (CCS) values using the single-field calibration equation (Stow et al. 2017). This skill produces calibration coefficients (beta, tfix) that enable prediction of CCS for unknown ions in positive or negative ion-mobility spectrometry modes.

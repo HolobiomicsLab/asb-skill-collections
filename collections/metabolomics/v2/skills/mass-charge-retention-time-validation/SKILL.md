@@ -17,7 +17,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -48,7 +48,6 @@ attribution:
 
 # Mass-charge-retention-time validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates whether targeted compounds are detectable within expected m/z and retention time windows in LC-MS runs prior to peak detection. This screening step ensures that target compounds are visible in the data before committing computational resources to full peak integration.

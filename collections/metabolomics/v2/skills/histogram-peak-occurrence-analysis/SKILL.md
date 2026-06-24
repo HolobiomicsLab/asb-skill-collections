@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # Rank Mass Differences by Occurrence with topAdducts
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill ranks mass differences observed in MALDI-MS imaging data by their occurrence frequency and cross-references them against known chemical adducts. It surfaces the most abundant molecular adducts—which represent potential metabolite–matrix or metabolite–salt ion associations—from a binned mass difference histogram.

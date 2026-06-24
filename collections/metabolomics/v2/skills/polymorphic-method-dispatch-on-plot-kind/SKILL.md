@@ -19,7 +19,7 @@ metadata:
   - bokeh
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -54,7 +54,6 @@ attribution:
 
 # polymorphic-method-dispatch-on-plot-kind
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A class hierarchy and dispatch mechanism that routes plot kind arguments (spectrum, chromatogram, mobilogram, peakmap) to concrete plot subclasses, each implementing backend-specific rendering for mass spectrometry data visualization. This enables consistent Pandas-style plotting API across matplotlib (static) and bokeh/plotly (interactive) backends.

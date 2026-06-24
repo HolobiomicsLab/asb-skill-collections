@@ -16,7 +16,7 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -51,7 +51,6 @@ attribution:
 
 # metabolite-abundance-stratification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify FT-ICR MS metabolite peaks by abundance rank and apply sample-wise sum-normalization to enable fair comparison of chemodiversity metrics across samples with varying total ion currents. This skill is essential when raw peak intensities span multiple orders of magnitude and downstream diversity calculations (Shannon, Gini-Simpson, Rao's quadratic entropy) are sensitive to absolute abundance differences.

@@ -16,7 +16,7 @@ metadata:
   - SummarizedExperiment
   - mzQualityDashboard
   - xcms
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -52,7 +52,6 @@ attribution:
 
 # compound-reliability-rsd-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomics compounds for reportability based on relative standard deviation (RSD) of quality control samples, background signal percentage, and compound presence thresholds. This skill identifies and removes unreliable compounds that fail to meet reproducibility and signal quality criteria across pooled QC samples.

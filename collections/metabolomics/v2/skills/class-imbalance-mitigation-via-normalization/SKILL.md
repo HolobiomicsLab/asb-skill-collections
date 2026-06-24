@@ -16,7 +16,7 @@ metadata:
   - TensorFlow
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -49,7 +49,6 @@ attribution:
 
 # class-imbalance-mitigation-via-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Balance class representation in neural network training batches by enforcing equal peak counts across all classes, set to the smallest class size. This mitigates training bias toward overrepresented classes in imbalanced LCMS labeling datasets.

@@ -16,7 +16,7 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -45,7 +45,6 @@ attribution:
 
 # derivatizing-matrix-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Register and configure novel chemical derivatizing matrices (beyond FMP-10) into Met-ID to enable automated metabolite identification with non-standard adduct annotations in mass spectrometry imaging. This skill extends Met-ID's extensibility architecture to support any derivatizing reagent with defined ionization behavior and expected adduct forms.

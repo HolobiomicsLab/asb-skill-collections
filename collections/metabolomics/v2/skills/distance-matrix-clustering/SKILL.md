@@ -15,7 +15,7 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -45,7 +45,6 @@ attribution:
 
 # Density-Based Clustering on Sparse Distance Matrices
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply density-based clustering (DBSCAN) to a sparse pairwise distance matrix computed from nearest neighbor indexes to group similar MS/MS spectra into clusters. This skill is the final step in large-scale spectrum clustering pipelines, converting similarity relationships into labeled cluster assignments.

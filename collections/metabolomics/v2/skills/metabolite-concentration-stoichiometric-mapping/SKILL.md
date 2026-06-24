@@ -16,7 +16,7 @@ metadata:
   - INTEGRATE pipeline
   - constraint-based stoichiometric metabolic models (ENGRO2)
   - Python (v3.0+)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -45,7 +45,6 @@ attribution:
 
 # metabolite-concentration-stoichiometric-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map measured intracellular metabolite concentrations to stoichiometric coefficients in a constraint-based metabolic model to compute Reaction Propensity Scores (RPS) that quantify expected metabolic flux differences driven by substrate availability alone, independent of gene expression regulation.

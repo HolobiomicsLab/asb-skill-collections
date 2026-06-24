@@ -13,7 +13,7 @@ metadata:
   - Python
   - Jupyter
   - cwieder/metabolomics-ORA
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -41,7 +41,6 @@ attribution:
 
 # ora-statistical-background-definition
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define and construct the statistical background set for Over-representation Analysis (ORA) in metabolomics by identifying which metabolites from a pathway database serve as the denominator for significance testing. Correct background definition is critical because misspecification invalidates p-value calculations and leads to false pathway discoveries.

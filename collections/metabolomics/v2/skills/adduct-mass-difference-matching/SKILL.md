@@ -16,7 +16,7 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -47,7 +47,6 @@ attribution:
 
 # adduct-mass-difference-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill matches observed mass differences from MS imaging data against a reference database of known molecular adducts (such as matrix or salt ions) to identify and rank abundant adduct species. It is applied after computing pairwise mass differences between all detected peaks and binning them into a histogram, using the mass2adduct package's adductMatch() and topAdducts() functions.

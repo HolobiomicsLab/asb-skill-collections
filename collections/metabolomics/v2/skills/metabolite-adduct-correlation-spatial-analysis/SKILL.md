@@ -21,7 +21,7 @@ metadata:
   - pointsAdducts
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -55,7 +55,6 @@ attribution:
 
 # metabolite-adduct-correlation-spatial-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Test spatial co-localization of candidate parent and adduct ion pairs in mass spectrometry imaging data using two-tailed Pearson correlation on pixel-wise intensity profiles. This skill validates putative adduct assignments by testing whether annotated ion pairs exhibit correlated abundance patterns across tissue pixels, a prerequisite for establishing true molecular relationships.

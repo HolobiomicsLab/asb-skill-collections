@@ -11,7 +11,7 @@ metadata:
   - Python
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -43,7 +43,6 @@ attribution:
 
 # metadata-field-extraction-from-headers
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract nested metadata structures from tagged tabular column headers by parsing export tags (prefixed with # or #.) to identify table names, field names, and record identifiers, producing a hierarchical JSON representation suitable for downstream directive resolvers.

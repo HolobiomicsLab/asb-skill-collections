@@ -15,7 +15,7 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -45,7 +45,6 @@ attribution:
 
 # energy-based-formula-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank candidate chemical formulae against tandem mass spectra using end-to-end energy-based neural modeling, without reliance on fragmentation tree databases or external spectrum libraries. This approach learns formula-spectrum agreement directly from MS/MS peak patterns and intensities.

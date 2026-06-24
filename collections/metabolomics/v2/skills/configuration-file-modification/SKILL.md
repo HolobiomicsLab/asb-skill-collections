@@ -13,7 +13,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -42,7 +42,6 @@ attribution:
 
 # configuration-file-modification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Modify YAML configuration files to alter instrument allowlists and dataset filtering parameters in FIDDLE preprocessing pipelines, enabling expansion or refinement of training and test compound pools for mass spectrometry molecular formula prediction.

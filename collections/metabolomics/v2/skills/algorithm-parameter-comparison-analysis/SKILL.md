@@ -18,7 +18,7 @@ metadata:
   techniques:
   - GC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -53,7 +53,6 @@ attribution:
 
 # algorithm-parameter-comparison-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare molecular formula assignment behavior by running the same algorithm with different parameter configurations (e.g., first-hit vs. all-hits modes) and contrasting assignment counts, score distributions, and quality metrics. This skill enables evidence-based parameter tuning for mass spectrometry annotation workflows.

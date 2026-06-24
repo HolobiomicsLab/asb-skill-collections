@@ -14,7 +14,7 @@ metadata:
   - Python
   - Jupyter
   - cwieder/metabolomics-ORA
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -42,7 +42,6 @@ attribution:
 
 # metabolomics-ora-methodology
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reproduce and validate Over-representation Analysis (ORA) simulations in metabolomics to understand pitfalls and apply best practices for pathway enrichment. This skill involves executing Python-based simulations in a Jupyter notebook to regenerate results demonstrating how ORA performs under different experimental conditions and parameter choices.

@@ -10,7 +10,7 @@ metadata:
   tools:
   - MAGMa
   - Docker Compose
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -40,7 +40,6 @@ attribution:
 
 # environment-variable-provisioning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure environment variables for containerized microservices in a multi-component orchestration system. This skill defines service-specific variables (ports, database connections, inter-service dependencies) that enable correct communication and resource allocation across containerized components.

@@ -14,7 +14,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -46,7 +46,6 @@ attribution:
 
 # metadata-transformation-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that tabular experimental metadata has been correctly extracted into an intermediate JSON representation and transformed to a target format (e.g., mwTab) by validating against schema constraints and comparing output against expected canonical results. This skill ensures data integrity across the extract–validate–convert pipeline used in metabolomics data deposition workflows.

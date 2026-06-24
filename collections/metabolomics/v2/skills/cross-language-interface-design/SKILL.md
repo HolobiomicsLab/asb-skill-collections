@@ -19,7 +19,7 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -52,7 +52,6 @@ attribution:
 
 # cross-language-interface-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement function wrapping and object marshalling layers that translate APIs between compiled/interpreted languages (Python ↔ R) while preserving type semantics and enabling seamless execution within unified analytical workflows. This skill is essential when integrating specialized libraries from one language ecosystem into another without forcing users to switch execution contexts.

@@ -18,7 +18,7 @@ metadata:
   - Numba
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -50,7 +50,6 @@ attribution:
 
 # peptide-modification-representation-and-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and represent post-translational modifications on peptidoforms using the ProForma 2.0 standard, enabling consistent annotation of modified amino acids in mass spectrometry workflows. This skill bridges modification ontologies (PSI-MOD) with peptide sequence specification for fragment ion matching and spectrum annotation.

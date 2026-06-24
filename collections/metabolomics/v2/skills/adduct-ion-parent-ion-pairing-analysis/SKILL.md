@@ -18,7 +18,7 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # Adduct-Ion Parent-Ion Pairing Analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate parent–adduct ion pairs in MALDI-MSI data by matching mass differences to known chemical adducts (e.g., sodium, potassium, matrix ions) and confirming spatial correlation between paired peaks across imaging pixels. This skill distinguishes true molecular adducts from spurious mass differences and illuminates metabolites that form abundant salt or matrix adducts.

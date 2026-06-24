@@ -15,7 +15,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -48,7 +48,6 @@ attribution:
 
 # peak-table-row-count-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that filtering operations on LC-MS peak tables have correctly modified the original data object by comparing row counts before and after filtering. This skill is essential for detecting unintended in-place modifications or shallow-copy behavior in R6-based metabolomics data structures.

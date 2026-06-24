@@ -17,7 +17,7 @@ metadata:
   - pycombat
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,7 +46,6 @@ attribution:
 
 # percentile-feature-filtering-for-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomics feature tables to retain only common features present across a minimum percentile of samples, then use this filtered feature set to compute per-sample normalization factors (median or mean TIC) for inter-sample intensity correction. This reduces noise from rare features and stabilizes normalization in untargeted LC-MS metabolomics workflows.

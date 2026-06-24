@@ -18,7 +18,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -56,7 +56,6 @@ attribution:
 
 # chromatographic-peak-characterization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction and quality assessment of chromatographic peaks for targeted compounds in LC–MS data, producing integrated area-under-curve (AUC), intensity, signal-to-noise ratio, and peak correlation metrics across multiple sample runs. This skill is essential when transitioning from targeted screening to full quantitative analysis of metabolomic or lipidomic cohorts.

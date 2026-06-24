@@ -13,7 +13,7 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -44,7 +44,6 @@ attribution:
 
 # deep-learning-module-instantiation-and-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate and validate a deep-learning feature extraction module (such as spectral feature extractors in chemprop-IR) by loading its implementation, configuring it with molecular inputs, and verifying that output tensors match expected dimensionality, data types, and architectural constraints.

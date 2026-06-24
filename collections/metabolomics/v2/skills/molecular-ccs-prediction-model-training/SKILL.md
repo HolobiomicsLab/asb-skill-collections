@@ -17,7 +17,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -46,7 +46,6 @@ attribution:
 
 # molecular-ccs-prediction-model-training
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and evaluate graph neural network models to predict collision cross section (CCS) values for small molecules from SMILES strings and optional 3D coordinates. This skill enables comparative evaluation of different GNN architectures on standardized train/test splits from curated databases (METLIN-CCS, CCSBase).

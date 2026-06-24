@@ -19,7 +19,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -51,7 +51,6 @@ attribution:
 
 # dropout-regularization-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply dropout regularization during training of a Siamese neural network to prevent overfitting and improve generalization when predicting structural similarities from MS/MS spectral pairs. Dropout probabilistically removes activations during training and is selectively applied at inference time to quantify prediction uncertainty via Monte-Carlo ensembles.

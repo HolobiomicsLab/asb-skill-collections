@@ -19,7 +19,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # deep-learning-model-inference-on-test-sets
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a pretrained deep learning model to generate predictions (embeddings, similarity scores, or structural labels) on a held-out test set, then compute performance metrics by comparing predictions against ground-truth labels. This skill is essential for validating model generalization and comparing against baseline methods on structurally independent data.

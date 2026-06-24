@@ -15,7 +15,7 @@ metadata:
   - MiMeNet
   - scikit-learn
   - scipy.stats
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -47,7 +47,6 @@ attribution:
 
 # background-distribution-null-hypothesis-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate an empirical null distribution by shuffling paired input features independently and re-running cross-validation, then use percentile thresholds from this background to identify statistically significant predictions. This skill decouples true signal from spurious correlations arising from compositional data or batch effects.

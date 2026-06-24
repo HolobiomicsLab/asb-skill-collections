@@ -15,7 +15,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,7 +46,6 @@ attribution:
 
 # Feature Table Moniker Management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A systematic approach to naming and tracking feature tables throughout metabolomics preprocessing, enabling reproducible reference to intermediate and final tables in the pipeline. Feature tables are identified by monikers (symbolic names) stored in experiment metadata, allowing downstream steps to retrieve, transform, and save results without hardcoding file paths.

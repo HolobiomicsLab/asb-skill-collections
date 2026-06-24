@@ -18,7 +18,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -49,7 +49,6 @@ attribution:
 
 # AIF Spectrum Fragment Database Matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match experimental MS/MS spectra from all-ion fragmentation LC–MS data against ion fragment libraries to assign metabolite identities to detected features. This skill bridges processed feature tables (from xcms/RamClustR) with ranked lipid or metabolite annotations by comparing fragmentation patterns.

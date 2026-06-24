@@ -16,7 +16,7 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -47,7 +47,6 @@ attribution:
 
 # mass-difference-calculation-from-spectral-peaks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate all pairwise mass differences from MS imaging peak lists to identify potential molecular adducts. This skill detects mass shifts between detected ions that may indicate adduct formation with matrix, salt, or solvent species.

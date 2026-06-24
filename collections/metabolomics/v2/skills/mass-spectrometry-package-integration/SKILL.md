@@ -17,7 +17,7 @@ metadata:
   - reticulate
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -50,7 +50,6 @@ attribution:
 
 # Cross-Language Mass Spectrometry Package Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Wrap Python mass spectrometry libraries (matchms, spectrum_utils) as R-callable functions within the Spectra framework, enabling seamless bidirectional translation of spectral objects and leveraging specialized Python algorithms (e.g., CosineGreedy similarity, spectral normalization) in R-based MS analysis workflows.

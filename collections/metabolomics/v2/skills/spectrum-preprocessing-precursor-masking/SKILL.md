@@ -15,7 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # spectrum-preprocessing-precursor-masking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Zero the precursor m/z channel in tandem MS/MS spectra before passing them to a frozen neural encoder to prevent the model from over-relying on the precursor ion intensity as a trivial prediction signal. This preprocessing step is critical in transfer-learning scenarios where the encoder is frozen and only downstream formula-prediction heads are trained.

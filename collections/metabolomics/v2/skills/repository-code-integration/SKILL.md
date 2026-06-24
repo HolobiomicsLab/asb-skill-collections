@@ -18,7 +18,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -50,7 +50,6 @@ attribution:
 
 # Repository Code Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate published research code from a versioned repository (clone, install dependencies, instantiate trained models) to enable reproducible application of a computational method on new data. This skill is essential when a research article describes a novel algorithm or model whose implementation is released publicly.

@@ -11,7 +11,7 @@ metadata:
   - Shiny
   - R (base and package ecosystem)
   - RTools
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -39,7 +39,6 @@ attribution:
 
 # system-library-dependency-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and document platform-specific system library dependencies, file path conventions, and conditional code branches in a cross-platform application to enable targeted remediation and cross-platform compatibility testing. This skill applies static analysis and codebase auditing to surface hidden OS-specific constraints before attempting deployment.

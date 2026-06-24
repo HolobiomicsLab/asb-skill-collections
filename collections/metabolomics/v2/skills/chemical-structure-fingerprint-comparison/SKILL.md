@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -60,7 +60,6 @@ attribution:
 
 # Chemical Structure Fingerprint Comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare MS/MS spectra to chemical structure similarity using molecular fingerprints (e.g., Tanimoto-based) as a ground-truth benchmark for validating spectral similarity methods. This skill evaluates whether a spectral similarity metric (cosine, Spec2Vec, etc.) correlates with true structural relationships derived from InChIKey planar structure matching.

@@ -18,7 +18,7 @@ metadata:
   - mass2adduct (R package)
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # Multiple-testing correction (Bonferroni)
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Bonferroni correction to control false-positive rate when testing statistical significance across many pairwise comparisons in mass spectrometry imaging data. This correction adjusts p-value thresholds by the total number of tests performed, protecting against spurious findings when screening thousands of ion-pair correlations.

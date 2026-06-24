@@ -12,7 +12,7 @@ metadata:
   - Dockerfile (multi-stage build with --target flag)
   - Docker
   - Dockerfile (multi-stage build syntax)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -42,7 +42,6 @@ attribution:
 
 # Multi-stage Dockerfile Interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and execute multi-stage Docker builds to produce variant container images from a single Dockerfile, then measure and validate their compressed and uncompressed sizes against documented ranges. This skill is essential when verifying that containerized applications meet storage and performance SLAs across different deployment targets (CLI, development, Linux, Windows).

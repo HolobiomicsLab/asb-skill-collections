@@ -13,7 +13,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -41,7 +41,6 @@ attribution:
 
 # intensity-drift-artifact-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detection and correction of intensity drift artifacts in targeted mass spectrometry quantification data using statistical models and calibration-based strategies. This skill addresses systematic loss or gain of signal intensity over the course of a measurement sequence, which compromises quantification accuracy.

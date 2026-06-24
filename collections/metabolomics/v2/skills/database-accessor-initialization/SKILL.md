@@ -10,7 +10,7 @@ metadata:
   - pip
   - sqlalchemy
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -40,7 +40,6 @@ attribution:
 
 # database-accessor-initialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a module depending on conditional dependencies successfully initializes its database accessor when those dependencies are installed. This skill ensures optional dependencies are correctly resolved and do not cause import failures.

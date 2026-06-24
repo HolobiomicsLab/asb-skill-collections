@@ -22,7 +22,7 @@ metadata:
   - Flux Variability Analysis (FVA)
   - GLPK solver
   - YSI bioanalyzer (YSI2950)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -60,7 +60,6 @@ attribution:
 
 # metabolic-model-constraint-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integration of transcriptomics-derived Reaction Activity Scores (RAS), nutrient availability bounds, and exo-metabolomics flux ratio constraints into cell-relative constraint-based metabolic models to narrow the feasible solution space and enable prediction of cell-line-specific metabolic flux distributions.

@@ -18,7 +18,7 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -53,7 +53,6 @@ attribution:
 
 # neural-network-threshold-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize classification thresholds for a trained neural network model by computing true vs. false positive rates across probability thresholds and selecting the threshold that maximizes the difference between true positives and false positives. This skill is essential for tuning NeatMS peak classification to balance sensitivity and specificity in automated LCMS false positive filtering.

@@ -18,7 +18,7 @@ metadata:
   - R 4.0.2
   - R
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -54,7 +54,6 @@ attribution:
 
 # microbial-phage-infection-experimental-design-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret metabolomic responses of marine bacteria to infection by different phage types (HP1, HS2, control) using multivariate statistical analysis (PERMANOVA) on FT-ICR MS peak intensity data. This skill determines whether phage type produces statistically significant differences in exometabolome composition.

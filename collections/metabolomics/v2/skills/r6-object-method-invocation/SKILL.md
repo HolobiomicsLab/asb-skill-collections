@@ -13,7 +13,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -45,7 +45,6 @@ attribution:
 
 # r6-object-method-invocation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke methods on R6 reference-semantic objects to perform in-place data transformations without copying the entire data structure. This skill leverages R6's reference semantics to efficiently update metabolomics feature tables through chained filter and summary operations.

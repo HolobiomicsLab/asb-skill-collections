@@ -16,7 +16,7 @@ metadata:
   - MetaMS
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -47,7 +47,6 @@ attribution:
 
 # GC-MS Spectral Library Matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated compound identification in low-resolution GC-MS data by matching retention-index-calibrated mass spectra against a reference spectral library. This skill enables high-confidence structural assignment of detected peaks using retention index filtering and spectral similarity scoring.

@@ -17,7 +17,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -47,7 +47,6 @@ attribution:
 
 # formula-ranking-accuracy-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the ranking quality of predicted chemical formulas and adduct assignments by computing top-k accuracy metrics (top-1, top-5, top-10) on held-out test spectra with annotated ground-truth formulas. This skill verifies whether a formula inference model (e.g., MIST-CF) correctly places the true molecular formula within the top-k candidates ranked by model confidence.

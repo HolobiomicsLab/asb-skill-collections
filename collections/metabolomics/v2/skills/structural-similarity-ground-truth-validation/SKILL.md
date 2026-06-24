@@ -22,7 +22,7 @@ metadata:
   - Pandas / NumPy
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -60,7 +60,6 @@ attribution:
 
 # structural-similarity-ground-truth-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate spectral similarity scoring methods by comparing their rankings against ground-truth structural annotations (InChIKeys) and computing receiver-operator-characteristic curves to measure true-positive and false-positive rates. This skill establishes whether a similarity metric (cosine, modified cosine, Spec2Vec, etc.) correlates with actual chemical structure similarity.

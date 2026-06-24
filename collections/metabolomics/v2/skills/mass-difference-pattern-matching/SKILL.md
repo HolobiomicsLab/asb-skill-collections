@@ -15,7 +15,7 @@ metadata:
   - SLAW grouping module
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -43,7 +43,6 @@ attribution:
 
 # mass-difference-pattern-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Grouping of detected LC-MS features into isotopologue and adduct clusters by identifying features that share the same molecular ion but differ by characteristic mass shifts (e.g., C13, N15, D isotopes or [M+H]+, [M+Na]+, [M+NH4]+ adducts). This skill consolidates redundant ion representations into interpretable molecular entities for downstream analysis.

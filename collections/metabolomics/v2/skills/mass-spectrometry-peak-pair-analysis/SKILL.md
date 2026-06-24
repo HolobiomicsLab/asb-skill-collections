@@ -18,7 +18,7 @@ metadata:
   - R (devtools, knitr, rmarkdown, pandoc)
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # mass-spectrometry-peak-pair-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank molecular adducts in mass spectrometry imaging by computing pairwise mass differences between all detected peaks, binning them into a histogram, and matching observed differences to known chemical species. This skill reveals adduct formation between target metabolites and matrix or salt ions, illuminating signals otherwise missed in standard peak annotation.

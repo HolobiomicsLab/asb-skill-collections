@@ -14,7 +14,7 @@ metadata:
   - mzQuality
   - R
   - SummarizedExperiment
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -45,7 +45,6 @@ attribution:
 
 # linear-regression-concentration-calibration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate absolute compound concentrations in metabolomics samples by fitting linear regression models to calibration line samples with known spiked concentrations, applied to batch-corrected compound/internal-standard ratios. This enables quantitative downstream analysis when reference standards are available.

@@ -16,7 +16,7 @@ metadata:
   - Docker Engine / Docker Desktop for Mac
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -48,7 +48,6 @@ attribution:
 
 # mzML output validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that vendor raw files have been successfully converted to valid mzML format by checking file presence and XML schema compliance. This skill ensures the CLI-based conversion from vendor formats through ProteoWizard bindings has completed correctly and produced well-formed output.

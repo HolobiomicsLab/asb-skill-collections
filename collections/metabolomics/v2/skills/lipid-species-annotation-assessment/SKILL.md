@@ -14,7 +14,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -45,7 +45,6 @@ attribution:
 
 # Lipid Species Annotation Assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect, rank, and compare alternative candidate lipid annotations for a given LC-MS feature, evaluating score distributions and chain-level variants to understand annotation confidence and structural ambiguity. This skill is essential when a feature matches multiple lipid species or fragments and you need to systematically document which candidates rank highest and why lower-scoring alternatives remain plausible.

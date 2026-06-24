@@ -15,7 +15,7 @@ metadata:
   - GitHub Actions
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -46,7 +46,6 @@ attribution:
 
 # java-build-artifact-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a Java application build workflow completes successfully and produces expected executable artifacts. This skill monitors GitHub Actions CI/CD pipelines, retrieves build logs and artifacts, and documents pass/fail outcomes to verify reproducibility of development releases.

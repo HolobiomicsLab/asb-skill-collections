@@ -15,7 +15,7 @@ metadata:
   - M2S
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -44,7 +44,6 @@ attribution:
 
 # retention-time-mass-correspondence-resolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match untargeted metabolomic features across two LC-MS datasets by resolving one-to-one correspondences based on m/z and retention time similarity. This skill enables cross-dataset feature alignment by computing pairwise similarity scores and selecting highest-confidence matches within specified mass and temporal tolerances.

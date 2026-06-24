@@ -13,7 +13,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -47,7 +47,6 @@ attribution:
 
 # json-data-structure-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform intermediate JSON data structures into alternative JSON schemas or formats by applying conversion directives (str, matrix, section) that selectively extract, filter, aggregate, and coerce field values. This skill enables conversion of validated experimental metadata into repository-ready formats such as mwTab.

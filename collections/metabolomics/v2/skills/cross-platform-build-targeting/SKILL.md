@@ -17,7 +17,7 @@ metadata:
   - Docker Engine
   - Wine
   - .NET Framework 4.8
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -49,7 +49,6 @@ attribution:
 
 # cross-platform-build-targeting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure multi-stage Docker builds with platform-specific runtime targets to enable a Windows-only .NET Framework 4.8 GUI application (AirdPro) to execute on macOS and Linux hosts. This skill pairs application compilation in a build stage with Wine runtime environments, producing separate optimized image targets for Windows native, Linux GUI via X11, CLI-only batch processing, and development modes.

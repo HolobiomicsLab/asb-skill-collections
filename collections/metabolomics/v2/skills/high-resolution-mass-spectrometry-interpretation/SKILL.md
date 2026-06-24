@@ -18,7 +18,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -47,7 +47,6 @@ attribution:
 
 # High-Resolution Mass Spectrometry Interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret LC- or GC-HRMS data to prioritize potential PFAS features using complementary mass-defect filtering, Kendrick analysis, and MS2 fragment matching. This skill combines multiple prioritization techniques to rank candidate features in non-target screening workflows, enabling efficient identification of perfluorinated and polyfluorinated compounds from vendor-neutral mzML spectral data.

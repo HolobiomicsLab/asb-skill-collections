@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -60,7 +60,6 @@ attribution:
 
 # spectral-peak-word-embedding-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry fragment peaks and neutral losses into word tokens suitable for Word2Vec embedding, enabling learned representation of fragmental relationships. This representation bridges spectral data and natural language processing to capture structural similarity patterns in MS/MS spectra.

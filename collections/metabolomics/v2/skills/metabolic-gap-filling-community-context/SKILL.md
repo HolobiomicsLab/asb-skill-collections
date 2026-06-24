@@ -11,7 +11,7 @@ metadata:
   - http://edamontology.org/topic_0621
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -41,7 +41,6 @@ attribution:
 
 # metabolic-gap-filling-community-context
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Community-dependent gap-filling leverages shared metabolic context across multiple microbial or plant community members to identify and fill metabolic gaps in individual consensus reconstructions. This skill is essential when working with multi-member community models where interdependencies and metabolic overlap can resolve gaps that cannot be addressed by single-organism reconstruction alone.

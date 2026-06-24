@@ -15,7 +15,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -44,7 +44,6 @@ attribution:
 
 # Reference Dataset Validation for Metabolite Ions
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate predicted metabolite adduct m/z values against published reference datasets (e.g., Nature Methods FMP-10 data) to ensure the derivatizing matrix ionization rules are correctly implemented and produce chemically plausible ions. This skill is essential for confirming that automated adduct enumeration workflows generate ions matching experimentally observed patterns.

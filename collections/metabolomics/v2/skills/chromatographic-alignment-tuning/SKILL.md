@@ -16,7 +16,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -46,7 +46,6 @@ attribution:
 
 # chromatographic-alignment-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated optimization of retention time and m/z alignment parameters across LC-MS samples to establish consensus feature coordinates for untargeted metabolomics. This skill tunes alignment module parameters by iterating candidate combinations against quality metrics (feature reproducibility, detection counts, signal-to-noise) to select the parameter set that maximizes cross-sample peak alignment fidelity.

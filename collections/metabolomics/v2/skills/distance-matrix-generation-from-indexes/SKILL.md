@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # distance-matrix-generation-from-indexes
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a sparse pairwise distance matrix by querying nearest neighbor indexes for each spectrum vector, computing distances only between each spectrum and its retrieved k nearest neighbors rather than exhaustively comparing all spectra. This enables scalable clustering of millions of MS/MS spectra by reducing the computational burden from O(n²) all-vs-all comparisons to O(n·k) sparse comparisons.

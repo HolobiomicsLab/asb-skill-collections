@@ -13,7 +13,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -47,7 +47,6 @@ attribution:
 
 # string-value-construction-from-tabular-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct single string values from filtered and sorted records in a tabular JSON table using the str conversion directive with test, sort_by, and delimiter fields. This skill enables aggregation of multiple protocol or metadata records into a human-readable summary field suitable for deposition into structured data repositories.

@@ -16,7 +16,7 @@ metadata:
   - Adam optimizer
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -48,7 +48,6 @@ attribution:
 
 # dense-neural-network-layer-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct sequential dense layers with regularization, batch normalization, and dropout to build a neural network base encoder that transforms high-dimensional binned MS/MS spectra into lower-dimensional embeddings. This skill is essential for building the embedding pipeline of Siamese networks in spectral similarity learning.

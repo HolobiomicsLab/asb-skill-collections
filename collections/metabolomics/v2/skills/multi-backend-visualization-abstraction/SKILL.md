@@ -19,7 +19,7 @@ metadata:
   - bokeh
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -54,7 +54,6 @@ attribution:
 
 # multi-backend-visualization-abstraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement an abstract class hierarchy that decouples mass spectrometry visualization logic from rendering backend (matplotlib, bokeh, plotly), enabling consistent plotting APIs and kind-based dispatch across static and interactive backends. This skill bridges domain-specific plot semantics (spectrum, chromatogram, mobilogram, peakmap) with backend-specific rendering implementations.

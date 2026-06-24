@@ -11,7 +11,7 @@ metadata:
   - chemprop-IR
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -42,7 +42,6 @@ attribution:
 
 # spectral-feature-engineering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and engineer spectral features from molecular structures using message passing neural networks for infrared spectral prediction tasks. This skill implements domain-specific feature construction within the chemprop-IR pipeline to transform molecular representations into tensors suitable for spectral property prediction.

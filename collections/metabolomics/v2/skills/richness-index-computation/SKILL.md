@@ -16,7 +16,7 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -51,7 +51,6 @@ attribution:
 
 # richness-index-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute abundance-based metabolite richness metrics (Chao1, Shannon, Gini-Simpson) from normalized peak-intensity matrices to quantify the diversity of detected molecular species in metabolomic samples. This skill enables comparison of metabolite richness across treatment groups or sample conditions.

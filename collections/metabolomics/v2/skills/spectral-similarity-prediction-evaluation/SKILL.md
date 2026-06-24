@@ -9,7 +9,7 @@ metadata:
   - RDKit
   - Python
   - scikit-learn
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -48,7 +48,6 @@ attribution:
 
 # spectral-similarity-prediction-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## When to use
 
 Use when the workflow requires spectral-similarity-prediction-evaluation.

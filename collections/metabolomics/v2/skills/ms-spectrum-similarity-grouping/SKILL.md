@@ -17,7 +17,7 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -48,7 +48,6 @@ attribution:
 
 # ms-spectrum-similarity-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply density-based clustering (DBSCAN) to a sparse pairwise distance matrix derived from nearest neighbor indexes to group similar MS/MS spectra into clusters. This is the final step in the falcon pipeline for large-scale spectrum clustering, assigning each spectrum a cluster label based on cosine distance thresholds and local density.

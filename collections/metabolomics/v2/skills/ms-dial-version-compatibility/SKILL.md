@@ -15,7 +15,7 @@ metadata:
   - MS-DIAL
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -44,7 +44,6 @@ attribution:
 
 # Generate and validate MS-DIAL version-specific configuration files
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate default TOML-formatted options files for MS-DIAL 4 or MS-DIAL 5 via the LipoCLEAN `--print` argument, then validate that the configuration matches the target MS-DIAL version's column schema and scaling conventions before running lipid quality filtering. This skill ensures model and configuration compatibility, since models trained on one MS-DIAL version will not work with the other.

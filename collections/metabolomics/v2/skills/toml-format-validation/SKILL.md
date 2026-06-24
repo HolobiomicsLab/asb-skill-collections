@@ -11,7 +11,7 @@ metadata:
   tools:
   - LipoCLEAN
   - MS-DIAL
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -40,7 +40,6 @@ attribution:
 
 # Generate and validate TOML configuration files for MS-DIAL version-specific pipelines
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate default TOML-formatted options files for MS-DIAL 4 or 5 using LipoCLEAN's `--print` argument, then validate the file structure and content before editing for downstream lipid quality filtering. This ensures version-specific configuration keys and syntax are correct before customization.

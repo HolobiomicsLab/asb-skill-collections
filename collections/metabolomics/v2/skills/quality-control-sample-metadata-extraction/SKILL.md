@@ -13,7 +13,7 @@ metadata:
   - QComics
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -42,7 +42,6 @@ attribution:
 
 # quality-control-sample-metadata-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and structure quality-control pool (QCpool) sample metadata and measurement values exported from Sciex MultiQuant (>v3.0.3) txt files into a machine-readable format suitable for downstream quality assessment workflows. This skill bridges instrument output and quality-control analytics by standardizing heterogeneous tabular data into validated, typed data frames.

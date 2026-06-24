@@ -19,7 +19,7 @@ metadata:
   - Classyfire
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -49,7 +49,6 @@ attribution:
 
 # mass-spectrometry-feature-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate untargeted LC-MS/MS features with predicted molecular substructures and chemical taxonomy using fragmentation tree analysis, molecular formula ranking, and fingerprint prediction. This enables chemically-informed metabolomic profiling by assigning structural properties to detected mass-spectrometry features.

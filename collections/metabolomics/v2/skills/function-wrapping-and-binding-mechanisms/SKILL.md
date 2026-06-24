@@ -19,7 +19,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -52,7 +52,6 @@ attribution:
 
 # function-wrapping-and-binding-mechanisms
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A cross-language binding technique that wraps Python mass spectrometry library functions (e.g., matchms, spectrum_utils) as callable R functions within the Spectra object model, enabling seamless data interchange and interoperability between R and Python analysis workflows in a single process.

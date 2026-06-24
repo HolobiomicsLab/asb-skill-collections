@@ -13,7 +13,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -43,7 +43,6 @@ attribution:
 
 # precursor-peak-removal-mass-tolerance
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove the precursor (parent) ion peak from a tandem mass spectrum using a mass tolerance window, eliminating the dominant peak that would otherwise dominate intensity-based scoring in spectral matching and annotation. This preprocessing step is critical for peptide identification workflows where the precursor peak can mask weaker fragment ions.

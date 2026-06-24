@@ -24,7 +24,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -59,7 +59,6 @@ attribution:
 
 # microbiome-metabolome-prediction-modeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and evaluate neural network models to predict metabolite abundances from microbiome composition data, with cross-validated performance assessment and identification of well-predicted metabolites above a background correlation threshold. This skill enables data-driven discovery of microbe-metabolite interaction structures without mechanistic prior knowledge.

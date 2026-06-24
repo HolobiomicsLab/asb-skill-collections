@@ -19,7 +19,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -57,7 +57,6 @@ attribution:
 
 # Spectrum pair retrieval and ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and rank all unique spectrum pairs from a spectral library by computing pairwise similarity scores (MS2DeepScore, Spec2Vec, or modified cosine), then evaluate retrieval performance by thresholding similarity scores and comparing precision-recall trade-offs against structural similarity labels (Tanimoto fingerprints). This skill enables benchmarking of spectral similarity measures for their ability to identify structurally related compounds.

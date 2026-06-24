@@ -18,7 +18,7 @@ metadata:
   - Nextflow4MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -48,7 +48,6 @@ attribution:
 
 # Configure Nextflow pipeline for high-performance computing with Singularity containerization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill enables deployment of Nextflow bioinformatics workflows on HPC systems by configuring Singularity container runtime and resource directives (queue, CPU, memory) in place of Docker. It is essential when executing metabolomics or other data-intensive pipelines on institutional computing clusters where Singularity is the standard container runtime.

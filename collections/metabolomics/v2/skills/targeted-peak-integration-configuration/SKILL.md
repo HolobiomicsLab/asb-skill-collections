@@ -19,7 +19,7 @@ metadata:
   - knitr / kableExtra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -52,7 +52,6 @@ attribution:
 
 # targeted-peak-integration-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and validate input parameters for targeted peak detection and integration in LC-MS data, including proper m/z window segregation, target list definition, and screening to ensure artifact-free extraction of ion chromatograms. This skill prevents sawtooth artefacts and ensures correct peak profiling by routing scan windows through accurate mass_range separation.

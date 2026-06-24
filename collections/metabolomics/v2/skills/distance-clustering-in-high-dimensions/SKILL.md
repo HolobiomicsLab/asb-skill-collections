@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -51,7 +51,6 @@ attribution:
 
 # distance-clustering-in-high-dimensions
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster detected features across multiple LC-IMS-MS/MS samples by applying N-dimensional distance-based grouping in (mz, drift_time, retention_time) space with user-defined tolerances. This skill enables cross-sample feature matching and alignment by identifying features that occupy the same region across dimensions, accounting for instrument drift and calibration variation.

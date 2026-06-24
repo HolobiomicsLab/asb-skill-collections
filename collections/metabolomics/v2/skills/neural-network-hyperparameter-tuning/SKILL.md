@@ -23,7 +23,7 @@ metadata:
   - ReLU activation
   - NumPy
   - SciPy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -67,7 +67,6 @@ attribution:
 
 # neural-network-hyperparameter-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic selection of multilayer perceptron hyperparameters (layer size, number of layers, L2 regularization, dropout rate) optimized per dataset to maximize metabolite prediction accuracy. This skill involves empirical tuning via cross-validation to identify dataset-specific configurations that balance model complexity and generalization.

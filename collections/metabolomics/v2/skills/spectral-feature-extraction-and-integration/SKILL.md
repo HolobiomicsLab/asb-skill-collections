@@ -12,7 +12,7 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -42,7 +42,6 @@ attribution:
 
 # spectral-feature-extraction-and-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and integrate infrared spectral features into message passing neural network architectures to enable molecular property prediction from both graph structure and spectral data. This skill reconstructs extended chemprop models that fuse molecular representations with spectral feature embeddings.

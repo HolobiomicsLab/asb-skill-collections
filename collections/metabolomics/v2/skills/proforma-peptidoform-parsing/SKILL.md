@@ -17,7 +17,7 @@ metadata:
   - spectrum_utils MsmsSpectrum.annotate_proforma()
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -49,7 +49,6 @@ attribution:
 
 # ProForma 2.0 peptidoform parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse ProForma 2.0 peptidoform strings (e.g., 'EM[Oxidation]EVEES[Phospho]PEK') to extract amino acid sequences and position-specific post-translational modifications for subsequent fragment ion annotation and spectrum matching. This is a prerequisite for annotating observed MS/MS spectrum peaks against modified peptide sequences.

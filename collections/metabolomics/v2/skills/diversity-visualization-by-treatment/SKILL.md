@@ -14,7 +14,7 @@ metadata:
   - SYNCSA
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -49,7 +49,6 @@ attribution:
 
 # diversity-visualization-by-treatment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate grouped box plots and statistical summaries of alpha and functional diversity metrics stratified by treatment or inoculation status in metabolomic or chemodiversity datasets. This skill enables visual and quantitative comparison of diversity trajectories across experimental conditions using abundance-based (Shannon, Gini-Simpson, Chao1) and trait-based (Rao's quadratic entropy) indices.

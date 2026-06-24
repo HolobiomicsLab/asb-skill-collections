@@ -19,7 +19,7 @@ metadata:
   - Keras/TensorFlow
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -54,7 +54,6 @@ attribution:
 
 # probability-threshold-calibration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate the classification probability threshold of a trained neural network model on a labelled validation dataset to maximize the difference between true positives and false positives. This ensures the model's decision boundary is optimized for the specific task of filtering false positive MS1 peaks in untargeted LCMS workflows.

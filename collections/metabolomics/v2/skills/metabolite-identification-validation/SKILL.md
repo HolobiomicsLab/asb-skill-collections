@@ -13,7 +13,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -42,7 +42,6 @@ attribution:
 
 # metabolite-identification-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a metabolite identification tool correctly recognizes and applies derivatizing matrices to produce expected adduct annotations in mass spectrometry imaging. This skill verifies both the extensibility of the identification system to novel matrices and the accuracy of predicted adduct forms against ground truth.

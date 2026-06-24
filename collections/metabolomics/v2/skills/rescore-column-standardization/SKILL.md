@@ -14,7 +14,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -43,7 +43,6 @@ attribution:
 
 # rescore-column-standardization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rename and standardize Rescore (k) output columns from FIDDLE v2.0.0's Siamese-architecture rescore model to a uniform format for downstream analysis and CSV export. This ensures consistent column naming across different inference runs and integrations with external tools.

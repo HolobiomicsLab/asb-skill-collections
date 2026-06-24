@@ -11,7 +11,7 @@ metadata:
   - R
   - mzQuality
   - SummarizedExperiment
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -50,7 +50,6 @@ attribution:
 
 # quality-control-sample-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and remove outlier pooled quality control (QC) samples and mis-injected study samples based on statistical tests and internal standard areas in metabolomics experiments. This skill ensures only reliable QC samples are retained for batch correction and compound reliability assessment.

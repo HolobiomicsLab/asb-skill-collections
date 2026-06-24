@@ -16,7 +16,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -47,7 +47,6 @@ attribution:
 
 # precursor-product-mass-pairing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match precursor–product ion mass pairs from MS2 spectra against a database of known PFAS diagnostic fragments to flag potential PFAS features in non-target HRMS screening. This skill identifies characteristic fragmentation patterns that distinguish PFAS from background features.

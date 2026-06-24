@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES matrix directive
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # header-key-value-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps table columns to dictionary key-value pairs using a headers specification (key=value syntax), enabling transformation of flat tabular records into structured key-value objects. This is a core operation within the MESSES matrix directive for converting JSON table data into lists of dictionaries.

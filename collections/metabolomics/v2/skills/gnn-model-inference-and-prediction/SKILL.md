@@ -17,7 +17,7 @@ metadata:
   - train_and_predict.py
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -46,7 +46,6 @@ attribution:
 
 # gnn-model-inference-and-prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute forward passes through trained graph neural network models on held-out test datasets to generate molecular property predictions (e.g., collision cross section values) and compute generalizability metrics (RMSE, MAE, R²) to validate model performance on unseen data.

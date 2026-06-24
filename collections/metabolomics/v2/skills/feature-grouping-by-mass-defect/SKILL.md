@@ -15,7 +15,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -44,7 +44,6 @@ attribution:
 
 # feature-grouping-by-mass-defect
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups high-resolution mass spectrometry features into homologous series by computing Kendrick mass defect (KMD) values and clustering features with equivalent or near-equivalent KMD within a user-specified tolerance. This identifies structurally related PFAS compounds that differ by repeating units (e.g., CF₂) in non-target LC- or GC-HRMS workflows.

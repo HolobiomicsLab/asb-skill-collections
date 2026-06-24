@@ -18,7 +18,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -52,7 +52,6 @@ attribution:
 
 # feature-detection-in-chromatographic-ms-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction of chromatographic features (m/z, retention time, intensity, charge state, isotope pattern) from centroided data-dependent acquisition mzML files using pyOpenMS, forming the input foundation for downstream PFAS prioritization and non-target screening workflows.

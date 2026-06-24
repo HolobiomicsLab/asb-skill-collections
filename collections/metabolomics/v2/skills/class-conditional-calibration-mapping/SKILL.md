@@ -16,7 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -45,7 +45,6 @@ attribution:
 
 # class-conditional-calibration-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute collision cross section (CCS) values for ions stratified by biomolecular class assignment, using class-specific reference standards to calibrate drift-time-to-CCS relationships without requiring prior feature identification. This enables direct CCS calculation from TWIM-MS arrival time data conditioned on experimental class labels.

@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -52,7 +52,6 @@ attribution:
 
 # gc-ms-chromatogram-processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction and processing of gas chromatography–mass spectrometry (GC-MS) chromatographic peaks from raw NetCDF data, including baseline correction, peak deconvolution, and retention index calibration to enable downstream compound identification via spectral library matching.

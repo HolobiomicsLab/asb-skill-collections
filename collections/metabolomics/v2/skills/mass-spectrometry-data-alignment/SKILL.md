@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -45,7 +45,6 @@ attribution:
 
 # mass-spectrometry-data-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align untargeted metabolomic features across two LC-MS datasets by computing pairwise similarity scores on m/z and retention time dimensions, then resolving one-to-one feature correspondences. This skill enables integration of metabolomic datasets for comparative analysis.

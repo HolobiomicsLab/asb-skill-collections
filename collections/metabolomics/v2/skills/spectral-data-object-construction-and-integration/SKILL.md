@@ -20,7 +20,7 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -55,7 +55,6 @@ attribution:
 
 # Spectral Data Object Construction and Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill encapsulates the process of loading LC–MS raw data (mzML files) into in-memory Spectra objects, annotating them with sample metadata (sampleData), and integrating them into MsExperiment containers for downstream targeted analysis. It bridges raw chromatographic data with structured experimental metadata required by TARDIS and related peak-detection workflows.

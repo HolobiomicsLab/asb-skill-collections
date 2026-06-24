@@ -15,7 +15,7 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -43,7 +43,6 @@ attribution:
 
 # Transformer Input Preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode discrete chemical formulae into fixed-length sinusoidal embedding vectors for input to a neural transformer architecture. This skill bridges raw chemical formula strings to learnable continuous representations suitable for energy-based scoring of formula–spectrum pairs.

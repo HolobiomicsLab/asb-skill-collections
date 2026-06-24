@@ -17,7 +17,7 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -45,7 +45,6 @@ attribution:
 
 # Container Image Building and Conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build or convert container images (Docker↔Singularity) to enable pipeline portability across execution environments—from local Docker-capable workstations to high-performance computing clusters that require Singularity for resource isolation and compliance.

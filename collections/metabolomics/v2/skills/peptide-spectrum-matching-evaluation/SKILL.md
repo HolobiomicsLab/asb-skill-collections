@@ -17,7 +17,7 @@ metadata:
   - Universal Spectrum Identifier (USI)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -51,7 +51,6 @@ attribution:
 
 # Peptide-Spectrum Matching Evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the quality and completeness of peptide-spectrum matches by quantifying the fraction of observed peaks that receive fragment ion annotations under different annotation strategies (e.g., with and without neutral losses). This skill measures how effectively fragment annotation settings improve peak interpretation coverage.

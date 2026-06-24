@@ -13,7 +13,7 @@ metadata:
   - COBRApy
   - scipy.stats
   - 'INTEGRATE pipeline (Step 10: concordanceAnalysis.py)'
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -41,7 +41,6 @@ attribution:
 
 # FDR correction for multiple testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Benjamini–Hochberg false discovery rate correction to empirical p-values derived from randomized sampling to control Type I error across reaction-level regulatory classifications. This ensures that significance thresholds account for the multiple hypothesis tests performed on thousands of metabolic reactions.

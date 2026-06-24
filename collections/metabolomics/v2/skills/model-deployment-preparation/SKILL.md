@@ -15,7 +15,7 @@ metadata:
   - Keras
   - TensorFlow Serving
   - Docker and docker-compose
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -48,7 +48,6 @@ attribution:
 
 # model-deployment-preparation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare a pre-trained Keras model for deployment in a TensorFlow Serving pipeline by converting it to HDF5 TF2 format and validating that input/output layer names match the expected schema. This skill ensures structural compliance before containerization and API exposure.

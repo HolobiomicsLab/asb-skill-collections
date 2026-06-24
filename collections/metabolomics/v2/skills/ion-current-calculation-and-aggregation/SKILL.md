@@ -16,7 +16,7 @@ metadata:
   - PCPFM (PythonCentricPipelineForMetabolomics)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -45,7 +45,6 @@ attribution:
 
 # ion-current-calculation-and-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute per-sample total ion current (TIC) by summing feature intensities across a percentile-filtered feature set, then derive per-sample normalization factors as the ratio of global TIC median (or mean) to each sample's TIC. This enables intensity bias correction in untargeted LC-MS metabolomics datasets.

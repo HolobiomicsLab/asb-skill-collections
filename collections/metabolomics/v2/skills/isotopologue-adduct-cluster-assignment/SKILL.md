@@ -13,7 +13,7 @@ metadata:
   - SLAW grouping module
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -41,7 +41,6 @@ attribution:
 
 # isotopologue-adduct-cluster-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups detected LC-MS features into isotopologue and adduct clusters by clustering features that share the same molecular ion and mass differences corresponding to isotopic shifts (C13, N15, D) or common adduct transformations ([M+H]+, [M+Na]+, [M+NH4]+). This step operates after peak picking and sample alignment to consolidate redundant feature representations into molecular equivalence classes.

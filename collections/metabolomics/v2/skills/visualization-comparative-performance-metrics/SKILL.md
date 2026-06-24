@@ -16,7 +16,7 @@ metadata:
   - pyOpenMS-Viz
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -44,7 +44,6 @@ attribution:
 
 # visualization-comparative-performance-metrics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically extract, compute, and visualize execution-time metrics (median, min, max) across multiple plotting backends for mass spectrometry visualization plot types to identify performance leaders and bottlenecks. This skill enables quantitative backend comparison at the plot-type granularity, critical for choosing the optimal backend for interactive or static rendering workflows.

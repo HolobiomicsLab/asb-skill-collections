@@ -21,7 +21,7 @@ metadata:
   - Reifycs Abf Converter
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -50,7 +50,6 @@ attribution:
 
 # mzML Metabolomics Data Import
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import and validate liquid chromatography–high-resolution mass spectrometry (LC-HRMS) metabolomics data in mzML format into a reproducible containerized Nextflow workflow for downstream processing with MS-DIAL. This skill ensures data integrity and format compliance before peak detection and feature quantification.

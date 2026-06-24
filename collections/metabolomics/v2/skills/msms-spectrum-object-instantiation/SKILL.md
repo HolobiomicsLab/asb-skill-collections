@@ -15,7 +15,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -47,7 +47,6 @@ attribution:
 
 # msms-spectrum-object-instantiation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate an MsmsSpectrum object by populating it with resolved spectrum data (m/z array, intensity array, precursor m/z, charge state, retention time, and metadata) retrieved from online proteomics repositories via Universal Spectrum Identifier (USI) resolution. This creates a structured, in-memory spectrum object that is ready for subsequent processing and annotation workflows.

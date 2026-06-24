@@ -17,7 +17,7 @@ metadata:
   - MetaboDirect
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -50,7 +50,6 @@ attribution:
 
 # aromaticity-index-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computation of the modified Aromaticity Index (AImod) from elemental composition of assigned molecular formulas to characterize the density of carbon-to-carbon double bonds and aromatic structure in metabolites. This index is a key thermodynamic descriptor for evaluating metabolite lability and degree of structural condensation in complex organic mixtures analyzed by FT-ICR MS.

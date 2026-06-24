@@ -15,7 +15,7 @@ metadata:
   - BiocManager
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -46,7 +46,6 @@ attribution:
 
 # Library Import and Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that MS/MS spectral libraries imported from .msp files or other sources are correctly converted into appropriately formatted and annotated CSV library entries with proper ionisation mode designation and peak-picking thresholds applied. This skill ensures spectral databases are ready for metabolite annotation workflows.

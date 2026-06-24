@@ -18,7 +18,7 @@ metadata:
   - pcpfm
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -52,7 +52,6 @@ attribution:
 
 # metabolite-mass-database-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match empirical compounds to known metabolites by querying JMS-compliant reference databases (HMDB, LMSD) using inferred molecular formulas. This Level 4 annotation step assigns candidate metabolite identities to grouped features without requiring explicit m/z tolerance specification.

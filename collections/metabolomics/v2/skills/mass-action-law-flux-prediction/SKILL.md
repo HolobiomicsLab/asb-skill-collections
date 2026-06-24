@@ -17,7 +17,7 @@ metadata:
   - COBRApy (implied by workflow)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -47,7 +47,6 @@ attribution:
 
 # Reconstruct the RPS computation from intracellular metabolomics via the mass action law
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Reaction Propensity Scores (RPS) from intracellular metabolite abundances by applying the mass action law principle—where reaction rate is proportional to the product of substrate concentrations each raised to their stoichiometric coefficient. This provides a metabolomics-based prediction of metabolic flux differences driven by substrate availability alone, independent of enzymatic activity or transcriptional regulation.

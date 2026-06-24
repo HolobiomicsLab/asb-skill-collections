@@ -14,7 +14,7 @@ metadata:
   - R
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -45,7 +45,6 @@ attribution:
 
 # adduct-annotation-against-reference-library
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass differences from MS imaging data against a curated reference library of known chemical adducts (e.g., matrix or salt ion complexes) to identify and annotate probable molecular adduct ion pairs. This skill bridges untargeted mass difference detection with chemical interpretation by assigning biological or instrumental significance to specific pairwise mass shifts.

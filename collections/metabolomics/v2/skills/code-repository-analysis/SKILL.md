@@ -23,7 +23,7 @@ metadata:
   - py4cytoscape
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -60,7 +60,6 @@ attribution:
 
 # code-repository-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically extract and cross-reference implementation details from a software repository's source code, dependency declarations, and documentation to construct a comprehensive feature inventory and comparative analysis table. This skill is essential when assessing the analytical capabilities of a bioinformatics pipeline against peer tools.

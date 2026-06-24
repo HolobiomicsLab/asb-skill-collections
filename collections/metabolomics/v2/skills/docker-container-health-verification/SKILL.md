@@ -17,7 +17,7 @@ metadata:
   - Docker Compose
   - TensorFlow Serving
   - mwang87/NP-Classifier
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -47,7 +47,6 @@ attribution:
 
 # docker-container-health-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that Docker containers running NP Classifier services (server and TensorFlow Serving) are operational and responding correctly before executing classification requests. This skill ensures the API is ready to accept SMILES queries and return properly structured responses.

@@ -15,7 +15,7 @@ metadata:
   - msimat()
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # mass-spectrometry-peak-enumeration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically enumerate all pairwise mass differences from a mass spectrometry imaging (MSI) dataset to identify potential molecular adducts. This skill transforms a raw MSI intensity matrix into a ranked catalog of mass-difference patterns, enabling discovery of salt, matrix, and metabolite adducts that may otherwise remain hidden in complex datasets.

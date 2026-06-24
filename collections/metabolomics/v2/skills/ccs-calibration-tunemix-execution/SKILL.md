@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -46,7 +46,6 @@ attribution:
 
 # ccs-calibration-tunemix-execution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the DEIMoS tunemix calibration function to positive-mode tune mix mass spectrometry data to derive a collision cross section (CCS) calibration model. This skill validates that the resulting single-field calibration achieves high goodness-of-fit (r-squared ≥ 0.9999) across the m/z range of reference compounds.

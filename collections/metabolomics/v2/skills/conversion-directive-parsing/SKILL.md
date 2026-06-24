@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -53,7 +53,6 @@ attribution:
 
 # conversion-directive-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and extract configuration from MESSES conversion directives files to enable structured transformation of intermediate JSON data into target formats. This skill is essential for setting up the conversion pipeline that translates validated experimental metadata from the intermediate JSON representation into format-specific outputs like mwTab.

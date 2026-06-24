@@ -17,7 +17,7 @@ metadata:
   - optGpSampler
   - COBRApy
   - GLPK solver
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -56,7 +56,6 @@ attribution:
 
 # Steady-state solution uniform sampling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Uniformly sample the feasible flux region of a constraint-based metabolic model to generate a large ensemble of steady-state flux distributions. This produces a probabilistic representation of all metabolically feasible solutions under the given constraints, enabling statistical characterization of flux variability across reactions and biological conditions.

@@ -16,7 +16,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -47,7 +47,6 @@ attribution:
 
 # batch-effect-assessment-via-quality-metrics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess batch effects in metabolomics mass spectrometry data by calculating quality metrics (RSDQC, background signal percentage, matrix effect, presence in QC samples) on pooled study quality control (SQC) samples and applying configurable thresholds to flag unreliable compounds and samples. This skill identifies which analytes and injections are affected by systematic variation and aids in selecting reportable results.

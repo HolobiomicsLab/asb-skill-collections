@@ -16,7 +16,7 @@ metadata:
   - NLeSC/MAGMa GitHub repository
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -46,7 +46,6 @@ attribution:
 
 # source-code-analysis-for-algorithm-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply static code analysis to scientific software repositories to extract algorithmic workflows, function call chains, and transformation rules governing in silico computation. This skill deconstructs complex chemo-informatics pipelines by tracing source code structure and reconstructing the computational logic as flowcharts or directed acyclic graphs suitable for documentation and validation.

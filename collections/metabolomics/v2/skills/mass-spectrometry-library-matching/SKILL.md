@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -59,7 +59,6 @@ attribution:
 
 # mass-spectrometry-library-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Library matching is the task of ranking unknown MS/MS spectra against a spectral database to identify chemical structures. This skill applies similarity scoring (cosine, modified cosine, or Spec2Vec) to assign candidate compounds ranked by score, controlled by threshold and minimum-peak-count criteria.

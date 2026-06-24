@@ -16,7 +16,7 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -51,7 +51,6 @@ attribution:
 
 # Reference-Peak Matching and Fallback Logic
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 An iterative mass calibration strategy that matches observed m/z peaks against known reference m/z values, progressively widening the PPM tolerance window when initial matches fall below a minimum threshold. This skill is essential for recovering calibration coefficients when sparse reference lists or high mass errors prevent sufficient matches at standard tolerances.

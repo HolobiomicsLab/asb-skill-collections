@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -46,7 +46,6 @@ attribution:
 
 # ionization-mode-classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify MS/MS spectra by ionization mode (positive or negative) based on adduct type metadata to assign appropriate ionization mode suffixes to spectral library entries. This is essential for downstream metabolite annotation, as fragment libraries are mode-specific and misclassification leads to incorrect candidate ranking.

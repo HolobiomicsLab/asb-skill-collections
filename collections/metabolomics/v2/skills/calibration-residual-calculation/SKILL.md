@@ -16,7 +16,7 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -51,7 +51,6 @@ attribution:
 
 # calibration-residual-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computation of mass calibration coefficients and residuals from matched reference m/z points using least-squares fitting or polynomial regression. This skill assesses the quality and accuracy of mass spectrum calibration by quantifying the deviation between theoretical and observed m/z values.

@@ -14,7 +14,7 @@ metadata:
   - Sciex Multiquant
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -44,7 +44,6 @@ attribution:
 
 # signal-trend-assessment-across-injections
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess instrumental drift and signal degradation in metabolomics/lipidomics quality control by computing trend metrics (slope, drift, stability index) across sequential QCpool injection data. This skill detects temporal instability in mass spectrometry signal that may compromise study reproducibility.

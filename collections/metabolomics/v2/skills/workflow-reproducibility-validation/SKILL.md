@@ -16,7 +16,7 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -46,7 +46,6 @@ attribution:
 
 # Workflow Reproducibility Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a containerized bioinformatics workflow (specifically Nextflow-based LC-HRMS metabolomics pipelines) produces consistent, portable results across diverse compute environments by executing functional tests, comparing outputs against reference datasets, and verifying resource logs and execution traces.

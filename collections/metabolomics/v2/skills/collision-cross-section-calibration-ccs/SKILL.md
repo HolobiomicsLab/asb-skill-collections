@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -53,7 +53,6 @@ attribution:
 
 # collision-cross-section-calibration-ccs
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate ion collision cross section (CCS) values from drift-time and m/z measurements using a polynomial model fitted to tune mix reference data. This skill establishes the quantitative m/z–drift-time–CCS relationship required to convert drift times into absolute CCS values for downstream feature characterization.

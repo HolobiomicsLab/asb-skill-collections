@@ -14,7 +14,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -45,7 +45,6 @@ attribution:
 
 # Spectral Metadata Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract, consolidate, and annotate MS2 spectra with isotopic relationships and adduct information across grouped feature ions in untargeted LC-MS workflows. This skill bridges peak-picked, aligned, and grouped features to their corresponding tandem mass spectra and isotopic metadata, producing a unified spectral-feature data structure.

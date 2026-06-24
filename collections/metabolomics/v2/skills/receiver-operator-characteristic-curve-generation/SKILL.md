@@ -22,7 +22,7 @@ metadata:
   - scikit-learn or scipy.metrics
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -60,7 +60,6 @@ attribution:
 
 # receiver-operator-characteristic-curve-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct ROC curves by ranking query spectra against a reference library and classifying hits as true or false positives based on structural identity (InChIKey), then computing and plotting true-positive rate versus false-positive rate across similarity score thresholds. This enables quantitative comparison of spectral similarity methods' discriminative power.

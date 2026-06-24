@@ -19,7 +19,7 @@ metadata:
   - Pandas
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -54,7 +54,6 @@ attribution:
 
 # spectrum-chromatogram-mobilogram-rendering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Render 1D mass spectrometry data (spectra, chromatograms, mobilograms) as static or interactive visualizations by plotting Pandas DataFrames with pyOpenMS-viz against x, y column dimensions. This skill bridges raw MS tabular data to publication-ready plots across matplotlib, bokeh, and plotly backends.

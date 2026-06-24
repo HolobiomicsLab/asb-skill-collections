@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -52,7 +52,6 @@ attribution:
 
 # multidimensional-coordinate-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns detected features across multiple LC-IMS-MS/MS samples by clustering them in N-dimensional space (m/z, drift time, retention time) using configurable tolerances, producing consensus coordinates and sample-membership vectors. This skill is essential when matching corresponding chemical features across datasets to account for instrument drift, calibration variation, and nonlinear retention-time shifts.

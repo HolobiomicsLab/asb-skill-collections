@@ -16,7 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -45,7 +45,6 @@ attribution:
 
 # ion-mobility-arrival-time-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert TWIM-MS ion arrival time measurements to calibrated collision cross section (CCS) values using class-specific calibration parameters. This skill is essential for quantifying biomolecular structural properties in high-dimensional multi-omic ion mobility workflows where class-appropriate calibration models must be applied to raw arrival time data.

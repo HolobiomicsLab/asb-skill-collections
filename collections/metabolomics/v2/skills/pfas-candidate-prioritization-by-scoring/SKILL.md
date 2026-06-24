@@ -17,7 +17,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -46,7 +46,6 @@ attribution:
 
 # PFAS candidate prioritization by scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prioritize potential per- and polyfluoroalkyl substance (PFAS) features detected in non-target high-resolution mass spectrometry data by computing and thresholding normalized mass defect and mass-per-carbon metrics. This skill identifies high-priority PFAS candidates from feature lists using the MD/C–m/C approach and optional Kendrick mass defect analysis.

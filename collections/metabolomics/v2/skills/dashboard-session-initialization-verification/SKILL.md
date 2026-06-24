@@ -13,7 +13,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -41,7 +41,6 @@ attribution:
 
 # dashboard-session-initialization-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a specXplore dashboard session instance correctly initializes and becomes accessible after loading a saved session data object from disk. This skill confirms the integrity of the session reconstruction workflow and readiness for interactive visual exploration.

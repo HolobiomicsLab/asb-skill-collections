@@ -18,7 +18,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -48,7 +48,6 @@ attribution:
 
 # lcms-data-format-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and validate raw LC-MS data in vendor or open formats (mzML, netCDF) for automated peak-picking and downstream processing. This skill ensures data is centroided, of uniform polarity, and properly formatted before routing to algorithm-specific wrappers.

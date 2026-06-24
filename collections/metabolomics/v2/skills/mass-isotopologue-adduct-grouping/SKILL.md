@@ -16,7 +16,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -46,7 +46,6 @@ attribution:
 
 # mass-isotopologue-adduct-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups aligned LC-MS peaks by their isotopologue and adduct relationships using mass difference and intensity ratio criteria. This step consolidates redundant ion representations of the same molecular feature, reducing complexity in the final feature table.

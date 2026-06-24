@@ -16,7 +16,7 @@ metadata:
   - TensorFlow or PyTorch
   - TensorFlow / PyTorch
   - Scikit-learn
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -56,7 +56,6 @@ attribution:
 
 # cross-validation-model-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate learned weight matrices from multiple cross-validated neural network models to construct a robust, consensus feature attribution score matrix that captures microbe-metabolite interaction patterns across model replicates. This skill isolates the signal in learned relationships from training variation by pooling weights across all CV folds and iterations.

@@ -15,7 +15,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -46,7 +46,6 @@ attribution:
 
 # spectrum-similarity-nearest-neighbor-indexing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct nearest neighbor indexes on low-dimensional spectrum vectors to enable fast, sparse pairwise similarity searching without exhaustive comparisons. This skill accelerates large-scale MS/MS spectrum clustering by trading full pairwise distance computation for efficient approximate nearest neighbor retrieval.

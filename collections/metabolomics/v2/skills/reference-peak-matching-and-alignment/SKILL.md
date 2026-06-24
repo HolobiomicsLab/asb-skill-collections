@@ -15,7 +15,7 @@ metadata:
   - Bruker Solarix
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -48,7 +48,6 @@ attribution:
 
 # reference-peak-matching-and-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match and align observed mass spectrum peaks against a reference peak list to establish calibration points, enabling mass recalibration via polynomial fitting. This skill is essential for high-resolution FT-ICR-MS where precise m/z assignment depends on matching experimental peaks to known standards within specified mass error tolerances.

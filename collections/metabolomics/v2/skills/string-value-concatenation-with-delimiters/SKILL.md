@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES convert command
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # string-value-concatenation-with-delimiters
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a single string value from multiple records in JSON by iterating over filtered and sorted records, concatenating their values with a specified delimiter. This skill is essential in the MESSES conversion pipeline when a target metadata field requires aggregation of repeated or multi-value fields from a source table.

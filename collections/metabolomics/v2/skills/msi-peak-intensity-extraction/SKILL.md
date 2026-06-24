@@ -19,7 +19,7 @@ metadata:
   - msimunging.pl
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -53,7 +53,6 @@ attribution:
 
 # MSI Peak Intensity Extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and import mass spectrometry imaging (MSI) intensity matrices from vendor software exports or third-party formats into a standardized msimat object for downstream adduct analysis. This skill converts raw MSI data into a uniform computational representation suitable for pairwise mass-difference calculations and spatial correlation testing.

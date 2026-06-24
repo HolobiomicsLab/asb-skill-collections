@@ -16,7 +16,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -47,7 +47,6 @@ attribution:
 
 # instrument-metadata-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and parse instrument type, chromatographic modality, and data acquisition signatures from MS file headers and metadata to enable automated classification and routing of heterogeneous MS data (LC, GC, IMS, MS imaging) to specialized analysis modules. This skill is essential for building flexible, data-type-agnostic workflows that dispatch raw data to the correct downstream processors.

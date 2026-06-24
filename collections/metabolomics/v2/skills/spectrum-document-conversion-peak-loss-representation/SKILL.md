@@ -22,7 +22,7 @@ metadata:
   - NumPy, Pandas, SciPy
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -61,7 +61,6 @@ attribution:
 
 # spectrum-document-conversion-peak-loss-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectra into text-like documents by representing fragment peaks and neutral losses as discrete words, enabling natural language processing algorithms (e.g., Word2Vec) to learn spectral embeddings. This representation bridges MS/MS spectra and NLP by treating peaks and losses as vocabulary units whose co-occurrence patterns encode structural relationships.

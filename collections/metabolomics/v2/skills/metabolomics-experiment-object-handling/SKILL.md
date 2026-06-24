@@ -17,7 +17,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -53,7 +53,6 @@ attribution:
 
 # metabolomics-experiment-object-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create, validate, and manipulate SummarizedExperiment objects as the canonical data container for mzQuality metabolomics analyses. This skill bridges raw metabolomics data (tab-delimited or Sciex OS formats) into a structured R object that tracks compounds, samples, assays, and quality metrics throughout the analysis pipeline.

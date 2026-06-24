@@ -15,7 +15,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -52,7 +52,6 @@ attribution:
 
 # spectral-noise-peak-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove low-intensity noise peaks from mass spectrometry spectra by filtering based on intensity thresholds relative to the base peak and limiting the total number of peaks retained. This preprocessing step enhances signal-to-noise ratio and prepares spectra for downstream peptide fragment annotation and database matching.

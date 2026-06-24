@@ -14,7 +14,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -43,7 +43,6 @@ attribution:
 
 # neural-network-layer-design-and-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement custom neural network modules (such as FormulaEncoder and RescoreHead) that transform domain-specific input vectors into fixed-dimension embeddings and combine multiple embeddings to produce scalar logits. This skill is essential when adapting deep learning architectures to novel molecular mass spectrometry tasks where off-the-shelf layers do not capture the required input-output relationships.

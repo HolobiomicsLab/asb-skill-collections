@@ -19,7 +19,7 @@ metadata:
   - Seaborn
   - Python
   - NumPy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -60,7 +60,6 @@ attribution:
 
 # feature-attribution-score-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate neural network feature attribution scores (weights) between microbes and metabolites using Olden's method to quantify the strength and direction of learned interactions. These scores reveal which microbes most strongly influence metabolite predictions and form the basis for clustering microbes and metabolites into functional modules.

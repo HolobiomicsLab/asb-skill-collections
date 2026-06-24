@@ -21,7 +21,7 @@ metadata:
   - Cytoscape
   - SciPy
   - Pandas
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -61,7 +61,6 @@ attribution:
 
 # microbe-metabolite-attribution-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute feature attribution scores linking individual microbes to predicted metabolites using Olden's method applied to trained neural network weights. This quantifies the directional and magnitude contribution of each microbe to each metabolite prediction, enabling downstream functional module discovery.

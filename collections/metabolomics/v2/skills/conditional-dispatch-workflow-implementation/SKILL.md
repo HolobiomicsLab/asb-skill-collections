@@ -16,7 +16,7 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -51,7 +51,6 @@ attribution:
 
 # Conditional-Dispatch Workflow Implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A pattern for implementing mutually exclusive signal-processing branches in mass spectrometry workflows, where spectrum properties or user parameters trigger selection of one noise-thresholding method (relative_abundance, signal_noise, or log) to filter and retain different peak populations from raw MS data.

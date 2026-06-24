@@ -19,7 +19,7 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # spectral-embedding-extraction-from-neural-networks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract fixed-dimensional dense vector representations (embeddings) from MS/MS spectra using a trained Siamese neural network's base network component. These embeddings encode learned chemically meaningful features and enable downstream tasks such as spectral clustering, visualization, and structural similarity prediction without requiring explicit molecular fingerprint computation.

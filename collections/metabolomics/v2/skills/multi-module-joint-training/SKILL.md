@@ -15,7 +15,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # Multi-module joint training
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train multiple neural network modules jointly while selectively freezing components to preserve learned representations and focus optimization on trainable submodules. In FIDDLE's rescore pipeline, this involves freezing a pretrained TCN spectrum encoder while jointly optimizing a FormulaEncoder and RescoreHead with binary cross-entropy loss.

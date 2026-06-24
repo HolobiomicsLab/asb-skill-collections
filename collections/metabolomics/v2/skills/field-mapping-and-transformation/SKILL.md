@@ -13,7 +13,7 @@ metadata:
   - jsonschema
   - messes
   - Python eval()
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -47,7 +47,6 @@ attribution:
 
 # field-mapping-and-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply conversion directives (str, override, code, record_id, for_each, test, sort_by, sort_order, delimiter, fields) to resolve dynamic field values from input JSON documents, supporting conditional filtering, iteration, Python code evaluation, and sorting. This skill bridges tabular experimental metadata and repository-ready JSON formats via structured directive specifications.

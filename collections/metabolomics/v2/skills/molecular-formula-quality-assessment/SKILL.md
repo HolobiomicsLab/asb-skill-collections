@@ -17,7 +17,7 @@ metadata:
   - MetaboDirect
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -54,7 +54,6 @@ attribution:
 
 # molecular-formula-quality-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quality assessment and filtering of molecular formula assignments from FT-ICR MS data using error thresholds and presence criteria. This skill removes unreliable formula assignments and low-confidence peaks before downstream analysis, ensuring that only high-quality molecular identifications are retained for metabolomic characterization.

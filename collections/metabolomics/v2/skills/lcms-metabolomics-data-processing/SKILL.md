@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -47,7 +47,6 @@ attribution:
 
 # lcms-metabolomics-data-processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a containerized Nextflow workflow to process liquid chromatography–high-resolution mass spectrometry (LC-HRMS) metabolomics data from raw .mzML or .abf format through MS-DIAL feature detection and peak alignment, followed by MSFLO annotation and statistical analysis. This skill ensures reproducible metabolomics pipelines across local, containerized, and high-performance computing environments.

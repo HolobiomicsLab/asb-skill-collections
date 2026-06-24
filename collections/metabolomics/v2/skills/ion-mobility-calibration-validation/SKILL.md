@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -52,7 +52,6 @@ attribution:
 
 # ion-mobility-calibration-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates collision cross section (CCS) calibration coefficients derived from ion mobility spectrometry data by applying the single-field calibration equation to reference standards and assessing model fit quality. This skill ensures that drift time and m/z reference measurements convert to reliable CCS calibration coefficients suitable for downstream ion characterization.

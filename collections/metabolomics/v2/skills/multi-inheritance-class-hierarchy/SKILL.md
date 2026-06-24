@@ -16,7 +16,7 @@ metadata:
   - Plotly
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -44,7 +44,6 @@ attribution:
 
 # Multi-inheritance class hierarchy for backend abstraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design a layered class architecture using multiple inheritance to decouple plotting configuration, core rendering logic, and backend-specific implementations, enabling seamless switching between matplotlib, Bokeh, and Plotly without duplicating visualization code.

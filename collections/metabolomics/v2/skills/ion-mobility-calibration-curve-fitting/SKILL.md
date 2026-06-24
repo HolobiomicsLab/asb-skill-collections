@@ -15,7 +15,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -44,7 +44,6 @@ attribution:
 
 # ion-mobility-calibration-curve-fitting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a regression model (linear or polynomial) to drift time vs. collision cross section (CCS) reference standards to establish a calibration curve for converting experimental TWIM-MS arrival times into calibrated CCS values. This is a core step in high-dimensional multi-omic ion mobility mass spectrometry data analysis.

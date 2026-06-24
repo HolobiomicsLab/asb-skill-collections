@@ -15,7 +15,7 @@ metadata:
   - GitHub Actions
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -48,7 +48,6 @@ attribution:
 
 # git-repository-cloning-and-version-control
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Clone a remote Git repository to a local development environment and inspect version-controlled artifacts (e.g., workflow files, source code) to understand project structure, CI/CD configuration, and reproducibility prerequisites. This skill is essential for reproducing computational workflows and validating automated checks defined in repository metadata.

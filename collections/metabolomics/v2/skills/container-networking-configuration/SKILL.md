@@ -12,7 +12,7 @@ metadata:
   tools:
   - MAGMa
   - Docker Compose
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -42,7 +42,6 @@ attribution:
 
 # container-networking-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure inter-service networking and dependencies in Docker Compose to orchestrate multiple containerized microservices as a cohesive system. This skill ensures that services can discover and communicate with each other while respecting startup order and health constraints.

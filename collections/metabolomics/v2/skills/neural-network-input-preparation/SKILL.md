@@ -17,7 +17,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -52,7 +52,6 @@ attribution:
 
 # neural-network-input-preparation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare peak matrix batches from raw LCMS data for neural network training by loading mzML and feature tables into a NeatMS Experiment, then instantiating a NN_handler to generate training/test/validation splits with configurable matrix dimensions, margin encoding, and class balancing. This skill ensures that input peak matrices conform to expected dimensions and class distributions before model training.

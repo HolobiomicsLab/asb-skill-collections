@@ -15,7 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # instrument-type-filtering-gnps
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter MS/MS spectra from GNPS datasets by instrument type (e.g., adding 'ftms' to an allowlist) to curate instrument-specific training and test partitions for deep learning models. This skill is essential when preprocessing heterogeneous spectral databases to match model instrument specificity and achieve target dataset sizes.

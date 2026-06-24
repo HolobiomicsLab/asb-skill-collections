@@ -19,7 +19,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -53,7 +53,6 @@ attribution:
 
 # treemap-visualization-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a treemap visualization to display the distribution and proportions of ions across filter status categories (passed/failed) from qc_summary() output. This skill enables rapid visual assessment of filtering efficiency and ion loss across multiple quality control filters in metabolomics workflows.

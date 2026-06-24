@@ -17,7 +17,7 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -51,7 +51,6 @@ attribution:
 
 # de-novo-precursor-mass-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate MS1 precursor masses and rank chemical formula and adduct assignments from tandem MS/MS spectra without reference to spectrum databases, using an end-to-end energy-based neural network that scores agreement between candidate formulas and observed peaks.

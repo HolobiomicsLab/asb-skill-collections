@@ -13,7 +13,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -47,7 +47,6 @@ attribution:
 
 # json-conversion-directive-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply conversion directives (str, matrix, or section value_type patterns) to transform intermediate JSON metadata into target format representations, using filtering, sorting, and field selection to aggregate or restructure tabular records. This skill is essential when converting structured experimental metadata from MESSES's standardized JSON schema into domain-specific formats like mwTab for repository deposition.

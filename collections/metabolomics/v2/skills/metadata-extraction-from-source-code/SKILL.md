@@ -11,7 +11,7 @@ metadata:
   tools:
   - MAGMa
   - GitHub
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -41,7 +41,6 @@ attribution:
 
 # metadata-extraction-from-source-code
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract architectural metadata (component names, roles, interdependencies, and functional descriptions) from source code repositories, README files, and configuration artifacts to reconstruct system design and workflow dependencies. This skill is essential when documentation is sparse or distributed across multiple files and you need to understand how discrete subproject components interact.

@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -56,7 +56,6 @@ attribution:
 
 # physicochemical-property-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute fundamental physico-chemical properties of polypeptides—including mass, isotopic distribution, charge, pI, and chromatographic retention time—using the Pyteomics mass module. This skill enables rapid characterization of peptide and protein sequences as a foundation for downstream proteomics data analysis.

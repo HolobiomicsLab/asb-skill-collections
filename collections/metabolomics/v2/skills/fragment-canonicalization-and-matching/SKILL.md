@@ -13,7 +13,7 @@ metadata:
   tools:
   - transformer architecture
   - convolutional neural network
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -41,7 +41,6 @@ attribution:
 
 # fragment-canonicalization-and-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Canonicalize and match molecular fragments to standardized representations for use in transformer-based assembly workflows. This skill converts raw fragment inputs into a consistent format suitable for training and inference in fragment-to-structure prediction models.

@@ -19,7 +19,7 @@ metadata:
   - getNormalizedRAS (INTEGRATE step 3)
   - rasIntegration (INTEGRATE step 4)
   - rasTtest (INTEGRATE step 8)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -55,7 +55,6 @@ attribution:
 
 # gene-expression-constraint-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate transcriptomics-derived gene expression constraints into constraint-based metabolic models by computing Reaction Activity Scores (RAS) from GPR rules and normalized expression data, then applying these scores as flux bounds to restrict the feasible solution space and improve model predictions of cell-line-specific metabolism.

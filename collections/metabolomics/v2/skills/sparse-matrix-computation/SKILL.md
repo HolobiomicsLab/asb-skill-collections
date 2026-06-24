@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # Reconstruct nearest-neighbor index construction and sparse pairwise distance computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill constructs spatial indexes (k-d trees or LSH-based inverted indexes) from low-dimensional spectrum vectors and queries them to compute a sparse pairwise distance matrix, avoiding exhaustive all-vs-all comparisons. It is essential for scaling similarity clustering to millions of MS/MS spectra by reducing computational complexity from O(n²) to O(n·k) where k is the number of neighbors queried per spectrum.

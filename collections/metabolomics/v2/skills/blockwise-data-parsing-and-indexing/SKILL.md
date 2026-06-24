@@ -17,7 +17,7 @@ metadata:
   - Black
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -46,7 +46,6 @@ attribution:
 
 # blockwise-data-parsing-and-indexing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and index large structured data files (e.g., mzML, text documents) by logical blocks—each block written as a single unit with an integer or string identifier—using the Generalized Seekable Gzip Writer (GSGW) pattern to enable random access in compressed archives without decompressing the entire file.

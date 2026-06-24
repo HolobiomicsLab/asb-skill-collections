@@ -21,7 +21,7 @@ metadata:
   - PCPFM (Python-Centric Pipeline for Metabolomics)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -55,7 +55,6 @@ attribution:
 
 # JMS-compliant database querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query JMS-compliant versions of HMDB and LIPID MAPS Structure Database (LMSD) using inferred molecular formulas from empirical compounds to retrieve matching reference entries for Level 4 MS1 annotation. This skill bridges pre-annotated empirical compound objects (from khipu grouping) to standardized metabolite reference databases without requiring explicit m/z tolerance specification.

@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -51,7 +51,6 @@ attribution:
 
 # isotope-mass-offset-enumeration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects isotopic variants (e.g., C13 substitutions) in mass spectrometry feature tables by enumerating expected m/z offsets and matching them against observed peaks within specified mass, drift time, and retention time tolerances. This approach improves feature annotation confidence by explicitly grouping monoisotopes with their heavier isotopologues.

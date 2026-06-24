@@ -14,7 +14,7 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,7 +44,6 @@ attribution:
 
 # chemical-valence-constraint-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter candidate chemical subformulae by applying chemical validity constraints (valence rules and atom count limits) to eliminate chemically implausible fragment assignments. This is a critical preprocessing step in de novo chemical formula inference from tandem mass spectra that reduces the search space before energy-based ranking.

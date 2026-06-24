@@ -12,7 +12,7 @@ metadata:
   tools:
   - Python
   - Jupyter
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -40,7 +40,6 @@ attribution:
 
 # false-positive-rate-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the proportion of statistically significant results (p < 0.05) that are false positives across a range of controlled simulation conditions in pathway analysis. This skill is essential for validating the robustness of Over-representation Analysis (ORA) under varying metabolite detection coverage and identifying conditions where statistical thresholds become unreliable.

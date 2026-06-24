@@ -20,7 +20,7 @@ metadata:
   - Numba
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -57,7 +57,6 @@ attribution:
 
 # precursor-and-noise-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove interfering peaks (precursor ion and low-intensity noise) from tandem mass spectra to improve signal quality and reduce computational burden in downstream analysis. This is a foundational spectrum preprocessing step that enhances spectral matching and annotation accuracy.

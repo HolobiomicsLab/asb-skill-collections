@@ -20,7 +20,7 @@ metadata:
   - pubchempy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -70,7 +70,6 @@ attribution:
 
 # molecular-fingerprint-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate binary molecular fingerprints from chemical structures (SMILES/InChI) using RDKit Daylight algorithm to encode structural features for downstream similarity computation and machine learning tasks.

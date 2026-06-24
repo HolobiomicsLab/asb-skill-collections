@@ -20,7 +20,7 @@ metadata:
   - MsExperiment
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -54,7 +54,6 @@ attribution:
 
 # chromatographic-peak-detection-and-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and integration of chromatographic peaks in LC-MS data using TARDIS to generate targeted quantitative metrics (AUC, max intensity, SNR, peak_cor) and QC feature tables. This skill is essential for high-throughput metabolomics and lipidomics workflows where multiple compounds must be consistently quantified across sample runs.

@@ -17,7 +17,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -48,7 +48,6 @@ attribution:
 
 # ion-mobility-dimension-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and classify ion mobility spectrometry (IMS) data dimensions from raw MS file headers and metadata to enable routing to specialized IMS analysis modules. This skill disambiguates IMS inputs from LC-MS, GC-MS, and MS imaging modalities by scanning instrument signatures and chromatographic/mobility dimensional markers.

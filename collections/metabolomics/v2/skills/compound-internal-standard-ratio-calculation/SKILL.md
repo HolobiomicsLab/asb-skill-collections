@@ -15,7 +15,7 @@ metadata:
   - R base
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -51,7 +51,6 @@ attribution:
 
 # compound-internal-standard-ratio-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute the ratio of compound peak area to internal standard peak area for each sample, a fundamental normalization step in metabolomics that accounts for instrument variability and sample preparation differences. This ratio serves as the basis for downstream quality control, batch correction, and absolute concentration estimation.

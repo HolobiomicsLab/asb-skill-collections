@@ -15,7 +15,7 @@ metadata:
   - KEGG database
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -46,7 +46,6 @@ attribution:
 
 # peak-pairwise-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare all pairs of detected peaks in FT-ICR MS samples by calculating mass differences to identify potential biochemical transformations. This pairwise comparison is the foundation for generating mass-difference networks that reveal metabolic pathway connectivity and hub metabolites.

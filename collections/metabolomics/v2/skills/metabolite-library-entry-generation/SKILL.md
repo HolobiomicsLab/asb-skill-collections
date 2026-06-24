@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -48,7 +48,6 @@ attribution:
 
 # metabolite-library-entry-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert experimental MS/MS spectra into annotated metabolite library entries by applying peak detection thresholds, noise filtering, and fragment ion scoring. This skill is essential for building custom fragment databases that enable downstream metabolite annotation of LC–MS All-ion fragmentation datasets.

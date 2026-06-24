@@ -16,7 +16,7 @@ metadata:
   - ElementTree (xml.etree.ElementTree)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -45,7 +45,6 @@ attribution:
 
 # xml-spectrum-element-deserialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deserialize XML spectrum and chromatogram elements from indexed gzip files into Python objects (Spectrum or Chromatogram instances) by parsing extracted data blocks with ElementTree. This skill enables rapid random-access retrieval and instantiation of mass spectrometry data structures from compressed mzML files.

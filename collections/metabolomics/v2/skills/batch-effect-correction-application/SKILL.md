@@ -16,7 +16,7 @@ metadata:
   - SummarizedExperiment
   - SummarizedExperiment (Bioconductor)
   - mzQualityDashboard
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -52,7 +52,6 @@ attribution:
 
 # batch-effect-correction-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply batch correction to metabolomics compound–internal standard ratios using pooled study quality control (SQC) samples as the correction reference. This removes systematic batch effects that inflate compound variability estimates, enabling more reliable internal standard selection and concentration calculations.

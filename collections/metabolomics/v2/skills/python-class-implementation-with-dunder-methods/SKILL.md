@@ -18,7 +18,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -50,7 +50,6 @@ attribution:
 
 # python-class-implementation-with-dunder-methods
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement custom Python classes with dunder methods (__getitem__, __init__, read) to enable random and sequential access to mzML spectral data stored in alternative formats (SQLite databases, compressed files). This skill bridges data storage backends with pymzML's Reader interface by defining the protocol through which the library retrieves spectra on demand.

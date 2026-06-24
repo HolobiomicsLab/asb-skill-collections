@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -59,7 +59,6 @@ attribution:
 
 # word-embedding-aggregation-for-spectral-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert MS/MS spectra into fixed-length vector representations by aggregating pre-trained Word2Vec embeddings of fragment peaks and neutral losses, weighted by normalized peak intensity. This enables efficient similarity comparisons and structural analogue searches in large spectral databases.

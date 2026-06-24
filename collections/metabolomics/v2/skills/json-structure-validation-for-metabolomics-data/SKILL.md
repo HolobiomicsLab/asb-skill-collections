@@ -15,7 +15,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # JSON Structure Validation for Metabolomics Data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the structural integrity and completeness of empirical compound JSON files produced by khipu's build_empCpds command, ensuring all required fields (list_of_features, median m/z, median rt, pre-annotation) are present and properly formatted before downstream annotation or statistical analysis.

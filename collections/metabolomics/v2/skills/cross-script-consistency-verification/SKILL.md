@@ -15,7 +15,7 @@ metadata:
   - FIDDLE
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # cross-script-consistency-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a critical preprocessing operation (e.g., zeroing the precursor m/z feature) is applied consistently across multiple execution scripts in a codebase before model inference. This ensures that no unintended leakage of protected information into the feature encoder occurs across different workflow stages (training, evaluation, reproduction).

@@ -18,7 +18,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -51,7 +51,6 @@ attribution:
 
 # peptide-mass-calculation-average
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate average molecular mass for polypeptide sequences using Pyteomics, complementing monoisotopic mass to characterize the full isotopic envelope of peptides. This is essential for relating theoretical peptide properties to experimental mass spectrometry observations where natural isotope abundances affect observed m/z.

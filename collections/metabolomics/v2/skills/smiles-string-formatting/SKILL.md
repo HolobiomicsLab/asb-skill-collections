@@ -15,7 +15,7 @@ metadata:
   - Docker Compose
   - TensorFlow Serving
   - NP-Classifier
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -44,7 +44,6 @@ attribution:
 
 # SMILES String Formatting for Chemical Classification API Queries
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Format organic molecule structures as SMILES (Simplified Molecular Input Line Entry System) strings to enable programmatic queries against the NP Classifier REST API endpoint. This skill is essential when you need to submit chemical structures for automated natural product classification without manual web interface interaction.

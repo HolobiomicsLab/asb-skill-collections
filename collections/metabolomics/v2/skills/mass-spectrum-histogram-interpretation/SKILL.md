@@ -17,7 +17,7 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -48,7 +48,6 @@ attribution:
 
 # Mass-Spectrum Histogram Interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Bin calculated mass differences into a histogram with instrument-appropriate precision, then visually and statistically identify peaks representing abundant molecular adducts. This technique transforms raw pairwise mass differences into actionable annotations by matching histogram bins to known chemical transformations.

@@ -16,7 +16,7 @@ metadata:
   - MAGMa pubchem service
   - MAGMa joblauncher webservice
   - MAGMa web application
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -46,7 +46,6 @@ attribution:
 
 # volume-mount-and-persistence-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and configure Docker volume mounts and data persistence strategies for multi-service containerized systems where stateful components (databases, lookup tables, calculation outputs) must survive container restarts and be shared across interdependent services. This skill is essential when orchestrating microservices that depend on shared data artifacts or long-lived state.

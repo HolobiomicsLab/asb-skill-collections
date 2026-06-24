@@ -19,7 +19,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # spectral-similarity-prediction-neural-networks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and apply a Siamese neural network to predict structural similarity scores (Tanimoto or Dice) directly from pairs of tandem mass spectra without computing molecular fingerprints. This skill enables rapid similarity assessment and uncertainty quantification via Monte-Carlo Dropout on MS/MS spectral pairs.

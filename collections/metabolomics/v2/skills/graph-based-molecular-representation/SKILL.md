@@ -15,7 +15,7 @@ metadata:
   - Transformer (architecture)
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -44,7 +44,6 @@ attribution:
 
 # graph-based-molecular-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Represent molecular structures as graphs with atoms as nodes and bonds as edges, enabling transformer and neural network architectures to learn structure-from-spectra mappings. This representation decouples molecular connectivity and formula prediction into discrete, learnable tasks suitable for end-to-end neural training.

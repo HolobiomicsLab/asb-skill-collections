@@ -16,7 +16,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -47,7 +47,6 @@ attribution:
 
 # peak-detection-threshold-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Application of noise and marker peak thresholds to filter MS/MS spectral peaks during library conversion or feature annotation in LC–MS metabolomics workflows. This skill ensures that only peaks meeting signal-to-noise and abundance criteria are retained, reducing noise-driven false matches and improving annotation specificity.

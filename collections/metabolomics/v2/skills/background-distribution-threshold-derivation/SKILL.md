@@ -21,7 +21,7 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -62,7 +62,6 @@ attribution:
 
 # Background-Distribution Threshold Derivation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Derive empirical significance thresholds for metabolite prediction quality by generating null distributions through repeated shuffling and cross-validation, then define well-predicted metabolites at a high percentile (e.g., 95th) of the background distribution. This guards against false discoveries and enables data-driven cutoff selection without prior assumptions.

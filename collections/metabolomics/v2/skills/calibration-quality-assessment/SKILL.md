@@ -17,7 +17,7 @@ metadata:
   - Bruker Solarix reader (ReadBrukerSolarix)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -50,7 +50,6 @@ attribution:
 
 # calibration-quality-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitatively evaluate mass calibration accuracy by computing mass error distributions, root-mean-square error (RMSE), and the count of matched calibration peaks against a reference standard. This skill determines whether a recalibrated FT-ICR mass spectrum meets acceptable accuracy thresholds for subsequent molecular formula assignment.

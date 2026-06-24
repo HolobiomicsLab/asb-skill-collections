@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -52,7 +52,6 @@ attribution:
 
 # Level 4 Annotation Assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Level 4 annotation maps empirical compounds (EmpCpds) to chemical formulas and structure candidates by querying JMS-compliant HMDB and LMSD reference databases using inferred molecular formulas. This annotation level assigns putative metabolite identities based on exact mass matching without requiring explicit m/z tolerance specification.

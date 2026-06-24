@@ -14,7 +14,7 @@ metadata:
   - EnviroMS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -46,7 +46,6 @@ attribution:
 
 # molecular-formula-heteroatom-classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organizes formula-assigned peaks from a mass spectrum into heteroatom class groups (CHO, CHON, CHOS, CHOP, etc.) for compositional analysis and visualization. This skill enables rapid summary and filtering of complex mass spectrometry datasets by elemental composition.

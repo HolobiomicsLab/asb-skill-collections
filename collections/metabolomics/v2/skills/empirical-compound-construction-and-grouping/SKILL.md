@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -55,7 +55,6 @@ attribution:
 
 # empirical-compound-construction-and-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construction and grouping of LC-MS features into empirical compounds (EmpCpds) with inferred molecular formulas and adduct assignments using the khipu pre-annotation framework. This skill bridges feature detection and MS1/MS2 annotation by organizing co-detected features into putative metabolites before library matching.

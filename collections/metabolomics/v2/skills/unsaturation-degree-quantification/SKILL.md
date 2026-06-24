@@ -16,7 +16,7 @@ metadata:
   - MetaboDirect
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -49,7 +49,6 @@ attribution:
 
 # unsaturation-degree-quantification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the degree of unsaturation and aromaticity in metabolites by calculating double-bond equivalents (DBE) and modified aromaticity index (AImod) from elemental composition of assigned molecular formulas. This enables characterization of molecular saturation state and aromatic structure prevalence, key properties for understanding metabolite lability and biochemical reactivity in FT-ICR MS datasets.

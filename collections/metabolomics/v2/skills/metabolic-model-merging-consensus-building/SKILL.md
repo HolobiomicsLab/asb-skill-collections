@@ -13,7 +13,7 @@ metadata:
   - http://edamontology.org/topic_3810
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -42,7 +42,6 @@ attribution:
 
 # metabolic-model-merging-consensus-building
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge multiple draft genome-scale metabolic models into a single consensus reconstruction by resolving conflicts and gaps using community-dependent logic. This skill is essential when integrating metabolic diversity from multi-member microbial or plant-associated communities into a unified, systems-level representation.

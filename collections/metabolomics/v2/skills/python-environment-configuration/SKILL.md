@@ -12,7 +12,7 @@ metadata:
   - Python
   - pip
   - conda
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -43,7 +43,6 @@ attribution:
 
 # Python Environment Configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate a Python package installation and verify that core functional modules are accessible after package manager installation. This skill ensures reproducible environment setup by confirming module availability before downstream analysis.

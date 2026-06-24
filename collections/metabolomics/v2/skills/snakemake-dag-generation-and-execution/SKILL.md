@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -55,7 +55,6 @@ attribution:
 
 # snakemake-dag-generation-and-execution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and execute a Snakemake directed acyclic graph (DAG) to orchestrate DEIMoS multi-dimensional mass spectrometry workflows, automating mzML ingestion, peak detection, feature alignment, and CCS calibration across local or cluster compute environments. This skill ensures reproducible, scalable processing of high-dimensional LC-IMS-MS/MS data with explicit rule dependencies and configurable execution modes.

@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -53,7 +53,6 @@ attribution:
 
 # mass-spectrometry-workflow-orchestration-snakemake
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate end-to-end high-dimensional mass spectrometry (MS) data processing pipelines using Snakemake to automatically execute feature detection, alignment, CCS calibration, isotope detection, and MS/MS deconvolution on mzML input files, producing HDF5-formatted output with characterized features, spectra, and isotopic signatures across study samples.

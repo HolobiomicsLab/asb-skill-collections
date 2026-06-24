@@ -16,7 +16,7 @@ metadata:
   - R
   - R prcomp
   - ggplot2 (R)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -51,7 +51,6 @@ attribution:
 
 # multivariate-ordination-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Ordination analysis (NMDS and PCA) reduces high-dimensional metabolomic data to low-dimensional visual representations to assess whether treatment groups separate in chemical composition space. This skill is applied after distance matrix calculation to visualize subtle metabolite compositional differences, though it often fails to discriminate groups that PERMANOVA detects as statistically significant.

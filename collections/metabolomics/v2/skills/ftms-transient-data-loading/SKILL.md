@@ -17,7 +17,7 @@ metadata:
   - Bruker Solarix
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -50,7 +50,6 @@ attribution:
 
 # ftms-transient-data-loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and initialize Bruker Solarix FT-ICR transient raw data files (.d format) into a CoreMS transient object for downstream signal processing and mass spectrum generation. This is the first step in reproducible FT-ICR data workflows where raw time-domain signals must be imported before apodization, zero-filling, and Fourier transformation.

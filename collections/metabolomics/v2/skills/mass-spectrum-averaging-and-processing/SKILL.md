@@ -15,7 +15,7 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -48,7 +48,6 @@ attribution:
 
 # mass-spectrum-averaging-and-processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply transient averaging and windowing functions (e.g., Hanning apodization) to Bruker FT-ICR raw transient data, followed by zero-filling and Fourier transformation, to produce a high-quality mass spectrum with reduced noise and improved peak definition. This skill is essential for converting raw time-domain transient data into interpretable frequency-domain mass spectra.

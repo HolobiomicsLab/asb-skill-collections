@@ -15,7 +15,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -44,7 +44,6 @@ attribution:
 
 # software-plugin-development
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extend a scientific software tool by creating and registering new plugin modules or configuration files that add support for novel reagents, matrices, or analysis parameters without modifying the core codebase. This skill is essential when a tool is designed with extensibility in mind but needs to support user-defined or newly documented derivatizing matrices, ionization behaviors, or similar domain-specific extensions.

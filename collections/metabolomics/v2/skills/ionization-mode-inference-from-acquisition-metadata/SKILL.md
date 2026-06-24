@@ -16,7 +16,7 @@ metadata:
   - Asari
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -48,7 +48,6 @@ attribution:
 
 # ionization-mode-inference-from-acquisition-metadata
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer the ionization polarity (positive or negative) of LC-MS acquisitions from instrument metadata embedded in mzML files or raw acquisition headers, enabling downstream selection of appropriate adduct definitions and annotation rules. This inference is necessary because empirical compound grouping and MS annotation both require knowledge of which ions were actually formed.

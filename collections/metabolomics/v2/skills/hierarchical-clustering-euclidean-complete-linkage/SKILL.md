@@ -19,7 +19,7 @@ metadata:
   - scipy.cluster.hierarchy
   - scikit-learn linkage functions
   - MiMeNet
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -58,7 +58,6 @@ attribution:
 
 # hierarchical-clustering-euclidean-complete-linkage
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Hierarchical clustering using Euclidean distance and complete linkage to organize rows and columns of a normalized microbe-metabolite attribution score matrix into dendrograms, enabling identification of natural groupings before consensus-based optimal cluster selection.

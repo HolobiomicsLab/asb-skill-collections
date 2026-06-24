@@ -20,7 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -58,7 +58,6 @@ attribution:
 
 # neutral-loss-extraction-and-weighting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract neutral losses (mass differences between precursor and fragment ions) from MS/MS spectra and encode them as weighted features for spectral embedding and similarity scoring. This skill is essential for capturing diagnostic fragmentation patterns that inform structural relationships beyond peak m/z alone.

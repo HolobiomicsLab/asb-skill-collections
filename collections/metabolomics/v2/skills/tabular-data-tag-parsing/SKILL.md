@@ -13,7 +13,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -45,7 +45,6 @@ attribution:
 
 # tabular-data-tag-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse tagged tabular files (Excel or CSV) into nested JSON by interpreting export tags (prefixed with # or #.) in column headers to map table names, record identifiers, and field names. This extraction step converts raw experimental metadata spreadsheets into a standardized, interoperable JSON representation suitable for downstream validation and format conversion.

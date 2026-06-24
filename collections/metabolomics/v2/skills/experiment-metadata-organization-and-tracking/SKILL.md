@@ -18,7 +18,7 @@ metadata:
   - pcpfm preprocess
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -51,7 +51,6 @@ attribution:
 
 # experiment-metadata-organization-and-tracking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Structured assembly of LC-MS metabolomics experiments by organizing raw acquisition files, sample metadata (names, types, batch identifiers, file paths), and instrument parameters into a centralized JSON state object that tracks provenance and enables reproducible, batch-aware processing. This foundation precedes all downstream quality control, normalization, and annotation steps.

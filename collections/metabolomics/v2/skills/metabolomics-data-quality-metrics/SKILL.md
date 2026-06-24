@@ -15,7 +15,7 @@ metadata:
   - Sciex Multiquant
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -45,7 +45,6 @@ attribution:
 
 # metabolomics-data-quality-metrics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute coefficient of variation (CV) and signal-trend metrics from QCpool (quality control pool) samples injected at regular intervals during liquid chromatography–mass spectrometry (LC-MS) sequences to rapidly assess technical reproducibility and instrumental drift in metabolomics or lipidomics studies. This skill enables detection of compounds with poor quality metrics before downstream analysis.

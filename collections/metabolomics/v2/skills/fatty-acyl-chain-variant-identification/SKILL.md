@@ -17,7 +17,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -48,7 +48,6 @@ attribution:
 
 # fatty-acyl-chain-variant-identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank alternative lipid annotations for a mass feature by extracting ranked candidate lists from MetaboAnnotatoR results and comparing scores of lipid species that share the same fatty acyl chain composition. This skill enables discovery of structural variants (e.g., PC fragments vs. intact LPC) that may annotate the same m/z feature with differing confidence.

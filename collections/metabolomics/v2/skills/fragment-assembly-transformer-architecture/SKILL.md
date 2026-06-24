@@ -14,7 +14,7 @@ metadata:
   - convolutional neural network
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -45,7 +45,6 @@ attribution:
 
 # fragment-assembly-transformer-architecture
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A transformer-based approach that assembles ordered or unordered sets of molecular fragments into candidate molecular structures using attention mechanisms to model fragment relationships. This skill automates the manual chemist task of structure elucidation from spectroscopic data by learning to predict connectivity and molecular topology from fragment-structure training pairs.

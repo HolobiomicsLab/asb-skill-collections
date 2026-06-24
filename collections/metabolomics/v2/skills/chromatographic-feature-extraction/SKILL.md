@@ -18,7 +18,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -53,7 +53,6 @@ attribution:
 
 # chromatographic-feature-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and extraction of mass spectrometry features (m/z, retention time, intensity) from centroided mzML raw data using pyOpenMS FeatureFinderCentroided. This skill converts vendor-neutral LC/GC-HRMS instrument output into structured feature tables suitable for downstream prioritization and annotation workflows.

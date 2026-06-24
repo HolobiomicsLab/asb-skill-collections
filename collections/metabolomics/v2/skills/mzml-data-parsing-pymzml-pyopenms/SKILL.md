@@ -17,7 +17,7 @@ metadata:
   - pandas
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -51,7 +51,6 @@ attribution:
 
 # mzML Data Parsing with pymzml and pyOpenMS
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load mass spectrometry data from mzML files into pandas DataFrames using pymzml or pyOpenMS libraries, enabling downstream visualization and analysis of chromatograms, spectra, and peak maps.

@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -51,7 +51,6 @@ attribution:
 
 # mass-spectrometry-reference-standard-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align ion mobility spectrometry (IMS) data to reference standards using drift time and m/z calibration to compute collision cross section (CCS) calibration coefficients via the single-field method. This skill enables quantitative CCS determination and mass calibration accuracy assessment in LC-IMS-MS/MS workflows.

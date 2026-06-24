@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # matrix-directive-collation-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a matrix conversion directive with collate='assignment' to group IC-FTMS measurement records by metabolite assignment and merge their sample intensity data into unified dictionaries. This skill validates that the directive correctly consolidates multiple records sharing the same metabolite assignment into single output objects.

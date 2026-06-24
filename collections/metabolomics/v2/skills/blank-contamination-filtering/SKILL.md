@@ -15,7 +15,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -47,7 +47,6 @@ attribution:
 
 # blank-contamination-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove MS1 features that are overrepresented in blank control samples (solvent blanks, media blanks) using group-based relative abundance thresholds. This skill corrects for carryover contamination and background signals that confound biological signal in metabolomics peak tables.

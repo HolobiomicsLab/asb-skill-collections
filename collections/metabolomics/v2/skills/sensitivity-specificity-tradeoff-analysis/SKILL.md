@@ -19,7 +19,7 @@ metadata:
   - Keras/TensorFlow
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -54,7 +54,6 @@ attribution:
 
 # sensitivity-specificity-tradeoff-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute optimal classification thresholds for neural network-based peak filtering by analyzing the tradeoff between true positive and false positive rates across a range of probability thresholds. This skill is essential when deploying trained classifiers to LCMS peak datasets where the cost of false positives must be balanced against detection sensitivity.

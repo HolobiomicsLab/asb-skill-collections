@@ -15,7 +15,7 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -50,7 +50,6 @@ attribution:
 
 # time-domain-signal-apodization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Hanning windowing to time-domain FT-ICR transients with zero-filling to reduce spectral artifacts and improve peak definition before Fourier transformation and mass calibration. This preprocessing step is essential for reducing spectral leakage and enhancing the signal-to-noise ratio of subsequent mass-domain analysis.

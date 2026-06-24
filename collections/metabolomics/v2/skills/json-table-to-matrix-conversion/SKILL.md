@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # json-table-to-matrix-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transforms a JSON table (array of records) into a list of dictionaries by mapping table columns to key–value pairs using a headers specification, with optional filtering, sorting, and record grouping. This skill is essential when converting semi-structured tabular metadata into clean, nested JSON objects suitable for repository submission or downstream processing.

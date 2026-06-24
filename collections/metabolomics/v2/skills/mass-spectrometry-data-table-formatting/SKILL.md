@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -45,7 +45,6 @@ attribution:
 
 # mass-spectrometry-data-table-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Format TWIM-MS experimental data into tabular structures indexed by feature identifier, with columns for arrival time, m/z values, and assigned biomolecular class labels. This enables downstream CCS calibration and class-specific calculations without prior feature identification.

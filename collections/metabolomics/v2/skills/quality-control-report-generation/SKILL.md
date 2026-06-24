@@ -16,7 +16,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -52,7 +52,6 @@ attribution:
 
 # quality-control-report-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export analyzed metabolomics quality control results as organized project folders containing publication-ready plots, HTML reports, and tab-delimited data tables. This skill packages post-analysis SummarizedExperiment objects into structured reports that distinguish compounds by confidence level (High Confidence, Caution, Low SNR) and enable downstream programmatic access.

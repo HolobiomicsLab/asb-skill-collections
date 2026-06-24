@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # adduct-mass-difference-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank observed mass differences by their occurrence frequency in MALDI-MS imaging data and annotate matches to known adduct species. This skill identifies abundant adduct signals that would otherwise be obscured in the metabolome by systematically counting pairwise mass differences and cross-referencing them against reference adduct tables.

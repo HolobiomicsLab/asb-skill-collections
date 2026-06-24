@@ -23,7 +23,7 @@ metadata:
   - matplotlib / seaborn
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -60,7 +60,6 @@ attribution:
 
 # comparative-performance-profiling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure and compare spectrum processing throughput (spectra per second) across multiple libraries under identical filtering and normalization conditions to quantify computational efficiency gains. This skill applies standardized workflows to competing tools to produce boxplots and summary statistics that reveal performance differences.

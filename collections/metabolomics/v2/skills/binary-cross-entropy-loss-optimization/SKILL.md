@@ -16,7 +16,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -48,7 +48,6 @@ attribution:
 
 # binary-cross-entropy-loss-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a Siamese rescore model by freezing a pretrained TCN spectrum encoder and optimizing FormulaEncoder and RescoreHead components using binary cross-entropy loss. This two-stage approach leverages spectrum feature extraction while learning formula-spectrum affinity scoring.

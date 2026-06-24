@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -49,7 +49,6 @@ attribution:
 
 # polynomial-regression-quality-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the goodness-of-fit of a polynomial calibration model by computing and validating the coefficient of determination (R²) against a predefined threshold, ensuring that the m/z–drift-time–CCS relationship meets required accuracy standards for collision cross section calibration.

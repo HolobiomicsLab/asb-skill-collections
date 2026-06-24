@@ -17,7 +17,7 @@ metadata:
   - Monte-Carlo Dropout
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -54,7 +54,6 @@ attribution:
 
 # root-mean-squared-error-regression-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 RMSE is a summary metric for evaluating regression model predictions by computing the square root of mean squared differences between predicted and ground-truth continuous values. It is useful when you need a single interpretable number (in the same units as the target variable) to quantify overall prediction error across a test set.

@@ -17,7 +17,7 @@ metadata:
   - TensorFlow or PyTorch
   - TensorFlow / PyTorch
   - scikit-learn
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -57,7 +57,6 @@ attribution:
 
 # Olden's Method Implementation for Neural Network Feature Attribution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Olden's method computes microbe-metabolite feature attribution scores by multiplying weight matrices across all hidden layers of a trained neural network, producing a single attribution matrix per model where rows represent microbial input features and columns represent metabolite output features. This method enables identification of which microbes contribute to predicting each metabolite by quantifying the product-of-weights pathway through the network.

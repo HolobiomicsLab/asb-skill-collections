@@ -19,7 +19,7 @@ metadata:
   - alphatims
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -51,7 +51,6 @@ attribution:
 
 # interactive-html-figure-generation-plotly
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate interactive HTML visualizations of mass spectrometry data using Plotly as the pyOpenMS-Viz plotting backend, enabling 2D and 3D peak-map rendering with client-side interactivity. Use this skill when you need to produce publication-ready, browser-viewable figures that preserve dimensionality (m/z, retention time, intensity) and support pan/zoom/hover inspection.

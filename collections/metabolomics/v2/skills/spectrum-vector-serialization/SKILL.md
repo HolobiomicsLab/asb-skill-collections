@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # Serialize and Persist Nearest Neighbor Index to File
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill persists constructed nearest neighbor indexes built from low-dimensional spectrum vectors to disk in a format optimized for fast retrieval and subsequent similarity search operations. It is essential for enabling reusable, efficient clustering workflows where indexes do not need to be reconstructed for each analysis run.

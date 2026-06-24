@@ -17,7 +17,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -48,7 +48,6 @@ attribution:
 
 # spatial-correlation-filtering-in-msi
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Test spatial correlation between putative parent and adduct ion pairs in mass spectrometry imaging data to validate that candidate adduct assignments reflect true co-localization in tissue. This filters out spurious mass-difference matches by exploiting the spatial dimension of MSI, retaining only ion pairs whose abundance patterns are significantly correlated across pixels.

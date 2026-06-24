@@ -15,7 +15,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # mass-spectrometry-library-curation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Curate and filter tandem mass spectrometry (MS/MS) spectral libraries by applying instrument-specific metadata constraints (e.g., allowlist fixes) and re-splitting datasets to obtain reproducible training/test compound counts. This skill ensures that instrumental biases are corrected before model development or validation.

@@ -16,7 +16,7 @@ metadata:
   - ggplot2
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -50,7 +50,6 @@ attribution:
 
 # ion-count-percentage-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate ion counts by filter status category and compute the percentage of total ions within each status using data.table operations on qc_summary() output. This calculation provides a quantitative breakdown of how many ions passed or failed each filtering step, enabling downstream visualization and quality assessment.

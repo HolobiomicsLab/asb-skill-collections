@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # feature-vector-similarity-search-preparation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert high-resolution MS/MS spectra to low-dimensional hashed vectors and construct nearest neighbor indexes to enable efficient similarity searching without exhaustive pairwise comparisons. This skill bridges spectrum preprocessing and fast clustering by creating the index structures that make large-scale spectrum analysis computationally feasible.

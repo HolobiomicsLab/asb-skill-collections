@@ -12,7 +12,7 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -43,7 +43,6 @@ attribution:
 
 # molecular-graph-representation-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse molecular inputs (SMILES strings or graph structures) into standardized graph representations compatible with message passing neural networks. This skill bridges chemical notation and computational graph formats required for chemprop and chemprop-IR model ingestion.

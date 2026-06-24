@@ -21,7 +21,7 @@ metadata:
   - HUMAnN2
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -61,7 +61,6 @@ attribution:
 
 # microbiome-metabolome-abundance-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compositional transformation of paired microbiome and metabolome count matrices into normalized abundance representations (relative abundance or centered log-ratio) prior to predictive modeling. This preprocessing step corrects for the compositional nature of sequencing data and removes features with low prevalence, enabling fair comparison across samples and reducing noise in downstream machine learning.

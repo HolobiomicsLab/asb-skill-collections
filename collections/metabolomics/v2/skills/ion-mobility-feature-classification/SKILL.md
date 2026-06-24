@@ -16,7 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -50,7 +50,6 @@ attribution:
 
 # ion-mobility-feature-classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns biomolecular class labels (lipid, peptide, carbohydrate, etc.) to experimental features directly from TWIM-MS arrival time and m/z dimensions without requiring prior feature identification. This enables class-specific collision cross section (CCS) calibration and downstream multi-omic analysis on raw or minimally processed ion mobility data.

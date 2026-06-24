@@ -15,7 +15,7 @@ metadata:
   - QIIME 2
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -45,7 +45,6 @@ attribution:
 
 # QIIME 2 Artifact Inspection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, validate, and parse QIIME 2 serialized artifacts (.qza files) to inspect their structure, format, and metadata. This skill is essential for understanding the composition and properties of intermediate and final analysis outputs, particularly phylogenetic trees and feature tables produced by metabolomic pipelines.

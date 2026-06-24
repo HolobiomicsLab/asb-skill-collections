@@ -17,7 +17,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -51,7 +51,6 @@ attribution:
 
 # Mass-Spectral Peak Annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate MS/MS spectral peaks by matching precursor–product mass pairs against diagnostic fragment databases and flagging characteristic mass differences to identify potential PFAS features in non-target HRMS data. This skill assigns chemical identity and structural relevance to detected fragments, enabling prioritization of suspect compounds.

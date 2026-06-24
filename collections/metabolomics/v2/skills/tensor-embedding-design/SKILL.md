@@ -10,7 +10,7 @@ metadata:
   tools:
   - SCARF
   - SIRIUS decomp
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -38,7 +38,6 @@ attribution:
 
 # Tensor Embedding Design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement sinusoidal formula embeddings to encode discrete chemical formulae as fixed-length dense vectors for neural network input. This technique encodes structural information (element identities and counts) using sine and cosine basis functions, enabling transformer architectures to process chemical composition in a learnable, position-independent manner.

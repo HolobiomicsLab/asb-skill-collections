@@ -12,7 +12,7 @@ metadata:
   - .NET Framework 4.8
   - Docker Desktop for Mac
   - AirdPro V5 / V6
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -42,7 +42,6 @@ attribution:
 
 # Wine Environment Initialization and Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Wine environment has successfully initialized .NET Framework 4.8 and associated dependencies before executing Windows-based scientific applications (such as AirdPro CLI) in Linux containers. This skill is essential when deploying C#-based proteomics tools via Docker on non-Windows hosts, as Wine initialization is a prerequisite for correct binary execution and can consume >30 minutes.

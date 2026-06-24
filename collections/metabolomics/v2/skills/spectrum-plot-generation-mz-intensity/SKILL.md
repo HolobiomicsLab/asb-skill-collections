@@ -21,7 +21,7 @@ metadata:
   - pyOpenMS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -51,7 +51,6 @@ attribution:
 
 # spectrum-plot-generation-mz-intensity
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate static or interactive mass spectrometry spectrum plots with m/z values on the x-axis and intensity on the y-axis using pyOpenMS-Viz's Pandas DataFrame plotting interface. This skill enables rapid visualization of MS spectral data across multiple plotting backends (matplotlib, Bokeh, Plotly) without writing backend-specific code.

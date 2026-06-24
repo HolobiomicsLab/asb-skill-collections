@@ -19,7 +19,7 @@ metadata:
   - Reifycs Abf Converter
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -48,7 +48,6 @@ attribution:
 
 # LC-HRMS metabolomics data processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A containerized Nextflow workflow for reproducible processing of liquid chromatography–high resolution mass spectrometry (LC-HRMS) metabolomics data using MS-DIAL peak detection, alignment, and annotation. The workflow automates feature extraction, quantification, and metabolite identification from .mzML or .abf raw data files across local, containerized, and HPC environments.

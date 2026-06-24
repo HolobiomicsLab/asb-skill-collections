@@ -15,7 +15,7 @@ metadata:
   - MAGMa
   - Static code analysis tools (e.g., ast module in Python, or javac for Java)
   - Graphviz or NetworkX (Python)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -45,7 +45,6 @@ attribution:
 
 # call-graph-construction-and-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and represent function call chains, control flow, and data transformations from scientific software source code as directed acyclic graphs or flowcharts to expose algorithm structure and identify computational entry points. This skill is essential for reverse-engineering complex chemo-informatics pipelines where static inspection of source alone is insufficient to understand metabolite generation workflows.

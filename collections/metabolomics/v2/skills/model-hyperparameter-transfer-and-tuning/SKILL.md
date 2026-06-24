@@ -16,7 +16,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -45,7 +45,6 @@ attribution:
 
 # model-hyperparameter-transfer-and-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transfer hyperparameters from a baseline GNN model to alternative architectures (e.g., GAT, MPNN) for collision cross section prediction, then evaluate held-out performance to compare generalization. This skill enables rapid architecture exploration without exhaustive hyperparameter search for each variant.

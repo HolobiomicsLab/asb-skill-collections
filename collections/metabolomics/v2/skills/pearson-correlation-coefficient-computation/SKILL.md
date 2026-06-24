@@ -16,7 +16,7 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -50,7 +50,6 @@ attribution:
 
 # Pearson Correlation Coefficient Computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute two-tailed Pearson correlation coefficients and p-values for pairs of mass spectrometry imaging intensity vectors to assess whether candidate parent and adduct ion abundances co-vary spatially across pixels. This identifies statistically significant ion relationships that support molecular adduct hypotheses.

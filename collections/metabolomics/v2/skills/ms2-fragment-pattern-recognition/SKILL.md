@@ -16,7 +16,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -47,7 +47,6 @@ attribution:
 
 # MS2 Fragment Pattern Recognition
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and annotates diagnostic fragment patterns in tandem MS (MS2) spectra by computing characteristic mass differences between precursor and fragment ions, enabling prioritization of PFAS features in non-target HRMS workflows. This skill leverages fragment mass losses (e.g., CF₂ losses) and perfluoroalkyl chain signatures to screen and rank potential PFAS compounds.

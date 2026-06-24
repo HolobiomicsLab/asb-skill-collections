@@ -18,7 +18,7 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -52,7 +52,6 @@ attribution:
 
 # neural-network-based-molecular-formula-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a formula transformer neural network to rank candidate chemical formulas and adduct assignments directly from tandem MS/MS spectra without fragmentation tree computation. This approach learns data-dependent patterns and considers multiple adduct types, enabling de novo precursor mass annotation for unknown metabolites.

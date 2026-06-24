@@ -17,7 +17,7 @@ metadata:
   - Formularity
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -50,7 +50,6 @@ attribution:
 
 # molecular-formula-property-derivation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute thermodynamic and molecular indices (DBE, GFE, AImod, NOSC) from elemental composition of assigned molecular formulas to characterize metabolite saturation, lability, oxidation state, and aromaticity. This skill transforms high-resolution FT-ICR MS formula assignments into interpretable biochemical properties for downstream metabolomic analysis.

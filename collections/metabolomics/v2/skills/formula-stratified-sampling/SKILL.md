@@ -15,7 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # formula-stratified-sampling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A data augmentation technique that caps positive examples per molecular formula and generates cross-spectrum negatives to create balanced training datasets for Siamese rescoring models. This ensures diversity in positive classes and prevents formula-specific bias in deep learning models trained on imbalanced MS/MS spectral data.

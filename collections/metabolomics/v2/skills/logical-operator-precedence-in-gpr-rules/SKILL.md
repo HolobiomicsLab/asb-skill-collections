@@ -14,7 +14,7 @@ metadata:
   - getRASscore
   - getGPRsFromModel
   - COBRApy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -42,7 +42,6 @@ attribution:
 
 # Logical operator precedence in GPR rules
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Correctly resolve Gene-Protein-Reaction (GPR) logical expressions by applying standard operator precedence (AND before OR) to compute reaction activity scores from gene expression data. This skill ensures that complex GPR rules with mixed AND/OR operators are parsed and evaluated consistently, preventing misinterpretation of subunit stoichiometry vs. isoform redundancy.

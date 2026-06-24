@@ -18,7 +18,7 @@ metadata:
   - scale_fill_brewer()
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -52,7 +52,6 @@ attribution:
 
 # ggplot2-geom-treemap-rendering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Render hierarchical ion filtering results as a treemap visualization using ggplot2's geom_treemap() and geom_treemap_text() layers, scaled by ion counts and annotated with filter status labels and percentages. This skill transforms aggregated qc_summary() data into a publication-ready treemap that communicates the distribution and relative abundance of ions across filter outcome categories.

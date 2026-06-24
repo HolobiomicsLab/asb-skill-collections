@@ -22,7 +22,7 @@ metadata:
   - matplotlib / seaborn
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -56,7 +56,6 @@ attribution:
 
 # runtime-performance-profiling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure and compare wall-clock processing time and throughput (spectra per second) across competing libraries on identical benchmark datasets and identical processing pipelines. This skill validates computational efficiency claims by quantifying median runtimes and deriving processing rates.

@@ -19,7 +19,7 @@ metadata:
   - scikit-learn hierarchical clustering
   - scipy spatial
   - Python numpy/pandas
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -58,7 +58,6 @@ attribution:
 
 # Consensus Clustering Optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine optimal cluster numbers for hierarchical clustering by computing consensus matrices across multiple trained models and selecting the cluster count where the proportional change in area under the cumulative distribution function (CDF) exceeds a stability threshold. This stabilizes cluster assignments and reduces model-specific artifacts in microbe-metabolite functional module discovery.

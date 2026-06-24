@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -46,7 +46,6 @@ attribution:
 
 # metabolite-annotation-result-export
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export completed metabolite annotations from a MetaboAnnotatoR annotations object to a user-specified directory as a suite of structured output files (global results table, ranked results per feature, ranked spectra PDFs, and pseudo-MS/MS MGF). This skill ensures all annotation results are serialized in standardized, reusable formats for downstream analysis and reporting.

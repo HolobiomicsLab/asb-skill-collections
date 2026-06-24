@@ -15,7 +15,7 @@ metadata:
   - PCPFM (Python-Centric Pipeline for Metabolomics)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -44,7 +44,6 @@ attribution:
 
 # feature-intensity-ratio-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Blank masking uses intensity ratios between study and blank samples to identify and remove features likely arising from background contamination rather than true biological signal. Features are retained only when their median intensity in unknown samples exceeds a user-specified multiple (typically 3×) of their median intensity in blank samples.

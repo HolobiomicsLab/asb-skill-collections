@@ -15,7 +15,7 @@ metadata:
   - MassBank
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -46,7 +46,6 @@ attribution:
 
 # Batch spectral record processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert MS/MS spectra from library files (e.g., .msp format) into metabolite annotation database entries by applying peak-picking, occurrence scoring, and ionization-mode classification. This skill enables high-throughput transformation of raw spectral data into structured, reusable fragment libraries for metabolite identification.

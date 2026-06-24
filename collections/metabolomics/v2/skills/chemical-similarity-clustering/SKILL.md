@@ -17,7 +17,7 @@ metadata:
   - GNPS FBMN
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -47,7 +47,6 @@ attribution:
 
 # chemical-similarity-clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a tree of mass-spectrometry features based on predicted molecular substructures to cluster and compare untargeted metabolomic LC-MS/MS profiles by chemical similarity. This enables phylogeny-aware diversity analysis of metabolites within and across samples.

@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -46,7 +46,6 @@ attribution:
 
 # file-system-audit-and-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a metabolomics annotation pipeline has successfully written all expected output file types to a specified directory, and that each file is non-empty and complete. This skill ensures data integrity and traceability by enumerating and validating the presence, format, and size of annotation results including global results tables, ranked candidate matches, ranked spectra PDFs, and pseudo-MS/MS MGF files.

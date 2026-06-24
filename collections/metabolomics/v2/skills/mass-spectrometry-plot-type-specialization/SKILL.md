@@ -16,7 +16,7 @@ metadata:
   - Plotly
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -44,7 +44,6 @@ attribution:
 
 # mass-spectrometry-plot-type-specialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and configure the appropriate visualization type (chromatogram, spectrum, mobilogram, or peakmap) based on the dimensionality and nature of mass spectrometry data, then dispatch it through pyOpenMS-viz's layered architecture to the chosen plotting backend. This skill ensures that the data's inherent structure (1D retention time × intensity, 2D m/z × intensity, or 3D m/z × retention time × intensity) is matched to a plot kind that faithfully represents it.

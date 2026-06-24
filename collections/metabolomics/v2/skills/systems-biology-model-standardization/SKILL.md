@@ -12,7 +12,7 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -41,7 +41,6 @@ attribution:
 
 # systems-biology-model-standardization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and validate multiple draft genome-scale metabolic models into a common format (JSON, XML, or SBML) to enable their integration into consensus community reconstructions. This skill ensures structural integrity and annotation consistency across heterogeneous input models before downstream merging and gap-filling.

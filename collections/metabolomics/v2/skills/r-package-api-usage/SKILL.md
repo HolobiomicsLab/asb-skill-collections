@@ -17,7 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -56,7 +56,6 @@ attribution:
 
 # R Package API Usage
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Programmatically invoke R package functions to perform metabolomics quality control analyses and generate standardized reports. This skill encompasses reading data, building experiment objects, executing analysis pipelines, and exporting results through mzQuality's documented API.

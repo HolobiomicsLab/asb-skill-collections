@@ -17,7 +17,7 @@ metadata:
   - QComics
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -47,7 +47,6 @@ attribution:
 
 # sciex-multiquant-data-export-format-recognition
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate Sciex MultiQuant (>v3.0.3) txt export files containing QCpool sample measurements for downstream quality assessment. This skill ensures that exported metabolomics/lipidomics data meets structural and format requirements before parsing into QComics workflows.

@@ -26,7 +26,7 @@ metadata:
   - pip
   - numpy
   - py4cytoscape
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -63,7 +63,6 @@ attribution:
 
 # command-line-tool-installation-and-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Installation and configuration of MetaboDirect and its dependencies (Python, R, Cytoscape, and domain libraries) to establish a working command-line environment for FT-ICR MS data analysis. This skill ensures all required computational infrastructure is in place before running the pipeline.

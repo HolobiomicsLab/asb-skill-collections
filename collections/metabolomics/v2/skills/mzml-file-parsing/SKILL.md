@@ -19,7 +19,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -54,7 +54,6 @@ attribution:
 
 # mzml-file-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse vendor-independent centroided mzML files using pyOpenMS to ingest high-resolution mass spectrometry raw data in a standardized, platform-agnostic format suitable for automated feature detection and PFAS prioritization workflows.

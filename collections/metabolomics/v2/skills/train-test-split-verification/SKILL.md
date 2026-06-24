@@ -15,7 +15,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # train-test-split-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that dataset preprocessing and filtering operations (e.g., instrument allowlist updates) produce expected training and test set sizes by rerunning the splitting workflow and comparing counts against reported baselines. This skill detects when configuration changes or bug fixes have the intended effect on dataset composition.

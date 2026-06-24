@@ -15,7 +15,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -52,7 +52,6 @@ attribution:
 
 # Spectral Precursor Peak Removal
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove the precursor ion peak from tandem mass spectrometry spectra using fragment ion tolerance thresholds. This operation is a critical early preprocessing step that eliminates the unfragmented parent ion, which would otherwise dominate the spectrum and interfere with downstream peak annotation and spectral matching.

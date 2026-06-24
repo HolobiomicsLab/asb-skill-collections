@@ -22,7 +22,7 @@ metadata:
   - Python time module
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -56,7 +56,6 @@ attribution:
 
 # mass-spectrometry-benchmark-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and execute a controlled benchmark experiment to compare the throughput (spectra per second) of multiple mass spectrometry data processing libraries on identical datasets and processing pipelines. This skill validates performance claims by measuring wall-clock execution time and computing processing rates under standardized conditions.

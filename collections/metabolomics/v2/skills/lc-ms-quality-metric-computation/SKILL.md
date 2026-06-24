@@ -19,7 +19,7 @@ metadata:
   - MsExperiment
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -53,7 +53,6 @@ attribution:
 
 # LC-MS Quality Metric Computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated computation of quantitative quality metrics (AUC, max intensity, SNR, peak correlation, points over peak) for targeted compounds detected in LC-MS runs. This skill evaluates peak detection accuracy and signal quality across multiple injections and QC samples.

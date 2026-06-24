@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -59,7 +59,6 @@ attribution:
 
 # word2vec-model-inference-unknown-word-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and handle unknown peaks (words) in mass spectra that fall outside a trained Word2Vec model's vocabulary during similarity inference. This skill estimates the weighted fraction of spectral intensity represented by out-of-vocabulary peaks and applies a missing-fraction threshold to avoid spurious Spec2Vec similarity scores on spectra with insufficient feature coverage.

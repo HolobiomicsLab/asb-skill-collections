@@ -13,7 +13,7 @@ metadata:
   - Python
   - MESSES
   - Python json module
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -45,7 +45,6 @@ attribution:
 
 # dictionary-list-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate transformed dictionaries produced by matrix directive operations (fields_to_headers, headers, or collate variants) into a single JSON list and serialize to file. This skill converts record-by-record dictionary transformations into a final array-of-objects structure suitable for downstream format conversion or repository submission.

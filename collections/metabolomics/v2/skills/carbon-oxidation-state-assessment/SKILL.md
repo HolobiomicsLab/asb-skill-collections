@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -50,7 +50,6 @@ attribution:
 
 # carbon-oxidation-state-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the nominal oxidation state of carbon (NOSC) from elemental composition of assigned molecular formulas to characterize metabolite oxidation degree and predict degradation likelihood in FT-ICR MS metabolomic datasets.

@@ -19,7 +19,7 @@ metadata:
   - optGpSampler
   - COBRApy
   - Flux Variability Analysis (FVA)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -58,7 +58,6 @@ attribution:
 
 # RAS-dependent flux boundary setting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Set flux boundaries for metabolic reactions proportionally to Reaction Activity Scores (RAS) derived from gene expression, enabling cell-line-specific constraint-based models. This integrates transcriptomic regulation into stoichiometric metabolic models by scaling FVA-determined bounds by normalized RAS values.

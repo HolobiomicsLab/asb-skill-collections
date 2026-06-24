@@ -18,7 +18,7 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -49,7 +49,6 @@ attribution:
 
 # ion-type-assignment-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that observed mass spectrum peaks are correctly annotated with their ion types (b, y, or other fragment series), charge states, and theoretical mass deviations when matched against a ProForma 2.0 peptidoform string. This skill ensures the integrity of fragment ion assignments before downstream analysis.

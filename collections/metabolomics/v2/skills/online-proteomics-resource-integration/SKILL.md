@@ -17,7 +17,7 @@ metadata:
   - PSI-MOD Protein Modifications Ontology
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -49,7 +49,6 @@ attribution:
 
 # online-proteomics-resource-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load tandem mass spectrometry spectra from distributed online proteomics and metabolomics repositories (PRIDE, MassIVE) using Universal Spectrum Identifier (USI) strings, resolving them to raw spectral data and instantiating searchable spectrum objects. This skill bridges the gap between web-accessible MS/MS data archives and local processing pipelines.

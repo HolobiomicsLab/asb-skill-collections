@@ -17,7 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -48,7 +48,6 @@ attribution:
 
 # compound-standard-ratio-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize metabolomics compound abundances by calculating ratios between each compound and its assigned internal standard to account for instrument response variation and sample preparation differences. This foundational preprocessing step enables downstream batch correction and quality control assessment in mass spectrometry-based metabolomics.

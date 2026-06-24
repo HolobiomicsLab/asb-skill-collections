@@ -17,7 +17,7 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -50,7 +50,6 @@ attribution:
 
 # training-validation-test-set-allocation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition labeled LCMS peak data into training, validation, and test sets with optional class balancing to ensure neural network models are trained on representative data without leakage and evaluated fairly. In NeatMS, this is performed via the nn_handler.create_batches() method, which supports both class-normalized (equal peaks per class) and unnormalized (original distribution) allocation strategies.

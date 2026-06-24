@@ -18,7 +18,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -50,7 +50,6 @@ attribution:
 
 # Ranking Metric Computation for Spectral Predictions
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute per-peak accuracy, exact-match rate per spectrum, and ranking metrics (e.g., fraction of correct subformulas in top-k predictions) to evaluate how well predicted chemical subformula or formula assignments match reference labels in MS/MS spectra. This skill quantifies the quality of candidate ranking without external databases or fragmentation tree computation.

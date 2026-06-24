@@ -16,7 +16,7 @@ metadata:
   - HDF5
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -48,7 +48,6 @@ attribution:
 
 # cross-dataset-feature-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align detected features across multiple mass spectrometry samples by exploiting multi-dimensional similarity in mass, drift time, and retention time to construct a reference-based coordinate transformation model. This reduces instrument variation and increases confidence in feature identification across datasets.

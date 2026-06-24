@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -49,7 +49,6 @@ attribution:
 
 # spectral-peak-binning-and-vectorization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a raw tandem mass spectrum (peaks at arbitrary m/z locations with varying intensities) into a fixed-dimensional numerical vector by binning peaks into equally-spaced m/z windows and applying intensity transformation. This preprocessing step prepares MS/MS spectra for neural network input and enables downstream similarity scoring.

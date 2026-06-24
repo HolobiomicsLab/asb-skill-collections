@@ -14,7 +14,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -44,7 +44,6 @@ attribution:
 
 # spectral-mz-range-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Restrict mass-to-charge (m/z) range of tandem MS spectra to a defined window to eliminate out-of-range noise and focus analysis on biologically relevant ion signals. This preprocessing step is applied early in the spectrum processing pipeline to improve downstream peak matching and reduce computational overhead.

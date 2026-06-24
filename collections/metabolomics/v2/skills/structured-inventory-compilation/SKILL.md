@@ -12,7 +12,7 @@ metadata:
   - MAGMa
   - GitHub API / git
   - jq or pandas
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -42,7 +42,6 @@ attribution:
 
 # structured-inventory-compilation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile named software components and their functional roles from project repository documentation into a machine-readable manifest (JSON/CSV). This skill systematically extracts architecture metadata to enable downstream dependency analysis, deployment orchestration, and integration testing.

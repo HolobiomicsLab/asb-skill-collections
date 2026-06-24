@@ -20,7 +20,7 @@ metadata:
   - Python
   - TensorFlow
   - scipy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -60,7 +60,6 @@ attribution:
 
 # Spearman Correlation Computation for Microbiome-Metabolome Prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Spearman correlation coefficients (SCCs) between predicted and observed metabolite abundances to quantify prediction accuracy in microbiome-metabolome models. This metric is used to identify well-predicted metabolites and compare the predictive performance of competing methods across paired microbiome and metabolomic datasets.

@@ -15,7 +15,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -57,7 +57,6 @@ attribution:
 
 # Tandem Mass Spectrometry Metadata Standardization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and validate MS/MS spectrum metadata (compound names, adducts, chemical structure annotations) using automated tools to enable downstream structural similarity prediction and machine learning. This skill transforms heterogeneous raw GNPS annotations into a consistent schema suitable for neural network training.

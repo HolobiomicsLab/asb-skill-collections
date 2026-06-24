@@ -15,7 +15,7 @@ metadata:
   - Transformer architecture
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -45,7 +45,6 @@ attribution:
 
 # molecular-structure-prediction-from-spectra
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict molecular structure (formula and connectivity) from routine 1D ¹H and/or ¹³C NMR spectra using an end-to-end CNN–transformer model. This skill is applicable to small organic molecules with up to 19 heavy atoms, where traditional manual interpretation becomes intractable.

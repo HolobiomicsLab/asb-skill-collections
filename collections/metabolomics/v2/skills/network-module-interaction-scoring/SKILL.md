@@ -23,7 +23,7 @@ metadata:
   - Consensus clustering
   - Wilcoxon rank-sum test
   - Python (Pandas, NumPy, SciPy)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -62,7 +62,6 @@ attribution:
 
 # Network Module Interaction Scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a module-based interaction network by aggregating microbe-metabolite feature attribution scores within and between biclustered functional modules. This skill quantifies the strength and direction of interactions across module boundaries, enabling visualization and interpretation of higher-order community structure.

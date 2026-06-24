@@ -24,7 +24,7 @@ metadata:
   - SYNCSA (R)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -59,7 +59,6 @@ attribution:
 
 # Thermodynamic molecular index calculation from elemental composition
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate thermodynamic and chemical indices (e.g., nominal oxidation state of carbon, hydrogen deficiency, aromaticity proxies) from assigned molecular formulas in FT-ICR MS datasets to quantify the oxidation state and structural properties of organic molecules. This skill enables rapid assessment of sample chemodiversity and biochemical transformation potential.

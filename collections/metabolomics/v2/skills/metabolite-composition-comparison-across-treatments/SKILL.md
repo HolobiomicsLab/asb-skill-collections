@@ -17,7 +17,7 @@ metadata:
   - ggplot2 / ggpubr
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -52,7 +52,6 @@ attribution:
 
 # metabolite-composition-comparison-across-treatments
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A multivariate statistical approach to test whether experimental treatments (e.g., phage type, incubation time) produce statistically significant differences in metabolite/organic compound composition detected by FT-ICR MS. This skill combines distance-based permutation analysis (PERMANOVA) with ordination visualization to detect subtle compositional shifts that may be invisible to unsupervised methods alone.

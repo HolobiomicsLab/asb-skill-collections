@@ -15,7 +15,7 @@ metadata:
   - PubChem or equivalent molecular database
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -43,7 +43,6 @@ attribution:
 
 # Molecular Structure Prediction Out-of-Distribution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extend and evaluate a trained NMR2Struct deep learning model (transformer + CNN) on molecules exceeding its training scope (>19 heavy atoms) to characterize accuracy degradation and failure modes in out-of-distribution settings. This skill identifies the limits of the model's generalization and quantifies performance loss as molecular complexity increases beyond the original training boundary.

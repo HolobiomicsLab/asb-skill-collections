@@ -16,7 +16,7 @@ metadata:
   - constraint-based stoichiometric metabolic models
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -46,7 +46,6 @@ attribution:
 
 # Reaction Propensity Score (RPS) computation from intracellular metabolomics via mass action law
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes a Reaction Propensity Score (RPS) for each metabolic reaction in a cell line by applying the mass action law to measured intracellular metabolite abundances, multiplying substrate concentrations each raised to their stoichiometric coefficients. This score estimates reaction rate potential based purely on substrate availability, excluding enzymatic activity.

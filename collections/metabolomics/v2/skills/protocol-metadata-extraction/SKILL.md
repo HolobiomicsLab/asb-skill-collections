@@ -12,7 +12,7 @@ metadata:
   - Python
   - MESSES
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -46,7 +46,6 @@ attribution:
 
 # Protocol Metadata Extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and aggregate protocol metadata from tabular experimental data into a unified, filtered JSON representation using tagging and iteration directives. This skill enables systematic transformation of dispersed protocol records into queryable metadata suitable for repository submission and quality control.

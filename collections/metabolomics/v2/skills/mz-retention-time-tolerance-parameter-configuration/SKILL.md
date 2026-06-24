@@ -17,7 +17,7 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # mz-retention-time-tolerance-parameter-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configuration of mass-to-charge (m/z) and retention time (RT) tolerance parameters for feature grouping in Asari LC-MS feature extraction. These parameters define the maximum acceptable deviations when clustering detected ions into putative metabolite features across a sample cohort.

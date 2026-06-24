@@ -17,7 +17,7 @@ metadata:
   - train-test.py script
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -46,7 +46,6 @@ attribution:
 
 # model-generalizability-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate whether a trained graph neural network model for collision cross section prediction generalizes effectively to held-out test data by computing standard regression metrics (RMSE, MAE, R²) and comparing against baseline values. This skill is essential for validating whether GNN models can reliably predict CCS across diverse molecular datasets beyond their training distribution.

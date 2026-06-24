@@ -15,7 +15,7 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -45,7 +45,6 @@ attribution:
 
 # fragment-peak-subformula-enumeration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate and rank all chemically valid molecular subformulae for each observed fragment peak in a tandem mass spectrum without relying on external fragmentation tree databases. This skill assigns chemical subformulae to fragment m/z values using energy-based scoring and chemical validity constraints, enabling de novo metabolite characterization.

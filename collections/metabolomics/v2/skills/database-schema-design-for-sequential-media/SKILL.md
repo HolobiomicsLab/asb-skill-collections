@@ -14,7 +14,7 @@ metadata:
   - xml.etree.ElementTree
   - Python
   - pymzML
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -44,7 +44,6 @@ attribution:
 
 # database-schema-design-for-sequential-media
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a relational database schema to store sequential media (spectra, chapters, or other indexed records) with ID and content columns, enabling efficient random access and iteration. This skill is essential when converting large sequential files into queryable databases for indexed, seekable access.

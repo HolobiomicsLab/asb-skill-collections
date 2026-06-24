@@ -19,7 +19,7 @@ metadata:
   - FT-ICR MS
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -54,7 +54,6 @@ attribution:
 
 # microbial-metabolomics-phage-impact-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess whether phage infection (or other treatments) produces statistically significant shifts in bacterial metabolite composition using distance-based multivariate analysis (PERMANOVA) on FT-ICR MS peak intensities. This skill detects subtle metabolic differences that ordination methods alone may miss, enabling interpretation of how external stressors alter microbial organic matter production.

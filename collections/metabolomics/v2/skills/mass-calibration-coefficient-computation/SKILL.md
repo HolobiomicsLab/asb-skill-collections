@@ -16,7 +16,7 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -51,7 +51,6 @@ attribution:
 
 # mass-calibration-coefficient-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute polynomial calibration coefficients from matched reference m/z peaks using least-squares fitting, enabling conversion of measured frequency or m/z error to true m/z values in FT-MS workflows. This skill bridges peak-matching (with adaptive PPM tolerance) to downstream molecular formula assignment.

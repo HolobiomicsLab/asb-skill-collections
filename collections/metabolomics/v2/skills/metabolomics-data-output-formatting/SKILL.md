@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -46,7 +46,6 @@ attribution:
 
 # metabolomics-data-output-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export annotated LC–MS metabolomics features and their ranked candidate matches to a multi-format output directory, including global results tables, ranked results per feature, ranked spectra PDFs, and pseudo-MS/MS MGF files. This skill ensures reproducible, auditable dissemination of annotation outputs suitable for downstream curation and publication.

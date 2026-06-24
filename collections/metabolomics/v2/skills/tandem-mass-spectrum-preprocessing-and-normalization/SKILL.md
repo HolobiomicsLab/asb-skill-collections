@@ -16,7 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -46,7 +46,6 @@ attribution:
 
 # tandem-mass-spectrum-preprocessing-and-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare raw tandem MS/MS spectra for downstream formula inference by normalizing peak intensities and removing low-intensity noise. This skill is essential before feeding spectra into neural network-based chemical formula ranking models like MIST-CF.

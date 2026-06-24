@@ -21,7 +21,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -62,7 +62,6 @@ attribution:
 
 # mass-difference-network-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Constructs biochemical transformation networks ab initio from FT-ICR MS peak data by computing all pairwise mass differences between detected m/z values and matching them against a reference database of known biochemical transformations. This skill enables discovery of metabolic pathways and hub metabolites without requiring compound identification or chromatographic separation.

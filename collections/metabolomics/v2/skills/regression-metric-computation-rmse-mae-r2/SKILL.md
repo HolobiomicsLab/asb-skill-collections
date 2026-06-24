@@ -16,7 +16,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -44,7 +44,6 @@ attribution:
 
 # regression-metric-computation-rmse-mae-r2
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute root-mean-square error (RMSE), mean absolute error (MAE), and coefficient of determination (R²) to quantify the generalizability and predictive accuracy of regression models on held-out test data. This skill is essential for validating graph neural network models trained for molecular property prediction across independent datasets.

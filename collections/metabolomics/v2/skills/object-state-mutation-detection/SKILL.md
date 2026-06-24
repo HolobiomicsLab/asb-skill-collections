@@ -14,7 +14,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -46,7 +46,6 @@ attribution:
 
 # object-state-mutation-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A technique to determine whether function calls operating on R6 reference objects modify the original data in-place or create independent deep copies. This is critical for metabolomics workflows where unintended mutation of peak tables can silently corrupt downstream analyses.

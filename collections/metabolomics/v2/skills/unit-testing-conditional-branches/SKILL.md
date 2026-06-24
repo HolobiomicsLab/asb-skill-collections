@@ -15,7 +15,7 @@ metadata:
   - xml.etree.ElementTree
   - pymzML
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -45,7 +45,6 @@ attribution:
 
 # unit-testing-conditional-branches
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically verify that each conditional branch in a file handler dispatch system correctly instantiates the appropriate handler class based on file extension and format detection. This skill ensures that polymorphic routing logic (e.g., .gz with index vs. without, .db, or standard mzML) produces the expected handler instances and integrates correctly with downstream readers.

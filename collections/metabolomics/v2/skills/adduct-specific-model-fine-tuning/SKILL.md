@@ -16,7 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -46,7 +46,6 @@ attribution:
 
 # adduct-specific-model-fine-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fine-tune a formula transformer neural network on MS/MS spectra grouped by ionization mode and adduct type to improve chemical formula ranking accuracy for molecules ionized under specific conditions. This skill adapts a pre-trained model (e.g., MIST-CF) by retraining its adduct tokenization and formula embedding layers on mode-specific data, enabling accurate formula inference for underrepresented ionization modes or novel adduct chemistries.

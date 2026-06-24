@@ -13,7 +13,7 @@ metadata:
   tools:
   - Python
   - Jupyter
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -41,7 +41,6 @@ attribution:
 
 # metabolite-background-set-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a statistical background set of metabolites for Over-representation Analysis (ORA) in metabolomics by filtering a complete metabolomics pathway database to exclude experimental detection lists and apply method-specific criteria. This background set defines the universe against which pathway enrichment significance is computed.

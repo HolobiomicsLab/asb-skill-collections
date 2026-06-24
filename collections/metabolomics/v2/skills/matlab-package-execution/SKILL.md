@@ -14,7 +14,7 @@ metadata:
   - M2S
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -43,7 +43,6 @@ attribution:
 
 # matlab-package-execution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a Matlab package to algorithmically match untargeted metabolomic features across two LC-MS datasets based on retention time and mass-to-charge ratio similarity. This skill is essential when you have two independent LC-MS feature tables and need to identify corresponding features to enable cross-dataset metabolomic analysis.

@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -55,7 +55,6 @@ attribution:
 
 # tandem-mass-spectrum-deconvolution-isotope-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill resolves convolved tandem mass spectra (MS/MS) into individual component spectra and annotates detected features with their isotopic signatures, enabling accurate molecular characterization in high-dimensional mass spectrometry workflows. It is essential for disambiguating overlapping fragmentation patterns and linking isotopologue patterns to detected features in multidimensional datasets.

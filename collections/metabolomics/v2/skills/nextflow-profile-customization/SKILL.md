@@ -15,7 +15,7 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -45,7 +45,6 @@ attribution:
 
 # nextflow-profile-customization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Customize Nextflow execution profiles to support containerized metabolomics workflows across diverse computational environments (local Docker, HPC with Singularity). This skill enables portable, reproducible LC-HRMS data processing by configuring container runtimes, resource directives, and tool-specific parameters for target execution contexts.

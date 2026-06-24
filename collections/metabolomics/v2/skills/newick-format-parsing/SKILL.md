@@ -15,7 +15,7 @@ metadata:
   - QIIME 2 artifact inspection tools
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -45,7 +45,6 @@ attribution:
 
 # newick-format-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate Newick-format phylogenetic trees to extract structural properties (node count, tree depth, branching statistics) for chemically-informed metabolomic trees. This skill is essential when inspecting Chemical Feature Tree artifacts produced by q2-qemistree to ensure data integrity before downstream phylogenetic diversity analysis.

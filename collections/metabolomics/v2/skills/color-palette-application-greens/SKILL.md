@@ -20,7 +20,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -54,7 +54,6 @@ attribution:
 
 # Apply Greens color palette to treemap visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the RColorBrewer Greens sequential palette to a treemap visualization of QC filtering results, enabling intuitive perception of ion count magnitudes across filter status categories. This palette choice leverages sequential color progression to emphasize both categorical distinctions and quantitative differences in ion abundances.

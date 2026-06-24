@@ -12,7 +12,7 @@ metadata:
   - Keras
   - TensorFlow 2.3.0
   - TensorFlow Serving
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -42,7 +42,6 @@ attribution:
 
 # keras-model-serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert pre-trained Keras neural network models to HDF5 TensorFlow 2 format for deployment in TensorFlow Serving. This serialization step is essential for packaging trained models into a format compatible with containerized inference pipelines.

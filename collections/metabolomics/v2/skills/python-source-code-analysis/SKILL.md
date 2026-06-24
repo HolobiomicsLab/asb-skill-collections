@@ -13,7 +13,7 @@ metadata:
   tools:
   - MAGMa
   - NLeSC/MAGMa joblauncher
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -43,7 +43,6 @@ attribution:
 
 # Python source code analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically extract HTTP endpoints, request/response schemas, and authentication mechanisms from Python webservice source code by analyzing route definitions, function signatures, type hints, and serialization logic. This skill enables reverse-engineering of webservice interfaces from implementation source when formal API documentation is absent or incomplete.

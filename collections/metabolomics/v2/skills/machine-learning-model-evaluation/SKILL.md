@@ -20,7 +20,7 @@ metadata:
   - Keras
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -55,7 +55,6 @@ attribution:
 
 # machine-learning-model-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine the optimal classification threshold for a trained neural network model by computing true and false positive rates across probability thresholds and selecting the threshold that maximizes the difference between true positives and false positives. This skill is essential for validating model performance on labelled peak datasets and ensuring the model generalizes beyond training data.

@@ -14,7 +14,7 @@ metadata:
   - pandas
   - numpy
   - matplotlib
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -49,7 +49,6 @@ attribution:
 
 # statistical-score-distribution-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and compare statistical properties (mean, median, standard deviation, min, max) of molecular formula assignment scores across different parameterization modes to assess how algorithmic choices affect annotation behavior and confidence distributions.

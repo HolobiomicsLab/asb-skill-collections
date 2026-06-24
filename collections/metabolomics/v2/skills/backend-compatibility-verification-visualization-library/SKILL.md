@@ -22,7 +22,7 @@ metadata:
   - alphatims
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -51,7 +51,6 @@ attribution:
 
 # Backend Compatibility Verification for Visualization Libraries
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a pandas-based mass spectrometry visualization library successfully renders output across multiple plotting backends (matplotlib, Bokeh, Plotly) by loading real MS data, configuring the backend, and validating the resulting interactive or static plots. This skill ensures that visualization code is portable and produces correct output regardless of the backend chosen.

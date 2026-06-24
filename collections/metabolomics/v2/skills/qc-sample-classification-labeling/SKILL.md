@@ -17,7 +17,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -48,7 +48,6 @@ attribution:
 
 # QC-Sample Classification and Labeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic annotation of LC-MS injection runs as either QC (quality control) or sample based on their position in an acquisition sequence, implemented by populating the sampleData 'type' column of an MsExperiment object. This classification enables downstream quality assessment and differential treatment of QC versus analytical samples.

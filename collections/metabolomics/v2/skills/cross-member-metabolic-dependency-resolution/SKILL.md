@@ -11,7 +11,7 @@ metadata:
   - http://edamontology.org/topic_3697
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -40,7 +40,6 @@ attribution:
 
 # cross-member-metabolic-dependency-resolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and resolve metabolic gaps in individual community members by leveraging cross-member dependencies and consensus constraints within a multi-organism metabolic model. This skill applies community-level constraints to gap-fill individual reconstructions, ensuring metabolic feasibility and interdependency consistency across all community members.

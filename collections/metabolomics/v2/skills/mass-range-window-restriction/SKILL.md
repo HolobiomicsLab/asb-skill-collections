@@ -15,7 +15,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -52,7 +52,6 @@ attribution:
 
 # mass-range-window-restriction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Restrict mass spectrometry data to a predefined m/z range to remove spectral regions outside the analyte search space and reduce computational burden. This operation filters out low and high mass-to-charge peaks before downstream analysis.

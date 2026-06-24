@@ -17,7 +17,7 @@ metadata:
   - Hierarchical clustering (Euclidean distance, complete linkage)
   - Consensus clustering
   - Python (Numpy, Pandas, Scikit-learn)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -51,7 +51,6 @@ attribution:
 
 # Reconstruct microbe-metabolite functional modules by clustering the feature attribution matrix
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill uses biclustering on normalized microbe-metabolite feature attribution score matrices to group microbes and metabolites into co-occurrence modules with similar interaction patterns. The method identifies optimal cluster numbers via consensus clustering across multiple trained models, enabling discovery of functional relationships in microbiome-metabolome networks.

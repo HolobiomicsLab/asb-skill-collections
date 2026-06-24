@@ -16,7 +16,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -47,7 +47,6 @@ attribution:
 
 # DDA Spectrum Association to Features
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Associate MS2 fragment spectra from data-dependent acquisition (DDA) to their parent features detected in MS1, enabling diagnostic fragment analysis and mass difference calculation for PFAS prioritization. This skill bridges raw spectral data to feature-level annotations by linking precursor ions to their fragment mass patterns.

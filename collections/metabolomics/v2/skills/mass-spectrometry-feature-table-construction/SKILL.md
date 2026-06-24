@@ -18,7 +18,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -53,7 +53,6 @@ attribution:
 
 # mass-spectrometry-feature-table-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated extraction of MS features (m/z, retention time, intensity) from centroided mzML files using pyOpenMS FeatureFinderCentroided, producing a structured feature table in mzTab or CSV format for downstream PFAS prioritization or metabolite screening.

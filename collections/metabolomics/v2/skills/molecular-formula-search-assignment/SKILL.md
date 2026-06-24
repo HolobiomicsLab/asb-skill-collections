@@ -18,7 +18,7 @@ metadata:
   - EnviroMS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -51,7 +51,6 @@ attribution:
 
 # molecular-formula-search-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns molecular formulas to detected m/z peaks in high-resolution mass spectra by matching observed mass-to-charge ratios against a constrained search space of possible elemental compositions. This skill is essential for converting raw peak lists into chemically interpretable molecular annotations, especially for natural organic matter and complex mixture analysis on FT-ICR instruments.

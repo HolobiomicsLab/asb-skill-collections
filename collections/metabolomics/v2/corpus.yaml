@@ -70,7 +70,7 @@ papers:
 - name: ms2decide
   doi: 10.1002/cmtd.202400088
   title: ms2decide
-  repo_url: ''
+  repo_url: https://github.com/MejriY/MS2DECIDE
   status: included
   wave: v2-expansion
   access:
@@ -78,9 +78,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: LipidOne 2.0
   doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -184,7 +184,7 @@ papers:
 - name: falcon
   doi: 10.1002/rcm.9153
   title: falcon
-  repo_url: ''
+  repo_url: https://github.com/bittremieuxlab/falcon
   status: included
   wave: v2-expansion
   access:
@@ -192,9 +192,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: github-api
 - name: MS-VIS
   doi: 10.1002/rcm.9253
   title: MS-VIS
@@ -268,7 +268,7 @@ papers:
 - name: pfdeltascreen
   doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
-  repo_url: ''
+  repo_url: https://github.com/JonZwe/PFAScreen
   status: included
   wave: v2-expansion
   access:
@@ -276,9 +276,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: LGPL-2.1
+  license_tier: open
+  license_detection: github-api
 - name: Mass Spectrum Transformer
   doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -563,7 +563,7 @@ papers:
 - name: quantyfey
   doi: 10.1016/j.aca.2025.344571
   title: quantyfey
-  repo_url: ''
+  repo_url: https://github.com/CDLMarkus/QuantyFey
   status: included
   wave: v2-expansion
   access:
@@ -571,9 +571,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
 - name: DIATAGe
   doi: 10.1016/j.aca.2025.344698
   title: DIATAGe
@@ -986,7 +986,7 @@ papers:
 - name: mass2adduct
   doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
-  repo_url: ''
+  repo_url: https://github.com/kbseah/mass2adduct
   status: included
   wave: v2-expansion
   access:
@@ -994,9 +994,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
 - name: DaDIA
   doi: 10.1021/acs.analchem.0c05022
   title: DaDIA
@@ -1098,7 +1098,7 @@ papers:
 - name: neatms
   doi: 10.1021/acs.analchem.1c02220
   title: neatms
-  repo_url: ''
+  repo_url: https://github.com/bihealth/NeatMS
   status: included
   wave: v2-expansion
   access:
@@ -1106,13 +1106,13 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: slaw
   doi: 10.1021/acs.analchem.1c02687
   title: slaw
-  repo_url: ''
+  repo_url: https://github.com/zamboni-lab/SLAW
   status: included
   wave: v2-expansion
   access:
@@ -1120,13 +1120,13 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0
+  license_tier: open
+  license_detection: github-api
 - name: metaboannotator
   doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
-  repo_url: ''
+  repo_url: https://github.com/gggraca/MetaboAnnotatoR
   status: included
   wave: v2-expansion
   access:
@@ -1134,9 +1134,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
 - name: 10.1021/acs.analchem.1c03163
   doi: 10.1021/acs.analchem.1c03163
   title: 10.1021/acs.analchem.1c03163
@@ -1168,7 +1168,7 @@ papers:
 - name: m2s
   doi: 10.1021/acs.analchem.1c03592
   title: m2s
-  repo_url: ''
+  repo_url: https://github.com/rjdossan/M2S
   status: included
   wave: v2-expansion
   access:
@@ -1176,9 +1176,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: github-api
 - name: Paramounter
   doi: 10.1021/acs.analchem.1c04758
   title: Paramounter
@@ -1196,7 +1196,7 @@ papers:
 - name: deimos
   doi: 10.1021/acs.analchem.1c05017
   title: deimos
-  repo_url: ''
+  repo_url: https://github.com/pnnl/deimos
   status: included
   wave: v2-expansion
   access:
@@ -1204,9 +1204,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: github-api
 - name: automRm
   doi: 10.1021/acs.analchem.1c05224
   title: automRm
@@ -1252,7 +1252,7 @@ papers:
 - name: rassp
   doi: 10.1021/acs.analchem.2c02093
   title: rassp
-  repo_url: ''
+  repo_url: https://github.com/thejonaslab/rassp-public
   status: included
   wave: v2-expansion
   access:
@@ -1336,7 +1336,7 @@ papers:
 - name: mspcompiler
   doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
-  repo_url: ''
+  repo_url: https://github.com/QizhiSu/mspcompiler
   status: included
   wave: v2-expansion
   access:
@@ -1346,7 +1346,7 @@ papers:
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
-  license_detection: none
+  license_detection: file-present-unclassified
 - name: CordBat
   doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -1546,7 +1546,7 @@ papers:
 - name: QComics
   doi: 10.1021/acs.analchem.3c03660
   title: QComics
-  repo_url: ''
+  repo_url: https://github.com/ricoderks/QComics
   status: included
   wave: v2-expansion
   access:
@@ -1554,9 +1554,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
 - name: AVIR
   doi: 10.1021/acs.analchem.3c04046
   title: AVIR
@@ -1588,7 +1588,7 @@ papers:
 - name: moccal
   doi: 10.1021/acs.analchem.3c04290
   title: moccal
-  repo_url: ''
+  repo_url: https://github.com/HinesLab/MOCCal
   status: included
   wave: v2-expansion
   access:
@@ -1596,9 +1596,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: Lipid Wizard
   doi: 10.1021/acs.analchem.3c04419
   title: Lipid Wizard
@@ -1616,7 +1616,7 @@ papers:
 - name: specxplore
   doi: 10.1021/acs.analchem.3c04444
   title: specxplore
-  repo_url: ''
+  repo_url: https://github.com/kevinmildau/specXplore
   status: included
   wave: v2-expansion
   access:
@@ -1624,9 +1624,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: MINNO
   doi: 10.1021/acs.analchem.3c04501
   title: MINNO
@@ -1686,7 +1686,7 @@ papers:
 - name: deepion
   doi: 10.1021/acs.analchem.3c05002
   title: deepion
-  repo_url: ''
+  repo_url: https://github.com/gankLei-X/DeepION
   status: included
   wave: v2-expansion
   access:
@@ -1700,7 +1700,7 @@ papers:
 - name: ps2ms
   doi: 10.1021/acs.analchem.3c05019
   title: ps2ms
-  repo_url: ''
+  repo_url: https://github.com/jhhung/PS2MS
   status: included
   wave: v2-expansion
   access:
@@ -1784,7 +1784,7 @@ papers:
 - name: mobilipid
   doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
-  repo_url: ''
+  repo_url: https://github.com/FelinaHildebrand/MobiLipid
   status: included
   wave: v2-expansion
   access:
@@ -1798,7 +1798,7 @@ papers:
 - name: bam
   doi: 10.1021/acs.analchem.4c01565
   title: bam
-  repo_url: ''
+  repo_url: https://github.com/HassounLab/BAM
   status: included
   wave: v2-expansion
   access:
@@ -1924,7 +1924,7 @@ papers:
 - name: lipoclean
   doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
-  repo_url: ''
+  repo_url: https://github.com/stavis1/LipoCLEAN
   status: included
   wave: v2-expansion
   access:
@@ -1932,9 +1932,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: PPGB-MS2
   doi: 10.1021/acs.analchem.4c04375
   title: PPGB-MS2
@@ -2106,7 +2106,7 @@ papers:
 - name: qc4metabolomics
   doi: 10.1021/acs.analchem.4c07078
   title: qc4metabolomics
-  repo_url: ''
+  repo_url: https://github.com/stanstrup/QC4Metabolomics
   status: included
   wave: v2-expansion
   access:
@@ -2190,7 +2190,7 @@ papers:
 - name: tardis
   doi: 10.1021/acs.analchem.5c00567
   title: tardis
-  repo_url: ''
+  repo_url: https://github.com/UGent-LIMET/TARDIS
   status: included
   wave: v2-expansion
   access:
@@ -2198,13 +2198,13 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
 - name: metid
   doi: 10.1021/acs.analchem.5c00633
   title: metid
-  repo_url: ''
+  repo_url: https://github.com/pbjarterot/Met-ID
   status: included
   wave: v2-expansion
   access:
@@ -2212,9 +2212,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
 - name: mzrtsim
   doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -2232,7 +2232,7 @@ papers:
 - name: mamsi
   doi: 10.1021/acs.analchem.5c01327
   title: mamsi
-  repo_url: ''
+  repo_url: https://github.com/kopeckylukas/py-mamsi
   status: included
   wave: v2-expansion
   access:
@@ -2240,9 +2240,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: github-api
 - name: LongitudinalProf-MSMS-Method
   doi: 10.1021/acs.analchem.5c01414
   title: LongitudinalProf-MSMS-Method
@@ -2572,7 +2572,7 @@ papers:
 - name: spectrumutils
   doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
-  repo_url: ''
+  repo_url: https://github.com/bittremieuxlab/spectrum_utils
   status: included
   wave: v2-expansion
   access:
@@ -2580,9 +2580,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
 - name: Retip
   doi: 10.1021/acs.analchem.9b05765
   title: Retip
@@ -2656,7 +2656,7 @@ papers:
 - name: Chemprop-IR
   doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
-  repo_url: ''
+  repo_url: https://github.com/gfm-collab/chemprop-IR
   status: included
   wave: v2-expansion
   access:
@@ -2664,9 +2664,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: CyProduct
   doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -2684,7 +2684,7 @@ papers:
 - name: mistcf
   doi: 10.1021/acs.jcim.3c01082
   title: mistcf
-  repo_url: ''
+  repo_url: https://github.com/samgoldman97/mist-cf
   status: included
   wave: v2-expansion
   access:
@@ -2692,9 +2692,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: QC-GN2oMS2
   doi: 10.1021/acs.jcim.4c00446
   title: QC-GN2oMS2
@@ -2768,7 +2768,7 @@ papers:
 - name: npclassifier
   doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
-  repo_url: ''
+  repo_url: https://github.com/mwang87/NP-Classifier
   status: included
   wave: v2-expansion
   access:
@@ -2776,9 +2776,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: Bioactivity-Based Molecular Networking
   doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking
@@ -3006,7 +3006,7 @@ papers:
 - name: pyopenmsviz
   doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
-  repo_url: ''
+  repo_url: https://github.com/OpenMS/pyopenms_viz
   status: included
   wave: v2-expansion
   access:
@@ -3014,9 +3014,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: github-api
 - name: MS-RT
   doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT
@@ -3104,7 +3104,7 @@ papers:
 - name: pyteomics
   doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
-  repo_url: ''
+  repo_url: https://github.com/levitsky/pyteomics
   status: included
   wave: v2-expansion
   access:
@@ -3112,9 +3112,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
 - name: CEU Mass Mediator 3.0
   doi: 10.1021/acs.jproteome.8b00720
   title: CEU Mass Mediator 3.0
@@ -3146,7 +3146,7 @@ papers:
 - name: NP Analyst
   doi: 10.1021/acscentsci.1c01108
   title: NP Analyst
-  repo_url: ''
+  repo_url: https://github.com/liningtonlab/npanalyst
   status: included
   wave: v2-expansion
   access:
@@ -3154,9 +3154,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: ENPKG (Experimental Natural Products Knowledge Graph)
   doi: 10.1021/acscentsci.3c00800
   title: ENPKG (Experimental Natural Products Knowledge Graph)
@@ -3174,7 +3174,7 @@ papers:
 - name: NMR2Struct
   doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
-  repo_url: ''
+  repo_url: https://github.com/MarklandGroup/NMR2Struct
   status: included
   wave: v2-expansion
   access:
@@ -3182,9 +3182,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: 10.1021/acscentsci.9b00085
   doi: 10.1021/acscentsci.9b00085
   title: 10.1021/acscentsci.9b00085
@@ -3370,7 +3370,7 @@ papers:
 - name: nextflow4msdial
   doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
-  repo_url: ''
+  repo_url: https://github.com/Nextflow4Metabolomics/nextflow4ms-dial
   status: included
   wave: v2-expansion
   access:
@@ -3378,9 +3378,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: Norm ISWSVR
   doi: 10.1021/jasms.4c00467
   title: Norm ISWSVR
@@ -3398,7 +3398,7 @@ papers:
 - name: mzquality
   doi: 10.1021/jasms.5c00073
   title: mzquality
-  repo_url: ''
+  repo_url: https://github.com/hankemeierlab/mzQuality
   status: included
   wave: v2-expansion
   access:
@@ -3406,9 +3406,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
 - name: Punc’data
   doi: 10.1021/jasms.5c00151
   title: Punc’data
@@ -3882,7 +3882,7 @@ papers:
 - name: fiddle
   doi: 10.1038/s41467-025-66060-9
   title: fiddle
-  repo_url: ''
+  repo_url: https://github.com/JosieHong/FIDDLE
   status: included
   wave: v2-expansion
   access:
@@ -3890,9 +3890,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
 - name: MetaboLM
   doi: 10.1038/s41467-025-66163-3
   title: MetaboLM
@@ -3994,7 +3994,7 @@ papers:
 - name: mzmine3
   doi: 10.1038/s41587-023-01690-2
   title: mzmine3
-  repo_url: ''
+  repo_url: https://github.com/mzmine/mzmine3
   status: included
   wave: v2-expansion
   access:
@@ -4002,9 +4002,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: MASST
   doi: 10.1038/s41587-023-01985-4
   title: MASST
@@ -4050,7 +4050,7 @@ papers:
 - name: qemistree
   doi: 10.1038/s41589-020-00677-3
   title: qemistree
-  repo_url: ''
+  repo_url: https://github.com/biocore/q2-qemistree
   status: included
   wave: v2-expansion
   access:
@@ -4058,9 +4058,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-2-Clause
+  license_tier: open
+  license_detection: github-api
 - name: Paired Omics Data Platform (PoDP)
   doi: 10.1038/s41589-020-00724-z
   title: Paired Omics Data Platform (PoDP)
@@ -4414,7 +4414,7 @@ papers:
 - name: 13C-SpaceM
   doi: 10.1038/s42255-024-01118-4
   title: 13C-SpaceM
-  repo_url: ''
+  repo_url: https://github.com/Buglakova/13C-SpaceM
   status: included
   wave: v2-expansion
   access:
@@ -5145,7 +5145,7 @@ papers:
 - name: pymzml
   doi: 10.1093/bioinformatics/bty046
   title: pymzml
-  repo_url: ''
+  repo_url: https://github.com/pymzml/pymzML
   status: included
   wave: v2-expansion
   access:
@@ -5153,9 +5153,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: ChemDistiller
   doi: 10.1093/bioinformatics/bty080
   title: ChemDistiller
@@ -5987,7 +5987,7 @@ papers:
 - name: mpactr
   doi: 10.1128/mra.00997-24
   title: mpactr
-  repo_url: ''
+  repo_url: https://github.com/mums2/mpactr
   status: included
   wave: v2-expansion
   access:
@@ -5995,9 +5995,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
 - name: BiG-MAP
   doi: 10.1128/msystems.00937-21
   title: BiG-MAP
@@ -6183,7 +6183,7 @@ papers:
 - name: aird
   doi: 10.1186/s12859-021-04490-0
   title: aird
-  repo_url: ''
+  repo_url: https://github.com/CSi-Studio/AirdPro
   status: included
   wave: v2-expansion
   access:
@@ -6191,9 +6191,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MulanPSL-2.0
+  license_tier: open
+  license_detection: github-api
 - name: mzBucket
   doi: 10.1186/s12859-022-04833-5
   title: mzBucket
@@ -6283,7 +6283,7 @@ papers:
 - name: MetFrag
   doi: 10.1186/s13321-016-0115-9
   title: MetFrag
-  repo_url: ''
+  repo_url: https://github.com/ipb-halle/MetFragRelaunched
   status: included
   wave: v2-expansion
   access:
@@ -6399,7 +6399,7 @@ papers:
 - name: MS2DeepScore
   doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
-  repo_url: ''
+  repo_url: https://github.com/matchms/ms2deepscore
   status: included
   wave: v2-expansion
   access:
@@ -6407,13 +6407,13 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
 - name: cmmrt
   doi: 10.1186/s13321-022-00613-8
   title: cmmrt
-  repo_url: ''
+  repo_url: https://github.com/constantino-garcia/cmmrt
   status: included
   wave: v2-expansion
   access:
@@ -6498,7 +6498,7 @@ papers:
 - name: idslmint
   doi: 10.1186/s13321-024-00804-5
   title: idslmint
-  repo_url: ''
+  repo_url: https://github.com/idslme/IDSL_MINT
   status: included
   wave: v2-expansion
   access:
@@ -6540,7 +6540,7 @@ papers:
 - name: mol2ccs
   doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
-  repo_url: ''
+  repo_url: https://github.com/enveda/ccs-prediction
   status: included
   wave: v2-expansion
   access:
@@ -6548,9 +6548,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0
+  license_tier: open
+  license_detection: github-api
 - name: ROASMI
   doi: 10.1186/s13321-025-00968-8
   title: ROASMI
@@ -6582,7 +6582,7 @@ papers:
 - name: minems2
   doi: 10.1186/s13321-025-01051-y
   title: minems2
-  repo_url: ''
+  repo_url: https://github.com/odisce/mineMS2
   status: included
   wave: v2-expansion
   access:
@@ -6592,7 +6592,7 @@ papers:
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
-  license_detection: none
+  license_detection: file-present-unclassified
 - name: Galaxy-M
   doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M
@@ -6624,7 +6624,7 @@ papers:
 - name: MetaboDirect
   doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
-  repo_url: ''
+  repo_url: https://github.com/Coayala/MetaboDirect
   status: included
   wave: v2-expansion
   access:
@@ -6632,9 +6632,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: HExpMetDB
   doi: 10.1289/EHP7722
   title: HExpMetDB
@@ -6696,7 +6696,7 @@ papers:
 - name: Spec2Vec
   doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
-  repo_url: ''
+  repo_url: https://github.com/iomega/spec2vec
   status: included
   wave: v2-expansion
   access:
@@ -6704,9 +6704,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
 - name: 10.1371/journal.pcbi.1008920
   doi: 10.1371/journal.pcbi.1008920
   title: 10.1371/journal.pcbi.1008920
@@ -6724,7 +6724,7 @@ papers:
 - name: MiMeNet
   doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
-  repo_url: ''
+  repo_url: https://github.com/YDaiLab/MiMeNet
   status: included
   wave: v2-expansion
   access:
@@ -6732,13 +6732,13 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: ORA
   doi: 10.1371/journal.pcbi.1009105
   title: ORA
-  repo_url: ''
+  repo_url: https://github.com/cwieder/metabolomics-ORA
   status: included
   wave: v2-expansion
   access:
@@ -6746,9 +6746,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: POMAShiny
   doi: 10.1371/journal.pcbi.1009148
   title: POMAShiny
@@ -6766,7 +6766,7 @@ papers:
 - name: INTEGRATE
   doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
-  repo_url: ''
+  repo_url: https://github.com/qLSLab/integrate
   status: included
   wave: v2-expansion
   access:
@@ -6774,13 +6774,13 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
 - name: COMMIT
   doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
-  repo_url: ''
+  repo_url: https://github.com/pwendering/COMMIT
   status: included
   wave: v2-expansion
   access:
@@ -6788,9 +6788,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: iPRESTO
   doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
@@ -6822,7 +6822,7 @@ papers:
 - name: pcpfm
   doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
-  repo_url: ''
+  repo_url: https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics
   status: included
   wave: v2-expansion
   access:
@@ -6830,9 +6830,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: license-file
 - name: 10.1371/journal.pntd.0006215
   doi: 10.1371/journal.pntd.0006215
   title: 10.1371/journal.pntd.0006215
@@ -6864,7 +6864,7 @@ papers:
 - name: uafr
   doi: 10.1371/journal.pone.0306202
   title: uafr
-  repo_url: ''
+  repo_url: https://github.com/castratton/uafR
   status: included
   wave: v2-expansion
   access:
@@ -6962,7 +6962,7 @@ papers:
 - name: vimms
   doi: 10.21105/joss.03990
   title: vimms
-  repo_url: ''
+  repo_url: https://github.com/glasgowcompbio/vimms
   status: included
   wave: v2-expansion
   access:
@@ -6970,9 +6970,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: msmetaenhancer
   doi: 10.21105/joss.04494
   title: msmetaenhancer
@@ -6990,7 +6990,7 @@ papers:
 - name: spectripy
   doi: 10.21105/joss.08070
   title: spectripy
-  repo_url: ''
+  repo_url: https://github.com/rformassspectrometry/SpectriPy
   status: included
   wave: v2-expansion
   access:
@@ -6998,9 +6998,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Artistic-2.0
+  license_tier: open
+  license_detection: github-api
 - name: OpenNAU
   doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU
@@ -7341,7 +7341,7 @@ papers:
 - name: messes
   doi: 10.3390/metabo13070842
   title: messes
-  repo_url: ''
+  repo_url: https://github.com/MoseleyBioinformaticsLab/MESSES
   status: included
   wave: v2-expansion
   access:
@@ -7349,9 +7349,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: license-file
 - name: SMetaS
   doi: 10.3390/metabo13080941
   title: SMetaS
@@ -7677,7 +7677,7 @@ papers:
 - name: corems
   doi: 10.5281/zenodo.14009575
   title: corems
-  repo_url: ''
+  repo_url: https://github.com/EMSL-Computing/CoreMS
   status: included
   wave: v2-expansion
   access:
@@ -7685,9 +7685,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: BSD-2-Clause
+  license_tier: open
+  license_detection: github-api
 - name: 10.5281/zenodo.14712886
   doi: 10.5281/zenodo.14712886
   title: 10.5281/zenodo.14712886
@@ -7957,7 +7957,7 @@ papers:
 - name: magma
   doi: 10.5702/massspectrometry.S0033
   title: magma
-  repo_url: ''
+  repo_url: https://github.com/NLeSC/MAGMa
   status: included
   wave: v2-expansion
   access:
@@ -7965,9 +7965,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
 - name: 10.6084/m9.figshare.28876751.v2
   doi: 10.6084/m9.figshare.28876751.v2
   title: 10.6084/m9.figshare.28876751.v2

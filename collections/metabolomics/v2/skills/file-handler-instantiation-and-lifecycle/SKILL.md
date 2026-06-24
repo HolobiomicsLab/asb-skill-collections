@@ -16,7 +16,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -46,7 +46,6 @@ attribution:
 
 # file-handler-instantiation-and-lifecycle
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate and manage file handler objects in pymzML by conditionally dispatching to specialized classes (IndexedGzip, StandardGzip, SQLiteDatabase, StandardMzml) based on file extension and compression metadata. This skill enables transparent support for multiple mzML file formats and storage backends within a unified Reader interface.

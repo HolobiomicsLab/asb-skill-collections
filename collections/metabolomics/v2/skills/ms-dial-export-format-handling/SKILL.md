@@ -15,7 +15,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -45,7 +45,6 @@ attribution:
 
 # ms-dial-export-format-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure MS-DIAL to export lipid identifications in the correct format (m/z matrix, msp export format, with blank filtering disabled) so that downstream tools like LipoCLEAN can correctly parse and filter the results. This skill ensures MS-DIAL output is compatible with machine learning-based quality filtering pipelines.

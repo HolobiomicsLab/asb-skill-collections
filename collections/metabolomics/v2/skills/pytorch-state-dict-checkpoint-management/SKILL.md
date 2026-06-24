@@ -15,7 +15,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # PyTorch State Dict Checkpoint Management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Manage selective freezing and persistence of PyTorch model components by saving individual module state dictionaries (e.g., formula_encoder_state_dict, rescore_head_state_dict) to checkpoint files while keeping other components (e.g., TCN encoder) frozen during training. This enables modular training workflows where different components are updated at different stages.

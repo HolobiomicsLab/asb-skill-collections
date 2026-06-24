@@ -15,7 +15,7 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -50,7 +50,6 @@ attribution:
 
 # ppm-tolerance-window-adjustment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 An iterative calibration refinement technique that progressively widens the parts-per-million (ppm) error tolerance window when initial narrow thresholds fail to yield sufficient reference m/z matches. This skill is essential for robust mass spectrometry calibration when working with sparse or challenging reference lists.

@@ -15,7 +15,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -46,7 +46,6 @@ attribution:
 
 # PFAS Characteristic Fragment Identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and prioritize PFAS features in non-target HRMS data by analyzing characteristic fragment mass differences and diagnostic fragments in MS2 spectra. This skill isolates fragments indicative of perfluoroalkyl structures (e.g., CF₂ loss, perfluoroalkyl chain fragments) to distinguish PFAS from confounding compounds.

@@ -15,7 +15,7 @@ metadata:
   - SummarizedExperiment
   - mzQualityDashboard
   - xcms
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -51,7 +51,6 @@ attribution:
 
 # quality-control-sample-ratio-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate Relative Standard Deviation (RSD) of batch-corrected compound-to-internal-standard ratios in QC samples to identify and remove outlier QC measurements and to guide internal standard selection. This skill is essential for detecting systematic quality issues and recommending the most stable internal standard for each compound in metabolomics studies.

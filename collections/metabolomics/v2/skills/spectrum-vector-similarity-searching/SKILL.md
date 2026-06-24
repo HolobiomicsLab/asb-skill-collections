@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -48,7 +48,6 @@ attribution:
 
 # spectrum-vector-similarity-searching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Efficiently retrieve k nearest neighbors for each spectrum vector using spatial indexing structures (k-d trees, LSH-based inverted indexes) to enable sparse pairwise distance computation without exhaustive all-vs-all comparisons. This skill is critical for scaling spectrum clustering to millions of MS/MS spectra.

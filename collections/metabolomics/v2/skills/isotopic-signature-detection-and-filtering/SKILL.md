@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -53,7 +53,6 @@ attribution:
 
 # isotopic-signature-detection-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detection and filtering of isotopic signatures in high-dimensional mass spectrometry data to retain only robust, multi-member isotope patterns. This skill refines feature characterization by eliminating spurious or under-represented isotopic assignments that lack sufficient member count to be considered reliable molecular identity evidence.

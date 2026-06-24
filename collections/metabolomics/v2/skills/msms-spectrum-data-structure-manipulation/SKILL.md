@@ -19,7 +19,7 @@ metadata:
   - PSI-MOD
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -51,7 +51,6 @@ attribution:
 
 # msms-spectrum-data-structure-manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, filter, annotate, and transform tandem mass spectrometry (MSMS) spectra using the spectrum_utils MsmsSpectrum data structure, enabling preparation of spectra for publication-quality visualization and downstream analysis. This skill encompasses mass range restriction, noise/precursor removal, intensity normalization, and fragment annotation via ProForma 2.0 peptide strings.

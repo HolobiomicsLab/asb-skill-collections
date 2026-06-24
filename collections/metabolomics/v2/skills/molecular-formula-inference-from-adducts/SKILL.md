@@ -19,7 +19,7 @@ metadata:
   - JMS (Json's Metabolite Services)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -53,7 +53,6 @@ attribution:
 
 # molecular-formula-inference-from-adducts
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer neutral molecular formulas from empirical compound (EmpCpd) parameters—including observed m/z, charge state, and ionization mode—to enable Level 4 MS1 annotation against reference databases. This skill is essential for bridging feature-level mass spectrometry data to chemical structure identity without requiring explicit mass tolerance specification.

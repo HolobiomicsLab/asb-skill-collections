@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -54,7 +54,6 @@ attribution:
 
 # collision-cross-section-calibration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate collision cross section (CCS) values for ion mobility spectrometry data by mapping observed drift times to reference CCS standards. This skill enables accurate structural characterization of detected features across multidimensional LC-IMS-MS datasets.

@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -47,7 +47,6 @@ attribution:
 
 # HDF5 File I/O Operations
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and save peak-picked mass spectrometry feature tables from/to HDF5 files with multidimensional columns (m/z, drift time, retention time, intensity). This skill enables efficient storage and retrieval of intermediate analysis results in DEIMoS workflows.

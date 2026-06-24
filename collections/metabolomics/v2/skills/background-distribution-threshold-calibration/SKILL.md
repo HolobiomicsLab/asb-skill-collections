@@ -17,7 +17,7 @@ metadata:
   - TensorFlow
   - scikit-learn
   - SciPy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -52,7 +52,6 @@ attribution:
 
 # background-distribution-threshold-calibration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method to establish empirically-grounded significance thresholds for predictive model outputs by generating a null distribution from shuffled data, then using percentile cutoffs to classify well-predicted features. This skill ensures that feature predictions are statistically validated against random baseline correlations rather than relying on arbitrary fixed cutoffs.

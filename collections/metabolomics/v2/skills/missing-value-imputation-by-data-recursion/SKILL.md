@@ -16,7 +16,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -44,7 +44,6 @@ attribution:
 
 # missing-value-imputation-by-data-recursion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A gap-filling strategy for untargeted LC-MS feature tables that recursively searches related samples (by retention time and m/z proximity) to recover missing feature intensities, replacing NA or zero entries with values from alternate sample batches or replicates. This technique restores the sample-feature matrix structure without requiring external reference libraries.

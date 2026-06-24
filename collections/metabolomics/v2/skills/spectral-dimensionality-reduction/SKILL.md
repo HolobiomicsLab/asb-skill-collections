@@ -13,7 +13,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -43,7 +43,6 @@ attribution:
 
 # spectral-dimensionality-reduction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform high-resolution MS/MS spectra into fixed-size, low-dimensional vector representations using feature hashing, enabling efficient nearest-neighbor indexing and similarity searching at scale. This transformation preserves cosine similarity while reducing memory footprint and computational cost.

@@ -17,7 +17,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -46,7 +46,6 @@ attribution:
 
 # feature-annotation-with-chemical-descriptors
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate mass spectrometry features with computed chemical descriptors (mass defect, normalized mass defect ratios, Kendrick mass defect) to enable prioritization and filtering of candidate compounds. This skill enriches feature lists with dimensionless or normalized chemical properties that support targeted screening of analytes with specific structural patterns, such as PFAS.

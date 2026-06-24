@@ -13,7 +13,7 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -43,7 +43,6 @@ attribution:
 
 # message-passing-neural-network-architecture-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement extensions to message-passing neural network (MPNN) architectures for molecular property prediction tasks, such as infrared spectral forecasting. This skill involves identifying architectural bottlenecks in a base MPNN framework, adding task-specific featurization and output layers, and validating that the extended model matches expected structural signatures.

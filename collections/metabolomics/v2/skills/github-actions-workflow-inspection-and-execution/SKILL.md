@@ -12,7 +12,7 @@ metadata:
   - git
   - GitHub Actions
   - RDKit
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -43,7 +43,6 @@ attribution:
 
 # GitHub Actions Workflow Inspection and Execution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and locally reproduce a GitHub Actions CI workflow by examining the main.yml configuration file and executing the same test suite and dependency installation steps to verify that the workflow passes and matches the reported badge status. This skill validates the integrity of automated CI pipelines and confirms reproducibility of build artifacts.

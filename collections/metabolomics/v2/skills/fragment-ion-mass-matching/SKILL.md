@@ -17,7 +17,7 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -50,7 +50,6 @@ attribution:
 
 # fragment-ion-mass-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass spectrometry peaks to theoretical fragment ions (b and y type) of a known peptidoform by computing theoretical m/z values and matching them within a specified mass tolerance. This skill enables ion type annotation and validation of peptide identifications.

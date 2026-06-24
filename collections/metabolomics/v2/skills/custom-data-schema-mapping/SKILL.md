@@ -17,7 +17,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -48,7 +48,6 @@ attribution:
 
 # Custom Data Schema Mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate user-supplied feature lists (CSV/TSV/XLSX format) into a standardized internal feature object representation compatible with downstream PFAS prioritization workflows. This skill enables PFΔScreen to accept features from external feature-finding tools or vendor software rather than relying solely on pyOpenMS-detected features.

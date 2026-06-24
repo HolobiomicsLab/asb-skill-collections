@@ -15,7 +15,7 @@ metadata:
   - Transformer (architecture)
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -44,7 +44,6 @@ attribution:
 
 # bond-connectivity-prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict molecular bond connectivity (graph structure) from spectroscopic or fragmentary inputs using transformer-based link prediction on molecular graphs. This skill recovers the missing edges and atom adjacencies in a partial or inferred molecular structure.

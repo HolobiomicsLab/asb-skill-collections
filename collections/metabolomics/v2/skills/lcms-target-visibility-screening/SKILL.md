@@ -18,7 +18,7 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -53,7 +53,6 @@ attribution:
 
 # lcms-target-visibility-screening
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A diagnostic preprocessing step in targeted LC–MS metabolomics that uses TARDIS screening mode to verify that all intended target compounds (internal standards and endogenous metabolites) are detectable within their expected m/z and retention time windows before launching full peak detection and integration. This step ensures data quality and prevents wasted computational effort on targets absent from the sample.

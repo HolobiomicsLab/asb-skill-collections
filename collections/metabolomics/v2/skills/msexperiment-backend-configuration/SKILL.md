@@ -18,7 +18,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -51,7 +51,6 @@ attribution:
 
 # MsExperiment Backend Configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and populate an MsExperiment object with LC-MS spectral data using a specified backend (e.g., MsBackendMzR) and annotate sample metadata (such as QC vs. sample type) to enable downstream targeted integration and quality assessment workflows.

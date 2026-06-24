@@ -17,7 +17,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -47,7 +47,6 @@ attribution:
 
 # random-access-seekable-file-interface-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a custom file wrapper class that enables random-access seeking into compressed or database-backed spectral data files by implementing indexed block structure with __getitem__, read(), and spectrum count methods. This skill is essential when standard mzML parsers must support chapter/spectrum-level random access on files too large for full decompression.

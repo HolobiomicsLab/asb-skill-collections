@@ -19,7 +19,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -53,7 +53,6 @@ attribution:
 
 # polarity-aware-data-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatic filtering of LC-MS data by ionization polarity (positive/negative) within the TARDIS peak detection pipeline, ensuring that only targets matching their expected polarity are included in quantitative output. This eliminates the need for manual polarity subsetting before peak detection.

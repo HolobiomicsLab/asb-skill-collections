@@ -16,7 +16,7 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -51,7 +51,6 @@ attribution:
 
 # FT-MS Mass Spectrum Peak Detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification and localization of mass spectral peaks in Fourier-transform ion cyclotron resonance (FT-ICR) mass spectrometry data using apex quadratic fitting. This skill is essential for converting raw FT-MS transients into interpretable peak lists suitable for downstream calibration and molecular formula assignment.

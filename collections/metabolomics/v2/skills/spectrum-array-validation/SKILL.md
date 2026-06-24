@@ -15,7 +15,7 @@ metadata:
   - Python (numpy)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -49,7 +49,6 @@ attribution:
 
 # Spectrum Array Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that mass spectrometry spectrum m/z and intensity arrays conform to expected ranges, data types, and peak count constraints after preprocessing. This skill ensures data integrity and correct application of filtering operations in spectrum_utils workflows.

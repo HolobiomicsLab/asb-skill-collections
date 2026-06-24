@@ -15,7 +15,7 @@ metadata:
   - SCARF
   - MIST-CF
   - PyTorch
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -47,7 +47,6 @@ attribution:
 
 # Neural Network Layer Instantiation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate a configured neural network layer (e.g., sinusoidal formula embeddings) with its specified dimensionality and invoke its forward pass on a batch of input data to produce learned representations. This skill is essential for setting up transformer and deep learning components that encode domain-specific inputs (chemical formulas, mass spectra features) into continuous vector spaces for downstream model tasks.

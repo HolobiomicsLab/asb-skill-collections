@@ -15,7 +15,7 @@ metadata:
   - Transformer Architecture
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -45,7 +45,6 @@ attribution:
 
 # nmr-spectrum-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and normalize 1D ¹H and/or ¹³C NMR spectra for machine learning-based molecular structure prediction by loading, validating, and encoding spectral data into a standardized format compatible with CNN feature extraction.

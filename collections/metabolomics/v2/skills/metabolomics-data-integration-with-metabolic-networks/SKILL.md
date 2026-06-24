@@ -15,7 +15,7 @@ metadata:
   - INTEGRATE pipeline (qLSLab/integrate)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -44,7 +44,6 @@ attribution:
 
 # metabolomics-data-integration-with-metabolic-networks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate intracellular metabolomics abundance data with constraint-based stoichiometric metabolic network models to compute Reaction Propensity Scores (RPS) that quantify expected metabolic flux changes across biological samples based on substrate availability alone. This enables discrimination of metabolically-controlled from transcriptionally-controlled metabolic fluxes when intersected with transcriptomic predictions.

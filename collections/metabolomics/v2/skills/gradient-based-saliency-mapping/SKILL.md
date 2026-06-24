@@ -16,7 +16,7 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -45,7 +45,6 @@ attribution:
 
 # gradient-based-saliency-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute gradient-based attribution maps that identify which input features (node and edge attributes in molecular graphs) most strongly influence neural network predictions of collision cross section. This post-hoc interpretability method uses backpropagation to quantify the sensitivity of model outputs to perturbations in structural features.

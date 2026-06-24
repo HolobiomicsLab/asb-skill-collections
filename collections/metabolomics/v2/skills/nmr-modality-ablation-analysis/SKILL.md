@@ -15,7 +15,7 @@ metadata:
   - NMR2Struct multitask framework
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -43,7 +43,6 @@ attribution:
 
 # nmr-modality-ablation-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate the individual and joint contributions of ¹H NMR, ¹³C NMR, and combined 1D NMR inputs to molecular structure prediction accuracy by running inference under each modality condition independently and comparing performance metrics. This skill isolates which spectroscopic modalities drive structure elucidation performance and quantifies synergy between them.

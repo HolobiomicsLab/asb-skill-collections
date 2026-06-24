@@ -20,7 +20,7 @@ metadata:
   - Spec2Vec
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -57,7 +57,6 @@ attribution:
 
 # Tanimoto-Score Threshold Optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method to systematically evaluate and select optimal structural similarity thresholds (Tanimoto scores) for compound retrieval tasks by measuring precision and recall across a range of decision boundaries. This skill determines which threshold value best balances the trade-off between selectivity and sensitivity when retrieving chemically related compounds from mass spectral datasets.

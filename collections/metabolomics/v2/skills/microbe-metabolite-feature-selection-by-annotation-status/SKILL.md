@@ -15,7 +15,7 @@ metadata:
   - TensorFlow
   - scikit-learn
   - Seaborn/Matplotlib
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -51,7 +51,6 @@ attribution:
 
 # Microbe-Metabolite Feature Selection by Annotation Status
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify metabolite prediction models by whether metabolites carry curated biochemical annotations, enabling separate evaluation of annotated versus unannotated features to measure the impact of annotation availability on prediction accuracy. This skill surfaces latent predictive signal in unannotated metabolites that can improve overall model performance when trained jointly.

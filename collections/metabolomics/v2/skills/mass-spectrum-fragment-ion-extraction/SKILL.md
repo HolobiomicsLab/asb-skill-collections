@@ -20,7 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -51,7 +51,6 @@ attribution:
 
 # mass-spectrum-fragment-ion-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and score fragment ions from experimental MS/MS spectra to construct metabolite library entries. This skill converts raw fragmentation data into annotated peak lists with occurrence scores, enabling downstream metabolite identification in untargeted LC–MS workflows.

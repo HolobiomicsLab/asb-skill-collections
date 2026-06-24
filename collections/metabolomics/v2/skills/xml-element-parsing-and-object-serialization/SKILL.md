@@ -16,7 +16,7 @@ metadata:
   - pymzML
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -46,7 +46,6 @@ attribution:
 
 # xml-element-parsing-and-object-serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse XML element strings retrieved from a data source (e.g., a database) and deserialize them into typed spectrum or chromatogram objects for downstream analysis. This skill bridges storage formats and in-memory object models in mass spectrometry data workflows.

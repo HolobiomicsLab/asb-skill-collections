@@ -19,7 +19,7 @@ metadata:
   - pyOpenMS-Viz
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -50,7 +50,6 @@ attribution:
 
 # pandas-dataframe-manipulation-ms-columns
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and structure mass spectrometry data within Pandas DataFrames by organizing and selecting columns for m/z, retention time, and intensity dimensions required by pyOpenMS-Viz plotting methods. This skill ensures data is in the correct format and column names are compatible with the visualization backend.

@@ -15,7 +15,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -46,7 +46,6 @@ attribution:
 
 # Polarity-mode filtering for LC-MS target lists
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill filters a target compound list by ionization polarity (positive or negative mode) to produce a subset of compounds matched to a specific MS acquisition mode. It is essential for targeted LC-MS workflows where different ionization modes are acquired separately and each analytical run requires only the compounds ionizable in that mode.

@@ -18,7 +18,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -49,7 +49,6 @@ attribution:
 
 # chromatographic-modality-classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and classifies mass spectrometry input data by acquisition modality (LC, GC, IMS, MS imaging) through file header and metadata inspection, enabling automatic routing to the appropriate mzmine analysis module. This skill is essential for flexible, modality-aware data processing workflows that must handle heterogeneous MS instrument types.

@@ -20,7 +20,7 @@ metadata:
   - AirdPro (V5 or V6)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -52,7 +52,6 @@ attribution:
 
 # wine-windows-runtime-initialization-diagnostics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Diagnose and document Wine initialization behavior and .NET Framework component download timing when executing Windows-compiled scientific software (such as AirdPro) in containerized Linux environments. This skill captures first-run Wine startup overhead, resource requirements, and completion signals to validate readiness for batch mass spectrometry data conversion workflows.

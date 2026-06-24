@@ -14,7 +14,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -43,7 +43,6 @@ attribution:
 
 # Transfer-Learning Encoder Freezing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Freeze a pretrained encoder's parameters while training downstream task-specific modules (e.g., FormulaEncoder and RescoreHead) on a new objective function. This skill enables efficient transfer of learned spectrum representations without catastrophic forgetting or computational overhead of full model retraining.

@@ -15,7 +15,7 @@ metadata:
   - jsonschema
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -49,7 +49,6 @@ attribution:
 
 # Record Grouping and Collation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill groups multiple table records into single dictionary entries by collating on a shared field value, enabling consolidation of repetitive experimental metadata into hierarchical structures suitable for repository submission.

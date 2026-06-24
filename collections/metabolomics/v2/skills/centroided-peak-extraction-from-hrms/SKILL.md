@@ -18,7 +18,7 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -52,7 +52,6 @@ attribution:
 
 # Centroided Peak Extraction from HRMS
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and delineation of chromatographic peaks from vendor-independent mzML files containing centroided high-resolution mass spectrometry data using pyOpenMS. This skill extracts feature attributes (m/z, retention time, intensity, charge state, isotope pattern) and constructs tabular feature tables for downstream prioritization workflows.

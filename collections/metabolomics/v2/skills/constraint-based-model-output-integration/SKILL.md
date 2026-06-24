@@ -19,7 +19,7 @@ metadata:
   - 'Statistical testing: t-test and Mann–Whitney U'
   - Cohen's kappa concordance statistic
   - Benjamini–Hochberg FDR correction
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -48,7 +48,6 @@ attribution:
 
 # constraint-based-model-output-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate constraint-based metabolic model predictions (RPS flux predictions and FFD flux distributions) with transcriptomics-derived reaction activity scores (RAS) to discriminate whether metabolic flux variation is driven by transcriptional regulation, metabolic (substrate/allosteric) regulation, or both. This multi-layer regulatory classification uses Cohen's kappa concordance between pairwise RAS-vs-FFD and RPS-vs-FFD variation sign comparisons across cell-line pairs.

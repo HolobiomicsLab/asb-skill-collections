@@ -21,7 +21,7 @@ metadata:
   - TensorFlow/Keras
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -58,7 +58,6 @@ attribution:
 
 # mass-spectrometry-peak-classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated classification of MS1 peaks as true or false positives using neural network models trained on labelled LCMS data. This skill enables filtering of spurious detections reported by standard peak-picking pipelines (mzMine, XCMS) to improve signal quality in untargeted metabolomics.

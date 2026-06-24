@@ -16,7 +16,7 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -48,7 +48,6 @@ attribution:
 
 # spectral-data-loading-from-repository
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load tandem mass spectrometry (MS/MS) spectra from online proteomics and metabolomics repositories using Universal Spectrum Identifier (USI) strings, resolving repository accessions, file identifiers, and scan numbers to retrieve raw spectral data (m/z, intensity, precursor m/z, charge state, retention time) and instantiate MsmsSpectrum objects for downstream processing.

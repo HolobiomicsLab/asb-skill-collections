@@ -15,7 +15,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,7 +44,6 @@ attribution:
 
 # energy-based-model-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a learned energy-based neural network model to score and rank candidate chemical assignments (formula–adduct pairs) for an unknown tandem mass spectrum without relying on spectral databases. This approach learns data-dependent scoring directly from MS/MS fragmentation patterns rather than computing deterministic fragmentation trees.

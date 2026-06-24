@@ -21,7 +21,7 @@ metadata:
   - NumPy / Pandas / SciPy
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -60,7 +60,6 @@ attribution:
 
 # Molecular Fingerprint Structural Similarity (Tanimoto)
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute structural similarity between pairs of molecules using daylight-like fingerprints (RDKit, 2048 bits) and Tanimoto/Jaccard distance, enabling quantitative correlation of spectral similarity scores with underlying chemical structure. This skill is essential for benchmarking mass spectral similarity methods against ground-truth structural relationships.

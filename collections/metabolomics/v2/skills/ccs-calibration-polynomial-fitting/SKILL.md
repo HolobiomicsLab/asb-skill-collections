@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -51,7 +51,6 @@ attribution:
 
 # ccs-calibration-polynomial-fitting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a polynomial calibration model to convert ion mobility drift times and reference m/z values into collision cross section (CCS) coefficients using the single-field calibration equation. This skill produces calibration coefficients (beta and tfix) that enable downstream CCS prediction for unknown ions in positive- or negative-mode ion mobility spectrometry.

@@ -16,7 +16,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -45,7 +45,6 @@ attribution:
 
 # Tabular Data I/O and Blank Masking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load feature tables and experiment metadata, then apply intensity-ratio filtering to remove features dominated by background contamination. Blank masking compares feature intensities between study samples and blank controls using a configurable ratio threshold, retaining only features where true sample signal substantially exceeds blank signal.

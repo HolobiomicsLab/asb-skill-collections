@@ -16,7 +16,7 @@ metadata:
   - Python
   - TensorFlow Serving
   - TensorFlow / Keras
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -46,7 +46,6 @@ attribution:
 
 # docker-container-orchestration-for-ml-services
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deploy containerized machine learning inference services (e.g., TensorFlow Serving models) using Docker and docker-compose to expose REST APIs for real-time predictions. This skill bundles model preparation, network configuration, and container orchestration to enable scalable, reproducible ML service delivery.

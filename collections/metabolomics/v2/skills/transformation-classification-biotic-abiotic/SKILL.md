@@ -16,7 +16,7 @@ metadata:
   - KEGG database
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -47,7 +47,6 @@ attribution:
 
 # transformation-classification-biotic-abiotic
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify matched mass-difference transformations detected in FT-ICR MS data as either biotic (microbial metabolic) or abiotic (chemical/environmental) based on prior categorization in a reference biochemical transformation key. This step anchors the interpretation of molecular transformation networks to biological process origin.

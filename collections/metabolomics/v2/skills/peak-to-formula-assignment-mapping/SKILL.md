@@ -14,7 +14,7 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,7 +44,6 @@ attribution:
 
 # peak-to-formula-assignment-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign chemical subformulae to fragment peaks in tandem mass spectra by enumerating valid molecular formulas within mass tolerance windows and ranking them by energy-based scoring, without relying on external fragmentation tree databases. This creates a structured peak-to-formula mapping table for use in downstream formula ranking models.

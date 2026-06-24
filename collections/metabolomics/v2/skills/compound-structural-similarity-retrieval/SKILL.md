@@ -18,7 +18,7 @@ metadata:
   - Spec2Vec
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -55,7 +55,6 @@ attribution:
 
 # compound-structural-similarity-retrieval
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve chemically related compound pairs from tandem mass spectral datasets by computing structural similarity scores using deep learning embeddings or classical spectral similarity measures, then filtering by precision–recall thresholds. This skill is applied after spectral preprocessing and is used to identify structurally related compounds (Tanimoto > threshold) at scale across thousands of spectra.

@@ -17,7 +17,7 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -52,7 +52,6 @@ attribution:
 
 # MS-DIAL Feature Detection and Alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 MS-DIAL is a containerized module within Nextflow4MS-DIAL that performs peak detection and chromatogram alignment on LC-HRMS metabolomics data in .mzML format. It transforms raw mass spectrometry signals into aligned feature tables suitable for downstream annotation and statistical analysis.

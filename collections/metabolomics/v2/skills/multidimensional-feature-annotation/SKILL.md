@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -46,7 +46,6 @@ attribution:
 
 # Multidimensional Feature Annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate detected mass spectrometry features with isotopologue labels and membership metadata by identifying C13 isotopic substitution patterns across m/z, drift time, and retention time dimensions. This enriches feature tables with monoisotopic designation, isotope count, and offset mass information for downstream filtering and interpretation.

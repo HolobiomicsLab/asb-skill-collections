@@ -17,7 +17,7 @@ metadata:
   - PyTorch or TensorFlow
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -49,7 +49,6 @@ attribution:
 
 # batch-normalization-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Batch normalization is applied after dense layers in a Siamese neural network base network to stabilize training and improve convergence when converting MS/MS spectra into spectral embeddings. It normalizes layer activations across a batch, reducing internal covariate shift and enabling more aggressive learning rates.

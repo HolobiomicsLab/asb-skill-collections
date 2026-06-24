@@ -14,7 +14,7 @@ metadata:
   - Transformer
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -46,7 +46,6 @@ attribution:
 
 # transformer-based-fragment-assembly
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a transformer architecture to assemble predicted molecular fragments into complete molecular structures (formula and connectivity) from spectral feature encodings. This skill is essential when the input space (trillions of possible structures up to 19 heavy atoms) requires efficient sequential reasoning over fragment dependencies rather than brute-force enumeration.

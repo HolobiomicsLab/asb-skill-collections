@@ -17,7 +17,7 @@ metadata:
   - Glycan Naming Ontology
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -51,7 +51,6 @@ attribution:
 
 # ProForma 2.0 Peptidoform Parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse ProForma 2.0 notation strings to extract peptide sequences, modification positions, and ion types for fragment annotation in mass spectrometry. This skill enables standardized representation of modified peptidoforms and supports downstream ion annotation workflows.

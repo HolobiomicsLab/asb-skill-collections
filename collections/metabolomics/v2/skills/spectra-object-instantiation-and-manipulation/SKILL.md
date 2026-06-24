@@ -19,7 +19,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -54,7 +54,6 @@ attribution:
 
 # Spectra-object-instantiation-and-manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create and manipulate Spectra objects in R to represent mass spectrometry data, enabling downstream MS analysis workflows. This skill bridges raw or tabular MS data into R's native Spectra infrastructure, which supports efficient backends, spectral processing, and cross-language integration.

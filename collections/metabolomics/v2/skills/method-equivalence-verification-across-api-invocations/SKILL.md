@@ -19,7 +19,7 @@ metadata:
   - knitr
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -54,7 +54,6 @@ attribution:
 
 # method-equivalence-verification-across-api-invocations
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that two distinct API invocation patterns (file-path-based vs. object-based) of the same analytical method produce functionally identical outputs on the same input data. This skill is critical when a tool's API is refactored or extended to support alternative input types, and reproducibility must be guaranteed across both calling conventions.

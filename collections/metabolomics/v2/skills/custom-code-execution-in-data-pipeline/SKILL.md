@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # Custom Code Execution in Data Pipeline
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill enables the injection and execution of user-defined Python code within a data transformation pipeline to apply custom logic that cannot be expressed through declarative directives alone. It is essential for complex, non-standard data transformations in extract-validate-convert workflows where built-in field mapping, filtering, and collation are insufficient.

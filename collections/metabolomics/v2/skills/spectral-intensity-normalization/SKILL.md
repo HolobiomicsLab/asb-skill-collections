@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -54,7 +54,6 @@ attribution:
 
 # spectral-intensity-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize peak intensities in tandem mass spectrometry spectra by applying scaling transformations (e.g., square-root scaling) to de-emphasize overly intense peaks and improve downstream spectral comparison and matching. This is a critical preprocessing step that follows noise removal and precedes spectral annotation or database matching.

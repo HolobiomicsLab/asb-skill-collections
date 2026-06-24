@@ -16,7 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -46,7 +46,6 @@ attribution:
 
 # class-specific-ccs-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate collision cross section (CCS) values partitioned by biomolecular class for TWIM-MS data using MOCCal, enabling class-aware mobility calibration without prior feature identification. This skill produces class-stratified CCS tables suitable for downstream biomolecular annotation and structure elucidation.

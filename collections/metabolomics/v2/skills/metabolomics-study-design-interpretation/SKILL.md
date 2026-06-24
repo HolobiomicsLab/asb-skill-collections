@@ -13,7 +13,7 @@ metadata:
   - ricoderks/QComics
   - Sciex Multiquant
   - QComics
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -42,7 +42,6 @@ attribution:
 
 # metabolomics-study-design-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and validate the quality control design of metabolomics or lipidomics studies by parsing exported analytical sequences, locating pooled QC samples (QCpool), and verifying their regular injection intervals across one or more measurement sequences. This skill ensures that QC strategy matches study design expectations and flags sequence deviations early.

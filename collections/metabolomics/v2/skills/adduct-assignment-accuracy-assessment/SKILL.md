@@ -16,7 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -47,7 +47,6 @@ attribution:
 
 # adduct-assignment-accuracy-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the contribution of multi-adduct support to chemical formula ranking accuracy by comparing model performance in [M+H]+-only mode versus full multi-adduct mode. This skill isolates the performance delta attributable to adduct type diversity in MS/MS-based formula inference.

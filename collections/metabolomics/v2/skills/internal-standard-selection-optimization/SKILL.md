@@ -15,7 +15,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -46,7 +46,6 @@ attribution:
 
 # internal-standard-selection-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify the optimal internal standard for each compound by exhaustively calculating Relative Standard Deviation of QC samples (RSDQC) across all internal standard candidates on batch-corrected metabolomics data. This skill selects the internal standard that minimizes measurement variance, improving data quality and downstream quantification reliability.

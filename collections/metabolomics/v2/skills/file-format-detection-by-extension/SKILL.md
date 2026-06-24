@@ -16,7 +16,7 @@ metadata:
   - pymzML
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -46,7 +46,6 @@ attribution:
 
 # file-format-detection-by-extension
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Conditionally dispatch file handlers to appropriate parser classes based on file extension and format-specific metadata (e.g., indexed gzip status). This skill enables polymorphic file handling in mass spectrometry data pipelines, allowing a single Reader interface to transparently support mzML, compressed gzip, indexed gzip, and SQLite database backends.

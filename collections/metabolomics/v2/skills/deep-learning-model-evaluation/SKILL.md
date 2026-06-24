@@ -17,7 +17,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -55,7 +55,6 @@ attribution:
 
 # deep-learning-model-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate a trained deep learning model's prediction accuracy on a held-out test set of spectrum pairs by computing root mean squared error (RMSE) between predicted and reference structural similarity scores. This skill assesses whether the model generalizes well to unseen data without applying uncertainty filtering.

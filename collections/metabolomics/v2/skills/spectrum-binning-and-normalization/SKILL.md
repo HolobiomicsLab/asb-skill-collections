@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -45,7 +45,6 @@ attribution:
 
 # spectrum-binning-and-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform high-resolution tandem MS/MS spectra into binned, normalized representations that preserve mass accuracy while enabling efficient downstream feature hashing and nearest-neighbor indexing. This preprocessing step is essential for large-scale spectrum clustering workflows.

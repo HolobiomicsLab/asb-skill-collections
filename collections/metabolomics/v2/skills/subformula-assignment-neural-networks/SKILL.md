@@ -18,7 +18,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -50,7 +50,6 @@ attribution:
 
 # Neural Network-Based Chemical Subformula Assignment for MS/MS Fragments
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace computationally expensive fragmentation tree enumeration (SIRIUS) with a learned neural network formula transformer that ranks candidate subformulas for each observed MS/MS fragment peak in a data-dependent fashion. This skill enables rapid, database-independent subformula prediction conditioned on precursor formula and observed m/z values.

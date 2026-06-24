@@ -15,7 +15,7 @@ metadata:
   - Python ElementTree
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,7 +43,6 @@ attribution:
 
 # spectrum-object-instantiation-from-xml
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Instantiate Spectrum objects from XML element representations of spectra in mzML files, enabling random-access retrieval and manipulation of individual mass spectrometry spectra. This skill is essential for converting raw XML data into in-memory Spectrum instances that support further analysis.

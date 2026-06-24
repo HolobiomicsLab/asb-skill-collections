@@ -18,7 +18,7 @@ metadata:
   - pubchempy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -59,7 +59,6 @@ attribution:
 
 # chemical-metadata-harmonization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and enrich MS/MS spectra metadata by cleaning compound names, extracting adduct information, consolidating metadata fields, and automating missing structure annotation lookups against PubChem. This ensures consistent metadata representation across heterogeneous spectral datasets before structural similarity computation or model training.

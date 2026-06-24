@@ -13,7 +13,7 @@ metadata:
   - xml.etree.ElementTree
   - pymzML
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -42,7 +42,6 @@ attribution:
 
 # random-access-index-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom file handler class that parses embedded index metadata from a compressed file header and provides bracket-notation access to retrieve specific data blocks by integer key without decompressing the entire file. This skill enables rapid, seek-based access to large compressed scientific data files (e.g., mzML.gz) by storing an index-to-offset mapping in the gzip header comment field.

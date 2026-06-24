@@ -24,7 +24,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -63,7 +63,6 @@ attribution:
 
 # Spectral Similarity Scoring Computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise similarity scores between mass spectra using cosine, modified cosine, or Spec2Vec methods to rank spectral matches by structural similarity. This skill is essential for library matching, molecular networking, and metabolite identification workflows where similarity thresholds determine which spectra are considered structurally related.

@@ -19,7 +19,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # monte-carlo-dropout-uncertainty-quantification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify prediction uncertainty for neural network outputs by running multiple forward passes with dropout enabled, then computing interquartile range (IQR) across the ensemble predictions. This method enables filtering low-confidence predictions and improving model performance on downstream similarity scoring tasks.

@@ -18,7 +18,7 @@ metadata:
   - MSiReader
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -49,7 +49,6 @@ attribution:
 
 # mass-spectrometry-imaging-data-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A workflow for identifying and visualizing sodium adduct ions relative to their parent ions in MALDI-MSI data by computing pairwise mass differences, matching them to known adducts, testing spatial correlation, and overlaying adduct and parent peaks on mass spectra with color-coded scatter plots. This skill reveals ion relationships that would otherwise remain hidden in the 'dark metabolome'.

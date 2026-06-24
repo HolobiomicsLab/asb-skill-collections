@@ -15,7 +15,7 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -44,7 +44,6 @@ attribution:
 
 # ms-ms-spectral-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret tandem mass spectrometry (MS/MS) spectra by matching experimental fragment ion peaks against theoretical fragmentations of candidate metabolites, ranked by cosine similarity or peak-matching scoring. This skill is essential when you need to annotate unknown metabolites from high-resolution MS/MS data in metabolomics workflows.

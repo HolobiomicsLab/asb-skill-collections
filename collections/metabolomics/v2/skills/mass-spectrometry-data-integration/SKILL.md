@@ -17,7 +17,7 @@ metadata:
   - HDF5
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -49,7 +49,6 @@ attribution:
 
 # mass-spectrometry-data-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reference-based alignment in DEIMoS integrates multi-dimensional mass spectrometry data across samples by matching detected features in N-dimensional space (mass, drift time, retention time) and applying a fitted transform to harmonize feature coordinates. This skill is essential when instrument variation, retention time shifts, or drift time calibration differences create systematic offsets between datasets that must be corrected before joint analysis.

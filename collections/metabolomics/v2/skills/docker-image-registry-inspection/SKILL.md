@@ -14,7 +14,7 @@ metadata:
   - Docker (docker build, docker inspect, docker system df)
   - Docker (docker build, docker inspect, docker system df, docker history)
   - Dockerfile (multi-stage build configuration)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -46,7 +46,6 @@ attribution:
 
 # Docker Image Registry Inspection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and audit Docker image variants (uncompressed and compressed sizes, layer composition) to verify they meet documented size specifications and functional requirements. This skill is essential for validating multi-stage Docker builds and ensuring consistency across image variants before deployment.

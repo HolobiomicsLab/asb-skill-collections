@@ -13,7 +13,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -47,7 +47,6 @@ attribution:
 
 # Conditional Record Resolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selectively resolve field values from input JSON records based on test conditions, applying code transformations and field extraction with optional sorting and concatenation. This skill enables intelligent record filtering and multi-value aggregation within the MESSES conversion directive framework, ensuring only records matching specified criteria contribute to the final output.

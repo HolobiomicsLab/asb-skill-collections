@@ -17,7 +17,7 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -47,7 +47,6 @@ attribution:
 
 # lcms-feature-table-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a consolidated feature table from untargeted LC-MS data by sequentially performing peak picking, sample alignment, isotopologue/adduct grouping, gap-filling, and MS2 annotation across all samples. This skill transforms raw mzML files into quantitative data matrices suitable for metabolomic analysis.

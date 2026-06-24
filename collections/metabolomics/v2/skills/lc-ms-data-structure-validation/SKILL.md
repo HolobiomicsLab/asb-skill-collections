@@ -16,7 +16,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -47,7 +47,6 @@ attribution:
 
 # lc-ms-data-structure-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that raw LC–MS data files are in centroided .mzML format and that compound target lists contain required columns (ID, name, m/z, RT, polarity) before targeted peak integration. This prerequisite check ensures TARDIS can correctly parse MS spectra and match targets to detected peaks.

@@ -17,7 +17,7 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -59,7 +59,6 @@ attribution:
 
 # chemical-structure-annotation-retrieval
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and assign chemical structure annotations (InChI, SMILES, InChIKey) to unannotated or partially annotated MS/MS spectra using automated database lookups. This skill is essential for preparing spectral datasets for machine learning by ensuring complete structural metadata coverage.

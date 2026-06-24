@@ -18,7 +18,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -53,7 +53,6 @@ attribution:
 
 # peak-matrix-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct 2D peak matrices from LCMS raw data and feature tables using NeatMS's neural network handler, encoding margin and peak signal regions for automated classification of true vs. false positive MS1 peaks. This skill produces normalized batch arrays suitable for neural network training and validation.

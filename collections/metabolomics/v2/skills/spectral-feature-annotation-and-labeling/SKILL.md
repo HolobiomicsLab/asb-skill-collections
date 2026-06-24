@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -51,7 +51,6 @@ attribution:
 
 # spectral-feature-annotation-and-labeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign isotopic group identifiers to detected mass spectrometry features by enumerating C13 singly-charged isotopologues and clustering matches within m/z, drift time, and retention time tolerances. This skill enables systematic labeling of isotopic clusters in high-dimensional MS data, improving feature characterization and downstream analysis confidence.

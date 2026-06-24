@@ -20,7 +20,7 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -56,7 +56,6 @@ attribution:
 
 # spectrum-filtering-and-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A suite of computational operations to clean and standardize mass spectrometry spectra by removing noise, filtering peaks by intensity, adjusting m/z ranges, and applying intensity scaling transformations. These operations optimize spectra for downstream analysis while reducing computational overhead and improving comparability across datasets.

@@ -16,7 +16,7 @@ metadata:
   - corrPairsMSI
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -50,7 +50,6 @@ attribution:
 
 # spectral-peak-parent-product-pairing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and retrieve pairs of mass spectral peaks that represent parent ions and their derivative adduct ions by matching observed mass differences to a reference table of known chemical adducts. This skill bridges annotation (matching mass differences to known species) with spatial validation, enabling confirmation that putative parent–adduct pairs co-occur in imaging data.

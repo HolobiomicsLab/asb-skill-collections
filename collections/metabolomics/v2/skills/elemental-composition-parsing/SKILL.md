@@ -17,7 +17,7 @@ metadata:
   - Formularity
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -50,7 +50,6 @@ attribution:
 
 # elemental-composition-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and structure elemental composition (C, H, O, N, S, P counts) from assigned molecular formulas in FT-ICR MS peak data. This is a prerequisite step that prepares composition data for downstream thermodynamic index calculation and molecular characterization.

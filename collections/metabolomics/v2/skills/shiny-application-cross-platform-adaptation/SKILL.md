@@ -13,7 +13,7 @@ metadata:
   - Shiny
   - R
   - RStudio / R IDE
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -43,7 +43,6 @@ attribution:
 
 # shiny-application-cross-platform-adaptation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Audit and refactor a Windows-only Shiny application to run on Linux and macOS by identifying platform-specific dependencies, replacing OS-dependent code patterns, and validating cross-platform functionality. This skill ensures interactive R web applications can reach users across operating systems.

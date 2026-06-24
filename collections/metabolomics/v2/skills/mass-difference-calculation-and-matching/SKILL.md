@@ -16,7 +16,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -47,7 +47,6 @@ attribution:
 
 # Mass-difference calculation and matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes and matches characteristic fragment mass differences between precursor and fragment ions in MS2 data to identify diagnostic PFAS patterns (e.g., CF₂ loss, perfluoroalkyl chain fragments). This is one of several prioritization techniques used alongside MD/C-m/C and Kendrick mass defect analysis to screen potential PFAS features in non-target HRMS measurements.

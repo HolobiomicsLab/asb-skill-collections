@@ -16,7 +16,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -45,7 +45,6 @@ attribution:
 
 # neural-network-architecture-training
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a Siamese neural network architecture for MS/MS formula rescoring by freezing a pretrained TCN spectrum encoder while optimizing formula and rescore head modules with binary cross-entropy loss. This approach leverages transfer learning to improve formula prediction confidence without retraining the spectrum feature extractor.

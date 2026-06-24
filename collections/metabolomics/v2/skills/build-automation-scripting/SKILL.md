@@ -12,7 +12,7 @@ metadata:
   - Docker Engine
   - Wine
   - .NET Framework 4.8
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -44,7 +44,6 @@ attribution:
 
 # build-automation-scripting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automate multi-stage Docker builds for cross-platform deployment of Windows-only .NET Framework applications using BuildKit optimization and resource-constrained orchestration. This skill enables reproducible, CI/CD-ready containerization of GUI and CLI variants with Wine runtime integration for non-Windows host execution.

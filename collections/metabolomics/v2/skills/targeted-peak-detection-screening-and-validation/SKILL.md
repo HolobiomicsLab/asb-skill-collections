@@ -20,7 +20,7 @@ metadata:
   - ProteoWizard MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -55,7 +55,6 @@ attribution:
 
 # Targeted Peak Detection Screening and Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A two-stage workflow that first screens LC–MS data to confirm visibility of targeted compounds within defined m/z and retention-time windows, then performs automated peak detection, integration, and quality assessment on confirmed targets. This skill validates that targets are detectable before committing to full quantitative analysis.

@@ -11,7 +11,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES convert command
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -45,7 +45,6 @@ attribution:
 
 # record-sorting-by-multiple-fields
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Sort JSON table records by one or more fields in ascending or descending order before transformation into string or matrix output formats. This preprocessing step is essential for controlling the order in which records are selected, aggregated, or iterated over during JSON-to-JSON conversion.

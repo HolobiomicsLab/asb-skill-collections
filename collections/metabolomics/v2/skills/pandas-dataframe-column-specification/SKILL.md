@@ -19,7 +19,7 @@ metadata:
   - plotly
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -52,7 +52,6 @@ attribution:
 
 # pandas-dataframe-column-specification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Specify and map Pandas DataFrame columns to mass spectrometry visualization dimensions (x, y, z axes) to enable flexible adaptation of diverse data formats to pyOpenMS-viz plotting functions. This skill decouples the plotting API from rigid column naming conventions, allowing reuse across different MS data schemas.

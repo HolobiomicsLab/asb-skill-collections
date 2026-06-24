@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES convert command
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # nested-json-path-resolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve nested JSON paths using table/fields/record_id directives to extract values from deeply nested structures in intermediate JSON representations. This skill is essential when converting tabular experimental metadata into standardized formats like mwTab, where source values may be embedded within complex hierarchical JSON records.

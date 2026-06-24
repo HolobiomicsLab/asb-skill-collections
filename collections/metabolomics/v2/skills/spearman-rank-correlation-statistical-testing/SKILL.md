@@ -13,7 +13,7 @@ metadata:
   - COBRApy
   - scipy.stats.spearmanr
   - matplotlib/seaborn
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -43,7 +43,6 @@ attribution:
 
 # spearman-rank-correlation-statistical-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Spearman rank correlation coefficient and two-tailed p-value to quantify monotonic association between two ranked variables (e.g., predicted vs. experimental phenotypes). Used to validate whether constraint-based model predictions discriminate biological samples and correlate with experimental measurements.

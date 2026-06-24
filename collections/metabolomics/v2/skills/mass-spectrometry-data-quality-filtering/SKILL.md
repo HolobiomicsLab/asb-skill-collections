@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,7 +46,6 @@ attribution:
 
 # Mass Spectrometry Data Quality Filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter LC-MS feature tables to remove low-quality features and background contamination before downstream statistical analysis. This skill removes features present in fewer than a specified percentile of samples and optionally masks blank contamination, yielding curated feature tables suitable for metabolite annotation and biomarker discovery.

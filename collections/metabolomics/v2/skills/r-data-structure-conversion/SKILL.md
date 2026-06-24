@@ -19,7 +19,7 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -53,7 +53,6 @@ attribution:
 
 # Convert between R data structures for mass spectrometry imaging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry imaging data between different R object formats—namely Cardinal's MSProcessedImagingExperiment/MSContinuousImagingExperiment and mass2adduct's msimat format—to enable cross-tool interoperability while preserving peak-binned intensity information.

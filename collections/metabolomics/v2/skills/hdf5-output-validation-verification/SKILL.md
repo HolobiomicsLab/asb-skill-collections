@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -52,7 +52,6 @@ attribution:
 
 # HDF5 Output Validation and Verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a DEIMoS Snakemake workflow has completed successfully by confirming the presence and integrity of HDF5 output files and their internal datasets. This skill ensures that all expected workflow artifacts (ms1, ms2, features, isotopes) are present with non-zero row counts before proceeding to downstream analysis.

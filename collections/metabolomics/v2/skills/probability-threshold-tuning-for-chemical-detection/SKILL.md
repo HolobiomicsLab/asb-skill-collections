@@ -16,7 +16,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -51,7 +51,6 @@ attribution:
 
 # probability-threshold-tuning-for-chemical-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize NeatMS neural network classification thresholds to balance true positive retention and false positive filtering in untargeted LCMS peak detection. This skill identifies the probability cutoff that best separates high-quality peaks from low-quality and noise peaks based on threshold-dependent ROC metrics.

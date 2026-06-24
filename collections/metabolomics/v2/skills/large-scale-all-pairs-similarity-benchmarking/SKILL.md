@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -61,7 +61,6 @@ attribution:
 
 # large-scale-all-pairs-similarity-benchmarking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compute all-pairs similarity scores across multiple methods (Spec2Vec, cosine, modified cosine) on large MS/MS spectral datasets, then correlate the resulting similarity matrices with ground-truth structural similarity (Tanimoto fingerprint distance) to benchmark and compare method performance at aggregate levels (e.g., top 0.1% of pairs).

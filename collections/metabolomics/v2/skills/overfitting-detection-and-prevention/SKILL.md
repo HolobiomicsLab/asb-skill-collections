@@ -21,7 +21,7 @@ metadata:
   - Jupyter Notebook
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -58,7 +58,6 @@ attribution:
 
 # overfitting-detection-and-prevention
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Monitor training and validation accuracy curves during neural network model training to detect overfitting and determine when to halt training. This skill ensures that a CNN model generalizes well to unseen data by comparing training performance against validation performance throughout the training process.

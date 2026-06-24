@@ -14,7 +14,7 @@ metadata:
   - Transformer architecture
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -44,7 +44,6 @@ attribution:
 
 # structure-similarity-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate predicted molecular structures against ground-truth structures using graph-based or chemical similarity metrics to quantify model accuracy. This skill applies structure matching metrics to assess whether an end-to-end spectroscopy-to-structure model has correctly recovered molecular formula, connectivity, and stereochemistry.

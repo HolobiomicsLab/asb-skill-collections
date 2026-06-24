@@ -17,7 +17,7 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -51,7 +51,6 @@ attribution:
 
 # Polarity filtering in targeted metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply ionization mode filtering to LC–MS data to isolate compounds ionized in a specific polarity (positive or negative) before targeted peak detection. This reduces processing overhead and prevents false peak assignments in compounds that cannot ionize under the selected mode.

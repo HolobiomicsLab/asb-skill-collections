@@ -16,7 +16,7 @@ metadata:
   - PNNLMetV20191015.MSL
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -47,7 +47,6 @@ attribution:
 
 # retention-index-calibration-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retention index (RI) calibration transforms GC-MS retention times into standardized indices using FAMES (fatty acid methyl ester) standards, enabling reliable compound identification across instruments and methods by normalizing peak elution order to a reference scale. This calibration is prerequisite for spectral library matching in low-resolution GC-MS workflows.

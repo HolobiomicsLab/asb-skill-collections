@@ -21,7 +21,7 @@ metadata:
   - TensorFlow
   - SciPy
   - TensorFlow / Keras
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -61,7 +61,6 @@ attribution:
 
 # Percentile-Threshold Determination for Spearman Correlation Coefficients
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Establishes a data-driven statistical cutoff for identifying well-predicted metabolites by computing the empirical 95th percentile of Spearman correlation coefficients (SCC) from a background distribution of shuffled microbiome-metabolome pairs. This threshold allows separation of genuinely predictive features from noise across heterogeneous datasets.

@@ -17,7 +17,7 @@ metadata:
   - 'INTEGRATE pipeline (Step 10: concordanceAnalysis.py)'
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -47,7 +47,6 @@ attribution:
 
 # Reconstruct the RPS computation from intracellular metabolomics via the mass action law
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes Reaction Propensity Scores (RPS) from LC-MS intracellular metabolite abundances using the mass action law, expressing each reaction's propensity as the product of substrate concentrations raised to their stoichiometric coefficients. This dataset enables downstream concordance analysis between metabolomic regulation (RPS), transcriptomic regulation (RAS), and constraint-based flux predictions (FFD).

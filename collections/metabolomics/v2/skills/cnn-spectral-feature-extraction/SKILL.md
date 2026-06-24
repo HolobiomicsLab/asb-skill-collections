@@ -15,7 +15,7 @@ metadata:
   - Transformer architecture
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -45,7 +45,6 @@ attribution:
 
 # CNN-based spectral feature extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract learned feature representations from 1D NMR spectra (¹H and/or ¹³C) using a convolutional neural network, transforming raw spectral intensity patterns into high-level encodings suitable for downstream molecular structure prediction. This skill is the foundational signal-processing stage in end-to-end NMR structure elucidation.

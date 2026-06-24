@@ -15,7 +15,7 @@ metadata:
   - Bruker Solarix
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -48,7 +48,6 @@ attribution:
 
 # ftms-mass-calibration-workflow
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A Bruker FT-ICR mass calibration workflow that recalibrates a processed mass spectrum using MzDomainCalibration against a reference peak list (e.g., SRFA.ref), applying polynomial recalibration to correct m/z values and quantifying calibration accuracy via mass error statistics.

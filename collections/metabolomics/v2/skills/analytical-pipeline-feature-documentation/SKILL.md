@@ -25,7 +25,7 @@ metadata:
   - py4cytoscape
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -62,7 +62,6 @@ attribution:
 
 # analytical-pipeline-feature-documentation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document and cross-validate the analytical and visualization features implemented in a bioinformatics pipeline by extracting capabilities from source code, official documentation, and dependency declarations, then comparing against peer software. This skill ensures comprehensive, reusable feature inventories and enables informed tool selection for FT-ICR MS analysis.

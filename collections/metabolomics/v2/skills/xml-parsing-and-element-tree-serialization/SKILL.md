@@ -15,7 +15,7 @@ metadata:
   - pymzML
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -45,7 +45,6 @@ attribution:
 
 # xml-parsing-and-element-tree-serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse XML element strings retrieved from data sources (such as SQLite databases) into structured XML trees using ElementTree, enabling random-access retrieval and deserialization of mass spectrometry spectrum objects. This skill bridges raw XML storage with pymzML's Spectrum and Chromatogram object instantiation.

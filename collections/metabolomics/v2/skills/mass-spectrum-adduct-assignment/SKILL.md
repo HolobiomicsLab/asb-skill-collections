@@ -14,7 +14,7 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,7 +44,6 @@ attribution:
 
 # mass-spectrum-adduct-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and assign multiple ionization adduct types (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) to tandem mass spectra using energy-based neural scoring, enabling chemical formula assignment without relying on fragmentation trees or spectrum databases.

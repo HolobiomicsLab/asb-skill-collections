@@ -21,7 +21,7 @@ metadata:
   - Cytoscape FileTransfer
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -56,7 +56,6 @@ attribution:
 
 # ft-icr-ms-data-preprocessing-and-quality-control
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated preprocessing and quality control of direct injection FT-ICR MS data prior to downstream analysis, involving peak detection filtering, isotope removal, mass accuracy validation, and intensity normalization to produce analysis-ready molecular abundance matrices.

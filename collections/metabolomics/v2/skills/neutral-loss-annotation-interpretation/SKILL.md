@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -60,7 +60,6 @@ attribution:
 
 # Neutral-loss-annotation-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate and interpret neutral losses in MS/MS spectra by calculating mass differences between precursor m/z and observed fragment peaks, then incorporating these losses as features into spectral representations for improved structural relationship learning. This skill enables mass spectrometry-based algorithms to recognize recurring fragmentation patterns that reflect structural chemistry.

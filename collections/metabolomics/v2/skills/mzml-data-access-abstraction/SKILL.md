@@ -16,7 +16,7 @@ metadata:
   - Python (standard library)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -46,7 +46,6 @@ attribution:
 
 # mzML Data Access Abstraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a polymorphic file handler interface (FileInterface) that dispatches mzML file reads to specialized handler classes based on file extension and compression format, enabling unified random-access parsing across uncompressed, indexed-gzip, standard-gzip, and SQLite-backed mzML data sources. This abstraction decouples Reader logic from storage format, permitting extensible support for new backends without modifying core parsing code.

@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # metabolite-feature-grouping-by-adduct-isotope
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group individual LC-MS features into empirical compounds by recognizing isotopologues and adducts using mass-to-charge and retention time tolerances. This pre-annotation step collapses redundant feature detections arising from the same chemical entity, enabling more accurate downstream metabolite annotation.

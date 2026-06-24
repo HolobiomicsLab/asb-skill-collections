@@ -17,7 +17,7 @@ metadata:
   - OpenMS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -50,7 +50,6 @@ attribution:
 
 # mass-spectrometry-data-preparation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load mass spectrometry data from CSV or mzML files into a Pandas DataFrame with properly named columns (m/z, retention time, intensity, ion mobility) to enable downstream visualization and analysis. This skill ensures data is in the standardized tabular format required by pyOpenMS-viz and other MS analysis libraries.

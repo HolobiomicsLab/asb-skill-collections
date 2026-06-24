@@ -12,7 +12,7 @@ metadata:
   - docker-compose
   - Python
   - TensorFlow Serving
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -42,7 +42,6 @@ attribution:
 
 # docker-container-deployment-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Dockerized model server (specifically TensorFlow Serving) is running and exposes the correct input/output layer metadata through its HTTP metadata endpoint. This skill ensures the deployed model conforms to expected interface specifications before classification queries are issued.

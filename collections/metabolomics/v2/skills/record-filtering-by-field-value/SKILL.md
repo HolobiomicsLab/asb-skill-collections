@@ -15,7 +15,7 @@ metadata:
   - MESSES
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -49,7 +49,6 @@ attribution:
 
 # record-filtering-by-field-value
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter JSON records by matching a single field against a specified value before downstream processing (e.g., string construction or matrix transformation). This skill selects only records meeting a field=value condition, reducing the input set to those relevant for the target conversion directive.

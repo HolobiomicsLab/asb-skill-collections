@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -53,7 +53,6 @@ attribution:
 
 # mass-calibration-against-reference-standards
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform m/z domain calibration of FT-ICR mass spectra using a reference standard file to correct instrumental mass deviations before molecular formula assignment. This calibration step is essential for achieving accurate mass error metrics and reliable formula annotation in high-resolution mass spectrometry workflows.

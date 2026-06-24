@@ -18,7 +18,7 @@ metadata:
   - reticulate
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -53,7 +53,6 @@ attribution:
 
 # R-Python Interoperability via Wrapper
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 SpectriPy wraps Python mass spectrometry package functionality (matchms, spectrum_utils) into R function signatures, enabling seamless invocation of Python MS algorithms within R-based Spectra workflows without manual object marshalling. This skill bridges two ecosystems to leverage Python's specialized MS libraries while remaining in R.

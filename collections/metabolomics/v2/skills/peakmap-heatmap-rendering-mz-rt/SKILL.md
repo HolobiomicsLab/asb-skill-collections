@@ -21,7 +21,7 @@ metadata:
   - pyOpenMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -51,7 +51,6 @@ attribution:
 
 # peakmap-heatmap-rendering-mz-rt
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Render 2D and 3D mass spectrometry peak maps as heatmaps with m/z on the x-axis and retention time on the y-axis, using intensity or color intensity as the third dimension. This skill enables visual exploration of chromatographic and spectral separation across multiple plotting backends (matplotlib, Bokeh, Plotly).

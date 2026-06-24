@@ -15,7 +15,7 @@ metadata:
   - h5py
   - hdf5plugin
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -46,7 +46,6 @@ attribution:
 
 # hdf5-format-support-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that HDF5-dependent proteomics data formats (mzMLb) are correctly supported in pyteomics by installing and testing conditional dependencies (h5py, hdf5plugin). This skill ensures that optional format handlers are properly resolved and functional before attempting mzMLb file access.

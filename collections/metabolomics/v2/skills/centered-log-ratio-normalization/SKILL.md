@@ -25,7 +25,7 @@ metadata:
   - SciPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -66,7 +66,6 @@ attribution:
 
 # centered-log-ratio-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Centered log-ratio (CLR) transformation is a compositional data normalization method that accounts for the constrained sum structure of microbiome count data by log-transforming the ratio of each feature to the geometric mean of all features. Applied as a preprocessing step before multivariate modeling of microbiome-metabolome relationships, CLR normalization improves prediction accuracy and correlation detection compared to relative abundance transformation, particularly in datasets with high feature counts.

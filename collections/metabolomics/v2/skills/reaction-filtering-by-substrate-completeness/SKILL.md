@@ -17,7 +17,7 @@ metadata:
   - concordanceAnalysis.py
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -47,7 +47,6 @@ attribution:
 
 # reaction-filtering-by-substrate-completeness
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolic reactions to retain only those with complete quantification of all substrate abundances in a metabolomics dataset, enabling reliable downstream computation of Reaction Propensity Scores (RPS) and concordance analysis. This is a quality-control step that prevents NaN/undefined computations when applying mass action law formulations.

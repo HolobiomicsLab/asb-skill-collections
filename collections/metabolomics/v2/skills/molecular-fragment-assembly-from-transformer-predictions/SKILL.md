@@ -16,7 +16,7 @@ metadata:
   - convolutional neural network
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -47,7 +47,6 @@ attribution:
 
 # molecular-fragment-assembly-from-transformer-predictions
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill uses a transformer architecture to assemble large numbers of molecular fragments predicted from spectral features into complete molecular structures with connectivity information. It is applied as the decoding stage of an end-to-end NMR-to-structure pipeline to convert fragment embeddings into valid molecular graphs.

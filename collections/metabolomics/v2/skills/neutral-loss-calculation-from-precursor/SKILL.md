@@ -26,7 +26,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -73,7 +73,6 @@ attribution:
 
 # neutral-loss-calculation-from-precursor
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate neutral loss peaks from MS/MS spectra by subtracting each fragment m/z from the precursor m/z, then represent these losses as vocabulary words for Word2Vec embedding in spectral document construction. This enriches spectral documents with chemical fragmentation information beyond direct fragments alone.

@@ -17,7 +17,7 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -48,7 +48,6 @@ attribution:
 
 # mass-spectrometry-benchmark-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitatively evaluate chemical formula ranking accuracy and adduct assignment performance across MS/MS inference methods using standardized benchmark datasets and ranking metrics. This skill isolates the contribution of individual model innovations (e.g., multi-adduct support) by computing top-k accuracy deltas against controlled baseline modes.

@@ -13,7 +13,7 @@ metadata:
   - Python
   - TensorFlow 2.3.0
   - Keras
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -42,7 +42,6 @@ attribution:
 
 # deep-learning-layer-inspection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and validate layer names and architecture of pre-trained deep learning models (Keras/TensorFlow) to ensure conformance with downstream serving requirements. This skill verifies that input and output layer names match expected conventions before model deployment or format conversion.

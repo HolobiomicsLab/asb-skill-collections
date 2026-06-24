@@ -19,7 +19,7 @@ metadata:
   - LC-MS
   - ion-mobility-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -53,7 +53,6 @@ attribution:
 
 # feature-table-consensus-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate aligned multi-sample LC-IMS-MS/MS features into consensus coordinates and cluster memberships to produce a unified, deduplicated feature table suitable for downstream quantitation and comparison. This skill reconciles instrument drift and calibration variation by computing weighted means or medians across clustered features in (mz, drift_time, retention_time) space.

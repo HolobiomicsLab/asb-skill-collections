@@ -14,7 +14,7 @@ metadata:
   - SIRIUS / CSI:FingerID
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -44,7 +44,6 @@ attribution:
 
 # mass-spectrometry-feature-tree-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect, validate, and characterize the structural properties of a Chemical Feature Tree artifact produced by q2-qemistree to understand the hierarchy and connectivity of mass-spectrometry features for downstream chemically-informed metabolomic analysis. This skill confirms tree integrity before using it for alpha/beta-diversity calculations or feature interpretation.

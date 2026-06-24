@@ -17,7 +17,7 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -52,7 +52,6 @@ attribution:
 
 # search-mode-configuration-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configuring and comparing molecular formula search modes (first-hit vs. all-hits) to understand how prioritization strategies affect assignment counts, score distributions, and computational efficiency. This skill is essential when optimizing molecular formula annotation workflows for different analytical goals—e.g., rapid screening vs. comprehensive assignment.

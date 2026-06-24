@@ -13,7 +13,7 @@ metadata:
   - pip
   - Python
   - conda
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -42,7 +42,6 @@ attribution:
 
 # installation-validation-reporting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify successful installation of a Python package and its core functional modules by performing sequential imports and generating a validation report. This skill ensures that a package installation from PyPI (or other distribution channels) is complete and that critical modules are accessible before downstream analysis workflows commence.

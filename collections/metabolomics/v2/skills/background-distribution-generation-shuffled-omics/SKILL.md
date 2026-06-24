@@ -20,7 +20,7 @@ metadata:
   - Python
   - TensorFlow
   - Scipy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -60,7 +60,6 @@ attribution:
 
 # background-distribution-generation-shuffled-omics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate an empirical null distribution of prediction performance metrics (e.g., Spearman correlation coefficients) by repeatedly shuffling paired omics datasets and performing cross-validated model evaluation. This establishes statistical thresholds for identifying well-predicted features and distinguishing signal from noise in microbiome–metabolome predictive models.

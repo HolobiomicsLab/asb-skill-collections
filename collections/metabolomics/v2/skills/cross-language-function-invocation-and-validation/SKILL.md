@@ -19,7 +19,7 @@ metadata:
   - reticulate
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
@@ -52,7 +52,6 @@ attribution:
 
 # Cross-language function invocation and validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke Python mass spectrometry package functions from within R-based Spectra workflows using language-bridging wrappers (e.g., SpectriPy), then validate that the wrapped call executes without error and returns properly typed R-native objects. This skill enables seamless exploitation of Python-only MS algorithms (similarity scoring, filtering, normalization) within R analysis pipelines.

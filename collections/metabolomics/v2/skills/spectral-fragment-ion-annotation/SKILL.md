@@ -17,7 +17,7 @@ metadata:
   - Numba
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -49,7 +49,6 @@ attribution:
 
 # spectral-fragment-ion-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate observed MS/MS spectrum peaks against theoretical fragment ions (a, b, y, and other ion types) derived from a ProForma 2.0 peptidoform specification, using tolerance-based matching to link experimental m/z values to predicted fragment masses and charge states. This enables identification and visualization of peptide fragmentation patterns in tandem mass spectrometry data.

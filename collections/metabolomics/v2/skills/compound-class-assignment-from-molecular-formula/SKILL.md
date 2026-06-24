@@ -16,7 +16,7 @@ metadata:
   - MetaboDirect
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -53,7 +53,6 @@ attribution:
 
 # compound-class-assignment-from-molecular-formula
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns biochemical compound classes (e.g., lipids, sugars, amino acids, lignin) to FT-ICR MS peaks based on their elemental composition in assigned molecular formulas. This classification is essential for interpreting metabolomic diversity and understanding the functional roles of detected compounds in biogeochemical cycling.

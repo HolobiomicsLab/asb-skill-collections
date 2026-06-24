@@ -14,7 +14,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -46,7 +46,6 @@ attribution:
 
 # technical-replicate-reproducibility-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess the reproducibility of metabolomic features across technical replicates by filtering out non-reproducible compounds using coefficient of variation (CV) thresholds. This skill identifies high-quality, consistent MS1 features that warrant downstream analysis.

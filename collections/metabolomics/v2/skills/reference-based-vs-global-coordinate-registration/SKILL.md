@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -52,7 +52,6 @@ attribution:
 
 # reference-based-vs-global-coordinate-registration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A skill for choosing and applying either reference-sample-based or global-coordinate alignment strategies when normalizing multi-dimensional LC-IMS-MS/MS feature coordinates across multiple samples. The choice affects how instrument drift and calibration variation are accommodated during feature matching.

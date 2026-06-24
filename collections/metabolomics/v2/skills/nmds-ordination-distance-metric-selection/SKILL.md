@@ -16,7 +16,7 @@ metadata:
   - R 4.0.2
   - R (4.0.2 or above)
   - ggplot2 or base R graphics
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -52,7 +52,6 @@ attribution:
 
 # NMDS Ordination with Distance Metric Selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an appropriate distance metric (Bray-Curtis, Euclidean, or Jaccard) to calculate pairwise distances among normalized metabolite abundance samples, then perform non-metric multidimensional scaling (NMDS) to generate a 2D ordination for visualization of sample clustering and biological grouping effects.

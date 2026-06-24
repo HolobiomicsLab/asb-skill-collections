@@ -17,7 +17,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -46,7 +46,6 @@ attribution:
 
 # ms-spectra-inference-with-neural-networks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a pre-trained deep neural network (FIDDLE) to predict molecular formulas directly from tandem MS/MS spectra, using a two-stage architecture (TCN for initial prediction + Siamese rescore model for ranking candidates). This skill is essential when you need rapid, high-accuracy formula assignment from high-resolution mass spectrometry without external tools like SIRIUS or BUDDY.

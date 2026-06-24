@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -45,7 +45,6 @@ attribution:
 
 # charge-state-specific-peak-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and match isotopologue patterns within a single charge state by enumerating mass offsets (e.g., C13 substitutions) and applying multi-dimensional tolerances on m/z, drift time, and retention time. This skill ensures that isotopic signatures are correctly attributed to their charge state, improving feature annotation accuracy in high-dimensional mass spectrometry workflows.

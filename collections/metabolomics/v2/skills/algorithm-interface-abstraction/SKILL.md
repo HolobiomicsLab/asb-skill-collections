@@ -17,7 +17,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -47,7 +47,6 @@ attribution:
 
 # algorithm-interface-abstraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design a unified interface that wraps multiple interchangeable peak-picking algorithms (Centwave, FeatureFinderMetabo, ADAP) and routes raw LC-MS data to the selected algorithm via configuration-driven dispatch, standardizing outputs to a common feature table format. This abstraction isolates algorithm-specific details and allows users to swap peak-picking methods without rewriting downstream processing logic.

@@ -15,7 +15,7 @@ metadata:
   - PubChem or equivalent chemical database
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -43,7 +43,6 @@ attribution:
 
 # performance-degradation-quantification-and-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies and characterizes how a trained machine learning model's accuracy degrades when applied to data beyond its original training scope. This skill measures the gap between in-scope and out-of-scope performance, documents failure modes, and establishes known performance boundaries.

@@ -14,7 +14,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -46,7 +46,6 @@ attribution:
 
 # usi-string-parsing-and-resolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and resolve Universal Spectrum Identifier (USI) strings to retrieve raw MS/MS spectrum data (m/z array, intensity array, precursor m/z, charge state, retention time) from online proteomics and metabolomics repositories (PRIDE, MassIVE). This skill bridges USI string syntax to live spectrum objects suitable for downstream processing and annotation.

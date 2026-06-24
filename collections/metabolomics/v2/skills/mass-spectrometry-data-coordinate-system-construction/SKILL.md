@@ -16,7 +16,7 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -46,7 +46,6 @@ attribution:
 
 # mass-spectrometry-data-coordinate-system-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a 2-D coordinate system from LC-MS/MS spectral data by applying t-SNE dimensionality reduction to ms2deepscore-computed pairwise similarity scores. This coordinate system serves as the foundation for interactive dashboard visualization and exploratory analysis of mass spectral relationships.

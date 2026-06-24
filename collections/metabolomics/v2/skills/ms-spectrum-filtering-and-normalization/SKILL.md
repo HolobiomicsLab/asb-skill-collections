@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -59,7 +59,6 @@ attribution:
 
 # MS spectrum filtering and normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A workflow to preprocess tandem mass spectrometry spectra by removing noise, truncating m/z ranges, eliminating precursor peaks, and applying intensity scaling. This skill is essential for standardizing spectra before database searching, spectral comparison, or machine learning pipelines.

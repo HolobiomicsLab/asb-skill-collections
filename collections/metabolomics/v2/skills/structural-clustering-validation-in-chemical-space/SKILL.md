@@ -18,7 +18,7 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -55,7 +55,6 @@ attribution:
 
 # Structural clustering validation in chemical space
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that learned molecular embeddings encode chemically meaningful information by applying dimensionality reduction to spectral embeddings and verifying that compounds cluster by chemical class. This skill confirms whether an embedding space preserves structural relationships needed for similarity prediction and molecular family discovery.

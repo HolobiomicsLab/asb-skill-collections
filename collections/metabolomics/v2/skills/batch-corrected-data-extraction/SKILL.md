@@ -15,7 +15,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -46,7 +46,6 @@ attribution:
 
 # batch-corrected-data-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract batch-corrected compound/internal-standard ratios and their metadata from a SummarizedExperiment object after pooled study quality control (SQC) sample-based batch correction. This skill enables downstream analyses requiring normalized, drift-corrected abundance data.

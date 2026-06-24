@@ -14,7 +14,7 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -43,7 +43,6 @@ attribution:
 
 # MS/MS Spectra Dataset Preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and partition tandem mass spectrometry (MS/MS) spectra datasets for deep learning model training by filtering spectra according to instrument type allowlists, quality thresholds, and metadata criteria, then splitting into training and test sets with target compound counts. This skill ensures reproducible dataset composition and verifiable alignment with downstream model training requirements.

@@ -16,7 +16,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -46,7 +46,6 @@ attribution:
 
 # igzip-compression-and-indexed-block-format
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill structures mzML mass spectrometry data into independently seekable compressed blocks using indexed gzip (igzip) format, enabling random access to specific spectra without decompressing the entire file. The technique reduces file sizes to RAW format levels while preserving rapid seek capability across large datasets.

@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -51,7 +51,6 @@ attribution:
 
 # singly-charged-ion-mass-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate expected m/z values for C13 isotopologues of singly-charged ions by applying a fixed m/z delta (1.003355 Da per carbon substitution) to detected monoisotopic features. This skill is essential for enumerating and matching isotopic clusters in high-resolution mass spectrometry data.

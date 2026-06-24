@@ -14,7 +14,7 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -42,7 +42,6 @@ attribution:
 
 # molecular-structure-ground-truth-matching-and-accuracy-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compares predicted molecular structures (formula and connectivity) against experimentally known ground-truth structures to compute exact recovery rates and other fidelity metrics. This skill is essential for validating end-to-end NMR-to-structure models on molecules up to 19 heavy atoms.

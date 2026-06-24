@@ -18,7 +18,7 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -46,7 +46,6 @@ attribution:
 
 # backend-routing-and-dispatch
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Route a user's backend specification through a layered software architecture to dispatch plot generation requests to the correct plotting library backend. This skill enables seamless switching between static (matplotlib) and interactive (bokeh, plotly) visualizations without changing application code.

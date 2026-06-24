@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -46,7 +46,6 @@ attribution:
 
 # polarity-based-compound-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a compound target list to retain only compounds matching a specified ionization polarity (positive or negative) before peak detection in LC–MS data. This step ensures that TARDIS peak integration operates only on chemically relevant m/z and retention time windows, avoiding spurious matches from oppositely charged ions.

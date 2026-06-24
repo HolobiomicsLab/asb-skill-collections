@@ -17,7 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -53,7 +53,6 @@ attribution:
 
 # metabolomics-data-format-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate tab-delimited metabolomics input files for mandatory columns, data types, and completeness before constructing SummarizedExperiment objects. This skill ensures data integrity and early detection of format errors that would otherwise propagate through downstream QC analyses.

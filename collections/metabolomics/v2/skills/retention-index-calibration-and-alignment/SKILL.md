@@ -17,7 +17,7 @@ metadata:
   - LowResMassSpectralMatch
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -52,7 +52,6 @@ attribution:
 
 # Retention-Index Calibration and Alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate gas chromatography retention times against reference alkane standards to compute retention indices (RI) for each detected peak, enabling standardized peak identification across different instruments and experimental conditions. This skill is essential for GC-MS compound identification workflows where spectral library matching relies on both mass spectral similarity and retention-index proximity.

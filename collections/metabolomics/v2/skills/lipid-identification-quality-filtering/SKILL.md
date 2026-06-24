@@ -15,7 +15,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -44,7 +44,6 @@ attribution:
 
 # lipid-identification-quality-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply machine learning-based quality filtering to lipid identifications exported from MS-DIAL to remove incorrect identifications and improve annotation reliability. This skill uses LipoCLEAN to score and filter lipid hits based on instrument-specific models trained on manually curated MS-DIAL datasets.

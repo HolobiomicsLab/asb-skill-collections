@@ -15,7 +15,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -45,7 +45,6 @@ attribution:
 
 # feature-table-moniker-registration-and-versioning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Register and version multiple feature table outputs from LC-MS preprocessing (Asari) into a persistent experiment object using semantic monikers ('full', 'preferred') to enable downstream traceability and alternative analysis paths. This skill ensures feature tables are discoverable, versioned, and ready for normalization, annotation, and quality control without manual file management.

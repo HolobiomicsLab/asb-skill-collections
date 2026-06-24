@@ -13,7 +13,7 @@ metadata:
   - xml.etree.ElementTree
   - pymzML
   - Python gzip module
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -42,7 +42,6 @@ attribution:
 
 # binary-stream-seeking-and-decompression
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement random-access decompression of indexed gzip files by parsing binary metadata embedded in the gzip header comment field to extract index-to-offset mappings, then use those mappings to seek directly to and decompress specific blocks without scanning the entire file. This skill is essential for rapid access to large compressed scientific data formats like mzML without requiring sequential iteration.

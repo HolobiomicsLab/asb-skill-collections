@@ -16,7 +16,7 @@ metadata:
   - PSI-MOD (HUPO-PSI Protein Modifications Ontology)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -48,7 +48,6 @@ attribution:
 
 # ion-type-classification-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selectively annotate and visualize peptide fragment ions of specified types (a, b, y, immonium, internal, etc.) from tandem mass spectrometry spectra. This skill enables targeted interpretation of observed peaks by restricting annotation to biologically or analytically relevant fragment ion series, improving spectrum clarity and reducing false-positive peak assignments.

@@ -15,7 +15,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -45,7 +45,6 @@ attribution:
 
 # temporal-signal-drift-detection-and-adjustment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and correct intensity drifts that occur across the sample run sequence in mass spectrometry quantification datasets using statistical or bracketing-based correction strategies. This skill ensures accurate quantification when instrumental signal degrades or fluctuates systematically over time.

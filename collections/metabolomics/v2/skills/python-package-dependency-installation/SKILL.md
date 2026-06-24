@@ -20,7 +20,7 @@ metadata:
   - conda
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -54,7 +54,6 @@ attribution:
 
 # python-package-dependency-installation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install Python packages and their conditional dependencies using pip or conda to enable specific functionality modules. This skill is essential when a proteomics analysis workflow requires optional features (e.g., mzMLb format support, Unimod database access) that are not included in the base package installation.

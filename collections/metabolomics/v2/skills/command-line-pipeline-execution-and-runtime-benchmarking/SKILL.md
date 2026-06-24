@@ -22,7 +22,7 @@ metadata:
   - SYNCSA
   - NumPy, pandas
   - vegan, SYNCSA
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -57,7 +57,6 @@ attribution:
 
 # command-line-pipeline-execution-and-runtime-benchmarking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a fully automated command-line pipeline on FT-ICR MS data and measure wall-clock runtime across sample-size conditions to validate that observed performance matches published benchmarks. This skill verifies reproducibility of computational efficiency claims by comparing empirical runtimes against reference thresholds.

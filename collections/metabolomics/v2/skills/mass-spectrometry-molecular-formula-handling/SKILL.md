@@ -18,7 +18,7 @@ metadata:
   - KEGG database
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -49,7 +49,6 @@ attribution:
 
 # mass-spectrometry-molecular-formula-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign molecular formulas to detected m/z peaks in high-resolution FT-ICR MS data and filter results by mass accuracy and isotopic consistency. This is a foundational preprocessing step that converts raw peak lists into chemically interpretable, annotated peak tables suitable for downstream analysis.

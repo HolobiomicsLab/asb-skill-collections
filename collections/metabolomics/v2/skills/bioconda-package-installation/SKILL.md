@@ -14,7 +14,7 @@ metadata:
   - conda
   - Bioconda
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -44,7 +44,6 @@ attribution:
 
 # bioconda-package-installation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install a Python package from the Bioconda conda channel and verify that core modules import without errors. Use this skill when you need to deploy a bioinformatics tool in a reproducible, cross-platform environment and confirm functional installation before downstream analysis.

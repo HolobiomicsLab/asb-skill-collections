@@ -15,7 +15,7 @@ metadata:
   - TensorFlow
   - scikit-learn
   - Matplotlib / Seaborn
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -53,7 +53,6 @@ attribution:
 
 # feature-attribution-score-interpretation-neural-networks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and interpret neural network feature attribution scores to identify significant microbe-metabolite interactions and construct functional modules. This skill transforms raw model weights into biologically interpretable interaction scores that reveal which microbial features drive metabolite predictions.

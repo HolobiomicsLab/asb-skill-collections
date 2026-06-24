@@ -14,7 +14,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -42,7 +42,6 @@ attribution:
 
 # ms-signal-correction-strategy-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selecting and applying intensity drift correction strategies to mass spectrometry datasets to remove systematic signal artifacts and ensure accurate quantification. This skill addresses the common problem of signal intensity drifting over long measurement sequences by choosing from multiple correction methods suited to the dataset's characteristics.

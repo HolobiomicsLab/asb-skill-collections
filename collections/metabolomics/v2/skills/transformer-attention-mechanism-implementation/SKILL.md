@@ -15,7 +15,7 @@ metadata:
   - Transformer (architecture)
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -45,7 +45,6 @@ attribution:
 
 # transformer-attention-mechanism-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a transformer encoder-decoder architecture with multi-head self-attention and cross-attention layers to map encoded molecular fragments into predicted molecular structures (formula and connectivity). This skill is used when the task requires learning a mapping from multiple input modalities (fragment embeddings, spectra representations) to structured outputs (molecular graphs and chemical formulas).

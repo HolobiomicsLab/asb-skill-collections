@@ -14,7 +14,7 @@ metadata:
   - Python
   - Jupyter
   - metabolomics-ORA
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -42,7 +42,6 @@ attribution:
 
 # over-representation-analysis-pvalue-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret Over-representation Analysis (ORA) p-values in metabolomics pathway analysis by quantifying how detection coverage (fraction of pathway metabolites actually measured) affects false-positive rates and statistical significance distributions. This skill guards against inflated significance claims arising from incomplete metabolite detection.

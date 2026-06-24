@@ -15,7 +15,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -44,7 +44,6 @@ attribution:
 
 # arrival-time-to-drift-time-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert TWIM-MS arrival times (detector arrival) to drift times (time spent in ion mobility cell) by subtracting the instrument-specific time-of-flight offset. This conversion is a prerequisite for accurate collision cross section (CCS) calibration in multi-omic ion mobility mass spectrometry workflows.

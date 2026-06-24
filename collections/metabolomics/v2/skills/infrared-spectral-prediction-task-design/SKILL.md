@@ -13,7 +13,7 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -43,7 +43,6 @@ attribution:
 
 # infrared-spectral-prediction-task-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement an infrared spectral prediction task by extending a message passing neural network (chemprop) with spectral feature processing and output layers. This skill enables molecular property models to predict infrared absorption spectra from molecular graphs.

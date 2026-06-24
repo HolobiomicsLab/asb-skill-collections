@@ -17,7 +17,7 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -47,7 +47,6 @@ attribution:
 
 # custom-file-wrapper-class-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a custom file wrapper class to enable pymzML to read and randomly access mass spectrometry data stored in non-standard formats (e.g., SQLite databases) by wrapping the data source with __getitem__, read(), and get_spectrum_count() methods that pymzML's FileInterface can detect and instantiate.

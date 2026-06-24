@@ -26,7 +26,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -67,7 +67,6 @@ attribution:
 
 # microbiome-metabolome-data-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preparation and normalization of paired microbiome and metabolome feature tables for downstream prediction modeling, including low-abundance filtering, compositional transformations (CLR or relative abundance), and feature quality control. This skill ensures that heterogeneous omics measurements are made commensurable and that rare features do not dominate the learning signal.

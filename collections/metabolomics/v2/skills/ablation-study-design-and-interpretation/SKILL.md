@@ -16,7 +16,7 @@ metadata:
   - TensorFlow
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -48,7 +48,6 @@ attribution:
 
 # ablation-study-design-and-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Ablation studies systematically compare model variants by isolating a single hyperparameter or design choice (shared vs. per-partition tuning) while holding all else constant, then measure performance differences to determine whether the isolated factor materially improves predictive accuracy. This skill is essential for distinguishing genuine performance gains from statistical noise and for understanding which design decisions actually drive model behavior.

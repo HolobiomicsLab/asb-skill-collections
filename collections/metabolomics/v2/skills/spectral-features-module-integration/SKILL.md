@@ -12,7 +12,7 @@ metadata:
   tools:
   - chemprop
   - chemprop-IR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -43,7 +43,6 @@ attribution:
 
 # spectral-features-module-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate a spectral features module as an extension layer into the chemprop base message passing neural network architecture to enable infrared spectral predictions on molecular graphs. This skill bridges molecular graph representations with spectral property outputs by composing the base MPNN with learned spectral feature transformations.

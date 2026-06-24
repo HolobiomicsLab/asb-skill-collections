@@ -17,7 +17,7 @@ metadata:
   - Pyteomics
   - conda
   - pandas
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -50,7 +50,6 @@ attribution:
 
 # polypeptide-property-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute physicochemical properties of polypeptides—including monoisotopic mass, average mass, isotopic distribution, charge, and pI—from amino acid sequences using Pyteomics mass modules. This skill enables rapid, reproducible calculation of mass-dependent proteomics features required for peptide identification and quantification workflows.

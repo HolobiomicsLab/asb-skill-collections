@@ -18,7 +18,7 @@ metadata:
   - GX-FBA
   - optGpSampler
   - COBRApy
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -57,7 +57,6 @@ attribution:
 
 # Reaction Activity Score Computation from Gene-Protein-Reaction Rules
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Reaction Activity Scores (RAS) that represent differential expression of metabolic enzymes across cell lines by resolving Gene-Protein-Reaction (GPR) logical rules against RNA-seq transcript abundance data. RAS values integrate gene expression via AND (minimum) and OR (sum) operations, then normalize across cell lines to constrain flux boundaries in constraint-based metabolic models.

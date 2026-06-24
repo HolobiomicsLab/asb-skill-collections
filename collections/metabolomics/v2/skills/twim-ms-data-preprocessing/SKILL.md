@@ -16,7 +16,7 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -47,7 +47,6 @@ attribution:
 
 # TWIM-MS Data Preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare raw or processed traveling-wave ion mobility mass spectrometry (TWIM-MS) data for collision cross section (CCS) calibration and biomolecular class assignment by converting arrival time measurements to drift time, partitioning by class stratum, and applying reference standard calibration. This skill enables downstream CCS computation without requiring prior feature identification.

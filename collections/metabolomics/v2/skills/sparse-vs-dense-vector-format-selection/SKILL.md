@@ -15,7 +15,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -45,7 +45,6 @@ attribution:
 
 # sparse-vs-dense-vector-format-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Choose between sparse and dense vector representations when converting binned MS/MS spectra to low-dimensional feature-hashed vectors. Dense vectors are compact and enable fast nearest-neighbor searching; sparse vectors preserve high-dimensional detail but require more memory and slower comparison.

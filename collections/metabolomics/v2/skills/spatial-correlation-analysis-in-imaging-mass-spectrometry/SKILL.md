@@ -20,7 +20,7 @@ metadata:
   - mass2adduct (R package)
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -51,7 +51,6 @@ attribution:
 
 # spatial-correlation-analysis-in-imaging-mass-spectrometry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Test whether annotated ion pairs in mass spectrometry imaging data exhibit significant spatial covariance by computing two-tailed Pearson correlation coefficients across pixel intensities. This validates whether suspected parent–adduct relationships are supported by correlated abundance patterns in the tissue sample.

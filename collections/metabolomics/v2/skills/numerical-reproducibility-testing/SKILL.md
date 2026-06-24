@@ -14,7 +14,7 @@ metadata:
   - MIST
   - SCARF
   - MIST-CF
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -46,7 +46,6 @@ attribution:
 
 # numerical-reproducibility-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that neural network embedding layers produce consistent, numerically stable outputs by comparing forward-pass results against reference implementations using strict tolerance thresholds. This skill ensures that model components (e.g., sinusoidal formula embeddings) reproduce reliably across environments and commits.

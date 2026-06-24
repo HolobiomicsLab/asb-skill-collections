@@ -15,7 +15,7 @@ metadata:
   - getRASscore.py
   - getNormalizedRAS.py
   - constraint-based stoichiometric metabolic models (SBML format, COBRApy library)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -43,7 +43,6 @@ attribution:
 
 # Gene-Protein-Reaction Association Evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically extract and validate Gene-Protein-Reaction (GPR) rules from a metabolic model, then use those rules to compute Reaction Activity Scores (RAS) by integrating transcriptomics data via logical AND/OR resolution. This skill bridges gene-expression levels to reaction-level constraints, enabling discrimination of transcriptionally controlled metabolic reactions.

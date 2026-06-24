@@ -14,7 +14,7 @@ metadata:
   - TensorFlow 2.3.0
   - Python
   - Docker
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -45,7 +45,6 @@ attribution:
 
 # tensorflow-model-layer-inspection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and validate the layer architecture of a TensorFlow 2.3.0 HDF5 model to confirm the presence and names of input and output layers required for downstream pipeline integration. This skill ensures structural compliance before model deployment in containerized environments.

@@ -15,7 +15,7 @@ metadata:
   - Asari
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # empirical-compound-construction-from-feature-clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups individual LC-MS features into empirical compounds by clustering features within configurable m/z and retention time windows, then annotates isotopologues and adducts based on observed mass differences and charge state patterns. This pre-annotation step produces a structured JSON representation of putative metabolites ready for downstream MS1 and MS2 annotation.

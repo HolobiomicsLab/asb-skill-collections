@@ -14,7 +14,7 @@ metadata:
   - Transformer
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -44,7 +44,6 @@ attribution:
 
 # molecular-connectivity-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict molecular formula and bond connectivity from 1D ¹H and/or ¹³C NMR spectra using an integrated CNN–transformer model. This skill recovers the complete molecular structure (atoms and bonds) from routine spectroscopic data for molecules up to 19 heavy atoms, automating a task traditionally performed by manual spectral interpretation.

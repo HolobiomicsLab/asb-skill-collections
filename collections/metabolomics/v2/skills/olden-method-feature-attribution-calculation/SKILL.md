@@ -19,7 +19,7 @@ metadata:
   - TensorFlow
   - scikit-learn
   - MiMeNet
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -54,7 +54,6 @@ attribution:
 
 # Olden's Method Feature Attribution Calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Olden's method derives microbe-metabolite feature attribution scores from trained multilayer perceptron neural network weights by multiplying weight matrices across all hidden layers, producing signed scores that quantify how strongly each microbe contributes to predicting metabolite abundance. These scores are subsequently normalized and thresholded to identify significant microbe-metabolite relationships for downstream functional module construction.

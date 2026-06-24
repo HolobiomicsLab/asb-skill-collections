@@ -16,7 +16,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -46,7 +46,6 @@ attribution:
 
 # spectral-similarity-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Density-based clustering of mass spectra using a sparse pairwise distance matrix to partition similar MS/MS spectra into homogeneous groups. This skill is applied as the final step of the falcon pipeline to assign cluster membership based on cosine similarity thresholds and neighborhood density.

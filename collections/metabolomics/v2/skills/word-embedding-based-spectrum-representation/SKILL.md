@@ -21,7 +21,7 @@ metadata:
   - Numpy, Scipy, Pandas
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -59,7 +59,6 @@ attribution:
 
 # word-embedding-based-spectrum-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectra into document-like representations where peaks and neutral losses are encoded as learned word embeddings, enabling structural similarity inference through natural language processing models such as Word2Vec. This approach yields superior true-positive-to-false-positive ratios compared to cosine-based spectral similarity during library matching.

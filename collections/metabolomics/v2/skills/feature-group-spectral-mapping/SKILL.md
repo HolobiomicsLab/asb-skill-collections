@@ -15,7 +15,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -46,7 +46,6 @@ attribution:
 
 # Reconstruct the Isotopologue and Adduct Grouping Component
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map consolidated MS2 spectra and isotopic metadata to feature groups (isotopologues and adducts) that have already been aligned and clustered across samples. This skill extracts representative tandem mass spectra for each feature group and annotates their isotopic relationships and adduct identities.

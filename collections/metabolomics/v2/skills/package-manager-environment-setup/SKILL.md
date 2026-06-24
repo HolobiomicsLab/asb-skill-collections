@@ -15,7 +15,7 @@ metadata:
   - pip
   - Bioconda
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -44,7 +44,6 @@ attribution:
 
 # package-manager-environment-setup
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install and verify a scientific Python package via a package manager (conda or pip) and confirm that core modules import without errors. This skill ensures reproducible, documented environment setup and validates that all critical dependencies resolve correctly before downstream analysis.

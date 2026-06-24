@@ -17,7 +17,7 @@ metadata:
   - MZmine2
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -47,7 +47,6 @@ attribution:
 
 # QIIME 2 Artifact Handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import, format, and manage mass-spectrometry and feature table data into QIIME 2 artifact types (.qza) to enable standardized downstream analysis. This skill ensures data interoperability across QIIME 2 plugins and preserves metadata throughout metabolomic or metagenomic pipelines.

@@ -17,7 +17,7 @@ metadata:
   - ProteoWizard MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -49,7 +49,6 @@ attribution:
 
 # vendor-raw-file-format-recognition
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and classify vendor-specific mass spectrometry raw file formats (e.g., .raw, .wiff2, .d) to select the appropriate conversion pathway and acquisition method handler in AirdPro. This skill is essential for batch or automated conversion pipelines where file origins are heterogeneous.

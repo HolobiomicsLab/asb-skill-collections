@@ -23,7 +23,7 @@ metadata:
   - FT-ICR MS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -58,7 +58,6 @@ attribution:
 
 # metabolite-chemodiversity-index-calculation-and-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and interpret chemodiversity indices (e.g., richness, evenness, heterogeneity metrics) on filtered peak-abundance matrices from FT-ICR MS data to quantify the molecular complexity and compositional structure of natural organic matter or metabolite pools. This skill enables researchers to compare chemical diversity across samples, treatments, or environmental conditions.

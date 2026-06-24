@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -59,7 +59,6 @@ attribution:
 
 # spectral-vector-normalization-by-intensity
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize fragment ion intensities in MS/MS spectra before converting them to document vectors for Word2Vec embedding. This intensity weighting ensures that the spectral embedding reflects the relative importance of fragment peaks and improves the fidelity of spectral similarity scoring based on learned structural relationships.

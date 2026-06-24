@@ -17,7 +17,7 @@ metadata:
   - Docker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -49,7 +49,6 @@ attribution:
 
 # cli-invocation-with-file-path-arguments
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke a command-line interface tool with input and output file path arguments to perform format conversion. This skill is essential for batch processing and automation workflows where vendor mass spectrometry raw files must be converted to standardized formats (mzML or Aird) without manual GUI interaction.

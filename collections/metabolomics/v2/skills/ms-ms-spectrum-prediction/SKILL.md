@@ -16,7 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -45,7 +45,6 @@ attribution:
 
 # MS/MS Spectrum Prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use deep learning (FIDDLE v2.0.0 with Siamese-architecture rescore model) to predict molecular formulas from tandem mass spectra (MS/MS), producing ranked formula candidates with confidence scores. This skill is essential when you need to identify unknown compounds from high-resolution MS/MS data without prior structure knowledge.

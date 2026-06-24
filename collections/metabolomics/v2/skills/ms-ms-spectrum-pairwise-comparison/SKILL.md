@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # MS/MS Spectrum Pairwise Comparison via Nearest Neighbor Indexing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use nearest neighbor indexes to efficiently compute pairwise distances between MS/MS spectra without exhaustive all-versus-all comparison. This skill enables sparse distance matrix construction for large-scale spectrum clustering by querying pre-built indexes rather than computing distances for every spectrum pair.

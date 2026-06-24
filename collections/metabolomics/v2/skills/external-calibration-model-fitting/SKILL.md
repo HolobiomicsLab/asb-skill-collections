@@ -14,7 +14,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -44,7 +44,6 @@ attribution:
 
 # external-calibration-model-fitting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a calibration model (linear or non-linear regression) to relate mass spectrometry signal intensities to known standard concentrations, enabling conversion of sample intensities into quantitative predictions. This skill addresses intensity drift in MS datasets through multiple correction strategies (internal standard, drift correction, bracketing, weighted bracketing).

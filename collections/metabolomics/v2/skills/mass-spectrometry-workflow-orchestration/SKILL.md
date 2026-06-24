@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -57,7 +57,6 @@ attribution:
 
 # mass-spectrometry-workflow-orchestration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate multi-stage LC-IMS-MS/MS data processing pipelines using Snakemake DAGs to automate mzML ingestion, peak detection, feature alignment, and spectral deconvolution. This skill ensures reproducible, scalable execution of DEIMoS analysis across batches of samples with parameterized algorithm configuration.

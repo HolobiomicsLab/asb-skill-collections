@@ -19,7 +19,7 @@ metadata:
   - OpenMS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -54,7 +54,6 @@ attribution:
 
 # mass-spectrometry-plot-taxonomy-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a polymorphic class hierarchy that routes mass spectrometry visualization requests (spectrum, chromatogram, mobilogram, peakmap) through abstract base classes to backend-specific concrete plot implementations. This skill enables a single Pandas plotting interface to delegate to matplotlib (static), bokeh, or plotly (interactive) renderers while maintaining consistent method signatures and validation logic across plot kinds.

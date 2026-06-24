@@ -13,7 +13,7 @@ metadata:
   - Matlab
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -41,7 +41,6 @@ attribution:
 
 # metabolite-feature-matching-across-datasets
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match untargeted metabolomic features across two LC-MS datasets by comparing retention time and mass-to-charge ratio signatures using the M2S Matlab package. This skill enables researchers to identify and link corresponding metabolite features between independent LC-MS runs, producing a consolidated feature correspondence table with matching scores.

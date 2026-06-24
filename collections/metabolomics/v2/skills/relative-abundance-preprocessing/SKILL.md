@@ -21,7 +21,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -62,7 +62,6 @@ attribution:
 
 # relative-abundance-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize microbiome and metabolome count tables to relative abundance (RA) or centered log-ratio (CLR) transformed compositions before predictive modeling. This preprocessing step standardizes feature scales and handles zero-inflation in compositional microbiome data, enabling fair comparison of transformation effects on downstream prediction performance.

@@ -13,7 +13,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -41,7 +41,6 @@ attribution:
 
 # quantitative-ms-data-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Correct intensity drifts in targeted mass spectrometry datasets using external calibration and multiple drift correction strategies (Internal Standard, statistical models, bracketing methods) to ensure accurate quantification before downstream analysis. This skill is essential when intensity artifacts accumulate during MS measurement runs and would otherwise bias quantitative results.

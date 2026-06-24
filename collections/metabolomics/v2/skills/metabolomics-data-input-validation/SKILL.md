@@ -14,7 +14,7 @@ metadata:
   - SummarizedExperiment
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -45,7 +45,6 @@ attribution:
 
 # metabolomics-data-input-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate tab-delimited metabolomics data files for mandatory column presence, correct format, and data integrity before constructing a SummarizedExperiment object. This upstream quality gate prevents malformed input from propagating through downstream quality control and analysis workflows in mzQuality.

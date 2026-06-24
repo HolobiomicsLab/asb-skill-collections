@@ -17,7 +17,7 @@ metadata:
   - ProForma 2.0
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -50,7 +50,6 @@ attribution:
 
 # mass-spectrum-visualization-matplotlib
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate publication-quality static plots of annotated mass spectrometry spectra using spectrum_utils' Matplotlib backend. This skill enables customizable visualization of fragment ion annotations overlaid on observed m/z intensity distributions for peer-reviewed figure production.

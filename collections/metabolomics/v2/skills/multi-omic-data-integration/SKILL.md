@@ -17,7 +17,7 @@ metadata:
   - DEIMoS (Data-Extraction for Integrated Multiomic Sources)
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -48,7 +48,6 @@ attribution:
 
 # multi-omic-data-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate and calibrate collision cross section (CCS) values across multiple biomolecular classes from traveling-wave ion mobility mass spectrometry (TWIM-MS) data without requiring prior feature identification. This skill enables unified CCS calibration and class-specific calculations across lipids, peptides, carbohydrates, and other biomolecular species in a single workflow.

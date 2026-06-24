@@ -19,7 +19,7 @@ metadata:
   - knitr
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -54,7 +54,6 @@ attribution:
 
 # extracted-ion-chromatogram-inspection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visual and qualitative inspection of extracted ion chromatograms (EICs) saved as diagnostic PNG files to assess peak detection quality, identify sawtooth artefacts from overlapping scan windows, and verify target compound visibility within defined m/z and retention time windows in LC–MS metabolomics and lipidomics data.

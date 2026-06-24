@@ -16,7 +16,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -45,7 +45,6 @@ attribution:
 
 # mass-spectrometry-ion-formula-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated prediction and enumeration of expected adduct ion formulas and m/z values for metabolites in mass spectrometry imaging, with support for derivatizing matrices (e.g. FMP-10) that produce non-standard ionization patterns. This skill replaces manual expert-driven ion assignment in high-throughput MS workflows.

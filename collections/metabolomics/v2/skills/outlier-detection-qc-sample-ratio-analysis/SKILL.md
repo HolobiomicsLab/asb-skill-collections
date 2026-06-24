@@ -17,7 +17,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -53,7 +53,6 @@ attribution:
 
 # outlier-detection-qc-sample-ratio-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and flags outlier Quality Control (QC) samples in metabolomics datasets by analyzing Compound/Internal Standard ratios using statistical tests, and simultaneously identifies mis-injected Study Samples via Internal Standard area anomalies. This filtering step removes unreliable samples before downstream reporting and interpretation.

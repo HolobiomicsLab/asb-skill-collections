@@ -18,7 +18,7 @@ metadata:
   - enveda/ccs-prediction
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -47,7 +47,6 @@ attribution:
 
 # molecular-structure-attribution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify which molecular structural features (atoms, bonds, functional groups) most strongly drive graph neural network predictions of collision cross section (CCS) through ablation and gradient-based attribution. This enables post-hoc interpretation of black-box GNN models trained on molecular graphs.

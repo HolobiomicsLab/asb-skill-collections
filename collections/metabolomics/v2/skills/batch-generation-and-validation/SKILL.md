@@ -18,7 +18,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -53,7 +53,6 @@ attribution:
 
 # Batch generation and validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate peak matrix batches from raw LCMS data and feature tables using NeatMS's NN_handler, then validate that the resulting matrices match documented shape, dimensionality, and margin/peak encoding specifications. This skill ensures that preprocessed data is correctly formatted before neural network training.

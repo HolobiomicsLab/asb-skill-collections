@@ -16,7 +16,7 @@ metadata:
   - ProteoWizard msConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -45,7 +45,6 @@ attribution:
 
 # Sequential Tool Integration and Data Routing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a containerized Nextflow pipeline that chains multiple LC-MS metabolomics tools (MS-DIAL → MSFLO) in strict sequential order, routing intermediate outputs from one tool directly into the next within a single orchestrated workflow. This skill ensures reproducible, portable execution across local machines and high-performance computing environments via Docker or Singularity containerization.

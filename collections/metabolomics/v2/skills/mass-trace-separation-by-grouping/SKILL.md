@@ -16,7 +16,7 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -47,7 +47,6 @@ attribution:
 
 # mass-trace-separation-by-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Separate multiple mass-to-charge (m/z) traces within a single chromatogram visualization by using the 'by' parameter to group data into faceted subplots. This skill is essential when a mass spectrometry dataset contains multiple ion traces and you need to visualize them as distinct chromatographic profiles rather than as an overlaid composite.

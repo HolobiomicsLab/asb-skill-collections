@@ -24,7 +24,7 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -65,7 +65,6 @@ attribution:
 
 # spectral-data-format-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw mass spectrometry spectral data from vendor-specific input formats (MGF, mzML, msp) into a unified bag-of-fragments representation with neutral losses retained, preparing spectra for downstream topic modeling in MS2LDA. This standardization is essential because MS/MS data arrives in heterogeneous formats but LDA modeling requires a consistent, normalized feature representation.

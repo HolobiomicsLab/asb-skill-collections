@@ -16,7 +16,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -60,7 +60,6 @@ attribution:
 
 # Structural Similarity Scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise Tanimoto structural-similarity scores between molecular structures using RDKit Daylight fingerprints, generating a label matrix for training deep learning models on tandem mass spectra. This skill quantifies structural similarity as ground-truth targets for predicting chemical relationships from MS/MS spectral data.

@@ -19,7 +19,7 @@ metadata:
   - FT-ICR MS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -57,7 +57,6 @@ attribution:
 
 # pairwise-mass-comparison-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute all pairwise mass differences between detected peaks in FT-ICR MS data to identify potential biochemical transformations. This vectorized subtraction yields a difference matrix that serves as input to transformation network reconstruction.

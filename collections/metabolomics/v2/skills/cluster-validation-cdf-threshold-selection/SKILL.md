@@ -16,7 +16,7 @@ metadata:
   - Hierarchical clustering (Euclidean distance, complete linkage)
   - Consensus clustering
   - Python (NumPy, SciPy, Pandas)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -50,7 +50,6 @@ attribution:
 
 # cluster-validation-cdf-threshold-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine the optimal number of clusters in a dataset by computing consensus matrices across multiple trained models, calculating cumulative distribution functions (CDFs), and selecting the largest cluster number where the proportional change in area under the CDF exceeds a predefined threshold (e.g., Δk > 0.025). This approach validates clustering stability and prevents over-clustering.

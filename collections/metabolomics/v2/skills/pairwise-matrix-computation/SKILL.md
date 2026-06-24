@@ -15,7 +15,7 @@ metadata:
   - Python
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # pairwise-matrix-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute a symmetric matrix of pairwise similarity scores (Tanimoto) between all molecular fingerprints derived from annotated MS/MS spectra, serving as ground-truth structural similarity labels for model training. This is essential when you need quantitative measures of molecular structural relatedness across a large set of unique chemical structures.

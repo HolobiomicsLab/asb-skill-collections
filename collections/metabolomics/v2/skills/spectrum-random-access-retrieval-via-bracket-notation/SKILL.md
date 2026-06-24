@@ -15,7 +15,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -43,7 +43,6 @@ attribution:
 
 # spectrum-random-access-retrieval-via-bracket-notation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enable random access retrieval of mass spectrometry spectra from mzML files using bracket notation and custom index patterns. This skill allows direct spectrum lookup by identifier without sequential file parsing, essential for efficient analysis of large mzML datasets with non-standard indexing schemes.

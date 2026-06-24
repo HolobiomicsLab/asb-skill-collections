@@ -19,7 +19,7 @@ metadata:
   - R (≥4.5.0)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -50,7 +50,6 @@ attribution:
 
 # metabolite-lipid-annotation-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate lipid annotations for LC–MS All-ion fragmentation features by matching experimental spectra against fragment ion databases using the annotateRC function. This skill identifies which features receive valid rank-1 lipid assignments and produces a globally ranked annotation summary.

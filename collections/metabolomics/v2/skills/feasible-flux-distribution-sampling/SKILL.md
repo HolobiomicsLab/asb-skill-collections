@@ -27,7 +27,7 @@ metadata:
   - Mann-Whitney U test
   - GLPK
   - MATLAB (optional)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -66,7 +66,6 @@ attribution:
 
 # feasible-flux-distribution-sampling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Uniformly sample the constrained null space of a cell-relative metabolic model to generate a Feasible Flux Distribution (FFD) that characterizes the landscape of metabolic fluxes compatible with transcriptomics, metabolomics, and extracellular flux constraints. This captures the solution space uncertainty inherent in constraint-based modeling when multiple flux solutions satisfy all integrated omic constraints.

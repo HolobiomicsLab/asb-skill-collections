@@ -20,7 +20,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -59,7 +59,6 @@ attribution:
 
 # Tandem-mass-spectra structural similarity assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify structural similarity between pairs of MS/MS spectra using deep learning (MS2DeepScore) with optional uncertainty quantification via Monte-Carlo Dropout ensemble sampling and interquartile range (IQR) filtering to achieve calibrated RMSE predictions against reference Tanimoto scores.

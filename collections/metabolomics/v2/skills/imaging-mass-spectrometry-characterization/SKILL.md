@@ -19,7 +19,7 @@ metadata:
   - GC-MS
   - MS-imaging
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -50,7 +50,6 @@ attribution:
 
 # imaging-mass-spectrometry-characterization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and classify mass spectrometry imaging data (e.g., MALDI) from raw instrument output by scanning file headers and metadata, then route the classified input to the appropriate mzmine analysis module. This skill enables flexible handling of multiple MS modalities within a unified workflow.

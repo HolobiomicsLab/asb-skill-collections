@@ -17,7 +17,7 @@ metadata:
   - PNNLMetV20191015.MSL
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -48,7 +48,6 @@ attribution:
 
 # low-resolution-compound-identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies chemical compounds in low-resolution GC-MS data by matching retention-index-calibrated peaks against a reference spectral library using spectral similarity algorithms. This skill enables automated compound annotation when only nominal m/z and retention time information are available.

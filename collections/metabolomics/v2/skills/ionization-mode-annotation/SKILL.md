@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -46,7 +46,6 @@ attribution:
 
 # ionization-mode-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate MS/MS spectra library entries with positive or negative ionization mode suffixes during conversion from .msp files to individual CSV library entries. This facilitates organization and retrieval of metabolite fragment libraries for LC-MS All-ion fragmentation (AIF) annotation workflows.

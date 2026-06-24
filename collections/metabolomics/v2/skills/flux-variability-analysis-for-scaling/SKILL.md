@@ -18,7 +18,7 @@ metadata:
   - optGpSampler
   - COBRApy
   - GLPK (GNU Linear Programming Kit)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -57,7 +57,6 @@ attribution:
 
 # Flux Variability Analysis for Scaling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 FVA determines the minimum and maximum steady-state flux through each internal reaction in a constraint-based metabolic model under specified nutrient and extracellular constraints, providing the reference flux bounds needed to scale reaction-specific activity scores into feasible flux boundaries for downstream sampling.

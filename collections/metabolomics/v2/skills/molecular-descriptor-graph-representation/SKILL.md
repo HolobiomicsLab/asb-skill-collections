@@ -16,7 +16,7 @@ metadata:
   - Poetry (dependency manager)
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -44,7 +44,6 @@ attribution:
 
 # molecular-descriptor-graph-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert molecular structures into graph neural network–compatible representations by encoding SMILES strings and optional 3D coordinates as node–edge graphs, enabling learned feature extraction for collision cross section prediction and generalizability evaluation.

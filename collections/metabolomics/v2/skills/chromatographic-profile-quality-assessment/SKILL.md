@@ -18,7 +18,7 @@ metadata:
   - ProteoWizard/MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -51,7 +51,6 @@ attribution:
 
 # chromatographic-profile-quality-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and diagnose artefacts (e.g. sawtooth profiles) in extracted ion chromatograms (EICs) produced by peak-detection workflows on LC-MS data with complex scan-window configurations. This skill detects when improper mass-range separation causes filtering of empty spectra within the processing pipeline, degrading peak profile quality.

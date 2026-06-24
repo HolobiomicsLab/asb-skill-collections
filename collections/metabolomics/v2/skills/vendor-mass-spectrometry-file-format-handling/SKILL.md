@@ -23,7 +23,7 @@ metadata:
   - AirdSDK
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -54,7 +54,6 @@ attribution:
 
 # vendor-mass-spectrometry-file-format-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert vendor-proprietary mass spectrometry raw files (e.g., .raw, .d, .wiff2) to the open Aird format using AirdPro, a C# tool built on ProteoWizard bindings that enables computation-oriented downstream analysis with high compression and fast decoding. Apply this skill when you have vendor instrument output that must be converted to a standardized, compressed format for batch processing, archival, or integration into open-source analysis pipelines.

@@ -14,7 +14,7 @@ metadata:
   - MIST-CF formula transformer
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -44,7 +44,6 @@ attribution:
 
 # multi-hypothesis-scoring-and-enumeration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank multiple candidate chemical formula–adduct pairs for an unknown tandem mass spectrum using end-to-end energy-based neural modeling, without relying on spectrum databases. This skill enumerates plausible formula and adduct hypotheses, scores each against observed fragment patterns, and returns ranked predictions with confidence signals.

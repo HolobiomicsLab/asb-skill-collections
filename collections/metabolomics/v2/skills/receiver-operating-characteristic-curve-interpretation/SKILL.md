@@ -17,7 +17,7 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -52,7 +52,6 @@ attribution:
 
 # receiver-operating-characteristic-curve-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret ROC curves and extract threshold-dependent classification metrics (TPR, FPR, precision) from a trained neural network classifier to understand the trade-off between true and false positive rates across probability thresholds. This skill is essential for selecting optimal decision thresholds and evaluating classifier performance on imbalanced MS1 peak datasets.

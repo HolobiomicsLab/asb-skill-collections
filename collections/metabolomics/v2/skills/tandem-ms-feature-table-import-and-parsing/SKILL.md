@@ -17,7 +17,7 @@ metadata:
   - MPACT (Python/Anaconda)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -50,7 +50,6 @@ attribution:
 
 # tandem-ms-feature-table-import-and-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load tandem mass spectrometry feature tables (m/z, retention time, abundance) from vendor-specific formats (Progenesis, MS-DIAL, Bruker Metaboscape) into a standardized in-memory object for downstream filtering and analysis. This is the necessary first step before any quality control or statistical analysis can be applied to metabolomics features.

@@ -16,7 +16,7 @@ metadata:
   - getNormalizedRAS.py
   - rasIntegration.py
   - constraint-based stoichiometric metabolic models (ENGRO2)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -44,7 +44,6 @@ attribution:
 
 # Transcript-Abundance Normalization Across Cell Lines
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize gene expression transcript abundances across cell lines by dividing each reaction's Reaction Activity Score (RAS) by the maximum RAS value observed across all samples, producing dimensionless scores in [0, 1] that enable cross-sample comparison of relative enzyme activity. This step is essential after computing raw RAS from GPR-resolved transcript data to enable constraint-based metabolic model integration and flux prediction across heterogeneous cell populations.

@@ -16,7 +16,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -45,7 +45,6 @@ attribution:
 
 # Kendrick mass defect (KMD) analysis for homologous-series detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 KMD analysis groups features from non-target HRMS data into CF₂ homologous series by computing normalized mass defects and clustering features within a narrow tolerance window. This enables prioritization of potential PFAS compounds by identifying characteristic repeating mass patterns.

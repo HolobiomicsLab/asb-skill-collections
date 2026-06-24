@@ -14,7 +14,7 @@ metadata:
   - Python
   - MESSES (Metadata from Experimental SpreadSheets Extraction System)
   - jsonschema
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -46,7 +46,6 @@ attribution:
 
 # matrix-directive-field-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the matrix directive's fields_to_headers variant to copy all fields from input table records into output dictionaries, with optional selective field exclusion and type coercion to strings. This skill transforms tabular data into arrays of objects suitable for JSON schema validation and format conversion.

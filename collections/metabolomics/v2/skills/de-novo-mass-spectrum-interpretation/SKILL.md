@@ -16,7 +16,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -48,7 +48,6 @@ attribution:
 
 # de-novo-mass-spectrum-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer chemical formula and adduct type for an unknown metabolite directly from tandem mass spectra (MS/MS) without referencing spectral databases or computing fragmentation trees. This skill uses a neural network-based formula transformer to rank candidate formulas and assign subformulas to fragment peaks in a data-dependent fashion.

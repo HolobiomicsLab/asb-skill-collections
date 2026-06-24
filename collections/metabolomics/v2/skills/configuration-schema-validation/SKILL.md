@@ -16,7 +16,7 @@ metadata:
   - MS-DIAL 5
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -45,7 +45,6 @@ attribution:
 
 # configuration-schema-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a TOML-formatted options file for LipoCLEAN contains all required configuration fields with correct syntax and structure before passing it to the tool for lipid identification filtering. This skill ensures the configuration is version-specific (MS-DIAL 4 or 5) and ready for execution.

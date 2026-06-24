@@ -25,7 +25,7 @@ metadata:
   - SCARF
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -73,7 +73,6 @@ attribution:
 
 # mass-spectrometry-adduct-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate mass differences observed in MALDI-MS imaging data by matching them to known adduct species using histogram binning and reference tables. This skill enables identification of molecular adducts formed between target metabolites and matrix or salt ions, illuminating peaks that would otherwise remain unassigned in the mass spectrum.

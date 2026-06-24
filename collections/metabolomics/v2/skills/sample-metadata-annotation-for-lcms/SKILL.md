@@ -19,7 +19,7 @@ metadata:
   - knitr
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -54,7 +54,6 @@ attribution:
 
 # sample-metadata-annotation-for-lcms
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate LC–MS sample metadata (particularly sample type classification as QC vs. sample) within an MsExperiment object to enable TARDIS to perform polarity filtering, QC-stratified quality metrics, and screening-mode target visibility assessment without manual file subsetting.

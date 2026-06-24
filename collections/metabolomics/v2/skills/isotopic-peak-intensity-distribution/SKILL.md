@@ -18,7 +18,7 @@ metadata:
   - Pyteomics
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -52,7 +52,6 @@ attribution:
 
 # isotopic-peak-intensity-distribution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and visualize the relative abundances of isotopic peaks (m/z and intensity pairs) for polypeptide sequences using Pyteomics' mass module. This skill enables quantitative prediction of how peptide ions will appear in mass spectrometry experiments across their natural isotopic envelope.

@@ -19,7 +19,7 @@ metadata:
   - SLAW (zamboni-lab/SLAW)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -52,7 +52,6 @@ attribution:
 
 # MS2 Spectrum Consolidation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Consolidates and extracts MS2 spectra from DDA LC-MS experiments by mapping MS2 scans to aligned MS1 features and pooling reference spectra across samples. This produces a unified MS2 spectral library indexed to the quantitative feature table, enabling spectral annotation and confidence scoring for identified metabolites.

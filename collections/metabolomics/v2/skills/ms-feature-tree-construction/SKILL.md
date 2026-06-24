@@ -16,7 +16,7 @@ metadata:
   - Classyfire
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -46,7 +46,6 @@ attribution:
 
 # ms-feature-tree-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a phylogenetic tree relating mass-spectrometry (LC-MS/MS) features based on predicted molecular substructures to enable chemically-informed comparative metabolomic analysis. This skill integrates fragmentation tree generation, molecular formula ranking, fingerprint prediction, and hierarchical clustering into a unified workflow for untargeted metabolomic profiling.

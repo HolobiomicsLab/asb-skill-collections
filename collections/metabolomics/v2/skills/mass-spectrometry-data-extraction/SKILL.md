@@ -22,7 +22,7 @@ metadata:
   - ADAP
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.11.12.687968v1
   title: MetaXtract
@@ -61,7 +61,6 @@ attribution:
 
 # mass-spectrometry-data-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract metadata, scan headers, peak lists, and technical details from Thermo Fisher RAW mass spectrometry files using MetaXtract, which provides programmatic Python access alongside GUI and CLI interfaces. This skill is essential for converting proprietary binary RAW files into tabular, analysis-ready formats (CSV, TSV, Parquet) with m/z, intensity, resolution, noise, baseline, and charge information.

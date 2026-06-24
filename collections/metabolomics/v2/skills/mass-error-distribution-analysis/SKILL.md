@@ -15,7 +15,7 @@ metadata:
   - Bruker Solarix
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -48,7 +48,6 @@ attribution:
 
 # mass-error-distribution-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction and statistical characterization of mass measurement errors across a recalibrated FT-ICR mass spectrum, including RMSE, error distribution metrics, and matched calibration peak counts. Essential for validating calibration quality and assessing measurement accuracy against reference standards.

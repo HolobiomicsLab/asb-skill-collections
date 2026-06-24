@@ -21,7 +21,7 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -56,7 +56,6 @@ attribution:
 
 # chromatographic-coelution-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and group coeluting features (isotopes and adducts) within configurable m/z and retention time windows to construct empirical compound clusters. This skill identifies metabolite-related ion signals that share the same chromatographic peak, enabling pre-annotation of putative metabolites before MS2 matching.

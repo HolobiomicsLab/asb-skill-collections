@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -48,7 +48,6 @@ attribution:
 
 # spectral-overview-representation-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a 2-D overview representation of mass spectral data by applying t-SNE dimensionality reduction to ms2deepscore-computed similarity matrices. This skill enables interactive visual exploration of LC-MS/MS spectral relationships in a condensed, interpretable format.

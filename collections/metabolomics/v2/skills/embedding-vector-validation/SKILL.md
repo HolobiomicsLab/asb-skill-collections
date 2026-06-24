@@ -14,7 +14,7 @@ metadata:
   - MIST
   - SCARF
   - MIST-CF
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -46,7 +46,6 @@ attribution:
 
 # embedding-vector-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate sinusoidal formula embedding vectors produced by a neural network layer by checking dimensionality, numerical range, and reproducibility against reference outputs. This skill ensures embeddings are correctly instantiated and can be reliably compared across runs or implementations.

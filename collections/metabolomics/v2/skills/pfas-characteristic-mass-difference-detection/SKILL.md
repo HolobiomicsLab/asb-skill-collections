@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -49,7 +49,6 @@ attribution:
 
 # PFAS characteristic mass difference detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies potential PFAS features in LC/GC-HRMS data by detecting diagnostic fragment mass differences in MS2 spectra that are characteristic of PFAS structures (e.g., CF₂ repeating units). This technique prioritizes candidate features alongside Kendrick mass defect and MD/C-m/C analysis for non-target PFAS screening.

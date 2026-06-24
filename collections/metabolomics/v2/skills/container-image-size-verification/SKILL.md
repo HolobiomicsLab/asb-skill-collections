@@ -12,7 +12,7 @@ metadata:
   - Wine
   - .NET Framework 4.8
   - build-docker.sh
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -41,7 +41,6 @@ attribution:
 
 # container-image-size-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a Docker container image built from a multi-stage Dockerfile has been successfully created and falls within expected size constraints (typically 6–7 GB for Wine-based runtime environments). This skill ensures the build process completed correctly before attempting container instantiation or deployment.

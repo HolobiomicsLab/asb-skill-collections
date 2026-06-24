@@ -18,7 +18,7 @@ metadata:
   - Monte-Carlo Dropout
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -57,7 +57,6 @@ attribution:
 
 # uncertainty-quantification-from-model-predictions
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify prediction uncertainty for individual neural network outputs using Monte-Carlo Dropout ensemble sampling, enabling selective filtering of low-confidence predictions to improve downstream accuracy metrics. This approach generates multiple stochastic forward passes through a model with dropout enabled at inference time, then aggregates the ensemble predictions to estimate confidence intervals and uncertainty bounds per prediction.

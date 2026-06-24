@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # nearest-neighbor-index-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query pre-constructed nearest neighbor indexes to retrieve candidate similar spectra and compute a sparse pairwise distance matrix, avoiding exhaustive all-versus-all comparison of MS/MS spectra. This skill enables efficient clustering of millions of spectra by trading off recall for speed through controlled exploration of index cells.

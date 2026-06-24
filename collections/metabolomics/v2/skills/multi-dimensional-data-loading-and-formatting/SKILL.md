@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -50,7 +50,6 @@ attribution:
 
 # multi-dimensional-data-loading-and-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse multi-dimensional mass spectrometry data from diverse file formats (HDF5, mzML) into DEIMoS-compatible data structures, preserving all acquisition dimensions (m/z, drift time, retention time, intensity) needed for downstream feature detection and CCS calibration.

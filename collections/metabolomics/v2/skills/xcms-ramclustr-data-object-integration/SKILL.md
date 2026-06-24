@@ -16,7 +16,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -49,7 +49,6 @@ attribution:
 
 # xcms-ramclustr-data-object-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integration of xcms peak-picked data with RamClustR pseudo-MS/MS spectra to create a unified R object pair suitable for fragment-based metabolite annotation. This skill bridges feature detection and spectral clustering, enabling downstream annotation workflows in untargeted LC-MS all-ion fragmentation metabolomics.

@@ -12,7 +12,7 @@ metadata:
   tools:
   - MAGMa
   - joblauncher
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -42,7 +42,6 @@ attribution:
 
 # api-specification-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract HTTP endpoint definitions, request/response schemas, and authentication mechanisms from webservice source code and map them into a formal API specification (OpenAPI 3.0). This skill is essential when integrating or documenting webservice components whose interfaces are defined in code rather than published specifications.

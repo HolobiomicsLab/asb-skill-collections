@@ -31,7 +31,7 @@ metadata:
   - TensorFlow 2.3.0
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer
@@ -78,7 +78,6 @@ attribution:
 
 # docker-container-orchestration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Run platform-dependent bioinformatics tools (like msconvert) inside containerized Docker environments to ensure reproducibility and avoid native OS dependencies. This skill is essential when the target tool has restrictive licensing or vendor-specific requirements that complicate native installation.

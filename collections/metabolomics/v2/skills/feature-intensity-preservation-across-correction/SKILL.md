@@ -15,7 +15,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -45,7 +45,6 @@ attribution:
 
 # feature-intensity-preservation-across-correction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preserve feature identifiers and sample metadata while applying intensity drift correction strategies to mass spectrometry quantification matrices. This skill ensures that drift-corrected intensity values retain their association with specific analytes and experimental samples throughout the correction workflow.

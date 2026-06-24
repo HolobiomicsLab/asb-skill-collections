@@ -18,7 +18,7 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -53,7 +53,6 @@ attribution:
 
 # spectrum-peak-to-fragment-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map observed mass spectrometry peaks to theoretical fragment ions (b and y ions) for a given peptidoform by matching m/z values within a specified mass tolerance. This enables fragment-level annotation and validation of peptide sequences and their modifications.

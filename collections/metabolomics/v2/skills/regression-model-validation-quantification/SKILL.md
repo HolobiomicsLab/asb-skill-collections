@@ -13,7 +13,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -41,7 +41,6 @@ attribution:
 
 # regression-model-validation-quantification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and optimize regression models (linear or polynomial) fitted to mass spectrometry external calibration data to ensure accurate conversion of raw intensity measurements to quantified concentration values. This skill ensures the selected model appropriately captures the intensity–concentration relationship and correctly handles intensity drift correction.

@@ -16,7 +16,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -52,7 +52,6 @@ attribution:
 
 # compound-metric-tabulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export quality control metrics and assay values for all compounds into tab-delimited and Excel files after mzQuality analysis. This skill enables programmatic access to batch-corrected ratios, RSDQC, background signal percentages, matrix effects, and presence/concentration data for downstream reporting and integration.

@@ -21,7 +21,7 @@ metadata:
   - spectrum_utils
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -58,7 +58,6 @@ attribution:
 
 # spectral-peak-intensity-scaling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply square-root or other intensity scaling transformations to mass spectrometry spectrum peak intensities to de-emphasize overly intense peaks and improve dynamic range for downstream spectral analysis and matching. This normalization step is critical for making weak and strong peaks more comparable in intensity-based search algorithms.

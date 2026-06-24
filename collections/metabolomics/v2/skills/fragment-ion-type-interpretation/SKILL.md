@@ -17,7 +17,7 @@ metadata:
   - PSI-MOD CV
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -49,7 +49,6 @@ attribution:
 
 # fragment-ion-type-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate observed mass spectrometry fragment peaks by matching them to theoretical fragment ions (a, b, y types and neutral losses) derived from a known peptide sequence using ProForma 2.0 notation. This enables visual and quantitative identification of which peaks correspond to expected peptide backbone cleavage products.

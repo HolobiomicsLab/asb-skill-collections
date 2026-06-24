@@ -21,7 +21,7 @@ metadata:
   - MsExperiment
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -55,7 +55,6 @@ attribution:
 
 # targeted-metabolite-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract quantitative metrics (area under curve, max intensity, signal-to-noise ratio, peak correlation, and points over peak) for user-defined targeted compounds from centroided LC-MS data in .mzML format using the TARDIS tardisPeaks() function with screening_mode=FALSE. This skill automates peak detection and quality assessment across all runs after validating target visibility in a screening pass.

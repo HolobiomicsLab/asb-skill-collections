@@ -11,7 +11,7 @@ metadata:
   - Python
   - TensorFlow Serving
   - Docker
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -40,7 +40,6 @@ attribution:
 
 # neural-network-layer-metadata-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and validate neural network model layer metadata (input/output layer names and shapes) from a TensorFlow Serving endpoint to confirm correct model deployment and identify the correct input and output tensors for downstream inference tasks.

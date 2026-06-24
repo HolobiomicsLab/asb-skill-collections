@@ -18,7 +18,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial
@@ -47,7 +47,6 @@ attribution:
 
 # container-image-selection-and-mounting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and configure containerized runtime environments (Docker or Singularity) for reproducible execution of bioinformatics workflows across heterogeneous compute platforms. This skill ensures portability and consistent tool behavior in LC-HRMS metabolomics data processing pipelines.

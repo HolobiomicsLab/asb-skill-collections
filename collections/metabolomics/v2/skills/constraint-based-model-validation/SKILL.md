@@ -13,7 +13,7 @@ metadata:
   - http://edamontology.org/topic_2259
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -42,7 +42,6 @@ attribution:
 
 # constraint-based-model-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validation of metabolic model consistency by checking reaction balancing, biomass production feasibility, and cross-member metabolic dependencies in gap-filled community reconstructions. This skill ensures that gap-filled models satisfy stoichiometric and thermodynamic constraints before downstream analysis.

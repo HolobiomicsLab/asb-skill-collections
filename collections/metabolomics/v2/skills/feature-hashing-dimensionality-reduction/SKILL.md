@@ -14,7 +14,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -44,7 +44,6 @@ attribution:
 
 # feature-hashing-dimensionality-reduction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert high-resolution MS/MS spectra into low-dimensional dense or sparse vectors using feature hashing with mass binning, preserving cosine similarity while enabling efficient nearest-neighbor indexing and clustering of millions of spectra.

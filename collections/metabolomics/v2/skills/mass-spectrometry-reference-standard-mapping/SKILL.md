@@ -16,7 +16,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -49,7 +49,6 @@ attribution:
 
 # mass-spectrometry-reference-standard-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Establish the m/z–drift-time–collision cross section (CCS) relationship by mapping loaded tunemix reference data with known CCS values to a polynomial calibration model. This skill ensures that subsequent CCS predictions on unknown samples are anchored to validated reference standards and achieve high R² fit quality (≥0.99997).

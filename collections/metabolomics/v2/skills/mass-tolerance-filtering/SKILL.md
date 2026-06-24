@@ -12,7 +12,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -42,7 +42,6 @@ attribution:
 
 # mass-tolerance-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter candidate chemical subformulae for fragment peaks by accepting only those whose theoretical m/z values fall within a specified mass tolerance window of the observed peak m/z. This is a data-preprocessing step that constrains the chemical formula space before applying validity filters and scoring.

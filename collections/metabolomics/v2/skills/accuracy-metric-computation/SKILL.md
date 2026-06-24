@@ -15,7 +15,7 @@ metadata:
   - convolutional neural network
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -43,7 +43,6 @@ attribution:
 
 # accuracy-metric-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute quantitative accuracy metrics (exact-match, graph edit distance, connectivity F1) to evaluate molecular structure predictions from spectroscopic inputs against ground truth labels. This skill measures prediction correctness across multiple structural representations and identifies performance gaps between modalities.

@@ -17,7 +17,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -46,7 +46,6 @@ attribution:
 
 # background-ion-blank-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A quality control filter that removes LC-MS metabolomics features likely arising from background contamination or instrument noise by comparing feature intensity between study samples and blank control samples using a user-specified intensity ratio threshold. This step prevents false positive metabolite identifications caused by reagent or solvent contaminants.

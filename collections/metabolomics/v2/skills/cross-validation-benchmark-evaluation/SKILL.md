@@ -21,7 +21,7 @@ metadata:
   - Canonical Correlation Analysis (CCA)
   - scikit-learn
   - TensorFlow / Keras
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -56,7 +56,6 @@ attribution:
 
 # cross-validation-benchmark-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A systematic evaluation protocol that uses nested and repeated cross-validation to rigorously benchmark a novel predictive model (MiMeNet) against multiple baseline methods across diverse datasets, ensuring fair comparison and robust performance estimation. This skill is essential when claiming methodological improvements over existing approaches and when generalization performance must be validated across multiple biological contexts.

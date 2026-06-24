@@ -22,7 +22,7 @@ metadata:
   - SYNCSA
   - ggpubr
   - factoextra
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -57,7 +57,6 @@ attribution:
 
 # Multivariate Ordination Analysis (NMDS & PCA)
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply non-metric multidimensional scaling (NMDS) and Principal Component Analysis (PCA) to reduced-dimensional visualization and statistical characterization of FT-ICR MS peak abundance matrices, enabling comparison of molecular composition across samples and identification of compositional gradients or clusters.

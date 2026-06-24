@@ -14,7 +14,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -42,7 +42,6 @@ attribution:
 
 # binary-format-specification-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a binary file format specification by defining header structure constants, encoding index-to-offset pairs as fixed-width tuples, and verifying byte-for-byte correctness against reference hex dumps. This skill is essential for enabling random access in compressed scientific data files like indexed gzip (igzip) used in mass spectrometry data.

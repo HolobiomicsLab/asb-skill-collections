@@ -17,7 +17,7 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -47,7 +47,6 @@ attribution:
 
 # mass-spec-tolerance-parameter-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Application of mass-to-charge (m/z) and retention time (RT) tolerances to group co-eluting isotopologues and adducts into empirical compounds during LC-MS feature pre-annotation. This skill operationalizes instrument-specific calibration and chromatographic resolution into concrete tolerance thresholds for metabolite grouping.

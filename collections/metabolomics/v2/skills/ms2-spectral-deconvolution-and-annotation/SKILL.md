@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -55,7 +55,6 @@ attribution:
 
 # MS/MS spectral deconvolution and annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Separate and characterize individual precursor ion fragmentation spectra from multiplexed tandem mass spectrometry data acquired across multiple separation dimensions (m/z, retention time, drift time). DEIMoS applies N-dimensional algorithmic implementations to mitigate convolution artifacts and assign fragment ions to their parent precursors, enabling confident annotation of tandem spectra characterized by mass, CCS, and isotopic signature.

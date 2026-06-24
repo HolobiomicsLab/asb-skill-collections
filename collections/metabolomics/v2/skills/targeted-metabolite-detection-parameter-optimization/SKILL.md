@@ -19,7 +19,7 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -54,7 +54,6 @@ attribution:
 
 # Targeted metabolite detection parameter optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic evaluation and refinement of m/z tolerance windows and retention time (RT) windows to maximize targeted compound visibility and peak detection sensitivity in LC–MS screening workflows. This skill validates detection parameters before committing computational resources to full-batch peak integration.

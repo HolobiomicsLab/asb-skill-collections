@@ -19,7 +19,7 @@ metadata:
   - Python (3.8+)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -55,7 +55,6 @@ attribution:
 
 # metabolite-abundance-normalization-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare the effects of different peak intensity normalization methods on downstream multivariate statistical analysis (PERMANOVA, NMDS) of FT-ICR MS metabolomics data to ensure robust and reproducible findings. This skill validates whether normalization choice materially affects the significance and interpretation of phage-type or treatment effects on metabolite composition.

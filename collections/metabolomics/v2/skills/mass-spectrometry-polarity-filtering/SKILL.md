@@ -20,7 +20,7 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -55,7 +55,6 @@ attribution:
 
 # Mass Spectrometry Polarity Filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatic subsetting of targeted LC–MS data by ionization mode (positive or negative) during peak detection and extraction, eliminating the need for manual pre-filtering of raw spectral data. This skill ensures that only m/z and retention time windows corresponding to the correct polarity are queried for each target compound, reducing false positives and computational overhead.

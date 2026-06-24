@@ -18,7 +18,7 @@ metadata:
   - PyTorch or TensorFlow
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -56,7 +56,6 @@ attribution:
 
 # root-mean-squared-error-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute root mean squared error (RMSE) between predicted and reference structural similarity scores (Tanimoto) across all spectrum pairs to quantify prediction accuracy of neural network models. RMSE serves as the primary regression loss metric and final evaluation criterion for MS2DeepScore model performance.

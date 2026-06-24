@@ -18,7 +18,7 @@ metadata:
   - scikit-learn
   - Seaborn
   - Python
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -59,7 +59,6 @@ attribution:
 
 # ROC-AUC computation for phenotype prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Trains binary neural network classifiers on derived microbe-metabolite module features to predict disease phenotype (IBD status), evaluating discriminative performance using area-under-ROC-curve (AUC) as the primary metric across multiple random iterations to assess robustness.

@@ -14,7 +14,7 @@ metadata:
   - matplotlib
   - Python
   - pyOpenMS-Viz
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -42,7 +42,6 @@ attribution:
 
 # statistical-summary-computation-median-range
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute median and range (min/max) statistics across grouped categorical dimensions (e.g., plot types and plotting backends) from execution-time or performance measurements. This skill transforms raw timing observations into ranked summary tables and comparative visualizations to identify fastest and slowest performers within each category.

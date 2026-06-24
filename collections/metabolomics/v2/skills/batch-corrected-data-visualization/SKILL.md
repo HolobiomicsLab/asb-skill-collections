@@ -15,7 +15,7 @@ metadata:
   - mzQuality
   - SummarizedExperiment
   - mzQualityDashboard
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -51,7 +51,6 @@ attribution:
 
 # batch-corrected-data-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate publication-ready plots and interactive visualizations of batch-corrected metabolomics data to inspect data quality, compound distributions, and sample clustering. This skill transforms post-analysis SummarizedExperiment objects into diagnostic plots and dimensionality reduction views that reveal batch effects, outlier patterns, and compound reliability.

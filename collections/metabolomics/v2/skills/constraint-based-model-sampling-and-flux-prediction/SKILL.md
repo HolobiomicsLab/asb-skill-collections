@@ -19,7 +19,7 @@ metadata:
   - INTEGRATE pipeline (qLSLab/integrate)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -53,7 +53,6 @@ attribution:
 
 # constraint-based-model-sampling-and-flux-prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Uniformly sample the feasible flux distribution of constraint-based metabolic models under multiple constraint scenarios (transcriptomics-derived, metabolomics-derived, and nutrient availability), then compute median fluxes and compare predicted growth yield against experimental measurements to assess which regulatory layers best explain observed metabolic phenotypes.

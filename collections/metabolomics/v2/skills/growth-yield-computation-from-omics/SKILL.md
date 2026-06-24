@@ -19,7 +19,7 @@ metadata:
   - YSI2950 bioanalyzer
   - Bradford assay
   - qLSLab/integrate pipeline
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -49,7 +49,6 @@ attribution:
 
 # growth-yield-computation-from-omics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute in silico growth yield (protein synthesized per glucose consumed) by sampling the feasible flux distribution of constraint-based metabolic models and calculating median flux ratios, then validate against experimental growth yield measured via protein assay and metabolite quantification. This skill bridges transcriptomics, metabolomics, and extracellular flux constraints to discriminate metabolic regulation mechanisms across cell lines.

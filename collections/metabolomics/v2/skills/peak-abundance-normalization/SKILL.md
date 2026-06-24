@@ -15,7 +15,7 @@ metadata:
   - vegan
   - SYNCSA
   - pmartR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -50,7 +50,6 @@ attribution:
 
 # peak-abundance-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize peak intensity values across FT-ICR MS samples to correct for instrumental variation and enable fair comparison of molecular composition between samples. This is a critical preprocessing step that standardizes the abundance matrix before downstream chemodiversity or multivariate statistical analysis.

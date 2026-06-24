@@ -18,7 +18,7 @@ metadata:
   - Plotly
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -46,7 +46,6 @@ attribution:
 
 # orchestrator-architecture-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a layered orchestrator architecture that routes configuration and plot-type specifications through abstraction layers to dispatch rendering requests to the correct backend-specific implementation. This skill enables polymorphic backend selection (matplotlib, Bokeh, Plotly) while maintaining a unified user-facing API.

@@ -17,7 +17,7 @@ metadata:
   - pip
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -48,7 +48,6 @@ attribution:
 
 # Python Package Installation and Dependency Management
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install and configure Python bioinformatics packages with pinned dependencies to ensure reproducible execution of mass spectrometry analysis workflows. This skill addresses version-specific compatibility constraints that arise when combining multiple scientific packages.

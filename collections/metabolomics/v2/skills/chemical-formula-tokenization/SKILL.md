@@ -22,7 +22,7 @@ metadata:
   - MIST-CF formula transformer
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)
@@ -57,7 +57,6 @@ attribution:
 
 # chemical-formula-tokenization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert chemical formulae extracted from tandem mass spectrometry data into discrete tokens and learned embeddings for use in transformer-based neural networks. This skill bridges raw chemical notation and neural sequence models by establishing a vocabulary and embedding scheme that preserves chemical semantics.

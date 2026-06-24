@@ -15,7 +15,7 @@ metadata:
   - R
   - SummarizedExperiment
   - mzQualityDashboard
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -51,7 +51,6 @@ attribution:
 
 # internal-standard-optimization-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selects the optimal internal standard for each compound in metabolomics studies by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) across batch-corrected compound-to-internal-standard ratios, then recommending the internal standard yielding the lowest RSDQC. This minimizes analytical variability and improves quantification reliability.

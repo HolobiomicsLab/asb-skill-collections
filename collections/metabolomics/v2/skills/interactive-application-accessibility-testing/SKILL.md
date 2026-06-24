@@ -14,7 +14,7 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -42,7 +42,6 @@ attribution:
 
 # interactive-application-accessibility-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a loaded specXplore dashboard session instance initializes without errors and becomes responsive to user input after ingesting a saved session data object. This skill ensures the multi-layer dashboard architecture (session instantiation → visualization rendering → interactive UI responsiveness) functions end-to-end before exploratory analysis begins.

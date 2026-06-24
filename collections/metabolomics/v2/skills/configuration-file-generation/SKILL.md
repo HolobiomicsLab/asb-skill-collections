@@ -15,7 +15,7 @@ metadata:
   - MS-DIAL
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -44,7 +44,6 @@ attribution:
 
 # configuration-file-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate version-specific default TOML configuration files for LipoCLEAN that define MS-DIAL export locations, quality filtering parameters, and model selection. This skill enables users to obtain a template options file tailored to their MS-DIAL version (4 or 5) that can be subsequently edited for custom analyses.

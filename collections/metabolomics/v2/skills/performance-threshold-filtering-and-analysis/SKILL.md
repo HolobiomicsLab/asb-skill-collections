@@ -18,7 +18,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -57,7 +57,6 @@ attribution:
 
 # Performance-threshold filtering and analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Incrementally filter model predictions by uncertainty quantile thresholds to trade off between prediction accuracy and retrieval rate, identifying the threshold at which a target performance metric (e.g., RMSE) is achieved. This skill applies ensemble-based uncertainty estimates (e.g., interquartile range from Monte-Carlo Dropout) to systematically reduce prediction error by discarding high-uncertainty predictions.

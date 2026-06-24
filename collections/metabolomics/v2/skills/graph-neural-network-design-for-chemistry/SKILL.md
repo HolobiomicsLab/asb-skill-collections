@@ -16,7 +16,7 @@ metadata:
   - convolutional neural network
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -44,7 +44,6 @@ attribution:
 
 # graph-neural-network-design-for-chemistry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and train graph neural network architectures to predict molecular properties or structures from spectroscopic data by encoding molecular connectivity and atomic features as node-edge graphs. This skill is essential when molecular topology and atomic relationships are central to the prediction task, such as structure elucidation from NMR spectra or fragment assembly.

@@ -14,7 +14,7 @@ metadata:
   - R
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -48,7 +48,6 @@ attribution:
 
 # cardinal-imaging-object-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert Cardinal MSI data objects (MSProcessedImagingExperiment or MSContinuousImagingExperiment) to mass2adduct's msimat format to enable downstream adduct detection and spatial correlation analysis. This skill bridges the Cardinal preprocessing ecosystem to mass2adduct's adduct identification pipeline.

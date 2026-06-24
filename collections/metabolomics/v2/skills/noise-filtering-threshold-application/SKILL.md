@@ -15,7 +15,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -46,7 +46,6 @@ attribution:
 
 # noise-filtering-threshold-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply intensity-based noise thresholds to LC-MS/MS spectra to remove low-intensity signals and retain only biologically or analytically relevant fragment peaks. This preprocessing step is essential before library entry generation or metabolite annotation to improve signal-to-noise ratio and reduce false positive peak matches.

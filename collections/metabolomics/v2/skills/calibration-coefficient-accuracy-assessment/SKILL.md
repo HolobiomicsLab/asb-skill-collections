@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -47,7 +47,6 @@ attribution:
 
 # calibration-coefficient-accuracy-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a collision cross section (CCS) calibration model applied to tuning reference compounds achieves a target goodness-of-fit (r-squared) by computing and comparing the calibration coefficient to a reference value at high precision. This skill ensures the calibration meets the statistical accuracy threshold required for reliable ion mobility–mass spectrometry workflows.

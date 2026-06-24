@@ -15,7 +15,7 @@ metadata:
   - SYNCSA
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -50,7 +50,6 @@ attribution:
 
 # chemodiversity-metric-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate abundance-based and functional-based diversity metrics on filtered FT-ICR MS peak matrices to quantify metabolite richness and functional trait diversity in environmental or experimental samples. This skill enables comparative assessment of how treatments (e.g., microbial inoculation) shift both the number of distinct metabolites and their decomposability, aromaticity, and elemental composition profiles.

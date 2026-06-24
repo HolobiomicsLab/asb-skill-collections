@@ -17,7 +17,7 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -46,7 +46,6 @@ attribution:
 
 # Post-hoc model interpretability
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply node and edge feature ablation and gradient-based saliency mapping to trained graph neural networks to identify which molecular structural features most strongly drive predictions of collision cross section. This enables attribution analysis of black-box GNN models after training is complete.

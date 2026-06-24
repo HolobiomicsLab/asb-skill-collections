@@ -15,7 +15,7 @@ metadata:
   - QIIME 2
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -45,7 +45,6 @@ attribution:
 
 # metabolomic-data-structure-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw mass-spectrometry metabolomic data into standardized QIIME 2 artifact formats (FeatureTable[Frequency] and MassSpectrometryFeatures) to enable downstream chemical tree construction and phylogenetic diversity analysis. This skill bridges peak-detection pipelines (MZmine2) and chemically-informed feature comparison.

@@ -20,7 +20,7 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -58,7 +58,6 @@ attribution:
 
 # neural-network-inference-and-embedding-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract fixed-dimensional vector embeddings and compute pairwise structural similarity predictions from tandem mass spectra using a trained Siamese neural network. This skill produces both continuous similarity scores (Tanimoto predictions) and intermediate spectrum representations suitable for dimensionality reduction and clustering.

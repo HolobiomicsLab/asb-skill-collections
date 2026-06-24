@@ -20,7 +20,7 @@ metadata:
   - bokeh
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -55,7 +55,6 @@ attribution:
 
 # mass-spectrometry-data-visualization-with-pandas
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create static or interactive visualizations of mass spectrometry data (chromatograms, spectra, peak maps) by extending Pandas DataFrame plotting capabilities with pyOpenMS-viz, which provides a unified API across matplotlib, bokeh, and plotly backends. Use this skill when raw or processed MS data is already loaded into a Pandas DataFrame and requires visual exploration or publication-quality figures across multiple output formats.

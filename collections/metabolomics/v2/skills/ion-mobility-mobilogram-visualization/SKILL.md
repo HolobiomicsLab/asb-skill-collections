@@ -20,7 +20,7 @@ metadata:
   - pyOpenMS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -50,7 +50,6 @@ attribution:
 
 # ion-mobility-mobilogram-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create 1D ion-mobility mobilogram visualizations from mass spectrometry data using pyOpenMS-Viz, supporting static (matplotlib) and interactive (Bokeh, Plotly) backends. This skill enables rapid exploration and publication of ion-mobility separation patterns across multiple plotting frameworks.

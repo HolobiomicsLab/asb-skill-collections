@@ -26,7 +26,7 @@ metadata:
   - UltraMassExplorer
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -63,7 +63,6 @@ attribution:
 
 # ft-icr-ms-data-processing-pipeline-execution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute the MetaboDirect command-line pipeline to process direct-injection FT-ICR MS datasets through automated data pre-processing, diagnostics, exploration, chemodiversity analysis, statistical analysis, and optional transformation network generation. This skill transforms raw peak lists with assigned molecular formulas (in Formularity .csv format) into normalized, filtered, annotated datasets with Van Krevelen diagrams, elemental composition plots, diversity metrics, and biochemical transformation networks.

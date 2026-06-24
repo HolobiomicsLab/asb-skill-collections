@@ -15,7 +15,7 @@ metadata:
   - ricoderks/QComics
   - Sciex Multiquant
   - QComics
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -45,7 +45,6 @@ attribution:
 
 # multiquant-file-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse Sciex Multiquant text export files to extract sample metadata, injection sequence information, and quality control pool (QCpool) sample positions for metabolomics and lipidomics quality assessment workflows. This skill enables systematic identification and validation of QCpool samples injected at regular intervals across analytical sequences.

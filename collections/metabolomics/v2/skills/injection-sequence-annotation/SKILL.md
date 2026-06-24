@@ -14,7 +14,7 @@ metadata:
   - ricoderks/QComics
   - Sciex Multiquant
   - QComics
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -43,7 +43,6 @@ attribution:
 
 # injection-sequence-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and annotates quality control pool (QCpool) samples within metabolomics or lipidomics injection sequences exported from Sciex Multiquant, recording their positions and validating regular interval spacing to support quality assessment workflows.

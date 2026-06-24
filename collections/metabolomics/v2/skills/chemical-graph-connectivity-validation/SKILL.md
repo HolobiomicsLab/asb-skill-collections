@@ -17,7 +17,7 @@ metadata:
   - NMR spectrum simulation or database retrieval tool
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -45,7 +45,6 @@ attribution:
 
 # chemical-graph-connectivity-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate predicted molecular connectivity graphs against ground-truth structures by comparing bond topology, atom composition, and structural invariants. This skill is essential when assessing whether a structure prediction model (such as NMR2Struct) has correctly recovered the connectivity of a molecule from spectroscopic data.

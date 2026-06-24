@@ -15,7 +15,7 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -44,7 +44,6 @@ attribution:
 
 # molecular-weight-prediction-with-modifications
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute expected m/z values for metabolites undergoing derivatizing matrix modifications (e.g., FMP-10) that produce ions beyond standard [M+H]+ and [M-H]− adducts. This skill automates the prediction of multiple ion species for a single metabolite, enabling high-throughput metabolite identification in mass spectrometry imaging.

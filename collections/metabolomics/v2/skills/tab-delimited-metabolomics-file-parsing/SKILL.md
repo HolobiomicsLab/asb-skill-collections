@@ -16,7 +16,7 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -47,7 +47,6 @@ attribution:
 
 # tab-delimited-metabolomics-file-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse tab-delimited metabolomics data files into validated data frames for downstream construction of SummarizedExperiment objects. This skill enforces mandatory column presence and data integrity before analyte ratio calculation and batch correction.

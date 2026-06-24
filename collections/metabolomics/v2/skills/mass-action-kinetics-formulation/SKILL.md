@@ -16,7 +16,7 @@ metadata:
   - createMetabolicDataset.py
   - concordanceAnalysis.py
   - constraint-based stoichiometric metabolic models
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -44,7 +44,6 @@ attribution:
 
 # mass-action-kinetics-formulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes Reaction Propensity Scores (RPS) from intracellular metabolomics abundance data using mass action law formulation, quantifying the expected relative metabolic flux changes across cell lines based on substrate availability alone. This provides a metabolic-regulation baseline independent of gene expression effects.

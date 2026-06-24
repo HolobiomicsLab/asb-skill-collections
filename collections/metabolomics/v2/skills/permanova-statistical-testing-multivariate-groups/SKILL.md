@@ -18,7 +18,7 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -54,7 +54,6 @@ attribution:
 
 # permanova-statistical-testing-multivariate-groups
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Permutational multivariate analysis of variance (PERMANOVA) tests whether categorical grouping factors (e.g., treatment, phage type, environmental condition) produce statistically significant differences in multivariate metabolomic or compositional data. This skill is essential for hypothesis-driven metabolomics when you need to determine if a factor of interest significantly structures the overall metabolite abundance or molecular composition profiles.

@@ -17,7 +17,7 @@ metadata:
   - bokeh
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -52,7 +52,6 @@ attribution:
 
 # pandas-accessor-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate a custom visualization backend into Pandas DataFrames via the accessor pattern, enabling domain-specific plot kinds (spectrum, chromatogram, mobilogram, peakmap) to be called directly on DataFrame objects with a consistent API across multiple plotting backends (matplotlib, bokeh, plotly).

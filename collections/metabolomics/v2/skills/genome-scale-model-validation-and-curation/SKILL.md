@@ -12,7 +12,7 @@ metadata:
   - http://edamontology.org/topic_3172
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -41,7 +41,6 @@ attribution:
 
 # genome-scale-model-validation-and-curation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and curate draft genome-scale metabolic models by parsing, checking structural integrity, and ensuring annotation consistency before integration into consensus reconstructions. This skill ensures input models meet quality standards required for reliable community-level metabolic analysis.

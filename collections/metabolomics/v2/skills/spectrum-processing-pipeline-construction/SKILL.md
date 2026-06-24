@@ -21,7 +21,7 @@ metadata:
   - Python time module
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -57,7 +57,6 @@ attribution:
 
 # spectrum-processing-pipeline-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct an optimized mass spectrometry spectrum processing pipeline by chaining operations (m/z range normalization, precursor/noise removal, intensity filtering, and scaling) in a sequence designed for computational efficiency and reproducibility across multiple spectra. This skill is essential when preparing raw MS/MS spectra for downstream analysis such as spectral library matching or benchmarking.

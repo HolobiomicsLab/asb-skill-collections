@@ -18,7 +18,7 @@ metadata:
   - Seaborn
   - Python
   - consensus clustering
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -59,7 +59,6 @@ attribution:
 
 # Consensus-clustering module construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group microbes and metabolites with similar interaction patterns into functional modules by biclustering normalized feature attribution score matrices, using consensus clustering with data-driven k* selection. This recovers the latent structure of microbe-metabolite interaction networks and enables module-level biomarker discovery.

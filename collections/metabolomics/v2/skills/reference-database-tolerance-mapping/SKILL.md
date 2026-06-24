@@ -16,7 +16,7 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -50,7 +50,6 @@ attribution:
 
 # Reference-Database Tolerance Mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass differences to known chemical adducts by finding the closest-matching bin in a mass difference histogram within a user-specified tolerance window. This skill annotates mass spectrometry peaks with their likely adduct identities, enabling metabolite annotation and validation.

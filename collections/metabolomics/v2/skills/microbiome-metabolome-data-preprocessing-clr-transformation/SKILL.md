@@ -18,7 +18,7 @@ metadata:
   - Pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -50,7 +50,6 @@ attribution:
 
 # microbiome-metabolome-data-preprocessing-clr-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply center log-ratio (CLR) transformation to microbiome relative abundance data and metabolomic abundance data to convert compositional count matrices into log-scale representations suitable for neural network training. This preprocessing step addresses the compositional nature of both data types and enables fair feature scaling before cross-validated model training.

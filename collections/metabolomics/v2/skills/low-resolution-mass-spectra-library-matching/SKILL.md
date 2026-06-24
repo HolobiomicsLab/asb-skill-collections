@@ -17,7 +17,7 @@ metadata:
   - numpy
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -52,7 +52,6 @@ attribution:
 
 # low-resolution-mass-spectra-library-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify unknown compounds in low-resolution GC-MS data by matching extracted mass spectra against a reference spectral library using cosine similarity and retention-index proximity scoring. This skill enables automated compound annotation when high-resolution mass accuracy is unavailable.

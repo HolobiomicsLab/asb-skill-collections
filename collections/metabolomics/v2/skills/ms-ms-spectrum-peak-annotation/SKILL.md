@@ -17,7 +17,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -48,7 +48,6 @@ attribution:
 
 # MS/MS Spectrum Peak Annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate fragment peaks in an MS/MS spectrum by applying noise and marker peak thresholds, then scoring matched ions against a metabolite library using occurrence-based scoring. This skill converts experimental spectra into library entries with scored fragment annotations suitable for downstream feature annotation in untargeted metabolomics workflows.

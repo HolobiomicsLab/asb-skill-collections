@@ -18,7 +18,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -50,7 +50,6 @@ attribution:
 
 # fragment-peak-chemical-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign chemical subformulas to individual MS/MS fragment peaks using a neural network-based formula transformer that ranks candidate subformulas conditioned on the precursor formula and observed m/z value, without computing fragmentation trees. This enables per-peak chemical annotation in a data-dependent fashion for tandem mass spectra.

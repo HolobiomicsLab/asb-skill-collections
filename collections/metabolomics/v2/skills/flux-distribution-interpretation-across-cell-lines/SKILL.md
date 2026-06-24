@@ -19,7 +19,7 @@ metadata:
   - getRASscore (INTEGRATE pipeline Step 2)
   - concordanceAnalysis (INTEGRATE pipeline Step 10)
   - createMetabolicDataset (INTEGRATE pipeline Step 9)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -49,7 +49,6 @@ attribution:
 
 # Flux-distribution interpretation across cell lines
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret feasible flux distributions (FFD) sampled from constraint-based metabolic models across multiple cell lines to distinguish metabolically controlled reactions (high RPSvsFFD concordance) from transcriptionally controlled ones (high RASvsFFD concordance). This skill enables classification of metabolic reactions by their regulatory mode using Cohen's kappa concordance coefficients.

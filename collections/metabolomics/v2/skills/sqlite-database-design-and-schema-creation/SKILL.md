@@ -17,7 +17,7 @@ metadata:
   - psf/black
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
@@ -47,7 +47,6 @@ attribution:
 
 # sqlite-database-design-and-schema-creation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and populate a SQLite database schema to store mass spectrometry spectra as indexed key-value pairs (spectrum ID and XML element), enabling random-access parsing of mzML data without full file decompression. This skill bridges file format abstraction by materializing spectral metadata into a queryable relational structure compatible with pymzML's FileInterface.

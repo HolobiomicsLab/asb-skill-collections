@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -50,7 +50,6 @@ attribution:
 
 # peak-picking-parameter-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure noise thresholds and peak-scoring parameters to convert experimental MS/MS spectra into scored fragment ion entries for metabolite library generation. This skill controls which peaks are retained during library entry creation and how their abundance is ranked relative to noise.

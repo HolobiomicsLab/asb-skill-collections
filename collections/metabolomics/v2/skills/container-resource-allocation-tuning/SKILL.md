@@ -17,7 +17,7 @@ metadata:
   - .NET Framework 4.8
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -49,7 +49,6 @@ attribution:
 
 # container-resource-allocation-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure Docker container memory and CPU limits to optimize multi-stage builds and runtime performance for resource-intensive applications like AirdPro. This skill ensures stable execution of complex workloads (e.g., large-scale mass spectrometry data conversion) without system resource exhaustion or out-of-memory failures.

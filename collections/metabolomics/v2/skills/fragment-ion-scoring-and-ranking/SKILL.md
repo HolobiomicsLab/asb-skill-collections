@@ -18,7 +18,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -49,7 +49,6 @@ attribution:
 
 # Fragment-Ion Scoring and Ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method to quantify and rank fragment ions detected in MS/MS spectra by attributing occurrence scores to peaks above noise thresholds, enabling prioritization of reliable fragments for metabolite library entries and spectrum matching. This skill bridges raw spectral data and scored fragment databases used in automated metabolite annotation.

@@ -15,7 +15,7 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -45,7 +45,6 @@ attribution:
 
 # Sparse Pairwise Distance Matrix Construction via Nearest Neighbor Indexing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill constructs a sparse pairwise distance matrix for large MS/MS spectrum datasets by querying pre-built nearest neighbor indexes, avoiding exhaustive all-versus-all comparison. It is essential for scaling density-based clustering to millions of spectra without prohibitive computational cost.

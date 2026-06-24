@@ -15,7 +15,7 @@ metadata:
   - h5py
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -47,7 +47,6 @@ attribution:
 
 # HDF5 Feature Table Loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load multidimensional mass spectrometry feature tables from HDF5 files using DEIMoS, specifying mass, drift time, retention time, and intensity dimensions for downstream processing. This skill is essential for preparing aligned or raw feature data in N-dimensional formats for feature alignment, calibration, or spectral analysis workflows.

@@ -20,7 +20,7 @@ metadata:
   - SQLAlchemy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -53,7 +53,6 @@ attribution:
 
 # pyteomics-api-usage
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use Pyteomics modules to programmatically calculate physico-chemical properties of polypeptides (mass, isotopic distribution, charge, pI) and access proteomics data formats. This skill enables reproducible, rapid prototyping of proteomics data analysis workflows in Python.

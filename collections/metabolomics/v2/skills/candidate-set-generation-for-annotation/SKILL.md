@@ -13,7 +13,7 @@ metadata:
   tools:
   - MAGMa
   - pubchem (eMetabolomics subproject)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -42,7 +42,6 @@ attribution:
 
 # candidate-set-generation-for-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract, standardize, and validate chemical structures from the PubChem database to generate a candidate structure set compatible with MAGMa's mass-spectrometry annotation pipeline. This skill bridges public chemical databases to metabolite identification by ensuring structural data meets format, schema, and completeness requirements.

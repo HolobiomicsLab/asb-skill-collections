@@ -21,7 +21,7 @@ metadata:
   - TensorFlow/Keras
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -58,7 +58,6 @@ attribution:
 
 # hyperparameter-tuning-learning-rate-optimizer-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic selection and tuning of neural network learning rate and optimizer (Adam, SGD) for CNN-based LCMS peak classification. This skill optimizes model convergence speed and generalization to achieve target performance (AUC ROC > 0.9) without overfitting.

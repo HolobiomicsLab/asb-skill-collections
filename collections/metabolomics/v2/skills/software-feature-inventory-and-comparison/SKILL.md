@@ -24,7 +24,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -61,7 +61,6 @@ attribution:
 
 # software-feature-inventory-and-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically document and compare analytical capabilities across multiple software tools for FT-ICR MS data analysis, producing a structured feature matrix that identifies which implementations support each analytical method, visualization type, and data transformation. This skill is essential when evaluating tool suitability for a specific research question or when positioning a new tool within the existing ecosystem.

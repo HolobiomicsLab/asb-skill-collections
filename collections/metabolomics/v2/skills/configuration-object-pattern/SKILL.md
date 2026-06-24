@@ -17,7 +17,7 @@ metadata:
   - Plotly
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -45,7 +45,6 @@ attribution:
 
 # configuration-object-pattern
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A design pattern for decoupling user-facing API parameters from backend-specific rendering logic by validating and storing plotting parameters in intermediate configuration objects that inherit from a common base class. This enables flexible routing to multiple backend implementations without duplicating validation logic.

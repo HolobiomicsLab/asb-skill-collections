@@ -14,7 +14,7 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -44,7 +44,6 @@ attribution:
 
 # intensity-threshold-noise-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove low-intensity noise peaks from tandem mass spectra by applying intensity thresholds relative to the base peak intensity and optionally capping the total number of retained peaks. This preprocessing step improves signal-to-noise ratio and reduces computational burden in downstream spectrum matching and visualization.

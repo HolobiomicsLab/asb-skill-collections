@@ -19,7 +19,7 @@ metadata:
   - rasTtest.py
   - mannWhitneyUTest.py
   - createMetabolicDataset.py
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -47,7 +47,6 @@ attribution:
 
 # fold-change-sign-determination-statistics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determine whether a metabolic reaction or gene shows significant up-regulation (+1), down-regulation (−1), or no change (0) between two biological conditions using statistical tests on fold-change measurements. This skill classifies directional changes in transcriptomics (RAS), proteomics (RPS), and flux distribution data (FFD) to enable concordance analysis across regulatory layers.

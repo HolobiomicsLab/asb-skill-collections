@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -54,7 +54,6 @@ attribution:
 
 # compound-identification-from-ms-data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of small-molecule compounds from mass spectrometry data via spectral library matching and retention index calibration. This skill applies cosine similarity and retention-index proximity scoring to assign compound names, CAS numbers, and match ranks from low-resolution GC-MS or high-resolution LC-MS spectra.

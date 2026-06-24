@@ -17,7 +17,7 @@ metadata:
   - matchms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -54,7 +54,6 @@ attribution:
 
 # Siamese Network Inference on Spectrum Pairs
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a trained Siamese neural network to compute predicted structural similarity scores (Tanimoto or Dice) between pairs of preprocessed tandem mass spectra by computing cosine similarity between paired 200-dimensional embeddings. This skill enables rapid prediction of molecular structural resemblance directly from MS/MS data without explicit fingerprint computation.

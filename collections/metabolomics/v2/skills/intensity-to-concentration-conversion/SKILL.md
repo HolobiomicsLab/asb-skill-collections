@@ -13,7 +13,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -46,7 +46,6 @@ attribution:
 
 # intensity-to-concentration-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry signal intensities into quantitative analyte concentrations using external calibration regression. This skill applies a fitted calibration model (linear or non-linear) derived from standard compounds to unknown sample intensity measurements, accounting for intensity drift during measurement runs.

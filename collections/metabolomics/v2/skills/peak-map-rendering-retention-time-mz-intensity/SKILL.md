@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -50,7 +50,6 @@ attribution:
 
 # peak-map-rendering-retention-time-mz-intensity
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Render interactive 2D and 3D peak-map visualizations of mass spectrometry data by plotting m/z (x-axis), retention time (y-axis), and intensity (z-axis or color) using pyOpenMS-Viz with Pandas DataFrames and pluggable plotting backends (matplotlib, Bokeh, Plotly). This skill enables rapid visual assessment of peak distributions, separation quality, and data quality across LC-MS experiments.

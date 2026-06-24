@@ -14,7 +14,7 @@ metadata:
   - Transformer (multi-head self-attention and cross-attention architecture)
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -43,7 +43,6 @@ attribution:
 
 # fragment-to-structure-assembly
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a transformer encoder-decoder architecture to assemble predicted molecular fragments (encoded as token sequences) into complete molecular structures by jointly predicting molecular formula and bond connectivity. This skill maps fragment embeddings to structure space via multi-head attention, enabling rapid structure elucidation from spectroscopic data.

@@ -16,7 +16,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -45,7 +45,6 @@ attribution:
 
 # MD/C-m/C prioritization filter for PFAS candidate features
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 The MD/C-m/C approach filters and ranks potential per- and polyfluoroalkyl substance (PFAS) features from non-target high-resolution mass spectrometry data by normalizing mass defect to the number of carbon atoms, then applying a threshold criterion to flag PFAS candidates. This prioritization technique reduces false positives in feature lists generated from LC- or GC-HRMS raw data.

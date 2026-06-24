@@ -14,7 +14,7 @@ metadata:
   - R
   - SummarizedExperiment
   - mzQualityDashboard
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -50,7 +50,6 @@ attribution:
 
 # background-contamination-threshold-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess and filter metabolomics compounds based on background signal contamination levels relative to study samples. This skill applies a user-configurable background percentage threshold to flag compounds with excessive signal in blank/negative control samples, preventing false-positive identifications and ensuring reportable compound reliability.

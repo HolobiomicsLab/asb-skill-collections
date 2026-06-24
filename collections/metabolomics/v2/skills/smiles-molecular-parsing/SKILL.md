@@ -14,7 +14,7 @@ metadata:
   - RDKit
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -44,7 +44,6 @@ attribution:
 
 # SMILES molecular parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse input metabolite structures from SMILES notation or mol format into computational molecular objects using RDKit, enabling downstream chemical transformations and property calculations. This is essential for automating metabolite identification workflows where manual expert annotation is infeasible.

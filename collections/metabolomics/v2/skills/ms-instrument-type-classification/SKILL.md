@@ -15,7 +15,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -44,7 +44,6 @@ attribution:
 
 # MS Instrument Type Classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify mass spectrometry data and workflows by their input separation/ionisation techniques (LC, GC, IMS, MS Imaging) to verify comprehensive software support across all major MS instrument types. This skill ensures that data processing pipelines can handle the full diversity of modern MS workflows.

@@ -19,7 +19,7 @@ metadata:
   - NumPy
   - TensorFlow
   - scikit-learn MLPRegressor
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -60,7 +60,6 @@ attribution:
 
 # neural-network-early-stopping-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Early stopping terminates neural network training when validation loss stops improving over a fixed number of iterations, preventing overfitting while preserving generalization performance. This is essential for multivariate metabolite prediction from microbiome data, where the optimization landscape is high-dimensional and validation performance diverges from training performance.

@@ -16,7 +16,7 @@ metadata:
   - mpactr
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -49,7 +49,6 @@ attribution:
 
 # metabolomics-peak-table-loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load preprocessed metabolomics peak tables and associated sample metadata from vendor-specific formats (e.g. Progenesis) into an R data object suitable for downstream filtering and statistical analysis. This is the foundational step that ingests MS1 feature abundance matrices and sample annotations before quality-control filtering.

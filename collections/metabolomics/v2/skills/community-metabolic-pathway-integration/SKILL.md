@@ -13,7 +13,7 @@ metadata:
   - http://edamontology.org/topic_0621
   tools:
   - COMMIT
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -42,7 +42,6 @@ attribution:
 
 # community-metabolic-pathway-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge multiple draft genome-scale metabolic reconstructions into a single consensus model for microbial communities by resolving pathway conflicts and gaps using community-dependent logic. This skill is essential when analyzing metabolic capacity of natural or engineered communities where individual member reconstructions must be unified to model community-level phenotypes.

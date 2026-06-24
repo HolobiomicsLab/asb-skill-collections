@@ -19,7 +19,7 @@ metadata:
   - bokeh
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -54,7 +54,6 @@ attribution:
 
 # abstract-base-class-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a multi-level abstract base class (ABC) hierarchy that separates domain-agnostic plotting logic from domain-specific (mass-spectrometry) concerns, and that delegates to backend-specific concrete implementations via a kind-dispatch mechanism. This pattern enables consistent APIs across multiple plotting backends while avoiding code duplication and supporting extension.

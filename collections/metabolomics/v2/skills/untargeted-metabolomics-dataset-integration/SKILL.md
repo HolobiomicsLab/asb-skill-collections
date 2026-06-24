@@ -15,7 +15,7 @@ metadata:
   - M2S
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s
@@ -44,7 +44,6 @@ attribution:
 
 # untargeted-metabolomics-dataset-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match untargeted metabolomic features across two LC-MS datasets by computing pairwise similarity scores on m/z and retention time dimensions, then resolving one-to-one correspondences with confidence filtering. This enables comparative metabolomics workflows where features from independent runs must be aligned before statistical or functional analysis.

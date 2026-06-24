@@ -20,7 +20,7 @@ metadata:
   techniques:
   - direct-infusion-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -56,7 +56,6 @@ attribution:
 
 # multidimensional-feature-detection-and-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply N-dimensional feature detection and cross-sample alignment to LC-IMS-MS/MS data to identify and characterize molecular features with improved sensitivity and confidence. DEIMoS implements persistent homology-based peak detection across m/z, drift time, and retention time dimensions, then aligns detected features across multiple samples while assigning mass, CCS, tandem spectra, and isotopic signatures.

@@ -20,7 +20,7 @@ metadata:
   - Flux Variability Analysis (FVA)
   - GLPK solver
   - qLSLab/integrate (pipeline scripts)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -56,7 +56,6 @@ attribution:
 
 # multi-constraint-metabolic-modeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply simultaneous nutrient availability, extracellular flux ratio, and transcriptomics-derived constraints to constraint-based metabolic models to segregate cell line phenotypes and characterize multi-level metabolic regulation. This skill integrates three orthogonal regulatory layers—substrate availability, measured metabolic exchange ratios, and gene expression—to achieve superior discrimination of steady-state flux distributions compared to single or paired constraint applications.

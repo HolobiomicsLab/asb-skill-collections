@@ -16,7 +16,7 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -47,7 +47,6 @@ attribution:
 
 # mass-defect-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Mass defect calculation is a quantitative technique for identifying PFAS-like features in non-target HRMS data by computing the difference between observed m/z values and theoretical exact masses. It serves as a foundational metric for downstream PFAS prioritization filters including MD/C ratio normalization and Kendrick mass defect analysis.

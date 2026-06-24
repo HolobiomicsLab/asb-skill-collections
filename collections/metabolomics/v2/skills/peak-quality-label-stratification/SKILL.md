@@ -16,7 +16,7 @@ metadata:
   - Keras / TensorFlow
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -49,7 +49,6 @@ attribution:
 
 # peak-quality-label-stratification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill involves stratifying MS1 peaks by quality labels (High/Low quality) during batch creation for neural network training, ensuring balanced or representative class distributions to avoid bias in model training. It is essential when preparing labeled LC-MS datasets for supervised learning where peak quality classification affects model generalization.

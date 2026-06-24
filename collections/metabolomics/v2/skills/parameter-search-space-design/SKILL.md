@@ -17,7 +17,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -47,7 +47,6 @@ attribution:
 
 # Parameter Search Space Design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Defines the bounded ranges and candidate combinations of peak picking, alignment, and gap-filling parameters for automated optimization in untargeted LC-MS workflows. This skill establishes the feasible region within which parameter optimization algorithms will search to yield optimal LC-MS processing outcomes.

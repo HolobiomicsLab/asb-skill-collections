@@ -15,7 +15,7 @@ metadata:
   - concordanceAnalysis.py
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -45,7 +45,6 @@ attribution:
 
 # multi-cell-line-rps-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Reaction Propensity Scores (RPS) across multiple cell lines by applying the mass action law to LC-MS intracellular metabolomics data, yielding substrate-availability-based reaction activity estimates for downstream concordance analysis with transcriptomics and flux predictions.

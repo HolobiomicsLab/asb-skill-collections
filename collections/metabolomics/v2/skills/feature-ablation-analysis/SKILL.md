@@ -19,7 +19,7 @@ metadata:
   - enveda/ccs-prediction repository
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -48,7 +48,6 @@ attribution:
 
 # feature-ablation-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically remove or mask individual molecular structural features (node and edge attributes) from graph neural network inputs and measure the resulting change in predicted collision cross section, enabling post-hoc attribution analysis to rank features by importance for model predictions.

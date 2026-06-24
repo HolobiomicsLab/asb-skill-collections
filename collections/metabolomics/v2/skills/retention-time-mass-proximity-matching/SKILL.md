@@ -16,7 +16,7 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -44,7 +44,6 @@ attribution:
 
 # Retention Time and Mass Proximity Matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A recursive matching strategy that identifies missing feature intensities by searching across related samples using retention time and m/z proximity windows to recover intensity values absent in some samples but present in others. This is a core component of gap-filling in untargeted LC-MS feature tables.

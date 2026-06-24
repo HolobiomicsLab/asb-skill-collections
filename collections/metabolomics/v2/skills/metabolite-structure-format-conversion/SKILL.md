@@ -15,7 +15,7 @@ metadata:
   - PubChem database
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
@@ -44,7 +44,6 @@ attribution:
 
 # metabolite-structure-format-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert and standardize chemical structure formats from public databases (e.g., PubChem) into formats compatible with in silico metabolite annotation pipelines. This skill ensures structural data integrity and computational compatibility across heterogeneous chemo-informatics workflows.

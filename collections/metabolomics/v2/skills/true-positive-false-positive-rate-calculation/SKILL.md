@@ -18,7 +18,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -53,7 +53,6 @@ attribution:
 
 # true-positive-false-positive-rate-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate True Positive Rate (TPR) and False Positive Rate (FPR) metrics from a trained NeatMS neural network model at a specified probability threshold. This skill is essential for evaluating classifier performance on untargeted LCMS peak classification and understanding the trade-off between retaining true peaks and filtering false positives.

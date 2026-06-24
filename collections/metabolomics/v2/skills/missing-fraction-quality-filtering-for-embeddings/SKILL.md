@@ -20,7 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -58,7 +58,6 @@ attribution:
 
 # missing-fraction-quality-filtering-for-embeddings
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter out spectra whose peak and neutral loss composition is poorly represented in a pre-trained Word2Vec embedding model, thereby avoiding unreliable spectral similarity scores for spectra with unknown fragments. This quality gate prevents downstream false positives in spectral matching and molecular networking.

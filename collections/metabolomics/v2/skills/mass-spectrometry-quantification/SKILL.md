@@ -15,7 +15,7 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -45,7 +45,6 @@ attribution:
 
 # mass-spectrometry-quantification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw mass spectrometry intensities into quantitative analyte concentrations using external calibration with regression modeling, accounting for intensity drift through drift correction strategies. This skill is essential when processing targeted MS data where accurate concentration prediction depends on fitting and applying calibration curves derived from known standard compounds.

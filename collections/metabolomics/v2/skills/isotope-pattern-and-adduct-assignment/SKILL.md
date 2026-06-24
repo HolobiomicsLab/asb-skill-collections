@@ -17,7 +17,7 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -49,7 +49,6 @@ attribution:
 
 # Isotope Pattern and Adduct Assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster LC-MS features into empirical compounds by matching isotope and adduct signatures using configurable m/z and retention time tolerances, producing annotated feature groups that represent putative metabolites. This skill bridges individual feature detection and compound-level annotation.

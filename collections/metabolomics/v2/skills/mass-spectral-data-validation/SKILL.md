@@ -16,7 +16,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
@@ -44,7 +44,6 @@ attribution:
 
 # mass-spectral-data-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate LC-MS/MS spectral data integrity and metadata correctness before importing into the specXplore pipeline. This skill ensures raw spectral data conform to required formats (.mgf) and contain essential feature identifiers needed for downstream processing and visualization.

@@ -14,7 +14,7 @@ metadata:
   - Python
   - jsonschema
   - MESSES
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.3390/metabo13070842
   title: messes
@@ -48,7 +48,6 @@ attribution:
 
 # directive-engine-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a conversion directive engine that resolves str-type directives from JSON specification files by parsing override, code, record_id, for_each, test, sort_by, sort_order, delimiter, and fields parameters to transform tabular or JSON input data into structured JSONized output. This skill is essential for automating complex metadata extraction and format conversion workflows in data curation pipelines.

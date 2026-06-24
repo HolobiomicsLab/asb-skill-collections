@@ -25,7 +25,7 @@ metadata:
   - R packages vegan, SYNCSA
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -62,7 +62,6 @@ attribution:
 
 # metabolomic-dataset-preprocessing-and-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing and normalization of FT-ICR MS metabolomic data by filtering peaks on physicochemical criteria (m/z range, isotopic signature, formula assignment error, sample prevalence) and normalizing intensities to remove technical bias. This foundational step prepares Formularity .csv output (assigned molecular formulas, m/z values, peak intensities) for downstream chemodiversity and statistical analysis.

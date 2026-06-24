@@ -17,7 +17,7 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -46,7 +46,6 @@ attribution:
 
 # graph-neural-network-model-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load a trained graph neural network model and use it to generate predictions on molecular structures represented as graphs. This skill enables post-hoc analysis of GNN predictions, such as attribution studies to identify which molecular features drive collision cross section predictions.

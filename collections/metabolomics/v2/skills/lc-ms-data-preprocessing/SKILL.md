@@ -17,7 +17,7 @@ metadata:
   - pandas
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -52,7 +52,6 @@ attribution:
 
 # lc-ms-data-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare untargeted liquid chromatography–mass spectrometry (LCMS) raw data and feature tables for neural network–based peak classification by converting mzML and feature table inputs into normalized peak matrices with consistent dimensionality. This skill is essential when you need to standardize heterogeneous LCMS outputs before filtering false positive MS1 peaks.

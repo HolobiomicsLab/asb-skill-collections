@@ -18,7 +18,7 @@ metadata:
   - GNPS (Feature-Based Molecular Networking)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -48,7 +48,6 @@ attribution:
 
 # metabolomic-feature-tree-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a tree of LC-MS/MS features that relates mass-spectrometry peaks according to predicted molecular substructures, enabling chemically-informed comparison of untargeted metabolomic profiles across samples and datasets. The tree is constructed by predicting molecular substructures using fragmentation trees and molecular formula rankings, then hierarchically organizing features based on shared chemical properties.

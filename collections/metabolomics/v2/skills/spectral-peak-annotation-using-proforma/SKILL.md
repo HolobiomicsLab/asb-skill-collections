@@ -19,7 +19,7 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
@@ -54,7 +54,6 @@ attribution:
 
 # spectral-peak-annotation-using-proforma
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate observed mass spectrometry spectrum peaks with fragment ion types (b, y, a ions and neutral losses) using the ProForma 2.0 specification to interpret which peaks correspond to known peptide fragments. This skill quantifies the fraction of observed peaks receiving structural interpretation, enabling validation of fragmentation patterns and assessment of annotation coverage.

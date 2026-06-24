@@ -20,7 +20,7 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -55,7 +55,6 @@ attribution:
 
 # Chromatographic Peak Annotation and Visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and inspect extracted ion chromatogram (EIC) plots with annotated peaks for targeted LC-MS compounds, enabling visual quality control of peak detection, integration, and retention time alignment across sample batches. This skill bridges automated peak detection with human-interpretable diagnostic plots for targeted metabolomics and lipidomics workflows.

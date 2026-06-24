@@ -19,7 +19,7 @@ metadata:
   - bokeh
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -54,7 +54,6 @@ attribution:
 
 # peakmap-visualization-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate interactive or static 2D and 3D peak map visualizations of mass spectrometry data from Pandas DataFrames using pyOpenMS-viz with multiple plotting backends. This skill enables researchers to render retention time (or ion mobility) versus m/z intensity maps, with optional marginal chromatograms and spectra.

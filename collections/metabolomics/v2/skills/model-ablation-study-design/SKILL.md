@@ -15,7 +15,7 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
@@ -46,7 +46,6 @@ attribution:
 
 # model-ablation-study-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and execute controlled ablation studies to isolate the contribution of individual model components (e.g., multi-adduct support, architectural features, input modalities) to overall prediction accuracy. This skill enables quantification of feature importance by comparing performance metrics under systematically restricted model configurations.

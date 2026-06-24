@@ -19,7 +19,7 @@ metadata:
   - plotResultSpec
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -54,7 +54,6 @@ attribution:
 
 # metabolite-candidate-ranking-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and interpret ranked candidate metabolite annotations for a given LC-MS feature, comparing scores and confidence levels to assess annotation quality and identify alternative structural assignments. This skill reveals whether the top-ranked annotation is robust or if lower-ranked candidates warrant consideration based on fragment matching patterns.

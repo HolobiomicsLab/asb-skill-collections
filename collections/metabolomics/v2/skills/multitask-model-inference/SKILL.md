@@ -15,7 +15,7 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -43,7 +43,6 @@ attribution:
 
 # multitask-model-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Run inference on a trained multitask machine learning model to predict multiple correlated outputs (e.g., molecular formula and connectivity) from a single input modality or multiple fused input modalities. This skill applies a pre-trained CNN–transformer pipeline to generate structured predictions suitable for comparative multimodal analysis.

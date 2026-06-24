@@ -18,7 +18,7 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -49,7 +49,6 @@ attribution:
 
 # Spectral Result Visualization and Verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify and visually inspect annotated metabolite spectra with matched fragment ions to confirm candidate ranking accuracy and annotation quality. This skill combines human-readable visualization of pseudo-MS/MS spectra against candidate matches with file-based auditing to ensure the annotation pipeline produced complete, valid outputs.

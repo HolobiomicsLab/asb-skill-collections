@@ -15,7 +15,7 @@ metadata:
   - SummarizedExperiment
   - mzQualityDashboard
   - R (lm, weighted.lm)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -51,7 +51,6 @@ attribution:
 
 # calibration-curve-fitting-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a weighted linear regression model to calibration-line samples with known concentrations, then apply the model to estimate absolute concentrations for study samples from their measured compound/internal-standard ratios. This skill enables quantitative metabolomics reporting when spiked calibration standards are available.

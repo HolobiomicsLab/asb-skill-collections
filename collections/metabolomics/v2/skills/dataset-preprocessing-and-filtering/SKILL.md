@@ -15,7 +15,7 @@ metadata:
   - FIDDLE
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle
@@ -44,7 +44,6 @@ attribution:
 
 # dataset-preprocessing-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and preprocess tandem mass spectrometry (MS/MS) spectral datasets by applying instrument-specific allowlists and re-running dataset splitting logic to obtain curated training and test compound partitions. This skill ensures that spectral records matching updated instrument metadata criteria are retained and correctly split into balanced subsets for model training and evaluation.
