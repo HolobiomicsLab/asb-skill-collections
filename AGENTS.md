@@ -119,6 +119,13 @@ fall back to **`local`** to clone the source and read it directly.
 
 ---
 
+## License tiers
+
+Every skill carries a `license_tier` (`open` / `noncommercial` / `restricted`) in
+`skills_index.json` and its `SKILL.md` frontmatter. The `asb-metabolomics` meta-skill
+enforces the `noncommercial` acknowledgment gate and routes tier logic; see
+[`governance/LICENSE_TIERS.md`](governance/LICENSE_TIERS.md) for the full policy.
+
 ## Notes
 
 - License **CC-BY-4.0**; every skill is `derived_from` a source DOI with verbatim

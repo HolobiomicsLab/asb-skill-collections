@@ -243,6 +243,27 @@ for the legal/open-access policy.
 **Suggest or annotate a paper:** see
 [Contributing → Propose or annotate a paper](.github/CONTRIBUTING.md#propose-or-annotate-a-paper).
 
+## License tiers
+
+Every skill carries a `license_tier` field (in `skills_index.json` and in each
+`SKILL.md` frontmatter `metadata.license_tier`) that answers *what may I do with
+the underlying tool?*
+
+| Tier | Meaning |
+|---|---|
+| `open` | Commercial use OK (MIT, Apache-2.0, GPL, CC-BY, …) |
+| `noncommercial` | Academic / noncommercial only — **confirm permitted use before applying** the skill |
+| `restricted` | No clear license detected — **verify before commercial use or redistribution** |
+
+Discovery defaults to `open` skills; the `asb-metabolomics` meta-skill enforces
+the `noncommercial` acknowledgment gate. Non-open skills carry a one-line banner
+in their body. Full policy: [`governance/LICENSE_TIERS.md`](governance/LICENSE_TIERS.md).
+
+```bash
+# list only open-tier skills
+jq '[.[] | select(.license_tier=="open")]' collections/metabolomics/v2/skills_index.json
+```
+
 ## License
 
 Dual-licensed, by layer (see [LICENSING.md](LICENSING.md)):

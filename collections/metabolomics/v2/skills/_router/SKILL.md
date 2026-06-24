@@ -91,6 +91,28 @@ grounding **tier** with `--tier`:
 `prepare` (build the KB without querying) and `resolve` (print the grounding map
 offline) are the other two subcommands.
 
+## License tier
+
+When routing or presenting candidate skills, read each candidate's `license_tier`
+from `skills_index.json` or the skill's `SKILL.md` frontmatter
+(`metadata.license_tier`). Apply the following rules, in addition to normal
+routing logic:
+
+- **`open`** — surface freely; no gate required. Discovery defaults to `open`-tier
+  skills whenever the consumer has not expressed a specific tier preference.
+- **`noncommercial`** — flag the **blocking acknowledgment** before applying the
+  skill: commercial use is forbidden without a separate license. Defer to the
+  `asb-metabolomics` gate (which checks `metadata.tool_license`) — the user must
+  explicitly confirm a permitted (academic / noncommercial) purpose. Do not apply
+  a `noncommercial` skill until the acknowledgment is confirmed.
+- **`restricted`** — show the soft note: *"no clear license detected — verify
+  before commercial use or redistribution"* (non-blocking). Proceed only after
+  surfacing this caveat.
+
+All other routing behavior (technique, EDAM, tool name, keyword matching) is
+unchanged; tier-awareness is an additional layer applied after candidate
+selection.
+
 ## Provenance
 
 Each skill is grounded (`derived_from` DOIs + `evidence_spans`), license-tagged
