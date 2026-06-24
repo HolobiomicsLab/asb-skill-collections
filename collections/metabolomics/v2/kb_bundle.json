@@ -5729,7 +5729,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "biochemical-annotation-mapping": {
       "dois": [
@@ -11645,7 +11645,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "circular-dependency-avoidance-in-method-design": {
       "dois": [
@@ -19200,7 +19200,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "csv-to-dictionary-conversion": {
       "dois": [
@@ -28023,7 +28023,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "external-calibration-model-fitting": {
       "dois": [
@@ -31010,7 +31010,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-vector-naming-convention": {
       "dois": [
@@ -62281,7 +62281,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-data-normalization-post-integration": {
       "dois": [
@@ -62331,7 +62331,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-data-quality-assessment": {
       "dois": [
@@ -62789,7 +62789,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-peak-quality-assessment": {
       "dois": [
@@ -62869,7 +62869,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-analyte-stability-characterization": {
       "dois": [
@@ -65885,7 +65885,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "missing-value-imputation-for-pca": {
       "dois": [
@@ -73005,7 +73005,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-criterion-score-combination-and-ranking": {
       "dois": [
@@ -74274,7 +74274,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multiclass-data-batch-correction": {
       "dois": [
@@ -74299,7 +74299,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multiclass-metabolite-comparison": {
       "dois": [
@@ -86062,7 +86062,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "performance-metric-comparison-across-backends": {
       "dois": [
@@ -88140,7 +88140,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pretrained-model-weight-loading": {
       "dois": [
@@ -91215,7 +91215,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "qc-summary-data-extraction": {
       "dois": [
@@ -91713,7 +91713,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "quality-control-sample-metadata-extraction": {
       "dois": [
@@ -92335,7 +92335,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-bioconductor-summarizedexperiment-manipulation": {
       "dois": [
@@ -92671,7 +92671,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-internal-function-implementation": {
       "dois": [
@@ -99774,7 +99774,7 @@
         "https://github.com/Ghoshlab/marr",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "sample-matrix-effect-handling": {
       "dois": [

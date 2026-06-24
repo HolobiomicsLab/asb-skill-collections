@@ -3961,8 +3961,8 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
+    license: GPL-3.0
+  license_tier: open
 - name: FBMN-STATS
   doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS
