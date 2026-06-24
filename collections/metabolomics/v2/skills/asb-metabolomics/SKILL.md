@@ -1,0 +1,40 @@
+---
+name: asb-metabolomics
+description: "Use FIRST when working with the ASB Metabolomics skill collection. The meta-skill: it explains good practice (search -> apply -> ground), enforces the license-tier acknowledgment for non-open tools, then hands off to the _router skill for actual skill selection."
+license: CC-BY-4.0
+metadata:
+  role: meta
+  delegates_to: _router
+schema_version: 0.2.0
+---
+
+# asb-metabolomics
+
+The entry point for the ASB Metabolomics collection. Run this before routing to a
+specific skill.
+
+## Protocol: search -> apply -> ground
+
+1. **Search** for a skill via `skills_index.json` (EDAM IRI / tool / keyword) or
+   `tools_index.json`.
+2. **License-tier gate (governance).** Read the candidate skill's
+   `metadata.tool_license`. If `requires_ack: true` (tier `noncommercial` or
+   `restricted`), surface `tier` + `ref` + `url` to the user and obtain an explicit
+   acknowledgment that their use is a permitted purpose **before applying the skill**.
+   Default discovery to `open`-tier skills; flag non-open results.
+3. **Apply** the selected skill.
+4. **Ground** against the source via the Perspicacité binder. Grounding for non-open
+   tiers is **link-only** (referenced, never embedded); assembling a local bundle is
+   the consumer's responsibility.
+
+## Hand-off
+
+For the actual skill selection, delegate to the `_router` skill, which performs pure
+routing over the indexes. This meta-skill owns guidance and license governance;
+`_router` owns routing.
+
+## License tiers
+
+`open` = commercial use OK; `noncommercial` = academic/noncommercial only;
+`restricted` = no grant / proprietary. See `governance/LICENSE_TIERS.md`. This axis is
+separate from the paper open-access axis (`access.type`).

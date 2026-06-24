@@ -11,8 +11,9 @@ computational LC-MS/MS metabolomics.
 /plugin install metabolomics@asb-skill-collections
 ```
 
-Skills auto-load from `collections/metabolomics/v2/skills/<slug>/SKILL.md`; the
-default entry is `skills/_router/SKILL.md`.
+Skills auto-load from `collections/metabolomics/v2/skills/<slug>/SKILL.md`. Start at
+the `asb-metabolomics` meta-skill (guide + license-tier governance), which hands off
+to `skills/_router/SKILL.md` for routing.
 
 ## Use
 
