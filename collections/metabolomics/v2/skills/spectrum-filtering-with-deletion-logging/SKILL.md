@@ -1,6 +1,7 @@
 ---
 name: spectrum-filtering-with-deletion-logging
-description: Use when processing heterogeneous mass spectrometry libraries (e.g., from OMSLs) where chemical identifiers are unevenly populated across records.
+description: Use when processing heterogeneous mass spectrometry libraries (e.g.,
+  from OMSLs) where chemical identifiers are unevenly populated across records.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,11 @@ metadata:
   - spectra-hash (SPLASH)
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

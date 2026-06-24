@@ -1,6 +1,7 @@
 ---
 name: ms-ms-spectral-library-matching
-description: Use when you have experimental MS/MS spectra from nontargeted metabolomics data and need to assign molecular identities or identify structurally related analogs.
+description: Use when you have experimental MS/MS spectra from nontargeted metabolomics
+  data and need to assign molecular identities or identify structurally related analogs.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -16,16 +17,24 @@ metadata:
   - PeakQC
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 - doi: 10.1021/jasms.4c00146
   title: ''
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
-- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library formats.'
+- 'TandemMatch: MS/MS spectral library matching with support for MSP and CSV library
+  formats.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

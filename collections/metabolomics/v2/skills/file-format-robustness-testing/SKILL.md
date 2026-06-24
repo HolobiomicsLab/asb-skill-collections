@@ -1,6 +1,9 @@
 ---
 name: file-format-robustness-testing
-description: Use when when processing MS spectral data from multiple open mass spectra libraries (OMSLs) in mixed formats (MSP, MGF, JSON, CSV), especially when source data exhibits missing fields, malformed entries, inconsistent adduct representations, or non-standard format variants that may cause silent.
+description: Use when when processing MS spectral data from multiple open mass spectra
+  libraries (OMSLs) in mixed formats (MSP, MGF, JSON, CSV), especially when source
+  data exhibits missing fields, malformed entries, inconsistent adduct representations,
+  or non-standard format variants that may cause silent.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -16,6 +19,11 @@ metadata:
   - FragHub
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

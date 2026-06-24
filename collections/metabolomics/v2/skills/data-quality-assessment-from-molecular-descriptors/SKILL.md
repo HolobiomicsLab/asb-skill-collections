@@ -1,6 +1,7 @@
 ---
 name: data-quality-assessment-from-molecular-descriptors
-description: Use when processing spectral datasets from open mass spectra libraries (OMSLs) where structural identifiers and ionization metadata are incomplete or inconsistent.
+description: Use when processing spectral datasets from open mass spectra libraries
+  (OMSLs) where structural identifiers and ionization metadata are incomplete or inconsistent.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +17,11 @@ metadata:
   - spectra-hash (SPLASH)
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

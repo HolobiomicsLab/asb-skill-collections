@@ -1,6 +1,8 @@
 ---
 name: peak-border-center-estimation
-description: Use when you have LC-HRMS chromatograms in retention time × m/z matrix format and need to automatically localize chromatographic peak positions and extents prior to matching against a reference peak library or generating CNN training instances.
+description: Use when you have LC-HRMS chromatograms in retention time × m/z matrix
+  format and need to automatically localize chromatographic peak positions and extents
+  prior to matching against a reference peak library or generating CNN training instances.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +16,11 @@ metadata:
   - OpenMS / TOPPView
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

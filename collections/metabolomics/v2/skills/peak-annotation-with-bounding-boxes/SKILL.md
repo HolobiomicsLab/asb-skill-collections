@@ -1,6 +1,8 @@
 ---
 name: peak-annotation-with-bounding-boxes
-description: Use when you have isolated reference peaks from training chromatograms (ground-truth, single compounds per sample) and need to create a diverse, labelled training set large enough to train a CNN peak detector.
+description: Use when you have isolated reference peaks from training chromatograms
+  (ground-truth, single compounds per sample) and need to create a diverse, labelled
+  training set large enough to train a CNN peak detector.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -14,6 +16,11 @@ metadata:
   - OpenMS (TOPPView)
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

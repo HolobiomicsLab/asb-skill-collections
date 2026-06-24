@@ -1,6 +1,9 @@
 ---
 name: feature-property-refinement-from-training-data
-description: Use when you have a set of training LC-HRMS chromatograms (retention time × m/z matrix format) and a manually curated reference list of isolated single chromatographic peaks, and you need to update the reference peak properties (retention time, m/z, peak shape) to match the actual peak signatures.
+description: Use when you have a set of training LC-HRMS chromatograms (retention
+  time × m/z matrix format) and a manually curated reference list of isolated single
+  chromatographic peaks, and you need to update the reference peak properties (retention
+  time, m/z, peak shape) to match the actual peak signatures.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -12,6 +15,11 @@ metadata:
   - PeakBot
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

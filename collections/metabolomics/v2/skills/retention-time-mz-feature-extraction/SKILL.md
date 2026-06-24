@@ -1,6 +1,9 @@
 ---
 name: retention-time-mz-feature-extraction
-description: Use when you have LC-HRMS profile-mode data (e.g., netCDF or mzML format) and need to convert detected or reference chromatographic peaks into fixed-size 2D arrays (rt × mz regions) to train or apply a convolutional neural network for peak classification and bounding-box prediction.
+description: Use when you have LC-HRMS profile-mode data (e.g., netCDF or mzML format)
+  and need to convert detected or reference chromatographic peaks into fixed-size
+  2D arrays (rt × mz regions) to train or apply a convolutional neural network for
+  peak classification and bounding-box prediction.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,6 +17,11 @@ metadata:
   - OpenMS/TOPPView
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

@@ -1,6 +1,9 @@
 ---
 name: signal-smoothing-preprocessing
-description: Use when when working with raw LC-HRMS profile-mode data containing noisy chromatographic signals, apply this skill before peak detection. Smoothing is particularly needed when the signal-to-noise ratio is low or when gradient-based peak detection would be compromised by high-frequency noise.
+description: Use when when working with raw LC-HRMS profile-mode data containing noisy
+  chromatographic signals, apply this skill before peak detection. Smoothing is particularly
+  needed when the signal-to-noise ratio is low or when gradient-based peak detection
+  would be compromised by high-frequency noise.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3214
@@ -12,6 +15,11 @@ metadata:
   - PeakBot
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

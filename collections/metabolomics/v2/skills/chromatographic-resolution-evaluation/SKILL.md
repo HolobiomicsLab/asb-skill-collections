@@ -1,6 +1,8 @@
 ---
 name: chromatographic-resolution-evaluation
-description: Use when when you have a feature table from LC-MS peak detection (e.g., output from MassCube's nontargeted peak segmentation step) and need to assess which features have adequate chromatographic separation from coeluting or nearby peaks.
+description: Use when when you have a feature table from LC-MS peak detection (e.g.,
+  output from MassCube's nontargeted peak segmentation step) and need to assess which
+  features have adequate chromatographic separation from coeluting or nearby peaks.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3633
@@ -12,12 +14,19 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:

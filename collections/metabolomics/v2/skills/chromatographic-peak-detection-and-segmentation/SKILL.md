@@ -1,6 +1,8 @@
 ---
 name: chromatographic-peak-detection-and-segmentation
-description: Use when you have raw LC-MS data (mzML or vendor format) and need to discover and characterize all chromatographic features present, without prior knowledge of target analytes.
+description: Use when you have raw LC-MS data (mzML or vendor format) and need to
+  discover and characterize all chromatographic features present, without prior knowledge
+  of target analytes.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,12 +16,19 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:

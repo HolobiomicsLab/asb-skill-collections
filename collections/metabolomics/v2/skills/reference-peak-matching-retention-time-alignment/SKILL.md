@@ -1,6 +1,9 @@
 ---
 name: reference-peak-matching-retention-time-alignment
-description: Use when you have training LC-HRMS chromatograms (rt × m/z matrix format) from which you have already extracted peak candidates using smoothing and gradient-descent peak detection, and you possess a curated reference list of isolated single chromatographic peaks (ground truth).
+description: Use when you have training LC-HRMS chromatograms (rt × m/z matrix format)
+  from which you have already extracted peak candidates using smoothing and gradient-descent
+  peak detection, and you possess a curated reference list of isolated single chromatographic
+  peaks (ground truth).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -14,6 +17,11 @@ metadata:
   - OpenMS/TOPPView
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

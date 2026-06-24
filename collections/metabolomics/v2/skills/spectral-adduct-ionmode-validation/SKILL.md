@@ -1,6 +1,7 @@
 ---
 name: spectral-adduct-ionmode-validation
-description: Use when when processing raw or aggregated mass spectra datasets (from .mgf, .msp, .json, or .
+description: Use when when processing raw or aggregated mass spectra datasets (from
+  .mgf, .msp, .json, or .
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +15,11 @@ metadata:
   - FragHub
   techniques:
   - GC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

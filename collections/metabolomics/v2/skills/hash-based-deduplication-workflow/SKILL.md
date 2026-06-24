@@ -1,6 +1,7 @@
 ---
 name: hash-based-deduplication-workflow
-description: Use when when processing open mass spectrometry library (OMSL) data that may contain duplicate spectral records (e.
+description: Use when when processing open mass spectrometry library (OMSL) data that
+  may contain duplicate spectral records (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,12 +15,18 @@ metadata:
   - FragHub
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
 evidence_spans:
 - Python-3.12
-- direct integration of spectra-hash (https://github.com/berlinguyinca/spectra-hash) into fraghub
+- direct integration of spectra-hash (https://github.com/berlinguyinca/spectra-hash)
+  into fraghub
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

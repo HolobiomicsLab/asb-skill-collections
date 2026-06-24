@@ -1,6 +1,8 @@
 ---
 name: batch-spectrum-quality-control
-description: Use when when ingesting spectra from multiple open mass spectrometry libraries (OMSLs) in .mgf, .msp, .json, or .csv format and you observe mixed experimental protocols, inconsistent adduct annotations, or partial metadata.
+description: Use when when ingesting spectra from multiple open mass spectrometry
+  libraries (OMSLs) in .mgf, .msp, .json, or .csv format and you observe mixed experimental
+  protocols, inconsistent adduct annotations, or partial metadata.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +16,11 @@ metadata:
   - FragHub
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

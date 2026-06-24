@@ -1,6 +1,9 @@
 ---
 name: deletion-reason-logging-and-traceability
-description: Use when when processing OMSLs (Open Mass Spectra Libraries) with heterogeneous data quality, inconsistent annotations, or mixed ionmode/chromatographic modes (LC/GC), and you need to track which spectra were discarded, why, and potentially recover or reprocess them in future iterations.
+description: Use when when processing OMSLs (Open Mass Spectra Libraries) with heterogeneous
+  data quality, inconsistent annotations, or mixed ionmode/chromatographic modes (LC/GC),
+  and you need to track which spectra were discarded, why, and potentially recover
+  or reprocess them in future iterations.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -14,6 +17,11 @@ metadata:
   - FragHub
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

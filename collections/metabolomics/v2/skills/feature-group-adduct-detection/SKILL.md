@@ -1,6 +1,8 @@
 ---
 name: feature-group-adduct-detection
-description: Use when you have a feature table from LC-MS analysis (containing m/z, retention time, and intensity values) and need to identify which detected features represent the same molecular species ionized under different adduction states.
+description: Use when you have a feature table from LC-MS analysis (containing m/z,
+  retention time, and intensity values) and need to identify which detected features
+  represent the same molecular species ionized under different adduction states.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3629
@@ -12,12 +14,19 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:

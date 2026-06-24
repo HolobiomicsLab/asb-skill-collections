@@ -1,6 +1,9 @@
 ---
 name: cnn-architecture-design-for-chromatography
-description: Use when you have LC-HRMS profile-mode chromatograms with ground-truth peak annotations (reference features) and need to detect peaks in new samples with high sensitivity and specificity, especially when peaks exhibit variable morphology (left/right isomers), overlapping background signals.
+description: Use when you have LC-HRMS profile-mode chromatograms with ground-truth
+  peak annotations (reference features) and need to detect peaks in new samples with
+  high sensitivity and specificity, especially when peaks exhibit variable morphology
+  (left/right isomers), overlapping background signals.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -14,6 +17,11 @@ metadata:
   - TensorFlow
   - CUDA/cuDNN
   - OpenMS/TOPPView
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

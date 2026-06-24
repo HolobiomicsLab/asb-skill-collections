@@ -1,6 +1,7 @@
 ---
 name: structural-identifier-completeness-checking
-description: Use when preprocessing open mass spectrometry libraries (OMSLs) or aggregated spectral datasets where structural identifiers are inconsistently populated.
+description: Use when preprocessing open mass spectrometry libraries (OMSLs) or aggregated
+  spectral datasets where structural identifiers are inconsistently populated.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +17,11 @@ metadata:
   - PubChem
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

@@ -1,6 +1,9 @@
 ---
 name: database-record-conditional-update
-description: 'Use when when processing mass spectrometry spectral records from a database where critical fields (e.g., adduct annotation) are absent or null, and you have a secondary field (e.g., ionmode: ''pos''/''neg'') that can deterministically populate the missing field.'
+description: 'Use when when processing mass spectrometry spectral records from a database
+  where critical fields (e.g., adduct annotation) are absent or null, and you have
+  a secondary field (e.g., ionmode: ''pos''/''neg'') that can deterministically populate
+  the missing field.'
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -14,6 +17,11 @@ metadata:
   - RDkit
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

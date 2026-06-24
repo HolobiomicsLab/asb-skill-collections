@@ -1,6 +1,7 @@
 ---
 name: lc-hrms-2d-area-standardization
-description: Use when after detecting local-maxima in LC-HRMS profile mode datasets and before training or inference with a CNN model for peak classification.
+description: Use when after detecting local-maxima in LC-HRMS profile mode datasets
+  and before training or inference with a CNN model for peak classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -14,6 +15,11 @@ metadata:
   - OpenMS TOPPView
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

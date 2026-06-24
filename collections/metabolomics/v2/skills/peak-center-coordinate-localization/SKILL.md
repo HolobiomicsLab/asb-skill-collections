@@ -1,6 +1,9 @@
 ---
 name: peak-center-coordinate-localization
-description: Use when you have LC-HRMS profile mode data with candidate peak regions (local maxima) exported as standardized rt×mz two-dimensional areas, and you need to automatically predict the precise peak-center location (both rt and mz coordinates) rather than relying on manual inspection or simple.
+description: Use when you have LC-HRMS profile mode data with candidate peak regions
+  (local maxima) exported as standardized rt×mz two-dimensional areas, and you need
+  to automatically predict the precise peak-center location (both rt and mz coordinates)
+  rather than relying on manual inspection or simple.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3632
@@ -12,6 +15,11 @@ metadata:
   - PeakBot
   - TensorFlow
   - OpenMS / TOPPView
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

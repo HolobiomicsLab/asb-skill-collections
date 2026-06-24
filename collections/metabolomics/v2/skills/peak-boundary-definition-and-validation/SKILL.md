@@ -1,6 +1,9 @@
 ---
 name: peak-boundary-definition-and-validation
-description: Use when after nontargeted peak detection has identified candidate peaks in LC-MS chromatograms, when you need to establish exact peak start/end retention times and extract peak-level metadata (intensity, width, shape) for downstream feature quality evaluation and annotation workflows.
+description: Use when after nontargeted peak detection has identified candidate peaks
+  in LC-MS chromatograms, when you need to establish exact peak start/end retention
+  times and extract peak-level metadata (intensity, width, shape) for downstream feature
+  quality evaluation and annotation workflows.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3215
@@ -12,12 +15,19 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:

@@ -1,6 +1,9 @@
 ---
 name: training-data-generation-from-reference-features
-description: Use when you have isolated, manually curated reference chromatographic peaks (ground-truth features) matched to local maxima detected in LC-HRMS profile-mode data, and you need to train a CNN classifier to distinguish peaks from background signals across diverse sample compositions.
+description: Use when you have isolated, manually curated reference chromatographic
+  peaks (ground-truth features) matched to local maxima detected in LC-HRMS profile-mode
+  data, and you need to train a CNN classifier to distinguish peaks from background
+  signals across diverse sample compositions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3799
@@ -13,6 +16,11 @@ metadata:
   - TensorFlow
   - CUDA Toolkit and cuDNN
   - OpenMS/TOPPView
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

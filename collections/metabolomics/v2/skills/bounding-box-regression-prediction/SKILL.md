@@ -1,6 +1,9 @@
 ---
 name: bounding-box-regression-prediction
-description: Use when when you have a trained CNN binary classifier for peak detection on rt×mz LC-HRMS images and need to additionally output precise bounding-box coordinates (left, right, top, bottom) and peak-center pixel positions for each detected peak to enable accurate feature quantitation or visual.
+description: Use when when you have a trained CNN binary classifier for peak detection
+  on rt×mz LC-HRMS images and need to additionally output precise bounding-box coordinates
+  (left, right, top, bottom) and peak-center pixel positions for each detected peak
+  to enable accurate feature quantitation or visual.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3443
@@ -13,6 +16,11 @@ metadata:
   - PeakBot
   - CUDA/cuDNN
   - OpenMS/TOPPView
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

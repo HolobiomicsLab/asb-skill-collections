@@ -1,6 +1,9 @@
 ---
 name: model-validation-on-chromatographic-standards
-description: Use when after training a CNN model on labeled rt×mz two-dimensional areas extracted from LC-HRMS data, use this skill to quantify model performance on a held-out test set of reference chromatograms before deploying the model for peak detection on new samples.
+description: Use when after training a CNN model on labeled rt×mz two-dimensional
+  areas extracted from LC-HRMS data, use this skill to quantify model performance
+  on a held-out test set of reference chromatograms before deploying the model for
+  peak detection on new samples.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3435
@@ -12,6 +15,11 @@ metadata:
   - PeakBot
   - TensorFlow
   - TOPPView (OpenMS)
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

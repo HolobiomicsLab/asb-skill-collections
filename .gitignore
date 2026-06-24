@@ -42,3 +42,4 @@ outputs/
 
 # License clarification wave output (runtime artifact — not committed)
 governance/license_clarification/wave.yaml
+.license-cache-v2.json

@@ -1,6 +1,8 @@
 ---
 name: in-silico-spectrum-metadata-curation
-description: Use when when processing collections of in-silico mass spectra from OMSLs (Open Mass Spectra Libraries) where the adduct field is absent, null, or not explicitly specified in the source file;
+description: Use when when processing collections of in-silico mass spectra from OMSLs
+  (Open Mass Spectra Libraries) where the adduct field is absent, null, or not explicitly
+  specified in the source file;
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -13,6 +15,11 @@ metadata:
   - spectra-hash
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

@@ -1,6 +1,7 @@
 ---
 name: molecular-identifier-completeness-verification
-description: Use when during MSP, MGF, JSON, or CSV file parsing when standardizing mass spectra from heterogeneous open mass spectral libraries (OMSLs).
+description: Use when during MSP, MGF, JSON, or CSV file parsing when standardizing
+  mass spectra from heterogeneous open mass spectral libraries (OMSLs).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3695
@@ -16,6 +17,11 @@ metadata:
   - FragHub
   techniques:
   - GC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub
