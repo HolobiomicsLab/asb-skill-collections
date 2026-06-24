@@ -10,9 +10,12 @@ Usage:
     python3 -m scripts.license_clarification_issues \\
         --corpus collections/metabolomics/v2/corpus.yaml \\
         --create --limit 5 --out governance/license_clarification/wave.yaml
+
+    python3 -m scripts.license_clarification_issues verify
 """
 from __future__ import annotations
 
+import datetime
 import pathlib
 import re
 import subprocess
@@ -32,6 +35,44 @@ _VALID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
 # F3 — patterns for junk display names that should fall back to repo slug
 _DOI_PAT = re.compile(r"^10\.\d")
 _FILENAME_PAT = re.compile(r"\.(R|py|jar|ipynb)$")
+
+# ---------------------------------------------------------------------------
+# Ledger
+# ---------------------------------------------------------------------------
+
+LEDGER_PATH = pathlib.Path("governance/license_clarification/deployments.yaml")
+_LEDGER_SCHEMA = "license-clarification-deployments/1"
+
+
+def load_ledger(path: pathlib.Path = LEDGER_PATH) -> dict:
+    """Load the deployments ledger, returning an empty-skeleton if missing."""
+    if not path.exists():
+        return {"schema": _LEDGER_SCHEMA, "deployments": []}
+    doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+    if doc is None:
+        return {"schema": _LEDGER_SCHEMA, "deployments": []}
+    return doc
+
+
+def append_deployment(path: pathlib.Path = LEDGER_PATH, record: dict = None) -> bool:
+    """Append *record* to the ledger unless a deployment with the same repo exists.
+
+    Returns True if the record was appended, False if it was a duplicate.
+    Writes the updated ledger back to *path*.
+    """
+    if record is None:
+        return False
+    ledger = load_ledger(path)
+    existing_repos = {d.get("repo") for d in ledger.get("deployments", [])}
+    if record.get("repo") in existing_repos:
+        return False
+    ledger.setdefault("deployments", []).append(record)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        yaml.safe_dump(ledger, sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
+    )
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -241,6 +282,10 @@ def run(
     _list: Callable[[str, str], list[str]] | None = None,
     _create: Callable | None = None,
     _sleep: Callable | None = None,
+    ledger_path: pathlib.Path = LEDGER_PATH,
+    wave_label: str = "manual",
+    today: str | None = None,
+    _append: Callable = append_deployment,
 ) -> list[dict]:
     """Build a plan from candidates and optionally execute it.
 
@@ -251,6 +296,10 @@ def run(
         _list: Injected list function (default: _default_list).
         _create: Injected create function (default: create_issue).
         _sleep: Injected sleep function (default: time.sleep).
+        ledger_path: Path to deployments.yaml ledger.
+        wave_label: Wave identifier stored in the ledger record.
+        today: ISO date string for filed_on (default: today).
+        _append: Injected append function (default: append_deployment).
 
     Returns:
         List of dicts with keys: name, owner, repo, title, action, [url].
@@ -263,6 +312,8 @@ def run(
         _create = create_issue
     if _sleep is None:
         _sleep = time.sleep
+    if today is None:
+        today = datetime.date.today().isoformat()
 
     # F7 — guard _create is callable when create=True
     if create:
@@ -300,7 +351,128 @@ def run(
             plan.append({"name": name, "owner": owner, "repo": repo, "title": title, "action": "created", "url": url})
             created_count += 1  # F6 — increment on each successful create
 
+            # Append to ledger (dry-run=False only)
+            _append(
+                ledger_path,
+                {
+                    "repo": f"{owner}/{repo}",
+                    "tool_names": c.get("tool_names", [name]),
+                    "doi": c.get("doi") or None,
+                    "issue_url": url,
+                    "filed_on": today,
+                    "wave": wave_label,
+                    "status": "open",
+                    "license_after": None,
+                    "last_checked": None,
+                },
+            )
+
     return plan
+
+
+# ---------------------------------------------------------------------------
+# verify_deployments
+# ---------------------------------------------------------------------------
+
+def _default_issue_state(issue_url: str) -> dict:
+    """Fetch issue state and comments count via gh CLI."""
+    result = subprocess.run(
+        [
+            "gh", "issue", "view", issue_url,
+            "--json", "state,comments",
+            "-q", "{state: .state, comments: (.comments | length)}",
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        return {"state": "unknown", "comments": 0}
+    import json
+    try:
+        return json.loads(result.stdout.strip())
+    except Exception:
+        return {"state": "unknown", "comments": 0}
+
+
+def _default_repo_license(owner: str, repo: str) -> str | None:
+    """Fetch the SPDX license identifier for owner/repo via gh CLI."""
+    result = subprocess.run(
+        [
+            "gh", "repo", "view", f"{owner}/{repo}",
+            "--json", "licenseInfo",
+            "-q", ".licenseInfo.spdxId // empty",
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        return None
+    spdx = result.stdout.strip()
+    if not spdx or spdx.upper() == "NOASSERTION":
+        return None
+    return spdx
+
+
+def verify_deployments(
+    ledger_path: pathlib.Path = LEDGER_PATH,
+    _issue_state: Callable | None = None,
+    _repo_license: Callable | None = None,
+    today: str | None = None,
+) -> dict:
+    """Check each deployment and update status/license_after in the ledger.
+
+    Args:
+        ledger_path: Path to deployments.yaml.
+        _issue_state: Injected fn(issue_url) -> {"state": str, "comments": int}.
+        _repo_license: Injected fn(owner, repo) -> spdx_id | None.
+        today: ISO date string for last_checked (default: today).
+
+    Returns:
+        Summary dict mapping status -> count.
+    """
+    if _issue_state is None:
+        _issue_state = _default_issue_state
+    if _repo_license is None:
+        _repo_license = _default_repo_license
+    if today is None:
+        today = datetime.date.today().isoformat()
+
+    ledger = load_ledger(ledger_path)
+    deployments = ledger.get("deployments", [])
+
+    summary: dict[str, int] = {}
+    for d in deployments:
+        d["last_checked"] = today
+        repo_slug = d.get("repo", "")
+        owner, _, repo = repo_slug.partition("/")
+
+        # Check if repo now has a license
+        spdx = _repo_license(owner, repo) if (owner and repo) else None
+        if spdx:
+            d["status"] = "license-added"
+            d["license_after"] = spdx
+        else:
+            # Check issue state
+            issue_url = d.get("issue_url", "")
+            state_info = _issue_state(issue_url) if issue_url else {"state": "unknown", "comments": 0}
+            issue_state = state_info.get("state", "unknown")
+            comments = state_info.get("comments", 0)
+
+            if issue_state == "CLOSED":
+                d["status"] = "closed"
+            elif comments and int(comments) > 0:
+                d["status"] = "responded"
+            # else keep existing status (open or whatever it was)
+
+        summary[d["status"]] = summary.get(d["status"], 0) + 1
+
+    # Write back
+    ledger_path.parent.mkdir(parents=True, exist_ok=True)
+    ledger_path.write_text(
+        yaml.safe_dump(ledger, sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
+    )
+    return summary
 
 
 # ---------------------------------------------------------------------------
@@ -310,6 +482,23 @@ def run(
 def main(argv=None) -> int:
     import argparse
 
+    # Dispatch to verify subcommand before full argparse
+    _argv = argv if argv is not None else sys.argv[1:]
+    if _argv and _argv[0] == "verify":
+        summary = verify_deployments()
+        print("Verify summary:")
+        for status, count in sorted(summary.items()):
+            print(f"  {status}: {count}")
+        newly_notable = [
+            d for d in load_ledger().get("deployments", [])
+            if d.get("status") in ("license-added", "responded")
+        ]
+        if newly_notable:
+            print("\nNotable updates:")
+            for d in newly_notable:
+                print(f"  {d['repo']}  status={d['status']}  license_after={d.get('license_after')}")
+        return 0
+
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--corpus", required=True, help="Path to corpus.yaml")
     ap.add_argument("--create", action="store_true", default=False,
@@ -318,7 +507,7 @@ def main(argv=None) -> int:
                     help="Cap the number of issues to process")
     ap.add_argument("--out", default="governance/license_clarification/wave.yaml",
                     help="Write plan as YAML to this path")
-    args = ap.parse_args(argv)
+    args = ap.parse_args(_argv)
 
     if args.create:
         print("⚠️  --create is set: issues WILL be filed. Ctrl-C to abort.")

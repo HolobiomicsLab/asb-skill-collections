@@ -141,6 +141,7 @@ def test_run_dry_run_never_calls_create(tmp_path):
         _list=lambda o, r: [],
         _create=_evil_create,
         _sleep=lambda n: None,
+        _append=lambda path, record: True,  # prevent writing to real ledger
     )
 
     assert len(plan) >= 1
@@ -196,6 +197,7 @@ def test_run_create_true_calls_create_and_skips(tmp_path):
         _list=_fake_list,
         _create=_fake_create,
         _sleep=lambda n: None,
+        _append=lambda path, record: True,  # prevent writing to real ledger
     )
 
     assert len(plan) == 2
@@ -419,6 +421,7 @@ def test_run_skips_on_list_error(tmp_path):
         _list=_raising_list,
         _create=_fake_create,
         _sleep=lambda n: None,
+        _append=lambda path, record: True,  # prevent writing to real ledger
     )
 
     assert len(plan) == 1
@@ -500,6 +503,7 @@ def test_sleep_called_before_second_create_not_first(tmp_path):
         _list=lambda o, r: [],  # no pre-existing issues
         _create=_fake_create,
         _sleep=_fake_sleep,
+        _append=lambda path, record: True,  # prevent writing to real ledger
     )
 
     # 3 creates happened
@@ -554,6 +558,7 @@ def test_sleep_not_called_when_first_entry_skipped(tmp_path):
         _list=_fake_list,
         _create=_fake_create,
         _sleep=_fake_sleep,
+        _append=lambda path, record: True,  # prevent writing to real ledger
     )
 
     # SkipMe skipped, CreateMe created
@@ -564,3 +569,353 @@ def test_sleep_not_called_when_first_entry_skipped(tmp_path):
     # No sleep before the first (and only) create
     assert len(sleep_calls) == 0
     assert len(create_calls) == 1
+
+
+# ---------------------------------------------------------------------------
+# Ledger — load_ledger / append_deployment
+# ---------------------------------------------------------------------------
+
+def test_load_ledger_returns_empty_skeleton_when_missing(tmp_path):
+    """load_ledger returns the empty schema skeleton when the file doesn't exist."""
+    from scripts.license_clarification_issues import load_ledger
+
+    ledger_path = tmp_path / "deployments.yaml"
+    result = load_ledger(ledger_path)
+    assert result["schema"] == "license-clarification-deployments/1"
+    assert result["deployments"] == []
+
+
+def test_append_deployment_appends_new_repo(tmp_path):
+    """append_deployment adds a new record and returns True."""
+    from scripts.license_clarification_issues import append_deployment, load_ledger
+
+    ledger_path = tmp_path / "deps.yaml"
+    record = {
+        "repo": "owner1/repoA",
+        "tool_names": ["ToolA"],
+        "doi": "10.1000/aaa",
+        "issue_url": "https://github.com/owner1/repoA/issues/1",
+        "filed_on": "2026-06-24",
+        "wave": "trial-2026-06-24",
+        "status": "open",
+        "license_after": None,
+        "last_checked": None,
+    }
+    result = append_deployment(ledger_path, record)
+    assert result is True
+
+    ledger = load_ledger(ledger_path)
+    assert len(ledger["deployments"]) == 1
+    assert ledger["deployments"][0]["repo"] == "owner1/repoA"
+
+
+def test_append_deployment_dedup_same_repo(tmp_path):
+    """append_deployment returns False and does NOT duplicate when repo already exists."""
+    from scripts.license_clarification_issues import append_deployment, load_ledger
+
+    ledger_path = tmp_path / "deps.yaml"
+    record = {
+        "repo": "owner1/repoA",
+        "tool_names": ["ToolA"],
+        "doi": "10.1000/aaa",
+        "issue_url": "https://github.com/owner1/repoA/issues/1",
+        "filed_on": "2026-06-24",
+        "wave": "trial",
+        "status": "open",
+        "license_after": None,
+        "last_checked": None,
+    }
+    append_deployment(ledger_path, record)
+    second_result = append_deployment(ledger_path, record)
+
+    assert second_result is False
+    ledger = load_ledger(ledger_path)
+    assert len(ledger["deployments"]) == 1  # still only 1
+
+
+# ---------------------------------------------------------------------------
+# Ledger — run() wires _append on created issues, skips on dry-run
+# ---------------------------------------------------------------------------
+
+def test_run_create_true_appends_to_ledger(tmp_path):
+    """run(create=True) calls _append once per created issue."""
+    from scripts.license_clarification_issues import run
+
+    append_calls = []
+
+    def _spy_append(path, record):
+        append_calls.append(record)
+        return True
+
+    def _fake_create(owner, repo, title, body, _run=None):
+        return f"https://github.com/{owner}/{repo}/issues/42"
+
+    path = _write_corpus(tmp_path)  # 1 candidate: owner1/repoA
+
+    plan = run(
+        path,
+        create=True,
+        _list=lambda o, r: [],
+        _create=_fake_create,
+        _sleep=lambda n: None,
+        ledger_path=tmp_path / "deps.yaml",
+        wave_label="test-wave",
+        today="2026-06-24",
+        _append=_spy_append,
+    )
+
+    created = [item for item in plan if item["action"] == "created"]
+    assert len(created) == 1
+    assert len(append_calls) == 1
+
+    rec = append_calls[0]
+    assert rec["repo"] == "owner1/repoA"
+    assert rec["wave"] == "test-wave"
+    assert rec["filed_on"] == "2026-06-24"
+    assert rec["status"] == "open"
+    assert rec["issue_url"] == "https://github.com/owner1/repoA/issues/42"
+
+
+def test_run_dry_run_does_not_append(tmp_path):
+    """run(create=False) never calls _append."""
+    from scripts.license_clarification_issues import run
+
+    append_calls = []
+
+    def _spy_append(path, record):
+        append_calls.append(record)
+        return True
+
+    path = _write_corpus(tmp_path)
+
+    run(
+        path,
+        create=False,
+        _list=lambda o, r: [],
+        _create=None,
+        _sleep=lambda n: None,
+        ledger_path=tmp_path / "deps.yaml",
+        _append=_spy_append,
+    )
+
+    assert len(append_calls) == 0
+
+
+# ---------------------------------------------------------------------------
+# verify_deployments
+# ---------------------------------------------------------------------------
+
+def _make_ledger(tmp_path, deployments: list[dict]) -> "pathlib.Path":
+    import pathlib
+    p = tmp_path / "deployments.yaml"
+    doc = {
+        "schema": "license-clarification-deployments/1",
+        "deployments": deployments,
+    }
+    p.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True), encoding="utf-8")
+    return p
+
+
+def test_verify_license_added(tmp_path):
+    """Repo that now has a license → status=license-added, license_after=MIT."""
+    from scripts.license_clarification_issues import verify_deployments
+
+    ledger_path = _make_ledger(tmp_path, [
+        {
+            "repo": "owner1/repoA",
+            "tool_names": ["ToolA"],
+            "doi": "10.x/y",
+            "issue_url": "https://github.com/owner1/repoA/issues/1",
+            "filed_on": "2026-06-24",
+            "wave": "trial",
+            "status": "open",
+            "license_after": None,
+            "last_checked": None,
+        }
+    ])
+
+    summary = verify_deployments(
+        ledger_path=ledger_path,
+        _issue_state=lambda url: {"state": "OPEN", "comments": 0},
+        _repo_license=lambda o, r: "MIT",
+        today="2026-06-24",
+    )
+
+    assert summary.get("license-added") == 1
+
+    ledger = yaml.safe_load(ledger_path.read_text())
+    d = ledger["deployments"][0]
+    assert d["status"] == "license-added"
+    assert d["license_after"] == "MIT"
+    assert d["last_checked"] == "2026-06-24"
+
+
+def test_verify_closed_issue(tmp_path):
+    """Closed issue with no license → status=closed."""
+    from scripts.license_clarification_issues import verify_deployments
+
+    ledger_path = _make_ledger(tmp_path, [
+        {
+            "repo": "owner2/repoB",
+            "tool_names": ["ToolB"],
+            "doi": None,
+            "issue_url": "https://github.com/owner2/repoB/issues/5",
+            "filed_on": "2026-06-24",
+            "wave": "trial",
+            "status": "open",
+            "license_after": None,
+            "last_checked": None,
+        }
+    ])
+
+    summary = verify_deployments(
+        ledger_path=ledger_path,
+        _issue_state=lambda url: {"state": "CLOSED", "comments": 0},
+        _repo_license=lambda o, r: None,
+        today="2026-06-24",
+    )
+
+    assert summary.get("closed") == 1
+    ledger = yaml.safe_load(ledger_path.read_text())
+    assert ledger["deployments"][0]["status"] == "closed"
+
+
+def test_verify_responded(tmp_path):
+    """Open issue with comments > 0 → status=responded."""
+    from scripts.license_clarification_issues import verify_deployments
+
+    ledger_path = _make_ledger(tmp_path, [
+        {
+            "repo": "owner3/repoC",
+            "tool_names": ["ToolC"],
+            "doi": None,
+            "issue_url": "https://github.com/owner3/repoC/issues/7",
+            "filed_on": "2026-06-24",
+            "wave": "trial",
+            "status": "open",
+            "license_after": None,
+            "last_checked": None,
+        }
+    ])
+
+    summary = verify_deployments(
+        ledger_path=ledger_path,
+        _issue_state=lambda url: {"state": "OPEN", "comments": 2},
+        _repo_license=lambda o, r: None,
+        today="2026-06-24",
+    )
+
+    assert summary.get("responded") == 1
+    ledger = yaml.safe_load(ledger_path.read_text())
+    assert ledger["deployments"][0]["status"] == "responded"
+
+
+def test_verify_still_open(tmp_path):
+    """Open issue, no comments, no license → status stays open."""
+    from scripts.license_clarification_issues import verify_deployments
+
+    ledger_path = _make_ledger(tmp_path, [
+        {
+            "repo": "owner4/repoD",
+            "tool_names": ["ToolD"],
+            "doi": None,
+            "issue_url": "https://github.com/owner4/repoD/issues/3",
+            "filed_on": "2026-06-24",
+            "wave": "trial",
+            "status": "open",
+            "license_after": None,
+            "last_checked": None,
+        }
+    ])
+
+    summary = verify_deployments(
+        ledger_path=ledger_path,
+        _issue_state=lambda url: {"state": "OPEN", "comments": 0},
+        _repo_license=lambda o, r: None,
+        today="2026-06-24",
+    )
+
+    assert summary.get("open") == 1
+    ledger = yaml.safe_load(ledger_path.read_text())
+    assert ledger["deployments"][0]["status"] == "open"
+    assert ledger["deployments"][0]["last_checked"] == "2026-06-24"
+
+
+def test_verify_mixed_summary(tmp_path):
+    """Mixed deployments produce correct summary counts."""
+    from scripts.license_clarification_issues import verify_deployments
+
+    ledger_path = _make_ledger(tmp_path, [
+        {
+            "repo": "o/r1", "tool_names": [], "doi": None,
+            "issue_url": "https://github.com/o/r1/issues/1",
+            "filed_on": "2026-06-24", "wave": "t", "status": "open",
+            "license_after": None, "last_checked": None,
+        },
+        {
+            "repo": "o/r2", "tool_names": [], "doi": None,
+            "issue_url": "https://github.com/o/r2/issues/2",
+            "filed_on": "2026-06-24", "wave": "t", "status": "open",
+            "license_after": None, "last_checked": None,
+        },
+        {
+            "repo": "o/r3", "tool_names": [], "doi": None,
+            "issue_url": "https://github.com/o/r3/issues/3",
+            "filed_on": "2026-06-24", "wave": "t", "status": "open",
+            "license_after": None, "last_checked": None,
+        },
+        {
+            "repo": "o/r4", "tool_names": [], "doi": None,
+            "issue_url": "https://github.com/o/r4/issues/4",
+            "filed_on": "2026-06-24", "wave": "t", "status": "open",
+            "license_after": None, "last_checked": None,
+        },
+    ])
+
+    def _fake_license(o, r):
+        if r == "r1":
+            return "Apache-2.0"
+        return None
+
+    def _fake_state(url):
+        if "r2" in url:
+            return {"state": "CLOSED", "comments": 0}
+        if "r3" in url:
+            return {"state": "OPEN", "comments": 3}
+        return {"state": "OPEN", "comments": 0}
+
+    summary = verify_deployments(
+        ledger_path=ledger_path,
+        _issue_state=_fake_state,
+        _repo_license=_fake_license,
+        today="2026-06-24",
+    )
+
+    assert summary.get("license-added") == 1
+    assert summary.get("closed") == 1
+    assert summary.get("responded") == 1
+    assert summary.get("open") == 1
+
+
+def test_verify_writes_ledger_back(tmp_path):
+    """verify_deployments writes the updated ledger back to disk."""
+    from scripts.license_clarification_issues import verify_deployments
+
+    ledger_path = _make_ledger(tmp_path, [
+        {
+            "repo": "o/r1", "tool_names": [], "doi": None,
+            "issue_url": "https://github.com/o/r1/issues/1",
+            "filed_on": "2026-06-24", "wave": "t", "status": "open",
+            "license_after": None, "last_checked": None,
+        }
+    ])
+
+    verify_deployments(
+        ledger_path=ledger_path,
+        _issue_state=lambda url: {"state": "OPEN", "comments": 0},
+        _repo_license=lambda o, r: None,
+        today="2026-07-01",
+    )
+
+    ledger = yaml.safe_load(ledger_path.read_text())
+    assert ledger["deployments"][0]["last_checked"] == "2026-07-01"

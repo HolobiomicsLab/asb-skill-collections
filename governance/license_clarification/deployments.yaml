@@ -1,0 +1,52 @@
+schema: license-clarification-deployments/1
+deployments:
+- repo: Chen-micslab/QCCAssisted4DSterol
+  tool_names:
+  - NA
+  doi: 10.1002/anie.202507483
+  issue_url: https://github.com/Chen-micslab/QCCAssisted4DSterol/issues/1
+  filed_on: '2026-06-24'
+  wave: trial-2026-06-24
+  status: open
+  license_after: null
+  last_checked: '2026-06-24'
+- repo: matteogiulietti/LipidOne
+  tool_names:
+  - LipidOne 2.0
+  doi: 10.1002/cpz1.70009
+  issue_url: https://github.com/matteogiulietti/LipidOne/issues/1
+  filed_on: '2026-06-24'
+  wave: trial-2026-06-24
+  status: open
+  license_after: null
+  last_checked: '2026-06-24'
+- repo: Ansanqi/GutUDB
+  tool_names:
+  - GutUDB
+  doi: 10.1002/imt2.195
+  issue_url: https://github.com/Ansanqi/GutUDB/issues/1
+  filed_on: '2026-06-24'
+  wave: trial-2026-06-24
+  status: open
+  license_after: null
+  last_checked: '2026-06-24'
+- repo: MassBank/MassBank-data
+  tool_names:
+  - MassBank
+  doi: 10.1002/jms.1777
+  issue_url: https://github.com/MassBank/MassBank-data/issues/394
+  filed_on: '2026-06-24'
+  wave: trial-2026-06-24
+  status: open
+  license_after: null
+  last_checked: '2026-06-24'
+- repo: mariallr/easy-amanida
+  tool_names:
+  - Easy-Amanida
+  doi: 10.1002/jrsm.1713
+  issue_url: https://github.com/mariallr/easy-amanida/issues/2
+  filed_on: '2026-06-24'
+  wave: trial-2026-06-24
+  status: open
+  license_after: null
+  last_checked: '2026-06-24'
