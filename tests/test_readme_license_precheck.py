@@ -389,3 +389,100 @@ class TestRunPrecheck:
 
         assert "open" in summary["by_tier"]
         assert summary["by_tier"]["open"] == 1
+
+    def test_run_precheck_retries_then_skips_on_persistent_ratelimit(self, tmp_path):
+        """RateLimited on both attempts: entry recorded as error-ratelimited, no crash, no retier."""
+        from scripts.readme_license_precheck import run_precheck, RateLimited
+
+        corpus_path = self._make_corpus(tmp_path)
+
+        def boom_readme(owner, repo, token, _open=None):
+            raise RateLimited("429")
+
+        summary = run_precheck(
+            str(corpus_path),
+            api_key="fake-key",
+            token="fake-token",
+            _readme=boom_readme,
+            _chat=lambda p: '{}',
+            _sleep=lambda s: None,  # no-op sleep for instant tests
+        )
+
+        # Should have error count, no retier, still marked file-issue
+        assert summary["errors"] >= 1
+        assert summary["retiered"] == 0
+        assert summary["checked"] == 1
+        assert summary["still_file_issue"] == 1
+
+        # Corpus should remain unchanged
+        doc = yaml.safe_load(corpus_path.read_text(encoding="utf-8"))
+        paper = doc["papers"][0]
+        assert paper["license_tier"] == "restricted"
+        assert not paper.get("license_evidence")
+
+    def test_run_precheck_one_error_does_not_stop_others(self, tmp_path):
+        """First candidate raises error; second should still be processed and retiered."""
+        from scripts.readme_license_precheck import run_precheck
+
+        # Build a corpus with TWO candidates
+        paper1 = {
+            "name": "ToolA",
+            "doi": "10.1000/aaa",
+            "repo_url": "https://github.com/owner1/repoA",
+            "license_tier": "restricted",
+            "license_detection": "none",
+            "access": {"license": None},
+            "status": "included",
+        }
+        paper2 = {
+            "name": "ToolB",
+            "doi": "10.1000/bbb",
+            "repo_url": "https://github.com/owner2/repoB",
+            "license_tier": "restricted",
+            "license_detection": "none",
+            "access": {"license": None},
+            "status": "included",
+        }
+        corpus = {
+            "schema": "asb-corpus/1.0",
+            "papers": [paper1, paper2],
+        }
+        corpus_path = tmp_path / "corpus.yaml"
+        corpus_path.write_text(
+            yaml.safe_dump(corpus, allow_unicode=True, sort_keys=False),
+            encoding="utf-8",
+        )
+
+        # First _readme call fails; second succeeds
+        call_count = [0]
+
+        def selective_readme(owner, repo, token, _open=None):
+            call_count[0] += 1
+            if call_count[0] == 1:
+                raise Exception("Generic network error")
+            return "MIT License here."
+
+        chat_fn = self._chat_fn(
+            {"license": "MIT", "confidence": "high", "evidence": "MIT License here."}
+        )
+
+        summary = run_precheck(
+            str(corpus_path),
+            api_key="fake-key",
+            token="fake-token",
+            _readme=selective_readme,
+            _chat=chat_fn,
+            _sleep=lambda s: None,
+        )
+
+        # First call errored, second succeeded
+        assert summary["errors"] == 1
+        assert summary["retiered"] == 1  # second one succeeded
+        assert summary["checked"] == 2
+        assert summary["still_file_issue"] == 1  # first one
+
+        # Corpus should show second paper retiered, first unchanged
+        doc = yaml.safe_load(corpus_path.read_text(encoding="utf-8"))
+        assert doc["papers"][0]["license_tier"] == "restricted"  # unchanged
+        assert doc["papers"][1]["license_tier"] == "open"  # retiered
+        assert doc["papers"][1]["access"]["license"] == "MIT"

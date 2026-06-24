@@ -26,6 +26,7 @@ import json
 import os
 import pathlib
 import re
+import time
 import urllib.error
 import urllib.request
 from typing import Callable
@@ -34,6 +35,16 @@ import yaml
 
 from scripts.derive_license_tiers import classify_license_text, parse_repo
 from scripts.license_tier import tier_for_license
+
+
+# ---------------------------------------------------------------------------
+# Exceptions
+# ---------------------------------------------------------------------------
+
+class RateLimited(Exception):
+    """Raised when GitHub API returns a rate-limit error (403, 429)."""
+    pass
+
 
 # ---------------------------------------------------------------------------
 # fetch_readme
@@ -52,6 +63,7 @@ def fetch_readme(
     """Fetch the README for owner/repo via the GitHub API and return decoded text.
 
     Returns None on 404, empty content, or any other fetch failure.
+    Raises RateLimited on 403 or 429 (rate limit exceeded).
     """
     headers = {"Accept": "application/vnd.github+json"}
     if token:
@@ -63,7 +75,9 @@ def fetch_readme(
     except urllib.error.HTTPError as exc:
         if exc.code == 404:
             return None
-        raise
+        if exc.code in (403, 429):
+            raise RateLimited(f"GitHub rate limit exceeded: {exc.code}")
+        return None
     except Exception:
         return None
 
@@ -288,8 +302,10 @@ def run_precheck(
     api_key: str,
     token: str | None = None,
     limit: int | None = None,
+    sleep_s: float = 0.7,
     _readme: Callable = fetch_readme,
     _chat: Callable | None = None,
+    _sleep: Callable = time.sleep,
 ) -> dict:
     """Run the README license precheck over all issue-wave candidates.
 
@@ -302,11 +318,13 @@ def run_precheck(
         api_key: OpenRouter API key (used to build a default _chat if _chat is None).
         token: GitHub token for README fetches.
         limit: Cap the number of candidates processed (None = no limit).
+        sleep_s: Throttle delay in seconds (default 0.7).
         _readme: Injectable README fetch function.
         _chat: Injectable LLM chat function. If None, builds one from api_key.
+        _sleep: Injectable sleep function (for testing).
 
     Returns:
-        Summary dict: {checked, retiered, still_file_issue, by_tier: {tier: count}}.
+        Summary dict: {checked, retiered, still_file_issue, by_tier: {tier: count}, errors}.
     """
     from scripts.license_clarification_issues import candidates
 
@@ -332,9 +350,14 @@ def run_precheck(
     checked = 0
     retiered = 0
     still_file_issue = 0
+    errors = 0
     by_tier: dict[str, int] = {}
 
-    for c in cands:
+    for i, c in enumerate(cands):
+        # Throttle: sleep before each candidate (except the first)
+        if i > 0:
+            _sleep(sleep_s)
+
         owner, repo = c["owner"], c["repo"]
         # Find the matching paper(s) from the corpus
         paper_list = repo_to_papers.get((owner, repo), [])
@@ -344,12 +367,37 @@ def run_precheck(
         # Use the first matching paper for precheck (all share the same repo)
         representative = paper_list[0]
 
-        result = precheck_entry(
-            representative,
-            token=token,
-            _readme=_readme,
-            _chat=_chat,
-        )
+        # Wrap precheck_entry in try/except for resilience
+        try:
+            result = precheck_entry(
+                representative,
+                token=token,
+                _readme=_readme,
+                _chat=_chat,
+            )
+        except RateLimited:
+            # Retry once after a longer sleep
+            try:
+                _sleep(sleep_s * 8)
+                result = precheck_entry(
+                    representative,
+                    token=token,
+                    _readme=_readme,
+                    _chat=_chat,
+                )
+            except RateLimited:
+                # Persistent rate limit: record error and continue
+                errors += 1
+                checked += 1
+                still_file_issue += 1
+                continue
+        except Exception:
+            # Any other error: record and continue
+            errors += 1
+            checked += 1
+            still_file_issue += 1
+            continue
+
         checked += 1
 
         if result["action"] == "retier":
@@ -369,7 +417,7 @@ def run_precheck(
         else:
             still_file_issue += 1
 
-    # Write corpus back only if we made changes
+    # Write corpus back if we made changes (or if we had errors but some progress)
     if retiered > 0:
         path.write_text(
             yaml.safe_dump(doc, sort_keys=False, allow_unicode=True),
@@ -381,6 +429,7 @@ def run_precheck(
         "retiered": retiered,
         "still_file_issue": still_file_issue,
         "by_tier": by_tier,
+        "errors": errors,
     }
 
 
