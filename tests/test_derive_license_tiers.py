@@ -10,6 +10,13 @@ def test_parse_repo_variants():
     assert d.parse_repo("") is None
     assert d.parse_repo("https://example.org/x") is None
 
+def test_parse_repo_tolerates_punctuation_and_paths():
+    assert d.parse_repo("idrblab/NOREVA;") == ("idrblab", "NOREVA")
+    assert d.parse_repo("https://github.com/a/b/tree/main") == ("a", "b")
+    assert d.parse_repo("https://github.com/a/b?tab=readme") == ("a", "b")
+    assert d.parse_repo("https://github.com/a/b#readme") == ("a", "b")
+    assert d.parse_repo("https://github.com/a/b.git") == ("a", "b")   # still works
+
 def test_tier_for_repo_maps_spdx():
     fetch = lambda o, r, t: {"iomega/spec2vec": "Apache-2.0"}.get(f"{o}/{r}")
     assert d.tier_for_repo("https://github.com/iomega/spec2vec", _fetch=fetch) == ("open", "Apache-2.0")

@@ -23,8 +23,8 @@ def parse_repo(repo_url: str):
     """Extract (owner, repo) from a GitHub URL or 'owner/repo'; None if not GitHub."""
     if not repo_url:
         return None
-    s = repo_url.strip()
-    m = re.search(r"github\.com[/:]([^/]+)/([^/#?]+?)(?:\.git)?/?$", s)
+    s = repo_url.strip().rstrip(";,. ")
+    m = re.search(r"github\.com[/:]([^/]+)/([^/#?]+?)(?:\.git)?(?:[/#?].*)?$", s)
     if m:
         return m.group(1), m.group(2)
     m = re.fullmatch(r"([\w.-]+)/([\w.-]+)", s)
