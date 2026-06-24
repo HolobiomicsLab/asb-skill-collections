@@ -152,3 +152,20 @@ def test_apply_to_corpus_writes_license_detection(tmp_path):
     d.apply_to_corpus(str(corpus), token=None, _detect=det)
     p = yaml.safe_load(corpus.read_text())["papers"][0]
     assert p["license_tier"] == "open" and p["access"]["license"] == "MIT" and p["license_detection"] == "license-file"
+
+
+def test_full_cc_by_nc_text_classifies_nc():
+    # a realistic CC BY-NC file contains both the CC-BY phrase and "NonCommercial"
+    txt = "Creative Commons Attribution-NonCommercial 4.0 International Public License"
+    assert d.classify_license_text(txt) == "CC-BY-NC-4.0"
+
+
+def test_passing_mention_of_noncommercial_does_not_become_nc():
+    # a permissive license that merely mentions the word must NOT be classified NC
+    txt = "MIT License. Note: a noncommercial companion dataset is available separately."
+    assert d.classify_license_text(txt) == "MIT"   # MIT rule wins; not CC-BY-NC
+
+
+def test_custom_noncommercial_without_cc_phrases_is_unclassified():
+    txt = "This software is provided for noncommercial research purposes only."
+    assert d.classify_license_text(txt) is None     # falls through -> file-present-unclassified upstream

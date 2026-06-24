@@ -31,7 +31,7 @@ _TEXT_RULES = [
     ("BSD-3-Clause", ["redistribution and use in source and binary"]),
     ("ISC",          ["isc license"]),
     ("Unlicense",    ["this is free and unencumbered software released into the public domain"]),
-    ("CC-BY-NC-4.0", ["attribution-noncommercial", "cc by-nc", "by-nc", "noncommercial", "non-commercial"]),
+    ("CC-BY-NC-4.0", ["attribution-noncommercial", "cc by-nc"]),  # high-confidence CC-BY-NC phrases only; ambiguous "noncommercial" mentions fall through to file-present-unclassified
     ("CC-BY-4.0",    ["creative commons attribution", "creativecommons.org/licenses/by/", "cc by"]),
 ]
 
