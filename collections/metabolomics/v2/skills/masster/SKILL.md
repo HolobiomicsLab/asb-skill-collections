@@ -33,5 +33,4 @@ bundle is the consumer's own responsibility.
 ## Use
 
 1. Reference the tool at https://github.com/zamboni-lab/masster-dist (do not embed).
-2. Follow the workflow described at the Zamboni-lab blog post linked from the corpus
-   entry for untargeted metabolomics data analysis.
+2. Follow the workflow described at the Zamboni-lab blog post (https://metabolomics.blog/2026/03/how-we-analyze-untargeted-metabolomics-data/) for untargeted metabolomics data analysis.

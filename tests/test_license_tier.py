@@ -10,6 +10,8 @@ def test_spdx_exact_open():
 def test_copyleft_is_open():
     assert lt.tier_for_license("GPL-3.0-only") == "open"
     assert lt.tier_for_license("AGPL-3.0-or-later") == "open"
+    assert lt.tier_for_license("LGPL-2.1-only") == "open"
+    assert lt.tier_for_license("LGPL-2.0-or-later") == "open"
 
 def test_noncommercial_spdx_and_keyword():
     assert lt.tier_for_license("CC-BY-NC-4.0") == "noncommercial"

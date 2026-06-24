@@ -238,6 +238,8 @@ def clone_repo(url, dest, _run=subprocess.run):
         return False
 
 
+# Active once Phase 2 propagates license_tier into kb_bundle.json records; until then
+# only exercised by tests (bundle records carry no license_tier yet).
 def link_only(rec) -> bool:
     """Non-open tiers must never embed source content into shipped bundles."""
     return (rec.get("license_tier") or "open") in ("noncommercial", "restricted")

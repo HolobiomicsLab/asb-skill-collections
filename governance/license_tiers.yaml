@@ -16,6 +16,11 @@ spdx:
   AGPL-3.0-only: open
   AGPL-3.0-or-later: open
   LGPL-3.0-only: open
+  LGPL-3.0-or-later: open
+  LGPL-2.1-only: open
+  LGPL-2.1-or-later: open
+  LGPL-2.0-only: open
+  LGPL-2.0-or-later: open
   CC-BY-NC-4.0: noncommercial
   CC-BY-NC-3.0: noncommercial
   CC-BY-NC-SA-4.0: noncommercial

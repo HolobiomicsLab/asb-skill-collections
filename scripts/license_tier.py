@@ -13,6 +13,7 @@ _DEFAULT_MAP = pathlib.Path(__file__).resolve().parent.parent / "governance" / "
 
 
 def load_map(path: pathlib.Path | None = None) -> dict:
+    """Load the SPDX-to-tier governance map (governance/license_tiers.yaml)."""
     return yaml.safe_load((path or _DEFAULT_MAP).read_text(encoding="utf-8"))
 
 

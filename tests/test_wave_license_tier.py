@@ -1,5 +1,4 @@
-import pathlib, sys, yaml
-sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
+import pathlib, yaml
 
 WAVE = pathlib.Path(__file__).parent.parent / "collections/metabolomics/proposals/wave-2026-06-community.yaml"
 
