@@ -1,6 +1,9 @@
 ---
 name: eawag-database-rule-application
-description: Use when when you have small-molecule structures (SMILES or structure format) and need to predict their environmental biotransformation pathways under microbial degradation conditions, particularly when the degradation rules must be drawn from curated, experimentally-validated biodegradation.
+description: Use when when you have small-molecule structures (SMILES or structure
+  format) and need to predict their environmental biotransformation pathways under
+  microbial degradation conditions, particularly when the degradation rules must be
+  drawn from curated, experimentally-validated biodegradation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -10,11 +13,18 @@ metadata:
   tools:
   - BioTransformer
   - EnviPath
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
 evidence_spans:
-- BioTransformer's environmental microbial degradation module uses data from the EAWAG's Biodegradation and Biocatalysis Database
+- BioTransformer's environmental microbial degradation module uses data from the EAWAG's
+  Biodegradation and Biocatalysis Database
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1127,8 +1127,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
+    license: MIT
+  license_tier: open
+  license_locked: true
 - name: MSIannotator
   doi: 10.1021/acs.analchem.2c00557
   title: MSIannotator
@@ -2544,8 +2545,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
+    license: no LICENSE file found (verified 2026-06-24)
   license_tier: restricted
+  license_locked: true
 - name: MADByTE
   doi: 10.1021/acs.jnatprod.0c01076
   title: MADByTE
@@ -4871,8 +4873,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
+    license: Academic use free; commercial use/redistribution by permission of the
+      authors (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+  license_tier: noncommercial
+  license_locked: true
 - name: MetaboAnalyst 6.0
   doi: 10.1093/nar/gkae253
   title: MetaboAnalyst 6.0
@@ -5833,8 +5837,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
+    license: Academic use free; commercial use/redistribution by permission of the
+      authors (Wishart Lab).
+  license_tier: noncommercial
+  license_locked: true
 - name: BioTransformer 1.0
   doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -5846,8 +5852,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
+    license: Academic use free; commercial use/redistribution by permission of the
+      authors (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+  license_tier: noncommercial
+  license_locked: true
 - name: 10.1186/s13321-020-00449-0
   doi: 10.1186/s13321-020-00449-0
   title: 10.1186/s13321-020-00449-0
@@ -6080,8 +6088,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
+    license: Apache-2.0
+  license_tier: open
+  license_locked: true
 - name: minems2
   doi: 10.1186/s13321-025-01051-y
   title: minems2
@@ -6288,8 +6297,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
+    license: AGPL-3.0
+  license_tier: open
+  license_locked: true
 - name: 10.1371/journal.pcbi.1011814
   doi: 10.1371/journal.pcbi.1011814
   title: 10.1371/journal.pcbi.1011814
@@ -6574,8 +6584,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
+    license: no license found (verified 2026-06-24)
   license_tier: restricted
+  license_locked: true
 - name: GraphBio
   doi: 10.3389/fgene.2022.957317
   title: GraphBio

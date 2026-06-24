@@ -1,6 +1,9 @@
 ---
 name: rest-api-client-integration
-description: Use when you have a batch of chemical compounds (identifiers and structures in SMILES, InChI, or IUPAC format) that need to be submitted to a remote REST API for classification or analysis, and you require the server's response (query ID and status) to track or retrieve results asynchronously.
+description: Use when you have a batch of chemical compounds (identifiers and structures
+  in SMILES, InChI, or IUPAC format) that need to be submitted to a remote REST API
+  for classification or analysis, and you require the server's response (query ID
+  and status) to track or retrieve results asynchronously.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3763
@@ -12,6 +15,12 @@ metadata:
   - Ruby
   - rest-client gem
   - ClassyFire API
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab).
+    url: https://bitbucket.org/wishartlab/classyfire_api.git
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire

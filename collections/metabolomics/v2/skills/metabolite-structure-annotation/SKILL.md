@@ -1,6 +1,8 @@
 ---
 name: metabolite-structure-annotation
-description: Use when you have chemical structures (as SMILES or molecular structure formats) of environmental compounds and need to predict their microbial metabolites and degradation pathways.
+description: Use when you have chemical structures (as SMILES or molecular structure
+  formats) of environmental compounds and need to predict their microbial metabolites
+  and degradation pathways.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -10,11 +12,18 @@ metadata:
   tools:
   - BioTransformer
   - EnviPath
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
 evidence_spans:
-- BioTransformer's environmental microbial degradation module uses data from the EAWAG's Biodegradation and Biocatalysis Database
+- BioTransformer's environmental microbial degradation module uses data from the EAWAG's
+  Biodegradation and Biocatalysis Database
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-web-service-communication
-description: Use when you have a collection of chemical compounds (identified by name, SMILES, InChI, or other standard identifier) that you need to classify by structural features, and you want to submit them in batch to a remote web service rather than performing local computation.
+description: Use when you have a collection of chemical compounds (identified by name,
+  SMILES, InChI, or other standard identifier) that you need to classify by structural
+  features, and you want to submit them in batch to a remote web service rather than
+  performing local computation.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3346
@@ -11,6 +14,12 @@ metadata:
   - Ruby
   - rest-client gem
   - ClassyFire API
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab).
+    url: https://bitbucket.org/wishartlab/classyfire_api.git
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire

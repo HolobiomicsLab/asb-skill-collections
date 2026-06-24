@@ -1,6 +1,7 @@
 ---
 name: smiles-inchi-fasta-format-recognition
-description: Use when when you have a mixed batch of chemical structure queries in unknown or variable formats (e.
+description: Use when when you have a mixed batch of chemical structure queries in
+  unknown or variable formats (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -11,6 +12,12 @@ metadata:
   - Ruby
   - rest-client gem
   - ClassyFire API
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab).
+    url: https://bitbucket.org/wishartlab/classyfire_api.git
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire

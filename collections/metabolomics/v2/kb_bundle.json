@@ -5340,7 +5340,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bi-encoder-cross-encoder-architecture-design": {
       "dois": [
@@ -5914,7 +5914,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "bioinformatic-object-conversion": {
       "dois": [
@@ -6210,7 +6210,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "biotransformation-candidate-integration-with-networking": {
       "dois": [
@@ -6260,7 +6260,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "biotransformation-rule-application": {
       "dois": [
@@ -6277,7 +6277,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "biotransformation-rule-application-to-metabolites": {
       "dois": [
@@ -6327,7 +6327,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "bipartite-graph-layout-optimization": {
       "dois": [
@@ -7462,7 +7462,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "candidate-metadata-record-serialization": {
       "dois": [
@@ -8706,7 +8706,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "chemical-descriptor-extraction": {
       "dois": [
@@ -9558,7 +9558,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "chemical-structure-annotation-oracle-mode": {
       "dois": [
@@ -10034,7 +10034,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "chemical-transformation-annotation": {
       "dois": [
@@ -10199,7 +10199,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "cheminformatics-table-generation": {
       "dois": [
@@ -10998,7 +10998,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatographic-peak-detection-validation": {
       "dois": [
@@ -14258,7 +14258,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "compound-identifier-lookup": {
       "dois": [
@@ -14473,7 +14473,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "compound-reliability-filtering-by-rsd-threshold": {
       "dois": [
@@ -22997,7 +22997,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "distribution-channel-validation": {
       "dois": [
@@ -23751,7 +23751,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "domain-context-to-application-routing": {
       "dois": [
@@ -24469,7 +24469,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "edge-case-boundary-testing": {
       "dois": [
@@ -25841,7 +25841,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "environmental-microbial-degradation-prediction": {
       "dois": [
@@ -25859,7 +25859,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "environmental-microbial-metabolism-prediction": {
       "dois": [
@@ -25874,7 +25874,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "enzyme-family-classification-and-mapping": {
       "dois": [
@@ -25890,7 +25890,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "error-handling-confirmation": {
       "dois": [
@@ -28103,7 +28103,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "extracted-ion-chromatogram-generation": {
       "dois": [
@@ -35440,7 +35440,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gene-cluster-family-formation-and-similarity-clustering": {
       "dois": [
@@ -35478,7 +35478,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gene-expression-constraint-integration": {
       "dois": [
@@ -35605,7 +35605,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "generalized-additive-model-fitting": {
       "dois": [
@@ -35823,7 +35823,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "genomic-metabolomic-link-ranking": {
       "dois": [
@@ -39374,7 +39374,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "hybrid-model-fusion-strategy": {
       "dois": [
@@ -53440,7 +53440,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-feature-grouping": {
       "dois": [
@@ -59343,7 +59343,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-concentration-stoichiometric-mapping": {
       "dois": [
@@ -60484,7 +60484,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-identification-validation": {
       "dois": [
@@ -60519,7 +60519,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-identifier-conversion": {
       "dois": [
@@ -61310,7 +61310,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-prediction-threshold-determination": {
       "dois": [
@@ -61992,7 +61992,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-structure-annotation-integration": {
       "dois": [
@@ -62042,7 +62042,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-structure-prediction": {
       "dois": [
@@ -62058,7 +62058,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-tandem-ms-library-curation": {
       "dois": [
@@ -65361,7 +65361,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "microbial-genome-annotation-harmonization": {
       "dois": [
@@ -77066,7 +77066,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "network-topology-comparison": {
       "dois": [
@@ -80449,7 +80449,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "organism-count-distribution-analysis": {
       "dois": [
@@ -80529,7 +80529,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "organism-taxonomy-identifier-mapping": {
       "dois": [
@@ -82432,7 +82432,7 @@
         "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "parent-product-relationship-tracking": {
       "dois": [
@@ -86269,7 +86269,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pfas-candidate-prioritization-by-scoring": {
       "dois": [
@@ -92269,7 +92269,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "queued-spectrum-preview-generation": {
       "dois": [
@@ -94765,7 +94765,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "redundant-feature-identification-lcms": {
       "dois": [
@@ -96977,7 +96977,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "rest-api-contract-documentation": {
       "dois": [
@@ -97061,7 +97061,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "rest-api-query-and-response-parsing": {
       "dois": [
@@ -103133,7 +103133,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "similarity-ranking-and-retrieval-evaluation": {
       "dois": [
@@ -103765,7 +103765,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "small-molecule-structure-matching": {
       "dois": [
@@ -103780,7 +103780,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "smarts-pattern-design-for-microbial-degradation": {
       "dois": [
@@ -103795,7 +103795,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "smarts-pattern-matching-for-chemical-transformation": {
       "dois": [
@@ -103972,7 +103972,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "smiles-inchi-round-trip-validation": {
       "dois": [
@@ -104810,7 +104810,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "sonarcloud-static-code-analysis-integration": {
       "dois": [
@@ -110702,7 +110702,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-quality-filtering-signal-to-noise": {
       "dois": [
@@ -113707,7 +113707,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-summary-computation-median-range": {
       "dois": [
@@ -114376,7 +114376,7 @@
       "repo_urls": [
         "https://bitbucket.org/wishartlab/classyfire_api.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "structural-scaffold-feature-identification": {
       "dois": [
@@ -115090,7 +115090,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "sub-network-detection-from-scored-graphs": {
       "dois": [
@@ -115200,7 +115200,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "substrate-concentration-normalization": {
       "dois": [
@@ -116280,7 +116280,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tandem-mass-spectrometry-metadata-standardization": {
       "dois": [
@@ -118879,7 +118879,7 @@
       "repo_urls": [
         "https://git.wur.nl/bioinformatics/iPRESTO.git"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "topn-acquisition-parameter-tuning": {
       "dois": [

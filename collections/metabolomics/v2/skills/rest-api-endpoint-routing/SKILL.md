@@ -1,6 +1,8 @@
 ---
 name: rest-api-endpoint-routing
-description: Use when your input is a raw query string containing a chemical compound identifier and structural representation (e.g. tab-delimited compound ID + structure), and you need to submit it to the ClassyFire API for automatic structure-based classification.
+description: Use when your input is a raw query string containing a chemical compound
+  identifier and structural representation (e.g. tab-delimited compound ID + structure),
+  and you need to submit it to the ClassyFire API for automatic structure-based classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3767
@@ -11,6 +13,12 @@ metadata:
   - rest-client gem
   - Ruby
   - ClassyFire API
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab).
+    url: https://bitbucket.org/wishartlab/classyfire_api.git
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire

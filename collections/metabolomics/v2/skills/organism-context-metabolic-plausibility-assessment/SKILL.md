@@ -1,6 +1,9 @@
 ---
 name: organism-context-metabolic-plausibility-assessment
-description: Use when when BioTransformer or another metabolism predictor has generated a list of candidate metabolite structures (in SMILES or InChI format) for a query compound, and you need to identify which candidates are most likely to occur in a specific organism or environment (e.
+description: Use when when BioTransformer or another metabolism predictor has generated
+  a list of candidate metabolite structures (in SMILES or InChI format) for a query
+  compound, and you need to identify which candidates are most likely to occur in
+  a specific organism or environment (e.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3927
@@ -10,11 +13,18 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - BioTransformer
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
 evidence_spans:
-- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that predicts small molecule metabolism
+- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that
+  predicts small molecule metabolism
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

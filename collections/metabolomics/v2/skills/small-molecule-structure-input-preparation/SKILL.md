@@ -1,6 +1,9 @@
 ---
 name: small-molecule-structure-input-preparation
-description: Use when you have a small-molecule chemical structure in an initial or non-standard format and need to predict its environmental microbial degradation, gut microbiota metabolism, or mammalian biotransformation using BioTransformer's prediction modules.
+description: Use when you have a small-molecule chemical structure in an initial or
+  non-standard format and need to predict its environmental microbial degradation,
+  gut microbiota metabolism, or mammalian biotransformation using BioTransformer's
+  prediction modules.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3961
@@ -10,11 +13,18 @@ metadata:
   - http://edamontology.org/topic_3407
   tools:
   - BioTransformer
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer.git
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
 evidence_spans:
-- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that predicts small molecule metabolism
+- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that
+  predicts small molecule metabolism
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

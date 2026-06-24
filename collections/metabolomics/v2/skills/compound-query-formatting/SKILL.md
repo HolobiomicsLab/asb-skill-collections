@@ -1,6 +1,9 @@
 ---
 name: compound-query-formatting
-description: Use when you have a set of chemical compounds (identified by name, SMILES, InChI, or other standard identifier) that you need to classify using ClassyFire, and you must prepare them as a single batch query body for the submit_query POST request.
+description: Use when you have a set of chemical compounds (identified by name, SMILES,
+  InChI, or other standard identifier) that you need to classify using ClassyFire,
+  and you must prepare them as a single batch query body for the submit_query POST
+  request.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3778
@@ -11,6 +14,12 @@ metadata:
   - Ruby
   - rest-client
   - ClassyFire API
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab).
+    url: https://bitbucket.org/wishartlab/classyfire_api.git
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire

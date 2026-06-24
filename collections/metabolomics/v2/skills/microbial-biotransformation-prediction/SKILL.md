@@ -1,6 +1,9 @@
 ---
 name: microbial-biotransformation-prediction
-description: Use when when you have chemical structures (SMILES or molecular structure format) and need to forecast what metabolites environmental microbes would produce; particularly when assessing pollutant persistence, environmental fate, or xenobiotic degradation pathways in aquatic and terrestrial settings.
+description: Use when when you have chemical structures (SMILES or molecular structure
+  format) and need to forecast what metabolites environmental microbes would produce;
+  particularly when assessing pollutant persistence, environmental fate, or xenobiotic
+  degradation pathways in aquatic and terrestrial settings.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3802
@@ -11,11 +14,18 @@ metadata:
   tools:
   - BioTransformer
   - EnviPath
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
 evidence_spans:
-- BioTransformer's environmental microbial degradation module uses data from the EAWAG's Biodegradation and Biocatalysis Database
+- BioTransformer's environmental microbial degradation module uses data from the EAWAG's
+  Biodegradation and Biocatalysis Database
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

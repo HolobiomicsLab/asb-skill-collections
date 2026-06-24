@@ -1,6 +1,9 @@
 ---
 name: structural-representation-format-detection
-description: Use when when you have a mixed-format input query that may contain a compound identifier and a structural representation separated by a tab delimiter, and you need to determine which ClassyFire API endpoint (SMILES, InChI, IUPAC, or FASTA) to submit the query to for chemical classification.
+description: Use when when you have a mixed-format input query that may contain a
+  compound identifier and a structural representation separated by a tab delimiter,
+  and you need to determine which ClassyFire API endpoint (SMILES, InChI, IUPAC, or
+  FASTA) to submit the query to for chemical classification.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3357
@@ -11,6 +14,12 @@ metadata:
   - Ruby
   - rest-client gem
   - ClassyFire API
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab).
+    url: https://bitbucket.org/wishartlab/classyfire_api.git
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire

@@ -1,6 +1,9 @@
 ---
 name: compound-identifier-extraction
-description: Use when when you receive a raw query string destined for the ClassyFire API and need to distinguish between a user-supplied compound identifier (e.g., a database accession or common name) and the actual chemical structure representation (SMILES, InChI, IAPNIC name, or FASTA sequence).
+description: Use when when you receive a raw query string destined for the ClassyFire
+  API and need to distinguish between a user-supplied compound identifier (e.g., a
+  database accession or common name) and the actual chemical structure representation
+  (SMILES, InChI, IAPNIC name, or FASTA sequence).
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3096
@@ -10,6 +13,12 @@ metadata:
   tools:
   - Ruby
   - rest-client gem
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab).
+    url: https://bitbucket.org/wishartlab/classyfire_api.git
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire

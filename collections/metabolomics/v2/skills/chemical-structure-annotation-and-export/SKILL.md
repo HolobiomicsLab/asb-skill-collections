@@ -1,6 +1,9 @@
 ---
 name: chemical-structure-annotation-and-export
-description: Use when after executing BioTransformer's environmental microbial degradation module on a small-molecule input, when you need to capture predicted metabolites alongside the specific transformation rules applied and degradation pathway information in a format suitable for subsequent analysis.
+description: Use when after executing BioTransformer's environmental microbial degradation
+  module on a small-molecule input, when you need to capture predicted metabolites
+  alongside the specific transformation rules applied and degradation pathway information
+  in a format suitable for subsequent analysis.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3762
@@ -10,11 +13,18 @@ metadata:
   - http://edamontology.org/topic_2814
   tools:
   - BioTransformer
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer.git
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
 evidence_spans:
-- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that predicts small molecule metabolism
+- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that
+  predicts small molecule metabolism
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,6 +1,8 @@
 ---
 name: organism-specific-metabolism-pathway-assignment
-description: Use when you have observed metabolites (from LC-MS/MS, chromatography, or spectroscopy) whose identities are unknown, and you wish to constrain the candidate pool by leveraging organism-specific metabolism predictions.
+description: Use when you have observed metabolites (from LC-MS/MS, chromatography,
+  or spectroscopy) whose identities are unknown, and you wish to constrain the candidate
+  pool by leveraging organism-specific metabolism predictions.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3656
@@ -13,11 +15,18 @@ metadata:
   - EAWAG Biodegradation and Biocatalysis Database
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer.git
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
 evidence_spans:
-- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that predicts small molecule metabolism
+- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that
+  predicts small molecule metabolism
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

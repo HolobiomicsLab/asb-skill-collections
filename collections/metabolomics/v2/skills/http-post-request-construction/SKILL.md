@@ -1,6 +1,9 @@
 ---
 name: http-post-request-construction
-description: Use when you need to submit structured chemical compound data (identifiers and structural representations) to a remote REST API that accepts POST requests and returns JSON responses, particularly when the API requires tab-separated compound inputs separated by newlines and a query label as the.
+description: Use when you need to submit structured chemical compound data (identifiers
+  and structural representations) to a remote REST API that accepts POST requests
+  and returns JSON responses, particularly when the API requires tab-separated compound
+  inputs separated by newlines and a query label as the.
 license: CC-BY-4.0
 metadata:
   edam_operation: http://edamontology.org/operation_3760
@@ -9,6 +12,12 @@ metadata:
   tools:
   - Ruby
   - rest-client gem
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab).
+    url: https://bitbucket.org/wishartlab/classyfire_api.git
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire
