@@ -29,6 +29,7 @@ papers:
   category: Multifunctional
   repo_url: https://github.com/rformassspectrometry
   status: hold
+  license_tier: open
   wave: community-2026-06
   resource_type: software-ecosystem
   source_issue: 14   # filed alongside #13
@@ -59,6 +60,7 @@ papers:
   category: Multifunctional
   repo_url: https://github.com/rformassspectrometry/Metabonaut
   status: hold
+  license_tier: open
   wave: community-2026-06
   resource_type: tutorial-workflow
   source_issue: 14
@@ -88,6 +90,7 @@ papers:
   category: Formats
   repo_url: https://github.com/MetabolomicsHub
   status: hold
+  license_tier: open
   wave: community-2026-06
   resource_type: data-infrastructure
   source_issue: 11
@@ -121,6 +124,7 @@ papers:
   category: Multifunctional
   repo_url: https://github.com/zamboni-lab/masster-dist
   status: hold
+  license_tier: noncommercial
   wave: community-2026-06
   resource_type: software-tool
   source_issue: 12
@@ -137,10 +141,9 @@ papers:
     rationale: >-
       Tooling behind the Zamboni-lab untargeted metabolomics workflow described in the
       linked blog post. Potentially useful for full-workflow agent grounding.
-    decision: blocked
+    decision: accept
     notes: >-
-      ⚠️ BLOCKER: the repo's "Masster Noncommercial and Commercial Services License
-      1.0.0" is source-available but explicitly NON-open / non-OSI (commercial-use
-      restrictions). It fails the OPEN_ACCESS_POLICY OA gate, so it cannot be staged to
-      included — independent of the software-DOI policy. No citable DOI either. Ask
-      upstream for an open license + a citable reference before reconsidering.
+      Admissible as a noncommercial-tier skill (license_tier: noncommercial). Ship a
+      prose-only SKILL.md with link-only grounding and a runtime use-acknowledgment
+      gate; do NOT embed the repo. access.type stays "restricted" (OA axis unchanged) —
+      the license_tier is what makes it includable. Still status: hold pending merge.
