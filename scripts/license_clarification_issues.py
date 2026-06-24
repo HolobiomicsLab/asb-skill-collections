@@ -14,6 +14,7 @@ Usage:
 from __future__ import annotations
 
 import pathlib
+import re
 import subprocess
 import sys
 from typing import Callable
@@ -23,6 +24,41 @@ import yaml
 from scripts.derive_license_tiers import parse_repo
 
 _COLLECTION_URL = "https://github.com/HolobiomicsLab/asb-skill-collections"
+
+# F1 — safe identifier validator: must start with alphanumeric; allows dash, underscore, dot
+# Starting with alphanumeric guards against shell-flag injection (e.g. "--label").
+_VALID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
+
+# F3 — patterns for junk display names that should fall back to repo slug
+_DOI_PAT = re.compile(r"^10\.\d")
+_FILENAME_PAT = re.compile(r"\.(R|py|jar|ipynb)$")
+
+
+# ---------------------------------------------------------------------------
+# F3 — _display_name
+# ---------------------------------------------------------------------------
+
+def _display_name(name: str | None, repo: str) -> str:
+    """Return a human-readable tool name, falling back to repo when name is junk.
+
+    Falls back to `repo` when name is:
+    - falsy (None, empty string)
+    - equal to "NA"
+    - looks like a DOI (starts with "10.")
+    - looks like a filename (.R, .py, .jar, .ipynb extension)
+    - starts with a non-letter character (e.g. "--", digit-led strings)
+    """
+    if not name:
+        return repo
+    if name == "NA":
+        return repo
+    if _DOI_PAT.match(name):
+        return repo
+    if _FILENAME_PAT.search(name):
+        return repo
+    if not name[0].isalpha():
+        return repo
+    return name
 
 
 # ---------------------------------------------------------------------------
@@ -34,39 +70,65 @@ def candidates(corpus_path: str) -> list[dict]:
 
     Selection criteria (ALL must be true):
     - license_tier == "restricted"
-    - repo_url parses to a GitHub (owner, repo) via parse_repo
+    - repo_url is a github.com URL (F5: positive GitHub-only check)
+    - repo_url parses to a valid GitHub (owner, repo) via parse_repo
+    - both owner and repo pass _VALID injection guard (F1)
     - (p.get("access") or {}).get("license") is falsy
+
+    Deduplication: emits ONE entry per (owner, repo), collecting all tool_names (F2).
     """
     path = pathlib.Path(corpus_path)
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
-    result = []
+
+    # ordered dict keyed by (owner, repo) to collect all names (F2 dedup)
+    seen: dict[tuple[str, str], dict] = {}
+
     for p in doc.get("papers", []):
         if p.get("license_tier") != "restricted":
             continue
         repo_url = p.get("repo_url") or ""
+
+        # F5 — positive GitHub-only check:
+        # Accept only if github.com is in the URL, OR it is a bare "owner/repo" shorthand
+        # with no explicit hostname.
+        bare_shorthand = bool(re.match(r"^[\w.-]+/[\w.-]+$", repo_url.strip()))
+        if not ("github.com" in repo_url or bare_shorthand):
+            continue
+
         parsed = parse_repo(repo_url)
         if not parsed:
             continue
-        # parse_repo returns (owner, repo) for GitHub URLs or 'owner/repo' shorthand,
-        # but it also matches non-GitHub shorthand; we must confirm it is GitHub.
-        if repo_url and "github.com" not in repo_url and "/" in repo_url:
-            # shorthand owner/repo — parse_repo accepts these; treat as GitHub
-            # only when there's no explicit hostname that contradicts GitHub.
-            # For safety: if an explicit non-github hostname is present, skip.
-            pass
-        if repo_url and ("gitlab.com" in repo_url or "bitbucket" in repo_url
-                         or "sourceforge" in repo_url):
-            continue
+
         if (p.get("access") or {}).get("license"):
             continue
+
         owner, repo = parsed
-        result.append({
-            "name": p.get("name", ""),
-            "owner": owner,
-            "repo": repo,
-            "doi": p.get("doi", ""),
-        })
-    return result
+
+        # F1 — injection guard: skip entries with unsafe owner/repo
+        if not (_VALID.match(owner) and _VALID.match(repo)):
+            continue
+
+        name = p.get("name", "") or ""
+        doi = p.get("doi", "")
+        key = (owner, repo)
+
+        if key not in seen:
+            seen[key] = {
+                "name": _display_name(name, repo),
+                "owner": owner,
+                "repo": repo,
+                "doi": doi,
+                "tool_names": [name] if name else [],
+            }
+        else:
+            # F2 — accumulate tool names; upgrade display name if current is junk
+            if name and name not in seen[key]["tool_names"]:
+                seen[key]["tool_names"].append(name)
+            # upgrade to a better display name if current one fell back to repo
+            if seen[key]["name"] == repo and _display_name(name, repo) != repo:
+                seen[key]["name"] = _display_name(name, repo)
+
+    return list(seen.values())
 
 
 # ---------------------------------------------------------------------------
@@ -100,7 +162,11 @@ def render_issue(
 # ---------------------------------------------------------------------------
 
 def _default_list(owner: str, repo: str) -> list[str]:
-    """Shell out to gh to list existing issue titles."""
+    """Shell out to gh to list existing issue titles.
+
+    Raises RuntimeError (F4) on non-zero returncode so callers cannot silently
+    skip duplicate-prevention.
+    """
     result = subprocess.run(
         [
             "gh", "issue", "list",
@@ -114,7 +180,10 @@ def _default_list(owner: str, repo: str) -> list[str]:
         text=True,
     )
     if result.returncode != 0:
-        return []
+        raise RuntimeError(
+            f"gh issue list failed for {owner}/{repo} (exit {result.returncode}): "
+            f"{result.stderr.strip()}"
+        )
     return [line for line in result.stdout.splitlines() if line.strip()]
 
 
@@ -139,7 +208,15 @@ def create_issue(
     body: str,
     _run=subprocess.run,
 ) -> str:
-    """File a GitHub issue and return the created issue URL."""
+    """File a GitHub issue and return the created issue URL.
+
+    Raises ValueError (F1) if owner or repo contains unsafe characters.
+    The guard runs BEFORE any subprocess call.
+    """
+    # F1 — injection guard (must be first, before any subprocess call)
+    if not (_VALID.match(owner) and _VALID.match(repo)):
+        raise ValueError(f"unsafe repo identifier: {owner}/{repo}")
+
     result = _run(
         [
             "gh", "issue", "create",
@@ -188,12 +265,16 @@ def run(
     if _sleep is None:
         _sleep = time.sleep
 
+    # F7 — guard _create is callable when create=True
+    if create:
+        assert _create is not None, "_create must not be None when create=True"
+
     cands = candidates(corpus_path)
     if limit is not None:
         cands = cands[:limit]
 
     plan = []
-    first_create = True
+    created_count = 0  # F6 — counter instead of first_create flag
     for c in cands:
         owner, repo, name = c["owner"], c["repo"], c["name"]
         title, body = render_issue(name)
@@ -203,15 +284,22 @@ def run(
             continue
 
         # create=True
-        skipped = already_filed(owner, repo, _list=_list)
+        try:
+            skipped = already_filed(owner, repo, _list=_list)
+        except RuntimeError:
+            # F4 — don't swallow list failures; mark as skipped-error and continue
+            plan.append({"name": name, "owner": owner, "repo": repo, "title": title, "action": "skipped-error"})
+            continue
+
         if skipped:
             plan.append({"name": name, "owner": owner, "repo": repo, "title": title, "action": "skipped-exists"})
         else:
-            if not first_create:
+            # F6 — sleep before every create after the first actual create
+            if created_count > 0:
                 _sleep(2)
             url = _create(owner, repo, title, body)
             plan.append({"name": name, "owner": owner, "repo": repo, "title": title, "action": "created", "url": url})
-            first_create = False
+            created_count += 1  # F6 — increment on each successful create
 
     return plan
 
