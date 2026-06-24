@@ -58,6 +58,10 @@ We cite these reviews as **named upstream sources of candidate methods**. We do
 not import their lists automatically, and we add no per-paper provenance field
 (provenance is documented here, at the corpus level).
 
+> **Update (2026-06-24).** A tool or package ecosystem with a citable *software*
+> DOI may itself be the inclusion candidate — the source identity need not be a
+> peer-reviewed method paper. See [§3.1](#31-acceptable-source-identifiers--software--zenodo-dois-first-class).
+
 ## 3. Scientific inclusion criteria
 
 A source paper is **eligible** when it meets all of:
@@ -74,6 +78,29 @@ A source paper is **eligible** when it meets all of:
    inventory for non-metabolomics collections).
 6. **Current** — not retracted, and not fully superseded by a later method that
    replaces it.
+
+### 3.1 Acceptable source identifiers — software & Zenodo DOIs first-class
+
+**Locked decision (2026-06-24).** A source's citable identifier need **not** be a
+peer-reviewed *paper* DOI. A resolvable **software, dataset, or tutorial DOI** —
+e.g. a Zenodo concept/version DOI for a tool, package ecosystem, or executable
+tutorial — is accepted as a **first-class** source identifier. Much
+computational-metabolomics expertise lives in actively maintained software rather
+than in a single method paper, and the corpus recognizes that.
+
+Each entry records a `resource_type` (e.g. `software-ecosystem`,
+`tutorial-workflow`, `software-tool`, `data-infrastructure`). Guidance:
+
+- **Prefer a paper anchor where one exists.** A software DOI may stand alone, or
+  be listed alongside the canonical method paper(s) for richer grounding.
+- **No citable DOI → defer.** An item that has not minted any DOI (e.g. a young
+  infrastructure project) is **deferred** until one exists, or routed to a
+  skill/tool pack rather than the paper corpus.
+- **Both gates still apply.** The legal gate reads the open-access tier from the
+  deposition/repository license (a CC-BY/CC0 Zenodo release → `gold-oa`), and the
+  consumer-use **tool license tier** (`open` / `noncommercial` / `restricted`) is
+  recorded per [`CONTENT_POLICY.md` §4 "Tool License Tier"](CONTENT_POLICY.md) and
+  the map in [`LICENSE_TIERS.md`](LICENSE_TIERS.md).
 
 ## 4. Exclusion criteria
 

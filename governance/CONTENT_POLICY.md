@@ -69,6 +69,8 @@ A paper qualifies as **open-access** if its access tier is one of the values abo
 4. **Generic OA** (`open-access` / `open_access` / `oa`) — verified open access where the specific tier is not further resolved
 5. **Government works** — papers authored by U.S. federal employees in their official capacity (public domain by law); recorded with a generic OA tier plus a public-domain license tag
 
+> **NOTE — software / dataset / tutorial DOIs (e.g. Zenodo).** A source's citable identifier need not be a journal paper DOI (see [`SOURCES.md` §3.1](SOURCES.md)). For a software/dataset/tutorial deposition, the OA tier is read from the **deposition license**: a CC-BY / CC-BY-SA / CC0 Zenodo release qualifies as `gold-oa`; a public git repository cloned at build qualifies as `repo-oa`. This is the *paper-access* axis only — what a consumer may do with the tool is the separate `license_tier` axis (§4 "Tool License Tier", §7.7).
+
 > **NOTE — `preprint` is NOT an OA tier.** "Preprint" is a value on a **separate provenance axis** (the version/stage of the document: preprint vs. accepted-manuscript vs. version-of-record), recorded in `provenance.version` / `provenance.source`. It is NOT a member of the OA set above and MUST NOT be used as `access.type`. A bioRxiv/medRxiv/arXiv preprint is admitted because its access tier is open (`open-access` / `gold-oa` as applicable) AND its provenance is `preprint`; the two axes are recorded independently. Do not conflate the open-access axis with the provenance axis.
 
 ### Non-OA Exclusion
@@ -140,6 +142,41 @@ Admission of closed-access or hybrid papers is deferred to v1. If a post-v0 rele
 
 - Leaderboard scores, solver evaluation results, failure-mode catalogs
 - Metadata tables (paper statistics, openness tier distribution)
+
+### Tool License Tier (consumer-use axis)
+
+**Locked decision (2026-06-24).** Separately from the *paper* open-access axis
+(§3) and the *workflow*-openness axis (§7.6), every source/tool carries a
+**`license_tier`** describing what a **consumer** may do with the underlying tool.
+This is a distinct, third axis — see §7.7. Canonical SPDX→tier map and fallback
+rule: [`LICENSE_TIERS.md`](LICENSE_TIERS.md).
+
+- **`open`** — commercial use permitted (MIT, Apache-2.0, BSD, MPL-2.0, CC-BY/CC0,
+  and copyleft GPL/AGPL/LGPL). Copyleft is `open` here: it governs derivative
+  *distribution*, not whether a consumer may use the tool commercially.
+- **`noncommercial`** — academic/noncommercial use only (CC-BY-NC*,
+  PolyForm-Noncommercial, and similar).
+- **`restricted`** — no grant / proprietary / no license (all-rights-reserved or a
+  non-OSI custom license that is not clearly noncommercial). Unknown → `restricted`.
+
+Two binding rules attach to non-open tiers:
+
+1. **Link-only grounding.** For `noncommercial` and `restricted` tiers a shipped
+   grounding bundle MUST reference the source (DOI / repo URL + citation) and MUST
+   NOT embed its code or text. Embedding non-open source into a publicly
+   distributed bundle would exceed the redistribution/relicensing the tool's
+   license grants. Assembling a *private, local* bundle is the consumer's own
+   responsibility. (Enforced in the grounding binder; CI enforcement is Phase 2.)
+2. **Runtime use acknowledgment.** A skill grounded on a `noncommercial` /
+   `restricted` tool sets `requires_ack: true` and surfaces the tier + license to
+   the user, who must confirm a permitted (e.g. noncommercial) use **before** the
+   skill is applied. The `asb-metabolomics` meta-skill enforces this gate.
+
+`license_tier` does **not** relicense the skill prose, which remains the
+collection's own work (CC-BY-4.0, per "Code & Synthesis Layer" above). A
+`noncommercial` tool may therefore be described by an openly-licensed skill — the
+restriction lands on the consumer's *use of the tool*, surfaced via the
+acknowledgment gate, not on our description of it.
 
 ---
 
@@ -361,6 +398,14 @@ The OA-access axis and the workflow-openness axis are **separate and independent
 - **`benchmark_tier.openness`** (`open` | `mixed` | `closed`) — the *workflow*-openness axis (are the benchmark's held-out splits/workflow open?). Used by the contamination gate (12), NOT by the access gates.
 
 A collection can be OA-only (`require_open_access: true`) while its `benchmark_tier.openness` is independently `open`, `mixed`, or `closed`. Never collapse these two axes into one field.
+
+### 7.7 Tool License Tier — a third, independent axis
+
+Beyond the two axes in §7.6, a **third** independent axis records what a consumer may do with the *tool* a skill grounds on:
+
+- **`license_tier`** (`open` | `noncommercial` | `restricted`) — the tool/source consumer-use axis (defined in §4 "Tool License Tier"; map in [`LICENSE_TIERS.md`](LICENSE_TIERS.md)).
+
+It is orthogonal to both `require_open_access` (is the *source* open access?) and `benchmark_tier.openness` (is the *workflow* open?). A source can be OA (`access.type: gold-oa`) yet `license_tier: noncommercial` — e.g. an open-access paper or CC-BY Zenodo deposition describing a noncommercially-licensed tool — or the reverse. Never collapse these axes: **OA-access** governs *our* right to redistribute the source; **`license_tier`** governs the *consumer's* right to use the tool.
 
 ---
 
