@@ -95,7 +95,7 @@ def test_render_issue_title_and_body():
     assert title == "License clarification for MyTool?"
     assert "MyTool" in body
     assert collection_url in body
-    assert "explicit open-source license" in body or "explicit" in body
+    assert "point us to the license" in body
     assert "<!-- asb-license-clarification -->" in body
 
 
