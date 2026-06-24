@@ -1,4 +1,4 @@
-import json, pathlib, sys, textwrap
+import json, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 from scripts import check_license_tiers as c
 
@@ -33,3 +33,10 @@ def test_inconsistent_ack_is_violation(tmp_path):
         skills={"s1": "name: s1\nmetadata:\n  tool_license:\n    tier: noncommercial\n    requires_ack: false\n"})
     v = c.check_collection(str(d))
     assert any("requires_ack" in x for x in v)
+
+def test_missing_si_tier_is_violation(tmp_path):
+    d = _collection(tmp_path,
+        ["- {name: A, doi: 10.1/a, license_tier: open}\n"],   # corpus clean
+        [{"slug": "s1"}])                                       # skills_index entry has no license_tier
+    v = c.check_collection(str(d))
+    assert any("license_tier" in x and "s1" in x for x in v)
