@@ -52,4 +52,6 @@ def test_apply_to_corpus_writes_tiers(tmp_path):
     out = yaml.safe_load(corpus.read_text())["papers"]
     assert out[0]["license_tier"] == "open" and out[0]["access"]["license"] == "MIT"
     assert out[1]["license_tier"] == "noncommercial" and out[1]["access"]["license"] == "CC-BY-NC-4.0"
+    assert out[0]["access"]["type"] == "repo-oa"
+    assert out[1]["access"]["type"] == "repo-oa"
     assert summary == {"open": 1, "noncommercial": 1}
