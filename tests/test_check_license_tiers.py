@@ -16,7 +16,8 @@ def _collection(tmp_path, corpus_papers, si_entries, skills=None):
 def test_clean_collection_passes(tmp_path):
     d = _collection(tmp_path,
         ["- {name: A, doi: 10.1/a, license_tier: open}\n"],
-        [{"slug": "s1", "license_tier": "open"}])
+        [{"slug": "s1", "license_tier": "open"}],
+        skills={"s1": "name: s1\nmetadata:\n  license_tier: open\n"})
     assert c.check_collection(str(d)) == []
 
 def test_missing_tier_is_violation(tmp_path):

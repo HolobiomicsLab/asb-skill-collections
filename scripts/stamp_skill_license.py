@@ -13,7 +13,7 @@ _NOTE = {
         "the underlying tool; verify licensing before commercial use or redistribution."),
 }
 
-def license_banner(tier: str):
+def license_banner(tier: str) -> str | None:
     note = _NOTE.get(tier)
     return None if note is None else f"> {note} {BANNER_MARKER}"
 
@@ -50,7 +50,9 @@ def stamp_skill(md_path, tier: str) -> bool:
     if fm_raw is None:
         return False
     fm = yaml.safe_load(fm_raw) or {}
-    fm.setdefault("metadata", {})["license_tier"] = tier
+    if not isinstance(fm.get("metadata"), dict):
+        fm["metadata"] = {}
+    fm["metadata"]["license_tier"] = tier
     new_body = _set_banner(body, license_banner(tier))
     new_text = "---\n" + yaml.safe_dump(fm, sort_keys=False, allow_unicode=True) + "---\n" + new_body
     if new_text == text:

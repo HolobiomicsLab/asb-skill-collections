@@ -47,6 +47,13 @@ def test_stamp_preserves_tool_license_block(tmp_path):
     assert fm["metadata"]["tool_license"]["requires_ack"] is True   # preserved
     assert fm["metadata"]["license_tier"] == "noncommercial"
 
+def test_stamp_handles_null_metadata(tmp_path):
+    d = tmp_path/"skills"/"s-null"; d.mkdir(parents=True)
+    (d/"SKILL.md").write_text("---\nname: s-null\nmetadata:\n---\n# t\n\nbody.\n")
+    assert S.stamp_skill(d/"SKILL.md", "open") is True
+    fm = yaml.safe_load((d/"SKILL.md").read_text().split("---\n",2)[1])
+    assert fm["metadata"]["license_tier"] == "open"
+
 def test_stamp_all(tmp_path):
     _skill(tmp_path, "a"); _skill(tmp_path, "b")
     (tmp_path/"skills_index.json").write_text(json.dumps([
