@@ -37,3 +37,34 @@ def test_prepare_kb_graceful_when_server_unreachable(monkeypatch):
     assert isinstance(status, dict)
     assert status.get("created") is False
     assert "unreachable" in (status.get("error") or "")
+
+
+def test_build_local_manifest_embeds_open(tmp_path):
+    calls = []
+    def fake_clone(url, dest, **kw):
+        calls.append(url); return True
+    rec = {"slug": "open-skill", "license_tier": "open",
+           "repo_urls": ["https://github.com/a/b"], "dois": []}
+    man = kb.build_local_manifest(rec, str(tmp_path), paper=False, email="e@e.com",
+                                  _clone=fake_clone)
+    assert man["mode"] == "embed"
+    assert man["repos"][0]["cloned"] is True
+    assert calls == ["https://github.com/a/b"]
+
+
+def test_build_local_manifest_link_only_noncommercial(tmp_path):
+    def fake_clone(url, dest, **kw):
+        raise AssertionError("non-open tier must not clone/embed")
+    rec = {"slug": "masster", "license_tier": "noncommercial",
+           "repo_urls": ["https://github.com/zamboni-lab/masster-dist"], "dois": ["10.x/y"]}
+    man = kb.build_local_manifest(rec, str(tmp_path), paper=True, email="e@e.com",
+                                  _clone=fake_clone)
+    assert man["mode"] == "link-only"
+    assert man["repos"][0]["embedded"] is False
+    assert man["paper"]["embedded"] is False
+
+
+def test_link_only_predicate():
+    assert kb.link_only({"license_tier": "restricted"}) is True
+    assert kb.link_only({"license_tier": "open"}) is False
+    assert kb.link_only({}) is False
