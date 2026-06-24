@@ -69,6 +69,10 @@ def apply_to_corpus(corpus_path, token, cache=None, _fetch=_gh_fetch) -> dict:
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
     summary: dict[str, int] = {}
     for p in doc.get("papers", []):
+        if p.get("license_locked"):
+            t = p.get("license_tier", "restricted")
+            summary[t] = summary.get(t, 0) + 1
+            continue
         tier, spdx = tier_for_repo(p.get("repo_url"), token=token, cache=cache, _fetch=_fetch)
         p["license_tier"] = tier
         p.setdefault("access", {})

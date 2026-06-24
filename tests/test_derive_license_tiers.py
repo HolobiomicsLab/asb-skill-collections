@@ -62,3 +62,26 @@ def test_apply_to_corpus_writes_tiers(tmp_path):
     assert out[0]["access"]["type"] == "repo-oa"
     assert out[1]["access"]["type"] == "repo-oa"
     assert summary == {"open": 1, "noncommercial": 1}
+
+def test_apply_to_corpus_respects_license_locked(tmp_path):
+    corpus = tmp_path / "corpus.yaml"
+    corpus.write_text(textwrap.dedent('''
+        papers:
+        - name: Locked
+          doi: 10.1/x
+          repo_url: https://github.com/a/b
+          license_tier: noncommercial
+          license_locked: true
+          access: {type: repo-oa, license: "Academic; commercial by permission"}
+        - name: Auto
+          doi: 10.1/y
+          repo_url: https://github.com/c/d
+          access: {type: repo-oa}
+    '''))
+    # _fetch would say both are MIT(open); the locked one must stay noncommercial.
+    summary = d.apply_to_corpus(str(corpus), token=None, _fetch=lambda o, r, t: "MIT")
+    out = yaml.safe_load(corpus.read_text())["papers"]
+    assert out[0]["license_tier"] == "noncommercial"               # locked, untouched
+    assert out[0]["access"]["license"] == "Academic; commercial by permission"
+    assert out[1]["license_tier"] == "open"                        # auto-derived
+    assert summary == {"noncommercial": 1, "open": 1}
