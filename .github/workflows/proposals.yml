@@ -1,0 +1,69 @@
+# proposals.yml -- Runs on PRs that touch staged skill proposals.
+# Gives contributors fast STRUCTURAL feedback: runs the same proposal-rail
+# gate a maintainer would (`scripts/check_proposals`) and posts a short
+# pass/fail PR comment so the review is about quality/fit, not structure.
+#
+# Additive: does NOT replace or disturb validate.yml. Advisory-leaning but
+# fails the check on a structural violation so the contributor sees it.
+#
+# Spec ref: governance/COMMUNITY_SKILLS.md (proposal rail)
+# Driver: scripts/check_proposals.py
+
+name: Proposals
+
+on:
+  pull_request:
+    paths:
+      - 'collections/*/proposals/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-proposals:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Check staged proposals
+        id: check
+        run: |
+          set +e
+          out="$(python -m scripts.check_proposals collections/metabolomics/v2 2>&1)"
+          code=$?
+          echo "$out"
+          {
+            echo "report<<EOF"
+            echo "$out"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+          exit $code
+
+      - name: Post PR comment with proposal check result
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const report = `${{ steps.check.outputs.report }}`;
+            const status = "${{ steps.check.outcome }}";
+            const heading = status === "success"
+              ? "### ✅ Proposal structure check passed"
+              : "### ❌ Proposal structure check failed";
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `${heading}\n\n\`\`\`\n${report}\n\`\`\`\n\nDriver: \`scripts/check_proposals.py\` · See governance/COMMUNITY_SKILLS.md`
+            });
