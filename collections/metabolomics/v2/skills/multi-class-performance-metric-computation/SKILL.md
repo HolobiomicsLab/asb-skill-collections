@@ -13,6 +13,7 @@ metadata:
   - scikit-learn classification_report
   - train.py with --task finetune
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

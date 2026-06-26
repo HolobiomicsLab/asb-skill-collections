@@ -20,6 +20,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.isci.2023.106881
   title: MultiABLER

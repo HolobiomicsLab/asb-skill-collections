@@ -20,6 +20,7 @@ metadata:
   - Python with TensorFlow 2.3.0 and Keras
   - NP Classifier
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

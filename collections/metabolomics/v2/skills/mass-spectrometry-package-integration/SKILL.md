@@ -18,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy

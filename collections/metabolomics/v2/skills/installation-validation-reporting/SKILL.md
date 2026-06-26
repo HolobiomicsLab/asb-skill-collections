@@ -14,6 +14,7 @@ metadata:
   - Python
   - conda
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics

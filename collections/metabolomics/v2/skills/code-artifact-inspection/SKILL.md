@@ -8,6 +8,7 @@ metadata:
   - GitHub
   - local code artifact
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fmolb.2022.952149
   title: TurboPutative

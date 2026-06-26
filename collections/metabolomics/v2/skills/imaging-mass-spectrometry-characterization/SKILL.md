@@ -20,6 +20,7 @@ metadata:
   - MS-imaging
   - ion-mobility-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

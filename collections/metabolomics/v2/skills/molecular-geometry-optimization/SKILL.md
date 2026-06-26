@@ -14,6 +14,7 @@ metadata:
   - RDKit
   - ASE-ANI
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

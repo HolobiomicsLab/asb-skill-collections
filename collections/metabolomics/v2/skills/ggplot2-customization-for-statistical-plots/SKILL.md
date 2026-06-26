@@ -14,6 +14,7 @@ metadata:
   - ggplot2
   - Omu (plot_variable_importance, PCA_plot, plot_bar)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool

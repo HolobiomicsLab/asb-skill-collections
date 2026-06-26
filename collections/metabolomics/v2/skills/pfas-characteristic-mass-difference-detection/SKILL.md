@@ -19,6 +19,7 @@ metadata:
   - LC-MS
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

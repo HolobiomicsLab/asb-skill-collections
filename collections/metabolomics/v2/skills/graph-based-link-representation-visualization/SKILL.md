@@ -17,6 +17,7 @@ metadata:
   - GNPS
   - AntiSMASH
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore

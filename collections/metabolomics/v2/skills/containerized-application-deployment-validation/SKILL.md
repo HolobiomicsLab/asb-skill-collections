@@ -13,6 +13,7 @@ metadata:
   - Dockerfile (multi-stage build with --target flag)
   - AirdPro V5 / V6
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

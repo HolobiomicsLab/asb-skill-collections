@@ -14,6 +14,7 @@ metadata:
   - Visual Studio Code
   - PyCharm
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.04.09.033894
   title: LipidLynxX

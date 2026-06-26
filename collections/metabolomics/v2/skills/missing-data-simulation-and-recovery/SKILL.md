@@ -16,6 +16,7 @@ metadata:
   - GSEA (Gene Set Enrichment Analysis)
   - scipy.stats
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

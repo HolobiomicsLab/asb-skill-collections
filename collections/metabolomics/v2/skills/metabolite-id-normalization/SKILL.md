@@ -21,6 +21,7 @@ metadata:
   - Kyoto Encyclopedia of Genes and Genomes (KEGG)
   - Lipidomics Gateway (LipidMaps)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2021.02.28.433248v2
   title: MetaFetcheR

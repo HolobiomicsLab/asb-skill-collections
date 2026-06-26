@@ -12,6 +12,7 @@ metadata:
   - BLAST
   - NCBI E-utilities
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0

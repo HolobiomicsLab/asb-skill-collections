@@ -16,6 +16,7 @@ metadata:
   - GNPS
   - Python scipy.stats.fisher_exact or R stats::fisher.test
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

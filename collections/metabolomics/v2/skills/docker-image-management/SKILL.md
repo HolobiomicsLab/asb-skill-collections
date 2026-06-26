@@ -14,6 +14,7 @@ metadata:
   - Docker Hub
   - tima (R package)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

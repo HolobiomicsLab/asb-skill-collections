@@ -310,6 +310,7 @@ metadata:
   techniques:
   - MS-imaging
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS

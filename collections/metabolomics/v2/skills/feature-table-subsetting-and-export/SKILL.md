@@ -17,6 +17,7 @@ metadata:
   - marr (R/Bioconductor package)
   - R (base and SummarizedExperiment)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr

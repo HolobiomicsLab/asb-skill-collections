@@ -17,6 +17,7 @@ metadata:
   - Keras
   - scikit-learn
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbad229/7199559
   title: SPIFFED

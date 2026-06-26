@@ -19,6 +19,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida

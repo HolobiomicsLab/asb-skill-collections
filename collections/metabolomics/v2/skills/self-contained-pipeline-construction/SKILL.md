@@ -14,6 +14,7 @@ metadata:
   - magrittr
   - maplet
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btab741/6409851
   title: maplet

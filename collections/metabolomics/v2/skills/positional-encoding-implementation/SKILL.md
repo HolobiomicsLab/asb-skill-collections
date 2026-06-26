@@ -14,6 +14,7 @@ metadata:
   - SCARF
   - MIST-CF formula transformer
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

@@ -13,6 +13,7 @@ metadata:
   - Python
   - pcaGLASSO
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fnins.2024.1520982
   title: MetaboLINK/ PCA-GLASSO

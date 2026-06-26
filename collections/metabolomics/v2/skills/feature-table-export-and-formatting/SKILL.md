@@ -22,6 +22,7 @@ metadata:
   - direct-infusion-MS
   - MS-imaging
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

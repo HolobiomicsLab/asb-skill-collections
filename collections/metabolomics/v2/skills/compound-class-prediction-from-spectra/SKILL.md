@@ -16,6 +16,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

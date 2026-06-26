@@ -15,6 +15,7 @@ metadata:
   techniques:
   - MS-imaging
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM

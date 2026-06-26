@@ -11,6 +11,7 @@ metadata:
   tools:
   - javax.faces-2.2.12.jar
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00720
   title: CEU Mass Mediator 3.0

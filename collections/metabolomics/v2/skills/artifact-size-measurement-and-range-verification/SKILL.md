@@ -11,6 +11,7 @@ metadata:
   - Docker (docker build, docker inspect, docker system df)
   - Dockerfile (multi-stage build with --target flag)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

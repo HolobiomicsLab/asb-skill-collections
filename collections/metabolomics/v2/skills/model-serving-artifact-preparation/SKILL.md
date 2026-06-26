@@ -15,6 +15,7 @@ metadata:
   - Keras
   - TensorFlow Serving
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation

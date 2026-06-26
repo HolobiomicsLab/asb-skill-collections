@@ -15,6 +15,7 @@ metadata:
   - make_omelette
   - plate_omelette
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool

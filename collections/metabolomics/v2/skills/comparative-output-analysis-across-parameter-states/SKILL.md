@@ -14,6 +14,7 @@ metadata:
   - CyProduct
   - Java
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.1c00144
   title: CyProduct

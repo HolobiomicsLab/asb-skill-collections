@@ -13,6 +13,7 @@ metadata:
   tools:
   - COMMIT
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009906
   title: COMMIT

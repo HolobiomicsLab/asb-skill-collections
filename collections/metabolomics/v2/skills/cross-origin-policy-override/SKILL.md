@@ -14,6 +14,7 @@ metadata:
   - WebWorker
   - WebAssembly
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s10858-025-00465-y#sec2
   title: COLMARvista

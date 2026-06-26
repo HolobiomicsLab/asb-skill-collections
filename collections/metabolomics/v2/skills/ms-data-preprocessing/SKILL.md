@@ -18,6 +18,7 @@ metadata:
   - LC-MS
   - CE-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS

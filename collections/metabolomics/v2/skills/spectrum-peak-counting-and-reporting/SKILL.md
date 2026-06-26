@@ -20,6 +20,7 @@ metadata:
   - GC-MS
   - MS-imaging
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems

@@ -16,6 +16,7 @@ metadata:
   techniques:
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra

@@ -16,6 +16,7 @@ metadata:
   techniques:
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

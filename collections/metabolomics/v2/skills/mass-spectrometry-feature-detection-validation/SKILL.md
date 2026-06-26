@@ -22,6 +22,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btab231/6214530
   title: mzRAPP

@@ -15,6 +15,7 @@ metadata:
   - AirdPro V5/V6
   - ProteoWizard
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

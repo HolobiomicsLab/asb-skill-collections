@@ -17,6 +17,7 @@ metadata:
   - MassSpecGym
   - MVP (HassounLab)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.11.12.688047v1
   title: MVP

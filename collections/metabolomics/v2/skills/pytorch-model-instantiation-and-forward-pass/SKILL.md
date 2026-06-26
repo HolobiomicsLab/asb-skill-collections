@@ -18,6 +18,7 @@ metadata:
   - rdkit-pypi
   - torch-scatter, torch-sparse, torch-cluster
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

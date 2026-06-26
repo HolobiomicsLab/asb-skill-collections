@@ -17,6 +17,7 @@ metadata:
   - PyTorch Geometric (PyG)
   - NaFM Official Repository
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

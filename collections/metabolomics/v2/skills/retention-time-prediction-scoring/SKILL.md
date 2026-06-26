@@ -16,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt

@@ -18,6 +18,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-020-15960-z
   title: LipidCreator

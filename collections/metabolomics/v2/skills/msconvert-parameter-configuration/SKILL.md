@@ -17,6 +17,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder

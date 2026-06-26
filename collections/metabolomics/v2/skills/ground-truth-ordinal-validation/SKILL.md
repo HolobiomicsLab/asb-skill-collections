@@ -18,6 +18,7 @@ metadata:
   - scipy, numpy, pandas, scikit-learn
   - ECCB2018.Rmd
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty590
   title: LC retention order prediction

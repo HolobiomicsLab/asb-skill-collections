@@ -13,6 +13,7 @@ metadata:
   - R Shiny
   - Docker
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fgene.2022.957317
   title: GraphBio

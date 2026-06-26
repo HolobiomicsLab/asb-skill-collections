@@ -15,6 +15,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.est.3c04764
   title: Scannotation

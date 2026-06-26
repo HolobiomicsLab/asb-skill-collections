@@ -22,6 +22,7 @@ metadata:
   - pip (requirements.txt)
   - Conda (environment.yml)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac032/6510930
   title: massNet

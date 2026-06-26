@@ -24,6 +24,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M
