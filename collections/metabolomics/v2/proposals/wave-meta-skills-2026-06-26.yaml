@@ -1,0 +1,36 @@
+schema: asb-skill-proposals/1.0
+proposals:
+- slug: molecular-networking
+  date: '2026-06-26'
+  related_skills:
+  - lc-ms-feature-extraction-and-alignment
+  - ms-ms-feature-preparation-for-gnps
+  - spectral-similarity-network-generation
+  - molecular-family-graph-construction
+  - spectral-cluster-connectivity-assessment
+  - spectral-library-matching
+  - spectral-network-propagation-analysis
+  - molecular-network-node-annotation
+  - interactive-network-visualization-rendering
+  - molecular-network-metadata-organization
+  tools_used:
+  - gnps-molecular-networking
+  - gnps-spectral-libraries
+  - matchms
+  - spec2vec
+  - cytoscape
+  license_tier: open
+  status: hold
+  skill_kind: super
+  synthesized_from:
+  - lc-ms-feature-extraction-and-alignment
+  - ms-ms-feature-preparation-for-gnps
+  - spectral-similarity-network-generation
+  - molecular-family-graph-construction
+  - spectral-cluster-connectivity-assessment
+  - spectral-library-matching
+  - spectral-network-propagation-analysis
+  - molecular-network-node-annotation
+  - interactive-network-visualization-rendering
+  - molecular-network-metadata-organization
+  submitted_on: '2026-06-26'

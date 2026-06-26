@@ -77,6 +77,10 @@ jobs:
           failures = []
           skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
           skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
+          # Published-skill gates validate shipped skills only; the proposals/
+          # rail (synthetic/community, status:hold, no source DOI) has its own
+          # dedicated gate (scripts/check_proposals.py).
+          skill_files = [p for p in skill_files if "proposals" not in p.parts]
           for skill_md in skill_files:
               text = skill_md.read_text()
               if not text.startswith("---"):
@@ -125,6 +129,10 @@ jobs:
           checked = 0
           skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
           skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
+          # Published-skill gates validate shipped skills only; the proposals/
+          # rail (synthetic/community, status:hold, no source DOI) has its own
+          # dedicated gate (scripts/check_proposals.py).
+          skill_files = [p for p in skill_files if "proposals" not in p.parts]
           for skill_md in skill_files[:10]:
               text = skill_md.read_text()
               if not text.startswith("---"):
@@ -169,6 +177,10 @@ jobs:
           checked = set()
           skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
           skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
+          # Published-skill gates validate shipped skills only; the proposals/
+          # rail (synthetic/community, status:hold, no source DOI) has its own
+          # dedicated gate (scripts/check_proposals.py).
+          skill_files = [p for p in skill_files if "proposals" not in p.parts]
           for skill_md in skill_files:
               text = skill_md.read_text()
               if not text.startswith("---"):
