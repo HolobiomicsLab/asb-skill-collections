@@ -2,14 +2,17 @@
 
 Validates each ``proposals/skills/*/SKILL.md`` against the SAME discipline a
 published skill must satisfy, plus the proposal invariants, so a maintainer's
-review is about quality/fit — not structure. A staged proposal is valid under
-EITHER provenance origin:
+review is about quality/fit — not structure. A staged proposal is valid under ANY
+of the three provenance origins (reusing the ``scripts.provenance_tier`` kernel):
 
 * **community** — ``metadata.provenance_tier == "community"`` and a
   ``related_skills`` key is present (the community provenance invariant);
 * **synthetic** — ``metadata.provenance_tier == "synthetic"`` and
   ``metadata.synthesized_from`` is a non-empty list (auto-derived from other
-  skills; see governance/PROVENANCE_TIERS.md).
+  skills; see governance/PROVENANCE_TIERS.md);
+* **literature** — ``metadata.provenance_tier == "literature"`` and
+  ``metadata.dois`` carries >=1 source DOI (e.g. a review-grounded super-skill
+  whose pipeline is distilled from a review article).
 
 For every staged skill, regardless of origin:
 
@@ -35,6 +38,7 @@ import sys
 import yaml
 
 from scripts.normalize_skill import frontmatter_violations
+from scripts.provenance_tier import validate_entry as validate_provenance
 
 # A super-skill orchestrates other skills; a plain skill stands alone.
 VALID_SKILL_KINDS = {"skill", "super"}
@@ -84,25 +88,19 @@ def check_collection(collection_dir) -> list:
 
         meta = fm.get("metadata") if isinstance(fm.get("metadata"), dict) else {}
 
-        # provenance invariant: valid under EITHER community OR synthetic origin.
+        # provenance invariant: valid under community, synthetic, OR literature
+        # (review-grounded super-skills) origin. Reuses the provenance_tier kernel
+        # semantics: literature ⇒ >=1 doi, synthetic ⇒ synthesized_from,
+        # community ⇒ related_skills key present.
         prov = meta.get("provenance_tier")
-        if prov == "community":
-            if "related_skills" not in fm:
-                violations.append(
-                    f"{md}: community proposal requires related_skills key"
-                )
-        elif prov == "synthetic":
-            synthesized_from = meta.get("synthesized_from")
-            if not (isinstance(synthesized_from, list) and synthesized_from):
-                violations.append(
-                    f"{md}: synthetic proposal requires non-empty "
-                    f"metadata.synthesized_from list"
-                )
-        else:
-            violations.append(
-                f"{md}: metadata.provenance_tier {prov!r} not in "
-                f"{{'community', 'synthetic'}}"
-            )
+        prov_violations = validate_provenance(
+            prov,
+            dois=meta.get("dois"),
+            synthesized_from=meta.get("synthesized_from"),
+            related_skills=fm.get("related_skills") if "related_skills" in fm else None,
+        )
+        for msg in prov_violations:
+            violations.append(f"{md}: {msg}")
 
         # skill_kind invariant (default 'skill' when absent); a 'super' skill
         # must orchestrate a non-empty list of resolvable sub-skill slugs.
