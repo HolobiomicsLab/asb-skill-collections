@@ -123,6 +123,15 @@ def build_unit(unit_dir, collection_dir, bind_script):
     shutil.copyfile(bind_script, unit_dir / "bin" / "perspicacite_kb_bind.py"); written.append("bin/perspicacite_kb_bind.py")
     (unit_dir / "commands").mkdir(exist_ok=True)
     (unit_dir / "commands" / "ground.md").write_text(render_ground_command()); written.append("commands/ground.md")
+    # ship the contribution commands (propose-skill, synthesize-meta-skill, …)
+    # verbatim alongside the rendered ground.md
+    src_cmds = collection_dir / "commands"
+    if src_cmds.is_dir():
+        for md in sorted(src_cmds.glob("*.md")):
+            if md.name == "ground.md":
+                continue  # ground.md is always the rendered version, not the collection copy
+            shutil.copyfile(md, unit_dir / "commands" / md.name)
+            written.append(f"commands/{md.name}")
     (unit_dir / "GROUNDING.md").write_text(render_grounding_doc(unit_dir.name)); written.append("GROUNDING.md")
     pj_path = unit_dir / ".claude-plugin" / "plugin.json"
     if not pj_path.is_file():

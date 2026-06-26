@@ -109,3 +109,61 @@ def test_build_unit_emits_all_artifacts(tmp_path):
     assert ".claude-plugin/plugin.json" not in written2
     desc2 = json.loads((unit / ".claude-plugin" / "plugin.json").read_text())["description"]
     assert desc2 == desc
+
+
+def _make_unit(tmp_path):
+    unit = tmp_path / "unit"
+    (unit / "skills" / "bioactivity-score-aggregation").mkdir(parents=True)
+    (unit / ".claude-plugin").mkdir()
+    (unit / ".claude-plugin" / "plugin.json").write_text(json.dumps({"name": "u", "description": "Subset."}))
+    bind = tmp_path / "src_bind.py"; bind.write_text("# vendored bind\n")
+    return unit, bind
+
+
+def _make_collection_with_commands(tmp_path):
+    col = tmp_path / "col"
+    col.mkdir()
+    shutil_copy_fixture(col)
+    cmds = col / "commands"
+    cmds.mkdir()
+    (cmds / "ground.md").write_text("STALE ground content — should be overwritten\n")
+    (cmds / "propose-skill.md").write_text("# propose-skill\nbody\n")
+    (cmds / "synthesize-meta-skill.md").write_text("# synthesize-meta-skill\nbody\n")
+    return col
+
+
+def shutil_copy_fixture(col):
+    import shutil
+    for name in ("corpus.yaml", "kb_bundle.json", "tools_index.json"):
+        shutil.copyfile(FIX / name, col / name)
+
+
+def test_build_unit_ships_all_collection_commands(tmp_path):
+    from scripts.build_grounding_bundle import build_unit, render_ground_command
+    unit, bind = _make_unit(tmp_path)
+    col = _make_collection_with_commands(tmp_path)
+    written = build_unit(unit, col, bind)
+    cmd_dir = unit / "commands"
+    # all three commands ship
+    assert (cmd_dir / "ground.md").exists()
+    assert (cmd_dir / "propose-skill.md").exists()
+    assert (cmd_dir / "synthesize-meta-skill.md").exists()
+    # ground.md comes from render_ground_command(), not the collection's stale copy
+    assert (cmd_dir / "ground.md").read_text() == render_ground_command()
+    # other commands copied verbatim
+    assert (cmd_dir / "propose-skill.md").read_text() == "# propose-skill\nbody\n"
+    assert (cmd_dir / "synthesize-meta-skill.md").read_text() == "# synthesize-meta-skill\nbody\n"
+    # writes are reported relative to the unit
+    assert "commands/ground.md" in written
+    assert "commands/propose-skill.md" in written
+    assert "commands/synthesize-meta-skill.md" in written
+
+
+def test_build_unit_without_collection_commands_dir(tmp_path):
+    # When the collection has no commands/ dir, only ground.md is shipped.
+    from scripts.build_grounding_bundle import build_unit
+    unit, bind = _make_unit(tmp_path)
+    written = build_unit(unit, FIX, bind)
+    assert (unit / "commands" / "ground.md").exists()
+    assert "commands/ground.md" in written
+    assert not any(w.startswith("commands/") and w != "commands/ground.md" for w in written)
