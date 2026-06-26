@@ -54,10 +54,15 @@ jobs:
       - name: Post PR comment with proposal check result
         if: always()
         uses: actions/github-script@v7
+        env:
+          # Pass untrusted check output via env (not inline interpolation) so a
+          # PR-controlled proposal path/content cannot break out of the JS body.
+          REPORT: ${{ steps.check.outputs.report }}
+          OUTCOME: ${{ steps.check.outcome }}
         with:
           script: |
-            const report = `${{ steps.check.outputs.report }}`;
-            const status = "${{ steps.check.outcome }}";
+            const report = process.env.REPORT || "";
+            const status = process.env.OUTCOME;
             const heading = status === "success"
               ? "### ✅ Proposal structure check passed"
               : "### ❌ Proposal structure check failed";
