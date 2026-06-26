@@ -32,8 +32,8 @@ Steps:
    do **not** fabricate a description or EDAM IRIs.
 
 3. **Match against the collection.** Find the related skills and the tools this
-   skill should declare. Use the matcher (Perspicacité KB-first, lexical fallback;
-   no server required):
+   skill should declare. Use the matcher — a serverless lexical (TF-IDF) ranker
+   over the collection's indexes; no server required:
    ```python
    import json
    from scripts.skill_match import match_skills, match_tools, near_duplicates
@@ -49,11 +49,14 @@ Steps:
    **warn** that the skill may overlap an existing one and suggest **annotating or
    merging** into that skill (via `CONTRIBUTING.md`) rather than adding a duplicate.
 
-4. **Ground (optional, best-effort).** If a Perspicacité server is reachable, ground
-   the skill's claims against its source the same way `/ground` does
-   (`scripts/perspicacite_kb_bind.py`). This is optional — a community skill is not
-   required to derive from a paper. If grounding is unavailable, proceed ungrounded
-   and say so.
+4. **Ground (optional, best-effort) — this is where Perspicacité fits.** If a
+   Perspicacité server is reachable, use it to look for a supporting paper for the
+   skill's claims, the same way `/ground` does (`scripts/perspicacite_kb_bind.py`,
+   the real per-DOI KB API). If a strong supporting paper is found, attach its DOI
+   under `derived_from` and flag the skill as a `literature_upgrade_candidate`.
+   This is optional — a community skill is **not** required to derive from a paper.
+   If Perspicacité is unavailable, proceed ungrounded and say so. (Matching in
+   step 3 is lexical and never needs a server; Perspicacité is used only here.)
 
 5. **Tier it `community` / `hold`.** Assemble the schema-correct frontmatter:
    `provenance_tier: community` (so the `related_skills` key is present — empty list
