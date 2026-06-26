@@ -19,6 +19,9 @@ derived_from:
 source_repos:
 - chopralab/CLAW
 schema_version: 0.2.0
+license_tier: open
+license: GPL-3.0
+license_detection: license-file
 techniques:
 - LC-MS
 - ion-mobility-MS

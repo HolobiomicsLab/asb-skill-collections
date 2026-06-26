@@ -6,5 +6,8 @@ derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - NMR

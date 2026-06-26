@@ -9,3 +9,6 @@ derived_from:
 source_repos:
 - https://git.wur.nl/bioinformatics/iPRESTO.git
 schema_version: 0.2.0
+license_tier: open
+license: AGPL-3.0
+license_detection: null

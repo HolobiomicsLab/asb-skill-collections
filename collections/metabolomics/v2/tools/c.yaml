@@ -4,3 +4,6 @@ evidence_spans:
 - // A small example demonstrating the basic usage of OpenTIMS in C++.
 - '`OpenTIMS` is a C++ library'
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: null

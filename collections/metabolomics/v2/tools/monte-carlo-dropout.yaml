@@ -8,5 +8,8 @@ derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
 schema_version: 0.2.0
+license_tier: open
+license: Apache-2.0
+license_detection: github-api
 techniques:
 - LC-MS

@@ -13,6 +13,9 @@ source_repos:
 - OpenMS/OpenMS
 - Roestlab/massdash
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: file-present-unclassified
 techniques:
 - LC-MS
 - ion-mobility-MS

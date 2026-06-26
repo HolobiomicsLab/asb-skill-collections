@@ -20,6 +20,9 @@ derived_from:
 source_repos:
 - vdhooftcompmet/MS2LDA
 schema_version: 0.2.0
+license_tier: open
+license: Apache-2.0
+license_detection: github-api
 techniques:
 - LC-MS
 - GC-MS

@@ -39,6 +39,9 @@ source_repos:
 - zmahnoor14/MAW
 - zquinlan/concise
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - LC-MS
 - GC-MS

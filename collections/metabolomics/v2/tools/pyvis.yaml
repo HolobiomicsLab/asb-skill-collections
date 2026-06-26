@@ -7,6 +7,9 @@ derived_from:
 - doi: 10.1371/journal.pcbi.1011814
   title: 'PathIntegrate: Multivariate modelling approaches for pathway-based multi-omics data integration'
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - LC-MS
 - mass-spectrometry

@@ -6,5 +6,8 @@ derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 schema_version: 0.2.0
+license_tier: open
+license: BSD-2-Clause
+license_detection: github-api
 techniques:
 - LC-MS

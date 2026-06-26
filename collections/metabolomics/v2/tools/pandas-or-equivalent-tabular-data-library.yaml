@@ -9,3 +9,6 @@ derived_from:
 source_repos:
 - mibig-secmet/mibig-json
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none

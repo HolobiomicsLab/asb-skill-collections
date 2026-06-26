@@ -6,6 +6,9 @@ derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - NMR
