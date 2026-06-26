@@ -35,7 +35,10 @@ Steps:
    skill should declare. Use the matcher (Perspicacité KB-first, lexical fallback;
    no server required):
    ```python
+   import json
    from scripts.skill_match import match_skills, match_tools, near_duplicates
+   skills_index = json.load(open("<collection-dir>/skills_index.json"))
+   tools_index  = json.load(open("<collection-dir>/tools_index.json"))
    text = "<name + description + tool names>"
    skills = match_skills(text, "<collection-dir>")          # [{slug, score, backend}]
    tools  = match_tools([s["slug"] for s in skills], skills_index, tools_index, text=text)

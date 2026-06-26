@@ -136,6 +136,17 @@ def test_bad_edam_iri_fails(tmp_path):
     assert any("edam" in x.lower() for x in v)
 
 
+def test_non_mapping_frontmatter_reports_clean_violation(tmp_path):
+    # A hand-authored proposal whose frontmatter parses to a list/scalar must yield
+    # a clean violation, not an uncaught AttributeError traceback.
+    col = _collection(tmp_path)
+    d = col / "proposals" / "skills" / "broken"
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "SKILL.md").write_text("---\n- just\n- a\n- list\n---\n# Skill\n")
+    v = c.check_collection(str(col))
+    assert any("not a mapping" in x for x in v)
+
+
 # --- main(argv) exit codes ---------------------------------------------------
 
 def test_main_exits_zero_when_no_proposals(tmp_path):

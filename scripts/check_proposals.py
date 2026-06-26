@@ -56,6 +56,9 @@ def check_collection(collection_dir) -> list:
         except yaml.YAMLError as e:
             violations.append(f"{md}: invalid frontmatter YAML: {e}")
             continue
+        if not isinstance(fm, dict):
+            violations.append(f"{md}: frontmatter is not a mapping")
+            continue
 
         meta = fm.get("metadata") or {}
 
