@@ -281,6 +281,80 @@ def test_community_skill_with_super_kind_resolves_orchestrates(tmp_path):
     assert any("ghost-skill" in x for x in v)
 
 
+# --- contributors (co-authorship attribution) --------------------------------
+
+def test_no_contributors_key_passes(tmp_path):
+    # contributors is optional — a staged skill without it is still valid.
+    col = _collection(tmp_path)
+    _write_skill(col, _good_fm())
+    assert c.check_collection(str(col)) == []
+
+
+def test_valid_contributors_block_passes(tmp_path):
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["contributors"] = [
+        {"name": "Ada Lovelace", "role": "author", "orcid": "0000-0002-1825-0097"},
+        {"name": "Grace Hopper", "role": "reviewer"},
+    ]
+    _write_skill(col, fm)
+    assert c.check_collection(str(col)) == []
+
+
+def test_contributors_not_a_list_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["contributors"] = {"name": "Ada", "role": "author"}
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("contributor" in x.lower() for x in v)
+
+
+def test_contributor_entry_not_mapping_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["contributors"] = ["Ada Lovelace"]
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("contributor" in x.lower() and "mapping" in x.lower() for x in v)
+
+
+def test_contributor_missing_name_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["contributors"] = [{"role": "author"}]
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("contributor" in x.lower() and "name" in x.lower() for x in v)
+
+
+def test_contributor_empty_name_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["contributors"] = [{"name": "  ", "role": "author"}]
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("contributor" in x.lower() and "name" in x.lower() for x in v)
+
+
+def test_contributor_missing_role_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["contributors"] = [{"name": "Ada"}]
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("contributor" in x.lower() and "role" in x.lower() for x in v)
+
+
+def test_contributor_bad_role_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["contributors"] = [{"name": "Ada", "role": "maintainer"}]
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("contributor" in x.lower() and "role" in x.lower() for x in v)
+
+
 # --- main(argv) exit codes ---------------------------------------------------
 
 def test_main_exits_zero_when_no_proposals(tmp_path):
