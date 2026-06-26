@@ -225,6 +225,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "adduct-mass-difference-matching",
+        "mass-spectrometry-adduct-annotation",
+        "chemical-transformation-library-lookup",
+        "reference-database-tolerance-mapping",
+        "histogram-peak-occurrence-analysis",
+        "chemical-transformation-annotation",
+        "adduct-mass-difference-ranking",
+        "mass-spectrometry-peak-enumeration"
       ]
     },
     "adduct-ion-mass-calculation": {
@@ -250,6 +260,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "adduct-mass-calculation-from-smiles",
+        "molecular-structure-transformation",
+        "molecular-weight-prediction-with-modifications",
+        "mass-spectrometry-ion-formula-assignment",
+        "derivatizing-matrix-ionization-rule-application",
+        "reference-dataset-validation-for-metabolite-ions",
+        "smiles-molecular-parsing",
+        "adduct-mass-adjustment-calculation"
       ]
     },
     "adduct-ion-parent-ion-pairing-analysis": {
@@ -276,6 +296,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-spectrometry-imaging-data-interpretation",
+        "spectral-peak-parent-product-pairing",
+        "mass-spectrometry-peak-enumeration",
+        "mass-spectrometry-adduct-annotation",
+        "mass-difference-calculation-from-spectral-peaks",
+        "adduct-mass-difference-matching",
+        "spatial-correlation-filtering-in-msi"
       ]
     },
     "adduct-ion-prediction-and-filtering": {
@@ -308,6 +338,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "ms-adduct-annotation-and-recognition",
+        "spatial-metabolomics-feature-annotation",
+        "mass-spectrometry-adduct-annotation",
+        "m-z-metabolite-annotation-mapping",
+        "metabolite-annotation-at-scale",
+        "mass-spectrometry-peak-enumeration",
+        "adduct-mass-shift-calculation",
+        "adduct-mass-difference-matching"
       ]
     },
     "adduct-mass-calculation-from-smiles": {
@@ -333,6 +373,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "adduct-ion-mass-calculation",
+        "molecular-structure-transformation",
+        "molecular-weight-prediction-with-modifications",
+        "smiles-molecular-parsing",
+        "mass-spectrometry-ion-formula-assignment",
+        "adduct-mass-adjustment-calculation",
+        "smiles-adduct-form-enumeration",
+        "molecular-formula-parsing-from-smiles"
       ]
     },
     "adduct-mass-difference-matching": {
@@ -357,6 +407,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "adduct-mass-difference-ranking",
+        "mass-spectrometry-adduct-annotation",
+        "histogram-peak-occurrence-analysis",
+        "mass-difference-calculation-from-spectral-peaks",
+        "mass-difference-pairwise-calculation",
+        "mass-spectrometry-peak-enumeration",
+        "reference-database-tolerance-mapping",
+        "mass-spectrum-histogram-interpretation"
       ]
     },
     "anndata-object-annotation": {
@@ -378,6 +438,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "anndata-object-integration-and-metadata-mapping",
+        "anndata-object-initialization-and-structuring",
+        "metabolite-level-expression-summarization",
+        "metabolite-detection-frequency-estimation",
+        "spot-level-intensity-aggregation",
+        "spatial-coordinate-metadata-extraction",
+        "spatial-coordinate-registration-across-modalities",
+        "mass-spectrometry-data-matrix-construction"
       ]
     },
     "anndata-object-initialization-and-structuring": {
@@ -399,6 +469,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "anndata-object-annotation",
+        "spatial-coordinate-metadata-extraction",
+        "anndata-object-integration-and-metadata-mapping",
+        "mass-spectrometry-data-matrix-construction",
+        "metabolite-feature-organization",
+        "metabolite-level-expression-summarization",
+        "metabolite-detection-frequency-estimation",
+        "spatial-coordinate-registration-across-modalities"
       ]
     },
     "anndata-object-integration-and-metadata-mapping": {
@@ -421,6 +501,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "anndata-object-annotation",
+        "spatial-coordinate-registration-across-modalities",
+        "euclidean-distance-computation-for-spatial-alignment",
+        "anndata-object-initialization-and-structuring",
+        "spatial-coordinate-metadata-extraction",
+        "knn-nearest-neighbor-matching-for-spot-correspondence",
+        "metabolite-detection-frequency-estimation",
+        "spot-level-intensity-aggregation"
       ]
     },
     "attention-mechanism-implementation": {
@@ -449,6 +539,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-intensity-encoding",
+        "iterative-peak-selection-from-latent-space",
+        "latent-feature-interpretation",
+        "spatial-feature-embedding",
+        "imaging-mass-spectrometry-ion-identification",
+        "latent-space-dimensionality-reduction",
+        "marker-ion-ranking-and-filtering",
+        "autoencoder-encoder-decoder-design"
       ]
     },
     "autoencoder-encoder-decoder-design": {
@@ -477,6 +577,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "latent-feature-interpretation",
+        "latent-space-dimensionality-reduction",
+        "iterative-peak-selection-from-latent-space",
+        "mass-spectrometry-peak-intensity-encoding",
+        "spatial-feature-embedding",
+        "attention-mechanism-implementation",
+        "imaging-mass-spectrometry-ion-identification",
+        "marker-ion-ranking-and-filtering"
       ]
     },
     "batch-file-processing-orchestration": {
@@ -499,6 +609,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "dimple-pipeline-execution",
+        "matlab-data-structure-design",
+        "imaging-data-workspace-integration",
+        "cdf-file-format-parsing",
+        "linear-axis-spatial-analysis",
+        "per-root-metabolite-profiling",
+        "root-developmental-tissue-profiling",
+        "matlab-workspace-initialization"
       ]
     },
     "binary-spectral-data-extraction": {
@@ -526,6 +646,16 @@
         "pewlib",
         "pewpew",
         "python"
+      ],
+      "related_skills": [
+        "imzml-metadata-parsing",
+        "ppm-mass-accuracy-filtering",
+        "mass-spectrometry-image-reconstruction",
+        "m-z-window-tolerance-application",
+        "laser-ablation-isotope-image-interpretation",
+        "instrumental-noise-spike-identification",
+        "imzml-file-format-parsing",
+        "la-icp-ms-image-denoising"
       ]
     },
     "biochemical-annotation-mapping": {
@@ -550,6 +680,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "msi-data-visualization-and-spatial-analysis",
+        "spectral-noise-reduction-msi",
+        "m-z-array-processing",
+        "msi-spectral-data-import",
+        "msi-data-table-export",
+        "spectral-library-matching-and-scoring",
+        "intensity-normalization-spectra",
+        "spectral-baseline-correction"
       ]
     },
     "bioinformatic-object-conversion": {
@@ -581,6 +721,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "cardinal-to-seurat-object-conversion",
+        "msi-feature-metadata-preservation",
+        "cardinal-object-structure-understanding",
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "cardinal-peak-processing-snr-filtering",
+        "spatial-coordinate-mapping-msi",
+        "r-data-structure-conversion",
+        "metabolite-annotation-at-scale"
       ]
     },
     "biological-reactant-pair-mapping-kegg": {
@@ -607,6 +757,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "metabolic-network-edge-construction",
+        "graph-database-indexing-and-serialization",
+        "peak-pairwise-comparison",
+        "chemical-database-query-and-matching",
+        "metabolite-edge-scoring-dbedges-bioedges",
+        "chemical-formula-deduplication-across-databases",
+        "cross-database-entity-reconciliation",
+        "biochemical-transformation-matching"
       ]
     },
     "bonferroni-multiple-testing-correction": {
@@ -632,6 +792,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "multiple-testing-correction-bonferroni",
+        "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+        "pearson-correlation-coefficient-computation",
+        "metabolite-adduct-correlation-spatial-analysis",
+        "spatial-correlation-filtering-in-msi",
+        "spectral-peak-parent-product-pairing",
+        "memory-efficient-pairwise-statistics",
+        "mass-spectrometry-peak-pair-analysis"
       ]
     },
     "bruker-baf-data-import-and-conversion": {
@@ -668,6 +838,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-vendor-format-support",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "data-format-validation-and-integrity-checking",
+        "ion-mobility-filtering-and-tolerance-tuning",
+        "spectral-ion-matching-across-vendors",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "msi-preprocessing-parameter-configuration",
+        "file-format-detection-and-routing"
       ]
     },
     "candidate-formula-ranking": {
@@ -693,6 +873,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "formula-assignment-in-mass-spectrometry",
+        "formula-network-extraction-from-mz",
+        "multiple-linear-regression-model-application",
+        "ppm-tolerance-scoring-and-ranking",
+        "chemical-database-query-and-matching",
+        "mass-accuracy-ppm-filtering",
+        "mass-spectral-feature-annotation",
+        "network-based-metabolite-identification"
       ]
     },
     "candidate-peak-filtering-annotation": {
@@ -718,6 +908,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "spatial-overlap-analysis-imaging",
+        "msi-peak-annotation",
+        "peak-collision-flagging",
+        "overlapping-peak-detection-interpretation",
+        "isobaric-ion-detection-msi",
+        "overlapping-ion-detection",
+        "mass-spectrometry-imaging-data-processing",
+        "m-z-value-clustering-mass-spectrometry"
       ]
     },
     "cardinal-imaging-object-conversion": {
@@ -742,6 +942,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "r-data-structure-conversion",
+        "msi-data-format-interoperability",
+        "mass-spectrometry-peak-enumeration",
+        "mass-spectrometry-imaging-data-interpretation",
+        "adduct-mass-difference-matching",
+        "cardinal-to-seurat-object-conversion",
+        "mass-spectrometry-peak-pair-analysis",
+        "cardinal-object-structure-understanding"
       ]
     },
     "cardinal-object-structure-understanding": {
@@ -773,6 +983,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "bioinformatic-object-conversion",
+        "cardinal-to-seurat-object-conversion",
+        "msimagingarray-object-manipulation",
+        "cardinal-imaging-object-conversion",
+        "msi-feature-metadata-preservation",
+        "cardinal-peak-processing-snr-filtering",
+        "msi-array-data-structure-handling"
       ]
     },
     "cardinal-to-seurat-object-conversion": {
@@ -805,6 +1025,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "bioinformatic-object-conversion",
+        "cardinal-object-structure-understanding",
+        "msi-feature-metadata-preservation",
+        "cardinal-peak-processing-snr-filtering",
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "cardinal-imaging-object-conversion",
+        "r-data-structure-conversion",
+        "metabolite-annotation-at-scale"
       ]
     },
     "cdf-file-format-parsing": {
@@ -826,6 +1056,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "matlab-data-structure-design",
+        "imaging-data-workspace-integration",
+        "batch-file-processing-orchestration",
+        "dimple-pipeline-execution",
+        "root-developmental-tissue-profiling",
+        "per-root-metabolite-profiling",
+        "linear-axis-spatial-analysis",
+        "matlab-workspace-initialization"
       ]
     },
     "cell-type-protein-profiling-integration": {
@@ -846,7 +1086,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "single-cell-spatial-metabolomics-data-processing",
+        "tissue-spatial-analysis-pipeline-execution",
+        "metabolomics-preprocessing-normalization",
+        "spatial-transcriptomics-integration",
+        "spatial-metabolomics-integration",
+        "maldi-imaging-mass-spectrometry-data-interpretation",
+        "spatial-segmentation-shrunken-centroids",
+        "mass-spectrometry-data-matrix-construction"
+      ]
     },
     "chemical-annotation-confidence-assessment": {
       "dois": [
@@ -876,6 +1126,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "spectral-library-annotation-interpretation",
+        "ms2-annotation-interpretation",
+        "metadata-annotation-integration",
+        "multivariate-ordination-interpretation",
+        "tabular-results-aggregation-and-comparison",
+        "metabolite-detection-matrix-construction",
+        "spectral-library-matching-gnps",
+        "group-wise-chemical-enrichment-calculation"
       ]
     },
     "chemical-database-query-and-matching": {
@@ -901,6 +1161,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "formula-assignment-in-mass-spectrometry",
+        "network-based-metabolite-identification",
+        "chemical-formula-deduplication-across-databases",
+        "mass-spectral-feature-annotation",
+        "candidate-formula-ranking",
+        "multiple-linear-regression-model-application",
+        "metabolite-edge-scoring-dbedges-bioedges",
+        "mass-accuracy-ppm-filtering"
       ]
     },
     "chemical-formula-annotation-mapping": {
@@ -926,6 +1196,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "msi-peak-annotation",
+        "ion-formula-matrix-classification",
+        "mass-spectrometry-imaging-data-processing",
+        "isobaric-ion-detection-msi",
+        "overlapping-peak-detection-interpretation",
+        "spatial-distribution-pattern-analysis",
+        "spatial-overlap-analysis-imaging",
+        "formula-assignment-in-mass-spectrometry"
       ]
     },
     "chemical-transformation-annotation": {
@@ -950,6 +1230,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "chemical-transformation-library-lookup",
+        "adduct-mass-difference-matching",
+        "adduct-mass-difference-ranking",
+        "mass-spectrometry-adduct-annotation",
+        "mass-spectrometry-peak-enumeration",
+        "histogram-peak-occurrence-analysis",
+        "mass-difference-calculation-from-spectral-peaks",
+        "mass-spectrum-histogram-interpretation"
       ]
     },
     "chemical-transformation-library-lookup": {
@@ -974,6 +1264,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "chemical-transformation-annotation",
+        "adduct-mass-difference-matching",
+        "mass-spectrometry-adduct-annotation",
+        "histogram-peak-occurrence-analysis",
+        "mass-difference-calculation-from-spectral-peaks",
+        "reference-database-tolerance-mapping",
+        "adduct-mass-difference-ranking",
+        "mass-spectrometry-peak-enumeration"
       ]
     },
     "ci-cd-workflow-triggering": {
@@ -1013,6 +1313,16 @@
         "open-tree-of-life",
         "sirius",
         "timar"
+      ],
+      "related_skills": [
+        "github-actions-api-integration",
+        "workflow-status-monitoring",
+        "java-application-build-verification",
+        "ci-cd-workflow-monitoring",
+        "build-artifact-retrieval-and-validation",
+        "github-actions-artifact-retrieval",
+        "java-build-artifact-validation",
+        "build-status-documentation"
       ]
     },
     "col-mode-augmentation-pipeline-implementation": {
@@ -1043,6 +1353,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "ion-image-augmentation-design",
+        "color-jitter-application-imaging",
+        "image-intensity-jittering",
+        "ion-image-augmentation-intensity-dependent",
+        "spectral-image-filtering",
+        "ion-image-augmentation-contrastive-learning",
+        "random-missing-value-masking",
+        "mass-spectrometry-image-preprocessing"
       ]
     },
     "colocalization-coefficient-computation": {
@@ -1070,6 +1390,16 @@
         "pewlib",
         "pewpew",
         "python"
+      ],
+      "related_skills": [
+        "spatial-overlap-quantification",
+        "pearson-correlation-statistical-testing",
+        "costes-threshold-segmentation",
+        "multi-channel-image-registration-validation",
+        "image-channel-masking-and-segmentation",
+        "local-statistics-median-mean-computation",
+        "per-pixel-array-arithmetic",
+        "laser-ablation-isotope-image-interpretation"
       ]
     },
     "color-jitter-application-imaging": {
@@ -1096,6 +1426,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "image-intensity-jittering",
+        "ion-image-augmentation-design",
+        "ion-image-augmentation-intensity-dependent",
+        "spectral-image-filtering",
+        "poisson-noise-generation",
+        "ion-image-augmentation-contrastive-learning",
+        "col-mode-augmentation-pipeline-implementation",
+        "random-missing-value-masking"
       ]
     },
     "command-line-software-installation-from-github": {
@@ -1133,6 +1473,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "bruker-baf-data-import-and-conversion",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "conda-environment-setup-and-activation",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "python-package-dependency-installation",
+        "python-package-installation-from-source",
+        "python-package-installation-and-dependency-management",
+        "msi-preprocessing-parameter-configuration"
       ]
     },
     "computational-reproducibility-verification": {
@@ -1154,7 +1504,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "notebook-execution-and-reproducibility",
+        "statistical-result-reproduction",
+        "simulation-result-reproduction",
+        "computational-reproducibility-documentation",
+        "script-reproducibility-verification",
+        "code-repository-analysis",
+        "reproducibility-gap-detection",
+        "single-cell-spatial-metabolomics-data-processing"
+      ]
     },
     "conda-environment-setup-and-activation": {
       "dois": [
@@ -1189,6 +1549,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "msi-preprocessing-parameter-configuration",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "conda-environment-creation-and-management",
+        "bruker-baf-data-import-and-conversion",
+        "system-path-environment-configuration",
+        "command-line-software-installation-from-github",
+        "package-manager-environment-setup",
+        "command-line-tool-installation-and-configuration"
       ]
     },
     "conditional-dispatch-logic-implementation": {
@@ -1220,6 +1590,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "module-loader-implementation",
+        "conditional-dispatch-routing-logic",
+        "conditional-dispatch-workflow-implementation",
+        "conditional-dispatch-routing",
+        "error-handling-for-unsupported-formats",
+        "file-format-detection-and-routing",
+        "conditional-routing-logic-extraction",
+        "vendor-file-format-specification-handling"
       ]
     },
     "contrastive-learning-encoder-construction": {
@@ -1247,6 +1627,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "contrastive-learning-encoder-design",
+        "deep-learning-architecture-implementation",
+        "ion-image-augmentation-contrastive-learning",
+        "convolutional-neural-network-encoding",
+        "contrastive-pair-generation",
+        "mass-spectrometry-image-preprocessing",
+        "contrastive-learning-loss-implementation",
+        "ion-image-augmentation-intensity-dependent"
       ]
     },
     "contrastive-learning-encoder-design": {
@@ -1274,6 +1664,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "contrastive-learning-encoder-construction",
+        "ion-image-augmentation-contrastive-learning",
+        "deep-learning-architecture-implementation",
+        "convolutional-neural-network-encoding",
+        "contrastive-learning-loss-implementation",
+        "contrastive-pair-generation",
+        "mass-spectrometry-image-preprocessing",
+        "representation-collapse-prevention"
       ]
     },
     "contrastive-learning-loss-implementation": {
@@ -1300,6 +1700,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "deep-learning-architecture-implementation",
+        "representation-collapse-prevention",
+        "ion-image-augmentation-contrastive-learning",
+        "contrastive-learning-encoder-design",
+        "ion-image-embedding-optimization",
+        "parameter-sharing-in-siamese-networks",
+        "convolutional-neural-network-encoding",
+        "contrastive-pair-generation"
       ]
     },
     "contrastive-pair-generation": {
@@ -1326,6 +1736,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "ion-image-augmentation-contrastive-learning",
+        "contrastive-learning-encoder-design",
+        "contrastive-learning-encoder-construction",
+        "representation-collapse-prevention",
+        "mass-spectrometry-image-preprocessing",
+        "ion-image-augmentation-intensity-dependent",
+        "ion-image-augmentation-design",
+        "convolutional-neural-network-encoding"
       ]
     },
     "convolutional-neural-network-encoding": {
@@ -1352,6 +1772,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "deep-learning-architecture-implementation",
+        "contrastive-learning-encoder-design",
+        "representation-collapse-prevention",
+        "ion-image-augmentation-contrastive-learning",
+        "contrastive-learning-encoder-construction",
+        "neural-network-projection-module-design",
+        "ion-image-embedding-optimization",
+        "ion-image-augmentation-design"
       ]
     },
     "coordinate-system-normalization-1based-indexing": {
@@ -1375,6 +1805,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "dimension-scale-linking-and-cross-group-indexing",
+        "hdf5-file-structure-specification",
+        "hdf5-cardinal-format-preservation",
+        "msi-intensity-matrix-normalization",
+        "feature-metadata-alignment-across-dimensions",
+        "isotope-corrected-image-quantitation",
+        "ion-image-quantification-workflow",
+        "hdf5-file-format-reading-and-writing"
       ]
     },
     "cross-database-entity-reconciliation": {
@@ -1400,6 +1840,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "chemical-formula-deduplication-across-databases",
+        "graph-database-indexing-and-serialization",
+        "chemical-database-query-and-matching",
+        "metabolic-network-edge-construction",
+        "duplicate-record-detection-and-deduplication",
+        "chemical-identifier-mapping-across-services",
+        "chemical-metadata-harmonization",
+        "multi-database-structure-querying"
       ]
     },
     "cross-domain-metadata-integration": {
@@ -1434,6 +1884,16 @@
         "microbiomemasst",
         "plantmasst",
         "tissuemasst"
+      ],
+      "related_skills": [
+        "cross-domain-metadata-harmonization",
+        "hit-score-consolidation-across-domains",
+        "multi-domain-search-result-aggregation",
+        "search-result-visualization-across-domains",
+        "domain-specific-masst-api-integration",
+        "metadata-harmonization-across-sources",
+        "spectral-match-result-consolidation",
+        "spectral-search-result-aggregation"
       ]
     },
     "data-format-validation-and-integrity-checking": {
@@ -1469,6 +1929,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-vendor-format-support",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "bruker-baf-data-import-and-conversion",
+        "file-format-detection-and-routing",
+        "vendor-file-format-specification-handling",
+        "msi-preprocessing-parameter-configuration",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "image-visualization-formatting"
       ]
     },
     "deep-learning-architecture-implementation": {
@@ -1495,6 +1965,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "convolutional-neural-network-encoding",
+        "contrastive-learning-encoder-design",
+        "deep-learning-model-implementation-in-pytorch-or-tensorflow",
+        "contrastive-learning-encoder-construction",
+        "ion-image-augmentation-contrastive-learning",
+        "contrastive-learning-loss-implementation",
+        "representation-collapse-prevention",
+        "parameter-sharing-in-siamese-networks"
       ]
     },
     "deep-learning-model-implementation-in-pytorch-or-tensorflow": {
@@ -1522,6 +2002,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "deep-learning-architecture-implementation",
+        "parameter-sharing-in-siamese-networks",
+        "convolutional-neural-network-encoding",
+        "neural-network-projection-module-design",
+        "parameter-sharing-mechanism-design",
+        "contrastive-learning-loss-implementation",
+        "contrastive-learning-encoder-design",
+        "resnet-architecture-modification-for-dimensionality-control"
       ]
     },
     "deep-learning-model-training": {
@@ -1542,6 +2032,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "meister"
+      ],
+      "related_skills": [
+        "high-dimensional-signal-enhancement",
+        "reconstruction-algorithm-implementation",
+        "model-validation-and-performance-evaluation",
+        "neural-network-model-training",
+        "machine-learning-model-training",
+        "mass-spectrometry-imaging-data-representation",
+        "deep-learning-model-training-and-validation",
+        "deep-learning-model-training-and-inference"
       ]
     },
     "derivatization-chemistry-enumeration": {
@@ -1567,6 +2067,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "derivatizing-matrix-ionization-rule-application",
+        "derivatizing-matrix-configuration",
+        "metabolite-identification-validation",
+        "molecular-structure-transformation",
+        "adduct-ion-mass-calculation",
+        "mass-spectrometry-ion-formula-assignment",
+        "reference-dataset-validation-for-metabolite-ions",
+        "molecular-weight-prediction-with-modifications"
       ]
     },
     "derivatizing-matrix-configuration": {
@@ -1592,6 +2102,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "derivatizing-matrix-ionization-rule-application",
+        "derivatization-chemistry-enumeration",
+        "metabolite-identification-validation",
+        "molecular-structure-transformation",
+        "mass-spectrometry-ion-formula-assignment",
+        "reference-dataset-validation-for-metabolite-ions",
+        "adduct-ion-mass-calculation",
+        "molecular-weight-prediction-with-modifications"
       ]
     },
     "derivatizing-matrix-ionization-rule-application": {
@@ -1616,6 +2136,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "derivatization-chemistry-enumeration",
+        "derivatizing-matrix-configuration",
+        "mass-spectrometry-ion-formula-assignment",
+        "adduct-ion-mass-calculation",
+        "molecular-structure-transformation",
+        "metabolite-identification-validation",
+        "reference-dataset-validation-for-metabolite-ions",
+        "molecular-weight-prediction-with-modifications"
       ]
     },
     "dimension-scale-linking-and-cross-group-indexing": {
@@ -1640,6 +2170,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "feature-metadata-alignment-across-dimensions",
+        "hdf5-file-structure-specification",
+        "hdf5-cardinal-format-preservation",
+        "lipid-feature-annotation-and-sorting",
+        "lipid-feature-identifier-matching",
+        "hdf5-file-format-reading-and-writing",
+        "coordinate-system-normalization-1based-indexing",
+        "msi-metadata-harmonization-across-image-stacks"
       ]
     },
     "dimple-pipeline-execution": {
@@ -1661,6 +2201,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "imaging-data-workspace-integration",
+        "batch-file-processing-orchestration",
+        "matlab-data-structure-design",
+        "linear-axis-spatial-analysis",
+        "cdf-file-format-parsing",
+        "per-root-metabolite-profiling",
+        "root-developmental-tissue-profiling",
+        "matlab-workspace-initialization"
       ]
     },
     "domain-context-to-application-routing": {
@@ -1695,6 +2245,16 @@
         "microbiomemasst",
         "plantmasst",
         "tissuemasst"
+      ],
+      "related_skills": [
+        "web-application-endpoint-mapping",
+        "spectrum-metadata-parsing",
+        "domain-specific-spectrum-search-implementation",
+        "domain-specific-masst-api-integration",
+        "multi-domain-search-result-aggregation",
+        "search-result-visualization-across-domains",
+        "spectral-search-result-aggregation",
+        "cross-domain-metadata-integration"
       ]
     },
     "domain-specific-masst-api-integration": {
@@ -1728,6 +2288,16 @@
         "microbiomemasst",
         "plantmasst",
         "tissuemasst"
+      ],
+      "related_skills": [
+        "mass-spectrometry-reference-database-integration",
+        "domain-specific-spectrum-search-implementation",
+        "search-result-visualization-across-domains",
+        "cross-domain-metadata-integration",
+        "multi-domain-search-result-aggregation",
+        "cross-domain-metadata-harmonization",
+        "spectrum-data-formatting",
+        "spectral-search-result-aggregation"
       ]
     },
     "encoder-output-dimension-reduction": {
@@ -1755,6 +2325,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "resnet-architecture-modification-for-dimensionality-control",
+        "neural-network-projection-module-design",
+        "representation-vector-dimensionality-reduction",
+        "convolutional-neural-network-encoding",
+        "ion-image-embedding-optimization",
+        "contrastive-learning-loss-implementation",
+        "contrastive-learning-encoder-design",
+        "deep-learning-architecture-implementation"
       ]
     },
     "environment-dependency-management": {
@@ -1787,6 +2367,16 @@
         "matlab-compiler-runtime-8-3",
         "python-2-7",
         "r-3-0-1"
+      ],
+      "related_skills": [
+        "metabolomics-tool-deployment",
+        "tool-xml-wrapper-integration",
+        "galaxy-installation-configuration",
+        "software-dependency-management-and-environment-setup",
+        "system-environment-configuration",
+        "galaxy-tool-registration-verification",
+        "reproducibility-gap-detection",
+        "command-line-tool-installation-and-configuration"
       ]
     },
     "error-handling-for-unsupported-formats": {
@@ -1818,6 +2408,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "file-format-detection-and-routing",
+        "vendor-file-format-specification-handling",
+        "module-loader-implementation",
+        "data-format-validation-and-integrity-checking",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "file-io-error-handling-robustness",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "msi-preprocessing-parameter-configuration"
       ]
     },
     "euclidean-distance-computation-for-spatial-alignment": {
@@ -1840,6 +2440,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "spatial-coordinate-registration-across-modalities",
+        "anndata-object-integration-and-metadata-mapping",
+        "knn-nearest-neighbor-matching-for-spot-correspondence",
+        "multi-modal-spot-validation-and-quality-assessment",
+        "spatial-coordinate-metadata-extraction",
+        "neural-network-hyperparameter-optimization",
+        "variational-autoencoder-training",
+        "multi-omics-latent-space-learning"
       ]
     },
     "experimental-design-metadata-integration": {
@@ -1861,6 +2471,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "knime"
+      ],
+      "related_skills": [
+        "knime-workflow-orchestration",
+        "ms-ms-raw-data-loading",
+        "mass-spectrometry-metadata-extraction",
+        "feature-statistical-annotation",
+        "metabolite-metadata-integration",
+        "spatial-coordinate-mapping",
+        "spectral-data-processing-and-annotation",
+        "lcms-feature-detection-and-quantification"
       ]
     },
     "feature-frequency-filtering-imaging": {
@@ -1886,6 +2506,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spectral-noise-filtering-dynamic-peak",
+        "peak-filtering-and-quality-control",
+        "spatial-spectral-array-processing",
+        "mass-spectrometry-peak-validation",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "spectral-reference-peak-summarization",
+        "spectral-peak-picking-derivative-based",
+        "spectral-peak-alignment-across-pixels"
       ]
     },
     "feature-metadata-alignment-across-dimensions": {
@@ -1909,6 +2539,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "hdf5-cardinal-format-preservation",
+        "dimension-scale-linking-and-cross-group-indexing",
+        "msi-metadata-harmonization-across-image-stacks",
+        "lipid-feature-identifier-matching",
+        "hdf5-file-structure-specification",
+        "lipid-feature-annotation-and-sorting",
+        "hdf5-file-format-reading-and-writing",
+        "msi-intensity-matrix-normalization"
       ]
     },
     "feature-statistical-annotation": {
@@ -1931,6 +2571,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "knime"
+      ],
+      "related_skills": [
+        "spectral-feature-annotation",
+        "mass-spectrometry-feature-annotation",
+        "knime-workflow-orchestration",
+        "unannotated-feature-characterization",
+        "spatial-coordinate-mapping",
+        "ms2lda-feature-annotation",
+        "sample-centric-metabolite-annotation",
+        "ms-ms-feature-preparation-for-gnps"
       ]
     },
     "feature-table-export-and-formatting": {
@@ -1958,6 +2608,16 @@
         "mzmine2",
         "openms",
         "optimus"
+      ],
+      "related_skills": [
+        "ms-ms-feature-preparation-for-gnps",
+        "molecular-networking-parameter-configuration",
+        "feature-table-export-and-validation",
+        "mass-spectrometry-feature-mapping",
+        "peak-detection-and-mass-alignment",
+        "cross-sample-feature-alignment",
+        "spectral-similarity-network-generation",
+        "mzmine-quantitative-table-parsing"
       ]
     },
     "file-format-detection-and-routing": {
@@ -1989,6 +2649,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "vendor-file-format-specification-handling",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "module-loader-implementation",
+        "data-format-validation-and-integrity-checking",
+        "error-handling-for-unsupported-formats",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "vendor-format-routing-dispatch",
+        "bruker-baf-data-import-and-conversion"
       ]
     },
     "formula-assignment-in-mass-spectrometry": {
@@ -2014,6 +2684,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "mass-spectral-feature-annotation",
+        "formula-network-extraction-from-mz",
+        "candidate-formula-ranking",
+        "chemical-database-query-and-matching",
+        "network-based-metabolite-identification",
+        "molecular-formula-search-assignment",
+        "multiple-linear-regression-model-application",
+        "mass-spectrometry-molecular-formula-handling"
       ]
     },
     "formula-network-extraction-from-mz": {
@@ -2039,6 +2719,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "formula-assignment-in-mass-spectrometry",
+        "candidate-formula-ranking",
+        "network-based-metabolite-identification",
+        "mass-spectral-feature-annotation",
+        "chemical-database-query-and-matching",
+        "multiple-linear-regression-model-application",
+        "mass-accuracy-ppm-filtering",
+        "metabolite-edge-scoring-dbedges-bioedges"
       ]
     },
     "git-repository-cloning-and-version-control": {
@@ -2065,6 +2755,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "ci-cd-pipeline-reproducibility-verification",
+        "github-actions-workflow-inspection-and-execution",
+        "git-repository-cloning",
+        "database-repository-retrieval",
+        "shell-environment-setup-and-dependency-management",
+        "github-actions-workflow-execution",
+        "repository-administration",
+        "repository-cloning-and-setup"
       ]
     },
     "graph-database-indexing-and-serialization": {
@@ -2090,6 +2790,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "chemical-formula-deduplication-across-databases",
+        "metabolic-network-edge-construction",
+        "cross-database-entity-reconciliation",
+        "chemical-database-query-and-matching",
+        "biological-reactant-pair-mapping-kegg",
+        "metabolite-edge-scoring-dbedges-bioedges",
+        "graph-neural-network-architecture-assembly",
+        "network-based-metabolite-identification"
       ]
     },
     "group-wise-chemical-enrichment-calculation": {
@@ -2120,6 +2830,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "tabular-results-aggregation-and-comparison",
+        "normalization-for-unequal-group-sizes",
+        "metadata-annotation-integration",
+        "multivariate-ordination-interpretation",
+        "chemical-annotation-confidence-assessment",
+        "metabolite-feature-table-normalization",
+        "file-grouping-by-sample-attributes",
+        "ms2-annotation-interpretation"
       ]
     },
     "hdf5-cardinal-format-preservation": {
@@ -2143,6 +2863,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "hdf5-file-structure-specification",
+        "hdf5-file-format-reading-and-writing",
+        "feature-metadata-alignment-across-dimensions",
+        "lipid-feature-identifier-matching",
+        "dimension-scale-linking-and-cross-group-indexing",
+        "lipid-feature-annotation-and-sorting",
+        "msi-intensity-matrix-isotope-correction",
+        "msi-intensity-matrix-normalization"
       ]
     },
     "hdf5-file-format-reading-and-writing": {
@@ -2169,6 +2899,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "hdf5-file-structure-specification",
+        "hdf5-cardinal-format-preservation",
+        "feature-metadata-alignment-across-dimensions",
+        "dimension-scale-linking-and-cross-group-indexing",
+        "msi-metadata-harmonization-across-image-stacks",
+        "lipid-feature-identifier-matching",
+        "lipid-feature-annotation-and-sorting",
+        "msi-intensity-matrix-normalization"
       ]
     },
     "hdf5-file-structure-specification": {
@@ -2192,6 +2932,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "hdf5-file-format-reading-and-writing",
+        "hdf5-cardinal-format-preservation",
+        "dimension-scale-linking-and-cross-group-indexing",
+        "msi-metadata-harmonization-across-image-stacks",
+        "feature-metadata-alignment-across-dimensions",
+        "lipid-feature-identifier-matching",
+        "lipid-feature-annotation-and-sorting",
+        "coordinate-system-normalization-1based-indexing"
       ]
     },
     "high-dimensional-signal-enhancement": {
@@ -2212,6 +2962,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "meister"
+      ],
+      "related_skills": [
+        "deep-learning-model-training",
+        "reconstruction-algorithm-implementation",
+        "spectral-noise-reduction-msi",
+        "mass-spectrometry-peak-intensity-encoding",
+        "two-dimensional-ms-image-processing",
+        "signal-quality-assessment",
+        "multidimensional-signal-smoothing-imms",
+        "noise-suppression-spectral-imaging"
       ]
     },
     "high-resolution-spot-to-spot-integration": {
@@ -2232,6 +2992,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "hacca"
+      ],
+      "related_skills": [
+        "multimodal-spot-correspondence-mapping",
+        "spatial-spot-coordinate-registration",
+        "spatial-transcriptome-metabolome-coregistration",
+        "spatial-transcriptomics-integration",
+        "spatial-data-integration-preprocessing",
+        "spatial-metabolomics-integration",
+        "knn-nearest-neighbor-matching-for-spot-correspondence",
+        "morphological-alignment-optimization"
       ]
     },
     "histogram-peak-occurrence-analysis": {
@@ -2255,6 +3025,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-enumeration",
+        "adduct-mass-difference-matching",
+        "adduct-mass-difference-ranking",
+        "mass-spectrum-histogram-interpretation",
+        "mass-spectrometry-imaging-data-interpretation",
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-difference-calculation-from-spectral-peaks",
+        "chemical-transformation-library-lookup"
       ]
     },
     "image-intensity-jittering": {
@@ -2280,6 +3060,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "color-jitter-application-imaging",
+        "ion-image-augmentation-intensity-dependent",
+        "spectral-image-filtering",
+        "spatial-filtering-ion-images",
+        "ion-image-augmentation-design",
+        "ion-image-augmentation-contrastive-learning",
+        "poisson-noise-generation",
+        "col-mode-augmentation-pipeline-implementation"
       ]
     },
     "image-visualization-formatting": {
@@ -2311,6 +3101,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-image-normalization",
+        "pixel-intensity-scaling-and-thresholding",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "msi-metadata-curation-and-storage",
+        "pixel-binning-and-spatial-registration",
+        "msi-preprocessing-parameter-configuration",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "spectral-ion-matching-across-vendors"
       ]
     },
     "imaging-data-workspace-integration": {
@@ -2333,6 +3133,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "per-root-metabolite-profiling",
+        "root-developmental-tissue-profiling",
+        "linear-axis-spatial-analysis",
+        "matlab-data-structure-design",
+        "dimple-pipeline-execution",
+        "cdf-file-format-parsing",
+        "batch-file-processing-orchestration",
+        "matlab-workspace-initialization"
       ]
     },
     "imaging-mass-spectrometry-characterization": {
@@ -2357,6 +3167,16 @@
         "javafx-24",
         "jdk-25",
         "mzmine"
+      ],
+      "related_skills": [
+        "chromatographic-modality-classification",
+        "ms-instrument-type-classification",
+        "ion-mobility-dimension-detection",
+        "ms-data-format-identification",
+        "data-type-classification-schema-design",
+        "ionisation-method-hardware-correspondence",
+        "instrument-metadata-parsing",
+        "module-dispatch-architecture-analysis"
       ]
     },
     "imaging-mass-spectrometry-ion-identification": {
@@ -2385,6 +3205,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "marker-ion-ranking-and-filtering",
+        "mass-spectrometry-peak-intensity-encoding",
+        "attention-mechanism-implementation",
+        "spatial-feature-embedding",
+        "iterative-peak-selection-from-latent-space",
+        "latent-space-dimensionality-reduction",
+        "autoencoder-encoder-decoder-design",
+        "latent-feature-interpretation"
       ]
     },
     "imaging-parameter-metadata-annotation": {
@@ -2417,6 +3247,16 @@
         "msconvert",
         "proteowizard",
         "python"
+      ],
+      "related_skills": [
+        "spatial-pixel-coordinate-alignment",
+        "mzml-to-imzml-format-conversion",
+        "scan-filter-file-organization",
+        "msconvert-workflow-configuration",
+        "mass-spectrometry-file-conversion",
+        "raw-vendor-file-format-handling",
+        "imzml-metadata-parsing",
+        "mass-recalibration-lock-mass-correction"
       ]
     },
     "imzml-continuous-format-parsing": {
@@ -2442,6 +3282,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-data-import",
+        "msi-imaging-experiment-class-manipulation",
+        "msi-array-data-structure-handling",
+        "msi-data-matrix-import-and-validation",
+        "spectral-dimension-verification",
+        "msi-data-format-interoperability",
+        "msimagingarray-object-manipulation",
+        "mass-spectrometry-peak-detection-and-alignment"
       ]
     },
     "imzml-file-format-parsing": {
@@ -2463,6 +3313,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-matrix-construction",
+        "spatial-coordinate-metadata-extraction",
+        "imzml-file-loading-and-import",
+        "imzml-metadata-parsing",
+        "metabolite-feature-organization",
+        "imaging-mass-spectrometry-characterization",
+        "anndata-object-initialization-and-structuring",
+        "mzml-to-imzml-format-conversion"
       ]
     },
     "imzml-file-loading-and-import": {
@@ -2486,6 +3346,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "ion-image-quantification-workflow",
+        "imzml-file-format-parsing",
+        "hdf5-cardinal-format-preservation",
+        "msi-metadata-harmonization-across-image-stacks",
+        "mass-spectrometry-imaging-data-import",
+        "hdf5-file-format-reading-and-writing",
+        "isotope-corrected-image-quantitation",
+        "msi-intensity-matrix-isotope-correction"
       ]
     },
     "imzml-metadata-parsing": {
@@ -2513,6 +3383,16 @@
         "pewlib",
         "pewpew",
         "python"
+      ],
+      "related_skills": [
+        "binary-spectral-data-extraction",
+        "mass-spectrometry-image-reconstruction",
+        "m-z-window-tolerance-application",
+        "ppm-mass-accuracy-filtering",
+        "imzml-file-format-parsing",
+        "imaging-parameter-metadata-annotation",
+        "spatial-pixel-coordinate-alignment",
+        "laser-ablation-isotope-image-interpretation"
       ]
     },
     "in-source-fragment-adduct-candidate-flagging": {
@@ -2539,6 +3419,16 @@
       "tools_used": [
         "dbdipy",
         "python"
+      ],
+      "related_skills": [
+        "time-resolved-dbdi-data-interpretation",
+        "adduct-fragment-formula-interpretation",
+        "mass-difference-adduct-matching",
+        "fragment-ion-spectral-matching",
+        "exact-mass-accuracy-calculation",
+        "temporal-profile-correlation-analysis",
+        "ms2-spectral-similarity-scoring",
+        "feature-pair-mass-refinement"
       ]
     },
     "integrative-omics-pathway-enrichment": {
@@ -2559,6 +3449,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "r-gui"
+      ],
+      "related_skills": [
+        "metabolite-pathway-annotation-mapping",
+        "pathway-metabolite-mapping-integration",
+        "metabolomic-biomarker-pathway-association",
+        "pathway-enrichment-analysis-tool-selection",
+        "metabolite-kegg-pathway-enrichment",
+        "r-bioconductor-omics-workflow",
+        "singular-value-decomposition-pathway-analysis",
+        "metabolomics-data-integration-with-metabolic-networks"
       ]
     },
     "intensity-dependent-missing-value-simulation": {
@@ -2587,6 +3487,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "random-missing-value-masking",
+        "ion-image-augmentation-intensity-dependent",
+        "image-intensity-jittering",
+        "poisson-noise-injection-for-imaging",
+        "ion-image-augmentation-design",
+        "color-jitter-application-imaging",
+        "poisson-noise-generation",
+        "spectral-image-filtering"
       ]
     },
     "intensity-normalization-spectra": {
@@ -2611,6 +3521,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "spectral-noise-reduction-msi",
+        "spectral-baseline-correction",
+        "mean-intensity-aggregation",
+        "msi-spectral-data-import",
+        "mass-spectrometry-image-normalization",
+        "signal-quality-assessment",
+        "m-z-array-processing",
+        "msi-data-table-export"
       ]
     },
     "interactive-spectral-visualization-emperor": {
@@ -2642,6 +3562,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "multivariate-ordination-interpretation",
+        "pca-dimensionality-reduction-unsupervised",
+        "metabolite-feature-table-normalization",
+        "ms2-annotation-interpretation",
+        "metadata-annotation-integration",
+        "metabolite-detection-matrix-construction",
+        "chemical-annotation-confidence-assessment",
+        "tabular-results-aggregation-and-comparison"
       ]
     },
     "internal-standard-intensity-calibration": {
@@ -2673,6 +3603,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-image-normalization",
+        "internal-standard-ion-selection-and-application",
+        "pixel-intensity-scaling-and-thresholding",
+        "intensity-normalization-spectra",
+        "image-visualization-formatting",
+        "internal-standard-feature-extraction",
+        "pixel-binning-and-spatial-registration",
+        "msi-intensity-matrix-normalization"
       ]
     },
     "internal-standard-ion-selection-and-application": {
@@ -2697,6 +3637,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "msi-intensity-matrix-normalization",
+        "isotope-corrected-image-quantitation",
+        "ion-image-quantification-workflow",
+        "lipid-feature-identifier-matching",
+        "msi-intensity-matrix-isotope-correction",
+        "internal-standardization-correction-lipidomes",
+        "internal-standard-intensity-calibration",
+        "internal-standardization-with-isotope-labels"
       ]
     },
     "ion-formula-matrix-classification": {
@@ -2723,6 +3673,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "chemical-formula-annotation-mapping",
+        "mass-spectrometry-imaging-data-processing",
+        "msi-peak-annotation",
+        "isobaric-ion-detection-msi",
+        "matrix-ion-spatial-distribution-visualization",
+        "overlapping-ion-detection",
+        "overlapping-peak-detection-interpretation",
+        "spatial-distribution-pattern-analysis"
       ]
     },
     "ion-image-augmentation-contrastive-learning": {
@@ -2749,6 +3709,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "ion-image-augmentation-design",
+        "contrastive-learning-encoder-design",
+        "ion-image-augmentation-intensity-dependent",
+        "mass-spectrometry-image-preprocessing",
+        "spectral-image-filtering",
+        "representation-collapse-prevention",
+        "spatial-filtering-ion-images",
+        "contrastive-learning-encoder-construction"
       ]
     },
     "ion-image-augmentation-design": {
@@ -2780,6 +3750,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "ion-image-augmentation-contrastive-learning",
+        "ion-image-augmentation-intensity-dependent",
+        "col-mode-augmentation-pipeline-implementation",
+        "color-jitter-application-imaging",
+        "image-intensity-jittering",
+        "spectral-image-filtering",
+        "representation-collapse-prevention",
+        "random-missing-value-masking"
       ]
     },
     "ion-image-augmentation-intensity-dependent": {
@@ -2806,6 +3786,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "image-intensity-jittering",
+        "ion-image-augmentation-contrastive-learning",
+        "ion-image-augmentation-design",
+        "intensity-dependent-missing-value-simulation",
+        "random-missing-value-masking",
+        "spectral-image-filtering",
+        "color-jitter-application-imaging",
+        "mass-spectrometry-image-preprocessing"
       ]
     },
     "ion-image-embedding-optimization": {
@@ -2832,6 +3822,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "ion-image-augmentation-contrastive-learning",
+        "representation-collapse-prevention",
+        "contrastive-learning-loss-implementation",
+        "convolutional-neural-network-encoding",
+        "ion-image-augmentation-design",
+        "encoder-output-dimension-reduction",
+        "contrastive-learning-encoder-design",
+        "ion-image-augmentation-intensity-dependent"
       ]
     },
     "ion-image-quantification-workflow": {
@@ -2855,6 +3855,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "isotope-corrected-image-quantitation",
+        "imzml-file-loading-and-import",
+        "msi-intensity-matrix-normalization",
+        "lipid-feature-annotation-and-sorting",
+        "msi-metadata-harmonization-across-image-stacks",
+        "internal-standard-ion-selection-and-application",
+        "hdf5-cardinal-format-preservation",
+        "lipid-adduct-pairing-by-neutral-mass"
       ]
     },
     "ion-mobility-filtering-and-tolerance-tuning": {
@@ -2887,6 +3897,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "spectral-ion-matching-across-vendors",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "mass-tolerance-parameter-calibration",
+        "bruker-baf-data-import-and-conversion",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "msi-preprocessing-parameter-configuration",
+        "ion-mobility-saturation-detection-and-repair"
       ]
     },
     "isobaric-ion-detection-msi": {
@@ -2912,6 +3932,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "msi-peak-annotation",
+        "isobaric-ion-misclassification-documentation",
+        "overlapping-ion-detection",
+        "overlapping-peak-detection-interpretation",
+        "mass-spectrometry-imaging-data-processing",
+        "peak-collision-flagging",
+        "spatial-overlap-analysis-imaging",
+        "m-z-value-clustering-mass-spectrometry"
       ]
     },
     "isobaric-ion-misclassification-documentation": {
@@ -2937,6 +3967,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "isobaric-ion-detection-msi",
+        "overlapping-ion-detection",
+        "overlapping-peak-detection-interpretation",
+        "spatial-overlap-analysis-imaging",
+        "ion-formula-matrix-classification",
+        "m-z-value-clustering-mass-spectrometry",
+        "peak-collision-flagging",
+        "matrix-ion-spatial-distribution-visualization"
       ]
     },
     "isotope-corrected-image-quantitation": {
@@ -2961,6 +4001,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "msi-intensity-matrix-normalization",
+        "ion-image-quantification-workflow",
+        "msi-intensity-matrix-isotope-correction",
+        "internal-standard-ion-selection-and-application",
+        "hdf5-cardinal-format-preservation",
+        "msi-metadata-harmonization-across-image-stacks",
+        "natural-isotope-abundance-calculation",
+        "lipid-feature-identifier-matching"
       ]
     },
     "iterative-peak-selection-from-latent-space": {
@@ -2990,6 +4040,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "latent-feature-interpretation",
+        "marker-ion-ranking-and-filtering",
+        "attention-mechanism-implementation",
+        "autoencoder-encoder-decoder-design",
+        "latent-space-dimensionality-reduction",
+        "imaging-mass-spectrometry-ion-identification",
+        "mass-spectrometry-peak-intensity-encoding",
+        "spatial-feature-embedding"
       ]
     },
     "java-build-artifact-validation": {
@@ -3015,6 +4075,16 @@
         "javafx-24",
         "jdk-25",
         "mzmine"
+      ],
+      "related_skills": [
+        "build-artifact-retrieval-and-validation",
+        "java-application-build-verification",
+        "github-actions-artifact-retrieval",
+        "build-status-documentation",
+        "ci-cd-workflow-monitoring",
+        "ci-cd-workflow-triggering",
+        "github-actions-api-integration",
+        "workflow-status-monitoring"
       ]
     },
     "keras-tensorflow-model-compilation": {
@@ -3055,6 +4125,16 @@
         "seaborn-0-9-0",
         "tensorflow",
         "tensorflow-1-8-0"
+      ],
+      "related_skills": [
+        "probabilistic-classification-network-construction",
+        "mass-spectrometry-imaging-data-representation",
+        "neural-network-model-training",
+        "training-data-loading-and-preprocessing",
+        "raw-spectral-data-input-handling-without-peak-picking",
+        "deep-learning-model-initialization",
+        "model-artifact-persistence",
+        "tensorflow-hdf5-serialization"
       ]
     },
     "knn-nearest-neighbor-matching-for-spot-correspondence": {
@@ -3077,6 +4157,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "spatial-metabolomics-integration",
+        "spatial-coordinate-registration-across-modalities",
+        "euclidean-distance-computation-for-spatial-alignment",
+        "multi-modal-spot-validation-and-quality-assessment",
+        "spatial-transcriptomics-integration",
+        "anndata-object-integration-and-metadata-mapping",
+        "spatial-coordinate-metadata-extraction",
+        "multi-omics-latent-space-learning"
       ]
     },
     "latent-feature-interpretation": {
@@ -3106,6 +4196,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "iterative-peak-selection-from-latent-space",
+        "latent-space-dimensionality-reduction",
+        "attention-mechanism-implementation",
+        "autoencoder-encoder-decoder-design",
+        "spatial-feature-embedding",
+        "mass-spectrometry-peak-intensity-encoding",
+        "marker-ion-ranking-and-filtering",
+        "imaging-mass-spectrometry-ion-identification"
       ]
     },
     "latent-space-dimensionality-reduction": {
@@ -3134,6 +4234,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "spatial-feature-embedding",
+        "mass-spectrometry-peak-intensity-encoding",
+        "latent-feature-interpretation",
+        "autoencoder-encoder-decoder-design",
+        "iterative-peak-selection-from-latent-space",
+        "attention-mechanism-implementation",
+        "imaging-mass-spectrometry-ion-identification",
+        "marker-ion-ranking-and-filtering"
       ]
     },
     "linear-axis-spatial-analysis": {
@@ -3156,6 +4266,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "imaging-data-workspace-integration",
+        "dimple-pipeline-execution",
+        "matlab-data-structure-design",
+        "per-root-metabolite-profiling",
+        "root-developmental-tissue-profiling",
+        "cdf-file-format-parsing",
+        "batch-file-processing-orchestration",
+        "matlab-workspace-initialization"
       ]
     },
     "lipid-adduct-pairing-by-neutral-mass": {
@@ -3179,6 +4299,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "natural-isotope-abundance-calculation",
+        "msi-intensity-matrix-isotope-correction",
+        "lipid-feature-annotation-and-sorting",
+        "lipid-feature-identifier-matching",
+        "isotope-corrected-image-quantitation",
+        "adduct-ion-parent-ion-pairing-analysis",
+        "ion-image-quantification-workflow",
+        "hdf5-cardinal-format-preservation"
       ]
     },
     "lipid-category-classification": {
@@ -3212,6 +4342,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "lipid-nomenclature-simplification",
+        "lipid-database-querying",
+        "m-z-annotation-reduction-quantification",
+        "annotation-complexity-comparison",
+        "lipid-class-feature-annotation",
+        "spatial-metabolomics-feature-annotation",
+        "metabolite-annotation-at-scale",
+        "seurat-assay-metadata-extraction"
       ]
     },
     "lipid-database-querying": {
@@ -3245,6 +4385,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "metabolite-annotation-at-scale",
+        "spatial-metabolomics-feature-annotation",
+        "m-z-metabolite-annotation-mapping",
+        "lipid-database-query-and-annotation",
+        "lipid-category-classification",
+        "m-z-database-matching-with-mass-tolerance",
+        "lipid-nomenclature-simplification",
+        "lipid-maps-database-lookup"
       ]
     },
     "lipid-feature-annotation-and-sorting": {
@@ -3268,6 +4418,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "lipid-feature-identifier-matching",
+        "hdf5-cardinal-format-preservation",
+        "msi-metadata-harmonization-across-image-stacks",
+        "feature-metadata-alignment-across-dimensions",
+        "hdf5-file-structure-specification",
+        "ion-image-quantification-workflow",
+        "dimension-scale-linking-and-cross-group-indexing",
+        "hdf5-file-format-reading-and-writing"
       ]
     },
     "lipid-feature-identifier-matching": {
@@ -3292,6 +4452,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "lipid-feature-annotation-and-sorting",
+        "hdf5-cardinal-format-preservation",
+        "feature-metadata-alignment-across-dimensions",
+        "hdf5-file-structure-specification",
+        "msi-intensity-matrix-normalization",
+        "msi-intensity-matrix-isotope-correction",
+        "dimension-scale-linking-and-cross-group-indexing",
+        "msi-metadata-harmonization-across-image-stacks"
       ]
     },
     "lipid-nomenclature-simplification": {
@@ -3325,6 +4495,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "lipid-category-classification",
+        "m-z-annotation-reduction-quantification",
+        "annotation-complexity-comparison",
+        "lipid-database-querying",
+        "spatial-metabolomics-feature-annotation",
+        "m-z-metabolite-annotation-mapping",
+        "metabolite-annotation-at-scale",
+        "lipid-class-feature-annotation"
       ]
     },
     "m-z-annotation-reduction-quantification": {
@@ -3358,6 +4538,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "lipid-nomenclature-simplification",
+        "annotation-complexity-comparison",
+        "m-z-metabolite-annotation-mapping",
+        "lipid-category-classification",
+        "spatial-metabolomics-feature-annotation",
+        "metabolite-annotation-at-scale",
+        "lipid-database-querying",
+        "seurat-assay-metadata-extraction"
       ]
     },
     "m-z-array-processing": {
@@ -3382,6 +4572,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "msi-spectral-data-import",
+        "msi-data-table-export",
+        "msi-data-visualization-and-spatial-analysis",
+        "spectral-noise-reduction-msi",
+        "mean-intensity-aggregation",
+        "spectral-baseline-correction",
+        "intensity-normalization-spectra",
+        "signal-quality-assessment"
       ]
     },
     "m-z-metabolite-annotation-mapping": {
@@ -3415,6 +4615,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "spatial-metabolomics-feature-annotation",
+        "metabolite-annotation-at-scale",
+        "seurat-assay-metadata-extraction",
+        "m-z-database-matching-with-mass-tolerance",
+        "m-z-annotation-reduction-quantification",
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "lipid-database-querying",
+        "adduct-ion-prediction-and-filtering"
       ]
     },
     "m-z-value-clustering-mass-spectrometry": {
@@ -3440,6 +4650,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "isobaric-ion-detection-msi",
+        "msi-peak-annotation",
+        "peak-collision-flagging",
+        "overlapping-peak-detection-interpretation",
+        "mass-spectrometry-imaging-data-processing",
+        "overlapping-ion-detection",
+        "spatial-overlap-analysis-imaging",
+        "isobaric-ion-misclassification-documentation"
       ]
     },
     "m-z-window-tolerance-application": {
@@ -3466,6 +4686,16 @@
         "pewlib",
         "pewpew",
         "python"
+      ],
+      "related_skills": [
+        "imzml-metadata-parsing",
+        "ppm-mass-accuracy-filtering",
+        "binary-spectral-data-extraction",
+        "mass-spectrometry-image-reconstruction",
+        "m-z-tolerance-window-matching",
+        "laser-ablation-isotope-image-interpretation",
+        "spectral-mz-window-filtering",
+        "imzml-file-format-parsing"
       ]
     },
     "maldi-imaging-mass-spectrometry-data-interpretation": {
@@ -3492,6 +4722,16 @@
       "tools_used": [
         "google-colab",
         "python-3"
+      ],
+      "related_skills": [
+        "metabolomics-data-downstream-analysis",
+        "mass-spectrometry-imaging-data-processing",
+        "single-cell-spatial-metabolomics-data-processing",
+        "imzml-file-format-parsing",
+        "metabolomics-preprocessing-normalization",
+        "mass-spectrometry-data-matrix-construction",
+        "spatial-coordinate-metadata-extraction",
+        "mass-spectrometry-imaging-data-representation"
       ]
     },
     "marker-ion-ranking-and-filtering": {
@@ -3520,6 +4760,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "imaging-mass-spectrometry-ion-identification",
+        "iterative-peak-selection-from-latent-space",
+        "attention-mechanism-implementation",
+        "mass-spectrometry-peak-intensity-encoding",
+        "latent-feature-interpretation",
+        "spatial-feature-embedding",
+        "latent-space-dimensionality-reduction",
+        "autoencoder-encoder-decoder-design"
       ]
     },
     "mass-accuracy-ppm-filtering": {
@@ -3545,6 +4795,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "ppm-tolerance-scoring-and-ranking",
+        "candidate-formula-ranking",
+        "ppm-tolerance-filtering-in-mass-spectrometry",
+        "chemical-database-query-and-matching",
+        "spectral-peak-filtering-by-mass-accuracy",
+        "ppm-error-tolerance-filtering",
+        "formula-network-extraction-from-mz",
+        "multiple-linear-regression-model-application"
       ]
     },
     "mass-difference-calculation-from-spectral-peaks": {
@@ -3569,6 +4829,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "adduct-mass-difference-matching",
+        "mass-difference-pairwise-calculation",
+        "pairwise-mass-difference-computation",
+        "adduct-mass-difference-ranking",
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-spectrometry-imaging-data-interpretation",
+        "mass-spectrometry-adduct-annotation",
+        "mass-spectrometry-peak-enumeration"
       ]
     },
     "mass-difference-pairwise-calculation": {
@@ -3595,6 +4865,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "pairwise-mass-difference-computation",
+        "mass-difference-calculation-from-spectral-peaks",
+        "adduct-mass-difference-matching",
+        "memory-efficient-pairwise-statistics",
+        "mass-spectrometry-adduct-annotation",
+        "mass-spectrometry-peak-enumeration",
+        "adduct-mass-difference-ranking",
+        "mass-spectrometry-peak-pair-analysis"
       ]
     },
     "mass-error-tolerance-filtering": {
@@ -3626,6 +4906,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "ppm-error-validation-in-metabolomics",
+        "m-z-database-matching-with-mass-tolerance",
+        "ppm-error-tolerance-filtering",
+        "ppm-tolerance-filtering-in-mass-spectrometry",
+        "mass-tolerance-window-filtering",
+        "m-z-metabolite-annotation-mapping",
+        "mass-to-charge-tolerance-filtering",
+        "mass-spec-tolerance-parameter-application"
       ]
     },
     "mass-recalibration-lock-mass-correction": {
@@ -3656,6 +4946,16 @@
         "msconvert",
         "proteowizard",
         "python"
+      ],
+      "related_skills": [
+        "mzml-to-imzml-format-conversion",
+        "scan-filter-file-organization",
+        "spatial-pixel-coordinate-alignment",
+        "imaging-parameter-metadata-annotation",
+        "mass-spectrometry-file-conversion",
+        "msconvert-workflow-configuration",
+        "mass-tolerance-parameter-calibration",
+        "mass-spectrometry-calibration"
       ]
     },
     "mass-spectral-feature-annotation": {
@@ -3681,6 +4981,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "formula-assignment-in-mass-spectrometry",
+        "chemical-database-query-and-matching",
+        "network-based-metabolite-identification",
+        "formula-network-extraction-from-mz",
+        "candidate-formula-ranking",
+        "multiple-linear-regression-model-application",
+        "ms1-feature-detection-and-annotation",
+        "mass-spectrometry-feature-annotation"
       ]
     },
     "mass-spectrometry-adduct-annotation": {
@@ -3729,6 +5039,16 @@
         "rdkit",
         "scarf",
         "sirius"
+      ],
+      "related_skills": [
+        "adduct-mass-difference-matching",
+        "mass-spectrometry-imaging-data-interpretation",
+        "adduct-mass-difference-ranking",
+        "chemical-transformation-library-lookup",
+        "mass-difference-calculation-from-spectral-peaks",
+        "mass-difference-pairwise-calculation",
+        "mass-spectrometry-peak-enumeration",
+        "reference-database-tolerance-mapping"
       ]
     },
     "mass-spectrometry-data-matrix-construction": {
@@ -3750,6 +5070,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "spatial-coordinate-metadata-extraction",
+        "metabolite-feature-organization",
+        "anndata-object-initialization-and-structuring",
+        "metabolite-level-expression-summarization",
+        "spatial-metabolomics-integration",
+        "metabolite-detection-frequency-estimation",
+        "imzml-file-format-parsing",
+        "spatial-coordinate-registration-across-modalities"
       ]
     },
     "mass-spectrometry-file-conversion": {
@@ -3782,6 +5112,16 @@
         "msconvert",
         "proteowizard",
         "python"
+      ],
+      "related_skills": [
+        "raw-vendor-file-format-handling",
+        "msconvert-workflow-configuration",
+        "mzml-to-imzml-format-conversion",
+        "mass-spectrometry-file-format-conversion",
+        "mass-spectrometry-data-processing",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "vendor-data-standardization",
+        "mzml-file-parsing"
       ]
     },
     "mass-spectrometry-image-normalization": {
@@ -3815,6 +5155,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "image-visualization-formatting",
+        "pixel-intensity-scaling-and-thresholding",
+        "total-ion-current-quantification",
+        "intensity-normalization-spectra",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "pixel-binning-and-spatial-registration",
+        "internal-standard-intensity-calibration",
+        "metabolomics-preprocessing-normalization"
       ]
     },
     "mass-spectrometry-image-preprocessing": {
@@ -3842,6 +5192,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "ion-image-augmentation-contrastive-learning",
+        "spectral-image-filtering",
+        "ion-image-augmentation-intensity-dependent",
+        "spatial-filtering-ion-images",
+        "color-jitter-application-imaging",
+        "image-intensity-jittering",
+        "random-missing-value-masking",
+        "ion-image-augmentation-design"
       ]
     },
     "mass-spectrometry-image-reconstruction": {
@@ -3869,6 +5229,16 @@
         "pewlib",
         "pewpew",
         "python"
+      ],
+      "related_skills": [
+        "imzml-metadata-parsing",
+        "binary-spectral-data-extraction",
+        "ppm-mass-accuracy-filtering",
+        "m-z-window-tolerance-application",
+        "laser-ablation-isotope-image-interpretation",
+        "reconstruction-algorithm-implementation",
+        "la-icp-ms-image-denoising",
+        "imzml-file-format-parsing"
       ]
     },
     "mass-spectrometry-imaging-data-import": {
@@ -3895,6 +5265,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "imzml-continuous-format-parsing",
+        "msi-imaging-experiment-class-manipulation",
+        "mass-spectrometry-imaging-data-loading",
+        "msi-array-data-structure-handling",
+        "msi-data-matrix-import-and-validation",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "imzml-file-loading-and-import",
+        "cardinal-imaging-object-conversion"
       ]
     },
     "mass-spectrometry-imaging-data-interpretation": {
@@ -3921,6 +5301,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-enumeration",
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-spectrometry-adduct-annotation",
+        "mass-difference-calculation-from-spectral-peaks",
+        "mass-spectrum-histogram-interpretation",
+        "adduct-ion-parent-ion-pairing-analysis",
+        "histogram-peak-occurrence-analysis",
+        "spatial-correlation-filtering-in-msi"
       ]
     },
     "mass-spectrometry-imaging-data-loading": {
@@ -3953,6 +5343,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-data-import",
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "spatial-metabolomics-feature-annotation",
+        "msi-imaging-experiment-class-manipulation",
+        "imzml-continuous-format-parsing",
+        "metabolite-annotation-at-scale",
+        "bioinformatic-object-conversion",
+        "lipid-database-querying"
       ]
     },
     "mass-spectrometry-imaging-data-processing": {
@@ -3979,6 +5379,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "msi-peak-annotation",
+        "isobaric-ion-detection-msi",
+        "ion-formula-matrix-classification",
+        "spatial-overlap-analysis-imaging",
+        "chemical-formula-annotation-mapping",
+        "overlapping-peak-detection-interpretation",
+        "m-z-value-clustering-mass-spectrometry",
+        "matrix-ion-spatial-distribution-visualization"
       ]
     },
     "mass-spectrometry-imaging-data-representation": {
@@ -4019,6 +5429,16 @@
         "seaborn-0-9-0",
         "tensorflow",
         "tensorflow-1-8-0"
+      ],
+      "related_skills": [
+        "raw-spectral-data-input-handling-without-peak-picking",
+        "probabilistic-classification-network-construction",
+        "keras-tensorflow-model-compilation",
+        "imaging-mass-spectrometry-ion-identification",
+        "mass-spectrometry-image-preprocessing",
+        "maldi-imaging-mass-spectrometry-data-interpretation",
+        "deep-learning-model-training",
+        "msi-data-visualization-and-spatial-analysis"
       ]
     },
     "mass-spectrometry-imaging-line-scan-data-handling": {
@@ -4053,6 +5473,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "spectral-ion-matching-across-vendors",
+        "image-visualization-formatting",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "pixel-binning-and-spatial-registration",
+        "msi-metadata-curation-and-storage",
+        "ion-mobility-filtering-and-tolerance-tuning",
+        "mass-tolerance-parameter-calibration",
+        "msi-preprocessing-parameter-configuration"
       ]
     },
     "mass-spectrometry-imaging-vendor-format-support": {
@@ -4089,6 +5519,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "bruker-baf-data-import-and-conversion",
+        "vendor-file-format-specification-handling",
+        "data-format-validation-and-integrity-checking",
+        "mass-spectrometry-file-conversion",
+        "spectral-ion-matching-across-vendors",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "file-format-detection-and-routing"
       ]
     },
     "mass-spectrometry-ion-formula-assignment": {
@@ -4114,6 +5554,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "adduct-ion-mass-calculation",
+        "molecular-structure-transformation",
+        "molecular-weight-prediction-with-modifications",
+        "adduct-mass-calculation-from-smiles",
+        "derivatizing-matrix-ionization-rule-application",
+        "reference-dataset-validation-for-metabolite-ions",
+        "derivatizing-matrix-configuration",
+        "metabolite-identification-validation"
       ]
     },
     "mass-spectrometry-peak-detection-and-alignment": {
@@ -4141,6 +5591,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spatial-spectral-array-processing",
+        "spectral-peak-picking-derivative-based",
+        "spectral-peak-alignment-across-pixels",
+        "spectral-reference-peak-summarization",
+        "spectral-noise-filtering-dynamic-peak",
+        "peak-filtering-and-quality-control",
+        "mass-spectrometry-peak-validation",
+        "signal-preprocessing-chain-normalization-smoothing-baseline"
       ]
     },
     "mass-spectrometry-peak-enumeration": {
@@ -4166,6 +5626,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-spectrometry-imaging-data-interpretation",
+        "histogram-peak-occurrence-analysis",
+        "adduct-mass-difference-matching",
+        "pairwise-mass-difference-computation",
+        "msi-peak-intensity-extraction",
+        "mass-difference-calculation-from-spectral-peaks",
+        "memory-efficient-pairwise-statistics"
       ]
     },
     "mass-spectrometry-peak-intensity-encoding": {
@@ -4194,6 +5664,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "imaging-mass-spectrometry-ion-identification",
+        "spatial-feature-embedding",
+        "attention-mechanism-implementation",
+        "latent-space-dimensionality-reduction",
+        "autoencoder-encoder-decoder-design",
+        "iterative-peak-selection-from-latent-space",
+        "marker-ion-ranking-and-filtering",
+        "latent-feature-interpretation"
       ]
     },
     "mass-spectrometry-peak-pair-analysis": {
@@ -4221,6 +5701,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-enumeration",
+        "mass-spectrometry-imaging-data-interpretation",
+        "pairwise-mass-difference-computation",
+        "msi-peak-intensity-extraction",
+        "adduct-ion-parent-ion-pairing-analysis",
+        "spectral-peak-parent-product-pairing",
+        "mass-difference-calculation-from-spectral-peaks",
+        "memory-efficient-pairwise-statistics"
       ]
     },
     "mass-spectrometry-peak-validation": {
@@ -4245,6 +5735,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-detection-and-alignment",
+        "spectral-peak-alignment-across-pixels",
+        "msimagingexperiment-subset-operations",
+        "peak-filtering-and-quality-control",
+        "feature-frequency-filtering-imaging",
+        "spectral-reference-peak-summarization",
+        "spatial-spectral-array-processing",
+        "spectral-peak-picking-derivative-based"
       ]
     },
     "mass-spectrum-histogram-interpretation": {
@@ -4270,6 +5770,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "adduct-mass-difference-matching",
+        "adduct-mass-difference-ranking",
+        "histogram-peak-occurrence-analysis",
+        "mass-spectrometry-imaging-data-interpretation",
+        "mass-difference-calculation-from-spectral-peaks",
+        "mass-spectrometry-adduct-annotation",
+        "mass-spectrometry-peak-enumeration",
+        "mass-difference-pairwise-calculation"
       ]
     },
     "mass-spectrum-preprocessing-and-normalization": {
@@ -4308,6 +5818,16 @@
         "napari",
         "python",
         "pytorch"
+      ],
+      "related_skills": [
+        "ms-ms-spectrum-preprocessing",
+        "transformer-encoder-decoder-inference",
+        "spectral-peak-filtering-by-quality-threshold",
+        "spectrum-preprocessing-and-normalization",
+        "tandem-mass-spectrum-preprocessing-and-normalization",
+        "mass-spectrum-preprocessing",
+        "mass-spectrometry-preprocessing",
+        "mztab-format-export-and-annotation"
       ]
     },
     "mass-tolerance-parameter-calibration": {
@@ -4340,6 +5860,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "ion-mobility-filtering-and-tolerance-tuning",
+        "spectral-ion-matching-across-vendors",
+        "mass-spectrometry-tolerance-calibration",
+        "msi-preprocessing-parameter-configuration",
+        "mass-spec-tolerance-parameter-application",
+        "mass-spectrometry-calibration",
+        "mass-spectrometry-image-normalization"
       ]
     },
     "matlab-data-structure-design": {
@@ -4363,6 +5893,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "cdf-file-format-parsing",
+        "imaging-data-workspace-integration",
+        "batch-file-processing-orchestration",
+        "dimple-pipeline-execution",
+        "linear-axis-spatial-analysis",
+        "root-developmental-tissue-profiling",
+        "per-root-metabolite-profiling",
+        "matlab-workspace-initialization"
       ]
     },
     "matlab-workspace-initialization": {
@@ -4384,6 +5924,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "imaging-data-workspace-integration",
+        "root-developmental-tissue-profiling",
+        "per-root-metabolite-profiling",
+        "linear-axis-spatial-analysis",
+        "matlab-data-structure-design",
+        "dimple-pipeline-execution",
+        "cdf-file-format-parsing",
+        "matlab-package-execution"
       ]
     },
     "matrix-ion-spatial-distribution-visualization": {
@@ -4409,6 +5959,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "spatial-overlap-analysis-imaging",
+        "isobaric-ion-detection-msi",
+        "overlapping-ion-detection",
+        "ion-formula-matrix-classification",
+        "msi-peak-annotation",
+        "spatial-distribution-pattern-analysis",
+        "overlapping-peak-detection-interpretation",
+        "mass-spectrometry-imaging-data-processing"
       ]
     },
     "mean-intensity-aggregation": {
@@ -4433,6 +5993,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "msi-spectral-data-import",
+        "m-z-array-processing",
+        "intensity-normalization-spectra",
+        "msi-data-table-export",
+        "spectral-noise-reduction-msi",
+        "msi-data-visualization-and-spatial-analysis",
+        "signal-quality-assessment",
+        "spectral-baseline-correction"
       ]
     },
     "memory-efficient-pairwise-statistics": {
@@ -4457,6 +6027,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "pairwise-mass-difference-computation",
+        "mass-difference-pairwise-calculation",
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-spectrometry-peak-enumeration",
+        "adduct-mass-difference-matching",
+        "spatial-correlation-filtering-in-msi",
+        "histogram-peak-occurrence-analysis",
+        "spectral-peak-parent-product-pairing"
       ]
     },
     "metabolic-network-edge-construction": {
@@ -4482,6 +6062,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "metabolite-edge-scoring-dbedges-bioedges",
+        "graph-database-indexing-and-serialization",
+        "network-based-metabolite-identification",
+        "chemical-database-query-and-matching",
+        "biological-reactant-pair-mapping-kegg",
+        "chemical-formula-deduplication-across-databases",
+        "cross-database-entity-reconciliation",
+        "molecular-class-annotation-for-networks"
       ]
     },
     "metabolite-adduct-correlation-spatial-analysis": {
@@ -4511,6 +6101,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+        "mass-spectrometry-adduct-annotation",
+        "mass-spectrometry-imaging-data-interpretation",
+        "spatial-correlation-filtering-in-msi",
+        "mass-spectrometry-peak-enumeration",
+        "adduct-mass-difference-matching",
+        "mass-spectrometry-peak-pair-analysis",
+        "spectral-peak-parent-product-pairing"
       ]
     },
     "metabolite-annotation-at-scale": {
@@ -4545,6 +6145,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "spatial-metabolomics-feature-annotation",
+        "m-z-metabolite-annotation-mapping",
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "m-z-database-matching-with-mass-tolerance",
+        "lipid-database-querying",
+        "msi-feature-metadata-preservation",
+        "seurat-assay-metadata-extraction",
+        "bioinformatic-object-conversion"
       ]
     },
     "metabolite-detection-frequency-estimation": {
@@ -4566,6 +6176,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "metabolite-level-expression-summarization",
+        "spatial-coordinate-metadata-extraction",
+        "spot-level-intensity-aggregation",
+        "anndata-object-annotation",
+        "spatial-metabolomics-integration",
+        "mass-spectrometry-data-matrix-construction",
+        "spatial-coordinate-registration-across-modalities",
+        "metabolite-feature-organization"
       ]
     },
     "metabolite-edge-scoring-dbedges-bioedges": {
@@ -4591,6 +6211,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "metabolic-network-edge-construction",
+        "network-based-metabolite-identification",
+        "chemical-database-query-and-matching",
+        "formula-network-extraction-from-mz",
+        "formula-assignment-in-mass-spectrometry",
+        "candidate-formula-ranking",
+        "graph-database-indexing-and-serialization",
+        "multiple-linear-regression-model-application"
       ]
     },
     "metabolite-feature-organization": {
@@ -4612,6 +6242,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-matrix-construction",
+        "spatial-coordinate-metadata-extraction",
+        "anndata-object-initialization-and-structuring",
+        "metabolite-level-expression-summarization",
+        "metabolite-detection-frequency-estimation",
+        "spatial-metabolomics-integration",
+        "spot-level-intensity-aggregation",
+        "spatial-coordinate-registration-across-modalities"
       ]
     },
     "metabolite-identification-validation": {
@@ -4637,6 +6277,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "derivatizing-matrix-configuration",
+        "reference-dataset-validation-for-metabolite-ions",
+        "derivatization-chemistry-enumeration",
+        "derivatizing-matrix-ionization-rule-application",
+        "molecular-structure-transformation",
+        "mass-spectrometry-ion-formula-assignment",
+        "adduct-ion-mass-calculation",
+        "molecular-weight-prediction-with-modifications"
       ]
     },
     "metabolite-level-expression-summarization": {
@@ -4658,6 +6308,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "metabolite-detection-frequency-estimation",
+        "spot-level-intensity-aggregation",
+        "spatial-metabolomics-integration",
+        "spatial-coordinate-metadata-extraction",
+        "anndata-object-annotation",
+        "mass-spectrometry-data-matrix-construction",
+        "spatial-coordinate-registration-across-modalities",
+        "metabolite-feature-organization"
       ]
     },
     "metabolomics-data-downstream-analysis": {
@@ -4682,6 +6342,16 @@
       "tools_used": [
         "google-colab",
         "python-3"
+      ],
+      "related_skills": [
+        "spatio-molecular-matrix-processing",
+        "maldi-imaging-mass-spectrometry-data-interpretation",
+        "notebook-execution-and-reproducibility",
+        "multivariate-statistical-analysis-metabolomics",
+        "metabolomics-preprocessing-normalization",
+        "statistical-result-reproduction",
+        "single-cell-spatial-metabolomics-data-processing",
+        "nontargeted-metabolomics-data-processing"
       ]
     },
     "metabolomics-preprocessing-normalization": {
@@ -4702,7 +6372,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "single-cell-spatial-metabolomics-data-processing",
+        "cell-type-protein-profiling-integration",
+        "tissue-spatial-analysis-pipeline-execution",
+        "mass-spectrometry-image-normalization",
+        "data-normalization-in-mass-spectrometry",
+        "metabolomics-peak-data-normalization-and-handling",
+        "ms-ms-spectral-preprocessing-normalization",
+        "metabolomics-feature-matrix-processing"
+      ]
     },
     "microbe-compound-identification": {
       "dois": [
@@ -4732,6 +6412,16 @@
         "microbiomemasst",
         "plantmasst",
         "tissuemasst"
+      ],
+      "related_skills": [
+        "mass-spectral-query-submission",
+        "mass-spectrometry-reference-database-integration",
+        "database-similarity-scoring",
+        "domain-specific-masst-api-integration",
+        "spectral-match-interpretation",
+        "spectrum-data-formatting",
+        "domain-specific-spectrum-search-implementation",
+        "metabolite-spectral-matching"
       ]
     },
     "model-checkpoint-serialization": {
@@ -4770,6 +6460,16 @@
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta",
         "tensorflow"
+      ],
+      "related_skills": [
+        "checkpoint-serialization-and-model-persistence",
+        "pytorch-checkpoint-serialization",
+        "model-checkpoint-persistence",
+        "mass-spectrum-prediction-modeling",
+        "model-weight-loading-and-deployment",
+        "deep-learning-model-inference",
+        "pytorch-model-checkpoint-management",
+        "molecular-structure-to-vector-encoding"
       ]
     },
     "model-validation-and-performance-evaluation": {
@@ -4790,6 +6490,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "meister"
+      ],
+      "related_skills": [
+        "deep-learning-model-training",
+        "model-validation-regression-metrics",
+        "reconstruction-algorithm-implementation",
+        "machine-learning-performance-metric-evaluation",
+        "model-validation-on-chromatographic-standards",
+        "classification-performance-evaluation",
+        "deep-learning-model-evaluation",
+        "dataset-train-test-split-validation"
       ]
     },
     "module-loader-implementation": {
@@ -4821,6 +6531,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "file-format-detection-and-routing",
+        "vendor-file-format-specification-handling",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "error-handling-for-unsupported-formats",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "conditional-dispatch-logic-implementation",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "mass-spectrometry-data-loader-integration"
       ]
     },
     "molecular-structure-transformation": {
@@ -4846,6 +6566,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "adduct-ion-mass-calculation",
+        "molecular-weight-prediction-with-modifications",
+        "mass-spectrometry-ion-formula-assignment",
+        "adduct-mass-calculation-from-smiles",
+        "smiles-molecular-parsing",
+        "derivatizing-matrix-ionization-rule-application",
+        "derivatizing-matrix-configuration",
+        "metabolite-identification-validation"
       ]
     },
     "molecular-weight-prediction-with-modifications": {
@@ -4871,6 +6601,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "adduct-ion-mass-calculation",
+        "molecular-structure-transformation",
+        "mass-spectrometry-ion-formula-assignment",
+        "adduct-mass-calculation-from-smiles",
+        "smiles-molecular-parsing",
+        "molecular-weight-prediction-from-ei-ms",
+        "mass-spectrometry-prediction-modeling",
+        "reference-dataset-validation-for-metabolite-ions"
       ]
     },
     "morphological-alignment-optimization": {
@@ -4891,6 +6631,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "hacca"
+      ],
+      "related_skills": [
+        "spatial-transcriptome-metabolome-coregistration",
+        "multimodal-spot-correspondence-mapping",
+        "spatial-spot-coordinate-registration",
+        "spatial-data-integration-preprocessing",
+        "high-resolution-spot-to-spot-integration",
+        "cross-omics-feature-matching",
+        "transcriptome-metabolome-correlation-analysis",
+        "spatial-transcriptomics-integration"
       ]
     },
     "ms2-annotation-interpretation": {
@@ -4922,6 +6672,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "spectral-library-annotation-interpretation",
+        "chemical-annotation-confidence-assessment",
+        "multivariate-ordination-interpretation",
+        "metadata-annotation-integration",
+        "spectral-library-matching-gnps",
+        "metabolite-detection-matrix-construction",
+        "tabular-results-aggregation-and-comparison",
+        "interactive-spectral-visualization-emperor"
       ]
     },
     "msi-array-data-structure-handling": {
@@ -4950,6 +6710,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "msi-imaging-experiment-class-manipulation",
+        "mass-spectrometry-imaging-data-import",
+        "msimagingarray-object-manipulation",
+        "spatial-spectral-array-processing",
+        "imzml-continuous-format-parsing",
+        "msi-data-format-interoperability",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "msi-data-matrix-import-and-validation"
       ]
     },
     "msi-data-format-interoperability": {
@@ -4974,6 +6744,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "r-data-structure-conversion",
+        "msi-data-matrix-import-and-validation",
+        "msi-peak-intensity-extraction",
+        "mass-spectrometry-peak-enumeration",
+        "msi-data-import-csv",
+        "mass-spectrometry-peak-pair-analysis",
+        "cardinal-imaging-object-conversion",
+        "mass-spectrometry-imaging-data-interpretation"
       ]
     },
     "msi-data-import-csv": {
@@ -5001,6 +6781,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "msi-data-matrix-import-and-validation",
+        "msi-peak-intensity-extraction",
+        "msi-data-format-interoperability",
+        "r-data-structure-conversion",
+        "mass-spectrometry-peak-pair-analysis",
+        "pairwise-mass-difference-computation",
+        "mass-difference-pairwise-calculation",
+        "mass-spectrometry-peak-enumeration"
       ]
     },
     "msi-data-matrix-import-and-validation": {
@@ -5026,6 +6816,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "msi-data-import-csv",
+        "msi-data-format-interoperability",
+        "msi-peak-intensity-extraction",
+        "r-data-structure-conversion",
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-spectrometry-imaging-data-import",
+        "mass-spectrometry-imaging-data-interpretation",
+        "msi-imaging-experiment-class-manipulation"
       ]
     },
     "msi-data-processing-speed-measurement": {
@@ -5048,6 +6848,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "performance-benchmark-execution",
+        "msi-metadata-harmonization-across-image-stacks",
+        "hardware-specification-documentation",
+        "msi-intensity-matrix-normalization",
+        "msi-data-visualization-and-spatial-analysis",
+        "hdf5-file-structure-specification",
+        "ion-image-quantification-workflow",
+        "msi-data-table-export"
       ]
     },
     "msi-data-table-export": {
@@ -5072,6 +6882,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "msi-spectral-data-import",
+        "msi-data-visualization-and-spatial-analysis",
+        "spectral-noise-reduction-msi",
+        "m-z-array-processing",
+        "mean-intensity-aggregation",
+        "intensity-normalization-spectra",
+        "spectral-baseline-correction",
+        "signal-quality-assessment"
       ]
     },
     "msi-data-visualization-and-spatial-analysis": {
@@ -5096,6 +6916,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "msi-spectral-data-import",
+        "spectral-noise-reduction-msi",
+        "msi-data-table-export",
+        "m-z-array-processing",
+        "biochemical-annotation-mapping",
+        "spectral-baseline-correction",
+        "mean-intensity-aggregation",
+        "signal-quality-assessment"
       ]
     },
     "msi-feature-metadata-preservation": {
@@ -5127,6 +6957,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "bioinformatic-object-conversion",
+        "cardinal-to-seurat-object-conversion",
+        "spatial-metabolomics-feature-annotation",
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "seurat-assay-metadata-extraction",
+        "spatial-coordinate-mapping-msi",
+        "metabolite-annotation-at-scale",
+        "cardinal-peak-processing-snr-filtering"
       ]
     },
     "msi-imaging-experiment-class-manipulation": {
@@ -5153,6 +6993,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "msi-array-data-structure-handling",
+        "mass-spectrometry-imaging-data-import",
+        "imzml-continuous-format-parsing",
+        "msimagingarray-object-manipulation",
+        "msi-data-matrix-import-and-validation",
+        "msi-data-format-interoperability",
+        "mass-spectrometry-imaging-data-loading",
+        "spatial-spectral-array-processing"
       ]
     },
     "msi-intensity-matrix-isotope-correction": {
@@ -5176,6 +7026,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "msi-intensity-matrix-normalization",
+        "isotope-corrected-image-quantitation",
+        "natural-isotope-abundance-calculation",
+        "hdf5-cardinal-format-preservation",
+        "lipid-feature-identifier-matching",
+        "msi-metadata-harmonization-across-image-stacks",
+        "feature-metadata-alignment-across-dimensions",
+        "internal-standard-ion-selection-and-application"
       ]
     },
     "msi-intensity-matrix-normalization": {
@@ -5200,6 +7060,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "msi-intensity-matrix-isotope-correction",
+        "isotope-corrected-image-quantitation",
+        "internal-standard-ion-selection-and-application",
+        "msi-metadata-harmonization-across-image-stacks",
+        "hdf5-cardinal-format-preservation",
+        "ion-image-quantification-workflow",
+        "lipid-feature-identifier-matching",
+        "feature-metadata-alignment-across-dimensions"
       ]
     },
     "msi-metadata-curation-and-storage": {
@@ -5232,6 +7102,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "image-visualization-formatting",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "msi-preprocessing-parameter-configuration",
+        "mass-spectrometry-image-normalization",
+        "msi-data-visualization-and-spatial-analysis",
+        "pixel-binning-and-spatial-registration",
+        "msi-data-table-export",
+        "pixel-intensity-scaling-and-thresholding"
       ]
     },
     "msi-metadata-harmonization-across-image-stacks": {
@@ -5255,6 +7135,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "msi-intensity-matrix-normalization",
+        "hdf5-file-structure-specification",
+        "feature-metadata-alignment-across-dimensions",
+        "lipid-feature-annotation-and-sorting",
+        "hdf5-cardinal-format-preservation",
+        "ion-image-quantification-workflow",
+        "msi-intensity-matrix-isotope-correction",
+        "isotope-corrected-image-quantitation"
       ]
     },
     "msi-peak-annotation": {
@@ -5281,6 +7171,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-data-processing",
+        "isobaric-ion-detection-msi",
+        "spatial-overlap-analysis-imaging",
+        "chemical-formula-annotation-mapping",
+        "overlapping-peak-detection-interpretation",
+        "candidate-peak-filtering-annotation",
+        "ion-formula-matrix-classification",
+        "peak-collision-flagging"
       ]
     },
     "msi-peak-intensity-extraction": {
@@ -5308,6 +7208,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "msi-data-import-csv",
+        "mass-spectrometry-peak-pair-analysis",
+        "msi-data-format-interoperability",
+        "msi-data-matrix-import-and-validation",
+        "mass-spectrometry-peak-enumeration",
+        "pairwise-mass-difference-computation",
+        "r-data-structure-conversion",
+        "mass-spectrometry-imaging-data-interpretation"
       ]
     },
     "msi-preprocessing-parameter-configuration": {
@@ -5344,6 +7254,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-vendor-format-support",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "msi-metadata-curation-and-storage",
+        "bruker-baf-data-import-and-conversion",
+        "image-visualization-formatting",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "mass-tolerance-parameter-calibration",
+        "vendor-file-format-specification-handling"
       ]
     },
     "msi-spectral-data-import": {
@@ -5368,6 +7288,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "msi-data-visualization-and-spatial-analysis",
+        "spectral-noise-reduction-msi",
+        "m-z-array-processing",
+        "msi-data-table-export",
+        "mean-intensity-aggregation",
+        "spectral-baseline-correction",
+        "intensity-normalization-spectra",
+        "signal-quality-assessment"
       ]
     },
     "msimagingarray-object-manipulation": {
@@ -5395,6 +7325,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "msi-array-data-structure-handling",
+        "msi-imaging-experiment-class-manipulation",
+        "spatial-spectral-array-processing",
+        "cardinal-object-structure-understanding",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "mass-spectrometry-imaging-data-import",
+        "queued-spectrum-preview-generation",
+        "cardinal-imaging-object-conversion"
       ]
     },
     "msimagingexperiment-object-validation": {
@@ -5419,6 +7359,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spectral-dimension-verification",
+        "cardinal-object-structure-understanding",
+        "msi-imaging-experiment-class-manipulation",
+        "imzml-continuous-format-parsing",
+        "msimagingarray-object-manipulation",
+        "mass-spectrometry-peak-validation",
+        "msi-data-matrix-import-and-validation",
+        "mass-spectrometry-imaging-data-import"
       ]
     },
     "msms-spectrum-data-structure-manipulation": {
@@ -5461,6 +7411,16 @@
         "seaborn",
         "spectrum-utils",
         "unimod"
+      ],
+      "related_skills": [
+        "ms-spectrum-filtering-and-normalization",
+        "msms-spectrum-object-instantiation",
+        "spectrum-filtering-and-normalization",
+        "spectrum-visualization-and-figure-rendering",
+        "spectrum-processing-pipeline-construction",
+        "intensity-normalization-and-scaling",
+        "online-proteomics-resource-integration",
+        "mass-spectrometry-data-loading-and-formatting"
       ]
     },
     "multi-modal-spot-validation-and-quality-assessment": {
@@ -5483,6 +7443,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "knn-nearest-neighbor-matching-for-spot-correspondence",
+        "euclidean-distance-computation-for-spatial-alignment",
+        "spatial-coordinate-registration-across-modalities",
+        "anndata-object-integration-and-metadata-mapping",
+        "spatial-metabolomics-integration",
+        "spot-level-intensity-aggregation",
+        "multi-omics-latent-space-learning",
+        "neural-network-hyperparameter-optimization"
       ]
     },
     "multi-omics-latent-space-learning": {
@@ -5504,6 +7474,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "variational-autoencoder-training",
+        "spatial-coordinate-registration-across-modalities",
+        "neural-network-hyperparameter-optimization",
+        "knn-nearest-neighbor-matching-for-spot-correspondence",
+        "spatial-transcriptomics-integration",
+        "spatial-metabolomics-integration",
+        "euclidean-distance-computation-for-spatial-alignment",
+        "anndata-object-integration-and-metadata-mapping"
       ]
     },
     "multimodal-spot-correspondence-mapping": {
@@ -5524,6 +7504,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "hacca"
+      ],
+      "related_skills": [
+        "spatial-transcriptome-metabolome-coregistration",
+        "spatial-spot-coordinate-registration",
+        "spatial-data-integration-preprocessing",
+        "high-resolution-spot-to-spot-integration",
+        "morphological-alignment-optimization",
+        "transcriptome-metabolome-correlation-analysis",
+        "spatial-transcriptomics-integration",
+        "spatial-coordinate-registration-across-modalities"
       ]
     },
     "multiple-linear-regression-model-application": {
@@ -5549,6 +7539,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "candidate-formula-ranking",
+        "chemical-database-query-and-matching",
+        "formula-assignment-in-mass-spectrometry",
+        "ppm-tolerance-scoring-and-ranking",
+        "mass-spectral-feature-annotation",
+        "formula-network-extraction-from-mz",
+        "mass-accuracy-ppm-filtering",
+        "network-based-metabolite-identification"
       ]
     },
     "multiple-testing-correction-bonferroni": {
@@ -5575,6 +7575,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "bonferroni-multiple-testing-correction",
+        "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+        "pearson-correlation-coefficient-computation",
+        "multiple-testing-correction-metabolomics",
+        "metabolite-adduct-correlation-spatial-analysis",
+        "multiple-comparison-correction",
+        "spatial-correlation-filtering-in-msi",
+        "mass-spectrometry-peak-pair-analysis"
       ]
     },
     "mzml-to-imzml-format-conversion": {
@@ -5605,6 +7615,16 @@
         "msconvert",
         "proteowizard",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-file-conversion",
+        "msconvert-workflow-configuration",
+        "scan-filter-file-organization",
+        "spatial-pixel-coordinate-alignment",
+        "raw-vendor-file-format-handling",
+        "mzml-file-parsing",
+        "imaging-parameter-metadata-annotation",
+        "mass-spectrometry-imaging-vendor-format-support"
       ]
     },
     "natural-isotope-abundance-calculation": {
@@ -5628,6 +7648,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "msi-intensity-matrix-isotope-correction",
+        "lipid-adduct-pairing-by-neutral-mass",
+        "isotope-corrected-image-quantitation",
+        "msi-intensity-matrix-normalization",
+        "internal-standard-ion-selection-and-application",
+        "ion-image-quantification-workflow",
+        "sodium-adduct-detection-and-classification",
+        "lipid-feature-identifier-matching"
       ]
     },
     "network-based-metabolite-identification": {
@@ -5653,6 +7683,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "chemical-database-query-and-matching",
+        "formula-assignment-in-mass-spectrometry",
+        "metabolite-edge-scoring-dbedges-bioedges",
+        "formula-network-extraction-from-mz",
+        "mass-spectral-feature-annotation",
+        "metabolic-network-edge-construction",
+        "candidate-formula-ranking",
+        "multiple-linear-regression-model-application"
       ]
     },
     "neural-network-hyperparameter-optimization": {
@@ -5674,6 +7714,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "variational-autoencoder-training",
+        "spatial-coordinate-registration-across-modalities",
+        "multi-omics-latent-space-learning",
+        "spatial-transcriptomics-integration",
+        "anndata-object-integration-and-metadata-mapping",
+        "spatial-metabolomics-integration",
+        "euclidean-distance-computation-for-spatial-alignment",
+        "knn-nearest-neighbor-matching-for-spot-correspondence"
       ]
     },
     "neural-network-projection-module-design": {
@@ -5699,6 +7749,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "convolutional-neural-network-encoding",
+        "encoder-output-dimension-reduction",
+        "resnet-architecture-modification-for-dimensionality-control",
+        "deep-learning-model-implementation-in-pytorch-or-tensorflow",
+        "deep-learning-architecture-implementation",
+        "contrastive-learning-loss-implementation",
+        "parameter-sharing-mechanism-design",
+        "contrastive-learning-encoder-design"
       ]
     },
     "noise-estimation-snr-thresholding": {
@@ -5724,6 +7784,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spectral-noise-filtering-dynamic-peak",
+        "peak-preservation-vs-noise-reduction-tradeoff",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "spectral-peak-picking-derivative-based",
+        "spatial-spectral-array-processing",
+        "peak-filtering-and-quality-control",
+        "spectral-reference-peak-summarization",
+        "signal-preprocessing-chain-normalization-smoothing-baseline"
       ]
     },
     "nontargeted-metabolomics-data-processing": {
@@ -5746,6 +7816,16 @@
       "tools_used": [
         "masscube",
         "python"
+      ],
+      "related_skills": [
+        "lcms-feature-extraction",
+        "chromatographic-peak-detection-and-segmentation",
+        "non-targeted-feature-detection-and-screening",
+        "feature-quality-assessment-metrics",
+        "feature-extraction-untargeted",
+        "ms-ms-spectral-library-matching",
+        "untargeted-metabolomics-marker-identification",
+        "mass-spectrometry-data-preprocessing"
       ]
     },
     "notebook-execution-and-reproducibility": {
@@ -5769,6 +7849,16 @@
       "tools_used": [
         "google-colab",
         "python-3"
+      ],
+      "related_skills": [
+        "statistical-result-reproduction",
+        "metabolomics-data-downstream-analysis",
+        "computational-reproducibility-verification",
+        "jupyter-notebook-execution",
+        "simulation-result-reproduction",
+        "jupyter-notebook-workflow-execution",
+        "jupyter-notebook-workflow-automation",
+        "spatio-molecular-matrix-processing"
       ]
     },
     "open-source-mass-spectrometry-file-format-interoperability": {
@@ -5805,6 +7895,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-vendor-format-support",
+        "bruker-baf-data-import-and-conversion",
+        "data-format-validation-and-integrity-checking",
+        "spectral-ion-matching-across-vendors",
+        "ion-mobility-filtering-and-tolerance-tuning",
+        "vendor-file-format-specification-handling",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "msi-preprocessing-parameter-configuration"
       ]
     },
     "overlapping-ion-detection": {
@@ -5831,6 +7931,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "overlapping-peak-detection-interpretation",
+        "spatial-overlap-analysis-imaging",
+        "isobaric-ion-detection-msi",
+        "isobaric-ion-misclassification-documentation",
+        "peak-collision-flagging",
+        "matrix-ion-spatial-distribution-visualization",
+        "ion-formula-matrix-classification",
+        "msi-peak-annotation"
       ]
     },
     "overlapping-peak-detection-interpretation": {
@@ -5856,6 +7966,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "overlapping-ion-detection",
+        "spatial-overlap-analysis-imaging",
+        "isobaric-ion-detection-msi",
+        "peak-collision-flagging",
+        "msi-peak-annotation",
+        "ion-formula-matrix-classification",
+        "spatial-distribution-pattern-analysis",
+        "isobaric-ion-misclassification-documentation"
       ]
     },
     "pairwise-mass-difference-computation": {
@@ -5881,6 +8001,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-difference-pairwise-calculation",
+        "mass-spectrometry-peak-pair-analysis",
+        "memory-efficient-pairwise-statistics",
+        "mass-difference-calculation-from-spectral-peaks",
+        "mass-spectrometry-peak-enumeration",
+        "adduct-mass-difference-matching",
+        "histogram-peak-occurrence-analysis",
+        "msi-peak-intensity-extraction"
       ]
     },
     "parameter-sharing-in-siamese-networks": {
@@ -5907,6 +8037,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "parameter-sharing-mechanism-design",
+        "contrastive-learning-loss-implementation",
+        "deep-learning-architecture-implementation",
+        "deep-learning-model-implementation-in-pytorch-or-tensorflow",
+        "convolutional-neural-network-encoding",
+        "representation-collapse-prevention",
+        "ion-image-augmentation-contrastive-learning",
+        "ion-image-augmentation-design"
       ]
     },
     "peak-collision-flagging": {
@@ -5932,6 +8072,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "overlapping-peak-detection-interpretation",
+        "isobaric-ion-detection-msi",
+        "msi-peak-annotation",
+        "spatial-overlap-analysis-imaging",
+        "overlapping-ion-detection",
+        "candidate-peak-filtering-annotation",
+        "m-z-value-clustering-mass-spectrometry",
+        "isobaric-ion-misclassification-documentation"
       ]
     },
     "peak-filtering-and-quality-control": {
@@ -5957,6 +8107,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spatial-spectral-array-processing",
+        "spectral-noise-filtering-dynamic-peak",
+        "feature-frequency-filtering-imaging",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "spectral-reference-peak-summarization",
+        "mass-spectrometry-peak-validation",
+        "spectral-peak-picking-derivative-based",
+        "spectral-peak-alignment-across-pixels"
       ]
     },
     "peak-preservation-vs-noise-reduction-tradeoff": {
@@ -5984,6 +8144,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spectral-smoothing-method-comparison",
+        "spectral-peak-picking-derivative-based",
+        "noise-estimation-snr-thresholding",
+        "spectral-noise-filtering-dynamic-peak",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "peak-filtering-and-quality-control",
+        "spatial-spectral-array-processing",
+        "mass-spectrometry-peak-validation"
       ]
     },
     "pearson-correlation-coefficient-computation": {
@@ -6008,6 +8178,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+        "pairwise-mass-difference-computation",
+        "bonferroni-multiple-testing-correction",
+        "spatial-correlation-filtering-in-msi",
+        "adduct-mass-difference-matching",
+        "metabolite-adduct-correlation-spatial-analysis",
+        "spectral-peak-parent-product-pairing",
+        "memory-efficient-pairwise-statistics"
       ]
     },
     "per-root-metabolite-profiling": {
@@ -6030,6 +8210,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "root-developmental-tissue-profiling",
+        "imaging-data-workspace-integration",
+        "linear-axis-spatial-analysis",
+        "dimple-pipeline-execution",
+        "cdf-file-format-parsing",
+        "matlab-data-structure-design",
+        "matlab-workspace-initialization",
+        "batch-file-processing-orchestration"
       ]
     },
     "pixel-binning-and-spatial-registration": {
@@ -6063,6 +8253,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "image-visualization-formatting",
+        "mass-spectrometry-image-normalization",
+        "spectral-ion-matching-across-vendors",
+        "msi-metadata-curation-and-storage",
+        "spatial-pixel-coordinate-alignment",
+        "pixel-intensity-scaling-and-thresholding",
+        "mass-spectrometry-imaging-vendor-format-support"
       ]
     },
     "pixel-intensity-scaling-and-thresholding": {
@@ -6095,6 +8295,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "image-visualization-formatting",
+        "mass-spectrometry-image-normalization",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "internal-standard-intensity-calibration",
+        "intensity-normalization-spectra",
+        "total-ion-current-quantification",
+        "pixel-binning-and-spatial-registration",
+        "msi-metadata-curation-and-storage"
       ]
     },
     "poisson-noise-generation": {
@@ -6121,6 +8331,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "poisson-noise-injection-for-imaging",
+        "poisson-noise-injection-spectral",
+        "color-jitter-application-imaging",
+        "image-intensity-jittering",
+        "spectral-image-filtering",
+        "ion-image-augmentation-intensity-dependent",
+        "ion-image-augmentation-design",
+        "random-missing-value-masking"
       ]
     },
     "poisson-noise-injection-for-imaging": {
@@ -6148,6 +8368,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "poisson-noise-injection-spectral",
+        "poisson-noise-generation",
+        "ion-image-augmentation-intensity-dependent",
+        "spectral-image-filtering",
+        "ion-image-augmentation-design",
+        "color-jitter-application-imaging",
+        "image-intensity-jittering",
+        "random-missing-value-masking"
       ]
     },
     "poisson-noise-injection-spectral": {
@@ -6174,6 +8404,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "poisson-noise-injection-for-imaging",
+        "poisson-noise-generation",
+        "spectral-image-filtering",
+        "ion-image-augmentation-intensity-dependent",
+        "color-jitter-application-imaging",
+        "image-intensity-jittering",
+        "ion-image-augmentation-design",
+        "random-missing-value-masking"
       ]
     },
     "ppm-mass-accuracy-filtering": {
@@ -6201,6 +8441,16 @@
         "pewlib",
         "pewpew",
         "python"
+      ],
+      "related_skills": [
+        "binary-spectral-data-extraction",
+        "imzml-metadata-parsing",
+        "m-z-window-tolerance-application",
+        "mass-spectrometry-image-reconstruction",
+        "laser-ablation-isotope-image-interpretation",
+        "mass-accuracy-ppm-filtering",
+        "la-icp-ms-image-denoising",
+        "interactive-region-of-interest-refinement"
       ]
     },
     "ppm-tolerance-scoring-and-ranking": {
@@ -6226,6 +8476,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "mass-accuracy-ppm-filtering",
+        "candidate-formula-ranking",
+        "chemical-database-query-and-matching",
+        "multiple-linear-regression-model-application",
+        "network-based-metabolite-identification",
+        "formula-network-extraction-from-mz",
+        "ppm-tolerance-filtering-in-mass-spectrometry",
+        "formula-assignment-in-mass-spectrometry"
       ]
     },
     "probabilistic-classification-network-construction": {
@@ -6267,6 +8527,16 @@
         "seaborn-0-9-0",
         "tensorflow",
         "tensorflow-1-8-0"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-data-representation",
+        "keras-tensorflow-model-compilation",
+        "raw-spectral-data-input-handling-without-peak-picking",
+        "neural-network-architecture-design",
+        "neural-network-model-training",
+        "lcms-spectral-peak-classification",
+        "disease-classification-prediction",
+        "multi-class-label-assignment"
       ]
     },
     "python-environment-pinning": {
@@ -6318,6 +8588,16 @@
         "seaborn-0-9-0",
         "tensorflow",
         "tensorflow-1-8-0"
+      ],
+      "related_skills": [
+        "cross-platform-reproducibility-configuration",
+        "conda-environment-file-generation",
+        "dependency-version-specification",
+        "pip-requirements-file-creation",
+        "python-dependency-resolution-and-pinning",
+        "package-version-pinning-and-lock-files",
+        "python-environment-setup-and-reproducibility",
+        "r-environment-dependency-specification"
       ]
     },
     "queued-spectrum-preview-generation": {
@@ -6344,6 +8624,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spatial-spectral-array-processing",
+        "msimagingarray-object-manipulation",
+        "spectral-noise-filtering-dynamic-peak",
+        "spectral-peak-picking-derivative-based",
+        "spectral-reference-peak-summarization",
+        "peak-preservation-vs-noise-reduction-tradeoff",
+        "signal-preprocessing-chain-normalization-smoothing-baseline",
+        "mass-spectrometry-peak-detection-and-alignment"
       ]
     },
     "r-data-structure-conversion": {
@@ -6370,6 +8660,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "msi-data-format-interoperability",
+        "cardinal-imaging-object-conversion",
+        "msi-data-matrix-import-and-validation",
+        "mass-spectrometry-peak-enumeration",
+        "msi-peak-intensity-extraction",
+        "mass-spectrometry-peak-pair-analysis",
+        "msi-data-import-csv",
+        "mass-spectrometry-imaging-data-interpretation"
       ]
     },
     "random-missing-value-masking": {
@@ -6396,6 +8696,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "intensity-dependent-missing-value-simulation",
+        "ion-image-augmentation-intensity-dependent",
+        "color-jitter-application-imaging",
+        "ion-image-augmentation-design",
+        "mass-spectrometry-image-preprocessing",
+        "poisson-noise-generation",
+        "image-intensity-jittering",
+        "spectral-image-filtering"
       ]
     },
     "raw-spectral-data-input-handling-without-peak-picking": {
@@ -6437,6 +8747,16 @@
         "seaborn-0-9-0",
         "tensorflow",
         "tensorflow-1-8-0"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-data-representation",
+        "probabilistic-classification-network-construction",
+        "imaging-mass-spectrometry-ion-identification",
+        "mass-spectrometry-spectral-preprocessing",
+        "mass-spectrometry-peak-intensity-encoding",
+        "msms-spectrum-data-structure-manipulation",
+        "numpy-array-manipulation",
+        "hdf5-file-io-operations"
       ]
     },
     "raw-vendor-file-format-handling": {
@@ -6468,6 +8788,16 @@
         "msconvert",
         "proteowizard",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-file-conversion",
+        "msconvert-workflow-configuration",
+        "mzml-to-imzml-format-conversion",
+        "vendor-data-standardization",
+        "mass-spectrometry-file-format-conversion",
+        "vendor-raw-file-format-recognition",
+        "vendor-mass-spectrometry-file-format-handling",
+        "mass-spectrometry-data-processing"
       ]
     },
     "reconstruction-algorithm-implementation": {
@@ -6488,6 +8818,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "meister"
+      ],
+      "related_skills": [
+        "deep-learning-model-training",
+        "high-dimensional-signal-enhancement",
+        "model-validation-and-performance-evaluation",
+        "mass-spectrometry-image-reconstruction",
+        "mass-spectrometry-imaging-data-processing",
+        "msi-peak-annotation",
+        "mass-spectrometry-deconvolution-algorithm-application",
+        "mass-spectrometry-data-matrix-construction"
       ]
     },
     "reference-database-tolerance-mapping": {
@@ -6512,6 +8852,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "adduct-mass-difference-matching",
+        "mass-spectrometry-adduct-annotation",
+        "chemical-transformation-library-lookup",
+        "adduct-mass-difference-ranking",
+        "mass-spectrum-histogram-interpretation",
+        "mass-difference-pairwise-calculation",
+        "mass-difference-calculation-from-spectral-peaks",
+        "adduct-annotation-against-reference-library"
       ]
     },
     "reference-dataset-validation-for-metabolite-ions": {
@@ -6537,6 +8887,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "metabolite-identification-validation",
+        "adduct-ion-mass-calculation",
+        "mass-spectrometry-ion-formula-assignment",
+        "derivatizing-matrix-ionization-rule-application",
+        "molecular-structure-transformation",
+        "derivatizing-matrix-configuration",
+        "molecular-weight-prediction-with-modifications",
+        "adduct-mass-calculation-from-smiles"
       ]
     },
     "release-branch-management": {
@@ -6565,6 +8925,16 @@
         "github-actions",
         "msnovelist",
         "sirius"
+      ],
+      "related_skills": [
+        "ci-cd-pipeline-monitoring",
+        "build-badge-verification",
+        "repository-administration",
+        "git-branch-workflow-validation",
+        "version-control-feature-branch-management",
+        "git-feature-branch-management",
+        "release-artifact-generation",
+        "cross-file-version-consistency-checking"
       ]
     },
     "repository-administration": {
@@ -6593,6 +8963,16 @@
         "github-actions",
         "msnovelist",
         "sirius"
+      ],
+      "related_skills": [
+        "build-badge-verification",
+        "release-branch-management",
+        "ci-cd-pipeline-reproducibility-verification",
+        "github-repository-operations",
+        "github-actions-api-integration",
+        "ci-cd-pipeline-monitoring",
+        "git-repository-cloning-and-version-control",
+        "build-artifact-retrieval-and-validation"
       ]
     },
     "representation-collapse-prevention": {
@@ -6619,6 +8999,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "ion-image-augmentation-contrastive-learning",
+        "ion-image-augmentation-design",
+        "contrastive-learning-loss-implementation",
+        "convolutional-neural-network-encoding",
+        "ion-image-augmentation-intensity-dependent",
+        "ion-image-embedding-optimization",
+        "contrastive-pair-generation",
+        "deep-learning-architecture-implementation"
       ]
     },
     "representation-vector-dimensionality-reduction": {
@@ -6646,6 +9036,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "encoder-output-dimension-reduction",
+        "convolutional-neural-network-encoding",
+        "contrastive-learning-encoder-construction",
+        "contrastive-learning-encoder-design",
+        "neural-network-projection-module-design",
+        "resnet-architecture-modification-for-dimensionality-control",
+        "deep-learning-architecture-implementation",
+        "latent-space-dimensionality-reduction"
       ]
     },
     "reproducibility-gap-detection": {
@@ -7483,6 +9883,16 @@
         "vimms",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "evidence-linking",
+        "figure-table-interpretation",
+        "expert-review-preparation",
+        "scientific-task-formulation",
+        "output-grounding",
+        "workflow-reconstruction",
+        "metabolite-abundance-normalization-across-conditions",
+        "mass-action-kinetics-propensity-scoring"
       ]
     },
     "resnet-architecture-modification-for-dimensionality-control": {
@@ -7509,6 +9919,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "encoder-output-dimension-reduction",
+        "neural-network-projection-module-design",
+        "deep-learning-architecture-implementation",
+        "convolutional-neural-network-encoding",
+        "deep-learning-model-implementation-in-pytorch-or-tensorflow",
+        "tensor-shape-validation-and-numerical-correctness-checking",
+        "ion-image-embedding-optimization",
+        "contrastive-learning-loss-implementation"
       ]
     },
     "roi-definition-and-extraction": {
@@ -7533,6 +9953,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "msi-data-visualization-and-spatial-analysis",
+        "spectral-noise-reduction-msi",
+        "m-z-array-processing",
+        "msi-spectral-data-import",
+        "msi-data-table-export",
+        "biochemical-annotation-mapping",
+        "lc-ms-roi-annotation-interpretation",
+        "spectral-baseline-correction"
       ]
     },
     "root-developmental-tissue-profiling": {
@@ -7555,6 +9985,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "matlab"
+      ],
+      "related_skills": [
+        "per-root-metabolite-profiling",
+        "imaging-data-workspace-integration",
+        "linear-axis-spatial-analysis",
+        "matlab-data-structure-design",
+        "cdf-file-format-parsing",
+        "matlab-workspace-initialization",
+        "dimple-pipeline-execution",
+        "batch-file-processing-orchestration"
       ]
     },
     "savitzky-golay-filter-application": {
@@ -7582,6 +10022,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spectral-smoothing-method-comparison",
+        "savitzky-golay-smoothing-application",
+        "spectral-noise-filtering-dynamic-peak",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "peak-preservation-vs-noise-reduction-tradeoff",
+        "cardinal-peak-processing-snr-filtering",
+        "spectral-peak-picking-derivative-based",
+        "feature-frequency-filtering-imaging"
       ]
     },
     "scan-filter-file-organization": {
@@ -7611,6 +10061,16 @@
         "msconvert",
         "proteowizard",
         "python"
+      ],
+      "related_skills": [
+        "mzml-to-imzml-format-conversion",
+        "spatial-pixel-coordinate-alignment",
+        "msconvert-workflow-configuration",
+        "mass-spectrometry-file-conversion",
+        "imaging-parameter-metadata-annotation",
+        "raw-vendor-file-format-handling",
+        "mass-recalibration-lock-mass-correction",
+        "mzml-file-parsing"
       ]
     },
     "search-result-visualization-across-domains": {
@@ -7643,6 +10103,16 @@
         "microbiomemasst",
         "plantmasst",
         "tissuemasst"
+      ],
+      "related_skills": [
+        "multi-domain-search-result-aggregation",
+        "spectral-search-result-aggregation",
+        "domain-specific-masst-api-integration",
+        "cross-domain-metadata-integration",
+        "cross-domain-metadata-harmonization",
+        "spectral-match-result-consolidation",
+        "hit-score-consolidation-across-domains",
+        "summary-visualization-artifact-generation"
       ]
     },
     "seurat-assay-metadata-extraction": {
@@ -7677,6 +10147,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "spatial-metabolomics-feature-annotation",
+        "m-z-metabolite-annotation-mapping",
+        "msi-feature-metadata-preservation",
+        "metabolite-annotation-at-scale",
+        "bioinformatic-object-conversion",
+        "cardinal-to-seurat-object-conversion",
+        "spatial-coordinate-mapping-msi",
+        "spatial-segmentation-shrunken-centroids"
       ]
     },
     "signal-preprocessing-chain-normalization-smoothing-baseline": {
@@ -7704,6 +10184,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-detection-and-alignment",
+        "spectral-peak-picking-derivative-based",
+        "spectral-noise-filtering-dynamic-peak",
+        "peak-preservation-vs-noise-reduction-tradeoff",
+        "noise-estimation-snr-thresholding",
+        "spatial-spectral-array-processing",
+        "spectral-smoothing-method-comparison",
+        "cardinal-peak-processing-snr-filtering"
       ]
     },
     "signal-quality-assessment": {
@@ -7728,6 +10218,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "spectral-noise-reduction-msi",
+        "msi-spectral-data-import",
+        "spectral-baseline-correction",
+        "intensity-normalization-spectra",
+        "msi-data-visualization-and-spatial-analysis",
+        "m-z-array-processing",
+        "msi-data-table-export",
+        "mean-intensity-aggregation"
       ]
     },
     "single-cell-spatial-metabolomics-data-processing": {
@@ -7751,7 +10251,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "tissue-spatial-analysis-pipeline-execution",
+        "metabolomics-preprocessing-normalization",
+        "cell-type-protein-profiling-integration",
+        "spatial-metabolomics-integration",
+        "spatial-transcriptomics-integration",
+        "maldi-imaging-mass-spectrometry-data-interpretation",
+        "spatial-coordinate-registration-across-modalities",
+        "mass-spectrometry-data-matrix-construction"
+      ]
     },
     "smiles-molecular-parsing": {
       "dois": [
@@ -7775,6 +10285,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "adduct-mass-calculation-from-smiles",
+        "smiles-parsing-and-validation",
+        "molecular-structure-transformation",
+        "molecular-weight-prediction-with-modifications",
+        "adduct-ion-mass-calculation",
+        "rdkit-molecular-descriptor-computation",
+        "smiles-string-parsing-and-validation",
+        "smiles-sdf-parsing"
       ]
     },
     "sodium-adduct-detection-and-classification": {
@@ -7801,6 +10321,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-data-interpretation",
+        "mass-spectrometry-adduct-annotation",
+        "mass-spectrometry-peak-enumeration",
+        "mass-difference-calculation-from-spectral-peaks",
+        "mass-spectrometry-peak-pair-analysis",
+        "adduct-mass-difference-matching",
+        "adduct-mass-difference-ranking",
+        "adduct-ion-parent-ion-pairing-analysis"
       ]
     },
     "software-plugin-development": {
@@ -7826,6 +10356,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "metabolite-identification-validation",
+        "derivatizing-matrix-configuration",
+        "molecular-structure-transformation",
+        "reproducibility-gap-detection",
+        "derivatizing-matrix-ionization-rule-application",
+        "derivatization-chemistry-enumeration",
+        "adduct-ion-mass-calculation",
+        "smiles-molecular-parsing"
       ]
     },
     "spatial-coordinate-mapping-msi": {
@@ -7857,6 +10397,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "msi-feature-metadata-preservation",
+        "bioinformatic-object-conversion",
+        "spatial-segmentation-shrunken-centroids",
+        "spatial-spectral-array-processing",
+        "spatial-metabolomics-feature-annotation",
+        "cardinal-object-structure-understanding",
+        "seurat-assay-metadata-extraction",
+        "cardinal-to-seurat-object-conversion"
       ]
     },
     "spatial-coordinate-metadata-extraction": {
@@ -7878,6 +10428,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-matrix-construction",
+        "anndata-object-initialization-and-structuring",
+        "metabolite-feature-organization",
+        "spatial-coordinate-registration-across-modalities",
+        "spatial-metabolomics-integration",
+        "metabolite-level-expression-summarization",
+        "metabolite-detection-frequency-estimation",
+        "anndata-object-integration-and-metadata-mapping"
       ]
     },
     "spatial-coordinate-registration-across-modalities": {
@@ -7900,6 +10460,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "spatial-transcriptomics-integration",
+        "anndata-object-integration-and-metadata-mapping",
+        "euclidean-distance-computation-for-spatial-alignment",
+        "spatial-metabolomics-integration",
+        "spatial-coordinate-metadata-extraction",
+        "knn-nearest-neighbor-matching-for-spot-correspondence",
+        "neural-network-hyperparameter-optimization",
+        "variational-autoencoder-training"
       ]
     },
     "spatial-correlation-analysis-in-imaging-mass-spectrometry": {
@@ -7929,6 +10499,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "metabolite-adduct-correlation-spatial-analysis",
+        "spatial-correlation-filtering-in-msi",
+        "spectral-peak-parent-product-pairing",
+        "mass-spectrometry-peak-pair-analysis",
+        "pearson-correlation-coefficient-computation",
+        "spectral-annotation-and-overlay-visualization",
+        "mass-spectrometry-imaging-data-interpretation",
+        "memory-efficient-pairwise-statistics"
       ]
     },
     "spatial-correlation-filtering-in-msi": {
@@ -7953,6 +10533,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+        "adduct-mass-difference-matching",
+        "mass-spectrometry-imaging-data-interpretation",
+        "metabolite-adduct-correlation-spatial-analysis",
+        "mass-spectrometry-peak-enumeration",
+        "memory-efficient-pairwise-statistics",
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-difference-calculation-from-spectral-peaks"
       ]
     },
     "spatial-distribution-pattern-analysis": {
@@ -7979,6 +10569,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "spatial-overlap-analysis-imaging",
+        "overlapping-peak-detection-interpretation",
+        "msi-peak-annotation",
+        "matrix-ion-spatial-distribution-visualization",
+        "isobaric-ion-detection-msi",
+        "ion-formula-matrix-classification",
+        "mass-spectrometry-imaging-data-processing",
+        "chemical-formula-annotation-mapping"
       ]
     },
     "spatial-feature-embedding": {
@@ -8007,6 +10607,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-intensity-encoding",
+        "latent-space-dimensionality-reduction",
+        "attention-mechanism-implementation",
+        "imaging-mass-spectrometry-ion-identification",
+        "autoencoder-encoder-decoder-design",
+        "iterative-peak-selection-from-latent-space",
+        "latent-feature-interpretation",
+        "marker-ion-ranking-and-filtering"
       ]
     },
     "spatial-filtering-ion-images": {
@@ -8032,6 +10642,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "spectral-image-filtering",
+        "image-intensity-jittering",
+        "mass-spectrometry-image-preprocessing",
+        "ion-image-augmentation-contrastive-learning",
+        "color-jitter-application-imaging",
+        "ion-image-augmentation-design",
+        "ion-image-augmentation-intensity-dependent",
+        "random-missing-value-masking"
       ]
     },
     "spatial-metabolomics-feature-annotation": {
@@ -8063,6 +10683,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "m-z-metabolite-annotation-mapping",
+        "metabolite-annotation-at-scale",
+        "seurat-assay-metadata-extraction",
+        "msi-feature-metadata-preservation",
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "adduct-ion-prediction-and-filtering",
+        "lipid-database-querying",
+        "spatial-segmentation-shrunken-centroids"
       ]
     },
     "spatial-metabolomics-integration": {
@@ -8084,6 +10714,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "spatial-transcriptomics-integration",
+        "spatial-coordinate-registration-across-modalities",
+        "knn-nearest-neighbor-matching-for-spot-correspondence",
+        "metabolite-level-expression-summarization",
+        "spatial-coordinate-metadata-extraction",
+        "metabolite-detection-frequency-estimation",
+        "mass-spectrometry-data-matrix-construction",
+        "metabolite-feature-organization"
       ]
     },
     "spatial-overlap-analysis-imaging": {
@@ -8109,6 +10749,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "overlapping-ion-detection",
+        "overlapping-peak-detection-interpretation",
+        "isobaric-ion-detection-msi",
+        "msi-peak-annotation",
+        "candidate-peak-filtering-annotation",
+        "matrix-ion-spatial-distribution-visualization",
+        "mass-spectrometry-imaging-data-processing",
+        "peak-collision-flagging"
       ]
     },
     "spatial-pixel-coordinate-alignment": {
@@ -8139,6 +10789,16 @@
         "msconvert",
         "proteowizard",
         "python"
+      ],
+      "related_skills": [
+        "mzml-to-imzml-format-conversion",
+        "scan-filter-file-organization",
+        "imaging-parameter-metadata-annotation",
+        "mass-spectrometry-file-conversion",
+        "msconvert-workflow-configuration",
+        "raw-vendor-file-format-handling",
+        "imzml-file-format-parsing",
+        "mass-recalibration-lock-mass-correction"
       ]
     },
     "spatial-segmentation-shrunken-centroids": {
@@ -8171,6 +10831,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "spatial-coordinate-mapping-msi",
+        "spatial-metabolomics-feature-annotation",
+        "bioinformatic-object-conversion",
+        "msi-feature-metadata-preservation",
+        "cardinal-to-seurat-object-conversion",
+        "seurat-assay-metadata-extraction",
+        "spectral-data-normalization-tic",
+        "metabolite-annotation-at-scale"
       ]
     },
     "spatial-spectral-array-processing": {
@@ -8196,6 +10866,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-detection-and-alignment",
+        "spectral-reference-peak-summarization",
+        "spectral-noise-filtering-dynamic-peak",
+        "peak-filtering-and-quality-control",
+        "spectral-peak-picking-derivative-based",
+        "spectral-peak-alignment-across-pixels",
+        "feature-frequency-filtering-imaging",
+        "msi-array-data-structure-handling"
       ]
     },
     "spatial-spot-coordinate-registration": {
@@ -8215,6 +10895,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "hacca"
+      ],
+      "related_skills": [
+        "multimodal-spot-correspondence-mapping",
+        "spatial-transcriptome-metabolome-coregistration",
+        "spatial-data-integration-preprocessing",
+        "high-resolution-spot-to-spot-integration",
+        "spatial-coordinate-registration-across-modalities",
+        "spatial-transcriptomics-integration",
+        "spatial-metabolomics-integration",
+        "morphological-alignment-optimization"
       ]
     },
     "spatial-transcriptome-metabolome-coregistration": {
@@ -8235,6 +10925,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "hacca"
+      ],
+      "related_skills": [
+        "multimodal-spot-correspondence-mapping",
+        "spatial-spot-coordinate-registration",
+        "spatial-data-integration-preprocessing",
+        "transcriptome-metabolome-correlation-analysis",
+        "spatial-transcriptomics-integration",
+        "morphological-alignment-optimization",
+        "high-resolution-spot-to-spot-integration",
+        "spatial-metabolomics-integration"
       ]
     },
     "spatial-transcriptomics-integration": {
@@ -8258,6 +10958,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "spatial-metabolomics-integration",
+        "spatial-coordinate-registration-across-modalities",
+        "knn-nearest-neighbor-matching-for-spot-correspondence",
+        "metabolite-level-expression-summarization",
+        "spatial-coordinate-metadata-extraction",
+        "mass-spectrometry-data-matrix-construction",
+        "neural-network-hyperparameter-optimization",
+        "anndata-object-integration-and-metadata-mapping"
       ]
     },
     "spatio-molecular-matrix-processing": {
@@ -8282,6 +10992,16 @@
       "tools_used": [
         "google-colab",
         "python-3"
+      ],
+      "related_skills": [
+        "metabolomics-data-downstream-analysis",
+        "single-cell-spatial-metabolomics-data-processing",
+        "maldi-imaging-mass-spectrometry-data-interpretation",
+        "tissue-spatial-analysis-pipeline-execution",
+        "mass-spectrometry-data-matrix-construction",
+        "spatial-metabolomics-integration",
+        "tsne-embedding-dimensionality-reduction",
+        "notebook-execution-and-reproducibility"
       ]
     },
     "spectral-annotation-and-overlay-visualization": {
@@ -8305,6 +11025,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+        "mass-spectrometry-adduct-annotation",
+        "spatial-correlation-filtering-in-msi",
+        "spectral-peak-parent-product-pairing",
+        "metabolite-adduct-correlation-spatial-analysis",
+        "mass-spectrometry-peak-pair-analysis",
+        "memory-efficient-pairwise-statistics",
+        "mass-spectrometry-imaging-data-interpretation"
       ]
     },
     "spectral-baseline-correction": {
@@ -8329,6 +11059,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "spectral-noise-reduction-msi",
+        "intensity-normalization-spectra",
+        "msi-spectral-data-import",
+        "m-z-array-processing",
+        "signal-quality-assessment",
+        "msi-data-visualization-and-spatial-analysis",
+        "msi-data-table-export",
+        "mean-intensity-aggregation"
       ]
     },
     "spectral-data-normalization-tic": {
@@ -8360,6 +11100,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "cardinal-peak-processing-snr-filtering",
+        "bioinformatic-object-conversion",
+        "2d-tic-preprocessing",
+        "cardinal-to-seurat-object-conversion",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "spatial-segmentation-shrunken-centroids",
+        "cardinal-object-structure-understanding"
       ]
     },
     "spectral-dimension-verification": {
@@ -8384,6 +11134,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "msimagingexperiment-object-validation",
+        "imzml-continuous-format-parsing",
+        "mass-spectrometry-peak-validation",
+        "mass-spectrometry-imaging-data-import",
+        "msi-imaging-experiment-class-manipulation",
+        "spatial-spectral-array-processing",
+        "spectral-peak-alignment-across-pixels",
+        "mass-spectrometry-peak-detection-and-alignment"
       ]
     },
     "spectral-image-filtering": {
@@ -8409,6 +11169,16 @@
         "poisson-noise-augmentation",
         "random-missing-value-augmentation",
         "resnet18"
+      ],
+      "related_skills": [
+        "spatial-filtering-ion-images",
+        "image-intensity-jittering",
+        "ion-image-augmentation-intensity-dependent",
+        "mass-spectrometry-image-preprocessing",
+        "color-jitter-application-imaging",
+        "ion-image-augmentation-contrastive-learning",
+        "ion-image-augmentation-design",
+        "poisson-noise-injection-for-imaging"
       ]
     },
     "spectral-ion-matching-across-vendors": {
@@ -8441,6 +11211,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "mass-spectrometry-imaging-vendor-format-support",
+        "ion-mobility-filtering-and-tolerance-tuning",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "bruker-baf-data-import-and-conversion",
+        "mass-tolerance-parameter-calibration",
+        "vendor-file-format-specification-handling",
+        "vendor-proprietary-format-interoperability"
       ]
     },
     "spectral-library-matching-and-scoring": {
@@ -8479,6 +11259,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "spectral-similarity-scoring",
+        "ms-ms-spectral-library-matching",
+        "spectral-library-matching-with-taxonomy",
+        "spectral-similarity-matching-and-comparison",
+        "spectral-database-matching",
+        "gc-ms-spectral-library-matching",
+        "spectral-similarity-scoring-and-reference-matching",
+        "spectral-library-matching"
       ]
     },
     "spectral-noise-reduction-msi": {
@@ -8503,6 +11293,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "spectral-baseline-correction",
+        "signal-quality-assessment",
+        "msi-spectral-data-import",
+        "msi-data-visualization-and-spatial-analysis",
+        "intensity-normalization-spectra",
+        "msi-data-table-export",
+        "m-z-array-processing",
+        "biochemical-annotation-mapping"
       ]
     },
     "spectral-peak-parent-product-pairing": {
@@ -8527,6 +11327,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-pair-analysis",
+        "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+        "pairwise-mass-difference-computation",
+        "memory-efficient-pairwise-statistics",
+        "metabolite-adduct-correlation-spatial-analysis",
+        "adduct-ion-parent-ion-pairing-analysis",
+        "mass-spectrometry-peak-enumeration",
+        "adduct-mass-difference-matching"
       ]
     },
     "spectral-peak-picking-derivative-based": {
@@ -8553,6 +11363,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-detection-and-alignment",
+        "spectral-reference-peak-summarization",
+        "spatial-spectral-array-processing",
+        "spectral-noise-filtering-dynamic-peak",
+        "peak-preservation-vs-noise-reduction-tradeoff",
+        "spectral-peak-alignment-across-pixels",
+        "peak-filtering-and-quality-control",
+        "noise-estimation-snr-thresholding"
       ]
     },
     "spectral-reference-peak-summarization": {
@@ -8578,6 +11398,16 @@
         "biocparallel",
         "cardinal",
         "cardinalio"
+      ],
+      "related_skills": [
+        "spatial-spectral-array-processing",
+        "spectral-peak-picking-derivative-based",
+        "mass-spectrometry-peak-detection-and-alignment",
+        "peak-filtering-and-quality-control",
+        "spectral-peak-alignment-across-pixels",
+        "spectral-noise-filtering-dynamic-peak",
+        "mass-spectrometry-peak-validation",
+        "feature-frequency-filtering-imaging"
       ]
     },
     "spectral-search-result-aggregation": {
@@ -8611,6 +11441,16 @@
         "microbiomemasst",
         "plantmasst",
         "tissuemasst"
+      ],
+      "related_skills": [
+        "multi-domain-search-result-aggregation",
+        "spectral-match-result-consolidation",
+        "search-result-visualization-across-domains",
+        "search-result-aggregation-and-normalization",
+        "cross-domain-metadata-integration",
+        "cross-domain-metadata-harmonization",
+        "hit-score-consolidation-across-domains",
+        "spectral-match-interpretation"
       ]
     },
     "spectrum-peak-counting-and-reporting": {
@@ -8641,6 +11481,16 @@
         "matplotlib",
         "numpy",
         "pandas"
+      ],
+      "related_skills": [
+        "mass-spectrum-noise-threshold-parameter-selection",
+        "mass-spectrum-peak-aggregation",
+        "ftms-mass-spectrum-peak-detection",
+        "statistical-score-distribution-analysis",
+        "gc-ms-chromatogram-processing",
+        "mass-spectrum-averaging-and-processing",
+        "reference-peak-matching-and-fallback-logic",
+        "ionization-mode-peak-retention-comparison"
       ]
     },
     "spot-level-intensity-aggregation": {
@@ -8663,6 +11513,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "metabolite-level-expression-summarization",
+        "metabolite-detection-frequency-estimation",
+        "anndata-object-annotation",
+        "anndata-object-integration-and-metadata-mapping",
+        "mass-spectrometry-data-matrix-construction",
+        "spatial-coordinate-metadata-extraction",
+        "metabolite-feature-organization",
+        "anndata-object-initialization-and-structuring"
       ]
     },
     "summary-visualization-artifact-generation": {
@@ -8698,6 +11558,16 @@
         "microbiomemasst",
         "plantmasst",
         "tissuemasst"
+      ],
+      "related_skills": [
+        "masst-output-visualization",
+        "search-result-visualization-across-domains",
+        "spectral-search-result-aggregation",
+        "spectral-match-result-consolidation",
+        "metadata-harmonization-across-sources",
+        "cross-domain-metadata-harmonization",
+        "multi-domain-search-result-aggregation",
+        "spectral-match-interpretation"
       ]
     },
     "tissue-spatial-analysis-pipeline-execution": {
@@ -8721,7 +11591,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "single-cell-spatial-metabolomics-data-processing",
+        "cell-type-protein-profiling-integration",
+        "metabolomics-preprocessing-normalization",
+        "spatial-metabolomics-integration",
+        "spatial-transcriptomics-integration",
+        "maldi-imaging-mass-spectrometry-data-interpretation",
+        "msi-data-visualization-and-spatial-analysis",
+        "metabolomics-data-downstream-analysis"
+      ]
     },
     "total-ion-current-quantification": {
       "dois": [
@@ -8753,6 +11633,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-image-normalization",
+        "image-visualization-formatting",
+        "pixel-intensity-scaling-and-thresholding",
+        "isotope-corrected-image-quantitation",
+        "internal-standard-intensity-calibration",
+        "ion-image-quantification-workflow",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "ion-current-calculation-and-aggregation"
       ]
     },
     "two-dimensional-spectral-map-analysis": {
@@ -8777,6 +11667,16 @@
       "tools_used": [
         "npfimg",
         "xcms"
+      ],
+      "related_skills": [
+        "two-dimensional-ms-image-processing",
+        "image-processing-for-metabolomics",
+        "image-processing-on-two-dimensional-mass-spectrometry-maps",
+        "image-based-feature-extraction-ms-maps",
+        "noise-suppression-spectral-imaging",
+        "chromatography-mass-spectrometry-data-processing",
+        "marker-feature-identification-chromatography-ms",
+        "marker-feature-identification-and-validation"
       ]
     },
     "variational-autoencoder-training": {
@@ -8798,6 +11698,16 @@
         "github-com-wanluliulab-spatialmeta",
         "scikit-learn-nearestneighbors-for-knn-index-construction",
         "spatialmeta"
+      ],
+      "related_skills": [
+        "neural-network-hyperparameter-optimization",
+        "multi-omics-latent-space-learning",
+        "spatial-coordinate-registration-across-modalities",
+        "spatial-transcriptomics-integration",
+        "euclidean-distance-computation-for-spatial-alignment",
+        "anndata-object-integration-and-metadata-mapping",
+        "spatial-metabolomics-integration",
+        "spatial-coordinate-metadata-extraction"
       ]
     },
     "vendor-file-format-specification-handling": {
@@ -8829,6 +11739,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-vendor-format-support",
+        "file-format-detection-and-routing",
+        "raw-vendor-file-format-handling",
+        "module-loader-implementation",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "mass-spectrometry-file-conversion",
+        "error-handling-for-unsupported-formats",
+        "msi-preprocessing-parameter-configuration"
       ]
     }
   }

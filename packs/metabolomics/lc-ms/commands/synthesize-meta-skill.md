@@ -1,6 +1,6 @@
 ---
-description: Synthesize a workflow-level super-skill from a pipeline seed — cluster the sub-skills, identify the canonical ordered pipeline, write the orchestration, tier it synthetic/super/hold, and stage a reviewable proposal PR (you never auto-merge — a maintainer merges after open curation).
-argument-hint: "[pipeline-name] [short-description] [collection-dir]"
+description: Synthesize a workflow-level super-skill from a pipeline seed — cluster the sub-skills, identify the canonical ordered pipeline, write the orchestration, tier it synthetic (or literature when grounded in a review DOI) / super / hold, and stage a reviewable proposal PR (you never auto-merge — a maintainer merges after open curation).
+argument-hint: "[pipeline-name] [short-description] [collection-dir] [--review-doi DOI]"
 ---
 You are auto-creating a **super-skill** — a workflow-level meta-skill that
 orchestrates several existing sub-skills (e.g. "molecular networking") — and
@@ -24,8 +24,12 @@ model), [`governance/PROVENANCE_TIERS.md`](../../../../governance/PROVENANCE_TIE
 meta-skills — this command generalizes them into a synthesizable, openly-curated rail.
 
 Inputs: `$ARGUMENTS` — the pipeline `name` (required), a short `description` of what
-the pipeline does (required), and the collection dir (default
-`collections/metabolomics/v2`).
+the pipeline does (required), the collection dir (default
+`collections/metabolomics/v2`), and an optional `--review-doi <DOI>`. Pass
+`--review-doi` **only** when the canonical pipeline is grounded in a real **review
+article** (a survey/tutorial that defines these stages): it flips the staged origin
+from `synthetic` (derived from the orchestrated skills) to `literature` (the review
+DOI is the source) — see step 4. Default (no review DOI) stays `synthetic`.
 
 Steps:
 
@@ -77,17 +81,23 @@ Steps:
      its source). This is genuine synthesis — write the real workflow, cite real
      slugs, don't fabricate.
 
-4. **Assemble the frontmatter (synthetic / super / hold).** Use the synthesizer's
-   `meta_frontmatter` — it reuses `normalize_skill.normalized_frontmatter` then
-   layers the super-skill invariants (`metadata.skill_kind="super"`,
+4. **Assemble the frontmatter (super / hold; synthetic or literature).** Use the
+   synthesizer's `meta_frontmatter` — it reuses `normalize_skill.normalized_frontmatter`
+   then layers the super-skill invariants (`metadata.skill_kind="super"`,
    `metadata.orchestrates`, `metadata.synthesized_from`), mirrors `related_skills`
-   onto the orchestrated slugs, and sets `provenance_tier="synthetic"`,
-   `status="hold"`:
+   onto the orchestrated slugs, and sets `status="hold"`. The origin depends on
+   whether you pass a **review DOI**:
+   - **default (no `review_doi`)** → `provenance_tier="synthetic"` (the pipeline is
+     derived from the orchestrated skills);
+   - **`review_doi="<DOI>"`** → `provenance_tier="literature"`, with
+     `metadata.dois=[<DOI>]` and `derived_from=[{doi:<DOI>}]` (the pipeline is grounded
+     in that review article). Only pass it for a real review/survey you can cite — the
+     proposals gate enforces *literature ⇒ ≥1 doi*; never fabricate a DOI.
    ```python
    from scripts.synthesize_meta_skill import meta_frontmatter
 
    orchestrates    = ["<stage-1-slug>", "<stage-2-slug>", ...]   # curated, ordered, real
-   synthesized_from = orchestrates + ["doi:10...."]              # sub-slugs (+ review DOIs if any)
+   synthesized_from = list(orchestrates)                         # the source sub-skill slugs
    tools_used       = ["<tool-slug>", ...]                       # from cluster["tools"]
 
    fm = meta_frontmatter(
@@ -97,6 +107,7 @@ Steps:
        synthesized_from=synthesized_from,
        tools_used=tools_used,
        license_tier="open",            # set from LICENSE_TIERS.md / the grounded tools
+       review_doi=None,                # or "10.xxxx/..." → literature-tier (review-grounded)
    )
    ```
 
@@ -134,9 +145,10 @@ Steps:
    ```
 
 7. **Validate what was staged** with the same gate CI runs — it enforces the
-   synthetic/super invariants (`synthesized_from` non-empty; `skill_kind ∈
-   {skill,super}`; for `super`, `orchestrates` non-empty and **every** orchestrated
-   slug resolves in `skills_index.json`), so the PR is green before any push:
+   provenance + super invariants (synthetic ⇒ `synthesized_from` non-empty;
+   literature ⇒ ≥1 `dois`; `skill_kind ∈ {skill,super}`; for `super`, `orchestrates`
+   non-empty and **every** orchestrated slug resolves in `skills_index.json`), so the
+   PR is green before any push:
    ```bash
    python -m scripts.check_proposals "<collection-dir>"
    ```

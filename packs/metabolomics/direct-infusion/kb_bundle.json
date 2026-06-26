@@ -67,6 +67,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "accurate-mass-metabolite-search-against-hmdb",
+        "metabolite-identifier-mapping",
+        "ms1-feature-detection-and-annotation",
+        "mztab-format-generation",
+        "ms1-feature-peak-detection-in-full-scan",
+        "fiams-spectra-window-extraction-and-merging",
+        "metabolomics-database-search-and-formula-matching",
+        "spectral-database-search-and-scoring"
       ]
     },
     "accurate-mass-metabolite-search-against-hmdb": {
@@ -95,6 +105,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "accurate-mass-database-search",
+        "metabolite-identifier-mapping",
+        "mztab-format-generation",
+        "ms1-feature-detection-and-annotation",
+        "fiams-spectra-window-extraction-and-merging",
+        "adduct-based-feature-consolidation",
+        "ms1-feature-peak-detection-in-full-scan",
+        "feature-detection-in-chromatographic-ms-data"
       ]
     },
     "acquisition-method-overlap-analysis": {
@@ -122,6 +142,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "feature-list-harmonization-across-methods",
+        "cross-software-feature-matching",
+        "targeted-peak-extraction-ms1",
+        "comparative-omics-report-generation",
+        "quantitation-table-generation",
+        "tandem-mass-spectrometry-mirror-plot-construction",
+        "mass-spectrometry-data-file-parsing",
+        "multi-sample-cohort-assessment"
       ]
     },
     "acquisition-mode-enumeration-and-validation": {
@@ -157,6 +187,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "ms-vendor-documentation-extraction",
+        "instrument-platform-compatibility-mapping",
+        "technical-specification-tabulation",
+        "mass-spectrometry-fragment-matching",
+        "mass-accuracy-tolerance-calibration",
+        "uhplc-hrms-ms-data-matching",
+        "mass-spectrometry-metadata-extraction",
+        "mass-spectrometry-data-column-mapping"
       ]
     },
     "adduct-based-feature-consolidation": {
@@ -185,6 +225,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "ms1-feature-peak-detection-in-full-scan",
+        "accurate-mass-metabolite-search-against-hmdb",
+        "ms1-feature-detection-and-annotation",
+        "spectral-data-normalization-and-merging",
+        "mztab-format-generation",
+        "metabolite-identifier-mapping",
+        "fiams-spectra-window-extraction-and-merging",
+        "duplicate-feature-detection-and-removal"
       ]
     },
     "aromaticity-index-computation": {
@@ -235,6 +285,16 @@
         "ultramassexplorer",
         "vegan",
         "vegan-r-package"
+      ],
+      "related_skills": [
+        "unsaturation-degree-quantification",
+        "thermodynamic-index-calculation",
+        "thermodynamic-molecular-index-calculation-from-elemental-composition",
+        "molecular-formula-property-derivation",
+        "elemental-composition-parsing",
+        "metabolite-chemodiversity-index-calculation-and-interpretation",
+        "richness-index-computation",
+        "molecular-formula-quality-assessment"
       ]
     },
     "automated-feature-extraction-from-spectra": {
@@ -258,6 +318,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-identification-and-extraction",
+        "mass-spectrum-peak-detection",
+        "spectral-data-preprocessing",
+        "spectral-database-search-and-scoring",
+        "peak-labeling-and-annotation",
+        "m-z-intensity-calibration",
+        "spectral-peak-detection-and-alignment",
+        "species-authentication-classification-evaluation"
       ]
     },
     "baseline-model-implementation-for-comparison": {
@@ -287,6 +357,16 @@
         "pubchem",
         "pytorch",
         "tensorflow"
+      ],
+      "related_skills": [
+        "baseline-model-training-and-evaluation",
+        "model-comparison-evaluation",
+        "molecular-spectrum-prediction-baseline",
+        "baseline-comparison-analysis",
+        "mass-spectrum-prediction-modeling",
+        "feedforward-neural-network-architecture-design",
+        "baseline-comparison-performance-benchmarking",
+        "feedforward-network-configuration"
       ]
     },
     "biochemical-transformation-matching": {
@@ -339,6 +419,16 @@
         "ultramassexplorer",
         "vegan",
         "vegan-r-package"
+      ],
+      "related_skills": [
+        "peak-pairwise-comparison",
+        "transformation-network-topology-analysis",
+        "pairwise-mass-comparison-computation",
+        "transformation-classification-biotic-abiotic",
+        "mass-difference-network-construction",
+        "molecular-class-annotation-for-networks",
+        "cytoscape-edge-node-file-formatting",
+        "ft-icr-ms-data-processing-pipeline-execution"
       ]
     },
     "blank-sample-background-interference-estimation": {
@@ -367,6 +457,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "ms1-feature-peak-detection-in-full-scan",
+        "ms1-feature-detection-and-annotation",
+        "background-ion-blank-comparison",
+        "sample-group-injection-aggregation",
+        "ms-peak-blank-signal-subtraction",
+        "blank-sample-feature-filtering",
+        "feature-table-blank-intensity-detection",
+        "mztab-format-generation"
       ]
     },
     "compound-class-assignment-from-molecular-formula": {
@@ -418,6 +518,16 @@
         "ultramassexplorer",
         "vegan",
         "vegan-r-package"
+      ],
+      "related_skills": [
+        "molecular-formula-quality-assessment",
+        "spectral-peak-filtering-by-mass-accuracy",
+        "molecular-formula-property-derivation",
+        "mass-spectrometry-molecular-formula-handling",
+        "molecular-class-annotation-for-networks",
+        "molecular-formula-heteroatom-classification",
+        "peak-pairwise-comparison",
+        "isotopic-peak-removal"
       ]
     },
     "cross-instrument-data-harmonization": {
@@ -442,6 +552,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "mass-spectrometry-instrument-format-compatibility",
+        "spectral-database-search-and-scoring",
+        "spectral-data-preprocessing",
+        "species-authentication-classification-evaluation",
+        "mass-spectrometry-peak-identification-and-extraction",
+        "automated-feature-extraction-from-spectra",
+        "m-z-intensity-calibration",
+        "visual-pattern-recognition-in-spectral-data"
       ]
     },
     "dimension-scale-linking-and-cross-group-indexing": {
@@ -466,6 +586,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "feature-metadata-alignment-across-dimensions",
+        "hdf5-file-structure-specification",
+        "hdf5-cardinal-format-preservation",
+        "lipid-feature-annotation-and-sorting",
+        "lipid-feature-identifier-matching",
+        "hdf5-file-format-reading-and-writing",
+        "coordinate-system-normalization-1based-indexing",
+        "msi-metadata-harmonization-across-image-stacks"
       ]
     },
     "diversity-visualization-by-treatment": {
@@ -516,6 +646,16 @@
         "ultramassexplorer",
         "vegan",
         "vegan-r-package"
+      ],
+      "related_skills": [
+        "nmds-ordination-distance-metric-selection",
+        "permanova-statistical-testing-multivariate-groups",
+        "multivariate-ordination-analysis",
+        "richness-index-computation",
+        "metabolite-distance-metric-calculation",
+        "metabolite-composition-comparison-across-treatments",
+        "chemodiversity-metric-calculation",
+        "metabolite-abundance-stratification"
       ]
     },
     "embedding-space-representation": {
@@ -538,6 +678,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "transformer"
+      ],
+      "related_skills": [
+        "spectral-peak-embedding-encoding",
+        "mass-spectrometry-embedding-generation",
+        "mass-spectrometry-spectral-embedding-learning",
+        "siamese-network-embedding-generation",
+        "infoence-loss-composition",
+        "tandem-mass-spectra-embedding-generation",
+        "embedding-similarity-computation",
+        "mass-spectra-embedding-extraction"
       ]
     },
     "environment-dependency-management": {
@@ -570,6 +720,16 @@
         "matlab-compiler-runtime-8-3",
         "python-2-7",
         "r-3-0-1"
+      ],
+      "related_skills": [
+        "metabolomics-tool-deployment",
+        "tool-xml-wrapper-integration",
+        "galaxy-installation-configuration",
+        "software-dependency-management-and-environment-setup",
+        "system-environment-configuration",
+        "galaxy-tool-registration-verification",
+        "reproducibility-gap-detection",
+        "command-line-tool-installation-and-configuration"
       ]
     },
     "experimental-design-metadata-integration": {
@@ -591,6 +751,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "knime"
+      ],
+      "related_skills": [
+        "knime-workflow-orchestration",
+        "ms-ms-raw-data-loading",
+        "mass-spectrometry-metadata-extraction",
+        "feature-statistical-annotation",
+        "metabolite-metadata-integration",
+        "spatial-coordinate-mapping",
+        "spectral-data-processing-and-annotation",
+        "lcms-feature-detection-and-quantification"
       ]
     },
     "extracted-ion-chromatogram-generation": {
@@ -617,6 +787,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-file-parsing",
+        "targeted-peak-extraction-ms1",
+        "precursor-ion-chromatogram-extraction",
+        "mass-spectrometry-data-loading",
+        "extracted-ion-chromatogram-processing",
+        "quantitation-table-generation",
+        "multiformat-data-export-to-pdf-csv",
+        "tandem-mass-spectrometry-mirror-plot-construction"
       ]
     },
     "feature-list-harmonization-across-methods": {
@@ -644,6 +824,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "cross-software-feature-matching",
+        "comparative-omics-report-generation",
+        "acquisition-method-overlap-analysis",
+        "metadata-normalization-and-reconciliation",
+        "targeted-peak-extraction-ms1",
+        "quantitation-table-generation",
+        "target-list-coordinate-mapping",
+        "multiformat-data-export-to-pdf-csv"
       ]
     },
     "feature-quality-assessment-metrics": {
@@ -666,6 +856,16 @@
       "tools_used": [
         "masscube",
         "python"
+      ],
+      "related_skills": [
+        "lc-ms-feature-quality-scoring",
+        "peak-shape-assessment",
+        "lcms-feature-extraction",
+        "signal-to-noise-ratio-computation",
+        "chromatographic-peak-detection-and-segmentation",
+        "feature-group-adduct-detection",
+        "feature-group-isotope-annotation",
+        "nontargeted-metabolomics-data-processing"
       ]
     },
     "feature-table-export-and-formatting": {
@@ -693,6 +893,16 @@
         "mzmine2",
         "openms",
         "optimus"
+      ],
+      "related_skills": [
+        "ms-ms-feature-preparation-for-gnps",
+        "molecular-networking-parameter-configuration",
+        "feature-table-export-and-validation",
+        "mass-spectrometry-feature-mapping",
+        "peak-detection-and-mass-alignment",
+        "cross-sample-feature-alignment",
+        "spectral-similarity-network-generation",
+        "mzmine-quantitative-table-parsing"
       ]
     },
     "fiams-spectra-window-extraction-and-merging": {
@@ -720,6 +930,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "ms1-feature-peak-detection-in-full-scan",
+        "spectral-data-normalization-and-merging",
+        "ms1-feature-detection-and-annotation",
+        "mztab-format-generation",
+        "metabolite-identifier-mapping",
+        "accurate-mass-metabolite-search-against-hmdb",
+        "feature-detection-in-chromatographic-ms-data",
+        "accurate-mass-database-search"
       ]
     },
     "fragment-ion-peak-annotation": {
@@ -746,6 +966,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "fragment-ion-library-matching",
+        "tandem-mass-spectrometry-mirror-plot-construction",
+        "fragment-ion-matching",
+        "mass-spectrometry-data-file-parsing",
+        "library-spectrum-database-format-parsing",
+        "fragment-ion-scoring-and-ranking",
+        "targeted-peak-extraction-ms1",
+        "ion-mobility-heatmap-visualization"
       ]
     },
     "gradient-performance-encoding": {
@@ -781,6 +1011,16 @@
         "python",
         "scikit-learn",
         "xcms"
+      ],
+      "related_skills": [
+        "lc-ms-gradient-encoding-vector-representation",
+        "chromatographic-window-coverage-assessment",
+        "retention-time-feature-distribution-analysis",
+        "gradient-space-optimization-search",
+        "gaussian-process-regression-model-fitting",
+        "separation-efficiency-calculation-from-retention-times",
+        "ms1-feature-ranking-and-extraction",
+        "separation-metric-normalization"
       ]
     },
     "hierarchical-clustering-dendrogram-cutting": {
@@ -813,6 +1053,16 @@
         "ramclustr",
         "sirius",
         "xcms"
+      ],
+      "related_skills": [
+        "metabolite-feature-grouping-by-compound",
+        "metabolite-feature-clustering-by-retention-time",
+        "mass-spectrometry-feature-clustering",
+        "xcms-object-handling-and-preprocessing",
+        "mass-spectral-similarity-scoring-across-samples",
+        "pairwise-similarity-matrix-construction",
+        "retention-time-correlation-similarity-scoring",
+        "compound-isotope-and-adduct-grouping"
       ]
     },
     "in-silico-fragment-m-z-calculation": {
@@ -846,6 +1096,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "in-silico-fragmentation-simulation-validation",
+        "fragment-ion-library-matching",
+        "mass-spectrometry-fragment-matching",
+        "lipid-identification-scoring",
+        "lipid-mass-spectral-matching",
+        "uhplc-hrms-ms-data-matching",
+        "lipid-library-annotation-from-mz",
+        "mass-accuracy-tolerance-calibration"
       ]
     },
     "in-silico-fragmentation-simulation-validation": {
@@ -881,6 +1141,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "uhplc-hrms-ms-data-matching",
+        "mass-spectrometry-fragment-matching",
+        "in-silico-fragment-m-z-calculation",
+        "lipid-mass-spectral-matching",
+        "lipid-identification-scoring",
+        "fragment-ion-library-matching",
+        "mass-tolerance-optimization-hrms",
+        "lipid-candidate-matching"
       ]
     },
     "instrument-platform-compatibility-mapping": {
@@ -914,6 +1184,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "technical-specification-tabulation",
+        "ms-vendor-documentation-extraction",
+        "acquisition-mode-enumeration-and-validation",
+        "software-support-matrix-construction",
+        "mass-spectrometry-data-column-mapping",
+        "mass-spectrometry-fragment-matching",
+        "mass-accuracy-tolerance-calibration",
+        "file-format-parsing-and-validation"
       ]
     },
     "ion-image-quantification-workflow": {
@@ -937,6 +1217,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "isotope-corrected-image-quantitation",
+        "imzml-file-loading-and-import",
+        "msi-intensity-matrix-normalization",
+        "lipid-feature-annotation-and-sorting",
+        "msi-metadata-harmonization-across-image-stacks",
+        "internal-standard-ion-selection-and-application",
+        "hdf5-cardinal-format-preservation",
+        "lipid-adduct-pairing-by-neutral-mass"
       ]
     },
     "knime-workflow-orchestration": {
@@ -961,6 +1251,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "knime"
+      ],
+      "related_skills": [
+        "mass-spectrometry-workflow-orchestration",
+        "lcms-workflow-orchestration",
+        "experimental-design-metadata-integration",
+        "feature-statistical-annotation",
+        "xcms-workflow-execution",
+        "ms-ms-raw-data-loading",
+        "nextflow-workflow-execution",
+        "peak-detection-and-mass-alignment"
       ]
     },
     "lc-ms-dataset-acquisition-and-curation": {
@@ -1004,6 +1304,16 @@
         "scipy",
         "scipy-signal-detrend",
         "scipy-signal-find-peaks"
+      ],
+      "related_skills": [
+        "m-z-alignment-and-mass-grid-assembly",
+        "mass-spectrometry-data-parsing",
+        "lc-ms-feature-extraction-and-alignment",
+        "software-performance-characterization-and-scaling-analysis",
+        "scalability-extrapolation-and-throughput-estimation",
+        "mass-track-extraction-and-binning",
+        "computational-resource-profiling-and-benchmarking",
+        "mass-spectrometry-data-preprocessing"
       ]
     },
     "lipid-candidate-matching": {
@@ -1037,6 +1347,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "lipid-identification-scoring",
+        "lipid-mass-spectral-matching",
+        "uhplc-hrms-ms-data-matching",
+        "mass-spectrometry-fragment-matching",
+        "lipid-library-format-schema",
+        "file-format-conversion-peak-picking-to-lipidmatch",
+        "fragment-ion-library-matching",
+        "mass-tolerance-optimization-hrms"
       ]
     },
     "lipid-feature-annotation-and-sorting": {
@@ -1060,6 +1380,16 @@
         "cardinal",
         "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
         "lipidqmap"
+      ],
+      "related_skills": [
+        "lipid-feature-identifier-matching",
+        "hdf5-cardinal-format-preservation",
+        "msi-metadata-harmonization-across-image-stacks",
+        "feature-metadata-alignment-across-dimensions",
+        "hdf5-file-structure-specification",
+        "ion-image-quantification-workflow",
+        "dimension-scale-linking-and-cross-group-indexing",
+        "hdf5-file-format-reading-and-writing"
       ]
     },
     "lipid-fingerprint-regeneration-neural-networks": {
@@ -1084,6 +1414,16 @@
       "tools_used": [
         "camera",
         "xcms"
+      ],
+      "related_skills": [
+        "wmy-network-prediction-confidence-scoring",
+        "lipid-fragmentation-pattern-recognition",
+        "mass-spectrometry-fragmentation-pattern-modeling",
+        "spectral-annotation-recall-precision-quantification",
+        "mass-spectrometry-library-indexing",
+        "multi-species-lipid-prediction",
+        "lipid-coverage-assessment",
+        "lipid-retention-time-rule-application"
       ]
     },
     "lipid-mass-spectral-matching": {
@@ -1118,6 +1458,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "uhplc-hrms-ms-data-matching",
+        "mass-spectrometry-fragment-matching",
+        "lipid-candidate-matching",
+        "fragment-ion-library-matching",
+        "lipid-identification-scoring",
+        "in-silico-fragmentation-simulation-validation",
+        "lipid-library-annotation-from-mz",
+        "mass-tolerance-optimization-hrms"
       ]
     },
     "m-z-intensity-calibration": {
@@ -1141,6 +1491,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "mass-spectrum-peak-detection",
+        "spectral-data-preprocessing",
+        "automated-feature-extraction-from-spectra",
+        "mass-spectrometry-peak-identification-and-extraction",
+        "peak-labeling-and-annotation",
+        "spectral-peak-detection-and-alignment",
+        "mass-spectrometry-instrument-format-compatibility",
+        "mass-spectrometry-calibration"
       ]
     },
     "marker-feature-identification-and-validation": {
@@ -1165,6 +1525,16 @@
       "tools_used": [
         "npfimg",
         "xcms"
+      ],
+      "related_skills": [
+        "marker-feature-identification-chromatography-ms",
+        "untargeted-metabolomics-marker-identification",
+        "image-based-feature-extraction-ms-maps",
+        "chromatography-mass-spectrometry-data-processing",
+        "marker-feature-visualization-retention-time-mz",
+        "ppb-level-marker-detection-and-sensitivity-assessment",
+        "image-processing-for-metabolomics",
+        "two-dimensional-spectral-map-analysis"
       ]
     },
     "mass-difference-network-construction": {
@@ -1219,6 +1589,16 @@
         "ultramassexplorer",
         "vegan",
         "vegan-r-package"
+      ],
+      "related_skills": [
+        "pairwise-mass-comparison-computation",
+        "transformation-network-topology-analysis",
+        "peak-pairwise-comparison",
+        "biochemical-transformation-matching",
+        "molecular-class-annotation-for-networks",
+        "metabolite-distance-metric-calculation",
+        "cytoscape-edge-node-file-formatting",
+        "ft-icr-ms-data-processing-pipeline-execution"
       ]
     },
     "mass-spectrometry-data-file-parsing": {
@@ -1247,6 +1627,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-loading",
+        "ion-mobility-heatmap-visualization",
+        "targeted-peak-extraction-ms1",
+        "tandem-mass-spectrometry-mirror-plot-construction",
+        "mass-spectrometry-data-parsing",
+        "parameter-range-filtering-for-chromatographic-data",
+        "extracted-ion-chromatogram-generation",
+        "spectral-quality-metrics-extraction"
       ]
     },
     "mass-spectrometry-data-loading": {
@@ -1276,6 +1666,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-file-parsing",
+        "targeted-peak-extraction-ms1",
+        "ion-mobility-heatmap-visualization",
+        "ms1-data-preprocessing-normalization",
+        "quantitation-table-generation",
+        "multiformat-data-export-to-pdf-csv",
+        "tandem-mass-spectrometry-mirror-plot-construction",
+        "extracted-ion-chromatogram-generation"
       ]
     },
     "mass-spectrometry-data-parsing": {
@@ -1369,6 +1769,16 @@
         "spec2vec",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "lc-ms-feature-extraction-and-alignment",
+        "mass-spectrometry-data-file-parsing",
+        "mzml-file-parsing",
+        "mass-spectrometry-data-preprocessing",
+        "mass-spectrometry-data-parsing-mzml-bruker",
+        "mass-spectrometry-data-processing",
+        "mass-spectrometry-data-format-parsing",
+        "mass-spectrometry-data-loading-and-formatting"
       ]
     },
     "mass-spectrometry-feature-similarity-modeling": {
@@ -1388,6 +1798,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mrnannoalgo3-metdna3"
+      ],
+      "related_skills": [
+        "metabolite-annotation-network-architecture",
+        "data-driven-similarity-layer-implementation",
+        "knowledge-data-driven-layer-integration",
+        "graph-based-knowledge-representation",
+        "knowledge-graph-integration-design",
+        "two-layer-topology-traversal",
+        "network-node-label-spreading",
+        "recursive-propagation-algorithm-development"
       ]
     },
     "mass-spectrometry-instrument-format-compatibility": {
@@ -1411,6 +1831,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "cross-instrument-data-harmonization",
+        "species-authentication-classification-evaluation",
+        "mass-spectrometry-peak-identification-and-extraction",
+        "spectral-data-preprocessing",
+        "m-z-intensity-calibration",
+        "automated-feature-extraction-from-spectra",
+        "spectral-database-search-and-scoring",
+        "unknown-sample-reference-comparison"
       ]
     },
     "mass-spectrometry-outlier-detection": {
@@ -1437,6 +1867,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "multi-sample-cohort-assessment",
+        "spectral-quality-metrics-extraction",
+        "mass-spectrometry-data-file-parsing",
+        "ion-target-quality-monitoring",
+        "principal-component-analysis-interpretation",
+        "acquisition-method-overlap-analysis",
+        "targeted-peak-extraction-ms1",
+        "ion-mobility-heatmap-visualization"
       ]
     },
     "mass-spectrometry-peak-identification-and-extraction": {
@@ -1460,6 +1900,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "mass-spectrum-peak-detection",
+        "automated-feature-extraction-from-spectra",
+        "spectral-data-preprocessing",
+        "peak-labeling-and-annotation",
+        "spectral-peak-detection-and-alignment",
+        "spectral-database-search-and-scoring",
+        "m-z-intensity-calibration",
+        "mass-spectrometry-instrument-format-compatibility"
       ]
     },
     "mass-spectrometry-peak-intensity-encoding": {
@@ -1488,6 +1938,16 @@
         "scanpy",
         "smart",
         "stagate"
+      ],
+      "related_skills": [
+        "imaging-mass-spectrometry-ion-identification",
+        "spatial-feature-embedding",
+        "attention-mechanism-implementation",
+        "latent-space-dimensionality-reduction",
+        "autoencoder-encoder-decoder-design",
+        "iterative-peak-selection-from-latent-space",
+        "marker-ion-ranking-and-filtering",
+        "latent-feature-interpretation"
       ]
     },
     "mass-spectrum-database-matching": {
@@ -1537,6 +1997,16 @@
         "proteowizard",
         "python",
         "rapidmass"
+      ],
+      "related_skills": [
+        "tandem-mass-spectra-peptide-matching",
+        "mass-spectrometry-metadata-interpretation",
+        "spectral-scoring-and-significance-assessment",
+        "biosynthetic-gene-cluster-mining-with-genomic-data",
+        "post-translational-modification-pattern-recognition",
+        "genome-sequence-mining",
+        "spectral-library-matching-ripp",
+        "spectral-database-matching"
       ]
     },
     "mass-spectrum-peak-detection": {
@@ -1560,6 +2030,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "spectral-peak-detection-and-alignment",
+        "mass-spectrometry-peak-identification-and-extraction",
+        "spectral-data-preprocessing",
+        "automated-feature-extraction-from-spectra",
+        "m-z-intensity-calibration",
+        "peak-labeling-and-annotation",
+        "spectral-database-search-and-scoring",
+        "peak-detection-mass-spectrometry"
       ]
     },
     "mass-track-construction-from-centroided-spectra": {
@@ -1607,6 +2087,16 @@
         "scipy",
         "scipy-signal-detrend",
         "scipy-signal-find-peaks"
+      ],
+      "related_skills": [
+        "mass-track-extraction-and-binning",
+        "m-z-alignment-and-mass-grid-assembly",
+        "mass-grid-construction-and-mapping",
+        "mass-track-consensus-computation",
+        "mz-binning-and-indexing",
+        "mass-track-clustering",
+        "chromatographic-data-structuring",
+        "composite-mass-track-construction"
       ]
     },
     "mass-track-extraction-and-binning": {
@@ -1652,6 +2142,16 @@
         "scipy",
         "scipy-signal-detrend",
         "scipy-signal-find-peaks"
+      ],
+      "related_skills": [
+        "mass-track-construction-from-centroided-spectra",
+        "mz-binning-and-indexing",
+        "mass-track-clustering",
+        "mass-track-consensus-computation",
+        "mass-grid-construction-and-mapping",
+        "m-z-alignment-and-mass-grid-assembly",
+        "m-z-alignment-across-samples",
+        "composite-mass-track-construction"
       ]
     },
     "metabolite-feature-clustering-by-retention-time": {
@@ -1684,6 +2184,16 @@
         "ramclustr",
         "sirius",
         "xcms"
+      ],
+      "related_skills": [
+        "metabolite-feature-grouping-by-compound",
+        "hierarchical-clustering-dendrogram-cutting",
+        "mass-spectrometry-feature-clustering",
+        "retention-time-correlation-similarity-scoring",
+        "retention-time-feature-clustering",
+        "xcms-object-handling-and-preprocessing",
+        "mass-spectral-similarity-scoring-across-samples",
+        "compound-isotope-and-adduct-grouping"
       ]
     },
     "metabolite-feature-grouping-by-adduct-isotope": {
@@ -1718,6 +2228,16 @@
         "pycombat",
         "python",
         "thermorawfileparser"
+      ],
+      "related_skills": [
+        "feature-annotation-via-isotope-adduct-grouping",
+        "ion-adduct-isotope-pattern-matching",
+        "isotope-pattern-and-adduct-assignment",
+        "compound-isotope-and-adduct-grouping",
+        "chromatographic-coelution-detection",
+        "mass-isotopologue-adduct-grouping",
+        "feature-group-adduct-detection",
+        "empirical-compound-grouping-by-adducts-and-isotopes"
       ]
     },
     "metabolite-feature-grouping-by-compound": {
@@ -1750,6 +2270,16 @@
         "ramclustr",
         "sirius",
         "xcms"
+      ],
+      "related_skills": [
+        "metabolite-feature-clustering-by-retention-time",
+        "hierarchical-clustering-dendrogram-cutting",
+        "mass-spectrometry-feature-clustering",
+        "compound-isotope-and-adduct-grouping",
+        "rc-object-construction-and-validation",
+        "xcms-object-handling-and-preprocessing",
+        "mass-spectral-similarity-scoring-across-samples",
+        "retention-time-correlation-similarity-scoring"
       ]
     },
     "metabolite-identifier-mapping": {
@@ -1776,6 +2306,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "mztab-format-generation",
+        "accurate-mass-database-search",
+        "accurate-mass-metabolite-search-against-hmdb",
+        "ms1-feature-peak-detection-in-full-scan",
+        "fiams-spectra-window-extraction-and-merging",
+        "ms1-feature-detection-and-annotation",
+        "adduct-based-feature-consolidation",
+        "spectral-data-normalization-and-merging"
       ]
     },
     "metabolomics-feature-preprocessing": {
@@ -1801,6 +2341,16 @@
       "tools_used": [
         "python",
         "python-3-8-1"
+      ],
+      "related_skills": [
+        "roi-tensor-formatting-for-deep-learning",
+        "lc-ms-profile-data-segmentation",
+        "mass-spectrometry-chromatogram-extraction",
+        "lc-ms-peak-quantification",
+        "detection-network-output-parsing",
+        "lc-ms-roi-annotation-interpretation",
+        "mzml-file-parsing-and-ingestion",
+        "peak-boundary-localization"
       ]
     },
     "metabolomics-tool-deployment": {
@@ -1831,6 +2381,16 @@
         "matlab-compiler-runtime-8-3",
         "python-2-7",
         "r-3-0-1"
+      ],
+      "related_skills": [
+        "galaxy-installation-configuration",
+        "tool-xml-wrapper-integration",
+        "environment-dependency-management",
+        "galaxy-tool-registration-verification",
+        "metabolomics-data-processing",
+        "cross-platform-software-capability-mapping",
+        "multi-platform-ms-integration",
+        "software-dependency-management-and-environment-setup"
       ]
     },
     "microbial-metabolomics-phage-impact-assessment": {
@@ -1883,6 +2443,16 @@
         "ultramassexplorer",
         "vegan",
         "vegan-r-package"
+      ],
+      "related_skills": [
+        "microbial-phage-infection-experimental-design-interpretation",
+        "multivariate-ordination-analysis",
+        "metabolite-composition-comparison-across-treatments",
+        "metabolite-distance-metric-calculation",
+        "metabolite-abundance-normalization-comparison",
+        "biochemical-transformation-matching",
+        "pairwise-mass-comparison-computation",
+        "ft-icr-ms-data-processing-pipeline-execution"
       ]
     },
     "missing-value-imputation-in-quantification-tables": {
@@ -1908,6 +2478,16 @@
         "mzmine2",
         "openms",
         "optimus"
+      ],
+      "related_skills": [
+        "peak-detection-and-mass-alignment",
+        "cross-sample-feature-alignment",
+        "feature-table-export-and-formatting",
+        "metabolomic-feature-table-imputation",
+        "feature-table-blank-intensity-detection",
+        "feature-abundance-threshold-comparison",
+        "missing-value-imputation-by-data-recursion",
+        "missing-value-imputation-for-omics"
       ]
     },
     "ms-ms-raw-data-loading": {
@@ -1934,6 +2514,16 @@
         "mzmine2",
         "openms",
         "optimus"
+      ],
+      "related_skills": [
+        "peak-detection-and-mass-alignment",
+        "mass-spectrometry-data-loading",
+        "open-format-mass-spectrometry-file-handling",
+        "mass-spectrometry-raw-data-preprocessing",
+        "lcms-raw-data-import",
+        "ms-ms-feature-preparation-for-gnps",
+        "mass-spectrometry-data-file-parsing",
+        "knime-workflow-orchestration"
       ]
     },
     "ms-vendor-documentation-extraction": {
@@ -1968,6 +2558,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "instrument-platform-compatibility-mapping",
+        "technical-specification-tabulation",
+        "acquisition-mode-enumeration-and-validation",
+        "software-support-matrix-construction",
+        "mass-spectrometry-fragment-matching",
+        "mass-spectrometry-metadata-extraction",
+        "uhplc-hrms-ms-data-matching",
+        "hrms-data-format-parsing"
       ]
     },
     "ms1-feature-detection-and-annotation": {
@@ -1995,6 +2595,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "ms1-feature-peak-detection-in-full-scan",
+        "accurate-mass-database-search",
+        "mztab-format-generation",
+        "fiams-spectra-window-extraction-and-merging",
+        "feature-detection-in-chromatographic-ms-data",
+        "accurate-mass-metabolite-search-against-hmdb",
+        "metabolite-identifier-mapping",
+        "peak-detection-and-mass-alignment"
       ]
     },
     "ms1-feature-peak-detection-in-full-scan": {
@@ -2023,6 +2633,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "ms1-feature-detection-and-annotation",
+        "fiams-spectra-window-extraction-and-merging",
+        "mztab-format-generation",
+        "spectral-data-normalization-and-merging",
+        "adduct-based-feature-consolidation",
+        "metabolite-identifier-mapping",
+        "feature-detection-in-chromatographic-ms-data",
+        "accurate-mass-metabolite-search-against-hmdb"
       ]
     },
     "multi-sample-cohort-assessment": {
@@ -2048,6 +2668,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "ion-target-quality-monitoring",
+        "mass-spectrometry-outlier-detection",
+        "spectral-quality-metrics-extraction",
+        "principal-component-analysis-interpretation",
+        "acquisition-method-overlap-analysis",
+        "ms1-data-preprocessing-normalization",
+        "targeted-peak-extraction-ms1",
+        "mass-spectrometry-data-file-parsing"
       ]
     },
     "multidimensional-feature-detection-and-alignment": {
@@ -2083,6 +2713,16 @@
         "proteowizard-msconvert",
         "python",
         "snakemake"
+      ],
+      "related_skills": [
+        "multidimensional-coordinate-alignment",
+        "ms2-spectral-deconvolution-and-annotation",
+        "tandem-mass-spectrum-deconvolution-isotope-annotation",
+        "cross-sample-feature-matching",
+        "mass-spectrometry-workflow-orchestration",
+        "multi-dimensional-feature-alignment",
+        "lcims-msms-data-preprocessing-peak-detection",
+        "mass-spectrometry-data-integration"
       ]
     },
     "multiformat-data-export-to-pdf-csv": {
@@ -2108,6 +2748,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-file-parsing",
+        "mass-spectrometry-data-loading",
+        "targeted-peak-extraction-ms1",
+        "ion-mobility-heatmap-visualization",
+        "quantitation-table-generation",
+        "extracted-ion-chromatogram-generation",
+        "feature-list-harmonization-across-methods",
+        "tandem-mass-spectrometry-mirror-plot-construction"
       ]
     },
     "mz-retention-time-tolerance-parameter-configuration": {
@@ -2142,6 +2792,16 @@
         "pycombat",
         "python",
         "thermorawfileparser"
+      ],
+      "related_skills": [
+        "lc-ms-feature-extraction-and-alignment",
+        "mass-spectrometry-tolerance-calibration",
+        "mass-spec-tolerance-parameter-application",
+        "metabolite-quality-control-filtering",
+        "ionization-mode-detection-from-mass-spectrometry-data",
+        "mass-spectrometry-data-quality-filtering",
+        "lc-ms-dataset-acquisition-and-curation",
+        "background-ion-blank-comparison"
       ]
     },
     "mztab-format-generation": {
@@ -2169,6 +2829,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "metabolite-identifier-mapping",
+        "ms1-feature-detection-and-annotation",
+        "ms1-feature-peak-detection-in-full-scan",
+        "accurate-mass-metabolite-search-against-hmdb",
+        "accurate-mass-database-search",
+        "fiams-spectra-window-extraction-and-merging",
+        "feature-detection-in-chromatographic-ms-data",
+        "adduct-based-feature-consolidation"
       ]
     },
     "nontargeted-metabolomics-data-processing": {
@@ -2191,6 +2861,16 @@
       "tools_used": [
         "masscube",
         "python"
+      ],
+      "related_skills": [
+        "lcms-feature-extraction",
+        "chromatographic-peak-detection-and-segmentation",
+        "non-targeted-feature-detection-and-screening",
+        "feature-quality-assessment-metrics",
+        "feature-extraction-untargeted",
+        "ms-ms-spectral-library-matching",
+        "untargeted-metabolomics-marker-identification",
+        "mass-spectrometry-data-preprocessing"
       ]
     },
     "parameter-range-filtering-for-chromatographic-data": {
@@ -2217,6 +2897,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "ion-mobility-heatmap-visualization",
+        "mass-spectrometry-data-file-parsing",
+        "targeted-peak-extraction-ms1",
+        "mass-spectrometry-data-loading",
+        "target-list-coordinate-mapping",
+        "quantitation-table-generation",
+        "chromatographic-peak-extraction-and-retention-time-filtering",
+        "retention-time-range-filtering"
       ]
     },
     "peak-detection-and-mass-alignment": {
@@ -2242,6 +2932,16 @@
         "mzmine2",
         "openms",
         "optimus"
+      ],
+      "related_skills": [
+        "cross-sample-feature-alignment",
+        "metabolomics-feature-detection-and-alignment",
+        "ms-ms-feature-preparation-for-gnps",
+        "spectral-peak-detection-and-alignment",
+        "mass-chromatogram-alignment",
+        "ms-ms-raw-data-loading",
+        "peak-detection-mass-spectrometry",
+        "lcms-peak-detection-and-alignment"
       ]
     },
     "peak-integration-quality-assessment": {
@@ -2262,6 +2962,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "avir-r"
+      ],
+      "related_skills": [
+        "metabolomic-feature-table-processing",
+        "data-quality-flagging-and-annotation",
+        "feature-alignment-error-identification",
+        "metabolomics-feature-integration-assessment",
+        "chromatographic-peak-quality-metric-evaluation",
+        "metabolomics-data-quality-assessment",
+        "computational-variation-detection",
+        "chromatographic-peak-quality-assessment"
       ]
     },
     "peak-labeling-and-annotation": {
@@ -2285,6 +2995,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "mass-spectrum-peak-detection",
+        "mass-spectrometry-peak-identification-and-extraction",
+        "spectral-peak-detection-and-alignment",
+        "automated-feature-extraction-from-spectra",
+        "spectral-data-preprocessing",
+        "m-z-intensity-calibration",
+        "species-candidate-ranking-from-spectral-alignment",
+        "spectral-database-search-and-scoring"
       ]
     },
     "plant-species-authentication-via-mass-spectrometry": {
@@ -2308,6 +3028,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "species-authentication-classification-evaluation",
+        "spectral-database-search-and-scoring",
+        "unknown-sample-reference-comparison",
+        "visual-pattern-recognition-in-spectral-data",
+        "species-candidate-ranking-from-spectral-alignment",
+        "mass-spectrometry-instrument-format-compatibility",
+        "automated-feature-extraction-from-spectra",
+        "cross-instrument-data-harmonization"
       ]
     },
     "pure-component-spectrum-extraction": {
@@ -2335,6 +3065,16 @@
         "conda",
         "python-3",
         "pytorch"
+      ],
+      "related_skills": [
+        "gc-ms-spectral-preprocessing",
+        "mass-spectral-matrix-prediction",
+        "overlapped-peak-resolution-transformer",
+        "mass-spectral-component-extraction",
+        "orthogonal-projection-deconvolution",
+        "transformer-model-training",
+        "spectral-feature-extraction",
+        "mass-spectral-data-augmentation"
       ]
     },
     "quality-control-metric-distribution-analysis": {
@@ -2378,6 +3118,16 @@
         "scipy",
         "scipy-signal-detrend",
         "scipy-signal-find-peaks"
+      ],
+      "related_skills": [
+        "prominence-controlled-peak-selection",
+        "snr-based-signal-validation",
+        "feature-table-row-count-validation",
+        "gaussian-peak-shape-evaluation",
+        "peak-selectivity-metric-evaluation",
+        "peak-quality-assessment-by-selectivity-and-snr-metrics",
+        "chromatographic-peak-detection-with-prominence-control",
+        "spectral-peak-detection-composite-map"
       ]
     },
     "retention-time-prediction-modeling": {
@@ -2401,6 +3151,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "retip"
+      ],
+      "related_skills": [
+        "machine-learning-model-inference",
+        "metabolite-annotation-by-chromatographic-behavior",
+        "retention-time-prediction-optimization",
+        "retention-time-prediction-chromatography",
+        "retention-time-prediction",
+        "retention-order-prediction-rplc",
+        "molecular-descriptor-extraction",
+        "retention-time-prediction-from-structures"
       ]
     },
     "retention-time-window-clustering": {
@@ -2446,6 +3206,16 @@
         "scikit-learn",
         "scipy",
         "xcms"
+      ],
+      "related_skills": [
+        "structural-cluster-annotation-metabolomics",
+        "retention-time-feature-clustering",
+        "spectral-feature-clustering-and-comparison",
+        "metabolite-feature-clustering-by-retention-time",
+        "isotopologue-pattern-detection-lcms",
+        "adduct-mass-matching-and-clustering",
+        "mass-to-charge-tolerance-matching",
+        "structural-cluster-network-construction"
       ]
     },
     "sample-group-injection-aggregation": {
@@ -2474,6 +3244,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "ms1-feature-peak-detection-in-full-scan",
+        "blank-sample-background-interference-estimation",
+        "ms1-feature-detection-and-annotation",
+        "adduct-based-feature-consolidation",
+        "spectral-data-normalization-and-merging",
+        "fiams-spectra-window-extraction-and-merging",
+        "mztab-format-generation",
+        "peak-detection-and-mass-alignment"
       ]
     },
     "siamese-neural-network-architecture-design": {
@@ -2500,6 +3280,16 @@
         "github",
         "ms2deepscore",
         "python"
+      ],
+      "related_skills": [
+        "siamese-network-inference-spectrum-pairs",
+        "siamese-network-inference",
+        "deep-learning-model-layer-composition",
+        "spectral-similarity-prediction-neural-networks",
+        "siamese-network-embedding-generation",
+        "tanimoto-similarity-computation",
+        "tandem-mass-spectra-structural-similarity-assessment",
+        "tanimoto-similarity-scoring-implementation"
       ]
     },
     "software-support-matrix-construction": {
@@ -2534,6 +3324,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "instrument-platform-compatibility-mapping",
+        "technical-specification-tabulation",
+        "ms-vendor-documentation-extraction",
+        "mass-spectrometry-fragment-matching",
+        "uhplc-hrms-ms-data-matching",
+        "acquisition-mode-enumeration-and-validation",
+        "multi-tool-schema-mapping",
+        "mass-spectrometry-data-column-mapping"
       ]
     },
     "spatial-correlation-filtering-in-msi": {
@@ -2558,6 +3358,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "spatial-correlation-analysis-in-imaging-mass-spectrometry",
+        "adduct-mass-difference-matching",
+        "mass-spectrometry-imaging-data-interpretation",
+        "metabolite-adduct-correlation-spatial-analysis",
+        "mass-spectrometry-peak-enumeration",
+        "memory-efficient-pairwise-statistics",
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-difference-calculation-from-spectral-peaks"
       ]
     },
     "species-authentication-classification-evaluation": {
@@ -2582,6 +3392,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "plant-species-authentication-via-mass-spectrometry",
+        "species-candidate-ranking-from-spectral-alignment",
+        "unknown-sample-reference-comparison",
+        "spectral-database-search-and-scoring",
+        "visual-pattern-recognition-in-spectral-data",
+        "cross-instrument-data-harmonization",
+        "mass-spectrometry-instrument-format-compatibility",
+        "automated-feature-extraction-from-spectra"
       ]
     },
     "species-candidate-ranking-from-spectral-alignment": {
@@ -2603,6 +3423,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "species-authentication-classification-evaluation",
+        "spectral-database-search-and-scoring",
+        "unknown-sample-reference-comparison",
+        "similarity-score-computation-for-spectra",
+        "visual-pattern-recognition-in-spectral-data",
+        "automated-feature-extraction-from-spectra",
+        "plant-species-authentication-via-mass-spectrometry",
+        "peak-labeling-and-annotation"
       ]
     },
     "spectral-data-normalization-and-merging": {
@@ -2629,6 +3459,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "fiams-spectra-window-extraction-and-merging",
+        "ms1-feature-peak-detection-in-full-scan",
+        "adduct-based-feature-consolidation",
+        "metabolite-identifier-mapping",
+        "mztab-format-generation",
+        "ms1-feature-detection-and-annotation",
+        "peak-detection-and-mass-alignment",
+        "feature-detection-in-chromatographic-ms-data"
       ]
     },
     "spectral-data-preprocessing": {
@@ -2652,6 +3492,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "mass-spectrum-peak-detection",
+        "mass-spectrometry-peak-identification-and-extraction",
+        "automated-feature-extraction-from-spectra",
+        "m-z-intensity-calibration",
+        "spectral-database-search-and-scoring",
+        "spectral-peak-detection-and-alignment",
+        "peak-labeling-and-annotation",
+        "cross-instrument-data-harmonization"
       ]
     },
     "spectral-database-search-and-scoring": {
@@ -2676,6 +3526,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "visual-pattern-recognition-in-spectral-data",
+        "unknown-sample-reference-comparison",
+        "species-candidate-ranking-from-spectral-alignment",
+        "species-authentication-classification-evaluation",
+        "spectral-data-preprocessing",
+        "similarity-score-computation-for-spectra",
+        "automated-feature-extraction-from-spectra",
+        "cross-instrument-data-harmonization"
       ]
     },
     "spectral-peak-detection-and-alignment": {
@@ -2699,6 +3559,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "mass-spectrum-peak-detection",
+        "spectral-data-preprocessing",
+        "mass-spectrometry-peak-identification-and-extraction",
+        "peak-labeling-and-annotation",
+        "automated-feature-extraction-from-spectra",
+        "peak-detection-and-mass-alignment",
+        "m-z-intensity-calibration",
+        "mass-spectrometry-peak-detection-and-alignment"
       ]
     },
     "spectral-quality-metrics-extraction": {
@@ -2725,6 +3595,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "ion-target-quality-monitoring",
+        "mass-spectrometry-data-file-parsing",
+        "mass-spectrometry-outlier-detection",
+        "targeted-peak-extraction-ms1",
+        "quantitation-table-generation",
+        "mass-spectrometry-quality-metrics-extraction",
+        "ms1-data-preprocessing-normalization",
+        "mass-spectrometry-data-loading"
       ]
     },
     "tandem-mass-spectrometry-mirror-plot-construction": {
@@ -2751,6 +3631,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-file-parsing",
+        "mass-spectrometry-data-loading",
+        "fragment-ion-peak-annotation",
+        "ion-mobility-heatmap-visualization",
+        "acquisition-method-overlap-analysis",
+        "targeted-peak-extraction-ms1",
+        "target-list-coordinate-mapping",
+        "quantitation-table-generation"
       ]
     },
     "target-list-coordinate-mapping": {
@@ -2777,6 +3667,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "targeted-peak-extraction-ms1",
+        "quantitation-table-generation",
+        "mass-spectrometry-data-file-parsing",
+        "mass-spectrometry-data-loading",
+        "parameter-range-filtering-for-chromatographic-data",
+        "ion-mobility-heatmap-visualization",
+        "feature-list-harmonization-across-methods",
+        "tandem-mass-spectrometry-mirror-plot-construction"
       ]
     },
     "targeted-peak-extraction-ms1": {
@@ -2804,6 +3704,16 @@
         "peakqc",
         "peakquant",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "quantitation-table-generation",
+        "target-list-coordinate-mapping",
+        "mass-spectrometry-data-loading",
+        "mass-spectrometry-data-file-parsing",
+        "parameter-range-filtering-for-chromatographic-data",
+        "spectral-quality-metrics-extraction",
+        "extracted-ion-chromatogram-generation",
+        "acquisition-method-overlap-analysis"
       ]
     },
     "technical-specification-tabulation": {
@@ -2837,6 +3747,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "instrument-platform-compatibility-mapping",
+        "ms-vendor-documentation-extraction",
+        "acquisition-mode-enumeration-and-validation",
+        "software-support-matrix-construction",
+        "mass-spectrometry-data-column-mapping",
+        "mass-spectrometry-fragment-matching",
+        "hrms-data-format-parsing",
+        "mass-accuracy-tolerance-calibration"
       ]
     },
     "transformation-network-topology-analysis": {
@@ -2890,6 +3810,16 @@
         "ultramassexplorer",
         "vegan",
         "vegan-r-package"
+      ],
+      "related_skills": [
+        "biochemical-transformation-matching",
+        "mass-difference-network-construction",
+        "pairwise-mass-comparison-computation",
+        "peak-pairwise-comparison",
+        "molecular-class-annotation-for-networks",
+        "transformation-classification-biotic-abiotic",
+        "cytoscape-edge-node-file-formatting",
+        "ft-icr-ms-data-processing-pipeline-execution"
       ]
     },
     "transformer-model-training": {
@@ -2917,6 +3847,16 @@
         "conda",
         "python-3",
         "pytorch"
+      ],
+      "related_skills": [
+        "gc-ms-spectral-preprocessing",
+        "mass-spectral-data-augmentation",
+        "overlapped-peak-resolution-transformer",
+        "overlapped-peak-separation-evaluation",
+        "transformer-cnn-hybrid-model-training",
+        "transformer-model-inference",
+        "train-validation-test-split-management",
+        "concentration-matrix-estimation-gc-ms"
       ]
     },
     "unknown-sample-reference-comparison": {
@@ -2938,6 +3878,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "spectral-database-search-and-scoring",
+        "species-authentication-classification-evaluation",
+        "species-candidate-ranking-from-spectral-alignment",
+        "similarity-score-computation-for-spectra",
+        "plant-species-authentication-via-mass-spectrometry",
+        "visual-pattern-recognition-in-spectral-data",
+        "mass-spectrometry-instrument-format-compatibility",
+        "mass-spectrometry-peak-identification-and-extraction"
       ]
     },
     "visual-pattern-recognition-in-spectral-data": {
@@ -2961,6 +3911,16 @@
         "asap-ms",
         "di-ms",
         "rapidmass"
+      ],
+      "related_skills": [
+        "spectral-database-search-and-scoring",
+        "species-authentication-classification-evaluation",
+        "species-candidate-ranking-from-spectral-alignment",
+        "unknown-sample-reference-comparison",
+        "plant-species-authentication-via-mass-spectrometry",
+        "automated-feature-extraction-from-spectra",
+        "spectral-data-preprocessing",
+        "mass-spectrometry-peak-identification-and-extraction"
       ]
     },
     "xcms-data-import-preprocessing": {
@@ -3004,6 +3964,16 @@
         "spectra",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "mzml-file-import-xcms",
+        "xcms-workflow-execution",
+        "xcms-parameter-optimization-msw",
+        "xcms-object-handling-and-preprocessing",
+        "chromatographic-peak-detection-wavelet",
+        "mass-spectrometry-data-preprocessing",
+        "xcms-grouped-object-manipulation",
+        "xcms-feature-extraction-and-grouping"
       ]
     }
   }

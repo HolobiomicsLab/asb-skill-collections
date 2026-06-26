@@ -112,7 +112,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "nmr-spin-system-simulation",
+        "metabolite-concentration-to-spectrum-mapping",
+        "j-coupling-multiplet-generation",
+        "lineshape-convolution-and-broadening",
+        "nmr-spectral-data-format-serialization",
+        "nmr-spectral-preprocessing-and-phasing",
+        "heteronuclear-homonuclear-correlation-extraction",
+        "fid-to-frequency-domain-fourier-transformation"
+      ]
     },
     "accuracy-metric-computation": {
       "dois": [
@@ -139,6 +149,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "chemical-graph-connectivity-validation",
+        "molecular-connectivity-inference",
+        "structure-similarity-evaluation",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-structure-prediction-from-spectra",
+        "multitask-model-inference",
+        "molecular-structure-prediction-evaluation"
       ]
     },
     "accurate-mass-metabolite-search-against-hmdb": {
@@ -167,6 +187,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "accurate-mass-database-search",
+        "metabolite-identifier-mapping",
+        "mztab-format-generation",
+        "ms1-feature-detection-and-annotation",
+        "fiams-spectra-window-extraction-and-merging",
+        "adduct-based-feature-consolidation",
+        "ms1-feature-peak-detection-in-full-scan",
+        "feature-detection-in-chromatographic-ms-data"
       ]
     },
     "algorithm-parameter-comparison-analysis": {
@@ -198,6 +228,16 @@
         "matplotlib",
         "numpy",
         "pandas"
+      ],
+      "related_skills": [
+        "statistical-score-distribution-analysis",
+        "search-mode-configuration-optimization",
+        "spectrum-peak-counting-and-reporting",
+        "molecular-formula-assignment-and-validation",
+        "gc-ms-chromatogram-processing",
+        "ionization-mode-peak-retention-comparison",
+        "peak-detection-parameter-optimization",
+        "spectral-similarity-scoring"
       ]
     },
     "annotation-confidence-assessment": {
@@ -222,6 +262,16 @@
         "ms-dial-or-higher",
         "ms-dial-v4-00-or-higher",
         "ms-finder"
+      ],
+      "related_skills": [
+        "ms-ms-spectrum-matching",
+        "compound-annotation-confidence-assessment",
+        "metabolite-annotation-confidence-assignment",
+        "in-silico-compound-annotation",
+        "ionization-mode-merging-and-reconciliation",
+        "ms-annotation-result-validation",
+        "ms-finder-format-export",
+        "metabolite-annotation-validation"
       ]
     },
     "annotation-confidence-scoring": {
@@ -241,6 +291,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mrnannoalgo3-metdna3"
+      ],
+      "related_skills": [
+        "metabolite-annotation-network-architecture",
+        "recursive-propagation-algorithm-development",
+        "network-node-label-spreading",
+        "two-layer-topology-traversal",
+        "knowledge-data-driven-layer-integration",
+        "graph-based-knowledge-representation",
+        "knowledge-graph-integration-design",
+        "mass-spectrometry-feature-similarity-modeling"
       ]
     },
     "annotation-scoring-and-ranking": {
@@ -273,6 +333,16 @@
         "s4vectors",
         "spectra",
         "trove4j"
+      ],
+      "related_skills": [
+        "metabolite-database-construction",
+        "false-discovery-rate-estimation-untargeted",
+        "decoy-database-generation-for-metabolomics",
+        "spectral-feature-scrambling-permutation",
+        "multi-criterion-scoring-integration",
+        "ms-ms-spectrum-peak-annotation",
+        "annotation-candidate-comparative-scoring",
+        "annotation-quality-filtering-by-cosine-similarity"
       ]
     },
     "api-request-response-handling": {
@@ -293,6 +363,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "tensorflow-serving-endpoint-integration",
+        "restful-api-endpoint-invocation",
+        "nmr-peak-json-serialization",
+        "http-post-request-assembly",
+        "chemical-shift-data-formatting",
+        "json-payload-construction-for-nmr-spectra",
+        "model-metadata-schema-inspection",
+        "api-response-parsing-and-validation"
       ]
     },
     "array-of-objects-construction": {
@@ -323,6 +403,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "json-table-to-matrix-conversion",
+        "structured-data-serialization",
+        "mwtab-to-json-conversion",
+        "metadata-structure-transformation",
+        "json-data-structure-transformation",
+        "tabular-data-transformation-with-pandas",
+        "conversion-directive-parsing",
+        "mwtab-file-parsing"
       ]
     },
     "bi-encoder-cross-encoder-architecture-design": {
@@ -348,6 +438,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "transformer-encoder-architecture-implementation",
+        "transformer-encoder-architecture-design",
+        "molecular-graph-encoder-decoder-training",
+        "graph-neural-network-encoder-design",
+        "encoder-decoder-end-to-end-training",
+        "weighted-loss-function-optimization",
+        "hybrid-model-fusion-strategy",
+        "nmr-spectra-deep-learning-encoding"
       ]
     },
     "binary-file-format-parsing": {
@@ -367,6 +467,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "metadata-extraction-from-fixed-offset-records",
+        "endianness-detection-and-handling",
+        "file-integrity-validation",
+        "nv-header-structure-interpretation",
+        "binary-format-specification-implementation",
+        "thermo-raw-format-parsing",
+        "binary-and-xml-data-deserialization",
+        "nmr-spectral-data-format-serialization"
       ]
     },
     "bioassay-activity-data-integration": {
@@ -394,6 +504,16 @@
         "mzmine2",
         "openms",
         "optimus"
+      ],
+      "related_skills": [
+        "molecular-network-feature-annotation",
+        "bioactivity-score-aggregation",
+        "mass-spectrometry-feature-mapping",
+        "network-graph-manipulation-python",
+        "spectral-graph-interpretation",
+        "ms-ms-feature-preparation-for-gnps",
+        "feature-table-export-and-formatting",
+        "feature-based-molecular-network-interpretation"
       ]
     },
     "biotransformation-rule-application-to-metabolites": {
@@ -418,6 +538,16 @@
         "bam",
         "hassounlab-bam",
         "rdkit"
+      ],
+      "related_skills": [
+        "biotransformation-rule-encoding",
+        "smarts-pattern-matching-for-chemical-transformation",
+        "biotransformation-candidate-integration-with-networking",
+        "metabolite-structure-annotation-integration",
+        "spectral-similarity-network-construction",
+        "metabolite-identification-from-transformation-rules",
+        "molecular-network-clustering-and-analysis",
+        "parent-product-relationship-tracking"
       ]
     },
     "block-layout-analysis-for-io-optimization": {
@@ -437,6 +567,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "dataset-storage-interface-architecture",
+        "memory-mapped-file-selection-strategy",
+        "conditional-allocation-design-patterns",
+        "nmr-spectrum-tiling-format-interpretation",
+        "chunk-wise-data-processing-optimization",
+        "metadata-extraction-from-fixed-offset-records",
+        "in-memory-optimization-for-large-datasets",
+        "dataframe-lazy-loading-comparison"
       ]
     },
     "blood-sample-processing-parameter-extraction": {
@@ -457,6 +597,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "metabolic-parameter-visualization",
+        "cohort-performance-reporting",
+        "plasma-serum-sample-comparison",
+        "metabolite-stability-assessment-across-cohorts",
+        "cohort-stratified-metabolic-performance-analysis",
+        "metabolite-dataset-preprocessing",
+        "nmr-metabolomic-quality-control-reporting",
+        "pre-analytical-delay-stratification"
       ]
     },
     "bond-connectivity-prediction": {
@@ -484,6 +634,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "graph-based-molecular-representation",
+        "molecular-graph-encoder-decoder-training",
+        "molecular-fragment-assembly-from-transformer-predictions",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-connectivity-inference",
+        "molecular-structure-prediction-from-spectra",
+        "transformer-attention-mechanism-implementation",
+        "fragment-to-structure-assembly"
       ]
     },
     "browser-security-policy-configuration": {
@@ -512,6 +672,16 @@
         "safari",
         "webassembly",
         "webworker"
+      ],
+      "related_skills": [
+        "per-browser-developer-setting-navigation",
+        "webworker-file-access-enabling",
+        "cross-origin-policy-override",
+        "webassembly-local-loading-setup",
+        "html-bundle-rendering-in-browser",
+        "cloud-hosted-computational-chemistry",
+        "standalone-web-application-deployment",
+        "metfrag-settings-injection"
       ]
     },
     "bruker-nmr-spectral-data-import": {
@@ -534,6 +704,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "asics"
+      ],
+      "related_skills": [
+        "r-package-function-execution",
+        "nmr-spectrum-object-construction",
+        "bruker-mass-spectrum-data-import",
+        "nmr-spectral-preprocessing-and-phasing",
+        "bruker-transient-data-import",
+        "bruker-solarix-format-parsing",
+        "nmr-spectra-preprocessing",
+        "nmr-spectrum-data-import-and-parsing"
       ]
     },
     "candidate-formula-ranking-by-mass-error": {
@@ -556,6 +736,16 @@
       "tools_used": [
         "docker",
         "metaboshiny"
+      ],
+      "related_skills": [
+        "formula-annotation-ranking",
+        "mass-tolerance-window-filtering",
+        "formula-database-querying",
+        "candidate-filtering-and-thresholding",
+        "candidate-formula-ranking",
+        "neutral-mass-derivation-from-mz",
+        "chemical-formula-ranking-evaluation",
+        "isotopic-pattern-matching"
       ]
     },
     "chemical-database-querying-and-retrieval": {
@@ -579,6 +769,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "biotransformer"
+      ],
+      "related_skills": [
+        "small-molecule-structure-matching",
+        "metabolite-identifier-annotation",
+        "metabolite-structure-prediction",
+        "metabolite-prediction-pathway-selection",
+        "cheminformatics-substructure-matching-and-reaction-templates",
+        "metabolite-structure-generation",
+        "metabolite-identification-from-transformation-rules",
+        "chemical-identifier-mapping"
       ]
     },
     "chemical-graph-connectivity-validation": {
@@ -607,6 +807,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "accuracy-metric-computation",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-structure-prediction-from-spectra",
+        "molecular-connectivity-inference",
+        "molecular-structure-prediction-evaluation",
+        "graph-based-molecular-representation",
+        "model-generalization-assessment-across-molecular-size-regimes"
       ]
     },
     "chemical-name-normalization-and-publish-database-integration": {
@@ -641,6 +851,16 @@
         "mzexacto",
         "spreadout",
         "webchem"
+      ],
+      "related_skills": [
+        "chemical-metadata-retrieval-and-aggregation",
+        "mass-spectrometry-data-formatting",
+        "cheminformatics-database-querying",
+        "chemical-identifier-unification",
+        "data-structure-design-for-spectral-searches",
+        "exact-mass-lookup-and-aggregation-from-chemical-databases",
+        "nested-data-structure-construction-for-chemical-metadata",
+        "retention-time-and-mass-sorting-of-chromatographic-peaks"
       ]
     },
     "chemical-shift-annotation": {
@@ -666,6 +886,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "spectral-correlation-interpretation",
+        "nmr-metabolite-identity-confirmation",
+        "stocsy-metabolite-assignment",
+        "nmr-spectral-preprocessing-and-phasing",
+        "confounder-adjustment-epidemiological-analysis",
+        "metabolite-phenotype-association-partial-correlation",
+        "fda-repeatability-compliance-assessment",
+        "ms-ms-spectrum-peak-annotation"
       ]
     },
     "chemical-shift-coordinate-extraction": {
@@ -688,6 +918,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "nmr-spectrum-peak-detection",
+        "spectral-peak-detection-and-picking",
+        "nmr-inadequate-spectra-acquisition-and-preprocessing",
+        "spectral-peak-network-grouping",
+        "inadequate-spectral-processing",
+        "peak-network-clustering-inadequate",
+        "spectral-connectivity-filtering",
+        "inadequate-spectral-interpretation"
       ]
     },
     "chemical-shift-data-formatting": {
@@ -708,6 +948,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "nmr-peak-json-serialization",
+        "json-payload-construction-for-nmr-spectra",
+        "restful-api-endpoint-invocation",
+        "api-request-response-handling",
+        "http-post-request-assembly",
+        "tensorflow-serving-endpoint-integration",
+        "model-metadata-schema-inspection",
+        "chemical-shift-reference-matching"
       ]
     },
     "chemical-shift-reference-matching": {
@@ -738,6 +988,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "metabolite-peak-assignment-from-nmr",
+        "transformer-model-inference-on-spectral-data",
+        "nmr-peak-quality-filtering",
+        "nmr-chemical-shift-interval-matching",
+        "spectral-peak-validation",
+        "nmr-spectrum-data-import-and-parsing",
+        "nmr-peak-prediction-via-database-lookup",
+        "peak-list-filtering-for-quality-control"
       ]
     },
     "clustered-peak-output-formatting": {
@@ -760,6 +1020,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "spectral-peak-detection-and-picking",
+        "peak-network-clustering-inadequate",
+        "compound-clustering-from-inadequate-spectra",
+        "nmr-spectrum-peak-detection",
+        "spectral-peak-network-grouping",
+        "peak-network-to-metabolite-assignment",
+        "peak-similarity-assessment",
+        "inadequate-spectral-interpretation"
       ]
     },
     "cnn-spectral-feature-extraction": {
@@ -787,6 +1057,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "nmr-spectrum-preprocessing",
+        "transformer-based-fragment-assembly",
+        "molecular-structure-prediction-from-spectra",
+        "spectral-to-structure-mapping-prediction",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-connectivity-inference",
+        "molecular-fragment-assembly-from-transformer-predictions"
       ]
     },
     "coefficient-of-variation-computation": {
@@ -820,6 +1100,16 @@
         "ncgtw",
         "statistical-total-correlation-spectroscopy-stocsy",
         "xcms"
+      ],
+      "related_skills": [
+        "qc-coefficient-of-variation-calculation",
+        "coefficient-of-variation-threshold-analysis",
+        "summarized-experiment-subsetting",
+        "coefficient-of-variation-comparison",
+        "metabolite-feature-quality-control",
+        "replicate-consistency-assessment",
+        "summarized-experiment-object-handling",
+        "multiple-testing-correction-metabolomics"
       ]
     },
     "coefficient-of-variation-threshold-analysis": {
@@ -844,6 +1134,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "quality-metrics-summarization",
+        "qc-coefficient-of-variation-calculation",
+        "fda-repeatability-compliance-assessment",
+        "coefficient-of-variation-computation",
+        "metabolite-feature-quality-control",
+        "cumulative-distribution-visualization",
+        "coefficient-of-variation-comparison",
+        "summarized-experiment-subsetting"
       ]
     },
     "cohort-performance-reporting": {
@@ -863,6 +1163,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "cohort-stratified-metabolic-performance-analysis",
+        "metabolite-dataset-preprocessing",
+        "pre-analytical-delay-stratification",
+        "metabolic-parameter-visualization",
+        "plasma-serum-sample-comparison",
+        "nmr-metabolomic-quality-control-reporting",
+        "metabolite-stability-assessment-across-cohorts",
+        "pre-analytical-delay-effect-quantification"
       ]
     },
     "cohort-stratified-metabolic-performance-analysis": {
@@ -883,6 +1193,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "cohort-performance-reporting",
+        "metabolite-stability-assessment-across-cohorts",
+        "pre-analytical-delay-stratification",
+        "pre-analytical-delay-effect-quantification",
+        "metabolite-dataset-preprocessing",
+        "nmr-metabolomic-quality-control-reporting",
+        "metabolic-parameter-visualization",
+        "interactive-data-exploration-design"
       ]
     },
     "column-name-variant-matching": {
@@ -910,6 +1230,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "metabolite-metadata-column-matching",
+        "metadata-column-profiling-across-datasets",
+        "mwtab-file-parsing",
+        "tabular-data-transformation-with-pandas",
+        "metabolite-database-identifier-normalization",
+        "mwtab-to-json-conversion",
+        "metabolomics-file-format-parsing",
+        "structured-data-serialization"
       ]
     },
     "command-line-interface-invocation": {
@@ -932,6 +1262,16 @@
       "tools_used": [
         "metabolabpy",
         "python"
+      ],
+      "related_skills": [
+        "package-entry-point-verification",
+        "command-line-interface-testing",
+        "entry-point-script-validation",
+        "package-installation-verification",
+        "command-line-tool-installation-and-configuration",
+        "python-environment-setup",
+        "command-line-interface-configuration-and-automation",
+        "entrypoint-verification"
       ]
     },
     "compound-abundance-quantification-from-flow": {
@@ -953,6 +1293,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "minimum-cost-flow-formulation",
+        "nmr-spectrum-reconstruction-from-library",
+        "emd-spectral-distance-computation",
+        "spectral-mixture-deconvolution",
+        "mixture-spectrum-comparison",
+        "nmr-spectrum-normalization",
+        "optimal-transport-scoring",
+        "wasserstein-distance-computation"
       ]
     },
     "compound-clustering-from-inadequate-spectra": {
@@ -975,6 +1325,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "compound-peak-association-inference",
+        "peak-network-clustering-inadequate",
+        "spectral-peak-network-grouping",
+        "inadequate-spectral-interpretation",
+        "spectral-peak-detection-and-picking",
+        "spectral-connectivity-filtering",
+        "peak-similarity-assessment",
+        "nmr-spectrum-peak-detection"
       ]
     },
     "compound-identification-ranking-evaluation": {
@@ -1002,6 +1362,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "nmr-spectra-deep-learning-encoding",
+        "transformer-cnn-hybrid-model-training",
+        "chemical-formula-ranking-evaluation",
+        "ranking-metric-computation-for-spectral-predictions",
+        "top-k-retrieval-ranking-evaluation",
+        "overlapped-peak-separation-evaluation",
+        "hit-metric-evaluation-fold-averaging",
+        "formula-ranking-accuracy-evaluation"
       ]
     },
     "compound-identifier-mapping": {
@@ -1032,6 +1402,16 @@
         "ggplot2",
         "github",
         "mpactr"
+      ],
+      "related_skills": [
+        "isotopic-pattern-mispicking-detection",
+        "spectral-artifact-identification-in-tandem-ms",
+        "metabolite-set-annotation-mapping",
+        "mass-spectrometry-preprocessing-quality-control",
+        "metabolomics-feature-table-filtering",
+        "isotopic-pattern-detection-and-merging",
+        "mispicked-ion-detection-and-merging",
+        "compound-identifier-lookup"
       ]
     },
     "compound-peak-association-inference": {
@@ -1054,6 +1434,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "compound-clustering-from-inadequate-spectra",
+        "peak-similarity-assessment",
+        "spectral-peak-network-grouping",
+        "peak-network-clustering-inadequate",
+        "spectral-peak-detection-and-picking",
+        "peak-network-to-metabolite-assignment",
+        "nmr-spectrum-peak-detection",
+        "inadequate-spectral-interpretation"
       ]
     },
     "conditional-allocation-design-patterns": {
@@ -1073,6 +1463,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "dataset-storage-interface-architecture",
+        "block-layout-analysis-for-io-optimization",
+        "memory-mapped-file-selection-strategy",
+        "nmr-spectrum-tiling-format-interpretation",
+        "dataframe-lazy-loading-comparison",
+        "metadata-extraction-from-fixed-offset-records",
+        "conditional-dispatch-logic-implementation",
+        "matlab-data-structure-design"
       ]
     },
     "confounder-adjustment-epidemiological-analysis": {
@@ -1096,6 +1496,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "metabolite-phenotype-association-partial-correlation",
+        "spearman-correlation-computation",
+        "multiple-testing-correction-metabolomics",
+        "summarized-experiment-object-handling",
+        "metabolite-feature-quality-control",
+        "nmr-spectral-preprocessing-and-phasing",
+        "fda-repeatability-compliance-assessment",
+        "chemical-shift-annotation"
       ]
     },
     "container-image-build-and-deployment": {
@@ -1116,6 +1526,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "docker"
+      ],
+      "related_skills": [
+        "repository-cloning-and-setup",
+        "docker-environment-configuration",
+        "docker-image-deployment",
+        "docker-container-deployment",
+        "tool-initialization-verification",
+        "container-image-management",
+        "container-image-building-conversion",
+        "container-image-selection-and-mounting"
       ]
     },
     "convolutional-neural-network-layer-design": {
@@ -1142,6 +1562,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "nmr-spectral-feature-extraction",
+        "transformer-encoder-architecture-implementation",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "cnn-spectral-feature-extraction",
+        "pytorch-module-composition",
+        "transformer-cnn-hybrid-model-training",
+        "nmr-spectra-deep-learning-encoding",
+        "nmr-spectrum-preprocessing"
       ]
     },
     "cross-assay-feature-linkage-analysis": {
@@ -1187,6 +1617,16 @@
         "scikit-learn",
         "scipy",
         "xcms"
+      ],
+      "related_skills": [
+        "cross-assay-feature-linkage",
+        "multi-assay-cross-linking-validation",
+        "metabolite-feature-annotation-aggregation",
+        "multi-assay-data-integration-and-harmonization",
+        "metabolomics-feature-selection-significance-filtering",
+        "metabolite-structural-annotation-integration",
+        "spectral-feature-clustering-and-comparison",
+        "mass-spectrometry-structural-annotation"
       ]
     },
     "cumulative-distribution-visualization": {
@@ -1209,6 +1649,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "quality-metrics-summarization",
+        "coefficient-of-variation-threshold-analysis",
+        "fda-repeatability-compliance-assessment",
+        "metabolite-feature-quality-control",
+        "qc-coefficient-of-variation-calculation",
+        "summarized-experiment-subsetting",
+        "statistical-distribution-visualization",
+        "coefficient-of-variation-computation"
       ]
     },
     "data-normalization-in-mass-spectrometry": {
@@ -1229,6 +1679,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mzmine"
+      ],
+      "related_skills": [
+        "metabolomics-feature-detection-and-alignment",
+        "raw-spectral-data-import-and-preprocessing",
+        "mzmine-batch-processing-configuration",
+        "peak-detection-and-mass-alignment",
+        "spectral-data-preprocessing-normalization",
+        "mass-spectrometry-data-preprocessing",
+        "ms1-data-preprocessing-normalization",
+        "feature-table-normalization"
       ]
     },
     "data-pipeline-module-design-and-integration": {
@@ -1261,6 +1721,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "multimodal-tensor-construction-and-validation",
+        "multimodal-spectral-alignment-by-molecular-identifier",
+        "spectral-intensity-normalization-across-modalities",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "spectral-modality-preprocessing",
+        "multi-modal-spectroscopic-data-integration",
+        "spectral-quality-filtering-signal-to-noise",
+        "spectrum-preprocessing-and-normalization"
       ]
     },
     "dataset-storage-interface-architecture": {
@@ -1280,6 +1750,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "memory-mapped-file-selection-strategy",
+        "block-layout-analysis-for-io-optimization",
+        "nmr-spectrum-tiling-format-interpretation",
+        "conditional-allocation-design-patterns",
+        "nv-header-structure-interpretation",
+        "metadata-extraction-from-fixed-offset-records",
+        "nmr-spectral-data-format-serialization",
+        "spectra-variable-and-peak-data-storage"
       ]
     },
     "deep-learning-metabolite-annotation": {
@@ -1306,6 +1786,16 @@
         "msthunder",
         "ubuntu",
         "windows"
+      ],
+      "related_skills": [
+        "nontargeted-analysis-workflow-execution",
+        "spectral-library-matching-annotation",
+        "unknown-pollutant-identification-mass-spectrometry",
+        "vendor-instrument-data-handling",
+        "raw-ms-data-format-conversion",
+        "msconvert-parameter-configuration",
+        "deep-learning-spectral-language-model",
+        "untargeted-metabolomics-annotation"
       ]
     },
     "deep-learning-spectral-language-model": {
@@ -1325,6 +1815,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "deepmass2"
+      ],
+      "related_skills": [
+        "mass-spectrum-semantic-encoding",
+        "structure-database-candidate-retrieval",
+        "spectral-similarity-prediction-deep-learning",
+        "semantic-metabolite-ranking",
+        "chemical-similarity-metric-aggregation",
+        "chemical-space-structure-ranking",
+        "neural-network-architecture-design-spectra",
+        "metabolite-similarity-scoring"
       ]
     },
     "dependency-version-management": {
@@ -1358,6 +1858,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "entrypoint-verification",
+        "virtual-environment-configuration",
+        "python-dependency-management",
+        "repository-cloning-and-initialization",
+        "dependency-version-specification",
+        "python-environment-setup",
+        "package-dependency-management",
+        "python-dependency-resolution-and-pinning"
       ]
     },
     "diffusion-model-inference": {
@@ -1379,6 +1889,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "diffspectra"
+      ],
+      "related_skills": [
+        "spectroscopic-data-preprocessing",
+        "spectra-to-structure-elucidation",
+        "molecular-structure-decoding",
+        "transformer-architecture-inference",
+        "multi-modal-spectroscopic-data-integration",
+        "structure-similarity-comparison",
+        "mass-spectrum-prediction-modeling",
+        "deep-learning-spectral-language-model"
       ]
     },
     "docker-environment-configuration": {
@@ -1400,6 +1920,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "docker"
+      ],
+      "related_skills": [
+        "repository-cloning-and-setup",
+        "container-image-build-and-deployment",
+        "tool-initialization-verification",
+        "container-image-management",
+        "docker-image-deployment",
+        "software-dependency-management-and-environment-setup",
+        "docker-container-deployment",
+        "docker-container-orchestration"
       ]
     },
     "dom-chemodiversity-characterization": {
@@ -1419,6 +1949,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "moletrans"
+      ],
+      "related_skills": [
+        "chemodiversity-descriptor-calculation",
+        "mass-spectrometry-dataset-post-processing",
+        "molecular-complexity-metric-computation",
+        "mass-difference-transformation-pair-derivation",
+        "molecular-formula-parsing-and-validation",
+        "formula-based-network-construction",
+        "reactomics-annotation-and-clustering",
+        "elemental-composition-extraction"
       ]
     },
     "emd-spectral-distance-computation": {
@@ -1439,6 +1979,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "spectral-mixture-deconvolution",
+        "nmr-spectrum-reconstruction-from-library",
+        "mixture-spectrum-comparison",
+        "compound-abundance-quantification-from-flow",
+        "wasserstein-distance-computation",
+        "minimum-cost-flow-formulation",
+        "optimal-transport-scoring",
+        "nmr-spectrum-normalization"
       ]
     },
     "endianness-detection-and-handling": {
@@ -1458,6 +2008,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "binary-file-format-parsing",
+        "metadata-extraction-from-fixed-offset-records",
+        "file-integrity-validation",
+        "nv-header-structure-interpretation",
+        "binary-and-xml-data-deserialization",
+        "binary-format-specification-implementation",
+        "file-io-error-handling-robustness",
+        "dataset-storage-interface-architecture"
       ]
     },
     "entrypoint-verification": {
@@ -1491,6 +2051,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "python-environment-setup",
+        "dependency-version-management",
+        "repository-cloning-and-initialization",
+        "package-entry-point-verification",
+        "virtual-environment-configuration",
+        "entry-point-script-validation",
+        "package-installation-verification",
+        "package-installation-verification-and-testing"
       ]
     },
     "fda-repeatability-compliance-assessment": {
@@ -1513,6 +2083,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "quality-metrics-summarization",
+        "coefficient-of-variation-threshold-analysis",
+        "metabolite-feature-quality-control",
+        "qc-coefficient-of-variation-calculation",
+        "replicate-consistency-assessment",
+        "cumulative-distribution-visualization",
+        "confounder-adjustment-epidemiological-analysis",
+        "nmr-metabolite-identity-confirmation"
       ]
     },
     "feature-table-consensus-aggregation": {
@@ -1546,6 +2126,16 @@
         "proteowizard-msconvert",
         "python",
         "snakemake"
+      ],
+      "related_skills": [
+        "cross-sample-feature-matching",
+        "multidimensional-coordinate-alignment",
+        "reference-based-vs-global-coordinate-registration",
+        "mass-spectrometry-data-integration",
+        "multidimensional-feature-detection-and-alignment",
+        "spectral-feature-annotation-and-labeling",
+        "feature-consolidation-across-samples",
+        "mass-spectrometry-feature-table-construction"
       ]
     },
     "fid-to-frequency-domain-fourier-transformation": {
@@ -1563,7 +2153,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "lineshape-convolution-and-broadening",
+        "2d-nmr-pulse-sequence-implementation",
+        "nmr-spin-system-simulation",
+        "nmr-spectral-data-format-serialization",
+        "metabolite-concentration-to-spectrum-mapping",
+        "nmr-spectral-preprocessing-and-phasing",
+        "j-coupling-multiplet-generation",
+        "nmr-peak-deconvolution"
+      ]
     },
     "file-api-endpoint-implementation": {
       "dois": [
@@ -1593,6 +2193,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "http-api-endpoint-design",
+        "jcamp-file-parsing",
+        "spectral-file-format-parsing",
+        "nmr-spectral-processing",
+        "spectral-image-rendering",
+        "file-compression-and-archiving",
+        "form-encoded-request-handling",
+        "mass-spectrometry-data-processing"
       ]
     },
     "file-integrity-validation": {
@@ -1612,6 +2222,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "nv-header-structure-interpretation",
+        "binary-file-format-parsing",
+        "metadata-extraction-from-fixed-offset-records",
+        "endianness-detection-and-handling",
+        "instrumental-parameter-validation-mass-spectrometry",
+        "binary-data-integrity-verification",
+        "csv-table-validation-and-integrity-checking",
+        "file-path-normalization-and-validation"
       ]
     },
     "form-encoded-request-handling": {
@@ -1642,6 +2262,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "spectral-peak-data-validation-and-parsing",
+        "http-api-integration-with-external-services",
+        "http-api-endpoint-design",
+        "json-response-serialization",
+        "nmr-spectral-processing",
+        "spectral-file-format-parsing",
+        "file-api-endpoint-implementation",
+        "spectral-image-rendering"
       ]
     },
     "fragment-assembly-transformer-architecture": {
@@ -1669,6 +2299,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-fragment-assembly-from-transformer-predictions",
+        "fragment-to-structure-assembly",
+        "transformer-based-fragment-assembly",
+        "nmr-spectrum-to-structure-inference",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-structure-prediction-from-spectra",
+        "graph-based-molecular-representation",
+        "molecular-connectivity-inference"
       ]
     },
     "fragment-ion-theoretical-mass-calculation": {
@@ -1691,6 +2331,16 @@
       "tools_used": [
         "camera",
         "xcms"
+      ],
+      "related_skills": [
+        "mass-spectrometry-fragmentation-pattern-modeling",
+        "fragment-ion-library-matching",
+        "lipid-fragmentation-pattern-recognition",
+        "mass-spectrometry-library-indexing",
+        "in-silico-fragment-m-z-calculation",
+        "lipid-chain-composition-enumeration",
+        "fragment-ion-mass-calibration",
+        "theoretical-fragment-ion-generation"
       ]
     },
     "fragment-to-structure-assembly": {
@@ -1718,6 +2368,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "fragment-assembly-transformer-architecture",
+        "molecular-fragment-assembly-from-transformer-predictions",
+        "transformer-based-fragment-assembly",
+        "transformer-attention-mechanism-implementation",
+        "nmr-spectrum-to-structure-inference",
+        "graph-based-molecular-representation",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-structure-prediction-from-spectra"
       ]
     },
     "fragmentation-pattern-similarity-scoring": {
@@ -1757,6 +2417,16 @@
         "readxl",
         "reshape2",
         "tidyverse"
+      ],
+      "related_skills": [
+        "spectral-clustering-and-feature-grouping",
+        "exact-mass-database-matching",
+        "reaction-pathway-assignment-and-propagation",
+        "spectral-similarity-matching-and-comparison",
+        "spectral-similarity-scoring-and-reference-matching",
+        "mass-spectral-similarity-scoring-across-samples",
+        "xenobiotic-metabolite-annotation-from-ms-ms",
+        "fragmentation-pattern-extraction-and-ranking"
       ]
     },
     "fusion-pooling-strategy-implementation": {
@@ -1783,6 +2453,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "hybrid-model-fusion-strategy",
+        "transformer-encoder-architecture-implementation",
+        "transformer-cnn-hybrid-model-training",
+        "convolutional-neural-network-layer-design",
+        "pytorch-module-composition",
+        "dual-branch-feature-fusion",
+        "cnn-spectral-feature-extraction",
+        "nmr-spectral-feature-extraction"
       ]
     },
     "graph-based-molecular-representation": {
@@ -1810,6 +2490,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "graph-neural-network-design-for-chemistry",
+        "nmr-spectrum-to-structure-inference",
+        "molecular-structure-prediction-from-spectra",
+        "molecular-graph-encoder-decoder-training",
+        "molecular-connectivity-inference",
+        "bond-connectivity-prediction",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "molecular-formula-prediction"
       ]
     },
     "graph-neural-network-design-for-chemistry": {
@@ -1837,6 +2527,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "graph-based-molecular-representation",
+        "molecular-structure-prediction-from-spectra",
+        "nmr-spectrum-to-structure-inference",
+        "molecular-connectivity-inference",
+        "molecular-graph-encoder-decoder-training",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "fragment-assembly-transformer-architecture",
+        "molecular-fragment-assembly-from-transformer-predictions"
       ]
     },
     "heteronuclear-homonuclear-correlation-extraction": {
@@ -1862,6 +2562,16 @@
         "conda",
         "madbyte",
         "python"
+      ],
+      "related_skills": [
+        "nmr-spectral-comparative-analysis",
+        "sample-prioritization-through-structural-clustering",
+        "structural-scaffold-feature-identification",
+        "nmr-network-visualization-and-interpretation",
+        "2d-nmr-pulse-sequence-implementation",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "hybrid-model-fusion-strategy"
       ]
     },
     "hmdb-metabolite-query-and-retrieval": {
@@ -1893,6 +2603,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "metabolite-reference-library-filtering",
+        "nmr-chemical-shift-interval-matching",
+        "spectral-roi-boundary-definition",
+        "jms-compliant-database-querying",
+        "hmdb-metabolite-extraction",
+        "accurate-mass-metabolite-search-against-hmdb",
+        "metabolomics-database-search-and-formula-matching",
+        "hmdb-formula-sampling"
       ]
     },
     "http-api-endpoint-design": {
@@ -1923,6 +2643,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "file-api-endpoint-implementation",
+        "spectral-image-rendering",
+        "http-api-integration-with-external-services",
+        "spectral-file-format-parsing",
+        "jcamp-file-parsing",
+        "nmr-spectral-processing",
+        "form-encoded-request-handling",
+        "file-compression-and-archiving"
       ]
     },
     "http-api-integration-with-external-services": {
@@ -1953,6 +2683,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "http-api-endpoint-design",
+        "spectral-peak-data-validation-and-parsing",
+        "form-encoded-request-handling",
+        "nmr-peak-prediction-via-database-lookup",
+        "json-response-serialization",
+        "nmr-spectral-processing",
+        "http-post-request-assembly",
+        "spectral-image-rendering"
       ]
     },
     "http-post-request-assembly": {
@@ -1974,6 +2714,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "restful-api-endpoint-invocation",
+        "api-request-response-handling",
+        "nmr-peak-json-serialization",
+        "tensorflow-serving-endpoint-integration",
+        "json-payload-construction-for-nmr-spectra",
+        "chemical-shift-data-formatting",
+        "model-metadata-schema-inspection",
+        "api-response-parsing-and-validation"
       ]
     },
     "hybrid-model-fusion-strategy": {
@@ -1999,6 +2749,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "transformer-cnn-hybrid-model-training",
+        "fusion-pooling-strategy-implementation",
+        "transformer-encoder-architecture-implementation",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "nmr-spectrum-to-structure-inference",
+        "cnn-spectral-feature-extraction",
+        "molecular-structure-prediction-from-spectra",
+        "nmr-modality-ablation-analysis"
       ]
     },
     "in-silico-fragment-m-z-calculation": {
@@ -2032,6 +2792,16 @@
         "q-exactive-orbitrap",
         "sciex-q-tof-uhplc-hrms-ms",
         "xcms"
+      ],
+      "related_skills": [
+        "in-silico-fragmentation-simulation-validation",
+        "fragment-ion-library-matching",
+        "mass-spectrometry-fragment-matching",
+        "lipid-identification-scoring",
+        "lipid-mass-spectral-matching",
+        "uhplc-hrms-ms-data-matching",
+        "lipid-library-annotation-from-mz",
+        "mass-accuracy-tolerance-calibration"
       ]
     },
     "in-silico-fragmentation-prediction": {
@@ -2052,6 +2822,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "magma"
+      ],
+      "related_skills": [
+        "spectral-peak-fragment-matching",
+        "ms-ms-spectral-interpretation",
+        "molecular-fragment-prediction",
+        "in-silico-fragment-prediction",
+        "molecular-fragment-prediction-interpretation",
+        "fragment-level-spectrum-prediction",
+        "tandem-mass-spectrum-prediction-fragment-level",
+        "spectral-peak-intensity-interpretation"
       ]
     },
     "inadequate-spectral-interpretation": {
@@ -2074,6 +2854,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "peak-network-clustering-inadequate",
+        "nmr-inadequate-spectra-acquisition-and-preprocessing",
+        "inadequate-spectral-processing",
+        "compound-clustering-from-inadequate-spectra",
+        "metabolite-database-matching",
+        "peak-similarity-assessment",
+        "spectral-peak-network-grouping",
+        "nmr-spectrum-peak-detection"
       ]
     },
     "inadequate-spectral-processing": {
@@ -2096,6 +2886,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "nmr-inadequate-spectra-acquisition-and-preprocessing",
+        "inadequate-spectral-interpretation",
+        "spectral-peak-detection-and-picking",
+        "nmr-spectrum-peak-detection",
+        "spectral-intensity-thresholding",
+        "compound-clustering-from-inadequate-spectra",
+        "peak-network-clustering-inadequate",
+        "spectral-peak-network-grouping"
       ]
     },
     "interactive-data-exploration-design": {
@@ -2115,6 +2915,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "metabolite-dataset-preprocessing",
+        "metabolic-parameter-visualization",
+        "cohort-performance-reporting",
+        "cohort-stratified-metabolic-performance-analysis",
+        "pre-analytical-delay-stratification",
+        "pre-analytical-delay-effect-quantification",
+        "plasma-serum-sample-comparison",
+        "nmr-metabolomic-quality-control-reporting"
       ]
     },
     "isotopic-impurity-accounting": {
@@ -2134,6 +2944,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "elemcor"
+      ],
+      "related_skills": [
+        "tracer-impurity-correction-modeling",
+        "lc-ms-data-calibration",
+        "naturally-occurring-isotope-contribution-accounting",
+        "mass-spectrometry-instrument-resolution-modeling",
+        "isotope-labeling-data-interpretation",
+        "isotopologue-abundance-correction",
+        "numerical-method-scheme-analysis",
+        "fractional-abundance-transformation"
       ]
     },
     "j-coupling-multiplet-generation": {
@@ -2151,7 +2971,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "nmr-spin-system-simulation",
+        "metabolite-concentration-to-spectrum-mapping",
+        "2d-nmr-pulse-sequence-implementation",
+        "lineshape-convolution-and-broadening",
+        "fid-to-frequency-domain-fourier-transformation",
+        "nmr-spectral-data-format-serialization",
+        "nmr-metabolite-identity-confirmation",
+        "nmr-peak-table-generation"
+      ]
     },
     "jcamp-file-parsing": {
       "dois": [
@@ -2181,6 +3011,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "spectral-file-format-parsing",
+        "nmr-spectral-processing",
+        "spectral-image-rendering",
+        "file-api-endpoint-implementation",
+        "peak-table-extraction",
+        "http-api-endpoint-design",
+        "mass-spectrometry-data-processing",
+        "spectral-peak-data-validation-and-parsing"
       ]
     },
     "json-payload-construction-for-nmr-spectra": {
@@ -2202,6 +3042,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "nmr-peak-json-serialization",
+        "chemical-shift-data-formatting",
+        "http-post-request-assembly",
+        "api-request-response-handling",
+        "restful-api-endpoint-invocation",
+        "tensorflow-serving-endpoint-integration",
+        "model-metadata-schema-inspection",
+        "json-response-serialization"
       ]
     },
     "json-response-serialization": {
@@ -2231,6 +3081,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "spectral-peak-data-validation-and-parsing",
+        "form-encoded-request-handling",
+        "http-api-integration-with-external-services",
+        "json-payload-construction-for-nmr-spectra",
+        "http-api-endpoint-design",
+        "nmr-peak-json-serialization",
+        "http-post-request-assembly",
+        "json-serialization-and-data-structure-design"
       ]
     },
     "json-schema-validation": {
@@ -2267,6 +3127,16 @@
         "npm",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "validation-error-categorization",
+        "mwtab-to-json-conversion",
+        "metabolite-metadata-column-matching",
+        "structured-data-serialization",
+        "mwtab-file-parsing",
+        "structured-report-generation",
+        "tabular-data-transformation-with-pandas",
+        "array-of-objects-construction"
       ]
     },
     "linear-score-calculation-from-coefficients": {
@@ -2289,6 +3159,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mimir"
+      ],
+      "related_skills": [
+        "metabolomics-model-coefficient-application",
+        "metabolite-score-projection",
+        "published-metabolic-profile-implementation",
+        "nightingale-1h-nmr-data-integration",
+        "metabolic-age-prediction-from-nmr-features",
+        "r-package-function-integration",
+        "biomarker-coefficient-extraction",
+        "pairwise-similarity-scoring-weighted-metrics"
       ]
     },
     "lineshape-convolution-and-broadening": {
@@ -2306,7 +3186,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "nmr-spin-system-simulation",
+        "j-coupling-multiplet-generation",
+        "2d-nmr-pulse-sequence-implementation",
+        "metabolite-concentration-to-spectrum-mapping",
+        "fid-to-frequency-domain-fourier-transformation",
+        "spectral-peak-shape-modeling",
+        "spectral-mixture-deconvolution",
+        "nmr-spectral-data-format-serialization"
+      ]
     },
     "mass-difference-network-construction": {
       "dois": [
@@ -2360,6 +3250,16 @@
         "ultramassexplorer",
         "vegan",
         "vegan-r-package"
+      ],
+      "related_skills": [
+        "pairwise-mass-comparison-computation",
+        "transformation-network-topology-analysis",
+        "peak-pairwise-comparison",
+        "biochemical-transformation-matching",
+        "molecular-class-annotation-for-networks",
+        "metabolite-distance-metric-calculation",
+        "cytoscape-edge-node-file-formatting",
+        "ft-icr-ms-data-processing-pipeline-execution"
       ]
     },
     "mass-spectral-data-validation": {
@@ -2387,6 +3287,16 @@
         "jupyter-notebooks",
         "ms2deepscore",
         "python"
+      ],
+      "related_skills": [
+        "lc-ms-spectral-data-import",
+        "spectral-data-import-validation",
+        "spectral-format-parsing-and-validation",
+        "spectral-data-validation",
+        "spectral-data-import-and-parsing",
+        "peak-filtering-and-preprocessing-lc-ms",
+        "spectral-metadata-validation",
+        "spectral-similarity-distance-metric-selection"
       ]
     },
     "mass-spectral-query-submission": {
@@ -2419,6 +3329,16 @@
         "microbiomemasst",
         "plantmasst",
         "tissuemasst"
+      ],
+      "related_skills": [
+        "mass-spectrometry-reference-database-integration",
+        "domain-specific-spectrum-search-implementation",
+        "spectral-query-formulation",
+        "spectrum-data-formatting",
+        "domain-specific-masst-api-integration",
+        "spectrum-metadata-parsing",
+        "database-similarity-scoring",
+        "mass-spectrometry-database-search"
       ]
     },
     "mass-spectrometry-data-processing": {
@@ -2491,6 +3411,16 @@
         "python-3",
         "python-3-8",
         "shiny"
+      ],
+      "related_skills": [
+        "mass-spectrometry-file-conversion",
+        "nmr-spectral-processing",
+        "mass-spectrometry-file-format-conversion",
+        "vendor-data-standardization",
+        "msconvert-integration-and-invocation",
+        "ms-data-preprocessing",
+        "mass-spectrometry-data-parsing",
+        "peak-table-extraction"
       ]
     },
     "mass-spectrum-structure-elucidation": {
@@ -2521,6 +3451,16 @@
         "pubchem",
         "pytorch",
         "tensorflow"
+      ],
+      "related_skills": [
+        "structure-ranking-from-spectral-data",
+        "pubchem-structure-retrieval",
+        "molecular-fragment-prediction",
+        "spectrum-peak-matching",
+        "candidate-structure-ranking-from-spectrum",
+        "tandem-mass-spectrum-prediction-fragment-level",
+        "molecular-fragment-prediction-interpretation",
+        "spectral-peak-intensity-interpretation"
       ]
     },
     "memory-mapped-file-selection-strategy": {
@@ -2540,6 +3480,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "dataset-storage-interface-architecture",
+        "block-layout-analysis-for-io-optimization",
+        "conditional-allocation-design-patterns",
+        "nmr-spectrum-tiling-format-interpretation",
+        "metadata-extraction-from-fixed-offset-records",
+        "in-memory-optimization-for-large-datasets",
+        "memory-profiling-and-benchmarking",
+        "mass-spectrometry-data-representation"
       ]
     },
     "metabolic-age-prediction-from-nmr-features": {
@@ -2562,6 +3512,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mimir"
+      ],
+      "related_skills": [
+        "metabolomics-model-coefficient-application",
+        "published-metabolic-profile-implementation",
+        "metabolite-score-projection",
+        "nightingale-1h-nmr-data-integration",
+        "r-package-function-integration",
+        "linear-score-calculation-from-coefficients",
+        "metabolite-feature-ranking",
+        "network-based-functional-prediction"
       ]
     },
     "metabolic-parameter-visualization": {
@@ -2582,6 +3542,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "cohort-performance-reporting",
+        "metabolite-stability-assessment-across-cohorts",
+        "nmr-metabolomic-quality-control-reporting",
+        "pre-analytical-delay-stratification",
+        "metabolite-dataset-preprocessing",
+        "cohort-stratified-metabolic-performance-analysis",
+        "pre-analytical-delay-effect-quantification",
+        "interactive-data-exploration-design"
       ]
     },
     "metabolite-concentration-to-spectrum-mapping": {
@@ -2599,7 +3569,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "nmr-spin-system-simulation",
+        "2d-nmr-pulse-sequence-implementation",
+        "j-coupling-multiplet-generation",
+        "lineshape-convolution-and-broadening",
+        "compound-abundance-quantification-from-flow",
+        "metabolite-peak-assignment-from-nmr",
+        "nmr-spectral-data-format-serialization",
+        "nmr-spectrum-object-construction"
+      ]
     },
     "metabolite-database-matching": {
       "dois": [
@@ -2621,6 +3601,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "inadequate-spectral-interpretation",
+        "peak-network-to-metabolite-assignment",
+        "peak-network-clustering-inadequate",
+        "spectral-peak-network-grouping",
+        "peak-similarity-assessment",
+        "spectral-similarity-metric-computation",
+        "nmr-inadequate-spectra-acquisition-and-preprocessing",
+        "compound-clustering-from-inadequate-spectra"
       ]
     },
     "metabolite-dataset-preprocessing": {
@@ -2640,6 +3630,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "pre-analytical-delay-stratification",
+        "cohort-performance-reporting",
+        "interactive-data-exploration-design",
+        "cohort-stratified-metabolic-performance-analysis",
+        "metabolic-parameter-visualization",
+        "pre-analytical-delay-effect-quantification",
+        "plasma-serum-sample-comparison",
+        "nmr-metabolomic-quality-control-reporting"
       ]
     },
     "metabolite-feature-quality-control": {
@@ -2663,6 +3663,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "summarized-experiment-subsetting",
+        "quality-metrics-summarization",
+        "fda-repeatability-compliance-assessment",
+        "metabolite-phenotype-association-partial-correlation",
+        "coefficient-of-variation-threshold-analysis",
+        "replicate-consistency-assessment",
+        "multiple-testing-correction-metabolomics",
+        "summarized-experiment-object-handling"
       ]
     },
     "metabolite-identification-from-transformation-rules": {
@@ -2682,6 +3692,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "biotransformer"
+      ],
+      "related_skills": [
+        "metabolite-structure-prediction",
+        "metabolite-structure-generation",
+        "biotransformation-rule-application",
+        "biotransformation-prediction-across-microbiota-contexts",
+        "metabolite-prediction-pathway-selection",
+        "biodegradation-pathway-interpretation",
+        "environmental-microbial-metabolism-prediction",
+        "small-molecule-structure-matching"
       ]
     },
     "metabolite-identifier-annotation": {
@@ -2703,6 +3723,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "biotransformer"
+      ],
+      "related_skills": [
+        "organism-specific-metabolism-pathway-assignment",
+        "metabolite-structure-prediction",
+        "metabolite-structure-annotation",
+        "small-molecule-structure-matching",
+        "metabolite-identification-from-transformation-rules",
+        "metabolite-structure-generation",
+        "metabolite-prediction-pathway-selection",
+        "chemical-database-querying-and-retrieval"
       ]
     },
     "metabolite-metadata-column-matching": {
@@ -2730,6 +3760,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "column-name-variant-matching",
+        "mwtab-file-parsing",
+        "metadata-column-profiling-across-datasets",
+        "json-schema-validation",
+        "mwtab-to-json-conversion",
+        "metabolomics-file-format-parsing",
+        "validation-error-categorization",
+        "metabolite-database-identifier-normalization"
       ]
     },
     "metabolite-peak-assignment-from-nmr": {
@@ -2761,6 +3801,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "transformer-model-inference-on-spectral-data",
+        "nmr-spectrum-data-import-and-parsing",
+        "chemical-shift-reference-matching",
+        "nmr-peak-quality-filtering",
+        "peak-list-filtering-for-quality-control",
+        "nmr-spectrum-peak-detection",
+        "nmr-peak-prediction-via-database-lookup",
+        "spectral-peak-validation"
       ]
     },
     "metabolite-phenotype-association-partial-correlation": {
@@ -2784,6 +3834,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "spearman-correlation-computation",
+        "multiple-testing-correction-metabolomics",
+        "confounder-adjustment-epidemiological-analysis",
+        "summarized-experiment-object-handling",
+        "metabolite-feature-quality-control",
+        "summarized-experiment-subsetting",
+        "replicate-consistency-assessment",
+        "coefficient-of-variation-computation"
       ]
     },
     "metabolite-prediction-pathway-selection": {
@@ -2805,6 +3865,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "biotransformer"
+      ],
+      "related_skills": [
+        "metabolite-structure-prediction",
+        "metabolite-structure-generation",
+        "biodegradation-pathway-interpretation",
+        "biotransformation-prediction-across-microbiota-contexts",
+        "environmental-microbial-metabolism-prediction",
+        "biotransformation-rule-application",
+        "microbial-biotransformation-prediction",
+        "metabolite-identification-from-transformation-rules"
       ]
     },
     "metabolite-reference-library-filtering": {
@@ -2837,6 +3907,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "hmdb-metabolite-query-and-retrieval",
+        "spectral-roi-boundary-definition",
+        "nmr-chemical-shift-interval-matching",
+        "jms-compliant-database-querying",
+        "hmdb-metabolite-extraction",
+        "molecular-formula-database-filtering",
+        "accurate-mass-metabolite-search-against-hmdb",
+        "chemical-formula-extraction-and-filtering"
       ]
     },
     "metabolite-score-projection": {
@@ -2860,6 +3940,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mimir"
+      ],
+      "related_skills": [
+        "metabolomics-model-coefficient-application",
+        "published-metabolic-profile-implementation",
+        "linear-score-calculation-from-coefficients",
+        "metabolic-age-prediction-from-nmr-features",
+        "nightingale-1h-nmr-data-integration",
+        "r-package-function-integration",
+        "metabolite-feature-ranking",
+        "metabolomics-feature-cv-assessment"
       ]
     },
     "metabolite-signal-drift-detection": {
@@ -2888,6 +3978,16 @@
         "hruv",
         "ruv-iii",
         "summarizedexperiment"
+      ],
+      "related_skills": [
+        "metabolomics-batch-effect-correction",
+        "run-order-diagnostic-plotting",
+        "hierarchical-normalisation-strategy",
+        "batch-effect-visualization",
+        "loess-smoothing-parameter-tuning",
+        "ruv-iii-implementation-in-metabolomics",
+        "batch-effect-preprocessing-with-replicate-structure",
+        "cross-batch-metabolite-quantification-harmonization"
       ]
     },
     "metabolite-spectral-matching": {
@@ -2912,6 +4012,16 @@
       "tools_used": [
         "gnps",
         "masst"
+      ],
+      "related_skills": [
+        "mass-spectrometry-database-search",
+        "spectral-query-formulation",
+        "large-scale-data-retrieval",
+        "spectral-library-matching-gnps",
+        "spectral-library-matching",
+        "spectral-database-matching",
+        "spectral-database-query-execution",
+        "spectral-metadata-standardization"
       ]
     },
     "metabolite-stability-assessment-across-cohorts": {
@@ -2932,6 +4042,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "cohort-stratified-metabolic-performance-analysis",
+        "nmr-metabolomic-quality-control-reporting",
+        "metabolic-parameter-visualization",
+        "cohort-performance-reporting",
+        "pre-analytical-delay-stratification",
+        "pre-analytical-delay-effect-quantification",
+        "metabolite-dataset-preprocessing",
+        "plasma-serum-sample-comparison"
       ]
     },
     "metabolite-structure-prediction": {
@@ -2952,6 +4072,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "biotransformer"
+      ],
+      "related_skills": [
+        "metabolite-structure-generation",
+        "metabolite-prediction-pathway-selection",
+        "metabolite-identification-from-transformation-rules",
+        "biotransformation-prediction-across-microbiota-contexts",
+        "metabolite-structure-annotation",
+        "environmental-microbial-metabolism-prediction",
+        "microbial-biotransformation-prediction",
+        "environmental-microbial-degradation-prediction"
       ]
     },
     "metabolomics-data-loading-and-formatting": {
@@ -2981,6 +4111,16 @@
         "keggrest",
         "omu-omu-summary-function",
         "randomforest"
+      ],
+      "related_skills": [
+        "random-forest-classification-for-metabolite-prediction",
+        "metabolomics-data-import-and-parsing",
+        "metabolite-count-normalization-and-transformation",
+        "metabolomics-peak-table-loading",
+        "metabolomics-data-loading-into-containers",
+        "hierarchical-metabolite-annotation-mapping",
+        "univariate-statistical-testing-for-metabolomics",
+        "metabolomic-data-format-standardization"
       ]
     },
     "metabolomics-data-representation": {
@@ -3021,6 +4161,16 @@
         "postgresql",
         "python",
         "spec2vec"
+      ],
+      "related_skills": [
+        "ms2-spectral-feature-extraction",
+        "corpus-bag-of-words-representation",
+        "topic-modeling-lda",
+        "peak-m-z-indexing",
+        "mass-fragment-neutral-loss-representation",
+        "spectral-data-format-conversion",
+        "mass-spectrometry-file-format-parsing",
+        "latent-dirichlet-allocation-topic-inference"
       ]
     },
     "metabolomics-data-standardization": {
@@ -3044,6 +4194,16 @@
         "nmrbox",
         "nmrpipe",
         "sand"
+      ],
+      "related_skills": [
+        "nmr-spectra-preprocessing",
+        "nmr-peak-table-generation",
+        "nmr-workflow-pipeline-execution",
+        "spectral-peak-deconvolution",
+        "nmr-peak-deconvolution",
+        "metabolomic-data-format-standardization",
+        "data-normalization-in-mass-spectrometry",
+        "vendor-data-standardization"
       ]
     },
     "metabolomics-database-search-and-formula-matching": {
@@ -3088,6 +4248,16 @@
         "scipy",
         "scipy-signal-detrend",
         "scipy-signal-find-peaks"
+      ],
+      "related_skills": [
+        "metabolite-mass-database-matching",
+        "feature-annotation-via-isotope-adduct-grouping",
+        "jms-compliant-database-querying",
+        "molecular-formula-inference-from-adducts",
+        "m-z-alignment-and-mass-grid-assembly",
+        "accurate-mass-database-search",
+        "isotope-and-adduct-pattern-recognition",
+        "empirical-compound-construction-and-grouping"
       ]
     },
     "metabolomics-file-format-parsing": {
@@ -3123,6 +4293,16 @@
         "pandas",
         "python",
         "r-gui"
+      ],
+      "related_skills": [
+        "mwtab-file-parsing",
+        "mwtab-to-json-conversion",
+        "tabular-data-transformation-with-pandas",
+        "structured-data-serialization",
+        "metabolite-metadata-column-matching",
+        "metadata-structure-transformation",
+        "conversion-directive-parsing",
+        "json-schema-validation"
       ]
     },
     "metabolomics-model-coefficient-application": {
@@ -3146,6 +4326,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mimir"
+      ],
+      "related_skills": [
+        "metabolite-score-projection",
+        "published-metabolic-profile-implementation",
+        "linear-score-calculation-from-coefficients",
+        "metabolic-age-prediction-from-nmr-features",
+        "r-package-function-integration",
+        "nightingale-1h-nmr-data-integration",
+        "biomarker-coefficient-extraction",
+        "multi-algorithm-comparative-analysis"
       ]
     },
     "metadata-extraction-from-fixed-offset-records": {
@@ -3165,6 +4355,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "binary-file-format-parsing",
+        "nv-header-structure-interpretation",
+        "endianness-detection-and-handling",
+        "file-integrity-validation",
+        "raw-file-format-parsing",
+        "binary-format-specification-implementation",
+        "raw-file-header-extraction",
+        "dataset-storage-interface-architecture"
       ]
     },
     "metadata-structure-transformation": {
@@ -3195,6 +4395,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "json-data-structure-transformation",
+        "array-of-objects-construction",
+        "structured-data-serialization",
+        "mwtab-to-json-conversion",
+        "metadata-transformation-verification",
+        "conversion-directive-parsing",
+        "json-conversion-directive-application",
+        "mwtab-file-parsing"
       ]
     },
     "microbiome-metabolome-data-preprocessing": {
@@ -3260,6 +4470,16 @@
         "tensorflow",
         "tensorflow-or-pytorch",
         "wgcna"
+      ],
+      "related_skills": [
+        "microbiome-metabolome-data-preprocessing-clr-transformation",
+        "microbiome-metabolome-prediction-modeling",
+        "microbiome-metabolome-abundance-normalization",
+        "cross-validation-performance-evaluation",
+        "relative-abundance-preprocessing",
+        "microbe-metabolite-prediction-neural-network",
+        "cross-validation-workflow-execution",
+        "metabolite-prediction-comparison-baseline-models"
       ]
     },
     "minimum-cost-flow-formulation": {
@@ -3280,6 +4500,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "compound-abundance-quantification-from-flow",
+        "mixture-spectrum-comparison",
+        "nmr-spectrum-reconstruction-from-library",
+        "emd-spectral-distance-computation",
+        "optimal-transport-scoring",
+        "spectral-mixture-deconvolution",
+        "wasserstein-distance-computation",
+        "nmr-spectrum-normalization"
       ]
     },
     "mixture-spectrum-comparison": {
@@ -3302,6 +4532,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "wasserstein-distance-computation",
+        "optimal-transport-scoring",
+        "emd-spectral-distance-computation",
+        "nmr-spectrum-reconstruction-from-library",
+        "spectral-mixture-deconvolution",
+        "minimum-cost-flow-formulation",
+        "compound-abundance-quantification-from-flow",
+        "nmr-spectrum-normalization"
       ]
     },
     "modality-contribution-quantification": {
@@ -3329,6 +4569,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "nmr-modality-ablation-analysis",
+        "multitask-model-inference",
+        "accuracy-metric-computation",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "multi-modal-spectroscopic-data-integration",
+        "multimodal-tensor-construction-and-validation",
+        "molecular-structure-prediction-evaluation",
+        "transformer-architecture-inference"
       ]
     },
     "model-generalization-assessment-across-molecular-size-regimes": {
@@ -3357,6 +4607,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-prediction-out-of-distribution",
+        "molecular-structure-prediction-evaluation",
+        "performance-degradation-quantification-and-analysis",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "structure-similarity-evaluation",
+        "chemical-graph-connectivity-validation",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-structure-prediction-from-spectra"
       ]
     },
     "model-metadata-extraction": {
@@ -3377,6 +4637,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "model-metadata-schema-verification",
+        "model-metadata-schema-inspection",
+        "tensorflow-model-metadata-inspection",
+        "model-metadata-validation",
+        "model-metadata-endpoint-validation",
+        "json-response-parsing",
+        "neural-network-layer-metadata-interpretation",
+        "model-layer-name-validation"
       ]
     },
     "model-metadata-schema-inspection": {
@@ -3396,6 +4666,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "model-metadata-schema-verification",
+        "api-request-response-handling",
+        "nmr-peak-json-serialization",
+        "tensorflow-serving-endpoint-integration",
+        "json-payload-construction-for-nmr-spectra",
+        "chemical-shift-data-formatting",
+        "model-metadata-extraction",
+        "restful-api-endpoint-invocation"
       ]
     },
     "model-metadata-schema-verification": {
@@ -3416,6 +4696,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "model-metadata-schema-inspection",
+        "model-metadata-extraction",
+        "api-request-response-handling",
+        "api-contract-validation",
+        "tensorflow-serving-endpoint-integration",
+        "model-metadata-validation",
+        "tensorflow-model-metadata-inspection",
+        "api-response-parsing-and-validation"
       ]
     },
     "modification-site-localization": {
@@ -3447,6 +4737,16 @@
         "pillow",
         "python",
         "rdkit"
+      ],
+      "related_skills": [
+        "mass-spectrometry-spectral-alignment",
+        "ms-modification-site-evaluation",
+        "peak-annotation-refinement-structure-driven",
+        "oracle-mode-structural-constraint-integration",
+        "chemical-structure-annotation-oracle-mode",
+        "msms-spectral-database-retrieval",
+        "compound-structure-comparison-metrics",
+        "spectral-alignment-scoring"
       ]
     },
     "molecular-connectivity-inference": {
@@ -3474,6 +4774,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-prediction-from-spectra",
+        "nmr-spectrum-to-structure-inference",
+        "graph-neural-network-design-for-chemistry",
+        "graph-based-molecular-representation",
+        "spectral-to-structure-mapping-prediction",
+        "molecular-formula-prediction",
+        "multitask-model-inference",
+        "molecular-fragment-assembly-from-transformer-predictions"
       ]
     },
     "molecular-formula-prediction": {
@@ -3501,6 +4811,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-prediction-from-spectra",
+        "nmr-spectrum-to-structure-inference",
+        "spectral-to-structure-mapping-prediction",
+        "molecular-connectivity-inference",
+        "molecular-graph-encoder-decoder-training",
+        "graph-based-molecular-representation",
+        "molecular-fragment-assembly-from-transformer-predictions",
+        "fragment-assembly-transformer-architecture"
       ]
     },
     "molecular-fragment-assembly-from-transformer-predictions": {
@@ -3528,6 +4848,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "transformer-based-fragment-assembly",
+        "fragment-assembly-transformer-architecture",
+        "fragment-to-structure-assembly",
+        "molecular-structure-prediction-from-spectra",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-graph-encoder-decoder-training",
+        "nmr-spectrum-to-structure-inference",
+        "molecular-connectivity-inference"
       ]
     },
     "molecular-geometry-neural-network-potential-evaluation": {
@@ -3554,6 +4884,16 @@
         "quick",
         "rdkit",
         "snakemake"
+      ],
+      "related_skills": [
+        "conformer-ensemble-energy-ranking",
+        "molecular-geometry-optimization",
+        "low-energy-structure-selection",
+        "conformer-filtering-threshold-selection",
+        "force-field-minimization-mmff94",
+        "conformer-generation-rdkit",
+        "small-molecule-3d-structure-preparation",
+        "machine-learning-based-conformation-filtering"
       ]
     },
     "molecular-graph-encoder-decoder-training": {
@@ -3581,6 +4921,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "graph-based-molecular-representation",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-fragment-assembly-from-transformer-predictions",
+        "bond-connectivity-prediction",
+        "molecular-structure-prediction-from-spectra",
+        "molecular-formula-prediction",
+        "molecular-connectivity-inference",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation"
       ]
     },
     "molecular-network-clustering-and-analysis": {
@@ -3605,6 +4955,16 @@
         "bam",
         "hassounlab-bam",
         "rdkit"
+      ],
+      "related_skills": [
+        "biotransformation-candidate-integration-with-networking",
+        "spectral-similarity-network-construction",
+        "molecular-network-construction-for-metabolomics",
+        "mass-spectral-feature-grouping",
+        "metabolite-structure-annotation-integration",
+        "biotransformation-rule-encoding",
+        "biotransformation-rule-application-to-metabolites",
+        "molecular-structure-canonicalization-and-validation"
       ]
     },
     "molecular-structure-conformer-generation": {
@@ -3648,6 +5008,16 @@
         "python-3",
         "pytorch",
         "rdkit"
+      ],
+      "related_skills": [
+        "molecular-conformer-preprocessing",
+        "molecular-coordinate-generation-2d3d",
+        "molecular-conformer-generation-and-optimization",
+        "conformer-generation-rdkit",
+        "molecular-descriptor-indexing",
+        "molecular-geometry-optimization",
+        "machine-learning-based-conformation-filtering",
+        "conformer-ensemble-energy-ranking"
       ]
     },
     "molecular-structure-ground-truth-matching-and-accuracy-evaluation": {
@@ -3675,6 +5045,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "accuracy-metric-computation",
+        "structure-similarity-evaluation",
+        "molecular-structure-prediction-evaluation",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-structure-prediction-from-spectra",
+        "graph-based-molecular-representation",
+        "chemical-graph-connectivity-validation",
+        "molecular-graph-encoder-decoder-training"
       ]
     },
     "molecular-structure-prediction-evaluation": {
@@ -3703,6 +5083,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "structure-similarity-evaluation",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "molecular-structure-prediction-out-of-distribution",
+        "model-generalization-assessment-across-molecular-size-regimes",
+        "nmr-modality-ablation-analysis",
+        "accuracy-metric-computation",
+        "molecular-structure-prediction-validation",
+        "spectral-to-structure-mapping-prediction"
       ]
     },
     "molecular-structure-prediction-from-spectra": {
@@ -3730,6 +5120,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-connectivity-inference",
+        "spectral-to-structure-mapping-prediction",
+        "nmr-spectrum-to-structure-inference",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-formula-prediction",
+        "graph-based-molecular-representation",
+        "molecular-fragment-assembly-from-transformer-predictions",
+        "cnn-spectral-feature-extraction"
       ]
     },
     "molecular-structure-prediction-out-of-distribution": {
@@ -3757,6 +5157,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "model-generalization-assessment-across-molecular-size-regimes",
+        "molecular-structure-prediction-evaluation",
+        "performance-degradation-quantification-and-analysis",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "molecular-structure-prediction-from-spectra",
+        "structure-similarity-evaluation",
+        "chemical-graph-connectivity-validation",
+        "graph-neural-network-design-for-chemistry"
       ]
     },
     "molecular-structure-prediction-validation": {
@@ -3788,6 +5198,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "structure-similarity-comparison",
+        "transformer-architecture-inference",
+        "molecular-structure-prediction-evaluation",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "multi-modal-spectroscopic-data-integration",
+        "chemical-graph-connectivity-validation",
+        "accuracy-metric-computation",
+        "molecular-structure-prediction-out-of-distribution"
       ]
     },
     "molecular-transformation-frequency-filtering": {
@@ -3807,6 +5227,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "moletrans"
+      ],
+      "related_skills": [
+        "mass-difference-transformation-pair-derivation",
+        "reactomics-annotation-and-clustering",
+        "mass-spectrometry-dataset-post-processing",
+        "molecular-formula-parsing-and-validation",
+        "molecular-complexity-metric-computation",
+        "dom-chemodiversity-characterization",
+        "formula-based-network-construction",
+        "elemental-composition-extraction"
       ]
     },
     "multi-database-structure-querying": {
@@ -3831,6 +5261,16 @@
         "ms-dial-or-higher",
         "ms-dial-v4-00-or-higher",
         "ms-finder"
+      ],
+      "related_skills": [
+        "in-silico-compound-annotation",
+        "ms-ms-spectrum-matching",
+        "ms-finder-format-export",
+        "compound-database-lookup-and-curation",
+        "feature-similarity-network-construction",
+        "exact-mass-database-matching",
+        "modularity-optimization-clustering",
+        "mass-spectrometry-feature-representation"
       ]
     },
     "multi-modal-spectroscopic-data-integration": {
@@ -3860,6 +5300,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "transformer-architecture-inference",
+        "multimodal-spectral-alignment-by-molecular-identifier",
+        "multimodal-tensor-construction-and-validation",
+        "spectral-intensity-normalization-across-modalities",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "spectral-modality-preprocessing",
+        "structure-similarity-comparison",
+        "molecular-structure-prediction-validation"
       ]
     },
     "multimodal-spectral-alignment-by-molecular-identifier": {
@@ -3887,6 +5337,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "spectral-intensity-normalization-across-modalities",
+        "multimodal-tensor-construction-and-validation",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "multi-modal-spectroscopic-data-integration",
+        "data-pipeline-module-design-and-integration",
+        "spectral-modality-preprocessing",
+        "spectral-quality-filtering-signal-to-noise",
+        "transformer-architecture-inference"
       ]
     },
     "multimodal-tensor-construction-and-validation": {
@@ -3919,6 +5379,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "multimodal-spectral-alignment-by-molecular-identifier",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "multi-modal-spectroscopic-data-integration",
+        "spectral-intensity-normalization-across-modalities",
+        "spectral-modality-preprocessing",
+        "data-pipeline-module-design-and-integration",
+        "spectral-quality-filtering-signal-to-noise",
+        "molecular-structure-prediction-validation"
       ]
     },
     "multiple-testing-correction-metabolomics": {
@@ -3942,6 +5412,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "metabolite-phenotype-association-partial-correlation",
+        "spearman-correlation-computation",
+        "confounder-adjustment-epidemiological-analysis",
+        "metabolite-feature-quality-control",
+        "multiple-testing-correction-application",
+        "summarized-experiment-object-handling",
+        "summarized-experiment-subsetting",
+        "coefficient-of-variation-computation"
       ]
     },
     "multitask-model-inference": {
@@ -3969,6 +5449,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-connectivity-inference",
+        "molecular-structure-prediction-from-spectra",
+        "nmr-modality-ablation-analysis",
+        "modality-contribution-quantification",
+        "accuracy-metric-computation",
+        "spectral-to-structure-mapping-prediction",
+        "nmr-spectrum-to-structure-inference",
+        "graph-neural-network-design-for-chemistry"
       ]
     },
     "mwtab-file-parsing": {
@@ -3997,6 +5487,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "mwtab-to-json-conversion",
+        "metabolomics-file-format-parsing",
+        "tabular-data-transformation-with-pandas",
+        "structured-data-serialization",
+        "metabolite-metadata-column-matching",
+        "column-name-variant-matching",
+        "json-schema-validation",
+        "metadata-column-profiling-across-datasets"
       ]
     },
     "mwtab-to-json-conversion": {
@@ -4026,6 +5526,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "mwtab-file-parsing",
+        "tabular-data-transformation-with-pandas",
+        "structured-data-serialization",
+        "metabolomics-file-format-parsing",
+        "array-of-objects-construction",
+        "json-table-to-matrix-conversion",
+        "json-schema-validation",
+        "conversion-directive-parsing"
       ]
     },
     "mzmine-quantitative-table-parsing": {
@@ -4070,6 +5580,16 @@
         "open-tree-of-life",
         "sirius",
         "timar"
+      ],
+      "related_skills": [
+        "metabolite-annotation-integration-across-databases",
+        "multi-component-weighted-ranking-aggregation",
+        "metabolite-feature-quantification-table-parsing",
+        "per-sample-feature-composition-analysis",
+        "unannotated-feature-characterization",
+        "ms2-spectral-dissimilarity-scoring",
+        "feature-redundancy-reduction-with-ion-identity",
+        "feature-table-export-and-formatting"
       ]
     },
     "neural-network-model-deployment": {
@@ -4095,6 +5615,16 @@
       "tools_used": [
         "pyeva",
         "python"
+      ],
+      "related_skills": [
+        "cnn-inference-on-metabolomics-data",
+        "feature-fidelity-prediction",
+        "lc-ms-peak-feature-engineering",
+        "chromatographic-peak-quality-assessment",
+        "neural-network-architecture-design",
+        "mass-spectrometry-peak-classification",
+        "deep-learning-model-inference",
+        "spectrum-feature-vectorization"
       ]
     },
     "nightingale-1h-nmr-data-integration": {
@@ -4117,6 +5647,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mimir"
+      ],
+      "related_skills": [
+        "published-metabolic-profile-implementation",
+        "metabolic-age-prediction-from-nmr-features",
+        "metabolite-score-projection",
+        "metabolomics-model-coefficient-application",
+        "linear-score-calculation-from-coefficients",
+        "r-package-function-integration",
+        "metabolite-dataset-preprocessing",
+        "nmr-spectral-preprocessing-and-phasing"
       ]
     },
     "nmr-chemical-shift-interval-matching": {
@@ -4149,6 +5689,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "hmdb-metabolite-query-and-retrieval",
+        "metabolite-reference-library-filtering",
+        "spectral-roi-boundary-definition",
+        "chemical-shift-reference-matching",
+        "metabolite-peak-assignment-from-nmr",
+        "nmr-peak-prediction-via-database-lookup",
+        "nmr-spectrum-data-import-and-parsing",
+        "metabolomics-database-search-and-formula-matching"
       ]
     },
     "nmr-inadequate-spectra-acquisition-and-preprocessing": {
@@ -4172,6 +5722,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "inadequate-spectral-processing",
+        "inadequate-spectral-interpretation",
+        "nmr-spectrum-peak-detection",
+        "spectral-peak-detection-and-picking",
+        "peak-network-clustering-inadequate",
+        "peak-similarity-assessment",
+        "compound-clustering-from-inadequate-spectra",
+        "spectral-peak-network-grouping"
       ]
     },
     "nmr-metabolite-identity-confirmation": {
@@ -4196,6 +5756,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "chemical-shift-annotation",
+        "nmr-spectral-preprocessing-and-phasing",
+        "spectral-correlation-interpretation",
+        "stocsy-metabolite-assignment",
+        "metabolite-peak-assignment-from-nmr",
+        "fda-repeatability-compliance-assessment",
+        "confounder-adjustment-epidemiological-analysis",
+        "nmr-spectral-comparative-analysis"
       ]
     },
     "nmr-metabolomic-quality-control-reporting": {
@@ -4216,6 +5786,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "pre-analytical-delay-effect-quantification",
+        "metabolite-stability-assessment-across-cohorts",
+        "cohort-stratified-metabolic-performance-analysis",
+        "metabolic-parameter-visualization",
+        "cohort-performance-reporting",
+        "metabolite-dataset-preprocessing",
+        "pre-analytical-delay-stratification",
+        "plasma-serum-sample-comparison"
       ]
     },
     "nmr-modality-ablation-analysis": {
@@ -4244,6 +5824,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "modality-contribution-quantification",
+        "multitask-model-inference",
+        "molecular-structure-prediction-evaluation",
+        "spectral-to-structure-mapping-prediction",
+        "molecular-structure-prediction-from-spectra",
+        "cnn-spectral-feature-extraction",
+        "nmr-spectrum-preprocessing",
+        "nmr-spectra-preprocessing-and-feature-extraction"
       ]
     },
     "nmr-network-visualization-and-interpretation": {
@@ -4269,6 +5859,16 @@
         "conda",
         "madbyte",
         "python"
+      ],
+      "related_skills": [
+        "nmr-spectral-comparative-analysis",
+        "heteronuclear-homonuclear-correlation-extraction",
+        "sample-prioritization-through-structural-clustering",
+        "spectral-visualization-and-result-interpretation",
+        "spectral-graph-interpretation",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "structural-scaffold-feature-identification",
+        "nmr-spectral-data-format-serialization"
       ]
     },
     "nmr-peak-deconvolution": {
@@ -4292,6 +5892,16 @@
         "nmrbox",
         "nmrpipe",
         "sand"
+      ],
+      "related_skills": [
+        "spectral-peak-deconvolution",
+        "nmr-workflow-pipeline-execution",
+        "nmr-spectra-preprocessing",
+        "nmr-peak-table-generation",
+        "nmr-spectrum-phase-adjustment",
+        "metabolomics-data-standardization",
+        "nmr-peak-prediction-via-database-lookup",
+        "nmr-spectral-processing"
       ]
     },
     "nmr-peak-json-serialization": {
@@ -4312,6 +5922,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "json-payload-construction-for-nmr-spectra",
+        "chemical-shift-data-formatting",
+        "api-request-response-handling",
+        "tensorflow-serving-endpoint-integration",
+        "http-post-request-assembly",
+        "restful-api-endpoint-invocation",
+        "model-metadata-schema-inspection",
+        "nmr-spectral-processing"
       ]
     },
     "nmr-peak-prediction-via-database-lookup": {
@@ -4343,6 +5963,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "spectral-peak-data-validation-and-parsing",
+        "nmr-spectral-processing",
+        "metabolite-peak-assignment-from-nmr",
+        "chemical-shift-reference-matching",
+        "nmr-chemical-shift-interval-matching",
+        "peak-table-extraction",
+        "http-api-integration-with-external-services",
+        "nmr-peak-table-generation"
       ]
     },
     "nmr-peak-quality-filtering": {
@@ -4373,6 +6003,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "peak-list-filtering-for-quality-control",
+        "tabular-data-cleaning",
+        "spectral-peak-validation",
+        "nmr-spectrum-data-import-and-parsing",
+        "chemical-shift-reference-matching",
+        "metabolite-peak-assignment-from-nmr",
+        "transformer-model-inference-on-spectral-data",
+        "signal-to-noise-ratio-assessment"
       ]
     },
     "nmr-peak-table-generation": {
@@ -4396,6 +6036,16 @@
         "nmrbox",
         "nmrpipe",
         "sand"
+      ],
+      "related_skills": [
+        "nmr-spectra-preprocessing",
+        "nmr-workflow-pipeline-execution",
+        "spectral-peak-deconvolution",
+        "nmr-peak-deconvolution",
+        "metabolomics-data-standardization",
+        "nmr-spectrum-phase-adjustment",
+        "peak-table-extraction",
+        "metabolite-peak-assignment-from-nmr"
       ]
     },
     "nmr-spectra-deep-learning-encoding": {
@@ -4422,6 +6072,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "nmr-spectral-feature-extraction",
+        "transformer-cnn-hybrid-model-training",
+        "transformer-encoder-architecture-implementation",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "convolutional-neural-network-layer-design",
+        "compound-identification-ranking-evaluation",
+        "transformer-model-inference-on-spectral-data",
+        "hybrid-model-fusion-strategy"
       ]
     },
     "nmr-spectra-preprocessing": {
@@ -4445,6 +6105,16 @@
         "nmrbox",
         "nmrpipe",
         "sand"
+      ],
+      "related_skills": [
+        "nmr-peak-table-generation",
+        "spectral-peak-deconvolution",
+        "nmr-workflow-pipeline-execution",
+        "nmr-peak-deconvolution",
+        "metabolomics-data-standardization",
+        "nmr-spectrum-phase-adjustment",
+        "nmr-spectral-preprocessing-and-phasing",
+        "nmr-spectral-processing"
       ]
     },
     "nmr-spectra-preprocessing-and-feature-extraction": {
@@ -4472,6 +6142,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "nmr-spectrum-preprocessing",
+        "cnn-spectral-feature-extraction",
+        "nmr-spectrum-to-structure-inference",
+        "molecular-structure-prediction-from-spectra",
+        "spectral-to-structure-mapping-prediction",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-connectivity-inference",
+        "graph-based-molecular-representation"
       ]
     },
     "nmr-spectral-comparative-analysis": {
@@ -4497,6 +6177,16 @@
         "conda",
         "madbyte",
         "python"
+      ],
+      "related_skills": [
+        "structural-scaffold-feature-identification",
+        "heteronuclear-homonuclear-correlation-extraction",
+        "sample-prioritization-through-structural-clustering",
+        "nmr-network-visualization-and-interpretation",
+        "nmr-spectrum-reconstruction-from-library",
+        "ms-ms-spectral-library-matching",
+        "structure-similarity-comparison",
+        "mass-spectrum-database-matching"
       ]
     },
     "nmr-spectral-data-format-serialization": {
@@ -4516,7 +6206,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "nmr-spectrum-data-import-and-parsing",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "2d-nmr-pulse-sequence-implementation",
+        "nmr-spin-system-simulation",
+        "nmr-spectral-processing",
+        "nmr-network-visualization-and-interpretation",
+        "metabolite-concentration-to-spectrum-mapping",
+        "nmr-spectral-comparative-analysis"
+      ]
     },
     "nmr-spectral-feature-extraction": {
       "dois": [
@@ -4542,6 +6242,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "nmr-spectra-deep-learning-encoding",
+        "convolutional-neural-network-layer-design",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "transformer-encoder-architecture-implementation",
+        "transformer-cnn-hybrid-model-training",
+        "spectral-feature-extraction",
+        "cnn-spectral-feature-extraction",
+        "transformer-model-inference-on-spectral-data"
       ]
     },
     "nmr-spectral-preprocessing-and-phasing": {
@@ -4568,6 +6278,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "chemical-shift-annotation",
+        "nmr-spectra-preprocessing",
+        "nmr-metabolite-identity-confirmation",
+        "spectral-correlation-interpretation",
+        "nmr-spectrum-phase-adjustment",
+        "confounder-adjustment-epidemiological-analysis",
+        "nmr-workflow-pipeline-execution",
+        "fda-repeatability-compliance-assessment"
       ]
     },
     "nmr-spectral-processing": {
@@ -4599,6 +6319,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "spectral-file-format-parsing",
+        "spectral-image-rendering",
+        "mass-spectrometry-data-processing",
+        "peak-table-extraction",
+        "jcamp-file-parsing",
+        "spectral-peak-data-validation-and-parsing",
+        "nmr-peak-prediction-via-database-lookup",
+        "nmr-spectrum-data-import-and-parsing"
       ]
     },
     "nmr-spectrum-data-import-and-parsing": {
@@ -4630,6 +6360,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "transformer-model-inference-on-spectral-data",
+        "metabolite-peak-assignment-from-nmr",
+        "nmr-peak-quality-filtering",
+        "tabular-data-cleaning",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "peak-list-filtering-for-quality-control",
+        "python-deep-learning-model-loading-and-execution",
+        "nmr-spectral-processing"
       ]
     },
     "nmr-spectrum-normalization": {
@@ -4652,6 +6392,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "nmr-spectrum-reconstruction-from-library",
+        "compound-abundance-quantification-from-flow",
+        "emd-spectral-distance-computation",
+        "mixture-spectrum-comparison",
+        "wasserstein-distance-computation",
+        "minimum-cost-flow-formulation",
+        "spectral-mixture-deconvolution",
+        "optimal-transport-scoring"
       ]
     },
     "nmr-spectrum-object-construction": {
@@ -4674,6 +6424,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "asics"
+      ],
+      "related_skills": [
+        "bruker-nmr-spectral-data-import",
+        "r-package-function-execution",
+        "hierarchical-spectrum-object-construction",
+        "spectra-object-instantiation-and-manipulation",
+        "nmr-spectral-preprocessing-and-phasing",
+        "spectral-data-object-construction",
+        "nmr-spectral-processing",
+        "nmr-spin-system-simulation"
       ]
     },
     "nmr-spectrum-peak-detection": {
@@ -4696,6 +6456,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "spectral-peak-detection-and-picking",
+        "nmr-inadequate-spectra-acquisition-and-preprocessing",
+        "peak-network-clustering-inadequate",
+        "spectral-peak-network-grouping",
+        "peak-similarity-assessment",
+        "inadequate-spectral-interpretation",
+        "chemical-shift-coordinate-extraction",
+        "compound-clustering-from-inadequate-spectra"
       ]
     },
     "nmr-spectrum-phase-adjustment": {
@@ -4719,6 +6489,16 @@
         "nmrbox",
         "nmrpipe",
         "sand"
+      ],
+      "related_skills": [
+        "nmr-spectra-preprocessing",
+        "nmr-peak-deconvolution",
+        "spectral-peak-deconvolution",
+        "nmr-workflow-pipeline-execution",
+        "nmr-peak-table-generation",
+        "nmr-spectral-preprocessing-and-phasing",
+        "metabolomics-data-standardization",
+        "nmrbox-environment-management"
       ]
     },
     "nmr-spectrum-preprocessing": {
@@ -4746,6 +6526,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "cnn-spectral-feature-extraction",
+        "molecular-structure-prediction-from-spectra",
+        "nmr-spectrum-to-structure-inference",
+        "transformer-based-fragment-assembly",
+        "spectral-to-structure-mapping-prediction",
+        "molecular-connectivity-inference",
+        "graph-neural-network-design-for-chemistry"
       ]
     },
     "nmr-spectrum-reconstruction-from-library": {
@@ -4767,6 +6557,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "spectral-mixture-deconvolution",
+        "compound-abundance-quantification-from-flow",
+        "emd-spectral-distance-computation",
+        "mixture-spectrum-comparison",
+        "minimum-cost-flow-formulation",
+        "nmr-spectrum-normalization",
+        "optimal-transport-scoring",
+        "wasserstein-distance-computation"
       ]
     },
     "nmr-spectrum-tiling-format-interpretation": {
@@ -4786,6 +6586,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "dataset-storage-interface-architecture",
+        "nmr-spectral-data-format-serialization",
+        "nv-header-structure-interpretation",
+        "block-layout-analysis-for-io-optimization",
+        "memory-mapped-file-selection-strategy",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "binary-file-format-parsing",
+        "nmr-spectrum-data-import-and-parsing"
       ]
     },
     "nmr-spectrum-to-structure-inference": {
@@ -4813,6 +6623,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-prediction-from-spectra",
+        "molecular-connectivity-inference",
+        "spectral-to-structure-mapping-prediction",
+        "graph-based-molecular-representation",
+        "fragment-assembly-transformer-architecture",
+        "graph-neural-network-design-for-chemistry",
+        "molecular-formula-prediction",
+        "nmr-spectra-preprocessing-and-feature-extraction"
       ]
     },
     "nmr-spin-system-simulation": {
@@ -4830,7 +6650,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "metabolite-concentration-to-spectrum-mapping",
+        "2d-nmr-pulse-sequence-implementation",
+        "j-coupling-multiplet-generation",
+        "lineshape-convolution-and-broadening",
+        "nmr-spectral-data-format-serialization",
+        "nmr-spectrum-object-construction",
+        "nmr-metabolite-identity-confirmation",
+        "nmr-spectral-preprocessing-and-phasing"
+      ]
     },
     "nmr-workflow-pipeline-execution": {
       "dois": [
@@ -4853,6 +6683,16 @@
         "nmrbox",
         "nmrpipe",
         "sand"
+      ],
+      "related_skills": [
+        "nmr-spectra-preprocessing",
+        "nmr-peak-deconvolution",
+        "nmr-peak-table-generation",
+        "spectral-peak-deconvolution",
+        "metabolomics-data-standardization",
+        "nmr-spectrum-phase-adjustment",
+        "nmr-spectral-processing",
+        "nmr-spectral-preprocessing-and-phasing"
       ]
     },
     "nmrbox-environment-management": {
@@ -4878,6 +6718,16 @@
         "nmrbox",
         "nmrpipe",
         "sand"
+      ],
+      "related_skills": [
+        "nmr-spectra-preprocessing",
+        "nmr-peak-deconvolution",
+        "nmr-workflow-pipeline-execution",
+        "nmr-spectrum-phase-adjustment",
+        "spectral-peak-deconvolution",
+        "nmr-peak-table-generation",
+        "metabolomics-data-standardization",
+        "environment-dependency-management"
       ]
     },
     "nv-header-structure-interpretation": {
@@ -4897,6 +6747,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "nmrfx"
+      ],
+      "related_skills": [
+        "metadata-extraction-from-fixed-offset-records",
+        "file-integrity-validation",
+        "binary-file-format-parsing",
+        "endianness-detection-and-handling",
+        "raw-file-header-extraction",
+        "nmr-spectrum-tiling-format-interpretation",
+        "dataset-storage-interface-architecture",
+        "nmr-peak-deconvolution"
       ]
     },
     "optimal-transport-scoring": {
@@ -4920,6 +6780,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "mixture-spectrum-comparison",
+        "wasserstein-distance-computation",
+        "emd-spectral-distance-computation",
+        "minimum-cost-flow-formulation",
+        "nmr-spectrum-reconstruction-from-library",
+        "compound-abundance-quantification-from-flow",
+        "spectral-mixture-deconvolution",
+        "nmr-spectrum-normalization"
       ]
     },
     "pathway-ranking-and-prioritization": {
@@ -4953,6 +6823,16 @@
         "pals-pathway-activity-level-scoring",
         "pals-viewer",
         "plage-method-within-pals"
+      ],
+      "related_skills": [
+        "pathway-level-activity-scoring",
+        "pathway-activity-decomposition-via-plage",
+        "pathway-database-integration",
+        "pathway-score-aggregation",
+        "metabolite-set-analysis",
+        "pathway-rank-stability-assessment",
+        "non-pathway-metabolite-classification",
+        "pathway-activity-decomposition-via-svd"
       ]
     },
     "peak-list-filtering-for-quality-control": {
@@ -4984,6 +6864,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "nmr-peak-quality-filtering",
+        "tabular-data-cleaning",
+        "nmr-spectrum-data-import-and-parsing",
+        "spectral-peak-validation",
+        "metabolite-peak-assignment-from-nmr",
+        "transformer-model-inference-on-spectral-data",
+        "chemical-shift-reference-matching",
+        "peak-list-filtering-and-cleaning"
       ]
     },
     "peak-network-clustering-inadequate": {
@@ -5008,6 +6898,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "inadequate-spectral-interpretation",
+        "peak-similarity-assessment",
+        "compound-clustering-from-inadequate-spectra",
+        "spectral-peak-detection-and-picking",
+        "spectral-peak-network-grouping",
+        "nmr-spectrum-peak-detection",
+        "metabolite-database-matching",
+        "nmr-inadequate-spectra-acquisition-and-preprocessing"
       ]
     },
     "peak-network-to-metabolite-assignment": {
@@ -5030,6 +6930,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "peak-similarity-assessment",
+        "spectral-peak-network-grouping",
+        "metabolite-database-matching",
+        "inadequate-spectral-interpretation",
+        "peak-network-clustering-inadequate",
+        "compound-clustering-from-inadequate-spectra",
+        "spectral-visualization-and-result-interpretation",
+        "compound-peak-association-inference"
       ]
     },
     "peak-similarity-assessment": {
@@ -5052,6 +6962,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "spectral-peak-network-grouping",
+        "peak-network-to-metabolite-assignment",
+        "compound-peak-association-inference",
+        "peak-network-clustering-inadequate",
+        "inadequate-spectral-interpretation",
+        "spectral-similarity-metric-computation",
+        "compound-clustering-from-inadequate-spectra",
+        "spectral-peak-detection-and-picking"
       ]
     },
     "peak-table-extraction": {
@@ -5083,6 +7003,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "nmr-spectral-processing",
+        "spectral-file-format-parsing",
+        "spectral-image-rendering",
+        "mass-spectrometry-data-processing",
+        "jcamp-file-parsing",
+        "spectral-data-table-conversion",
+        "spectral-peak-data-validation-and-parsing",
+        "nmr-peak-table-generation"
       ]
     },
     "peaklist-metabolite-assignment-prioritization": {
@@ -5106,6 +7036,16 @@
       "tools_used": [
         "idsl-ipa",
         "idsl-ufa"
+      ],
+      "related_skills": [
+        "molecular-formula-isotopic-profile-matching",
+        "ms1-spectral-annotation-chemical-space",
+        "mass-accuracy-tolerance-filtering",
+        "metabolomic-peak-quality-assessment",
+        "metabolomics-data-preprocessing",
+        "metabolite-signal-extraction-from-lc-hrms",
+        "lc-hrms-data-processing-evaluation",
+        "chromatographic-peak-processing"
       ]
     },
     "per-browser-developer-setting-navigation": {
@@ -5133,6 +7073,16 @@
         "safari",
         "webassembly",
         "webworker"
+      ],
+      "related_skills": [
+        "browser-security-policy-configuration",
+        "webassembly-local-loading-setup",
+        "webworker-file-access-enabling",
+        "cross-origin-policy-override",
+        "standalone-web-application-deployment",
+        "html-bundle-rendering-in-browser",
+        "metfrag-settings-injection",
+        "interactive-application-accessibility-testing"
       ]
     },
     "performance-degradation-quantification-and-analysis": {
@@ -5160,6 +7110,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-prediction-out-of-distribution",
+        "model-generalization-assessment-across-molecular-size-regimes",
+        "chemical-graph-connectivity-validation",
+        "molecular-structure-prediction-evaluation",
+        "accuracy-metric-computation",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "structure-similarity-evaluation",
+        "graph-neural-network-design-for-chemistry"
       ]
     },
     "pfas-characteristic-mass-difference-detection": {
@@ -5189,6 +7149,16 @@
         "openms",
         "pyopenms",
         "python"
+      ],
+      "related_skills": [
+        "pfas-characteristic-fragment-identification",
+        "mass-difference-calculation-and-matching",
+        "ms2-diagnostic-fragment-matching",
+        "precursor-product-mass-pairing",
+        "mass-spectral-peak-annotation",
+        "ms2-fragment-pattern-recognition",
+        "high-resolution-mass-spectrometry-interpretation",
+        "pfas-homologous-series-detection"
       ]
     },
     "plasma-serum-sample-comparison": {
@@ -5208,6 +7178,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "pre-analytical-delay-stratification",
+        "cohort-performance-reporting",
+        "metabolite-dataset-preprocessing",
+        "metabolic-parameter-visualization",
+        "metabolite-stability-assessment-across-cohorts",
+        "blood-sample-processing-parameter-extraction",
+        "cohort-stratified-metabolic-performance-analysis",
+        "nmr-metabolomic-quality-control-reporting"
       ]
     },
     "pre-analytical-delay-effect-quantification": {
@@ -5228,6 +7208,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "pre-analytical-delay-stratification",
+        "nmr-metabolomic-quality-control-reporting",
+        "cohort-stratified-metabolic-performance-analysis",
+        "metabolite-dataset-preprocessing",
+        "metabolic-parameter-visualization",
+        "metabolite-stability-assessment-across-cohorts",
+        "cohort-performance-reporting",
+        "interactive-data-exploration-design"
       ]
     },
     "pre-analytical-delay-stratification": {
@@ -5247,6 +7237,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "prima-panel"
+      ],
+      "related_skills": [
+        "pre-analytical-delay-effect-quantification",
+        "metabolite-dataset-preprocessing",
+        "cohort-performance-reporting",
+        "cohort-stratified-metabolic-performance-analysis",
+        "metabolic-parameter-visualization",
+        "plasma-serum-sample-comparison",
+        "metabolite-stability-assessment-across-cohorts",
+        "nmr-metabolomic-quality-control-reporting"
       ]
     },
     "published-metabolic-profile-implementation": {
@@ -5269,6 +7269,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mimir"
+      ],
+      "related_skills": [
+        "metabolite-score-projection",
+        "metabolomics-model-coefficient-application",
+        "metabolic-age-prediction-from-nmr-features",
+        "nightingale-1h-nmr-data-integration",
+        "linear-score-calculation-from-coefficients",
+        "r-package-function-integration",
+        "cohort-stratified-metabolic-performance-analysis",
+        "cohort-performance-reporting"
       ]
     },
     "python-deep-learning-model-loading-and-execution": {
@@ -5301,6 +7311,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "nmr-spectrum-data-import-and-parsing",
+        "pytorch-model-loading-and-forward-pass",
+        "pretrained-model-weight-loading",
+        "transformer-model-inference-on-spectral-data",
+        "pytorch-distributed-training-execution",
+        "model-weight-loading-and-deployment",
+        "pytorch-inference-execution",
+        "nmr-spectra-deep-learning-encoding"
       ]
     },
     "python-environment-setup": {
@@ -5333,6 +7353,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "virtual-environment-configuration",
+        "entrypoint-verification",
+        "repository-cloning-and-initialization",
+        "python-package-environment-setup",
+        "python-environment-setup-and-reproducibility",
+        "python-environment-dependency-resolution",
+        "development-environment-setup",
+        "software-dependency-management-and-environment-setup"
       ]
     },
     "pytorch-module-composition": {
@@ -5360,6 +7390,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "transformer-encoder-architecture-implementation",
+        "convolutional-neural-network-layer-design",
+        "transformer-cnn-hybrid-model-training",
+        "hybrid-model-fusion-strategy",
+        "nmr-spectral-feature-extraction",
+        "nmr-spectra-deep-learning-encoding",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "fusion-pooling-strategy-implementation"
       ]
     },
     "qc-coefficient-of-variation-calculation": {
@@ -5383,6 +7423,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "coefficient-of-variation-threshold-analysis",
+        "coefficient-of-variation-computation",
+        "quality-metrics-summarization",
+        "coefficient-of-variation-comparison",
+        "metabolite-cv-ratio-calculation",
+        "metabolite-feature-quality-control",
+        "fda-repeatability-compliance-assessment",
+        "summarized-experiment-subsetting"
       ]
     },
     "quality-metrics-summarization": {
@@ -5405,6 +7455,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "coefficient-of-variation-threshold-analysis",
+        "metabolite-feature-quality-control",
+        "fda-repeatability-compliance-assessment",
+        "cumulative-distribution-visualization",
+        "qc-coefficient-of-variation-calculation",
+        "summarized-experiment-subsetting",
+        "metabolomics-quality-metric-interpretation",
+        "qc-sample-reliability-evaluation"
       ]
     },
     "r-package-function-execution": {
@@ -5427,6 +7487,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "asics"
+      ],
+      "related_skills": [
+        "bruker-nmr-spectral-data-import",
+        "nmr-spectrum-object-construction",
+        "nmr-spectral-preprocessing-and-phasing",
+        "nmr-workflow-pipeline-execution",
+        "r-workflow-scripting-for-analytical-chemistry",
+        "xcms-object-handling-and-preprocessing",
+        "r-internal-function-invocation",
+        "nmr-spectral-processing"
       ]
     },
     "r-package-function-integration": {
@@ -5450,6 +7520,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mimir"
+      ],
+      "related_skills": [
+        "metabolomics-model-coefficient-application",
+        "published-metabolic-profile-implementation",
+        "metabolic-age-prediction-from-nmr-features",
+        "metabolite-score-projection",
+        "nightingale-1h-nmr-data-integration",
+        "r-package-integration",
+        "linear-score-calculation-from-coefficients",
+        "linear-regression-model-fitting"
       ]
     },
     "record-grouping-and-collation": {
@@ -5479,6 +7559,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "record-field-transformation-and-collation",
+        "matrix-directive-collation-validation",
+        "dictionary-list-aggregation",
+        "tabular-record-filtering-and-sorting",
+        "array-of-objects-construction",
+        "record-sorting-by-multiple-fields",
+        "string-concatenation-with-delimiters",
+        "multi-key-sorting-and-filtering"
       ]
     },
     "replicate-consistency-assessment": {
@@ -5503,6 +7593,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "metabolite-feature-quality-control",
+        "summarized-experiment-subsetting",
+        "summarized-experiment-object-handling",
+        "fda-repeatability-compliance-assessment",
+        "coefficient-of-variation-computation",
+        "metabolite-phenotype-association-partial-correlation",
+        "multiple-testing-correction-metabolomics",
+        "quality-metrics-summarization"
       ]
     },
     "repository-cloning-and-initialization": {
@@ -5534,6 +7634,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "entrypoint-verification",
+        "python-environment-setup",
+        "dependency-version-management",
+        "virtual-environment-configuration",
+        "repository-cloning-and-setup",
+        "git-repository-cloning",
+        "hmdb-metabolite-query-and-retrieval",
+        "repository-cloning-and-structure-navigation"
       ]
     },
     "repository-cloning-and-setup": {
@@ -5556,6 +7666,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "docker"
+      ],
+      "related_skills": [
+        "docker-environment-configuration",
+        "container-image-build-and-deployment",
+        "tool-initialization-verification",
+        "docker-image-deployment",
+        "git-repository-cloning-and-version-control",
+        "repository-environment-setup",
+        "docker-container-deployment",
+        "repository-cloning-and-structure-navigation"
       ]
     },
     "restful-api-endpoint-invocation": {
@@ -5577,6 +7697,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "api-request-response-handling",
+        "http-post-request-assembly",
+        "tensorflow-serving-endpoint-integration",
+        "nmr-peak-json-serialization",
+        "chemical-shift-data-formatting",
+        "json-payload-construction-for-nmr-spectra",
+        "api-response-parsing-and-validation",
+        "model-metadata-schema-inspection"
       ]
     },
     "sample-prioritization-through-structural-clustering": {
@@ -5602,6 +7732,16 @@
         "conda",
         "madbyte",
         "python"
+      ],
+      "related_skills": [
+        "structural-scaffold-feature-identification",
+        "nmr-spectral-comparative-analysis",
+        "heteronuclear-homonuclear-correlation-extraction",
+        "nmr-network-visualization-and-interpretation",
+        "structural-clustering-validation-in-chemical-space",
+        "molecular-network-clustering-and-analysis",
+        "inchikey-structural-similarity-computation",
+        "structural-cluster-network-construction"
       ]
     },
     "signal-to-noise-ratio-assessment": {
@@ -5632,6 +7772,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "nmr-peak-quality-filtering",
+        "signal-to-noise-ratio-calculation-peaks",
+        "signal-to-noise-ratio-computation",
+        "spectral-quality-filtering-signal-to-noise",
+        "tabular-data-cleaning",
+        "metabolite-peak-assignment-from-nmr",
+        "snr-based-signal-validation",
+        "spectral-peak-validation"
       ]
     },
     "small-molecule-structure-matching": {
@@ -5651,6 +7801,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "biotransformer"
+      ],
+      "related_skills": [
+        "metabolite-structure-prediction",
+        "metabolite-identification-from-transformation-rules",
+        "candidate-metabolite-ranking",
+        "metabolite-identifier-annotation",
+        "metabolite-structure-generation",
+        "small-molecule-structure-input-preparation",
+        "cheminformatics-substructure-matching-and-reaction-templates",
+        "chemical-database-querying-and-retrieval"
       ]
     },
     "smiles-structure-annotation": {
@@ -5682,6 +7842,16 @@
         "python-3-7",
         "torch",
         "torch-1-7-1"
+      ],
+      "related_skills": [
+        "structure-prediction-from-spectra",
+        "molecular-structure-generation-evaluation",
+        "unknown-chemical-identification-in-complex-mixtures",
+        "spectral-molecular-embedding-alignment",
+        "smiles-string-validation",
+        "training-dataset-assembly",
+        "chemical-structure-format-verification",
+        "smiles-structure-annotation-from-molfiles"
       ]
     },
     "spatial-overlap-analysis-imaging": {
@@ -5707,6 +7877,16 @@
         "rmsi",
         "rmsicleanup",
         "rmsiproc"
+      ],
+      "related_skills": [
+        "overlapping-ion-detection",
+        "overlapping-peak-detection-interpretation",
+        "isobaric-ion-detection-msi",
+        "msi-peak-annotation",
+        "candidate-peak-filtering-annotation",
+        "matrix-ion-spatial-distribution-visualization",
+        "mass-spectrometry-imaging-data-processing",
+        "peak-collision-flagging"
       ]
     },
     "spearman-correlation-computation": {
@@ -5730,6 +7910,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "metabolite-phenotype-association-partial-correlation",
+        "multiple-testing-correction-metabolomics",
+        "confounder-adjustment-epidemiological-analysis",
+        "spectral-correlation-interpretation",
+        "coefficient-of-variation-computation",
+        "metabolite-feature-quality-control",
+        "summarized-experiment-object-handling",
+        "fda-repeatability-compliance-assessment"
       ]
     },
     "spectra-to-structure-elucidation": {
@@ -5752,6 +7942,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "diffspectra"
+      ],
+      "related_skills": [
+        "diffusion-model-inference",
+        "spectroscopic-data-preprocessing",
+        "molecular-structure-decoding",
+        "mass-spectrum-structure-elucidation",
+        "structure-ranking-from-spectral-data",
+        "structural-similarity-scoring-metabolites",
+        "structure-similarity-comparison",
+        "compound-class-prediction-from-spectra"
       ]
     },
     "spectral-connectivity-filtering": {
@@ -5774,6 +7974,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "compound-clustering-from-inadequate-spectra",
+        "spectral-peak-network-grouping",
+        "peak-network-clustering-inadequate",
+        "spectral-peak-detection-and-picking",
+        "peak-similarity-assessment",
+        "inadequate-spectral-interpretation",
+        "compound-peak-association-inference",
+        "peak-network-to-metabolite-assignment"
       ]
     },
     "spectral-correlation-interpretation": {
@@ -5799,6 +8009,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "stocsy-metabolite-assignment",
+        "chemical-shift-annotation",
+        "nmr-metabolite-identity-confirmation",
+        "spearman-correlation-computation",
+        "nmr-spectral-preprocessing-and-phasing",
+        "metabolite-phenotype-association-partial-correlation",
+        "fda-repeatability-compliance-assessment",
+        "confounder-adjustment-epidemiological-analysis"
       ]
     },
     "spectral-data-format-parsing-nmr-hsqc-cosy-ir": {
@@ -5831,6 +8051,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "multimodal-tensor-construction-and-validation",
+        "multimodal-spectral-alignment-by-molecular-identifier",
+        "spectral-modality-preprocessing",
+        "spectral-intensity-normalization-across-modalities",
+        "multi-modal-spectroscopic-data-integration",
+        "spectral-quality-filtering-signal-to-noise",
+        "data-pipeline-module-design-and-integration",
+        "nmr-spectrum-data-import-and-parsing"
       ]
     },
     "spectral-database-matching": {
@@ -5866,6 +8096,16 @@
         "rdkit",
         "sirius",
         "spectra"
+      ],
+      "related_skills": [
+        "ms2-dereplication",
+        "spectral-library-matching",
+        "compound-database-matching",
+        "spectral-library-matching-gnps",
+        "mass-spectrometry-database-search",
+        "ms-ms-spectral-library-matching",
+        "spectrum-similarity-scoring",
+        "metabolite-spectral-matching"
       ]
     },
     "spectral-feature-engineering": {
@@ -5887,6 +8127,16 @@
       "tools_used": [
         "chemprop",
         "chemprop-ir"
+      ],
+      "related_skills": [
+        "spectral-feature-extraction-and-integration",
+        "molecular-property-prediction-feature-construction",
+        "infrared-spectral-prediction-task-design",
+        "spectral-features-module-integration",
+        "molecular-graph-feature-representation",
+        "message-passing-neural-network-implementation",
+        "molecular-graph-representation-parsing",
+        "neural-network-architecture-extension"
       ]
     },
     "spectral-file-format-parsing": {
@@ -5918,6 +8168,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "nmr-spectral-processing",
+        "jcamp-file-parsing",
+        "spectral-image-rendering",
+        "peak-table-extraction",
+        "spectral-peak-data-validation-and-parsing",
+        "mass-spectrometry-data-processing",
+        "file-api-endpoint-implementation",
+        "file-compression-and-archiving"
       ]
     },
     "spectral-graph-interpretation": {
@@ -5945,6 +8205,16 @@
         "mzmine2",
         "openms",
         "optimus"
+      ],
+      "related_skills": [
+        "feature-based-molecular-network-interpretation",
+        "spectral-similarity-network-generation",
+        "ms-ms-feature-preparation-for-gnps",
+        "molecular-networking-parameter-configuration",
+        "network-graph-manipulation-python",
+        "bioassay-activity-data-integration",
+        "mass-spectrometry-feature-mapping",
+        "gnps-molecular-network-integration"
       ]
     },
     "spectral-image-rendering": {
@@ -5974,6 +8244,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "nmr-spectral-processing",
+        "spectral-file-format-parsing",
+        "peak-table-extraction",
+        "jcamp-file-parsing",
+        "http-api-endpoint-design",
+        "spectral-peak-data-validation-and-parsing",
+        "mass-spectrometry-data-processing",
+        "file-compression-and-archiving"
       ]
     },
     "spectral-intensity-normalization-across-modalities": {
@@ -6001,6 +8281,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "multimodal-spectral-alignment-by-molecular-identifier",
+        "spectral-modality-preprocessing",
+        "multimodal-tensor-construction-and-validation",
+        "multi-modal-spectroscopic-data-integration",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "data-pipeline-module-design-and-integration",
+        "spectral-quality-filtering-signal-to-noise",
+        "transformer-architecture-inference"
       ]
     },
     "spectral-intensity-thresholding": {
@@ -6023,6 +8313,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "nmr-spectrum-peak-detection",
+        "spectral-peak-detection-and-picking",
+        "nmr-inadequate-spectra-acquisition-and-preprocessing",
+        "inadequate-spectral-processing",
+        "inadequate-spectral-interpretation",
+        "spectral-connectivity-filtering",
+        "spectral-peak-network-grouping",
+        "compound-clustering-from-inadequate-spectra"
       ]
     },
     "spectral-library-matching-gnps": {
@@ -6053,6 +8353,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "spectral-library-annotation-interpretation",
+        "metabolite-detection-matrix-construction",
+        "ms2-annotation-interpretation",
+        "spectral-library-matching",
+        "multivariate-ordination-interpretation",
+        "spectral-library-molecular-networking",
+        "spectral-database-matching",
+        "open-format-mass-spectrometry-file-handling"
       ]
     },
     "spectral-mixture-deconvolution": {
@@ -6074,6 +8384,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "nmr-spectrum-reconstruction-from-library",
+        "emd-spectral-distance-computation",
+        "compound-abundance-quantification-from-flow",
+        "mixture-spectrum-comparison",
+        "minimum-cost-flow-formulation",
+        "wasserstein-distance-computation",
+        "optimal-transport-scoring",
+        "nmr-spectrum-normalization"
       ]
     },
     "spectral-modality-preprocessing": {
@@ -6106,6 +8426,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "spectral-intensity-normalization-across-modalities",
+        "multimodal-tensor-construction-and-validation",
+        "transformer-architecture-inference",
+        "multi-modal-spectroscopic-data-integration",
+        "multimodal-spectral-alignment-by-molecular-identifier",
+        "data-pipeline-module-design-and-integration",
+        "spectral-quality-filtering-signal-to-noise"
       ]
     },
     "spectral-overview-representation-generation": {
@@ -6134,6 +8464,16 @@
         "jupyter-notebooks",
         "ms2deepscore",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-coordinate-system-construction",
+        "spectral-similarity-distance-metric-selection",
+        "tsne-embedding-dimensionality-reduction",
+        "lc-ms-spectral-data-import",
+        "mass-spectrometry-spectral-embedding-learning",
+        "spectral-similarity-score-computation",
+        "spectral-embedding-generation",
+        "classification-metric-visualization"
       ]
     },
     "spectral-peak-data-validation-and-parsing": {
@@ -6164,6 +8504,16 @@
         "gunicorn",
         "proteowizard-pwiz-skyline",
         "python-3"
+      ],
+      "related_skills": [
+        "form-encoded-request-handling",
+        "spectral-file-format-parsing",
+        "nmr-spectral-processing",
+        "nmr-peak-prediction-via-database-lookup",
+        "spectral-image-rendering",
+        "http-api-integration-with-external-services",
+        "peak-table-extraction",
+        "jcamp-file-parsing"
       ]
     },
     "spectral-peak-deconvolution": {
@@ -6187,6 +8537,16 @@
         "nmrbox",
         "nmrpipe",
         "sand"
+      ],
+      "related_skills": [
+        "nmr-peak-deconvolution",
+        "nmr-spectra-preprocessing",
+        "nmr-peak-table-generation",
+        "nmr-workflow-pipeline-execution",
+        "nmr-spectrum-phase-adjustment",
+        "metabolomics-data-standardization",
+        "spectral-peak-detection-and-picking",
+        "mass-spectrometry-feature-deconvolution"
       ]
     },
     "spectral-peak-detection-and-picking": {
@@ -6210,6 +8570,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "nmr-spectrum-peak-detection",
+        "spectral-peak-network-grouping",
+        "peak-network-clustering-inadequate",
+        "compound-clustering-from-inadequate-spectra",
+        "peak-similarity-assessment",
+        "nmr-inadequate-spectra-acquisition-and-preprocessing",
+        "inadequate-spectral-interpretation",
+        "chemical-shift-coordinate-extraction"
       ]
     },
     "spectral-peak-network-grouping": {
@@ -6232,6 +8602,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "peak-similarity-assessment",
+        "spectral-peak-detection-and-picking",
+        "peak-network-to-metabolite-assignment",
+        "compound-clustering-from-inadequate-spectra",
+        "peak-network-clustering-inadequate",
+        "compound-peak-association-inference",
+        "nmr-spectrum-peak-detection",
+        "inadequate-spectral-interpretation"
       ]
     },
     "spectral-peak-validation": {
@@ -6262,6 +8642,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "nmr-peak-quality-filtering",
+        "peak-list-filtering-for-quality-control",
+        "transformer-model-inference-on-spectral-data",
+        "tabular-data-cleaning",
+        "metabolite-peak-assignment-from-nmr",
+        "chemical-shift-reference-matching",
+        "spectral-peak-data-validation-and-parsing",
+        "nmr-spectrum-data-import-and-parsing"
       ]
     },
     "spectral-quality-filtering-signal-to-noise": {
@@ -6289,6 +8679,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "spectral-intensity-normalization-across-modalities",
+        "multimodal-spectral-alignment-by-molecular-identifier",
+        "multimodal-tensor-construction-and-validation",
+        "data-pipeline-module-design-and-integration",
+        "spectral-modality-preprocessing",
+        "nmr-peak-quality-filtering",
+        "tabular-data-cleaning"
       ]
     },
     "spectral-query-formulation": {
@@ -6312,6 +8712,16 @@
       "tools_used": [
         "gnps",
         "masst"
+      ],
+      "related_skills": [
+        "spectral-database-query-execution",
+        "mass-spectrometry-database-search",
+        "large-scale-data-retrieval",
+        "metabolite-spectral-matching",
+        "mass-spectral-query-submission",
+        "spectral-database-matching",
+        "mass-spectrometry-query-formulation",
+        "spectrum-data-formatting"
       ]
     },
     "spectral-roi-boundary-definition": {
@@ -6345,6 +8755,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "hmdb-metabolite-query-and-retrieval",
+        "metabolite-reference-library-filtering",
+        "nmr-chemical-shift-interval-matching",
+        "roi-detection-mass-spectrometry",
+        "lc-ms-roi-annotation-interpretation",
+        "matlab-scientific-computing",
+        "metabolite-peak-assignment-from-nmr",
+        "accurate-mass-metabolite-search-against-hmdb"
       ]
     },
     "spectral-similarity-matching-and-comparison": {
@@ -6388,6 +8808,16 @@
         "spectra",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "spectral-similarity-scoring-and-reference-matching",
+        "spectral-similarity-scoring",
+        "spectral-similarity-matching-algorithms",
+        "chromatographic-peak-shape-comparison",
+        "spectral-similarity-matrix-computation",
+        "ms2-spectrum-extraction-and-consensus-building",
+        "spectral-similarity-ranking",
+        "spectral-similarity-score-computation"
       ]
     },
     "spectral-similarity-scoring-parent-tp": {
@@ -6417,6 +8847,16 @@
         "patroon",
         "pubchem",
         "sirius"
+      ],
+      "related_skills": [
+        "annotation-candidate-ranking-tp-score",
+        "component-candidate-prioritization-filtering",
+        "transformation-product-parent-linkage",
+        "fragment-neutral-loss-annotation-matching",
+        "spectral-similarity-scoring",
+        "mass-spectrometry-compound-annotation-database-generation",
+        "fragmentation-pattern-similarity-scoring",
+        "retention-time-correlation-similarity-scoring"
       ]
     },
     "spectral-to-structure-mapping-prediction": {
@@ -6444,6 +8884,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-prediction-from-spectra",
+        "nmr-spectrum-to-structure-inference",
+        "molecular-formula-prediction",
+        "molecular-connectivity-inference",
+        "graph-neural-network-design-for-chemistry",
+        "graph-based-molecular-representation",
+        "cnn-spectral-feature-extraction",
+        "nmr-spectra-preprocessing-and-feature-extraction"
       ]
     },
     "spectral-visualization-and-result-interpretation": {
@@ -6466,6 +8916,16 @@
       "tools_used": [
         "pyineta",
         "python"
+      ],
+      "related_skills": [
+        "spectral-peak-network-grouping",
+        "inadequate-spectral-interpretation",
+        "peak-similarity-assessment",
+        "peak-network-to-metabolite-assignment",
+        "spectral-similarity-metric-computation",
+        "spectral-peak-detection-and-picking",
+        "spectral-connectivity-filtering",
+        "metabolite-database-matching"
       ]
     },
     "spectroscopic-data-preprocessing": {
@@ -6486,6 +8946,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "diffspectra"
+      ],
+      "related_skills": [
+        "diffusion-model-inference",
+        "spectra-to-structure-elucidation",
+        "multi-modal-spectroscopic-data-integration",
+        "mass-spectrometry-spectral-preprocessing",
+        "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
+        "spectral-data-preprocessing",
+        "nmr-spectral-processing",
+        "spectral-modality-preprocessing"
       ]
     },
     "stocsy-metabolite-assignment": {
@@ -6511,6 +8981,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "spectral-correlation-interpretation",
+        "chemical-shift-annotation",
+        "nmr-metabolite-identity-confirmation",
+        "metabolite-phenotype-association-partial-correlation",
+        "confounder-adjustment-epidemiological-analysis",
+        "nmr-spectral-preprocessing-and-phasing",
+        "fda-repeatability-compliance-assessment",
+        "spearman-correlation-computation"
       ]
     },
     "structural-scaffold-feature-identification": {
@@ -6536,6 +9016,16 @@
         "conda",
         "madbyte",
         "python"
+      ],
+      "related_skills": [
+        "nmr-spectral-comparative-analysis",
+        "sample-prioritization-through-structural-clustering",
+        "heteronuclear-homonuclear-correlation-extraction",
+        "scaffold-extraction-from-molecular-structures",
+        "nmr-network-visualization-and-interpretation",
+        "metabolite-structural-annotation-integration",
+        "mass-spectrometry-structural-annotation",
+        "inchikey-structural-similarity-computation"
       ]
     },
     "structural-similarity-scoring-metabolites": {
@@ -6556,7 +9046,17 @@
       ],
       "license_tier": "open",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "spectral-similarity-prediction-deep-learning",
+        "similarity-score-sorting",
+        "metabolite-similarity-scoring",
+        "structural-similarity-scoring",
+        "chemical-similarity-metric-aggregation",
+        "compound-structural-similarity-retrieval",
+        "neural-network-architecture-design-spectra",
+        "chemical-space-similarity-computation"
+      ]
     },
     "structure-prediction-from-spectra": {
       "dois": [
@@ -6588,6 +9088,16 @@
         "python-3-7",
         "torch",
         "torch-1-7-1"
+      ],
+      "related_skills": [
+        "molecular-structure-generation-evaluation",
+        "unknown-chemical-identification-in-complex-mixtures",
+        "neural-network-model-inference",
+        "mass-spectrometry-spectrum-preprocessing",
+        "mass-spectrum-prediction-modeling",
+        "structure-prediction-from-mass-spectra",
+        "smiles-structure-annotation",
+        "model-weight-loading-and-deployment"
       ]
     },
     "structure-similarity-comparison": {
@@ -6613,6 +9123,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "molecular-structure-prediction-validation",
+        "structural-similarity-scoring",
+        "molecular-similarity-calculation",
+        "multi-modal-spectroscopic-data-integration",
+        "structure-similarity-evaluation",
+        "structural-similarity-calculation-fingerprint-based",
+        "contrastive-learning-for-cross-modal-retrieval",
+        "transformer-architecture-inference"
       ]
     },
     "structure-similarity-evaluation": {
@@ -6640,6 +9160,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "molecular-structure-prediction-evaluation",
+        "molecular-structure-prediction-from-spectra",
+        "spectral-to-structure-mapping-prediction",
+        "accuracy-metric-computation",
+        "graph-neural-network-design-for-chemistry",
+        "nmr-spectrum-to-structure-inference",
+        "graph-based-molecular-representation"
       ]
     },
     "structured-report-generation": {
@@ -6670,6 +9200,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "json-schema-validation",
+        "structured-data-serialization",
+        "validation-error-categorization",
+        "metabolite-metadata-column-matching",
+        "mwtab-to-json-conversion",
+        "mwtab-file-parsing",
+        "tabular-data-transformation-with-pandas",
+        "column-name-variant-matching"
       ]
     },
     "summarized-experiment-object-handling": {
@@ -6693,6 +9233,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "summarized-experiment-subsetting",
+        "metabolite-phenotype-association-partial-correlation",
+        "summarized-experiment-data-structure-handling",
+        "metabolomics-experiment-object-handling",
+        "metabolite-feature-quality-control",
+        "multiple-testing-correction-metabolomics",
+        "summarized-experiment-object-manipulation",
+        "r-bioconductor-summarizedexperiment-manipulation"
       ]
     },
     "summarized-experiment-subsetting": {
@@ -6716,6 +9266,16 @@
         "bioconductor",
         "mwastools",
         "statistical-total-correlation-spectroscopy-stocsy"
+      ],
+      "related_skills": [
+        "metabolite-feature-quality-control",
+        "summarized-experiment-object-handling",
+        "coefficient-of-variation-computation",
+        "quality-metrics-summarization",
+        "replicate-consistency-assessment",
+        "r-bioconductor-summarizedexperiment-manipulation",
+        "coefficient-of-variation-threshold-analysis",
+        "quality-control-metric-threshold-configuration"
       ]
     },
     "tabular-data-cleaning": {
@@ -6746,6 +9306,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "nmr-peak-quality-filtering",
+        "peak-list-filtering-for-quality-control",
+        "nmr-spectrum-data-import-and-parsing",
+        "spectral-peak-validation",
+        "chemical-shift-reference-matching",
+        "metabolite-peak-assignment-from-nmr",
+        "spectral-quality-filtering-signal-to-noise",
+        "transformer-model-inference-on-spectral-data"
       ]
     },
     "tabular-data-transformation-with-pandas": {
@@ -6775,6 +9345,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "mwtab-to-json-conversion",
+        "mwtab-file-parsing",
+        "structured-data-serialization",
+        "metabolomics-file-format-parsing",
+        "json-data-structure-transformation",
+        "column-name-variant-matching",
+        "json-table-to-matrix-conversion",
+        "array-of-objects-construction"
       ]
     },
     "tensorflow-serving-endpoint-integration": {
@@ -6795,6 +9375,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "tensorflow-serving"
+      ],
+      "related_skills": [
+        "api-request-response-handling",
+        "restful-api-endpoint-invocation",
+        "nmr-peak-json-serialization",
+        "http-post-request-assembly",
+        "chemical-shift-data-formatting",
+        "model-metadata-schema-inspection",
+        "json-payload-construction-for-nmr-spectra",
+        "model-metadata-schema-verification"
       ]
     },
     "tool-initialization-verification": {
@@ -6816,6 +9406,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "docker"
+      ],
+      "related_skills": [
+        "docker-environment-configuration",
+        "container-image-build-and-deployment",
+        "repository-cloning-and-setup",
+        "installation-verification-and-validation",
+        "container-orchestration-verification",
+        "command-line-tool-verification",
+        "container-runtime-verification",
+        "command-line-tool-invocation"
       ]
     },
     "top-k-accuracy-ranking-and-evaluation": {
@@ -6842,6 +9442,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-structure-prediction-evaluation",
+        "accuracy-metric-computation",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "structure-similarity-evaluation",
+        "top-k-retrieval-ranking-evaluation",
+        "nmr-modality-ablation-analysis",
+        "model-generalization-assessment-across-molecular-size-regimes",
+        "chemical-graph-connectivity-validation"
       ]
     },
     "transformer-architecture-inference": {
@@ -6877,6 +9487,16 @@
         "numpy",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "multi-modal-spectroscopic-data-integration",
+        "molecular-structure-prediction-validation",
+        "spectral-modality-preprocessing",
+        "multitask-model-inference",
+        "transformer-architecture-implementation",
+        "structure-similarity-comparison",
+        "transformer-model-inference-on-spectral-data",
+        "multimodal-tensor-construction-and-validation"
       ]
     },
     "transformer-attention-mechanism-implementation": {
@@ -6904,6 +9524,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "fragment-to-structure-assembly",
+        "graph-based-molecular-representation",
+        "molecular-fragment-assembly-from-transformer-predictions",
+        "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
+        "molecular-graph-encoder-decoder-training",
+        "graph-neural-network-design-for-chemistry",
+        "bond-connectivity-prediction",
+        "molecular-structure-prediction-from-spectra"
       ]
     },
     "transformer-based-fragment-assembly": {
@@ -6931,6 +9561,16 @@
         "pytorch",
         "transformer",
         "transformer-architecture"
+      ],
+      "related_skills": [
+        "molecular-fragment-assembly-from-transformer-predictions",
+        "fragment-assembly-transformer-architecture",
+        "fragment-to-structure-assembly",
+        "cnn-spectral-feature-extraction",
+        "molecular-structure-prediction-from-spectra",
+        "fragment-canonicalization-and-matching",
+        "nmr-spectrum-preprocessing",
+        "graph-neural-network-design-for-chemistry"
       ]
     },
     "transformer-cnn-hybrid-model-training": {
@@ -6957,6 +9597,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "hybrid-model-fusion-strategy",
+        "nmr-spectra-deep-learning-encoding",
+        "transformer-encoder-architecture-implementation",
+        "nmr-spectrum-preprocessing",
+        "transformer-model-training",
+        "cnn-spectral-feature-extraction",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "nmr-spectral-feature-extraction"
       ]
     },
     "transformer-encoder-architecture-implementation": {
@@ -6983,6 +9633,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "transformer-cnn-hybrid-model-training",
+        "nmr-spectra-deep-learning-encoding",
+        "convolutional-neural-network-layer-design",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "molecular-graph-encoder-decoder-training",
+        "transformer-encoder-architecture-design",
+        "nmr-spectral-feature-extraction",
+        "transformer-architecture-implementation"
       ]
     },
     "transformer-model-inference-on-spectral-data": {
@@ -7014,6 +9674,16 @@
         "python",
         "pytorch",
         "scipy"
+      ],
+      "related_skills": [
+        "metabolite-peak-assignment-from-nmr",
+        "nmr-spectrum-data-import-and-parsing",
+        "chemical-shift-reference-matching",
+        "transformer-encoder-architecture-implementation",
+        "spectral-peak-validation",
+        "python-deep-learning-model-loading-and-execution",
+        "nmr-spectra-preprocessing-and-feature-extraction",
+        "transformer-cnn-hybrid-model-training"
       ]
     },
     "unannotated-feature-characterization": {
@@ -7058,6 +9728,16 @@
         "open-tree-of-life",
         "sirius",
         "timar"
+      ],
+      "related_skills": [
+        "per-sample-feature-composition-analysis",
+        "metabolite-annotation-integration-across-databases",
+        "multi-component-weighted-ranking-aggregation",
+        "mzmine-quantitative-table-parsing",
+        "ms2-spectral-dissimilarity-scoring",
+        "spectral-annotation-filtering-by-similarity-metrics",
+        "mass-spectrometry-feature-annotation",
+        "metabolite-annotation-validation"
       ]
     },
     "unknown-chemical-identification-in-complex-mixtures": {
@@ -7088,6 +9768,16 @@
         "python-3-7",
         "torch",
         "torch-1-7-1"
+      ],
+      "related_skills": [
+        "structure-prediction-from-spectra",
+        "molecular-structure-generation-evaluation",
+        "mass-spectrometry-spectrum-preprocessing",
+        "smiles-structure-annotation",
+        "neural-network-model-inference",
+        "model-weight-loading-and-deployment",
+        "compound-identification-validation",
+        "in-silico-spectrum-generation-cfmid"
       ]
     },
     "validation-error-categorization": {
@@ -7115,6 +9805,16 @@
         "mwtab",
         "pandas",
         "python"
+      ],
+      "related_skills": [
+        "json-schema-validation",
+        "metabolite-metadata-column-matching",
+        "mwtab-file-parsing",
+        "structured-report-generation",
+        "structured-data-serialization",
+        "conversion-directive-parsing",
+        "metabolomics-file-format-parsing",
+        "mwtab-to-json-conversion"
       ]
     },
     "virtual-environment-configuration": {
@@ -7148,6 +9848,16 @@
         "python",
         "python-3-9",
         "xlsxwriter"
+      ],
+      "related_skills": [
+        "python-environment-setup",
+        "dependency-version-management",
+        "entrypoint-verification",
+        "repository-cloning-and-initialization",
+        "python-environment-configuration",
+        "python-environment-setup-and-reproducibility",
+        "conda-environment-file-generation",
+        "python-environment-dependency-resolution"
       ]
     },
     "wasserstein-distance-computation": {
@@ -7170,6 +9880,16 @@
       "tools_used": [
         "mcfnmr",
         "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+      ],
+      "related_skills": [
+        "mixture-spectrum-comparison",
+        "optimal-transport-scoring",
+        "emd-spectral-distance-computation",
+        "nmr-spectrum-reconstruction-from-library",
+        "nmr-spectrum-normalization",
+        "spectral-mixture-deconvolution",
+        "minimum-cost-flow-formulation",
+        "compound-abundance-quantification-from-flow"
       ]
     },
     "webassembly-local-loading-setup": {
@@ -7198,6 +9918,16 @@
         "safari",
         "webassembly",
         "webworker"
+      ],
+      "related_skills": [
+        "per-browser-developer-setting-navigation",
+        "browser-security-policy-configuration",
+        "webworker-file-access-enabling",
+        "cross-origin-policy-override",
+        "standalone-web-application-deployment",
+        "html-bundle-rendering-in-browser",
+        "cli-application-invocation-with-file-io-management",
+        "cloud-hosted-computational-chemistry"
       ]
     },
     "webworker-file-access-enabling": {
@@ -7226,6 +9956,16 @@
         "safari",
         "webassembly",
         "webworker"
+      ],
+      "related_skills": [
+        "browser-security-policy-configuration",
+        "per-browser-developer-setting-navigation",
+        "cross-origin-policy-override",
+        "webassembly-local-loading-setup",
+        "cloud-hosted-computational-chemistry",
+        "http-file-upload-implementation",
+        "cli-application-invocation-with-file-io-management",
+        "mass-spectrometry-raw-file-handling"
       ]
     },
     "weighted-loss-function-optimization": {
@@ -7252,6 +9992,16 @@
         "anaconda",
         "python",
         "pytorch-cu118"
+      ],
+      "related_skills": [
+        "binary-cross-entropy-loss-optimization",
+        "bi-encoder-cross-encoder-architecture-design",
+        "contrastive-loss-integration-with-encoders",
+        "transformer-encoder-architecture-implementation",
+        "nmr-spectra-deep-learning-encoding",
+        "multi-task-loss-function-formulation",
+        "pytorch-module-development",
+        "molecular-graph-encoder-decoder-training"
       ]
     },
     "xcms-feature-extraction-and-grouping": {
@@ -7275,6 +10025,16 @@
       "tools_used": [
         "george",
         "xcms"
+      ],
+      "related_skills": [
+        "metabolite-fold-change-statistical-testing",
+        "r-bioconductor-workflow-orchestration",
+        "metabolite-feature-extraction-xcms",
+        "lcms-peak-alignment-and-annotation",
+        "xcms-grouped-object-manipulation",
+        "xcms-workflow-execution",
+        "lc-ms-feature-grouping-and-compounding",
+        "xcms-object-handling-and-preprocessing"
       ]
     }
   }

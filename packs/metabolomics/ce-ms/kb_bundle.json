@@ -176,6 +176,16 @@
         "smartpeak",
         "smartpeakcli",
         "smartpeakgui"
+      ],
+      "related_skills": [
+        "accurate-mass-metabolite-search-against-hmdb",
+        "metabolite-identifier-mapping",
+        "ms1-feature-detection-and-annotation",
+        "mztab-format-generation",
+        "ms1-feature-peak-detection-in-full-scan",
+        "fiams-spectra-window-extraction-and-merging",
+        "metabolomics-database-search-and-formula-matching",
+        "spectral-database-search-and-scoring"
       ]
     },
     "adduct-ion-parent-ion-pairing-analysis": {
@@ -202,6 +212,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-peak-pair-analysis",
+        "mass-spectrometry-imaging-data-interpretation",
+        "spectral-peak-parent-product-pairing",
+        "mass-spectrometry-peak-enumeration",
+        "mass-spectrometry-adduct-annotation",
+        "mass-difference-calculation-from-spectral-peaks",
+        "adduct-mass-difference-matching",
+        "spatial-correlation-filtering-in-msi"
       ]
     },
     "annotation-quality-filtering-by-cosine-similarity": {
@@ -244,6 +264,16 @@
         "open-tree-of-life",
         "sirius",
         "timar"
+      ],
+      "related_skills": [
+        "spectral-annotation-filtering-by-similarity-metrics",
+        "metabolite-annotation-validation",
+        "annotation-table-quality-control",
+        "metabolite-annotation-integration-across-databases",
+        "mass-accuracy-tolerance-application",
+        "unannotated-feature-characterization",
+        "ms2-spectral-dissimilarity-scoring",
+        "multi-component-weighted-ranking-aggregation"
       ]
     },
     "approximate-nearest-neighbor-index-construction": {
@@ -265,6 +295,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "ann-solo"
+      ],
+      "related_skills": [
+        "approximate-nearest-neighbor-indexing-construction",
+        "approximate-nearest-neighbor-indexing-for-spectra",
+        "gpu-accelerated-nearest-neighbor-indexing",
+        "spectral-vectorization-for-indexing",
+        "nearest-neighbor-candidate-retrieval",
+        "spectral-library-indexing",
+        "spectral-library-matching-with-cosine-similarity",
+        "candidate-spectrum-retrieval-and-ranking"
       ]
     },
     "bioconductor-data-import-and-handling": {
@@ -297,6 +337,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ce-ms-data-import-and-parsing",
+        "r-workflow-scripting-for-analytical-chemistry",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "extracted-ion-electropherogram-generation",
+        "effective-mobility-transformation",
+        "xcms-data-import-preprocessing",
+        "peak-detection-and-boundary-identification",
+        "electrophoretic-system-parameter-specification"
       ]
     },
     "biomolecular-class-label-assignment": {
@@ -322,6 +372,16 @@
         "hineslab-moccal",
         "moccal",
         "python"
+      ],
+      "related_skills": [
+        "biomolecular-class-annotation",
+        "twim-ms-data-processing",
+        "arrival-time-based-class-assignment",
+        "ion-mobility-feature-classification",
+        "twim-ms-data-preprocessing",
+        "biomolecular-class-ccs-mapping",
+        "multi-omic-data-integration",
+        "class-specific-ccs-calculation"
       ]
     },
     "breath-sample-feature-normalization": {
@@ -343,6 +403,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "python"
+      ],
+      "related_skills": [
+        "feature-consolidation-across-samples",
+        "breath-volatile-peak-classification",
+        "peak-detection-signal-processing",
+        "feature-table-construction-for-multivariate-analysis",
+        "retention-time-mz-alignment-matching",
+        "mass-spectrometry-peak-detection-and-extraction",
+        "ms-data-format-parsing-and-conversion",
+        "feature-intensity-thresholding"
       ]
     },
     "candidate-spectrum-retrieval-and-ranking": {
@@ -363,6 +433,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "ann-solo"
+      ],
+      "related_skills": [
+        "nearest-neighbor-candidate-retrieval",
+        "approximate-nearest-neighbor-indexing-for-spectra",
+        "open-modification-spectral-search-strategy",
+        "open-modification-spectrum-matching",
+        "spectral-library-matching-with-cosine-similarity",
+        "spectral-similarity-scoring-with-mass-shifts",
+        "approximate-nearest-neighbor-index-construction",
+        "dot-product-based-spectral-comparison"
       ]
     },
     "ce-ms-data-import-and-parsing": {
@@ -396,6 +476,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ion-trace-extraction-and-filtering",
+        "effective-mobility-transformation",
+        "extracted-ion-electropherogram-generation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "peak-detection-and-boundary-identification",
+        "bioconductor-data-import-and-handling",
+        "ce-ms-migration-time-measurement",
+        "mobility-scale-transformation"
       ]
     },
     "ce-ms-eof-marker-identification": {
@@ -428,6 +518,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ce-ms-migration-time-to-mobility-transformation",
+        "migration-time-extraction",
+        "mass-to-charge-tolerance-filtering",
+        "ce-ms-migration-time-measurement",
+        "effective-mobility-calibration-single-marker",
+        "effective-mobility-transformation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "peak-detection-and-boundary-identification"
       ]
     },
     "ce-ms-migration-time-measurement": {
@@ -459,6 +559,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ce-ms-migration-time-to-mobility-transformation",
+        "effective-mobility-transformation",
+        "ce-ms-data-import-and-parsing",
+        "migration-time-extraction",
+        "mobility-scale-transformation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "effective-mobility-calibration-single-marker",
+        "ce-ms-eof-marker-identification"
       ]
     },
     "ce-ms-migration-time-to-mobility-transformation": {
@@ -490,6 +600,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "effective-mobility-transformation",
+        "ce-ms-migration-time-measurement",
+        "effective-mobility-calibration-single-marker",
+        "migration-time-extraction",
+        "ce-ms-eof-marker-identification",
+        "mobility-scale-transformation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "ce-ms-data-import-and-parsing"
       ]
     },
     "chemical-annotation-confidence-assessment": {
@@ -520,6 +640,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "spectral-library-annotation-interpretation",
+        "ms2-annotation-interpretation",
+        "metadata-annotation-integration",
+        "multivariate-ordination-interpretation",
+        "tabular-results-aggregation-and-comparison",
+        "metabolite-detection-matrix-construction",
+        "spectral-library-matching-gnps",
+        "group-wise-chemical-enrichment-calculation"
       ]
     },
     "chemical-annotation-matrix-construction": {
@@ -550,6 +680,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "metabolite-detection-matrix-construction",
+        "metabolite-feature-table-normalization",
+        "metadata-annotation-integration",
+        "multivariate-ordination-interpretation",
+        "pca-dimensionality-reduction-unsupervised",
+        "ms2-annotation-interpretation",
+        "tabular-results-aggregation-and-comparison",
+        "chemical-annotation-confidence-assessment"
       ]
     },
     "compound-ground-truth-matching": {
@@ -583,6 +723,16 @@
         "numba",
         "python",
         "pytorch"
+      ],
+      "related_skills": [
+        "retrieval-metric-hit-k-calculation",
+        "compound-retrieval-hit-at-k-evaluation",
+        "cosine-similarity-matrix-computation",
+        "cosine-similarity-ranking-metrics",
+        "spectral-retrieval-ranking-task",
+        "embedding-similarity-computation",
+        "structural-similarity-ground-truth-validation",
+        "similarity-ranking-and-retrieval-evaluation"
       ]
     },
     "conditional-routing-logic-extraction": {
@@ -621,6 +771,16 @@
         "open-tree-of-life",
         "sirius",
         "timar"
+      ],
+      "related_skills": [
+        "control-flow-diagram-synthesis",
+        "java-source-code-inspection",
+        "workflow-routing-configuration",
+        "module-dispatch-architecture-analysis",
+        "data-type-classification-schema-design",
+        "conditional-routing-logic",
+        "ion-mobility-dimension-detection",
+        "chromatographic-modality-classification"
       ]
     },
     "consensus-spectrum-assembly-from-fragmentation-spectra": {
@@ -663,6 +823,16 @@
         "spectra",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "ms2-spectrum-extraction-and-consensus-building",
+        "ms2-spectrum-collection-from-data-dependent-acquisition",
+        "spectral-similarity-scoring-and-reference-matching",
+        "fragment-intensity-aggregation",
+        "spectral-similarity-matching-and-comparison",
+        "mass-chromatogram-alignment",
+        "chromatographic-peak-detection-msw",
+        "metabolite-ion-consolidation"
       ]
     },
     "cosine-similarity-computation": {
@@ -684,7 +854,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "spectral-similarity-measure-implementation",
+        "cosine-similarity-scoring-computation",
+        "spectrum-alignment-performance-benchmarking",
+        "mass-spectrum-peak-normalization",
+        "cosine-distance-scoring",
+        "spectral-neutral-loss-transformation",
+        "cosine-similarity-ranking-metrics",
+        "spectral-similarity-scoring-cosine"
+      ]
     },
     "cosine-similarity-matrix-computation": {
       "dois": [
@@ -718,6 +898,16 @@
         "numba",
         "python",
         "pytorch"
+      ],
+      "related_skills": [
+        "cosine-similarity-ranking-metrics",
+        "retrieval-metric-hit-k-calculation",
+        "compound-ground-truth-matching",
+        "embedding-similarity-computation",
+        "cosine-similarity-computation",
+        "cosine-similarity-scoring-computation",
+        "spectral-embedding-generation",
+        "compound-retrieval-hit-at-k-evaluation"
       ]
     },
     "cosine-similarity-ranking-metrics": {
@@ -753,6 +943,16 @@
         "numba",
         "python",
         "pytorch"
+      ],
+      "related_skills": [
+        "cosine-similarity-matrix-computation",
+        "retrieval-metric-hit-k-calculation",
+        "spectral-retrieval-ranking-task",
+        "compound-retrieval-hit-at-k-evaluation",
+        "cosine-similarity-computation",
+        "cosine-similarity-scoring-computation",
+        "embedding-similarity-computation",
+        "compound-ground-truth-matching"
       ]
     },
     "data-augmentation-metabolomics": {
@@ -791,6 +991,16 @@
         "signal-processing-toolbox",
         "statistics-and-machine-learning-toolbox",
         "wavelet-toolbox"
+      ],
+      "related_skills": [
+        "matlab-scientific-computing",
+        "roi-detection-mass-spectrometry",
+        "parameter-driven-preprocessing-pipeline",
+        "multi-platform-ms-integration",
+        "ms-data-preprocessing",
+        "vendor-data-standardization",
+        "data-normalization-in-mass-spectrometry",
+        "lc-ms-roi-annotation-interpretation"
       ]
     },
     "derivatizing-matrix-configuration": {
@@ -816,6 +1026,16 @@
         "git",
         "github-actions",
         "rdkit"
+      ],
+      "related_skills": [
+        "derivatizing-matrix-ionization-rule-application",
+        "derivatization-chemistry-enumeration",
+        "metabolite-identification-validation",
+        "molecular-structure-transformation",
+        "mass-spectrometry-ion-formula-assignment",
+        "reference-dataset-validation-for-metabolite-ions",
+        "adduct-ion-mass-calculation",
+        "molecular-weight-prediction-with-modifications"
       ]
     },
     "effective-mobility-calibration-single-marker": {
@@ -847,6 +1067,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "effective-mobility-transformation",
+        "ce-ms-migration-time-to-mobility-transformation",
+        "mobility-scale-transformation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "ce-ms-migration-time-measurement",
+        "unified-mobility-scale-construction-across-polarities",
+        "migration-time-extraction",
+        "electrophoretic-system-parameter-specification"
       ]
     },
     "effective-mobility-transformation": {
@@ -879,6 +1109,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "mobility-scale-transformation",
+        "ce-ms-migration-time-to-mobility-transformation",
+        "effective-mobility-calibration-single-marker",
+        "ce-ms-data-import-and-parsing",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "ce-ms-migration-time-measurement",
+        "extracted-ion-electropherogram-generation",
+        "unified-mobility-scale-construction-across-polarities"
       ]
     },
     "electron-ionization-spectral-comparison": {
@@ -900,6 +1140,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mssearchr"
+      ],
+      "related_skills": [
+        "spectral-similarity-scoring-ei-simple",
+        "mass-spectrum-peak-matching",
+        "library-spectrum-database-searching",
+        "similarity-score-computation",
+        "ei-mass-spectra-structure-representation",
+        "ei-spectrum-normalization",
+        "mass-spectrum-peak-list-handling",
+        "ei-spectral-library-parsing-and-merging"
       ]
     },
     "electrophoretic-system-parameter-specification": {
@@ -929,6 +1179,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "effective-mobility-transformation",
+        "ce-ms-data-import-and-parsing",
+        "mobility-scale-transformation",
+        "extracted-ion-electropherogram-generation",
+        "effective-mobility-calibration-single-marker",
+        "ce-ms-migration-time-measurement",
+        "ce-ms-migration-time-to-mobility-transformation",
+        "ondiskmsnexp-object-manipulation-and-export"
       ]
     },
     "extracted-ion-electropherogram-generation": {
@@ -960,6 +1220,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ce-ms-data-import-and-parsing",
+        "ion-trace-extraction-and-filtering",
+        "effective-mobility-transformation",
+        "peak-detection-and-boundary-identification",
+        "migration-time-extraction",
+        "mobility-scale-transformation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "electrophoretic-system-parameter-specification"
       ]
     },
     "floating-point-numerical-accuracy-assessment": {
@@ -998,6 +1268,16 @@
         "redis",
         "rq-redis-queue",
         "streamlit"
+      ],
+      "related_skills": [
+        "numeric-array-round-trip-validation",
+        "unit-test-fixture-design-and-execution",
+        "numpress-compression-algorithm-encoding",
+        "mass-accuracy-validation",
+        "mass-spectrometry-m-z-accuracy-assessment",
+        "mass-error-calculation-and-assessment",
+        "binary-data-integrity-verification",
+        "numerical-equivalence-verification"
       ]
     },
     "fragmentation-pattern-annotation-magma": {
@@ -1028,6 +1308,16 @@
         "pillow",
         "python",
         "rdkit"
+      ],
+      "related_skills": [
+        "peak-annotation-refinement-structure-driven",
+        "chemical-structure-annotation-oracle-mode",
+        "modification-site-localization",
+        "mass-spectrometry-annotation-engine-customization",
+        "mass-spectrometry-spectral-alignment",
+        "oracle-mode-structural-constraint-integration",
+        "fragmentation-pattern-annotation",
+        "network-graph-re-annotation-propagation"
       ]
     },
     "fragmentation-pattern-similarity-scoring": {
@@ -1067,6 +1357,16 @@
         "readxl",
         "reshape2",
         "tidyverse"
+      ],
+      "related_skills": [
+        "spectral-clustering-and-feature-grouping",
+        "exact-mass-database-matching",
+        "reaction-pathway-assignment-and-propagation",
+        "spectral-similarity-matching-and-comparison",
+        "spectral-similarity-scoring-and-reference-matching",
+        "mass-spectral-similarity-scoring-across-samples",
+        "xenobiotic-metabolite-annotation-from-ms-ms",
+        "fragmentation-pattern-extraction-and-ranking"
       ]
     },
     "group-wise-chemical-enrichment-calculation": {
@@ -1097,6 +1397,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "tabular-results-aggregation-and-comparison",
+        "normalization-for-unequal-group-sizes",
+        "metadata-annotation-integration",
+        "multivariate-ordination-interpretation",
+        "chemical-annotation-confidence-assessment",
+        "metabolite-feature-table-normalization",
+        "file-grouping-by-sample-attributes",
+        "ms2-annotation-interpretation"
       ]
     },
     "high-dimensional-signal-enhancement": {
@@ -1117,6 +1427,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "meister"
+      ],
+      "related_skills": [
+        "deep-learning-model-training",
+        "reconstruction-algorithm-implementation",
+        "spectral-noise-reduction-msi",
+        "mass-spectrometry-peak-intensity-encoding",
+        "two-dimensional-ms-image-processing",
+        "signal-quality-assessment",
+        "multidimensional-signal-smoothing-imms",
+        "noise-suppression-spectral-imaging"
       ]
     },
     "interactive-spectral-visualization-emperor": {
@@ -1148,6 +1468,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "multivariate-ordination-interpretation",
+        "pca-dimensionality-reduction-unsupervised",
+        "metabolite-feature-table-normalization",
+        "ms2-annotation-interpretation",
+        "metadata-annotation-integration",
+        "metabolite-detection-matrix-construction",
+        "chemical-annotation-confidence-assessment",
+        "tabular-results-aggregation-and-comparison"
       ]
     },
     "ion-trace-extraction-and-filtering": {
@@ -1179,6 +1509,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ce-ms-data-import-and-parsing",
+        "extracted-ion-electropherogram-generation",
+        "peak-detection-and-boundary-identification",
+        "effective-mobility-transformation",
+        "mass-to-charge-tolerance-filtering",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "mobility-scale-transformation",
+        "migration-time-extraction"
       ]
     },
     "lcms-metabolomics-data-processing": {
@@ -1210,6 +1550,16 @@
         "nextflow",
         "nextflow-22-10-0",
         "singularity"
+      ],
+      "related_skills": [
+        "lc-hrms-metabolomics-data-processing",
+        "lc-hrms-data-preprocessing-pipeline",
+        "nextflow-pipeline-orchestration",
+        "lc-ms-output-validation",
+        "metabolomics-peak-detection-configuration",
+        "sequential-tool-integration-and-data-routing",
+        "nextflow-workflow-execution",
+        "mzml-metabolomics-data-import"
       ]
     },
     "mass-spectrometry-file-format-conversion": {
@@ -1259,6 +1609,16 @@
         "signal-processing-toolbox",
         "statistics-and-machine-learning-toolbox",
         "wavelet-toolbox"
+      ],
+      "related_skills": [
+        "vendor-data-standardization",
+        "ms-data-preprocessing",
+        "mass-spectrometry-file-conversion",
+        "mass-spectrometry-data-processing",
+        "msconvert-tool-configuration",
+        "msconvert-integration-and-invocation",
+        "mass-spectrometry-data-structure-conversion",
+        "ms-instrument-data-preprocessing"
       ]
     },
     "mass-spectrometry-file-inventory-management": {
@@ -1290,6 +1650,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "file-grouping-by-sample-attributes",
+        "filter-criteria-composition-and-validation",
+        "sample-metadata-stratification-and-filtering",
+        "sample-information-metadata-parsing",
+        "open-format-mass-spectrometry-file-handling",
+        "controlled-vocabulary-term-mapping",
+        "metadata-annotation-integration",
+        "multivariate-ordination-interpretation"
       ]
     },
     "mass-spectrometry-fragmentation-pattern-modeling": {
@@ -1313,6 +1683,16 @@
       "tools_used": [
         "camera",
         "xcms"
+      ],
+      "related_skills": [
+        "lipid-fragmentation-pattern-recognition",
+        "mass-spectrometry-library-indexing",
+        "spectral-similarity-matching-algorithms",
+        "lipid-fingerprint-regeneration-neural-networks",
+        "spectral-candidate-classification",
+        "throughput-optimization-ms-querying",
+        "fragment-ion-theoretical-mass-calculation",
+        "fragment-ion-library-matching"
       ]
     },
     "mass-spectrometry-library-search-retrieval": {
@@ -1333,7 +1713,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "mass-spectrometry-library-matching",
+        "mass-spectrum-similarity-scoring",
+        "spectrum-alignment-performance-benchmarking",
+        "spectral-library-similarity-matching",
+        "library-spectrum-database-searching",
+        "spectrum-similarity-scoring",
+        "mass-spectrum-peak-matching",
+        "ms-ms-spectral-library-matching"
+      ]
     },
     "mass-spectrum-fragment-ion-extraction": {
       "dois": [
@@ -1362,6 +1752,16 @@
         "r-version-or-higher",
         "ramclustr",
         "xcms"
+      ],
+      "related_skills": [
+        "metabolite-library-entry-generation",
+        "ms-ms-spectrum-peak-annotation",
+        "spectral-library-entry-generation",
+        "fragment-ion-scoring-and-ranking",
+        "fragment-ion-database-matching",
+        "aif-spectrum-fragment-database-matching",
+        "peak-picking-parameter-configuration",
+        "ionization-mode-annotation"
       ]
     },
     "mass-spectrum-peak-normalization": {
@@ -1382,7 +1782,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "spectral-peak-alignment-with-mass-offset",
+        "spectral-neutral-loss-transformation",
+        "cosine-similarity-computation",
+        "tandem-mass-spectrum-normalization",
+        "peak-intensity-normalization",
+        "spectral-intensity-normalization",
+        "spectral-similarity-measure-implementation",
+        "spectrum-alignment-performance-benchmarking"
+      ]
     },
     "mass-to-charge-tolerance-filtering": {
       "dois": [
@@ -1414,6 +1824,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ion-trace-extraction-and-filtering",
+        "ce-ms-migration-time-to-mobility-transformation",
+        "migration-time-extraction",
+        "ce-ms-eof-marker-identification",
+        "ce-ms-data-import-and-parsing",
+        "ce-ms-migration-time-measurement",
+        "mobility-scale-transformation",
+        "peak-detection-and-boundary-identification"
       ]
     },
     "matlab-scientific-computing": {
@@ -1454,6 +1874,16 @@
         "signal-processing-toolbox",
         "statistics-and-machine-learning-toolbox",
         "wavelet-toolbox"
+      ],
+      "related_skills": [
+        "roi-detection-mass-spectrometry",
+        "data-augmentation-metabolomics",
+        "multi-platform-ms-integration",
+        "parameter-driven-preprocessing-pipeline",
+        "ms-data-preprocessing",
+        "vendor-data-standardization",
+        "lc-ms-roi-annotation-interpretation",
+        "spectral-peak-detection-and-deconvolution"
       ]
     },
     "metabolic-network-graph-construction": {
@@ -1476,6 +1906,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "python"
+      ],
+      "related_skills": [
+        "metabolic-network-mapping",
+        "mass-feature-to-node-mapping",
+        "network-based-functional-prediction",
+        "untargeted-metabolomics-feature-interpretation",
+        "feature-to-metabolite-network-propagation",
+        "pathway-activity-propagation-inference",
+        "untargeted-metabolomics-feature-analysis",
+        "functional-module-inference-from-networks"
       ]
     },
     "metabolite-detection-matrix-construction": {
@@ -1506,6 +1946,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "chemical-annotation-matrix-construction",
+        "spectral-library-matching-gnps",
+        "ms2-annotation-interpretation",
+        "multivariate-ordination-interpretation",
+        "tabular-results-aggregation-and-comparison",
+        "metabolite-feature-table-normalization",
+        "metadata-annotation-integration",
+        "spectral-library-annotation-interpretation"
       ]
     },
     "metabolite-feature-table-normalization": {
@@ -1537,6 +1987,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "multivariate-ordination-interpretation",
+        "metadata-annotation-integration",
+        "pca-dimensionality-reduction-unsupervised",
+        "metabolite-detection-matrix-construction",
+        "chemical-annotation-matrix-construction",
+        "tabular-results-aggregation-and-comparison",
+        "interactive-spectral-visualization-emperor",
+        "normalization-for-unequal-group-sizes"
       ]
     },
     "metabolite-library-entry-generation": {
@@ -1564,6 +2024,16 @@
         "r-version-or-higher",
         "ramclustr",
         "xcms"
+      ],
+      "related_skills": [
+        "spectral-library-entry-generation",
+        "mass-spectrum-fragment-ion-extraction",
+        "ms-ms-spectrum-peak-annotation",
+        "fragment-ion-scoring-and-ranking",
+        "batch-spectral-record-processing",
+        "fragment-ion-database-matching",
+        "peak-picking-parameter-configuration",
+        "metabolite-lipid-annotation-ranking"
       ]
     },
     "metabolomics-peak-detection-configuration": {
@@ -1596,6 +2066,16 @@
         "nextflow",
         "nextflow-22-10-0",
         "singularity"
+      ],
+      "related_skills": [
+        "lc-hrms-data-preprocessing-pipeline",
+        "nextflow-workflow-execution",
+        "ms-dial-feature-detection-and-alignment",
+        "lc-hrms-metabolomics-data-processing",
+        "lcms-metabolomics-data-processing",
+        "nextflow-pipeline-orchestration",
+        "workflow-configuration-and-parameterization",
+        "msflo-metabolite-annotation"
       ]
     },
     "metadata-annotation-integration": {
@@ -1626,6 +2106,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "sample-information-metadata-parsing",
+        "ms2-annotation-interpretation",
+        "tabular-results-aggregation-and-comparison",
+        "multivariate-ordination-interpretation",
+        "spectral-library-annotation-interpretation",
+        "metabolite-feature-table-normalization",
+        "chemical-annotation-confidence-assessment",
+        "sample-metadata-stratification-and-filtering"
       ]
     },
     "migration-time-extraction": {
@@ -1658,6 +2148,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ce-ms-migration-time-to-mobility-transformation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "ce-ms-eof-marker-identification",
+        "ce-ms-migration-time-measurement",
+        "effective-mobility-transformation",
+        "extracted-ion-electropherogram-generation",
+        "mass-to-charge-tolerance-filtering",
+        "ce-ms-data-import-and-parsing"
       ]
     },
     "mirror-plot-visualization-for-spectrum-comparison": {
@@ -1701,6 +2201,16 @@
         "spectra",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "spectral-similarity-scoring-and-reference-matching",
+        "spectral-similarity-matching-and-comparison",
+        "mass-spectrometry-data-visualization",
+        "consensus-spectrum-assembly-from-fragmentation-spectra",
+        "ms2-spectrum-extraction-and-consensus-building",
+        "tandem-mass-spectrometry-mirror-plot-construction",
+        "chromatographic-peak-shape-comparison",
+        "pairwise-spectrum-comparison"
       ]
     },
     "mobility-scale-transformation": {
@@ -1733,6 +2243,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "effective-mobility-transformation",
+        "ce-ms-migration-time-to-mobility-transformation",
+        "effective-mobility-calibration-single-marker",
+        "ce-ms-migration-time-measurement",
+        "ce-ms-data-import-and-parsing",
+        "unified-mobility-scale-construction-across-polarities",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "electrophoretic-system-parameter-specification"
       ]
     },
     "model-inference-and-tokenization": {
@@ -1768,6 +2288,16 @@
         "numba",
         "python",
         "pytorch"
+      ],
+      "related_skills": [
+        "ms-ms-spectrum-tokenization-and-representation",
+        "spectral-embedding-generation",
+        "mass-spectrometry-spectrum-tokenization",
+        "spectral-retrieval-ranking-task",
+        "deep-learning-model-inference",
+        "high-quality-spectral-library-benchmarking",
+        "mass-spectra-embedding-extraction",
+        "mass-spectrometry-dataset-handling-preprocessing"
       ]
     },
     "molecular-similarity-calculation": {
@@ -1802,6 +2332,16 @@
         "patroon",
         "pubchem",
         "sirius"
+      ],
+      "related_skills": [
+        "structure-similarity-comparison",
+        "structural-similarity-scoring",
+        "molecular-fingerprint-calculation",
+        "inchikey-structural-similarity-computation",
+        "spectral-similarity-scoring-parent-tp",
+        "compound-structural-similarity-retrieval",
+        "chemical-structure-similarity-matching",
+        "smiles-structure-representation-handling"
       ]
     },
     "ms-data-preprocessing": {
@@ -1833,6 +2373,16 @@
         "signal-processing-toolbox",
         "statistics-and-machine-learning-toolbox",
         "wavelet-toolbox"
+      ],
+      "related_skills": [
+        "vendor-data-standardization",
+        "mass-spectrometry-file-format-conversion",
+        "mass-spectrometry-data-processing",
+        "multi-platform-ms-integration",
+        "ms-instrument-data-preprocessing",
+        "msconvert-tool-configuration",
+        "mass-spectrometry-file-conversion",
+        "msconvert-integration-and-invocation"
       ]
     },
     "ms-ms-spectrum-matching": {
@@ -1857,6 +2407,16 @@
         "ms-dial-or-higher",
         "ms-dial-v4-00-or-higher",
         "ms-finder"
+      ],
+      "related_skills": [
+        "multi-database-structure-querying",
+        "ms-finder-format-export",
+        "in-silico-compound-annotation",
+        "ms-dial-peak-character-estimation",
+        "mass-spectrometry-feature-representation",
+        "peak-intensity-chromatographic-property-analysis",
+        "feature-similarity-network-construction",
+        "ms-peak-blank-signal-subtraction"
       ]
     },
     "ms-spectra-extraction-and-preprocessing": {
@@ -1892,6 +2452,16 @@
         "python",
         "scikit-learn",
         "xcms"
+      ],
+      "related_skills": [
+        "ms1-feature-ranking-and-extraction",
+        "separation-efficiency-calculation-from-retention-times",
+        "mass-spectrometry-data-preprocessing",
+        "ms2-spectrum-extraction-and-consensus-building",
+        "chromatographic-feature-extraction",
+        "centroided-peak-extraction-from-hrms",
+        "peak-filtering-and-preprocessing-lc-ms",
+        "mass-spectrometry-quality-metrics-extraction"
       ]
     },
     "ms1-composite-spectra-deconvolution": {
@@ -1914,6 +2484,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "idsl-csa"
+      ],
+      "related_skills": [
+        "composite-spectra-analysis",
+        "composite-spectra-assembly-from-fragment-ions",
+        "mass-spectrometry-deconvolution-algorithm-application",
+        "fragmentation-spectrum-extraction",
+        "chemical-structure-annotation-preparation",
+        "metabolomics-data-preprocessing",
+        "r-workflow-implementation",
+        "dia-data-format-recognition"
       ]
     },
     "ms2-annotation-interpretation": {
@@ -1945,6 +2525,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "spectral-library-annotation-interpretation",
+        "chemical-annotation-confidence-assessment",
+        "multivariate-ordination-interpretation",
+        "metadata-annotation-integration",
+        "spectral-library-matching-gnps",
+        "metabolite-detection-matrix-construction",
+        "tabular-results-aggregation-and-comparison",
+        "interactive-spectral-visualization-emperor"
       ]
     },
     "ms2-data-preprocessing-pipeline": {
@@ -1974,6 +2564,16 @@
         "github-actions",
         "ms2query",
         "python"
+      ],
+      "related_skills": [
+        "ms-ms-spectrum-parsing",
+        "peak-filtering-noise-removal",
+        "ms2-fragmentation-spectrum-parsing",
+        "peak-filtering-and-preprocessing-lc-ms",
+        "ms2-spectrum-extraction-and-consensus-building",
+        "spectral-intensity-normalisation",
+        "mass-spectrometry-file-format-parsing",
+        "spectrum-normalization-and-standardization"
       ]
     },
     "ms2-spectral-library-matching-post-denoising": {
@@ -2014,6 +2614,16 @@
         "s4vectors",
         "spectra",
         "stats"
+      ],
+      "related_skills": [
+        "mass-spectrometry-data-validation",
+        "spectral-peak-retention-signal-noise-discrimination",
+        "signal-noise-trade-off-evaluation",
+        "sensitivity-threshold-stability-assessment",
+        "replicate-spectrum-comparison",
+        "mzml-file-generation-mass-spectrometry",
+        "spectral-similarity-matching-and-comparison",
+        "spectral-peak-frequency-threshold-optimization"
       ]
     },
     "ms2-spectrum-collection-from-data-dependent-acquisition": {
@@ -2056,6 +2666,16 @@
         "spectra",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "ms2-spectrum-extraction-and-consensus-building",
+        "consensus-spectrum-assembly-from-fragmentation-spectra",
+        "spectral-similarity-scoring-and-reference-matching",
+        "chromatographic-peak-detection-msw",
+        "chromatographic-peak-extraction-and-retention-time-filtering",
+        "ms2-spectrum-consolidation",
+        "spectral-similarity-matching-and-comparison",
+        "mass-spectrometry-data-preprocessing"
       ]
     },
     "ms2-spectrum-extraction-and-consensus-building": {
@@ -2099,6 +2719,16 @@
         "spectra",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "ms2-spectrum-collection-from-data-dependent-acquisition",
+        "consensus-spectrum-assembly-from-fragmentation-spectra",
+        "spectral-similarity-scoring-and-reference-matching",
+        "ms2-spectrum-consolidation",
+        "spectral-similarity-matching-and-comparison",
+        "chromatographic-peak-extraction-and-retention-time-filtering",
+        "ms2-data-preprocessing-pipeline",
+        "chromatographic-peak-detection-msw"
       ]
     },
     "msconvert-tool-configuration": {
@@ -2124,6 +2754,16 @@
         "jorhelp-docker-image",
         "msconvert",
         "pytorch"
+      ],
+      "related_skills": [
+        "ms-instrument-data-preprocessing",
+        "mass-spectrometry-file-format-conversion",
+        "isotope-pattern-detection",
+        "mass-spectrometry-file-conversion",
+        "msconvert-parameter-configuration",
+        "msconvert-integration-and-invocation",
+        "ms-data-preprocessing",
+        "mass-spectrometry-data-processing"
       ]
     },
     "msflo-metabolite-annotation": {
@@ -2154,6 +2794,16 @@
         "nextflow",
         "nextflow-22-10-0",
         "singularity"
+      ],
+      "related_skills": [
+        "ms-dial-feature-detection-and-alignment",
+        "lc-hrms-data-preprocessing-pipeline",
+        "lc-hrms-metabolomics-data-processing",
+        "metabolomics-peak-detection-configuration",
+        "lc-ms-output-validation",
+        "lcms-metabolomics-data-processing",
+        "nextflow-workflow-execution",
+        "nextflow-pipeline-orchestration"
       ]
     },
     "msi-feature-metadata-preservation": {
@@ -2185,6 +2835,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "bioinformatic-object-conversion",
+        "cardinal-to-seurat-object-conversion",
+        "spatial-metabolomics-feature-annotation",
+        "mass-spectrometry-feature-extraction-from-cardinal-objects",
+        "seurat-assay-metadata-extraction",
+        "spatial-coordinate-mapping-msi",
+        "metabolite-annotation-at-scale",
+        "cardinal-peak-processing-snr-filtering"
       ]
     },
     "msp-file-parsing-edge-case-handling": {
@@ -2209,6 +2869,16 @@
       "tools_used": [
         "python",
         "spectra-hash"
+      ],
+      "related_skills": [
+        "msp-file-parsing-and-serialization",
+        "msp-file-parsing-and-writing",
+        "file-format-robustness-testing",
+        "spectral-metadata-validation",
+        "msp-file-parsing",
+        "spectrum-filtering-with-deletion-logging",
+        "molecular-identifier-completeness-verification",
+        "spectrum-metadata-filtering"
       ]
     },
     "multi-platform-ms-integration": {
@@ -2249,6 +2919,16 @@
         "signal-processing-toolbox",
         "statistics-and-machine-learning-toolbox",
         "wavelet-toolbox"
+      ],
+      "related_skills": [
+        "matlab-scientific-computing",
+        "roi-detection-mass-spectrometry",
+        "data-augmentation-metabolomics",
+        "ms-data-preprocessing",
+        "parameter-driven-preprocessing-pipeline",
+        "vendor-data-standardization",
+        "mass-spectrometry-file-format-conversion",
+        "untargeted-metabolomics-dataset-integration"
       ]
     },
     "multivariate-ordination-interpretation": {
@@ -2280,6 +2960,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "ms2-annotation-interpretation",
+        "interactive-spectral-visualization-emperor",
+        "spectral-library-annotation-interpretation",
+        "tabular-results-aggregation-and-comparison",
+        "metabolite-feature-table-normalization",
+        "metadata-annotation-integration",
+        "pca-dimensionality-reduction-unsupervised",
+        "metabolite-detection-matrix-construction"
       ]
     },
     "normalization-for-unequal-group-sizes": {
@@ -2310,6 +3000,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "tabular-results-aggregation-and-comparison",
+        "group-wise-chemical-enrichment-calculation",
+        "metabolite-feature-table-normalization",
+        "metadata-annotation-integration",
+        "sample-metadata-stratification-and-filtering",
+        "file-grouping-by-sample-attributes",
+        "sample-information-metadata-parsing",
+        "multivariate-ordination-interpretation"
       ]
     },
     "numeric-array-round-trip-validation": {
@@ -2348,6 +3048,16 @@
         "redis",
         "rq-redis-queue",
         "streamlit"
+      ],
+      "related_skills": [
+        "floating-point-numerical-accuracy-assessment",
+        "unit-test-fixture-design-and-execution",
+        "numpress-compression-algorithm-encoding",
+        "binary-data-integrity-verification",
+        "round-trip-data-integrity-verification",
+        "numerical-equivalence-verification",
+        "file-format-conversion-validation",
+        "unit-test-validation-for-preprocessing"
       ]
     },
     "ondiskmsnexp-object-manipulation-and-export": {
@@ -2379,6 +3089,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "effective-mobility-transformation",
+        "ce-ms-data-import-and-parsing",
+        "migration-time-extraction",
+        "ce-ms-migration-time-to-mobility-transformation",
+        "mobility-scale-transformation",
+        "ce-ms-migration-time-measurement",
+        "effective-mobility-calibration-single-marker",
+        "unified-mobility-scale-construction-across-polarities"
       ]
     },
     "open-source-mass-spectrometry-file-format-interoperability": {
@@ -2415,6 +3135,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-vendor-format-support",
+        "bruker-baf-data-import-and-conversion",
+        "data-format-validation-and-integrity-checking",
+        "spectral-ion-matching-across-vendors",
+        "ion-mobility-filtering-and-tolerance-tuning",
+        "vendor-file-format-specification-handling",
+        "mass-spectrometry-imaging-line-scan-data-handling",
+        "msi-preprocessing-parameter-configuration"
       ]
     },
     "output-grounding": {
@@ -3023,6 +3753,16 @@
         "vimms",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "figure-table-interpretation",
+        "evidence-linking",
+        "scientific-task-formulation",
+        "expert-review-preparation",
+        "reproducibility-gap-detection",
+        "workflow-reconstruction",
+        "metabolite-abundance-normalization-across-conditions",
+        "mass-action-kinetics-propensity-scoring"
       ]
     },
     "parameter-driven-preprocessing-pipeline": {
@@ -3065,6 +3805,16 @@
         "signal-processing-toolbox",
         "statistics-and-machine-learning-toolbox",
         "wavelet-toolbox"
+      ],
+      "related_skills": [
+        "matlab-scientific-computing",
+        "roi-detection-mass-spectrometry",
+        "data-augmentation-metabolomics",
+        "multi-platform-ms-integration",
+        "ms-data-preprocessing",
+        "metabolomics-feature-preprocessing",
+        "spectral-peak-detection-and-deconvolution",
+        "lc-hrms-data-preprocessing-pipeline"
       ]
     },
     "pca-dimensionality-reduction-unsupervised": {
@@ -3096,6 +3846,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "interactive-spectral-visualization-emperor",
+        "multivariate-ordination-interpretation",
+        "metabolite-feature-table-normalization",
+        "chemical-annotation-matrix-construction",
+        "metabolite-detection-matrix-construction",
+        "metadata-annotation-integration",
+        "tabular-results-aggregation-and-comparison",
+        "tsne-embedding-dimensionality-reduction"
       ]
     },
     "peak-detection-and-boundary-identification": {
@@ -3127,6 +3887,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "ce-ms-data-import-and-parsing",
+        "ion-trace-extraction-and-filtering",
+        "extracted-ion-electropherogram-generation",
+        "effective-mobility-transformation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "ce-ms-migration-time-measurement",
+        "migration-time-extraction",
+        "mass-to-charge-tolerance-filtering"
       ]
     },
     "peak-picking-avoidance-ms-analysis": {
@@ -3151,6 +3921,16 @@
       "tools_used": [
         "npfimg",
         "xcms"
+      ],
+      "related_skills": [
+        "automated-peak-detection-without-conventional-picking",
+        "image-based-feature-extraction-ms-maps",
+        "two-dimensional-ms-image-processing",
+        "image-processing-for-metabolomics",
+        "chromatography-mass-spectrometry-data-processing",
+        "marker-feature-identification-and-validation",
+        "two-dimensional-spectral-map-analysis",
+        "untargeted-metabolomics-marker-identification"
       ]
     },
     "peak-picking-parameter-configuration": {
@@ -3178,6 +3958,16 @@
         "r-version-or-higher",
         "ramclustr",
         "xcms"
+      ],
+      "related_skills": [
+        "ms-ms-spectrum-peak-annotation",
+        "peak-detection-threshold-application",
+        "mass-spectrum-fragment-ion-extraction",
+        "metabolite-library-entry-generation",
+        "spectral-library-entry-generation",
+        "fragment-ion-scoring-and-ranking",
+        "annotaterc-function-parameterization",
+        "noise-filtering-threshold-application"
       ]
     },
     "peak-quality-assessment-by-selectivity-and-snr-metrics": {
@@ -3225,6 +4015,16 @@
         "scipy",
         "scipy-signal-detrend",
         "scipy-signal-find-peaks"
+      ],
+      "related_skills": [
+        "peak-evaluation-metrics-cselectivity-snr-gaussian-fit",
+        "selectivity-metric-computation-chromatographic",
+        "snr-based-signal-validation",
+        "prominence-controlled-peak-selection",
+        "signal-to-noise-ratio-calculation-peaks",
+        "peak-quality-threshold-filtering",
+        "quality-control-metric-distribution-analysis",
+        "peak-selectivity-metric-evaluation"
       ]
     },
     "peaklist-metabolite-assignment-prioritization": {
@@ -3248,6 +4048,16 @@
       "tools_used": [
         "idsl-ipa",
         "idsl-ufa"
+      ],
+      "related_skills": [
+        "molecular-formula-isotopic-profile-matching",
+        "ms1-spectral-annotation-chemical-space",
+        "mass-accuracy-tolerance-filtering",
+        "metabolomic-peak-quality-assessment",
+        "metabolomics-data-preprocessing",
+        "metabolite-signal-extraction-from-lc-hrms",
+        "lc-hrms-data-processing-evaluation",
+        "chromatographic-peak-processing"
       ]
     },
     "qc-failure-event-detection": {
@@ -3276,6 +4086,16 @@
         "msconvert",
         "plotly-or-equivalent-interactive-plotting-library",
         "slack-api"
+      ],
+      "related_skills": [
+        "slack-api-integration",
+        "per-sample-pass-fail-classification",
+        "notification-configuration-management",
+        "notification-payload-formatting",
+        "email-delivery-integration",
+        "realtime-alert-dispatch",
+        "qc-metric-visualization-across-samples",
+        "lc-ms-data-pipeline-architecture"
       ]
     },
     "r-data-structure-conversion": {
@@ -3302,6 +4122,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "msi-data-format-interoperability",
+        "cardinal-imaging-object-conversion",
+        "msi-data-matrix-import-and-validation",
+        "mass-spectrometry-peak-enumeration",
+        "msi-peak-intensity-extraction",
+        "mass-spectrometry-peak-pair-analysis",
+        "msi-data-import-csv",
+        "mass-spectrometry-imaging-data-interpretation"
       ]
     },
     "r-workflow-scripting-for-analytical-chemistry": {
@@ -3334,6 +4164,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "bioconductor-data-import-and-handling",
+        "xcms-workflow-execution",
+        "lcms-workflow-orchestration",
+        "ce-ms-data-import-and-parsing",
+        "r-bioconductor-workflow-orchestration",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "effective-mobility-transformation",
+        "xcms-object-handling-and-preprocessing"
       ]
     },
     "reaction-pathway-assignment-and-propagation": {
@@ -3373,6 +4213,16 @@
         "readxl",
         "reshape2",
         "tidyverse"
+      ],
+      "related_skills": [
+        "spectral-clustering-and-feature-grouping",
+        "xenobiotic-metabolite-annotation-from-ms-ms",
+        "exact-mass-database-matching",
+        "fragmentation-pattern-similarity-scoring",
+        "metabolomic-heatmap-visualization",
+        "organism-specific-metabolism-pathway-assignment",
+        "reactomics-annotation-and-clustering",
+        "biochemical-transformation-matching"
       ]
     },
     "reconstruction-algorithm-implementation": {
@@ -3393,6 +4243,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "meister"
+      ],
+      "related_skills": [
+        "deep-learning-model-training",
+        "high-dimensional-signal-enhancement",
+        "model-validation-and-performance-evaluation",
+        "mass-spectrometry-image-reconstruction",
+        "mass-spectrometry-imaging-data-processing",
+        "msi-peak-annotation",
+        "mass-spectrometry-deconvolution-algorithm-application",
+        "mass-spectrometry-data-matrix-construction"
       ]
     },
     "recursive-propagation-algorithm-development": {
@@ -3412,6 +4272,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "mrnannoalgo3-metdna3"
+      ],
+      "related_skills": [
+        "metabolite-annotation-network-architecture",
+        "annotation-confidence-scoring",
+        "two-layer-topology-traversal",
+        "network-node-label-spreading",
+        "knowledge-graph-integration-design",
+        "knowledge-data-driven-layer-integration",
+        "graph-based-knowledge-representation",
+        "data-driven-similarity-layer-implementation"
       ]
     },
     "retention-time-based-ion-association": {
@@ -3433,6 +4303,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "idsl-csa"
+      ],
+      "related_skills": [
+        "dda-precursor-fragment-ion-grouping",
+        "composite-spectra-assembly-from-fragment-ions",
+        "mass-spectrometry-deconvolution-algorithm-application",
+        "dia-data-format-recognition",
+        "composite-spectra-analysis",
+        "chemical-structure-annotation-preparation",
+        "retention-time-alignment-across-batches",
+        "ms1-composite-spectra-deconvolution"
       ]
     },
     "retention-time-prediction-modeling": {
@@ -3456,6 +4336,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "retip"
+      ],
+      "related_skills": [
+        "machine-learning-model-inference",
+        "metabolite-annotation-by-chromatographic-behavior",
+        "retention-time-prediction-optimization",
+        "retention-time-prediction-chromatography",
+        "retention-time-prediction",
+        "retention-order-prediction-rplc",
+        "molecular-descriptor-extraction",
+        "retention-time-prediction-from-structures"
       ]
     },
     "retrieval-metric-hit-k-calculation": {
@@ -3489,6 +4379,16 @@
         "numba",
         "python",
         "pytorch"
+      ],
+      "related_skills": [
+        "compound-retrieval-hit-at-k-evaluation",
+        "compound-ground-truth-matching",
+        "cosine-similarity-ranking-metrics",
+        "cosine-similarity-matrix-computation",
+        "hit-metric-evaluation-fold-averaging",
+        "top-k-retrieval-ranking-evaluation",
+        "spectral-retrieval-ranking-task",
+        "embedding-similarity-computation"
       ]
     },
     "roi-detection-mass-spectrometry": {
@@ -3529,6 +4429,16 @@
         "signal-processing-toolbox",
         "statistics-and-machine-learning-toolbox",
         "wavelet-toolbox"
+      ],
+      "related_skills": [
+        "matlab-scientific-computing",
+        "parameter-driven-preprocessing-pipeline",
+        "multi-platform-ms-integration",
+        "data-augmentation-metabolomics",
+        "lc-ms-roi-annotation-interpretation",
+        "ms-data-preprocessing",
+        "chromatographic-peak-detection-validation",
+        "spectral-peak-detection-and-deconvolution"
       ]
     },
     "sample-information-metadata-parsing": {
@@ -3558,6 +4468,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "sample-metadata-stratification-and-filtering",
+        "metadata-annotation-integration",
+        "file-grouping-by-sample-attributes",
+        "mass-spectrometry-file-inventory-management",
+        "controlled-vocabulary-term-mapping",
+        "filter-criteria-composition-and-validation",
+        "metabolite-feature-table-normalization",
+        "tabular-results-aggregation-and-comparison"
       ]
     },
     "signal-quality-assessment": {
@@ -3582,6 +4502,16 @@
         "msi-explorer",
         "napari",
         "python"
+      ],
+      "related_skills": [
+        "spectral-noise-reduction-msi",
+        "msi-spectral-data-import",
+        "spectral-baseline-correction",
+        "intensity-normalization-spectra",
+        "msi-data-visualization-and-spatial-analysis",
+        "m-z-array-processing",
+        "msi-data-table-export",
+        "mean-intensity-aggregation"
       ]
     },
     "singularity-container-deployment": {
@@ -3612,6 +4542,16 @@
         "nextflow",
         "nextflow-22-10-0",
         "singularity"
+      ],
+      "related_skills": [
+        "nextflow-pipeline-configuration-hpc",
+        "singularity-container-backend-setup",
+        "container-image-building-conversion",
+        "container-image-selection-and-mounting",
+        "nextflow-profile-customization",
+        "workflow-reproducibility-validation",
+        "container-image-management",
+        "nextflow-workflow-execution"
       ]
     },
     "sodium-adduct-detection-and-classification": {
@@ -3638,6 +4578,16 @@
         "cardinal",
         "github-kbseah-mass2adduct",
         "mass2adduct"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-data-interpretation",
+        "mass-spectrometry-adduct-annotation",
+        "mass-spectrometry-peak-enumeration",
+        "mass-difference-calculation-from-spectral-peaks",
+        "mass-spectrometry-peak-pair-analysis",
+        "adduct-mass-difference-matching",
+        "adduct-mass-difference-ranking",
+        "adduct-ion-parent-ion-pairing-analysis"
       ]
     },
     "spatial-coordinate-mapping-msi": {
@@ -3669,6 +4619,16 @@
         "seurat",
         "spamtp",
         "tidyr"
+      ],
+      "related_skills": [
+        "msi-feature-metadata-preservation",
+        "bioinformatic-object-conversion",
+        "spatial-segmentation-shrunken-centroids",
+        "spatial-spectral-array-processing",
+        "spatial-metabolomics-feature-annotation",
+        "cardinal-object-structure-understanding",
+        "seurat-assay-metadata-extraction",
+        "cardinal-to-seurat-object-conversion"
       ]
     },
     "spectral-clustering-and-feature-grouping": {
@@ -3708,6 +4668,16 @@
         "readxl",
         "reshape2",
         "tidyverse"
+      ],
+      "related_skills": [
+        "reaction-pathway-assignment-and-propagation",
+        "xenobiotic-metabolite-annotation-from-ms-ms",
+        "exact-mass-database-matching",
+        "metabolomic-heatmap-visualization",
+        "fragmentation-pattern-similarity-scoring",
+        "metabolite-feature-grouping-by-compound",
+        "lc-ms-feature-grouping-and-compounding",
+        "mass-spectrometry-feature-clustering"
       ]
     },
     "spectral-coverage-and-intensity-metric-computation": {
@@ -3744,6 +4714,16 @@
         "python",
         "topncontroller",
         "vimms"
+      ],
+      "related_skills": [
+        "metabolite-detection-and-acquisition-performance-benchmarking",
+        "vimms-controller-configuration-and-execution",
+        "mzml-format-output-generation-and-validation",
+        "dynamic-exclusion-weighting-strategy-evaluation",
+        "spectral-scan-generation-and-export",
+        "evaluation-data-collection-for-simulation-assessment",
+        "fragmentation-strategy-comparison-across-datasets",
+        "simulation-evaluation-data-capture"
       ]
     },
     "spectral-database-matching": {
@@ -3779,6 +4759,16 @@
         "rdkit",
         "sirius",
         "spectra"
+      ],
+      "related_skills": [
+        "ms2-dereplication",
+        "spectral-library-matching",
+        "compound-database-matching",
+        "spectral-library-matching-gnps",
+        "mass-spectrometry-database-search",
+        "ms-ms-spectral-library-matching",
+        "spectrum-similarity-scoring",
+        "metabolite-spectral-matching"
       ]
     },
     "spectral-library-annotation-interpretation": {
@@ -3809,6 +4799,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "chemical-annotation-confidence-assessment",
+        "ms2-annotation-interpretation",
+        "multivariate-ordination-interpretation",
+        "spectral-library-matching-gnps",
+        "metadata-annotation-integration",
+        "tabular-results-aggregation-and-comparison",
+        "metabolite-detection-matrix-construction",
+        "metabolite-feature-table-normalization"
       ]
     },
     "spectral-library-matching-gnps": {
@@ -3839,6 +4839,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "spectral-library-annotation-interpretation",
+        "metabolite-detection-matrix-construction",
+        "ms2-annotation-interpretation",
+        "spectral-library-matching",
+        "multivariate-ordination-interpretation",
+        "spectral-library-molecular-networking",
+        "spectral-database-matching",
+        "open-format-mass-spectrometry-file-handling"
       ]
     },
     "spectral-neutral-loss-transformation": {
@@ -3860,7 +4870,17 @@
       ],
       "license_tier": "restricted",
       "provenance_tier": "literature",
-      "tools_used": []
+      "tools_used": [],
+      "related_skills": [
+        "mass-spectrum-peak-normalization",
+        "spectral-peak-alignment-with-mass-offset",
+        "cosine-similarity-computation",
+        "neutral-loss-calculation-from-precursor",
+        "neutral-loss-formula-computation",
+        "precursor-mass-neutral-loss-calculation",
+        "structured-molecule-relationship-evaluation",
+        "spectrum-alignment-performance-benchmarking"
+      ]
     },
     "spectral-retrieval-ranking-task": {
       "dois": [
@@ -3892,6 +4912,16 @@
         "numba",
         "python",
         "pytorch"
+      ],
+      "related_skills": [
+        "compound-retrieval-hit-at-k-evaluation",
+        "cosine-similarity-ranking-metrics",
+        "similarity-ranking-and-retrieval-evaluation",
+        "top-k-retrieval-ranking-evaluation",
+        "high-quality-spectral-library-benchmarking",
+        "embedding-similarity-computation",
+        "compound-ground-truth-matching",
+        "spectral-similarity-scoring-computation"
       ]
     },
     "spectral-similarity-matching-and-comparison": {
@@ -3935,6 +4965,16 @@
         "spectra",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "spectral-similarity-scoring-and-reference-matching",
+        "spectral-similarity-scoring",
+        "spectral-similarity-matching-algorithms",
+        "chromatographic-peak-shape-comparison",
+        "spectral-similarity-matrix-computation",
+        "ms2-spectrum-extraction-and-consensus-building",
+        "spectral-similarity-ranking",
+        "spectral-similarity-score-computation"
       ]
     },
     "spectral-similarity-scoring": {
@@ -4015,6 +5055,16 @@
         "sirius",
         "spectra",
         "tandemmatch"
+      ],
+      "related_skills": [
+        "spectral-similarity-matching-and-comparison",
+        "gc-ms-spectral-library-matching",
+        "spectral-similarity-scoring-computation",
+        "low-resolution-mass-spectra-library-matching",
+        "spectral-similarity-scoring-and-reference-matching",
+        "spectral-similarity-matrix-computation",
+        "spectral-similarity-ranking",
+        "spectral-similarity-score-computation"
       ]
     },
     "spectral-similarity-scoring-and-reference-matching": {
@@ -4059,6 +5109,16 @@
         "spectra",
         "xcms",
         "zenodo"
+      ],
+      "related_skills": [
+        "spectral-similarity-matching-and-comparison",
+        "spectral-similarity-scoring",
+        "ms2-spectrum-collection-from-data-dependent-acquisition",
+        "mirror-plot-visualization-for-spectrum-comparison",
+        "ms2-spectrum-extraction-and-consensus-building",
+        "spectral-similarity-score-computation",
+        "spectrum-similarity-scoring",
+        "consensus-spectrum-assembly-from-fragmentation-spectra"
       ]
     },
     "spectrum-similarity-scoring": {
@@ -4086,6 +5146,16 @@
         "gnps",
         "massbank",
         "mergeion2"
+      ],
+      "related_skills": [
+        "public-database-query-integration",
+        "precursor-m-z-based-filtering",
+        "compound-identifier-lookup",
+        "fragmentation-pattern-annotation",
+        "spectral-similarity-scoring-and-reference-matching",
+        "mass-spectrum-similarity-scoring",
+        "spectral-similarity-matching-and-comparison",
+        "spectral-database-matching"
       ]
     },
     "tabular-results-aggregation-and-comparison": {
@@ -4116,6 +5186,16 @@
         "gnps2",
         "massive",
         "redu"
+      ],
+      "related_skills": [
+        "group-wise-chemical-enrichment-calculation",
+        "normalization-for-unequal-group-sizes",
+        "multivariate-ordination-interpretation",
+        "metadata-annotation-integration",
+        "metabolite-detection-matrix-construction",
+        "ms2-annotation-interpretation",
+        "metabolite-feature-table-normalization",
+        "spectral-library-annotation-interpretation"
       ]
     },
     "unified-mobility-scale-construction-across-polarities": {
@@ -4147,6 +5227,16 @@
         "msnbase",
         "spectra",
         "xcms"
+      ],
+      "related_skills": [
+        "effective-mobility-transformation",
+        "mobility-scale-transformation",
+        "ce-ms-migration-time-to-mobility-transformation",
+        "ondiskmsnexp-object-manipulation-and-export",
+        "effective-mobility-calibration-single-marker",
+        "ce-ms-data-import-and-parsing",
+        "ce-ms-migration-time-measurement",
+        "migration-time-extraction"
       ]
     },
     "unit-test-fixture-design-and-execution": {
@@ -4184,6 +5274,16 @@
         "redis",
         "rq-redis-queue",
         "streamlit"
+      ],
+      "related_skills": [
+        "numeric-array-round-trip-validation",
+        "floating-point-numerical-accuracy-assessment",
+        "unit-test-design-for-analytical-chemistry",
+        "numpress-compression-algorithm-encoding",
+        "unit-test-design-for-scoring-metrics",
+        "unit-test-validation-for-preprocessing",
+        "unit-test-design-for-file-parsing",
+        "unit-test-development-for-spectral-loaders"
       ]
     },
     "vendor-data-standardization": {
@@ -4215,6 +5315,16 @@
         "signal-processing-toolbox",
         "statistics-and-machine-learning-toolbox",
         "wavelet-toolbox"
+      ],
+      "related_skills": [
+        "ms-data-preprocessing",
+        "mass-spectrometry-file-format-conversion",
+        "mass-spectrometry-file-conversion",
+        "raw-vendor-file-format-handling",
+        "mass-spectrometry-data-processing",
+        "vendor-instrument-data-handling",
+        "vendor-mass-spectrometry-file-format-handling",
+        "mass-spectrometry-data-structure-conversion"
       ]
     },
     "vendor-file-format-specification-handling": {
@@ -4246,6 +5356,16 @@
         "proteowizard-msconvert",
         "pybaf2sql",
         "python"
+      ],
+      "related_skills": [
+        "mass-spectrometry-imaging-vendor-format-support",
+        "file-format-detection-and-routing",
+        "raw-vendor-file-format-handling",
+        "module-loader-implementation",
+        "open-source-mass-spectrometry-file-format-interoperability",
+        "mass-spectrometry-file-conversion",
+        "error-handling-for-unsupported-formats",
+        "msi-preprocessing-parameter-configuration"
       ]
     },
     "xenobiotic-metabolite-annotation-from-ms-ms": {
@@ -4285,6 +5405,16 @@
         "readxl",
         "reshape2",
         "tidyverse"
+      ],
+      "related_skills": [
+        "exact-mass-database-matching",
+        "reaction-pathway-assignment-and-propagation",
+        "spectral-clustering-and-feature-grouping",
+        "fragmentation-pattern-similarity-scoring",
+        "metabolite-feature-extraction-xcms",
+        "metabolite-feature-grouping-by-compound",
+        "xcms-object-handling-and-preprocessing",
+        "metabolite-feature-annotation"
       ]
     },
     "xic-marker-annotation": {
@@ -4304,6 +5434,16 @@
       "provenance_tier": "literature",
       "tools_used": [
         "gnps-lcms-visualization-dashboard"
+      ],
+      "related_skills": [
+        "ms2-precursor-extraction",
+        "retention-time-scan-mapping",
+        "peak-list-formatting",
+        "retention-time-intensity-tabulation",
+        "spectral-data-retrieval",
+        "marker-feature-visualization-retention-time-mz",
+        "marker-feature-identification-chromatography-ms",
+        "gnps-repository-querying"
       ]
     }
   }
