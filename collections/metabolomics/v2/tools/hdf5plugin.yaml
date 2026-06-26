@@ -12,6 +12,9 @@ derived_from:
 source_repos:
 - PNNL-m-q/mzapy
 schema_version: 0.2.0
+license_tier: open
+license: BSD-2-Clause
+license_detection: github-api
 techniques:
 - LC-MS
 - ion-mobility-MS

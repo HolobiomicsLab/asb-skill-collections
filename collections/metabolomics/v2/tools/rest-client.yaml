@@ -10,3 +10,6 @@ derived_from:
 source_repos:
 - https://bitbucket.org/wishartlab/classyfire_api.git
 schema_version: 0.2.0
+license_tier: noncommercial
+license: Academic use free; commercial use/redistribution by permission of the authors (Wishart Lab).
+license_detection: null

@@ -15,6 +15,9 @@ derived_from:
 source_repos:
 - griquelme/tidyms
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - LC-MS
 - CE-MS

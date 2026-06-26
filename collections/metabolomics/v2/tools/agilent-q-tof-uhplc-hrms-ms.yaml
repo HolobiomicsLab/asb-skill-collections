@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - GarrettLab-UF/LipidMatch
 schema_version: 0.2.0
+license_tier: open
+license: CC-BY-4.0
+license_detection: license-file
 techniques:
 - LC-MS
 - direct-infusion-MS

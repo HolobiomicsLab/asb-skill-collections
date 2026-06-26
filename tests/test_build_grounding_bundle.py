@@ -167,3 +167,27 @@ def test_build_unit_without_collection_commands_dir(tmp_path):
     assert (unit / "commands" / "ground.md").exists()
     assert "commands/ground.md" in written
     assert not any(w.startswith("commands/") and w != "commands/ground.md" for w in written)
+
+
+def test_build_unit_self_build_collection_is_its_own_unit(tmp_path):
+    # build_all_grounding.sh first builds the full collection as its own unit
+    # (unit_dir == collection_dir). The command copy must not raise
+    # SameFileError when source and destination resolve to the same path.
+    from scripts.build_grounding_bundle import build_unit, render_ground_command
+    col = _make_collection_with_commands(tmp_path)
+    (col / "skills" / "bioactivity-score-aggregation").mkdir(parents=True)
+    (col / ".claude-plugin").mkdir()
+    (col / ".claude-plugin" / "plugin.json").write_text(
+        json.dumps({"name": "c", "description": "Full."})
+    )
+    bind = tmp_path / "bind.py"
+    bind.write_text("# vendored bind\n")
+    # unit and collection are the same directory
+    written = build_unit(col, col, bind)
+    cmd_dir = col / "commands"
+    # the contribution commands are preserved verbatim (already in place)
+    assert (cmd_dir / "propose-skill.md").read_text() == "# propose-skill\nbody\n"
+    assert (cmd_dir / "synthesize-meta-skill.md").read_text() == "# synthesize-meta-skill\nbody\n"
+    # ground.md is (re)rendered, overwriting the stale collection copy
+    assert (cmd_dir / "ground.md").read_text() == render_ground_command()
+    assert "commands/ground.md" in written

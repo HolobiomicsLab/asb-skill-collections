@@ -19,6 +19,9 @@ source_repos:
 - beherasan/MS2Compound
 - https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git
 schema_version: 0.2.0
+license_tier: restricted
+license: no license found (verified 2026-06-24)
+license_detection: null
 techniques:
 - LC-MS
 - MS-imaging

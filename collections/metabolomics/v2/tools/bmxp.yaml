@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - broadinstitute/bmxp
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: license-file
 techniques:
 - LC-MS
 - ion-mobility-MS

@@ -10,5 +10,8 @@ derived_from:
 source_repos:
 - wabdelmoula/massNet
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - MS-imaging

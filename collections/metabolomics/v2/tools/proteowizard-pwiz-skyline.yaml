@@ -10,5 +10,8 @@ derived_from:
 source_repos:
 - ComPlat/chem-spectra-app
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - NMR

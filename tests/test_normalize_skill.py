@@ -226,3 +226,133 @@ def test_normalized_frontmatter_does_not_mutate_input():
     snapshot = {"name": "x", "description": VALID_DESC, "metadata": {"license_tier": "open"}}
     n.normalized_frontmatter(raw, related_skills=["a"], tools_used=["b"], license_tier="restricted")
     assert raw == snapshot
+
+
+# --- contributors (co-authorship attribution) --------------------------------
+
+def test_normalized_frontmatter_omits_contributors_when_none():
+    raw = {"name": "x", "description": VALID_DESC, "metadata": {}}
+    fm = n.normalized_frontmatter(
+        raw, related_skills=[], tools_used=[], license_tier="open"
+    )
+    assert "contributors" not in fm
+
+
+def test_normalized_frontmatter_emits_well_formed_contributors_block():
+    raw = {"name": "x", "description": VALID_DESC, "metadata": {}}
+    contributors = [
+        {
+            "name": "Ada Lovelace",
+            "role": "author",
+            "orcid": "0000-0002-1825-0097",
+            "github": "ada",
+        },
+        {"name": "Grace Hopper", "role": "reviewer"},
+    ]
+    fm = n.normalized_frontmatter(
+        raw,
+        related_skills=[],
+        tools_used=[],
+        license_tier="open",
+        contributors=contributors,
+    )
+    assert fm["contributors"] == [
+        {
+            "name": "Ada Lovelace",
+            "role": "author",
+            "orcid": "0000-0002-1825-0097",
+            "github": "ada",
+        },
+        {"name": "Grace Hopper", "role": "reviewer"},
+    ]
+    # optional keys are dropped when absent (no orcid/github key on Grace)
+    assert "orcid" not in fm["contributors"][1]
+    assert "github" not in fm["contributors"][1]
+
+
+def test_normalized_frontmatter_contributors_block_does_not_mutate_input():
+    raw = {"name": "x", "description": VALID_DESC, "metadata": {}}
+    contributors = [{"name": "Ada", "role": "author", "extra": "drop-me"}]
+    snapshot = [{"name": "Ada", "role": "author", "extra": "drop-me"}]
+    fm = n.normalized_frontmatter(
+        raw,
+        related_skills=[],
+        tools_used=[],
+        license_tier="open",
+        contributors=contributors,
+    )
+    # input is not mutated; the emitted entry keeps only the well-formed keys
+    assert contributors == snapshot
+    assert fm["contributors"] == [{"name": "Ada", "role": "author"}]
+
+
+def test_normalized_frontmatter_contributors_round_trips_through_yaml():
+    raw = {
+        "name": "blank-contamination-filtering",
+        "description": VALID_DESC,
+        "metadata": {
+            "edam_operation": "http://edamontology.org/operation_3215",
+            "edam_topics": ["http://edamontology.org/topic_0091"],
+        },
+    }
+    fm = n.normalized_frontmatter(
+        raw,
+        related_skills=[],
+        tools_used=[],
+        license_tier="open",
+        contributors=[{"name": "Ada Lovelace", "role": "author"}],
+    )
+    reloaded = yaml.safe_load(yaml.safe_dump(fm, sort_keys=False, allow_unicode=True))
+    assert reloaded == fm
+    # emitting a contributors block must not break the existing gate
+    assert n.frontmatter_violations(fm) == []
+
+
+# --- contributor_violations --------------------------------------------------
+
+def test_contributor_violations_valid_returns_empty():
+    contributors = [
+        {"name": "Ada Lovelace", "role": "author", "orcid": "0000-0002-1825-0097"},
+        {"name": "Grace Hopper", "role": "reviewer"},
+        {"name": "Curator C", "role": "curator", "github": "cc"},
+    ]
+    assert n.contributor_violations(contributors) == []
+
+
+def test_contributor_violations_absent_is_clean():
+    # contributors is optional — absence (None) yields no violations.
+    assert n.contributor_violations(None) == []
+
+
+def test_contributor_violations_not_a_list_flagged():
+    assert n.contributor_violations({"name": "Ada", "role": "author"})
+
+
+def test_contributor_violations_entry_not_mapping_flagged():
+    v = n.contributor_violations(["Ada Lovelace"])
+    assert any("mapping" in x.lower() for x in v)
+
+
+def test_contributor_violations_missing_name_flagged():
+    v = n.contributor_violations([{"role": "author"}])
+    assert any("name" in x.lower() for x in v)
+
+
+def test_contributor_violations_empty_name_flagged():
+    v = n.contributor_violations([{"name": "   ", "role": "author"}])
+    assert any("name" in x.lower() for x in v)
+
+
+def test_contributor_violations_missing_role_flagged():
+    v = n.contributor_violations([{"name": "Ada"}])
+    assert any("role" in x.lower() for x in v)
+
+
+def test_contributor_violations_bad_role_flagged():
+    v = n.contributor_violations([{"name": "Ada", "role": "maintainer"}])
+    assert any("role" in x.lower() for x in v)
+
+
+def test_contributor_violations_each_allowed_role_ok():
+    for role in ("author", "reviewer", "curator"):
+        assert n.contributor_violations([{"name": "X", "role": role}]) == [], role

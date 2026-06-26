@@ -1,4 +1,5 @@
-"""Synthesizer helper for auto-created **super-skills** (synthetic provenance).
+"""Synthesizer helper for auto-created **super-skills** (synthetic, or
+review-grounded **literature**, provenance).
 
 The deterministic half of the ``synthesize-meta-skill`` flow (the agentic
 ``commands/synthesize-meta-skill.md`` does the identify-the-pipeline + body
@@ -10,13 +11,15 @@ no network beyond the *injected* matcher:
   (:func:`scripts.skill_match.match_skills`, injectable for tests) that gathers
   the candidate sub-skills clustered around a pipeline seed plus the tools they
   ground on (via :func:`scripts.skill_match.match_tools`).
-* :func:`meta_frontmatter` — assemble a schema-correct ``super``/``synthetic``
-  frontmatter, reusing :func:`scripts.normalize_skill.normalized_frontmatter`
-  (``provenance_tier="synthetic"``, ``status="hold"``) and adding
-  ``metadata.skill_kind="super"`` + ``metadata.orchestrates``. ``related_skills``
-  mirrors ``orchestrates`` so the result also satisfies the community
-  ``related_skills``-key expectation. Yields zero
-  :func:`scripts.normalize_skill.frontmatter_violations`.
+* :func:`meta_frontmatter` — assemble a schema-correct ``super`` frontmatter,
+  reusing :func:`scripts.normalize_skill.normalized_frontmatter`
+  (``status="hold"``) and adding ``metadata.skill_kind="super"`` +
+  ``metadata.orchestrates``. The default origin is ``synthetic`` (derived from the
+  orchestrated skills); passing a ``review_doi`` instead grounds the pipeline in a
+  *review article* → ``provenance_tier="literature"`` with ``metadata.dois`` +
+  ``derived_from`` carrying that DOI. ``related_skills`` mirrors ``orchestrates``
+  so the result also satisfies the community ``related_skills``-key expectation.
+  Yields zero :func:`scripts.normalize_skill.frontmatter_violations`.
 * :func:`stage_meta_skill` — stage the synthesized SKILL.md + a
   ``wave-meta-skills-<date>.yaml`` ledger, **reusing
   :mod:`scripts.propose_skill`'s** idempotent writers (DRY; same proposals rail).
@@ -90,37 +93,57 @@ def meta_frontmatter(
     synthesized_from,
     tools_used,
     license_tier: str = "open",
+    review_doi: str | None = None,
 ) -> dict:
-    """Assemble a schema-correct super-skill (synthetic) frontmatter.
+    """Assemble a schema-correct super-skill frontmatter (synthetic or literature).
 
-    Reuses :func:`scripts.normalize_skill.normalized_frontmatter` with
-    ``provenance_tier="synthetic"`` and ``status="hold"`` (so the deterministic
-    EDAM/tool/tier assembly is shared with the community rail), then layers the
-    super-skill invariants the proposals gate checks:
+    Reuses :func:`scripts.normalize_skill.normalized_frontmatter` and
+    ``status="hold"`` (so the deterministic EDAM/tool/tier assembly is shared with
+    the community rail), then layers the super-skill invariants the proposals gate
+    checks:
 
     * ``metadata.skill_kind = "super"``,
     * ``metadata.orchestrates = orchestrates`` (the sub-skill slugs it sequences),
-    * ``metadata.synthesized_from = synthesized_from`` (the synthetic-provenance
-      invariant — non-empty list).
+    * ``metadata.synthesized_from = synthesized_from`` (the source skill slugs;
+      kept non-empty for the synthetic invariant and as provenance even for a
+      review-grounded super-skill).
 
-    ``related_skills`` mirrors ``orchestrates`` so a synthetic super-skill also
-    satisfies any community ``related_skills``-key expectation. The result yields
-    zero :func:`scripts.normalize_skill.frontmatter_violations`. Inputs are not
-    mutated.
+    Origin (``provenance_tier``):
+
+    * **default (synthetic)** — ``review_doi is None``: the super-skill is derived
+      from the skills it orchestrates (``provenance_tier="synthetic"``).
+    * **literature** — when a ``review_doi`` is given, the pipeline is grounded in a
+      *review article*: ``provenance_tier="literature"``, ``metadata.dois =
+      [review_doi]`` (the literature ⇒ ≥1 doi invariant), and
+      ``derived_from = [{"doi": review_doi}]``. The super orchestration
+      (``skill_kind``/``orchestrates``/``synthesized_from``) is preserved.
+
+    ``related_skills`` mirrors ``orchestrates`` so the super-skill also satisfies
+    any community ``related_skills``-key expectation. The result yields zero
+    :func:`scripts.normalize_skill.frontmatter_violations`. Inputs are not mutated.
     """
     raw = {"name": name, "description": description}
+    if review_doi:
+        provenance_tier = "literature"
+        derived_from = [{"doi": review_doi}]
+    else:
+        provenance_tier = "synthetic"
+        derived_from = None
     fm = normalized_frontmatter(
         raw,
         related_skills=list(orchestrates),
         tools_used=list(tools_used),
         license_tier=license_tier,
-        provenance_tier="synthetic",
+        provenance_tier=provenance_tier,
         status="hold",
+        derived_from=derived_from,
     )
     meta = fm["metadata"]
     meta["skill_kind"] = "super"
     meta["orchestrates"] = list(orchestrates)
     meta["synthesized_from"] = list(synthesized_from)
+    if review_doi:
+        meta["dois"] = [review_doi]
     return fm
 
 

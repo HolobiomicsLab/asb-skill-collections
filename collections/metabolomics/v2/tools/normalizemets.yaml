@@ -9,5 +9,8 @@ derived_from:
 source_repos:
 - metabolomicstats/NormalizeMets
 schema_version: 0.2.0
+license_tier: open
+license: GPL-2.0-or-later
+license_detection: readme-llm
 techniques:
 - mass-spectrometry

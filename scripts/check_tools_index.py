@@ -10,6 +10,8 @@ import json
 import pathlib
 import sys
 
+import yaml
+
 _VALID = {"open", "noncommercial", "restricted"}
 
 
@@ -22,6 +24,7 @@ def check_collection(collection_dir) -> list[str]:
 
     tool_slugs = {t.get("slug") for t in tools}
     skill_slugs = {s.get("slug") for s in skills}
+    tier_by_slug = {t.get("slug"): t.get("license_tier") for t in tools}
 
     # Every tool license_tier is valid; every used_by_skills slug resolves.
     for t in tools:
@@ -32,6 +35,22 @@ def check_collection(collection_dir) -> list[str]:
             if ref not in skill_slugs:
                 violations.append(
                     f"tools_index {slug!r}: used_by_skills {ref!r} not in skills_index"
+                )
+
+    # Per-tool YAML license_tier must equal its tools_index license_tier.
+    # Tools that have no tools/<slug>.yaml are skipped (not every tool has one).
+    tools_dir = d / "tools"
+    if tools_dir.is_dir():
+        for yaml_path in sorted(tools_dir.glob("*.yaml")):
+            slug = yaml_path.stem
+            if slug not in tier_by_slug:
+                continue
+            rec = yaml.safe_load(yaml_path.read_text(encoding="utf-8")) or {}
+            yaml_tier = rec.get("license_tier")
+            if yaml_tier != tier_by_slug[slug]:
+                violations.append(
+                    f"tools/{slug}.yaml: license_tier {yaml_tier!r} != "
+                    f"tools_index {tier_by_slug[slug]!r}"
                 )
 
     # Every skill tools_used slug resolves to a real tool.

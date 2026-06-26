@@ -17,6 +17,9 @@ source_repos:
 - https://bitbucket.org/wishartlab/biotransformer3.0jar.git
 - rickhelmus/patRoon
 schema_version: 0.2.0
+license_tier: noncommercial
+license: Academic use free; commercial use/redistribution by permission of the authors (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+license_detection: null
 techniques:
 - LC-MS
 - GC-MS

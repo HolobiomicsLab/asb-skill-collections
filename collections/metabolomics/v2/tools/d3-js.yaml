@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - Wang-Bioinformatics-Lab/NetworkFamily_MultipleAlignment_Website
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: file-present-unclassified
 techniques:
 - LC-MS
 - mass-spectrometry

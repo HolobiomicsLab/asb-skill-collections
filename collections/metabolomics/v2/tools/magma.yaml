@@ -7,6 +7,9 @@ derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
 schema_version: 0.2.0
+license_tier: open
+license: Apache-2.0
+license_detection: github-api
 techniques:
 - LC-MS
 - GC-MS

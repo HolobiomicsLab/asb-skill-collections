@@ -188,6 +188,74 @@ def test_meta_frontmatter_does_not_mutate_inputs():
     assert tools == list(TOOLS)
 
 
+# --- meta_frontmatter: review-grounded (literature) super-skills -------------
+
+REVIEW_DOI = "10.1021/acs.analchem.0c01234"
+
+
+def test_meta_frontmatter_review_doi_sets_literature_tier():
+    # A review DOI flips the origin to literature: provenance_tier="literature",
+    # dois=[review_doi], derived_from=[{doi: review_doi}], keeping the super
+    # orchestration intact.
+    fm = s.meta_frontmatter(
+        name="molecular-networking",
+        description=VALID_DESC,
+        orchestrates=list(SUBSKILLS),
+        synthesized_from=list(SUBSKILLS),
+        tools_used=list(TOOLS),
+        review_doi=REVIEW_DOI,
+    )
+    meta = fm["metadata"]
+    assert meta["provenance_tier"] == "literature"
+    assert meta["dois"] == [REVIEW_DOI]
+    assert fm["derived_from"] == [{"doi": REVIEW_DOI}]
+    # super orchestration is preserved
+    assert meta["skill_kind"] == "super"
+    assert meta["orchestrates"] == list(SUBSKILLS)
+    assert meta["synthesized_from"] == list(SUBSKILLS)
+    assert fm["status"] == "hold"
+    assert frontmatter_violations(fm) == []
+
+
+def test_meta_frontmatter_default_path_stays_synthetic():
+    # Without a review DOI, the default path is unchanged: synthetic, no dois,
+    # no derived_from.
+    fm = s.meta_frontmatter(
+        name="molecular-networking",
+        description=VALID_DESC,
+        orchestrates=list(SUBSKILLS),
+        synthesized_from=list(SUBSKILLS),
+        tools_used=list(TOOLS),
+    )
+    meta = fm["metadata"]
+    assert meta["provenance_tier"] == "synthetic"
+    assert "dois" not in meta
+    assert "derived_from" not in fm
+
+
+def test_meta_frontmatter_review_doi_passes_check_collection(tmp_path):
+    # A staged review-grounded (literature) super-skill is accepted by the gate.
+    col = _collection(tmp_path)
+    fm = s.meta_frontmatter(
+        name="molecular-networking",
+        description=VALID_DESC,
+        orchestrates=list(SUBSKILLS),
+        synthesized_from=list(SUBSKILLS),
+        tools_used=list(TOOLS),
+        review_doi=REVIEW_DOI,
+    )
+    ledger_meta = {
+        "slug": "molecular-networking",
+        "synthesized_from": list(SUBSKILLS),
+        "orchestrates": list(SUBSKILLS),
+        "tools_used": list(TOOLS),
+        "license_tier": "open",
+        "date": "2026-06-26",
+    }
+    s.stage_meta_skill(str(col), fm, BODY, ledger_meta)
+    assert cp.check_collection(str(col)) == []
+
+
 # --- stage_meta_skill --------------------------------------------------------
 
 BODY = "# Molecular Networking\n\nOrdered orchestration body.\n"

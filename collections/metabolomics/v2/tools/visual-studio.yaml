@@ -10,6 +10,9 @@ derived_from:
 source_repos:
 - systemsomicslab/MsdialWorkbench
 schema_version: 0.2.0
+license_tier: open
+license: LGPL-3.0
+license_detection: readme-llm
 techniques:
 - LC-MS
 - CE-MS

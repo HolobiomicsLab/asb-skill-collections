@@ -4,3 +4,6 @@ evidence_spans:
 - '#include "opentims++/opentims_all.cpp"'
 - OpenTIMS is a C++ library for accessing timsTOF Pro data format (TDF)
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: null
