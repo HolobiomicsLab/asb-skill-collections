@@ -49,14 +49,24 @@ Steps:
    **warn** that the skill may overlap an existing one and suggest **annotating or
    merging** into that skill (via `CONTRIBUTING.md`) rather than adding a duplicate.
 
-4. **Ground (optional, best-effort) — this is where Perspicacité fits.** If a
-   Perspicacité server is reachable, use it to look for a supporting paper for the
-   skill's claims, the same way `/ground` does (`scripts/perspicacite_kb_bind.py`,
-   the real per-DOI KB API). If a strong supporting paper is found, attach its DOI
-   under `derived_from` and flag the skill as a `literature_upgrade_candidate`.
-   This is optional — a community skill is **not** required to derive from a paper.
-   If Perspicacité is unavailable, proceed ungrounded and say so. (Matching in
-   step 3 is lexical and never needs a server; Perspicacité is used only here.)
+4. **Ground (optional, best-effort) — this is where Perspicacité fits.** Propose a
+   **candidate source DOI** for the skill's claims (from the contributor, the tool's
+   own paper, or a literature search), then verify it executably against the real
+   per-DOI KB API with `scripts/ground_skill.py` — it ensures the
+   `asb-paper-<doi-slug>` KB and asks `/api/chat` whether the paper *supports* the
+   skill, returning a structured `{supported, confidence, evidence}` verdict:
+   ```bash
+   python -m scripts.ground_skill --doi "<candidate-DOI>" \
+       --skill-md "<normalized-SKILL.md>"
+   ```
+   This **never fails the flow**: if Perspicacité is unreachable (or the paper does
+   not support the claims) it returns `{"supported": false, "confidence": "low"}` and
+   you proceed **ungrounded** — say so. A community skill is **not** required to
+   derive from a paper. Only when the verdict is `supported: true` with
+   `confidence` ∈ {`high`, `medium`} (and you've eyeballed the returned `evidence`
+   quote), attach the DOI under `derived_from` and flag
+   `metadata.literature_upgrade_candidate: true`; otherwise leave both unset. (Matching
+   in step 3 is lexical and never needs a server; Perspicacité is used only here.)
 
 5. **Tier it `community` / `hold`.** Assemble the schema-correct frontmatter:
    `provenance_tier: community` (so the `related_skills` key is present — empty list
