@@ -26,6 +26,10 @@ Search → apply → ground. Full protocol in [`AGENTS.md`](AGENTS.md) and
   `synthetic` / `community`); each tool in `tools_index.json` carries `license_tier`
   + `used_by_skills` (the skills that ground on it) — see
   [`governance/PROVENANCE_TIERS.md`](governance/PROVENANCE_TIERS.md).
+- Workflow-level **super-skills** (`skill_kind: super`) orchestrate several
+  sub-skills into a canonical pipeline; they are auto-synthesized
+  (`provenance_tier: synthetic`) via `synthesize-meta-skill` and staged for open
+  curation — see [`governance/META_SKILLS.md`](governance/META_SKILLS.md).
 - Ground a skill against its source paper with the Perspicacité binder:
   `python scripts/perspicacite_kb_bind.py query --collection collections/metabolomics/v2 --skill <slug> --question "..."`
   (skill→KB map in `kb_bundle.json`; tiers `paper`/`si`/`repo`).

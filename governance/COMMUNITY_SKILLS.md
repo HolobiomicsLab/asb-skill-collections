@@ -13,6 +13,11 @@ It complements:
 - [`PROVENANCE_TIERS.md`](PROVENANCE_TIERS.md) — defines the `community` tier and
   its enforced invariant (a `related_skills` key must be present; an empty list is
   allowed). `provenance_tier` is **origin** ("where did the content come from?").
+- [`META_SKILLS.md`](META_SKILLS.md) — the **third** intake path: workflow-level
+  *super-skills* (`skill_kind: super`) auto-synthesized from existing skills
+  (`provenance_tier: synthetic`). They reuse this same proposal rail + maintainer
+  merge gate; only the *creation* is automated synthesis rather than human
+  contribution.
 - [`LICENSE_TIERS.md`](LICENSE_TIERS.md) — the **consumer** axis: a community skill
   still declares the `license_tier` of the tool it grounds on (`open` /
   `noncommercial` / `restricted`), independent of its provenance.

@@ -45,9 +45,13 @@ Steps:
    tools     = cluster["tools"]
    dups      = near_duplicates(subskills, threshold=0.85)        # warn on overlap, don't dedupe silently
    ```
-   Surface the clustered sub-skill slugs (with scores) and tool slugs. If
-   `near_duplicates` flags an existing super-skill covering the same pipeline,
-   **warn** — propose annotating/extending it rather than synthesizing a duplicate.
+   Surface the clustered sub-skill slugs (with scores) and tool slugs.
+   `near_duplicates` returns the clustered sub-skills whose match score clears the
+   threshold — i.e. the most strongly-overlapping sub-skills in the cluster, not an
+   existing duplicate super-skill. Treat a dense cluster of high-scoring overlaps as a
+   **signal to curate/merge stages** (and to check the collection for an existing
+   super-skill covering the same pipeline before synthesizing) rather than as proof a
+   duplicate already exists — **warn**, don't dedupe silently.
 
 2. **Identify the canonical ordered pipeline (the agentic step — this is you, not the
    helper).** From the cluster, extract the recurring end-to-end workflow:
