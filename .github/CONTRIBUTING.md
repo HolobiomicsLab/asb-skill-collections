@@ -154,6 +154,44 @@ skill against the same discipline as a published one, and the
 grant on your skill prose. A maintainer then reviews fit and merges; accepted skills
 are promoted out of `proposals/` into the shipped collection at a curation wave.
 
+## Claim/contribute a skill for your tool (become a co-author)
+
+If you are an **author of the tool (or method/paper)** a skill grounds on, you can
+contribute that skill **and be credited as a verified co-author**. This is the
+community-tier path above, plus an attribution layer: your identity is verified and
+your credit surfaces in `contributors.jsonld`, the merge commit's `Co-authored-by:`
+trailer, and (at release) `CITATION.cff`. See
+[`governance/AUTHORSHIP.md`](../governance/AUTHORSHIP.md) for the full model.
+
+1. **Open a "Claim / contribute a skill for your tool" issue** using the
+   [`claim-skill`](ISSUE_TEMPLATE/claim-skill.md) template. Tell us the skill, the
+   tool/method and its **paper DOI**, and **who you are** — name, ORCID, GitHub, and
+   the email you want on the `Co-authored-by:` trailer.
+
+2. **Verified authorship.** Your authorship is **identity-verified** before any
+   credit, using the same checks as curator candidacy (`vet-curator`): **L1** (your
+   GitHub URL is in your ORCID public profile) and **L2** (your ORCID is an author on
+   the tool's paper DOI, via OpenAlex). If you are not yet in `contributors.jsonld`,
+   complete **Step 0** above first — your authorship is credited once that lands.
+
+3. **A maintainer runs the `claim-skill` command**
+   ([`collections/metabolomics/v2/commands/claim-skill.md`](../collections/metabolomics/v2/commands/claim-skill.md)).
+   It reuses the `propose-skill` flow (normalize → match → ground → stage), writes you
+   into the staged skill's `contributors` as `role: author`, and prepares a PR with a
+   `Co-authored-by: <you>` trailer, `Closes #<issue>`, and **you requested as a
+   reviewer** of your own contribution.
+
+4. **Conflict of interest is disclosed, not disqualifying.** Authoring a skill for
+   your own tool and reviewing it yourself is a self-review — disclosed on the issue
+   and PR (exactly like a co-authored paper review under
+   [`governance/COI_POLICY.md`](../governance/COI_POLICY.md)). The independent gate is
+   the **merging maintainer**, who must be a *different* person. **You cannot
+   self-merge.**
+
+5. **On merge, your credit is recorded** via the author-credit path of
+   `scripts/tier_update.py` (`--credit-author` increments `asb:authored_skills` and
+   re-evaluates your tier — it never downgrades an already-higher tier).
+
 ## Tier progression
 
 | Tier | Requirement |
