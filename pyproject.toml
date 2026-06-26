@@ -29,6 +29,9 @@ hf = [
 embed = [
     "sentence-transformers>=2.2",
 ]
+embed-openai = [
+    "openai>=1.0",
+]
 dev = [
     "pytest>=8.0",
     "pytest-cov",

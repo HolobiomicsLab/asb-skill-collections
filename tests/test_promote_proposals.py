@@ -252,6 +252,21 @@ def test_promote_moves_into_skills_with_included_status(tmp_path):
     assert kb["skills"][proposal]["provenance_tier"] == "community"
 
 
+def test_promote_updates_used_by_skills_backlink(tmp_path):
+    # the promoted skill must appear in its tools' used_by_skills so the catalog
+    # inverse index stays consistent (without a full DOI re-derive).
+    col, _, proposal = build_fixture(tmp_path)
+    promote_proposals.promote(str(col), [proposal], date=DATE)
+    tools = json.loads((col / "tools_index.json").read_text(encoding="utf-8"))
+    matchms = next(t for t in tools if t["slug"] == "matchms")
+    assert proposal in matchms["used_by_skills"]
+    # idempotent: re-promote does not duplicate the back-link
+    promote_proposals.promote(str(col), [proposal], date=DATE)
+    tools2 = json.loads((col / "tools_index.json").read_text(encoding="utf-8"))
+    matchms2 = next(t for t in tools2 if t["slug"] == "matchms")
+    assert matchms2["used_by_skills"].count(proposal) == 1
+
+
 def test_promote_is_gate_clean(tmp_path):
     col, _, proposal = build_fixture(tmp_path)
     promote_proposals.promote(str(col), [proposal], date=DATE)

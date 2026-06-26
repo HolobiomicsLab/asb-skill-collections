@@ -39,8 +39,6 @@ from scripts.perspicacite_kb_bind import kb_slug
 
 UNSUPPORTED = {"supported": False, "confidence": "low", "evidence": ""}
 
-VALID_CONFIDENCE = ("high", "medium", "low")
-
 _PROMPT = (
     "You are grounding a candidate skill against a single source paper. Using ONLY "
     "the retrieved passages from this paper, decide whether the paper SUPPORTS the "

@@ -246,3 +246,32 @@ def test_gate_main_exit_codes(tmp_path):
         json.dumps({"skills": {}}, indent=2), encoding="utf-8"
     )
     assert crs.main([str(dirty)]) == 1
+
+
+# --- backend factory (no model/network) -------------------------------------
+
+def test_embedder_for_dispatches(monkeypatch):
+    monkeypatch.setattr(brs, "default_embedder", lambda: "LOCAL")
+    monkeypatch.setattr(brs, "openai_embedder", lambda **kw: "OPENAI")
+    assert brs.embedder_for("local") == "LOCAL"
+    assert brs.embedder_for("openai") == "OPENAI"
+    with pytest.raises(ValueError):
+        brs.embedder_for("nope")
+
+
+def test_default_backend_follows_env(monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    assert brs.default_backend() == "openai"
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    assert brs.default_backend() == "local"
+
+
+def test_openai_embedder_requires_key(monkeypatch):
+    # With no key, constructing the openai backend must fail clearly (not silently).
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    import sys, types
+    fake = types.ModuleType("openai")
+    fake.OpenAI = lambda *a, **k: None
+    monkeypatch.setitem(sys.modules, "openai", fake)
+    with pytest.raises(RuntimeError):
+        brs.openai_embedder()

@@ -5,13 +5,20 @@ builds a *semantic* similarity graph from sentence-transformer embeddings of eac
 skill's :func:`skill_match.skill_doc` text, and writes the resulting top-N
 neighbour lists into ``skills_index.json`` + ``kb_bundle.json``.
 
+Two backends, one injectable interface (``embedder_for``):
+
+* **local** — pinned MiniLM (``sentence-transformers``, ``[embed]`` extra):
+  lightweight, offline, no key.
+* **openai** — ``text-embedding-3-large`` (``openai``, ``[embed-openai]`` extra):
+  the advanced backend, the *same* model Perspicacité uses (3072-dim); needs
+  ``OPENAI_API_KEY``. The CLI defaults to this when a key is present, else local.
+
 Design constraints (see the operationalize-pipelines plan):
 
-* **Optional dependency.** The embedding model lives behind the ``[embed]`` extra
-  (``sentence-transformers``). :func:`default_embedder` imports it *lazily* — only
-  when called — so this module imports fine without the extra, and the pure
-  graph/IO helpers (:func:`related_map`, :func:`embed_skills`, :func:`build`) work
-  with any injected embedder.
+* **Optional dependencies, lazy import.** Both backend builders import their
+  package *inside* the function, so this module imports fine without either extra,
+  and the pure graph/IO helpers (:func:`related_map`, :func:`embed_skills`,
+  :func:`build`) work with any injected embedder.
 * **No live model/network in tests.** Every entry point takes an injected
   ``embedder`` (a ``callable(list[str]) -> list[list[float]]``); only the CLI
   reaches for :func:`default_embedder`.
@@ -65,6 +72,62 @@ def default_embedder():
         return [[float(x) for x in v] for v in vecs]
 
     return embed
+
+
+_OPENAI_MODEL = "text-embedding-3-large"
+
+
+def openai_embedder(model=_OPENAI_MODEL, *, batch_size=256):
+    """Return ``embed(texts) -> list[list[float]]`` backed by the OpenAI
+    embeddings API (``text-embedding-3-large`` by default — the *same* model
+    Perspicacité uses, 3072-dim). Reads ``OPENAI_API_KEY`` from the environment.
+
+    ``openai`` is imported here, *not* at module import time, so this module loads
+    without it; calling without the package or a key raises with guidance.
+    """
+    try:
+        from openai import OpenAI
+    except ImportError as e:  # pragma: no cover - exercised via monkeypatch
+        raise ImportError(
+            "openai_embedder requires the optional 'embed-openai' extra: "
+            "pip install '.[embed-openai]'  (openai)"
+        ) from e
+    import os
+
+    if not os.environ.get("OPENAI_API_KEY"):
+        raise RuntimeError("openai_embedder requires OPENAI_API_KEY in the environment")
+    client = OpenAI()
+
+    def embed(texts):
+        texts = list(texts)
+        out: list[list[float]] = []
+        for i in range(0, len(texts), batch_size):
+            resp = client.embeddings.create(model=model, input=texts[i : i + batch_size])
+            out.extend([list(d.embedding) for d in resp.data])
+        return out
+
+    return embed
+
+
+def embedder_for(backend, **kwargs):
+    """Resolve a backend name to an embedder.
+
+    ``local`` — pinned MiniLM (offline, no key, lightweight);
+    ``openai`` — ``text-embedding-3-large`` (advanced, Perspicacité-aligned, needs
+    ``OPENAI_API_KEY``).
+    """
+    if backend == "local":
+        return default_embedder()
+    if backend == "openai":
+        return openai_embedder(**kwargs)
+    raise ValueError(f"unknown embedder backend {backend!r} (use 'local' or 'openai')")
+
+
+def default_backend():
+    """Prefer the advanced OpenAI backend when a key is present, else lightweight local."""
+    import os
+
+    return "openai" if os.environ.get("OPENAI_API_KEY") else "local"
 
 
 def embed_skills(skills_index, *, embedder):
@@ -191,12 +254,19 @@ def main(argv=None) -> int:
         "--threshold", type=float, default=DEFAULT_THRESHOLD,
         help=f"minimum cosine similarity (default {DEFAULT_THRESHOLD})",
     )
+    ap.add_argument(
+        "--backend", choices=("local", "openai"), default=None,
+        help="embedder: 'local' (MiniLM, offline) or 'openai' (text-embedding-3-large). "
+             "Default: openai when OPENAI_API_KEY is set, else local.",
+    )
     a = ap.parse_args(argv)
 
-    # default_embedder (the live model) is reached only here, never in build's
+    # A live embedder (model / API) is constructed only here, never in build's
     # importable path or in tests.
-    res = build(a.collection, embedder=None, top_n=a.top_n, threshold=a.threshold)
-    print(json.dumps(res, indent=2))
+    backend = a.backend or default_backend()
+    res = build(a.collection, embedder=embedder_for(backend), top_n=a.top_n,
+                threshold=a.threshold)
+    print(json.dumps({"backend": backend, **res}, indent=2))
     return 0
 
 

@@ -173,6 +173,7 @@ def promote(collection_dir, slugs, *, date: str, dry_run: bool = False) -> dict:
 
     promoted: list[str] = []
     skipped: list[str] = []
+    promoted_tools: list = []  # (slug, tools_used) — for used_by_skills back-links
 
     for slug in slugs:
         proposal_md = d / "proposals" / "skills" / slug / "SKILL.md"
@@ -206,6 +207,7 @@ def promote(collection_dir, slugs, *, date: str, dry_run: bool = False) -> dict:
         si.append(_index_entry(slug, fm))
         existing_slugs.add(slug)
         kb.setdefault("skills", {})[slug] = _kb_record(fm)
+        promoted_tools.append((slug, (fm.get("metadata") or {}).get("tools_used") or []))
 
         # --- re-stamp the SKILL.md to match the index (idempotent) ----------- #
         tier = (fm.get("metadata") or {}).get("provenance_tier")
@@ -215,8 +217,34 @@ def promote(collection_dir, slugs, *, date: str, dry_run: bool = False) -> dict:
     if not dry_run and promoted:
         _write_json_if_changed(si_path, si, si_indent)
         _write_json_if_changed(kb_path, kb, kb_indent)
+        _link_used_by_skills(d / "tools_index.json", promoted_tools)
 
     return {"promoted": promoted, "skipped": skipped}
+
+
+def _link_used_by_skills(tools_path, promoted_tools) -> None:
+    """Keep the tool catalog's inverse index in sync after promotion.
+
+    The forward ``tools_used`` is carried verbatim from the proposal frontmatter
+    (curated by the matcher / synthesis); this adds each promoted skill to those
+    tools' ``used_by_skills`` so the bidirectional link is consistent — without a
+    full DOI re-derive (``enrich_tools_index``), which would drop curated
+    community/synthetic links whose skills carry no matching corpus DOI.
+    Idempotent: a slug already present is left untouched.
+    """
+    if not promoted_tools or not tools_path.is_file():
+        return
+    tools, indent = _load_json(tools_path)
+    by_slug = {t.get("slug"): t for t in tools}
+    for slug, tools_used in promoted_tools:
+        for tool_slug in tools_used:
+            tool = by_slug.get(tool_slug)
+            if tool is None:
+                continue
+            ubs = tool.get("used_by_skills") or []
+            if slug not in ubs:
+                tool["used_by_skills"] = sorted([*ubs, slug])
+    _write_json_if_changed(tools_path, tools, indent)
 
 
 def main(argv=None) -> int:
