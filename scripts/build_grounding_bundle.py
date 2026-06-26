@@ -130,7 +130,11 @@ def build_unit(unit_dir, collection_dir, bind_script):
         for md in sorted(src_cmds.glob("*.md")):
             if md.name == "ground.md":
                 continue  # ground.md is always the rendered version, not the collection copy
-            shutil.copyfile(md, unit_dir / "commands" / md.name)
+            dst = unit_dir / "commands" / md.name
+            # when the unit IS the collection (full self-build), the command is
+            # already in place — copying onto itself raises SameFileError.
+            if not (dst.exists() and md.samefile(dst)):
+                shutil.copyfile(md, dst)
             written.append(f"commands/{md.name}")
     (unit_dir / "GROUNDING.md").write_text(render_grounding_doc(unit_dir.name)); written.append("GROUNDING.md")
     pj_path = unit_dir / ".claude-plugin" / "plugin.json"

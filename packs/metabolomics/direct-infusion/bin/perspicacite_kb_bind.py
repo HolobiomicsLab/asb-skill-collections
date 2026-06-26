@@ -238,19 +238,42 @@ def clone_repo(url, dest, _run=subprocess.run):
         return False
 
 
+# Active once Phase 2 propagates license_tier into kb_bundle.json records; until then
+# only exercised by tests (bundle records carry no license_tier yet).
+def link_only(rec) -> bool:
+    """Non-open tiers must never embed source content into shipped bundles."""
+    return (rec.get("license_tier") or "open") in ("noncommercial", "restricted")
+
+
+def build_local_manifest(rec, dest, paper, email, _clone=clone_repo, _oa=None):
+    if _oa is None:
+        _oa = unpaywall_oa_url
+    tier = rec.get("license_tier") or "open"
+    if link_only(rec):
+        manifest = {
+            "skill": rec["slug"], "mode": "link-only", "license_tier": tier,
+            "note": "non-open tier: referenced, not embedded; bundling is the consumer's responsibility.",
+            "repos": [{"url": u, "embedded": False} for u in (rec.get("repo_urls") or [])],
+            "paper": None,
+        }
+        if paper and rec.get("dois"):
+            manifest["paper"] = {"doi": rec["dois"][0], "embedded": False}
+        return manifest
+    base = Path(dest) / rec["slug"]
+    manifest = {"skill": rec["slug"], "mode": "embed", "license_tier": tier, "repos": [], "paper": None}
+    for i, url in enumerate(rec.get("repo_urls") or []):
+        d = base / "repo" / str(i)
+        manifest["repos"].append({"url": url, "dest": str(d), "cloned": _clone(url, d)})
+    if paper and rec.get("dois"):
+        doi = rec["dois"][0]
+        manifest["paper"] = {"doi": doi, "oa_url": _oa(doi, email), "path": None}
+    return manifest
+
+
 def cmd_local(args) -> int:
     bundle = load_bundle(Path(args.collection))
     rec = resolve_skill(bundle, args.skill)
-    base = Path(args.dest) / rec["slug"]
-    manifest = {"skill": rec["slug"], "repos": [], "paper": None}
-    for i, url in enumerate(rec.get("repo_urls") or []):
-        dest = base / "repo" / str(i)
-        manifest["repos"].append({"url": url, "dest": str(dest), "cloned": clone_repo(url, dest)})
-    if args.paper and rec.get("dois"):
-        doi = rec["dois"][0]
-        oa = unpaywall_oa_url(doi, args.email)
-        manifest["paper"] = {"doi": doi, "oa_url": oa, "path": None}
-    print(json.dumps(manifest, indent=2))
+    print(json.dumps(build_local_manifest(rec, args.dest, args.paper, args.email), indent=2))
     return 0
 
 
