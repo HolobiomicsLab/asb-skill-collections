@@ -299,3 +299,7 @@ jobs:
       # -- Gate: License-tier enforcement ------
       - name: License-tier gate
         run: python -m scripts.check_license_tiers collections/metabolomics/v2
+
+      # -- Gate: Provenance-tier enforcement ------
+      - name: Provenance-tier gate
+        run: python -m scripts.check_provenance_tiers collections/metabolomics/v2
