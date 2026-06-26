@@ -307,3 +307,7 @@ jobs:
       # -- Gate: Tool-catalog consistency ------
       - name: Tool-catalog gate
         run: python -m scripts.check_tools_index collections/metabolomics/v2
+
+      # -- Gate: Community-skill proposals ------
+      - name: Proposals gate
+        run: python -m scripts.check_proposals collections/metabolomics/v2
