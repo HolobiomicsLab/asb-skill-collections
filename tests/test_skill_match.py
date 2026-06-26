@@ -198,6 +198,14 @@ def test_near_duplicates_threshold_is_strict_greater():
 # a callable ``http(method, path, body=None, timeout=...)`` returning parsed
 # JSON (or raising on transport/HTTP error). Tests record calls, never hit the
 # network, and exercise the graceful fallback to the lexical core.
+#
+# NOTE: the ``/api/kb/<kb>/documents`` and ``/api/kb/<kb>/search`` paths these
+# mocks answer are PROVISIONAL placeholders — they are NOT real Perspicacité
+# endpoints (see the PROVISIONAL warning in ``scripts/skill_match.py``). These
+# tests pin the current backend's *internal* contract against a mock; they do
+# NOT verify the endpoints against a live server. Before wiring this backend to
+# a real ``_http``, the routes must be verified/redesigned and these mocks
+# updated to the supported ingest (/local-files) and query (/api/chat) surface.
 
 
 class RecordingHttp:
