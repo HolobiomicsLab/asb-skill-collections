@@ -303,3 +303,7 @@ jobs:
       # -- Gate: Provenance-tier enforcement ------
       - name: Provenance-tier gate
         run: python -m scripts.check_provenance_tiers collections/metabolomics/v2
+
+      # -- Gate: Tool-catalog consistency ------
+      - name: Tool-catalog gate
+        run: python -m scripts.check_tools_index collections/metabolomics/v2
