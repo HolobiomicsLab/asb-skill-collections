@@ -33,6 +33,43 @@ def _good_fm(slug="my-new-skill", tools_used=None, **overrides):
     return fm
 
 
+def _synthetic_fm(
+    slug="my-meta-skill",
+    tools_used=None,
+    synthesized_from=("lc-ms-feature-extraction", "spectral-similarity-scoring"),
+    skill_kind="super",
+    orchestrates=("lc-ms-feature-extraction", "spectral-similarity-scoring"),
+    **overrides,
+):
+    """A synthetic-provenance (optionally super) staged proposal frontmatter.
+
+    Synthetic proposals are valid via ``metadata.synthesized_from`` rather than
+    the community ``related_skills`` key.
+    """
+    meta = {
+        "edam_operation": "http://edamontology.org/operation_3215",
+        "edam_topics": ["http://edamontology.org/topic_0091"],
+        "license_tier": "open",
+        "provenance_tier": "synthetic",
+        "tools_used": ["mzmine"] if tools_used is None else tools_used,
+    }
+    if synthesized_from is not None:
+        meta["synthesized_from"] = list(synthesized_from)
+    if skill_kind is not None:
+        meta["skill_kind"] = skill_kind
+    if orchestrates is not None:
+        meta["orchestrates"] = list(orchestrates)
+    fm = {
+        "name": slug,
+        "description": VALID_DESC,
+        "license": "CC-BY-4.0",
+        "metadata": meta,
+        "status": "hold",
+    }
+    fm.update(overrides)
+    return fm
+
+
 def _write_skill(col, fm, body="# Skill\n\nbody\n"):
     slug = fm["name"]
     d = col / "proposals" / "skills" / slug
@@ -41,11 +78,17 @@ def _write_skill(col, fm, body="# Skill\n\nbody\n"):
     (d / "SKILL.md").write_text(text)
 
 
-def _collection(tmp_path, tool_slugs=("mzmine",)):
+def _collection(
+    tmp_path,
+    tool_slugs=("mzmine",),
+    skill_slugs=("lc-ms-feature-extraction", "spectral-similarity-scoring"),
+):
     col = tmp_path / "v2"
     col.mkdir(parents=True)
     tools = [{"slug": s, "license_tier": "open", "used_by_skills": []} for s in tool_slugs]
     (col / "tools_index.json").write_text(json.dumps(tools))
+    skills = [{"slug": s} for s in skill_slugs]
+    (col / "skills_index.json").write_text(json.dumps(skills))
     return col
 
 
@@ -145,6 +188,97 @@ def test_non_mapping_frontmatter_reports_clean_violation(tmp_path):
     (d / "SKILL.md").write_text("---\n- just\n- a\n- list\n---\n# Skill\n")
     v = c.check_collection(str(col))
     assert any("not a mapping" in x for x in v)
+
+
+# --- synthetic provenance + super invariants ---------------------------------
+
+def test_clean_synthetic_super_skill_passes(tmp_path):
+    # A synthetic super-skill is valid via synthesized_from + a resolvable
+    # orchestrates list — no community related_skills key required.
+    col = _collection(tmp_path)
+    _write_skill(col, _synthetic_fm())
+    assert c.check_collection(str(col)) == []
+
+
+def test_synthetic_without_synthesized_from_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _synthetic_fm(synthesized_from=None)
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("synthesized_from" in x for x in v)
+
+
+def test_synthetic_with_empty_synthesized_from_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _synthetic_fm()
+    fm["metadata"]["synthesized_from"] = []
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("synthesized_from" in x for x in v)
+
+
+def test_super_with_empty_orchestrates_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _synthetic_fm(orchestrates=None)
+    fm["metadata"]["orchestrates"] = []
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("orchestrates" in x for x in v)
+
+
+def test_super_with_absent_orchestrates_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _synthetic_fm(orchestrates=None)  # key absent entirely
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("orchestrates" in x for x in v)
+
+
+def test_super_orchestrates_slug_not_in_index_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _synthetic_fm(
+        synthesized_from=("lc-ms-feature-extraction", "ghost-skill"),
+        orchestrates=("lc-ms-feature-extraction", "ghost-skill"),
+    )
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("ghost-skill" in x for x in v)
+
+
+def test_synthetic_skill_kind_skill_does_not_require_orchestrates(tmp_path):
+    # Default/explicit non-super kind => orchestrates is irrelevant.
+    col = _collection(tmp_path)
+    fm = _synthetic_fm(skill_kind="skill", orchestrates=None)
+    _write_skill(col, fm)
+    assert c.check_collection(str(col)) == []
+
+
+def test_synthetic_default_skill_kind_is_skill(tmp_path):
+    # No skill_kind key => treated as 'skill', so no orchestrates needed.
+    col = _collection(tmp_path)
+    fm = _synthetic_fm(skill_kind=None, orchestrates=None)
+    _write_skill(col, fm)
+    assert c.check_collection(str(col)) == []
+
+
+def test_invalid_skill_kind_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _synthetic_fm(skill_kind="orchestrator", orchestrates=None)
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("skill_kind" in x for x in v)
+
+
+def test_community_skill_with_super_kind_resolves_orchestrates(tmp_path):
+    # skill_kind/orchestrates apply regardless of provenance; a community super
+    # with a dangling orchestrate slug must fail.
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["metadata"]["skill_kind"] = "super"
+    fm["metadata"]["orchestrates"] = ["lc-ms-feature-extraction", "ghost-skill"]
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("ghost-skill" in x for x in v)
 
 
 # --- main(argv) exit codes ---------------------------------------------------
