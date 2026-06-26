@@ -167,6 +167,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "adduct-ion-parent-ion-pairing-analysis": {
@@ -184,7 +193,15 @@
         "asb-paper-10-1021-acs-analchem-0c04720"
       ],
       "repo_urls": [
+        "https://github.com/kbseah/mass2adduct",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "github-kbseah-mass2adduct",
+        "mass2adduct"
       ]
     },
     "annotation-quality-filtering-by-cosine-similarity": {
@@ -210,6 +227,23 @@
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/Functional-Metabolomics-Lab/FBMN-STATS",
         "https://github.com/boecker-lab/sirius"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "canopus",
+        "gnps",
+        "ion-identity",
+        "javafx-24",
+        "jdk-25",
+        "lotus-database",
+        "memo",
+        "mzmine",
+        "mzmine2",
+        "mzmine3",
+        "open-tree-of-life",
+        "sirius",
+        "timar"
       ]
     },
     "approximate-nearest-neighbor-index-construction": {
@@ -226,6 +260,11 @@
       ],
       "repo_urls": [
         "https://github.com/bittremieux-lab/ANN-SoLo"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "ann-solo"
       ]
     },
     "bioconductor-data-import-and-handling": {
@@ -248,6 +287,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "biomolecular-class-label-assignment": {
@@ -264,7 +313,15 @@
         "asb-paper-10-1021-acs-analchem-3c04290"
       ],
       "repo_urls": [
+        "https://github.com/HinesLab/MOCCal",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "hineslab-moccal",
+        "moccal",
+        "python"
       ]
     },
     "breath-sample-feature-normalization": {
@@ -281,6 +338,11 @@
       "repo_urls": [
         "https://github.com/HuanLab/breathXplorer",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "python"
       ]
     },
     "candidate-spectrum-retrieval-and-ranking": {
@@ -296,6 +358,11 @@
       ],
       "repo_urls": [
         "https://github.com/bittremieux-lab/ANN-SoLo"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "ann-solo"
       ]
     },
     "ce-ms-data-import-and-parsing": {
@@ -319,6 +386,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "ce-ms-eof-marker-identification": {
@@ -341,6 +418,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "ce-ms-migration-time-measurement": {
@@ -362,6 +449,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "ce-ms-migration-time-to-mobility-transformation": {
@@ -383,6 +480,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "chemical-annotation-confidence-assessment": {
@@ -404,6 +511,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "chemical-annotation-matrix-construction": {
@@ -425,6 +541,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "compound-ground-truth-matching": {
@@ -449,6 +574,15 @@
         "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cuda",
+        "figshare",
+        "numba",
+        "python",
+        "pytorch"
       ]
     },
     "conditional-routing-logic-extraction": {
@@ -470,6 +604,23 @@
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/Functional-Metabolomics-Lab/FBMN-STATS",
         "https://github.com/boecker-lab/sirius"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "canopus",
+        "gnps",
+        "ion-identity",
+        "javafx-24",
+        "jdk-25",
+        "lotus-database",
+        "memo",
+        "mzmine",
+        "mzmine2",
+        "mzmine3",
+        "open-tree-of-life",
+        "sirius",
+        "timar"
       ]
     },
     "consensus-spectrum-assembly-from-fragmentation-spectra": {
@@ -495,6 +646,23 @@
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "github",
+        "gnps",
+        "limma",
+        "massspecwavelet",
+        "metabocoreutils",
+        "msbackendmgf",
+        "msdatahub",
+        "msfeatures",
+        "pheatmap",
+        "spectra",
+        "xcms",
+        "zenodo"
       ]
     },
     "cosine-similarity-computation": {
@@ -513,7 +681,10 @@
       ],
       "repo_urls": [
         "https://github.com/bittremieux/cosine_neutral_loss"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "cosine-similarity-matrix-computation": {
       "dois": [
@@ -538,6 +709,15 @@
         "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cuda",
+        "figshare",
+        "numba",
+        "python",
+        "pytorch"
       ]
     },
     "cosine-similarity-ranking-metrics": {
@@ -564,6 +744,15 @@
         "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cuda",
+        "figshare",
+        "numba",
+        "python",
+        "pytorch"
       ]
     },
     "data-augmentation-metabolomics": {
@@ -587,6 +776,21 @@
       ],
       "repo_urls": [
         "https://github.com/AdrianHaun/AriumMS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioinformatic-toolbox",
+        "image-processing-toolbox",
+        "matlab-r2024a",
+        "msconvert",
+        "msroiaug",
+        "parallel-computing-toolbox",
+        "proteowizard",
+        "roipeaks",
+        "signal-processing-toolbox",
+        "statistics-and-machine-learning-toolbox",
+        "wavelet-toolbox"
       ]
     },
     "derivatizing-matrix-configuration": {
@@ -601,9 +805,17 @@
         "asb-paper-10-1021-acs-analchem-5c00633"
       ],
       "repo_urls": [
+        "https://github.com/pbjarterot/Met-ID",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/MassBank/MassBank-data",
         "https://github.com/DasSusanta/snakemake_ccs"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "git",
+        "github-actions",
+        "rdkit"
       ]
     },
     "effective-mobility-calibration-single-marker": {
@@ -625,6 +837,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "effective-mobility-transformation": {
@@ -647,6 +869,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "electron-ionization-spectral-comparison": {
@@ -663,6 +895,11 @@
       ],
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mssearchr"
       ]
     },
     "electrophoretic-system-parameter-specification": {
@@ -682,6 +919,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "extracted-ion-electropherogram-generation": {
@@ -703,6 +950,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "floating-point-numerical-accuracy-assessment": {
@@ -725,6 +982,22 @@
         "https://github.com/MolecularCartography/Optimus",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker",
+        "github",
+        "github-actions",
+        "knime",
+        "multiprocessing",
+        "nanobind",
+        "openms",
+        "openms-topp-tools",
+        "python",
+        "redis",
+        "rq-redis-queue",
+        "streamlit"
       ]
     },
     "fragmentation-pattern-annotation-magma": {
@@ -745,6 +1018,16 @@
         "https://github.com/PNNL-m-q/mzapy",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/DasSusanta/snakemake_ccs"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "basicevaluationengine",
+        "matplotlib",
+        "modifinder",
+        "pillow",
+        "python",
+        "rdkit"
       ]
     },
     "fragmentation-pattern-similarity-scoring": {
@@ -770,6 +1053,20 @@
       ],
       "repo_urls": [
         "https://github.com/LeaveMeNotTonight/CMDN"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "clumsid",
+        "clumsiddata",
+        "grid",
+        "msentropy",
+        "msmssim",
+        "orgmassspecr",
+        "pheatmap",
+        "readxl",
+        "reshape2",
+        "tidyverse"
       ]
     },
     "group-wise-chemical-enrichment-calculation": {
@@ -791,6 +1088,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "high-dimensional-signal-enhancement": {
@@ -806,6 +1112,11 @@
       ],
       "repo_urls": [
         "https://github.com/richardxie1119/MEISTER"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "meister"
       ]
     },
     "interactive-spectral-visualization-emperor": {
@@ -828,6 +1139,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "ion-trace-extraction-and-filtering": {
@@ -849,6 +1169,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "lcms-metabolomics-data-processing": {
@@ -867,8 +1197,19 @@
         "asb-paper-10-1021-jasms-4c00364"
       ],
       "repo_urls": [
+        "https://github.com/Nextflow4Metabolomics/nextflow4ms-dial",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker",
+        "ms-dial",
+        "msflo",
+        "nextflow",
+        "nextflow-22-10-0",
+        "singularity"
       ]
     },
     "mass-spectrometry-file-format-conversion": {
@@ -897,6 +1238,27 @@
         "https://github.com/xfcui/IsoFusion",
         "https://github.com/98104781/LSG",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioinformatic-toolbox",
+        "excalibur",
+        "image-processing-toolbox",
+        "isofusion",
+        "jorhelp-docker-image",
+        "lsg",
+        "lsg-lipid-spectrum-generator",
+        "matlab-r2024a",
+        "msconvert",
+        "msroiaug",
+        "parallel-computing-toolbox",
+        "proteowizard",
+        "pytorch",
+        "roipeaks",
+        "signal-processing-toolbox",
+        "statistics-and-machine-learning-toolbox",
+        "wavelet-toolbox"
       ]
     },
     "mass-spectrometry-file-inventory-management": {
@@ -919,6 +1281,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "mass-spectrometry-fragmentation-pattern-modeling": {
@@ -936,6 +1307,12 @@
       "repo_urls": [
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "camera",
+        "xcms"
       ]
     },
     "mass-spectrometry-library-search-retrieval": {
@@ -953,7 +1330,10 @@
       ],
       "repo_urls": [
         "https://github.com/bittremieux/cosine_neutral_loss"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "mass-spectrum-fragment-ion-extraction": {
       "dois": [
@@ -971,8 +1351,17 @@
         "asb-paper-10-1021-acs-analchem-1c03032"
       ],
       "repo_urls": [
+        "https://github.com/gggraca/MetaboAnnotatoR",
         "https://github.com/cbroeckl/RAMClustR",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metaboannotator",
+        "r-version-or-higher",
+        "ramclustr",
+        "xcms"
       ]
     },
     "mass-spectrum-peak-normalization": {
@@ -990,7 +1379,10 @@
       ],
       "repo_urls": [
         "https://github.com/bittremieux/cosine_neutral_loss"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "mass-to-charge-tolerance-filtering": {
       "dois": [
@@ -1012,6 +1404,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "matlab-scientific-computing": {
@@ -1037,6 +1439,21 @@
       ],
       "repo_urls": [
         "https://github.com/AdrianHaun/AriumMS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioinformatic-toolbox",
+        "image-processing-toolbox",
+        "matlab-r2024a",
+        "msconvert",
+        "msroiaug",
+        "parallel-computing-toolbox",
+        "proteowizard",
+        "roipeaks",
+        "signal-processing-toolbox",
+        "statistics-and-machine-learning-toolbox",
+        "wavelet-toolbox"
       ]
     },
     "metabolic-network-graph-construction": {
@@ -1054,6 +1471,11 @@
       "repo_urls": [
         "https://github.com/shuzhao-li/mummichog",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "python"
       ]
     },
     "metabolite-detection-matrix-construction": {
@@ -1075,6 +1497,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "metabolite-feature-table-normalization": {
@@ -1097,6 +1528,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "metabolite-library-entry-generation": {
@@ -1113,8 +1553,17 @@
         "asb-paper-10-1021-acs-analchem-1c03032"
       ],
       "repo_urls": [
+        "https://github.com/gggraca/MetaboAnnotatoR",
         "https://github.com/cbroeckl/RAMClustR",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metaboannotator",
+        "r-version-or-higher",
+        "ramclustr",
+        "xcms"
       ]
     },
     "metabolomics-peak-detection-configuration": {
@@ -1134,8 +1583,19 @@
         "asb-paper-10-1021-jasms-4c00364"
       ],
       "repo_urls": [
+        "https://github.com/Nextflow4Metabolomics/nextflow4ms-dial",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker",
+        "ms-dial",
+        "msflo",
+        "nextflow",
+        "nextflow-22-10-0",
+        "singularity"
       ]
     },
     "metadata-annotation-integration": {
@@ -1157,6 +1617,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "migration-time-extraction": {
@@ -1179,6 +1648,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "mirror-plot-visualization-for-spectrum-comparison": {
@@ -1205,6 +1684,23 @@
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "github",
+        "gnps",
+        "limma",
+        "massspecwavelet",
+        "metabocoreutils",
+        "msbackendmgf",
+        "msdatahub",
+        "msfeatures",
+        "pheatmap",
+        "spectra",
+        "xcms",
+        "zenodo"
       ]
     },
     "mobility-scale-transformation": {
@@ -1227,6 +1723,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "model-inference-and-tokenization": {
@@ -1253,6 +1759,15 @@
         "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cuda",
+        "figshare",
+        "numba",
+        "python",
+        "pytorch"
       ]
     },
     "molecular-similarity-calculation": {
@@ -1277,6 +1792,16 @@
         "https://github.com/RECETOX/MSMetaEnhancer",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/boecker-lab/sirius"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "biotransformer",
+        "cts",
+        "metfrag",
+        "patroon",
+        "pubchem",
+        "sirius"
       ]
     },
     "ms-data-preprocessing": {
@@ -1293,6 +1818,21 @@
       ],
       "repo_urls": [
         "https://github.com/AdrianHaun/AriumMS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioinformatic-toolbox",
+        "image-processing-toolbox",
+        "matlab-r2024a",
+        "msconvert",
+        "msroiaug",
+        "parallel-computing-toolbox",
+        "proteowizard",
+        "roipeaks",
+        "signal-processing-toolbox",
+        "statistics-and-machine-learning-toolbox",
+        "wavelet-toolbox"
       ]
     },
     "ms-ms-spectrum-matching": {
@@ -1309,6 +1849,14 @@
       ],
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "ms-cleanr",
+        "ms-dial-or-higher",
+        "ms-dial-v4-00-or-higher",
+        "ms-finder"
       ]
     },
     "ms-spectra-extraction-and-preprocessing": {
@@ -1333,6 +1881,17 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bago",
+        "ms-dial",
+        "mzmine-3",
+        "pyopenms",
+        "python",
+        "scikit-learn",
+        "xcms"
       ]
     },
     "ms1-composite-spectra-deconvolution": {
@@ -1350,6 +1909,11 @@
       ],
       "repo_urls": [
         "https://github.com/idslme/IDSL.CSA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "idsl-csa"
       ]
     },
     "ms2-annotation-interpretation": {
@@ -1372,6 +1936,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "ms2-data-preprocessing-pipeline": {
@@ -1392,6 +1965,15 @@
         "https://github.com/MassBank/MassBank-data",
         "https://github.com/13479776/statTarget",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "git",
+        "github",
+        "github-actions",
+        "ms2query",
+        "python"
       ]
     },
     "ms2-spectral-library-matching-post-denoising": {
@@ -1416,6 +1998,22 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "data-table",
+        "deoptim",
+        "dplyr",
+        "dures",
+        "ggplot2",
+        "magrittr",
+        "pbapply",
+        "readr",
+        "rpref",
+        "s4vectors",
+        "spectra",
+        "stats"
       ]
     },
     "ms2-spectrum-collection-from-data-dependent-acquisition": {
@@ -1441,6 +2039,23 @@
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "github",
+        "gnps",
+        "limma",
+        "massspecwavelet",
+        "metabocoreutils",
+        "msbackendmgf",
+        "msdatahub",
+        "msfeatures",
+        "pheatmap",
+        "spectra",
+        "xcms",
+        "zenodo"
       ]
     },
     "ms2-spectrum-extraction-and-consensus-building": {
@@ -1467,6 +2082,23 @@
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "github",
+        "gnps",
+        "limma",
+        "massspecwavelet",
+        "metabocoreutils",
+        "msbackendmgf",
+        "msdatahub",
+        "msfeatures",
+        "pheatmap",
+        "spectra",
+        "xcms",
+        "zenodo"
       ]
     },
     "msconvert-tool-configuration": {
@@ -1484,6 +2116,14 @@
         "https://github.com/xfcui/IsoFusion",
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "isofusion",
+        "jorhelp-docker-image",
+        "msconvert",
+        "pytorch"
       ]
     },
     "msflo-metabolite-annotation": {
@@ -1501,8 +2141,19 @@
         "asb-paper-10-1021-jasms-4c00364"
       ],
       "repo_urls": [
+        "https://github.com/Nextflow4Metabolomics/nextflow4ms-dial",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker",
+        "ms-dial",
+        "msflo",
+        "nextflow",
+        "nextflow-22-10-0",
+        "singularity"
       ]
     },
     "msi-feature-metadata-preservation": {
@@ -1524,6 +2175,16 @@
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "dplyr",
+        "ggplot2",
+        "seurat",
+        "spamtp",
+        "tidyr"
       ]
     },
     "msp-file-parsing-edge-case-handling": {
@@ -1542,6 +2203,12 @@
       "repo_urls": [
         "https://github.com/eMetaboHUB/FragHub",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "python",
+        "spectra-hash"
       ]
     },
     "multi-platform-ms-integration": {
@@ -1567,6 +2234,21 @@
       ],
       "repo_urls": [
         "https://github.com/AdrianHaun/AriumMS"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioinformatic-toolbox",
+        "image-processing-toolbox",
+        "matlab-r2024a",
+        "msconvert",
+        "msroiaug",
+        "parallel-computing-toolbox",
+        "proteowizard",
+        "roipeaks",
+        "signal-processing-toolbox",
+        "statistics-and-machine-learning-toolbox",
+        "wavelet-toolbox"
       ]
     },
     "multivariate-ordination-interpretation": {
@@ -1589,6 +2271,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "normalization-for-unequal-group-sizes": {
@@ -1610,6 +2301,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "numeric-array-round-trip-validation": {
@@ -1632,6 +2332,22 @@
         "https://github.com/MolecularCartography/Optimus",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker",
+        "github",
+        "github-actions",
+        "knime",
+        "multiprocessing",
+        "nanobind",
+        "openms",
+        "openms-topp-tools",
+        "python",
+        "redis",
+        "rq-redis-queue",
+        "streamlit"
       ]
     },
     "ondiskmsnexp-object-manipulation-and-export": {
@@ -1653,6 +2369,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "open-source-mass-spectrometry-file-format-interoperability": {
@@ -1677,6 +2403,18 @@
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "git",
+        "miniconda",
+        "msconvert",
+        "msigen",
+        "proteowizard-msconvert",
+        "pybaf2sql",
+        "python"
       ]
     },
     "output-grounding": {
@@ -2109,6 +2847,7 @@
         "https://github.com/CCMS-UCSD/GNPS_Workflows",
         "https://github.com/Ansanqi/GutUDB",
         "https://github.com/kevinmildau/homologueDiscoverer",
+        "https://github.com/idslme/IDSL_MINT",
         "https://github.com/mzmine/mzmine",
         "https://github.com/hnolCol/instantclue",
         "https://github.com/ZhuMetLab/MetDNA2",
@@ -2130,6 +2869,7 @@
         "https://github.com/CSi-Studio/MetaPro",
         "https://github.com/Li-OmicsLab/MetDIT",
         "https://github.com/ShawnWx2019/MetMiner",
+        "https://github.com/odisce/mineMS2",
         "https://github.com/LewisResearchGroup/MINNO",
         "https://github.com/BalunasLab/mpact",
         "https://github.com/MRMkit/MRMkit",
@@ -2138,6 +2878,8 @@
         "https://github.com/hkevgill/MS-VIS",
         "https://github.com/laurenfields/MSIght",
         "https://github.com/mzmine/mzmine2",
+        "https://github.com/mzmine/mzmine3",
+        "https://github.com/bihealth/NeatMS",
         "https://github.com/TamirBar-Tov/NetAurHPD-Network-Auralization-Hyperlink-Prediction-Method",
         "https://github.com/Dingxian666/Norm-ISWSVR",
         "https://github.com/danielatrivella/NP3_MS_Workflow",
@@ -2147,6 +2889,7 @@
         "https://github.com/nutrimetabolomics/POMAShiny",
         "https://github.com/stanstrup/PredRet",
         "https://github.com/mzniber/Protomix",
+        "https://github.com/stanstrup/QC4Metabolomics",
         "https://github.com/mathelab/RaMP-DB",
         "https://github.com/computational-chemical-biology/regression_filter",
         "https://github.com/DLUT-datas/SGMNS",
@@ -2155,6 +2898,7 @@
         "https://github.com/metabolomics-us/metadatastandardizer",
         "https://github.com/pantakis/SMolESY-select",
         "https://github.com/hejjack/SpecTUS",
+        "https://github.com/kevinmildau/specXplore",
         "https://github.com/13479776/statTarget",
         "https://github.com/computational-metabolomics/struct",
         "https://github.com/wesleyburr/subMaldi",
@@ -2192,6 +2936,93 @@
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/DasSusanta/snakemake_ccs",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "canopus",
+        "chemicalmixturefrommzml",
+        "conda",
+        "csi-fingerid",
+        "cytoscape",
+        "data-table",
+        "docker",
+        "environment",
+        "ggplot",
+        "ggplot2",
+        "github",
+        "github-actions",
+        "gitlab",
+        "gnps",
+        "hmdb",
+        "igraph",
+        "independentmassspectrometer",
+        "ion-identity",
+        "javafx-24",
+        "jdk-25",
+        "jupyter",
+        "jupyter-notebooks",
+        "keras",
+        "knime",
+        "limma",
+        "local-code-artifact",
+        "lotus-database",
+        "manual-expert-review",
+        "massbank",
+        "massspecwavelet",
+        "masst",
+        "memo",
+        "metaboanalyst",
+        "metaboanalystr",
+        "metabocoreutils",
+        "metdna2-r-package",
+        "minems2",
+        "mpactr",
+        "ms-dial",
+        "ms2deepscore",
+        "msbackendmgf",
+        "msconvert",
+        "msdatahub",
+        "msfeatures",
+        "msfragger",
+        "msnovelist",
+        "multiprocessing",
+        "mzmine",
+        "mzmine-2",
+        "mzmine2",
+        "mzmine3",
+        "nanobind",
+        "neatms",
+        "netgsa-r-package",
+        "numpy",
+        "open-tree-of-life",
+        "openms",
+        "openms-topp-tools",
+        "pandas",
+        "pheatmap",
+        "poetry",
+        "proteowizard",
+        "python",
+        "python-3-6",
+        "python-3-9-0",
+        "pytorch",
+        "rdkit",
+        "redis",
+        "rq-redis-queue",
+        "scikit-learn",
+        "semantic-release",
+        "sirius",
+        "skyline",
+        "snakemake",
+        "spectra",
+        "streamlit",
+        "tensorflow",
+        "timar",
+        "topncontroller",
+        "vimms",
+        "xcms",
+        "zenodo"
       ]
     },
     "parameter-driven-preprocessing-pipeline": {
@@ -2219,6 +3050,21 @@
       ],
       "repo_urls": [
         "https://github.com/AdrianHaun/AriumMS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioinformatic-toolbox",
+        "image-processing-toolbox",
+        "matlab-r2024a",
+        "msconvert",
+        "msroiaug",
+        "parallel-computing-toolbox",
+        "proteowizard",
+        "roipeaks",
+        "signal-processing-toolbox",
+        "statistics-and-machine-learning-toolbox",
+        "wavelet-toolbox"
       ]
     },
     "pca-dimensionality-reduction-unsupervised": {
@@ -2241,6 +3087,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "peak-detection-and-boundary-identification": {
@@ -2262,6 +3117,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "peak-picking-avoidance-ms-analysis": {
@@ -2280,6 +3145,12 @@
       "repo_urls": [
         "https://github.com/poomcj/NPFimg",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "npfimg",
+        "xcms"
       ]
     },
     "peak-picking-parameter-configuration": {
@@ -2296,8 +3167,17 @@
         "asb-paper-10-1021-acs-analchem-1c03032"
       ],
       "repo_urls": [
+        "https://github.com/gggraca/MetaboAnnotatoR",
         "https://github.com/cbroeckl/RAMClustR",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metaboannotator",
+        "r-version-or-higher",
+        "ramclustr",
+        "xcms"
       ]
     },
     "peak-quality-assessment-by-selectivity-and-snr-metrics": {
@@ -2324,6 +3204,27 @@
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/FanzhouKong/spectral_denoising"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+        "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+        "asari-peaks-module",
+        "hmdb-4",
+        "https-github-com-shuzhao-li-asari",
+        "jms",
+        "khipu",
+        "lowess",
+        "mass-functions-nn-cluster-by-mz-seeds",
+        "numpy",
+        "proteowizard",
+        "pymzml",
+        "python",
+        "scipy",
+        "scipy-signal-detrend",
+        "scipy-signal-find-peaks"
       ]
     },
     "peaklist-metabolite-assignment-prioritization": {
@@ -2341,6 +3242,12 @@
       "repo_urls": [
         "https://github.com/idslme/IDSL.UFA",
         "https://github.com/idslme/IDSL.IPA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "idsl-ipa",
+        "idsl-ufa"
       ]
     },
     "qc-failure-event-detection": {
@@ -2360,6 +3267,15 @@
         "https://github.com/czbiohub-sf/Rapid-QC-MS",
         "https://github.com/FrigerioGianfranco/GetFeatistics",
         "https://github.com/AdrianHaun/AriumMS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "email-service",
+        "ms-dial",
+        "msconvert",
+        "plotly-or-equivalent-interactive-plotting-library",
+        "slack-api"
       ]
     },
     "r-data-structure-conversion": {
@@ -2377,7 +3293,15 @@
         "asb-paper-10-1021-acs-analchem-0c04720"
       ],
       "repo_urls": [
+        "https://github.com/kbseah/mass2adduct",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "github-kbseah-mass2adduct",
+        "mass2adduct"
       ]
     },
     "r-workflow-scripting-for-analytical-chemistry": {
@@ -2400,6 +3324,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "reaction-pathway-assignment-and-propagation": {
@@ -2425,6 +3359,20 @@
       ],
       "repo_urls": [
         "https://github.com/LeaveMeNotTonight/CMDN"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "clumsid",
+        "clumsiddata",
+        "grid",
+        "msentropy",
+        "msmssim",
+        "orgmassspecr",
+        "pheatmap",
+        "readxl",
+        "reshape2",
+        "tidyverse"
       ]
     },
     "reconstruction-algorithm-implementation": {
@@ -2440,6 +3388,11 @@
       ],
       "repo_urls": [
         "https://github.com/richardxie1119/MEISTER"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "meister"
       ]
     },
     "recursive-propagation-algorithm-development": {
@@ -2454,6 +3407,11 @@
       ],
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mrnannoalgo3-metdna3"
       ]
     },
     "retention-time-based-ion-association": {
@@ -2470,6 +3428,11 @@
       ],
       "repo_urls": [
         "https://github.com/idslme/IDSL.CSA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "idsl-csa"
       ]
     },
     "retention-time-prediction-modeling": {
@@ -2488,6 +3451,11 @@
       ],
       "repo_urls": [
         "https://github.com/oloBion/Retip"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "retip"
       ]
     },
     "retrieval-metric-hit-k-calculation": {
@@ -2512,6 +3480,15 @@
         "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cuda",
+        "figshare",
+        "numba",
+        "python",
+        "pytorch"
       ]
     },
     "roi-detection-mass-spectrometry": {
@@ -2537,6 +3514,21 @@
       ],
       "repo_urls": [
         "https://github.com/AdrianHaun/AriumMS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioinformatic-toolbox",
+        "image-processing-toolbox",
+        "matlab-r2024a",
+        "msconvert",
+        "msroiaug",
+        "parallel-computing-toolbox",
+        "proteowizard",
+        "roipeaks",
+        "signal-processing-toolbox",
+        "statistics-and-machine-learning-toolbox",
+        "wavelet-toolbox"
       ]
     },
     "sample-information-metadata-parsing": {
@@ -2557,6 +3549,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "signal-quality-assessment": {
@@ -2574,6 +3575,13 @@
       "repo_urls": [
         "https://github.com/MMV-Lab/MSI-Explorer",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "msi-explorer",
+        "napari",
+        "python"
       ]
     },
     "singularity-container-deployment": {
@@ -2591,8 +3599,19 @@
         "asb-paper-10-1021-jasms-4c00364"
       ],
       "repo_urls": [
+        "https://github.com/Nextflow4Metabolomics/nextflow4ms-dial",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker",
+        "ms-dial",
+        "msflo",
+        "nextflow",
+        "nextflow-22-10-0",
+        "singularity"
       ]
     },
     "sodium-adduct-detection-and-classification": {
@@ -2610,7 +3629,15 @@
         "asb-paper-10-1021-acs-analchem-0c04720"
       ],
       "repo_urls": [
+        "https://github.com/kbseah/mass2adduct",
         "https://github.com/GenomicsMachineLearning/SpaMTP"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "github-kbseah-mass2adduct",
+        "mass2adduct"
       ]
     },
     "spatial-coordinate-mapping-msi": {
@@ -2632,6 +3659,16 @@
         "https://github.com/GenomicsMachineLearning/SpaMTP",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "dplyr",
+        "ggplot2",
+        "seurat",
+        "spamtp",
+        "tidyr"
       ]
     },
     "spectral-clustering-and-feature-grouping": {
@@ -2657,6 +3694,20 @@
       ],
       "repo_urls": [
         "https://github.com/LeaveMeNotTonight/CMDN"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "clumsid",
+        "clumsiddata",
+        "grid",
+        "msentropy",
+        "msmssim",
+        "orgmassspecr",
+        "pheatmap",
+        "readxl",
+        "reshape2",
+        "tidyverse"
       ]
     },
     "spectral-coverage-and-intensity-metric-computation": {
@@ -2676,9 +3727,23 @@
         "asb-paper-10-1021-acs-analchem-0c03895"
       ],
       "repo_urls": [
+        "https://github.com/glasgowcompbio/vimms",
         "https://github.com/GarrettLab-UF/LipidMatch",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chemicalmixturefrommzml",
+        "environment",
+        "independentmassspectrometer",
+        "mzmine",
+        "openms",
+        "poetry",
+        "python",
+        "topncontroller",
+        "vimms"
       ]
     },
     "spectral-database-matching": {
@@ -2703,6 +3768,17 @@
         "https://github.com/DasSusanta/snakemake_ccs",
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metfrag",
+        "pubchem",
+        "pubchempy",
+        "python",
+        "rdkit",
+        "sirius",
+        "spectra"
       ]
     },
     "spectral-library-annotation-interpretation": {
@@ -2724,6 +3800,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "spectral-library-matching-gnps": {
@@ -2745,6 +3830,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "spectral-neutral-loss-transformation": {
@@ -2763,7 +3857,10 @@
       ],
       "repo_urls": [
         "https://github.com/bittremieux/cosine_neutral_loss"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "spectral-retrieval-ranking-task": {
       "dois": [
@@ -2786,6 +3883,15 @@
         "https://github.com/HassounLab/JESTR1",
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cuda",
+        "figshare",
+        "numba",
+        "python",
+        "pytorch"
       ]
     },
     "spectral-similarity-matching-and-comparison": {
@@ -2812,6 +3918,23 @@
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "github",
+        "gnps",
+        "limma",
+        "massspecwavelet",
+        "metabocoreutils",
+        "msbackendmgf",
+        "msdatahub",
+        "msfeatures",
+        "pheatmap",
+        "spectra",
+        "xcms",
+        "zenodo"
       ]
     },
     "spectral-similarity-scoring": {
@@ -2851,6 +3974,7 @@
         "asb-paper-10-1038-s41467-022-30118-9"
       ],
       "repo_urls": [
+        "https://github.com/EMSL-Computing/CoreMS",
         "https://github.com/huaxuyu/masscube",
         "https://github.com/zmahnoor14/MAW",
         "https://github.com/joannawolthuis/MetaboShiny",
@@ -2865,6 +3989,32 @@
         "https://github.com/DasSusanta/snakemake_ccs",
         "https://github.com/boecker-lab/sirius",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bruker-solarix",
+        "comparador",
+        "corems",
+        "docker",
+        "iontoolpack",
+        "masscube",
+        "matplotlib",
+        "metaboshiny",
+        "metfrag",
+        "mirador",
+        "numpy",
+        "pandas",
+        "peakqc",
+        "peakquant",
+        "pubchem",
+        "pubchempy",
+        "python",
+        "rdkit",
+        "simile",
+        "sirius",
+        "spectra",
+        "tandemmatch"
       ]
     },
     "spectral-similarity-scoring-and-reference-matching": {
@@ -2892,6 +4042,23 @@
         "https://github.com/LeaveMeNotTonight/CMDN",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "github",
+        "gnps",
+        "limma",
+        "massspecwavelet",
+        "metabocoreutils",
+        "msbackendmgf",
+        "msdatahub",
+        "msfeatures",
+        "pheatmap",
+        "spectra",
+        "xcms",
+        "zenodo"
       ]
     },
     "spectrum-similarity-scoring": {
@@ -2911,6 +4078,14 @@
       "repo_urls": [
         "https://github.com/daniellyz/meRgeION2",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "drugbank",
+        "gnps",
+        "massbank",
+        "mergeion2"
       ]
     },
     "tabular-results-aggregation-and-comparison": {
@@ -2932,6 +4107,15 @@
         "https://github.com/mwang87/ReDU-MS2-Documentation",
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/NPLinker/nplinker"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "unified-mobility-scale-construction-across-polarities": {
@@ -2953,6 +4137,16 @@
         "https://github.com/LiesaSalzer/MobilityTransformR",
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabocoreutils",
+        "mobilitytransformr",
+        "msdata",
+        "msnbase",
+        "spectra",
+        "xcms"
       ]
     },
     "unit-test-fixture-design-and-execution": {
@@ -2974,6 +4168,22 @@
         "https://github.com/MolecularCartography/Optimus",
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker",
+        "github",
+        "github-actions",
+        "knime",
+        "multiprocessing",
+        "nanobind",
+        "openms",
+        "openms-topp-tools",
+        "python",
+        "redis",
+        "rq-redis-queue",
+        "streamlit"
       ]
     },
     "vendor-data-standardization": {
@@ -2990,6 +4200,21 @@
       ],
       "repo_urls": [
         "https://github.com/AdrianHaun/AriumMS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioinformatic-toolbox",
+        "image-processing-toolbox",
+        "matlab-r2024a",
+        "msconvert",
+        "msroiaug",
+        "parallel-computing-toolbox",
+        "proteowizard",
+        "roipeaks",
+        "signal-processing-toolbox",
+        "statistics-and-machine-learning-toolbox",
+        "wavelet-toolbox"
       ]
     },
     "vendor-file-format-specification-handling": {
@@ -3009,6 +4234,18 @@
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/AdrianHaun/AriumMS",
         "https://github.com/01dadada/RT-Transformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "git",
+        "miniconda",
+        "msconvert",
+        "msigen",
+        "proteowizard-msconvert",
+        "pybaf2sql",
+        "python"
       ]
     },
     "xenobiotic-metabolite-annotation-from-ms-ms": {
@@ -3034,6 +4271,20 @@
       ],
       "repo_urls": [
         "https://github.com/LeaveMeNotTonight/CMDN"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "clumsid",
+        "clumsiddata",
+        "grid",
+        "msentropy",
+        "msmssim",
+        "orgmassspecr",
+        "pheatmap",
+        "readxl",
+        "reshape2",
+        "tidyverse"
       ]
     },
     "xic-marker-annotation": {
@@ -3048,6 +4299,11 @@
       ],
       "repo_urls": [
         "https://github.com/Wang-Bioinformatics-Lab/GNPS_LCMSDashboard"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps-lcms-visualization-dashboard"
       ]
     }
   }

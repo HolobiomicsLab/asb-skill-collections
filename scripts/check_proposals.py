@@ -24,6 +24,9 @@ For every staged skill, regardless of origin:
   absent). A ``super`` skill orchestrates sub-skills: ``metadata.orchestrates``
   must be a non-empty list and EVERY orchestrated slug must resolve to a real
   skill in ``skills_index.json``.
+* an OPTIONAL top-level ``contributors`` block (co-authorship attribution); when
+  present each entry must be a mapping with a non-empty ``name`` and a ``role``
+  ∈ {``author``, ``reviewer``, ``curator``}. Absence is fine (not required).
 
 A collection with no ``proposals/`` (or no staged skills) yields no violations.
 ``main`` exits 1 on any violation, 0 otherwise. Mirrors
@@ -37,7 +40,7 @@ import sys
 
 import yaml
 
-from scripts.normalize_skill import frontmatter_violations
+from scripts.normalize_skill import contributor_violations, frontmatter_violations
 from scripts.provenance_tier import validate_entry as validate_provenance
 
 # A super-skill orchestrates other skills; a plain skill stands alone.
@@ -138,6 +141,12 @@ def check_collection(collection_dir) -> list:
                 violations.append(
                     f"{md}: tools_used {ref!r} not in tools_index.json"
                 )
+
+        # contributors (co-authorship attribution) — OPTIONAL; validate shape
+        # only when present (top-level key; absence is fine).
+        if "contributors" in fm:
+            for msg in contributor_violations(fm.get("contributors")):
+                violations.append(f"{md}: {msg}")
 
     return violations
 

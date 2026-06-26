@@ -27,6 +27,13 @@ DESC_PREFIXES = ("Use when", "Reference for", "Explains", "Decision support for"
 DESC_MIN, DESC_MAX = 50, 300
 MARKETING_TERMS = ("best", "state-of-the-art", "revolutionary", "leading", "superior")
 VALID_LICENSE_TIERS = {"open", "noncommercial", "restricted"}
+# Co-authorship attribution roles for the optional ``contributors`` block:
+# ``author`` (a tool's author who contributed the skill), ``reviewer`` (vetted
+# it), ``curator`` (a maintainer who staged/shaped it). See governance/AUTHORSHIP.md.
+VALID_CONTRIBUTOR_ROLES = {"author", "reviewer", "curator"}
+# Well-formed contributor keys: ``name``/``role`` required, ``orcid``/``github``
+# optional. Only these keys are emitted into a normalized block.
+CONTRIBUTOR_KEYS = ("name", "role", "orcid", "github")
 
 
 def slugify(name: str) -> str:
@@ -110,6 +117,34 @@ def frontmatter_violations(fm: dict) -> list[str]:
     return violations
 
 
+def contributor_violations(contributors) -> list[str]:
+    """Validate an optional ``contributors`` block (empty = valid/absent).
+
+    The block is OPTIONAL: ``None`` (absent) yields no violations. When present
+    it must be a list of mappings, each with a non-empty ``name`` and a ``role``
+    in :data:`VALID_CONTRIBUTOR_ROLES`. ``orcid``/``github`` are optional and not
+    further validated here. See governance/AUTHORSHIP.md.
+    """
+    if contributors is None:
+        return []
+    violations: list[str] = []
+    if not isinstance(contributors, list):
+        return ["contributors must be a list"]
+    for i, entry in enumerate(contributors):
+        if not isinstance(entry, dict):
+            violations.append(f"contributor[{i}] must be a mapping")
+            continue
+        name = entry.get("name")
+        if not (isinstance(name, str) and name.strip()):
+            violations.append(f"contributor[{i}] missing non-empty name")
+        role = entry.get("role")
+        if role not in VALID_CONTRIBUTOR_ROLES:
+            violations.append(
+                f"contributor[{i}] role {role!r} not in {sorted(VALID_CONTRIBUTOR_ROLES)}"
+            )
+    return violations
+
+
 def normalized_frontmatter(
     raw_fm: dict,
     *,
@@ -119,6 +154,7 @@ def normalized_frontmatter(
     provenance_tier: str = "community",
     status: str = "hold",
     derived_from=None,
+    contributors=None,
 ) -> dict:
     """Assemble a schema-correct community frontmatter from ``raw_fm``.
 
@@ -127,6 +163,11 @@ def normalized_frontmatter(
     ``related_skills``/``tools_used``/``status``/``provenance_tier``/
     ``license_tier``. ``derived_from`` is included only when provided. Does not
     mutate ``raw_fm``.
+
+    ``contributors`` (the co-authorship attribution block) is emitted only when
+    provided. Each entry is reduced to its well-formed keys
+    (:data:`CONTRIBUTOR_KEYS`: ``name``/``role`` required, ``orcid``/``github``
+    optional; unknown keys dropped); the input is not mutated.
     """
     if provenance_tier not in VALID_PROVENANCE:
         raise ValueError(f"invalid provenance_tier {provenance_tier!r}")
@@ -154,6 +195,14 @@ def normalized_frontmatter(
     fm["related_skills"] = list(related_skills)
     if derived_from is not None:
         fm["derived_from"] = copy.deepcopy(derived_from)
+    if contributors is not None:
+        emitted: list[dict] = []
+        for entry in contributors:
+            src_entry = entry if isinstance(entry, dict) else {}
+            emitted.append(
+                {k: src_entry[k] for k in CONTRIBUTOR_KEYS if k in src_entry}
+            )
+        fm["contributors"] = emitted
     return fm
 
 
