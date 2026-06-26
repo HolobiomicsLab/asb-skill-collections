@@ -63,6 +63,9 @@ source_repos:
 - vdhooftcompmet/MS2LDA
 - volvox292/mass2smiles
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - LC-MS
 - GC-MS

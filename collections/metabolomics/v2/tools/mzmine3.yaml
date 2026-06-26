@@ -14,6 +14,9 @@ source_repos:
 - Functional-Metabolomics-Lab/FBMN-STATS
 - luigiquiros/inventa
 schema_version: 0.2.0
+license_tier: open
+license: BSD-3-Clause
+license_detection: github-api
 techniques:
 - LC-MS
 - GC-MS

@@ -4,6 +4,9 @@ derived_from:
 - doi: 10.1021/acscentsci.1c01108
   title: NP Analyst
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - MS-imaging

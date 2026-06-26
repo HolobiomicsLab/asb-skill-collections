@@ -70,6 +70,48 @@ def _synthetic_fm(
     return fm
 
 
+def _literature_fm(
+    slug="my-review-meta-skill",
+    tools_used=None,
+    dois=("10.1021/acs.analchem.0c01234",),
+    synthesized_from=("lc-ms-feature-extraction", "spectral-similarity-scoring"),
+    skill_kind="super",
+    orchestrates=("lc-ms-feature-extraction", "spectral-similarity-scoring"),
+    **overrides,
+):
+    """A review-grounded (literature-provenance) staged super-skill frontmatter.
+
+    Literature proposals are valid via >=1 source ``metadata.dois`` (the review
+    DOI), while keeping the super orchestration invariants.
+    """
+    meta = {
+        "edam_operation": "http://edamontology.org/operation_3215",
+        "edam_topics": ["http://edamontology.org/topic_0091"],
+        "license_tier": "open",
+        "provenance_tier": "literature",
+        "tools_used": ["mzmine"] if tools_used is None else tools_used,
+    }
+    if dois is not None:
+        meta["dois"] = list(dois)
+    if synthesized_from is not None:
+        meta["synthesized_from"] = list(synthesized_from)
+    if skill_kind is not None:
+        meta["skill_kind"] = skill_kind
+    if orchestrates is not None:
+        meta["orchestrates"] = list(orchestrates)
+    fm = {
+        "name": slug,
+        "description": VALID_DESC,
+        "license": "CC-BY-4.0",
+        "metadata": meta,
+        "status": "hold",
+    }
+    if dois is not None:
+        fm["derived_from"] = [{"doi": d} for d in dois]
+    fm.update(overrides)
+    return fm
+
+
 def _write_skill(col, fm, body="# Skill\n\nbody\n"):
     slug = fm["name"]
     d = col / "proposals" / "skills" / slug
@@ -115,13 +157,13 @@ def test_clean_staged_skill_passes(tmp_path):
 
 # --- bad provenance tier -----------------------------------------------------
 
-def test_non_community_provenance_tier_fails(tmp_path):
+def test_unknown_provenance_tier_fails(tmp_path):
     col = _collection(tmp_path)
     fm = _good_fm()
-    fm["metadata"]["provenance_tier"] = "literature"
+    fm["metadata"]["provenance_tier"] = "made-up"
     _write_skill(col, fm)
     v = c.check_collection(str(col))
-    assert any("provenance_tier" in x and "community" in x for x in v)
+    assert any("provenance_tier" in x and "made-up" in x for x in v)
 
 
 # --- missing related_skills key ----------------------------------------------
@@ -267,6 +309,46 @@ def test_invalid_skill_kind_fails(tmp_path):
     _write_skill(col, fm)
     v = c.check_collection(str(col))
     assert any("skill_kind" in x for x in v)
+
+
+# --- literature provenance (review-grounded super-skills) --------------------
+
+def test_clean_literature_super_skill_passes(tmp_path):
+    # A review-grounded super-skill is valid via >=1 source DOI + a resolvable
+    # orchestrates list — no community related_skills key required.
+    col = _collection(tmp_path)
+    _write_skill(col, _literature_fm())
+    assert c.check_collection(str(col)) == []
+
+
+def test_literature_without_doi_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _literature_fm(dois=None)
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("doi" in x.lower() for x in v)
+
+
+def test_literature_with_empty_dois_fails(tmp_path):
+    col = _collection(tmp_path)
+    fm = _literature_fm()
+    fm["metadata"]["dois"] = []
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("doi" in x.lower() for x in v)
+
+
+def test_literature_super_still_resolves_orchestrates(tmp_path):
+    # The super invariants apply regardless of provenance: a literature super
+    # with a dangling orchestrate slug must fail.
+    col = _collection(tmp_path)
+    fm = _literature_fm(
+        synthesized_from=("lc-ms-feature-extraction", "ghost-skill"),
+        orchestrates=("lc-ms-feature-extraction", "ghost-skill"),
+    )
+    _write_skill(col, fm)
+    v = c.check_collection(str(col))
+    assert any("ghost-skill" in x for x in v)
 
 
 def test_community_skill_with_super_kind_resolves_orchestrates(tmp_path):

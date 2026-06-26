@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - AdrianHaun/AriumMS
 schema_version: 0.2.0
+license_tier: open
+license: BSD-3-Clause
+license_detection: github-api
 techniques:
 - LC-MS
 - CE-MS

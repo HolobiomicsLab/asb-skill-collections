@@ -8,6 +8,9 @@ derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 schema_version: 0.2.0
+license_tier: open
+license: Artistic-2.0
+license_detection: github-api
 techniques:
 - LC-MS
 - mass-spectrometry

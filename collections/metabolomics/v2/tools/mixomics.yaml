@@ -13,6 +13,9 @@ source_repos:
 - DanielQuiroz97/RGCxGC
 - LargeMetabo/LargeMetabo
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - LC-MS
 - GC-MS

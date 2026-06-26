@@ -34,9 +34,12 @@ proposals gate ([`check_proposals.py`](../scripts/check_proposals.py)):
 | `metadata.skill_kind` | `skill` (default, stands alone) or `super` (orchestrates others) | must be in {`skill`, `super`} |
 | `metadata.orchestrates` | the ordered sub-skill slugs the pipeline sequences | for `super`: non-empty list, **every slug resolves in `skills_index.json`** |
 
-A `super` skill is almost always `provenance_tier: synthetic` (it is derived from
-the skills it orchestrates), so its `metadata.synthesized_from` lists those same
-sub-skill slugs (plus any review DOIs that motivated the pipeline). The body is
+A `super` skill is usually `provenance_tier: synthetic` (it is derived from the
+skills it orchestrates), so its `metadata.synthesized_from` lists those same
+sub-skill slugs. When the canonical pipeline is instead **grounded in a review
+article** — a survey/tutorial that defines the workflow's stages — the super-skill
+is `provenance_tier: literature` with that review's DOI in `metadata.dois` and
+`derived_from` (see *The three provenance origins* below). Either way the body is
 **genuine synthesis** — it writes the real ordered workflow and cites each stage's
 sub-skills by their actual slug; it never fabricates stages, slugs, tools, or DOIs.
 
@@ -54,13 +57,23 @@ sub-skills by their actual slug; it never fabricates stages, slugs, tools, or DO
   (see [`COMMUNITY_SKILLS.md`](COMMUNITY_SKILLS.md)). Invariant: a `related_skills`
   key is present.
 - **`literature`** — *distilled from one or more peer-reviewed source papers* by the
-  curation pipeline (the origin of every shipped skill today). Invariant: ≥1 source
-  DOI.
+  curation pipeline (the origin of every shipped single-procedure skill today).
+  Invariant: ≥1 source DOI. A super-skill lands here when its **pipeline is grounded
+  in a review article** rather than merely composed from existing skills: the
+  `synthesize-meta-skill` command is given a `--review-doi`, and `meta_frontmatter`
+  sets `provenance_tier: literature`, `metadata.dois: [<review-doi>]`, and
+  `derived_from: [{doi: <review-doi>}]` (while keeping `skill_kind: super` +
+  `orchestrates`). This is a **review-grounded meta-skill** — the survey defines the
+  canonical stages, the sub-skills carry each stage.
 
-`skill_kind` (`skill` / `super`) is **orthogonal** to provenance: a `super` skill is
-usually `synthetic`, but a hand-authored workflow skill could be `community` and
-still set `skill_kind: super`. The two precedents below are hand-authored meta-skills
-that this rail generalizes into a synthesizable, openly-curated form.
+A super-skill therefore has **three** possible origins: `synthetic` (composed from
+the orchestrated skills, the default), `literature` (review-grounded, via a review
+DOI), or `community` (a hand-authored workflow skill contributed outside the
+pipeline). `skill_kind` (`skill` / `super`) is **orthogonal** to provenance: a
+`super` skill is usually `synthetic`, but it can be `literature` (review-grounded)
+or `community` and still set `skill_kind: super`. The two precedents below are
+hand-authored meta-skills that this rail generalizes into a synthesizable,
+openly-curated form.
 
 ## The open-curation model
 
@@ -85,10 +98,12 @@ community skill, with a human merge gate. **The synthesis is never auto-promoted
 
 3. **CI validation.** On the PR, `scripts/check_proposals.py` (the **Proposals gate**)
    holds the staged skill to the same discipline a published skill must pass, plus the
-   synthetic + super invariants: `metadata.synthesized_from` non-empty;
-   `metadata.skill_kind ∈ {skill, super}`; for `super`, `metadata.orchestrates`
-   non-empty and **every orchestrated slug resolves in `skills_index.json`**. CI checks
-   **structure**, never scientific merit.
+   provenance + super invariants (reusing the `scripts/provenance_tier.py` kernel): a
+   `synthetic` proposal needs non-empty `metadata.synthesized_from`; a `literature`
+   (review-grounded) proposal needs ≥1 `metadata.dois`; a `community` proposal needs a
+   `related_skills` key. For `super` (any origin): `metadata.skill_kind ∈ {skill,
+   super}`, `metadata.orchestrates` non-empty, and **every orchestrated slug resolves
+   in `skills_index.json`**. CI checks **structure**, never scientific merit.
 
 4. **Open community/expert review.** The public PR waits for open review — the same
    community-signal / expert-attestation mechanisms described in
@@ -121,7 +136,7 @@ any other proposal.
 
 | Concern | Rule | Enforced by |
 |---|---|---|
-| Origin | `provenance_tier: synthetic` + `metadata.synthesized_from` non-empty | `check_proposals.py`, `check_provenance_tiers.py` |
+| Origin | `synthetic` ⇒ `metadata.synthesized_from` non-empty; `literature` (review-grounded) ⇒ ≥1 `metadata.dois`; `community` ⇒ `related_skills` key | `check_proposals.py`, `check_provenance_tiers.py` |
 | Kind | `metadata.skill_kind ∈ {skill, super}` (default `skill`) | `check_proposals.py` |
 | Orchestration | for `super`: `metadata.orchestrates` non-empty + every slug in `skills_index.json` | `check_proposals.py` |
 | Rail | `status: hold` while in `proposals/` | `check_proposals.py` |

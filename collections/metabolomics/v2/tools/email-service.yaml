@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - czbiohub-sf/Rapid-QC-MS
 schema_version: 0.2.0
+license_tier: open
+license: BSD-3-Clause
+license_detection: license-file
 techniques:
 - LC-MS
 - CE-MS

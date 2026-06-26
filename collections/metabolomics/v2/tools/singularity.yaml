@@ -19,6 +19,9 @@ source_repos:
 - ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 - meowcat/MSNovelist
 schema_version: 0.2.0
+license_tier: open
+license: AGPL-3.0
+license_detection: github-api
 techniques:
 - LC-MS
 - CE-MS

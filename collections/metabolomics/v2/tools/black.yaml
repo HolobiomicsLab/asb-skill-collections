@@ -13,5 +13,8 @@ source_repos:
 - SysMedOs/LipidLynxX
 - medema-group/BiG-SCAPE
 schema_version: 0.2.0
+license_tier: open
+license: AGPL-3.0
+license_detection: github-api
 techniques:
 - mass-spectrometry

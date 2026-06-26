@@ -30,6 +30,9 @@ source_repos:
 - sneumann/xcms
 - zmahnoor14/MAW
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: file-present-unclassified
 techniques:
 - LC-MS
 - GC-MS
