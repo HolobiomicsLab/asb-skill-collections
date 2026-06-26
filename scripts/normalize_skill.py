@@ -60,8 +60,11 @@ def check_description(desc) -> list[str]:
     elif n > DESC_MAX:
         violations.append(f"description too long ({n} > {DESC_MAX} chars)")
     low = text.lower()
+    # Substring match for CI parity with validate.yml Gate 5
+    # (`if term.lower() in desc.lower()`), not word-boundary — the gate the
+    # contributed skill must satisfy after the PR is opened uses substrings.
     for term in MARKETING_TERMS:
-        if re.search(rf"\b{re.escape(term)}\b", low):
+        if term in low:
             violations.append(f"description uses marketing term {term!r}")
     return violations
 
@@ -89,9 +92,15 @@ def frontmatter_violations(fm: dict) -> list[str]:
     op = meta.get("edam_operation")
     if op is not None and not valid_edam(op):
         violations.append(f"invalid EDAM operation IRI: {op!r}")
-    for topic in meta.get("edam_topics") or []:
-        if not valid_edam(topic):
-            violations.append(f"invalid EDAM topic IRI: {topic!r}")
+    topics = meta.get("edam_topics") or []
+    if not isinstance(topics, list):
+        # A bare string (or other scalar) would iterate per-character and emit
+        # one violation per char; emit a single clear message instead.
+        violations.append("edam_topics must be a list")
+    else:
+        for topic in topics:
+            if not valid_edam(topic):
+                violations.append(f"invalid EDAM topic IRI: {topic!r}")
 
     tier = meta.get("license_tier")
     if tier not in VALID_LICENSE_TIERS:

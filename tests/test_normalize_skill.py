@@ -78,6 +78,20 @@ def test_check_description_marketing_terms_flagged():
         assert any("marketing" in v.lower() for v in violations), term
 
 
+def test_check_description_marketing_substring_flagged_for_ci_parity():
+    # CI Gate 5 uses substring matching (`term in desc.lower()`); the normalizer
+    # must flag the SAME cases so a skill it pre-clears isn't later rejected by
+    # CI. "bestowing" contains "best"; "misleading" contains "leading".
+    for word, term in (("bestowing", "best"), ("misleading", "leading")):
+        desc = (
+            f"Use when {word} labels on an LC-MS feature table before downstream "
+            "statistical analysis of the resulting metabolite features."
+        )
+        violations = n.check_description(desc)
+        assert any("marketing" in v.lower() for v in violations), word
+        assert any(term in v for v in violations), term
+
+
 # --- parse_skill_md ----------------------------------------------------------
 
 def test_parse_skill_md_splits_frontmatter_and_body():
@@ -127,6 +141,16 @@ def test_frontmatter_violations_bad_edam_topic():
     fm = _good_fm()
     fm["metadata"]["edam_topics"] = ["http://example.org/topic_0091"]
     assert any("edam" in v.lower() for v in n.frontmatter_violations(fm))
+
+
+def test_frontmatter_violations_string_edam_topics_single_message():
+    # A bare string instead of a list must yield ONE clear violation, not one
+    # per character (contributor-supplied frontmatter robustness).
+    fm = _good_fm()
+    fm["metadata"]["edam_topics"] = "http://edamontology.org/topic_0091"
+    violations = n.frontmatter_violations(fm)
+    topic_violations = [v for v in violations if "edam_topics" in v or "topic IRI" in v]
+    assert topic_violations == ["edam_topics must be a list"]
 
 
 def test_frontmatter_violations_bad_license_tier():
