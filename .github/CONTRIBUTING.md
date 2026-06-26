@@ -108,6 +108,52 @@ Improve a paper already in (or proposed to) the corpus by either:
 owned): `doi`, the `access` block, and `status` — these are set by verification
 and curation, not by annotation.
 
+## Propose a skill (community tier)
+
+Beyond papers, you can contribute a **skill** directly — a community-tier skill is
+one curated outside the literature pipeline (`provenance_tier: community`). It is
+held to the **same structural discipline** as a published skill, but is not required
+to derive from a paper. See
+[`governance/COMMUNITY_SKILLS.md`](../governance/COMMUNITY_SKILLS.md) for the full
+curation model and [`governance/PROVENANCE_TIERS.md`](../governance/PROVENANCE_TIERS.md)
+for the `community` tier. As with everything else, **a maintainer makes the final
+merge decision** — you cannot self-merge.
+
+There are two ways in:
+
+### 1. Suggest via an issue (lightest)
+
+Open a **Propose a skill (community tier)** issue using the
+[`propose-skill`](ISSUE_TEMPLATE/propose-skill.md) template. Tell us what the skill
+does, why it matters, and link it (or paste its `SKILL.md`). The issue template asks
+you to confirm you license your skill prose under **CC-BY-4.0**.
+
+### 2. Stage a proposal PR with the `propose-skill` command (recommended)
+
+Run the `propose-skill` command
+([`collections/metabolomics/v2/commands/propose-skill.md`](../collections/metabolomics/v2/commands/propose-skill.md))
+on your local `SKILL.md`. It will:
+
+- **normalize** the frontmatter to the CI gates (description prefix/length, no
+  marketing terms, canonical EDAM IRIs, a valid `license_tier`);
+- **match** it against the collection to suggest `related_skills` + `tools_used`,
+  and **warn** if it looks like a near-duplicate (annotate/merge instead of adding a
+  copy);
+- best-effort **ground** it (Perspicacité, optional — community skills need no DOI);
+- tier it `community` / `hold` and **stage** the files via
+  `scripts/propose_skill.py`:
+  - `collections/<slug>/v<N>/proposals/skills/<skill-slug>/SKILL.md`
+  - `collections/<slug>/v<N>/proposals/wave-skills-<date>.yaml` (ledger,
+    `asb-skill-proposals/1.0`).
+
+The command **never opens the PR for you** — it prints the exact
+`git`/`gh pr create` commands for you to review and run yourself. On the PR, the
+**Proposals gate** (`scripts/check_proposals.py` in `validate.yml`) checks the staged
+skill against the same discipline as a published one, and the
+[pull-request template](PULL_REQUEST_TEMPLATE.md) asks you to confirm the CC-BY-4.0
+grant on your skill prose. A maintainer then reviews fit and merges; accepted skills
+are promoted out of `proposals/` into the shipped collection at a curation wave.
+
 ## Tier progression
 
 | Tier | Requirement |

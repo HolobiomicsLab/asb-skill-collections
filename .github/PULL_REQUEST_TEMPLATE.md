@@ -6,6 +6,7 @@
 
 - [ ] New collection (`staged-collections/<slug>/v<N>/`)
 - [ ] Review attestation (`collections/<slug>/v<N>/reviews/<doi>.yaml`)
+- [ ] Community skill proposal (`collections/<slug>/v<N>/proposals/skills/<slug>/SKILL.md`)
 - [ ] Curator candidacy (`candidates/<handle>.yaml`)
 - [ ] Leaderboard result (`benchmark/leaderboard.jsonld`)
 - [ ] Governance / docs update
@@ -29,6 +30,11 @@
 - [ ] RO-Crate metadata is valid (Workflow Run Profile 0.5)
 - [ ] At least 1 skill has `evidence_spans` linking to a verifiable paper quote
 - [ ] Description discipline passes CI lint (50-300 chars, "Use when..." lead)
+
+### For community skill proposals
+- [ ] Skill is staged under `proposals/skills/<slug>/` with `provenance_tier: community` and `status: hold`
+- [ ] The Proposals gate (`check_proposals.py` in `validate.yml`) passes
+- [ ] I license my contributed skill prose (description + body) under **CC-BY-4.0** (separate from the skill's `license_tier`, which describes the tool it grounds on)
 
 ### For curator candidacy PRs
 - [ ] `candidates/<handle>.yaml` includes `proof_publications` (2-3 DOIs)
