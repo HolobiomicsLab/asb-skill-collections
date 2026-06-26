@@ -323,3 +323,9 @@ jobs:
       # -- Gate: Community-skill proposals ------
       - name: Proposals gate
         run: python -m scripts.check_proposals collections/metabolomics/v2
+
+      # -- Gate: Related-skills referential integrity ------
+      # Vacuously passes until a maintainer runs the embedding precompute
+      # (pip install '.[embed]' && python -m scripts.build_related_skills).
+      - name: Related-skills gate
+        run: python -m scripts.check_related_skills collections/metabolomics/v2

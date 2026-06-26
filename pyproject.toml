@@ -23,6 +23,12 @@ asbb = "scripts.asbb_cli:main"
 hf = [
     "huggingface_hub>=0.23",
 ]
+# Embedding similarity graph (scripts.build_related_skills). The model is loaded
+# lazily — the module imports fine without this extra; only the real precompute
+# needs it.
+embed = [
+    "sentence-transformers>=2.2",
+]
 dev = [
     "pytest>=8.0",
     "pytest-cov",
