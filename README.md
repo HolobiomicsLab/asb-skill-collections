@@ -314,6 +314,29 @@ A tool's tier is the **most-restrictive** of its source papers; tools with no
 matched license default to `restricted`. See
 [`governance/LICENSE_TIERS.md`](governance/LICENSE_TIERS.md) for the tier semantics.
 
+## Contributing skills & meta-skills
+
+Beyond the paper-distillation pipeline, two **agentic** rails let you add skills
+from your own machine with Claude Code. Both **normalize → match → stage → print
+`gh pr create`** — they never auto-open and never auto-merge; everything lands in
+`collections/<slug>/proposals/skills/` as `status: hold` for maintainer + open
+community/expert curation. A CI gate (`scripts/check_proposals.py`) validates each
+staged skill's structure so review is about quality and fit, not formatting.
+
+| Rail | Command | Produces | Governance |
+|---|---|---|---|
+| **Community skill** | [`/propose-skill`](collections/metabolomics/v2/commands/propose-skill.md) | a `provenance_tier: community` skill, auto-matched to related skills/tools | [`COMMUNITY_SKILLS.md`](governance/COMMUNITY_SKILLS.md) |
+| **Synthetic meta-skill** | [`/synthesize-meta-skill`](collections/metabolomics/v2/commands/synthesize-meta-skill.md) | a `provenance_tier: synthetic` **super-skill** (`skill_kind: super`) orchestrating sub-skills | [`META_SKILLS.md`](governance/META_SKILLS.md) |
+
+A **super-skill** is workflow-level: its `metadata.orchestrates` lists the
+sub-skill slugs it sequences (each must resolve in `skills_index.json`), and
+`synthesized_from` records what it was built from. A worked example ships staged at
+`collections/metabolomics/v2/proposals/skills/molecular-networking/`.
+
+> **Matching is lexical** (serverless TF-IDF over `skills_index.json`; no server
+> needed). Perspicacité is used only for the optional *literature-grounding* step
+> (finding a supporting paper) — not for skill matching.
+
 ## License
 
 Dual-licensed, by layer (see [LICENSING.md](LICENSING.md)):
