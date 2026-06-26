@@ -296,7 +296,7 @@ by DOI intersection:
 | Field | On | Meaning |
 |---|---|---|
 | `license_tier` | each tool | `open` / `noncommercial` / `restricted` — rolled up most-restrictive across the tool's source papers |
-| `license` / `license_detection` | each tool | the matched SPDX license and how it was detected (`none` when unmatched ⇒ `restricted`) |
+| `license` / `license_detection` | each tool | the matched SPDX license and how it was detected (`none`/`null` when unmatched ⇒ `restricted`) |
 | `used_by_skills` | each tool | skill slugs that ground on this tool |
 | `tools_used` | each skill (`skills_index.json`, `kb_bundle.json`) | tool slugs this skill grounds on — the inverse of `used_by_skills` |
 

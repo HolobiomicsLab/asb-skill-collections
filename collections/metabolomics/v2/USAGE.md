@@ -295,7 +295,7 @@ intersection between a tool's source papers and each skill's source DOIs):
 | Field | On | Meaning |
 |---|---|---|
 | `license_tier` | each tool | `open` / `noncommercial` / `restricted` — most-restrictive across the tool's source papers |
-| `license` / `license_detection` | each tool | matched SPDX license + how it was detected (`none` ⇒ unmatched ⇒ `restricted`) |
+| `license` / `license_detection` | each tool | matched SPDX license + how it was detected (`none`/`null` ⇒ unmatched ⇒ `restricted`) |
 | `used_by_skills` | each tool | skill slugs that ground on this tool |
 | `tools_used` | each skill | tool slugs this skill grounds on — inverse of `used_by_skills` |
 
