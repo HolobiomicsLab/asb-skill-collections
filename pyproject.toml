@@ -28,9 +28,11 @@ hf = [
 # needs it.
 embed = [
     "sentence-transformers>=2.2",
+    "numpy>=1.24",
 ]
 embed-openai = [
     "openai>=1.0",
+    "numpy>=1.24",
 ]
 dev = [
     "pytest>=8.0",

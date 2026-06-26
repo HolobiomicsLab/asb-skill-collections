@@ -158,14 +158,46 @@ def _cosine(a, b) -> float:
 
 
 def related_map(vectors, *, top_n=DEFAULT_TOP_N, threshold=DEFAULT_THRESHOLD):
-    """Cosine top-N neighbour graph from a ``{slug: vector}`` map. Pure.
+    """Cosine top-N neighbour graph from a ``{slug: vector}`` map.
 
     For each slug, returns the ``top_n`` other slugs with the highest cosine
     similarity that is strictly above ``threshold``, excluding self. Ties in
     similarity are broken by slug ascending (deterministic output). Returns
     ``{slug: [slug, ...]}``.
+
+    Uses a vectorized numpy path when available — O(n^2 * d) pure Python does not
+    scale to thousands of high-dimensional vectors — and falls back to the
+    pure-Python implementation otherwise. Both produce identical output.
     """
     slugs = sorted(vectors)
+    if not slugs:
+        return {}
+    try:
+        import numpy as np
+    except ImportError:  # pragma: no cover - exercised when numpy is absent
+        return _related_map_py(slugs, vectors, top_n=top_n, threshold=threshold)
+
+    matrix = np.asarray([vectors[s] for s in slugs], dtype=float)
+    matrix[~np.isfinite(matrix)] = 0.0  # drop degenerate (NaN/inf) embedding values
+    norms = np.linalg.norm(matrix, axis=1)
+    norms[norms == 0.0] = 1.0  # zero vector -> all-zero row -> cosine 0 (matches _cosine)
+    unit = matrix / norms[:, None]
+    with np.errstate(invalid="ignore", divide="ignore", over="ignore"):
+        sims = unit @ unit.T
+    sims[~np.isfinite(sims)] = -np.inf  # degenerate similarities are never neighbours
+    np.fill_diagonal(sims, -np.inf)  # exclude self
+    out: dict[str, list[str]] = {}
+    for i, s in enumerate(slugs):
+        row = sims[i]
+        cand = np.where(row > threshold)[0]  # ascending index == ascending slug
+        # stable sort by descending similarity; equal sims keep ascending-slug order
+        order = cand[np.argsort(-row[cand], kind="stable")]
+        out[s] = [slugs[j] for j in order[:top_n]]
+    return out
+
+
+def _related_map_py(slugs, vectors, *, top_n, threshold):
+    """Pure-Python cosine top-N (numpy-free fallback)."""
     out: dict[str, list[str]] = {}
     for s in slugs:
         vs = vectors[s]
