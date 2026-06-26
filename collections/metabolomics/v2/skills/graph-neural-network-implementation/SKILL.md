@@ -26,6 +26,7 @@ metadata:
   techniques:
   - ion-mobility-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

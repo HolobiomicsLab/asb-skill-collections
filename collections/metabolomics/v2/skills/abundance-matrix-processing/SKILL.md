@@ -15,6 +15,7 @@ metadata:
   - mixOmics
   - ComBat (via sva Bioconductor package)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo

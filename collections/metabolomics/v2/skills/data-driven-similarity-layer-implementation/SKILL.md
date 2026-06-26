@@ -20,6 +20,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-ND-4.0
     url: ZhuMetLab/MrnAnnoAlgo3
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3

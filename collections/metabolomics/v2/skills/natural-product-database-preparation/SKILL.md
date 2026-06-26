@@ -15,6 +15,7 @@ metadata:
   - jobs.py
   - Prefect 2
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02813-0
   title: MSnLib

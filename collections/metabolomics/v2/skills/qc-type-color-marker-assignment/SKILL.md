@@ -14,6 +14,7 @@ metadata:
   techniques:
   - GC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

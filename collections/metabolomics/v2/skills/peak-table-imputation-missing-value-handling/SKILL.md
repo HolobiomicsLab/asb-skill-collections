@@ -13,6 +13,7 @@ metadata:
   - R
   - GCIMS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

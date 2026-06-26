@@ -12,6 +12,7 @@ metadata:
   tools:
   - CypReact
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.8b00035
   title: CypReact

@@ -12,6 +12,7 @@ metadata:
   - Python
   - MINE-Database / Pickaxe
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

@@ -18,6 +18,7 @@ metadata:
   - GC-MS
   - direct-infusion-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

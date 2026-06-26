@@ -14,6 +14,7 @@ metadata:
   - Convolutional Neural Network (CNN)
   - cosine similarity / Euclidean distance
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed

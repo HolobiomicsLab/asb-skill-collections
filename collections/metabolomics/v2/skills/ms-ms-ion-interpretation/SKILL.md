@@ -19,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE

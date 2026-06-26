@@ -17,6 +17,7 @@ metadata:
   - R (4.0.2 or above)
   - ggplot2 or base R graphics
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect

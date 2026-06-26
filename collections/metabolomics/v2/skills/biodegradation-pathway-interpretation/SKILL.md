@@ -19,6 +19,7 @@ metadata:
       (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
     url: https://bitbucket.org/wishartlab/biotransformer.git
   license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0

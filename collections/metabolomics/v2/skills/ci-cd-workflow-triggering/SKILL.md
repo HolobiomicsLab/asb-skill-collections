@@ -16,6 +16,7 @@ metadata:
   techniques:
   - MS-imaging
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

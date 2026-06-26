@@ -12,6 +12,7 @@ metadata:
   - Gnuplot
   - Perl
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/cpz1.70009
   title: LipidOne 2.0

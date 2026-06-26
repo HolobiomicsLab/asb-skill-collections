@@ -15,6 +15,7 @@ metadata:
   - Python pandas or native set operations
   - R data.table or dplyr
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

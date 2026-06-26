@@ -14,6 +14,7 @@ metadata:
   - MAGMa joblauncher
   - OpenAPI 3.0
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma

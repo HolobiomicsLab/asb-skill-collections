@@ -25,6 +25,7 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator

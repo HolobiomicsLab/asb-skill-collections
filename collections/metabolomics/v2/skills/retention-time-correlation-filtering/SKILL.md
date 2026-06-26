@@ -21,6 +21,7 @@ metadata:
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
   license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube

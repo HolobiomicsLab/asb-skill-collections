@@ -17,6 +17,7 @@ metadata:
   - PALS (Pathway Activity Level Scoring)
   - SciPy preprocessing module
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

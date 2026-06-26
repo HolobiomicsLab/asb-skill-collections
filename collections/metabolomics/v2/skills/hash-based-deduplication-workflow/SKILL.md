@@ -21,6 +21,7 @@ metadata:
     ref: CC-BY-NC-4.0
     url: eMetaboHUB/FragHub
   license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

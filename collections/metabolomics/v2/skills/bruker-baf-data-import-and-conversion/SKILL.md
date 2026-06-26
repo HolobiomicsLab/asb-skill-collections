@@ -23,6 +23,7 @@ metadata:
   - MS-imaging
   - ion-mobility-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00178
   title: MSIGen

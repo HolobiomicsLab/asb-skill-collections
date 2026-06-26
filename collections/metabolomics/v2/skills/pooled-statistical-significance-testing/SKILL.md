@@ -18,6 +18,7 @@ metadata:
   - Python (numpy, scipy.stats, pandas, matplotlib, seaborn)
   - Python scipy.stats
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

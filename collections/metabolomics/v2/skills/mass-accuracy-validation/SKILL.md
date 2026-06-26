@@ -30,6 +30,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-4.0
     url: huaxuyu/masscube
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec

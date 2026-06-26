@@ -26,6 +26,7 @@ metadata:
   - rawrr
   - R base stats package (lm function)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

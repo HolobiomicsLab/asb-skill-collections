@@ -19,6 +19,7 @@ metadata:
   - Salmon
   - Nextflow
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioadv/vbae175
   title: MultiOmicsIntegrator

@@ -15,6 +15,7 @@ metadata:
   techniques:
   - NMR
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS

@@ -17,6 +17,7 @@ metadata:
   - Galaxy
   - R (base, stats)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-021-01841-z
   title: IonFlow

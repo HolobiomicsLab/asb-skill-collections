@@ -16,6 +16,7 @@ metadata:
   - FluoroMatch
   - Core-Match
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-021-03392-7
   title: FluoroMatch 2.0

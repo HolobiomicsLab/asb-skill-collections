@@ -14,6 +14,7 @@ metadata:
   - ggplot2
   - metaboprep
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac059/6522114
   title: Metaboprep

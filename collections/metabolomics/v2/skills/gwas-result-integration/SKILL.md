@@ -18,6 +18,7 @@ metadata:
   - HMDB
   - GWAS Catalog
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btad523/7248906
   title: metGWAS 1.0

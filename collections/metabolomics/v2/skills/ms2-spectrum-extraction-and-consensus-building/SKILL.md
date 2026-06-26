@@ -20,6 +20,7 @@ metadata:
   - LC-MS
   - CE-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS

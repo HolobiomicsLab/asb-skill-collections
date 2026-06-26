@@ -14,6 +14,7 @@ metadata:
   - pytest
   - GitHub Actions
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

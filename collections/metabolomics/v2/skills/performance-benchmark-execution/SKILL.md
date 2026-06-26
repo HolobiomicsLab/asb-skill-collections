@@ -12,6 +12,7 @@ metadata:
   tools:
   - LipidQMap
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap

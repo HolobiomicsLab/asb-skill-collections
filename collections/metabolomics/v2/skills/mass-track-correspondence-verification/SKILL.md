@@ -18,6 +18,7 @@ metadata:
   - asari (peaks.audit_mass_track)
   - asari (CompositeMap.calibrate_sample_RT)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

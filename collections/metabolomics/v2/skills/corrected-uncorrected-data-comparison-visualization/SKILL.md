@@ -15,6 +15,7 @@ metadata:
   - sva (ComBat parametric and non-parametric models)
   - R graphics (ggplot2, lattice, base R)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41598-021-84824-3
   title: Dbnorm

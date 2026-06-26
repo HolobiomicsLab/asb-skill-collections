@@ -18,6 +18,7 @@ metadata:
   - CE-MS
   - MS-imaging
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-024-02171-3
   title: MEISTER

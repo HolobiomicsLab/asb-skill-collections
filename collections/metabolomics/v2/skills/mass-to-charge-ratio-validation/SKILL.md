@@ -17,6 +17,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita

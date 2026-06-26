@@ -22,6 +22,7 @@ metadata:
   - CE-MS
   - direct-infusion-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b05765
   title: Retip

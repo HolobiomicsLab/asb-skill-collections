@@ -20,6 +20,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

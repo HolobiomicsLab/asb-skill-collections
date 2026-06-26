@@ -17,6 +17,7 @@ metadata:
   - R
   - R (stats::prcomp or similar)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff

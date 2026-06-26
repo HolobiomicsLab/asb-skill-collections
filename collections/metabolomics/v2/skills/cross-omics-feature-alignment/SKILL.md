@@ -15,6 +15,7 @@ metadata:
   - scikit-learn
   - XGBoost
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.08.17.608400v2
   title: Recon8D

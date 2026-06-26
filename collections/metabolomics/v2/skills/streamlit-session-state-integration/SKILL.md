@@ -13,6 +13,7 @@ metadata:
   - multiprocessing
   - settings.json
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

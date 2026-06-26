@@ -21,6 +21,7 @@ metadata:
   techniques:
   - direct-infusion-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

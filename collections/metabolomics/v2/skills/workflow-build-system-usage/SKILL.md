@@ -15,6 +15,7 @@ metadata:
   - Make
   - conda/mamba
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41586-023-06906-8
   title: Reverse metabolomics

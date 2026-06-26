@@ -21,6 +21,7 @@ metadata:
   - LC-MS
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

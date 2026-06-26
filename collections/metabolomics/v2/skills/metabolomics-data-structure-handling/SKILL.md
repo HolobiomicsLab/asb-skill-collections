@@ -22,6 +22,7 @@ metadata:
   - Spectra
   - MSnbase
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV

@@ -20,6 +20,7 @@ metadata:
   - renv
   - conda / r-miniconda
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo13080944
   title: SERDA
