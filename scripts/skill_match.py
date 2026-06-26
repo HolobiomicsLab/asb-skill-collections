@@ -1,50 +1,28 @@
 """skill_match — match a (possibly ungrounded) candidate skill against the
-existing collection's skills and tools.
+existing collection's skills and tools, using a serverless lexical core.
 
-This module has two halves:
+Pure-Python TF-IDF cosine ranking over an in-memory ``skills_index`` /
+``tools_index``, plus a near-duplicate flag. It depends on nothing external, so
+a contributor without any server still gets useful ``related_skills`` /
+``tools_used`` suggestions.
 
-* a **serverless lexical core** (this task) — pure-Python TF-IDF cosine ranking
-  over an in-memory ``skills_index``/``tools_index``, plus a near-duplicate flag.
-  It depends on nothing external, so a contributor without Perspicacité still
-  gets useful ``related_skills`` / ``tools_used`` suggestions;
-* a **Perspicacité KB backend + dispatch** layered on top (``kb_name``,
-  ``build_skills_kb``, ``kb_match``, ``match_skills``), with the lexical core as
-  the graceful fallback. The HTTP transport is injected (same shape as
-  ``perspicacite_kb_bind._http``); nothing here touches the network on its own.
+Skill-similarity matching is intentionally **lexical, not Perspicacité-backed**:
+Perspicacité is a paper/literature RAG system and exposes no "index arbitrary
+docs, semantic-search them back as slugs" surface, so it is not the right tool
+for skill↔skill matching. Perspicacité's role in this pipeline is the optional
+*literature grounding* step — finding/verifying a supporting paper for a skill —
+which the ``propose-skill`` command performs via ``perspicacite_kb_bind`` against
+the real per-DOI KB API. See ``commands/propose-skill.md``.
 
-.. warning:: PROVISIONAL / UNVERIFIED KB BACKEND.
-
-   This backend is **dormant**: no production code wires ``build_skills_kb`` /
-   ``kb_match`` to a live ``_http`` — the only live path today is the lexical
-   fallback. The KB endpoints it assumes were checked against the Perspicacité
-   source (``src/perspicacite/web/routers/{kb,chat}.py``) and **do not exist**:
-
-     * ``POST /api/kb/{name}/documents`` (assumed per-skill text ingest) — **no
-       such route.** Perspicacité ingests via ``/dois``, ``/papers``,
-       ``/bibtex``, ``/local-files`` (multipart), ``/local-paths``. There is no
-       JSON per-document text-ingest endpoint.
-     * ``POST /api/kb/{name}/search`` (assumed slug-hit retrieval) — **no such
-       route.** Retrieval/RAG goes through ``POST /api/chat`` with ``kb_names``,
-       which returns prose + *paper* sources, not skill-slug hits.
-
-   In short, Perspicacité is a paper/literature RAG system; it exposes no
-   "index arbitrary docs, semantic-search them back as slugs" surface that this
-   backend's design requires. The endpoint shapes below are therefore
-   **assumptions that need live verification (or a redesign onto the supported
-   ingest/query path) before anything is wired to the real ``_http``.** Until
-   then ``match_skills`` degrades to the lexical core on any error (graceful),
-   and ``build_skills_kb`` would 404 against a real server.
-
-The lexical functions never raise on sparse/odd entries and never touch the
-network. Each skill is reduced to a single searchable *document* by
-:func:`skill_doc` (name + description + tools + EDAM topics + techniques); the
-query text is scored against those documents with TF-IDF cosine similarity.
+The functions never raise on sparse/odd entries and never touch the network.
+Each skill is reduced to a single searchable *document* by :func:`skill_doc`
+(name + description + tools + EDAM topics + techniques); the query text is scored
+against those documents with TF-IDF cosine similarity.
 """
 from __future__ import annotations
 
 import json
 import math
-import os
 import re
 from collections import Counter
 from pathlib import Path
@@ -209,38 +187,10 @@ def near_duplicates(candidates: list[dict], *, threshold: float = 0.0) -> list[s
 
 
 # ===========================================================================
-# Perspicacité KB backend + dispatch (Task 2)
-#
-# Layered on top of the lexical core: query an ``asb-skills-<collection>`` KB in
-# a running Perspicacité instance for semantic matches, falling back to the
-# serverless lexical core whenever the server is unreachable or returns nothing.
-#
-# The ``http`` parameter is the *injected* transport — same shape as
-# ``perspicacite_kb_bind._http``: ``http(method, path, body=None, timeout=...)``
-# returning parsed JSON (or raising on transport/HTTP error). Production callers
-# pass ``perspicacite_kb_bind._http``; tests pass a recording mock. Nothing here
-# touches the network on its own.
-#
-# PROVISIONAL: the ``/api/kb/{kb}/documents`` (ingest) and ``/api/kb/{kb}/search``
-# (retrieval) endpoints used below are ASSUMED — they are NOT part of the
-# Perspicacité API surface (verified against the server source: kb.py exposes
-# ingest via /dois|/papers|/bibtex|/local-files|/local-paths and query via
-# /api/chat; neither /documents nor /search exists). See the module docstring's
-# warning. Do not wire this to a live ``_http`` without first verifying the real
-# endpoints against a running server or redesigning onto the supported path.
+# Collection-level matching — load skills_index.json and rank lexically.
+# (Skill-similarity matching is lexical by design; Perspicacité is used for the
+# separate literature-grounding step, not here — see the module docstring.)
 # ===========================================================================
-
-SKILLS_KB_DESC = "ASB skills index for community-contribution matching."
-
-
-def kb_name(collection_dir) -> str:
-    """The Perspicacité KB slug for a collection: ``asb-skills-<basename>``.
-
-    The basename is the final path component (``collections/metabolomics/v2`` →
-    ``v2`` → ``asb-skills-v2``); a trailing separator is tolerated.
-    """
-    base = os.path.basename(os.path.normpath(str(collection_dir)))
-    return f"asb-skills-{base}"
 
 
 def _load_skills_index(collection_dir) -> list[dict]:
@@ -257,116 +207,12 @@ def _load_skills_index(collection_dir) -> list[dict]:
     return data if isinstance(data, list) else []
 
 
-def build_skills_kb(collection_dir, *, http) -> dict:
-    """Idempotently create the skills KB and ingest one document per skill.
+def match_skills(text: str, collection_dir, *, k: int = 10) -> list[dict]:
+    """Match ``text`` against the collection's skills (serverless lexical core).
 
-    Creates ``asb-skills-<collection>`` (tolerating an already-present KB:
-    HTTP 400/409 on create is ignored), then POSTs one document per skill —
-    text = :func:`skill_doc` (name + description + tools + EDAM + techniques),
-    metadata ``{"slug": <slug>}`` — so retrieval maps a hit straight back to a
-    skill. Returns ``{"kb": <slug>, "ingested": <count>}``.
-
-    .. warning:: PROVISIONAL — the ``POST /api/kb/{name}/documents`` ingest
-       route assumed here **does not exist** in the Perspicacité API (verified
-       against ``src/perspicacite/web/routers/kb.py``: there is no JSON
-       per-document text-ingest endpoint). Against a live server this would
-       404. To make this real, ingest must move onto a supported path — e.g.
-       ``POST /api/kb/{name}/local-files`` (multipart, one ``.md`` per skill,
-       async → returns a ``job_id``), which also means the injected ``http``
-       can no longer be a JSON-only transport. The backend is dormant (nothing
-       wires it to the real ``_http``); see the module docstring warning.
+    Scores the query against each skill's :func:`skill_doc` with TF-IDF cosine
+    over ``skills_index.json`` and returns up to ``k`` hits ``{slug, score,
+    backend:"lexical"}``, best first. Always returns a list and never raises — a
+    broken/empty collection yields ``[]``.
     """
-    name = kb_name(collection_dir)
-    # create (idempotent: an existing KB returns 400/409, which we swallow)
-    try:
-        http("POST", "/api/kb", {"name": name, "description": SKILLS_KB_DESC}, timeout=60)
-    except Exception as e:  # noqa: BLE001
-        code = getattr(e, "code", None)
-        if code is not None and code not in (400, 409):
-            raise
-    ingested = 0
-    for entry in _load_skills_index(collection_dir):
-        slug = entry.get("slug")
-        if not slug:
-            continue
-        http(
-            "POST",
-            f"/api/kb/{name}/documents",
-            {"text": skill_doc(entry), "metadata": {"slug": slug}},
-            timeout=120,
-        )
-        ingested += 1
-    return {"kb": name, "ingested": ingested}
-
-
-def _hit_slug(hit: dict):
-    """Pull the skill slug out of a KB hit (tolerant of response shapes)."""
-    meta = hit.get("metadata") if isinstance(hit.get("metadata"), dict) else {}
-    return meta.get("slug") or hit.get("slug") or hit.get("id")
-
-
-def _hit_score(hit: dict) -> float:
-    for key in ("score", "similarity", "relevance"):
-        v = hit.get(key)
-        if isinstance(v, (int, float)):
-            return float(v)
-    # a distance (lower = closer) folded to a similarity-like score
-    d = hit.get("distance")
-    if isinstance(d, (int, float)):
-        return float(1.0 / (1.0 + d))
-    return 0.0
-
-
-def kb_match(text: str, collection_dir, *, k: int = 10, http) -> list[dict]:
-    """Query the skills KB and map hits to ``{slug, score, backend:"kb"}``.
-
-    Scopes the search to ``asb-skills-<collection>`` and returns up to ``k``
-    hits, best first. Hits without a resolvable slug are dropped. Raises only if
-    ``http`` raises (the caller — :func:`match_skills` — handles that).
-
-    .. warning:: PROVISIONAL — the ``POST /api/kb/{name}/search`` retrieval
-       route assumed here **does not exist** in the Perspicacité API (verified
-       against ``src/perspicacite/web/routers/chat.py`` /
-       ``...routers/kb.py``). Perspicacité queries go through ``POST /api/chat``
-       with ``kb_names=[...]`` (as the binder ``perspicacite_kb_bind`` does),
-       which returns prose + *paper* sources — not skill-slug hits — so this
-       function cannot be pointed at ``/api/chat`` unchanged. Verify the real
-       retrieval surface (or build a slug-aware one) before wiring to a live
-       server; see the module docstring warning. The backend is dormant."""
-    name = kb_name(collection_dir)
-    resp = http("POST", f"/api/kb/{name}/search", {"query": text, "k": k}, timeout=120)
-    hits = []
-    if isinstance(resp, dict):
-        hits = resp.get("results") or resp.get("hits") or resp.get("matches") or []
-    elif isinstance(resp, list):
-        hits = resp
-    out: list[dict] = []
-    for h in hits:
-        if not isinstance(h, dict):
-            continue
-        slug = _hit_slug(h)
-        if not slug:
-            continue
-        out.append({"slug": slug, "score": _hit_score(h), "backend": "kb"})
-    return out[:k]
-
-
-def match_skills(text: str, collection_dir, *, k: int = 10, http=None) -> list[dict]:
-    """Match ``text`` against the collection's skills, KB-first with a lexical
-    fallback.
-
-    When ``http`` is provided, try the Perspicacité KB backend
-    (:func:`kb_match`). On **any** exception (server unreachable, HTTP error,
-    odd payload) *or* an empty result, fall back to the serverless lexical core
-    (:func:`lexical_match` over ``skills_index.json``). Always returns a list and
-    never raises — a contributor without a server still gets suggestions, and a
-    broken collection yields ``[]``.
-    """
-    if http is not None:
-        try:
-            hits = kb_match(text, collection_dir, k=k, http=http)
-            if hits:
-                return hits
-        except Exception:  # noqa: BLE001 — graceful degrade to lexical
-            pass
     return lexical_match(text, _load_skills_index(collection_dir), k=k)
