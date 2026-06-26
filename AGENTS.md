@@ -126,6 +126,39 @@ Every skill carries a `license_tier` (`open` / `noncommercial` / `restricted`) i
 enforces the `noncommercial` acknowledgment gate and routes tier logic; see
 [`governance/LICENSE_TIERS.md`](governance/LICENSE_TIERS.md) for the full policy.
 
+## Provenance tiers
+
+Orthogonally, every skill carries a `provenance_tier` (in `skills_index.json`,
+`kb_bundle.json`, and `SKILL.md` frontmatter `metadata.provenance_tier`) recording
+**where its content came from** — independent of `license_tier`:
+
+- `literature` — synthesized from ≥1 peer-reviewed paper (requires ≥1 source DOI).
+- `synthetic` — composed from other skills (requires `synthesized_from`).
+- `community` — contributed/curated outside the literature pipeline (requires a
+  `related_skills` key).
+
+All v2 skills are `literature` today. Full policy:
+[`governance/PROVENANCE_TIERS.md`](governance/PROVENANCE_TIERS.md).
+
+## Tool catalog
+
+`tools_index.json` is enriched with a consumer license axis and a **bidirectional
+skill↔tool link** (computed by DOI intersection):
+
+- each tool carries `license_tier` (`open`/`noncommercial`/`restricted`,
+  most-restrictive across its source papers; unmatched ⇒ `restricted`), `license`,
+  `license_detection`, and `used_by_skills` (the skill slugs that ground on it);
+- each skill carries `tools_used` (the tool slugs it grounds on) — the inverse map.
+
+```bash
+# tools usable commercially (open tier)
+jq -r '.[] | select(.license_tier=="open") | "\(.slug)\t\(.canonical_url)"' \
+  collections/metabolomics/v2/tools_index.json
+# the tools a given skill grounds on
+jq -r '.[] | select(.slug=="<slug>") | .tools_used' \
+  collections/metabolomics/v2/skills_index.json
+```
+
 ## Notes
 
 - License **CC-BY-4.0**; every skill is `derived_from` a source DOI with verbatim

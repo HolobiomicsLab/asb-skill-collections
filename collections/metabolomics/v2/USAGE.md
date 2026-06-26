@@ -262,6 +262,60 @@ jq '[.[] | select(.license_tier=="open")]' collections/metabolomics/v2/skills_in
 
 ---
 
+## Provenance tiers
+
+Orthogonally to `license_tier`, every skill carries a `provenance_tier` field (in
+`skills_index.json`, `kb_bundle.json`, and each `SKILL.md` frontmatter
+`metadata.provenance_tier`) recording **where its content came from**:
+
+| Tier | Meaning |
+|---|---|
+| `literature` | Synthesized from one or more peer-reviewed papers — requires ≥1 source DOI |
+| `synthetic` | Composed from other skills — requires `synthesized_from` |
+| `community` | Contributed/curated outside the literature pipeline — requires a `related_skills` key |
+
+Every skill in v2 is `literature`; the other tiers are wired ahead of need. This
+axis is **independent** of `license_tier` (permission) and `access.type`
+(redistribution). Full policy:
+[`governance/PROVENANCE_TIERS.md`](../../../governance/PROVENANCE_TIERS.md).
+
+```bash
+# count skills per provenance tier
+jq -r 'group_by(.provenance_tier)[] | "\(.[0].provenance_tier)\t\(length)"' skills_index.json
+```
+
+---
+
+## Tool catalog
+
+`tools_index.json` (909 deduplicated tool records) carries the same consumer
+license axis as skills, plus a **bidirectional skill↔tool link** (computed by DOI
+intersection between a tool's source papers and each skill's source DOIs):
+
+| Field | On | Meaning |
+|---|---|---|
+| `license_tier` | each tool | `open` / `noncommercial` / `restricted` — most-restrictive across the tool's source papers |
+| `license` / `license_detection` | each tool | matched SPDX license + how it was detected (`none` ⇒ unmatched ⇒ `restricted`) |
+| `used_by_skills` | each tool | skill slugs that ground on this tool |
+| `tools_used` | each skill | tool slugs this skill grounds on — inverse of `used_by_skills` |
+
+```bash
+# tools usable commercially (open tier), with repo URLs
+jq -r '.[] | select(.license_tier=="open") | "\(.slug)\t\(.canonical_url)"' tools_index.json
+
+# the tools a given skill grounds on
+jq -r '.[] | select(.slug=="<slug>") | .tools_used' skills_index.json
+
+# the skills that ground on a given tool
+jq -r '.[] | select(.slug=="<tool-slug>") | .used_by_skills' tools_index.json
+```
+
+A tool's tier is the **most-restrictive** of its source papers; tools with no
+matched license default to `restricted`. Tier semantics:
+[`governance/LICENSE_TIERS.md`](../../../governance/LICENSE_TIERS.md).
+
+---
+
 ## Skill metadata & attribution
 
 Every `SKILL.md` carries an `attribution:` block (collection-level mirror in
