@@ -308,6 +308,13 @@ Maintained by [Holobiomics Lab](https://github.com/HolobiomicsLab) — see
 conflict-of-interest policy: [COI_POLICY.md](governance/COI_POLICY.md). All governance & policy
 docs now live in [`governance/`](governance/).
 
+**Found an improvement while using a skill?** Use the
+[Contribute page](https://holobiomicslab.github.io/asb-skill-collections/contribute.html)
+or `scripts/make_improvement_report.py` to open an anonymized issue. Merged
+contributions earn a place on the contributor leaderboard and can become
+co-authorship on the next release DOI — the full flywheel is documented in
+[CONTRIBUTION_LOOP.md](governance/CONTRIBUTION_LOOP.md).
+
 ## Other collections
 
 `collections/` also contains `epigenomics/v1`, `transcriptomics/v1`, and the
