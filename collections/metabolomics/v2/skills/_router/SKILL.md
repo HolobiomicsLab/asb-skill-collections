@@ -6,6 +6,7 @@ metadata:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
   skills_count: 5858
   tools_count: 909
+  workflows_count: 10
   indexes:
   - skills_index.json
   - tools_index.json

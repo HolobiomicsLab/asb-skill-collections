@@ -39,7 +39,7 @@
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
   "description": "Auto-generated registry of all released ASB Skill Collections.",
-  "generated_at": "2026-06-28T18:00:52Z",
+  "generated_at": "2026-06-28T18:23:10Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
@@ -433,7 +433,7 @@
         "http://edamontology.org/topic_3958"
       ],
       "doi": "10.5281/zenodo.20794027",
-      "released_at": "2026-06-22T00:02:37Z",
+      "released_at": "2026-06-28T00:00:00Z",
       "lead_curators": [
         {
           "name": "Louis-Felix Nothias",

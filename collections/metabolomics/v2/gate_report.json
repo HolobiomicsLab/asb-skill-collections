@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-06-28T18:06:39.022034+00:00",
+  "generated_at": "2026-06-28T18:24:29.154230+00:00",
   "collection_dir": "collections/metabolomics/v2",
   "corpus_path": "collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -111,14 +111,9 @@
       "status": "pass",
       "gates": [],
       "hard_gate": false,
-      "summary": "Composite workflow super-skills resolve to real leaves with a valid DAG.",
-      "n_findings": 1,
-      "details": [
-        {
-          "status": "pass",
-          "message": "No workflows/ subtree (n/a)."
-        }
-      ]
+      "summary": "Composite workflow super-skills resolve to real leaves with a valid DAG.  (10 workflows checked)",
+      "n_findings": 0,
+      "details": []
     }
   ]
 }

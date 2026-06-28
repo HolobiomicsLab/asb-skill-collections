@@ -4,7 +4,7 @@ Instructions for coding/research agents (Claude Code, OpenAI Codex, GitHub
 Copilot, or any SKILL-aware agent) to **install and use** the ASB Metabolomics
 Skill Collection. The public release is the **metabolomics** collection at
 `collections/metabolomics/v2/` (5,858 evidence-grounded skills over 909
-software tools for computational LC-MS/MS; tag `metabolomics-v0.1.0`).
+software tools for computational LC-MS/MS; tag `metabolomics-v0.2.0`).
 
 > Full human guide: [`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md).
 

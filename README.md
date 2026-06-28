@@ -4,7 +4,7 @@
 
 # ASB Skill Collections
 
-[![release](https://img.shields.io/badge/release-metabolomics--v0.1.0-blue)](collections/metabolomics/v2)
+[![release](https://img.shields.io/badge/release-metabolomics--v0.2.0-blue)](collections/metabolomics/v2)
 [![skills](https://img.shields.io/badge/skills-5%2C865-success)](collections/metabolomics/v2/skills_index.json)
 [![tools](https://img.shields.io/badge/tools-909-success)](collections/metabolomics/v2/tools_index.json)
 [![license](https://img.shields.io/badge/code-Apache--2.0-green)](LICENSE) [![content](https://img.shields.io/badge/content-CC--BY--4.0-green)](LICENSING.md)
@@ -24,18 +24,21 @@ Metabolomics** ([26181](https://www.dagstuhl.de/en/seminars/seminar-calendar/sem
   <img src="assets/asb-overview.png" alt="ASB pipeline: real research papers → ASB → domain benchmark (skills · tools · data) → agents evaluated → community validates, with a domain/community-defined feedback loop" width="640">
 </p>
 
-> **This release — `metabolomics-v0.1.0` (preliminary):**
+> **This release — `metabolomics-v0.2.0` (preliminary):**
 > [`collections/metabolomics/v2`](collections/metabolomics/v2) — **5,858 skills**
 > across **909 tools** distilled from **568 papers**, for computational
 > metabolomics — predominantly **LC-MS/MS**, but also LC-MS, GC-MS,
 > mass-spectrometry imaging, ion mobility and lipidomics, with some **NMR** and
-> multi-omics / statistics / pathway tools.
+> multi-omics / statistics / pathway tools. New in this version: **10 composite
+> workflow super-skills** (end-to-end pipelines that chain the atomic skills) under
+> [`workflows/`](collections/metabolomics/v2/workflows).
 
 ### Artifacts in this release
 
 | Artifact | Status |
 |---|---|
 | **ASB-Skills** — evidence-grounded procedural skills | ✅ **released** |
+| **ASB-Workflows** — 10 composite end-to-end pipeline super-skills | ✅ **released** |
 | **ASB-Tools** — deduplicated software-tool records (EDAM + DOIs) | ✅ **released** |
 | **ASB-Benchmark** — per-paper tasks + claim-retrieval test sets | ⏳ to be released soon |
 | **ASB-Capsules** — raw per-paper ASB pipeline outputs (full traceability) | ⏳ to be released soon |
