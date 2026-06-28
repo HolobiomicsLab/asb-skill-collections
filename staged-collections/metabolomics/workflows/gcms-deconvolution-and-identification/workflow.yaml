@@ -8,19 +8,13 @@ steps:
   goal: GC-MS EI spectral deconvolution + peak detection
   edam_operation: operation_3215
   skills:
-  - gc-ms-spectral-deconvolution
   - gcms-spectrum-deconvolution
+  - gc-ms-spectral-deconvolution
   - pure-component-spectrum-extraction
   - mass-spectral-component-extraction
   - deconvolved-spectrum-comparison
   tools:
-  - MSHub
-  - GNPS
   - GNPS_GC
-  - PyTorch
-  - Python 3
-  - conda
-  - GCMSFormer
   inputs:
   - type: mzML
   outputs:
@@ -34,23 +28,27 @@ steps:
     - 10.1021/acs.analchem.3c05772
     - 10.1038/s41587-020-0700-3
   after: []
+  candidate_tools:
+  - MSHub
+  - GNPS
+  - PyTorch
+  - Python 3
+  - conda
+  - GCMSFormer
 - id: ei_library_match
   goal: identify compounds by EI spectral library matching
   edam_operation: operation_3631
   skills:
+  - gc-ms-spectral-library-matching
+  - low-resolution-compound-identification
   - electron-ionization-spectral-comparison
   - spectral-similarity-scoring-ei-simple
-  - gc-ms-spectral-library-matching
-  - mass-spectrometry-network-construction
+  - spectral-library-molecular-networking
   tools:
-  - mssearchr
-  - R
-  - NIST API
   - CoreMS
   - LowResMassSpectralMatch
   - GC_RI_Calibration
   - MetaMS
-  - GNPS_GC
   inputs:
   - type: mgf
   outputs:
@@ -66,6 +64,13 @@ steps:
     - 10.5281/zenodo.14009575
   after:
   - deconvolution
+  candidate_tools:
+  - PNNLMetV20191015.MSL
+  - mssearchr
+  - R
+  - NIST API
+  - MSHub
+  - GNPS
   inputs_from:
     deconvolution:
     - mgf
@@ -73,28 +78,15 @@ steps:
   goal: retention index calibration + RI-filtered identifications
   edam_operation: operation_3695
   skills:
+  - mass-spectrometry-column-polarity-filtering
   - retention-index-calibration-application
   - retention-index-assignment-and-filtering
-  - low-resolution-compound-identification
   - gc-column-polarity-specific-ri-filtering
   - kovats-retention-index-extraction-and-assignment
   tools:
-  - CoreMS
-  - GC_RI_Calibration
-  - LowResMassSpectralMatch
-  - PNNLMetV20191015.MSL
   - mspcompiler
   - R
-  - future
-  - future.apply
-  - Lib2NIST
-  - MS-DIAL
-  - MoNA
-  - RIKEN
-  - NIST MS Search
-  - MS Search
-  - R statistical environment
-  - NIST Library Installation
+  - NIST
   inputs:
   - type: tsv
   outputs:
@@ -108,6 +100,21 @@ steps:
     - 10.5281/zenodo.14009575
   after:
   - ei_library_match
+  candidate_tools:
+  - CoreMS
+  - GC_RI_Calibration
+  - LowResMassSpectralMatch
+  - PNNLMetV20191015.MSL
+  - future
+  - future.apply
+  - Lib2NIST
+  - MS-DIAL
+  - MoNA
+  - RIKEN
+  - NIST MS Search
+  - MS Search
+  - R statistical environment
+  - NIST Library Installation
   inputs_from:
     ei_library_match:
     - tsv
@@ -117,7 +124,6 @@ steps:
   skills:
   - group-comparison-statistics
   - gc-ms-data-preprocessing-and-normalization
-  - gcxgc-ms-multivariate-analysis
   - univariate-statistical-testing-for-metabolomics
   - permanova-statistical-testing-multivariate-groups
   tools:
@@ -127,11 +133,31 @@ steps:
   - FSelector
   - mixOmics
   - siggenes
+  inputs:
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c03163
+    - asb-paper-10-1021-acs-analchem-1c03163-ref
+    - asb-paper-10-1093-bib-bbac455
+    - asb-paper-10-1128-mra-00129-19
+    - asb-paper-10-1186-s40168-023-01476-3
+    dois:
+    - 10.1021/acs.analchem.1c03163
+    - 10.1021/acs.analchem.1c03163?ref=
+    - 10.1093/bib/bbac455
+    - 10.1128/mra.00129-19
+    - 10.1186/s40168-023-01476-3
+  after:
+  - deconvolution
+  - retention_index
+  candidate_tools:
   - NPFimg
   - XCMS
-  - RGCxGC
   - R
-  - colorRamps
   - omu (omu_summary function)
   - assign_hierarchy
   - omu_summary
@@ -144,31 +170,6 @@ steps:
   - R 4.0.2
   - vegan
   - Python
-  inputs:
-  - type: feature-table
-  - type: tsv
-  outputs:
-  - type: tsv
-  grounding:
-    kb_slugs:
-    - asb-paper-10-1016-j-microc-2020-104830
-    - asb-paper-10-1021-acs-analchem-1c03163
-    - asb-paper-10-1021-acs-analchem-1c03163-ref
-    - asb-paper-10-1093-bib-bbac455
-    - asb-paper-10-1128-mra-00129-19
-    - asb-paper-10-1186-s40168-023-01476-3
-    - asb-paper-10-1371-journal-pntd-0006215
-    dois:
-    - 10.1016/j.microc.2020.104830
-    - 10.1021/acs.analchem.1c03163
-    - 10.1021/acs.analchem.1c03163?ref=
-    - 10.1093/bib/bbac455
-    - 10.1128/mra.00129-19
-    - 10.1186/s40168-023-01476-3
-    - 10.1371/journal.pntd.0006215
-  after:
-  - deconvolution
-  - retention_index
   inputs_from:
     deconvolution:
     - feature-table
@@ -178,30 +179,14 @@ steps:
   goal: consolidate GC-MS identifications + stats into a master table
   edam_operation: operation_3434
   skills:
-  - feature-consolidation-across-samples
+  - compound-area-aggregation-across-samples
   - mass-spectrometry-feature-grouping
-  - feature-table-matrix-assembly
   - feature-alignment-metabolomics
   tools:
-  - Python
-  - BreathXplorer
-  - Python pandas
-  - patRoon
-  - XCMS
-  - OpenMS
-  - enviPick
-  - KPIC2
-  - PFΔScreen
-  - pyOpenMS
-  - pandas
-  - MsFeatures
-  - faahKO
   - R
-  - mzrtsim
-  - SummarizedExperiment
-  - R base
-  - openNAU
-  - MetaQC
+  - spreadOut()
+  - mzExacto()
+  - Agilent Unknowns Analysis
   inputs:
   - type: feature-table
   - type: tsv
@@ -211,20 +196,35 @@ steps:
     kb_slugs:
     - asb-paper-10-1007-s00216-023-05070-2
     - asb-paper-10-1021-ac051437y
-    - asb-paper-10-1021-acs-analchem-5c01213
-    - asb-paper-10-1021-jasms-4c00152
     - asb-paper-10-1186-s13321-020-00477-w
+    - asb-paper-10-1371-journal-pone-0306202
     - asb-paper-10-21147-j-issn-1000-9604-2023-05-11
     dois:
     - 10.1007/s00216-023-05070-2
     - 10.1021/ac051437y
-    - 10.1021/acs.analchem.5c01213
-    - 10.1021/jasms.4c00152
     - 10.1186/s13321-020-00477-w
+    - 10.1371/journal.pone.0306202
     - 10.21147/j.issn.1000-9604.2023.05.11
   after:
+  - deconvolution
   - statistics
+  candidate_tools:
+  - patRoon
+  - XCMS
+  - OpenMS
+  - enviPick
+  - KPIC2
+  - Python
+  - PFΔScreen
+  - pyOpenMS
+  - pandas
+  - MsFeatures
+  - faahKO
+  - openNAU
+  - MetaQC
   inputs_from:
+    deconvolution:
+    - feature-table
     statistics:
     - tsv
 verification:
@@ -234,3 +234,4 @@ verification:
 provenance:
   derived_from_workflows: []
   bound_by: perspicacite-semantic
+  coverage_gaps: []

@@ -3,7 +3,7 @@ name: sirius-denovo-structure-elucidation-workflow
 description: 'Use when you have MS/MS for unknown features (a SIRIUS-flavour mgf /
   .ms) and want de novo annotation without a spectral match — molecular formula (SIRIUS+ZODIAC),
   structure (CSI:FingerID + COSMIC), compound class (CANOPUS), optionally against
-  a custom database, filtered by confidence.
+  a custom database, filtered by confidence. Library-FREE by design.
 
   '
 license: CC-BY-4.0
@@ -19,64 +19,37 @@ metadata:
   - molecular-formula-assignment
   - fragment-peak-subformula-enumeration
   - neural-network-based-molecular-formula-inference
+  - compound-structure-processing
+  - chemical-structure-validation
+  - molecular-structure-input-format-handling
+  - structure-standardization-validation
+  - chemical-structure-serialization
+  - de-novo-structure-candidate-ranking
   - molecular-fingerprint-prediction
   - molecular-fingerprint-parsing
   - web-service-api-integration
-  - de-novo-structure-candidate-ranking
   - spectrum-query-formatting
-  - chemical-classification-scheme-validation
+  - compound-class-annotation-parsing
   - natural-product-classifier-substitution
   - classification-workflow-parameter-toggling
   - chemical-ontology-mapping
   - consensus-classification-reconciliation
-  - chemical-structure-validation
-  - molecular-structure-input-format-handling
-  - structure-standardization-validation
-  - compound-structure-processing
-  - chemical-structure-serialization
+  - chemical-class-assignment-classyfire
   - sirius-zodiac-score-filtering
   - annotation-table-quality-control
-  - spectral-annotation-filtering-by-similarity-metrics
   - metabolite-annotation-validation
   - structural-annotation-integration
+  - compound-candidate-ranking
   member_tools:
   - SIRIUS
   - MIST-CF
-  - msfiddle
-  - FIDDLE
-  - BUDDY
-  - MIST
-  - SCARF
-  - PyTorch
-  - SIRIUS decomp
+  - ZODIAC
+  - CFM-ID
+  - MSNovelist
   - CSI:FingerID
   - CANOPUS
-  - MSNovelist
-  - NPClassifier
-  - GNPS
-  - ClassyFire
-  - ConCISE
-  - Fiehn Labs ClassyFire Batch
-  - RDKit
-  - PubChemPy
-  - Python
-  - MetFrag
-  - biosynfoni
-  - pip
-  - PubChem standardization
-  - rcdk
-  - CFM-ID
-  - PHP
-  - Symfony
-  - MySQL 8
-  - MariaDB 10
-  - CycloBranch
   - INVENTA
-  - MZmine2
-  - MZmine3
-  - timaR
-  - MEMO
-  - ISDB
+  coverage_gaps: []
   derived_from_workflows: []
   bound_by: perspicacite-semantic
 schema_version: 0.3.0
@@ -91,12 +64,12 @@ attribution:
 
 ## Summary
 
-End-to-end de novo elucidation with SIRIUS 6: formula, structure and class prediction for novel/unannotated chemistry, with confidence-based filtering.
+End-to-end de novo elucidation with SIRIUS 6: formula, structure and class prediction for novel/unannotated chemistry, with confidence-based filtering. No spectral library.
 
 
 ## When to use
 
-Use when you have MS/MS for unknown features (a SIRIUS-flavour mgf / .ms) and want de novo annotation without a spectral match — molecular formula (SIRIUS+ZODIAC), structure (CSI:FingerID + COSMIC), compound class (CANOPUS), optionally against a custom database, filtered by confidence.
+Use when you have MS/MS for unknown features (a SIRIUS-flavour mgf / .ms) and want de novo annotation without a spectral match — molecular formula (SIRIUS+ZODIAC), structure (CSI:FingerID + COSMIC), compound class (CANOPUS), optionally against a custom database, filtered by confidence. Library-FREE by design.
 
 
 ## When NOT to use
@@ -116,11 +89,29 @@ Use when you have MS/MS for unknown features (a SIRIUS-flavour mgf / .ms) and wa
 
 **Candidate leaf skills:** `energy-based-formula-scoring` (primary), `molecular-formula-prediction-from-fragmentation`, `molecular-formula-assignment`, `fragment-peak-subformula-enumeration`, `neural-network-based-molecular-formula-inference`
 
-**Tools:** SIRIUS, MIST-CF, msfiddle, FIDDLE, BUDDY, MIST, SCARF
+**Tools (primary):** SIRIUS, MIST-CF, ZODIAC
+
+**Other candidate tools:** msfiddle, FIDDLE, BUDDY, MIST, SCARF
 
 **Grounding:** 2 KB(s); DOIs: 10.1021/acs.jcim.3c01082, 10.1038/s41467-025-66060-9
 
-### Stage 2 — structure
+### Stage 2 — custom_db  [OPTIONAL]
+
+**Goal:** (optional) build a custom structure database for the search space
+
+**EDAM operation:** operation_3434
+
+**Inputs:** smiles · **Outputs:** tsv
+
+**Candidate leaf skills:** `compound-structure-processing` (primary), `chemical-structure-validation`, `molecular-structure-input-format-handling`, `structure-standardization-validation`, `chemical-structure-serialization`
+
+**Tools (primary):** CFM-ID
+
+**Other candidate tools:** RDKit, PubChemPy, Python, SIRIUS, MetFrag, biosynfoni, pip, PubChem standardization, rcdk, PHP, Symfony, MySQL 8, MariaDB 10, CycloBranch
+
+**Grounding:** 5 KB(s); DOIs: 10.1038/s41592-023-02143-z, 10.1186/s13321-021-00530-2, 10.1186/s13321-023-00695-y, 10.26434/chemrxiv-2025-cwq74 …
+
+### Stage 3 — structure
 
 **Goal:** structure prediction (CSI:FingerID + COSMIC)
 
@@ -128,13 +119,15 @@ Use when you have MS/MS for unknown features (a SIRIUS-flavour mgf / .ms) and wa
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `molecular-fingerprint-prediction` (primary), `molecular-fingerprint-parsing`, `web-service-api-integration`, `de-novo-structure-candidate-ranking`, `spectrum-query-formatting`
+**Candidate leaf skills:** `de-novo-structure-candidate-ranking` (primary), `molecular-fingerprint-prediction`, `molecular-fingerprint-parsing`, `web-service-api-integration`, `spectrum-query-formatting`
 
-**Tools:** PyTorch, MIST, MIST-CF, SIRIUS decomp, CSI:FingerID, SIRIUS, CANOPUS, MSNovelist
+**Tools (primary):** MSNovelist, SIRIUS, CSI:FingerID, CANOPUS
+
+**Other candidate tools:** PyTorch, MIST, MIST-CF, SIRIUS decomp
 
 **Grounding:** 2 KB(s); DOIs: 10.1038/s41587-021-01045-9, 10.1038/s42256-023-00708-3
 
-### Stage 3 — compound_class
+### Stage 4 — compound_class
 
 **Goal:** compound class prediction (CANOPUS / NPClassifier)
 
@@ -142,25 +135,13 @@ Use when you have MS/MS for unknown features (a SIRIUS-flavour mgf / .ms) and wa
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `chemical-classification-scheme-validation` (primary), `natural-product-classifier-substitution`, `classification-workflow-parameter-toggling`, `chemical-ontology-mapping`, `consensus-classification-reconciliation`
+**Candidate leaf skills:** `compound-class-annotation-parsing` (primary), `natural-product-classifier-substitution`, `classification-workflow-parameter-toggling`, `chemical-ontology-mapping`, `consensus-classification-reconciliation`, `chemical-class-assignment-classyfire`
 
-**Tools:** NPClassifier, SIRIUS, GNPS, ClassyFire, ConCISE, Fiehn Labs ClassyFire Batch, CANOPUS
+**Tools (primary):** CANOPUS, SIRIUS
 
-**Grounding:** 1 KB(s); DOIs: 10.3390/metabo12121275
+**Other candidate tools:** NPClassifier, GNPS, ClassyFire, ConCISE, matchms, MS2DeepScore, scikit-learn, Python, RDKit
 
-### Stage 4 — custom_db  [OPTIONAL]
-
-**Goal:** (optional) build a custom structure database for the search space
-
-**EDAM operation:** operation_3434
-
-**Inputs:** tsv · **Outputs:** tsv
-
-**Candidate leaf skills:** `chemical-structure-validation` (primary), `molecular-structure-input-format-handling`, `structure-standardization-validation`, `compound-structure-processing`, `chemical-structure-serialization`
-
-**Tools:** RDKit, PubChemPy, Python, SIRIUS, MetFrag, biosynfoni, pip, PubChem standardization, rcdk, CFM-ID, PHP, Symfony, MySQL 8, MariaDB 10, CycloBranch
-
-**Grounding:** 5 KB(s); DOIs: 10.1038/s41592-023-02143-z, 10.1186/s13321-021-00530-2, 10.1186/s13321-023-00695-y, 10.26434/chemrxiv-2025-cwq74 …
+**Grounding:** 3 KB(s); DOIs: 10.1038/s41587-021-01045-9, 10.1186/s13321-021-00558-4, 10.3390/metabo12121275
 
 ### Stage 5 — confidence_filter
 
@@ -170,11 +151,13 @@ Use when you have MS/MS for unknown features (a SIRIUS-flavour mgf / .ms) and wa
 
 **Inputs:** tsv, tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `sirius-zodiac-score-filtering` (primary), `annotation-table-quality-control`, `spectral-annotation-filtering-by-similarity-metrics`, `metabolite-annotation-validation`, `structural-annotation-integration`
+**Candidate leaf skills:** `sirius-zodiac-score-filtering` (primary), `annotation-table-quality-control`, `metabolite-annotation-validation`, `structural-annotation-integration`, `compound-candidate-ranking`
 
-**Tools:** SIRIUS, INVENTA, CANOPUS, GNPS, MZmine2, MZmine3, timaR, MEMO, ISDB, NPClassifier, ClassyFire, ConCISE
+**Tools (primary):** SIRIUS, INVENTA, CANOPUS
 
-**Grounding:** 3 KB(s); DOIs: 10.1038/s41467-021-23953-9, 10.3389/fmolb.2022.1028334, 10.3390/metabo12121275
+**Other candidate tools:** GNPS, ISDB, timaR, NPClassifier, ClassyFire, ConCISE, RDKit, PubChemPy, Python, MetFrag
+
+**Grounding:** 4 KB(s); DOIs: 10.1038/s41467-021-23953-9, 10.1186/s13321-023-00695-y, 10.3389/fmolb.2022.1028334, 10.3390/metabo12121275
 
 ## Grounding
 
@@ -186,4 +169,4 @@ Each stage carries the `kb_slugs`/`dois` of the leaves it draws on. Ground any s
 
 ## Provenance
 
-Generated by `compose_workflows.py` (semantic binding). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — these are the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.
+Generated by `compose_workflows.py` (semantic binding + EDAM-aware primary selection). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.

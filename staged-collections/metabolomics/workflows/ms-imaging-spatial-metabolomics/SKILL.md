@@ -16,20 +16,20 @@ metadata:
   member_skills:
   - mass-spectrometry-imaging-data-import
   - mass-spectrometry-peak-detection-and-alignment
-  - mass-spectrometry-image-reconstruction
   - spatial-pixel-coordinate-alignment
   - spectral-peak-alignment-across-pixels
+  - imzml-metadata-parsing
+  - maldi-imaging-mass-spectrometry-data-interpretation
   - spatial-metabolomics-feature-annotation
   - imaging-mass-spectrometry-ion-identification
   - mass-spectral-feature-annotation
   - m-z-metabolite-annotation-mapping
   - metabolite-annotation-at-scale
   - spatial-segmentation-shrunken-centroids
+  - spatial-spectral-array-processing
   - cardinal-object-structure-understanding
+  - bioinformatic-object-conversion
   - spatial-coordinate-mapping-msi
-  - single-cell-spatial-metabolomics-data-processing
-  - mass-spectrometry-peak-intensity-encoding
-  - spatial-correlation-analysis-in-imaging-mass-spectrometry
   - spot-level-intensity-aggregation
   member_tools:
   - Cardinal
@@ -37,40 +37,16 @@ metadata:
   - R
   - matter
   - BiocManager
-  - BiocParallel
-  - Cardinal 3.6
-  - pewpew
-  - pewlib
-  - pewpew (pew²)
-  - Python
-  - imzML Writer
-  - imzML Scout
-  - msconvert
+  - Google Colab
+  - Python 3
+  - METASPACE
+  - CellProfiler 3.0.0
+  - Fiji (December 22 2015)
+  - Python 3 with requirements.txt
   - SpaMTP
-  - Seurat
-  - pandas
-  - h5py
-  - Graph-attention autoencoder
-  - scanpy
-  - SMART
-  - RefineLipids
-  - SearchAnnotations
   - dplyr
-  - HMDB Database
-  - Lipidmaps Database
-  - ScSpaMet repository
-  - Zenodo deposit (raw data)
-  - Mesmer
-  - STAGATE
-  - mass2adduct
-  - corrPairsMSI
-  - corrPairsMSIchunks
-  - msimat
-  - adductMatch
-  - diffGetPeaks
-  - mass2adduct (R package)
-  - spatialMETA
-  - spatialmeta.pp.filter_cells_sm
+  - Seurat
+  coverage_gaps: []
   derived_from_workflows: []
   bound_by: perspicacite-semantic
 schema_version: 0.3.0
@@ -108,9 +84,11 @@ Use when you have mass-spectrometry imaging data (imzML, e.g. MALDI/DESI) and wa
 
 **Inputs:** imzML · **Outputs:** feature-table
 
-**Candidate leaf skills:** `mass-spectrometry-imaging-data-import` (primary), `mass-spectrometry-peak-detection-and-alignment`, `mass-spectrometry-image-reconstruction`, `spatial-pixel-coordinate-alignment`, `spectral-peak-alignment-across-pixels`
+**Candidate leaf skills:** `mass-spectrometry-imaging-data-import` (primary), `mass-spectrometry-peak-detection-and-alignment`, `spatial-pixel-coordinate-alignment`, `spectral-peak-alignment-across-pixels`, `imzml-metadata-parsing`
 
-**Tools:** Cardinal, CardinalIO, R, matter, BiocManager, BiocParallel, Cardinal 3.6, pewpew, pewlib, pewpew (pew²), Python, imzML Writer, imzML Scout, msconvert
+**Tools (primary):** Cardinal, CardinalIO, R, matter, BiocManager
+
+**Other candidate tools:** BiocParallel, Cardinal 3.6, Python, imzML Writer, imzML Scout, msconvert, pewpew, pewlib, pewpew (pew²)
 
 **Grounding:** 4 KB(s); DOIs: 10.1021/acs.analchem.1c02138, 10.1021/acs.analchem.4c06520, 10.1093/bioinformatics/btv146, 10.1529/biophysj.103.038422
 
@@ -122,11 +100,13 @@ Use when you have mass-spectrometry imaging data (imzML, e.g. MALDI/DESI) and wa
 
 **Inputs:** feature-table · **Outputs:** tsv
 
-**Candidate leaf skills:** `spatial-metabolomics-feature-annotation` (primary), `imaging-mass-spectrometry-ion-identification`, `mass-spectral-feature-annotation`, `m-z-metabolite-annotation-mapping`, `metabolite-annotation-at-scale`
+**Candidate leaf skills:** `maldi-imaging-mass-spectrometry-data-interpretation` (primary), `spatial-metabolomics-feature-annotation`, `imaging-mass-spectrometry-ion-identification`, `mass-spectral-feature-annotation`, `m-z-metabolite-annotation-mapping`, `metabolite-annotation-at-scale`
 
-**Tools:** SpaMTP, R, Seurat, Cardinal, pandas, h5py, Graph-attention autoencoder, scanpy, SMART, RefineLipids, SearchAnnotations, dplyr, HMDB Database, Lipidmaps Database
+**Tools (primary):** Google Colab, Python 3, METASPACE, CellProfiler 3.0.0, Fiji (December 22 2015), Python 3 with requirements.txt
 
-**Grounding:** 3 KB(s); DOIs: 10.1021/acs.analchem.4c06210, 10.1101/2024.10.14.618269, 10.1101/2024.10.31.621429v1
+**Other candidate tools:** SpaMTP, R, Seurat, Cardinal, pandas, h5py, Graph-attention autoencoder, scanpy, SMART, RefineLipids, SearchAnnotations, dplyr, HMDB Database, Lipidmaps Database
+
+**Grounding:** 4 KB(s); DOIs: 10.1021/acs.analchem.4c06210, 10.1038/s41592-021-01198-0, 10.1101/2024.10.14.618269, 10.1101/2024.10.31.621429v1
 
 ### Stage 3 — segmentation
 
@@ -136,11 +116,13 @@ Use when you have mass-spectrometry imaging data (imzML, e.g. MALDI/DESI) and wa
 
 **Inputs:** feature-table · **Outputs:** tsv
 
-**Candidate leaf skills:** `spatial-segmentation-shrunken-centroids` (primary), `cardinal-object-structure-understanding`, `spatial-coordinate-mapping-msi`
+**Candidate leaf skills:** `spatial-segmentation-shrunken-centroids` (primary), `spatial-spectral-array-processing`, `cardinal-object-structure-understanding`
 
-**Tools:** SpaMTP, dplyr, R, Cardinal, Seurat
+**Tools (primary):** SpaMTP, dplyr, R, Cardinal, Seurat
 
-**Grounding:** 2 KB(s); DOIs: 10.1101/2024.10.14.618269, 10.1101/2024.10.31.621429v1
+**Other candidate tools:** BiocParallel, matter
+
+**Grounding:** 3 KB(s); DOIs: 10.1093/bioinformatics/btv146, 10.1101/2024.10.14.618269, 10.1101/2024.10.31.621429v1
 
 ### Stage 4 — region_statistics
 
@@ -150,11 +132,13 @@ Use when you have mass-spectrometry imaging data (imzML, e.g. MALDI/DESI) and wa
 
 **Inputs:** tsv, tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `single-cell-spatial-metabolomics-data-processing` (primary), `mass-spectrometry-peak-intensity-encoding`, `spatial-correlation-analysis-in-imaging-mass-spectrometry`, `spot-level-intensity-aggregation`
+**Candidate leaf skills:** `bioinformatic-object-conversion` (primary), `spatial-coordinate-mapping-msi`, `spot-level-intensity-aggregation`
 
-**Tools:** ScSpaMet repository, Zenodo deposit (raw data), Mesmer, scanpy, STAGATE, pandas, h5py, mass2adduct, R, corrPairsMSI, corrPairsMSIchunks, msimat, adductMatch, diffGetPeaks, mass2adduct (R package), spatialMETA, spatialmeta.pp.filter_cells_sm
+**Tools (primary):** SpaMTP, R, Cardinal, Seurat
 
-**Grounding:** 5 KB(s); DOIs: 10.1021/acs.analchem.0c04720, 10.1021/acs.analchem.4c06210, 10.1038/s41467-023-43917-5, 10.1038/s41467-025-63915-z …
+**Other candidate tools:** spatialMETA, spatialmeta.pp.filter_cells_sm
+
+**Grounding:** 3 KB(s); DOIs: 10.1038/s41467-025-63915-z, 10.1101/2024.10.14.618269, 10.1101/2024.10.31.621429v1
 
 ## Grounding
 
@@ -166,4 +150,4 @@ Each stage carries the `kb_slugs`/`dois` of the leaves it draws on. Ground any s
 
 ## Provenance
 
-Generated by `compose_workflows.py` (semantic binding). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — these are the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.
+Generated by `compose_workflows.py` (semantic binding + EDAM-aware primary selection). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.

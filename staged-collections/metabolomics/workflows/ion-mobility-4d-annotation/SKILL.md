@@ -13,9 +13,9 @@ metadata:
   - ion-mobility-MS
   stage_count: 4
   member_skills:
-  - ion-mobility-feature-classification
   - multidimensional-feature-detection-and-alignment
   - ion-mobility-heatmap-visualization
+  - ion-mobility-feature-classification
   - ion-mobility-dimension-detection
   - multidimensional-coordinate-alignment
   - collision-cross-section-calibration-ccs
@@ -24,56 +24,28 @@ metadata:
   - collision-cross-section-measurement-quality-control
   - collision-cross-section-matching-and-annotation
   - reference-library-alignment
-  - ion-mobility-reference-matching
   - 4d-lcimmsms-feature-extraction
   - fragmentation-pattern-spectral-matching
-  - molecular-networking-construction
-  - spectral-library-molecular-networking
+  - feature-based-molecular-network-interpretation
   - spectral-similarity-network-building
-  - metabolomic-spectral-annotation-and-molecular-family-clustering
+  - molecular-networking-construction
+  - feature-network-construction-from-mass-spectrometry
   - spectral-similarity-network-generation
   member_tools:
-  - Python
-  - MOCCal
   - DEIMoS
+  - Python
   - conda
   - pip
   - Snakemake
   - ProteoWizard msconvert
-  - Mirador
-  - IonToolPack
-  - PeakQC
-  - mzmine
-  - JDK 25
-  - JavaFX 24
   - numpy
-  - MOCCal (Multi-Omic CCS Calibrator)
-  - DEIMoS (Data-Exploratory Ion Mobility MS)
-  - R
-  - MobiLipid
-  - ggplot2
-  - data.table
   - Jupyter Notebook
   - scikit-learn
-  - R (ggplot2, data.table, DT packages)
-  - RDKit
-  - ENPKG
-  - MEMO
-  - MSHub
-  - GNPS
-  - q2-qemistree
-  - SIRIUS
-  - CSI:FingerID
-  - ZODIAC
-  - MZmine2
+  - R
+  - MZmine3
   - GNPS FBMN
-  - ClassyFire
-  - antiSMASH
-  - BiG-SCAPE
-  - NPLinker
-  - MIBiG
-  - Optimus
-  - Cytoscape
+  - Google Colab
+  coverage_gaps: []
   derived_from_workflows: []
   bound_by: perspicacite-semantic
 schema_version: 0.3.0
@@ -111,9 +83,11 @@ Use when you have ion-mobility LC-IMS-MS/MS data (e.g. timsTOF / PASEF) and want
 
 **Inputs:** mzML · **Outputs:** feature-table, mgf
 
-**Candidate leaf skills:** `ion-mobility-feature-classification` (primary), `multidimensional-feature-detection-and-alignment`, `ion-mobility-heatmap-visualization`, `ion-mobility-dimension-detection`, `multidimensional-coordinate-alignment`
+**Candidate leaf skills:** `multidimensional-feature-detection-and-alignment` (primary), `ion-mobility-heatmap-visualization`, `ion-mobility-feature-classification`, `ion-mobility-dimension-detection`, `multidimensional-coordinate-alignment`
 
-**Tools:** Python, MOCCal, DEIMoS, conda, pip, Snakemake, ProteoWizard msconvert, Mirador, IonToolPack, PeakQC, mzmine, JDK 25, JavaFX 24, numpy
+**Tools (primary):** DEIMoS, Python, conda, pip, Snakemake, ProteoWizard msconvert
+
+**Other candidate tools:** Mirador, IonToolPack, PeakQC, MOCCal, mzmine, JDK 25, JavaFX 24, numpy
 
 **Grounding:** 4 KB(s); DOIs: 10.1021/acs.analchem.1c05017, 10.1021/acs.analchem.3c04290, 10.1021/jasms.4c00146, 10.1038/s41587-023-01690-2
 
@@ -127,7 +101,9 @@ Use when you have ion-mobility LC-IMS-MS/MS data (e.g. timsTOF / PASEF) and want
 
 **Candidate leaf skills:** `collision-cross-section-calibration-ccs` (primary), `collision-cross-section-calibration`, `collision-cross-section-calculation`, `collision-cross-section-measurement-quality-control`
 
-**Tools:** DEIMoS, conda, pip, Python, numpy, Snakemake, MOCCal, MOCCal (Multi-Omic CCS Calibrator), DEIMoS (Data-Exploratory Ion Mobility MS), R, MobiLipid, ggplot2, data.table
+**Tools (primary):** DEIMoS, conda, pip, Python, numpy
+
+**Other candidate tools:** Snakemake, MOCCal, MOCCal (Multi-Omic CCS Calibrator), DEIMoS (Data-Exploratory Ion Mobility MS), R, MobiLipid, ggplot2, data.table
 
 **Grounding:** 3 KB(s); DOIs: 10.1021/acs.analchem.1c05017, 10.1021/acs.analchem.3c04290, 10.1021/acs.analchem.4c01253
 
@@ -139,11 +115,13 @@ Use when you have ion-mobility LC-IMS-MS/MS data (e.g. timsTOF / PASEF) and want
 
 **Inputs:** mgf, feature-table · **Outputs:** tsv
 
-**Candidate leaf skills:** `collision-cross-section-matching-and-annotation` (primary), `reference-library-alignment`, `ion-mobility-reference-matching`, `4d-lcimmsms-feature-extraction`, `fragmentation-pattern-spectral-matching`
+**Candidate leaf skills:** `collision-cross-section-matching-and-annotation` (primary), `reference-library-alignment`, `4d-lcimmsms-feature-extraction`, `fragmentation-pattern-spectral-matching`
 
-**Tools:** Python, Jupyter Notebook, scikit-learn, R, MobiLipid, R (ggplot2, data.table, DT packages), MOCCal, DEIMoS, RDKit
+**Tools (primary):** Python, Jupyter Notebook, scikit-learn
 
-**Grounding:** 3 KB(s); DOIs: 10.1002/anie.202507483, 10.1021/acs.analchem.3c04290, 10.1021/acs.analchem.4c01253
+**Other candidate tools:** R, MobiLipid, R (ggplot2, data.table, DT packages), RDKit
+
+**Grounding:** 2 KB(s); DOIs: 10.1002/anie.202507483, 10.1021/acs.analchem.4c01253
 
 ### Stage 4 — networking  [OPTIONAL]
 
@@ -151,13 +129,15 @@ Use when you have ion-mobility LC-IMS-MS/MS data (e.g. timsTOF / PASEF) and want
 
 **EDAM operation:** operation_3432
 
-**Inputs:** mgf · **Outputs:** graphml
+**Inputs:** mgf, feature-table, tsv · **Outputs:** graphml
 
-**Candidate leaf skills:** `molecular-networking-construction` (primary), `spectral-library-molecular-networking`, `spectral-similarity-network-building`, `metabolomic-spectral-annotation-and-molecular-family-clustering`, `spectral-similarity-network-generation`
+**Candidate leaf skills:** `feature-based-molecular-network-interpretation` (primary), `spectral-similarity-network-building`, `molecular-networking-construction`, `feature-network-construction-from-mass-spectrometry`, `spectral-similarity-network-generation`
 
-**Tools:** ENPKG, MZmine, MEMO, MSHub, GNPS, q2-qemistree, SIRIUS, CSI:FingerID, ZODIAC, MZmine2, GNPS FBMN, ClassyFire, antiSMASH, BiG-SCAPE, NPLinker, MIBiG, Optimus, Cytoscape
+**Tools (primary):** R, Jupyter Notebook, MZmine3, GNPS FBMN, Google Colab
 
-**Grounding:** 6 KB(s); DOIs: 10.1021/acs.jnatprod.7b00737, 10.1021/acscentsci.3c00800, 10.1038/s41587-020-0700-3, 10.1038/s41589-020-00677-3 …
+**Other candidate tools:** q2-qemistree, SIRIUS, CSI:FingerID, ZODIAC, MZmine2, ClassyFire, ENPKG, MZmine, MEMO, networkx, treelib, mass2chem, metDataModel, Python 3, asari, khipu, Optimus, GNPS, Cytoscape
+
+**Grounding:** 5 KB(s); DOIs: 10.1021/acs.analchem.2c05810, 10.1021/acs.jnatprod.7b00737, 10.1021/acscentsci.3c00800, 10.1038/s41589-020-00677-3 …
 
 ## Grounding
 
@@ -169,4 +149,4 @@ Each stage carries the `kb_slugs`/`dois` of the leaves it draws on. Ground any s
 
 ## Provenance
 
-Generated by `compose_workflows.py` (semantic binding). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — these are the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.
+Generated by `compose_workflows.py` (semantic binding + EDAM-aware primary selection). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.

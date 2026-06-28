@@ -8,27 +8,17 @@ steps:
   goal: prepare a query MS/MS spectrum / USI for search
   edam_operation: operation_3215
   skills:
+  - usi-spectrum-retrieval-and-loading
   - spectral-data-loading-from-repository
   - usi-namespace-parsing
-  - usi-spectrum-retrieval-and-loading
   - usi-string-parsing-and-resolution
   - usi-spectrum-identifier-encoding
   tools:
-  - Python
   - spectrum_utils
-  - NumPy
-  - GNPS Molecular Networking
-  - MassBank
-  - MetaboLights
-  - Metabolomics Workbench
-  - MS2LDA
-  - GNPS Spectral Libraries
-  - ProteoXchange Repository
+  - Python
   - matplotlib
   - GNPS public library
   - ProteomeXchange (PXD datasets)
-  - QR Code Generation Library
-  - USI Resolver and Displayer
   inputs:
   - type: mgf
   outputs:
@@ -41,26 +31,32 @@ steps:
     - 10.1021/acs.analchem.9b04884
     - 10.1101/2020.05.09.086066
   after: []
+  candidate_tools:
+  - NumPy
+  - GNPS Molecular Networking
+  - MassBank
+  - MetaboLights
+  - Metabolomics Workbench
+  - MS2LDA
+  - GNPS Spectral Libraries
+  - ProteoXchange Repository
+  - QR Code Generation Library
+  - USI Resolver and Displayer
 - id: masst_search
   goal: repository-scale spectral search (fastMASST)
   edam_operation: operation_3631
   skills:
+  - spectral-database-query-execution
   - spectral-match-result-consolidation
   - mass-spectrometry-database-search
   - mass-spectrometry-reference-database-integration
+  - spectral-match-interpretation
   tools:
-  - metadataMASST
-  - microbeMASST
-  - plantMASST
-  - tissueMASST
-  - microbiomeMASST
-  - foodMASST
-  - Fast Search API
-  - GNPS_MASST
+  - MASST
   - GNPS
   - MASST+
-  - GNPS Molecular Networking
-  - MZmine
+  - CLUSTERING+
+  - PAIRING+
   inputs:
   - type: tsv
   outputs:
@@ -76,6 +72,17 @@ steps:
     - 10.1038/s41587-023-01985-4
   after:
   - spectrum_prep
+  candidate_tools:
+  - metadataMASST
+  - microbeMASST
+  - plantMASST
+  - tissueMASST
+  - microbiomeMASST
+  - foodMASST
+  - Fast Search API
+  - GNPS_MASST
+  - GNPS Molecular Networking
+  - MZmine
   inputs_from:
     spectrum_prep:
     - tsv
@@ -83,18 +90,18 @@ steps:
   goal: (optional) ecological context via microbe/plant/food MASST
   edam_operation: operation_3631
   skills:
-  - spectral-match-interpretation
   - domain-specific-spectrum-search-implementation
   - masst-output-visualization
   - multi-domain-search-result-aggregation
+  - metadata-harmonization-across-sources
   tools:
   - microbeMASST
   - metadataMASST
+  - GNPS_MASST
   - plantMASST
   - tissueMASST
   - microbiomeMASST
   - foodMASST
-  - GNPS_MASST
   - Fast Search API
   - MZmine
   inputs:
@@ -118,26 +125,38 @@ steps:
   goal: co-occurrence / reverse-metabolomics interpretation
   edam_operation: operation_3659
   skills:
-  - mass-spectrometry-metadata-interpretation
   - metabolite-metadata-integration
   - sample-centric-metabolite-annotation
   - tandem-mass-spectrometry-metadata-standardization
   - ms-ms-spectral-library-matching
+  - compound-database-matching
   tools:
-  - MetaMiner
-  - NPDtools 2.5.0
-  - matplotlib
-  - networkx
-  - ProteoWizard msconvert
-  - Dereplicator
-  - rawrr
-  - RawFileReader
-  - MsBackendRawFileReader
-  - rawDiag
-  - Spectra
   - msFeaST
   - pandas
   - jupyter-notebook
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acscentsci-3c00800
+    - asb-paper-10-1021-jasms-4c00146
+    - asb-paper-10-1038-s41467-025-60640-5
+    - asb-paper-10-1093-bioinformatics-btae584
+    - asb-paper-10-1186-s13321-021-00558-4
+    - asb-paper-10-1186-s13321-023-00695-y
+    dois:
+    - 10.1021/acscentsci.3c00800
+    - 10.1021/jasms.4c00146
+    - 10.1038/s41467-025-60640-5
+    - 10.1093/bioinformatics/btae584
+    - 10.1186/s13321-021-00558-4
+    - 10.1186/s13321-023-00695-y
+  after:
+  - masst_search
+  - specialized_masst
+  candidate_tools:
   - ENPKG
   - MZmine
   - enpkg_mn_isdb_taxo
@@ -156,33 +175,15 @@ steps:
   - TandemMatch
   - Mirador
   - PeakQC
-  inputs:
-  - type: tsv
-  outputs:
-  - type: tsv
-  grounding:
-    kb_slugs:
-    - asb-paper-10-1021-acs-jproteome-0c00866
-    - asb-paper-10-1021-acscentsci-3c00800
-    - asb-paper-10-1021-jasms-4c00146
-    - asb-paper-10-1038-s41467-018-06082-8
-    - asb-paper-10-1038-s41467-025-60640-5
-    - asb-paper-10-1093-bioinformatics-btae584
-    - asb-paper-10-1101-2020-10-30-362533
-    - asb-paper-10-1186-s13321-021-00558-4
-    dois:
-    - 10.1021/acs.jproteome.0c00866
-    - 10.1021/acscentsci.3c00800
-    - 10.1021/jasms.4c00146
-    - 10.1038/s41467-018-06082-8
-    - 10.1038/s41467-025-60640-5
-    - 10.1093/bioinformatics/btae584
-    - 10.1101/2020.10.30.362533
-    - 10.1186/s13321-021-00558-4
-  after:
-  - masst_search
+  - Spectra
+  - MetFrag
+  - R
+  - PubChem
+  - COCONUT
   inputs_from:
     masst_search:
+    - tsv
+    specialized_masst:
     - tsv
 verification:
   final_outputs:
@@ -191,3 +192,4 @@ verification:
 provenance:
   derived_from_workflows: []
   bound_by: perspicacite-semantic
+  coverage_gaps: []

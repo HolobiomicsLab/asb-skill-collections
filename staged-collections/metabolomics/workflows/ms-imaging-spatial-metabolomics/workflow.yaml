@@ -10,24 +10,15 @@ steps:
   skills:
   - mass-spectrometry-imaging-data-import
   - mass-spectrometry-peak-detection-and-alignment
-  - mass-spectrometry-image-reconstruction
   - spatial-pixel-coordinate-alignment
   - spectral-peak-alignment-across-pixels
+  - imzml-metadata-parsing
   tools:
   - Cardinal
   - CardinalIO
   - R
   - matter
   - BiocManager
-  - BiocParallel
-  - Cardinal 3.6
-  - pewpew
-  - pewlib
-  - pewpew (pew²)
-  - Python
-  - imzML Writer
-  - imzML Scout
-  - msconvert
   inputs:
   - type: imzML
   outputs:
@@ -44,16 +35,51 @@ steps:
     - 10.1093/bioinformatics/btv146
     - 10.1529/biophysj.103.038422
   after: []
+  candidate_tools:
+  - BiocParallel
+  - Cardinal 3.6
+  - Python
+  - imzML Writer
+  - imzML Scout
+  - msconvert
+  - pewpew
+  - pewlib
+  - pewpew (pew²)
 - id: spatial_annotation
   goal: annotate ion images to metabolites with FDR control
   edam_operation: operation_3803
   skills:
+  - maldi-imaging-mass-spectrometry-data-interpretation
   - spatial-metabolomics-feature-annotation
   - imaging-mass-spectrometry-ion-identification
   - mass-spectral-feature-annotation
   - m-z-metabolite-annotation-mapping
   - metabolite-annotation-at-scale
   tools:
+  - Google Colab
+  - Python 3
+  - METASPACE
+  - CellProfiler 3.0.0
+  - Fiji (December 22 2015)
+  - Python 3 with requirements.txt
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-4c06210
+    - asb-paper-10-1038-s41592-021-01198-0
+    - asb-paper-10-1101-2024-10-14-618269
+    - asb-paper-10-1101-2024-10-31-621429v1
+    dois:
+    - 10.1021/acs.analchem.4c06210
+    - 10.1038/s41592-021-01198-0
+    - 10.1101/2024.10.14.618269
+    - 10.1101/2024.10.31.621429v1
+  after:
+  - preprocess_imaging
+  candidate_tools:
   - SpaMTP
   - R
   - Seurat
@@ -68,21 +94,6 @@ steps:
   - dplyr
   - HMDB Database
   - Lipidmaps Database
-  inputs:
-  - type: feature-table
-  outputs:
-  - type: tsv
-  grounding:
-    kb_slugs:
-    - asb-paper-10-1021-acs-analchem-4c06210
-    - asb-paper-10-1101-2024-10-14-618269
-    - asb-paper-10-1101-2024-10-31-621429v1
-    dois:
-    - 10.1021/acs.analchem.4c06210
-    - 10.1101/2024.10.14.618269
-    - 10.1101/2024.10.31.621429v1
-  after:
-  - preprocess_imaging
   inputs_from:
     preprocess_imaging:
     - feature-table
@@ -91,8 +102,8 @@ steps:
   edam_operation: operation_3432
   skills:
   - spatial-segmentation-shrunken-centroids
+  - spatial-spectral-array-processing
   - cardinal-object-structure-understanding
-  - spatial-coordinate-mapping-msi
   tools:
   - SpaMTP
   - dplyr
@@ -105,13 +116,18 @@ steps:
   - type: tsv
   grounding:
     kb_slugs:
+    - asb-paper-10-1093-bioinformatics-btv146
     - asb-paper-10-1101-2024-10-14-618269
     - asb-paper-10-1101-2024-10-31-621429v1
     dois:
+    - 10.1093/bioinformatics/btv146
     - 10.1101/2024.10.14.618269
     - 10.1101/2024.10.31.621429v1
   after:
   - preprocess_imaging
+  candidate_tools:
+  - BiocParallel
+  - matter
   inputs_from:
     preprocess_imaging:
     - feature-table
@@ -119,28 +135,14 @@ steps:
   goal: compare metabolite intensities across spatial regions
   edam_operation: operation_3659
   skills:
-  - single-cell-spatial-metabolomics-data-processing
-  - mass-spectrometry-peak-intensity-encoding
-  - spatial-correlation-analysis-in-imaging-mass-spectrometry
+  - bioinformatic-object-conversion
+  - spatial-coordinate-mapping-msi
   - spot-level-intensity-aggregation
   tools:
-  - ScSpaMet repository
-  - Zenodo deposit (raw data)
-  - Mesmer
-  - scanpy
-  - STAGATE
-  - pandas
-  - h5py
-  - mass2adduct
+  - SpaMTP
   - R
-  - corrPairsMSI
-  - corrPairsMSIchunks
-  - msimat
-  - adductMatch
-  - diffGetPeaks
-  - mass2adduct (R package)
-  - spatialMETA
-  - spatialmeta.pp.filter_cells_sm
+  - Cardinal
+  - Seurat
   inputs:
   - type: tsv
   - type: tsv
@@ -148,20 +150,19 @@ steps:
   - type: tsv
   grounding:
     kb_slugs:
-    - asb-paper-10-1021-acs-analchem-0c04720
-    - asb-paper-10-1021-acs-analchem-4c06210
-    - asb-paper-10-1038-s41467-023-43917-5
     - asb-paper-10-1038-s41467-025-63915-z
-    - asb-paper-10-5281-zenodo-6784251
+    - asb-paper-10-1101-2024-10-14-618269
+    - asb-paper-10-1101-2024-10-31-621429v1
     dois:
-    - 10.1021/acs.analchem.0c04720
-    - 10.1021/acs.analchem.4c06210
-    - 10.1038/s41467-023-43917-5
     - 10.1038/s41467-025-63915-z
-    - 10.5281/zenodo.6784251
+    - 10.1101/2024.10.14.618269
+    - 10.1101/2024.10.31.621429v1
   after:
   - spatial_annotation
   - segmentation
+  candidate_tools:
+  - spatialMETA
+  - spatialmeta.pp.filter_cells_sm
   inputs_from:
     spatial_annotation:
     - tsv
@@ -174,3 +175,4 @@ verification:
 provenance:
   derived_from_workflows: []
   bound_by: perspicacite-semantic
+  coverage_gaps: []

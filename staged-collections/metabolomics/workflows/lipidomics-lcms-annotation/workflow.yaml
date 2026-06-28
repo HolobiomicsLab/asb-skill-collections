@@ -8,19 +8,15 @@ steps:
   goal: raw lipidomics mzML -> aligned feature table + MS/MS export
   edam_operation: operation_3215
   skills:
+  - lcms-peak-detection-and-alignment
   - mass-spectrometry-metadata-extraction
   - file-format-conversion-peak-picking-to-lipidmatch
-  - lcms-peak-detection-and-alignment
   - feature-table-normalization
   - mass-spectrometry-data-column-mapping
   tools:
-  - MZmine
-  - XCMS
-  - MS-DIAL
-  - Compound Discoverer
-  - LipidMatch
   - ISFrag
   - R
+  - XCMS
   - CAMERA
   inputs:
   - type: mzML
@@ -35,6 +31,53 @@ steps:
     - 10.1021/acs.analchem.1c01644
     - 10.1186/s12859-017-1744-3
   after: []
+  candidate_tools:
+  - MZmine
+  - MS-DIAL
+  - Compound Discoverer
+  - LipidMatch
+- id: normalize
+  goal: normalize + batch-correct the lipid feature table
+  edam_operation: operation_3434
+  skills:
+  - batch-aware-normalization-workflows
+  - batch-correction-quality-assessment
+  - batch-effect-correction-in-metabolomics
+  - batch-corrected-feature-table-validation
+  - batch-effect-correction-workflow
+  tools:
+  - Python
+  - pycombat
+  - Asari
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1038-s41596-024-01046-3
+    - asb-paper-10-1093-bioinformatics-btac706
+    - asb-paper-10-1371-journal-pcbi-1011912
+    dois:
+    - 10.1038/s41596-024-01046-3
+    - 10.1093/bioinformatics/btac706
+    - 10.1371/journal.pcbi.1011912
+  after:
+  - preprocess
+  candidate_tools:
+  - ThermoRawFileParser
+  - pcpfm
+  - ADViSELipidomics
+  - limma
+  - edgeR
+  - ComBat
+  - R
+  - Jupyter Notebook
+  - Google Colab
+  - FBMN-STATS
+  inputs_from:
+    preprocess:
+    - feature-table
 - id: lipid_identification
   goal: identify lipids (class + species) from MS/MS fragmentation
   edam_operation: operation_3803
@@ -43,21 +86,13 @@ steps:
   - fragment-ion-library-matching
   - multi-species-lipid-prediction
   - uhplc-hrms-ms-data-matching
-  - lipid-library-format-schema
+  - lipid-structure-specification
   tools:
   - LipidMatch
   - MZmine
   - XCMS
   - MS-DIAL
   - Compound Discoverer
-  - Q-Exactive
-  - CAMERA
-  - LipidIN EQ module
-  - LipidIN LCI module
-  - Q-Exactive orbitrap
-  - Agilent Q-TOF
-  - Bruker Q-TOF
-  - SCIEX Q-TOF
   inputs:
   - type: mgf
   outputs:
@@ -71,6 +106,15 @@ steps:
     - 10.1186/s12859-017-1744-3
   after:
   - preprocess
+  candidate_tools:
+  - Q-Exactive
+  - CAMERA
+  - LipidIN EQ module
+  - LipidIN LCI module
+  - Q-Exactive orbitrap
+  - Agilent Q-TOF
+  - Bruker Q-TOF
+  - SCIEX Q-TOF
   inputs_from:
     preprocess:
     - mgf
@@ -79,19 +123,13 @@ steps:
   edam_operation: operation_3695
   skills:
   - false-positive-annotation-filtering
-  - lipid-retention-time-rule-application
   - lipid-identification-quality-filtering
+  - lipid-retention-time-rule-application
   - lipid-species-annotation-assessment
   tools:
   - XCMS
   - CAMERA
   - LipidIN LCI module
-  - LipidIN (LCI Module)
-  - RaMS
-  - LipoCLEAN
-  - MS-DIAL
-  - MetaboAnnotatoR
-  - R
   inputs:
   - type: tsv
   outputs:
@@ -107,6 +145,13 @@ steps:
     - 10.1038/s41467-025-59683-5
   after:
   - lipid_identification
+  candidate_tools:
+  - LipoCLEAN
+  - MS-DIAL
+  - LipidIN (LCI Module)
+  - RaMS
+  - MetaboAnnotatoR
+  - R
   inputs_from:
     lipid_identification:
     - tsv
@@ -117,24 +162,12 @@ steps:
   - multicontrast-statistical-testing-lipidomics
   - fold-change-calculation
   - lipid-abundance-differential-analysis
+  - differential-lipid-expression-analysis
   - metabolite-feature-anova-analysis
-  - enrichment-statistic-interpretation
   tools:
   - lipidr
   - limma
   - R
-  - Python (pandas, NumPy, SciPy)
-  - R (base stats, tidyverse, or similar)
-  - pandas
-  - NumPy
-  - SciPy
-  - edgeR.R
-  - ADViSELipidomics
-  - edgeR
-  - ComBat
-  - LIPID MAPS
-  - margheRita
-  - MS-DIAL
   inputs:
   - type: feature-table
   - type: tsv
@@ -154,10 +187,24 @@ steps:
     - 10.1101/2024.06.20.599545
     - 10.1101/2024.06.20.599545v1
   after:
-  - preprocess
+  - normalize
   - rule_validation
+  candidate_tools:
+  - Python (pandas, NumPy, SciPy)
+  - R (base stats, tidyverse, or similar)
+  - pandas
+  - NumPy
+  - SciPy
+  - edgeR.R
+  - ADViSELipidomics
+  - edgeR
+  - ComBat
+  - LIPID MAPS
+  - Metabolomics Workbench API
+  - margheRita
+  - MS-DIAL
   inputs_from:
-    preprocess:
+    normalize:
     - feature-table
     rule_validation:
     - tsv
@@ -165,22 +212,15 @@ steps:
   goal: consolidate lipid annotations + stats into one master table
   edam_operation: operation_3434
   skills:
+  - structured-data-matrix-construction
   - lipid-class-feature-annotation
   - lipid-class-annotation-and-parsing
   - lipid-species-classification-mapping
-  - structured-data-matrix-construction
   tools:
-  - lipidr
-  - R
-  - Skyline
-  - SummarizedExperiment
   - ADViSELipidomics
-  - limma
-  - edgeR
-  - ComBat
-  - LIPID MAPS
   - LipidSearch
   - LIQUID
+  - LIPID MAPS
   inputs:
   - type: feature-table
   - type: tsv
@@ -194,8 +234,19 @@ steps:
     - 10.1021/acs.jproteome.0c00082
     - 10.1093/bioinformatics/btac706
   after:
+  - normalize
   - statistics
+  candidate_tools:
+  - lipidr
+  - R
+  - Skyline
+  - SummarizedExperiment
+  - limma
+  - edgeR
+  - ComBat
   inputs_from:
+    normalize:
+    - feature-table
     statistics:
     - tsv
 verification:
@@ -205,3 +256,4 @@ verification:
 provenance:
   derived_from_workflows: []
   bound_by: perspicacite-semantic
+  coverage_gaps: []

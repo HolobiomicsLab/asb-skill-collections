@@ -1,544 +1,260 @@
 ---
 name: untargeted-lcmsms-annotation-workflow
-description: Use when you have raw untargeted LC-MS/MS data (mzML / an mzmine or
-  GNPS-FBMN export) and want a full annotated feature table — preprocessing,
-  molecular networking, spectral library matching, SIRIUS formula/structure/class,
-  taxonomy-informed propagation (optional), and a fused master table with provenance.
+description: 'Use when you have untargeted LC-MS/MS data (mzML) and want an annotated
+  feature table — preprocessing, blank/QC filtering, feature-based molecular networking,
+  spectral library matching, SIRIUS de novo annotation, optional taxonomy-aware re-weighting,
+  and a fused master table. This is the canonical metabopipe-style annotation pipeline.
+
+  '
 license: CC-BY-4.0
 metadata:
   kind: composite-workflow
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
-  techniques: [LC-MS]
-  stage_count: 6
+  techniques:
+  - LC-MS
+  stage_count: 7
   member_skills:
-    - peak-detection-and-mass-alignment
-    - lc-ms-data-preprocessing
-    - feature-detection-in-chromatographic-ms-data
-    - lcms-peak-detection-and-alignment
-    - xcms-data-import-preprocessing
-    - spectral-similarity-network-generation
-    - molecular-networking-construction
-    - feature-based-molecular-network-interpretation
-    - molecular-networking-parameter-configuration
-    - spectral-library-matching
-    - spectral-library-matching-annotation
-    - mass-spectrometry-library-ranking
-    - identity-search-spectrum-annotation
-    - spectral-library-annotation-matching
-    - sirius-spectral-request-construction
-    - web-service-api-integration
-    - sirius-zodiac-score-filtering
-    - spectral-fingerprint-web-service-query
-    - de-novo-structure-candidate-ranking
-    - metabolite-annotation-taxonomic-integration
-    - taxonomic-weighting-in-annotation
-    - metabolite-annotation-scoring
-    - spectral-library-matching-with-taxonomy
-    - ranked-candidate-prioritization
-    - mass-spectrometry-feature-deduplication
-    - feature-network-construction-from-mass-spectrometry
-    - feature-metadata-annotation
-    - feature-table-annotation-table-construction
+  - peak-detection-and-mass-alignment
+  - mass-spectrometry-feature-detection-validation
+  - lcms-peak-detection-and-alignment
+  - spectral-feature-table-generation
+  - cross-sample-feature-alignment
+  - blank-sample-feature-filtering
+  - feature-table-blank-intensity-detection
+  - background-ion-contaminant-removal
+  - feature-table-quality-control
+  - background-ion-blank-comparison
+  - molecular-networking-construction
+  - molecular-family-graph-construction
+  - spectral-similarity-network-generation
+  - spectral-library-molecular-networking
+  - gnps-molecular-network-integration
+  - graph-based-metabolite-similarity-assessment
+  - spectral-library-matching-annotation
+  - spectral-library-matching
+  - spectral-library-matching-with-cosine-similarity
+  - mass-spectrometry-library-ranking
+  - spectral-library-annotation-matching
+  - sirius-spectral-request-construction
+  - web-service-api-integration
+  - spectrum-query-formatting
+  - spectral-fingerprint-web-service-query
+  - molecular-fingerprint-parsing
+  - taxonomic-weighting-in-annotation
+  - metabolite-annotation-taxonomic-integration
+  - metabolite-annotation-scoring
+  - metabolite-annotation-network-architecture
+  - feature-metadata-annotation
+  - feature-network-construction-from-mass-spectrometry
+  - sample-centric-metabolite-annotation
+  - feature-table-consensus-aggregation
+  - unannotated-feature-characterization
+  - feature-table-integration-and-normalization
   member_tools:
-    - MZmine2
-    - Optimus
-    - OpenMS
-    - NeatMS
-    - Python
-    - NumPy
-    - pandas
-    - pyOpenMS
-    - MSConvert
-    - PFΔScreen
-    - ISFrag
-    - R
-    - XCMS
-    - CAMERA
-    - MSnbase
-    - Spectra
-    - MsExperiment
-    - BiocParallel
-    - GNPS
-    - Cytoscape
-    - ENPKG
-    - MZmine
-    - ENPKG MN/ISDB/Taxo module
-    - MEMO
-    - Jupyter Notebook
-    - MZmine3
-    - GNPS FBMN
-    - Google Colab
-    - microbeMASST
-    - metadataMASST
-    - plantMASST
-    - tissueMASST
-    - microbiomeMASST
-    - foodMASST
-    - GNPS_MASST
-    - GNPS libraries
-    - Fast Search API
-    - MASSBANK
-    - DrugBANK
-    - meRgeION2
-    - RChemMass
-    - MS2Compound
-    - CFM-id
-    - mssearchr
-    - NIST API
-    - MSThunder
-    - Windows
-    - Anaconda
-    - Git
-    - MSBERT
-    - PyTorch
-    - matchms
-    - Spec2Vec
-    - masscube
-    - nplinker
-    - pytest
-    - CSI:FingerID
-    - SIRIUS
-    - CANOPUS
-    - MSNovelist
-    - INVENTA
-    - ClassyFire
-    - tima (Taxonomically Informed Metabolite Annotation)
-    - LOTUS
-    - Docker
-    - MolNotator
-    - PyYAML
-    - networkx
-    - treelib
-    - mass2chem
-    - metDataModel
-    - asari
-    - khipu
-    - msFeaST
-    - jupyter-notebook
-    - msFeaST Dashboard bundle
-    - MS-Dial
-    - GetFeatistics
-    - patRoon
-  edam_operations:
-    - operation_3215
-    - operation_3214
-    - operation_3645
-    - operation_3631
-    - operation_3860
-    - operation_3801
-    - operation_3434
-    - operation_0491
-    - operation_3767
-    - operation_3432
-    - operation_3441
-    - operation_3632
+  - MZmine2
+  - Optimus
+  - OpenMS
+  - R
+  - MZmine3
+  - Jupyter Notebook
+  - FBMN-STATS
+  - ENPKG
+  - MZmine
+  - MEMO
+  - MSThunder
+  - Windows
+  - GNPS
+  - MSConvert
+  - CSI:FingerID
+  - SIRIUS
+  - CANOPUS
+  - Docker
+  - tima (Taxonomically Informed Metabolite Annotation)
+  - LOTUS
+  - GNPS-FBMN
+  - msFeaST
+  - jupyter-notebook
+  - msFeaST Dashboard bundle
+  coverage_gaps: []
   derived_from_workflows:
-    - coll_ms2deepscore
-    - coll_ramclust_cq
-    - coll_xcms_cq
-    - coll_inventa_cq
-    - coll_nmr2struct
-    - spec2vec_grounded
-    - spec2vec_pkg_oalarge
-    - coll_bioactivity_based_molecular_networking_cq
-    - coll_concise_cq
-    - coll_redu_cq
-    - coll_deepmsprofiler_cq
-    - coll_cardinal_cq
-    - coll_dures_cq
-    - coll_fbmn_stats_cq
-    - coll_idsl_ipa_cq
-    - coll_metabodirect
-    - coll_multiomicsintegrator_cq
-    - coll_peakqc_cq
-    - coll_tardis
-    - coll_vimms
-    - coll_lipidin_cq
-    - coll_molnetenhancer
-    - coll_ms2rescore_immunopeptidome_rescoring_cq
-    - coll_npclassscore_cq
-    - coll_rapidmass_cq
-    - coll_tardis_cq
-    - coll_esp_cq
-    - coll_graphormer_rt_cq
-    - coll_lipidmatch_cq
-    - coll_corems
+  - coll_ms2deepscore
+  - coll_ramclust_cq
+  - coll_xcms_cq
+  - coll_inventa_cq
+  - coll_nmr2struct
+  - spec2vec_grounded
+  - spec2vec_pkg_oalarge
+  - coll_bioactivity_based_molecular_networking_cq
+  - coll_concise_cq
+  - coll_redu_cq
+  - coll_deepmsprofiler_cq
+  - coll_cardinal_cq
+  - coll_dures_cq
+  - coll_fbmn_stats_cq
+  - coll_idsl_ipa_cq
+  - coll_metabodirect
+  - coll_multiomicsintegrator_cq
+  - coll_peakqc_cq
+  - coll_tardis
+  - coll_vimms
+  - coll_lipidin_cq
+  - coll_molnetenhancer
+  - coll_ms2rescore_immunopeptidome_rescoring_cq
+  - coll_npclassscore_cq
+  - coll_rapidmass_cq
+  - coll_tardis_cq
+  - coll_esp_cq
+  - coll_graphormer_rt_cq
+  - coll_lipidmatch_cq
+  - coll_corems
   bound_by: perspicacite-semantic
 schema_version: 0.3.0
 attribution:
   generator: AgenticScienceBuilder
-  date: "2026-06-28"
-  method: v2-semantic-binding-perspicacite-text-embedding-3-large-llm-judge
+  promoter: Louis-Félix Nothias
+  sponsor: CNRS & Université Côte d'Azur
+  zenodo_doi: 10.5281/zenodo.20794027
 ---
+
+# Untargeted LC-MS/MS Metabolomite Annotation (FBMN + SIRIUS)
 
 ## Summary
 
-End-to-end untargeted LC-MS/MS annotation pipeline: raw mzML data files enter
-and a fully annotated, fused master feature table exits. Six ordered stages cover
-peak detection and mass alignment, molecular networking, spectral library matching,
-SIRIUS formula/structure/class prediction, optional taxonomy-informed propagation,
-and cross-tool annotation fusion. The pipeline is grounded in the ASB metabolomics
-v2 collection (5,865 leaf skills / 568 papers) and is gradable by the
-`asb solve-workflow` rubric.
+End-to-end untargeted LC-MS/MS annotation: raw mzML in, an evidence-grounded master feature table out, combining molecular networking, library matching and SIRIUS.
 
-Stage-to-leaf bindings in this v2 artifact were selected by **semantic retrieval**
-(Perspicacité, text-embedding-3-large + LLM judge) rather than keyword/index
-matching. The v1 (index-bound) artifact is archived at
-`../_archive/untargeted-lcmsms-annotation.v1-index` for A/B comparison.
 
 ## When to use
 
-- You have raw mzML files (or an mzml/mzXML batch) from an untargeted LC-MS/MS
-  experiment and want a complete annotated feature table.
-- You are starting from an existing MZmine project output, a GNPS-FBMN job result,
-  or a SIRIUS mgf export and want to continue from mid-pipeline.
-- You want molecular-family-level annotations with network context (GNPS/matchms
-  molecular networking) combined with in silico structure/class prediction (SIRIUS
-  CSI:FingerID + CANOPUS) and optional taxonomic reweighting (TIMA/LOTUS).
-- You need provenance-aware fusion of multiple annotation sources into a single
-  Cytoscape-ready master feature table.
+Use when you have untargeted LC-MS/MS data (mzML) and want an annotated feature table — preprocessing, blank/QC filtering, feature-based molecular networking, spectral library matching, SIRIUS de novo annotation, optional taxonomy-aware re-weighting, and a fused master table. This is the canonical metabopipe-style annotation pipeline.
+
 
 ## When NOT to use
 
-- GC-MS data: the preprocess and network stages here target LC-MS/MS; use a
-  dedicated GC-MS workflow or the GNPS GC deconvolution workflow directly.
-- Targeted quantitation: the pipeline is discovery-mode; targeted MRM/PRM
-  workflows are out of scope.
-- NMR-only datasets: no MS2 spectra means networking and SIRIUS stages cannot run.
-- Single-spectrum identification only: if you have one spectrum and want a quick
-  library hit, use the `spectral-library-matching` or `identity-search-spectrum-annotation`
-  leaf skills directly.
+- The data is not LC-MS.
+- You need a single atomic step, not the full pipeline (use the leaf skill directly via the router).
 
 ## Stages
 
 ### Stage 1 — preprocess
 
-**Goal:** Convert raw mzML files to an aligned feature table and export MS2 spectra
-(GNPS-FBMN mgf + SIRIUS mgf) for downstream stages.
+**Goal:** raw mzML -> aligned feature table + MS2 exports (GNPS-FBMN mgf + SIRIUS mgf)
 
-**EDAM operation:** `operation_3215` (peak picking / mass spectrometry data processing)
+**EDAM operation:** operation_3215
 
-**Inputs:** Raw mzML files (one per sample)
+**Inputs:** mzML · **Outputs:** feature-table, mgf/gnps-fbmn, mgf/sirius
 
-**Outputs:**
-- `feature_table.csv` — aligned feature table (m/z, RT, per-sample intensities)
-- `spectra_gnps.mgf` — MS2 export formatted for GNPS-FBMN
-- `spectra_sirius.mgf` — MS2 export formatted for SIRIUS
+**Candidate leaf skills:** `peak-detection-and-mass-alignment` (primary), `mass-spectrometry-feature-detection-validation`, `lcms-peak-detection-and-alignment`, `spectral-feature-table-generation`, `cross-sample-feature-alignment`
 
-**Primary leaf skill:** `peak-detection-and-mass-alignment`
-- Tools: MZmine2, Optimus, OpenMS
-- Grounding kb_slugs: `asb-paper-10-1021-acs-jnatprod-7b00737`
-- DOIs: `10.1021/acs.jnatprod.7b00737`
+**Tools (primary):** MZmine2, Optimus, OpenMS
 
-**Candidate leaf skills:**
-- `lc-ms-data-preprocessing` — NeatMS-based peak quality filtering and matrix
-  construction from mzmine-formatted CSV + mzML pairs (Tools: NeatMS, Python,
-  NumPy, pandas;
-  kb_slugs: `asb-paper-10-1021-acs-analchem-1c02220`;
-  DOIs: `10.1021/acs.analchem.1c02220`)
-- `feature-detection-in-chromatographic-ms-data` — OpenMS/pyOpenMS centroided
-  DDA feature delineation across m/z and RT dimensions (Tools: pyOpenMS, OpenMS,
-  Python, MSConvert, PFΔScreen;
-  kb_slugs: `asb-paper-10-1007-s00216-023-05070-2`;
-  DOIs: `10.1007/s00216-023-05070-2`)
-- `lcms-peak-detection-and-alignment` — XCMS/ISFrag multi-sample DDA/DIA/fullscan
-  feature extraction with CAMERA adduct grouping (Tools: ISFrag, R, XCMS, CAMERA;
-  kb_slugs: `asb-paper-10-1021-acs-analchem-1c01644`;
-  DOIs: `10.1021/acs.analchem.1c01644`)
-- `xcms-data-import-preprocessing` — XCMS peak detection + m/z bias correction
-  from raw mzML/NetCDF/mzXML data (Tools: xcms, MSnbase, Spectra, MsExperiment,
-  BiocParallel;
-  kb_slugs: `asb-paper-10-1021-ac051437y`;
-  DOIs: `10.1021/ac051437y`)
+**Other candidate tools:** mzRAPP, MZmine 2, R, XCMS, enviPat, Skyline, R (with mzRAPP library), ISFrag, CAMERA, JPA, MS-Convert
 
-**Verification:** Feature table must have >0 rows; both mgf files must be non-empty
-and contain `BEGIN IONS` entries; PEPMASS fields must be present in SIRIUS mgf.
+**Grounding:** 4 KB(s); DOIs: 10.1021/acs.analchem.1c01644, 10.1021/acs.jnatprod.7b00737, 10.1093/bioinformatics/btab231/6214530, 10.3390/metabo12030212
 
----
+### Stage 2 — qc_filter  [OPTIONAL]
 
-### Stage 2 — network
+**Goal:** (optional) remove blank / background / low-quality features before annotation
 
-**Goal:** Compute MS/MS spectral similarity scores and construct a molecular family
-graph (all-pairs modified cosine; GNPS-style components) as a graphml file.
-This stage builds the SIMILARITY GRAPH — it is distinct from library_match, which
-queries REFERENCE LIBRARIES for compound identifications.
+**EDAM operation:** operation_3695
 
-**EDAM operation:** `operation_3214` (spectral analysis) / `operation_3645`
-(molecular networking)
+**Inputs:** feature-table · **Outputs:** feature-table
 
-**Inputs:** `spectra_gnps.mgf` (from preprocess)
+**Candidate leaf skills:** `blank-sample-feature-filtering` (primary), `feature-table-blank-intensity-detection`, `background-ion-contaminant-removal`, `feature-table-quality-control`, `background-ion-blank-comparison`
 
-**Outputs:**
-- `network.graphml` — molecular network graph with cosine-similarity edges
-- `components.tsv` — component/cluster membership per feature
+**Tools (primary):** R, MZmine3, Jupyter Notebook, FBMN-STATS
 
-**Primary leaf skill:** `spectral-similarity-network-generation`
-- Tools: MZmine2, Optimus, GNPS, Cytoscape
-- Grounding kb_slugs: `asb-paper-10-1021-acs-jnatprod-7b00737`
-- DOIs: `10.1021/acs.jnatprod.7b00737`
+**Other candidate tools:** ThermoRawFileParser, Python, PCPFM (Python-Centric Pipeline for Metabolomics), Asari, GetFeatistics, XCMS, MS-Dial, metDataModel
 
-**Candidate leaf skills:**
-- `molecular-networking-construction` — ENPKG-based molecular network construction
-  from LC-MS/MS DDA data with MEMO memorization (Tools: ENPKG, MZmine,
-  ENPKG MN/ISDB/Taxo module, MEMO;
-  kb_slugs: `asb-paper-10-1021-acscentsci-3c00800`;
-  DOIs: `10.1021/acscentsci.3c00800`)
-- `feature-based-molecular-network-interpretation` — GNPS FBMN network
-  interpretation and visualization in R/Jupyter (Tools: R, Jupyter Notebook,
-  MZmine3, GNPS FBMN, Google Colab;
-  kb_slugs: `asb-paper-10-1038-s41596-024-01046-3`;
-  DOIs: `10.1038/s41596-024-01046-3`)
-- `molecular-networking-parameter-configuration` — Pre-GNPS parameter setup and
-  MGF/feature-table preparation for network submission (Tools: MZmine2, GNPS,
-  Optimus, Cytoscape;
-  kb_slugs: `asb-paper-10-1021-acs-jnatprod-7b00737`;
-  DOIs: `10.1021/acs.jnatprod.7b00737`)
+**Grounding:** 3 KB(s); DOIs: 10.1038/s41596-024-01046-3, 10.1371/journal.pcbi.1011912, 10.1515/jib-2025-0047
 
-**Verification:** network.graphml must be parseable XML; at least one edge with
-cosine score >= 0.7 should exist for typical complex extracts; components.tsv must
-have a header and one row per feature.
+### Stage 3 — network
 
----
+**Goal:** MS2 spectra -> molecular family graph (modified cosine; GNPS-style components)
 
-### Stage 3 — library_match
+**EDAM operation:** operation_3214
 
-**Goal:** Annotate features by spectral similarity against reference libraries
-(GNPS, MassBank, MASST, in-house); produce MSI level 2 hits with cosine scores
-and precursor m/z deltas. This stage queries REFERENCE LIBRARIES — it is distinct
-from network, which builds the pairwise similarity graph.
+**Inputs:** mgf/gnps-fbmn · **Outputs:** graphml, tsv
 
-**EDAM operation:** `operation_3631` (spectral matching) / `operation_3215`
+**Candidate leaf skills:** `molecular-networking-construction` (primary), `molecular-family-graph-construction`, `spectral-similarity-network-generation`, `spectral-library-molecular-networking`, `gnps-molecular-network-integration`, `graph-based-metabolite-similarity-assessment`
 
-**Inputs:** `spectra_gnps.mgf` (from preprocess)
+**Tools (primary):** ENPKG, MZmine, MEMO
 
-**Outputs:**
-- `library_matches.tsv` — per-feature spectral library hits with cosine scores,
-  precursor m/z delta, MSI level annotations
+**Other candidate tools:** nplinker, Python, pytest, GNPS, MZmine2, Optimus, Cytoscape, MSHub, mineMS2, igraph, R, MSnbase
 
-**Primary leaf skill:** `spectral-library-matching`
-- Tools: microbeMASST, metadataMASST, plantMASST, tissueMASST, microbiomeMASST,
-  foodMASST, GNPS_MASST, GNPS libraries, Fast Search API, MZmine, MASSBANK,
-  DrugBANK, meRgeION2, GNPS, RChemMass, MS2Compound, CFM-id, mssearchr, R,
-  NIST API
-- Grounding kb_slugs: `asb-paper-10-1038-s41538-022-00137-3`,
-  `asb-paper-10-1021-acs-analchem-2c04343`, `asb-paper-10-1089-omi-2021-0051`
-- DOIs: `10.1038/s41538-022-00137-3`, `10.1021/acs.analchem.2c04343`,
-  `10.1089/omi.2021.0051`
+**Grounding:** 5 KB(s); DOIs: 10.1021/acs.jnatprod.7b00737, 10.1021/acscentsci.3c00800, 10.1038/s41587-020-0700-3, 10.1186/s13321-025-01051-y …
 
-**Candidate leaf skills:**
-- `spectral-library-matching-annotation` — UPLC-HRMS MS2 spectral matching against
-  known reference spectra via MSThunder (Tools: MSThunder, Windows, GNPS, MSConvert;
-  kb_slugs: `asb-paper-10-1016-j-enceco-2025-07-022`;
-  DOIs: `10.1016/j.enceco.2025.07.022`)
-- `mass-spectrometry-library-ranking` — MSBERT transformer-based library search
-  and result ranking (Tools: Python, Anaconda, Git, MSBERT, PyTorch, matchms,
-  Spec2Vec;
-  kb_slugs: `asb-paper-10-1021-acs-analchem-4c02426`;
-  DOIs: `10.1021/acs.analchem.4c02426`)
-- `identity-search-spectrum-annotation` — masscube identity search for definitive
-  molecular identity assignment from curated spectral library (Tools: masscube,
-  Python;
-  kb_slugs: `asb-paper-10-1038-s41467-025-60640-5`;
-  DOIs: `10.1038/s41467-025-60640-5`)
-- `spectral-library-annotation-matching` — nplinker GNPS archive spectral matching
-  and annotation enrichment (Tools: nplinker, Python, pytest, GNPS;
-  kb_slugs: `asb-paper-10-1186-s40168-022-01444-3`;
-  DOIs: `10.1186/s40168-022-01444-3`)
+### Stage 4 — library_match
 
-**Verification:** library_matches.tsv must have a non-empty header; cosine column
-must be numeric in [0, 1]; precursor m/z delta column must be present.
+**Goal:** MS2 spectra -> spectral library annotations (cosine match to reference libraries)
 
----
+**EDAM operation:** operation_3631
 
-### Stage 4 — sirius
+**Inputs:** mgf/gnps-fbmn · **Outputs:** tsv
 
-**Goal:** Run SIRIUS 6 (formula assignment, CSI:FingerID structure prediction,
-CANOPUS compound-class assignment) on MS2 spectra.
+**Candidate leaf skills:** `spectral-library-matching-annotation` (primary), `spectral-library-matching`, `spectral-library-matching-with-cosine-similarity`, `mass-spectrometry-library-ranking`, `spectral-library-annotation-matching`
 
-**EDAM operation:** `operation_3860` (molecular formula identification) /
-`operation_3801` (structure prediction)
+**Tools (primary):** MSThunder, Windows, GNPS, MSConvert
 
-**Inputs:** `spectra_sirius.mgf` (from preprocess)
+**Other candidate tools:** microbeMASST, metadataMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, GNPS_MASST, GNPS libraries, Fast Search API, MZmine, MASSBANK, DrugBANK, meRgeION2, RChemMass, MS2Compound, CFM-id, mssearchr, R, NIST API, ANN-SoLo, Python, Anaconda, Git, MSBERT, PyTorch, matchms, Spec2Vec, nplinker, pytest
 
-**Outputs:**
-- `sirius_results/compound_identification.tsv` — per-feature formula + structure +
-  confidence scores
-- `sirius_results/canopus_summary.tsv` — compound-class predictions (ClassyFire)
+**Grounding:** 8 KB(s); DOIs: 10.1016/j.enceco.2025.07.022, 10.1021/acs.analchem.2c04343, 10.1021/acs.analchem.4c02426, 10.1021/acs.jproteome.8b00359 …
 
-**Primary leaf skill:** `sirius-spectral-request-construction`
-- Tools: CSI:FingerID, SIRIUS, CANOPUS
-- Grounding kb_slugs: `asb-paper-10-1038-s41587-021-01045-9`
-- DOIs: `10.1038/s41587-021-01045-9`
+### Stage 5 — sirius
 
-**Candidate leaf skills:**
-- `web-service-api-integration` — Submits parsed mass spectra to SIRIUS web
-  service endpoints and retrieves molecular fingerprint predictions, de-novo
-  candidates, or compound-class predictions (Tools: CSI:FingerID, MSNovelist,
-  SIRIUS, CANOPUS;
-  kb_slugs: `asb-paper-10-1038-s41587-021-01045-9`;
-  DOIs: `10.1038/s41587-021-01045-9`)
-- `sirius-zodiac-score-filtering` — Filters compound_identification.tsv by Zodiac
-  and Cosmic confidence scores to eliminate low-confidence SIRIUS annotations
-  (Tools: SIRIUS, INVENTA, CANOPUS;
-  kb_slugs: `asb-paper-10-3389-fmolb-2022-1028334`,
-  `asb-paper-10-1038-s41467-021-23953-9`;
-  DOIs: `10.3389/fmolb.2022.1028334`, `10.1038/s41467-021-23953-9`)
-- `spectral-fingerprint-web-service-query` — Queries CANOPUS web service for
-  systematic structural classification with compound-class confidence estimates
-  (Tools: CANOPUS, SIRIUS, CSI:FingerID, ClassyFire;
-  kb_slugs: `asb-paper-10-1038-s41587-021-01045-9`;
-  DOIs: `10.1038/s41587-021-01045-9`)
-- `de-novo-structure-candidate-ranking` — De-novo structure generation and ranking
-  via MSNovelist for unknowns absent from spectral libraries (Tools: MSNovelist,
-  SIRIUS, CSI:FingerID, CANOPUS;
-  kb_slugs: `asb-paper-10-1038-s41587-021-01045-9`;
-  DOIs: `10.1038/s41587-021-01045-9`)
+**Goal:** MS2 spectra -> formula + structure + class (SIRIUS / CSI:FingerID / CANOPUS)
 
-**Verification:** compound_identification.tsv must contain InChIKey and ConfidenceScore
-columns; canopus_summary.tsv must contain NPC#pathway and ClassyFire#superclass columns.
+**EDAM operation:** operation_3860
 
----
+**Inputs:** mgf/sirius · **Outputs:** tsv
 
-### Stage 5 — taxonomy_propagate  [OPTIONAL]
+**Candidate leaf skills:** `sirius-spectral-request-construction` (primary), `web-service-api-integration`, `spectrum-query-formatting`, `spectral-fingerprint-web-service-query`, `molecular-fingerprint-parsing`
 
-**Goal:** Reweight and propagate annotations using organism/taxon context (TIMA +
-LOTUS) to reduce false positives and propagate high-confidence hits to unannotated
-features.
+**Tools (primary):** CSI:FingerID, SIRIUS, CANOPUS
 
-**EDAM operation:** (no canonical EDAM; biological context reweighting)
+**Other candidate tools:** MSNovelist, ClassyFire
 
-**Inputs:**
-- `library_matches.tsv` (from library_match)
-- `sirius_results/compound_identification.tsv` (from sirius)
-- Organism taxonomy metadata (sample manifest with taxon names or NCBI/GBIF IDs)
+**Grounding:** 1 KB(s); DOIs: 10.1038/s41587-021-01045-9
 
-**Outputs:**
-- `tima_reweighted.tsv` — reweighted candidate rank list with TIMA scores
+### Stage 6 — taxonomy_propagate  [OPTIONAL]
 
-**Primary leaf skill:** `metabolite-annotation-taxonomic-integration`
-- Tools: R, tima (R package), LOTUS, SIRIUS v5/v6, GNPS, Spectra (R package)
-- Grounding kb_slugs: `asb-paper-10-3389-fpls-2019-01329`
-- DOIs: `10.3389/fpls.2019.01329`
+**Goal:** (optional) taxonomy-aware re-weighting / propagation of annotations
 
-**Candidate leaf skills:**
-- `taxonomic-weighting-in-annotation` — Applies organism/taxon-derived TIMA weights
-  to candidate rank lists with Docker deployment (Tools: R, Docker,
-  tima (Taxonomically Informed Metabolite Annotation), LOTUS, SIRIUS, GNPS-FBMN;
-  kb_slugs: `asb-paper-10-3389-fpls-2019-01329`;
-  DOIs: `10.3389/fpls.2019.01329`)
-- `metabolite-annotation-scoring` — Full TIMA scoring pipeline integrating MS/MS
-  spectral similarity, chemical consistency, and taxonomic plausibility (Tools: R,
-  Docker, tima (Taxonomically Informed Metabolite Annotation), LOTUS, SIRIUS,
-  GNPS-FBMN;
-  kb_slugs: `asb-paper-10-3389-fpls-2019-01329`, `asb-paper-10-1038-nbt-3597`,
-  `asb-paper-10-1038-s41592-019-0344-8`;
-  DOIs: `10.3389/fpls.2019.01329`, `10.1038/nbt.3597`,
-  `10.1038/s41592-019-0344-8`)
-- `spectral-library-matching-with-taxonomy` — Ranks annotations by both spectral
-  similarity AND biochemical likelihood given organism taxonomy (Tools: R, Docker,
-  tima (Taxonomically Informed Metabolite Annotation), LOTUS (Natural Products
-  Database), SIRIUS (v5/v6), GNPS-FBMN;
-  kb_slugs: `asb-paper-10-3389-fpls-2019-01329`;
-  DOIs: `10.3389/fpls.2019.01329`)
-- `ranked-candidate-prioritization` — Final reranking of candidate lists using
-  TIMA + biological metadata; outputs ranked table (Tools: R, Docker, tima, LOTUS,
-  SIRIUS v5/v6, GNPS-FBMN;
-  kb_slugs: `asb-paper-10-3389-fpls-2019-01329`;
-  DOIs: `10.3389/fpls.2019.01329`)
+**EDAM operation:** —
 
-**Verification (when run):** tima_reweighted.tsv must have a score column; scores
-must be numeric and bounded [0, 1]; feature count must match the input feature table.
+**Inputs:** tsv, tsv, metadata · **Outputs:** tsv
 
----
+**Candidate leaf skills:** `taxonomic-weighting-in-annotation` (primary), `metabolite-annotation-taxonomic-integration`, `metabolite-annotation-scoring`, `metabolite-annotation-network-architecture`
 
-### Stage 6 — fusion
+**Tools (primary):** R, Docker, tima (Taxonomically Informed Metabolite Annotation), LOTUS, SIRIUS, GNPS-FBMN
 
-**Goal:** Fuse all per-tool annotations into one master feature table via InChIKey
-deduplication and adduct/isotope grouping; export Cytoscape-ready format.
+**Other candidate tools:** tima (R package), GNPS, Spectra (R package), MrnAnnoAlgo3 (MetDNA3), MrnAnnoAlgo3, MetDNA3
 
-**EDAM operation:** `operation_3434` (format conversion / data integration)
+**Grounding:** 4 KB(s); DOIs: 10.1038/nbt.3597, 10.1038/s41467-025-63536-6, 10.1038/s41592-019-0344-8, 10.3389/fpls.2019.01329
 
-**Inputs:**
-- `feature_table.csv` (from preprocess)
-- `network.graphml` + `components.tsv` (from network)
-- `library_matches.tsv` (from library_match)
-- `sirius_results/compound_identification.tsv` + `canopus_summary.tsv` (from sirius)
-- `tima_reweighted.tsv` (from taxonomy_propagate, if run)
+### Stage 7 — fusion
 
-**Outputs:**
-- `master_feature_table.tsv` — one row per feature, all annotation columns joined
-- `master_feature_table_cytoscape.graphml` — Cytoscape-compatible export
+**Goal:** consolidate networking + library + SIRIUS (+ taxonomy) into one master table
 
-**Primary leaf skill:** `mass-spectrometry-feature-deduplication`
-- Tools: MolNotator, PyYAML, Python
-- Grounding kb_slugs: `asb-paper-10-1101-2021-12-21-473622v1`
-- DOIs: `10.1101/2021.12.21.473622v1`
+**EDAM operation:** operation_3434
 
-**Candidate leaf skills:**
-- `feature-network-construction-from-mass-spectrometry` — networkx/asari/khipu
-  network construction from LC-MS feature tables with isotope and adduct annotation
-  (Tools: networkx, treelib, mass2chem, metDataModel, Python 3, asari, khipu;
-  kb_slugs: `asb-paper-10-1021-acs-analchem-2c05810`;
-  DOIs: `10.1021/acs.analchem.2c05810`)
-- `feature-metadata-annotation` — msFeaST dashboard combining quantification,
-  sample metadata, and spectral annotations into a unified queryable artifact
-  (Tools: msFeaST, jupyter-notebook, msFeaST Dashboard bundle;
-  kb_slugs: `asb-paper-10-1093-bioinformatics-btae584`;
-  DOIs: `10.1093/bioinformatics/btae584`)
-- `feature-table-annotation-table-construction` — patRoon/GetFeatistics joining of
-  XCMS/MS-Dial feature tables with reference compound databases (Tools: R, XCMS,
-  MS-Dial, GetFeatistics, patRoon;
-  kb_slugs: `asb-paper-10-1515-jib-2025-0047`;
-  DOIs: `10.1515/jib-2025-0047`)
+**Inputs:** feature-table, graphml, tsv · **Outputs:** tsv
 
-**Verification:** master_feature_table.tsv must have one row per input feature;
-columns from each upstream stage must be present (network_component, cosine_score,
-sirius_formula, etc.); no duplicate feature_id values; Cytoscape graphml must be
-parseable.
+**Candidate leaf skills:** `feature-metadata-annotation` (primary), `feature-network-construction-from-mass-spectrometry`, `sample-centric-metabolite-annotation`, `feature-table-consensus-aggregation`, `unannotated-feature-characterization`, `feature-table-integration-and-normalization`
 
----
+**Tools (primary):** msFeaST, jupyter-notebook, msFeaST Dashboard bundle
+
+**Other candidate tools:** networkx, treelib, mass2chem, metDataModel, Python 3, asari, khipu, ENPKG, MZmine, enpkg_mn_isdb_taxo, enpkg_sirius_canopus, enpkg_meta_analysis, SIRIUS, Open Tree of Life, Wikidata, NPClassifier, ChEMBL, Python, DEIMoS, numpy, ProteoWizard msconvert, MZmine2, MZmine3, timaR, Ion Identity, Inventa, ISFrag, R, XCMS
+
+**Grounding:** 7 KB(s); DOIs: 10.1021/acs.analchem.1c01644, 10.1021/acs.analchem.1c05017, 10.1021/acs.analchem.2c05810, 10.1021/acscentsci.3c00800 …
 
 ## Grounding
 
-Run `/ground` per stage to verify against source papers via Perspicacité (server
-on :8002, KB prefix `asb-paper-*`):
-
-```
-/ground stage=preprocess     kb=asb-paper-10-1021-acs-jnatprod-7b00737
-/ground stage=network        kb=asb-paper-10-1038-s41596-024-01046-3
-/ground stage=library_match  kb=asb-paper-10-1038-s41538-022-00137-3
-/ground stage=sirius         kb=asb-paper-10-1038-s41587-021-01045-9
-/ground stage=taxonomy_propagate kb=asb-paper-10-3389-fpls-2019-01329  # optional
-/ground stage=fusion         kb=asb-paper-10-1021-acs-analchem-2c05810
-```
-
-When no Perspicacité server is available, ground against the DOIs listed per stage
-using the local `skills_index.json` embedding search (offline fallback, P4).
+Each stage carries the `kb_slugs`/`dois` of the leaves it draws on. Ground any stage against its source paper with the collection's `/ground` command or `bin/perspicacite_kb_bind.py` (Perspicacité KB; serverless local-clone fallback).
 
 ## Verification contract
 
-The `asb solve-workflow` rubric grades this workflow on eight dimensions:
-
-| Rubric dimension        | Binding | Notes |
-|-------------------------|---------|-------|
-| STEP_ORDERING           | binding | preprocess → network → library_match → sirius → (taxonomy_propagate) → fusion |
-| TOOL_SELECTION          | binding | MZmine/OpenMS for preprocess; GNPS/matchms for network; GNPS/MASSBANK for library_match; SIRIUS 6 for sirius |
-| INTERMEDIATE_FIDELITY   | binding | feature_table, mgf×2, network.graphml, library_matches, compound_identification, tima_reweighted |
-| END_TO_END_OUTPUT       | binding | master_feature_table.tsv must exist and be non-empty |
-| SCIENTIFIC_VALIDITY     | binding | annotations must carry MSI level metadata; provenance columns must trace to source |
-| CLAIM_VALIDATION        | informational | cross-check annotation counts vs reported literature benchmarks |
-| REPRODUCTION            | informational | mgf → SIRIUS → compound_identification round-trip checksum |
-| PARAMETER_SENSITIVITY   | informational | cosine threshold 0.7; SIRIUS confidence filter cosmicScore >= 0.5 |
+`workflow.yaml` is gradable by `asb solve-workflow` (checkpoint mode). Each stage declares typed outputs; the final stage emits the master deliverable.
 
 ## Provenance
 
-- **schema_version:** 0.3.0
-- **kind:** composite-workflow (P0 pilot)
-- **bound_by:** perspicacite-semantic (embedding retrieval text-embedding-3-large + LLM judge)
-- **v1 archived:** `../_archive/untargeted-lcmsms-annotation.v1-index` (index-bound)
-- **derived_from_workflows:** see `metadata.derived_from_workflows` — these benchmark
-  items are ablated by the eval harness when this super-skill is installed
-  (SPEC §8 integrity contract).
-- **authored:** 2026-06-28
-- **generator:** AgenticScienceBuilder v2-semantic-binding
-- **collection:** metabolomics v2 (5,865 skills / 909 tools / 568 papers)
+Generated by `compose_workflows.py` (semantic binding + EDAM-aware primary selection). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.

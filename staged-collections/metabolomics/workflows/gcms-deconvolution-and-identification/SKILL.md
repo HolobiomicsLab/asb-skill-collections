@@ -13,94 +13,47 @@ metadata:
   - GC-MS
   stage_count: 5
   member_skills:
-  - gc-ms-spectral-deconvolution
   - gcms-spectrum-deconvolution
+  - gc-ms-spectral-deconvolution
   - pure-component-spectrum-extraction
   - mass-spectral-component-extraction
   - deconvolved-spectrum-comparison
+  - gc-ms-spectral-library-matching
+  - low-resolution-compound-identification
   - electron-ionization-spectral-comparison
   - spectral-similarity-scoring-ei-simple
-  - gc-ms-spectral-library-matching
-  - mass-spectrometry-network-construction
+  - spectral-library-molecular-networking
+  - mass-spectrometry-column-polarity-filtering
   - retention-index-calibration-application
   - retention-index-assignment-and-filtering
-  - low-resolution-compound-identification
   - gc-column-polarity-specific-ri-filtering
   - kovats-retention-index-extraction-and-assignment
   - group-comparison-statistics
   - gc-ms-data-preprocessing-and-normalization
-  - gcxgc-ms-multivariate-analysis
   - univariate-statistical-testing-for-metabolomics
   - permanova-statistical-testing-multivariate-groups
-  - feature-consolidation-across-samples
+  - compound-area-aggregation-across-samples
   - mass-spectrometry-feature-grouping
-  - feature-table-matrix-assembly
   - feature-alignment-metabolomics
   member_tools:
-  - MSHub
-  - GNPS
   - GNPS_GC
-  - PyTorch
-  - Python 3
-  - conda
-  - GCMSFormer
-  - mssearchr
-  - R
-  - NIST API
   - CoreMS
   - LowResMassSpectralMatch
   - GC_RI_Calibration
   - MetaMS
-  - PNNLMetV20191015.MSL
   - mspcompiler
-  - future
-  - future.apply
-  - Lib2NIST
-  - MS-DIAL
-  - MoNA
-  - RIKEN
-  - NIST MS Search
-  - MS Search
-  - R statistical environment
-  - NIST Library Installation
+  - R
+  - NIST
   - LargeMetabo
   - Marker_Identify
   - e1071
   - FSelector
   - mixOmics
   - siggenes
-  - NPFimg
-  - XCMS
-  - RGCxGC
-  - colorRamps
-  - omu (omu_summary function)
-  - assign_hierarchy
-  - omu_summary
-  - omu_anova
-  - count_fold_changes
-  - transform_samples
-  - MetaboDirect
-  - vegan (R package)
-  - Python 3.8
-  - R 4.0.2
-  - vegan
-  - Python
-  - BreathXplorer
-  - Python pandas
-  - patRoon
-  - OpenMS
-  - enviPick
-  - KPIC2
-  - PFΔScreen
-  - pyOpenMS
-  - pandas
-  - MsFeatures
-  - faahKO
-  - mzrtsim
-  - SummarizedExperiment
-  - R base
-  - openNAU
-  - MetaQC
+  - spreadOut()
+  - mzExacto()
+  - Agilent Unknowns Analysis
+  coverage_gaps: []
   derived_from_workflows: []
   bound_by: perspicacite-semantic
 schema_version: 0.3.0
@@ -138,9 +91,11 @@ Use when you have GC-MS data (mzML / CDF, typically EI) and want deconvolved, re
 
 **Inputs:** mzML · **Outputs:** feature-table, mgf
 
-**Candidate leaf skills:** `gc-ms-spectral-deconvolution` (primary), `gcms-spectrum-deconvolution`, `pure-component-spectrum-extraction`, `mass-spectral-component-extraction`, `deconvolved-spectrum-comparison`
+**Candidate leaf skills:** `gcms-spectrum-deconvolution` (primary), `gc-ms-spectral-deconvolution`, `pure-component-spectrum-extraction`, `mass-spectral-component-extraction`, `deconvolved-spectrum-comparison`
 
-**Tools:** MSHub, GNPS, GNPS_GC, PyTorch, Python 3, conda, GCMSFormer
+**Tools (primary):** GNPS_GC
+
+**Other candidate tools:** MSHub, GNPS, PyTorch, Python 3, conda, GCMSFormer
 
 **Grounding:** 2 KB(s); DOIs: 10.1021/acs.analchem.3c05772, 10.1038/s41587-020-0700-3
 
@@ -152,9 +107,11 @@ Use when you have GC-MS data (mzML / CDF, typically EI) and want deconvolved, re
 
 **Inputs:** mgf · **Outputs:** tsv
 
-**Candidate leaf skills:** `electron-ionization-spectral-comparison` (primary), `spectral-similarity-scoring-ei-simple`, `gc-ms-spectral-library-matching`, `mass-spectrometry-network-construction`
+**Candidate leaf skills:** `gc-ms-spectral-library-matching` (primary), `low-resolution-compound-identification`, `electron-ionization-spectral-comparison`, `spectral-similarity-scoring-ei-simple`, `spectral-library-molecular-networking`
 
-**Tools:** mssearchr, R, NIST API, CoreMS, LowResMassSpectralMatch, GC_RI_Calibration, MetaMS, GNPS_GC
+**Tools (primary):** CoreMS, LowResMassSpectralMatch, GC_RI_Calibration, MetaMS
+
+**Other candidate tools:** PNNLMetV20191015.MSL, mssearchr, R, NIST API, MSHub, GNPS
 
 **Grounding:** 3 KB(s); DOIs: 10.1021/jasms.5c00322, 10.1038/s41587-020-0700-3, 10.5281/zenodo.14009575
 
@@ -166,9 +123,11 @@ Use when you have GC-MS data (mzML / CDF, typically EI) and want deconvolved, re
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `retention-index-calibration-application` (primary), `retention-index-assignment-and-filtering`, `low-resolution-compound-identification`, `gc-column-polarity-specific-ri-filtering`, `kovats-retention-index-extraction-and-assignment`
+**Candidate leaf skills:** `mass-spectrometry-column-polarity-filtering` (primary), `retention-index-calibration-application`, `retention-index-assignment-and-filtering`, `gc-column-polarity-specific-ri-filtering`, `kovats-retention-index-extraction-and-assignment`
 
-**Tools:** CoreMS, GC_RI_Calibration, LowResMassSpectralMatch, PNNLMetV20191015.MSL, mspcompiler, R, future, future.apply, Lib2NIST, MS-DIAL, MoNA, RIKEN, NIST MS Search, MS Search, R statistical environment, NIST Library Installation
+**Tools (primary):** mspcompiler, R, NIST
+
+**Other candidate tools:** CoreMS, GC_RI_Calibration, LowResMassSpectralMatch, PNNLMetV20191015.MSL, future, future.apply, Lib2NIST, MS-DIAL, MoNA, RIKEN, NIST MS Search, MS Search, R statistical environment, NIST Library Installation
 
 **Grounding:** 2 KB(s); DOIs: 10.1021/acs.analchem.2c05389, 10.5281/zenodo.14009575
 
@@ -180,11 +139,13 @@ Use when you have GC-MS data (mzML / CDF, typically EI) and want deconvolved, re
 
 **Inputs:** feature-table, tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `group-comparison-statistics` (primary), `gc-ms-data-preprocessing-and-normalization`, `gcxgc-ms-multivariate-analysis`, `univariate-statistical-testing-for-metabolomics`, `permanova-statistical-testing-multivariate-groups`
+**Candidate leaf skills:** `group-comparison-statistics` (primary), `gc-ms-data-preprocessing-and-normalization`, `univariate-statistical-testing-for-metabolomics`, `permanova-statistical-testing-multivariate-groups`
 
-**Tools:** LargeMetabo, Marker_Identify, e1071, FSelector, mixOmics, siggenes, NPFimg, XCMS, RGCxGC, R, colorRamps, omu (omu_summary function), assign_hierarchy, omu_summary, omu_anova, count_fold_changes, transform_samples, MetaboDirect, vegan (R package), Python 3.8, R 4.0.2, vegan, Python
+**Tools (primary):** LargeMetabo, Marker_Identify, e1071, FSelector, mixOmics, siggenes
 
-**Grounding:** 7 KB(s); DOIs: 10.1016/j.microc.2020.104830, 10.1021/acs.analchem.1c03163, 10.1021/acs.analchem.1c03163?ref=, 10.1093/bib/bbac455 …
+**Other candidate tools:** NPFimg, XCMS, R, omu (omu_summary function), assign_hierarchy, omu_summary, omu_anova, count_fold_changes, transform_samples, MetaboDirect, vegan (R package), Python 3.8, R 4.0.2, vegan, Python
+
+**Grounding:** 5 KB(s); DOIs: 10.1021/acs.analchem.1c03163, 10.1021/acs.analchem.1c03163?ref=, 10.1093/bib/bbac455, 10.1128/mra.00129-19 …
 
 ### Stage 5 — fusion
 
@@ -194,11 +155,13 @@ Use when you have GC-MS data (mzML / CDF, typically EI) and want deconvolved, re
 
 **Inputs:** feature-table, tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `feature-consolidation-across-samples` (primary), `mass-spectrometry-feature-grouping`, `feature-table-matrix-assembly`, `feature-alignment-metabolomics`
+**Candidate leaf skills:** `compound-area-aggregation-across-samples` (primary), `mass-spectrometry-feature-grouping`, `feature-alignment-metabolomics`
 
-**Tools:** Python, BreathXplorer, Python pandas, patRoon, XCMS, OpenMS, enviPick, KPIC2, PFΔScreen, pyOpenMS, pandas, MsFeatures, faahKO, R, mzrtsim, SummarizedExperiment, R base, openNAU, MetaQC
+**Tools (primary):** R, spreadOut(), mzExacto(), Agilent Unknowns Analysis
 
-**Grounding:** 6 KB(s); DOIs: 10.1007/s00216-023-05070-2, 10.1021/ac051437y, 10.1021/acs.analchem.5c01213, 10.1021/jasms.4c00152 …
+**Other candidate tools:** patRoon, XCMS, OpenMS, enviPick, KPIC2, Python, PFΔScreen, pyOpenMS, pandas, MsFeatures, faahKO, openNAU, MetaQC
+
+**Grounding:** 5 KB(s); DOIs: 10.1007/s00216-023-05070-2, 10.1021/ac051437y, 10.1186/s13321-020-00477-w, 10.1371/journal.pone.0306202 …
 
 ## Grounding
 
@@ -210,4 +173,4 @@ Each stage carries the `kb_slugs`/`dois` of the leaves it draws on. Ground any s
 
 ## Provenance
 
-Generated by `compose_workflows.py` (semantic binding). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — these are the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.
+Generated by `compose_workflows.py` (semantic binding + EDAM-aware primary selection). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.

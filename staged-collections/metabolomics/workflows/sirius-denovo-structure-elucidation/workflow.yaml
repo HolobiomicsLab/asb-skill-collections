@@ -16,11 +16,7 @@ steps:
   tools:
   - SIRIUS
   - MIST-CF
-  - msfiddle
-  - FIDDLE
-  - BUDDY
-  - MIST
-  - SCARF
+  - ZODIAC
   inputs:
   - type: mgf
     flavour: sirius
@@ -34,98 +30,25 @@ steps:
     - 10.1021/acs.jcim.3c01082
     - 10.1038/s41467-025-66060-9
   after: []
-- id: structure
-  goal: structure prediction (CSI:FingerID + COSMIC)
-  edam_operation: operation_3801
-  skills:
-  - molecular-fingerprint-prediction
-  - molecular-fingerprint-parsing
-  - web-service-api-integration
-  - de-novo-structure-candidate-ranking
-  - spectrum-query-formatting
-  tools:
-  - PyTorch
+  candidate_tools:
+  - msfiddle
+  - FIDDLE
+  - BUDDY
   - MIST
-  - MIST-CF
-  - SIRIUS decomp
-  - CSI:FingerID
-  - SIRIUS
-  - CANOPUS
-  - MSNovelist
-  inputs:
-  - type: tsv
-  outputs:
-  - type: tsv
-  grounding:
-    kb_slugs:
-    - asb-paper-10-1038-s41587-021-01045-9
-    - asb-paper-10-1038-s42256-023-00708-3
-    dois:
-    - 10.1038/s41587-021-01045-9
-    - 10.1038/s42256-023-00708-3
-  after:
-  - formula
-  inputs_from:
-    formula:
-    - tsv
-- id: compound_class
-  goal: compound class prediction (CANOPUS / NPClassifier)
-  edam_operation: operation_3803
-  skills:
-  - chemical-classification-scheme-validation
-  - natural-product-classifier-substitution
-  - classification-workflow-parameter-toggling
-  - chemical-ontology-mapping
-  - consensus-classification-reconciliation
-  tools:
-  - NPClassifier
-  - SIRIUS
-  - GNPS
-  - ClassyFire
-  - ConCISE
-  - Fiehn Labs ClassyFire Batch
-  - CANOPUS
-  inputs:
-  - type: tsv
-  outputs:
-  - type: tsv
-  grounding:
-    kb_slugs:
-    - asb-paper-10-3390-metabo12121275
-    dois:
-    - 10.3390/metabo12121275
-  after:
-  - formula
-  inputs_from:
-    formula:
-    - tsv
+  - SCARF
 - id: custom_db
   goal: (optional) build a custom structure database for the search space
   edam_operation: operation_3434
   skills:
+  - compound-structure-processing
   - chemical-structure-validation
   - molecular-structure-input-format-handling
   - structure-standardization-validation
-  - compound-structure-processing
   - chemical-structure-serialization
   tools:
-  - RDKit
-  - PubChemPy
-  - Python
-  - SIRIUS
-  - MetFrag
-  - biosynfoni
-  - pip
-  - PubChem standardization
-  - rcdk
   - CFM-ID
-  - PHP
-  - Symfony
-  - MySQL 8
-  - MariaDB 10
-  - CycloBranch
   inputs:
-  - type: tsv
+  - type: smiles
   outputs:
   - type: tsv
   grounding:
@@ -142,29 +65,114 @@ steps:
     - 10.26434/chemrxiv-2025-cwq74
     - 10.3389/fchem.2022.908572
   after: []
+  candidate_tools:
+  - RDKit
+  - PubChemPy
+  - Python
+  - SIRIUS
+  - MetFrag
+  - biosynfoni
+  - pip
+  - PubChem standardization
+  - rcdk
+  - PHP
+  - Symfony
+  - MySQL 8
+  - MariaDB 10
+  - CycloBranch
   optional: true
+- id: structure
+  goal: structure prediction (CSI:FingerID + COSMIC)
+  edam_operation: operation_3801
+  skills:
+  - de-novo-structure-candidate-ranking
+  - molecular-fingerprint-prediction
+  - molecular-fingerprint-parsing
+  - web-service-api-integration
+  - spectrum-query-formatting
+  tools:
+  - MSNovelist
+  - SIRIUS
+  - CSI:FingerID
+  - CANOPUS
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1038-s41587-021-01045-9
+    - asb-paper-10-1038-s42256-023-00708-3
+    dois:
+    - 10.1038/s41587-021-01045-9
+    - 10.1038/s42256-023-00708-3
+  after:
+  - formula
+  - custom_db
+  candidate_tools:
+  - PyTorch
+  - MIST
+  - MIST-CF
+  - SIRIUS decomp
+  inputs_from:
+    formula:
+    - tsv
+    custom_db:
+    - tsv
+- id: compound_class
+  goal: compound class prediction (CANOPUS / NPClassifier)
+  edam_operation: operation_3803
+  skills:
+  - compound-class-annotation-parsing
+  - natural-product-classifier-substitution
+  - classification-workflow-parameter-toggling
+  - chemical-ontology-mapping
+  - consensus-classification-reconciliation
+  - chemical-class-assignment-classyfire
+  tools:
+  - CANOPUS
+  - SIRIUS
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1038-s41587-021-01045-9
+    - asb-paper-10-1186-s13321-021-00558-4
+    - asb-paper-10-3390-metabo12121275
+    dois:
+    - 10.1038/s41587-021-01045-9
+    - 10.1186/s13321-021-00558-4
+    - 10.3390/metabo12121275
+  after:
+  - structure
+  candidate_tools:
+  - NPClassifier
+  - GNPS
+  - ClassyFire
+  - ConCISE
+  - matchms
+  - MS2DeepScore
+  - scikit-learn
+  - Python
+  - RDKit
+  inputs_from:
+    structure:
+    - tsv
 - id: confidence_filter
   goal: filter annotations by ZODIAC / COSMIC confidence
   edam_operation: operation_3695
   skills:
   - sirius-zodiac-score-filtering
   - annotation-table-quality-control
-  - spectral-annotation-filtering-by-similarity-metrics
   - metabolite-annotation-validation
   - structural-annotation-integration
+  - compound-candidate-ranking
   tools:
   - SIRIUS
   - INVENTA
   - CANOPUS
-  - GNPS
-  - MZmine2
-  - MZmine3
-  - timaR
-  - MEMO
-  - ISDB
-  - NPClassifier
-  - ClassyFire
-  - ConCISE
   inputs:
   - type: tsv
   - type: tsv
@@ -173,15 +181,28 @@ steps:
   grounding:
     kb_slugs:
     - asb-paper-10-1038-s41467-021-23953-9
+    - asb-paper-10-1186-s13321-023-00695-y
     - asb-paper-10-3389-fmolb-2022-1028334
     - asb-paper-10-3390-metabo12121275
     dois:
     - 10.1038/s41467-021-23953-9
+    - 10.1186/s13321-023-00695-y
     - 10.3389/fmolb.2022.1028334
     - 10.3390/metabo12121275
   after:
   - structure
   - compound_class
+  candidate_tools:
+  - GNPS
+  - ISDB
+  - timaR
+  - NPClassifier
+  - ClassyFire
+  - ConCISE
+  - RDKit
+  - PubChemPy
+  - Python
+  - MetFrag
   inputs_from:
     structure:
     - tsv
@@ -194,3 +215,4 @@ verification:
 provenance:
   derived_from_workflows: []
   bound_by: perspicacite-semantic
+  coverage_gaps: []

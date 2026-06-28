@@ -18,17 +18,18 @@ metadata:
   - metabolomics-data-quality-assessment
   - metabolite-feature-column-mapping
   - metabolomic-feature-table-assembly
-  - metabolic-network-mapping
   - pathway-activity-propagation-inference
+  - metabolic-network-mapping
   - functional-module-inference-from-networks
   - network-based-functional-prediction
   - mass-feature-to-node-mapping
-  - metabolite-set-enrichment-analysis
-  - pathway-metabolite-mapping-integration
-  - metabolic-pathway-database-querying
   - metabolite-set-analysis
-  - metabolite-kegg-pathway-enrichment
+  - metabolite-set-enrichment-analysis
+  - comparative-enrichment-method-evaluation
+  - untargeted-metabolomics-feature-interpretation
+  - pathway-metabolite-mapping-integration
   - pathway-enrichment-visualization
+  - metabolite-kegg-pathway-enrichment
   - enrichment-score-computation
   - metabolomic-biomarker-pathway-association
   member_tools:
@@ -36,40 +37,22 @@ metadata:
   - metDataModel
   - JMS
   - mass2chem
-  - MetaboAnalystR
-  - R
-  - metabCombiner
-  - JPA
-  - XCMS
-  - MS-Convert
   - Python
   - mummichog (v3)
-  - mummichog
-  - fgsea
-  - readr
-  - readxl
-  - KEGG
-  - enrichmet
-  - KEGGREST
-  - igraph
-  - clusterProfiler
-  - margheRita
-  - ComplexHeatmap
   - PALS (Pathway Activity Level Scoring)
   - PALS Viewer
   - ORA (Over-Representation Analysis)
   - GSEA (Gene Set Enrichment Analysis)
   - GNPS (Global Natural Products Social Molecular Networking)
   - MS2LDA
-  - ggplot2
-  - KEGG_Enrich_PlotPanel
-  - Enrichment
-  - KEGG_Enrich_Plot
-  - Python (pandas, NumPy, SciPy)
-  - Statistical analysis libraries (scipy.stats for enrichment tests)
-  - MetENP
-  - pathview
-  - SciPy (scipy.stats)
+  - R
+  - fgsea
+  - readr
+  - readxl
+  - enrichmet
+  - KEGGREST
+  - igraph
+  coverage_gaps: []
   derived_from_workflows: []
   bound_by: perspicacite-semantic
 schema_version: 0.3.0
@@ -109,7 +92,9 @@ Use when you have an LC-MS metabolomics feature list (m/z, optionally p-values/f
 
 **Candidate leaf skills:** `untargeted-metabolomics-feature-analysis` (primary), `metabolomics-data-quality-assessment`, `metabolite-feature-column-mapping`, `metabolomic-feature-table-assembly`
 
-**Tools:** Mummichog 3, metDataModel, JMS, mass2chem, MetaboAnalystR, R, metabCombiner, JPA, XCMS, MS-Convert
+**Tools (primary):** Mummichog 3, metDataModel, JMS, mass2chem
+
+**Other candidate tools:** MetaboAnalystR, R, metabCombiner, JPA, XCMS, MS-Convert
 
 **Grounding:** 4 KB(s); DOIs: 10.1021/acs.analchem.0c03693, 10.1038/s41467-024-48009-6, 10.1371/journal.pcbi.1003123, 10.3390/metabo12030212
 
@@ -121,9 +106,11 @@ Use when you have an LC-MS metabolomics feature list (m/z, optionally p-values/f
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `metabolic-network-mapping` (primary), `pathway-activity-propagation-inference`, `functional-module-inference-from-networks`, `network-based-functional-prediction`, `mass-feature-to-node-mapping`
+**Candidate leaf skills:** `pathway-activity-propagation-inference` (primary), `metabolic-network-mapping`, `functional-module-inference-from-networks`, `network-based-functional-prediction`, `mass-feature-to-node-mapping`
 
-**Tools:** Mummichog 3, metDataModel, JMS, mass2chem, Python, mummichog (v3), mummichog
+**Tools (primary):** Python, mummichog (v3), JMS, metDataModel, mass2chem
+
+**Other candidate tools:** Mummichog 3, mummichog
 
 **Grounding:** 1 KB(s); DOIs: 10.1371/journal.pcbi.1003123
 
@@ -133,13 +120,15 @@ Use when you have an LC-MS metabolomics feature list (m/z, optionally p-values/f
 
 **EDAM operation:** operation_3928
 
-**Inputs:** tsv · **Outputs:** tsv
+**Inputs:** tsv, tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `metabolite-set-enrichment-analysis` (primary), `pathway-metabolite-mapping-integration`, `metabolic-pathway-database-querying`, `metabolite-set-analysis`, `metabolite-kegg-pathway-enrichment`
+**Candidate leaf skills:** `metabolite-set-analysis` (primary), `metabolite-set-enrichment-analysis`, `comparative-enrichment-method-evaluation`, `untargeted-metabolomics-feature-interpretation`
 
-**Tools:** R, fgsea, readr, readxl, KEGG, enrichmet, KEGGREST, igraph, clusterProfiler, margheRita, ComplexHeatmap, PALS (Pathway Activity Level Scoring), PALS Viewer, ORA (Over-Representation Analysis), GSEA (Gene Set Enrichment Analysis), GNPS (Global Natural Products Social Molecular Networking), MS2LDA, ggplot2, KEGG_Enrich_PlotPanel, Enrichment, KEGG_Enrich_Plot
+**Tools (primary):** PALS (Pathway Activity Level Scoring), PALS Viewer, ORA (Over-Representation Analysis), GSEA (Gene Set Enrichment Analysis), GNPS (Global Natural Products Social Molecular Networking), MS2LDA
 
-**Grounding:** 6 KB(s); DOIs: 10.1093/bib/bbac455, 10.1101/2024.06.20.599545, 10.1101/2024.06.20.599545v1, 10.1101/2025.08.28.672951v2 …
+**Other candidate tools:** R, fgsea, readr, readxl, KEGG, enrichmet, KEGGREST, igraph, Python, mummichog, metDataModel, JMS, mass2chem
+
+**Grounding:** 4 KB(s); DOIs: 10.1101/2025.08.28.672951v2, 10.1186/1471-2105-6-225, 10.1371/journal.pcbi.1003123, 10.3390/metabo11020103
 
 ### Stage 4 — interpretation
 
@@ -147,13 +136,15 @@ Use when you have an LC-MS metabolomics feature list (m/z, optionally p-values/f
 
 **EDAM operation:** operation_3659
 
-**Inputs:** tsv, tsv · **Outputs:** tsv
+**Inputs:** tsv, tsv · **Outputs:** tsv, html
 
-**Candidate leaf skills:** `pathway-enrichment-visualization` (primary), `enrichment-score-computation`, `metabolomic-biomarker-pathway-association`
+**Candidate leaf skills:** `pathway-metabolite-mapping-integration` (primary), `pathway-enrichment-visualization`, `metabolite-kegg-pathway-enrichment`, `enrichment-score-computation`, `metabolomic-biomarker-pathway-association`
 
-**Tools:** clusterProfiler, margheRita, R, ComplexHeatmap, Python (pandas, NumPy, SciPy), Statistical analysis libraries (scipy.stats for enrichment tests), MetENP, KEGGREST, pathview, SciPy (scipy.stats), ggplot2, igraph, KEGG_Enrich_PlotPanel, Enrichment, KEGG_Enrich_Plot
+**Tools (primary):** R, fgsea, readr, readxl, enrichmet, KEGGREST, igraph
 
-**Grounding:** 4 KB(s); DOIs: 10.1093/bib/bbac455, 10.1101/2020.11.20.391912, 10.1101/2024.06.20.599545, 10.1101/2024.06.20.599545v1
+**Other candidate tools:** clusterProfiler, margheRita, ComplexHeatmap, ggplot2, KEGG_Enrich_PlotPanel, Enrichment, KEGG_Enrich_Plot, Python (pandas, NumPy, SciPy), Statistical analysis libraries (scipy.stats for enrichment tests), MetENP, pathview, SciPy (scipy.stats)
+
+**Grounding:** 5 KB(s); DOIs: 10.1093/bib/bbac455, 10.1101/2020.11.20.391912, 10.1101/2024.06.20.599545, 10.1101/2024.06.20.599545v1 …
 
 ## Grounding
 
@@ -165,4 +156,4 @@ Each stage carries the `kb_slugs`/`dois` of the leaves it draws on. Ground any s
 
 ## Provenance
 
-Generated by `compose_workflows.py` (semantic binding). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — these are the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.
+Generated by `compose_workflows.py` (semantic binding + EDAM-aware primary selection). `derived_from_workflows` lists ASB per-paper workflows whose structure corroborated this pipeline — the eval-ablation set (SPEC §8). Staging only; promote via `release_gate.py`.

@@ -18,14 +18,11 @@ steps:
   - MWASTools
   - TopSpin 3.2
   - Bruker Avance III 600 MHz
-  - SAND
-  - NMRPipe
-  - NMRBox
-  - PRIMA-Panel
   inputs:
   - type: nmr-spectrum
   outputs:
   - type: feature-table
+  - type: nmr-spectrum
   grounding:
     kb_slugs:
     - asb-paper-10-1021-acs-analchem-3c03078
@@ -36,6 +33,11 @@ steps:
     - 10.1021/acs.analchem.4c04938
     - 10.1093/bioinformatics/btx477
   after: []
+  candidate_tools:
+  - SAND
+  - NMRPipe
+  - NMRBox
+  - PRIMA-Panel
 - id: identification
   goal: identify metabolites by chemical shift matching
   edam_operation: operation_3803
@@ -50,16 +52,6 @@ steps:
   - Pandas
   - SciPy
   - NMRformer
-  - R
-  - Bioconductor
-  - MWASTools
-  - TopSpin 3.2
-  - openpyxl
-  - XlsxWriter
-  - Python
-  - PyQt5
-  - Human Metabolome Database (HMDB)
-  - ROIAL-NMR
   inputs:
   - type: feature-table
   outputs:
@@ -75,6 +67,17 @@ steps:
     - 10.1093/bioinformatics/btx477
   after:
   - preprocess_nmr
+  candidate_tools:
+  - R
+  - Bioconductor
+  - MWASTools
+  - TopSpin 3.2
+  - openpyxl
+  - XlsxWriter
+  - Python
+  - PyQt5
+  - Human Metabolome Database (HMDB)
+  - ROIAL-NMR
   inputs_from:
     preprocess_nmr:
     - feature-table
@@ -89,10 +92,8 @@ steps:
   - SAND
   - NMRPipe
   - NMRBox
-  - mcfNMR
-  - spec2csv
   inputs:
-  - type: feature-table
+  - type: nmr-spectrum
   - type: tsv
   outputs:
   - type: tsv
@@ -104,53 +105,36 @@ steps:
     - 10.1021/acs.analchem.3c03078
     - 10.1021/acs.analchem.4c01652
   after:
+  - preprocess_nmr
   - identification
+  candidate_tools:
+  - mcfNMR
+  - spec2csv
   inputs_from:
     preprocess_nmr:
-    - feature-table
+    - nmr-spectrum
     identification:
     - tsv
 - id: statistics
-  goal: multivariate + differential analysis of NMR profiles
+  goal: differential analysis of NMR profiles (univariate; multivariate where a leaf
+    exists)
   edam_operation: operation_3659
   skills:
-  - univariate-statistical-testing-for-metabolomics
   - multiple-testing-correction-metabolomics
-  - group-comparison-statistics
-  - multicontrast-statistical-testing-lipidomics
+  - confounder-adjustment-epidemiological-analysis
   tools:
-  - R
-  - omu (omu_summary function)
-  - assign_hierarchy
-  - omu_summary
-  - omu_anova
-  - count_fold_changes
-  - transform_samples
   - MWASTools
+  - R
   - Bioconductor
-  - LargeMetabo
-  - Marker_Identify
-  - e1071
-  - FSelector
-  - mixOmics
-  - siggenes
-  - lipidr
-  - limma
   inputs:
   - type: tsv
   outputs:
   - type: tsv
   grounding:
     kb_slugs:
-    - asb-paper-10-1021-acs-jproteome-0c00082
-    - asb-paper-10-1093-bib-bbac455
     - asb-paper-10-1093-bioinformatics-btx477
-    - asb-paper-10-1128-mra-00129-19
     dois:
-    - 10.1021/acs.jproteome.0c00082
-    - 10.1093/bib/bbac455
     - 10.1093/bioinformatics/btx477
-    - 10.1128/mra.00129-19
   after:
   - quantification
   inputs_from:
@@ -163,3 +147,4 @@ verification:
 provenance:
   derived_from_workflows: []
   bound_by: perspicacite-semantic
+  coverage_gaps: []

@@ -335,11 +335,15 @@ def _iter_skill_md(collection_dir: Path) -> Iterable[Path]:
     skills_dir = collection_dir / "skills"
     root = skills_dir if skills_dir.is_dir() else collection_dir
     for p in sorted(root.rglob("SKILL.md")):
+        parts = p.relative_to(root).parts[:-1]
         # Skip infrastructure skills in `_`-prefixed dirs (e.g. `_router`),
         # consistent with collect_metabolomics_collection.py's `_`-skip: they
         # are routing/entry scaffolds, not paper-derived skills, so the
-        # provenance / verbatim gates do not apply to them.
-        if any(part.startswith("_") for part in p.relative_to(root).parts[:-1]):
+        # provenance / verbatim gates do not apply to them. Likewise skip the
+        # composite-workflow subtree (`workflows/<slug>/`): those are composites
+        # of leaves with per-stage grounding, gated separately by check_workflows,
+        # not single-paper-derived leaves with one source DOI.
+        if any(part.startswith("_") for part in parts) or "workflows" in parts:
             continue
         yield p
 
@@ -806,14 +810,24 @@ def check_workflows(collection_dir: Path) -> CheckResult:
     if not wf_root.is_dir():
         res.add(PASS, "No workflows/ subtree (n/a).")
         return res
-    try:
-        idx = {r["slug"] for r in json.loads((collection_dir / "skills_index.json").read_text(encoding="utf-8"))}
-    except (OSError, ValueError) as exc:
-        res.add(FAIL, f"cannot load skills_index.json for workflow validation: {exc}")
-        return res
+    # Leaf slug resolution needs the leaf index. A staging subtree (workflows only) has no
+    # skills_index.json — its leaves live in the released collection — so degrade to a loud
+    # WARN and run the structural checks (DAG / collisions / tool leaks) rather than a false
+    # FAIL. Full slug resolution: validate_workflows.py --collection <released>.
+    idx: set | None = None
+    idx_path = collection_dir / "skills_index.json"
+    if idx_path.is_file():
+        try:
+            idx = {r["slug"] for r in json.loads(idx_path.read_text(encoding="utf-8"))}
+        except ValueError as exc:
+            res.add(FAIL, f"cannot parse skills_index.json: {exc}")
+            return res
+    else:
+        res.add(WARN, "no skills_index.json in this subtree — leaf-slug resolution deferred "
+                      "to validate_workflows.py --collection <released>; structural checks only.")
     n = 0
     for d in sorted(wf_root.iterdir()):
-        if not d.is_dir() or d.name.startswith("_"):
+        if not d.is_dir() or d.name.startswith("_") or d.name == "bin":
             continue
         n += 1
         name = d.name
@@ -835,7 +849,7 @@ def check_workflows(collection_dir: Path) -> CheckResult:
         for st in (wf.get("steps") or []):
             sid = st.get("id")
             for s in (st.get("skills") or []):
-                if s not in idx:
+                if idx is not None and s not in idx:
                     res.add(FAIL, f"{name}/{sid}: unresolved skill {s}", file=name)
                 if s in seen and seen[s] != sid:
                     res.add(FAIL, f"{name}: collision {s} ({seen[s]} & {sid})", file=name)

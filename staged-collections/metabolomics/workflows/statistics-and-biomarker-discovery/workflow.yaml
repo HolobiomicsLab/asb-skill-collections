@@ -18,27 +18,6 @@ steps:
   - Jupyter Notebook
   - Google Colab
   - FBMN-STATS web app
-  - R ≥4.1.2
-  - OUKS (Omics Untargeted Key Script)
-  - MAI package
-  - MetCorR
-  - GetFeatistics
-  - ggplot2
-  - XCMS
-  - MS-Dial
-  - dbnorm
-  - sva
-  - ber
-  - pcaMethods, limma, impute, BiocParallel, Biobase, mixOmics, statTarget
-  - MInfer
-  - MetaboAnalyst
-  - NormalizeMets
-  - RStudio
-  - NormQcmets
-  - LogTransform
-  - MissingValues
-  - RlaPlots
-  - PcaPlots
   inputs:
   - type: feature-table
   outputs:
@@ -61,6 +40,28 @@ steps:
     - 10.1038/s41598-021-84824-3
     - 10.1515/jib-2025-0047
   after: []
+  candidate_tools:
+  - R ≥4.1.2
+  - OUKS (Omics Untargeted Key Script)
+  - MAI package
+  - MetCorR
+  - GetFeatistics
+  - ggplot2
+  - XCMS
+  - MS-Dial
+  - dbnorm
+  - sva
+  - ber
+  - pcaMethods, limma, impute, BiocParallel, Biobase, mixOmics, statTarget
+  - MInfer
+  - MetaboAnalyst
+  - NormalizeMets
+  - RStudio
+  - NormQcmets
+  - LogTransform
+  - MissingValues
+  - RlaPlots
+  - PcaPlots
 - id: multivariate
   goal: multivariate analysis (PCA / PLS-DA / OPLS-DA, VIP)
   edam_operation: operation_3659
@@ -68,13 +69,33 @@ steps:
   - multivariate-statistical-analysis-metabolomics
   - multivariate-ordination-analysis
   - metabolomics-feature-selection-significance-filtering
-  - univariate-statistical-analysis-interpretation
   - multivariate-ordination-analysis-nmds-pca
+  - principal-component-analysis-for-metabolomics
   tools:
   - R
   - Jupyter Notebook
   - Google Colab
   - MZmine3
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-5c01327
+    - asb-paper-10-1038-s41596-024-01046-3
+    - asb-paper-10-1093-bioinformatics-btac059-6522114
+    - asb-paper-10-1186-s40168-023-01476-3
+    - asb-paper-10-1371-journal-pcbi-1011814
+    dois:
+    - 10.1021/acs.analchem.5c01327
+    - 10.1038/s41596-024-01046-3
+    - 10.1093/bioinformatics/btac059/6522114
+    - 10.1186/s40168-023-01476-3
+    - 10.1371/journal.pcbi.1011814
+  after:
+  - clean_normalize
+  candidate_tools:
   - vegan
   - MetaboDirect
   - R prcomp
@@ -87,31 +108,14 @@ steps:
   - matplotlib
   - MAMSI
   - MamsiStructSearch
-  - GNPS2 Web App
-  - Streamlit App
   - Python 3.8
   - R 4.0.2
   - seaborn
   - SYNCSA
   - ggpubr
   - factoextra
-  inputs:
-  - type: feature-table
-  outputs:
-  - type: tsv
-  grounding:
-    kb_slugs:
-    - asb-paper-10-1021-acs-analchem-5c01327
-    - asb-paper-10-1038-s41596-024-01046-3
-    - asb-paper-10-1186-s40168-023-01476-3
-    - asb-paper-10-1371-journal-pcbi-1011814
-    dois:
-    - 10.1021/acs.analchem.5c01327
-    - 10.1038/s41596-024-01046-3
-    - 10.1186/s40168-023-01476-3
-    - 10.1371/journal.pcbi.1011814
-  after:
-  - clean_normalize
+  - ggplot2
+  - metaboprep
   inputs_from:
     clean_normalize:
     - feature-table
@@ -119,29 +123,14 @@ steps:
   goal: differential feature analysis (univariate, volcano, FDR)
   edam_operation: operation_3659
   skills:
+  - metabolite-feature-anova-analysis
   - fold-change-calculation
   - multiple-testing-correction-and-p-value-adjustment
   - fold-change-calculation-metabolomics
   - fold-change-calculation-across-groups
-  - metabolite-feature-anova-analysis
   tools:
-  - Python (pandas, NumPy, SciPy)
-  - R (base stats, tidyverse, or similar)
-  - pandas
-  - NumPy
-  - SciPy
-  - edgeR.R
-  - DESeq2
-  - RankProd
-  - ggplot2
-  - ComplexHeatmap
-  - edgeR
-  - RankProduct
-  - LargeMetabo
-  - R
-  - pytest
-  - fermo_core
   - margheRita
+  - R
   - MS-DIAL
   inputs:
   - type: feature-table
@@ -164,6 +153,22 @@ steps:
     - 10.1101/2024.06.20.599545v1
   after:
   - clean_normalize
+  candidate_tools:
+  - Python (pandas, NumPy, SciPy)
+  - R (base stats, tidyverse, or similar)
+  - pandas
+  - NumPy
+  - SciPy
+  - edgeR.R
+  - DESeq2
+  - RankProd
+  - ggplot2
+  - ComplexHeatmap
+  - edgeR
+  - RankProduct
+  - LargeMetabo
+  - pytest
+  - fermo_core
   inputs_from:
     clean_normalize:
     - feature-table
@@ -185,14 +190,6 @@ steps:
   - enrichmet
   - KEGGREST
   - igraph
-  - ggplot2
-  - KEGG_Enrich_PlotPanel
-  - Enrichment
-  - KEGG_Enrich_Plot
-  - Mummichog 3
-  - metDataModel
-  - JMS
-  - mass2chem
   inputs:
   - type: tsv
   outputs:
@@ -208,6 +205,15 @@ steps:
     - 10.1371/journal.pcbi.1003123
   after:
   - differential
+  candidate_tools:
+  - ggplot2
+  - KEGG_Enrich_PlotPanel
+  - Enrichment
+  - KEGG_Enrich_Plot
+  - Mummichog 3
+  - metDataModel
+  - JMS
+  - mass2chem
   inputs_from:
     differential:
     - tsv
@@ -215,20 +221,14 @@ steps:
   goal: biomarker selection + ROC / importance
   edam_operation: operation_3659
   skills:
-  - metabolomics-model-performance-comparison
   - feature-importance-ranking
   - model-performance-evaluation-roc-curves
   - variable-importance-ranking-and-interpretation
   - random-forest-classification-for-metabolite-prediction
+  - metabolomic-biomarker-pathway-association
   tools:
-  - MetaClean
-  - R
-  - caret
   - MeTEor
-  - randomForest
-  - ggplot2
-  - Omu
-  - read.metabo
+  - R
   inputs:
   - type: tsv
   - type: tsv
@@ -237,19 +237,26 @@ steps:
   grounding:
     kb_slugs:
     - asb-paper-10-1007-978-3-319-47656-8-6
-    - asb-paper-10-1007-s11306-020-01738-3
+    - asb-paper-10-1093-bib-bbac455
     - asb-paper-10-1093-bioadv-vbae178
     - asb-paper-10-1128-mra-00129-19
-    - asb-paper-10-1186-1471-2105-15-s11-s5
     dois:
     - 10.1007/978-3-319-47656-8_6
-    - 10.1007/s11306-020-01738-3
+    - 10.1093/bib/bbac455
     - 10.1093/bioadv/vbae178
     - 10.1128/mra.00129-19
-    - 10.1186/1471-2105-15-s11-s5
   after:
   - multivariate
   - differential
+  candidate_tools:
+  - randomForest
+  - ggplot2
+  - Omu
+  - read.metabo
+  - igraph
+  - KEGG_Enrich_PlotPanel
+  - Enrichment
+  - KEGG_Enrich_Plot
   inputs_from:
     multivariate:
     - tsv
@@ -262,3 +269,4 @@ verification:
 provenance:
   derived_from_workflows: []
   bound_by: perspicacite-semantic
+  coverage_gaps: []

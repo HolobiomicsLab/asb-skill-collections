@@ -79,7 +79,7 @@ def main():
     idx = {r["slug"] for r in json.load(open(os.path.join(a.collection, "skills_index.json")))}
     dirs = [d for d in sorted(glob.glob(os.path.join(a.workflows, "*")))
             if os.path.isdir(d) and not os.path.basename(d).startswith("_")
-            and os.path.basename(d) != "_archive"]
+            and os.path.basename(d) not in ("_archive", "bin")]
     all_errs, n_ok = [], 0
     for d in dirs:
         errs = validate_one(d, idx)
