@@ -1,0 +1,264 @@
+schema_version: 0.3.0
+workflow_id: statistics_and_biomarker_discovery
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: clean_normalize
+  goal: clean + normalize the feature table
+  edam_operation: operation_3435
+  skills:
+  - metabolite-feature-normalization-across-batches
+  - metabolite-feature-intensity-normalization
+  - metabolomics-feature-transformation
+  - metabolomics-data-normalization
+  - metabolite-feature-matrix-manipulation
+  tools:
+  - R
+  - Jupyter Notebook
+  - Google Colab
+  - FBMN-STATS web app
+  - R ≥4.1.2
+  - OUKS (Omics Untargeted Key Script)
+  - MAI package
+  - MetCorR
+  - GetFeatistics
+  - ggplot2
+  - XCMS
+  - MS-Dial
+  - dbnorm
+  - sva
+  - ber
+  - pcaMethods, limma, impute, BiocParallel, Biobase, mixOmics, statTarget
+  - MInfer
+  - MetaboAnalyst
+  - NormalizeMets
+  - RStudio
+  - NormQcmets
+  - LogTransform
+  - MissingValues
+  - RlaPlots
+  - PcaPlots
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s11306-018-1347-7
+    - asb-paper-10-1007-s12561-013-9081-1
+    - asb-paper-10-1016-j-cmpb-2025-108672
+    - asb-paper-10-1021-acs-jproteome-1c00392
+    - asb-paper-10-1038-s41596-024-01046-3
+    - asb-paper-10-1038-s41598-021-84824-3
+    - asb-paper-10-1515-jib-2025-0047
+    dois:
+    - 10.1007/s11306-018-1347-7
+    - 10.1007/s12561-013-9081-1
+    - 10.1016/j.cmpb.2025.108672
+    - 10.1021/acs.jproteome.1c00392
+    - 10.1038/s41596-024-01046-3
+    - 10.1038/s41598-021-84824-3
+    - 10.1515/jib-2025-0047
+  after: []
+- id: multivariate
+  goal: multivariate analysis (PCA / PLS-DA / OPLS-DA, VIP)
+  edam_operation: operation_3659
+  skills:
+  - multivariate-statistical-analysis-metabolomics
+  - multivariate-ordination-analysis
+  - metabolomics-feature-selection-significance-filtering
+  - univariate-statistical-analysis-interpretation
+  - multivariate-ordination-analysis-nmds-pca
+  tools:
+  - R
+  - Jupyter Notebook
+  - Google Colab
+  - MZmine3
+  - vegan
+  - MetaboDirect
+  - R prcomp
+  - ggplot2 (R)
+  - Python
+  - mbpls
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - MAMSI
+  - MamsiStructSearch
+  - GNPS2 Web App
+  - Streamlit App
+  - Python 3.8
+  - R 4.0.2
+  - seaborn
+  - SYNCSA
+  - ggpubr
+  - factoextra
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-5c01327
+    - asb-paper-10-1038-s41596-024-01046-3
+    - asb-paper-10-1186-s40168-023-01476-3
+    - asb-paper-10-1371-journal-pcbi-1011814
+    dois:
+    - 10.1021/acs.analchem.5c01327
+    - 10.1038/s41596-024-01046-3
+    - 10.1186/s40168-023-01476-3
+    - 10.1371/journal.pcbi.1011814
+  after:
+  - clean_normalize
+  inputs_from:
+    clean_normalize:
+    - feature-table
+- id: differential
+  goal: differential feature analysis (univariate, volcano, FDR)
+  edam_operation: operation_3659
+  skills:
+  - fold-change-calculation
+  - multiple-testing-correction-and-p-value-adjustment
+  - fold-change-calculation-metabolomics
+  - fold-change-calculation-across-groups
+  - metabolite-feature-anova-analysis
+  tools:
+  - Python (pandas, NumPy, SciPy)
+  - R (base stats, tidyverse, or similar)
+  - pandas
+  - NumPy
+  - SciPy
+  - edgeR.R
+  - DESeq2
+  - RankProd
+  - ggplot2
+  - ComplexHeatmap
+  - edgeR
+  - RankProduct
+  - LargeMetabo
+  - R
+  - pytest
+  - fermo_core
+  - margheRita
+  - MS-DIAL
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-4c05039
+    - asb-paper-10-1038-s41467-024-50111-8
+    - asb-paper-10-1093-bib-bbac455
+    - asb-paper-10-1093-bioadv-vbae175
+    - asb-paper-10-1101-2024-06-20-599545
+    - asb-paper-10-1101-2024-06-20-599545v1
+    dois:
+    - 10.1021/acs.analchem.4c05039
+    - 10.1038/s41467-024-50111-8
+    - 10.1093/bib/bbac455
+    - 10.1093/bioadv/vbae175
+    - 10.1101/2024.06.20.599545
+    - 10.1101/2024.06.20.599545v1
+  after:
+  - clean_normalize
+  inputs_from:
+    clean_normalize:
+    - feature-table
+- id: enrichment_pathway
+  goal: enrichment + pathway / functional analysis
+  edam_operation: operation_3928
+  skills:
+  - metabolite-set-enrichment-analysis
+  - metabolite-kegg-pathway-enrichment
+  - untargeted-metabolomics-feature-analysis
+  - metabolic-network-mapping
+  - pathway-metabolite-mapping-integration
+  tools:
+  - R
+  - fgsea
+  - readr
+  - readxl
+  - KEGG
+  - enrichmet
+  - KEGGREST
+  - igraph
+  - ggplot2
+  - KEGG_Enrich_PlotPanel
+  - Enrichment
+  - KEGG_Enrich_Plot
+  - Mummichog 3
+  - metDataModel
+  - JMS
+  - mass2chem
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1093-bib-bbac455
+    - asb-paper-10-1101-2025-08-28-672951v2
+    - asb-paper-10-1371-journal-pcbi-1003123
+    dois:
+    - 10.1093/bib/bbac455
+    - 10.1101/2025.08.28.672951v2
+    - 10.1371/journal.pcbi.1003123
+  after:
+  - differential
+  inputs_from:
+    differential:
+    - tsv
+- id: biomarker
+  goal: biomarker selection + ROC / importance
+  edam_operation: operation_3659
+  skills:
+  - metabolomics-model-performance-comparison
+  - feature-importance-ranking
+  - model-performance-evaluation-roc-curves
+  - variable-importance-ranking-and-interpretation
+  - random-forest-classification-for-metabolite-prediction
+  tools:
+  - MetaClean
+  - R
+  - caret
+  - MeTEor
+  - randomForest
+  - ggplot2
+  - Omu
+  - read.metabo
+  inputs:
+  - type: tsv
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-978-3-319-47656-8-6
+    - asb-paper-10-1007-s11306-020-01738-3
+    - asb-paper-10-1093-bioadv-vbae178
+    - asb-paper-10-1128-mra-00129-19
+    - asb-paper-10-1186-1471-2105-15-s11-s5
+    dois:
+    - 10.1007/978-3-319-47656-8_6
+    - 10.1007/s11306-020-01738-3
+    - 10.1093/bioadv/vbae178
+    - 10.1128/mra.00129-19
+    - 10.1186/1471-2105-15-s11-s5
+  after:
+  - multivariate
+  - differential
+  inputs_from:
+    multivariate:
+    - tsv
+    differential:
+    - tsv
+verification:
+  final_outputs:
+  - path: biomarker_report.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic

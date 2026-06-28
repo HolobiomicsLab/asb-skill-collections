@@ -1,0 +1,236 @@
+schema_version: 0.3.0
+workflow_id: gcms_deconvolution_and_identification
+kind: composite-workflow
+techniques:
+- GC-MS
+steps:
+- id: deconvolution
+  goal: GC-MS EI spectral deconvolution + peak detection
+  edam_operation: operation_3215
+  skills:
+  - gc-ms-spectral-deconvolution
+  - gcms-spectrum-deconvolution
+  - pure-component-spectrum-extraction
+  - mass-spectral-component-extraction
+  - deconvolved-spectrum-comparison
+  tools:
+  - MSHub
+  - GNPS
+  - GNPS_GC
+  - PyTorch
+  - Python 3
+  - conda
+  - GCMSFormer
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  - type: mgf
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-3c05772
+    - asb-paper-10-1038-s41587-020-0700-3
+    dois:
+    - 10.1021/acs.analchem.3c05772
+    - 10.1038/s41587-020-0700-3
+  after: []
+- id: ei_library_match
+  goal: identify compounds by EI spectral library matching
+  edam_operation: operation_3631
+  skills:
+  - electron-ionization-spectral-comparison
+  - spectral-similarity-scoring-ei-simple
+  - gc-ms-spectral-library-matching
+  - mass-spectrometry-network-construction
+  tools:
+  - mssearchr
+  - R
+  - NIST API
+  - CoreMS
+  - LowResMassSpectralMatch
+  - GC_RI_Calibration
+  - MetaMS
+  - GNPS_GC
+  inputs:
+  - type: mgf
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-jasms-5c00322
+    - asb-paper-10-1038-s41587-020-0700-3
+    - asb-paper-10-5281-zenodo-14009575
+    dois:
+    - 10.1021/jasms.5c00322
+    - 10.1038/s41587-020-0700-3
+    - 10.5281/zenodo.14009575
+  after:
+  - deconvolution
+  inputs_from:
+    deconvolution:
+    - mgf
+- id: retention_index
+  goal: retention index calibration + RI-filtered identifications
+  edam_operation: operation_3695
+  skills:
+  - retention-index-calibration-application
+  - retention-index-assignment-and-filtering
+  - low-resolution-compound-identification
+  - gc-column-polarity-specific-ri-filtering
+  - kovats-retention-index-extraction-and-assignment
+  tools:
+  - CoreMS
+  - GC_RI_Calibration
+  - LowResMassSpectralMatch
+  - PNNLMetV20191015.MSL
+  - mspcompiler
+  - R
+  - future
+  - future.apply
+  - Lib2NIST
+  - MS-DIAL
+  - MoNA
+  - RIKEN
+  - NIST MS Search
+  - MS Search
+  - R statistical environment
+  - NIST Library Installation
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-2c05389
+    - asb-paper-10-5281-zenodo-14009575
+    dois:
+    - 10.1021/acs.analchem.2c05389
+    - 10.5281/zenodo.14009575
+  after:
+  - ei_library_match
+  inputs_from:
+    ei_library_match:
+    - tsv
+- id: statistics
+  goal: differential GC-MS feature analysis between groups
+  edam_operation: operation_3659
+  skills:
+  - group-comparison-statistics
+  - gc-ms-data-preprocessing-and-normalization
+  - gcxgc-ms-multivariate-analysis
+  - univariate-statistical-testing-for-metabolomics
+  - permanova-statistical-testing-multivariate-groups
+  tools:
+  - LargeMetabo
+  - Marker_Identify
+  - e1071
+  - FSelector
+  - mixOmics
+  - siggenes
+  - NPFimg
+  - XCMS
+  - RGCxGC
+  - R
+  - colorRamps
+  - omu (omu_summary function)
+  - assign_hierarchy
+  - omu_summary
+  - omu_anova
+  - count_fold_changes
+  - transform_samples
+  - MetaboDirect
+  - vegan (R package)
+  - Python 3.8
+  - R 4.0.2
+  - vegan
+  - Python
+  inputs:
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1016-j-microc-2020-104830
+    - asb-paper-10-1021-acs-analchem-1c03163
+    - asb-paper-10-1021-acs-analchem-1c03163-ref
+    - asb-paper-10-1093-bib-bbac455
+    - asb-paper-10-1128-mra-00129-19
+    - asb-paper-10-1186-s40168-023-01476-3
+    - asb-paper-10-1371-journal-pntd-0006215
+    dois:
+    - 10.1016/j.microc.2020.104830
+    - 10.1021/acs.analchem.1c03163
+    - 10.1021/acs.analchem.1c03163?ref=
+    - 10.1093/bib/bbac455
+    - 10.1128/mra.00129-19
+    - 10.1186/s40168-023-01476-3
+    - 10.1371/journal.pntd.0006215
+  after:
+  - deconvolution
+  - retention_index
+  inputs_from:
+    deconvolution:
+    - feature-table
+    retention_index:
+    - tsv
+- id: fusion
+  goal: consolidate GC-MS identifications + stats into a master table
+  edam_operation: operation_3434
+  skills:
+  - feature-consolidation-across-samples
+  - mass-spectrometry-feature-grouping
+  - feature-table-matrix-assembly
+  - feature-alignment-metabolomics
+  tools:
+  - Python
+  - BreathXplorer
+  - Python pandas
+  - patRoon
+  - XCMS
+  - OpenMS
+  - enviPick
+  - KPIC2
+  - PFΔScreen
+  - pyOpenMS
+  - pandas
+  - MsFeatures
+  - faahKO
+  - R
+  - mzrtsim
+  - SummarizedExperiment
+  - R base
+  - openNAU
+  - MetaQC
+  inputs:
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s00216-023-05070-2
+    - asb-paper-10-1021-ac051437y
+    - asb-paper-10-1021-acs-analchem-5c01213
+    - asb-paper-10-1021-jasms-4c00152
+    - asb-paper-10-1186-s13321-020-00477-w
+    - asb-paper-10-21147-j-issn-1000-9604-2023-05-11
+    dois:
+    - 10.1007/s00216-023-05070-2
+    - 10.1021/ac051437y
+    - 10.1021/acs.analchem.5c01213
+    - 10.1021/jasms.4c00152
+    - 10.1186/s13321-020-00477-w
+    - 10.21147/j.issn.1000-9604.2023.05.11
+  after:
+  - statistics
+  inputs_from:
+    statistics:
+    - tsv
+verification:
+  final_outputs:
+  - path: master_gcms_table.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic

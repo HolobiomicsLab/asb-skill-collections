@@ -1,0 +1,188 @@
+schema_version: 0.3.0
+workflow_id: ion_mobility_4d_annotation
+kind: composite-workflow
+techniques:
+- ion-mobility-MS
+steps:
+- id: preprocess_4d
+  goal: 4D LC-IMS-MS/MS feature extraction (with CCS)
+  edam_operation: operation_3215
+  skills:
+  - ion-mobility-feature-classification
+  - multidimensional-feature-detection-and-alignment
+  - ion-mobility-heatmap-visualization
+  - ion-mobility-dimension-detection
+  - multidimensional-coordinate-alignment
+  tools:
+  - Python
+  - MOCCal
+  - DEIMoS
+  - conda
+  - pip
+  - Snakemake
+  - ProteoWizard msconvert
+  - Mirador
+  - IonToolPack
+  - PeakQC
+  - mzmine
+  - JDK 25
+  - JavaFX 24
+  - numpy
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  - type: mgf
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c05017
+    - asb-paper-10-1021-acs-analchem-3c04290
+    - asb-paper-10-1021-jasms-4c00146
+    - asb-paper-10-1038-s41587-023-01690-2
+    dois:
+    - 10.1021/acs.analchem.1c05017
+    - 10.1021/acs.analchem.3c04290
+    - 10.1021/jasms.4c00146
+    - 10.1038/s41587-023-01690-2
+  after: []
+- id: ccs_calibration
+  goal: collision cross section calibration + filtering
+  edam_operation: operation_3695
+  skills:
+  - collision-cross-section-calibration-ccs
+  - collision-cross-section-calibration
+  - collision-cross-section-calculation
+  - collision-cross-section-measurement-quality-control
+  tools:
+  - DEIMoS
+  - conda
+  - pip
+  - Python
+  - numpy
+  - Snakemake
+  - MOCCal
+  - MOCCal (Multi-Omic CCS Calibrator)
+  - DEIMoS (Data-Exploratory Ion Mobility MS)
+  - R
+  - MobiLipid
+  - ggplot2
+  - data.table
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c05017
+    - asb-paper-10-1021-acs-analchem-3c04290
+    - asb-paper-10-1021-acs-analchem-4c01253
+    dois:
+    - 10.1021/acs.analchem.1c05017
+    - 10.1021/acs.analchem.3c04290
+    - 10.1021/acs.analchem.4c01253
+  after:
+  - preprocess_4d
+  inputs_from:
+    preprocess_4d:
+    - feature-table
+- id: ccs_library_match
+  goal: CCS-aware spectral / library annotation
+  edam_operation: operation_3631
+  skills:
+  - collision-cross-section-matching-and-annotation
+  - reference-library-alignment
+  - ion-mobility-reference-matching
+  - 4d-lcimmsms-feature-extraction
+  - fragmentation-pattern-spectral-matching
+  tools:
+  - Python
+  - Jupyter Notebook
+  - scikit-learn
+  - R
+  - MobiLipid
+  - R (ggplot2, data.table, DT packages)
+  - MOCCal
+  - DEIMoS
+  - RDKit
+  inputs:
+  - type: mgf
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1002-anie-202507483
+    - asb-paper-10-1021-acs-analchem-3c04290
+    - asb-paper-10-1021-acs-analchem-4c01253
+    dois:
+    - 10.1002/anie.202507483
+    - 10.1021/acs.analchem.3c04290
+    - 10.1021/acs.analchem.4c01253
+  after:
+  - preprocess_4d
+  - ccs_calibration
+  inputs_from:
+    preprocess_4d:
+    - mgf
+    ccs_calibration:
+    - feature-table
+- id: networking
+  goal: (optional) molecular networking of IM-resolved features
+  edam_operation: operation_3432
+  skills:
+  - molecular-networking-construction
+  - spectral-library-molecular-networking
+  - spectral-similarity-network-building
+  - metabolomic-spectral-annotation-and-molecular-family-clustering
+  - spectral-similarity-network-generation
+  tools:
+  - ENPKG
+  - MZmine
+  - MEMO
+  - MSHub
+  - GNPS
+  - q2-qemistree
+  - SIRIUS
+  - CSI:FingerID
+  - ZODIAC
+  - MZmine2
+  - GNPS FBMN
+  - ClassyFire
+  - antiSMASH
+  - BiG-SCAPE
+  - NPLinker
+  - MIBiG
+  - Optimus
+  - Cytoscape
+  inputs:
+  - type: mgf
+  outputs:
+  - type: graphml
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-jnatprod-7b00737
+    - asb-paper-10-1021-acscentsci-3c00800
+    - asb-paper-10-1038-s41587-020-0700-3
+    - asb-paper-10-1038-s41589-020-00677-3
+    - asb-paper-10-1101-2024-10-11-617756
+    - asb-paper-10-1371-journal-pcbi-1008920
+    dois:
+    - 10.1021/acs.jnatprod.7b00737
+    - 10.1021/acscentsci.3c00800
+    - 10.1038/s41587-020-0700-3
+    - 10.1038/s41589-020-00677-3
+    - 10.1101/2024.10.11.617756
+    - 10.1371/journal.pcbi.1008920
+  after:
+  - preprocess_4d
+  inputs_from:
+    preprocess_4d:
+    - mgf
+  optional: true
+verification:
+  final_outputs:
+  - path: ccs_annotations.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic

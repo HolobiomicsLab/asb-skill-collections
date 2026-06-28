@@ -1,0 +1,464 @@
+schema_version: "0.3.0"
+workflow_id: untargeted_lcmsms_annotation
+kind: composite-workflow
+techniques:
+  - LC-MS
+bound_by: perspicacite-semantic
+derived_from_workflows:
+  - coll_ms2deepscore
+  - coll_ramclust_cq
+  - coll_xcms_cq
+  - coll_inventa_cq
+  - coll_nmr2struct
+  - spec2vec_grounded
+  - spec2vec_pkg_oalarge
+  - coll_bioactivity_based_molecular_networking_cq
+  - coll_concise_cq
+  - coll_redu_cq
+  - coll_deepmsprofiler_cq
+  - coll_cardinal_cq
+  - coll_dures_cq
+  - coll_fbmn_stats_cq
+  - coll_idsl_ipa_cq
+  - coll_metabodirect
+  - coll_multiomicsintegrator_cq
+  - coll_peakqc_cq
+  - coll_tardis
+  - coll_vimms
+  - coll_lipidin_cq
+  - coll_molnetenhancer
+  - coll_ms2rescore_immunopeptidome_rescoring_cq
+  - coll_npclassscore_cq
+  - coll_rapidmass_cq
+  - coll_tardis_cq
+  - coll_esp_cq
+  - coll_graphormer_rt_cq
+  - coll_lipidmatch_cq
+  - coll_corems
+
+steps:
+  - id: preprocess
+    goal: "Raw mzML files -> aligned feature table + MS2 exports (GNPS-FBMN mgf + SIRIUS mgf)"
+    edam_operation: "http://edamontology.org/operation_3215"
+    optional: false
+    primary_skill: peak-detection-and-mass-alignment
+    skills:
+      - peak-detection-and-mass-alignment
+      - lc-ms-data-preprocessing
+      - feature-detection-in-chromatographic-ms-data
+      - lcms-peak-detection-and-alignment
+      - xcms-data-import-preprocessing
+    tools:
+      - MZmine2
+      - Optimus
+      - OpenMS
+      - NeatMS
+      - Python
+      - NumPy
+      - pandas
+      - pyOpenMS
+      - MSConvert
+      - PFΔScreen
+      - ISFrag
+      - R
+      - XCMS
+      - CAMERA
+      - MSnbase
+      - Spectra
+      - MsExperiment
+      - BiocParallel
+    inputs:
+      - type: mzML
+        description: "Raw LC-MS/MS data files, one per sample"
+    outputs:
+      - type: feature-table
+        path: feature_table.csv
+        description: "Aligned feature table with m/z, RT, per-sample intensities"
+      - type: mgf
+        flavour: gnps-fbmn
+        path: spectra_gnps.mgf
+        description: "MS2 spectra export formatted for GNPS-FBMN"
+      - type: mgf
+        flavour: sirius
+        path: spectra_sirius.mgf
+        description: "MS2 spectra export formatted for SIRIUS"
+    grounding:
+      kb_slugs:
+        - asb-paper-10-1021-acs-jnatprod-7b00737
+        - asb-paper-10-1021-acs-analchem-1c02220
+        - asb-paper-10-1007-s00216-023-05070-2
+        - asb-paper-10-1021-acs-analchem-1c01644
+        - asb-paper-10-1021-ac051437y
+      dois:
+        - "10.1021/acs.jnatprod.7b00737"
+        - "10.1021/acs.analchem.1c02220"
+        - "10.1007/s00216-023-05070-2"
+        - "10.1021/acs.analchem.1c01644"
+        - "10.1021/ac051437y"
+    after: []
+    inputs_from: {}
+
+  - id: network
+    goal: "MS2 spectra -> molecular family graph (all-pairs modified cosine; GNPS-style components; graphml)"
+    edam_operation: "http://edamontology.org/operation_3214"
+    optional: false
+    primary_skill: spectral-similarity-network-generation
+    skills:
+      - spectral-similarity-network-generation
+      - molecular-networking-construction
+      - feature-based-molecular-network-interpretation
+      - molecular-networking-parameter-configuration
+    tools:
+      - MZmine2
+      - Optimus
+      - GNPS
+      - Cytoscape
+      - ENPKG
+      - MZmine
+      - ENPKG MN/ISDB/Taxo module
+      - MEMO
+      - R
+      - Jupyter Notebook
+      - MZmine3
+      - GNPS FBMN
+      - Google Colab
+    inputs:
+      - type: mgf
+        flavour: gnps-fbmn
+        description: "MS2 spectra in GNPS-FBMN format"
+    outputs:
+      - type: graphml
+        path: network.graphml
+        description: "Molecular network graph with cosine-similarity edges and molecular family components"
+      - type: tsv
+        path: components.tsv
+        description: "Component/cluster membership per feature"
+    grounding:
+      kb_slugs:
+        - asb-paper-10-1021-acs-jnatprod-7b00737
+        - asb-paper-10-1021-acscentsci-3c00800
+        - asb-paper-10-1038-s41596-024-01046-3
+      dois:
+        - "10.1021/acs.jnatprod.7b00737"
+        - "10.1021/acscentsci.3c00800"
+        - "10.1038/s41596-024-01046-3"
+    after:
+      - preprocess
+    inputs_from:
+      preprocess:
+        - "mgf:gnps-fbmn"
+
+  - id: library_match
+    goal: "MS2 spectra -> spectral library hits with cosine scores vs reference libraries (MSI level 2 annotations)"
+    edam_operation: "http://edamontology.org/operation_3631"
+    optional: false
+    primary_skill: spectral-library-matching
+    skills:
+      - spectral-library-matching
+      - spectral-library-matching-annotation
+      - mass-spectrometry-library-ranking
+      - identity-search-spectrum-annotation
+      - spectral-library-annotation-matching
+    tools:
+      - microbeMASST
+      - metadataMASST
+      - plantMASST
+      - tissueMASST
+      - microbiomeMASST
+      - foodMASST
+      - GNPS_MASST
+      - GNPS libraries
+      - Fast Search API
+      - MZmine
+      - MASSBANK
+      - DrugBANK
+      - meRgeION2
+      - GNPS
+      - RChemMass
+      - MS2Compound
+      - CFM-id
+      - mssearchr
+      - R
+      - NIST API
+      - MSThunder
+      - Windows
+      - MSConvert
+      - Python
+      - Anaconda
+      - Git
+      - MSBERT
+      - PyTorch
+      - matchms
+      - Spec2Vec
+      - masscube
+      - nplinker
+      - pytest
+    inputs:
+      - type: mgf
+        flavour: gnps-fbmn
+        description: "MS2 spectra in GNPS-FBMN format"
+    outputs:
+      - type: tsv
+        path: library_matches.tsv
+        description: "Per-feature spectral library hits with cosine scores, precursor m/z delta, MSI level"
+    grounding:
+      kb_slugs:
+        - asb-paper-10-1038-s41538-022-00137-3
+        - asb-paper-10-1021-acs-analchem-2c04343
+        - asb-paper-10-1089-omi-2021-0051
+        - asb-paper-10-1021-jasms-5c00322
+        - asb-paper-10-1016-j-enceco-2025-07-022
+        - asb-paper-10-1021-acs-analchem-4c02426
+        - asb-paper-10-1038-s41467-025-60640-5
+        - asb-paper-10-1186-s40168-022-01444-3
+      dois:
+        - "10.1038/s41538-022-00137-3"
+        - "10.1021/acs.analchem.2c04343"
+        - "10.1089/omi.2021.0051"
+        - "10.1021/jasms.5c00322"
+        - "10.1016/j.enceco.2025.07.022"
+        - "10.1021/acs.analchem.4c02426"
+        - "10.1038/s41467-025-60640-5"
+        - "10.1186/s40168-022-01444-3"
+    after:
+      - preprocess
+    inputs_from:
+      preprocess:
+        - "mgf:gnps-fbmn"
+
+  - id: sirius
+    goal: "MS2 spectra -> SIRIUS 6 formula + CSI:FingerID structure + CANOPUS compound-class predictions"
+    edam_operation: "http://edamontology.org/operation_3860"
+    optional: false
+    primary_skill: sirius-spectral-request-construction
+    skills:
+      - sirius-spectral-request-construction
+      - web-service-api-integration
+      - sirius-zodiac-score-filtering
+      - spectral-fingerprint-web-service-query
+      - de-novo-structure-candidate-ranking
+    tools:
+      - CSI:FingerID
+      - SIRIUS
+      - CANOPUS
+      - MSNovelist
+      - INVENTA
+      - ClassyFire
+    inputs:
+      - type: mgf
+        flavour: sirius
+        description: "MS2 spectra in SIRIUS format"
+    outputs:
+      - type: tsv
+        path: sirius_results/compound_identification.tsv
+        description: "Per-feature formula + structure + confidence scores (Zodiac, Cosmic)"
+      - type: tsv
+        path: sirius_results/canopus_summary.tsv
+        description: "Compound-class predictions (ClassyFire / NPC pathway)"
+    grounding:
+      kb_slugs:
+        - asb-paper-10-1038-s41587-021-01045-9
+        - asb-paper-10-3389-fmolb-2022-1028334
+        - asb-paper-10-1038-s41467-021-23953-9
+      dois:
+        - "10.1038/s41587-021-01045-9"
+        - "10.3389/fmolb.2022.1028334"
+        - "10.1038/s41467-021-23953-9"
+    after:
+      - preprocess
+    inputs_from:
+      preprocess:
+        - "mgf:sirius"
+
+  - id: taxonomy_propagate
+    goal: "Reweight and propagate annotations using organism/taxon context (TIMA + LOTUS) to reduce false positives"
+    edam_operation: null
+    optional: true
+    primary_skill: metabolite-annotation-taxonomic-integration
+    skills:
+      - metabolite-annotation-taxonomic-integration
+      - taxonomic-weighting-in-annotation
+      - metabolite-annotation-scoring
+      - spectral-library-matching-with-taxonomy
+      - ranked-candidate-prioritization
+    tools:
+      - R
+      - tima (Taxonomically Informed Metabolite Annotation)
+      - LOTUS
+      - SIRIUS
+      - GNPS
+      - Spectra
+      - Docker
+      - GNPS FBMN
+    inputs:
+      - type: tsv
+        description: "library_matches.tsv from library_match stage"
+      - type: tsv
+        description: "compound_identification.tsv from sirius stage"
+      - type: metadata
+        description: "Sample manifest with organism taxonomy (taxon names or NCBI/GBIF IDs)"
+    outputs:
+      - type: tsv
+        path: tima_reweighted.tsv
+        description: "Reweighted candidate rank list with TIMA scores"
+    grounding:
+      kb_slugs:
+        - asb-paper-10-3389-fpls-2019-01329
+        - asb-paper-10-1038-nbt-3597
+        - asb-paper-10-1038-s41592-019-0344-8
+      dois:
+        - "10.3389/fpls.2019.01329"
+        - "10.1038/nbt.3597"
+        - "10.1038/s41592-019-0344-8"
+    after:
+      - library_match
+      - sirius
+    inputs_from:
+      library_match:
+        - "tsv:library_matches"
+      sirius:
+        - "tsv:compound_identification"
+
+  - id: fusion
+    goal: "Fuse all per-tool annotations into one master feature table (adduct/isotope grouping + dedup) + Cytoscape export"
+    edam_operation: "http://edamontology.org/operation_3434"
+    optional: false
+    primary_skill: mass-spectrometry-feature-deduplication
+    skills:
+      - mass-spectrometry-feature-deduplication
+      - feature-network-construction-from-mass-spectrometry
+      - feature-metadata-annotation
+      - feature-table-annotation-table-construction
+    tools:
+      - MolNotator
+      - PyYAML
+      - Python
+      - networkx
+      - treelib
+      - mass2chem
+      - metDataModel
+      - asari
+      - khipu
+      - msFeaST
+      - jupyter-notebook
+      - msFeaST Dashboard bundle
+      - R
+      - XCMS
+      - MS-Dial
+      - GetFeatistics
+      - patRoon
+    inputs:
+      - type: feature-table
+        description: "feature_table.csv from preprocess"
+      - type: graphml
+        description: "network.graphml + components.tsv from network"
+      - type: tsv
+        description: "library_matches.tsv from library_match"
+      - type: tsv
+        description: "compound_identification.tsv + canopus_summary.tsv from sirius"
+      - type: tsv
+        description: "tima_reweighted.tsv from taxonomy_propagate (when run)"
+        optional: true
+    outputs:
+      - type: tsv
+        path: master_feature_table.tsv
+        description: "One row per feature; all annotation columns joined with provenance"
+      - type: graphml
+        path: master_feature_table_cytoscape.graphml
+        description: "Cytoscape-compatible network export"
+    grounding:
+      kb_slugs:
+        - asb-paper-10-1101-2021-12-21-473622v1
+        - asb-paper-10-1021-acs-analchem-2c05810
+        - asb-paper-10-1093-bioinformatics-btae584
+        - asb-paper-10-1515-jib-2025-0047
+      dois:
+        - "10.1101/2021.12.21.473622v1"
+        - "10.1021/acs.analchem.2c05810"
+        - "10.1093/bioinformatics/btae584"
+        - "10.1515/jib-2025-0047"
+    after:
+      - network
+      - library_match
+      - sirius
+      - taxonomy_propagate   # optional dependency; fusion proceeds if skipped
+    inputs_from:
+      preprocess:
+        - "feature-table"
+      network:
+        - "graphml"
+        - "tsv:components"
+      library_match:
+        - "tsv:library_matches"
+      sirius:
+        - "tsv:compound_identification"
+        - "tsv:canopus_summary"
+      taxonomy_propagate:
+        - "tsv:tima_reweighted"
+
+verification:
+  per_step_outputs:
+    - step: preprocess
+      check: "feature_table.csv exists and row count > 0"
+    - step: preprocess
+      check: "spectra_gnps.mgf and spectra_sirius.mgf are non-empty and contain BEGIN IONS"
+    - step: network
+      check: "network.graphml is parseable XML; components.tsv has header"
+    - step: library_match
+      check: "library_matches.tsv has non-empty header; cosine column is numeric in [0,1]"
+    - step: sirius
+      check: "compound_identification.tsv contains InChIKey and ConfidenceScore columns"
+    - step: sirius
+      check: "canopus_summary.tsv contains NPC#pathway and ClassyFire#superclass columns"
+    - step: taxonomy_propagate
+      optional: true
+      check: "tima_reweighted.tsv score column is numeric and bounded [0,1]"
+    - step: fusion
+      check: "master_feature_table.tsv has one row per input feature; no duplicate feature_id"
+    - step: fusion
+      check: "network_component, cosine_score, sirius_formula columns present"
+  final_outputs:
+    - path: master_feature_table.tsv
+      type: file
+      description: "Fully fused annotated feature table"
+    - path: master_feature_table_cytoscape.graphml
+      type: file
+      description: "Cytoscape-compatible network export"
+
+provenance:
+  derived_from_workflows:
+    - coll_ms2deepscore
+    - coll_ramclust_cq
+    - coll_xcms_cq
+    - coll_inventa_cq
+    - coll_nmr2struct
+    - spec2vec_grounded
+    - spec2vec_pkg_oalarge
+    - coll_bioactivity_based_molecular_networking_cq
+    - coll_concise_cq
+    - coll_redu_cq
+    - coll_deepmsprofiler_cq
+    - coll_cardinal_cq
+    - coll_dures_cq
+    - coll_fbmn_stats_cq
+    - coll_idsl_ipa_cq
+    - coll_metabodirect
+    - coll_multiomicsintegrator_cq
+    - coll_peakqc_cq
+    - coll_tardis
+    - coll_vimms
+    - coll_lipidin_cq
+    - coll_molnetenhancer
+    - coll_ms2rescore_immunopeptidome_rescoring_cq
+    - coll_npclassscore_cq
+    - coll_rapidmass_cq
+    - coll_tardis_cq
+    - coll_esp_cq
+    - coll_graphormer_rt_cq
+    - coll_lipidmatch_cq
+    - coll_corems
+  bound_by: perspicacite-semantic
+  authored: "2026-06-28"
+  generator: AgenticScienceBuilder
+  method: v2-semantic-binding-perspicacite-text-embedding-3-large-llm-judge
+  collection: "https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2"

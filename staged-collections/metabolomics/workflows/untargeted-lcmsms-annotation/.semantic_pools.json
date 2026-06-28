@@ -1,0 +1,1182 @@
+{
+  "preprocess": [
+    {
+      "slug": "peak-detection-and-mass-alignment",
+      "name": "peak-detection-and-mass-alignment",
+      "score": 0.777,
+      "tools": [
+        "MZmine2",
+        "Optimus",
+        "OpenMS"
+      ],
+      "techniques": [
+        "LC-MS",
+        "direct-infusion-MS"
+      ],
+      "description": "Use when when you have raw LC-MS/MS data files (.mzML, .raw, or vendor formats) from multiple samples and need to identify reproducible molecular features across the cohort before annotation or statistical analysis."
+    },
+    {
+      "slug": "lc-ms-data-preprocessing",
+      "name": "lc-ms-data-preprocessing",
+      "score": 0.7753,
+      "tools": [
+        "NeatMS",
+        "Python",
+        "NumPy",
+        "pandas"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have raw mzML files and corresponding feature tables (CSV format, mzmine-formatted) from untargeted LCMS experiments, and you need to convert them into uniformly-shaped peak matrices (2 \u00d7 120 per peak: margin + signal regions) "
+    },
+    {
+      "slug": "mass-spectrometry-data-preprocessing",
+      "name": "mass-spectrometry-data-preprocessing",
+      "score": 0.7628,
+      "tools": [
+        "ISFrag",
+        "R",
+        "XCMS",
+        "RStudio",
+        "MEISTER",
+        "msFeaST",
+        "jupyter-notebook",
+        "pandas",
+        "openNAU",
+        "MetaQC",
+        "MARC",
+        "PS2MS",
+        "PS\u00b2MS",
+        "NEIMS",
+        "DeepEI",
+        "MsBackendMgf",
+        "MsFeatures",
+        "MsDataHub",
+        "MassSpecWavelet",
+        "xcms",
+        "Spectra"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have raw LCMS data in mzML or mzXML format from DDA, DIA, or fullscan analyses and need to extract metabolite features with unified m/z, retention time, and intensity values across multiple samples before performing MS2 annotat"
+    },
+    {
+      "slug": "non-targeted-preprocessing-tool-comparison",
+      "name": "non-targeted-preprocessing-tool-comparison",
+      "score": 0.7583,
+      "tools": [
+        "mzRAPP",
+        "MZmine 2",
+        "R",
+        "XCMS",
+        "enviPat",
+        "Skyline",
+        "MSConvert"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have LC-HRMS mzML data processed by at least one non-targeted pre-processing tool (XCMS, MZmine 2, MZmine 3, MS-DIAL, OpenMS, El-MAVEN, or similar), you have access to curated retention time boundaries and molecular formulas fo"
+    },
+    {
+      "slug": "xcms-data-import-preprocessing",
+      "name": "xcms-data-import-preprocessing",
+      "score": 0.754,
+      "tools": [
+        "xcms",
+        "MSnbase",
+        "Spectra",
+        "MsExperiment",
+        "BiocParallel"
+      ],
+      "techniques": [
+        "LC-MS",
+        "GC-MS",
+        "direct-infusion-MS"
+      ],
+      "description": "Use when you have raw LC-MS or GC-MS data files from a mass spectrometer (in mzML, NetCDF, or mzXML format) and need to detect chromatographic peaks, correct m/z bias via mass calibration (e."
+    },
+    {
+      "slug": "peak-filtering-and-preprocessing-lc-ms",
+      "name": "peak-filtering-and-preprocessing-lc-ms",
+      "score": 0.7493,
+      "tools": [
+        "matchms",
+        "gensim",
+        "Numba",
+        "Pandas",
+        "scipy",
+        "spec2vec",
+        "Word2Vec",
+        "Pandas / NumPy / SciPy"
+      ],
+      "techniques": [
+        "LC-MS",
+        "GC-MS"
+      ],
+      "description": "Use when you have raw LC-MS/MS spectra from vendor instruments (mzML, mzXML, MGF, or MSP format) with variable peak quality and intensity distributions, and you plan to perform library matching, molecular networking, or spectral similarity "
+    },
+    {
+      "slug": "spectral-feature-table-generation",
+      "name": "spectral-feature-table-generation",
+      "score": 0.7448,
+      "tools": [
+        "JPA",
+        "R",
+        "XCMS",
+        "MS-Convert"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have raw LC-MS data in mzXML format (or vendor formats convertible via MS-Convert) and need to identify and quantify metabolic features before multi-sample alignment. Use MS1 peak picking for full-scan or DDA data to extract Ga"
+    },
+    {
+      "slug": "spectral-peak-detection-and-deconvolution",
+      "name": "spectral-peak-detection-and-deconvolution",
+      "score": 0.7438,
+      "tools": [
+        "MetaboAnalystR",
+        "MetaboAnalyst web server"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have raw LC-MS data in mzML or mzXML format and need to extract reproducible, high-quality metabolite features (m/z, retention time, intensity) for global metabolomics."
+    },
+    {
+      "slug": "feature-detection-in-chromatographic-ms-data",
+      "name": "feature-detection-in-chromatographic-ms-data",
+      "score": 0.7435,
+      "tools": [
+        "pyOpenMS",
+        "OpenMS",
+        "Python",
+        "MSConvert",
+        "PF\u0394Screen"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have vendor-independent centroided DDA mzML files from LC- or GC-HRMS and need to delineate chromatographic peaks across the mass-to-charge and retention-time dimensions before applying mass defect analysis, diagnostic fragment"
+    },
+    {
+      "slug": "lcms-peak-detection-and-alignment",
+      "name": "lcms-peak-detection-and-alignment",
+      "score": 0.7408,
+      "tools": [
+        "ISFrag",
+        "R",
+        "XCMS",
+        "CAMERA"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have one or more raw mzXML or mzML LCMS data files (from DDA, DIA, or fullscan acquisition) and need to extract quantitative metabolite features for multi-sample comparative analysis."
+    },
+    {
+      "slug": "mass-spectrometry-feature-detection-validation",
+      "name": "mass-spectrometry-feature-detection-validation",
+      "score": 0.7388,
+      "tools": [
+        "mzRAPP",
+        "MZmine 2",
+        "R",
+        "XCMS",
+        "enviPat",
+        "Skyline",
+        "R (with mzRAPP library)"
+      ],
+      "techniques": [
+        "mass-spectrometry"
+      ],
+      "description": "Use when when you have processed LC-HRMS mzML files through a non-targeted preprocessing tool (e.g., XCMS, MZmine 2, MS-DIAL) and need to assess whether peak detection rates, isotopologue ratio fidelity, and alignment accuracy meet acceptab"
+    },
+    {
+      "slug": "mass-spectrometry-feature-table-construction",
+      "name": "mass-spectrometry-feature-table-construction",
+      "score": 0.7388,
+      "tools": [
+        "Python",
+        "pyOpenMS",
+        "OpenMS",
+        "MSConvert",
+        "PF\u0394Screen"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have vendor-independent centroided mzML files from LC- or GC-HRMS data acquired in data-dependent acquisition (ddMS2) mode and need to extract detected features with m/z, retention time, and intensity attributes as input for no"
+    }
+  ],
+  "network": [
+    {
+      "slug": "feature-based-molecular-network-interpretation",
+      "name": "feature-based-molecular-network-interpretation",
+      "score": 0.7641,
+      "tools": [
+        "R",
+        "Jupyter Notebook",
+        "MZmine3",
+        "GNPS FBMN",
+        "Google Colab"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a feature-based molecular network generated from non-targeted LC-MS/MS metabolomics data (e."
+    },
+    {
+      "slug": "spectral-similarity-network-building",
+      "name": "spectral-similarity-network-building",
+      "score": 0.7426,
+      "tools": [
+        "q2-qemistree",
+        "SIRIUS",
+        "CSI:FingerID",
+        "ZODIAC",
+        "MZmine2",
+        "GNPS FBMN",
+        "ClassyFire"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have detected LC-MS/MS features (MS1 peaks with MS2 fragmentation spectra) from untargeted metabolomics experiments and seek to organize them into a chemical hierarchy for comparative metabolomic analysis."
+    },
+    {
+      "slug": "spectral-library-molecular-networking",
+      "name": "spectral-library-molecular-networking",
+      "score": 0.7273,
+      "tools": [
+        "MSHub",
+        "GNPS"
+      ],
+      "techniques": [
+        "LC-MS",
+        "GC-MS"
+      ],
+      "description": "Use when you have deconvolved GC-MS spectra (from overlapping chromatographic peaks) in MGF or mzTab format and want to group chemically related compounds, visualize their similarity relationships, and identify spectral families without pri"
+    },
+    {
+      "slug": "spectral-similarity-network-generation",
+      "name": "spectral-similarity-network-generation",
+      "score": 0.7247,
+      "tools": [
+        "MZmine2",
+        "Optimus",
+        "GNPS",
+        "Cytoscape"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when after feature detection and alignment across LC-MS/MS runs (via MZmine2 or Optimus) have produced a feature quantification table and MGF file with MS/MS spectra, and you need to discover molecular relationships and detect unknown c"
+    },
+    {
+      "slug": "molecular-networking-construction",
+      "name": "molecular-networking-construction",
+      "score": 0.701,
+      "tools": [
+        "ENPKG",
+        "MZmine",
+        "ENPKG MN/ISDB/Taxo module",
+        "MEMO"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have LC-MS/MS DDA data from one or more samples and need to organize fragmentation spectra by similarity relationships to support compound annotation, enable cross-sample comparisons, and identify known and unknown metabolites "
+    },
+    {
+      "slug": "gnps-molecular-network-integration",
+      "name": "gnps-molecular-network-integration",
+      "score": 0.6896,
+      "tools": [
+        "mineMS2",
+        "igraph",
+        "R",
+        "GNPS",
+        "Cytoscape"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have computed frequent fragmentation patterns from a collection of MS/MS spectra using mineMS2, and you want to focus pattern interpretation on subsets of spectra that form meaningful network components (connected groups, cliqu"
+    },
+    {
+      "slug": "metabolomic-molecular-family-networking-gnps",
+      "name": "metabolomic-molecular-family-networking-gnps",
+      "score": 0.6882,
+      "tools": [
+        "nplinker",
+        "Python",
+        "conda",
+        "pip",
+        "GNPS",
+        "BigScape",
+        "NPLinker",
+        "AntiSMASH"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have untargeted LC-MS/MS spectral data from microbial or environmental samples and aim to group related metabolites into molecular families for natural product discovery, especially when integrating with genomic biosynthet"
+    },
+    {
+      "slug": "molecular-networking-parameter-configuration",
+      "name": "molecular-networking-parameter-configuration",
+      "score": 0.6864,
+      "tools": [
+        "MZmine2",
+        "GNPS",
+        "Optimus",
+        "Cytoscape"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when after preparing a feature table and MS/MS spectral data (mzML or MGF format with precursor m/z, retention time, and MS/MS spectra) and before submitting to GNPS for molecular network generation."
+    },
+    {
+      "slug": "molecular-network-feature-annotation",
+      "name": "molecular-network-feature-annotation",
+      "score": 0.6843,
+      "tools": [
+        "MZmine2",
+        "Jupyter notebook",
+        "GNPS",
+        "Optimus",
+        "Cytoscape"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have both (1) a molecular network graph from GNPS with MS/MS feature nodes and edges, and (2) a quantitative bioassay matrix (fractions \u00d7 bioactivity measurements) from parallel LC-MS/MS fractionation of the same sample ex"
+    },
+    {
+      "slug": "graph-based-metabolite-similarity-assessment",
+      "name": "graph-based-metabolite-similarity-assessment",
+      "score": 0.6834,
+      "tools": [
+        "mineMS2",
+        "igraph",
+        "R",
+        "MSnbase",
+        "GNPS",
+        "Cytoscape"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a collection of MS/MS spectra (stored as Spectrum2 objects in an ms2Lib class) and need to identify which spectra share identical fragmentation patterns\u2014particularly when coupled to a GNPS molecular network to focus on exp"
+    },
+    {
+      "slug": "chemical-phylogenetic-comparison",
+      "name": "chemical-phylogenetic-comparison",
+      "score": 0.6832,
+      "tools": [
+        "q2-qemistree",
+        "SIRIUS",
+        "MZmine2",
+        "GNPS FBMN",
+        "Classyfire"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have LC-MS/MS data preprocessed with MZmine2 into an MGF file (containing MS1 and MS2 spectra) and a feature table (peak areas per sample), and you want to relate MS1 features to each other based on predicted molecular substruc"
+    },
+    {
+      "slug": "molecular-family-grouping-analysis",
+      "name": "molecular-family-grouping-analysis",
+      "score": 0.6812,
+      "tools": [
+        "GNPS",
+        "MS2LDA",
+        "PALS (Pathway Activity Level Scoring)",
+        "GNPS (Global Natural Products Social Molecular Networking)",
+        "MS2LDA (Mass2Motif Latent Dirichlet Allocation)",
+        "PALS Viewer"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have untargeted metabolomics peak intensity data and spectral groupings (Molecular Families or Mass2Motifs) but lack confident chemical annotations or want to avoid pathway database dependency."
+    }
+  ],
+  "library_match": [
+    {
+      "slug": "spectral-library-matching",
+      "name": "spectral-library-matching",
+      "score": 0.7025,
+      "tools": [
+        "microbeMASST",
+        "metadataMASST",
+        "plantMASST",
+        "tissueMASST",
+        "microbiomeMASST",
+        "foodMASST",
+        "GNPS_MASST",
+        "GNPS libraries",
+        "Fast Search API",
+        "MZmine",
+        "MASSBANK",
+        "DrugBANK",
+        "meRgeION2",
+        "MergeION2",
+        "GNPS",
+        "RChemMass",
+        "MS2Compound",
+        "CFM-id",
+        "mssearchr",
+        "R",
+        "NIST API"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have one or more MS/MS spectra in .mgf format (or USI identifiers) and need to: (1) identify unknowns by searching against domain-curated reference data; (2) assign Level 2 metabolomics annotations via GNPS library matches; (3)"
+    },
+    {
+      "slug": "spectrum-similarity-scoring",
+      "name": "spectrum-similarity-scoring",
+      "score": 0.6908,
+      "tools": [
+        "MASSBANK",
+        "DrugBANK",
+        "meRgeION2",
+        "MergeION2",
+        "GNPS"
+      ],
+      "techniques": [
+        "CE-MS"
+      ],
+      "description": "Use when you have an unknown MS/MS spectrum (query spectrum with m/z and intensity pairs) and a reference spectral library (local or public: GNPS, MASSBANK, DrugBANK), and you need to identify the -matching compounds by ranking library entr"
+    },
+    {
+      "slug": "spectral-library-matching-annotation",
+      "name": "spectral-library-matching-annotation",
+      "score": 0.687,
+      "tools": [
+        "MSThunder",
+        "Windows",
+        "GNPS",
+        "MSConvert"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have MS2 spectral data (precursor m/z, retention time, and fragment ion patterns) from UPLC-HRMS analysis of environmental or biological samples and need to assign compound identities by comparing against known reference spectr"
+    },
+    {
+      "slug": "spectral-library-matching-gnps",
+      "name": "spectral-library-matching-gnps",
+      "score": 0.6702,
+      "tools": [
+        "GNPS",
+        "MassIVE",
+        "ReDU",
+        "Emperor"
+      ],
+      "techniques": [
+        "CE-MS",
+        "NMR"
+      ],
+      "description": "Use when you have MS2 product-ion spectra in open formats (.mzML or .mzXML) from public mass spectrometry datasets (e.g., from MassIVE with a valid accession) and need to identify chemical compounds by comparing fragmentation patterns again"
+    },
+    {
+      "slug": "gnps-spectral-library-compound-retrieval",
+      "name": "gnps-spectral-library-compound-retrieval",
+      "score": 0.6663,
+      "tools": [
+        "ModiFinder",
+        "BasicEvaluationEngine",
+        "Python",
+        "RDKit",
+        "GNPS Library"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have GNPS library accession IDs (e.g. CCMSLIB00011906190) for a reference compound and a chemically or biologically modified analog, and need to load their full MS/MS spectra and structural annotations to set up a modification-"
+    },
+    {
+      "slug": "mass-spectrometry-library-search-retrieval",
+      "name": "mass-spectrometry-library-search-retrieval",
+      "score": 0.6651,
+      "tools": [
+        "cosine_neutral_loss",
+        "spectrum_utils"
+      ],
+      "techniques": [
+        "CE-MS"
+      ],
+      "description": "Use when when you have an unknown MSMS spectrum (precursor m/z and fragment ions) and need to discover structurally related compounds from a spectral library."
+    },
+    {
+      "slug": "spectral-library-matching-with-cosine-similarity",
+      "name": "spectral-library-matching-with-cosine-similarity",
+      "score": 0.6622,
+      "tools": [
+        "ANN-SoLo"
+      ],
+      "techniques": [
+        "mass-spectrometry"
+      ],
+      "description": "Use when you have a query spectrum and a reduced candidate set of library spectra (via approximate nearest neighbor indexing), and need to search for exact unmodified peptide matches with high confidence before proceeding to variable-mass-s"
+    },
+    {
+      "slug": "mass-spectrometry-library-ranking",
+      "name": "mass-spectrometry-library-ranking",
+      "score": 0.6596,
+      "tools": [
+        "Python",
+        "Anaconda",
+        "Git",
+        "MSBERT",
+        "PyTorch",
+        "matchms",
+        "Spec2Vec"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a set of unidentified tandem mass spectra (queries) and need to identify them by matching against a curated reference library (e.g., GNPS Orbitrap dataset)."
+    },
+    {
+      "slug": "mass-spectrometry-database-search",
+      "name": "mass-spectrometry-database-search",
+      "score": 0.6524,
+      "tools": [
+        "GNPS",
+        "MASST+",
+        "GNPS Molecular Networking"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have an unknown mass spectrum (or a representative metabolite spectrum from public data) and need to identify it by comparing it against a large reference library\u2014particularly when the database contains billions of spectra and "
+    },
+    {
+      "slug": "identity-search-spectrum-annotation",
+      "name": "identity-search-spectrum-annotation",
+      "score": 0.6523,
+      "tools": [
+        "masscube",
+        "Python"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have experimental MS/MS spectra and need to assign definitive molecular identities by matching against a curated spectral library."
+    },
+    {
+      "slug": "spectral-library-annotation-matching",
+      "name": "spectral-library-annotation-matching",
+      "score": 0.6512,
+      "tools": [
+        "nplinker",
+        "Python",
+        "pytest",
+        "GNPS"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have downloaded a GNPS archive (GNPS1 or GNPS2 workflows) and need to map experimental spectra to known library compounds for annotation enrichment. Apply this skill after spectral data (spectra."
+    },
+    {
+      "slug": "precursor-m-z-based-filtering",
+      "name": "precursor-m-z-based-filtering",
+      "score": 0.6509,
+      "tools": [
+        "MASSBANK",
+        "DrugBANK",
+        "meRgeION2",
+        "MergeION2",
+        "GNPS"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have an unknown MS/MS query spectrum with a known or measured precursor m/z value and need to search a spectral library (local or public: GNPS, MASSBANK, DrugBANK) to annotate the compound."
+    }
+  ],
+  "sirius": [
+    {
+      "slug": "chemical-ontology-mapping",
+      "name": "chemical-ontology-mapping",
+      "score": 0.667,
+      "tools": [
+        "SIRIUS",
+        "NPClassifier",
+        "GNPS",
+        "CANOPUS",
+        "ClassyFire",
+        "ConCISE"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when your analysis has produced both in silico structural predictions (e."
+    },
+    {
+      "slug": "sirius-spectral-request-construction",
+      "name": "sirius-spectral-request-construction",
+      "score": 0.6631,
+      "tools": [
+        "CSI:FingerID",
+        "SIRIUS",
+        "CANOPUS"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have processed LC-MS/MS data with precursor m/z, ionization mode, collision energy (if available), and fragment peak lists (m/z and intensity pairs), and need to query CSI:FingerID for molecular fingerprint predictions as "
+    },
+    {
+      "slug": "web-service-api-integration",
+      "name": "web-service-api-integration",
+      "score": 0.6529,
+      "tools": [
+        "CSI:FingerID",
+        "MSNovelist",
+        "SIRIUS",
+        "CANOPUS"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have a parsed mass spectrum (precursor m/z, ionization mode, collision energy, and fragment peak list as m/z\u2013intensity pairs) and need to obtain molecular fingerprint predictions, de-novo candidate structures, or chemical "
+    },
+    {
+      "slug": "structural-annotation-integration",
+      "name": "structural-annotation-integration",
+      "score": 0.6417,
+      "tools": [
+        "SIRIUS",
+        "NPClassifier",
+        "GNPS",
+        "ClassyFire",
+        "ConCISE"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have structural candidates from in silico tools (SIRIUS/CANOPUS) and library spectral matches from GNPS, but need to resolve conflicting or incomplete chemical classifications into a unified consensus."
+    },
+    {
+      "slug": "de-novo-structure-candidate-ranking",
+      "name": "de-novo-structure-candidate-ranking",
+      "score": 0.6363,
+      "tools": [
+        "MSNovelist",
+        "SIRIUS",
+        "CSI:FingerID",
+        "CANOPUS"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have high-resolution LC-MS/MS data for an unknown metabolite or small molecule, have computed or measured the molecular ion mass and fragmentation spectrum, and require de-novo structure generation because the compound is "
+    },
+    {
+      "slug": "molecular-fingerprint-parsing",
+      "name": "molecular-fingerprint-parsing",
+      "score": 0.6187,
+      "tools": [
+        "CSI:FingerID",
+        "SIRIUS",
+        "CANOPUS"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have received a JSON response from the CSI:FingerID web service endpoint after submitting a fragmentation tree or tandem mass spectrum query, and you need to extract the predicted molecular fingerprint representation and associ"
+    },
+    {
+      "slug": "sirius-zodiac-score-filtering",
+      "name": "sirius-zodiac-score-filtering",
+      "score": 0.6127,
+      "tools": [
+        "SIRIUS",
+        "INVENTA",
+        "CANOPUS"
+      ],
+      "techniques": [
+        "mass-spectrometry"
+      ],
+      "description": "Use when after running SIRIUS on a mass spectrometry feature set and obtaining compound_identification.tsv output containing Zodiac and Cosmic confidence scores, apply this filter to eliminate low-confidence SIRIUS annotations before downst"
+    },
+    {
+      "slug": "spectral-feature-chemical-assignment",
+      "name": "spectral-feature-chemical-assignment",
+      "score": 0.6092,
+      "tools": [
+        "SIRIUS",
+        "NPClassifier",
+        "GNPS",
+        "ClassyFire",
+        "ConCISE"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have spectral feature data annotated by both in silico structural tools (e."
+    },
+    {
+      "slug": "spectral-annotation-filtering-by-similarity-metrics",
+      "name": "spectral-annotation-filtering-by-similarity-metrics",
+      "score": 0.6062,
+      "tools": [
+        "MZmine2",
+        "MZmine3",
+        "timaR",
+        "CANOPUS",
+        "MEMO",
+        "GNPS",
+        "SIRIUS",
+        "ISDB",
+        "MZmine2/MZmine3",
+        "Inventa"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when after running GNPS molecular networking, SIRIUS compound identification, or ISDB in silico annotation on LC-MS/MS data, when you have provisional annotations for features but need to filter them to retain only high-confidence match"
+    },
+    {
+      "slug": "spectral-fingerprint-web-service-query",
+      "name": "spectral-fingerprint-web-service-query",
+      "score": 0.6061,
+      "tools": [
+        "CANOPUS",
+        "SIRIUS",
+        "CSI:FingerID",
+        "ClassyFire"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a high-resolution LC-MS/MS spectrum or pre-computed molecular fingerprint from a small-molecule sample and need to retrieve a systematic structural classification (compound class and subclass) with confidence estimates."
+    },
+    {
+      "slug": "consensus-classification-reconciliation",
+      "name": "consensus-classification-reconciliation",
+      "score": 0.6035,
+      "tools": [
+        "SIRIUS",
+        "NPClassifier",
+        "GNPS",
+        "ClassyFire",
+        "ConCISE"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have spectral features annotated by both in silico structural prediction tools (e.g., SIRIUS/CANOPUS) and spectral library matching (GNPS), and you need a single authoritative chemical classification per feature rather than a l"
+    },
+    {
+      "slug": "de-novo-precursor-mass-annotation",
+      "name": "de-novo-precursor-mass-annotation",
+      "score": 0.6034,
+      "tools": [
+        "MIST",
+        "MIST-CF",
+        "SIRIUS",
+        "SCARF"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have unknown MS/MS spectra with observed precursor m/z values and want to infer the molecular formula and adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+) in a de novo setting without access to spectral libraries."
+    }
+  ],
+  "taxonomy_propagate": [
+    {
+      "slug": "metabolite-annotation-taxonomic-integration",
+      "name": "metabolite-annotation-taxonomic-integration",
+      "score": 0.7459,
+      "tools": [
+        "R",
+        "tima (R package)",
+        "LOTUS",
+        "SIRIUS v5/v6",
+        "GNPS",
+        "Spectra (R package)"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have paired metabolomics data (MS/MS spectra and feature quantification) linked to organismal or tissue taxonomy, and you want to reduce false positive annotations and improve annotation rank by filtering candidate metabolites "
+    },
+    {
+      "slug": "taxonomic-weighting-in-annotation",
+      "name": "taxonomic-weighting-in-annotation",
+      "score": 0.7313,
+      "tools": [
+        "R",
+        "Docker",
+        "tima (Taxonomically Informed Metabolite Annotation)",
+        "LOTUS",
+        "SIRIUS",
+        "GNPS-FBMN"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a feature table with candidate metabolite annotations (m/z, retention time, chemical identifiers) and MS/MS spectra, and you know the organism or taxon of origin for your samples."
+    },
+    {
+      "slug": "metabolite-annotation-scoring",
+      "name": "metabolite-annotation-scoring",
+      "score": 0.6983,
+      "tools": [
+        "R",
+        "Docker",
+        "tima (Taxonomically Informed Metabolite Annotation)",
+        "LOTUS",
+        "SIRIUS",
+        "GNPS-FBMN"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a feature table with candidate metabolite annotations (m/z, retention time, chemical identifiers) from MS/MS spectra or external tools (SIRIUS, GNPS), sample metadata linking samples to organisms, and you need to prioritiz"
+    },
+    {
+      "slug": "spectral-library-matching-with-taxonomy",
+      "name": "spectral-library-matching-with-taxonomy",
+      "score": 0.6684,
+      "tools": [
+        "R",
+        "Docker",
+        "tima (Taxonomically Informed Metabolite Annotation)",
+        "LOTUS (Natural Products Database)",
+        "SIRIUS (v5/v6)",
+        "GNPS-FBMN",
+        "R (with tidyverse, Spectra, MetaboCoreUtils)"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have MS/MS spectra (.mgf) and candidate metabolite annotations (with m/z, retention time, chemical identifiers) linked to a known organism or taxon, and you want to rank annotations by both spectral similarity AND biochemical l"
+    },
+    {
+      "slug": "ranked-candidate-prioritization",
+      "name": "ranked-candidate-prioritization",
+      "score": 0.6316,
+      "tools": [
+        "R",
+        "Docker",
+        "tima",
+        "LOTUS",
+        "SIRIUS v5/v6",
+        "GNPS-FBMN"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a feature quantification table (m/z, retention time, peak areas) and candidate metabolite annotations (chemical identifiers, MS/MS spectra matches, or SIRIUS/GNPS predictions) linked to a sample organism or taxon, and you "
+    },
+    {
+      "slug": "ranked-annotation-prioritization",
+      "name": "ranked-annotation-prioritization",
+      "score": 0.6309,
+      "tools": [
+        "mWISE",
+        "R",
+        "FELLA",
+        "igraph"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have completed cluster-based filtering of KEGG candidate assignments in untargeted LC-MS metabolomics and need to rank those candidates by biological plausibility using a metabolite interaction network. Specifically, use it aft"
+    },
+    {
+      "slug": "sample-centric-metabolite-annotation",
+      "name": "sample-centric-metabolite-annotation",
+      "score": 0.6212,
+      "tools": [
+        "ENPKG",
+        "MZmine",
+        "enpkg_mn_isdb_taxo",
+        "enpkg_sirius_canopus",
+        "enpkg_meta_analysis",
+        "SIRIUS",
+        "Open Tree of Life",
+        "Wikidata",
+        "NPClassifier",
+        "ChEMBL"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when after MZmine feature detection and molecular networking on a single LC-MS/MS DDA sample, when you have a feature table (with retention time, m/z, fragmentation spectra) and sample-level taxonomical metadata, and you want to assign "
+    },
+    {
+      "slug": "metabolite-ranking-by-annotation-score",
+      "name": "metabolite-ranking-by-annotation-score",
+      "score": 0.6092,
+      "tools": [
+        "MAGMa"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have generated a set of candidate metabolites for a given experimental MS/MS spectrum and need to determine which candidate is most likely to be the true metabolite."
+    },
+    {
+      "slug": "metabolite-annotation-network-architecture",
+      "name": "metabolite-annotation-network-architecture",
+      "score": 0.6076,
+      "tools": [
+        "MrnAnnoAlgo3 (MetDNA3)",
+        "MrnAnnoAlgo3",
+        "MetDNA3"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when annotating large-scale untargeted metabolomics datasets where reference library coverage is incomplete and you need to infer metabolite identities for unannotated compounds by propagating annotations from seed metabolites (dat"
+    },
+    {
+      "slug": "multi-component-weighted-ranking-aggregation",
+      "name": "multi-component-weighted-ranking-aggregation",
+      "score": 0.6065,
+      "tools": [
+        "MZmine2",
+        "MZmine3",
+        "timaR",
+        "CANOPUS",
+        "MEMO",
+        "GNPS",
+        "SIRIUS",
+        "Lotus Database",
+        "Inventa"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have completed LC\u2013MS/MS feature detection and annotation (via MZmine2/3 and GNPS/SIRIUS/CANOPUS), have compiled a taxonomically annotated metadata table, and need to rank extracts by their likelihood of containing novel chemist"
+    },
+    {
+      "slug": "workflow-pipeline-execution-validation",
+      "name": "workflow-pipeline-execution-validation",
+      "score": 0.598,
+      "tools": [
+        "R",
+        "tima R package",
+        "SIRIUS",
+        "GNPS-FBMN",
+        "LOTUS database",
+        "Docker (adafede/tima-r image)"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have prepared metabolomics input files (feature quantification table, MS/MS spectra in MGF format, sample metadata) and are about to execute the TIMA taxonomically informed annotation pipeline, or after pipeline execution to ve"
+    },
+    {
+      "slug": "metabolite-structure-annotation-integration",
+      "name": "metabolite-structure-annotation-integration",
+      "score": 0.5894,
+      "tools": [
+        "BAM",
+        "HassounLab/BAM",
+        "PROXIMAL2",
+        "GNN-SOM"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a set of candidate transformed structures generated by biotransformation rules (e."
+    }
+  ],
+  "fusion": [
+    {
+      "slug": "feature-annotation-consolidation",
+      "name": "feature-annotation-consolidation",
+      "score": 0.6416,
+      "tools": [
+        "MsFeatures",
+        "xcms",
+        "faahKO"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when after chromatographic peak detection and feature detection in LC-MS preprocessing, when you have a set of detected features (m/z, retention time, intensity) and need to consolidate redundant or related ion signals into compound-lev"
+    },
+    {
+      "slug": "mass-spectrometry-feature-deduplication",
+      "name": "mass-spectrometry-feature-deduplication",
+      "score": 0.6334,
+      "tools": [
+        "MolNotator",
+        "PyYAML",
+        "Python"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when immediately after MZmine feature detection when you have both MGF (MS/MS spectra) and CSV (metadata) output files for one or both ionization modes and wish to construct a deduplicated molecular network."
+    },
+    {
+      "slug": "feature-network-construction-from-mass-spectrometry",
+      "name": "feature-network-construction-from-mass-spectrometry",
+      "score": 0.6121,
+      "tools": [
+        "networkx",
+        "treelib",
+        "mass2chem",
+        "metDataModel",
+        "Python 3",
+        "asari",
+        "khipu"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a preprocessed feature table (tab-delimited: feature ID, m/z, retention time, intensity columns) from LC-MS data and need to annotate which observed features represent the same underlying compound via isotope or adduct rel"
+    },
+    {
+      "slug": "empirical-compound-annotation-and-representation",
+      "name": "empirical-compound-annotation-and-representation",
+      "score": 0.6063,
+      "tools": [
+        "networkx",
+        "treelib",
+        "mass2chem",
+        "metDataModel",
+        "Python 3",
+        "asari",
+        "khipu"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a tab-delimited feature table (m/z, retention time, intensities) from LC-MS preprocessing and need to group related ions (isotopologues, adducts, in-source fragments) into compound-level annotations with inferred neutral m"
+    },
+    {
+      "slug": "feature-metadata-annotation",
+      "name": "feature-metadata-annotation",
+      "score": 0.6052,
+      "tools": [
+        "msFeaST",
+        "jupyter-notebook",
+        "msFeaST Dashboard bundle"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have processed mass spectrometry data consisting of three separate tables (quantification features, sample metadata, and spectral annotations) and need to combine them into a single, queryable artifact that preserves relationsh"
+    },
+    {
+      "slug": "feature-table-consensus-aggregation",
+      "name": "feature-table-consensus-aggregation",
+      "score": 0.6046,
+      "tools": [
+        "Python",
+        "DEIMoS",
+        "numpy",
+        "ProteoWizard msconvert"
+      ],
+      "techniques": [
+        "LC-MS",
+        "ion-mobility-MS",
+        "NMR"
+      ],
+      "description": "Use when you have detected feature tables from multiple LC-IMS-MS/MS samples and need to establish a unified feature catalog in which each row represents a distinct molecular entity observed across one or more samples, with harmonized m/z, "
+    },
+    {
+      "slug": "feature-table-integration-and-normalization",
+      "name": "feature-table-integration-and-normalization",
+      "score": 0.5921,
+      "tools": [
+        "ISFrag",
+        "R",
+        "XCMS"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when when you have MS1 feature tables from heterogeneous sources\u2014e.g., XCMS peak detection output mixed with vendor software (MS-DIAL, MZmine2) results\u2014and need to merge them into a single, format-normalized table for ISFrag analysis."
+    },
+    {
+      "slug": "feature-consolidation-across-batches",
+      "name": "feature-consolidation-across-batches",
+      "score": 0.5899,
+      "tools": [
+        "R (>=)",
+        "LargeMetabo",
+        "R"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have two or more CSV feature tables from separate metabolomic experiments (each containing mass, retention time, intensity, isotope, and adduct columns), and you need to align and merge them into a single feature-by-sample matr"
+    },
+    {
+      "slug": "feature-table-annotation-table-construction",
+      "name": "feature-table-annotation-table-construction",
+      "score": 0.5884,
+      "tools": [
+        "R",
+        "XCMS",
+        "MS-Dial",
+        "GetFeatistics",
+        "patRoon"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when after feature extraction from XCMS or MS-Dial when you have a feature intensity table (samples \u00d7 features), a feature info table with m/z and retention time measurements, and access to a reference compound database with known m/z, "
+    },
+    {
+      "slug": "duplicate-record-detection-and-deduplication",
+      "name": "duplicate-record-detection-and-deduplication",
+      "score": 0.5839,
+      "tools": [
+        "R",
+        "webchem",
+        "amanida",
+        "PubChem"
+      ],
+      "techniques": [],
+      "description": "Use when when merging metabolomic data from multiple studies, you have compound identifiers in heterogeneous formats (chemical names, InChI, InChIKey, SMILES) and need to detect whether the same compound appears under different representati"
+    },
+    {
+      "slug": "feature-consolidation-across-samples",
+      "name": "feature-consolidation-across-samples",
+      "score": 0.5817,
+      "tools": [
+        "Python",
+        "BreathXplorer",
+        "Python pandas"
+      ],
+      "techniques": [
+        "mass-spectrometry"
+      ],
+      "description": "Use when you have extracted multiple per-sample feature tables (in CSV format, each with feature ID, m/z, intensity, and retention time columns) and need to identify which features are the same compound detected across different breath samp"
+    },
+    {
+      "slug": "feature-group-isotope-annotation",
+      "name": "feature-group-isotope-annotation",
+      "score": 0.5811,
+      "tools": [
+        "masscube",
+        "Python"
+      ],
+      "techniques": [
+        "LC-MS"
+      ],
+      "description": "Use when you have a feature table from nontargeted LC-MS peak detection (containing m/z, retention time, and intensity values) and need to disambiguate whether detected features represent the same molecular entity under different ionization"
+    }
+  ]
+}
