@@ -788,6 +788,74 @@ def check_provenance(collection_dir: Path) -> CheckResult:
     return res
 
 
+def check_workflows(collection_dir: Path) -> CheckResult:
+    """Validate the composite workflow super-skill subtree (`workflows/<slug>/`).
+
+    Each workflow's leaves must resolve in skills_index.json, the workflow.yaml DAG
+    (after / inputs_from) must reference only earlier steps, no leaf may appear in two
+    stages, and tools must not leak script filenames. Non-hard (advisory) — the leaf
+    collection is the hard-gated artifact; workflows are an additive layer.
+    """
+    res = CheckResult(
+        name="composite_workflows",
+        gates=[],
+        hard_gate=False,
+        summary="Composite workflow super-skills resolve to real leaves with a valid DAG.",
+    )
+    wf_root = collection_dir / "workflows"
+    if not wf_root.is_dir():
+        res.add(PASS, "No workflows/ subtree (n/a).")
+        return res
+    try:
+        idx = {r["slug"] for r in json.loads((collection_dir / "skills_index.json").read_text(encoding="utf-8"))}
+    except (OSError, ValueError) as exc:
+        res.add(FAIL, f"cannot load skills_index.json for workflow validation: {exc}")
+        return res
+    n = 0
+    for d in sorted(wf_root.iterdir()):
+        if not d.is_dir() or d.name.startswith("_"):
+            continue
+        n += 1
+        name = d.name
+        sk_md, wf_y = d / "SKILL.md", d / "workflow.yaml"
+        if not (sk_md.is_file() and wf_y.is_file()):
+            res.add(FAIL, f"{name}: missing SKILL.md or workflow.yaml", file=name)
+            continue
+        try:
+            fm, _ = _read_frontmatter(sk_md.read_text(encoding="utf-8"))
+            wf = yaml.safe_load(wf_y.read_text(encoding="utf-8")) or {}
+        except (OSError, yaml.YAMLError) as exc:
+            res.add(FAIL, f"{name}: unreadable ({exc})", file=name)
+            continue
+        meta = fm.get("metadata", {}) or {}
+        if meta.get("kind") != "composite-workflow":
+            res.add(FAIL, f"{name}: metadata.kind != composite-workflow", file=name)
+        ids: set = set()
+        seen: dict = {}
+        for st in (wf.get("steps") or []):
+            sid = st.get("id")
+            for s in (st.get("skills") or []):
+                if s not in idx:
+                    res.add(FAIL, f"{name}/{sid}: unresolved skill {s}", file=name)
+                if s in seen and seen[s] != sid:
+                    res.add(FAIL, f"{name}: collision {s} ({seen[s]} & {sid})", file=name)
+                seen[s] = sid
+            for a in (st.get("after") or []):
+                if a not in ids:
+                    res.add(FAIL, f"{name}/{sid}: dangling after -> {a}", file=name)
+            for k in (st.get("inputs_from") or {}):
+                if k not in ids:
+                    res.add(FAIL, f"{name}/{sid}: dangling inputs_from -> {k}", file=name)
+            ids.add(sid)
+        for t in (meta.get("member_tools") or []):
+            if str(t).endswith(".py"):
+                res.add(WARN, f"{name}: script-filename as tool: {t}", file=name)
+    res.summary = f"{res.summary}  ({n} workflows checked)"
+    if n == 0:
+        res.add(PASS, "workflows/ present but empty.")
+    return res
+
+
 # --------------------------------------------------------------------------- #
 # Corpus / collection loaders.                                                #
 # --------------------------------------------------------------------------- #
@@ -826,6 +894,7 @@ def run_gate(
         check_strip_verbatim(collection_dir, access_by_doi),
         check_pii_dual_use(collection_dir, collection_meta),
         check_provenance(collection_dir),
+        check_workflows(collection_dir),
     ]
 
     counts = {PASS: 0, WARN: 0, FAIL: 0}

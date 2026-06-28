@@ -27,12 +27,23 @@ Use it in three steps: **select → run → ground**.
 
 ## 1. Select — match the goal to a workflow
 
-Load `workflows_index.json` (one row per composite workflow: `slug`, `name`,
-`description`, `techniques`, `stages`, `member_tools`). Match the user's goal, in order of
-precision:
+**Prefer semantic retrieval (P2):** run
+
+```bash
+python bin/semantic_search.py --target workflows --query "<the user's goal>" [--technique LC-MS] --k 3
+```
+
+It uses meaning-based ranking (text-embedding-3-large — the same model Perspicacité uses)
+when an embedding backend is available, and **falls back to a keyword index search
+automatically** when it is not, so it always works offline. The result's `mode` field tells
+you which ran. The same tool works at the leaf level with `--target skills` (Step 2).
+
+If you prefer manual lookup, load `workflows_index.json` (one row per composite workflow:
+`slug`, `name`, `description`, `techniques`, `stages`, `member_tools`) and match the goal,
+in order of precision:
 
 1. **Technique** — what platform is the data? `LC-MS`, `GC-MS`, `MS-imaging`,
-   `ion-mobility-MS` (and NMR as it lands). Filter `techniques` first.
+   `ion-mobility-MS`, `NMR`. Filter `techniques` first.
 2. **Goal phrasing** — match the user's intent against each row's `description`.
 
 Available workflows (this staged set):
@@ -47,6 +58,8 @@ Available workflows (this staged set):
 | `sirius-denovo-structure-elucidation` | LC-MS | formula → structure → class → confidence filter (no library needed) |
 | `masst-repository-scale-search` | LC-MS | reverse metabolomics: where else does this molecule occur in public data |
 | `ion-mobility-4d-annotation` | ion-mobility-MS | 4D feature extraction → CCS calibration → CCS-aware annotation |
+| `nmr-metabolomics-profiling` | NMR | spectra → preprocess → identify (chemical shift) → quantify → stats |
+| `pathway-functional-analysis` | LC-MS | m/z feature list → mummichog → pathway/enrichment → interpretation |
 
 If no workflow fits the goal, fall back to the **leaf router**
 (`metabolomics-collection-router`) and assemble steps from atomic skills.

@@ -1,0 +1,165 @@
+schema_version: 0.3.0
+workflow_id: nmr_metabolomics_profiling
+kind: composite-workflow
+techniques:
+- NMR
+steps:
+- id: preprocess_nmr
+  goal: NMR spectral preprocessing (phase, baseline, referencing, binning)
+  edam_operation: operation_3215
+  skills:
+  - nmr-spectral-preprocessing-and-phasing
+  - nmr-workflow-pipeline-execution
+  - nmr-spectra-preprocessing
+  - metabolite-dataset-preprocessing
+  tools:
+  - R
+  - Bioconductor
+  - MWASTools
+  - TopSpin 3.2
+  - Bruker Avance III 600 MHz
+  - SAND
+  - NMRPipe
+  - NMRBox
+  - PRIMA-Panel
+  inputs:
+  - type: nmr-spectrum
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-3c03078
+    - asb-paper-10-1021-acs-analchem-4c04938
+    - asb-paper-10-1093-bioinformatics-btx477
+    dois:
+    - 10.1021/acs.analchem.3c03078
+    - 10.1021/acs.analchem.4c04938
+    - 10.1093/bioinformatics/btx477
+  after: []
+- id: identification
+  goal: identify metabolites by chemical shift matching
+  edam_operation: operation_3803
+  skills:
+  - metabolite-peak-assignment-from-nmr
+  - nmr-metabolite-identity-confirmation
+  - nmr-chemical-shift-interval-matching
+  - hmdb-metabolite-query-and-retrieval
+  tools:
+  - PyTorch
+  - NumPy
+  - Pandas
+  - SciPy
+  - NMRformer
+  - R
+  - Bioconductor
+  - MWASTools
+  - TopSpin 3.2
+  - openpyxl
+  - XlsxWriter
+  - Python
+  - PyQt5
+  - Human Metabolome Database (HMDB)
+  - ROIAL-NMR
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1002-nbm-70131
+    - asb-paper-10-1021-acs-analchem-4c05632
+    - asb-paper-10-1093-bioinformatics-btx477
+    dois:
+    - 10.1002/nbm.70131
+    - 10.1021/acs.analchem.4c05632
+    - 10.1093/bioinformatics/btx477
+  after:
+  - preprocess_nmr
+  inputs_from:
+    preprocess_nmr:
+    - feature-table
+- id: quantification
+  goal: quantify metabolites from NMR signals
+  edam_operation: operation_3799
+  skills:
+  - nmr-peak-deconvolution
+  - compound-abundance-quantification-from-flow
+  - nmr-peak-table-generation
+  tools:
+  - SAND
+  - NMRPipe
+  - NMRBox
+  - mcfNMR
+  - spec2csv
+  inputs:
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-3c03078
+    - asb-paper-10-1021-acs-analchem-4c01652
+    dois:
+    - 10.1021/acs.analchem.3c03078
+    - 10.1021/acs.analchem.4c01652
+  after:
+  - identification
+  inputs_from:
+    preprocess_nmr:
+    - feature-table
+    identification:
+    - tsv
+- id: statistics
+  goal: multivariate + differential analysis of NMR profiles
+  edam_operation: operation_3659
+  skills:
+  - univariate-statistical-testing-for-metabolomics
+  - multiple-testing-correction-metabolomics
+  - group-comparison-statistics
+  - multicontrast-statistical-testing-lipidomics
+  tools:
+  - R
+  - omu (omu_summary function)
+  - assign_hierarchy
+  - omu_summary
+  - omu_anova
+  - count_fold_changes
+  - transform_samples
+  - MWASTools
+  - Bioconductor
+  - LargeMetabo
+  - Marker_Identify
+  - e1071
+  - FSelector
+  - mixOmics
+  - siggenes
+  - lipidr
+  - limma
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-jproteome-0c00082
+    - asb-paper-10-1093-bib-bbac455
+    - asb-paper-10-1093-bioinformatics-btx477
+    - asb-paper-10-1128-mra-00129-19
+    dois:
+    - 10.1021/acs.jproteome.0c00082
+    - 10.1093/bib/bbac455
+    - 10.1093/bioinformatics/btx477
+    - 10.1128/mra.00129-19
+  after:
+  - quantification
+  inputs_from:
+    quantification:
+    - tsv
+verification:
+  final_outputs:
+  - path: nmr_profile_report.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
