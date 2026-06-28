@@ -10,6 +10,7 @@ metadata:
   - skills_index.json
   - tools_index.json
   - kb_bundle.json
+  retrieval: bin/semantic_search.py
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
@@ -33,8 +34,26 @@ You (the agent) use this router in three steps: **search → apply → (optional
 
 ## 1. Search — find the right skill
 
-Every skill is one `skills/<slug>/SKILL.md` with YAML frontmatter. Two machine
-indexes at the collection root make lookup cheap — load whichever fits:
+**Prefer semantic retrieval.** Let meaning, not keyword overlap, rank the 5,865
+skills (run from the collection root):
+
+```bash
+python bin/semantic_search.py --query "<the user's task>" \
+  --collection . --target skills [--technique LC-MS] --k 10
+```
+
+It ranks with `text-embedding-3-large` — the same model Perspicacité uses — when
+an embedding backend is available (set `OPENAI_API_KEY`, and point
+`ASB_LEAF_EMB_CACHE` at the leaf embedding cache or drop it at
+`.cache/leafemb_v2.npz`), and **falls back to a keyword index search
+automatically** when it is not, so it always works offline. The `mode` field in
+the output tells you which ran. Registry/meta leaves (>25 tools, e.g.
+`evidence-linking`) are filtered from both modes so they cannot crowd out real
+skills. The same tool selects composite workflow super-skills with
+`--target workflows` (see `metabolomics-workflow-router`).
+
+If you prefer manual lookup, two machine indexes at the collection root make it
+cheap — load whichever fits:
 
 - **`skills_index.json`** — one row per skill: `slug`, `name`, `description`,
   `edam_operation`, `edam_topics`, `tools`, `dois`, `techniques`.

@@ -30,7 +30,8 @@ Use it in three steps: **select → run → ground**.
 **Prefer semantic retrieval (P2):** run
 
 ```bash
-python bin/semantic_search.py --target workflows --query "<the user's goal>" [--technique LC-MS] --k 3
+python bin/semantic_search.py --query "<the user's goal>" \
+  --collection . --target workflows [--technique LC-MS] --k 3
 ```
 
 It uses meaning-based ranking (text-embedding-3-large — the same model Perspicacité uses)
