@@ -157,6 +157,32 @@ jq '.[] | select(.edam_topics[]? | test("topic_3172")) | {slug,name}' skills_ind
 jq -r '.[] | select(.description | test("library match";"i")) | .slug' skills_index.json
 ```
 
+### Semantic retrieval & the embedding cache
+
+`bin/semantic_search.py` ranks by **meaning** (`text-embedding-3-large`, the model
+Perspicacité uses) when an embedding cache is present, and falls back to a keyword
+index search otherwise — so it always works offline (the `mode` field in the output
+says which ran). Two things switch semantic mode on:
+
+1. **The cache** — a `.npz` of precomputed leaf embeddings. Either:
+   - **Download it** from the collection's Zenodo record (file
+     `metabolomics-v<N>-leafemb.npz`) — no re-embedding, no API cost for the corpus.
+     Drop it at `collections/metabolomics/v2/.cache/leafemb_v2.npz`, or point
+     `ASB_LEAF_EMB_CACHE` at it.
+   - **Build it** from a source embedding set (or from scratch with an API key):
+     ```bash
+     python scripts/build_leaf_embedding_cache.py \
+       --collection collections/metabolomics/v2 --source <full_embeddings.npz>   # align (no key)
+     python scripts/build_leaf_embedding_cache.py \
+       --collection collections/metabolomics/v2 --embed                          # bootstrap (needs key)
+     ```
+2. **`OPENAI_API_KEY`** — needed only to embed the *query* at run time (≈free per
+   call). The corpus is already embedded in the cache; the key never re-embeds the
+   5,858 leaves.
+
+So: cache present + key set → semantic ranking; cache present, no key → keyword;
+no cache → keyword. Nothing is required for the collection to be usable.
+
 ### Whole-pipeline goals → composite workflows
 
 For an end-to-end goal ("annotate an untargeted LC-MS/MS run", "GC-MS deconvolution

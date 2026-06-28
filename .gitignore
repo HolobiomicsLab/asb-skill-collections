@@ -38,3 +38,8 @@ htmlcov/
 outputs/
 *.jsonl.gz
 *.parquet
+
+# Leaf embedding caches — large, regenerated from source / shipped as Zenodo + GitHub Release assets
+.cache/
+**/.cache/
+*.npz
