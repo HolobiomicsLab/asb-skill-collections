@@ -1,6 +1,10 @@
 """asbb — utility CLI for asb-skill-collections.
 
 Subcommands:
+  search / get                — keyword-search skills/workflows/tools and print a
+                                source file (offline, no API key; reads a local
+                                checkout). The thin programmatic surface, also
+                                exposed over MCP by asb_mcp_server.py.
   registry / verify / doctor  — registry utilities (Phase 1.7 stubs).
   install / uninstall         — materialize packs into NON-Claude runtimes
                                 (Codex, Gemini, Copilot, Cursor, Cline,
@@ -45,6 +49,39 @@ def _cmd_verify(args: argparse.Namespace) -> int:
 def _cmd_doctor(args: argparse.Namespace) -> int:
     """`asbb doctor` — health check (DOI resolution, KB reachability, manifest)."""
     print(f"asbb doctor: {_TO_BUILD}")
+    return 0
+
+
+def _cmd_search(args) -> int:
+    """`asbb search` — keyword-search skills/workflows/tools in a local checkout."""
+    import json
+    from scripts import asb_skill_index as idx
+    cols = idx.discover_collections(args.repo)
+    if not cols:
+        print("error: no collections found. Run from a checkout or set "
+              "ASB_COLLECTIONS_ROOT / --repo.", file=sys.stderr)
+        return 1
+    if getattr(args, "list_collections", False):
+        for c in cols:
+            print(f"{c['id']}\t{c.get('skills_count') or '?'} skills"
+                  f"\t{'+workflows' if c['has_workflows'] else ''}")
+        return 0
+    results = idx.search(args.collection, args.target, args.query,
+                         technique=args.technique, k=args.k, root=args.repo)
+    print(json.dumps({"target": args.target, "query": args.query,
+                      "mode": "keyword", "results": results}, indent=2))
+    return 0
+
+
+def _cmd_get(args) -> int:
+    """`asbb get` — print a skill/workflow/tool's source file."""
+    from scripts import asb_skill_index as idx
+    text = idx.get_item_text(args.collection, args.target, args.slug, root=args.repo)
+    if text is None:
+        print(f"error: {args.target[:-1]} {args.slug!r} not found in "
+              f"{args.collection!r}", file=sys.stderr)
+        return 1
+    print(text)
     return 0
 
 
@@ -140,7 +177,27 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--version", action="version", version=f"asbb {__version__}"
     )
-    sub = parser.add_subparsers(dest="command", metavar="{registry,verify,doctor,install,uninstall}")
+    sub = parser.add_subparsers(dest="command", metavar="{search,get,registry,verify,doctor,install,uninstall}")
+
+    # asbb search <query> [--collection ...] [--target skills|workflows|tools]
+    p_search = sub.add_parser("search", help="Keyword-search skills/workflows/tools (offline, no key).")
+    p_search.add_argument("query", nargs="?", default="", help="Free-text query.")
+    p_search.add_argument("--collection", help="slug or slug/vN (default: all collections).")
+    p_search.add_argument("--target", choices=["skills", "workflows", "tools"], default="skills")
+    p_search.add_argument("--technique", help="Filter by technique tag (e.g. LC-MS).")
+    p_search.add_argument("--k", type=int, default=10, help="Max results (default 10).")
+    p_search.add_argument("--repo", help="Path to a checkout (else ASB_COLLECTIONS_ROOT / CWD).")
+    p_search.add_argument("--list-collections", action="store_true", dest="list_collections",
+                          help="List discovered collections and exit.")
+    p_search.set_defaults(func=_cmd_search)
+
+    # asbb get <slug> --collection slug/vN [--target ...]
+    p_get = sub.add_parser("get", help="Print a skill/workflow/tool's source file.")
+    p_get.add_argument("slug", help="Item slug.")
+    p_get.add_argument("--collection", required=True, help="slug or slug/vN.")
+    p_get.add_argument("--target", choices=["skills", "workflows", "tools"], default="skills")
+    p_get.add_argument("--repo", help="Path to a checkout (else ASB_COLLECTIONS_ROOT / CWD).")
+    p_get.set_defaults(func=_cmd_get)
 
     # asbb registry [list|validate]
     p_registry = sub.add_parser(

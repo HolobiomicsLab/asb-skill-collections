@@ -143,6 +143,51 @@ removes exactly what was installed (tracked in `~/.asbb/installed.json`).
 
 > For **Claude Code**, the plugin marketplace above remains the recommended path.
 
+### 🐍 Pip / uvx — `asbb` as a programmatic skill provider
+
+The `asbb` CLI offers offline, key-free retrieval over a checkout — the thin
+programmatic surface for any agent or script:
+
+```bash
+pip install asb-skill-collections          # or: pipx install asb-skill-collections
+# zero-install with uv:
+uvx --from asb-skill-collections asbb search "spectral library matching" --collection metabolomics
+
+asbb search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows
+asbb get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows
+asbb search --list-collections
+```
+
+`search`/`get` read a local checkout (or `ASB_COLLECTIONS_ROOT` / `--repo`); the
+ranking matches each collection's `bin/semantic_search.py` keyword mode — no API
+key. *(Publishing to PyPI is pending; from a clone today, use
+`python3 -m scripts.asbb_cli search …`.)*
+
+### 🔌 MCP skill-server — for any MCP agent
+
+Expose the same retrieval over the Model Context Protocol so Claude Desktop,
+Cursor, Cline, Codex, etc. can search and fetch skills at run time:
+
+```bash
+pip install "asb-skill-collections[mcp]"
+ASB_COLLECTIONS_ROOT=/path/to/checkout asb-mcp
+```
+
+```jsonc
+// Claude Desktop / Code  →  mcpServers
+{
+  "asb-skills": {
+    "command": "uvx",
+    "args": ["--from", "asb-skill-collections[mcp]", "asb-mcp"],
+    "env": { "ASB_COLLECTIONS_ROOT": "/path/to/asb-skill-collections" }
+  }
+}
+```
+
+Tools: `list_collections`, `search_skills`, `search_workflows`, `search_tools`,
+`get_skill`, `get_workflow`. Pairs naturally with a Perspicacité MCP — one server
+for skill retrieval, one for evidence grounding.
+
 ## Use
 
 **Search → apply → ground.** Find a skill via `skills_index.json` (by EDAM IRI,
